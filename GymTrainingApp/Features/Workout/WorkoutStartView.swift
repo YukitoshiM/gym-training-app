@@ -34,6 +34,7 @@ struct WorkoutStartView: View {
                                     .padding(.vertical, 4)
                                 }
                                 .buttonStyle(.plain)
+                                .accessibilityIdentifier("startWorkout-\(plan.name)")
                             }
                         }
                     }
@@ -51,4 +52,3 @@ struct WorkoutStartView: View {
     WorkoutStartView()
         .environmentObject(AppStore())
 }
-

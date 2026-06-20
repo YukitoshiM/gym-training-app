@@ -18,6 +18,7 @@ struct HistoryListView: View {
                             NavigationLink(value: session) {
                                 HistoryRow(session: session)
                             }
+                            .accessibilityIdentifier("historyRow-\(session.title)")
                         }
                         .onDelete(perform: appStore.deleteWorkoutHistory)
                     }
@@ -66,4 +67,3 @@ private struct HistoryRow: View {
     HistoryListView()
         .environmentObject(AppStore())
 }
-

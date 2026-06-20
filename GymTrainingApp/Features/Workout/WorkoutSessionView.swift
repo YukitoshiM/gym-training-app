@@ -66,6 +66,7 @@ struct WorkoutSessionView: View {
                         isConfirmingFinish = true
                     }
                     .buttonStyle(.borderedProminent)
+                    .accessibilityIdentifier("finishWorkoutButton")
                 }
             }
             .sheet(isPresented: $isSelectingExercise) {
@@ -225,6 +226,7 @@ private struct WorkoutSetRow: View {
 
                 Toggle("完了", isOn: $set.isCompleted)
                     .labelsHidden()
+                    .accessibilityIdentifier("completeSetToggle-\(set.setOrder)")
 
                 Button(role: .destructive, action: onDelete) {
                     Image(systemName: "minus.circle")

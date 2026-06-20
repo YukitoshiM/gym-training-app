@@ -8,6 +8,15 @@ final class AppStore: ObservableObject {
     private let storage = LocalJSONStorage()
 
     init() {
+        if ProcessInfo.processInfo.arguments.contains("--reset-ui-test-data") {
+            storage.reset()
+        }
+
+        if ProcessInfo.processInfo.arguments.contains("--seed-alpha-ui-test-plan") {
+            storage.savePlans([Self.alphaUITestPlan()])
+            storage.saveWorkoutHistory([])
+        }
+
         plans = storage.loadPlans()
         workoutHistory = storage.loadWorkoutHistory()
     }
@@ -58,6 +67,18 @@ final class AppStore: ObservableObject {
         workoutHistory.removeAll { $0.id == session.id }
         storage.saveWorkoutHistory(workoutHistory)
     }
+
+    private static func alphaUITestPlan() -> TrainingPlan {
+        TrainingPlan(
+            name: "胸の日",
+            exercises: [
+                PlanExercise(
+                    exercise: PresetExerciseStore.exercises[0],
+                    sortOrder: 0
+                )
+            ]
+        )
+    }
 }
 
 private struct LocalJSONStorage {
@@ -80,6 +101,11 @@ private struct LocalJSONStorage {
 
     func saveWorkoutHistory(_ history: [WorkoutSession]) {
         save(history, key: historyKey)
+    }
+
+    func reset() {
+        UserDefaults.standard.removeObject(forKey: plansKey)
+        UserDefaults.standard.removeObject(forKey: historyKey)
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {

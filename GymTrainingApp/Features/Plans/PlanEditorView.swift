@@ -7,8 +7,12 @@ struct PlanEditorView: View {
     @State private var draft: TrainingPlan
     @State private var isSelectingExercise = false
     @State private var isShowingValidation = false
+    @FocusState private var isPlanNameFocused: Bool
 
-    init(plan: TrainingPlan?) {
+    let onSaved: () -> Void
+
+    init(plan: TrainingPlan?, onSaved: @escaping () -> Void = {}) {
+        self.onSaved = onSaved
         _draft = State(
             initialValue: plan ?? TrainingPlan(
                 name: "",
@@ -28,6 +32,8 @@ struct PlanEditorView: View {
             Form {
                 Section("計画名") {
                     TextField("例: 胸の日", text: $draft.name)
+                        .accessibilityIdentifier("planNameField")
+                        .focused($isPlanNameFocused)
                 }
 
                 Section {
@@ -51,11 +57,26 @@ struct PlanEditorView: View {
                     } label: {
                         Label("種目を追加", systemImage: "plus.circle")
                     }
+                    .accessibilityIdentifier("addExerciseToPlanButton")
                 } header: {
                     Text("種目")
                 } footer: {
                     Text("セット目標はワークアウト開始時にコピーされ、履歴に残ります。")
                 }
+
+            }
+            .safeAreaInset(edge: .bottom) {
+                Button {
+                    save()
+                } label: {
+                    Text("計画を保存")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(!canSave)
+                .padding()
+                .background(.bar)
+                .accessibilityIdentifier("savePlanPinnedButton")
             }
             .navigationTitle(draft.name.isEmpty ? "計画作成" : draft.name)
             .navigationBarTitleDisplayMode(.inline)
@@ -70,11 +91,20 @@ struct PlanEditorView: View {
                     Button("保存") {
                         save()
                     }
+                    .accessibilityIdentifier("savePlanButton")
                 }
 
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
                         .disabled(draft.exercises.count < 2)
+                }
+
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("入力完了") {
+                        isPlanNameFocused = false
+                    }
+                    .accessibilityIdentifier("dismissKeyboardButton")
                 }
             }
             .sheet(isPresented: $isSelectingExercise) {
@@ -126,6 +156,7 @@ struct PlanEditorView: View {
         draft.name = draft.name.trimmingCharacters(in: .whitespacesAndNewlines)
         normalizeSortOrder()
         appStore.savePlan(draft)
+        onSaved()
         dismiss()
     }
 }
@@ -171,6 +202,7 @@ private struct PlanExerciseEditorCard: View {
                 Label("セットを追加", systemImage: "plus")
             }
             .buttonStyle(.borderless)
+            .accessibilityIdentifier("addPlanSetButton")
         }
         .padding(.vertical, 6)
     }
@@ -232,4 +264,3 @@ private struct PlanSetTargetRow: View {
     PlanEditorView(plan: nil)
         .environmentObject(AppStore())
 }
-

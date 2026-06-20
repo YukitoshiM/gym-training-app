@@ -32,4 +32,15 @@ targets:
           UIImageName: ""
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
-
+  GymTrainingAppUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: GymTrainingAppUITests
+    dependencies:
+      - target: GymTrainingApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.uitests
+        TEST_TARGET_NAME: GymTrainingApp
+        GENERATE_INFOPLIST_FILE: YES

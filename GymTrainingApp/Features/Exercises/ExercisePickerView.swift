@@ -33,6 +33,7 @@ struct ExercisePickerView: View {
                     .padding(.vertical, 4)
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("exercisePicker-\(exercise.name)")
             }
             .navigationTitle("種目を選択")
             .navigationBarTitleDisplayMode(.inline)
@@ -51,4 +52,3 @@ struct ExercisePickerView: View {
 #Preview {
     ExercisePickerView { _ in }
 }
-

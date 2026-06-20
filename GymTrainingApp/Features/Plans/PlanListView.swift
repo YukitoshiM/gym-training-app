@@ -19,6 +19,7 @@ struct PlanListView: View {
                             isShowingEditor = true
                         }
                         .buttonStyle(.borderedProminent)
+                        .accessibilityIdentifier("createPlanEmptyButton")
                     }
                 } else {
                     List {
@@ -45,10 +46,13 @@ struct PlanListView: View {
                         Image(systemName: "plus")
                     }
                     .accessibilityLabel("計画を作成")
+                    .accessibilityIdentifier("createPlanToolbarButton")
                 }
             }
             .sheet(isPresented: $isShowingEditor) {
-                PlanEditorView(plan: planToEdit)
+                PlanEditorView(plan: planToEdit) {
+                    isShowingEditor = false
+                }
             }
         }
     }
@@ -82,4 +86,3 @@ private struct PlanRow: View {
     PlanListView()
         .environmentObject(AppStore())
 }
-
