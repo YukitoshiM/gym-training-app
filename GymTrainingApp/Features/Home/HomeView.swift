@@ -8,19 +8,19 @@ struct HomeView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Gym Training")
                             .font(.title2.bold())
-                        Text("MVP environment scaffold")
+                        Text("アルファ版の中核体験を作成中")
                             .foregroundStyle(.secondary)
                     }
                     .padding(.vertical, 8)
                 }
 
-                Section("Next") {
-                    Label("Create SwiftUI screens from the MVP design", systemImage: "doc.text")
-                    Label("Add local-first data models", systemImage: "externaldrive")
-                    Label("Prepare CloudKit sync", systemImage: "icloud")
+                Section("Alpha") {
+                    Label("計画を作る", systemImage: "list.bullet.rectangle")
+                    Label("計画から記録する", systemImage: "figure.strengthtraining.traditional")
+                    Label("履歴で振り返る", systemImage: "clock.arrow.circlepath")
                 }
             }
-            .navigationTitle("Home")
+            .navigationTitle("ホーム")
         }
     }
 }
@@ -28,4 +28,3 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
-
