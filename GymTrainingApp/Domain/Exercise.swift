@@ -1,6 +1,6 @@
 import Foundation
 
-struct Exercise: Identifiable, Hashable {
+struct Exercise: Identifiable, Hashable, Codable {
     let id: UUID
     let name: String
     let primaryMuscle: MuscleGroup
@@ -25,7 +25,7 @@ struct Exercise: Identifiable, Hashable {
     }
 }
 
-enum MuscleGroup: String, CaseIterable, Identifiable {
+enum MuscleGroup: String, CaseIterable, Identifiable, Codable {
     case chest
     case back
     case legs
@@ -49,7 +49,7 @@ enum MuscleGroup: String, CaseIterable, Identifiable {
     }
 }
 
-enum Equipment: String, CaseIterable, Identifiable {
+enum Equipment: String, CaseIterable, Identifiable, Codable {
     case barbell
     case dumbbell
     case machine
@@ -68,4 +68,3 @@ enum Equipment: String, CaseIterable, Identifiable {
         }
     }
 }
-

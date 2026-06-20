@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var appStore: AppStore
+
     var body: some View {
         NavigationStack {
             List {
@@ -14,10 +16,20 @@ struct HomeView: View {
                     .padding(.vertical, 8)
                 }
 
+                Section("現在") {
+                    LabeledContent("計画", value: "\(appStore.plans.count)件")
+                    LabeledContent("履歴", value: "\(appStore.workoutHistory.count)件")
+
+                    if let latest = appStore.workoutHistory.first {
+                        LabeledContent("直近", value: latest.title)
+                        LabeledContent("達成率", value: AppFormatters.percent(latest.achievementRate))
+                    }
+                }
+
                 Section("Alpha") {
-                    Label("計画を作る", systemImage: "list.bullet.rectangle")
-                    Label("計画から記録する", systemImage: "figure.strengthtraining.traditional")
-                    Label("履歴で振り返る", systemImage: "clock.arrow.circlepath")
+                    Label("計画を作る", systemImage: "checkmark.circle")
+                    Label("計画から記録する", systemImage: "checkmark.circle")
+                    Label("履歴で振り返る", systemImage: "checkmark.circle")
                 }
             }
             .navigationTitle("ホーム")
@@ -27,4 +39,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(AppStore())
 }
