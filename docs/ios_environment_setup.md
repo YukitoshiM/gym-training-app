@@ -27,6 +27,12 @@
 
 App StoreまたはApple DeveloperサイトからXcodeをインストールする。
 
+App Storeを開く:
+
+```sh
+open 'macappstore://apps.apple.com/app/id497799835'
+```
+
 インストール後、以下を実行する。
 
 ```sh
@@ -34,6 +40,14 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 sudo xcodebuild -license accept
 xcodebuild -version
 ```
+
+現在の開発者ディレクトリを確認する:
+
+```sh
+xcode-select -p
+```
+
+`/Library/Developer/CommandLineTools` が表示される場合、iOS SimulatorビルドにはXcode本体への切り替えが必要。
 
 ### 2. XcodeGenを確認
 
@@ -75,7 +89,12 @@ CLIで確認する場合:
 xcodebuild -scheme GymTrainingApp -destination 'platform=iOS Simulator,name=iPhone 16' build
 ```
 
+利用できるSimulator名を確認する:
+
+```sh
+xcrun simctl list devices available
+```
+
 ## 注意
 
 このリポジトリでは `.xcodeproj` はXcodeGenで生成するためGit管理しない。設定変更は `project.yml` に反映する。
-
