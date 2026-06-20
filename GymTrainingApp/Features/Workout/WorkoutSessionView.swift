@@ -209,7 +209,7 @@ private struct WorkoutSetRow: View {
                 Text("\(set.setOrder)")
                     .font(.headline)
                     .frame(width: 30, height: 30)
-                    .background(set.isCompleted ? .green.opacity(0.18) : .thinMaterial, in: Circle())
+                    .background(set.isCompleted ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("目標 \(AppFormatters.weight(set.targetWeight)) × \(set.targetReps)回")
@@ -260,4 +260,3 @@ private struct WorkoutSetRow: View {
     )
     .environmentObject(AppStore())
 }
-

@@ -86,7 +86,7 @@ private struct HistorySetRow: View {
             Text("\(set.setOrder)")
                 .font(.headline)
                 .frame(width: 30, height: 30)
-                .background(set.isAchieved ? .green.opacity(0.18) : .thinMaterial, in: Circle())
+                .background(set.isAchieved ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
 
             VStack(alignment: .leading, spacing: 3) {
                 Text("実績 \(AppFormatters.weight(set.actualWeight)) × \(set.actualReps)回")
@@ -120,4 +120,3 @@ private struct HistorySetRow: View {
     }
     .environmentObject(AppStore())
 }
-
