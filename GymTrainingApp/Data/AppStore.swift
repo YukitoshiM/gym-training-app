@@ -4,6 +4,8 @@ import SwiftUI
 final class AppStore: ObservableObject {
     @Published private(set) var plans: [TrainingPlan] = []
     @Published private(set) var workoutHistory: [WorkoutSession] = []
+    @Published private(set) var bodyMetricEntries: [BodyMetricEntry] = []
+    @Published private(set) var bodyMetricGoals: [BodyMetricGoal] = []
 
     private let storage = LocalJSONStorage()
 
@@ -15,10 +17,19 @@ final class AppStore: ObservableObject {
         if ProcessInfo.processInfo.arguments.contains("--seed-alpha-ui-test-plan") {
             storage.savePlans([Self.alphaUITestPlan()])
             storage.saveWorkoutHistory([])
+            storage.saveBodyMetricEntries([])
+            storage.saveBodyMetricGoals(Self.defaultBodyMetricGoals())
         }
 
         plans = storage.loadPlans()
         workoutHistory = storage.loadWorkoutHistory()
+        bodyMetricEntries = storage.loadBodyMetricEntries()
+        bodyMetricGoals = storage.loadBodyMetricGoals()
+
+        if bodyMetricGoals.isEmpty {
+            bodyMetricGoals = Self.defaultBodyMetricGoals()
+            storage.saveBodyMetricGoals(bodyMetricGoals)
+        }
     }
 
     func savePlan(_ plan: TrainingPlan) {
@@ -68,6 +79,48 @@ final class AppStore: ObservableObject {
         storage.saveWorkoutHistory(workoutHistory)
     }
 
+    func bodyMetricEntries(for kind: BodyMetricKind) -> [BodyMetricEntry] {
+        bodyMetricEntries
+            .filter { $0.kind == kind }
+            .sorted { $0.recordedAt > $1.recordedAt }
+    }
+
+    func latestBodyMetricEntry(for kind: BodyMetricKind) -> BodyMetricEntry? {
+        bodyMetricEntries(for: kind).first
+    }
+
+    func bodyMetricGoal(for kind: BodyMetricKind) -> BodyMetricGoal {
+        bodyMetricGoals.first { $0.kind == kind } ?? BodyMetricGoal(kind: kind)
+    }
+
+    func saveBodyMetricEntry(_ entry: BodyMetricEntry) {
+        if let index = bodyMetricEntries.firstIndex(where: { $0.id == entry.id }) {
+            bodyMetricEntries[index] = entry
+        } else {
+            bodyMetricEntries.append(entry)
+        }
+
+        bodyMetricEntries.sort { $0.recordedAt > $1.recordedAt }
+        storage.saveBodyMetricEntries(bodyMetricEntries)
+    }
+
+    func saveBodyMetricGoal(_ goal: BodyMetricGoal) {
+        if let index = bodyMetricGoals.firstIndex(where: { $0.kind == goal.kind }) {
+            bodyMetricGoals[index] = goal
+        } else {
+            bodyMetricGoals.append(goal)
+        }
+
+        storage.saveBodyMetricGoals(bodyMetricGoals)
+    }
+
+    func deleteBodyMetricEntries(kind: BodyMetricKind, at offsets: IndexSet) {
+        let visibleEntries = bodyMetricEntries(for: kind)
+        let idsToDelete = offsets.map { visibleEntries[$0].id }
+        bodyMetricEntries.removeAll { idsToDelete.contains($0.id) }
+        storage.saveBodyMetricEntries(bodyMetricEntries)
+    }
+
     private static func alphaUITestPlan() -> TrainingPlan {
         TrainingPlan(
             name: "胸の日",
@@ -79,11 +132,19 @@ final class AppStore: ObservableObject {
             ]
         )
     }
+
+    private static func defaultBodyMetricGoals() -> [BodyMetricGoal] {
+        BodyMetricKind.allCases.map {
+            BodyMetricGoal(kind: $0)
+        }
+    }
 }
 
 private struct LocalJSONStorage {
     private let plansKey = "gym.training.alpha.plans"
     private let historyKey = "gym.training.alpha.history"
+    private let bodyMetricEntriesKey = "gym.training.alpha.bodyMetricEntries"
+    private let bodyMetricGoalsKey = "gym.training.alpha.bodyMetricGoals"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
@@ -103,9 +164,27 @@ private struct LocalJSONStorage {
         save(history, key: historyKey)
     }
 
+    func loadBodyMetricEntries() -> [BodyMetricEntry] {
+        load([BodyMetricEntry].self, key: bodyMetricEntriesKey)
+    }
+
+    func saveBodyMetricEntries(_ entries: [BodyMetricEntry]) {
+        save(entries, key: bodyMetricEntriesKey)
+    }
+
+    func loadBodyMetricGoals() -> [BodyMetricGoal] {
+        load([BodyMetricGoal].self, key: bodyMetricGoalsKey)
+    }
+
+    func saveBodyMetricGoals(_ goals: [BodyMetricGoal]) {
+        save(goals, key: bodyMetricGoalsKey)
+    }
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: plansKey)
         UserDefaults.standard.removeObject(forKey: historyKey)
+        UserDefaults.standard.removeObject(forKey: bodyMetricEntriesKey)
+        UserDefaults.standard.removeObject(forKey: bodyMetricGoalsKey)
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {

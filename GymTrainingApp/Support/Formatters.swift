@@ -28,5 +28,8 @@ enum AppFormatters {
     static func percent(_ value: Double) -> String {
         (value * 100).formatted(.number.precision(.fractionLength(0))) + "%"
     }
-}
 
+    static func metricValue(_ value: Double, unit: String) -> String {
+        value.formatted(.number.precision(.fractionLength(0...1))) + " " + unit
+    }
+}
