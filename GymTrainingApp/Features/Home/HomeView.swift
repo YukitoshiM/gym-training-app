@@ -12,8 +12,6 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    header
-
                     TodayTrainingCard(plan: nextPlan) {
                         if let nextPlan {
                             activeSession = WorkoutSession(plan: nextPlan)
@@ -35,24 +33,13 @@ struct HomeView: View {
                 }
                 .padding(16)
             }
-            .background(AppTheme.pageBackground)
-            .navigationTitle("ホーム")
+            .background(TrainingBackground())
+            .navigationTitle("Gym Training")
+            .navigationBarTitleDisplayMode(.inline)
             .fullScreenCover(item: $activeSession) { session in
                 WorkoutSessionView(session: session)
             }
         }
-    }
-
-    private var header: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text("Gym Training")
-                .font(.title.bold())
-            Text("今日やること、記録、身体KPIをすぐ確認できます")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.top, 4)
     }
 
     private var latestAchievementText: String {
@@ -80,12 +67,14 @@ private struct TodayTrainingCard: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("次のトレーニング")
+                    Text("TODAY'S SESSION")
                         .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.accent)
+                        .tracking(1.2)
 
                     Text(plan?.name ?? "計画を作成しましょう")
-                        .font(.title2.bold())
+                        .font(.system(size: 30, weight: .black, design: .rounded))
+                        .foregroundStyle(.white)
                         .lineLimit(2)
                 }
 
@@ -93,10 +82,10 @@ private struct TodayTrainingCard: View {
 
                 Text(plan == nil ? "未設定" : "Ready")
                     .font(.caption.bold())
-                    .foregroundStyle(plan == nil ? .secondary : AppTheme.accent)
+                    .foregroundStyle(plan == nil ? .white.opacity(0.65) : AppTheme.ink)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
-                    .background(Color(.tertiarySystemGroupedBackground), in: Capsule())
+                    .background(plan == nil ? Color.white.opacity(0.12) : AppTheme.accent, in: Capsule())
             }
 
             if let plan {
@@ -105,11 +94,11 @@ private struct TodayTrainingCard: View {
                     Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                 }
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.white.opacity(0.72))
 
                 Text(plan.exercises.map { $0.exercise.name }.joined(separator: "、"))
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.white.opacity(0.64))
                     .lineLimit(2)
 
                 Button(action: onStart) {
@@ -123,14 +112,44 @@ private struct TodayTrainingCard: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
                 .tint(AppTheme.accent)
+                .foregroundStyle(AppTheme.ink)
             } else {
                 Text("計画タブで種目とセット目標を登録すると、ここからすぐ開始できます。")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.white.opacity(0.72))
             }
         }
-        .padding(18)
-        .background(AppTheme.cardBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .padding(20)
+        .background {
+            ZStack(alignment: .bottomTrailing) {
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                AppTheme.gymFloor,
+                                Color(red: 0.18, green: 0.22, blue: 0.17)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+
+                VStack(spacing: 8) {
+                    ForEach(0..<5) { _ in
+                        Rectangle()
+                            .fill(Color.white.opacity(0.06))
+                            .frame(width: 150, height: 1)
+                    }
+                }
+                .rotationEffect(.degrees(-28))
+                .offset(x: 18, y: -18)
+            }
+        }
+        .overlay(
+            RoundedRectangle(cornerRadius: 14)
+                .stroke(AppTheme.accent.opacity(0.42), lineWidth: 1)
+        )
+        .shadow(color: AppTheme.gymFloor.opacity(0.28), radius: 24, x: 0, y: 16)
     }
 }
 
@@ -160,7 +179,12 @@ private struct CompactStat: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
-        .background(AppTheme.cardBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .overlay(
+            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+        )
+        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
     }
 }
 
@@ -201,7 +225,12 @@ private struct BodyKPIDashboard: View {
                 }
             }
             .padding(16)
-            .background(AppTheme.cardBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            .overlay(
+                RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                    .stroke(Color.white.opacity(0.65), lineWidth: 1)
+            )
+            .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("bodyMetricListLink")

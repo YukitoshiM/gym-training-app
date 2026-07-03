@@ -28,10 +28,10 @@ struct RootTabView: View {
                     Label("種目", systemImage: "dumbbell")
                 }
         }
+        .tint(AppTheme.accent)
     }
 }
 
 #Preview {
     RootTabView()
 }
-
