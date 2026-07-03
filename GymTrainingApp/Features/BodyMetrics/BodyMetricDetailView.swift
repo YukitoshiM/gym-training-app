@@ -29,6 +29,8 @@ struct BodyMetricDetailView: View {
             Section {
                 CurrentBodyMetricSummary(kind: kind, latestEntry: latestEntry, goal: goal)
             }
+            .listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
 
             Section("推移") {
                 if chartEntries.isEmpty {
@@ -56,6 +58,7 @@ struct BodyMetricDetailView: View {
                     .accessibilityIdentifier("bodyMetricChart-\(kind.rawValue)")
                 }
             }
+            .listRowBackground(AppTheme.cardBackground)
 
             Section("記録") {
                 if entries.isEmpty {
@@ -85,7 +88,10 @@ struct BodyMetricDetailView: View {
                     }
                 }
             }
+            .listRowBackground(AppTheme.cardBackground)
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle(kind.displayName)
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
@@ -120,46 +126,53 @@ private struct CurrentBodyMetricSummary: View {
     let goal: BodyMetricGoal
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                Label(kind.displayName, systemImage: kind.systemImage)
-                    .font(.headline)
+        CardContainer {
+            VStack(alignment: .leading, spacing: 14) {
+                HStack {
+                    Label(kind.displayName, systemImage: kind.systemImage)
+                        .font(.headline)
 
-                Spacer()
+                    Spacer()
 
-                Text(goal.direction.displayName)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
+                    Text(goal.direction.displayName)
+                        .font(.caption.bold())
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 6)
+                        .background(Color(.tertiarySystemGroupedBackground), in: Capsule())
+                }
 
-            if let latestEntry {
-                Text(AppFormatters.metricValue(latestEntry.value, unit: kind.unit))
-                    .font(.largeTitle.bold())
+                if let latestEntry {
+                    Text(AppFormatters.metricValue(latestEntry.value, unit: kind.unit))
+                        .font(.largeTitle.bold())
 
-                if let targetValue = goal.targetValue {
-                    LabeledContent("目標", value: AppFormatters.metricValue(targetValue, unit: kind.unit))
+                    if let targetValue = goal.targetValue {
+                        VStack(spacing: 8) {
+                            LabeledContent("目標", value: AppFormatters.metricValue(targetValue, unit: kind.unit))
 
-                    if let delta = goal.delta(from: latestEntry.value) {
-                        LabeledContent("目標差", value: deltaText(delta))
-                    }
+                            if let delta = goal.delta(from: latestEntry.value) {
+                                LabeledContent("目標差", value: deltaText(delta))
+                            }
 
-                    if let rate = goal.achievementRate(from: latestEntry.value) {
-                        LabeledContent("達成率", value: AppFormatters.percent(rate))
+                            if let rate = goal.achievementRate(from: latestEntry.value) {
+                                LabeledContent("達成率", value: AppFormatters.percent(rate))
+                            }
+                        }
+                        .font(.subheadline)
+                    } else {
+                        Text("目標値を設定すると、差分と達成率を表示します。")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
                     }
                 } else {
-                    Text("目標値を設定すると、差分と達成率を表示します。")
+                    Text("未記録")
+                        .font(.title2.bold())
+                    Text("最初の値を記録すると、推移と目標差分を確認できます。")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
-            } else {
-                Text("未記録")
-                    .font(.title2.bold())
-                Text("最初の値を記録すると、推移と目標差分を確認できます。")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
             }
         }
-        .padding(.vertical, 6)
     }
 
     private func deltaText(_ delta: Double) -> String {

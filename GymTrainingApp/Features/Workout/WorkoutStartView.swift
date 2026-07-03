@@ -20,24 +20,43 @@ struct WorkoutStartView: View {
                                 Button {
                                     activeSession = WorkoutSession(plan: plan)
                                 } label: {
-                                    VStack(alignment: .leading, spacing: 6) {
-                                        Text(plan.name)
-                                            .font(.headline)
+                                    CardContainer {
+                                        HStack(spacing: 12) {
+                                            IconBadge(systemImage: "play.fill", tint: AppTheme.accent)
 
-                                        HStack(spacing: 10) {
-                                            Label("\(plan.exercises.count)種目", systemImage: "dumbbell")
-                                            Label("\(plan.totalSetCount)セット", systemImage: "checklist")
+                                            VStack(alignment: .leading, spacing: 6) {
+                                                Text(plan.name)
+                                                    .font(.headline)
+
+                                                HStack(spacing: 10) {
+                                                    Label("\(plan.exercises.count)種目", systemImage: "dumbbell")
+                                                    Label("\(plan.totalSetCount)セット", systemImage: "checklist")
+                                                }
+                                                .font(.caption)
+                                                .foregroundStyle(.secondary)
+                                            }
+
+                                            Spacer()
+
+                                            Text("開始")
+                                                .font(.caption.bold())
+                                                .foregroundStyle(AppTheme.accent)
+                                                .padding(.horizontal, 10)
+                                                .padding(.vertical, 6)
+                                                .background(AppTheme.accent.opacity(0.12), in: Capsule())
                                         }
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
                                     }
-                                    .padding(.vertical, 4)
                                 }
                                 .buttonStyle(.plain)
+                                .listRowSeparator(.hidden)
+                                .listRowBackground(Color.clear)
                                 .accessibilityIdentifier("startWorkout-\(plan.name)")
                             }
                         }
                     }
+                    .listStyle(.plain)
+                    .scrollContentBackground(.hidden)
+                    .background(AppTheme.pageBackground)
                 }
             }
             .navigationTitle("記録")

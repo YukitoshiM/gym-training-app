@@ -8,13 +8,13 @@ struct WorkoutSummaryView: View {
         NavigationStack {
             List {
                 Section {
-                    HStack {
-                        SummaryMetric(title: "達成率", value: AppFormatters.percent(session.achievementRate))
-                        Spacer()
-                        SummaryMetric(title: "総ボリューム", value: AppFormatters.volume(session.totalVolume))
+                    HStack(spacing: 10) {
+                        MetricPill(title: "達成率", value: AppFormatters.percent(session.achievementRate), systemImage: "target", tint: AppTheme.accent)
+                        MetricPill(title: "総ボリューム", value: AppFormatters.volume(session.totalVolume), systemImage: "scalemass", tint: AppTheme.orange)
                     }
-                    .padding(.vertical, 8)
                 }
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
 
                 Section("種目別") {
                     ForEach(session.exercises) { exercise in
@@ -33,9 +33,13 @@ struct WorkoutSummaryView: View {
                                 .font(.headline)
                                 .foregroundStyle(exercise.isSkipped ? .secondary : .primary)
                         }
+                        .padding(.vertical, 6)
                     }
                 }
+                .listRowBackground(AppTheme.cardBackground)
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("完了")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -72,4 +76,3 @@ struct SummaryMetric: View {
         onClose: {}
     )
 }
-

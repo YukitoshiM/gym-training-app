@@ -16,6 +16,8 @@ struct BodyMetricListView: View {
                             goal: appStore.bodyMetricGoal(for: kind)
                         )
                     }
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
                     .accessibilityIdentifier("bodyMetricRow-\(kind.rawValue)")
                 }
             }
@@ -26,6 +28,9 @@ struct BodyMetricListView: View {
             }
             .foregroundStyle(.secondary)
         }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("身体KPI")
     }
 }
@@ -36,57 +41,64 @@ private struct BodyMetricRow: View {
     let goal: BodyMetricGoal
 
     var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: kind.systemImage)
-                .font(.title3)
-                .foregroundStyle(Color.accentColor)
-                .frame(width: 30)
+        CardContainer {
+            HStack(spacing: 12) {
+                IconBadge(systemImage: kind.systemImage, tint: tint)
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(kind.displayName)
-                    .font(.headline)
-
-                if let latestEntry {
-                    Text(AppFormatters.shortDate.string(from: latestEntry.recordedAt))
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                } else {
-                    Text("未記録")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-            }
-
-            Spacer()
-
-            VStack(alignment: .trailing, spacing: 4) {
-                if let latestEntry {
-                    Text(AppFormatters.metricValue(latestEntry.value, unit: kind.unit))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(kind.displayName)
                         .font(.headline)
-                } else {
-                    Text("-")
-                        .font(.headline)
-                        .foregroundStyle(.secondary)
+
+                    if let latestEntry {
+                        Text(AppFormatters.shortDate.string(from: latestEntry.recordedAt))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Text("未記録")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                 }
 
-                if let latestEntry,
-                   let delta = goal.delta(from: latestEntry.value) {
-                    Text(deltaText(delta))
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                } else {
-                    Text("目標未設定")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                Spacer()
+
+                VStack(alignment: .trailing, spacing: 4) {
+                    if let latestEntry {
+                        Text(AppFormatters.metricValue(latestEntry.value, unit: kind.unit))
+                            .font(.headline)
+                    } else {
+                        Text("-")
+                            .font(.headline)
+                            .foregroundStyle(.secondary)
+                    }
+
+                    if let latestEntry,
+                       let delta = goal.delta(from: latestEntry.value) {
+                        Text(deltaText(delta))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Text("目標未設定")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 3)
     }
 
     private func deltaText(_ delta: Double) -> String {
         let sign = delta > 0 ? "+" : ""
         return "目標差 \(sign)\(AppFormatters.metricValue(delta, unit: kind.unit))"
+    }
+
+    private var tint: Color {
+        switch kind {
+        case .bodyWeight: AppTheme.blue
+        case .waist: AppTheme.orange
+        case .bodyFatPercentage: AppTheme.purple
+        }
     }
 }
 

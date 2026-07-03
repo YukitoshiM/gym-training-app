@@ -18,10 +18,15 @@ struct HistoryListView: View {
                             NavigationLink(value: session) {
                                 HistoryRow(session: session)
                             }
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
                             .accessibilityIdentifier("historyRow-\(session.title)")
                         }
                         .onDelete(perform: appStore.deleteWorkoutHistory)
                     }
+                    .listStyle(.plain)
+                    .scrollContentBackground(.hidden)
+                    .background(AppTheme.pageBackground)
                 }
             }
             .navigationTitle("履歴")
@@ -36,30 +41,38 @@ private struct HistoryRow: View {
     let session: WorkoutSession
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            HStack {
-                Text(session.title)
-                    .font(.headline)
+        CardContainer {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(session.title)
+                            .font(.headline)
+                        Text(AppFormatters.shortDateTime.string(from: session.startedAt))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
 
-                Spacer()
+                    Spacer()
 
-                Text(AppFormatters.percent(session.achievementRate))
-                    .font(.subheadline.bold())
-            }
+                    Text(AppFormatters.percent(session.achievementRate))
+                        .font(.headline.bold())
+                        .foregroundStyle(AppTheme.accent)
+                }
 
-            HStack(spacing: 10) {
-                Label(AppFormatters.shortDateTime.string(from: session.startedAt), systemImage: "calendar")
-                Label(AppFormatters.volume(session.totalVolume), systemImage: "scalemass")
-            }
-            .font(.caption)
-            .foregroundStyle(.secondary)
-
-            Text(session.exercises.map { $0.exercise.name }.joined(separator: "、"))
+                HStack(spacing: 10) {
+                    Label(AppFormatters.volume(session.totalVolume), systemImage: "scalemass")
+                    Label("\(session.exercises.count)種目", systemImage: "dumbbell")
+                }
                 .font(.caption)
                 .foregroundStyle(.secondary)
-                .lineLimit(1)
+
+                Text(session.exercises.map { $0.exercise.name }.joined(separator: "、"))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+            }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 3)
     }
 }
 

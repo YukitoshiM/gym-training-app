@@ -31,9 +31,14 @@ struct PlanListView: View {
                                 PlanRow(plan: plan)
                             }
                             .buttonStyle(.plain)
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
                         }
                         .onDelete(perform: appStore.deletePlans)
                     }
+                    .listStyle(.plain)
+                    .scrollContentBackground(.hidden)
+                    .background(AppTheme.pageBackground)
                 }
             }
             .navigationTitle("計画")
@@ -62,23 +67,35 @@ private struct PlanRow: View {
     let plan: TrainingPlan
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(plan.name)
-                .font(.headline)
+        CardContainer {
+            HStack(spacing: 12) {
+                IconBadge(systemImage: "list.bullet.rectangle", tint: AppTheme.blue)
 
-            HStack(spacing: 10) {
-                Label("\(plan.exercises.count)種目", systemImage: "dumbbell")
-                Label("\(plan.totalSetCount)セット", systemImage: "checklist")
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(plan.name)
+                        .font(.headline)
+
+                    Text(plan.exercises.map { $0.exercise.name }.joined(separator: "、"))
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+
+                    HStack(spacing: 10) {
+                        Label("\(plan.exercises.count)種目", systemImage: "dumbbell")
+                        Label("\(plan.totalSetCount)セット", systemImage: "checklist")
+                    }
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(.caption.bold())
+                    .foregroundStyle(.tertiary)
             }
-            .font(.subheadline)
-            .foregroundStyle(.secondary)
-
-            Text(plan.exercises.map { $0.exercise.name }.joined(separator: "、"))
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .lineLimit(1)
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 3)
     }
 }
 

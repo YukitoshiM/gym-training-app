@@ -18,27 +18,23 @@ struct WorkoutSessionView: View {
         NavigationStack {
             List {
                 Section {
-                    HStack {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("全体達成率")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                            Text(AppFormatters.percent(session.achievementRate))
-                                .font(.title2.bold())
-                        }
-
-                        Spacer()
-
-                        VStack(alignment: .trailing, spacing: 4) {
-                            Text("総ボリューム")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                            Text(AppFormatters.volume(session.totalVolume))
-                                .font(.title2.bold())
-                        }
+                    HStack(spacing: 10) {
+                        MetricPill(
+                            title: "全体達成率",
+                            value: AppFormatters.percent(session.achievementRate),
+                            systemImage: "target",
+                            tint: AppTheme.accent
+                        )
+                        MetricPill(
+                            title: "総ボリューム",
+                            value: AppFormatters.volume(session.totalVolume),
+                            systemImage: "scalemass",
+                            tint: AppTheme.orange
+                        )
                     }
-                    .padding(.vertical, 6)
                 }
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
 
                 ForEach($session.exercises) { $workoutExercise in
                     WorkoutExerciseSection(workoutExercise: $workoutExercise)
@@ -51,7 +47,12 @@ struct WorkoutSessionView: View {
                         Label("種目を追加", systemImage: "plus.circle")
                     }
                 }
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
             }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle(session.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -130,38 +131,42 @@ private struct WorkoutExerciseSection: View {
 
     var body: some View {
         Section {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(workoutExercise.exercise.name)
-                        .font(.headline)
+            CardContainer {
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(workoutExercise.exercise.name)
+                                .font(.headline)
 
-                    Text("\(workoutExercise.exercise.primaryMuscle.displayName)・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+                            Text("\(workoutExercise.exercise.primaryMuscle.displayName)・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
 
-                Spacer()
+                        Spacer()
 
-                Toggle("スキップ", isOn: $workoutExercise.isSkipped)
-                    .labelsHidden()
-            }
+                        Toggle("スキップ", isOn: $workoutExercise.isSkipped)
+                            .labelsHidden()
+                    }
 
-            if workoutExercise.isSkipped {
-                Label("この種目はスキップされました", systemImage: "forward.end")
-                    .foregroundStyle(.secondary)
-            } else {
-                ForEach($workoutExercise.sets) { $set in
-                    WorkoutSetRow(set: $set) {
-                        removeSet(set)
+                    if workoutExercise.isSkipped {
+                        Label("この種目はスキップされました", systemImage: "forward.end")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach($workoutExercise.sets) { $set in
+                            WorkoutSetRow(set: $set) {
+                                removeSet(set)
+                            }
+                        }
+
+                        Button {
+                            addSet()
+                        } label: {
+                            Label("セットを追加", systemImage: "plus")
+                        }
+                        .buttonStyle(.borderless)
                     }
                 }
-
-                Button {
-                    addSet()
-                } label: {
-                    Label("セットを追加", systemImage: "plus")
-                }
-                .buttonStyle(.borderless)
             }
         }
     }
@@ -247,7 +252,8 @@ private struct WorkoutSetRow: View {
             }
             .font(.subheadline)
         }
-        .padding(.vertical, 4)
+        .padding(10)
+        .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
     }
 }
 
