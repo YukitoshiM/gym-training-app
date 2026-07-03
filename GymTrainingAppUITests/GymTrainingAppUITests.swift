@@ -2,6 +2,13 @@ import XCTest
 
 final class GymTrainingAppUITests: XCTestCase {
     private var app: XCUIApplication!
+    private static let calendarDayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
 
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -66,6 +73,13 @@ final class GymTrainingAppUITests: XCTestCase {
 
     private func verifyHistory() {
         app.tabBars.buttons["履歴"].tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["historyCalendar"].waitForExistence(timeout: 5))
+
+        let todayID = Self.calendarDayFormatter.string(from: Date())
+        let todayCalendarButton = app.buttons["historyCalendarDay-\(todayID)"]
+        XCTAssertTrue(todayCalendarButton.waitForExistence(timeout: 5))
+        todayCalendarButton.tap()
 
         let historyRow = app.descendants(matching: .any)["historyRow-胸の日"]
         XCTAssertTrue(historyRow.waitForExistence(timeout: 5))
