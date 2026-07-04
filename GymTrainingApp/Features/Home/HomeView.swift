@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var appStore: AppStore
     @State private var activeSession: WorkoutSession?
+    @State private var isShowingGoalPicker = false
 
     private var nextPlan: TrainingPlan? {
         appStore.plans.first
@@ -12,6 +13,10 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    GoalActionCard(goalType: appStore.userProfile.goalType) {
+                        isShowingGoalPicker = true
+                    }
+
                     TodayTrainingCard(plan: nextPlan) {
                         if let nextPlan {
                             activeSession = WorkoutSession(plan: nextPlan)
@@ -39,6 +44,12 @@ struct HomeView: View {
             .fullScreenCover(item: $activeSession) { session in
                 WorkoutSessionView(session: session)
             }
+            .sheet(isPresented: $isShowingGoalPicker) {
+                GoalPickerView(selectedGoal: appStore.userProfile.goalType) { goalType in
+                    appStore.saveUserProfile(UserProfile(goalType: goalType))
+                    isShowingGoalPicker = false
+                }
+            }
         }
     }
 
@@ -55,6 +66,103 @@ struct HomeView: View {
         case .bodyWeight: AppTheme.blue
         case .waist: AppTheme.orange
         case .bodyFatPercentage: AppTheme.purple
+        }
+    }
+}
+
+private struct GoalActionCard: View {
+    let goalType: GoalType
+    let onEdit: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("BODYMAKE MODE")
+                        .font(.caption.bold())
+                        .foregroundStyle(AppTheme.accent)
+                        .tracking(1)
+
+                    Text(goalType.displayName)
+                        .font(.title2.bold())
+                }
+
+                Spacer()
+
+                Button(action: onEdit) {
+                    Image(systemName: "slider.horizontal.3")
+                        .frame(width: 34, height: 34)
+                }
+                .buttonStyle(.borderless)
+                .accessibilityLabel("目的を変更")
+                .accessibilityIdentifier("editGoalButton")
+            }
+
+            Label(goalType.shortAction, systemImage: "checkmark.seal.fill")
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(AppTheme.ink)
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text(goalType.insightTitle)
+                    .font(.caption.bold())
+                    .foregroundStyle(.secondary)
+
+                Text(goalType.insightBody)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(16)
+        .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .overlay(
+            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+        )
+        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        .accessibilityIdentifier("goalActionCard")
+    }
+}
+
+private struct GoalPickerView: View {
+    let selectedGoal: GoalType
+    let onSelect: (GoalType) -> Void
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    ForEach(GoalType.allCases) { goalType in
+                        Button {
+                            onSelect(goalType)
+                        } label: {
+                            HStack(alignment: .top, spacing: 12) {
+                                Image(systemName: selectedGoal == goalType ? "checkmark.circle.fill" : "circle")
+                                    .foregroundStyle(selectedGoal == goalType ? AppTheme.accent : .secondary)
+
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(goalType.displayName)
+                                        .font(.headline)
+                                        .foregroundStyle(.primary)
+
+                                    Text(goalType.shortAction)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                            .padding(.vertical, 4)
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("goalOption-\(goalType.rawValue)")
+                    }
+                } header: {
+                    Text("目的モード")
+                } footer: {
+                    Text("目的に合わせてホームの確認ポイントと次にやることを切り替えます。")
+                }
+            }
+            .navigationTitle("目的を選択")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

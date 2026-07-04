@@ -2,6 +2,7 @@ import SwiftUI
 
 @MainActor
 final class AppStore: ObservableObject {
+    @Published private(set) var userProfile: UserProfile = .default
     @Published private(set) var plans: [TrainingPlan] = []
     @Published private(set) var workoutHistory: [WorkoutSession] = []
     @Published private(set) var bodyMetricEntries: [BodyMetricEntry] = []
@@ -19,8 +20,10 @@ final class AppStore: ObservableObject {
             storage.saveWorkoutHistory([])
             storage.saveBodyMetricEntries([])
             storage.saveBodyMetricGoals(Self.defaultBodyMetricGoals())
+            storage.saveUserProfile(.default)
         }
 
+        userProfile = storage.loadUserProfile()
         plans = storage.loadPlans()
         workoutHistory = storage.loadWorkoutHistory()
         bodyMetricEntries = storage.loadBodyMetricEntries()
@@ -30,6 +33,11 @@ final class AppStore: ObservableObject {
             bodyMetricGoals = Self.defaultBodyMetricGoals()
             storage.saveBodyMetricGoals(bodyMetricGoals)
         }
+    }
+
+    func saveUserProfile(_ profile: UserProfile) {
+        userProfile = profile
+        storage.saveUserProfile(profile)
     }
 
     func savePlan(_ plan: TrainingPlan) {
@@ -156,12 +164,21 @@ final class AppStore: ObservableObject {
 }
 
 private struct LocalJSONStorage {
+    private let userProfileKey = "gym.training.alpha.userProfile"
     private let plansKey = "gym.training.alpha.plans"
     private let historyKey = "gym.training.alpha.history"
     private let bodyMetricEntriesKey = "gym.training.alpha.bodyMetricEntries"
     private let bodyMetricGoalsKey = "gym.training.alpha.bodyMetricGoals"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
+
+    func loadUserProfile() -> UserProfile {
+        load(UserProfile.self, key: userProfileKey) ?? .default
+    }
+
+    func saveUserProfile(_ profile: UserProfile) {
+        save(profile, key: userProfileKey)
+    }
 
     func loadPlans() -> [TrainingPlan] {
         load([TrainingPlan].self, key: plansKey)
@@ -196,6 +213,7 @@ private struct LocalJSONStorage {
     }
 
     func reset() {
+        UserDefaults.standard.removeObject(forKey: userProfileKey)
         UserDefaults.standard.removeObject(forKey: plansKey)
         UserDefaults.standard.removeObject(forKey: historyKey)
         UserDefaults.standard.removeObject(forKey: bodyMetricEntriesKey)
@@ -206,6 +224,15 @@ private struct LocalJSONStorage {
         guard let data = UserDefaults.standard.data(forKey: key),
               let value = try? decoder.decode(type, from: data) else {
             return []
+        }
+
+        return value
+    }
+
+    private func load<T: Decodable>(_ type: T.Type, key: String) -> T? {
+        guard let data = UserDefaults.standard.data(forKey: key),
+              let value = try? decoder.decode(type, from: data) else {
+            return nil
         }
 
         return value

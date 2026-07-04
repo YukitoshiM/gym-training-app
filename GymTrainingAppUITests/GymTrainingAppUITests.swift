@@ -45,6 +45,23 @@ final class GymTrainingAppUITests: XCTestCase {
         copyButton.tap()
     }
 
+    func testGoalModeSelection() throws {
+        app.tabBars.buttons["ホーム"].tap()
+
+        let goalCard = app.buttons["goalActionCard"]
+        XCTAssertTrue(goalCard.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["体型改善"].exists)
+
+        goalCard.tap()
+
+        let dietOption = app.buttons["goalOption-diet"]
+        XCTAssertTrue(dietOption.waitForExistence(timeout: 5))
+        dietOption.tap()
+
+        XCTAssertTrue(app.staticTexts["ダイエット"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["体重・腹囲・食事を記録する"].exists)
+    }
+
     private func verifySeededPlan() {
         app.tabBars.buttons["計画"].tap()
 
