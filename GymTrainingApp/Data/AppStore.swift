@@ -79,6 +79,21 @@ final class AppStore: ObservableObject {
         storage.saveWorkoutHistory(workoutHistory)
     }
 
+    func latestCompletedSets(for exercise: Exercise) -> [WorkoutSet] {
+        for session in workoutHistory {
+            guard let workoutExercise = session.exercises.first(where: { $0.exercise.name == exercise.name }) else {
+                continue
+            }
+
+            let completedSets = workoutExercise.sets.filter(\.isCompleted)
+            if !completedSets.isEmpty {
+                return completedSets.sorted { $0.setOrder < $1.setOrder }
+            }
+        }
+
+        return []
+    }
+
     func bodyMetricEntries(for kind: BodyMetricKind) -> [BodyMetricEntry] {
         bodyMetricEntries
             .filter { $0.kind == kind }

@@ -34,6 +34,17 @@ final class GymTrainingAppUITests: XCTestCase {
         verifyBodyMetricSummary()
     }
 
+    func testPreviousPerformanceCopy() throws {
+        completeWorkoutFromPlan()
+        startWorkoutFromPlan()
+
+        XCTAssertTrue(app.staticTexts["前回 20 kg × 10回"].waitForExistence(timeout: 5))
+
+        let copyButton = app.buttons["copyPreviousSet-1"]
+        XCTAssertTrue(copyButton.waitForExistence(timeout: 5))
+        copyButton.tap()
+    }
+
     private func verifySeededPlan() {
         app.tabBars.buttons["計画"].tap()
 
@@ -42,14 +53,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func completeWorkoutFromPlan() {
-        app.tabBars.buttons["記録"].tap()
-
-        let planButton = app.descendants(matching: .any)["startWorkout-胸の日"]
-        XCTAssertTrue(planButton.waitForExistence(timeout: 5))
-        planButton.tap()
-
-        XCTAssertTrue(app.navigationBars["胸の日"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
+        startWorkoutFromPlan()
 
         for index in 1...3 {
             let toggle = app.switches["completeSetToggle-\(index)"]
@@ -69,6 +73,17 @@ final class GymTrainingAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
 
         app.buttons["閉じる"].tap()
+    }
+
+    private func startWorkoutFromPlan() {
+        app.tabBars.buttons["記録"].tap()
+
+        let planButton = app.descendants(matching: .any)["startWorkout-胸の日"]
+        XCTAssertTrue(planButton.waitForExistence(timeout: 5))
+        planButton.tap()
+
+        XCTAssertTrue(app.navigationBars["胸の日"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
     }
 
     private func verifyHistory() {

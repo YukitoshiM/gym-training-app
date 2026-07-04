@@ -127,7 +127,12 @@ struct WorkoutSessionView: View {
 }
 
 private struct WorkoutExerciseSection: View {
+    @EnvironmentObject private var appStore: AppStore
     @Binding var workoutExercise: WorkoutExercise
+
+    private var previousSets: [WorkoutSet] {
+        appStore.latestCompletedSets(for: workoutExercise.exercise)
+    }
 
     var body: some View {
         Section {
@@ -154,7 +159,10 @@ private struct WorkoutExerciseSection: View {
                             .foregroundStyle(.secondary)
                     } else {
                         ForEach($workoutExercise.sets) { $set in
-                            WorkoutSetRow(set: $set) {
+                            WorkoutSetRow(
+                                set: $set,
+                                previousSet: previousSet(for: set)
+                            ) {
                                 removeSet(set)
                             }
                         }
@@ -185,6 +193,10 @@ private struct WorkoutExerciseSection: View {
         )
     }
 
+    private func previousSet(for set: WorkoutSet) -> WorkoutSet? {
+        previousSets.first { $0.setOrder == set.setOrder }
+    }
+
     private func removeSet(_ set: WorkoutSet) {
         guard workoutExercise.sets.count > 1 else {
             return
@@ -199,6 +211,7 @@ private struct WorkoutExerciseSection: View {
 
 private struct WorkoutSetRow: View {
     @Binding var set: WorkoutSet
+    let previousSet: WorkoutSet?
     let onDelete: () -> Void
 
     private var deltaText: String {
@@ -211,6 +224,29 @@ private struct WorkoutSetRow: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            if let previousSet {
+                HStack {
+                    Label(previousText(for: previousSet), systemImage: "clock.arrow.circlepath")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+
+                    Spacer()
+
+                    Button {
+                        copyPrevious(previousSet)
+                    } label: {
+                        Label("コピー", systemImage: "doc.on.doc")
+                            .labelStyle(.titleAndIcon)
+                    }
+                    .font(.caption.bold())
+                    .buttonStyle(.borderless)
+                    .accessibilityIdentifier("copyPreviousSet-\(set.setOrder)")
+                }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 8)
+                .background(AppTheme.accent.opacity(0.12), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            }
+
             HStack {
                 Text("\(set.setOrder)")
                     .font(.headline)
@@ -254,6 +290,15 @@ private struct WorkoutSetRow: View {
         }
         .padding(10)
         .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+    }
+
+    private func previousText(for previousSet: WorkoutSet) -> String {
+        "前回 \(AppFormatters.weight(previousSet.actualWeight)) × \(previousSet.actualReps)回"
+    }
+
+    private func copyPrevious(_ previousSet: WorkoutSet) {
+        set.actualWeight = previousSet.actualWeight
+        set.actualReps = previousSet.actualReps
     }
 }
 
