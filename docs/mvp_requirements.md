@@ -2,7 +2,7 @@
 
 作成日: 2026-07-01  
 対象: iPhoneアプリ MVP  
-参照資料: `gym_training_app_user_stories_mvp.md`, `docs/gym_training_app_design_mvp.md`, `docs/alpha_scope.md`, 筋トレMEMO公開ストア情報
+参照資料: `gym_training_app_user_stories_mvp.md`, `docs/gym_training_app_design_mvp.md`, `docs/alpha_scope.md`, `docs/competitive_research.md`
 
 ## 1. MVPの目的
 
@@ -127,9 +127,9 @@ MVPに含めたいが、Core完成後に追加する範囲。
 | 共有 | SNS共有、友人フォロー |
 | 課金 | 有料プラン、買い切り、サブスクリプション |
 
-## 7. 筋トレMEMO参考からの取り込み方針
+## 7. 競合アプリ参考からの取り込み方針
 
-筋トレMEMOの公開ストア情報では、重量・レップス記録、グラフ分析、有酸素記録、種目別履歴、RM自動計算、部位別カスタム、最後のトレーニングからの経過時間、セット間タイマー、前回履歴コピーが主要機能として確認できる。
+筋トレMEMO、Strong、Hevy、FitNotes、JEFIT、Fitbod、StrongLifts、Burnfitの公開情報を参考にする。詳細は `docs/competitive_research.md` に整理する。
 
 本アプリのMVPでは、以下の順で取り込む。理由は、ジム中の入力負荷を下げ、振り返りの価値を上げるため。
 
@@ -139,9 +139,11 @@ MVPに含めたいが、Core完成後に追加する範囲。
 | 2 | 種目別履歴 | 次回重量判断に直結する | 未実装 |
 | 3 | 週次ボリューム分析 | 疲労管理と継続判断に使える | 未実装 |
 | 4 | セット間タイマー | ジム中の体験価値が高い | 未実装 |
-| 5 | RM自動計算 | 中上級者には有用だがCore後でよい | 未実装 |
-| 6 | kg/lb切替 | 海外利用や器具単位差に対応できる | 未実装 |
-| 7 | SNS共有 | 成長後の拡張。MVPでは不要 | 対象外 |
+| 5 | カスタム種目 | プリセット不足を補える | 未実装 |
+| 6 | 自己ベスト/PR検出 | 成長実感を作れる | 未実装 |
+| 7 | RM自動計算 | 中上級者には有用だがCore後でよい | 未実装 |
+| 8 | kg/lb切替 | 海外利用や器具単位差に対応できる | 未実装 |
+| 9 | SNS共有/コミュニティ | 成長後の拡張。MVPでは不要 | 対象外 |
 
 ## 8. 次に作るべきIssue候補
 
