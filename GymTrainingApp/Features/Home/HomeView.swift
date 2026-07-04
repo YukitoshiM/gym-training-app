@@ -29,6 +29,11 @@ struct HomeView: View {
                         CompactStat(title: "直近", value: latestAchievementText, suffix: "", tint: AppTheme.accent)
                     }
 
+                    DailyRecordStatusCard(
+                        mealCount: appStore.mealEntries().count,
+                        bodyPhotoCount: appStore.bodyPhotoEntries().count
+                    )
+
                     BodyKPIDashboard(
                         kinds: BodyMetricKind.allCases,
                         latestEntry: { appStore.latestBodyMetricEntry(for: $0) },
@@ -342,6 +347,88 @@ private struct BodyKPIDashboard: View {
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("bodyMetricListLink")
+    }
+}
+
+private struct DailyRecordStatusCard: View {
+    let mealCount: Int
+    let bodyPhotoCount: Int
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("今日の記録")
+                        .font(.headline)
+                    Text("AIなしでも手動で残せる項目です")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+            }
+
+            HStack(spacing: 10) {
+                NavigationLink {
+                    MealListView()
+                } label: {
+                    DailyRecordButton(
+                        title: "食事",
+                        value: "\(mealCount)件",
+                        systemImage: "fork.knife",
+                        tint: AppTheme.orange
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("mealListLink")
+
+                NavigationLink {
+                    BodyPhotoListView()
+                } label: {
+                    DailyRecordButton(
+                        title: "体型写真",
+                        value: "\(bodyPhotoCount)件",
+                        systemImage: "camera",
+                        tint: AppTheme.purple
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("bodyPhotoListLink")
+            }
+        }
+        .padding(16)
+        .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .overlay(
+            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+        )
+        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+    }
+}
+
+private struct DailyRecordButton: View {
+    let title: String
+    let value: String
+    let systemImage: String
+    let tint: Color
+
+    var body: some View {
+        HStack(spacing: 10) {
+            IconBadge(systemImage: systemImage, tint: tint)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppTheme.ink)
+                Text(value)
+                    .font(.caption.bold())
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+        }
+        .padding(10)
+        .background(tint.opacity(0.08), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
     }
 }
 

@@ -7,6 +7,8 @@ final class AppStore: ObservableObject {
     @Published private(set) var workoutHistory: [WorkoutSession] = []
     @Published private(set) var bodyMetricEntries: [BodyMetricEntry] = []
     @Published private(set) var bodyMetricGoals: [BodyMetricGoal] = []
+    @Published private(set) var mealEntries: [MealEntry] = []
+    @Published private(set) var bodyPhotoEntries: [BodyPhotoEntry] = []
 
     private let storage = LocalJSONStorage()
 
@@ -20,6 +22,8 @@ final class AppStore: ObservableObject {
             storage.saveWorkoutHistory([])
             storage.saveBodyMetricEntries([])
             storage.saveBodyMetricGoals(Self.defaultBodyMetricGoals())
+            storage.saveMealEntries([])
+            storage.saveBodyPhotoEntries([])
             storage.saveUserProfile(.default)
         }
 
@@ -28,6 +32,8 @@ final class AppStore: ObservableObject {
         workoutHistory = storage.loadWorkoutHistory()
         bodyMetricEntries = storage.loadBodyMetricEntries()
         bodyMetricGoals = storage.loadBodyMetricGoals()
+        mealEntries = storage.loadMealEntries()
+        bodyPhotoEntries = storage.loadBodyPhotoEntries()
 
         if bodyMetricGoals.isEmpty {
             bodyMetricGoals = Self.defaultBodyMetricGoals()
@@ -144,6 +150,54 @@ final class AppStore: ObservableObject {
         storage.saveBodyMetricEntries(bodyMetricEntries)
     }
 
+    func mealEntries(on date: Date = Date()) -> [MealEntry] {
+        mealEntries
+            .filter { Calendar.current.isDate($0.recordedAt, inSameDayAs: date) }
+            .sorted { $0.recordedAt > $1.recordedAt }
+    }
+
+    func saveMealEntry(_ entry: MealEntry) {
+        if let index = mealEntries.firstIndex(where: { $0.id == entry.id }) {
+            mealEntries[index] = entry
+        } else {
+            mealEntries.append(entry)
+        }
+
+        mealEntries.sort { $0.recordedAt > $1.recordedAt }
+        storage.saveMealEntries(mealEntries)
+    }
+
+    func deleteMealEntries(at offsets: IndexSet) {
+        for offset in offsets.sorted(by: >) {
+            mealEntries.remove(at: offset)
+        }
+        storage.saveMealEntries(mealEntries)
+    }
+
+    func bodyPhotoEntries(on date: Date = Date()) -> [BodyPhotoEntry] {
+        bodyPhotoEntries
+            .filter { Calendar.current.isDate($0.recordedAt, inSameDayAs: date) }
+            .sorted { $0.recordedAt > $1.recordedAt }
+    }
+
+    func saveBodyPhotoEntry(_ entry: BodyPhotoEntry) {
+        if let index = bodyPhotoEntries.firstIndex(where: { $0.id == entry.id }) {
+            bodyPhotoEntries[index] = entry
+        } else {
+            bodyPhotoEntries.append(entry)
+        }
+
+        bodyPhotoEntries.sort { $0.recordedAt > $1.recordedAt }
+        storage.saveBodyPhotoEntries(bodyPhotoEntries)
+    }
+
+    func deleteBodyPhotoEntries(at offsets: IndexSet) {
+        for offset in offsets.sorted(by: >) {
+            bodyPhotoEntries.remove(at: offset)
+        }
+        storage.saveBodyPhotoEntries(bodyPhotoEntries)
+    }
+
     private static func alphaUITestPlan() -> TrainingPlan {
         TrainingPlan(
             name: "胸の日",
@@ -169,6 +223,8 @@ private struct LocalJSONStorage {
     private let historyKey = "gym.training.alpha.history"
     private let bodyMetricEntriesKey = "gym.training.alpha.bodyMetricEntries"
     private let bodyMetricGoalsKey = "gym.training.alpha.bodyMetricGoals"
+    private let mealEntriesKey = "gym.training.alpha.mealEntries"
+    private let bodyPhotoEntriesKey = "gym.training.alpha.bodyPhotoEntries"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
@@ -212,12 +268,30 @@ private struct LocalJSONStorage {
         save(goals, key: bodyMetricGoalsKey)
     }
 
+    func loadMealEntries() -> [MealEntry] {
+        load([MealEntry].self, key: mealEntriesKey)
+    }
+
+    func saveMealEntries(_ entries: [MealEntry]) {
+        save(entries, key: mealEntriesKey)
+    }
+
+    func loadBodyPhotoEntries() -> [BodyPhotoEntry] {
+        load([BodyPhotoEntry].self, key: bodyPhotoEntriesKey)
+    }
+
+    func saveBodyPhotoEntries(_ entries: [BodyPhotoEntry]) {
+        save(entries, key: bodyPhotoEntriesKey)
+    }
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: userProfileKey)
         UserDefaults.standard.removeObject(forKey: plansKey)
         UserDefaults.standard.removeObject(forKey: historyKey)
         UserDefaults.standard.removeObject(forKey: bodyMetricEntriesKey)
         UserDefaults.standard.removeObject(forKey: bodyMetricGoalsKey)
+        UserDefaults.standard.removeObject(forKey: mealEntriesKey)
+        UserDefaults.standard.removeObject(forKey: bodyPhotoEntriesKey)
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {

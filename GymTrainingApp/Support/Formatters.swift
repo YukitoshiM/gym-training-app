@@ -25,6 +25,14 @@ enum AppFormatters {
         value.formatted(.number.precision(.fractionLength(0))) + " kg"
     }
 
+    static func calories(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(0))) + " kcal"
+    }
+
+    static func grams(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(0...1))) + "g"
+    }
+
     static func percent(_ value: Double) -> String {
         (value * 100).formatted(.number.precision(.fractionLength(0))) + "%"
     }

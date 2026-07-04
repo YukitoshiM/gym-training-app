@@ -1,5 +1,6 @@
 import XCTest
 
+@MainActor
 final class GymTrainingAppUITests: XCTestCase {
     private var app: XCUIApplication!
     private static let calendarDayFormatter: DateFormatter = {
@@ -60,6 +61,11 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["ダイエット"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["体重・腹囲・食事を記録する"].exists)
+    }
+
+    func testManualMealAndBodyPhotoLogFlow() throws {
+        addManualMealEntry()
+        addBodyPhotoMemoEntry()
     }
 
     private func verifySeededPlan() {
@@ -182,5 +188,63 @@ final class GymTrainingAppUITests: XCTestCase {
 
         let chart = app.descendants(matching: .any)["bodyMetricChart-bodyWeight"]
         XCTAssertTrue(chart.waitForExistence(timeout: 5))
+    }
+
+    private func addManualMealEntry() {
+        app.tabBars.buttons["ホーム"].tap()
+
+        let mealListLink = app.buttons["mealListLink"]
+        XCTAssertTrue(mealListLink.waitForExistence(timeout: 5))
+        mealListLink.tap()
+
+        let addMealButton = app.buttons["addMealButton"]
+        XCTAssertTrue(addMealButton.waitForExistence(timeout: 5))
+        addMealButton.tap()
+
+        let nameField = app.textFields["mealNameField"]
+        XCTAssertTrue(nameField.waitForExistence(timeout: 5))
+        nameField.tap()
+        nameField.typeText("鶏むね肉定食")
+
+        let caloriesField = app.textFields["mealCaloriesField"]
+        XCTAssertTrue(caloriesField.waitForExistence(timeout: 5))
+        caloriesField.tap()
+        caloriesField.typeText("512")
+
+        let proteinField = app.textFields["mealProteinField"]
+        XCTAssertTrue(proteinField.waitForExistence(timeout: 5))
+        proteinField.tap()
+        proteinField.typeText("31")
+
+        let saveButton = app.buttons["saveMealButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["mealRow-鶏むね肉定食"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["512 kcal"].exists)
+    }
+
+    private func addBodyPhotoMemoEntry() {
+        app.tabBars.buttons["ホーム"].tap()
+
+        let bodyPhotoListLink = app.buttons["bodyPhotoListLink"]
+        XCTAssertTrue(bodyPhotoListLink.waitForExistence(timeout: 5))
+        bodyPhotoListLink.tap()
+
+        let addBodyPhotoButton = app.buttons["addBodyPhotoButton"]
+        XCTAssertTrue(addBodyPhotoButton.waitForExistence(timeout: 5))
+        addBodyPhotoButton.tap()
+
+        let memoField = app.textFields["bodyPhotoMemoField"]
+        XCTAssertTrue(memoField.waitForExistence(timeout: 5))
+        memoField.tap()
+        memoField.typeText("正面メモ")
+
+        let saveButton = app.buttons["saveBodyPhotoButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["bodyPhotoRow-front"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["正面メモ"].exists)
     }
 }
