@@ -16,6 +16,18 @@ struct BodyMetricDetailView: View {
         entries.sorted { $0.recordedAt < $1.recordedAt }
     }
 
+    private var weeklyAverages: [BodyMetricWeeklyAverage] {
+        Dictionary(grouping: entries, by: { Calendar.current.startOfWeekForBodyMetric(for: $0.recordedAt) })
+            .map { weekStart, entries in
+                BodyMetricWeeklyAverage(
+                    weekStart: weekStart,
+                    value: entries.reduce(0) { $0 + $1.value } / Double(entries.count),
+                    count: entries.count
+                )
+            }
+            .sorted { $0.weekStart > $1.weekStart }
+    }
+
     private var latestEntry: BodyMetricEntry? {
         entries.first
     }
@@ -56,6 +68,21 @@ struct BodyMetricDetailView: View {
                     .chartYAxisLabel(kind.unit)
                     .frame(height: 220)
                     .accessibilityIdentifier("bodyMetricChart-\(kind.rawValue)")
+                }
+            }
+            .listRowBackground(AppTheme.cardBackground)
+
+            Section("週次平均") {
+                if weeklyAverages.isEmpty {
+                    Text("週次平均はまだありません。")
+                        .foregroundStyle(.secondary)
+                } else {
+                    ForEach(weeklyAverages) { average in
+                        LabeledContent(
+                            AppFormatters.shortDate.string(from: average.weekStart),
+                            value: "\(AppFormatters.metricValue(average.value, unit: kind.unit)) / \(average.count)件"
+                        )
+                    }
                 }
             }
             .listRowBackground(AppTheme.cardBackground)
@@ -117,6 +144,20 @@ struct BodyMetricDetailView: View {
         .sheet(isPresented: $isShowingGoalEditor) {
             BodyMetricGoalEditorView(kind: kind)
         }
+    }
+}
+
+private struct BodyMetricWeeklyAverage: Identifiable {
+    let weekStart: Date
+    let value: Double
+    let count: Int
+
+    var id: Date { weekStart }
+}
+
+private extension Calendar {
+    func startOfWeekForBodyMetric(for date: Date) -> Date {
+        dateInterval(of: .weekOfYear, for: date)?.start ?? startOfDay(for: date)
     }
 }
 

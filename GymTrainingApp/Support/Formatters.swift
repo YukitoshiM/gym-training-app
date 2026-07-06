@@ -17,12 +17,22 @@ enum AppFormatters {
         return formatter
     }()
 
-    static func weight(_ value: Double) -> String {
-        value.formatted(.number.precision(.fractionLength(0...1))) + " kg"
+    static func weight(_ value: Double, unit: WeightUnit = .kg) -> String {
+        switch unit {
+        case .kg:
+            value.formatted(.number.precision(.fractionLength(0...1))) + " kg"
+        case .lb:
+            (value * 2.2046226218).formatted(.number.precision(.fractionLength(0...1))) + " lb"
+        }
     }
 
-    static func volume(_ value: Double) -> String {
-        value.formatted(.number.precision(.fractionLength(0))) + " kg"
+    static func volume(_ value: Double, unit: WeightUnit = .kg) -> String {
+        switch unit {
+        case .kg:
+            value.formatted(.number.precision(.fractionLength(0))) + " kg"
+        case .lb:
+            (value * 2.2046226218).formatted(.number.precision(.fractionLength(0))) + " lb"
+        }
     }
 
     static func calories(_ value: Double) -> String {

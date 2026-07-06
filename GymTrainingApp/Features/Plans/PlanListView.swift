@@ -4,6 +4,7 @@ struct PlanListView: View {
     @EnvironmentObject private var appStore: AppStore
     @State private var isShowingEditor = false
     @State private var planToEdit: TrainingPlan?
+    @State private var pendingDeletePlan: TrainingPlan?
 
     var body: some View {
         NavigationStack {
@@ -34,7 +35,7 @@ struct PlanListView: View {
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.clear)
                         }
-                        .onDelete(perform: appStore.deletePlans)
+                        .onDelete(perform: confirmDeletePlan)
                     }
                     .listStyle(.plain)
                     .scrollContentBackground(.hidden)
@@ -59,7 +60,30 @@ struct PlanListView: View {
                     isShowingEditor = false
                 }
             }
+            .confirmationDialog(
+                "この計画を削除しますか？",
+                isPresented: Binding(
+                    get: { pendingDeletePlan != nil },
+                    set: { if !$0 { pendingDeletePlan = nil } }
+                ),
+                titleVisibility: .visible
+            ) {
+                Button("削除", role: .destructive) {
+                    if let pendingDeletePlan,
+                       let index = appStore.plans.firstIndex(where: { $0.id == pendingDeletePlan.id }) {
+                        appStore.deletePlans(at: IndexSet(integer: index))
+                    }
+                    pendingDeletePlan = nil
+                }
+                Button("キャンセル", role: .cancel) {
+                    pendingDeletePlan = nil
+                }
+            }
         }
+    }
+
+    private func confirmDeletePlan(at offsets: IndexSet) {
+        pendingDeletePlan = offsets.first.map { appStore.plans[$0] }
     }
 }
 

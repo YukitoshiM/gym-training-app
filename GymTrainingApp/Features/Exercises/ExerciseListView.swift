@@ -1,14 +1,16 @@
 import SwiftUI
 
 struct ExerciseListView: View {
+    @EnvironmentObject private var appStore: AppStore
     @State private var searchText = ""
+    @State private var isShowingCustomEditor = false
 
     private var filteredExercises: [Exercise] {
         guard !searchText.isEmpty else {
-            return PresetExerciseStore.exercises
+            return appStore.allExercises
         }
 
-        return PresetExerciseStore.exercises.filter {
+        return appStore.allExercises.filter {
             $0.name.localizedStandardContains(searchText)
             || $0.primaryMuscle.displayName.localizedStandardContains(searchText)
             || $0.equipment.displayName.localizedStandardContains(searchText)
@@ -37,8 +39,22 @@ struct ExerciseListView: View {
             }
             .navigationTitle("種目")
             .searchable(text: $searchText, prompt: "種目名・部位・器具")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isShowingCustomEditor = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .accessibilityLabel("カスタム種目を追加")
+                    .accessibilityIdentifier("addCustomExerciseButton")
+                }
+            }
             .navigationDestination(for: Exercise.self) { exercise in
                 ExerciseDetailView(exercise: exercise)
+            }
+            .sheet(isPresented: $isShowingCustomEditor) {
+                CustomExerciseEditorView()
             }
         }
     }
@@ -61,5 +77,5 @@ private struct ExerciseRow: View {
 
 #Preview {
     ExerciseListView()
+        .environmentObject(AppStore())
 }
-

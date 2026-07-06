@@ -60,8 +60,66 @@ enum GoalType: String, CaseIterable, Identifiable, Codable {
     }
 }
 
+enum Sex: String, CaseIterable, Identifiable, Codable {
+    case unspecified
+    case male
+    case female
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .unspecified: "未設定"
+        case .male: "男性"
+        case .female: "女性"
+        }
+    }
+}
+
+enum ExperienceLevel: String, CaseIterable, Identifiable, Codable {
+    case beginner
+    case intermediate
+    case advanced
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .beginner: "初心者"
+        case .intermediate: "中級者"
+        case .advanced: "上級者"
+        }
+    }
+}
+
+enum WeightUnit: String, CaseIterable, Identifiable, Codable {
+    case kg
+    case lb
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .kg: "kg"
+        case .lb: "lb"
+        }
+    }
+}
+
 struct UserProfile: Codable, Equatable {
     var goalType: GoalType
+    var heightCm: Double?
+    var birthYear: Int?
+    var sex: Sex
+    var experienceLevel: ExperienceLevel
+    var weightUnit: WeightUnit
 
-    static let `default` = UserProfile(goalType: .bodyShape)
+    static let `default` = UserProfile(
+        goalType: .bodyShape,
+        heightCm: nil,
+        birthYear: nil,
+        sex: .unspecified,
+        experienceLevel: .beginner,
+        weightUnit: .kg
+    )
 }

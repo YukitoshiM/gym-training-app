@@ -1,16 +1,17 @@
 import SwiftUI
 
 struct ExercisePickerView: View {
+    @EnvironmentObject private var appStore: AppStore
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     let onSelect: (Exercise) -> Void
 
     private var filteredExercises: [Exercise] {
         guard !searchText.isEmpty else {
-            return PresetExerciseStore.exercises
+            return appStore.allExercises
         }
 
-        return PresetExerciseStore.exercises.filter {
+        return appStore.allExercises.filter {
             $0.name.localizedStandardContains(searchText)
             || $0.primaryMuscle.displayName.localizedStandardContains(searchText)
             || $0.equipment.displayName.localizedStandardContains(searchText)

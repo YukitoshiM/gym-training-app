@@ -4,6 +4,7 @@ struct HistoryListView: View {
     @EnvironmentObject private var appStore: AppStore
     @State private var displayedMonth = Date()
     @State private var selectedDate: Date?
+    @State private var pendingDeleteSession: WorkoutSession?
 
     private var visibleSessions: [WorkoutSession] {
         guard let selectedDate else {
@@ -26,6 +27,22 @@ struct HistoryListView: View {
                     }
                 } else {
                     List {
+                        Section {
+                            NavigationLink {
+                                WeeklyVolumeView()
+                            } label: {
+                                Label("週次ボリューム分析", systemImage: "chart.bar.xaxis")
+                            }
+                            .accessibilityIdentifier("weeklyVolumeLink")
+
+                            NavigationLink {
+                                ExerciseHistoryListView()
+                            } label: {
+                                Label("種目別履歴", systemImage: "dumbbell")
+                            }
+                            .accessibilityIdentifier("exerciseHistoryLink")
+                        }
+
                         Section {
                             WorkoutCalendarView(
                                 displayedMonth: $displayedMonth,
@@ -56,7 +73,7 @@ struct HistoryListView: View {
                                 .listRowBackground(Color.clear)
                                 .accessibilityIdentifier("historyRow-\(session.title)")
                             }
-                            .onDelete(perform: deleteVisibleSessions)
+                            .onDelete(perform: confirmDeleteVisibleSessions)
                         } header: {
                             HStack {
                                 Text(selectedDateTitle)
@@ -80,6 +97,24 @@ struct HistoryListView: View {
             .navigationDestination(for: WorkoutSession.self) { session in
                 HistoryDetailView(session: session)
             }
+            .confirmationDialog(
+                "この履歴を削除しますか？",
+                isPresented: Binding(
+                    get: { pendingDeleteSession != nil },
+                    set: { if !$0 { pendingDeleteSession = nil } }
+                ),
+                titleVisibility: .visible
+            ) {
+                Button("削除", role: .destructive) {
+                    if let pendingDeleteSession {
+                        appStore.deleteWorkout(pendingDeleteSession)
+                    }
+                    pendingDeleteSession = nil
+                }
+                Button("キャンセル", role: .cancel) {
+                    pendingDeleteSession = nil
+                }
+            }
         }
     }
 
@@ -91,10 +126,8 @@ struct HistoryListView: View {
         return AppFormatters.shortDate.string(from: selectedDate)
     }
 
-    private func deleteVisibleSessions(at offsets: IndexSet) {
-        for offset in offsets {
-            appStore.deleteWorkout(visibleSessions[offset])
-        }
+    private func confirmDeleteVisibleSessions(at offsets: IndexSet) {
+        pendingDeleteSession = offsets.first.map { visibleSessions[$0] }
     }
 }
 

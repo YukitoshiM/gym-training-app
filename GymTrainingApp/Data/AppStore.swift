@@ -9,6 +9,7 @@ final class AppStore: ObservableObject {
     @Published private(set) var bodyMetricGoals: [BodyMetricGoal] = []
     @Published private(set) var mealEntries: [MealEntry] = []
     @Published private(set) var bodyPhotoEntries: [BodyPhotoEntry] = []
+    @Published private(set) var customExercises: [Exercise] = []
 
     private let storage = LocalJSONStorage()
 
@@ -24,6 +25,7 @@ final class AppStore: ObservableObject {
             storage.saveBodyMetricGoals(Self.defaultBodyMetricGoals())
             storage.saveMealEntries([])
             storage.saveBodyPhotoEntries([])
+            storage.saveCustomExercises([])
             storage.saveUserProfile(.default)
         }
 
@@ -34,6 +36,7 @@ final class AppStore: ObservableObject {
         bodyMetricGoals = storage.loadBodyMetricGoals()
         mealEntries = storage.loadMealEntries()
         bodyPhotoEntries = storage.loadBodyPhotoEntries()
+        customExercises = storage.loadCustomExercises()
 
         if bodyMetricGoals.isEmpty {
             bodyMetricGoals = Self.defaultBodyMetricGoals()
@@ -44,6 +47,11 @@ final class AppStore: ObservableObject {
     func saveUserProfile(_ profile: UserProfile) {
         userProfile = profile
         storage.saveUserProfile(profile)
+    }
+
+    var allExercises: [Exercise] {
+        (PresetExerciseStore.exercises + customExercises)
+            .sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
     }
 
     func savePlan(_ plan: TrainingPlan) {
@@ -91,6 +99,49 @@ final class AppStore: ObservableObject {
     func deleteWorkout(_ session: WorkoutSession) {
         workoutHistory.removeAll { $0.id == session.id }
         storage.saveWorkoutHistory(workoutHistory)
+    }
+
+    func saveWorkoutHistorySession(_ session: WorkoutSession) {
+        if let index = workoutHistory.firstIndex(where: { $0.id == session.id }) {
+            workoutHistory[index] = session
+        } else {
+            workoutHistory.append(session)
+        }
+
+        workoutHistory.sort { $0.startedAt > $1.startedAt }
+        storage.saveWorkoutHistory(workoutHistory)
+    }
+
+    func saveCustomExercise(_ exercise: Exercise) {
+        if let index = customExercises.firstIndex(where: { $0.id == exercise.id }) {
+            customExercises[index] = exercise
+        } else {
+            customExercises.append(exercise)
+        }
+
+        customExercises.sort { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+        storage.saveCustomExercises(customExercises)
+    }
+
+    func deleteCustomExercises(at offsets: IndexSet) {
+        for offset in offsets.sorted(by: >) {
+            customExercises.remove(at: offset)
+        }
+        storage.saveCustomExercises(customExercises)
+    }
+
+    func resetAllData() {
+        storage.reset()
+        userProfile = .default
+        plans = []
+        workoutHistory = []
+        bodyMetricEntries = []
+        bodyMetricGoals = Self.defaultBodyMetricGoals()
+        mealEntries = []
+        bodyPhotoEntries = []
+        customExercises = []
+        storage.saveBodyMetricGoals(bodyMetricGoals)
+        storage.saveUserProfile(userProfile)
     }
 
     func latestCompletedSets(for exercise: Exercise) -> [WorkoutSet] {
@@ -225,6 +276,7 @@ private struct LocalJSONStorage {
     private let bodyMetricGoalsKey = "gym.training.alpha.bodyMetricGoals"
     private let mealEntriesKey = "gym.training.alpha.mealEntries"
     private let bodyPhotoEntriesKey = "gym.training.alpha.bodyPhotoEntries"
+    private let customExercisesKey = "gym.training.alpha.customExercises"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
@@ -284,6 +336,14 @@ private struct LocalJSONStorage {
         save(entries, key: bodyPhotoEntriesKey)
     }
 
+    func loadCustomExercises() -> [Exercise] {
+        load([Exercise].self, key: customExercisesKey)
+    }
+
+    func saveCustomExercises(_ exercises: [Exercise]) {
+        save(exercises, key: customExercisesKey)
+    }
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: userProfileKey)
         UserDefaults.standard.removeObject(forKey: plansKey)
@@ -292,6 +352,7 @@ private struct LocalJSONStorage {
         UserDefaults.standard.removeObject(forKey: bodyMetricGoalsKey)
         UserDefaults.standard.removeObject(forKey: mealEntriesKey)
         UserDefaults.standard.removeObject(forKey: bodyPhotoEntriesKey)
+        UserDefaults.standard.removeObject(forKey: customExercisesKey)
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {

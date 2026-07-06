@@ -4,17 +4,22 @@ struct HistoryDetailView: View {
     @EnvironmentObject private var appStore: AppStore
     @Environment(\.dismiss) private var dismiss
     @State private var isConfirmingDelete = false
+    @State private var isShowingEditor = false
 
     let session: WorkoutSession
+
+    private var currentSession: WorkoutSession {
+        appStore.workoutHistory.first { $0.id == session.id } ?? session
+    }
 
     var body: some View {
         List {
             Section {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(session.title)
+                    Text(currentSession.title)
                         .font(.title2.bold())
 
-                    Text(AppFormatters.shortDateTime.string(from: session.startedAt))
+                    Text(AppFormatters.shortDateTime.string(from: currentSession.startedAt))
                         .foregroundStyle(.secondary)
                 }
                 .padding(.vertical, 4)
@@ -22,14 +27,14 @@ struct HistoryDetailView: View {
 
             Section {
                 HStack {
-                    SummaryMetric(title: "達成率", value: AppFormatters.percent(session.achievementRate))
+                    SummaryMetric(title: "達成率", value: AppFormatters.percent(currentSession.achievementRate))
                     Spacer()
-                    SummaryMetric(title: "総ボリューム", value: AppFormatters.volume(session.totalVolume))
+                    SummaryMetric(title: "総ボリューム", value: AppFormatters.volume(currentSession.totalVolume, unit: appStore.userProfile.weightUnit))
                 }
                 .padding(.vertical, 8)
             }
 
-            ForEach(session.exercises) { exercise in
+            ForEach(currentSession.exercises) { exercise in
                 Section {
                     if exercise.isSkipped {
                         Label("スキップ", systemImage: "forward.end")
@@ -51,7 +56,14 @@ struct HistoryDetailView: View {
         .navigationTitle("履歴詳細")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .primaryAction) {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button {
+                    isShowingEditor = true
+                } label: {
+                    Image(systemName: "square.and.pencil")
+                }
+                .accessibilityLabel("履歴を編集")
+
                 Button(role: .destructive) {
                     isConfirmingDelete = true
                 } label: {
@@ -60,9 +72,12 @@ struct HistoryDetailView: View {
                 .accessibilityLabel("履歴を削除")
             }
         }
+        .sheet(isPresented: $isShowingEditor) {
+            HistoryEditView(session: currentSession)
+        }
         .confirmationDialog("この履歴を削除しますか？", isPresented: $isConfirmingDelete, titleVisibility: .visible) {
             Button("削除", role: .destructive) {
-                appStore.deleteWorkout(session)
+                appStore.deleteWorkout(currentSession)
                 dismiss()
             }
             Button("キャンセル", role: .cancel) {}

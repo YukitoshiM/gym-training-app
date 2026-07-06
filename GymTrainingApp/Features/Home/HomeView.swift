@@ -4,6 +4,7 @@ struct HomeView: View {
     @EnvironmentObject private var appStore: AppStore
     @State private var activeSession: WorkoutSession?
     @State private var isShowingGoalPicker = false
+    @State private var isShowingSettings = false
 
     private var nextPlan: TrainingPlan? {
         appStore.plans.first
@@ -46,14 +47,30 @@ struct HomeView: View {
             .background(TrainingBackground())
             .navigationTitle("Gym Training")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isShowingSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                    .accessibilityLabel("設定")
+                    .accessibilityIdentifier("settingsButton")
+                }
+            }
             .fullScreenCover(item: $activeSession) { session in
                 WorkoutSessionView(session: session)
             }
             .sheet(isPresented: $isShowingGoalPicker) {
                 GoalPickerView(selectedGoal: appStore.userProfile.goalType) { goalType in
-                    appStore.saveUserProfile(UserProfile(goalType: goalType))
+                    var profile = appStore.userProfile
+                    profile.goalType = goalType
+                    appStore.saveUserProfile(profile)
                     isShowingGoalPicker = false
                 }
+            }
+            .sheet(isPresented: $isShowingSettings) {
+                ProfileSettingsView(profile: appStore.userProfile)
             }
         }
     }

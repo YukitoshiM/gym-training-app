@@ -7,14 +7,38 @@ struct WorkoutStartView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if appStore.plans.isEmpty {
-                    ContentUnavailableView {
-                        Label("開始できる計画がありません", systemImage: "play.circle")
-                    } description: {
-                        Text("計画タブで種目とセット目標を登録すると、ここから記録を始められます。")
+                List {
+                    Section {
+                        Button {
+                            activeSession = WorkoutSession(
+                                title: "フリートレーニング",
+                                sourcePlanID: nil,
+                                exercises: []
+                            )
+                        } label: {
+                            CardContainer {
+                                HStack(spacing: 12) {
+                                    IconBadge(systemImage: "plus.circle.fill", tint: AppTheme.orange)
+
+                                    VStack(alignment: .leading, spacing: 6) {
+                                        Text("フリートレーニング")
+                                            .font(.headline)
+                                        Text("計画なしで種目を追加して記録します")
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+
+                                    Spacer()
+                                }
+                            }
+                        }
+                        .buttonStyle(.plain)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
+                        .accessibilityIdentifier("startFreeWorkoutButton")
                     }
-                } else {
-                    List {
+
+                    if !appStore.plans.isEmpty {
                         Section("計画から開始") {
                             ForEach(appStore.plans) { plan in
                                 Button {
@@ -54,10 +78,10 @@ struct WorkoutStartView: View {
                             }
                         }
                     }
-                    .listStyle(.plain)
-                    .scrollContentBackground(.hidden)
-                    .background(AppTheme.pageBackground)
                 }
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+                .background(AppTheme.pageBackground)
             }
             .navigationTitle("記録")
             .fullScreenCover(item: $activeSession) { session in

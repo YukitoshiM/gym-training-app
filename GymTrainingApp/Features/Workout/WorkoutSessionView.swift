@@ -129,6 +129,10 @@ struct WorkoutSessionView: View {
 private struct WorkoutExerciseSection: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var workoutExercise: WorkoutExercise
+    @State private var restRemaining = 0
+    @State private var isRestTimerRunning = false
+
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     private var previousSets: [WorkoutSet] {
         appStore.latestCompletedSets(for: workoutExercise.exercise)
@@ -158,10 +162,20 @@ private struct WorkoutExerciseSection: View {
                         Label("この種目はスキップされました", systemImage: "forward.end")
                             .foregroundStyle(.secondary)
                     } else {
+                        RestTimerControl(
+                            restSeconds: workoutExercise.restSeconds,
+                            remaining: restRemaining,
+                            isRunning: isRestTimerRunning,
+                            onStart: startRestTimer,
+                            onStop: stopRestTimer
+                        )
+
                         ForEach($workoutExercise.sets) { $set in
                             WorkoutSetRow(
                                 set: $set,
-                                previousSet: previousSet(for: set)
+                                previousSet: previousSet(for: set),
+                                restSeconds: workoutExercise.restSeconds,
+                                onCompleted: startRestTimer
                             ) {
                                 removeSet(set)
                             }
@@ -177,6 +191,32 @@ private struct WorkoutExerciseSection: View {
                 }
             }
         }
+        .onReceive(timer) { _ in
+            guard isRestTimerRunning else {
+                return
+            }
+
+            if restRemaining > 0 {
+                restRemaining -= 1
+            }
+
+            if restRemaining <= 0 {
+                isRestTimerRunning = false
+            }
+        }
+    }
+
+    private func startRestTimer() {
+        guard workoutExercise.restSeconds > 0 else {
+            return
+        }
+        restRemaining = workoutExercise.restSeconds
+        isRestTimerRunning = true
+    }
+
+    private func stopRestTimer() {
+        isRestTimerRunning = false
+        restRemaining = 0
     }
 
     private func addSet() {
@@ -210,8 +250,11 @@ private struct WorkoutExerciseSection: View {
 }
 
 private struct WorkoutSetRow: View {
+    @EnvironmentObject private var appStore: AppStore
     @Binding var set: WorkoutSet
     let previousSet: WorkoutSet?
+    let restSeconds: Int
+    let onCompleted: () -> Void
     let onDelete: () -> Void
 
     private var deltaText: String {
@@ -268,6 +311,11 @@ private struct WorkoutSetRow: View {
                 Toggle("完了", isOn: $set.isCompleted)
                     .labelsHidden()
                     .accessibilityIdentifier("completeSetToggle-\(set.setOrder)")
+                    .onChange(of: set.isCompleted) { oldValue, newValue in
+                        if !oldValue && newValue {
+                            onCompleted()
+                        }
+                    }
 
                 Button(role: .destructive, action: onDelete) {
                     Image(systemName: "minus.circle")
@@ -277,7 +325,7 @@ private struct WorkoutSetRow: View {
 
             HStack(spacing: 12) {
                 Stepper(value: $set.actualWeight, in: 0...999, step: 2.5) {
-                    Text(AppFormatters.weight(set.actualWeight))
+                    Text(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit))
                         .frame(minWidth: 80, alignment: .leading)
                 }
 
@@ -287,18 +335,69 @@ private struct WorkoutSetRow: View {
                 }
             }
             .font(.subheadline)
+
+            Button {
+                copyTarget()
+            } label: {
+                Label("目標値をコピー", systemImage: "target")
+            }
+            .font(.caption.bold())
+            .buttonStyle(.borderless)
+            .accessibilityIdentifier("copyTargetSet-\(set.setOrder)")
         }
         .padding(10)
         .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
     }
 
     private func previousText(for previousSet: WorkoutSet) -> String {
-        "前回 \(AppFormatters.weight(previousSet.actualWeight)) × \(previousSet.actualReps)回"
+        "前回 \(AppFormatters.weight(previousSet.actualWeight, unit: appStore.userProfile.weightUnit)) × \(previousSet.actualReps)回"
     }
 
     private func copyPrevious(_ previousSet: WorkoutSet) {
         set.actualWeight = previousSet.actualWeight
         set.actualReps = previousSet.actualReps
+    }
+
+    private func copyTarget() {
+        set.actualWeight = set.targetWeight
+        set.actualReps = set.targetReps
+    }
+}
+
+private struct RestTimerControl: View {
+    let restSeconds: Int
+    let remaining: Int
+    let isRunning: Bool
+    let onStart: () -> Void
+    let onStop: () -> Void
+
+    private var displayRemaining: Int {
+        isRunning ? remaining : restSeconds
+    }
+
+    var body: some View {
+        HStack {
+            Label("休憩 \(format(displayRemaining))", systemImage: "timer")
+                .font(.subheadline.weight(.semibold))
+
+            Spacer()
+
+            Button {
+                isRunning ? onStop() : onStart()
+            } label: {
+                Label(isRunning ? "停止" : "開始", systemImage: isRunning ? "stop.fill" : "play.fill")
+            }
+            .buttonStyle(.borderless)
+            .accessibilityIdentifier("restTimerButton")
+        }
+        .padding(10)
+        .background(AppTheme.blue.opacity(0.1), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+    }
+
+    private func format(_ seconds: Int) -> String {
+        let minutes = seconds / 60
+        let seconds = seconds % 60
+        return "\(minutes):" + String(format: "%02d", seconds)
     }
 }
 

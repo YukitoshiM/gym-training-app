@@ -68,6 +68,14 @@ final class GymTrainingAppUITests: XCTestCase {
         addBodyPhotoMemoEntry()
     }
 
+    func testAIFreeMVPSurfaces() throws {
+        verifyFreeWorkoutEntryPoint()
+        addCustomExercise()
+        verifySettingsSurface()
+        completeWorkoutFromPlan()
+        verifyHistoryAnalyticsLinks()
+    }
+
     private func verifySeededPlan() {
         app.tabBars.buttons["計画"].tap()
 
@@ -188,6 +196,56 @@ final class GymTrainingAppUITests: XCTestCase {
 
         let chart = app.descendants(matching: .any)["bodyMetricChart-bodyWeight"]
         XCTAssertTrue(chart.waitForExistence(timeout: 5))
+    }
+
+    private func verifyFreeWorkoutEntryPoint() {
+        app.tabBars.buttons["記録"].tap()
+
+        let freeWorkoutButton = app.descendants(matching: .any)["startFreeWorkoutButton"]
+        XCTAssertTrue(freeWorkoutButton.waitForExistence(timeout: 5))
+    }
+
+    private func addCustomExercise() {
+        app.tabBars.buttons["種目"].tap()
+
+        let addButton = app.buttons["addCustomExerciseButton"]
+        XCTAssertTrue(addButton.waitForExistence(timeout: 5))
+        addButton.tap()
+
+        let nameField = app.textFields["customExerciseNameField"]
+        XCTAssertTrue(nameField.waitForExistence(timeout: 5))
+        nameField.tap()
+        nameField.typeText("ヒップスラスト")
+
+        let saveButton = app.buttons["saveCustomExerciseButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+
+        XCTAssertTrue(app.staticTexts["ヒップスラスト"].waitForExistence(timeout: 5))
+    }
+
+    private func verifySettingsSurface() {
+        app.tabBars.buttons["ホーム"].tap()
+
+        let settingsButton = app.buttons["settingsButton"]
+        XCTAssertTrue(settingsButton.waitForExistence(timeout: 5))
+        settingsButton.tap()
+
+        XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
+
+        let saveButton = app.buttons["saveProfileSettingsButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+    }
+
+    private func verifyHistoryAnalyticsLinks() {
+        app.tabBars.buttons["履歴"].tap()
+
+        let weeklyVolumeLink = app.descendants(matching: .any)["weeklyVolumeLink"]
+        XCTAssertTrue(weeklyVolumeLink.waitForExistence(timeout: 5))
+
+        let exerciseHistoryLink = app.descendants(matching: .any)["exerciseHistoryLink"]
+        XCTAssertTrue(exerciseHistoryLink.waitForExistence(timeout: 5))
     }
 
     private func addManualMealEntry() {
