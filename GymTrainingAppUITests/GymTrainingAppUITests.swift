@@ -215,13 +215,14 @@ final class GymTrainingAppUITests: XCTestCase {
         let nameField = app.textFields["customExerciseNameField"]
         XCTAssertTrue(nameField.waitForExistence(timeout: 5))
         nameField.tap()
-        nameField.typeText("ヒップスラスト")
+        let customExerciseName = "AAAテストローププレス"
+        nameField.typeText(customExerciseName)
 
         let saveButton = app.buttons["saveCustomExerciseButton"]
         XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
         saveButton.tap()
 
-        XCTAssertTrue(app.staticTexts["ヒップスラスト"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts[customExerciseName].waitForExistence(timeout: 5))
     }
 
     private func verifySettingsSurface() {

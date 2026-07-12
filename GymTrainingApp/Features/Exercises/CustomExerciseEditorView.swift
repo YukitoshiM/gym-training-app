@@ -9,6 +9,13 @@ struct CustomExerciseEditorView: View {
     @State private var equipment: Equipment = .machine
     @State private var instruction = ""
 
+    let onSaved: (Exercise) -> Void
+
+    init(initialName: String = "", onSaved: @escaping (Exercise) -> Void = { _ in }) {
+        _name = State(initialValue: initialName)
+        self.onSaved = onSaved
+    }
+
     private var canSave: Bool {
         !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
@@ -59,14 +66,14 @@ struct CustomExerciseEditorView: View {
     }
 
     private func save() {
-        appStore.saveCustomExercise(
-            Exercise(
-                name: name.trimmingCharacters(in: .whitespacesAndNewlines),
-                primaryMuscle: primaryMuscle,
-                equipment: equipment,
-                instruction: instruction.isEmpty ? "ユーザー追加種目" : instruction
-            )
+        let exercise = Exercise(
+            name: name.trimmingCharacters(in: .whitespacesAndNewlines),
+            primaryMuscle: primaryMuscle,
+            equipment: equipment,
+            instruction: instruction.isEmpty ? "ユーザー追加種目" : instruction
         )
+        appStore.saveCustomExercise(exercise)
+        onSaved(exercise)
         dismiss()
     }
 }
