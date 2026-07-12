@@ -122,4 +122,31 @@ struct UserProfile: Codable, Equatable {
         experienceLevel: .beginner,
         weightUnit: .kg
     )
+
+    init(
+        goalType: GoalType,
+        heightCm: Double?,
+        birthYear: Int?,
+        sex: Sex,
+        experienceLevel: ExperienceLevel,
+        weightUnit: WeightUnit
+    ) {
+        self.goalType = goalType
+        self.heightCm = heightCm
+        self.birthYear = birthYear
+        self.sex = sex
+        self.experienceLevel = experienceLevel
+        self.weightUnit = weightUnit
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let defaults = Self.default
+        goalType = try container.decodeIfPresent(GoalType.self, forKey: .goalType) ?? defaults.goalType
+        heightCm = try container.decodeIfPresent(Double.self, forKey: .heightCm)
+        birthYear = try container.decodeIfPresent(Int.self, forKey: .birthYear)
+        sex = try container.decodeIfPresent(Sex.self, forKey: .sex) ?? defaults.sex
+        experienceLevel = try container.decodeIfPresent(ExperienceLevel.self, forKey: .experienceLevel) ?? defaults.experienceLevel
+        weightUnit = try container.decodeIfPresent(WeightUnit.self, forKey: .weightUnit) ?? defaults.weightUnit
+    }
 }

@@ -5,12 +5,16 @@ struct ProfileSettingsView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var draft: UserProfile
+    @State private var aiDraft: AISettings
     @State private var heightText: String
     @State private var birthYearText: String
     @State private var isConfirmingReset = false
+    @State private var isCheckingAI = false
+    @State private var aiHealthMessage: String?
 
-    init(profile: UserProfile) {
+    init(profile: UserProfile, aiSettings: AISettings = .default) {
         _draft = State(initialValue: profile)
+        _aiDraft = State(initialValue: aiSettings)
         _heightText = State(initialValue: profile.heightCm.map { String(format: "%.1f", $0) } ?? "")
         _birthYearText = State(initialValue: profile.birthYear.map(String.init) ?? "")
     }
@@ -51,6 +55,36 @@ struct ProfileSettingsView: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                }
+
+                Section {
+                    Toggle("AI機能を使う", isOn: $aiDraft.isEnabled)
+
+                    TextField("サーバーURL", text: $aiDraft.baseURLString)
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.URL)
+                        .accessibilityIdentifier("aiBaseURLField")
+
+                    SecureField("APIキー", text: $aiDraft.apiKey)
+                        .textInputAutocapitalization(.never)
+
+                    Button {
+                        checkAIHealth()
+                    } label: {
+                        Label(isCheckingAI ? "確認中" : "接続確認", systemImage: "network")
+                    }
+                    .disabled(isCheckingAI || !aiDraft.isEnabled)
+                    .accessibilityIdentifier("checkAIHealthButton")
+
+                    if let aiHealthMessage {
+                        Text(aiHealthMessage)
+                            .font(.caption)
+                            .foregroundStyle(aiHealthMessage.contains("OK") ? .green : .red)
+                    }
+                } header: {
+                    Text("ローカルLLM")
+                } footer: {
+                    Text("開発中はMac上のローカルサーバーを指定します。Simulatorなら http://127.0.0.1:8765、実機ならMacのLAN IPまたはTailscale名を使います。")
                 }
 
                 Section("データ") {
@@ -94,11 +128,32 @@ struct ProfileSettingsView: View {
         draft.heightCm = Double(heightText)
         draft.birthYear = Int(birthYearText)
         appStore.saveUserProfile(draft)
+        appStore.saveAISettings(aiDraft)
         dismiss()
+    }
+
+    private func checkAIHealth() {
+        isCheckingAI = true
+        aiHealthMessage = nil
+
+        Task {
+            do {
+                let health = try await LocalAIClient(settings: aiDraft).health()
+                await MainActor.run {
+                    aiHealthMessage = "OK: \(health.model) / Ollama \(health.ollamaReachable ? "接続" : "未接続")"
+                    isCheckingAI = false
+                }
+            } catch {
+                await MainActor.run {
+                    aiHealthMessage = error.localizedDescription
+                    isCheckingAI = false
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ProfileSettingsView(profile: .default)
+    ProfileSettingsView(profile: .default, aiSettings: .default)
         .environmentObject(AppStore())
 }

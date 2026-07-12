@@ -29,6 +29,8 @@ struct MealEntry: Identifiable, Codable, Hashable {
     var carbs: Double
     var memo: String
     var imageData: Data?
+    var aiDraft: MealAIDraft?
+    var confirmedByUser: Bool
 
     init(
         id: UUID = UUID(),
@@ -40,7 +42,9 @@ struct MealEntry: Identifiable, Codable, Hashable {
         fat: Double = 0,
         carbs: Double = 0,
         memo: String = "",
-        imageData: Data? = nil
+        imageData: Data? = nil,
+        aiDraft: MealAIDraft? = nil,
+        confirmedByUser: Bool = true
     ) {
         self.id = id
         self.recordedAt = recordedAt
@@ -52,5 +56,23 @@ struct MealEntry: Identifiable, Codable, Hashable {
         self.carbs = carbs
         self.memo = memo
         self.imageData = imageData
+        self.aiDraft = aiDraft
+        self.confirmedByUser = confirmedByUser
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        recordedAt = try container.decodeIfPresent(Date.self, forKey: .recordedAt) ?? Date()
+        mealType = try container.decodeIfPresent(MealType.self, forKey: .mealType) ?? .lunch
+        name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        calories = try container.decodeIfPresent(Double.self, forKey: .calories) ?? 0
+        protein = try container.decodeIfPresent(Double.self, forKey: .protein) ?? 0
+        fat = try container.decodeIfPresent(Double.self, forKey: .fat) ?? 0
+        carbs = try container.decodeIfPresent(Double.self, forKey: .carbs) ?? 0
+        memo = try container.decodeIfPresent(String.self, forKey: .memo) ?? ""
+        imageData = try container.decodeIfPresent(Data.self, forKey: .imageData)
+        aiDraft = try container.decodeIfPresent(MealAIDraft.self, forKey: .aiDraft)
+        confirmedByUser = try container.decodeIfPresent(Bool.self, forKey: .confirmedByUser) ?? true
     }
 }

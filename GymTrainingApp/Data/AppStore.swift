@@ -10,6 +10,8 @@ final class AppStore: ObservableObject {
     @Published private(set) var mealEntries: [MealEntry] = []
     @Published private(set) var bodyPhotoEntries: [BodyPhotoEntry] = []
     @Published private(set) var customExercises: [Exercise] = []
+    @Published private(set) var aiSettings: AISettings = .default
+    @Published private(set) var aiInsights: [AIInsight] = []
 
     private let storage = LocalJSONStorage()
 
@@ -26,6 +28,8 @@ final class AppStore: ObservableObject {
             storage.saveMealEntries([])
             storage.saveBodyPhotoEntries([])
             storage.saveCustomExercises([])
+            storage.saveAISettings(.default)
+            storage.saveAIInsights([])
             storage.saveUserProfile(.default)
         }
 
@@ -37,6 +41,8 @@ final class AppStore: ObservableObject {
         mealEntries = storage.loadMealEntries()
         bodyPhotoEntries = storage.loadBodyPhotoEntries()
         customExercises = storage.loadCustomExercises()
+        aiSettings = storage.loadAISettings()
+        aiInsights = storage.loadAIInsights()
 
         if bodyMetricGoals.isEmpty {
             bodyMetricGoals = Self.defaultBodyMetricGoals()
@@ -47,6 +53,22 @@ final class AppStore: ObservableObject {
     func saveUserProfile(_ profile: UserProfile) {
         userProfile = profile
         storage.saveUserProfile(profile)
+    }
+
+    func saveAISettings(_ settings: AISettings) {
+        aiSettings = settings
+        storage.saveAISettings(settings)
+    }
+
+    func saveAIInsight(_ insight: AIInsight) {
+        if let index = aiInsights.firstIndex(where: { $0.id == insight.id }) {
+            aiInsights[index] = insight
+        } else {
+            aiInsights.insert(insight, at: 0)
+        }
+
+        aiInsights.sort { $0.date > $1.date }
+        storage.saveAIInsights(aiInsights)
     }
 
     var allExercises: [Exercise] {
@@ -140,8 +162,12 @@ final class AppStore: ObservableObject {
         mealEntries = []
         bodyPhotoEntries = []
         customExercises = []
+        aiSettings = .default
+        aiInsights = []
         storage.saveBodyMetricGoals(bodyMetricGoals)
         storage.saveUserProfile(userProfile)
+        storage.saveAISettings(aiSettings)
+        storage.saveAIInsights(aiInsights)
     }
 
     func latestCompletedSets(for exercise: Exercise) -> [WorkoutSet] {
@@ -277,6 +303,8 @@ private struct LocalJSONStorage {
     private let mealEntriesKey = "gym.training.alpha.mealEntries"
     private let bodyPhotoEntriesKey = "gym.training.alpha.bodyPhotoEntries"
     private let customExercisesKey = "gym.training.alpha.customExercises"
+    private let aiSettingsKey = "gym.training.alpha.aiSettings"
+    private let aiInsightsKey = "gym.training.alpha.aiInsights"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
@@ -344,6 +372,22 @@ private struct LocalJSONStorage {
         save(exercises, key: customExercisesKey)
     }
 
+    func loadAISettings() -> AISettings {
+        load(AISettings.self, key: aiSettingsKey) ?? .default
+    }
+
+    func saveAISettings(_ settings: AISettings) {
+        save(settings, key: aiSettingsKey)
+    }
+
+    func loadAIInsights() -> [AIInsight] {
+        load([AIInsight].self, key: aiInsightsKey)
+    }
+
+    func saveAIInsights(_ insights: [AIInsight]) {
+        save(insights, key: aiInsightsKey)
+    }
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: userProfileKey)
         UserDefaults.standard.removeObject(forKey: plansKey)
@@ -353,6 +397,8 @@ private struct LocalJSONStorage {
         UserDefaults.standard.removeObject(forKey: mealEntriesKey)
         UserDefaults.standard.removeObject(forKey: bodyPhotoEntriesKey)
         UserDefaults.standard.removeObject(forKey: customExercisesKey)
+        UserDefaults.standard.removeObject(forKey: aiSettingsKey)
+        UserDefaults.standard.removeObject(forKey: aiInsightsKey)
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {

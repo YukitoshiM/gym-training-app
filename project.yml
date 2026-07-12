@@ -27,6 +27,9 @@ targets:
       path: GymTrainingApp/Info.plist
       properties:
         CFBundleDisplayName: Gym Training
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+          NSAllowsLocalNetworking: true
         UILaunchScreen:
           UIColorName: ""
           UIImageName: ""

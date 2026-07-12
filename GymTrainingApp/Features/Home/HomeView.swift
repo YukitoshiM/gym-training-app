@@ -35,6 +35,8 @@ struct HomeView: View {
                         bodyPhotoCount: appStore.bodyPhotoEntries().count
                     )
 
+                    AIInsightStatusCard(insight: appStore.aiInsights.first { $0.insightType == .weekly })
+
                     BodyKPIDashboard(
                         kinds: BodyMetricKind.allCases,
                         latestEntry: { appStore.latestBodyMetricEntry(for: $0) },
@@ -70,7 +72,7 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $isShowingSettings) {
-                ProfileSettingsView(profile: appStore.userProfile)
+                ProfileSettingsView(profile: appStore.userProfile, aiSettings: appStore.aiSettings)
             }
         }
     }
@@ -364,6 +366,46 @@ private struct BodyKPIDashboard: View {
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("bodyMetricListLink")
+    }
+}
+
+private struct AIInsightStatusCard: View {
+    let insight: AIInsight?
+
+    var body: some View {
+        NavigationLink {
+            AIReportView()
+        } label: {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack {
+                    Label("AIレポート", systemImage: "sparkles")
+                        .font(.headline)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(.secondary)
+                }
+
+                if let insight {
+                    Text(insight.outputComment)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(3)
+                } else {
+                    Text("ローカルLLMから週次コメントを生成します")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(16)
+            .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            .overlay(
+                RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                    .stroke(AppTheme.accent.opacity(0.35), lineWidth: 1)
+            )
+            .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier("aiReportLink")
     }
 }
 

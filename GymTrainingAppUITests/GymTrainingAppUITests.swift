@@ -235,10 +235,15 @@ final class GymTrainingAppUITests: XCTestCase {
 
         let saveButton = app.buttons["saveProfileSettingsButton"]
         XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        app.swipeUp()
+        XCTAssertTrue(app.textFields["aiBaseURLField"].waitForExistence(timeout: 5))
         saveButton.tap()
     }
 
     private func verifyHistoryAnalyticsLinks() {
+        app.tabBars.buttons["ホーム"].tap()
+        XCTAssertTrue(app.descendants(matching: .any)["aiReportLink"].waitForExistence(timeout: 5))
+
         app.tabBars.buttons["履歴"].tap()
 
         let weeklyVolumeLink = app.descendants(matching: .any)["weeklyVolumeLink"]

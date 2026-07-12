@@ -95,6 +95,12 @@ private struct MealRow: View {
                     }
                     .font(.caption)
                     .foregroundStyle(.secondary)
+
+                    if let aiDraft = meal.aiDraft {
+                        Label("AI下書き: \(aiDraft.confidence)", systemImage: "sparkles")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.accent)
+                    }
                 }
             }
         }
@@ -140,6 +146,9 @@ private struct MealEditorView: View {
     @State private var memo = ""
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var imageData: Data?
+    @State private var aiDraft: MealAIDraft?
+    @State private var isAnalyzing = false
+    @State private var aiErrorMessage: String?
 
     var body: some View {
         NavigationStack {
@@ -158,6 +167,14 @@ private struct MealEditorView: View {
                             .frame(height: 180)
                             .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
                     }
+
+                    Button {
+                        analyzeMeal()
+                    } label: {
+                        Label(isAnalyzing ? "AI下書き作成中" : "AI下書きを作成", systemImage: "sparkles")
+                    }
+                    .disabled(imageData == nil || isAnalyzing)
+                    .accessibilityIdentifier("analyzeMealButton")
                 }
 
                 Section("食事") {
@@ -188,6 +205,36 @@ private struct MealEditorView: View {
                     TextField("メモ", text: $memo, axis: .vertical)
                         .lineLimit(3, reservesSpace: true)
                 }
+
+                if let aiDraft {
+                    Section("AI下書き") {
+                        LabeledContent("信頼度", value: aiDraft.confidence)
+
+                        if !aiDraft.comment.isEmpty {
+                            Text(aiDraft.comment)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        ForEach(aiDraft.items) { item in
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(item.name)
+                                    .font(.headline)
+                                Text("\(item.amount) / \(AppFormatters.calories(item.calories)) / P \(AppFormatters.grams(item.protein))")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+
+                if let aiErrorMessage {
+                    Section("AIエラー") {
+                        Text(aiErrorMessage)
+                            .font(.subheadline)
+                            .foregroundStyle(.red)
+                    }
+                }
             }
             .navigationTitle("食事を記録")
             .navigationBarTitleDisplayMode(.inline)
@@ -214,6 +261,40 @@ private struct MealEditorView: View {
         }
     }
 
+    private func analyzeMeal() {
+        guard let imageData else {
+            return
+        }
+
+        isAnalyzing = true
+        aiErrorMessage = nil
+
+        Task {
+            do {
+                let draft = try await LocalAIClient(settings: appStore.aiSettings)
+                    .analyzeMealImage(imageData: imageData, mealType: mealType, memo: memo)
+                await MainActor.run {
+                    apply(draft)
+                    isAnalyzing = false
+                }
+            } catch {
+                await MainActor.run {
+                    aiErrorMessage = error.localizedDescription
+                    isAnalyzing = false
+                }
+            }
+        }
+    }
+
+    private func apply(_ draft: MealAIDraft) {
+        aiDraft = draft
+        name = draft.mealName
+        calories = draft.calories.formatted(.number.precision(.fractionLength(0)))
+        protein = draft.protein.formatted(.number.precision(.fractionLength(0...1)))
+        fat = draft.fat.formatted(.number.precision(.fractionLength(0...1)))
+        carbs = draft.carbs.formatted(.number.precision(.fractionLength(0...1)))
+    }
+
     private func save() {
         appStore.saveMealEntry(
             MealEntry(
@@ -224,7 +305,9 @@ private struct MealEditorView: View {
                 fat: Double(fat) ?? 0,
                 carbs: Double(carbs) ?? 0,
                 memo: memo,
-                imageData: imageData
+                imageData: imageData,
+                aiDraft: aiDraft,
+                confirmedByUser: true
             )
         )
         onSave()

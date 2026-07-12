@@ -24,18 +24,21 @@ struct BodyPhotoEntry: Identifiable, Codable, Hashable {
     var angle: BodyPhotoAngle
     var memo: String
     var imageData: Data?
+    var aiComment: BodyPhotoAIComment?
 
     init(
         id: UUID = UUID(),
         recordedAt: Date = Date(),
         angle: BodyPhotoAngle = .front,
         memo: String = "",
-        imageData: Data? = nil
+        imageData: Data? = nil,
+        aiComment: BodyPhotoAIComment? = nil
     ) {
         self.id = id
         self.recordedAt = recordedAt
         self.angle = angle
         self.memo = memo
         self.imageData = imageData
+        self.aiComment = aiComment
     }
 }

@@ -89,6 +89,13 @@ private struct BodyPhotoRow: View {
                             .foregroundStyle(.secondary)
                             .lineLimit(2)
                     }
+
+                    if let aiComment = entry.aiComment {
+                        Label(aiComment.summary, systemImage: "sparkles")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.accent)
+                            .lineLimit(2)
+                    }
                 }
             }
         }
@@ -129,6 +136,9 @@ private struct BodyPhotoEditorView: View {
     @State private var memo = ""
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var imageData: Data?
+    @State private var aiComment: BodyPhotoAIComment?
+    @State private var isAnalyzing = false
+    @State private var aiErrorMessage: String?
 
     var body: some View {
         NavigationStack {
@@ -147,6 +157,14 @@ private struct BodyPhotoEditorView: View {
                             .frame(height: 220)
                             .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
                     }
+
+                    Button {
+                        analyzeBodyPhoto()
+                    } label: {
+                        Label(isAnalyzing ? "AIコメント作成中" : "AIコメントを作成", systemImage: "sparkles")
+                    }
+                    .disabled(imageData == nil || isAnalyzing)
+                    .accessibilityIdentifier("analyzeBodyPhotoButton")
                 }
 
                 Section("撮影角度") {
@@ -163,6 +181,28 @@ private struct BodyPhotoEditorView: View {
                     TextField("撮影条件や見た目のメモ", text: $memo, axis: .vertical)
                         .lineLimit(3, reservesSpace: true)
                         .accessibilityIdentifier("bodyPhotoMemoField")
+                }
+
+                if let aiComment {
+                    Section("AIコメント") {
+                        Text(aiComment.summary)
+                            .font(.headline)
+                        LabeledContent("腹部", value: aiComment.abdomen)
+                        LabeledContent("脇腹", value: aiComment.waist)
+                        LabeledContent("姿勢", value: aiComment.posture)
+                        if let score = aiComment.score {
+                            LabeledContent("見た目スコア", value: score.formatted(.number.precision(.fractionLength(0...1))))
+                        }
+                        LabeledContent("信頼度", value: aiComment.confidence)
+                    }
+                }
+
+                if let aiErrorMessage {
+                    Section("AIエラー") {
+                        Text(aiErrorMessage)
+                            .font(.subheadline)
+                            .foregroundStyle(.red)
+                    }
                 }
             }
             .navigationTitle("体型写真を記録")
@@ -189,12 +229,38 @@ private struct BodyPhotoEditorView: View {
         }
     }
 
+    private func analyzeBodyPhoto() {
+        guard let imageData else {
+            return
+        }
+
+        isAnalyzing = true
+        aiErrorMessage = nil
+
+        Task {
+            do {
+                let comment = try await LocalAIClient(settings: appStore.aiSettings)
+                    .analyzeBodyPhoto(imageData: imageData, angle: angle, memo: memo)
+                await MainActor.run {
+                    aiComment = comment
+                    isAnalyzing = false
+                }
+            } catch {
+                await MainActor.run {
+                    aiErrorMessage = error.localizedDescription
+                    isAnalyzing = false
+                }
+            }
+        }
+    }
+
     private func save() {
         appStore.saveBodyPhotoEntry(
             BodyPhotoEntry(
                 angle: angle,
                 memo: memo,
-                imageData: imageData
+                imageData: imageData,
+                aiComment: aiComment
             )
         )
         onSave()
