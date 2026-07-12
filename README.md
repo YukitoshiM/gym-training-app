@@ -15,7 +15,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 export LOCAL_AI_API_KEY=dev-local-key
 export OLLAMA_BASE_URL=http://127.0.0.1:11434
-export OLLAMA_MODEL=llava
+export OLLAMA_MODEL=gemma4:12b
 uvicorn main:app --host 0.0.0.0 --port 8765
 ```
 

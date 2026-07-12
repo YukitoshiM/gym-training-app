@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 APP_NAME = "Gym Training Local LLM"
 API_KEY = os.getenv("LOCAL_AI_API_KEY", "dev-local-key")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llava")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4:12b")
 
 app = FastAPI(title=APP_NAME)
 
@@ -178,6 +178,7 @@ async def ollama_json(prompt: str, fallback: dict[str, Any], images: Optional[li
         "prompt": prompt,
         "stream": False,
         "format": "json",
+        "think": False,
     }
     if images:
         payload["images"] = images
@@ -204,17 +205,77 @@ def extract_json(text: str) -> Any:
 
 
 def normalize_meal(result: dict[str, Any], fallback: dict[str, Any]) -> dict[str, Any]:
-    merged = fallback | result
-    merged["items"] = result.get("items") if isinstance(result.get("items"), list) else fallback["items"]
-    return merged
+    items = result.get("items") if isinstance(result.get("items"), list) else fallback["items"]
+    normalized_items: list[dict[str, Any]] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        normalized_items.append(
+            {
+                "name": pick_text(item, "name", "food_name", "食材名", default="不明"),
+                "amount": pick_text(item, "amount", "estimated_amount", "量", default="要確認"),
+                "calories": pick_float(item, "calories", "calorie", "kcal"),
+                "protein": pick_float(item, "protein", "protein_g"),
+                "fat": pick_float(item, "fat", "fat_g"),
+                "carbs": pick_float(item, "carbs", "carbohydrate", "carbs_g"),
+            }
+        )
+
+    return {
+        "meal_name": pick_text(result, "meal_name", "mealName", "name", "料理名", default=fallback["meal_name"]),
+        "calories": pick_float(result, "calories", "calorie", "kcal", default=fallback["calories"]),
+        "protein": pick_float(result, "protein", "protein_g", default=fallback["protein"]),
+        "fat": pick_float(result, "fat", "fat_g", default=fallback["fat"]),
+        "carbs": pick_float(result, "carbs", "carbohydrate", "carbs_g", default=fallback["carbs"]),
+        "confidence": pick_text(result, "confidence", "信頼度", default=fallback["confidence"]),
+        "comment": pick_text(result, "comment", "note", "コメント", default=fallback["comment"]),
+        "items": normalized_items,
+    }
 
 
 def normalize_body_photo(result: dict[str, Any], fallback: dict[str, Any]) -> dict[str, Any]:
-    return fallback | result
+    return {
+        "summary": pick_text(result, "summary", "全体", "要約", default=fallback["summary"]),
+        "abdomen": pick_text(result, "abdomen", "腹部", default=fallback["abdomen"]),
+        "waist": pick_text(result, "waist", "脇腹", "腹囲", default=fallback["waist"]),
+        "posture": pick_text(result, "posture", "姿勢", default=fallback["posture"]),
+        "score": pick_optional_float(result, "score", "スコア"),
+        "confidence": pick_text(result, "confidence", "信頼度", default=fallback["confidence"]),
+    }
 
 
 def normalize_weekly(result: dict[str, Any], fallback: dict[str, Any]) -> dict[str, Any]:
-    return fallback | result
+    return {
+        "input_summary": pick_text(result, "input_summary", "inputSummary", "summary", "入力データ要約", default=fallback["input_summary"]),
+        "output_comment": pick_text(result, "output_comment", "outputComment", "comment", "コメント", default=fallback["output_comment"]),
+        "action_suggestion": pick_text(result, "action_suggestion", "actionSuggestion", "suggestion", "改善案", default=fallback["action_suggestion"]),
+    }
+
+
+def pick_text(source: dict[str, Any], *keys: str, default: str = "") -> str:
+    for key in keys:
+        value = source.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return default
+
+
+def pick_float(source: dict[str, Any], *keys: str, default: float = 0) -> float:
+    value = pick_optional_float(source, *keys)
+    return default if value is None else value
+
+
+def pick_optional_float(source: dict[str, Any], *keys: str) -> Optional[float]:
+    for key in keys:
+        value = source.get(key)
+        if isinstance(value, (int, float)):
+            return float(value)
+        if isinstance(value, str):
+            try:
+                return float(value)
+            except ValueError:
+                continue
+    return None
 
 
 def fallback_meal(request: MealAnalysisRequest) -> dict[str, Any]:
@@ -225,14 +286,14 @@ def fallback_meal(request: MealAnalysisRequest) -> dict[str, Any]:
         "fat": 0,
         "carbs": 0,
         "confidence": "low",
-        "comment": "Ollamaに接続できないため、手動補正を前提にした下書きです。",
+        "comment": "AI生成結果を下書き化できなかったため、手動補正を前提にした下書きです。",
         "items": [],
     }
 
 
 def fallback_body_photo(request: BodyPhotoAnalysisRequest) -> dict[str, Any]:
     return {
-        "summary": "Ollamaに接続できないため、写真メモとして保存してください。",
+        "summary": "AI生成結果を下書き化できなかったため、写真メモとして保存してください。",
         "abdomen": "写真だけでは断定できません。同じ条件で撮影した前回写真と比較してください。",
         "waist": "腹囲まわりは測定値と合わせて確認してください。",
         "posture": "同じ角度、同じ光、同じ姿勢で撮ると比較しやすくなります。",
@@ -248,6 +309,6 @@ def fallback_weekly(request: WeeklyReportRequest) -> dict[str, Any]:
     photo_count = len(request.body_photos)
     return {
         "input_summary": f"身体KPI {body_count}件、食事 {meal_count}件、筋トレ {workout_count}件、体型写真 {photo_count}件を確認しました。",
-        "output_comment": "Ollamaに接続できないため、記録量にもとづく簡易コメントです。記録は蓄積できています。",
+        "output_comment": "AI生成結果を下書き化できなかったため、記録量にもとづく簡易コメントです。記録は蓄積できています。",
         "action_suggestion": "次は体重・腹囲・食事・筋トレを同じタイミングで記録し、週単位で傾向を確認してください。",
     }

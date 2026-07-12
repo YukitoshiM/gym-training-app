@@ -11,7 +11,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 export LOCAL_AI_API_KEY=dev-local-key
 export OLLAMA_BASE_URL=http://127.0.0.1:11434
-export OLLAMA_MODEL=llava
+export OLLAMA_MODEL=gemma4:12b
 uvicorn main:app --host 0.0.0.0 --port 8765
 ```
 
@@ -23,7 +23,7 @@ Simulatorからは `http://127.0.0.1:8765` を指定します。
 画像解析を使う場合は、画像対応モデルを用意します。
 
 ```bash
-ollama pull llava
+ollama pull gemma4:12b
 ollama serve
 ```
 
