@@ -70,6 +70,7 @@ final class GymTrainingAppUITests: XCTestCase {
     func testManualMealAndBodyPhotoLogFlow() throws {
         addManualMealEntry()
         addBodyPhotoMemoEntry()
+        verifyDailyJournalForManualLogs()
     }
 
     func testAIFreeMVPSurfaces() throws {
@@ -167,6 +168,9 @@ final class GymTrainingAppUITests: XCTestCase {
         todayCalendarButton.tap()
 
         let historyRow = app.descendants(matching: .any)["historyRow-胸の日"]
+        for _ in 0..<3 where !historyRow.exists {
+            app.swipeUp()
+        }
         XCTAssertTrue(historyRow.waitForExistence(timeout: 5))
         historyRow.tap()
 
@@ -298,6 +302,27 @@ final class GymTrainingAppUITests: XCTestCase {
 
         let exerciseHistoryLink = app.descendants(matching: .any)["exerciseHistoryLink"]
         XCTAssertTrue(exerciseHistoryLink.waitForExistence(timeout: 5))
+    }
+
+    private func verifyDailyJournalForManualLogs() {
+        app.tabBars.buttons["履歴"].tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["historyCalendar"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["dailyJournalSummary"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["512 kcal"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["トレーニングは未記録"].exists)
+
+        let mealName = app.staticTexts["昼食 鶏むね肉定食"]
+        for _ in 0..<3 where !mealName.exists {
+            app.swipeUp()
+        }
+        XCTAssertTrue(mealName.exists)
+
+        let bodyPhotoMemo = app.staticTexts["正面メモ"]
+        for _ in 0..<3 where !bodyPhotoMemo.exists {
+            app.swipeUp()
+        }
+        XCTAssertTrue(bodyPhotoMemo.exists)
     }
 
     private func addManualMealEntry() {
