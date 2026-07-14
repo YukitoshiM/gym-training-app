@@ -10,7 +10,7 @@ struct ProfileSettingsView: View {
     @State private var birthYearText: String
     @State private var isConfirmingReset = false
     @State private var isCheckingAI = false
-    @State private var aiHealthMessage: String?
+    @State private var aiConnectionResult: AIConnectionCheckResult?
 
     init(profile: UserProfile, aiSettings: AISettings = .default) {
         _draft = State(initialValue: profile)
@@ -69,6 +69,15 @@ struct ProfileSettingsView: View {
                         .textInputAutocapitalization(.never)
 
                     Button {
+                        aiDraft.baseURLString = AISettings.default.baseURLString
+                        aiDraft.apiKey = AISettings.default.apiKey
+                        aiConnectionResult = nil
+                    } label: {
+                        Label("Simulator推奨値に戻す", systemImage: "arrow.counterclockwise")
+                    }
+                    .accessibilityIdentifier("resetAISettingsToSimulatorButton")
+
+                    Button {
                         checkAIHealth()
                     } label: {
                         Label(isCheckingAI ? "確認中" : "接続確認", systemImage: "network")
@@ -76,15 +85,13 @@ struct ProfileSettingsView: View {
                     .disabled(isCheckingAI || !aiDraft.isEnabled)
                     .accessibilityIdentifier("checkAIHealthButton")
 
-                    if let aiHealthMessage {
-                        Text(aiHealthMessage)
-                            .font(.caption)
-                            .foregroundStyle(aiHealthMessage.contains("OK") ? .green : .red)
+                    if let aiConnectionResult {
+                        AIConnectionCheckCard(result: aiConnectionResult)
                     }
                 } header: {
                     Text("ローカルLLM")
                 } footer: {
-                    Text("開発中はMac上のローカルサーバーを指定します。Simulatorなら http://127.0.0.1:8765、実機ならMacのLAN IPまたはTailscale名を使います。")
+                    Text("Simulatorなら http://127.0.0.1:8765。実機はMacのLAN IPまたはTailscale名を使います。接続確認はAPI、Ollama、モデル取得状態まで確認します。")
                 }
 
                 Section("データ") {
@@ -133,23 +140,130 @@ struct ProfileSettingsView: View {
     }
 
     private func checkAIHealth() {
+        guard aiDraft.isEnabled else {
+            aiConnectionResult = .disabled
+            return
+        }
+
         isCheckingAI = true
-        aiHealthMessage = nil
+        aiConnectionResult = nil
 
         Task {
             do {
                 let health = try await LocalAIClient(settings: aiDraft).health()
                 await MainActor.run {
-                    aiHealthMessage = "OK: \(health.model) / Ollama \(health.ollamaReachable ? "接続" : "未接続")"
+                    aiConnectionResult = .init(health: health)
                     isCheckingAI = false
                 }
             } catch {
                 await MainActor.run {
-                    aiHealthMessage = error.localizedDescription
+                    aiConnectionResult = .init(error: error)
                     isCheckingAI = false
                 }
             }
         }
+    }
+}
+
+private struct AIConnectionCheckResult {
+    enum Level {
+        case ready
+        case warning
+        case failure
+    }
+
+    var level: Level
+    var title: String
+    var detail: String
+    var recovery: String?
+
+    static let disabled = AIConnectionCheckResult(
+        level: .warning,
+        title: "AI機能はオフです",
+        detail: "手動記録はこのまま使えます。",
+        recovery: "AI下書きや週次コメントを使う場合は、AI機能をオンにしてから接続確認してください。"
+    )
+
+    init(level: Level, title: String, detail: String, recovery: String?) {
+        self.level = level
+        self.title = title
+        self.detail = detail
+        self.recovery = recovery
+    }
+
+    init(health: AIHealthResponse) {
+        if health.isReady {
+            self.init(
+                level: .ready,
+                title: "ローカルLLM接続OK",
+                detail: "APIサーバーとOllama \(health.model) に接続できています。",
+                recovery: health.message
+            )
+        } else if !health.ollamaReachable {
+            self.init(
+                level: .warning,
+                title: "APIは起動中 / Ollama未接続",
+                detail: "local_llm_server は応答していますが、Ollamaに届いていません。",
+                recovery: health.message ?? "Mac miniで `ollama serve` を起動してから、もう一度接続確認してください。"
+            )
+        } else {
+            self.init(
+                level: .warning,
+                title: "Ollamaモデルが未取得です",
+                detail: "Ollamaは起動していますが、設定中のモデル \(health.model) が見つかりません。",
+                recovery: health.message ?? "Mac miniで `ollama pull \(health.model)` を実行するか、local_llm_server の OLLAMA_MODEL を変更してください。"
+            )
+        }
+    }
+
+    init(error: Error) {
+        let presentation = AIClientError.presentation(for: error)
+        self.init(
+            level: .failure,
+            title: presentation.message,
+            detail: "AI下書きや週次コメントは実行できませんが、手動記録は保存できます。",
+            recovery: presentation.recovery
+        )
+    }
+
+    var tint: Color {
+        switch level {
+        case .ready: .green
+        case .warning: AppTheme.orange
+        case .failure: .red
+        }
+    }
+
+    var systemImage: String {
+        switch level {
+        case .ready: "checkmark.circle.fill"
+        case .warning: "exclamationmark.triangle.fill"
+        case .failure: "xmark.octagon.fill"
+        }
+    }
+}
+
+private struct AIConnectionCheckCard: View {
+    let result: AIConnectionCheckResult
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(result.title, systemImage: result.systemImage)
+                .font(.subheadline.bold())
+                .foregroundStyle(result.tint)
+
+            Text(result.detail)
+                .font(.caption)
+                .foregroundStyle(AppTheme.ink)
+
+            if let recovery = result.recovery, !recovery.isEmpty {
+                Text(recovery)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 4)
+        .accessibilityIdentifier("aiConnectionResultCard")
     }
 }
 

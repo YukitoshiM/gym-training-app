@@ -149,6 +149,7 @@ private struct MealEditorView: View {
     @State private var aiDraft: MealAIDraft?
     @State private var isAnalyzing = false
     @State private var aiErrorMessage: String?
+    @State private var aiErrorRecovery: String?
 
     var body: some View {
         NavigationStack {
@@ -173,8 +174,12 @@ private struct MealEditorView: View {
                     } label: {
                         Label(isAnalyzing ? "AI下書き作成中" : "AI下書きを作成", systemImage: "sparkles")
                     }
-                    .disabled(imageData == nil || isAnalyzing)
+                    .disabled(imageData == nil || isAnalyzing || !appStore.aiSettings.isEnabled)
                     .accessibilityIdentifier("analyzeMealButton")
+
+                    Text(aiHelpText)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
                 }
 
                 Section("食事") {
@@ -230,9 +235,22 @@ private struct MealEditorView: View {
 
                 if let aiErrorMessage {
                     Section("AIエラー") {
-                        Text(aiErrorMessage)
-                            .font(.subheadline)
-                            .foregroundStyle(.red)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label(aiErrorMessage, systemImage: "xmark.octagon.fill")
+                                .font(.subheadline.bold())
+                                .foregroundStyle(.red)
+
+                            if let aiErrorRecovery {
+                                Text(aiErrorRecovery)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+
+                            Text("食事名とPFCを手動で入力すれば、このまま保存できます。")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        .accessibilityIdentifier("mealAIErrorRecoveryCard")
                     }
                 }
             }
@@ -256,9 +274,24 @@ private struct MealEditorView: View {
             .onChange(of: selectedPhoto) { _, item in
                 Task {
                     imageData = try? await item?.loadTransferable(type: Data.self)
+                    aiDraft = nil
+                    aiErrorMessage = nil
+                    aiErrorRecovery = nil
                 }
             }
         }
+    }
+
+    private var aiHelpText: String {
+        if !appStore.aiSettings.isEnabled {
+            return "AI機能は設定でオフです。手動入力はこのまま保存できます。"
+        }
+
+        if imageData == nil {
+            return "写真を選ぶと、ローカルLLMで料理名とPFCの下書きを作れます。"
+        }
+
+        return "AI下書きは参考値です。必ず量とPFCを確認してから保存してください。"
     }
 
     private func analyzeMeal() {
@@ -268,6 +301,7 @@ private struct MealEditorView: View {
 
         isAnalyzing = true
         aiErrorMessage = nil
+        aiErrorRecovery = nil
 
         Task {
             do {
@@ -279,7 +313,9 @@ private struct MealEditorView: View {
                 }
             } catch {
                 await MainActor.run {
-                    aiErrorMessage = error.localizedDescription
+                    let presentation = AIClientError.presentation(for: error)
+                    aiErrorMessage = presentation.message
+                    aiErrorRecovery = presentation.recovery
                     isAnalyzing = false
                 }
             }

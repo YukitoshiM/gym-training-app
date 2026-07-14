@@ -3,7 +3,9 @@ import SwiftUI
 struct AIReportView: View {
     @EnvironmentObject private var appStore: AppStore
     @State private var isGenerating = false
-    @State private var errorMessage: String?
+    @State private var isCheckingConnection = false
+    @State private var errorPresentation: AIErrorPresentation?
+    @State private var connectionNotice: AIReportConnectionNotice?
 
     private var latestWeeklyInsight: AIInsight? {
         appStore.aiInsights.first { $0.insightType == .weekly }
@@ -12,6 +14,10 @@ struct AIReportView: View {
     var body: some View {
         List {
             Section {
+                if let connectionNotice {
+                    AIReportConnectionNoticeCard(notice: connectionNotice)
+                }
+
                 Button {
                     generateWeeklyReport()
                 } label: {
@@ -20,8 +26,20 @@ struct AIReportView: View {
                 .disabled(isGenerating || !appStore.aiSettings.isEnabled)
                 .accessibilityIdentifier("generateWeeklyAIReportButton")
 
+                Button {
+                    checkConnection()
+                } label: {
+                    Label(isCheckingConnection ? "接続確認中" : "ローカルLLM接続を確認", systemImage: "network")
+                }
+                .disabled(isCheckingConnection || !appStore.aiSettings.isEnabled)
+                .accessibilityIdentifier("checkAIConnectionFromReportButton")
+
                 if !appStore.aiSettings.isEnabled {
                     Text("設定でAI機能がオフです。")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text("接続できない場合でも、記録済みデータは消えません。手動記録を続けたまま、あとでAIコメントだけ生成できます。")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -60,10 +78,9 @@ struct AIReportView: View {
                 }
             }
 
-            if let errorMessage {
+            if let errorPresentation {
                 Section("AIエラー") {
-                    Text(errorMessage)
-                        .foregroundStyle(.red)
+                    AIErrorRecoveryCard(presentation: errorPresentation)
                 }
             }
 
@@ -85,7 +102,8 @@ struct AIReportView: View {
 
     private func generateWeeklyReport() {
         isGenerating = true
-        errorMessage = nil
+        errorPresentation = nil
+        connectionNotice = nil
 
         Task {
             do {
@@ -104,8 +122,29 @@ struct AIReportView: View {
                 }
             } catch {
                 await MainActor.run {
-                    errorMessage = error.localizedDescription
+                    errorPresentation = AIClientError.presentation(for: error)
                     isGenerating = false
+                }
+            }
+        }
+    }
+
+    private func checkConnection() {
+        isCheckingConnection = true
+        errorPresentation = nil
+        connectionNotice = nil
+
+        Task {
+            do {
+                let health = try await LocalAIClient(settings: appStore.aiSettings).health()
+                await MainActor.run {
+                    connectionNotice = AIReportConnectionNotice(health: health)
+                    isCheckingConnection = false
+                }
+            } catch {
+                await MainActor.run {
+                    errorPresentation = AIClientError.presentation(for: error)
+                    isCheckingConnection = false
                 }
             }
         }
@@ -127,6 +166,84 @@ struct AIReportView: View {
                 "\($0.angle.displayName): \($0.aiComment?.summary ?? $0.memo)"
             }
         )
+    }
+}
+
+private struct AIReportConnectionNotice {
+    var title: String
+    var detail: String
+    var recovery: String?
+    var tint: Color
+    var systemImage: String
+
+    init(health: AIHealthResponse) {
+        if health.isReady {
+            title = "接続OK"
+            detail = "Ollama \(health.model) で週次コメントを生成できます。"
+            recovery = health.message
+            tint = .green
+            systemImage = "checkmark.circle.fill"
+        } else if !health.ollamaReachable {
+            title = "Ollama未接続"
+            detail = "local_llm_server は起動していますが、Ollamaに接続できません。"
+            recovery = health.message ?? "Mac miniで `ollama serve` を起動してください。"
+            tint = AppTheme.orange
+            systemImage = "exclamationmark.triangle.fill"
+        } else {
+            title = "モデル未取得"
+            detail = "Ollamaは起動していますが、\(health.model) が見つかりません。"
+            recovery = health.message ?? "`ollama pull \(health.model)` を実行してください。"
+            tint = AppTheme.orange
+            systemImage = "exclamationmark.triangle.fill"
+        }
+    }
+}
+
+private struct AIReportConnectionNoticeCard: View {
+    let notice: AIReportConnectionNotice
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(notice.title, systemImage: notice.systemImage)
+                .font(.subheadline.bold())
+                .foregroundStyle(notice.tint)
+
+            Text(notice.detail)
+                .font(.caption)
+                .foregroundStyle(AppTheme.ink)
+
+            if let recovery = notice.recovery, !recovery.isEmpty {
+                Text(recovery)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 4)
+        .accessibilityIdentifier("aiReportConnectionNotice")
+    }
+}
+
+private struct AIErrorRecoveryCard: View {
+    let presentation: AIErrorPresentation
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(presentation.message, systemImage: "xmark.octagon.fill")
+                .font(.subheadline.bold())
+                .foregroundStyle(.red)
+
+            if let recovery = presentation.recovery, !recovery.isEmpty {
+                Text(recovery)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Text("記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 4)
+        .accessibilityIdentifier("aiErrorRecoveryCard")
     }
 }
 

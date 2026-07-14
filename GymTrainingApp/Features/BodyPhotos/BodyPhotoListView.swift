@@ -139,6 +139,7 @@ private struct BodyPhotoEditorView: View {
     @State private var aiComment: BodyPhotoAIComment?
     @State private var isAnalyzing = false
     @State private var aiErrorMessage: String?
+    @State private var aiErrorRecovery: String?
 
     var body: some View {
         NavigationStack {
@@ -163,8 +164,12 @@ private struct BodyPhotoEditorView: View {
                     } label: {
                         Label(isAnalyzing ? "AIコメント作成中" : "AIコメントを作成", systemImage: "sparkles")
                     }
-                    .disabled(imageData == nil || isAnalyzing)
+                    .disabled(imageData == nil || isAnalyzing || !appStore.aiSettings.isEnabled)
                     .accessibilityIdentifier("analyzeBodyPhotoButton")
+
+                    Text(aiHelpText)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
                 }
 
                 Section("撮影角度") {
@@ -199,9 +204,22 @@ private struct BodyPhotoEditorView: View {
 
                 if let aiErrorMessage {
                     Section("AIエラー") {
-                        Text(aiErrorMessage)
-                            .font(.subheadline)
-                            .foregroundStyle(.red)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label(aiErrorMessage, systemImage: "xmark.octagon.fill")
+                                .font(.subheadline.bold())
+                                .foregroundStyle(.red)
+
+                            if let aiErrorRecovery {
+                                Text(aiErrorRecovery)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+
+                            Text("撮影角度とメモだけでも保存できます。AIコメントは後から追加する想定で進められます。")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        .accessibilityIdentifier("bodyPhotoAIErrorRecoveryCard")
                     }
                 }
             }
@@ -224,9 +242,24 @@ private struct BodyPhotoEditorView: View {
             .onChange(of: selectedPhoto) { _, item in
                 Task {
                     imageData = try? await item?.loadTransferable(type: Data.self)
+                    aiComment = nil
+                    aiErrorMessage = nil
+                    aiErrorRecovery = nil
                 }
             }
         }
+    }
+
+    private var aiHelpText: String {
+        if !appStore.aiSettings.isEnabled {
+            return "AI機能は設定でオフです。写真メモはこのまま保存できます。"
+        }
+
+        if imageData == nil {
+            return "写真を選ぶと、ローカルLLMで見た目変化の参考コメントを作れます。"
+        }
+
+        return "写真AIは体脂肪率を断定しません。同じ条件で撮った写真との差分確認に使います。"
     }
 
     private func analyzeBodyPhoto() {
@@ -236,6 +269,7 @@ private struct BodyPhotoEditorView: View {
 
         isAnalyzing = true
         aiErrorMessage = nil
+        aiErrorRecovery = nil
 
         Task {
             do {
@@ -247,7 +281,9 @@ private struct BodyPhotoEditorView: View {
                 }
             } catch {
                 await MainActor.run {
-                    aiErrorMessage = error.localizedDescription
+                    let presentation = AIClientError.presentation(for: error)
+                    aiErrorMessage = presentation.message
+                    aiErrorRecovery = presentation.recovery
                     isAnalyzing = false
                 }
             }

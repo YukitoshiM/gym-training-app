@@ -20,7 +20,9 @@ final class AppStore: ObservableObject {
             storage.reset()
         }
 
-        if ProcessInfo.processInfo.arguments.contains("--seed-alpha-ui-test-plan") {
+        let arguments = ProcessInfo.processInfo.arguments
+
+        if arguments.contains("--seed-alpha-ui-test-plan") {
             storage.savePlans([Self.alphaUITestPlan()])
             storage.saveWorkoutHistory([])
             storage.saveBodyMetricEntries([])
@@ -28,7 +30,7 @@ final class AppStore: ObservableObject {
             storage.saveMealEntries([])
             storage.saveBodyPhotoEntries([])
             storage.saveCustomExercises([])
-            storage.saveAISettings(.default)
+            storage.saveAISettings(arguments.contains("--seed-ai-unreachable-settings") ? Self.unreachableAISettings() : .default)
             storage.saveAIInsights([])
             storage.saveUserProfile(.default)
         }
@@ -306,6 +308,14 @@ final class AppStore: ObservableObject {
         BodyMetricKind.allCases.map {
             BodyMetricGoal(kind: $0)
         }
+    }
+
+    private static func unreachableAISettings() -> AISettings {
+        AISettings(
+            isEnabled: true,
+            baseURLString: "http://127.0.0.1:1",
+            apiKey: AISettings.default.apiKey
+        )
     }
 }
 

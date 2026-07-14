@@ -29,6 +29,20 @@ ollama serve
 
 Ollamaに接続できない場合も、アプリ開発を止めないためのフォールバックJSONを返します。
 
+## 接続確認
+
+アプリの設定画面で「接続確認」を押すと、次の3段階を確認します。
+
+- `local_llm_server` が起動しているか
+- `OLLAMA_BASE_URL` のOllamaに接続できるか
+- `OLLAMA_MODEL` で指定したモデルが取得済みか
+
+よくある失敗:
+
+- `ローカルLLMサーバーに接続できません`: `uvicorn main:app --host 0.0.0.0 --port 8765` を起動します。
+- `Ollama未接続`: `ollama serve` を起動し、`OLLAMA_BASE_URL` を確認します。
+- `モデル未取得`: `ollama pull $OLLAMA_MODEL` を実行するか、利用中のモデル名を `OLLAMA_MODEL` に指定します。
+
 ## Endpoints
 
 - `GET /v1/health`

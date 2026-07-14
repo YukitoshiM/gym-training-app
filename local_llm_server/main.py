@@ -81,11 +81,20 @@ def require_api_key(authorization: Optional[str] = Header(default=None)) -> None
 
 @app.get("/v1/health")
 async def health(_: None = Depends(require_api_key)) -> dict[str, Any]:
-    reachable = await ollama_reachable()
+    ollama = await ollama_status()
+    if not ollama["reachable"]:
+        message = f"Ollamaに接続できません。Mac miniで `ollama serve` を起動し、OLLAMA_BASE_URL={OLLAMA_BASE_URL} を確認してください。"
+    elif not ollama["model_available"]:
+        message = f"Ollamaは起動していますが、モデル {OLLAMA_MODEL} が見つかりません。`ollama pull {OLLAMA_MODEL}` を実行するか、OLLAMA_MODELを変更してください。"
+    else:
+        message = "local_llm_server、Ollama、指定モデルに接続できています。"
+
     return {
         "status": "ok",
         "model": OLLAMA_MODEL,
-        "ollama_reachable": reachable,
+        "ollama_reachable": ollama["reachable"],
+        "model_available": ollama["model_available"],
+        "message": message,
     }
 
 
@@ -163,13 +172,26 @@ async def weekly_report(request: WeeklyReportRequest, _: None = Depends(require_
     return normalize_weekly(result, fallback)
 
 
-async def ollama_reachable() -> bool:
+async def ollama_status() -> dict[str, Any]:
     try:
         async with httpx.AsyncClient(timeout=2.0) as client:
             response = await client.get(f"{OLLAMA_BASE_URL}/api/tags")
-            return response.status_code == 200
+            if response.status_code != 200:
+                return {"reachable": False, "model_available": False, "models": []}
+
+            models = [
+                item.get("name") or item.get("model")
+                for item in response.json().get("models", [])
+                if isinstance(item, dict)
+            ]
+            model_available = OLLAMA_MODEL in models
+            return {
+                "reachable": True,
+                "model_available": model_available,
+                "models": models,
+            }
     except httpx.HTTPError:
-        return False
+        return {"reachable": False, "model_available": False, "models": []}
 
 
 async def ollama_json(prompt: str, fallback: dict[str, Any], images: Optional[list[str]] = None) -> dict[str, Any]:

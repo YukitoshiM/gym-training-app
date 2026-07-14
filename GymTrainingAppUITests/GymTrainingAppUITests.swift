@@ -81,6 +81,12 @@ final class GymTrainingAppUITests: XCTestCase {
         verifyHistoryAnalyticsLinks()
     }
 
+    func testAIConnectionFailureUX() throws {
+        relaunchWithUnreachableAI()
+        verifyAISettingsFailureMessage()
+        verifyAIReportFailureMessage()
+    }
+
     private func verifySeededPlan() {
         app.tabBars.buttons["計画"].tap()
 
@@ -291,6 +297,42 @@ final class GymTrainingAppUITests: XCTestCase {
         saveButton.tap()
     }
 
+    private func verifyAISettingsFailureMessage() {
+        app.tabBars.buttons["ホーム"].tap()
+
+        let settingsButton = app.buttons["settingsButton"]
+        XCTAssertTrue(settingsButton.waitForExistence(timeout: 5))
+        settingsButton.tap()
+
+        XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
+        app.swipeUp()
+        XCTAssertTrue(app.textFields["aiBaseURLField"].waitForExistence(timeout: 5))
+
+        let checkButton = app.buttons["checkAIHealthButton"]
+        XCTAssertTrue(checkButton.waitForExistence(timeout: 5))
+        checkButton.tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["aiConnectionResultCard"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["ローカルLLMサーバーに接続できません。"].waitForExistence(timeout: 5))
+
+        app.buttons["saveProfileSettingsButton"].tap()
+    }
+
+    private func verifyAIReportFailureMessage() {
+        app.tabBars.buttons["ホーム"].tap()
+
+        let aiReportLink = app.descendants(matching: .any)["aiReportLink"]
+        XCTAssertTrue(aiReportLink.waitForExistence(timeout: 5))
+        aiReportLink.tap()
+
+        let generateButton = app.buttons["generateWeeklyAIReportButton"]
+        XCTAssertTrue(generateButton.waitForExistence(timeout: 5))
+        generateButton.tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["aiErrorRecoveryCard"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。"].exists)
+    }
+
     private func verifyHistoryAnalyticsLinks() {
         app.tabBars.buttons["ホーム"].tap()
         XCTAssertTrue(app.descendants(matching: .any)["aiReportLink"].waitForExistence(timeout: 5))
@@ -381,5 +423,15 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.descendants(matching: .any)["bodyPhotoRow-front"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["正面メモ"].exists)
+    }
+
+    private func relaunchWithUnreachableAI() {
+        app.terminate()
+        app.launchArguments = [
+            "--reset-ui-test-data",
+            "--seed-alpha-ui-test-plan",
+            "--seed-ai-unreachable-settings"
+        ]
+        app.launch()
     }
 }
