@@ -18,6 +18,12 @@ struct HomeView: View {
                         isShowingGoalPicker = true
                     }
 
+                    TodayTrainingCard(plan: nextPlan) {
+                        if let nextPlan {
+                            activeSession = WorkoutSession(plan: nextPlan)
+                        }
+                    }
+
                     DailyRecordChecklistCard(
                         bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
                         waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
@@ -25,12 +31,6 @@ struct HomeView: View {
                         bodyPhotoCount: appStore.bodyPhotoEntries().count,
                         workoutCount: appStore.workoutSessions().count
                     )
-
-                    TodayTrainingCard(plan: nextPlan) {
-                        if let nextPlan {
-                            activeSession = WorkoutSession(plan: nextPlan)
-                        }
-                    }
 
                     HStack(spacing: 10) {
                         CompactStat(title: "計画", value: "\(appStore.plans.count)", suffix: "件", tint: AppTheme.blue)

@@ -7,6 +7,11 @@ struct DailyRecordChecklistCard: View {
     let bodyPhotoCount: Int
     let workoutCount: Int
 
+    private let columns = [
+        GridItem(.flexible(), spacing: 8),
+        GridItem(.flexible(), spacing: 8)
+    ]
+
     private var completedCount: Int {
         [
             bodyWeightRecorded,
@@ -41,8 +46,8 @@ struct DailyRecordChecklistCard: View {
                 ProgressView(value: Double(completedCount), total: 5)
                     .tint(AppTheme.accent)
 
-                VStack(spacing: 9) {
-                    DailyRecordStatusLine(
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
+                    DailyRecordStatusChip(
                         title: "体重",
                         detail: bodyWeightRecorded ? "記録済み" : "未記録",
                         systemImage: "scalemass",
@@ -50,7 +55,7 @@ struct DailyRecordChecklistCard: View {
                         tint: AppTheme.blue
                     )
 
-                    DailyRecordStatusLine(
+                    DailyRecordStatusChip(
                         title: "腹囲",
                         detail: waistRecorded ? "記録済み" : "未記録",
                         systemImage: "figure.core.training",
@@ -58,7 +63,7 @@ struct DailyRecordChecklistCard: View {
                         tint: AppTheme.orange
                     )
 
-                    DailyRecordStatusLine(
+                    DailyRecordStatusChip(
                         title: "食事",
                         detail: mealCount > 0 ? "\(mealCount)件" : "未記録",
                         systemImage: "fork.knife",
@@ -66,7 +71,7 @@ struct DailyRecordChecklistCard: View {
                         tint: AppTheme.orange
                     )
 
-                    DailyRecordStatusLine(
+                    DailyRecordStatusChip(
                         title: "体型写真",
                         detail: bodyPhotoCount > 0 ? "\(bodyPhotoCount)件" : "未記録",
                         systemImage: "camera",
@@ -74,7 +79,7 @@ struct DailyRecordChecklistCard: View {
                         tint: AppTheme.purple
                     )
 
-                    DailyRecordStatusLine(
+                    DailyRecordStatusChip(
                         title: "筋トレ",
                         detail: workoutCount > 0 ? "\(workoutCount)回" : "未実施",
                         systemImage: "figure.strengthtraining.traditional",
@@ -88,7 +93,7 @@ struct DailyRecordChecklistCard: View {
     }
 }
 
-private struct DailyRecordStatusLine: View {
+private struct DailyRecordStatusChip: View {
     let title: String
     let detail: String
     let systemImage: String
@@ -100,19 +105,27 @@ private struct DailyRecordStatusLine: View {
             Image(systemName: isCompleted ? "checkmark.circle.fill" : systemImage)
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(isCompleted ? .green : tint)
-                .frame(width: 22)
+                .frame(width: 20)
 
-            Text(title)
-                .font(.subheadline.weight(.semibold))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.caption.bold())
+                    .foregroundStyle(AppTheme.ink)
+                    .lineLimit(1)
 
-            Spacer()
-
-            Text(detail)
-                .font(.caption.bold())
-                .foregroundStyle(isCompleted ? .green : .secondary)
-                .padding(.horizontal, 9)
-                .padding(.vertical, 5)
-                .background(Color(.tertiarySystemGroupedBackground), in: Capsule())
+                Text(detail)
+                    .font(.caption2.bold())
+                    .foregroundStyle(isCompleted ? .green : .secondary)
+                    .lineLimit(1)
+            }
         }
+        .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 8)
+        .background((isCompleted ? Color.green : tint).opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke((isCompleted ? Color.green : tint).opacity(0.18), lineWidth: 1)
+        )
     }
 }
