@@ -28,6 +28,7 @@ Simulatorではアプリ設定のローカルLLM URLを `http://127.0.0.1:8765` 
 - [アルファ版スコープ定義](docs/alpha_scope.md)
 - [MVP設計書](docs/gym_training_app_design_mvp.md)
 - [競合アプリ参考メモ](docs/competitive_research.md)
+- [Apple Watch連携 W1設計](docs/apple_watch_workout_plan.md)
 - [iOS開発環境セットアップ](docs/ios_environment_setup.md)
 
 ## Development
