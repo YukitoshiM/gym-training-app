@@ -1,16 +1,30 @@
 import SwiftUI
 
 struct WorkoutSummaryView: View {
+    @EnvironmentObject private var appStore: AppStore
+
     let session: WorkoutSession
     let onClose: () -> Void
+
+    private let summaryColumns = [
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
+    ]
 
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                    HStack(spacing: 10) {
+                    LazyVGrid(columns: summaryColumns, spacing: 10) {
                         MetricPill(title: "達成率", value: AppFormatters.percent(session.achievementRate), systemImage: "target", tint: AppTheme.accent)
-                        MetricPill(title: "総ボリューム", value: AppFormatters.volume(session.totalVolume), systemImage: "scalemass", tint: AppTheme.orange)
+                        MetricPill(title: "計画セット", value: "\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist", tint: AppTheme.blue)
+                        MetricPill(title: "総ボリューム", value: AppFormatters.volume(session.totalVolume, unit: appStore.userProfile.weightUnit), systemImage: "scalemass", tint: AppTheme.orange)
+                        MetricPill(
+                            title: "目標差",
+                            value: AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit),
+                            systemImage: "plusminus",
+                            tint: session.volumeDelta >= 0 ? AppTheme.accent : AppTheme.orange
+                        )
                     }
                 }
                 .listRowSeparator(.hidden)
@@ -22,9 +36,12 @@ struct WorkoutSummaryView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(exercise.exercise.name)
                                     .font(.headline)
-                                Text("\(exercise.sets.filter(\.isCompleted).count)/\(exercise.sets.count)セット完了")
+                                Text("計画 \(exercise.completedPlannedSetCount)/\(exercise.plannedSetCount)セット完了 / 達成 \(exercise.achievedPlannedSetCount)/\(exercise.plannedSetCount)")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
+                                Text("目標差 \(AppFormatters.signedVolume(exercise.volumeDelta, unit: appStore.userProfile.weightUnit))")
+                                    .font(.caption.bold())
+                                    .foregroundStyle(exercise.volumeDelta >= 0 ? .green : AppTheme.orange)
                             }
 
                             Spacer()
@@ -75,4 +92,5 @@ struct SummaryMetric: View {
         )),
         onClose: {}
     )
+    .environmentObject(AppStore())
 }

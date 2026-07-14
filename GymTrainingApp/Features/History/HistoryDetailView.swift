@@ -8,6 +8,11 @@ struct HistoryDetailView: View {
 
     let session: WorkoutSession
 
+    private let summaryColumns = [
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
+    ]
+
     private var currentSession: WorkoutSession {
         appStore.workoutHistory.first { $0.id == session.id } ?? session
     }
@@ -26,12 +31,14 @@ struct HistoryDetailView: View {
             }
 
             Section {
-                HStack {
+                LazyVGrid(columns: summaryColumns, spacing: 12) {
                     SummaryMetric(title: "達成率", value: AppFormatters.percent(currentSession.achievementRate))
-                    Spacer()
+                    SummaryMetric(title: "計画セット", value: "\(currentSession.completedPlannedSetCount)/\(currentSession.plannedSetCount)")
                     SummaryMetric(title: "総ボリューム", value: AppFormatters.volume(currentSession.totalVolume, unit: appStore.userProfile.weightUnit))
+                    SummaryMetric(title: "目標差", value: AppFormatters.signedVolume(currentSession.volumeDelta, unit: appStore.userProfile.weightUnit))
                 }
                 .padding(.vertical, 8)
+                .accessibilityIdentifier("historyPlanDeltaSummary")
             }
 
             ForEach(currentSession.exercises) { exercise in
@@ -48,7 +55,7 @@ struct HistoryDetailView: View {
                     HStack {
                         Text(exercise.exercise.name)
                         Spacer()
-                        Text(exercise.isSkipped ? "スキップ" : AppFormatters.percent(exercise.achievementRate))
+                        Text(exercise.isSkipped ? "スキップ" : "\(exercise.completedPlannedSetCount)/\(exercise.plannedSetCount)セット \(AppFormatters.percent(exercise.achievementRate))")
                     }
                 }
             }
@@ -86,6 +93,8 @@ struct HistoryDetailView: View {
 }
 
 private struct HistorySetRow: View {
+    @EnvironmentObject private var appStore: AppStore
+
     let set: WorkoutSet
 
     private var resultText: String {
@@ -96,6 +105,16 @@ private struct HistorySetRow: View {
         return set.isAchieved ? "達成" : "未達"
     }
 
+    private var statusTint: Color {
+        if set.isAchieved {
+            return .green
+        }
+        if set.isCompleted {
+            return AppTheme.orange
+        }
+        return .secondary
+    }
+
     var body: some View {
         HStack {
             Text("\(set.setOrder)")
@@ -104,19 +123,24 @@ private struct HistorySetRow: View {
                 .background(set.isAchieved ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
 
             VStack(alignment: .leading, spacing: 3) {
-                Text("実績 \(AppFormatters.weight(set.actualWeight)) × \(set.actualReps)回")
+                Text("実績 \(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit)) × \(set.actualReps)回")
                     .font(.headline)
 
-                Text("目標 \(AppFormatters.weight(set.targetWeight)) × \(set.targetReps)回 / 差分 \(set.repsDelta >= 0 ? "+" : "")\(set.repsDelta)回")
+                Text("目標 \(AppFormatters.weight(set.targetWeight, unit: appStore.userProfile.weightUnit)) × \(set.targetReps)回")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+
+                Text("重量差 \(AppFormatters.signedWeight(set.weightDelta, unit: appStore.userProfile.weightUnit)) / 回数差 \(AppFormatters.signedReps(set.repsDelta))")
+                    .font(.caption.bold())
+                    .foregroundStyle(statusTint)
+                    .accessibilityIdentifier("historySetDelta-\(set.setOrder)")
             }
 
             Spacer()
 
             Text(resultText)
                 .font(.subheadline.bold())
-                .foregroundStyle(set.isAchieved ? .green : .orange)
+                .foregroundStyle(statusTint)
         }
         .padding(.vertical, 4)
     }

@@ -102,6 +102,10 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["総ボリューム"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
+        XCTAssertTrue(app.staticTexts["計画セット"].exists)
+        XCTAssertTrue(app.staticTexts["3/3"].exists)
+        XCTAssertTrue(app.staticTexts["目標差"].exists)
+        XCTAssertTrue(app.staticTexts["0 kg"].exists)
 
         app.buttons["閉じる"].tap()
     }
@@ -115,6 +119,9 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.navigationBars["胸の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
+        XCTAssertTrue(app.staticTexts["計画セット"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["0/3"].exists)
+        XCTAssertTrue(app.staticTexts["-600 kg"].exists)
     }
 
     private func verifyHistory() {
@@ -133,7 +140,10 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.navigationBars["履歴詳細"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["総ボリューム"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["historyPlanDeltaSummary"].exists)
         XCTAssertTrue(app.staticTexts["実績 20 kg × 10回"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["historySetDelta-1"].exists)
+        XCTAssertTrue(app.staticTexts["重量差 0 kg / 回数差 0回"].exists)
     }
 
     private func openBodyMetricDetail() {

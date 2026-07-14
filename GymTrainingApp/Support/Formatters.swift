@@ -35,6 +35,21 @@ enum AppFormatters {
         }
     }
 
+    static func signedWeight(_ value: Double, unit: WeightUnit = .kg) -> String {
+        let prefix = value > 0 ? "+" : ""
+        return prefix + weight(value, unit: unit)
+    }
+
+    static func signedVolume(_ value: Double, unit: WeightUnit = .kg) -> String {
+        let prefix = value > 0 ? "+" : ""
+        return prefix + volume(value, unit: unit)
+    }
+
+    static func signedReps(_ value: Int) -> String {
+        let prefix = value > 0 ? "+" : ""
+        return "\(prefix)\(value)回"
+    }
+
     static func calories(_ value: Double) -> String {
         value.formatted(.number.precision(.fractionLength(0))) + " kcal"
     }

@@ -105,11 +105,37 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         exercises.reduce(0) { $0 + $1.totalVolume }
     }
 
+    var plannedSetCount: Int {
+        exercises.reduce(0) { $0 + $1.plannedSetCount }
+    }
+
+    var completedPlannedSetCount: Int {
+        exercises.reduce(0) { $0 + $1.completedPlannedSetCount }
+    }
+
+    var achievedPlannedSetCount: Int {
+        exercises.reduce(0) { $0 + $1.achievedPlannedSetCount }
+    }
+
+    var targetVolume: Double {
+        exercises.reduce(0) { $0 + $1.targetVolume }
+    }
+
+    var actualPlannedVolume: Double {
+        exercises.reduce(0) { $0 + $1.actualPlannedVolume }
+    }
+
+    var volumeDelta: Double {
+        actualPlannedVolume - targetVolume
+    }
+
     var achievementRate: Double {
-        let plannedExercises = exercises.filter { !$0.isSkipped }
-        guard !plannedExercises.isEmpty else { return 0 }
-        let total = plannedExercises.reduce(0) { $0 + $1.achievementRate }
-        return total / Double(plannedExercises.count)
+        let plannedSets = exercises
+            .filter { !$0.isSkipped }
+            .flatMap(\.plannedSets)
+        guard !plannedSets.isEmpty else { return 0 }
+        let total = plannedSets.reduce(0) { $0 + $1.achievementRate }
+        return total / Double(plannedSets.count)
     }
 }
 
@@ -141,9 +167,38 @@ struct WorkoutExercise: Identifiable, Codable, Hashable {
         sets.filter(\.isCompleted).reduce(0) { $0 + $1.volume }
     }
 
+    var plannedSets: [WorkoutSet] {
+        sets.filter { !$0.isAdded }
+    }
+
+    var plannedSetCount: Int {
+        isSkipped ? 0 : plannedSets.count
+    }
+
+    var completedPlannedSetCount: Int {
+        isSkipped ? 0 : plannedSets.filter(\.isCompleted).count
+    }
+
+    var achievedPlannedSetCount: Int {
+        isSkipped ? 0 : plannedSets.filter(\.isAchieved).count
+    }
+
+    var targetVolume: Double {
+        guard !isSkipped else { return 0 }
+        return plannedSets.reduce(0) { $0 + $1.targetVolume }
+    }
+
+    var actualPlannedVolume: Double {
+        guard !isSkipped else { return 0 }
+        return plannedSets.filter(\.isCompleted).reduce(0) { $0 + $1.volume }
+    }
+
+    var volumeDelta: Double {
+        actualPlannedVolume - targetVolume
+    }
+
     var achievementRate: Double {
         guard !isSkipped else { return 0 }
-        let plannedSets = sets.filter { !$0.isAdded }
         guard !plannedSets.isEmpty else { return 0 }
         let total = plannedSets.reduce(0) { $0 + $1.achievementRate }
         return total / Double(plannedSets.count)
@@ -192,13 +247,23 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         actualWeight * Double(actualReps)
     }
 
+    var targetVolume: Double {
+        targetWeight * Double(targetReps)
+    }
+
     var achievementRate: Double {
+        guard isCompleted else { return 0 }
         guard targetReps > 0 else { return 0 }
-        return min(Double(actualReps) / Double(targetReps), 1)
+        let repsRate = min(Double(actualReps) / Double(targetReps), 1)
+        guard targetWeight > 0 else {
+            return repsRate
+        }
+        let weightRate = min(actualWeight / targetWeight, 1)
+        return min(weightRate, repsRate)
     }
 
     var isAchieved: Bool {
-        actualReps >= targetReps && actualWeight >= targetWeight
+        isCompleted && actualReps >= targetReps && actualWeight >= targetWeight
     }
 }
 
@@ -230,4 +295,3 @@ extension WorkoutSession {
         )
     }
 }
-

@@ -312,6 +312,8 @@ private struct CalendarDayButton: View {
 }
 
 private struct HistoryRow: View {
+    @EnvironmentObject private var appStore: AppStore
+
     let session: WorkoutSession
 
     var body: some View {
@@ -334,11 +336,16 @@ private struct HistoryRow: View {
                 }
 
                 HStack(spacing: 10) {
-                    Label(AppFormatters.volume(session.totalVolume), systemImage: "scalemass")
+                    Label(AppFormatters.volume(session.totalVolume, unit: appStore.userProfile.weightUnit), systemImage: "scalemass")
                     Label("\(session.exercises.count)種目", systemImage: "dumbbell")
+                    Label("\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist")
                 }
                 .font(.caption)
                 .foregroundStyle(.secondary)
+
+                Text("目標差 \(AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit))")
+                    .font(.caption.bold())
+                    .foregroundStyle(session.volumeDelta >= 0 ? .green : AppTheme.orange)
 
                 Text(session.exercises.map { $0.exercise.name }.joined(separator: "、"))
                     .font(.caption)

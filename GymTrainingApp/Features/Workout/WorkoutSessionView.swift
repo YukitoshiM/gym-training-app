@@ -10,6 +10,11 @@ struct WorkoutSessionView: View {
     @State private var isConfirmingCancel = false
     @State private var completedSession: WorkoutSession?
 
+    private let summaryColumns = [
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
+    ]
+
     init(session: WorkoutSession) {
         _session = State(initialValue: session)
     }
@@ -18,7 +23,7 @@ struct WorkoutSessionView: View {
         NavigationStack {
             List {
                 Section {
-                    HStack(spacing: 10) {
+                    LazyVGrid(columns: summaryColumns, spacing: 10) {
                         MetricPill(
                             title: "全体達成率",
                             value: AppFormatters.percent(session.achievementRate),
@@ -26,10 +31,22 @@ struct WorkoutSessionView: View {
                             tint: AppTheme.accent
                         )
                         MetricPill(
+                            title: "計画セット",
+                            value: "\(session.completedPlannedSetCount)/\(session.plannedSetCount)",
+                            systemImage: "checklist",
+                            tint: AppTheme.blue
+                        )
+                        MetricPill(
                             title: "総ボリューム",
-                            value: AppFormatters.volume(session.totalVolume),
+                            value: AppFormatters.volume(session.totalVolume, unit: appStore.userProfile.weightUnit),
                             systemImage: "scalemass",
                             tint: AppTheme.orange
+                        )
+                        MetricPill(
+                            title: "目標差",
+                            value: AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit),
+                            systemImage: "plusminus",
+                            tint: session.volumeDelta >= 0 ? AppTheme.accent : AppTheme.orange
                         )
                     }
                 }
@@ -147,7 +164,7 @@ private struct WorkoutExerciseSection: View {
                             Text(workoutExercise.exercise.name)
                                 .font(.headline)
 
-                            Text("\(workoutExercise.exercise.primaryMuscle.displayName)・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
+                            Text("\(workoutExercise.exercise.primaryMuscle.displayName)・計画 \(workoutExercise.completedPlannedSetCount)/\(workoutExercise.plannedSetCount)セット・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                         }
@@ -169,6 +186,8 @@ private struct WorkoutExerciseSection: View {
                             onStart: startRestTimer,
                             onStop: stopRestTimer
                         )
+
+                        WorkoutPlanProgressStrip(workoutExercise: workoutExercise)
 
                         ForEach($workoutExercise.sets) { $set in
                             WorkoutSetRow(
@@ -257,12 +276,24 @@ private struct WorkoutSetRow: View {
     let onCompleted: () -> Void
     let onDelete: () -> Void
 
-    private var deltaText: String {
-        if set.repsDelta == 0 {
-            return "目標通り"
+    private var statusText: String {
+        if set.isAdded {
+            return "追加"
         }
+        if !set.isCompleted {
+            return "未完了"
+        }
+        return set.isAchieved ? "達成" : "未達"
+    }
 
-        return set.repsDelta > 0 ? "+\(set.repsDelta)回" : "\(set.repsDelta)回"
+    private var statusTint: Color {
+        if set.isAchieved {
+            return .green
+        }
+        if set.isCompleted {
+            return AppTheme.orange
+        }
+        return .secondary
     }
 
     var body: some View {
@@ -301,12 +332,29 @@ private struct WorkoutSetRow: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
 
-                    Text(deltaText)
-                        .font(.caption.bold())
-                        .foregroundStyle(set.isAchieved ? .green : .orange)
+                    HStack(spacing: 6) {
+                        DeltaBadge(
+                            title: "重量差",
+                            value: AppFormatters.signedWeight(set.weightDelta, unit: appStore.userProfile.weightUnit),
+                            tint: statusTint
+                        )
+                        DeltaBadge(
+                            title: "回数差",
+                            value: AppFormatters.signedReps(set.repsDelta),
+                            tint: statusTint
+                        )
+                    }
+                    .accessibilityIdentifier("workoutSetDelta-\(set.setOrder)")
                 }
 
                 Spacer()
+
+                Text(statusText)
+                    .font(.caption.bold())
+                    .foregroundStyle(statusTint)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 5)
+                    .background(statusTint.opacity(0.12), in: Capsule())
 
                 Toggle("完了", isOn: $set.isCompleted)
                     .labelsHidden()
@@ -361,6 +409,60 @@ private struct WorkoutSetRow: View {
     private func copyTarget() {
         set.actualWeight = set.targetWeight
         set.actualReps = set.targetReps
+    }
+}
+
+private struct WorkoutPlanProgressStrip: View {
+    @EnvironmentObject private var appStore: AppStore
+    let workoutExercise: WorkoutExercise
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            ProgressView(value: workoutExercise.achievementRate)
+                .tint(progressTint)
+
+            HStack(spacing: 8) {
+                DeltaBadge(
+                    title: "達成セット",
+                    value: "\(workoutExercise.achievedPlannedSetCount)/\(workoutExercise.plannedSetCount)",
+                    tint: AppTheme.accent
+                )
+                DeltaBadge(
+                    title: "目標差",
+                    value: AppFormatters.signedVolume(workoutExercise.volumeDelta, unit: appStore.userProfile.weightUnit),
+                    tint: workoutExercise.volumeDelta >= 0 ? AppTheme.accent : AppTheme.orange
+                )
+            }
+        }
+        .padding(10)
+        .background(AppTheme.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+    }
+
+    private var progressTint: Color {
+        workoutExercise.achievementRate >= 1 ? .green : AppTheme.accent
+    }
+}
+
+private struct DeltaBadge: View {
+    let title: String
+    let value: String
+    let tint: Color
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text(title)
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+            Text(value)
+                .font(.caption.bold())
+                .foregroundStyle(tint)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 6)
+        .background(tint.opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
     }
 }
 
