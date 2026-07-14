@@ -201,6 +201,10 @@ final class GymTrainingAppUITests: XCTestCase {
     private func verifyFreeWorkoutEntryPoint() {
         app.tabBars.buttons["記録"].tap()
 
+        XCTAssertTrue(app.descendants(matching: .any)["dailyRecordChecklistCard"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["recordHubBodyWeightLink"].exists)
+        XCTAssertTrue(app.buttons["recordHubMealLink"].exists)
+
         let freeWorkoutButton = app.descendants(matching: .any)["startFreeWorkoutButton"]
         XCTAssertTrue(freeWorkoutButton.waitForExistence(timeout: 5))
     }

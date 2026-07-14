@@ -18,6 +18,14 @@ struct HomeView: View {
                         isShowingGoalPicker = true
                     }
 
+                    DailyRecordChecklistCard(
+                        bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
+                        waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
+                        mealCount: appStore.mealEntries().count,
+                        bodyPhotoCount: appStore.bodyPhotoEntries().count,
+                        workoutCount: appStore.workoutSessions().count
+                    )
+
                     TodayTrainingCard(plan: nextPlan) {
                         if let nextPlan {
                             activeSession = WorkoutSession(plan: nextPlan)
@@ -45,6 +53,7 @@ struct HomeView: View {
                     )
                 }
                 .padding(16)
+                .padding(.bottom, 96)
             }
             .background(TrainingBackground())
             .navigationTitle("Gym Training")

@@ -13,7 +13,7 @@ struct RootTabView: View {
                     Label("計画", systemImage: "list.bullet.rectangle")
                 }
 
-            WorkoutStartView()
+            RecordHubView()
                 .tabItem {
                     Label("記録", systemImage: "figure.strengthtraining.traditional")
                 }

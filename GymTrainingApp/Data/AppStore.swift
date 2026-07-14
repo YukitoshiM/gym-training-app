@@ -123,6 +123,12 @@ final class AppStore: ObservableObject {
         storage.saveWorkoutHistory(workoutHistory)
     }
 
+    func workoutSessions(on date: Date = Date()) -> [WorkoutSession] {
+        workoutHistory
+            .filter { Calendar.current.isDate($0.startedAt, inSameDayAs: date) }
+            .sorted { $0.startedAt > $1.startedAt }
+    }
+
     func saveWorkoutHistorySession(_ session: WorkoutSession) {
         if let index = workoutHistory.firstIndex(where: { $0.id == session.id }) {
             workoutHistory[index] = session
@@ -189,6 +195,15 @@ final class AppStore: ObservableObject {
         bodyMetricEntries
             .filter { $0.kind == kind }
             .sorted { $0.recordedAt > $1.recordedAt }
+    }
+
+    func bodyMetricEntries(for kind: BodyMetricKind, on date: Date) -> [BodyMetricEntry] {
+        bodyMetricEntries(for: kind)
+            .filter { Calendar.current.isDate($0.recordedAt, inSameDayAs: date) }
+    }
+
+    func hasBodyMetricEntry(for kind: BodyMetricKind, on date: Date = Date()) -> Bool {
+        !bodyMetricEntries(for: kind, on: date).isEmpty
     }
 
     func latestBodyMetricEntry(for kind: BodyMetricKind) -> BodyMetricEntry? {
