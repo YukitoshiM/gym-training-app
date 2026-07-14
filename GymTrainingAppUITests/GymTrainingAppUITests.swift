@@ -46,6 +46,10 @@ final class GymTrainingAppUITests: XCTestCase {
         copyButton.tap()
     }
 
+    func testPlanQuickTemplateAndBulkSetPreset() throws {
+        createPlanFromQuickTemplate()
+    }
+
     func testGoalModeSelection() throws {
         app.tabBars.buttons["ホーム"].tap()
 
@@ -81,6 +85,34 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["胸の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
+    }
+
+    private func createPlanFromQuickTemplate() {
+        app.tabBars.buttons["計画"].tap()
+
+        let createButton = app.buttons["createPlanToolbarButton"]
+        XCTAssertTrue(createButton.waitForExistence(timeout: 5))
+        createButton.tap()
+
+        let backTemplate = app.buttons["planTemplate-back"]
+        XCTAssertTrue(backTemplate.waitForExistence(timeout: 5))
+        backTemplate.tap()
+
+        XCTAssertTrue(app.navigationBars["背中の日"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["ラットプルダウン"].exists)
+
+        let strengthPreset = app.buttons["planSetPreset-strength"]
+        XCTAssertTrue(strengthPreset.waitForExistence(timeout: 5))
+        strengthPreset.tap()
+
+        XCTAssertTrue(app.staticTexts["5回"].waitForExistence(timeout: 5))
+
+        let saveButton = app.buttons["savePlanPinnedButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+
+        XCTAssertTrue(app.staticTexts["背中の日"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["20セット"].waitForExistence(timeout: 5))
     }
 
     private func completeWorkoutFromPlan() {

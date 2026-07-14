@@ -11,6 +11,13 @@ struct PlanEditorView: View {
 
     let onSaved: () -> Void
 
+    private let quickTemplates = PlanTemplate.defaults
+    private let setPresets = PlanSetPreset.defaults
+    private let setPresetColumns = [
+        GridItem(.flexible(), spacing: 8),
+        GridItem(.flexible(), spacing: 8)
+    ]
+
     init(plan: TrainingPlan?, onSaved: @escaping () -> Void = {}) {
         self.onSaved = onSaved
         _draft = State(
@@ -34,6 +41,47 @@ struct PlanEditorView: View {
                     TextField("例: 胸の日", text: $draft.name)
                         .accessibilityIdentifier("planNameField")
                         .focused($isPlanNameFocused)
+                }
+
+                Section {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            ForEach(quickTemplates) { template in
+                                Button {
+                                    applyTemplate(template)
+                                } label: {
+                                    PlanTemplateChip(template: template)
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityIdentifier("planTemplate-\(template.id)")
+                            }
+                        }
+                        .padding(.vertical, 2)
+                    }
+                } header: {
+                    Text("クイック作成")
+                }
+
+                Section {
+                    if draft.exercises.isEmpty {
+                        Text("種目を追加すると一括設定できます。")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        LazyVGrid(columns: setPresetColumns, spacing: 8) {
+                            ForEach(setPresets) { preset in
+                                Button {
+                                    applySetPreset(preset)
+                                } label: {
+                                    SetPresetChip(preset: preset)
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityIdentifier("planSetPreset-\(preset.id)")
+                            }
+                        }
+                    }
+                } header: {
+                    Text("セット一括設定")
                 }
 
                 Section {
@@ -131,6 +179,50 @@ struct PlanEditorView: View {
         )
     }
 
+    private func applyTemplate(_ template: PlanTemplate) {
+        if draft.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            draft.name = template.name
+        }
+
+        var existingNames = Set(draft.exercises.map { $0.exercise.name })
+        var nextOrder = draft.exercises.count
+
+        for exerciseName in template.exerciseNames {
+            guard !existingNames.contains(exerciseName),
+                  let exercise = appStore.allExercises.first(where: { $0.name == exerciseName }) else {
+                continue
+            }
+
+            draft.exercises.append(
+                PlanExercise(
+                    exercise: exercise,
+                    sortOrder: nextOrder,
+                    restSeconds: template.restSeconds,
+                    sets: PlanSetTarget.quickSets(
+                        count: template.setCount,
+                        targetWeight: template.targetWeight,
+                        targetReps: template.targetReps
+                    )
+                )
+            )
+            existingNames.insert(exerciseName)
+            nextOrder += 1
+        }
+
+        normalizeSortOrder()
+    }
+
+    private func applySetPreset(_ preset: PlanSetPreset) {
+        for index in draft.exercises.indices {
+            let currentWeight = draft.exercises[index].sets.first?.targetWeight ?? preset.targetWeight
+            draft.exercises[index].sets = PlanSetTarget.quickSets(
+                count: preset.setCount,
+                targetWeight: currentWeight,
+                targetReps: preset.targetReps
+            )
+        }
+    }
+
     private func removeExercise(_ planExercise: PlanExercise) {
         draft.exercises.removeAll { $0.id == planExercise.id }
         normalizeSortOrder()
@@ -161,9 +253,164 @@ struct PlanEditorView: View {
     }
 }
 
+private struct PlanTemplate: Identifiable {
+    let id: String
+    let name: String
+    let subtitle: String
+    let systemImage: String
+    let tint: Color
+    let exerciseNames: [String]
+    let setCount: Int
+    let targetWeight: Double
+    let targetReps: Int
+    let restSeconds: Int
+
+    static let defaults: [PlanTemplate] = [
+        PlanTemplate(
+            id: "chest",
+            name: "胸の日",
+            subtitle: "押す / 胸上部",
+            systemImage: "figure.strengthtraining.traditional",
+            tint: AppTheme.accent,
+            exerciseNames: ["ベンチプレス", "インクラインダンベルプレス", "ケーブルクロスオーバー", "トライセプスプレスダウン"],
+            setCount: 3,
+            targetWeight: 20,
+            targetReps: 10,
+            restSeconds: 90
+        ),
+        PlanTemplate(
+            id: "back",
+            name: "背中の日",
+            subtitle: "引く / 厚み",
+            systemImage: "figure.pull",
+            tint: AppTheme.blue,
+            exerciseNames: ["ラットプルダウン", "シーテッドロー", "ワンハンドダンベルロー", "フェイスプル"],
+            setCount: 3,
+            targetWeight: 20,
+            targetReps: 10,
+            restSeconds: 90
+        ),
+        PlanTemplate(
+            id: "legs",
+            name: "脚の日",
+            subtitle: "脚 / 臀部",
+            systemImage: "figure.walk",
+            tint: AppTheme.orange,
+            exerciseNames: ["レッグプレス", "レッグカール", "ヒップスラスト", "スタンディングカーフレイズ"],
+            setCount: 3,
+            targetWeight: 20,
+            targetReps: 10,
+            restSeconds: 120
+        ),
+        PlanTemplate(
+            id: "shouldersArms",
+            name: "肩・腕",
+            subtitle: "肩 / 二頭 / 三頭",
+            systemImage: "figure.arms.open",
+            tint: AppTheme.purple,
+            exerciseNames: ["ショルダープレス", "サイドレイズ", "ダンベルカール", "トライセプスプレスダウン"],
+            setCount: 3,
+            targetWeight: 15,
+            targetReps: 12,
+            restSeconds: 75
+        ),
+        PlanTemplate(
+            id: "fullBodyLight",
+            name: "全身軽め",
+            subtitle: "全身 / 維持",
+            systemImage: "figure.mixed.cardio",
+            tint: AppTheme.accent,
+            exerciseNames: ["スクワット", "ベンチプレス", "ラットプルダウン", "ショルダープレス"],
+            setCount: 2,
+            targetWeight: 20,
+            targetReps: 10,
+            restSeconds: 90
+        )
+    ]
+}
+
+private struct PlanSetPreset: Identifiable {
+    let id: String
+    let title: String
+    let detail: String
+    let setCount: Int
+    let targetWeight: Double
+    let targetReps: Int
+    let tint: Color
+
+    static let defaults: [PlanSetPreset] = [
+        PlanSetPreset(id: "standard", title: "3x10", detail: "標準", setCount: 3, targetWeight: 20, targetReps: 10, tint: AppTheme.accent),
+        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: "筋肥大", setCount: 4, targetWeight: 20, targetReps: 8, tint: AppTheme.blue),
+        PlanSetPreset(id: "strength", title: "5x5", detail: "高重量", setCount: 5, targetWeight: 20, targetReps: 5, tint: AppTheme.orange),
+        PlanSetPreset(id: "pump", title: "2x15", detail: "軽め", setCount: 2, targetWeight: 20, targetReps: 15, tint: AppTheme.purple)
+    ]
+}
+
+private struct PlanTemplateChip: View {
+    let template: PlanTemplate
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                IconBadge(systemImage: template.systemImage, tint: template.tint)
+                Spacer()
+                Text("\(template.exerciseNames.count)種目")
+                    .font(.caption.bold())
+                    .foregroundStyle(template.tint)
+            }
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(template.name)
+                    .font(.headline)
+                    .foregroundStyle(AppTheme.ink)
+                Text(template.subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .frame(width: 150, alignment: .leading)
+        .padding(12)
+        .background(template.tint.opacity(0.1), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .overlay(
+            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                .stroke(template.tint.opacity(0.22), lineWidth: 1)
+        )
+    }
+}
+
+private struct SetPresetChip: View {
+    let preset: PlanSetPreset
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "checklist")
+                .font(.headline)
+                .foregroundStyle(preset.tint)
+                .frame(width: 30, height: 30)
+                .background(preset.tint.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(preset.title)
+                    .font(.headline)
+                    .foregroundStyle(AppTheme.ink)
+                Text(preset.detail)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, minHeight: 54, alignment: .leading)
+        .padding(10)
+        .background(preset.tint.opacity(0.08), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+    }
+}
+
 private struct PlanExerciseEditorCard: View {
     @Binding var planExercise: PlanExercise
     let onDelete: () -> Void
+
+    private let setPresets = PlanSetPreset.defaults
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -187,6 +434,18 @@ private struct PlanExerciseEditorCard: View {
             Stepper(value: $planExercise.restSeconds, in: 0...600, step: 30) {
                 Text("休憩 \(planExercise.restSeconds)秒")
             }
+
+            Menu {
+                ForEach(setPresets) { preset in
+                    Button("\(preset.title) \(preset.detail)") {
+                        applySetPreset(preset)
+                    }
+                }
+            } label: {
+                Label("セット構成", systemImage: "slider.horizontal.3")
+            }
+            .buttonStyle(.borderless)
+            .accessibilityIdentifier("planExerciseSetMenu-\(planExercise.exercise.name)")
 
             VStack(spacing: 8) {
                 ForEach($planExercise.sets) { $set in
@@ -215,6 +474,15 @@ private struct PlanExerciseEditorCard: View {
                 targetWeight: previous?.targetWeight ?? 20,
                 targetReps: previous?.targetReps ?? 10
             )
+        )
+    }
+
+    private func applySetPreset(_ preset: PlanSetPreset) {
+        let currentWeight = planExercise.sets.first?.targetWeight ?? preset.targetWeight
+        planExercise.sets = PlanSetTarget.quickSets(
+            count: preset.setCount,
+            targetWeight: currentWeight,
+            targetReps: preset.targetReps
         )
     }
 
@@ -257,6 +525,14 @@ private struct PlanSetTargetRow: View {
             .buttonStyle(.borderless)
         }
         .font(.subheadline)
+    }
+}
+
+private extension PlanSetTarget {
+    static func quickSets(count: Int, targetWeight: Double, targetReps: Int) -> [PlanSetTarget] {
+        (1...max(count, 1)).map {
+            PlanSetTarget(setOrder: $0, targetWeight: targetWeight, targetReps: targetReps)
+        }
     }
 }
 
