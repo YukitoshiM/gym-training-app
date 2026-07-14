@@ -188,6 +188,29 @@ Apple公式ドキュメントでは、HKWorkoutSessionはApple Watch上でユー
 8. iPhone側で履歴に保存
 9. UIテスト/手動実機テスト手順を追加
 
+## 10.1 W2実装メモ
+
+実装日: 2026-07-14
+
+- `GymTrainingWatchApp` ターゲットを追加した
+- iPhone/Watch共通DTOとして `WatchWorkoutPlanSnapshot` を `Shared/` に追加した
+- iPhone側に `WatchPlanSyncService` を追加し、`sendMessage` と `transferUserInfo` で計画を送れるようにした
+- 記録タブに「Apple Watchへ計画を送信」カードを追加した
+- Watch側に受信した計画、種目、セット目標を表示する画面を追加した
+- Watch側では最後に受信した計画を `UserDefaults` に保存し、再起動後も表示できるようにした
+
+検証:
+
+- `xcodebuild -project GymTrainingApp.xcodeproj -target GymTrainingWatchApp -sdk watchsimulator26.5 ARCHS=arm64 ONLY_ACTIVE_ARCH=YES build`
+- `xcodebuild -project GymTrainingApp.xcodeproj -scheme GymTrainingApp -destination 'platform=iOS Simulator,id=4008EC67-FCFD-40C4-9202-9D7BEC14E346' build`
+- `xcodebuild test -project GymTrainingApp.xcodeproj -scheme GymTrainingApp -destination 'platform=iOS Simulator,id=4008EC67-FCFD-40C4-9202-9D7BEC14E346'`
+
+補足:
+
+- 現在のMacではWatch Simulatorデバイスが `simctl` に出ていないため、Watch Appの起動確認とWatchConnectivityの疎通確認は実機ペアで行う
+- XcodeGenではSwiftUI Watch Appとして `type: application` + `platform: watchOS` で生成している
+- 配布前にWatch App用の正式なAppIconを追加する
+
 ## 11. W4実装タスク
 
 1. HealthKit capabilityを追加

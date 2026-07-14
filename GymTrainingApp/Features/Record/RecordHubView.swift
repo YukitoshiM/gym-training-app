@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RecordHubView: View {
     @EnvironmentObject private var appStore: AppStore
+    @StateObject private var watchSyncService = WatchPlanSyncService()
     @State private var activeSession: WorkoutSession?
 
     private var mealCount: Int {
@@ -93,6 +94,18 @@ struct RecordHubView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         SectionHeader(title: "トレーニング", subtitle: "計画から開始するか、その場で種目を追加して記録します。")
 
+                        if let watchPlan = appStore.plans.first {
+                            WatchPlanSyncCard(
+                                plan: watchPlan,
+                                state: watchSyncService.state
+                            ) {
+                                watchSyncService.send(
+                                    plan: watchPlan,
+                                    weightUnit: appStore.userProfile.weightUnit
+                                )
+                            }
+                        }
+
                         Button {
                             activeSession = WorkoutSession(
                                 title: "フリートレーニング",
@@ -152,6 +165,62 @@ struct RecordHubView: View {
             .fullScreenCover(item: $activeSession) { session in
                 WorkoutSessionView(session: session)
             }
+        }
+    }
+}
+
+private struct WatchPlanSyncCard: View {
+    let plan: TrainingPlan
+    let state: WatchPlanSyncService.SyncState
+    let onSend: () -> Void
+
+    var body: some View {
+        CardContainer {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 12) {
+                    IconBadge(systemImage: state.systemImage, tint: tint)
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Apple Watch")
+                            .font(.headline)
+                            .foregroundStyle(AppTheme.ink)
+                        Text("次の計画: \(plan.name)")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                    }
+
+                    Spacer()
+
+                    Button {
+                        onSend()
+                    } label: {
+                        Label("送信", systemImage: "arrow.up.forward.app")
+                            .labelStyle(.iconOnly)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(tint)
+                    .accessibilityLabel("Apple Watchへ計画を送信")
+                    .accessibilityIdentifier("sendPlanToWatchButton")
+                }
+
+                Text(state.message)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .accessibilityIdentifier("watchPlanSyncCard")
+    }
+
+    private var tint: Color {
+        switch state {
+        case .idle, .ready, .sent:
+            AppTheme.accent
+        case .sending:
+            AppTheme.blue
+        case .unavailable, .failed:
+            AppTheme.orange
         }
     }
 }
