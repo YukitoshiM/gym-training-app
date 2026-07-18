@@ -194,16 +194,42 @@ private struct MealEditorView: View {
                 }
 
                 Section("PFC") {
-                    TextField("カロリー kcal", text: $calories)
-                        .keyboardType(.decimalPad)
-                        .accessibilityIdentifier("mealCaloriesField")
-                    TextField("たんぱく質 g", text: $protein)
-                        .keyboardType(.decimalPad)
-                        .accessibilityIdentifier("mealProteinField")
-                    TextField("脂質 g", text: $fat)
-                        .keyboardType(.decimalPad)
-                    TextField("炭水化物 g", text: $carbs)
-                        .keyboardType(.decimalPad)
+                    NumericTextInputControl(
+                        text: $calories,
+                        title: "カロリー",
+                        unit: "kcal",
+                        range: 0...5_000,
+                        step: 1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealCaloriesField"
+                    )
+                    NumericTextInputControl(
+                        text: $protein,
+                        title: "たんぱく質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealProteinField"
+                    )
+                    NumericTextInputControl(
+                        text: $fat,
+                        title: "脂質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealFatField"
+                    )
+                    NumericTextInputControl(
+                        text: $carbs,
+                        title: "炭水化物",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealCarbsField"
+                    )
                 }
 
                 Section("メモ") {

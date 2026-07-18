@@ -1,11 +1,24 @@
 import SwiftUI
+import UIKit
 
 enum AppTheme {
-    static let pageBackground = Color(red: 0.92, green: 0.94, blue: 0.90)
-    static let cardBackground = Color(red: 0.99, green: 0.99, blue: 0.96)
-    static let elevatedBackground = Color.white.opacity(0.92)
-    static let ink = Color(red: 0.08, green: 0.10, blue: 0.09)
-    static let mutedInk = Color(red: 0.43, green: 0.48, blue: 0.43)
+    static let pageBackground = adaptive(
+        light: UIColor(red: 0.92, green: 0.94, blue: 0.90, alpha: 1),
+        dark: UIColor(red: 0.055, green: 0.07, blue: 0.06, alpha: 1)
+    )
+    static let cardBackground = adaptive(
+        light: UIColor(red: 0.99, green: 0.99, blue: 0.96, alpha: 1),
+        dark: UIColor(red: 0.10, green: 0.12, blue: 0.105, alpha: 1)
+    )
+    static let elevatedBackground = adaptive(
+        light: UIColor(red: 0.98, green: 0.98, blue: 0.95, alpha: 0.96),
+        dark: UIColor(red: 0.12, green: 0.145, blue: 0.125, alpha: 0.96)
+    )
+    static let ink = Color(uiColor: .label)
+    static let mutedInk = Color(uiColor: .secondaryLabel)
+    static let onAccent = Color(red: 0.08, green: 0.10, blue: 0.09)
+    static let cardBorder = Color(uiColor: .separator).opacity(0.55)
+    static let shadow = Color.black.opacity(0.18)
     static let gymFloor = Color(red: 0.12, green: 0.15, blue: 0.13)
     static let accent = Color(red: 0.53, green: 0.93, blue: 0.30)
     static let blue = Color(red: 0.14, green: 0.42, blue: 0.82)
@@ -13,6 +26,12 @@ enum AppTheme {
     static let purple = Color(red: 0.50, green: 0.25, blue: 0.78)
 
     static let cardRadius: CGFloat = 8
+
+    private static func adaptive(light: UIColor, dark: UIColor) -> Color {
+        Color(uiColor: UIColor { traits in
+            traits.userInterfaceStyle == .dark ? dark : light
+        })
+    }
 }
 
 struct TrainingBackground: View {
@@ -20,9 +39,9 @@ struct TrainingBackground: View {
         ZStack {
             LinearGradient(
                 colors: [
-                    Color(red: 0.88, green: 0.92, blue: 0.84),
-                    Color(red: 0.96, green: 0.95, blue: 0.89),
-                    Color(red: 0.91, green: 0.93, blue: 0.90)
+                    AppTheme.pageBackground,
+                    AppTheme.cardBackground,
+                    AppTheme.pageBackground
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -38,7 +57,7 @@ struct TrainingBackground: View {
                         x += spacing
                     }
                 }
-                .stroke(Color.black.opacity(0.035), lineWidth: 1)
+                .stroke(AppTheme.ink.opacity(0.05), lineWidth: 1)
             }
 
             VStack {
@@ -86,7 +105,7 @@ struct MetricPill: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
-        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
     }
 }
 
@@ -112,8 +131,8 @@ struct CardContainer<Content: View>: View {
             .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
             .overlay(
                 RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                    .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                    .stroke(AppTheme.cardBorder, lineWidth: 1)
             )
-            .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+            .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
     }
 }

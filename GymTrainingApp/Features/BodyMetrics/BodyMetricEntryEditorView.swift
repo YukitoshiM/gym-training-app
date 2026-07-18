@@ -3,6 +3,7 @@ import SwiftUI
 struct BodyMetricEntryEditorView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var appStore: AppStore
+    @EnvironmentObject private var healthDataManager: HealthDataManager
 
     let kind: BodyMetricKind
 
@@ -10,7 +11,6 @@ struct BodyMetricEntryEditorView: View {
     @State private var recordedAt = Date()
     @State private var note = ""
     @State private var isShowingValidation = false
-    @FocusState private var isValueFocused: Bool
 
     private var parsedValue: Double? {
         Double(valueText.replacingOccurrences(of: ",", with: "."))
@@ -28,15 +28,15 @@ struct BodyMetricEntryEditorView: View {
         NavigationStack {
             Form {
                 Section(kind.displayName) {
-                    HStack {
-                        TextField("値", text: $valueText)
-                            .keyboardType(.decimalPad)
-                            .focused($isValueFocused)
-                            .accessibilityIdentifier("bodyMetricValueField")
-
-                        Text(kind.unit)
-                            .foregroundStyle(.secondary)
-                    }
+                    NumericTextInputControl(
+                        text: $valueText,
+                        title: "値",
+                        unit: kind.unit,
+                        range: kind.inputRange,
+                        step: 0.1,
+                        defaultValue: kind.defaultInputValue,
+                        accessibilityIdentifier: "bodyMetricValueField"
+                    )
 
                     DatePicker("記録日", selection: $recordedAt, displayedComponents: .date)
                 }
@@ -62,13 +62,6 @@ struct BodyMetricEntryEditorView: View {
                     .disabled(!canSave)
                     .accessibilityIdentifier("saveBodyMetricEntryButton")
                 }
-
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button("入力完了") {
-                        isValueFocused = false
-                    }
-                }
             }
             .onAppear {
                 if valueText.isEmpty,
@@ -90,14 +83,14 @@ struct BodyMetricEntryEditorView: View {
             return
         }
 
-        appStore.saveBodyMetricEntry(
-            BodyMetricEntry(
-                kind: kind,
-                value: parsedValue,
-                recordedAt: recordedAt,
-                note: note.trimmingCharacters(in: .whitespacesAndNewlines)
-            )
+        let entry = BodyMetricEntry(
+            kind: kind,
+            value: parsedValue,
+            recordedAt: recordedAt,
+            note: note.trimmingCharacters(in: .whitespacesAndNewlines)
         )
+        appStore.saveBodyMetricEntry(entry)
+        Task { await healthDataManager.saveBodyMetricIfAuthorized(entry) }
         dismiss()
     }
 }
@@ -105,4 +98,5 @@ struct BodyMetricEntryEditorView: View {
 #Preview {
     BodyMetricEntryEditorView(kind: .bodyWeight)
         .environmentObject(AppStore())
+        .environmentObject(HealthDataManager())
 }

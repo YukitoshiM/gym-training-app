@@ -11,6 +11,7 @@ struct HistoryListView: View {
         || !appStore.bodyMetricEntries.isEmpty
         || !appStore.mealEntries.isEmpty
         || !appStore.bodyPhotoEntries.isEmpty
+        || !appStore.gymVisits.isEmpty
     }
 
     private var visibleSessions: [WorkoutSession] {
@@ -31,6 +32,7 @@ struct HistoryListView: View {
         appStore.bodyMetricEntries.forEach { dates.insert(calendar.startOfDay(for: $0.recordedAt)) }
         appStore.mealEntries.forEach { dates.insert(calendar.startOfDay(for: $0.recordedAt)) }
         appStore.bodyPhotoEntries.forEach { dates.insert(calendar.startOfDay(for: $0.recordedAt)) }
+        appStore.gymVisits.forEach { dates.insert(calendar.startOfDay(for: $0.arrivedAt)) }
 
         return dates
             .map { dailySummary(on: $0) }
@@ -63,6 +65,13 @@ struct HistoryListView: View {
                                     Label("種目別履歴", systemImage: "dumbbell")
                                 }
                                 .accessibilityIdentifier("exerciseHistoryLink")
+
+                                NavigationLink {
+                                    SensorTrainingAnalysisView()
+                                } label: {
+                                    Label("Watchセンサー分析", systemImage: "heart.text.square")
+                                }
+                                .accessibilityIdentifier("sensorTrainingAnalysisLink")
                             }
                         }
 
@@ -184,7 +193,8 @@ struct HistoryListView: View {
             workouts: appStore.workoutSessions(on: date),
             bodyMetricEntries: bodyMetricEntries,
             meals: appStore.mealEntries(on: date),
-            bodyPhotos: appStore.bodyPhotoEntries(on: date)
+            bodyPhotos: appStore.bodyPhotoEntries(on: date),
+            gymVisits: appStore.gymVisits(on: date)
         )
     }
 }
@@ -195,11 +205,12 @@ private struct DailyLogSummary: Identifiable {
     let bodyMetricEntries: [BodyMetricEntry]
     let meals: [MealEntry]
     let bodyPhotos: [BodyPhotoEntry]
+    let gymVisits: [GymVisit]
 
     var id: Date { date }
 
     var totalLogCount: Int {
-        workouts.count + bodyMetricEntries.count + meals.count + bodyPhotos.count
+        workouts.count + bodyMetricEntries.count + meals.count + bodyPhotos.count + gymVisits.count
     }
 
     var totalCalories: Double {
@@ -292,9 +303,9 @@ private struct WorkoutCalendarView: View {
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
         .overlay(
             RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                .stroke(AppTheme.cardBorder, lineWidth: 1)
         )
-        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
         .accessibilityIdentifier("historyCalendar")
     }
 
@@ -386,6 +397,12 @@ private struct CalendarDayButton: View {
                             .frame(width: 5, height: 5)
                     }
 
+                    if gymVisitCount > 0 {
+                        Circle()
+                            .fill(.cyan)
+                            .frame(width: 5, height: 5)
+                    }
+
                     if totalLogCount == 0 {
                         Circle()
                             .fill(Color.clear)
@@ -406,7 +423,7 @@ private struct CalendarDayButton: View {
 
     private var foregroundColor: Color {
         if isSelected {
-            return AppTheme.ink
+            return AppTheme.onAccent
         }
 
         return day.isInDisplayedMonth ? AppTheme.ink : AppTheme.mutedInk.opacity(0.45)
@@ -441,6 +458,10 @@ private struct CalendarDayButton: View {
 
     private var bodyPhotoCount: Int {
         summary?.bodyPhotos.count ?? 0
+    }
+
+    private var gymVisitCount: Int {
+        summary?.gymVisits.count ?? 0
     }
 
     private static let identifierFormatter: DateFormatter = {
@@ -517,6 +538,13 @@ private struct DailyJournalSummaryCard: View {
                         systemImage: "dumbbell",
                         tint: AppTheme.accent
                     )
+
+                    DailyJournalStat(
+                        title: "ジム訪問",
+                        value: "\(summary.gymVisits.count)回",
+                        systemImage: "mappin.and.ellipse",
+                        tint: .cyan
+                    )
                 }
 
                 Divider()
@@ -577,6 +605,19 @@ private struct DailyJournalSummaryCard: View {
                             )
                         }
                     }
+
+                    journalSectionHeader("ジム訪問", systemImage: "mappin.and.ellipse", tint: .cyan)
+                    if summary.gymVisits.isEmpty {
+                        DailyJournalEmptyLine(text: "ジム訪問は未記録")
+                    } else {
+                        ForEach(summary.gymVisits) { visit in
+                            DailyJournalLine(
+                                title: "ジム到着",
+                                detail: visit.departedAt.map { formatVisitDuration(from: visit.arrivedAt, to: $0) } ?? "滞在中",
+                                footnote: AppFormatters.shortDateTime.string(from: visit.arrivedAt)
+                            )
+                        }
+                    }
                 }
             }
         }
@@ -594,6 +635,14 @@ private struct DailyJournalSummaryCard: View {
         }
         .padding(.top, 2)
     }
+}
+
+private func formatVisitDuration(from start: Date, to end: Date) -> String {
+    let minutes = max(0, Int(end.timeIntervalSince(start) / 60))
+    if minutes < 60 {
+        return "\(minutes)分"
+    }
+    return "\(minutes / 60)時間\(minutes % 60)分"
 }
 
 private struct DailyJournalStat: View {

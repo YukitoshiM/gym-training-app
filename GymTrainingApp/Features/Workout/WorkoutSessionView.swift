@@ -192,6 +192,7 @@ private struct WorkoutExerciseSection: View {
                         ForEach($workoutExercise.sets) { $set in
                             WorkoutSetRow(
                                 set: $set,
+                                exerciseSortOrder: workoutExercise.sortOrder,
                                 previousSet: previousSet(for: set),
                                 restSeconds: workoutExercise.restSeconds,
                                 onCompleted: startRestTimer
@@ -271,6 +272,7 @@ private struct WorkoutExerciseSection: View {
 private struct WorkoutSetRow: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var set: WorkoutSet
+    let exerciseSortOrder: Int
     let previousSet: WorkoutSet?
     let restSeconds: Int
     let onCompleted: () -> Void
@@ -314,7 +316,7 @@ private struct WorkoutSetRow: View {
                     }
                     .font(.caption.bold())
                     .buttonStyle(.borderless)
-                    .accessibilityIdentifier("copyPreviousSet-\(set.setOrder)")
+                    .accessibilityIdentifier("copyPreviousSet-\(exerciseSortOrder)-\(set.setOrder)")
                 }
                 .padding(.horizontal, 10)
                 .padding(.vertical, 8)
@@ -344,7 +346,7 @@ private struct WorkoutSetRow: View {
                             tint: statusTint
                         )
                     }
-                    .accessibilityIdentifier("workoutSetDelta-\(set.setOrder)")
+                    .accessibilityIdentifier("workoutSetDelta-\(exerciseSortOrder)-\(set.setOrder)")
                 }
 
                 Spacer()
@@ -358,7 +360,7 @@ private struct WorkoutSetRow: View {
 
                 Toggle("完了", isOn: $set.isCompleted)
                     .labelsHidden()
-                    .accessibilityIdentifier("completeSetToggle-\(set.setOrder)")
+                    .accessibilityIdentifier("completeSetToggle-\(exerciseSortOrder)-\(set.setOrder)")
                     .onChange(of: set.isCompleted) { oldValue, newValue in
                         if !oldValue && newValue {
                             set.completedAt = Date()
@@ -376,15 +378,16 @@ private struct WorkoutSetRow: View {
             }
 
             HStack(spacing: 12) {
-                Stepper(value: $set.actualWeight, in: 0...999, step: 2.5) {
-                    Text(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit))
-                        .frame(minWidth: 80, alignment: .leading)
-                }
+                WeightInputControl(
+                    weightInKilograms: $set.actualWeight,
+                    unit: appStore.userProfile.weightUnit,
+                    accessibilityIdentifier: "workoutWeightField-\(exerciseSortOrder)-\(set.setOrder)"
+                )
 
-                Stepper(value: $set.actualReps, in: 0...999) {
-                    Text("\(set.actualReps)回")
-                        .frame(minWidth: 52, alignment: .leading)
-                }
+                RepsInputControl(
+                    reps: $set.actualReps,
+                    accessibilityIdentifier: "workoutRepsField-\(exerciseSortOrder)-\(set.setOrder)"
+                )
             }
             .font(.subheadline)
 
@@ -395,7 +398,7 @@ private struct WorkoutSetRow: View {
             }
             .font(.caption.bold())
             .buttonStyle(.borderless)
-            .accessibilityIdentifier("copyTargetSet-\(set.setOrder)")
+            .accessibilityIdentifier("copyTargetSet-\(exerciseSortOrder)-\(set.setOrder)")
         }
         .padding(10)
         .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))

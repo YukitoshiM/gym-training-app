@@ -27,6 +27,16 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>歩数、活動量、睡眠、心拍などをまとめてコンディションとトレーニング傾向を表示します。</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Apple Watchで記録した筋力トレーニングと身体測定をApple Healthに保存します。</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>登録したジムへの到着と退出を記録する場合に位置情報を使用します。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Apple Watchの動きからセット中の回数とテンポを推定します。</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

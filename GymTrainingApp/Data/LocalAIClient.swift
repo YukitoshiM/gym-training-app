@@ -302,6 +302,7 @@ struct WeeklyReportRequest: Encodable {
     var meals: [String]
     var workouts: [String]
     var bodyPhotos: [String]
+    var sensorMetrics: [String]
 
     enum CodingKeys: String, CodingKey {
         case profileGoal = "profile_goal"
@@ -309,6 +310,7 @@ struct WeeklyReportRequest: Encodable {
         case meals
         case workouts
         case bodyPhotos = "body_photos"
+        case sensorMetrics = "sensor_metrics"
     }
 }
 

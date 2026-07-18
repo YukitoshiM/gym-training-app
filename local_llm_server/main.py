@@ -63,6 +63,7 @@ class WeeklyReportRequest(BaseModel):
     meals: list[str] = []
     workouts: list[str] = []
     body_photos: list[str] = []
+    sensor_metrics: list[str] = []
 
 
 class WeeklyReportResponse(BaseModel):
@@ -152,6 +153,7 @@ async def weekly_report(request: WeeklyReportRequest, _: None = Depends(require_
         "meals": request.meals,
         "workouts": request.workouts,
         "body_photos": request.body_photos,
+        "sensor_metrics": request.sensor_metrics,
     }
     prompt = f"""
 あなたはAIボディメイクマネージャーです。
@@ -329,8 +331,9 @@ def fallback_weekly(request: WeeklyReportRequest) -> dict[str, Any]:
     meal_count = len(request.meals)
     workout_count = len(request.workouts)
     photo_count = len(request.body_photos)
+    sensor_count = len(request.sensor_metrics)
     return {
-        "input_summary": f"身体KPI {body_count}件、食事 {meal_count}件、筋トレ {workout_count}件、体型写真 {photo_count}件を確認しました。",
+        "input_summary": f"身体KPI {body_count}件、食事 {meal_count}件、筋トレ {workout_count}件、体型写真 {photo_count}件、センサー {sensor_count}件を確認しました。",
         "output_comment": "AI生成結果を下書き化できなかったため、記録量にもとづく簡易コメントです。記録は蓄積できています。",
         "action_suggestion": "次は体重・腹囲・食事・筋トレを同じタイミングで記録し、週単位で傾向を確認してください。",
     }

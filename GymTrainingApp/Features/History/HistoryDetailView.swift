@@ -32,6 +32,11 @@ struct HistoryDetailView: View {
                             .font(.caption.bold())
                             .foregroundStyle(AppTheme.accent)
                     }
+
+                    if let note = currentSession.note, !note.isEmpty {
+                        Label(note, systemImage: "note.text")
+                            .font(.subheadline)
+                    }
                 }
                 .padding(.vertical, 4)
             }
@@ -45,6 +50,26 @@ struct HistoryDetailView: View {
                 }
                 .padding(.vertical, 8)
                 .accessibilityIdentifier("historyPlanDeltaSummary")
+            }
+
+            if let sensorSummary = currentSession.sensorSummary {
+                Section("Apple Watch計測") {
+                    LazyVGrid(columns: summaryColumns, spacing: 12) {
+                        SummaryMetric(title: "時間", value: formatSetDuration(sensorSummary.durationSeconds))
+                        SummaryMetric(title: "消費", value: sensorSummary.activeEnergyKilocalories.map { "\(Int($0)) kcal" } ?? "未取得")
+                        SummaryMetric(title: "平均心拍", value: sensorSummary.averageHeartRate.map { "\(Int($0)) bpm" } ?? "未取得")
+                        SummaryMetric(title: "最大心拍", value: sensorSummary.maximumHeartRate.map { "\(Int($0)) bpm" } ?? "未取得")
+                    }
+                    .padding(.vertical, 8)
+
+                    if let estimatedReps = sensorSummary.estimatedReps {
+                        Label("動作推定 合計\(estimatedReps)回", systemImage: "sensor.tag.radiowaves.forward")
+                    }
+
+                    Label(healthSaveTitle, systemImage: healthSaveSystemImage)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             ForEach(currentSession.exercises) { exercise in
@@ -95,6 +120,21 @@ struct HistoryDetailView: View {
             }
             Button("キャンセル", role: .cancel) {}
         }
+    }
+
+    private var healthSaveTitle: String {
+        switch currentSession.healthWorkoutSaveState {
+        case .saved: "Apple Healthへ保存済み"
+        case .permissionDenied: "Health未許可・アプリ履歴のみ保存"
+        case .failed: "Health保存失敗・アプリ履歴は保存済み"
+        case .unavailable: "アプリ履歴のみ保存"
+        case .collecting: "Health保存状態を確認中"
+        case nil: "Health保存情報なし"
+        }
+    }
+
+    private var healthSaveSystemImage: String {
+        currentSession.healthWorkoutSaveState == .saved ? "heart.fill" : "heart.slash"
     }
 }
 
@@ -152,6 +192,22 @@ private struct HistorySetRow: View {
                     Text("セット時間 \(formatSetDuration(duration))")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
+                }
+
+                if let sensorSummary = set.sensorSummary {
+                    HStack(spacing: 8) {
+                        if let averageHeartRate = sensorSummary.averageHeartRate {
+                            Label("\(Int(averageHeartRate)) bpm", systemImage: "heart.fill")
+                        }
+                        if let estimatedReps = sensorSummary.estimatedReps {
+                            Label("推定\(estimatedReps)回", systemImage: "waveform.path")
+                        }
+                        if let consistency = sensorSummary.movementConsistency {
+                            Label("安定\(Int(consistency * 100))%", systemImage: "checkmark.circle")
+                        }
+                    }
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
                 }
             }
 

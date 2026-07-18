@@ -55,7 +55,12 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         self.appStore = appStore
     }
 
-    func send(plans: [TrainingPlan], weightUnit: WeightUnit) {
+    func send(
+        plans: [TrainingPlan],
+        profile: UserProfile,
+        sensorSettings: SensorSettings,
+        preferredPlanID: UUID?
+    ) {
         guard let session else {
             state = .unavailable("この端末ではApple Watch連携を利用できません")
             return
@@ -83,7 +88,19 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         }
 
         let library = WatchWorkoutPlanLibrarySnapshot(
-            plans: plans.map { WatchWorkoutPlanSnapshot(plan: $0, weightUnit: weightUnit) }
+            plans: plans.map { WatchWorkoutPlanSnapshot(plan: $0, weightUnit: profile.weightUnit) },
+            preferredPlanID: preferredPlanID,
+            userProfile: WatchUserProfileSnapshot(
+                birthYear: profile.birthYear,
+                goalTypeRawValue: profile.goalType.rawValue
+            ),
+            sensorPreferences: WatchSensorPreferences(
+                healthWorkoutEnabled: sensorSettings.healthIntegrationEnabled,
+                motionRepDetectionEnabled: sensorSettings.motionRepDetectionEnabled,
+                adaptiveRestEnabled: sensorSettings.adaptiveRestEnabled,
+                hapticCoachingEnabled: sensorSettings.hapticCoachingEnabled,
+                reducedSensorSamplingEnabled: sensorSettings.reducedSensorSamplingEnabled
+            )
         )
 
         do {

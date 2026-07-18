@@ -431,9 +431,10 @@ private struct PlanExerciseEditorCard: View {
                 .buttonStyle(.borderless)
             }
 
-            Stepper(value: $planExercise.restSeconds, in: 0...600, step: 30) {
-                Text("休憩 \(planExercise.restSeconds)秒")
-            }
+            RestSecondsInputControl(
+                seconds: $planExercise.restSeconds,
+                accessibilityIdentifier: "planRestSeconds-\(planExercise.sortOrder)"
+            )
 
             Menu {
                 ForEach(setPresets) { preset in
@@ -449,7 +450,10 @@ private struct PlanExerciseEditorCard: View {
 
             VStack(spacing: 8) {
                 ForEach($planExercise.sets) { $set in
-                    PlanSetTargetRow(set: $set) {
+                    PlanSetTargetRow(
+                        set: $set,
+                        exerciseSortOrder: planExercise.sortOrder
+                    ) {
                         removeSet(set)
                     }
                 }
@@ -499,7 +503,9 @@ private struct PlanExerciseEditorCard: View {
 }
 
 private struct PlanSetTargetRow: View {
+    @EnvironmentObject private var appStore: AppStore
     @Binding var set: PlanSetTarget
+    let exerciseSortOrder: Int
     let onDelete: () -> Void
 
     var body: some View {
@@ -509,15 +515,17 @@ private struct PlanSetTargetRow: View {
                 .frame(width: 28, height: 28)
                 .background(.thinMaterial, in: Circle())
 
-            Stepper(value: $set.targetWeight, in: 0...999, step: 2.5) {
-                Text(AppFormatters.weight(set.targetWeight))
-                    .frame(minWidth: 72, alignment: .leading)
-            }
+            WeightInputControl(
+                weightInKilograms: $set.targetWeight,
+                unit: appStore.userProfile.weightUnit,
+                accessibilityIdentifier: "planWeightField-\(exerciseSortOrder)-\(set.setOrder)"
+            )
 
-            Stepper(value: $set.targetReps, in: 1...999) {
-                Text("\(set.targetReps)回")
-                    .frame(minWidth: 48, alignment: .leading)
-            }
+            RepsInputControl(
+                reps: $set.targetReps,
+                in: 1...999,
+                accessibilityIdentifier: "planRepsField-\(exerciseSortOrder)-\(set.setOrder)"
+            )
 
             Button(role: .destructive, action: onDelete) {
                 Image(systemName: "minus.circle")

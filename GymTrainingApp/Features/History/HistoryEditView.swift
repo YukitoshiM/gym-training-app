@@ -26,13 +26,16 @@ struct HistoryEditView: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Toggle("セット\(set.setOrder) 完了", isOn: $set.isCompleted)
 
-                                Stepper(value: $set.actualWeight, in: 0...999, step: 2.5) {
-                                    Text("重量 \(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit))")
-                                }
+                                WeightInputControl(
+                                    weightInKilograms: $set.actualWeight,
+                                    unit: appStore.userProfile.weightUnit,
+                                    accessibilityIdentifier: "historyWeightField-\(exercise.sortOrder)-\(set.setOrder)"
+                                )
 
-                                Stepper(value: $set.actualReps, in: 0...999) {
-                                    Text("回数 \(set.actualReps)回")
-                                }
+                                RepsInputControl(
+                                    reps: $set.actualReps,
+                                    accessibilityIdentifier: "historyRepsField-\(exercise.sortOrder)-\(set.setOrder)"
+                                )
                             }
                         }
                     }

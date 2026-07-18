@@ -18,6 +18,15 @@ struct HomeView: View {
                         isShowingGoalPicker = true
                     }
 
+                    NavigationLink {
+                        ConditionDashboardView()
+                    } label: {
+                        ConditionSummaryCard()
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityElement(children: .combine)
+                    .accessibilityIdentifier("conditionSummaryCard")
+
                     TodayTrainingCard(plan: nextPlan) {
                         if let nextPlan {
                             activeSession = WorkoutSession(plan: nextPlan)
@@ -81,7 +90,11 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $isShowingSettings) {
-                ProfileSettingsView(profile: appStore.userProfile, aiSettings: appStore.aiSettings)
+                ProfileSettingsView(
+                    profile: appStore.userProfile,
+                    aiSettings: appStore.aiSettings,
+                    sensorSettings: appStore.sensorSettings
+                )
             }
         }
     }
@@ -150,9 +163,9 @@ private struct GoalActionCard: View {
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
         .overlay(
             RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                .stroke(AppTheme.cardBorder, lineWidth: 1)
         )
-        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
         .accessibilityIdentifier("goalActionCard")
     }
 }
@@ -223,7 +236,7 @@ private struct TodayTrainingCard: View {
 
                 Text(plan == nil ? "未設定" : "Ready")
                     .font(.caption.bold())
-                    .foregroundStyle(plan == nil ? .white.opacity(0.65) : AppTheme.ink)
+                    .foregroundStyle(plan == nil ? .white.opacity(0.65) : AppTheme.onAccent)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
                     .background(plan == nil ? Color.white.opacity(0.12) : AppTheme.accent, in: Capsule())
@@ -253,7 +266,7 @@ private struct TodayTrainingCard: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
                 .tint(AppTheme.accent)
-                .foregroundStyle(AppTheme.ink)
+                .foregroundStyle(AppTheme.onAccent)
             } else {
                 Text("計画タブで種目とセット目標を登録すると、ここからすぐ開始できます。")
                     .font(.subheadline)
@@ -323,9 +336,9 @@ private struct CompactStat: View {
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
         .overlay(
             RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                .stroke(AppTheme.cardBorder, lineWidth: 1)
         )
-        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
     }
 }
 
@@ -369,9 +382,9 @@ private struct BodyKPIDashboard: View {
             .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
             .overlay(
                 RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                    .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                    .stroke(AppTheme.cardBorder, lineWidth: 1)
             )
-            .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+            .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("bodyMetricListLink")
@@ -411,7 +424,7 @@ private struct AIInsightStatusCard: View {
                 RoundedRectangle(cornerRadius: AppTheme.cardRadius)
                     .stroke(AppTheme.accent.opacity(0.35), lineWidth: 1)
             )
-            .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+            .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("aiReportLink")
@@ -468,9 +481,9 @@ private struct DailyRecordStatusCard: View {
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
         .overlay(
             RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                .stroke(AppTheme.cardBorder, lineWidth: 1)
         )
-        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
     }
 }
 
@@ -561,4 +574,6 @@ private struct BodyKPIProgressRow: View {
 #Preview {
     HomeView()
         .environmentObject(AppStore())
+        .environmentObject(HealthDataManager())
+        .environmentObject(GymLocationManager())
 }

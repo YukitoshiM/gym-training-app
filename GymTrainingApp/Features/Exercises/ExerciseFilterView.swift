@@ -66,7 +66,7 @@ private struct FilterChip: View {
         Button(action: action) {
             Text(title)
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(isSelected ? AppTheme.ink : AppTheme.mutedInk)
+                .foregroundStyle(isSelected ? AppTheme.onAccent : AppTheme.mutedInk)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 7)
                 .background(isSelected ? AppTheme.accent : Color(.tertiarySystemGroupedBackground), in: Capsule())
