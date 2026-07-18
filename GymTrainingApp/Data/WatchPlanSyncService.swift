@@ -9,6 +9,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         case ready(String)
         case sending(String)
         case sent(String)
+        case received(String)
         case failed(String)
 
         var message: String {
@@ -19,6 +20,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
                  .ready(let message),
                  .sending(let message),
                  .sent(let message),
+                 .received(let message),
                  .failed(let message):
                 message
             }
@@ -31,12 +33,14 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             case .ready: "checkmark.circle"
             case .sending: "arrow.triangle.2.circlepath"
             case .sent: "checkmark.circle.fill"
+            case .received: "tray.and.arrow.down.fill"
             case .failed: "exclamationmark.triangle.fill"
             }
         }
     }
 
     @Published private(set) var state: SyncState = .idle
+    private weak var appStore: AppStore?
 
     private var session: WCSession? {
         WCSession.isSupported() ? .default : nil
@@ -45,6 +49,10 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
     override init() {
         super.init()
         configureSession()
+    }
+
+    func bind(appStore: AppStore) {
+        self.appStore = appStore
     }
 
     func send(plan: TrainingPlan, weightUnit: WeightUnit) {
@@ -114,6 +122,57 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             self?.state = state
         }
     }
+
+    @discardableResult
+    private func saveFinishedWatchSession(payload: Data) -> Bool {
+        guard let appStore else {
+            state = .failed("Apple Watchの記録を保存する準備ができていません")
+            return false
+        }
+
+        do {
+            let watchSession = try JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: payload)
+            var workoutSession = WorkoutSession(watchSession: watchSession)
+            workoutSession.endedAt = workoutSession.endedAt ?? Date()
+            workoutSession.watchSyncState = .received
+            appStore.saveWorkoutHistorySession(workoutSession)
+            state = .received("\(workoutSession.title) をApple Watchから履歴に保存しました")
+            return true
+        } catch {
+            state = .failed("Apple Watchの記録を読み込めませんでした")
+            NSLog("Watch session decode failed: \(error.localizedDescription)")
+            return false
+        }
+    }
+
+    private nonisolated func receive(userInfo: [String: Any]) {
+        guard userInfo[WatchWorkoutTransfer.messageTypeKey] as? String == WatchWorkoutTransfer.sessionFinishedType,
+              let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else {
+            return
+        }
+
+        Task { @MainActor [weak self] in
+            self?.saveFinishedWatchSession(payload: payload)
+        }
+    }
+
+    private nonisolated func receive(message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        guard message[WatchWorkoutTransfer.messageTypeKey] as? String == WatchWorkoutTransfer.sessionFinishedType,
+              let payload = message[WatchWorkoutTransfer.payloadKey] as? Data else {
+            replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
+            return
+        }
+
+        guard (try? JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: payload)) != nil else {
+            replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
+            return
+        }
+
+        Task { @MainActor [weak self] in
+            self?.saveFinishedWatchSession(payload: payload)
+        }
+        replyHandler([WatchWorkoutTransfer.acknowledgementKey: true])
+    }
 }
 
 extension WatchPlanSyncService: WCSessionDelegate {
@@ -149,5 +208,21 @@ extension WatchPlanSyncService: WCSessionDelegate {
 
     nonisolated func sessionDidDeactivate(_ session: WCSession) {
         session.activate()
+    }
+
+    nonisolated func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        receive(userInfo: userInfo)
+    }
+
+    nonisolated func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
+        receive(userInfo: message)
+    }
+
+    nonisolated func session(
+        _ session: WCSession,
+        didReceiveMessage message: [String: Any],
+        replyHandler: @escaping ([String: Any]) -> Void
+    ) {
+        receive(message: message, replyHandler: replyHandler)
     }
 }

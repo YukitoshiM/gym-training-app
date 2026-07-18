@@ -28,8 +28,11 @@ struct WatchWorkoutPlanSnapshot: Codable, Hashable, Identifiable, Sendable {
 
 struct WatchPlanExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
     var id: UUID
+    var exerciseID: UUID?
     var name: String
     var primaryMuscleName: String
+    var primaryMuscleRawValue: String?
+    var equipmentRawValue: String?
     var restSeconds: Int
     var sets: [WatchPlanSetTargetSnapshot]
 }
@@ -58,5 +61,163 @@ enum WatchWorkoutTransfer {
     static let payloadKey = "payload"
     static let eventIDKey = "event_id"
     static let sentAtKey = "sent_at"
+    static let acknowledgementKey = "acknowledged"
     static let planPushType = "watch_plan_push"
+    static let sessionFinishedType = "watch_session_finished"
+}
+
+struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
+    var id: UUID
+    var sourcePlanID: UUID?
+    var title: String
+    var startedAt: Date
+    var endedAt: Date?
+    var weightUnit: WatchWeightUnit
+    var exercises: [WatchWorkoutExerciseSnapshot]
+
+    init(
+        id: UUID = UUID(),
+        sourcePlanID: UUID?,
+        title: String,
+        startedAt: Date = Date(),
+        endedAt: Date? = nil,
+        weightUnit: WatchWeightUnit,
+        exercises: [WatchWorkoutExerciseSnapshot]
+    ) {
+        self.id = id
+        self.sourcePlanID = sourcePlanID
+        self.title = title
+        self.startedAt = startedAt
+        self.endedAt = endedAt
+        self.weightUnit = weightUnit
+        self.exercises = exercises
+    }
+
+    init(plan: WatchWorkoutPlanSnapshot) {
+        self.init(
+            sourcePlanID: plan.id,
+            title: plan.name,
+            weightUnit: plan.weightUnit,
+            exercises: plan.exercises.enumerated().map { offset, exercise in
+                WatchWorkoutExerciseSnapshot(planExercise: exercise, sortOrder: offset)
+            }
+        )
+    }
+
+    var totalSetCount: Int {
+        exercises.reduce(0) { $0 + $1.sets.count }
+    }
+
+    var completedSetCount: Int {
+        exercises.reduce(0) { $0 + $1.sets.filter(\.isCompleted).count }
+    }
+
+    var totalVolume: Double {
+        exercises.reduce(0) { $0 + $1.totalVolume }
+    }
+
+    var isAllSetsCompleted: Bool {
+        totalSetCount > 0 && completedSetCount == totalSetCount
+    }
+}
+
+struct WatchWorkoutExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
+    var id: UUID
+    var planExerciseID: UUID
+    var exerciseID: UUID?
+    var name: String
+    var primaryMuscleName: String
+    var primaryMuscleRawValue: String?
+    var equipmentRawValue: String?
+    var sortOrder: Int
+    var restSeconds: Int
+    var sets: [WatchWorkoutSetSnapshot]
+
+    init(
+        id: UUID = UUID(),
+        planExerciseID: UUID,
+        exerciseID: UUID?,
+        name: String,
+        primaryMuscleName: String,
+        primaryMuscleRawValue: String?,
+        equipmentRawValue: String?,
+        sortOrder: Int,
+        restSeconds: Int,
+        sets: [WatchWorkoutSetSnapshot]
+    ) {
+        self.id = id
+        self.planExerciseID = planExerciseID
+        self.exerciseID = exerciseID
+        self.name = name
+        self.primaryMuscleName = primaryMuscleName
+        self.primaryMuscleRawValue = primaryMuscleRawValue
+        self.equipmentRawValue = equipmentRawValue
+        self.sortOrder = sortOrder
+        self.restSeconds = restSeconds
+        self.sets = sets
+    }
+
+    init(planExercise: WatchPlanExerciseSnapshot, sortOrder: Int) {
+        self.init(
+            planExerciseID: planExercise.id,
+            exerciseID: planExercise.exerciseID,
+            name: planExercise.name,
+            primaryMuscleName: planExercise.primaryMuscleName,
+            primaryMuscleRawValue: planExercise.primaryMuscleRawValue,
+            equipmentRawValue: planExercise.equipmentRawValue,
+            sortOrder: sortOrder,
+            restSeconds: planExercise.restSeconds,
+            sets: planExercise.sets.map { WatchWorkoutSetSnapshot(planSet: $0) }
+        )
+    }
+
+    var totalVolume: Double {
+        sets.filter(\.isCompleted).reduce(0) { $0 + $1.volume }
+    }
+}
+
+struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
+    var id: UUID
+    var setOrder: Int
+    var targetWeight: Double
+    var targetReps: Int
+    var actualWeight: Double
+    var actualReps: Int
+    var isCompleted: Bool
+    var rpe: Double?
+    var completedAt: Date?
+
+    init(
+        id: UUID = UUID(),
+        setOrder: Int,
+        targetWeight: Double,
+        targetReps: Int,
+        actualWeight: Double? = nil,
+        actualReps: Int? = nil,
+        isCompleted: Bool = false,
+        rpe: Double? = nil,
+        completedAt: Date? = nil
+    ) {
+        self.id = id
+        self.setOrder = setOrder
+        self.targetWeight = targetWeight
+        self.targetReps = targetReps
+        self.actualWeight = actualWeight ?? targetWeight
+        self.actualReps = actualReps ?? targetReps
+        self.isCompleted = isCompleted
+        self.rpe = rpe
+        self.completedAt = completedAt
+    }
+
+    init(planSet: WatchPlanSetTargetSnapshot) {
+        self.init(
+            setOrder: planSet.setOrder,
+            targetWeight: planSet.targetWeight,
+            targetReps: planSet.targetReps
+        )
+    }
+
+    var volume: Double {
+        actualWeight * Double(actualReps)
+    }
 }

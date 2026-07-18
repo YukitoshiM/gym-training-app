@@ -26,6 +26,12 @@ struct HistoryDetailView: View {
 
                     Text(AppFormatters.shortDateTime.string(from: currentSession.startedAt))
                         .foregroundStyle(.secondary)
+
+                    if currentSession.sourceDevice == .appleWatch {
+                        Label("Apple Watchから同期", systemImage: "applewatch")
+                            .font(.caption.bold())
+                            .foregroundStyle(AppTheme.accent)
+                    }
                 }
                 .padding(.vertical, 4)
             }
@@ -134,6 +140,13 @@ private struct HistorySetRow: View {
                     .font(.caption.bold())
                     .foregroundStyle(statusTint)
                     .accessibilityIdentifier("historySetDelta-\(set.setOrder)")
+
+                if let rpe = set.rpe {
+                    Text("RPE \(rpe.formatted(.number.precision(.fractionLength(0...1))))")
+                        .font(.caption2.bold())
+                        .foregroundStyle(AppTheme.accent)
+                        .accessibilityIdentifier("historySetRPE-\(set.setOrder)")
+                }
             }
 
             Spacer()

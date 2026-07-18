@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @EnvironmentObject private var appStore: AppStore
+    @EnvironmentObject private var watchPlanSyncService: WatchPlanSyncService
+
     var body: some View {
         TabView {
             HomeView()
@@ -29,9 +32,14 @@ struct RootTabView: View {
                 }
         }
         .tint(AppTheme.accent)
+        .onAppear {
+            watchPlanSyncService.bind(appStore: appStore)
+        }
     }
 }
 
 #Preview {
     RootTabView()
+        .environmentObject(AppStore())
+        .environmentObject(WatchPlanSyncService())
 }

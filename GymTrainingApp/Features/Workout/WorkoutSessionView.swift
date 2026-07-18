@@ -361,7 +361,11 @@ private struct WorkoutSetRow: View {
                     .accessibilityIdentifier("completeSetToggle-\(set.setOrder)")
                     .onChange(of: set.isCompleted) { oldValue, newValue in
                         if !oldValue && newValue {
+                            set.completedAt = Date()
                             onCompleted()
+                        } else if oldValue && !newValue {
+                            set.completedAt = nil
+                            set.rpe = nil
                         }
                     }
 

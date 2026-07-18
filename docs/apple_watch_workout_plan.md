@@ -220,6 +220,30 @@ Apple公式ドキュメントでは、HKWorkoutSessionはApple Watch上でユー
 5. 心拍、時間、消費カロリーをWorkoutSessionに紐付ける設計を追加
 6. HealthKit保存/読み取りの失敗UXを作る
 
+## 11.1 W3実装メモ
+
+実装日: 2026-07-18
+
+- Watch側に実行中セッション状態を追加した
+- Watchで計画を開始し、全セットを一覧から完了できるようにした
+- Watchで重量を2.5kg刻み、回数を1回刻みで微修正できるようにした
+- WatchでRPE 6〜10または未設定を選べるようにした
+- セット完了時に休憩タイマーを自動開始し、Watch上でスキップできるようにした
+- 実行中セッションと未送信セッションをWatchの `UserDefaults` に保存するようにした
+- Watchで完了したセッションを `watch_session_finished` としてiPhoneへ返し、iPhone側の履歴へ保存できるようにした
+- iPhoneの履歴詳細にApple Watch同期表示とRPE表示を追加した
+
+検証:
+
+- `xcodebuild -project GymTrainingApp.xcodeproj -target GymTrainingWatchApp -sdk watchsimulator26.5 ARCHS=arm64 ONLY_ACTIVE_ARCH=YES build`
+- `xcodebuild -project GymTrainingApp.xcodeproj -scheme GymTrainingApp -destination 'platform=iOS Simulator,id=4008EC67-FCFD-40C4-9202-9D7BEC14E346' build`
+
+補足:
+
+- Watch SimulatorデバイスがこのMacに出ていないため、Watchアプリの実操作とWatchConnectivity疎通は実機ペアで確認する
+- W3ではHealthKitは使わず、筋トレセット記録とiPhone履歴反映に集中する
+- 未到達時は `transferUserInfo` に載せつつ、Watch側にも未送信セッションを残して再送できる
+
 ## 12. W2受け入れ基準
 
 - Watch Appターゲットがビルドできる

@@ -80,6 +80,8 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
     var startedAt: Date
     var endedAt: Date?
     var exercises: [WorkoutExercise]
+    var sourceDevice: WorkoutSourceDevice?
+    var watchSyncState: WatchSyncState?
 
     init(
         id: UUID = UUID(),
@@ -87,7 +89,9 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         sourcePlanID: UUID?,
         startedAt: Date = Date(),
         endedAt: Date? = nil,
-        exercises: [WorkoutExercise]
+        exercises: [WorkoutExercise],
+        sourceDevice: WorkoutSourceDevice? = nil,
+        watchSyncState: WatchSyncState? = nil
     ) {
         self.id = id
         self.title = title
@@ -95,6 +99,8 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         self.startedAt = startedAt
         self.endedAt = endedAt
         self.exercises = exercises
+        self.sourceDevice = sourceDevice
+        self.watchSyncState = watchSyncState
     }
 
     var isCompleted: Bool {
@@ -214,6 +220,8 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var actualReps: Int
     var isCompleted: Bool
     var isAdded: Bool
+    var rpe: Double?
+    var completedAt: Date?
 
     init(
         id: UUID = UUID(),
@@ -223,7 +231,9 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         actualWeight: Double? = nil,
         actualReps: Int? = nil,
         isCompleted: Bool = false,
-        isAdded: Bool = false
+        isAdded: Bool = false,
+        rpe: Double? = nil,
+        completedAt: Date? = nil
     ) {
         self.id = id
         self.setOrder = setOrder
@@ -233,6 +243,8 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         self.actualReps = actualReps ?? targetReps
         self.isCompleted = isCompleted
         self.isAdded = isAdded
+        self.rpe = rpe
+        self.completedAt = completedAt
     }
 
     var repsDelta: Int {
@@ -265,6 +277,25 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var isAchieved: Bool {
         isCompleted && actualReps >= targetReps && actualWeight >= targetWeight
     }
+}
+
+enum WorkoutSourceDevice: String, Codable, Hashable {
+    case iPhone
+    case appleWatch
+
+    var displayName: String {
+        switch self {
+        case .iPhone: "iPhone"
+        case .appleWatch: "Apple Watch"
+        }
+    }
+}
+
+enum WatchSyncState: String, Codable, Hashable {
+    case pending
+    case sent
+    case received
+    case failed
 }
 
 extension WorkoutSession {

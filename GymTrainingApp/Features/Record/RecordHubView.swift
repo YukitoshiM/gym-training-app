@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RecordHubView: View {
     @EnvironmentObject private var appStore: AppStore
-    @StateObject private var watchSyncService = WatchPlanSyncService()
+    @EnvironmentObject private var watchSyncService: WatchPlanSyncService
     @State private var activeSession: WorkoutSession?
 
     private var mealCount: Int {
@@ -215,7 +215,7 @@ private struct WatchPlanSyncCard: View {
 
     private var tint: Color {
         switch state {
-        case .idle, .ready, .sent:
+        case .idle, .ready, .sent, .received:
             AppTheme.accent
         case .sending:
             AppTheme.blue
@@ -309,4 +309,5 @@ private struct WorkoutStartCard: View {
 #Preview {
     RecordHubView()
         .environmentObject(AppStore())
+        .environmentObject(WatchPlanSyncService())
 }
