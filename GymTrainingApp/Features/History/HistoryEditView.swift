@@ -41,6 +41,8 @@ struct HistoryEditView: View {
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("履歴編集")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -104,7 +104,7 @@ struct HistoryListView: View {
                             if visibleSessions.isEmpty {
                                 Text(selectedDate == nil ? "トレーニング履歴はありません" : "この日のトレーニングはありません")
                                     .font(.subheadline)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .padding(.vertical, 18)
                                     .listRowSeparator(.hidden)
@@ -284,7 +284,7 @@ private struct WorkoutCalendarView: View {
                 ForEach(weekdays, id: \.self) { weekday in
                     Text(weekday)
                         .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .frame(maxWidth: .infinity)
                 }
 
@@ -399,7 +399,7 @@ private struct CalendarDayButton: View {
 
                     if gymVisitCount > 0 {
                         Circle()
-                            .fill(.cyan)
+                            .fill(AppTheme.tertiaryAccent)
                             .frame(width: 5, height: 5)
                     }
 
@@ -501,11 +501,11 @@ private struct DailyJournalSummaryCard: View {
 
                     Text("\(summary.totalLogCount)件")
                         .font(.caption.bold())
-                        .foregroundStyle(summary.totalLogCount > 0 ? AppTheme.ink : .secondary)
+                        .foregroundStyle(summary.totalLogCount > 0 ? AppTheme.ink : AppTheme.mutedInk)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
                         .background(
-                            (summary.totalLogCount > 0 ? AppTheme.accent : Color.secondary).opacity(0.16),
+                            (summary.totalLogCount > 0 ? AppTheme.accent : AppTheme.mutedInk).opacity(0.16),
                             in: Capsule()
                         )
                 }
@@ -543,7 +543,7 @@ private struct DailyJournalSummaryCard: View {
                         title: "ジム訪問",
                         value: "\(summary.gymVisits.count)回",
                         systemImage: "mappin.and.ellipse",
-                        tint: .cyan
+                        tint: AppTheme.tertiaryAccent
                     )
                 }
 
@@ -606,7 +606,7 @@ private struct DailyJournalSummaryCard: View {
                         }
                     }
 
-                    journalSectionHeader("ジム訪問", systemImage: "mappin.and.ellipse", tint: .cyan)
+                    journalSectionHeader("ジム訪問", systemImage: "mappin.and.ellipse", tint: AppTheme.tertiaryAccent)
                     if summary.gymVisits.isEmpty {
                         DailyJournalEmptyLine(text: "ジム訪問は未記録")
                     } else {
@@ -667,7 +667,7 @@ private struct DailyJournalStat: View {
                     .minimumScaleFactor(0.75)
                 Text(title)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Spacer(minLength: 0)
@@ -692,7 +692,7 @@ private struct DailyJournalLine: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Text(footnote)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .lineLimit(2)
             }
 
@@ -714,7 +714,7 @@ private struct DailyJournalEmptyLine: View {
     var body: some View {
         Text(text)
             .font(.caption)
-            .foregroundStyle(.secondary)
+            .foregroundStyle(AppTheme.mutedInk)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
@@ -733,7 +733,7 @@ private struct HistoryRow: View {
                             .font(.headline)
                         Text(AppFormatters.shortDateTime.string(from: session.startedAt))
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
 
                     Spacer()
@@ -749,11 +749,11 @@ private struct HistoryRow: View {
                     Label("\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist")
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
 
                 Text("目標差 \(AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit))")
                     .font(.caption.bold())
-                    .foregroundStyle(session.volumeDelta >= 0 ? .green : AppTheme.orange)
+                    .foregroundStyle(session.volumeDelta >= 0 ? AppTheme.positive : AppTheme.orange)
 
                 VStack(spacing: 5) {
                     ForEach(session.exercises) { exercise in
@@ -764,13 +764,13 @@ private struct HistoryRow: View {
                             Spacer(minLength: 8)
 
                             Text(exercise.isSkipped ? "スキップ" : "\(exercise.completedSetCount)セット・\(exercise.completedRepCount)回")
-                                .foregroundStyle(exercise.isSkipped ? .secondary : AppTheme.ink)
+                                .foregroundStyle(exercise.isSkipped ? AppTheme.mutedInk : AppTheme.ink)
                         }
                         .accessibilityIdentifier("historyExerciseResult-\(exercise.sortOrder)")
                     }
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .padding(.vertical, 3)

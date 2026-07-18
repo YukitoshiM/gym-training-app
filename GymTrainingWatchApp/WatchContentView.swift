@@ -36,19 +36,19 @@ private struct WatchEmptyPlanView: View {
         VStack(spacing: 10) {
             Image(systemName: "applewatch")
                 .font(.largeTitle)
-                .foregroundStyle(.green)
+                .foregroundStyle(WatchAppTheme.positive)
 
             Text("メニュー待ち")
                 .font(.headline)
 
             Text(statusMessage)
                 .font(.footnote)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(WatchAppTheme.mutedInk)
                 .multilineTextAlignment(.center)
 
             Text("iPhoneの記録タブからApple Watchへメニューを同期します。")
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(WatchAppTheme.mutedInk)
                 .multilineTextAlignment(.center)
         }
         .padding()
@@ -70,10 +70,10 @@ private struct WatchMenuSelectionView: View {
                         .font(.headline)
                     Text("\(plans.count)件から選択")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                     Text(statusMessage)
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                 }
             }
 
@@ -84,16 +84,16 @@ private struct WatchMenuSelectionView: View {
                     } label: {
                         HStack(spacing: 10) {
                             Image(systemName: "dumbbell.fill")
-                                .foregroundStyle(.green)
+                                .foregroundStyle(WatchAppTheme.positive)
 
                             VStack(alignment: .leading, spacing: 3) {
                                 Text(plan.name)
                                     .font(.headline)
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(WatchAppTheme.ink)
                                     .lineLimit(1)
                                 Text(planOverview(plan))
                                     .font(.caption2)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(WatchAppTheme.mutedInk)
                                     .lineLimit(2)
                             }
                         }
@@ -132,10 +132,10 @@ private struct WatchPlanDetailView: View {
                         .font(.headline)
                     Text(planOverview(plan))
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                     Text(statusMessage)
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                 }
 
                 Button {
@@ -173,7 +173,7 @@ private struct WatchPlanDetailView: View {
                             .lineLimit(1)
                         Text(targetSummary(for: exercise, unit: plan.weightUnit))
                             .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(WatchAppTheme.mutedInk)
                             .lineLimit(2)
                     }
                 }
@@ -194,10 +194,10 @@ private struct WatchExercisePreviewView: View {
                         .font(.headline)
                     Text(exercise.primaryMuscleName)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                     Text("休憩 \(exercise.restSeconds)秒")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                 }
             }
 
@@ -207,14 +207,14 @@ private struct WatchExercisePreviewView: View {
                         Text("\(set.setOrder)")
                             .font(.headline)
                             .frame(width: 26, height: 26)
-                            .background(.green.opacity(0.2), in: Circle())
+                            .background(WatchAppTheme.positive.opacity(0.2), in: Circle())
 
                         VStack(alignment: .leading, spacing: 2) {
                             Text(formatWeight(set.targetWeight, unit: unit))
                                 .font(.headline)
                             Text("\(set.targetReps)回")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(WatchAppTheme.mutedInk)
                         }
                     }
                 }
@@ -243,7 +243,7 @@ private struct WatchActiveWorkoutView: View {
                         .font(.headline)
                     Text("\(session.completedSetCount)/\(session.totalSetCount)セット・\(session.completedRepCount)回記録")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                         .accessibilityIdentifier("watchWorkoutProgress")
 
                     if let nextSet {
@@ -253,7 +253,7 @@ private struct WatchActiveWorkoutView: View {
                             Label("次のセットを開始", systemImage: "play.fill")
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(.green)
+                        .tint(WatchAppTheme.positive)
                         .accessibilityIdentifier("watchStartNextSetButton")
                     }
 
@@ -261,7 +261,7 @@ private struct WatchActiveWorkoutView: View {
                         value: Double(session.completedSetCount),
                         total: Double(max(session.totalSetCount, 1))
                     )
-                    .tint(.green)
+                    .tint(WatchAppTheme.positive)
 
                     WatchLiveMetricsView(
                         metrics: workoutStore.liveMetrics,
@@ -275,13 +275,13 @@ private struct WatchActiveWorkoutView: View {
                                 .font(.caption.bold())
                             Text("信頼度 \(Int(suggestion.confidence * 100))%・\(suggestion.reason)")
                                 .font(.caption2)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(WatchAppTheme.mutedInk)
                             HStack {
                                 Button("開始") {
                                     workoutStore.acceptSetStartSuggestion()
                                 }
                                 .buttonStyle(.borderedProminent)
-                                .tint(.green)
+                                .tint(WatchAppTheme.positive)
                                 .accessibilityIdentifier("watchAcceptSetStartSuggestion")
 
                                 Button("違う") {
@@ -325,7 +325,7 @@ private struct WatchActiveWorkoutView: View {
                         if let restReadinessMessage = workoutStore.restReadinessMessage {
                             Text(restReadinessMessage)
                                 .font(.caption2)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(WatchAppTheme.mutedInk)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
 
@@ -335,7 +335,7 @@ private struct WatchActiveWorkoutView: View {
                                     .font(.caption.bold())
                                 Text(suggestion.reason)
                                     .font(.caption2)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(WatchAppTheme.mutedInk)
                                 Button("提案を反映") {
                                     workoutStore.applyNextSetLoadSuggestion()
                                 }
@@ -381,7 +381,7 @@ private struct WatchActiveWorkoutView: View {
                 if let note = session.note {
                     Text(note)
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                         .lineLimit(3)
                 }
 
@@ -391,7 +391,7 @@ private struct WatchActiveWorkoutView: View {
                     Label("完了して送信", systemImage: "checkmark.circle.fill")
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("watchFinishWorkoutButton")
 
                 Button(role: .destructive) {
@@ -469,7 +469,7 @@ private struct WatchWorkoutNoteEntryView: View {
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("saveWatchWorkoutNoteButton")
             }
         }
@@ -492,11 +492,11 @@ private struct WatchSetControlRow: View {
                 Text("\(set.setOrder)")
                     .font(.headline)
                     .frame(width: 26, height: 26)
-                    .background(set.isCompleted ? .green.opacity(0.22) : .secondary.opacity(0.16), in: Circle())
+                    .background(set.isCompleted ? WatchAppTheme.positive.opacity(0.22) : WatchAppTheme.mutedInk.opacity(0.16), in: Circle())
 
                 Text("目標 \(formatWeight(set.targetWeight, unit: unit)) × \(set.targetReps)回")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(WatchAppTheme.mutedInk)
 
                 Spacer()
 
@@ -512,7 +512,7 @@ private struct WatchSetControlRow: View {
                     Label("セット開始", systemImage: "play.fill")
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("watchSetStart-\(exercise.sortOrder)-\(set.setOrder)")
             } else {
                 Text("実績 \(formatWeight(set.actualWeight, unit: unit)) × \(set.actualReps)回")
@@ -567,7 +567,7 @@ private struct WatchSetControlRow: View {
                             systemImage: "sensor.tag.radiowaves.forward"
                         )
                         .font(.caption2)
-                        .foregroundStyle(.green)
+                        .foregroundStyle(WatchAppTheme.positive)
                         .accessibilityIdentifier("watchMotionEstimate")
                     }
 
@@ -575,7 +575,7 @@ private struct WatchSetControlRow: View {
                        workoutStore.motionEstimate(exerciseID: exercise.id, setID: set.id) != nil {
                         Label("動作停止を検知しました", systemImage: "checkmark.circle")
                             .font(.caption2.bold())
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(WatchAppTheme.warning)
                             .accessibilityIdentifier("watchSetCompletionSuggestion")
                     }
 
@@ -600,7 +600,7 @@ private struct WatchSetControlRow: View {
                             Label("完了", systemImage: "checkmark")
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(.green)
+                        .tint(WatchAppTheme.positive)
                         .accessibilityIdentifier("watchSetComplete-\(exercise.sortOrder)-\(set.setOrder)")
                     }
                     .font(.caption)
@@ -678,9 +678,9 @@ private struct WatchSetControlRow: View {
     }
 
     private var statusTint: Color {
-        if set.isCompleted { return .green }
-        if set.startedAt != nil { return .orange }
-        return .secondary
+        if set.isCompleted { return WatchAppTheme.positive }
+        if set.startedAt != nil { return WatchAppTheme.warning }
+        return WatchAppTheme.mutedInk
     }
 
     private var rpeTitle: String {
@@ -703,46 +703,46 @@ private struct WatchLiveMetricsView: View {
                 CompactWatchLiveMetric(
                     value: metrics.currentHeartRate.map { "\(Int($0))" } ?? "-",
                     systemImage: "heart.fill",
-                    tint: .red
+                    tint: WatchAppTheme.critical
                 )
                 CompactWatchLiveMetric(
                     value: metrics.averageHeartRate.map { "平均\(Int($0))" } ?? "平均-",
                     systemImage: "heart",
-                    tint: .pink
+                    tint: WatchAppTheme.secondaryAccent
                 )
                 CompactWatchLiveMetric(
                     value: metrics.maximumHeartRate.map { "最大\(Int($0))" } ?? "最大-",
                     systemImage: "heart.circle",
-                    tint: .orange
+                    tint: WatchAppTheme.warning
                 )
             }
             HStack(spacing: 8) {
                 CompactWatchLiveMetric(
                     value: formatElapsed(metrics.elapsedSeconds),
                     systemImage: "timer",
-                    tint: .green
+                    tint: WatchAppTheme.positive
                 )
                 CompactWatchLiveMetric(
                     value: metrics.activeEnergyKilocalories.map { "\(Int($0))" } ?? "-",
                     systemImage: "flame.fill",
-                    tint: .orange
+                    tint: WatchAppTheme.warning
                 )
                 CompactWatchLiveMetric(
                     value: zoneValue,
                     systemImage: "gauge.with.dots.needle.50percent",
-                    tint: .cyan
+                    tint: WatchAppTheme.mutedInk
                 )
             }
 
             if statusMessage != "センサー計測中" {
                 Text(statusMessage)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(WatchAppTheme.mutedInk)
                 .lineLimit(1)
             }
             Text(powerModeMessage)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(WatchAppTheme.mutedInk)
                 .lineLimit(1)
         }
         .accessibilityIdentifier("watchLiveMetrics")
@@ -812,7 +812,7 @@ private struct WatchSetSensorSummaryView: View {
             }
         }
         .font(.caption2)
-        .foregroundStyle(.secondary)
+        .foregroundStyle(WatchAppTheme.mutedInk)
     }
 }
 
@@ -880,7 +880,7 @@ private struct WatchWeightEntryView: View {
 
                     Text(unit.displayName)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 24, alignment: .leading)
                 }
 
@@ -895,7 +895,7 @@ private struct WatchWeightEntryView: View {
 
                     Text(unit.displayName)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                 }
 
                 Button("反映") {
@@ -904,7 +904,7 @@ private struct WatchWeightEntryView: View {
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("saveWatchWeightButton")
             }
         }
@@ -965,7 +965,7 @@ private struct WatchRepsEntryView: View {
 
                     Text("回")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 28, alignment: .leading)
                 }
 
@@ -978,7 +978,7 @@ private struct WatchRepsEntryView: View {
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("saveWatchRepsButton")
             }
         }
@@ -1017,7 +1017,7 @@ private struct WatchRestTimerEntryView: View {
 
                     Text("分:秒")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 36, alignment: .leading)
                 }
 
@@ -1028,7 +1028,7 @@ private struct WatchRestTimerEntryView: View {
 
                     Text("秒")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                 }
 
                 Button("反映") {
@@ -1036,7 +1036,7 @@ private struct WatchRestTimerEntryView: View {
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("saveWatchRestSecondsButton")
             }
         }
@@ -1080,7 +1080,7 @@ private struct WatchRPESelectionView: View {
 
                     Text("RPE")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 34, alignment: .leading)
                 }
 
@@ -1097,7 +1097,7 @@ private struct WatchRPESelectionView: View {
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("saveWatchRPEButton")
 
                 Button("RPEなし") {

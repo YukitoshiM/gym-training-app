@@ -38,11 +38,11 @@ struct AIReportView: View {
                 if !appStore.aiSettings.isEnabled {
                     Text("設定でAI機能がオフです。")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("接続できない場合でも、記録済みデータは消えません。手動記録を続けたまま、あとでAIコメントだけ生成できます。")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
 
@@ -51,18 +51,18 @@ struct AIReportView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         Text(AppFormatters.shortDateTime.string(from: latestWeeklyInsight.date))
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
 
                         Text(latestWeeklyInsight.outputComment)
                             .font(.headline)
 
                         Text(latestWeeklyInsight.actionSuggestion)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
 
                         Text("入力データの傾向をもとにした提案で、医療上の診断ではありません。体調や痛みに不安がある場合は専門家へ相談してください。")
                             .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                     .padding(.vertical, 4)
                 }
@@ -70,7 +70,7 @@ struct AIReportView: View {
                 Section("入力データ要約") {
                     Text(latestWeeklyInsight.inputSummary)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             } else {
                 Section {
@@ -96,7 +96,7 @@ struct AIReportView: View {
                             .font(.headline)
                         Text(insight.actionSuggestion)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(2)
                     }
                 }
@@ -105,7 +105,7 @@ struct AIReportView: View {
             Section("AI送信履歴") {
                 if appStore.aiTransmissionHistory.isEmpty {
                     Text("送信履歴はありません")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     ForEach(appStore.aiTransmissionHistory) { record in
                         VStack(alignment: .leading, spacing: 4) {
@@ -119,16 +119,18 @@ struct AIReportView: View {
                             }
                             Text(record.sharedCategories.joined(separator: "、").ifEmpty("共有項目なし"))
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                             Text("\(record.itemCount)件・\(record.purpose)")
                                 .font(.caption2)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
                     }
                     .onDelete(perform: appStore.deleteAITransmissionHistory)
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("AIレポート")
     }
 
@@ -259,8 +261,8 @@ struct AIReportView: View {
     private func statusTint(_ status: AITransmissionStatus) -> Color {
         switch status {
         case .sending: AppTheme.blue
-        case .completed: .green
-        case .failed: .red
+        case .completed: AppTheme.positive
+        case .failed: AppTheme.critical
         }
     }
 }
@@ -283,7 +285,7 @@ private struct AIReportConnectionNotice {
             title = "接続OK"
             detail = "Ollama \(health.model) で週次コメントを生成できます。"
             recovery = health.message
-            tint = .green
+            tint = AppTheme.positive
             systemImage = "checkmark.circle.fill"
         } else if !health.ollamaReachable {
             title = "Ollama未接続"
@@ -317,7 +319,7 @@ private struct AIReportConnectionNoticeCard: View {
             if let recovery = notice.recovery, !recovery.isEmpty {
                 Text(recovery)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .padding(.vertical, 4)
@@ -332,17 +334,17 @@ private struct AIErrorRecoveryCard: View {
         VStack(alignment: .leading, spacing: 8) {
             Label(presentation.message, systemImage: "xmark.octagon.fill")
                 .font(.subheadline.bold())
-                .foregroundStyle(.red)
+                .foregroundStyle(AppTheme.critical)
 
             if let recovery = presentation.recovery, !recovery.isEmpty {
                 Text(recovery)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Text("記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
         }
         .padding(.vertical, 4)
         .accessibilityIdentifier("aiErrorRecoveryCard")

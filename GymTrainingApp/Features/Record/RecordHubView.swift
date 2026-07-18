@@ -112,6 +112,7 @@ struct RecordHubView: View {
                                         plans: appStore.plans,
                                         profile: appStore.userProfile,
                                         sensorSettings: appStore.sensorSettings,
+                                        appearanceSettings: appStore.appearanceSettings,
                                         preferredPlanID: appStore.todayPlan?.id
                                     )
                                 }
@@ -188,20 +189,20 @@ private struct GymArrivalPlanCard: View {
     var body: some View {
         CardContainer {
             HStack(spacing: 12) {
-                IconBadge(systemImage: "mappin.and.ellipse", tint: .green)
+                IconBadge(systemImage: "mappin.and.ellipse", tint: AppTheme.positive)
                 VStack(alignment: .leading, spacing: 3) {
                     Text("ジムに到着しました")
                         .font(.headline)
                     Text("今日: \(plan.name)・\(plan.totalSetCount)セット")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
                 Spacer()
                 Button(action: onStart) {
                     Image(systemName: "play.fill")
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(AppTheme.positive)
                 .accessibilityLabel("今日のメニューを開始")
                 .accessibilityIdentifier("startArrivedGymPlanButton")
             }
@@ -229,7 +230,7 @@ private struct WatchPlanSyncCard: View {
                             .foregroundStyle(AppTheme.ink)
                         Text("登録済みメニュー \(plans.count)件")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(1)
                     }
 
@@ -249,7 +250,7 @@ private struct WatchPlanSyncCard: View {
 
                 Text(state.message)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .fixedSize(horizontal: false, vertical: true)
 
                 Menu {
@@ -311,7 +312,7 @@ private struct SectionHeader: View {
                 .font(.headline)
             Text(subtitle)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
         }
     }
 }
@@ -327,11 +328,11 @@ private struct RecordQuickActionCard: View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    IconBadge(systemImage: isCompleted ? "checkmark.circle.fill" : systemImage, tint: isCompleted ? .green : tint)
+                    IconBadge(systemImage: isCompleted ? "checkmark.circle.fill" : systemImage, tint: isCompleted ? AppTheme.positive : tint)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 VStack(alignment: .leading, spacing: 4) {
@@ -340,7 +341,7 @@ private struct RecordQuickActionCard: View {
                         .foregroundStyle(AppTheme.ink)
                     Text(detail)
                         .font(.caption.bold())
-                        .foregroundStyle(isCompleted ? .green : .secondary)
+                        .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -366,7 +367,7 @@ private struct WorkoutStartCard: View {
                         .foregroundStyle(AppTheme.ink)
                     Text(detail)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Spacer()

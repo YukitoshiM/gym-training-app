@@ -21,7 +21,7 @@ struct BodyPhotoListView: View {
                     if appStore.bodyPhotoEntries.isEmpty {
                         Text("体型写真はまだありません")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.vertical, 18)
                             .listRowSeparator(.hidden)
@@ -81,12 +81,12 @@ private struct BodyPhotoRow: View {
 
                     Text(AppFormatters.shortDateTime.string(from: entry.recordedAt))
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     if !entry.memo.isEmpty {
                         Text(entry.memo)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(2)
                     }
 
@@ -169,7 +169,7 @@ private struct BodyPhotoEditorView: View {
 
                     Text(aiHelpText)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Section("撮影角度") {
@@ -207,22 +207,24 @@ private struct BodyPhotoEditorView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label(aiErrorMessage, systemImage: "xmark.octagon.fill")
                                 .font(.subheadline.bold())
-                                .foregroundStyle(.red)
+                                .foregroundStyle(AppTheme.critical)
 
                             if let aiErrorRecovery {
                                 Text(aiErrorRecovery)
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
 
                             Text("撮影角度とメモだけでも保存できます。AIコメントは後から追加する想定で進められます。")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
                         .accessibilityIdentifier("bodyPhotoAIErrorRecoveryCard")
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("体型写真を記録")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

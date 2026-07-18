@@ -15,6 +15,7 @@ struct GymDataExport: Codable {
     var customExercises: [Exercise]
     var aiInsights: [AIInsight]
     var sensorSettings: SensorSettings
+    var appearanceSettings: AppAppearanceSettings
     var gymLocation: GymLocation?
     var gymVisits: [GymVisit]
     var subjectiveRecoveryEntries: [SubjectiveRecoveryEntry]

@@ -14,6 +14,8 @@ struct GymTrainingApp: App {
                 .environmentObject(watchPlanSyncService)
                 .environmentObject(healthDataManager)
                 .environmentObject(gymLocationManager)
+                .preferredColorScheme(AppTheme.preferredColorScheme(for: appStore.appearanceSettings.mode))
+                .id("\(appStore.appearanceSettings.colorTheme.rawValue)-\(appStore.appearanceSettings.mode.rawValue)")
         }
     }
 }

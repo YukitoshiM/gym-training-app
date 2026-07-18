@@ -46,6 +46,8 @@ struct BodyMetricEntryEditorView: View {
                         .lineLimit(2...4)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("\(kind.displayName)を記録")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -9,6 +9,7 @@ struct ProfileSettingsView: View {
     @State private var draft: UserProfile
     @State private var aiDraft: AISettings
     @State private var sensorDraft: SensorSettings
+    @State private var appearanceDraft: AppAppearanceSettings
     @State private var heightText: String
     @State private var birthYearText: String
     @State private var isConfirmingReset = false
@@ -22,11 +23,13 @@ struct ProfileSettingsView: View {
     init(
         profile: UserProfile,
         aiSettings: AISettings = .default,
-        sensorSettings: SensorSettings = .default
+        sensorSettings: SensorSettings = .default,
+        appearanceSettings: AppAppearanceSettings = .default
     ) {
         _draft = State(initialValue: profile)
         _aiDraft = State(initialValue: aiSettings)
         _sensorDraft = State(initialValue: sensorSettings)
+        _appearanceDraft = State(initialValue: appearanceSettings)
         _heightText = State(initialValue: profile.heightCm.map { String(format: "%.1f", $0) } ?? "")
         _birthYearText = State(initialValue: profile.birthYear.map(String.init) ?? "")
     }
@@ -75,6 +78,28 @@ struct ProfileSettingsView: View {
                 }
 
                 Section("表示") {
+                    ForEach(AppColorTheme.allCases) { theme in
+                        Button {
+                            appearanceDraft.colorTheme = theme
+                        } label: {
+                            ThemeOptionRow(
+                                theme: theme,
+                                isSelected: appearanceDraft.colorTheme == theme
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("themeOption-\(theme.rawValue)")
+                        .accessibilityValue(appearanceDraft.colorTheme == theme ? "選択中" : "未選択")
+                    }
+
+                    Picker("表示モード", selection: $appearanceDraft.mode) {
+                        ForEach(AppAppearanceMode.allCases) { mode in
+                            Text(mode.displayName).tag(mode)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .accessibilityIdentifier("appearanceModePicker")
+
                     Picker("重量単位", selection: $draft.weightUnit) {
                         ForEach(WeightUnit.allCases) { unit in
                             Text(unit.displayName).tag(unit)
@@ -122,7 +147,7 @@ struct ProfileSettingsView: View {
 
                     Text("現在選択: \(aiDraft.dataSharing.enabledCategoryNames.joined(separator: "、").ifEmpty("なし"))")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     TextField("サーバーURL", text: $aiDraft.baseURLString)
                         .textInputAutocapitalization(.never)
@@ -174,6 +199,8 @@ struct ProfileSettingsView: View {
                     .accessibilityIdentifier("resetAllDataButton")
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("設定")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -233,6 +260,7 @@ struct ProfileSettingsView: View {
             || aiDraft.dataSharing.workoutSensors
         appStore.saveAISettings(aiDraft)
         appStore.saveSensorSettings(sensorDraft)
+        appStore.saveAppearanceSettings(appearanceDraft)
         if sensorDraft.gymVisitDetectionEnabled {
             gymLocationManager.enableBackgroundVisitDetection()
         } else {
@@ -273,6 +301,40 @@ struct ProfileSettingsView: View {
         } catch {
             exportErrorMessage = error.localizedDescription
         }
+    }
+}
+
+private struct ThemeOptionRow: View {
+    let theme: AppColorTheme
+    let isSelected: Bool
+
+    var body: some View {
+        HStack(spacing: 12) {
+            HStack(spacing: 4) {
+                ForEach(Array(AppTheme.previewSwatches(for: theme).enumerated()), id: \.offset) { _, color in
+                    Circle()
+                        .fill(color)
+                        .frame(width: 18, height: 18)
+                        .overlay(Circle().stroke(AppTheme.ink.opacity(0.16), lineWidth: 1))
+                }
+            }
+            .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text("\(theme.shortCode)  \(theme.displayName)")
+                    .font(.subheadline.bold())
+                    .foregroundStyle(AppTheme.ink)
+                Text(theme.summary)
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.mutedInk)
+            }
+
+            Spacer()
+
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                .foregroundStyle(isSelected ? AppTheme.accent : AppTheme.mutedInk)
+        }
+        .contentShape(Rectangle())
     }
 }
 
@@ -345,9 +407,9 @@ private struct AIConnectionCheckResult {
 
     var tint: Color {
         switch level {
-        case .ready: .green
+        case .ready: AppTheme.positive
         case .warning: AppTheme.orange
-        case .failure: .red
+        case .failure: AppTheme.critical
         }
     }
 
@@ -376,7 +438,7 @@ private struct AIConnectionCheckCard: View {
             if let recovery = result.recovery, !recovery.isEmpty {
                 Text(recovery)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .padding(.vertical, 4)
@@ -385,7 +447,7 @@ private struct AIConnectionCheckCard: View {
 }
 
 #Preview {
-    ProfileSettingsView(profile: .default, aiSettings: .default)
+    ProfileSettingsView(profile: .default, aiSettings: .default, appearanceSettings: .default)
         .environmentObject(AppStore())
         .environmentObject(HealthDataManager())
         .environmentObject(GymLocationManager())

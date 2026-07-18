@@ -46,6 +46,8 @@ struct ExerciseListView: View {
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("種目")
             .searchable(text: $searchText, prompt: "種目名・部位・手法")
             .toolbar {
@@ -89,7 +91,7 @@ struct ExerciseSummaryRow: View {
                 .font(.headline)
             Text("\(exercise.primaryMuscle.displayName)・\(exercise.equipment.displayName)")
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
         }
         .padding(.vertical, 4)
     }

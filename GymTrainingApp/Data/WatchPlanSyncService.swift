@@ -59,6 +59,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         plans: [TrainingPlan],
         profile: UserProfile,
         sensorSettings: SensorSettings,
+        appearanceSettings: AppAppearanceSettings,
         preferredPlanID: UUID?
     ) {
         guard let session else {
@@ -100,7 +101,8 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
                 adaptiveRestEnabled: sensorSettings.adaptiveRestEnabled,
                 hapticCoachingEnabled: sensorSettings.hapticCoachingEnabled,
                 reducedSensorSamplingEnabled: sensorSettings.reducedSensorSamplingEnabled
-            )
+            ),
+            appearanceSettings: appearanceSettings
         )
 
         do {

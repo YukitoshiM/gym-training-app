@@ -101,7 +101,7 @@ private struct PlanRow: View {
 
                     Text(plan.exercises.map { $0.exercise.name }.joined(separator: "、"))
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .lineLimit(1)
 
                     HStack(spacing: 10) {
@@ -109,14 +109,14 @@ private struct PlanRow: View {
                         Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                     }
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Spacer()
 
                 Image(systemName: "chevron.right")
                     .font(.caption.bold())
-                    .foregroundStyle(.tertiary)
+                    .foregroundStyle(AppTheme.mutedInk.opacity(0.7))
             }
         }
         .padding(.vertical, 3)

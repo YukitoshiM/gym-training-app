@@ -6,19 +6,22 @@ struct WatchWorkoutPlanLibrarySnapshot: Codable, Hashable, Sendable {
     var preferredPlanID: UUID?
     var userProfile: WatchUserProfileSnapshot?
     var sensorPreferences: WatchSensorPreferences?
+    var appearanceSettings: AppAppearanceSettings?
 
     init(
         generatedAt: Date = Date(),
         plans: [WatchWorkoutPlanSnapshot],
         preferredPlanID: UUID? = nil,
         userProfile: WatchUserProfileSnapshot? = nil,
-        sensorPreferences: WatchSensorPreferences? = nil
+        sensorPreferences: WatchSensorPreferences? = nil,
+        appearanceSettings: AppAppearanceSettings? = nil
     ) {
         self.generatedAt = generatedAt
         self.plans = plans
         self.preferredPlanID = preferredPlanID
         self.userProfile = userProfile
         self.sensorPreferences = sensorPreferences
+        self.appearanceSettings = appearanceSettings
     }
 }
 

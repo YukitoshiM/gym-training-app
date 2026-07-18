@@ -42,6 +42,8 @@ struct BodyMetricGoalEditorView: View {
                     .pickerStyle(.segmented)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("目標設定")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -27,12 +27,12 @@ struct ConditionDashboardView: View {
                                     .font(.headline)
                                 Text("負荷・セット品質・心拍回復・停滞候補")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
                             Spacer()
                             Image(systemName: "chevron.right")
                                 .font(.caption.bold())
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
                     }
                 }
@@ -129,14 +129,14 @@ struct ConditionSummaryCard: View {
                         Spacer()
                         Image(systemName: "chevron.right")
                             .font(.caption.bold())
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                     Text(healthDataManager.accessState == .notRequested ? "Apple Healthを連携" : assessment.level.title)
                         .font(.subheadline.bold())
                         .foregroundStyle(tint)
                     Text(healthDataManager.accessState == .notRequested ? "睡眠・回復・活動量をまとめて確認できます。" : assessment.summary)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .lineLimit(2)
                 }
             }
@@ -146,7 +146,7 @@ struct ConditionSummaryCard: View {
     private var tint: Color {
         guard healthDataManager.accessState != .notRequested else { return AppTheme.blue }
         return switch assessment.level {
-        case .good: .green
+        case .good: AppTheme.positive
         case .moderate: AppTheme.blue
         case .recover: AppTheme.orange
         }
@@ -165,7 +165,7 @@ private struct SubjectiveRecoveryCard: View {
                         .font(.headline)
                     Text(currentLabel)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
                 Spacer()
                 Menu {
@@ -233,11 +233,11 @@ private struct SleepDetailsCard: View {
                          ? "時間、深い睡眠、REM、中途覚醒から端末内で算出した参考スコアです。"
                          : "睡眠ステージが未取得のため、合計時間を中心にした参考スコアです。")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("睡眠データは未取得です。未取得値を0として評価しません。")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
         }
@@ -255,12 +255,12 @@ private struct HealthPermissionCard: View {
     var body: some View {
         CardContainer {
             VStack(alignment: .leading, spacing: 14) {
-                IconBadge(systemImage: "heart.text.square.fill", tint: .red)
+                IconBadge(systemImage: "heart.text.square.fill", tint: AppTheme.critical)
                 Text("Apple Healthと連携")
                     .font(.title3.bold())
                 Text("歩数、アクティビティ、睡眠、安静時心拍、HRV、呼吸数、手首皮膚温を必要な項目ごとに許可できます。許可しない項目は未取得として扱い、手入力はそのまま使えます。")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                 Button(action: onRequest) {
                     Label("連携する項目を選ぶ", systemImage: "checkmark.shield")
@@ -302,13 +302,13 @@ private struct ReadinessCard: View {
                 ForEach(assessment.factors.prefix(4), id: \.self) { factor in
                     Label(factor, systemImage: "circle.fill")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .symbolRenderingMode(.hierarchical)
                 }
 
                 Text("医療的な判定ではなく、取得できたデータの傾向をまとめた参考値です。")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .accessibilityIdentifier("readinessCard")
@@ -316,7 +316,7 @@ private struct ReadinessCard: View {
 
     private var tint: Color {
         switch assessment.level {
-        case .good: .green
+        case .good: AppTheme.positive
         case .moderate: AppTheme.blue
         case .recover: AppTheme.orange
         }
@@ -343,17 +343,17 @@ private struct ActivityProgressCard: View {
                         ActivityLegendRow(
                             title: "ムーブ",
                             value: progressText(progress?.moveKilocalories, goal: progress?.moveGoalKilocalories, unit: "kcal"),
-                            tint: .red
+                            tint: AppTheme.accent
                         )
                         ActivityLegendRow(
                             title: "運動",
                             value: progressText(progress?.exerciseMinutes, goal: progress?.exerciseGoalMinutes, unit: "分"),
-                            tint: .green
+                            tint: AppTheme.secondaryAccent
                         )
                         ActivityLegendRow(
                             title: "スタンド",
                             value: progressText(progress?.standHours, goal: progress?.standGoalHours, unit: "時間"),
-                            tint: AppTheme.blue
+                            tint: AppTheme.tertiaryAccent
                         )
                     }
                 }
@@ -386,9 +386,9 @@ private struct ActivityProgressRings: View {
 
     var body: some View {
         ZStack {
-            ring(progress: ratio(progress?.moveKilocalories, progress?.moveGoalKilocalories), tint: .red, inset: 0)
-            ring(progress: ratio(progress?.exerciseMinutes, progress?.exerciseGoalMinutes), tint: .green, inset: 12)
-            ring(progress: ratio(progress?.standHours, progress?.standGoalHours), tint: AppTheme.blue, inset: 24)
+            ring(progress: ratio(progress?.moveKilocalories, progress?.moveGoalKilocalories), tint: AppTheme.accent, inset: 0)
+            ring(progress: ratio(progress?.exerciseMinutes, progress?.exerciseGoalMinutes), tint: AppTheme.secondaryAccent, inset: 12)
+            ring(progress: ratio(progress?.standHours, progress?.standGoalHours), tint: AppTheme.tertiaryAccent, inset: 24)
         }
     }
 
@@ -424,7 +424,7 @@ private struct ActivityLegendRow: View {
             VStack(alignment: .leading, spacing: 1) {
                 Text(title)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                 Text(value)
                     .font(.caption.bold())
                     .lineLimit(1)
@@ -447,7 +447,7 @@ private struct CompactHealthValue: View {
                 .minimumScaleFactor(0.75)
             Text(title)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
         }
         .frame(maxWidth: .infinity)
     }
@@ -463,18 +463,18 @@ private struct RecoveryMetricsSection: View {
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                 HealthMetricCard(title: "睡眠", value: format(snapshot.sleepHours, suffix: "時間", digits: 1), icon: "bed.double.fill", tint: AppTheme.purple)
-                HealthMetricCard(title: "安静時心拍", value: format(snapshot.restingHeartRate?.value, suffix: "bpm", digits: 0), icon: "heart.fill", tint: .red)
+                HealthMetricCard(title: "安静時心拍", value: format(snapshot.restingHeartRate?.value, suffix: "bpm", digits: 0), icon: "heart.fill", tint: AppTheme.critical)
                 HealthMetricCard(title: "HRV", value: format(snapshot.heartRateVariabilityMilliseconds?.value, suffix: "ms", digits: 0), icon: "waveform.path.ecg", tint: AppTheme.blue)
-                HealthMetricCard(title: "呼吸数", value: format(snapshot.respiratoryRate?.value, suffix: "回/分", digits: 1), icon: "lungs.fill", tint: .cyan)
+                HealthMetricCard(title: "呼吸数", value: format(snapshot.respiratoryRate?.value, suffix: "回/分", digits: 1), icon: "lungs.fill", tint: AppTheme.tertiaryAccent)
                 HealthMetricCard(title: "手首皮膚温", value: format(snapshot.wristTemperatureCelsius?.value, suffix: "°C", digits: 1), icon: "thermometer.medium", tint: AppTheme.orange)
-                HealthMetricCard(title: "心拍回復", value: format(snapshot.heartRateRecovery?.value, suffix: "bpm", digits: 0), icon: "arrow.down.heart.fill", tint: .green)
+                HealthMetricCard(title: "心拍回復", value: format(snapshot.heartRateRecovery?.value, suffix: "bpm", digits: 0), icon: "arrow.down.heart.fill", tint: AppTheme.positive)
             }
 
             if let current = snapshot.respiratoryRate?.value,
                let baseline = snapshot.baselines.respiratoryRate {
                 Text("呼吸数は14日平均 \(baseline.formatted(.number.precision(.fractionLength(1))))回/分に対して \(signed(current - baseline))回/分")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
     }
@@ -511,7 +511,7 @@ private struct EnergyBalanceCard: View {
 
                 Text(detailText)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .accessibilityIdentifier("energyBalanceCard")
@@ -552,7 +552,7 @@ private struct EnvironmentMetricsSection: View {
                         .font(.subheadline.bold())
                     Text(audioGuidance)
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
         }
@@ -577,8 +577,8 @@ private struct EnvironmentMetricsSection: View {
     }
 
     private var audioTint: Color {
-        guard let value = snapshot.environmentalAudioExposureDecibels?.value else { return .secondary }
-        return value >= 85 ? AppTheme.orange : .green
+        guard let value = snapshot.environmentalAudioExposureDecibels?.value else { return AppTheme.mutedInk }
+        return value >= 85 ? AppTheme.orange : AppTheme.positive
     }
 
     private var audioIcon: String {
@@ -620,11 +620,11 @@ private struct OutdoorRouteCard: View {
 
                     Text("Apple Healthに保存された最新のランニングルートを表示しています。")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("ルート付きの屋外ランニングが見つかると、距離・速度・高度差を表示します。")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
         }
@@ -679,7 +679,7 @@ private struct HealthMetricCard: View {
                     .minimumScaleFactor(0.7)
                 Text(title)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -698,7 +698,7 @@ private struct HealthDataQualityCard: View {
                     .font(.subheadline.bold())
                 Text("Apple Watchを適度にフィットさせて装着し、睡眠中も着用すると回復指標がそろいやすくなります。値がない項目は推測で補完しません。")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
     }
@@ -731,19 +731,19 @@ private struct GymVisitCard: View {
                             .font(.headline)
                         Text(visitSummary)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                     Spacer()
                     if gymLocationManager.isAtGym {
                         Text("滞在中")
                             .font(.caption.bold())
-                            .foregroundStyle(.green)
+                            .foregroundStyle(AppTheme.positive)
                     }
                 }
 
                 Text(gymLocationManager.statusMessage)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                 if appStore.gymLocation == nil {
                     Button {
@@ -774,7 +774,7 @@ private struct GymVisitCard: View {
                             )
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(gymLocationManager.isAtGym ? AppTheme.orange : .green)
+                        .tint(gymLocationManager.isAtGym ? AppTheme.orange : AppTheme.positive)
                         .accessibilityIdentifier("manualGymCheckButton")
 
                         Button {

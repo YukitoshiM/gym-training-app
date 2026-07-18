@@ -19,6 +19,7 @@ final class AppStore: ObservableObject {
     @Published private(set) var subjectiveRecoveryEntries: [SubjectiveRecoveryEntry] = []
     @Published private(set) var pendingMissedGymPlan: DailyWorkoutSelection?
     @Published private(set) var aiTransmissionHistory: [AITransmissionRecord] = []
+    @Published private(set) var appearanceSettings: AppAppearanceSettings = .default
 
     private let storage = LocalJSONStorage()
 
@@ -28,6 +29,21 @@ final class AppStore: ObservableObject {
         }
 
         let arguments = ProcessInfo.processInfo.arguments
+
+        if arguments.contains("--seed-theme-black-champagne") {
+            storage.saveAppearanceSettings(.init(colorTheme: .blackChampagne, mode: .system))
+        } else if arguments.contains("--seed-theme-royal-cobalt") {
+            storage.saveAppearanceSettings(.init(colorTheme: .royalCobalt, mode: .system))
+        }
+        if arguments.contains("--force-light-appearance") {
+            var settings = storage.loadAppearanceSettings()
+            settings.mode = .light
+            storage.saveAppearanceSettings(settings)
+        } else if arguments.contains("--force-dark-appearance") {
+            var settings = storage.loadAppearanceSettings()
+            settings.mode = .dark
+            storage.saveAppearanceSettings(settings)
+        }
 
         if arguments.contains("--seed-alpha-ui-test-plan") {
             storage.savePlans([Self.alphaUITestPlan()])
@@ -58,6 +74,7 @@ final class AppStore: ObservableObject {
         gymVisits = storage.loadGymVisits()
         subjectiveRecoveryEntries = storage.loadSubjectiveRecoveryEntries()
         aiTransmissionHistory = storage.loadAITransmissionHistory()
+        appearanceSettings = storage.loadAppearanceSettings()
 
         if let selection = dailyWorkoutSelection,
            !Calendar.current.isDateInToday(selection.date) {
@@ -94,6 +111,11 @@ final class AppStore: ObservableObject {
     func saveSensorSettings(_ settings: SensorSettings) {
         sensorSettings = settings
         storage.saveSensorSettings(settings)
+    }
+
+    func saveAppearanceSettings(_ settings: AppAppearanceSettings) {
+        appearanceSettings = settings
+        storage.saveAppearanceSettings(settings)
     }
 
     func selectTodayPlan(_ planID: UUID) {
@@ -309,11 +331,13 @@ final class AppStore: ObservableObject {
         gymVisits = []
         subjectiveRecoveryEntries = []
         aiTransmissionHistory = []
+        appearanceSettings = .default
         storage.saveBodyMetricGoals(bodyMetricGoals)
         storage.saveUserProfile(userProfile)
         storage.saveAISettings(aiSettings)
         storage.saveAIInsights(aiInsights)
         storage.saveSensorSettings(sensorSettings)
+        storage.saveAppearanceSettings(appearanceSettings)
     }
 
     func makeExportData() throws -> Data {
@@ -330,6 +354,7 @@ final class AppStore: ObservableObject {
             customExercises: customExercises,
             aiInsights: aiInsights,
             sensorSettings: sensorSettings,
+            appearanceSettings: appearanceSettings,
             gymLocation: gymLocation,
             gymVisits: gymVisits,
             subjectiveRecoveryEntries: subjectiveRecoveryEntries,
@@ -630,6 +655,14 @@ private struct LocalJSONStorage {
         save(records, key: aiTransmissionHistoryKey)
     }
 
+    func loadAppearanceSettings() -> AppAppearanceSettings {
+        .load()
+    }
+
+    func saveAppearanceSettings(_ settings: AppAppearanceSettings) {
+        settings.save()
+    }
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: userProfileKey)
         UserDefaults.standard.removeObject(forKey: plansKey)
@@ -647,6 +680,7 @@ private struct LocalJSONStorage {
         UserDefaults.standard.removeObject(forKey: gymVisitsKey)
         UserDefaults.standard.removeObject(forKey: subjectiveRecoveryEntriesKey)
         UserDefaults.standard.removeObject(forKey: aiTransmissionHistoryKey)
+        AppAppearanceSettings.reset()
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {

@@ -93,7 +93,8 @@ struct HomeView: View {
                 ProfileSettingsView(
                     profile: appStore.userProfile,
                     aiSettings: appStore.aiSettings,
-                    sensorSettings: appStore.sensorSettings
+                    sensorSettings: appStore.sensorSettings,
+                    appearanceSettings: appStore.appearanceSettings
                 )
             }
         }
@@ -151,11 +152,11 @@ private struct GoalActionCard: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text(goalType.insightTitle)
                     .font(.caption.bold())
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                 Text(goalType.insightBody)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
@@ -184,16 +185,16 @@ private struct GoalPickerView: View {
                         } label: {
                             HStack(alignment: .top, spacing: 12) {
                                 Image(systemName: selectedGoal == goalType ? "checkmark.circle.fill" : "circle")
-                                    .foregroundStyle(selectedGoal == goalType ? AppTheme.accent : .secondary)
+                                    .foregroundStyle(selectedGoal == goalType ? AppTheme.accent : AppTheme.mutedInk)
 
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(goalType.displayName)
                                         .font(.headline)
-                                        .foregroundStyle(.primary)
+                                        .foregroundStyle(AppTheme.ink)
 
                                     Text(goalType.shortAction)
                                         .font(.caption)
-                                        .foregroundStyle(.secondary)
+                                        .foregroundStyle(AppTheme.mutedInk)
                                 }
                             }
                             .padding(.vertical, 4)
@@ -207,6 +208,8 @@ private struct GoalPickerView: View {
                     Text("目的に合わせてホームの確認ポイントと次にやることを切り替えます。")
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("目的を選択")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -228,7 +231,7 @@ private struct TodayTrainingCard: View {
 
                     Text(plan?.name ?? "計画を作成しましょう")
                         .font(.system(size: 30, weight: .black, design: .rounded))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(AppTheme.foregroundOnDark)
                         .lineLimit(2)
                 }
 
@@ -236,10 +239,10 @@ private struct TodayTrainingCard: View {
 
                 Text(plan == nil ? "未設定" : "Ready")
                     .font(.caption.bold())
-                    .foregroundStyle(plan == nil ? .white.opacity(0.65) : AppTheme.onAccent)
+                    .foregroundStyle(plan == nil ? AppTheme.foregroundOnDark.opacity(0.65) : AppTheme.onAccent)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
-                    .background(plan == nil ? Color.white.opacity(0.12) : AppTheme.accent, in: Capsule())
+                    .background(plan == nil ? AppTheme.foregroundOnDark.opacity(0.12) : AppTheme.accent, in: Capsule())
             }
 
             if let plan {
@@ -248,11 +251,11 @@ private struct TodayTrainingCard: View {
                     Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                 }
                 .font(.subheadline)
-                .foregroundStyle(.white.opacity(0.72))
+                .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.72))
 
                 Text(plan.exercises.map { $0.exercise.name }.joined(separator: "、"))
                     .font(.caption)
-                    .foregroundStyle(.white.opacity(0.64))
+                    .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.64))
                     .lineLimit(2)
 
                 Button(action: onStart) {
@@ -270,28 +273,19 @@ private struct TodayTrainingCard: View {
             } else {
                 Text("計画タブで種目とセット目標を登録すると、ここからすぐ開始できます。")
                     .font(.subheadline)
-                    .foregroundStyle(.white.opacity(0.72))
+                    .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.72))
             }
         }
         .padding(20)
         .background {
             ZStack(alignment: .bottomTrailing) {
-                RoundedRectangle(cornerRadius: 14)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                AppTheme.gymFloor,
-                                Color(red: 0.18, green: 0.22, blue: 0.17)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
+                RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                    .fill(AppTheme.darkBase)
 
                 VStack(spacing: 8) {
                     ForEach(0..<5) { _ in
                         Rectangle()
-                            .fill(Color.white.opacity(0.06))
+                            .fill(AppTheme.foregroundOnDark.opacity(0.06))
                             .frame(width: 150, height: 1)
                     }
                 }
@@ -300,7 +294,7 @@ private struct TodayTrainingCard: View {
             }
         }
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
                 .stroke(AppTheme.accent.opacity(0.42), lineWidth: 1)
         )
         .shadow(color: AppTheme.gymFloor.opacity(0.28), radius: 24, x: 0, y: 16)
@@ -317,14 +311,14 @@ private struct CompactStat: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
             HStack(alignment: .firstTextBaseline, spacing: 2) {
                 Text(value)
                     .font(.title2.bold())
                 if !suffix.isEmpty {
                     Text(suffix)
                         .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
             Capsule()
@@ -359,14 +353,14 @@ private struct BodyKPIDashboard: View {
                             .font(.headline)
                         Text("目標差と推移をまとめて確認")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
 
                     Spacer()
 
                     Image(systemName: "chevron.right")
                         .font(.headline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 ForEach(kinds) { kind in
@@ -404,18 +398,18 @@ private struct AIInsightStatusCard: View {
                         .font(.headline)
                     Spacer()
                     Image(systemName: "chevron.right")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 if let insight {
                     Text(insight.outputComment)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .lineLimit(3)
                 } else {
                     Text("ローカルLLMから週次コメントを生成します")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
             .padding(16)
@@ -443,7 +437,7 @@ private struct DailyRecordStatusCard: View {
                         .font(.headline)
                     Text("AIなしでも手動で残せる項目です")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Spacer()
@@ -503,7 +497,7 @@ private struct DailyRecordButton: View {
                     .foregroundStyle(AppTheme.ink)
                 Text(value)
                     .font(.caption.bold())
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Spacer()
@@ -543,7 +537,7 @@ private struct BodyKPIProgressRow: View {
 
             Text(detailText)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
                 .lineLimit(1)
         }
     }

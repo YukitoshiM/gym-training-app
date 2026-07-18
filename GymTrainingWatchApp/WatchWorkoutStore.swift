@@ -22,6 +22,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     @Published private(set) var setStartSuggestion: WatchSetStartSuggestion?
     @Published private(set) var nextSetLoadSuggestion: WatchNextSetLoadSuggestion?
     @Published private(set) var sensorPowerModeMessage = "通常サンプリング"
+    @Published private(set) var appearanceSettings: AppAppearanceSettings = .load()
 
     private let planStorageKey = "gym.training.watch.currentPlan"
     private let planLibraryStorageKey = "gym.training.watch.planLibrary"
@@ -1026,6 +1027,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             plans = library.plans
             userProfile = library.userProfile
             sensorPreferences = library.sensorPreferences ?? .default
+            appearanceSettings = library.appearanceSettings ?? .load()
+            appearanceSettings.save()
             disableUnavailableSensors()
             selectedPlan = library.preferredPlanID.flatMap { preferredID in
                 plans.first { $0.id == preferredID }
@@ -1063,11 +1066,16 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             defaults.removeObject(forKey: activeSessionStorageKey)
             defaults.removeObject(forKey: pendingSessionStorageKey)
             defaults.removeObject(forKey: restTimerEndStorageKey)
+            AppAppearanceSettings.reset(in: defaults)
+            appearanceSettings = .default
         }
 
         guard arguments.contains("--seed-watch-ui-test-plan"),
               let libraryData = try? encoder.encode(
-                WatchWorkoutPlanLibrarySnapshot(plans: Self.uiTestPlans())
+                WatchWorkoutPlanLibrarySnapshot(
+                    plans: Self.uiTestPlans(),
+                    appearanceSettings: .default
+                )
               ) else {
             return
         }
@@ -1134,6 +1142,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         plans = library.plans
         userProfile = library.userProfile
         sensorPreferences = library.sensorPreferences ?? .default
+        appearanceSettings = library.appearanceSettings ?? appearanceSettings
+        appearanceSettings.save()
         disableUnavailableSensors()
         selectedPlan = library.preferredPlanID.flatMap { preferredID in
             plans.first { $0.id == preferredID }
@@ -1205,7 +1215,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
                 plans: plans,
                 preferredPlanID: selectedPlan?.id,
                 userProfile: userProfile,
-                sensorPreferences: sensorPreferences
+                sensorPreferences: sensorPreferences,
+                appearanceSettings: appearanceSettings
             )
         ) else {
             return

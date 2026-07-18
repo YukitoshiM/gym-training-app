@@ -33,6 +33,9 @@ struct RootTabView: View {
                 }
         }
         .tint(AppTheme.accent)
+        .toolbarBackground(AppTheme.cardBackground, for: .tabBar)
+        .toolbarBackground(.visible, for: .tabBar)
+        .foregroundStyle(AppTheme.ink)
         .onAppear {
             watchPlanSyncService.bind(appStore: appStore)
             gymLocationManager.bind(appStore: appStore)

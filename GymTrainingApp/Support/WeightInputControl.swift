@@ -26,7 +26,7 @@ struct WeightInputControl: View {
             .accessibilityIdentifier(accessibilityIdentifier)
 
             Text(unit.displayName)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
                 .frame(minWidth: 20, alignment: .leading)
 
             Button {
@@ -132,7 +132,7 @@ private struct WeightWheelPickerSheet: View {
 
                 Text(unit.displayName)
                     .font(.headline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .frame(width: 44, alignment: .leading)
             }
             .navigationTitle("重量")
@@ -202,7 +202,7 @@ struct RepsInputControl: View {
                 .accessibilityIdentifier(accessibilityIdentifier)
 
             Text("回")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
                 .frame(minWidth: 20, alignment: .leading)
 
             Button {
@@ -273,7 +273,7 @@ private struct RepsWheelPickerSheet: View {
 
                 Text("回")
                     .font(.headline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .frame(width: 44, alignment: .leading)
             }
             .navigationTitle("回数")
@@ -317,7 +317,7 @@ struct RestSecondsInputControl: View {
                 .accessibilityIdentifier("\(accessibilityIdentifier)-field")
 
             Text("秒")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
 
             Button {
                 isTextFieldFocused = false
@@ -348,7 +348,7 @@ struct RestSecondsInputControl: View {
 
                     Text("分:秒")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .frame(width: 52, alignment: .leading)
                 }
                 .navigationTitle("休憩時間")
@@ -431,7 +431,7 @@ struct NumericTextInputControl: View {
 
             if !unit.isEmpty {
                 Text(unit)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .frame(minWidth: 28, alignment: .leading)
             }
 
@@ -536,7 +536,7 @@ private struct NumericWheelPickerSheet: View {
                 if !unit.isEmpty {
                     Text(unit)
                         .font(.headline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .frame(width: 52, alignment: .leading)
                 }
             }

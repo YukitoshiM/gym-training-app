@@ -31,7 +31,7 @@ struct DailyRecordChecklistCard: View {
                             .font(.headline)
                         Text("\(completedCount)/5 完了")
                             .font(.caption.bold())
-                            .foregroundStyle(completedCount == 5 ? .green : .secondary)
+                            .foregroundStyle(completedCount == 5 ? AppTheme.positive : AppTheme.mutedInk)
                     }
 
                     Spacer()
@@ -104,7 +104,7 @@ private struct DailyRecordStatusChip: View {
         HStack(spacing: 10) {
             Image(systemName: isCompleted ? "checkmark.circle.fill" : systemImage)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(isCompleted ? .green : tint)
+                .foregroundStyle(isCompleted ? AppTheme.positive : tint)
                 .frame(width: 20)
 
             VStack(alignment: .leading, spacing: 2) {
@@ -115,17 +115,17 @@ private struct DailyRecordStatusChip: View {
 
                 Text(detail)
                     .font(.caption2.bold())
-                    .foregroundStyle(isCompleted ? .green : .secondary)
+                    .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
                     .lineLimit(1)
             }
         }
         .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
         .padding(.horizontal, 10)
         .padding(.vertical, 8)
-        .background((isCompleted ? Color.green : tint).opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
+        .background((isCompleted ? AppTheme.positive : tint).opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke((isCompleted ? Color.green : tint).opacity(0.18), lineWidth: 1)
+                .stroke((isCompleted ? AppTheme.positive : tint).opacity(0.18), lineWidth: 1)
         )
     }
 }

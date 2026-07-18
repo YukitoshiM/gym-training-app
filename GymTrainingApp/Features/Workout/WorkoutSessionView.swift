@@ -166,7 +166,7 @@ private struct WorkoutExerciseSection: View {
 
                             Text("\(workoutExercise.exercise.primaryMuscle.displayName)・計画 \(workoutExercise.completedPlannedSetCount)/\(workoutExercise.plannedSetCount)セット・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
 
                         Spacer()
@@ -177,7 +177,7 @@ private struct WorkoutExerciseSection: View {
 
                     if workoutExercise.isSkipped {
                         Label("この種目はスキップされました", systemImage: "forward.end")
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         RestTimerControl(
                             restSeconds: workoutExercise.restSeconds,
@@ -290,12 +290,12 @@ private struct WorkoutSetRow: View {
 
     private var statusTint: Color {
         if set.isAchieved {
-            return .green
+            return AppTheme.positive
         }
         if set.isCompleted {
             return AppTheme.orange
         }
-        return .secondary
+        return AppTheme.mutedInk
     }
 
     var body: some View {
@@ -304,7 +304,7 @@ private struct WorkoutSetRow: View {
                 HStack {
                     Label(previousText(for: previousSet), systemImage: "clock.arrow.circlepath")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     Spacer()
 
@@ -327,12 +327,12 @@ private struct WorkoutSetRow: View {
                 Text("\(set.setOrder)")
                     .font(.headline)
                     .frame(width: 30, height: 30)
-                    .background(set.isCompleted ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
+                    .background(set.isCompleted ? AppTheme.positive.opacity(0.18) : AppTheme.ink.opacity(0.09), in: Circle())
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("目標 \(AppFormatters.weight(set.targetWeight)) × \(set.targetReps)回")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 6) {
                         DeltaBadge(
@@ -401,7 +401,7 @@ private struct WorkoutSetRow: View {
             .accessibilityIdentifier("copyTargetSet-\(exerciseSortOrder)-\(set.setOrder)")
         }
         .padding(10)
-        .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .background(AppTheme.cardBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
     }
 
     private func previousText(for previousSet: WorkoutSet) -> String {
@@ -446,7 +446,7 @@ private struct WorkoutPlanProgressStrip: View {
     }
 
     private var progressTint: Color {
-        workoutExercise.achievementRate >= 1 ? .green : AppTheme.accent
+        workoutExercise.achievementRate >= 1 ? AppTheme.positive : AppTheme.accent
     }
 }
 
@@ -459,7 +459,7 @@ private struct DeltaBadge: View {
         VStack(alignment: .leading, spacing: 1) {
             Text(title)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
             Text(value)
                 .font(.caption.bold())
                 .foregroundStyle(tint)

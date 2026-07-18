@@ -25,7 +25,7 @@ struct HistoryDetailView: View {
                         .font(.title2.bold())
 
                     Text(AppFormatters.shortDateTime.string(from: currentSession.startedAt))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     if currentSession.sourceDevice == .appleWatch {
                         Label("Apple Watchから同期", systemImage: "applewatch")
@@ -68,7 +68,7 @@ struct HistoryDetailView: View {
 
                     Label(healthSaveTitle, systemImage: healthSaveSystemImage)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
 
@@ -76,7 +76,7 @@ struct HistoryDetailView: View {
                 Section {
                     if exercise.isSkipped {
                         Label("スキップ", systemImage: "forward.end")
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         ForEach(exercise.sets) { set in
                             HistorySetRow(set: set)
@@ -91,6 +91,8 @@ struct HistoryDetailView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("履歴詳細")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -153,12 +155,12 @@ private struct HistorySetRow: View {
 
     private var statusTint: Color {
         if set.isAchieved {
-            return .green
+            return AppTheme.positive
         }
         if set.isCompleted {
             return AppTheme.orange
         }
-        return .secondary
+        return AppTheme.mutedInk
     }
 
     var body: some View {
@@ -166,7 +168,7 @@ private struct HistorySetRow: View {
             Text("\(set.setOrder)")
                 .font(.headline)
                 .frame(width: 30, height: 30)
-                .background(set.isAchieved ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
+                .background(set.isAchieved ? AppTheme.positive.opacity(0.18) : AppTheme.ink.opacity(0.09), in: Circle())
 
             VStack(alignment: .leading, spacing: 3) {
                 Text("実績 \(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit)) × \(set.actualReps)回")
@@ -174,7 +176,7 @@ private struct HistorySetRow: View {
 
                 Text("目標 \(AppFormatters.weight(set.targetWeight, unit: appStore.userProfile.weightUnit)) × \(set.targetReps)回")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                 Text("重量差 \(AppFormatters.signedWeight(set.weightDelta, unit: appStore.userProfile.weightUnit)) / 回数差 \(AppFormatters.signedReps(set.repsDelta))")
                     .font(.caption.bold())
@@ -191,7 +193,7 @@ private struct HistorySetRow: View {
                 if let duration = set.duration {
                     Text("セット時間 \(formatSetDuration(duration))")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 if let sensorSummary = set.sensorSummary {
@@ -207,7 +209,7 @@ private struct HistorySetRow: View {
                         }
                     }
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                 }
             }
 
