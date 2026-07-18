@@ -706,10 +706,22 @@ private struct HistoryRow: View {
                     .font(.caption.bold())
                     .foregroundStyle(session.volumeDelta >= 0 ? .green : AppTheme.orange)
 
-                Text(session.exercises.map { $0.exercise.name }.joined(separator: "、"))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
+                VStack(spacing: 5) {
+                    ForEach(session.exercises) { exercise in
+                        HStack(spacing: 8) {
+                            Text(exercise.exercise.name)
+                                .lineLimit(1)
+
+                            Spacer(minLength: 8)
+
+                            Text(exercise.isSkipped ? "スキップ" : "\(exercise.completedSetCount)セット・\(exercise.completedRepCount)回")
+                                .foregroundStyle(exercise.isSkipped ? .secondary : AppTheme.ink)
+                        }
+                        .accessibilityIdentifier("historyExerciseResult-\(exercise.sortOrder)")
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
             }
         }
         .padding(.vertical, 3)

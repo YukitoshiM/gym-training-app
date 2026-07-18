@@ -62,7 +62,7 @@ private struct WatchPlanDetailView: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text(plan.name)
                         .font(.headline)
-                    Text("\(plan.exercises.count)種目 / \(plan.totalSetCount)セット")
+                    Text(planOverview(plan))
                         .font(.caption)
                         .foregroundStyle(.secondary)
                     Text(statusMessage)
@@ -96,7 +96,7 @@ private struct WatchPlanDetailView: View {
                         Text(exercise.name)
                             .font(.headline)
                             .lineLimit(1)
-                        Text("\(exercise.primaryMuscleName)・\(exercise.sets.count)セット・休憩 \(exercise.restSeconds)秒")
+                        Text(targetSummary(for: exercise, unit: plan.weightUnit))
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                             .lineLimit(2)
@@ -164,9 +164,10 @@ private struct WatchActiveWorkoutView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(session.title)
                         .font(.headline)
-                    Text("\(session.completedSetCount)/\(session.totalSetCount)セット")
+                    Text("\(session.completedSetCount)/\(session.totalSetCount)セット・\(session.completedRepCount)回記録")
                         .font(.caption)
                         .foregroundStyle(.secondary)
+                        .accessibilityIdentifier("watchWorkoutProgress")
 
                     ProgressView(
                         value: Double(session.completedSetCount),
@@ -378,6 +379,31 @@ private func formatWeight(_ value: Double, unit: WatchWeightUnit) -> String {
     case .lb:
         (value * 2.2046226218).formatted(.number.precision(.fractionLength(0...1))) + " lb"
     }
+}
+
+private func targetSummary(for exercise: WatchPlanExerciseSnapshot, unit: WatchWeightUnit) -> String {
+    guard let firstSet = exercise.sets.first else {
+        return "セット未設定"
+    }
+
+    let hasSameTarget = exercise.sets.allSatisfy {
+        $0.targetWeight == firstSet.targetWeight && $0.targetReps == firstSet.targetReps
+    }
+
+    if hasSameTarget {
+        return "\(formatWeight(firstSet.targetWeight, unit: unit)) × \(firstSet.targetReps)回 × \(exercise.sets.count)セット"
+    }
+
+    let totalReps = exercise.sets.reduce(0) { $0 + $1.targetReps }
+    return "\(exercise.sets.count)セット・目標 合計\(totalReps)回"
+}
+
+private func planOverview(_ plan: WatchWorkoutPlanSnapshot) -> String {
+    if let exercise = plan.exercises.first, plan.exercises.count == 1 {
+        return "\(exercise.name)・\(exercise.sets.count)セット・計\(plan.totalTargetRepCount)回"
+    }
+
+    return "\(plan.exercises.count)種目・\(plan.totalSetCount)セット・計\(plan.totalTargetRepCount)回"
 }
 
 private func formatDuration(_ seconds: Int) -> String {

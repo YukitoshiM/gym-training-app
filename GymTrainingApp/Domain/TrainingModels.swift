@@ -123,6 +123,14 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         exercises.reduce(0) { $0 + $1.achievedPlannedSetCount }
     }
 
+    var completedSetCount: Int {
+        exercises.reduce(0) { $0 + $1.completedSetCount }
+    }
+
+    var completedRepCount: Int {
+        exercises.reduce(0) { $0 + $1.completedRepCount }
+    }
+
     var targetVolume: Double {
         exercises.reduce(0) { $0 + $1.targetVolume }
     }
@@ -187,6 +195,15 @@ struct WorkoutExercise: Identifiable, Codable, Hashable {
 
     var achievedPlannedSetCount: Int {
         isSkipped ? 0 : plannedSets.filter(\.isAchieved).count
+    }
+
+    var completedSetCount: Int {
+        isSkipped ? 0 : sets.filter(\.isCompleted).count
+    }
+
+    var completedRepCount: Int {
+        guard !isSkipped else { return 0 }
+        return sets.filter(\.isCompleted).reduce(0) { $0 + $1.actualReps }
     }
 
     var targetVolume: Double {

@@ -15,13 +15,13 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         app.launch()
 
         XCTAssertTrue(app.staticTexts["Watch UIテスト"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.staticTexts["1種目 / 3セット"].exists)
+        XCTAssertTrue(app.staticTexts["ベンチプレス・3セット・計30回"].exists)
 
         let startButton = app.buttons["watchStartWorkoutButton"]
         XCTAssertTrue(startButton.waitForExistence(timeout: 5))
         startButton.tap()
 
-        XCTAssertTrue(app.staticTexts["0/3セット"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["0/3セット・0回記録"].waitForExistence(timeout: 5))
 
         let rpeButton = findHittableElement(in: app, identifier: "watchSetRPE-0-1")
         XCTAssertTrue(rpeButton.isHittable)
@@ -36,7 +36,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         firstSetButton.tap()
 
         XCUIDevice.shared.rotateDigitalCrown(delta: -1)
-        XCTAssertTrue(app.staticTexts["1/3セット"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["1/3セット・10回記録"].waitForExistence(timeout: 5))
 
         app.swipeUp()
         let finishButton = app.buttons["watchFinishWorkoutButton"]

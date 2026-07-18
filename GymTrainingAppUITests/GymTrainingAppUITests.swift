@@ -206,6 +206,7 @@ final class GymTrainingAppUITests: XCTestCase {
             app.swipeUp()
         }
         XCTAssertTrue(historyRow.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["3セット・30回"].exists)
         historyRow.tap()
 
         XCTAssertTrue(app.navigationBars["履歴詳細"].waitForExistence(timeout: 5))

@@ -396,6 +396,7 @@ extension WatchWorkoutStore: WCSessionDelegate {
     nonisolated func sessionReachabilityDidChange(_ session: WCSession) {
         if session.isReachable {
             Task { @MainActor [weak self] in
+                guard self?.pendingFinishedSession != nil else { return }
                 self?.resendPendingSession()
             }
         }

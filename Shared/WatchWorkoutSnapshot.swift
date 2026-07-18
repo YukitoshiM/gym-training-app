@@ -24,6 +24,12 @@ struct WatchWorkoutPlanSnapshot: Codable, Hashable, Identifiable, Sendable {
     var totalSetCount: Int {
         exercises.reduce(0) { $0 + $1.sets.count }
     }
+
+    var totalTargetRepCount: Int {
+        exercises.reduce(0) { total, exercise in
+            total + exercise.sets.reduce(0) { $0 + $1.targetReps }
+        }
+    }
 }
 
 struct WatchPlanExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
@@ -112,6 +118,10 @@ struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
         exercises.reduce(0) { $0 + $1.sets.filter(\.isCompleted).count }
     }
 
+    var completedRepCount: Int {
+        exercises.reduce(0) { $0 + $1.completedRepCount }
+    }
+
     var totalVolume: Double {
         exercises.reduce(0) { $0 + $1.totalVolume }
     }
@@ -173,6 +183,14 @@ struct WatchWorkoutExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
 
     var totalVolume: Double {
         sets.filter(\.isCompleted).reduce(0) { $0 + $1.volume }
+    }
+
+    var completedSetCount: Int {
+        sets.filter(\.isCompleted).count
+    }
+
+    var completedRepCount: Int {
+        sets.filter(\.isCompleted).reduce(0) { $0 + $1.actualReps }
     }
 }
 
