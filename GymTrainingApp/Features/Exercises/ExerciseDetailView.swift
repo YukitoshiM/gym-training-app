@@ -10,7 +10,7 @@ struct ExerciseDetailView: View {
                     Text(exercise.name)
                         .font(.title2.bold())
                     Text("\(exercise.primaryMuscle.displayName)・\(exercise.equipment.displayName)")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
                 .padding(.vertical, 8)
             }
@@ -34,6 +34,8 @@ struct ExerciseDetailView: View {
                 Text(exercise.instruction)
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("種目詳細")
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -44,4 +46,3 @@ struct ExerciseDetailView: View {
         ExerciseDetailView(exercise: PresetExerciseStore.exercises[0])
     }
 }
-

@@ -41,9 +41,55 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["前回 20 kg × 10回"].waitForExistence(timeout: 5))
 
-        let copyButton = app.buttons["copyPreviousSet-1"]
+        let copyButton = app.buttons["copyPreviousSet-0-1"]
         XCTAssertTrue(copyButton.waitForExistence(timeout: 5))
         copyButton.tap()
+    }
+
+    func testWorkoutWeightSupportsManualDecimalEntry() throws {
+        startWorkoutFromPlan()
+
+        let weightField = app.textFields["workoutWeightField-0-1"]
+        XCTAssertTrue(weightField.waitForExistence(timeout: 5))
+        weightField.tap(withNumberOfTaps: 3, numberOfTouches: 1)
+        weightField.typeText("20.1")
+
+        let dismissButton = app.buttons["dismiss-workoutWeightField-0-1"]
+        XCTAssertTrue(dismissButton.waitForExistence(timeout: 5))
+        dismissButton.tap()
+
+        XCTAssertEqual(weightField.value as? String, "20.1")
+
+        let wheelButton = app.buttons["wheel-workoutWeightField-0-1"]
+        XCTAssertTrue(wheelButton.waitForExistence(timeout: 5))
+        wheelButton.tap()
+
+        XCTAssertTrue(app.pickerWheels.firstMatch.waitForExistence(timeout: 5))
+        XCTAssertEqual(app.pickerWheels.count, 2)
+        let tenthsPicker = app.pickerWheels.element(boundBy: 1)
+        tenthsPicker.adjust(toPickerWheelValue: "2")
+
+        let saveButton = app.buttons["saveWeightWheelButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+
+        XCTAssertEqual(weightField.value as? String, "20.2")
+
+        let repsField = app.textFields["workoutRepsField-0-1"]
+        let repsWheelButton = app.buttons["wheel-workoutRepsField-0-1"]
+        XCTAssertTrue(repsField.waitForExistence(timeout: 5))
+        XCTAssertTrue(repsWheelButton.waitForExistence(timeout: 5))
+        repsWheelButton.tap()
+
+        let repsPicker = app.pickerWheels.firstMatch
+        XCTAssertTrue(repsPicker.waitForExistence(timeout: 5))
+        repsPicker.adjust(toPickerWheelValue: "11")
+
+        let saveRepsButton = app.buttons["saveRepsWheelButton"]
+        XCTAssertTrue(saveRepsButton.waitForExistence(timeout: 5))
+        saveRepsButton.tap()
+
+        XCTAssertEqual(repsField.value as? String, "11")
     }
 
     func testPlanQuickTemplateAndBulkSetPreset() throws {
@@ -115,11 +161,123 @@ final class GymTrainingAppUITests: XCTestCase {
         XCTAssertTrue(immediateResult.exists || queuedResult.exists)
     }
 
+    func testConditionDashboardWithSeededSensorData() throws {
+        app.terminate()
+        app.launchArguments = [
+            "--reset-ui-test-data",
+            "--seed-alpha-ui-test-plan",
+            "--seed-sensor-ui-test-data"
+        ]
+        app.launch()
+
+        let conditionCard = app.buttons["conditionSummaryCard"]
+        XCTAssertTrue(conditionCard.waitForExistence(timeout: 5))
+        conditionCard.tap()
+
+        XCTAssertTrue(app.navigationBars["コンディション"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["readinessCard"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["activityProgressCard"].exists)
+        XCTAssertTrue(app.staticTexts["7,842"].exists)
+
+        let sleepValue = app.staticTexts["7.4 時間"]
+        for _ in 0..<3 where !sleepValue.exists {
+            app.swipeUp()
+        }
+        XCTAssertTrue(sleepValue.waitForExistence(timeout: 3))
+    }
+
+    func testExtendedSensorDashboardAndAnalysisSurfaces() throws {
+        app.terminate()
+        app.launchArguments = [
+            "--reset-ui-test-data",
+            "--seed-alpha-ui-test-plan",
+            "--seed-sensor-ui-test-data"
+        ]
+        app.launch()
+
+        let conditionCard = app.buttons["conditionSummaryCard"]
+        XCTAssertTrue(conditionCard.waitForExistence(timeout: 5))
+        conditionCard.tap()
+
+        let analysisLink = app.descendants(matching: .any)["sensorTrainingAnalysisLink"]
+        XCTAssertTrue(analysisLink.waitForExistence(timeout: 5))
+        analysisLink.tap()
+        XCTAssertTrue(app.descendants(matching: .any)["setQualityBreakdownCard"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["conditionComparisonCard"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["plateauEvidenceCard"].exists)
+
+        app.navigationBars.buttons.firstMatch.tap()
+        let sleepCard = app.descendants(matching: .any)["sleepDetailsCard"]
+        for _ in 0..<4 where !sleepCard.exists {
+            app.swipeUp()
+        }
+        XCTAssertTrue(sleepCard.waitForExistence(timeout: 3))
+        XCTAssertTrue(app.staticTexts["品質 86"].exists)
+
+        let routeCard = app.descendants(matching: .any)["outdoorRunningRouteCard"]
+        for _ in 0..<8 where !routeCard.exists {
+            app.swipeUp()
+        }
+        XCTAssertTrue(routeCard.waitForExistence(timeout: 3))
+        XCTAssertTrue(app.staticTexts["5.1 km"].exists)
+    }
+
+    func testAIDataSharingCanBeSelectedByCategory() throws {
+        app.tabBars.buttons["ホーム"].tap()
+        app.buttons["settingsButton"].tap()
+        XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
+
+        let disclosure = app.buttons["AIへ送るデータ"]
+        for _ in 0..<5 where !disclosure.isHittable {
+            app.swipeUp()
+        }
+        XCTAssertTrue(disclosure.waitForExistence(timeout: 3))
+        disclosure.tap()
+
+        XCTAssertTrue(scrollToHittable(app.switches["身体KPI"]).isHittable)
+        XCTAssertTrue(scrollToHittable(app.switches["睡眠・回復"]).isHittable)
+        XCTAssertTrue(scrollToHittable(app.switches["ジム訪問"]).isHittable)
+        XCTAssertTrue(scrollToHittable(app.switches["心拍・モーション"]).isHittable)
+    }
+
+    func testThemeAndAppearanceSelectionPersists() throws {
+        openSettings()
+
+        let blackChampagne = app.buttons["themeOption-blackChampagne"]
+        XCTAssertTrue(blackChampagne.waitForExistence(timeout: 5))
+        blackChampagne.tap()
+
+        let appearancePicker = app.segmentedControls["appearanceModePicker"]
+        XCTAssertTrue(appearancePicker.waitForExistence(timeout: 5))
+        appearancePicker.buttons["ダーク"].tap()
+        app.buttons["saveProfileSettingsButton"].tap()
+
+        openSettings()
+        XCTAssertEqual(app.buttons["themeOption-blackChampagne"].value as? String, "選択中")
+        XCTAssertTrue(app.segmentedControls["appearanceModePicker"].buttons["ダーク"].isSelected)
+
+        app.buttons["themeOption-royalCobalt"].tap()
+        app.segmentedControls["appearanceModePicker"].buttons["ライト"].tap()
+        app.buttons["saveProfileSettingsButton"].tap()
+
+        openSettings()
+        XCTAssertEqual(app.buttons["themeOption-royalCobalt"].value as? String, "選択中")
+        XCTAssertTrue(app.segmentedControls["appearanceModePicker"].buttons["ライト"].isSelected)
+    }
+
     private func verifySeededPlan() {
         app.tabBars.buttons["計画"].tap()
 
         XCTAssertTrue(app.staticTexts["胸の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
+    }
+
+    private func openSettings() {
+        app.tabBars.buttons["ホーム"].tap()
+        let settingsButton = app.buttons["settingsButton"]
+        XCTAssertTrue(settingsButton.waitForExistence(timeout: 5))
+        settingsButton.tap()
+        XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
     }
 
     private func createPlanFromQuickTemplate() {
@@ -136,11 +294,28 @@ final class GymTrainingAppUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["背中の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ラットプルダウン"].exists)
 
+        let restButton = app.buttons["planRestSeconds-0"]
+        XCTAssertTrue(restButton.waitForExistence(timeout: 5))
+        restButton.tap()
+
+        let restPicker = app.pickerWheels.firstMatch
+        XCTAssertTrue(restPicker.waitForExistence(timeout: 5))
+        restPicker.adjust(toPickerWheelValue: "1:35")
+
+        let saveRestButton = app.buttons["saveRestSecondsButton"]
+        XCTAssertTrue(saveRestButton.waitForExistence(timeout: 5))
+        saveRestButton.tap()
+
         let strengthPreset = app.buttons["planSetPreset-strength"]
         XCTAssertTrue(strengthPreset.waitForExistence(timeout: 5))
         strengthPreset.tap()
 
-        XCTAssertTrue(app.staticTexts["5回"].waitForExistence(timeout: 5))
+        let repsField = app.textFields["planRepsField-0-1"]
+        XCTAssertTrue(repsField.waitForExistence(timeout: 5))
+        XCTAssertEqual(repsField.value as? String, "5")
+        let restField = app.textFields["planRestSeconds-0-field"]
+        XCTAssertTrue(restField.exists)
+        XCTAssertEqual(restField.value as? String, "95")
 
         let saveButton = app.buttons["savePlanPinnedButton"]
         XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
@@ -154,7 +329,7 @@ final class GymTrainingAppUITests: XCTestCase {
         startWorkoutFromPlan()
 
         for index in 1...3 {
-            let toggle = app.switches["completeSetToggle-\(index)"]
+            let toggle = app.switches["completeSetToggle-0-\(index)"]
             XCTAssertTrue(toggle.waitForExistence(timeout: 5))
             if toggle.value as? String == "0" {
                 toggle.tap()
@@ -337,8 +512,8 @@ final class GymTrainingAppUITests: XCTestCase {
         app.swipeUp()
         XCTAssertTrue(app.textFields["aiBaseURLField"].waitForExistence(timeout: 5))
 
-        let checkButton = app.buttons["checkAIHealthButton"]
-        XCTAssertTrue(checkButton.waitForExistence(timeout: 5))
+        let checkButton = scrollToHittable(app.buttons["checkAIHealthButton"])
+        XCTAssertTrue(checkButton.isHittable)
         checkButton.tap()
 
         XCTAssertTrue(app.descendants(matching: .any)["aiConnectionResultCard"].waitForExistence(timeout: 8))
@@ -462,5 +637,15 @@ final class GymTrainingAppUITests: XCTestCase {
             "--seed-ai-unreachable-settings"
         ]
         app.launch()
+    }
+
+    private func scrollToHittable(_ element: XCUIElement, maxSwipes: Int = 10) -> XCUIElement {
+        for _ in 0..<maxSwipes {
+            if element.exists, element.isHittable {
+                return element
+            }
+            app.swipeUp()
+        }
+        return element
     }
 }

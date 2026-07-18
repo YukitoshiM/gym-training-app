@@ -82,6 +82,9 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
     var exercises: [WorkoutExercise]
     var sourceDevice: WorkoutSourceDevice?
     var watchSyncState: WatchSyncState?
+    var sensorSummary: WorkoutSensorSummary?
+    var healthWorkoutSaveState: HealthWorkoutSaveState?
+    var note: String?
 
     init(
         id: UUID = UUID(),
@@ -91,7 +94,10 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         endedAt: Date? = nil,
         exercises: [WorkoutExercise],
         sourceDevice: WorkoutSourceDevice? = nil,
-        watchSyncState: WatchSyncState? = nil
+        watchSyncState: WatchSyncState? = nil,
+        sensorSummary: WorkoutSensorSummary? = nil,
+        healthWorkoutSaveState: HealthWorkoutSaveState? = nil,
+        note: String? = nil
     ) {
         self.id = id
         self.title = title
@@ -101,6 +107,9 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         self.exercises = exercises
         self.sourceDevice = sourceDevice
         self.watchSyncState = watchSyncState
+        self.sensorSummary = sensorSummary
+        self.healthWorkoutSaveState = healthWorkoutSaveState
+        self.note = note
     }
 
     var isCompleted: Bool {
@@ -240,6 +249,8 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var rpe: Double?
     var startedAt: Date?
     var completedAt: Date?
+    var sensorSummary: SetSensorSummary?
+    var note: String?
 
     init(
         id: UUID = UUID(),
@@ -252,7 +263,9 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         isAdded: Bool = false,
         rpe: Double? = nil,
         startedAt: Date? = nil,
-        completedAt: Date? = nil
+        completedAt: Date? = nil,
+        sensorSummary: SetSensorSummary? = nil,
+        note: String? = nil
     ) {
         self.id = id
         self.setOrder = setOrder
@@ -265,6 +278,8 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         self.rpe = rpe
         self.startedAt = startedAt
         self.completedAt = completedAt
+        self.sensorSummary = sensorSummary
+        self.note = note
     }
 
     var repsDelta: Int {

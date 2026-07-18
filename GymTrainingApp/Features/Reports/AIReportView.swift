@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AIReportView: View {
     @EnvironmentObject private var appStore: AppStore
+    @EnvironmentObject private var healthDataManager: HealthDataManager
     @State private var isGenerating = false
     @State private var isCheckingConnection = false
     @State private var errorPresentation: AIErrorPresentation?
@@ -37,11 +38,11 @@ struct AIReportView: View {
                 if !appStore.aiSettings.isEnabled {
                     Text("設定でAI機能がオフです。")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("接続できない場合でも、記録済みデータは消えません。手動記録を続けたまま、あとでAIコメントだけ生成できます。")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
 
@@ -50,14 +51,18 @@ struct AIReportView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         Text(AppFormatters.shortDateTime.string(from: latestWeeklyInsight.date))
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
 
                         Text(latestWeeklyInsight.outputComment)
                             .font(.headline)
 
                         Text(latestWeeklyInsight.actionSuggestion)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
+
+                        Text("入力データの傾向をもとにした提案で、医療上の診断ではありません。体調や痛みに不安がある場合は専門家へ相談してください。")
+                            .font(.caption2)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                     .padding(.vertical, 4)
                 }
@@ -65,7 +70,7 @@ struct AIReportView: View {
                 Section("入力データ要約") {
                     Text(latestWeeklyInsight.inputSummary)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             } else {
                 Section {
@@ -91,12 +96,41 @@ struct AIReportView: View {
                             .font(.headline)
                         Text(insight.actionSuggestion)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(2)
                     }
                 }
             }
+
+            Section("AI送信履歴") {
+                if appStore.aiTransmissionHistory.isEmpty {
+                    Text("送信履歴はありません")
+                        .foregroundStyle(AppTheme.mutedInk)
+                } else {
+                    ForEach(appStore.aiTransmissionHistory) { record in
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack {
+                                Text(AppFormatters.shortDateTime.string(from: record.sentAt))
+                                    .font(.subheadline.bold())
+                                Spacer()
+                                Text(statusTitle(record.status))
+                                    .font(.caption.bold())
+                                    .foregroundStyle(statusTint(record.status))
+                            }
+                            Text(record.sharedCategories.joined(separator: "、").ifEmpty("共有項目なし"))
+                                .font(.caption)
+                                .foregroundStyle(AppTheme.mutedInk)
+                            Text("\(record.itemCount)件・\(record.purpose)")
+                                .font(.caption2)
+                                .foregroundStyle(AppTheme.mutedInk)
+                        }
+                    }
+                    .onDelete(perform: appStore.deleteAITransmissionHistory)
+                }
+            }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("AIレポート")
     }
 
@@ -105,10 +139,22 @@ struct AIReportView: View {
         errorPresentation = nil
         connectionNotice = nil
 
+        let payload = weeklyPayload()
+        let record = AITransmissionRecord(
+            purpose: "週次レポート",
+            sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
+            itemCount: payload.bodyLogs.count
+                + payload.meals.count
+                + payload.workouts.count
+                + payload.bodyPhotos.count
+                + payload.sensorMetrics.count
+        )
+        appStore.saveAITransmission(record)
+
         Task {
             do {
                 let response = try await LocalAIClient(settings: appStore.aiSettings)
-                    .generateWeeklyReport(payload: weeklyPayload())
+                    .generateWeeklyReport(payload: payload)
                 await MainActor.run {
                     appStore.saveAIInsight(
                         AIInsight(
@@ -118,10 +164,12 @@ struct AIReportView: View {
                             actionSuggestion: response.actionSuggestion
                         )
                     )
+                    appStore.updateAITransmission(id: record.id, status: .completed)
                     isGenerating = false
                 }
             } catch {
                 await MainActor.run {
+                    appStore.updateAITransmission(id: record.id, status: .failed)
                     errorPresentation = AIClientError.presentation(for: error)
                     isGenerating = false
                 }
@@ -151,21 +199,77 @@ struct AIReportView: View {
     }
 
     private func weeklyPayload() -> WeeklyReportRequest {
-        WeeklyReportRequest(
+        let sharing = appStore.aiSettings.dataSharing
+        return WeeklyReportRequest(
             profileGoal: appStore.userProfile.goalType.displayName,
-            bodyLogs: appStore.bodyMetricEntries.prefix(20).map {
+            bodyLogs: sharing.bodyMetrics ? appStore.bodyMetricEntries.prefix(20).map {
                 "\($0.kind.displayName): \(AppFormatters.metricValue($0.value, unit: $0.kind.unit)) \(AppFormatters.shortDate.string(from: $0.recordedAt))"
-            },
-            meals: appStore.mealEntries.prefix(20).map {
+            } : [],
+            meals: sharing.meals ? appStore.mealEntries.prefix(20).map {
                 "\($0.mealType.displayName) \($0.name): \(AppFormatters.calories($0.calories)) P\(AppFormatters.grams($0.protein)) F\(AppFormatters.grams($0.fat)) C\(AppFormatters.grams($0.carbs))"
-            },
-            workouts: appStore.workoutHistory.prefix(12).map {
+            } : [],
+            workouts: sharing.workouts ? appStore.workoutHistory.prefix(12).map {
                 "\($0.title): \(AppFormatters.volume($0.totalVolume, unit: appStore.userProfile.weightUnit)) 達成率 \(AppFormatters.percent($0.achievementRate))"
-            },
-            bodyPhotos: appStore.bodyPhotoEntries.prefix(12).map {
+            } : [],
+            bodyPhotos: sharing.bodyPhotos ? appStore.bodyPhotoEntries.prefix(12).map {
                 "\($0.angle.displayName): \($0.aiComment?.summary ?? $0.memo)"
-            }
+            } : [],
+            sensorMetrics: sensorMetricsForAI
         )
+    }
+
+    private var sensorMetricsForAI: [String] {
+        let sharing = appStore.aiSettings.dataSharing
+        let snapshot = healthDataManager.snapshot
+        var values: [String] = []
+
+        if sharing.sleepAndRecovery, let sleep = snapshot.sleepHours {
+            values.append("睡眠: \(sleep.formatted(.number.precision(.fractionLength(1))))時間")
+        }
+        if sharing.sleepAndRecovery, let resting = snapshot.restingHeartRate?.value {
+            values.append("安静時心拍: \(Int(resting)) bpm")
+        }
+        if sharing.sleepAndRecovery, let hrv = snapshot.heartRateVariabilityMilliseconds?.value {
+            values.append("HRV: \(Int(hrv)) ms")
+        }
+        if sharing.dailyActivity, let steps = snapshot.steps {
+            values.append("歩数: \(Int(steps))")
+        }
+        if sharing.gymVisits, !appStore.gymVisits.isEmpty {
+            values.append("直近7日のジム訪問: \(appStore.gymVisits.filter { $0.arrivedAt >= Date().addingTimeInterval(-7 * 86_400) }.count)回")
+        }
+
+        if sharing.workoutSensors {
+            values.append(contentsOf: appStore.workoutHistory.prefix(6).compactMap { session in
+                guard let sensors = session.sensorSummary else { return nil }
+                let heartRate = sensors.averageHeartRate.map { "平均心拍 \(Int($0)) bpm" } ?? "心拍未取得"
+                let energy = sensors.activeEnergyKilocalories.map { "消費 \(Int($0)) kcal" } ?? "消費未取得"
+                return "\(session.title): \(heartRate), \(energy)"
+            })
+        }
+        return values
+    }
+
+    private func statusTitle(_ status: AITransmissionStatus) -> String {
+        switch status {
+        case .sending: "送信中"
+        case .completed: "完了"
+        case .failed: "失敗"
+        }
+    }
+
+    private func statusTint(_ status: AITransmissionStatus) -> Color {
+        switch status {
+        case .sending: AppTheme.blue
+        case .completed: AppTheme.positive
+        case .failed: AppTheme.critical
+        }
+    }
+}
+
+private extension String {
+    func ifEmpty(_ fallback: String) -> String {
+        isEmpty ? fallback : self
     }
 }
 
@@ -181,7 +285,7 @@ private struct AIReportConnectionNotice {
             title = "接続OK"
             detail = "Ollama \(health.model) で週次コメントを生成できます。"
             recovery = health.message
-            tint = .green
+            tint = AppTheme.positive
             systemImage = "checkmark.circle.fill"
         } else if !health.ollamaReachable {
             title = "Ollama未接続"
@@ -215,7 +319,7 @@ private struct AIReportConnectionNoticeCard: View {
             if let recovery = notice.recovery, !recovery.isEmpty {
                 Text(recovery)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .padding(.vertical, 4)
@@ -230,17 +334,17 @@ private struct AIErrorRecoveryCard: View {
         VStack(alignment: .leading, spacing: 8) {
             Label(presentation.message, systemImage: "xmark.octagon.fill")
                 .font(.subheadline.bold())
-                .foregroundStyle(.red)
+                .foregroundStyle(AppTheme.critical)
 
             if let recovery = presentation.recovery, !recovery.isEmpty {
                 Text(recovery)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Text("記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
         }
         .padding(.vertical, 4)
         .accessibilityIdentifier("aiErrorRecoveryCard")
@@ -251,5 +355,6 @@ private struct AIErrorRecoveryCard: View {
     NavigationStack {
         AIReportView()
             .environmentObject(AppStore())
+            .environmentObject(HealthDataManager())
     }
 }

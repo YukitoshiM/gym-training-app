@@ -64,7 +64,10 @@ extension WorkoutSession {
                 .sorted { $0.sortOrder < $1.sortOrder }
                 .map { WorkoutExercise(watchExercise: $0) },
             sourceDevice: .appleWatch,
-            watchSyncState: .received
+            watchSyncState: .received,
+            sensorSummary: watchSession.sensorSummary.map(WorkoutSensorSummary.init),
+            healthWorkoutSaveState: watchSession.healthKitSaveStatus.map(HealthWorkoutSaveState.init),
+            note: watchSession.note
         )
     }
 }
@@ -95,8 +98,61 @@ private extension WorkoutSet {
             isCompleted: watchSet.isCompleted,
             rpe: watchSet.rpe,
             startedAt: watchSet.startedAt,
-            completedAt: watchSet.completedAt
+            completedAt: watchSet.completedAt,
+            sensorSummary: watchSet.sensorSummary.map(SetSensorSummary.init),
+            note: watchSet.note
         )
+    }
+}
+
+private extension WorkoutSensorSummary {
+    init(_ summary: WatchWorkoutSensorSummary) {
+        self.init(
+            durationSeconds: summary.durationSeconds,
+            activeEnergyKilocalories: summary.activeEnergyKilocalories,
+            averageHeartRate: summary.averageHeartRate,
+            maximumHeartRate: summary.maximumHeartRate,
+            heartRateRecovery: summary.heartRateRecovery,
+            estimatedReps: summary.estimatedReps,
+            motionConfidence: summary.motionConfidence,
+            heartRateZoneDurations: summary.heartRateZoneDurations
+        )
+    }
+}
+
+private extension SetSensorSummary {
+    init(_ summary: WatchSetSensorSummary) {
+        self.init(
+            heartRateAtStart: summary.heartRateAtStart,
+            heartRateAtEnd: summary.heartRateAtEnd,
+            averageHeartRate: summary.averageHeartRate,
+            maximumHeartRate: summary.maximumHeartRate,
+            heartRateRecovery: summary.heartRateRecovery,
+            estimatedReps: summary.estimatedReps,
+            averageRepDuration: summary.averageRepDuration,
+            movementConsistency: summary.movementConsistency,
+            confidence: summary.confidence,
+            averageConcentricDuration: summary.averageConcentricDuration,
+            averageEccentricDuration: summary.averageEccentricDuration,
+            averagePauseDuration: summary.averagePauseDuration,
+            relativeRangeOfMotion: summary.relativeRangeOfMotion,
+            rangeOfMotionConsistency: summary.rangeOfMotionConsistency,
+            velocityLossPercent: summary.velocityLossPercent,
+            exerciseCandidateName: summary.exerciseCandidateName,
+            exerciseCandidateConfidence: summary.exerciseCandidateConfidence
+        )
+    }
+}
+
+private extension HealthWorkoutSaveState {
+    init(_ status: WatchHealthKitSaveStatus) {
+        switch status {
+        case .unavailable: self = .unavailable
+        case .permissionDenied: self = .permissionDenied
+        case .collecting: self = .collecting
+        case .saved: self = .saved
+        case .failed: self = .failed
+        }
     }
 }
 

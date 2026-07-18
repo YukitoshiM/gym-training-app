@@ -12,6 +12,14 @@ final class AppStore: ObservableObject {
     @Published private(set) var customExercises: [Exercise] = []
     @Published private(set) var aiSettings: AISettings = .default
     @Published private(set) var aiInsights: [AIInsight] = []
+    @Published private(set) var sensorSettings: SensorSettings = .default
+    @Published private(set) var dailyWorkoutSelection: DailyWorkoutSelection?
+    @Published private(set) var gymLocation: GymLocation?
+    @Published private(set) var gymVisits: [GymVisit] = []
+    @Published private(set) var subjectiveRecoveryEntries: [SubjectiveRecoveryEntry] = []
+    @Published private(set) var pendingMissedGymPlan: DailyWorkoutSelection?
+    @Published private(set) var aiTransmissionHistory: [AITransmissionRecord] = []
+    @Published private(set) var appearanceSettings: AppAppearanceSettings = .default
 
     private let storage = LocalJSONStorage()
 
@@ -21,6 +29,21 @@ final class AppStore: ObservableObject {
         }
 
         let arguments = ProcessInfo.processInfo.arguments
+
+        if arguments.contains("--seed-theme-black-champagne") {
+            storage.saveAppearanceSettings(.init(colorTheme: .blackChampagne, mode: .system))
+        } else if arguments.contains("--seed-theme-royal-cobalt") {
+            storage.saveAppearanceSettings(.init(colorTheme: .royalCobalt, mode: .system))
+        }
+        if arguments.contains("--force-light-appearance") {
+            var settings = storage.loadAppearanceSettings()
+            settings.mode = .light
+            storage.saveAppearanceSettings(settings)
+        } else if arguments.contains("--force-dark-appearance") {
+            var settings = storage.loadAppearanceSettings()
+            settings.mode = .dark
+            storage.saveAppearanceSettings(settings)
+        }
 
         if arguments.contains("--seed-alpha-ui-test-plan") {
             storage.savePlans([Self.alphaUITestPlan()])
@@ -45,6 +68,29 @@ final class AppStore: ObservableObject {
         customExercises = storage.loadCustomExercises()
         aiSettings = storage.loadAISettings()
         aiInsights = storage.loadAIInsights()
+        sensorSettings = storage.loadSensorSettings()
+        dailyWorkoutSelection = storage.loadDailyWorkoutSelection()
+        gymLocation = storage.loadGymLocation()
+        gymVisits = storage.loadGymVisits()
+        subjectiveRecoveryEntries = storage.loadSubjectiveRecoveryEntries()
+        aiTransmissionHistory = storage.loadAITransmissionHistory()
+        appearanceSettings = storage.loadAppearanceSettings()
+
+        if let selection = dailyWorkoutSelection,
+           !Calendar.current.isDateInToday(selection.date) {
+            let planStillExists = plans.contains(where: { $0.id == selection.planID })
+            let visitedGym = !gymVisits(on: selection.date).isEmpty
+            let completedWorkout = !workoutSessions(on: selection.date).isEmpty
+            if planStillExists, !visitedGym, !completedWorkout {
+                pendingMissedGymPlan = selection
+            }
+            dailyWorkoutSelection = nil
+            storage.saveDailyWorkoutSelection(nil)
+        } else if let selection = dailyWorkoutSelection,
+                  !plans.contains(where: { $0.id == selection.planID }) {
+            dailyWorkoutSelection = nil
+            storage.saveDailyWorkoutSelection(nil)
+        }
 
         if bodyMetricGoals.isEmpty {
             bodyMetricGoals = Self.defaultBodyMetricGoals()
@@ -62,6 +108,90 @@ final class AppStore: ObservableObject {
         storage.saveAISettings(settings)
     }
 
+    func saveSensorSettings(_ settings: SensorSettings) {
+        sensorSettings = settings
+        storage.saveSensorSettings(settings)
+    }
+
+    func saveAppearanceSettings(_ settings: AppAppearanceSettings) {
+        appearanceSettings = settings
+        storage.saveAppearanceSettings(settings)
+    }
+
+    func selectTodayPlan(_ planID: UUID) {
+        guard plans.contains(where: { $0.id == planID }) else { return }
+        let selection = DailyWorkoutSelection(date: Date(), planID: planID)
+        dailyWorkoutSelection = selection
+        storage.saveDailyWorkoutSelection(selection)
+    }
+
+    var todayPlan: TrainingPlan? {
+        if let selection = dailyWorkoutSelection,
+           Calendar.current.isDateInToday(selection.date),
+           let plan = plans.first(where: { $0.id == selection.planID }) {
+            return plan
+        }
+
+        return plans.first
+    }
+
+    var pendingMissedGymPlanName: String? {
+        guard let pendingMissedGymPlan else { return nil }
+        return plans.first(where: { $0.id == pendingMissedGymPlan.planID })?.name
+    }
+
+    func resolveMissedGymPlan(rescheduleForToday: Bool) {
+        let pending = pendingMissedGymPlan
+        pendingMissedGymPlan = nil
+        guard rescheduleForToday,
+              let pending,
+              plans.contains(where: { $0.id == pending.planID }) else {
+            return
+        }
+        selectTodayPlan(pending.planID)
+    }
+
+    func saveGymLocation(_ location: GymLocation?) {
+        gymLocation = location
+        storage.saveGymLocation(location)
+    }
+
+    func recordGymArrival(source: String, at date: Date = Date()) {
+        guard gymVisits.first?.departedAt != nil || gymVisits.isEmpty else { return }
+        gymVisits.insert(GymVisit(arrivedAt: date, source: source), at: 0)
+        storage.saveGymVisits(gymVisits)
+    }
+
+    func recordGymDeparture(at date: Date = Date()) {
+        guard !gymVisits.isEmpty, gymVisits[0].departedAt == nil else { return }
+        gymVisits[0].departedAt = date
+        storage.saveGymVisits(gymVisits)
+    }
+
+    func gymVisits(on date: Date) -> [GymVisit] {
+        gymVisits.filter { Calendar.current.isDate($0.arrivedAt, inSameDayAs: date) }
+    }
+
+    var todaySubjectiveRecovery: SubjectiveRecoveryEntry? {
+        subjectiveRecoveryEntries.first { Calendar.current.isDateInToday($0.recordedAt) }
+    }
+
+    func saveSubjectiveFatigue(_ level: Int, at date: Date = Date()) {
+        if let index = subjectiveRecoveryEntries.firstIndex(where: {
+            Calendar.current.isDate($0.recordedAt, inSameDayAs: date)
+        }) {
+            subjectiveRecoveryEntries[index].fatigueLevel = min(5, max(1, level))
+            subjectiveRecoveryEntries[index].recordedAt = date
+        } else {
+            subjectiveRecoveryEntries.insert(
+                SubjectiveRecoveryEntry(recordedAt: date, fatigueLevel: level),
+                at: 0
+            )
+        }
+        subjectiveRecoveryEntries.sort { $0.recordedAt > $1.recordedAt }
+        storage.saveSubjectiveRecoveryEntries(subjectiveRecoveryEntries)
+    }
+
     func saveAIInsight(_ insight: AIInsight) {
         if let index = aiInsights.firstIndex(where: { $0.id == insight.id }) {
             aiInsights[index] = insight
@@ -71,6 +201,29 @@ final class AppStore: ObservableObject {
 
         aiInsights.sort { $0.date > $1.date }
         storage.saveAIInsights(aiInsights)
+    }
+
+    func saveAITransmission(_ record: AITransmissionRecord) {
+        if let index = aiTransmissionHistory.firstIndex(where: { $0.id == record.id }) {
+            aiTransmissionHistory[index] = record
+        } else {
+            aiTransmissionHistory.insert(record, at: 0)
+        }
+        aiTransmissionHistory.sort { $0.sentAt > $1.sentAt }
+        storage.saveAITransmissionHistory(aiTransmissionHistory)
+    }
+
+    func updateAITransmission(id: UUID, status: AITransmissionStatus) {
+        guard let index = aiTransmissionHistory.firstIndex(where: { $0.id == id }) else { return }
+        aiTransmissionHistory[index].status = status
+        storage.saveAITransmissionHistory(aiTransmissionHistory)
+    }
+
+    func deleteAITransmissionHistory(at offsets: IndexSet) {
+        for offset in offsets.sorted(by: >) {
+            aiTransmissionHistory.remove(at: offset)
+        }
+        storage.saveAITransmissionHistory(aiTransmissionHistory)
     }
 
     var allExercises: [Exercise] {
@@ -172,10 +325,45 @@ final class AppStore: ObservableObject {
         customExercises = []
         aiSettings = .default
         aiInsights = []
+        sensorSettings = .default
+        dailyWorkoutSelection = nil
+        gymLocation = nil
+        gymVisits = []
+        subjectiveRecoveryEntries = []
+        aiTransmissionHistory = []
+        appearanceSettings = .default
         storage.saveBodyMetricGoals(bodyMetricGoals)
         storage.saveUserProfile(userProfile)
         storage.saveAISettings(aiSettings)
         storage.saveAIInsights(aiInsights)
+        storage.saveSensorSettings(sensorSettings)
+        storage.saveAppearanceSettings(appearanceSettings)
+    }
+
+    func makeExportData() throws -> Data {
+        let export = GymDataExport(
+            schemaVersion: 1,
+            generatedAt: Date(),
+            userProfile: userProfile,
+            plans: plans,
+            workoutHistory: workoutHistory,
+            bodyMetricEntries: bodyMetricEntries,
+            bodyMetricGoals: bodyMetricGoals,
+            mealEntries: mealEntries,
+            bodyPhotoEntries: bodyPhotoEntries,
+            customExercises: customExercises,
+            aiInsights: aiInsights,
+            sensorSettings: sensorSettings,
+            appearanceSettings: appearanceSettings,
+            gymLocation: gymLocation,
+            gymVisits: gymVisits,
+            subjectiveRecoveryEntries: subjectiveRecoveryEntries,
+            aiTransmissionHistory: aiTransmissionHistory
+        )
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        return try encoder.encode(export)
     }
 
     func latestCompletedSets(for exercise: Exercise) -> [WorkoutSet] {
@@ -330,6 +518,12 @@ private struct LocalJSONStorage {
     private let customExercisesKey = "gym.training.alpha.customExercises"
     private let aiSettingsKey = "gym.training.alpha.aiSettings"
     private let aiInsightsKey = "gym.training.alpha.aiInsights"
+    private let sensorSettingsKey = "gym.training.alpha.sensorSettings"
+    private let dailyWorkoutSelectionKey = "gym.training.alpha.dailyWorkoutSelection"
+    private let gymLocationKey = "gym.training.alpha.gymLocation"
+    private let gymVisitsKey = "gym.training.alpha.gymVisits"
+    private let subjectiveRecoveryEntriesKey = "gym.training.alpha.subjectiveRecoveryEntries"
+    private let aiTransmissionHistoryKey = "gym.training.alpha.aiTransmissionHistory"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
@@ -413,6 +607,62 @@ private struct LocalJSONStorage {
         save(insights, key: aiInsightsKey)
     }
 
+    func loadSensorSettings() -> SensorSettings {
+        load(SensorSettings.self, key: sensorSettingsKey) ?? .default
+    }
+
+    func saveSensorSettings(_ settings: SensorSettings) {
+        save(settings, key: sensorSettingsKey)
+    }
+
+    func loadDailyWorkoutSelection() -> DailyWorkoutSelection? {
+        load(DailyWorkoutSelection.self, key: dailyWorkoutSelectionKey)
+    }
+
+    func saveDailyWorkoutSelection(_ selection: DailyWorkoutSelection?) {
+        saveOptional(selection, key: dailyWorkoutSelectionKey)
+    }
+
+    func loadGymLocation() -> GymLocation? {
+        load(GymLocation.self, key: gymLocationKey)
+    }
+
+    func saveGymLocation(_ location: GymLocation?) {
+        saveOptional(location, key: gymLocationKey)
+    }
+
+    func loadGymVisits() -> [GymVisit] {
+        load([GymVisit].self, key: gymVisitsKey)
+    }
+
+    func saveGymVisits(_ visits: [GymVisit]) {
+        save(visits, key: gymVisitsKey)
+    }
+
+    func loadSubjectiveRecoveryEntries() -> [SubjectiveRecoveryEntry] {
+        load([SubjectiveRecoveryEntry].self, key: subjectiveRecoveryEntriesKey)
+    }
+
+    func saveSubjectiveRecoveryEntries(_ entries: [SubjectiveRecoveryEntry]) {
+        save(entries, key: subjectiveRecoveryEntriesKey)
+    }
+
+    func loadAITransmissionHistory() -> [AITransmissionRecord] {
+        load([AITransmissionRecord].self, key: aiTransmissionHistoryKey)
+    }
+
+    func saveAITransmissionHistory(_ records: [AITransmissionRecord]) {
+        save(records, key: aiTransmissionHistoryKey)
+    }
+
+    func loadAppearanceSettings() -> AppAppearanceSettings {
+        .load()
+    }
+
+    func saveAppearanceSettings(_ settings: AppAppearanceSettings) {
+        settings.save()
+    }
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: userProfileKey)
         UserDefaults.standard.removeObject(forKey: plansKey)
@@ -424,6 +674,13 @@ private struct LocalJSONStorage {
         UserDefaults.standard.removeObject(forKey: customExercisesKey)
         UserDefaults.standard.removeObject(forKey: aiSettingsKey)
         UserDefaults.standard.removeObject(forKey: aiInsightsKey)
+        UserDefaults.standard.removeObject(forKey: sensorSettingsKey)
+        UserDefaults.standard.removeObject(forKey: dailyWorkoutSelectionKey)
+        UserDefaults.standard.removeObject(forKey: gymLocationKey)
+        UserDefaults.standard.removeObject(forKey: gymVisitsKey)
+        UserDefaults.standard.removeObject(forKey: subjectiveRecoveryEntriesKey)
+        UserDefaults.standard.removeObject(forKey: aiTransmissionHistoryKey)
+        AppAppearanceSettings.reset()
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {
@@ -450,5 +707,14 @@ private struct LocalJSONStorage {
         }
 
         UserDefaults.standard.set(data, forKey: key)
+    }
+
+    private func saveOptional<T: Encodable>(_ value: T?, key: String) {
+        guard let value else {
+            UserDefaults.standard.removeObject(forKey: key)
+            return
+        }
+
+        save(value, key: key)
     }
 }

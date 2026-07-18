@@ -21,7 +21,7 @@ struct MealListView: View {
                     if appStore.mealEntries.isEmpty {
                         Text("食事記録はまだありません")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.vertical, 18)
                             .listRowSeparator(.hidden)
@@ -85,7 +85,7 @@ private struct MealRow: View {
 
                     Text(AppFormatters.shortDateTime.string(from: meal.recordedAt))
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 8) {
                         Text(AppFormatters.calories(meal.calories))
@@ -94,7 +94,7 @@ private struct MealRow: View {
                         Text("C \(AppFormatters.grams(meal.carbs))")
                     }
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                     if let aiDraft = meal.aiDraft {
                         Label("AI下書き: \(aiDraft.confidence)", systemImage: "sparkles")
@@ -179,7 +179,7 @@ private struct MealEditorView: View {
 
                     Text(aiHelpText)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Section("食事") {
@@ -194,16 +194,42 @@ private struct MealEditorView: View {
                 }
 
                 Section("PFC") {
-                    TextField("カロリー kcal", text: $calories)
-                        .keyboardType(.decimalPad)
-                        .accessibilityIdentifier("mealCaloriesField")
-                    TextField("たんぱく質 g", text: $protein)
-                        .keyboardType(.decimalPad)
-                        .accessibilityIdentifier("mealProteinField")
-                    TextField("脂質 g", text: $fat)
-                        .keyboardType(.decimalPad)
-                    TextField("炭水化物 g", text: $carbs)
-                        .keyboardType(.decimalPad)
+                    NumericTextInputControl(
+                        text: $calories,
+                        title: "カロリー",
+                        unit: "kcal",
+                        range: 0...5_000,
+                        step: 1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealCaloriesField"
+                    )
+                    NumericTextInputControl(
+                        text: $protein,
+                        title: "たんぱく質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealProteinField"
+                    )
+                    NumericTextInputControl(
+                        text: $fat,
+                        title: "脂質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealFatField"
+                    )
+                    NumericTextInputControl(
+                        text: $carbs,
+                        title: "炭水化物",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealCarbsField"
+                    )
                 }
 
                 Section("メモ") {
@@ -218,7 +244,7 @@ private struct MealEditorView: View {
                         if !aiDraft.comment.isEmpty {
                             Text(aiDraft.comment)
                                 .font(.subheadline)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
 
                         ForEach(aiDraft.items) { item in
@@ -227,7 +253,7 @@ private struct MealEditorView: View {
                                     .font(.headline)
                                 Text("\(item.amount) / \(AppFormatters.calories(item.calories)) / P \(AppFormatters.grams(item.protein))")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
                         }
                     }
@@ -238,22 +264,24 @@ private struct MealEditorView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label(aiErrorMessage, systemImage: "xmark.octagon.fill")
                                 .font(.subheadline.bold())
-                                .foregroundStyle(.red)
+                                .foregroundStyle(AppTheme.critical)
 
                             if let aiErrorRecovery {
                                 Text(aiErrorRecovery)
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
 
                             Text("食事名とPFCを手動で入力すれば、このまま保存できます。")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
                         .accessibilityIdentifier("mealAIErrorRecoveryCard")
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("食事を記録")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

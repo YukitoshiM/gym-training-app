@@ -26,7 +26,7 @@ struct BodyMetricListView: View {
                 Label("目標との差分と達成率をKPIごとに確認できます。", systemImage: "target")
                 Label("体重や腹囲のように日々ぶれる数値は、推移で見る前提です。", systemImage: "chart.line.uptrend.xyaxis")
             }
-            .foregroundStyle(.secondary)
+            .foregroundStyle(AppTheme.mutedInk)
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
@@ -52,11 +52,11 @@ private struct BodyMetricRow: View {
                     if let latestEntry {
                         Text(AppFormatters.shortDate.string(from: latestEntry.recordedAt))
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         Text("未記録")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
 
@@ -69,18 +69,18 @@ private struct BodyMetricRow: View {
                     } else {
                         Text("-")
                             .font(.headline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
 
                     if let latestEntry,
                        let delta = goal.delta(from: latestEntry.value) {
                         Text(deltaText(delta))
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         Text("目標未設定")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
             }

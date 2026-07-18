@@ -3,6 +3,7 @@ import SwiftUI
 struct RecordHubView: View {
     @EnvironmentObject private var appStore: AppStore
     @EnvironmentObject private var watchSyncService: WatchPlanSyncService
+    @EnvironmentObject private var gymLocationManager: GymLocationManager
     @State private var activeSession: WorkoutSession?
 
     private var mealCount: Int {
@@ -21,6 +22,12 @@ struct RecordHubView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    if gymLocationManager.isAtGym, let todayPlan = appStore.todayPlan {
+                        GymArrivalPlanCard(plan: todayPlan) {
+                            activeSession = WorkoutSession(plan: todayPlan)
+                        }
+                    }
+
                     DailyRecordChecklistCard(
                         bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
                         waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
@@ -97,13 +104,19 @@ struct RecordHubView: View {
                         if !appStore.plans.isEmpty {
                             WatchPlanSyncCard(
                                 plans: appStore.plans,
-                                state: watchSyncService.state
-                            ) {
-                                watchSyncService.send(
-                                    plans: appStore.plans,
-                                    weightUnit: appStore.userProfile.weightUnit
-                                )
-                            }
+                                selectedPlanID: appStore.todayPlan?.id,
+                                state: watchSyncService.state,
+                                onSelectPlan: { appStore.selectTodayPlan($0) },
+                                onSend: {
+                                    watchSyncService.send(
+                                        plans: appStore.plans,
+                                        profile: appStore.userProfile,
+                                        sensorSettings: appStore.sensorSettings,
+                                        appearanceSettings: appStore.appearanceSettings,
+                                        preferredPlanID: appStore.todayPlan?.id
+                                    )
+                                }
+                            )
                         }
 
                         Button {
@@ -169,9 +182,40 @@ struct RecordHubView: View {
     }
 }
 
+private struct GymArrivalPlanCard: View {
+    let plan: TrainingPlan
+    let onStart: () -> Void
+
+    var body: some View {
+        CardContainer {
+            HStack(spacing: 12) {
+                IconBadge(systemImage: "mappin.and.ellipse", tint: AppTheme.positive)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("ジムに到着しました")
+                        .font(.headline)
+                    Text("今日: \(plan.name)・\(plan.totalSetCount)セット")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+                Spacer()
+                Button(action: onStart) {
+                    Image(systemName: "play.fill")
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(AppTheme.positive)
+                .accessibilityLabel("今日のメニューを開始")
+                .accessibilityIdentifier("startArrivedGymPlanButton")
+            }
+        }
+        .accessibilityIdentifier("gymArrivalPlanCard")
+    }
+}
+
 private struct WatchPlanSyncCard: View {
     let plans: [TrainingPlan]
+    let selectedPlanID: UUID?
     let state: WatchPlanSyncService.SyncState
+    let onSelectPlan: (UUID) -> Void
     let onSend: () -> Void
 
     var body: some View {
@@ -186,7 +230,7 @@ private struct WatchPlanSyncCard: View {
                             .foregroundStyle(AppTheme.ink)
                         Text("登録済みメニュー \(plans.count)件")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(1)
                     }
 
@@ -206,10 +250,44 @@ private struct WatchPlanSyncCard: View {
 
                 Text(state.message)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .fixedSize(horizontal: false, vertical: true)
+
+                Menu {
+                    ForEach(plans) { plan in
+                        Button {
+                            onSelectPlan(plan.id)
+                        } label: {
+                            if plan.id == selectedPlanID {
+                                Label(plan.name, systemImage: "checkmark")
+                            } else {
+                                Text(plan.name)
+                            }
+                        }
+                    }
+                } label: {
+                    HStack {
+                        Label("今日のメニュー", systemImage: "calendar.badge.checkmark")
+                            .font(.caption.bold())
+                        Spacer()
+                        Text(selectedPlanName)
+                            .font(.caption)
+                            .lineLimit(1)
+                        Image(systemName: "chevron.up.chevron.down")
+                            .font(.caption2)
+                    }
+                    .foregroundStyle(AppTheme.ink)
+                    .padding(.horizontal, 12)
+                    .frame(height: 40)
+                    .background(AppTheme.pageBackground, in: RoundedRectangle(cornerRadius: 8))
+                }
+                .accessibilityIdentifier("watchTodayPlanMenu")
             }
         }
+    }
+
+    private var selectedPlanName: String {
+        plans.first(where: { $0.id == selectedPlanID })?.name ?? plans.first?.name ?? "未選択"
     }
 
     private var tint: Color {
@@ -234,7 +312,7 @@ private struct SectionHeader: View {
                 .font(.headline)
             Text(subtitle)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
         }
     }
 }
@@ -250,11 +328,11 @@ private struct RecordQuickActionCard: View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    IconBadge(systemImage: isCompleted ? "checkmark.circle.fill" : systemImage, tint: isCompleted ? .green : tint)
+                    IconBadge(systemImage: isCompleted ? "checkmark.circle.fill" : systemImage, tint: isCompleted ? AppTheme.positive : tint)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 VStack(alignment: .leading, spacing: 4) {
@@ -263,7 +341,7 @@ private struct RecordQuickActionCard: View {
                         .foregroundStyle(AppTheme.ink)
                     Text(detail)
                         .font(.caption.bold())
-                        .foregroundStyle(isCompleted ? .green : .secondary)
+                        .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -289,7 +367,7 @@ private struct WorkoutStartCard: View {
                         .foregroundStyle(AppTheme.ink)
                     Text(detail)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Spacer()
@@ -309,4 +387,5 @@ private struct WorkoutStartCard: View {
     RecordHubView()
         .environmentObject(AppStore())
         .environmentObject(WatchPlanSyncService())
+        .environmentObject(GymLocationManager())
 }

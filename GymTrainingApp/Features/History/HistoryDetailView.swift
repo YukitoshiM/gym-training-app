@@ -25,12 +25,17 @@ struct HistoryDetailView: View {
                         .font(.title2.bold())
 
                     Text(AppFormatters.shortDateTime.string(from: currentSession.startedAt))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     if currentSession.sourceDevice == .appleWatch {
                         Label("Apple Watchから同期", systemImage: "applewatch")
                             .font(.caption.bold())
                             .foregroundStyle(AppTheme.accent)
+                    }
+
+                    if let note = currentSession.note, !note.isEmpty {
+                        Label(note, systemImage: "note.text")
+                            .font(.subheadline)
                     }
                 }
                 .padding(.vertical, 4)
@@ -47,11 +52,31 @@ struct HistoryDetailView: View {
                 .accessibilityIdentifier("historyPlanDeltaSummary")
             }
 
+            if let sensorSummary = currentSession.sensorSummary {
+                Section("Apple Watch計測") {
+                    LazyVGrid(columns: summaryColumns, spacing: 12) {
+                        SummaryMetric(title: "時間", value: formatSetDuration(sensorSummary.durationSeconds))
+                        SummaryMetric(title: "消費", value: sensorSummary.activeEnergyKilocalories.map { "\(Int($0)) kcal" } ?? "未取得")
+                        SummaryMetric(title: "平均心拍", value: sensorSummary.averageHeartRate.map { "\(Int($0)) bpm" } ?? "未取得")
+                        SummaryMetric(title: "最大心拍", value: sensorSummary.maximumHeartRate.map { "\(Int($0)) bpm" } ?? "未取得")
+                    }
+                    .padding(.vertical, 8)
+
+                    if let estimatedReps = sensorSummary.estimatedReps {
+                        Label("動作推定 合計\(estimatedReps)回", systemImage: "sensor.tag.radiowaves.forward")
+                    }
+
+                    Label(healthSaveTitle, systemImage: healthSaveSystemImage)
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+            }
+
             ForEach(currentSession.exercises) { exercise in
                 Section {
                     if exercise.isSkipped {
                         Label("スキップ", systemImage: "forward.end")
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         ForEach(exercise.sets) { set in
                             HistorySetRow(set: set)
@@ -66,6 +91,8 @@ struct HistoryDetailView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("履歴詳細")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -96,6 +123,21 @@ struct HistoryDetailView: View {
             Button("キャンセル", role: .cancel) {}
         }
     }
+
+    private var healthSaveTitle: String {
+        switch currentSession.healthWorkoutSaveState {
+        case .saved: "Apple Healthへ保存済み"
+        case .permissionDenied: "Health未許可・アプリ履歴のみ保存"
+        case .failed: "Health保存失敗・アプリ履歴は保存済み"
+        case .unavailable: "アプリ履歴のみ保存"
+        case .collecting: "Health保存状態を確認中"
+        case nil: "Health保存情報なし"
+        }
+    }
+
+    private var healthSaveSystemImage: String {
+        currentSession.healthWorkoutSaveState == .saved ? "heart.fill" : "heart.slash"
+    }
 }
 
 private struct HistorySetRow: View {
@@ -113,12 +155,12 @@ private struct HistorySetRow: View {
 
     private var statusTint: Color {
         if set.isAchieved {
-            return .green
+            return AppTheme.positive
         }
         if set.isCompleted {
             return AppTheme.orange
         }
-        return .secondary
+        return AppTheme.mutedInk
     }
 
     var body: some View {
@@ -126,7 +168,7 @@ private struct HistorySetRow: View {
             Text("\(set.setOrder)")
                 .font(.headline)
                 .frame(width: 30, height: 30)
-                .background(set.isAchieved ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
+                .background(set.isAchieved ? AppTheme.positive.opacity(0.18) : AppTheme.ink.opacity(0.09), in: Circle())
 
             VStack(alignment: .leading, spacing: 3) {
                 Text("実績 \(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit)) × \(set.actualReps)回")
@@ -134,7 +176,7 @@ private struct HistorySetRow: View {
 
                 Text("目標 \(AppFormatters.weight(set.targetWeight, unit: appStore.userProfile.weightUnit)) × \(set.targetReps)回")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                 Text("重量差 \(AppFormatters.signedWeight(set.weightDelta, unit: appStore.userProfile.weightUnit)) / 回数差 \(AppFormatters.signedReps(set.repsDelta))")
                     .font(.caption.bold())
@@ -151,7 +193,23 @@ private struct HistorySetRow: View {
                 if let duration = set.duration {
                     Text("セット時間 \(formatSetDuration(duration))")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+
+                if let sensorSummary = set.sensorSummary {
+                    HStack(spacing: 8) {
+                        if let averageHeartRate = sensorSummary.averageHeartRate {
+                            Label("\(Int(averageHeartRate)) bpm", systemImage: "heart.fill")
+                        }
+                        if let estimatedReps = sensorSummary.estimatedReps {
+                            Label("推定\(estimatedReps)回", systemImage: "waveform.path")
+                        }
+                        if let consistency = sensorSummary.movementConsistency {
+                            Label("安定\(Int(consistency * 100))%", systemImage: "checkmark.circle")
+                        }
+                    }
+                    .font(.caption2)
+                    .foregroundStyle(AppTheme.mutedInk)
                 }
             }
 

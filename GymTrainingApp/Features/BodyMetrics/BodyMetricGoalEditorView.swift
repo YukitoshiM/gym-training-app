@@ -8,7 +8,6 @@ struct BodyMetricGoalEditorView: View {
 
     @State private var targetValueText = ""
     @State private var direction: BodyMetricGoalDirection = .decrease
-    @FocusState private var isTargetFocused: Bool
 
     private var parsedTargetValue: Double? {
         let trimmed = targetValueText.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -23,15 +22,15 @@ struct BodyMetricGoalEditorView: View {
         NavigationStack {
             Form {
                 Section("目標値") {
-                    HStack {
-                        TextField("未設定", text: $targetValueText)
-                            .keyboardType(.decimalPad)
-                            .focused($isTargetFocused)
-                            .accessibilityIdentifier("bodyMetricGoalField")
-
-                        Text(kind.unit)
-                            .foregroundStyle(.secondary)
-                    }
+                    NumericTextInputControl(
+                        text: $targetValueText,
+                        title: "目標値",
+                        unit: kind.unit,
+                        range: kind.inputRange,
+                        step: 0.1,
+                        defaultValue: kind.defaultInputValue,
+                        accessibilityIdentifier: "bodyMetricGoalField"
+                    )
                 }
 
                 Section("方向") {
@@ -43,6 +42,8 @@ struct BodyMetricGoalEditorView: View {
                     .pickerStyle(.segmented)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("目標設定")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -57,13 +58,6 @@ struct BodyMetricGoalEditorView: View {
                         save()
                     }
                     .accessibilityIdentifier("saveBodyMetricGoalButton")
-                }
-
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button("入力完了") {
-                        isTargetFocused = false
-                    }
                 }
             }
             .onAppear {

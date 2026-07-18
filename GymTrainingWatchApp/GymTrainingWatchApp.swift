@@ -8,6 +8,7 @@ struct GymTrainingWatchApp: App {
         WindowGroup {
             WatchContentView()
                 .environmentObject(workoutStore)
+                .id(workoutStore.appearanceSettings.colorTheme.rawValue)
         }
     }
 }

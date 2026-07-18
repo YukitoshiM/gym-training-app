@@ -75,7 +75,7 @@ struct BodyMetricDetailView: View {
             Section("週次平均") {
                 if weeklyAverages.isEmpty {
                     Text("週次平均はまだありません。")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     ForEach(weeklyAverages) { average in
                         LabeledContent(
@@ -90,7 +90,7 @@ struct BodyMetricDetailView: View {
             Section("記録") {
                 if entries.isEmpty {
                     Text("まだ記録がありません。")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     ForEach(entries) { entry in
                         VStack(alignment: .leading, spacing: 4) {
@@ -99,13 +99,13 @@ struct BodyMetricDetailView: View {
                                     .font(.headline)
                                 Spacer()
                                 Text(AppFormatters.shortDate.string(from: entry.recordedAt))
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
 
                             if !entry.note.isEmpty {
                                 Text(entry.note)
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
                         }
                         .padding(.vertical, 4)
@@ -177,10 +177,10 @@ private struct CurrentBodyMetricSummary: View {
 
                     Text(goal.direction.displayName)
                         .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
-                        .background(Color(.tertiarySystemGroupedBackground), in: Capsule())
+                        .background(AppTheme.cardBackground, in: Capsule())
                 }
 
                 if let latestEntry {
@@ -203,14 +203,14 @@ private struct CurrentBodyMetricSummary: View {
                     } else {
                         Text("目標値を設定すると、差分と達成率を表示します。")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                 } else {
                     Text("未記録")
                         .font(.title2.bold())
                     Text("最初の値を記録すると、推移と目標差分を確認できます。")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
             }
         }

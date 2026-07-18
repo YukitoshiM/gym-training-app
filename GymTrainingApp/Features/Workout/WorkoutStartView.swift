@@ -25,7 +25,7 @@ struct WorkoutStartView: View {
                                             .font(.headline)
                                         Text("計画なしで種目を追加して記録します")
                                             .font(.caption)
-                                            .foregroundStyle(.secondary)
+                                            .foregroundStyle(AppTheme.mutedInk)
                                     }
 
                                     Spacer()
@@ -57,7 +57,7 @@ struct WorkoutStartView: View {
                                                     Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                                                 }
                                                 .font(.caption)
-                                                .foregroundStyle(.secondary)
+                                                .foregroundStyle(AppTheme.mutedInk)
                                             }
 
                                             Spacer()

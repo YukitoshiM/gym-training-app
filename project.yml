@@ -10,7 +10,7 @@ settings:
     MARKETING_VERSION: 0.1.0
     CURRENT_PROJECT_VERSION: 1
     SWIFT_VERSION: 6.0
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: PXJ45MLX8V
 targets:
   GymTrainingApp:
     type: application
@@ -23,6 +23,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp
+        CODE_SIGN_ENTITLEMENTS: GymTrainingApp/GymTrainingApp.entitlements
         INFOPLIST_KEY_CFBundleDisplayName: Gym Training
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
@@ -34,6 +35,11 @@ targets:
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: true
           NSAllowsLocalNetworking: true
+        NSHealthShareUsageDescription: 歩数、活動量、睡眠、心拍などをまとめてコンディションとトレーニング傾向を表示します。
+        NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングと身体測定をApple Healthに保存します。
+        NSLocationAlwaysAndWhenInUseUsageDescription: 登録したジムへの到着と退出を記録する場合に位置情報を使用します。
+        NSLocationWhenInUseUsageDescription: 現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。
+        NSMotionUsageDescription: Apple Watchの動きからセット中の回数とテンポを推定します。
         UILaunchScreen:
           UIColorName: ""
           UIImageName: ""
@@ -48,6 +54,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.watchkitapp
+        CODE_SIGN_ENTITLEMENTS: GymTrainingWatchApp/GymTrainingWatchApp.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: ""
         INFOPLIST_KEY_CFBundleDisplayName: Gym Watch
         INFOPLIST_KEY_WKApplication: YES
@@ -60,6 +67,11 @@ targets:
         CFBundleDisplayName: Gym Watch
         WKApplication: true
         WKCompanionAppBundleIdentifier: com.yukitoshim.gymtrainingapp
+        NSHealthShareUsageDescription: ワークアウト中の心拍と消費エネルギーを表示し、セットごとの負荷を記録します。
+        NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングをApple Healthに保存します。
+        NSMotionUsageDescription: 手首の動きからセット中の回数とテンポを推定します。
+        WKBackgroundModes:
+          - workout-processing
   GymTrainingAppUITests:
     type: bundle.ui-testing
     platform: iOS
