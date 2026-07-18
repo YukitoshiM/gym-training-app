@@ -14,7 +14,15 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         ]
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["Watch UIテスト"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["2件から選択"].exists)
+        XCTAssertTrue(app.staticTexts["胸の日"].exists)
+
+        let chestMenu = findHittableElement(in: app, identifier: "watchMenu-胸の日")
+        XCTAssertTrue(chestMenu.isHittable)
+        chestMenu.tap()
+
+        XCTAssertTrue(app.staticTexts["胸の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス・3セット・計30回"].exists)
 
         let startButton = app.buttons["watchStartWorkoutButton"]
@@ -72,7 +80,27 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(confirmButton.waitForExistence(timeout: 5))
         confirmButton.tap()
 
-        XCTAssertTrue(app.staticTexts["Watch UIテスト"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["2件から選択"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["watchMenu-胸の日"].exists)
+    }
+
+    func testCanChooseAnotherMenu() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
+
+        let backMenu = findHittableElement(in: app, identifier: "watchMenu-背中の日")
+        XCTAssertTrue(backMenu.isHittable)
+        backMenu.tap()
+
+        XCTAssertTrue(app.staticTexts["背中の日"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["ラットプルダウン・3セット・計36回"].exists)
         XCTAssertTrue(app.buttons["watchStartWorkoutButton"].exists)
     }
 

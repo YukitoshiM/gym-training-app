@@ -97,14 +97,14 @@ final class GymTrainingAppUITests: XCTestCase {
 
         XCTAssertTrue(sendButton.waitForExistence(timeout: 5))
 
-        guard app.staticTexts["Apple Watchへ計画を送信できます"].waitForExistence(timeout: 8) else {
+        guard app.staticTexts["Apple Watchへメニューを同期できます"].waitForExistence(timeout: 8) else {
             throw XCTSkip("ペアリング済みでWatchアプリが入った環境でのみ実行します")
         }
 
         XCTAssertTrue(sendButton.isHittable)
         sendButton.tap()
 
-        let immediateResult = app.staticTexts["胸の日 をApple Watchへ送信しました"]
+        let immediateResult = app.staticTexts["1件のメニューをApple Watchへ同期しました"]
         let queuedResult = app.staticTexts["Apple Watchが近くにないため、次回起動時に届くよう予約しました"]
         let deadline = Date().addingTimeInterval(20)
 

@@ -1,5 +1,15 @@
 import Foundation
 
+struct WatchWorkoutPlanLibrarySnapshot: Codable, Hashable, Sendable {
+    var generatedAt: Date
+    var plans: [WatchWorkoutPlanSnapshot]
+
+    init(generatedAt: Date = Date(), plans: [WatchWorkoutPlanSnapshot]) {
+        self.generatedAt = generatedAt
+        self.plans = plans
+    }
+}
+
 struct WatchWorkoutPlanSnapshot: Codable, Hashable, Identifiable, Sendable {
     var id: UUID
     var name: String
@@ -69,6 +79,7 @@ enum WatchWorkoutTransfer {
     static let sentAtKey = "sent_at"
     static let acknowledgementKey = "acknowledged"
     static let planPushType = "watch_plan_push"
+    static let planLibraryPushType = "watch_plan_library_push"
     static let sessionFinishedType = "watch_session_finished"
 }
 

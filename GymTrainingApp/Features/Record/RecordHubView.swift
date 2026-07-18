@@ -94,13 +94,13 @@ struct RecordHubView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         SectionHeader(title: "トレーニング", subtitle: "計画から開始するか、その場で種目を追加して記録します。")
 
-                        if let watchPlan = appStore.plans.first {
+                        if !appStore.plans.isEmpty {
                             WatchPlanSyncCard(
-                                plan: watchPlan,
+                                plans: appStore.plans,
                                 state: watchSyncService.state
                             ) {
                                 watchSyncService.send(
-                                    plan: watchPlan,
+                                    plans: appStore.plans,
                                     weightUnit: appStore.userProfile.weightUnit
                                 )
                             }
@@ -170,7 +170,7 @@ struct RecordHubView: View {
 }
 
 private struct WatchPlanSyncCard: View {
-    let plan: TrainingPlan
+    let plans: [TrainingPlan]
     let state: WatchPlanSyncService.SyncState
     let onSend: () -> Void
 
@@ -184,7 +184,7 @@ private struct WatchPlanSyncCard: View {
                         Text("Apple Watch")
                             .font(.headline)
                             .foregroundStyle(AppTheme.ink)
-                        Text("次の計画: \(plan.name)")
+                        Text("登録済みメニュー \(plans.count)件")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                             .lineLimit(1)
@@ -200,7 +200,7 @@ private struct WatchPlanSyncCard: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(tint)
-                    .accessibilityLabel("Apple Watchへ計画を送信")
+                    .accessibilityLabel("Apple Watchへメニューを同期")
                     .accessibilityIdentifier("sendPlanToWatchButton")
                 }
 

@@ -8,9 +8,15 @@ struct WatchContentView: View {
             Group {
                 if let activeSession = workoutStore.activeSession {
                     WatchActiveWorkoutView(session: activeSession)
-                } else if let plan = workoutStore.plan {
+                } else if let plan = workoutStore.selectedPlan {
                     WatchPlanDetailView(
                         plan: plan,
+                        statusMessage: workoutStore.statusMessage,
+                        pendingSession: workoutStore.pendingFinishedSession
+                    )
+                } else if !workoutStore.plans.isEmpty {
+                    WatchMenuSelectionView(
+                        plans: workoutStore.plans,
                         statusMessage: workoutStore.statusMessage,
                         pendingSession: workoutStore.pendingFinishedSession
                     )
@@ -32,7 +38,7 @@ private struct WatchEmptyPlanView: View {
                 .font(.largeTitle)
                 .foregroundStyle(.green)
 
-            Text("計画待ち")
+            Text("メニュー待ち")
                 .font(.headline)
 
             Text(statusMessage)
@@ -40,12 +46,74 @@ private struct WatchEmptyPlanView: View {
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
 
-            Text("iPhoneの記録タブからApple Watchへ送信します。")
+            Text("iPhoneの記録タブからApple Watchへメニューを同期します。")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
         }
         .padding()
+    }
+}
+
+private struct WatchMenuSelectionView: View {
+    @EnvironmentObject private var workoutStore: WatchWorkoutStore
+
+    let plans: [WatchWorkoutPlanSnapshot]
+    let statusMessage: String
+    let pendingSession: WatchWorkoutSessionSnapshot?
+
+    var body: some View {
+        List {
+            Section {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("今日のメニュー")
+                        .font(.headline)
+                    Text("\(plans.count)件から選択")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text(statusMessage)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Section("メニュー") {
+                ForEach(plans) { plan in
+                    Button {
+                        workoutStore.selectPlan(plan)
+                    } label: {
+                        HStack(spacing: 10) {
+                            Image(systemName: "dumbbell.fill")
+                                .foregroundStyle(.green)
+
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text(plan.name)
+                                    .font(.headline)
+                                    .foregroundStyle(.primary)
+                                    .lineLimit(1)
+                                Text(planOverview(plan))
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(2)
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityIdentifier("watchMenu-\(plan.name)")
+                }
+            }
+
+            if let pendingSession {
+                Section("未送信") {
+                    Button {
+                        workoutStore.resendPendingSession()
+                    } label: {
+                        Label("\(pendingSession.title) を再送", systemImage: "arrow.clockwise")
+                    }
+                    .accessibilityIdentifier("watchResendPendingSessionButton")
+                }
+            }
+        }
     }
 }
 
@@ -77,6 +145,13 @@ private struct WatchPlanDetailView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .accessibilityIdentifier("watchStartWorkoutButton")
+
+                Button {
+                    workoutStore.clearPlanSelection()
+                } label: {
+                    Label("メニュー変更", systemImage: "arrow.left.circle")
+                }
+                .accessibilityIdentifier("watchChangeMenuButton")
 
                 if let pendingSession {
                     Button {

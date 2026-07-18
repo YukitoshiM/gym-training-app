@@ -15,7 +15,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         var message: String {
             switch self {
             case .idle:
-                "Apple Watchへ今日の計画を送れます"
+                "Apple Watchへメニューを同期できます"
             case .unavailable(let message),
                  .ready(let message),
                  .sending(let message),
@@ -55,9 +55,14 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         self.appStore = appStore
     }
 
-    func send(plan: TrainingPlan, weightUnit: WeightUnit) {
+    func send(plans: [TrainingPlan], weightUnit: WeightUnit) {
         guard let session else {
             state = .unavailable("この端末ではApple Watch連携を利用できません")
+            return
+        }
+
+        guard !plans.isEmpty else {
+            state = .failed("Apple Watchへ同期するメニューがありません")
             return
         }
 
@@ -77,27 +82,29 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             return
         }
 
-        let snapshot = WatchWorkoutPlanSnapshot(plan: plan, weightUnit: weightUnit)
+        let library = WatchWorkoutPlanLibrarySnapshot(
+            plans: plans.map { WatchWorkoutPlanSnapshot(plan: $0, weightUnit: weightUnit) }
+        )
 
         do {
-            let payload = try JSONEncoder().encode(snapshot)
+            let payload = try JSONEncoder().encode(library)
             let message: [String: Any] = [
-                WatchWorkoutTransfer.messageTypeKey: WatchWorkoutTransfer.planPushType,
+                WatchWorkoutTransfer.messageTypeKey: WatchWorkoutTransfer.planLibraryPushType,
                 WatchWorkoutTransfer.payloadKey: payload,
                 WatchWorkoutTransfer.eventIDKey: UUID().uuidString,
                 WatchWorkoutTransfer.sentAtKey: Date()
             ]
 
-            state = .sending("\(plan.name) をApple Watchへ送信中")
+            state = .sending("\(plans.count)件のメニューをApple Watchへ同期中")
 
             if session.isReachable {
-                sendImmediately(message: message, planName: plan.name, session: session)
+                sendImmediately(message: message, menuCount: plans.count, session: session)
             } else {
                 session.transferUserInfo(message)
                 state = .sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました")
             }
         } catch {
-            state = .failed("Apple Watch用の計画データを作れませんでした")
+            state = .failed("Apple Watch用のメニューデータを作れませんでした")
         }
     }
 
@@ -119,11 +126,11 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
 
     private nonisolated func sendImmediately(
         message: [String: Any],
-        planName: String,
+        menuCount: Int,
         session: WCSession
     ) {
         session.sendMessage(message, replyHandler: { [weak self] _ in
-            self?.updateState(.sent("\(planName) をApple Watchへ送信しました"))
+            self?.updateState(.sent("\(menuCount)件のメニューをApple Watchへ同期しました"))
         }, errorHandler: { [weak self] error in
             session.transferUserInfo(message)
             self?.updateState(.sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました"))
@@ -197,7 +204,7 @@ extension WatchPlanSyncService: WCSessionDelegate {
         switch activationState {
         case .activated:
             if session.isPaired && session.isWatchAppInstalled {
-                updateState(.ready("Apple Watchへ計画を送信できます"))
+                updateState(.ready("Apple Watchへメニューを同期できます"))
             } else if session.isPaired {
                 updateState(.unavailable("Apple Watch側にGym Trainingをインストールしてください"))
             } else {

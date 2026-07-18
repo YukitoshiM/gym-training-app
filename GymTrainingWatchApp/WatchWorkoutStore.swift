@@ -4,14 +4,16 @@ import WatchKit
 
 @MainActor
 final class WatchWorkoutStore: NSObject, ObservableObject {
-    @Published private(set) var plan: WatchWorkoutPlanSnapshot?
+    @Published private(set) var plans: [WatchWorkoutPlanSnapshot] = []
+    @Published private(set) var selectedPlan: WatchWorkoutPlanSnapshot?
     @Published private(set) var activeSession: WatchWorkoutSessionSnapshot?
     @Published private(set) var pendingFinishedSession: WatchWorkoutSessionSnapshot?
-    @Published private(set) var statusMessage = "iPhoneから今日の計画を送信してください"
+    @Published private(set) var statusMessage = "iPhoneからメニューを同期してください"
     @Published private(set) var restRemaining = 0
     @Published private(set) var isRestTimerRunning = false
 
     private let planStorageKey = "gym.training.watch.currentPlan"
+    private let planLibraryStorageKey = "gym.training.watch.planLibrary"
     private let activeSessionStorageKey = "gym.training.watch.activeSession"
     private let pendingSessionStorageKey = "gym.training.watch.pendingFinishedSession"
     private let restTimerEndStorageKey = "gym.training.watch.restTimerEnd"
@@ -27,22 +29,34 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     func startWorkout() {
-        guard let plan else {
-            statusMessage = "先にiPhoneから計画を送信してください"
+        guard let selectedPlan else {
+            statusMessage = "今日のメニューを選んでください"
             return
         }
 
-        activeSession = WatchWorkoutSessionSnapshot(plan: plan)
+        activeSession = WatchWorkoutSessionSnapshot(plan: selectedPlan)
         stopRestTimer()
-        statusMessage = "\(plan.name) を開始しました"
+        statusMessage = "\(selectedPlan.name) を開始しました"
         saveActiveSession()
+    }
+
+    func selectPlan(_ plan: WatchWorkoutPlanSnapshot) {
+        guard plans.contains(where: { $0.id == plan.id }) else { return }
+        selectedPlan = plan
+        statusMessage = "\(plan.name) を選択しました"
+    }
+
+    func clearPlanSelection() {
+        selectedPlan = nil
+        statusMessage = "今日のメニューを選んでください"
     }
 
     func cancelWorkout() {
         activeSession = nil
+        selectedPlan = nil
         stopRestTimer()
         UserDefaults.standard.removeObject(forKey: activeSessionStorageKey)
-        statusMessage = plan == nil ? "iPhoneから今日の計画を送信してください" : "ワークアウトを破棄しました"
+        statusMessage = plans.isEmpty ? "iPhoneからメニューを同期してください" : "ワークアウトを破棄しました"
     }
 
     func startSet(exerciseID: UUID, setID: UUID) {
@@ -149,6 +163,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         finished.endedAt = Date()
         pendingFinishedSession = finished
         activeSession = nil
+        selectedPlan = nil
         stopRestTimer()
         savePendingSession()
         UserDefaults.standard.removeObject(forKey: activeSessionStorageKey)
@@ -175,10 +190,15 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     private func loadSavedState() {
-        if let data = UserDefaults.standard.data(forKey: planStorageKey),
-           let savedPlan = try? decoder.decode(WatchWorkoutPlanSnapshot.self, from: data) {
-            plan = savedPlan
-            statusMessage = "前回受信した計画を表示しています"
+        if let data = UserDefaults.standard.data(forKey: planLibraryStorageKey),
+           let library = try? decoder.decode(WatchWorkoutPlanLibrarySnapshot.self, from: data) {
+            plans = library.plans
+            statusMessage = "同期済みメニューから選べます"
+        } else if let data = UserDefaults.standard.data(forKey: planStorageKey),
+                  let savedPlan = try? decoder.decode(WatchWorkoutPlanSnapshot.self, from: data) {
+            plans = [savedPlan]
+            savePlanLibrary()
+            statusMessage = "同期済みメニューから選べます"
         }
 
         if let data = UserDefaults.standard.data(forKey: activeSessionStorageKey),
@@ -202,52 +222,89 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
         if arguments.contains("--reset-watch-ui-test-data") {
             defaults.removeObject(forKey: planStorageKey)
+            defaults.removeObject(forKey: planLibraryStorageKey)
             defaults.removeObject(forKey: activeSessionStorageKey)
             defaults.removeObject(forKey: pendingSessionStorageKey)
             defaults.removeObject(forKey: restTimerEndStorageKey)
         }
 
         guard arguments.contains("--seed-watch-ui-test-plan"),
-              let planData = try? encoder.encode(Self.uiTestPlan()) else {
+              let libraryData = try? encoder.encode(
+                WatchWorkoutPlanLibrarySnapshot(plans: Self.uiTestPlans())
+              ) else {
             return
         }
 
-        defaults.set(planData, forKey: planStorageKey)
+        defaults.set(libraryData, forKey: planLibraryStorageKey)
     }
 
-    private static func uiTestPlan() -> WatchWorkoutPlanSnapshot {
+    private static func uiTestPlans() -> [WatchWorkoutPlanSnapshot] {
         let exerciseID = UUID(uuidString: "00000000-0000-0000-0000-000000000101")!
 
-        return WatchWorkoutPlanSnapshot(
-            id: UUID(uuidString: "00000000-0000-0000-0000-000000000100")!,
-            name: "Watch UIテスト",
-            weightUnit: .kg,
-            exercises: [
-                WatchPlanExerciseSnapshot(
-                    id: UUID(uuidString: "00000000-0000-0000-0000-000000000102")!,
-                    exerciseID: exerciseID,
-                    name: "ベンチプレス",
-                    primaryMuscleName: "胸",
-                    primaryMuscleRawValue: "chest",
-                    equipmentRawValue: "barbell",
-                    restSeconds: 60,
-                    sets: (1...3).map { setOrder in
-                        WatchPlanSetTargetSnapshot(
-                            id: UUID(uuidString: String(format: "00000000-0000-0000-0000-%012d", 200 + setOrder))!,
-                            setOrder: setOrder,
-                            targetWeight: 20,
-                            targetReps: 10
-                        )
-                    }
-                )
-            ]
-        )
+        return [
+            WatchWorkoutPlanSnapshot(
+                id: UUID(uuidString: "00000000-0000-0000-0000-000000000100")!,
+                name: "胸の日",
+                weightUnit: .kg,
+                exercises: [
+                    WatchPlanExerciseSnapshot(
+                        id: UUID(uuidString: "00000000-0000-0000-0000-000000000102")!,
+                        exerciseID: exerciseID,
+                        name: "ベンチプレス",
+                        primaryMuscleName: "胸",
+                        primaryMuscleRawValue: "chest",
+                        equipmentRawValue: "barbell",
+                        restSeconds: 60,
+                        sets: (1...3).map { setOrder in
+                            WatchPlanSetTargetSnapshot(
+                                id: UUID(uuidString: String(format: "00000000-0000-0000-0000-%012d", 200 + setOrder))!,
+                                setOrder: setOrder,
+                                targetWeight: 20,
+                                targetReps: 10
+                            )
+                        }
+                    )
+                ]
+            ),
+            WatchWorkoutPlanSnapshot(
+                id: UUID(uuidString: "00000000-0000-0000-0000-000000000300")!,
+                name: "背中の日",
+                weightUnit: .kg,
+                exercises: [
+                    WatchPlanExerciseSnapshot(
+                        id: UUID(uuidString: "00000000-0000-0000-0000-000000000302")!,
+                        exerciseID: UUID(uuidString: "00000000-0000-0000-0000-000000000301")!,
+                        name: "ラットプルダウン",
+                        primaryMuscleName: "背中",
+                        primaryMuscleRawValue: "back",
+                        equipmentRawValue: "machine",
+                        restSeconds: 75,
+                        sets: (1...3).map { setOrder in
+                            WatchPlanSetTargetSnapshot(
+                                id: UUID(uuidString: String(format: "00000000-0000-0000-0000-%012d", 400 + setOrder))!,
+                                setOrder: setOrder,
+                                targetWeight: 30,
+                                targetReps: 12
+                            )
+                        }
+                    )
+                ]
+            )
+        ]
     }
 
-    private func apply(plan snapshot: WatchWorkoutPlanSnapshot, data: Data) {
-        plan = snapshot
-        statusMessage = "\(snapshot.name) を受信しました"
-        UserDefaults.standard.set(data, forKey: planStorageKey)
+    private func apply(plans snapshots: [WatchWorkoutPlanSnapshot], data: Data? = nil) {
+        plans = snapshots
+        selectedPlan = nil
+        statusMessage = "\(snapshots.count)件のメニューを同期しました"
+
+        if let data {
+            UserDefaults.standard.set(data, forKey: planLibraryStorageKey)
+        } else {
+            savePlanLibrary()
+        }
+
+        UserDefaults.standard.removeObject(forKey: planStorageKey)
     }
 
     private func updateSession(_ body: (inout WatchWorkoutSessionSnapshot) -> Void) {
@@ -282,6 +339,14 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
 
         UserDefaults.standard.set(data, forKey: activeSessionStorageKey)
+    }
+
+    private func savePlanLibrary() {
+        guard let data = try? encoder.encode(WatchWorkoutPlanLibrarySnapshot(plans: plans)) else {
+            return
+        }
+
+        UserDefaults.standard.set(data, forKey: planLibraryStorageKey)
     }
 
     @discardableResult
@@ -366,19 +431,35 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     @discardableResult
     private nonisolated func receive(userInfo: [String: Any]) -> Bool {
-        guard userInfo[WatchWorkoutTransfer.messageTypeKey] as? String == WatchWorkoutTransfer.planPushType,
+        guard let messageType = userInfo[WatchWorkoutTransfer.messageTypeKey] as? String,
               let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else {
             return false
         }
 
-        do {
-            let snapshot = try JSONDecoder().decode(WatchWorkoutPlanSnapshot.self, from: data)
+        switch messageType {
+        case WatchWorkoutTransfer.planLibraryPushType:
+            guard let library = try? JSONDecoder().decode(WatchWorkoutPlanLibrarySnapshot.self, from: data) else {
+                updateStatus("メニューデータを読み込めませんでした")
+                return false
+            }
+
             Task { @MainActor [weak self] in
-                self?.apply(plan: snapshot, data: data)
+                self?.apply(plans: library.plans, data: data)
             }
             return true
-        } catch {
-            updateStatus("計画データを読み込めませんでした")
+
+        case WatchWorkoutTransfer.planPushType:
+            guard let snapshot = try? JSONDecoder().decode(WatchWorkoutPlanSnapshot.self, from: data) else {
+                updateStatus("メニューデータを読み込めませんでした")
+                return false
+            }
+
+            Task { @MainActor [weak self] in
+                self?.apply(plans: [snapshot])
+            }
+            return true
+
+        default:
             return false
         }
     }
