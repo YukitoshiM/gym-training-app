@@ -18,6 +18,8 @@ targets:
     sources:
       - path: GymTrainingApp
       - path: Shared
+    dependencies:
+      - target: GymTrainingWatchApp
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp
@@ -70,3 +72,17 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.uitests
         TEST_TARGET_NAME: GymTrainingApp
         GENERATE_INFOPLIST_FILE: YES
+  GymTrainingWatchAppUITests:
+    type: bundle.ui-testing
+    platform: watchOS
+    sources:
+      - path: GymTrainingWatchAppUITests
+    dependencies:
+      - target: GymTrainingWatchApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.watchkitapp.uitests
+        TEST_TARGET_NAME: GymTrainingWatchApp
+        GENERATE_INFOPLIST_FILE: YES
+        SUPPORTED_PLATFORMS: "watchos watchsimulator"
+        TARGETED_DEVICE_FAMILY: 4

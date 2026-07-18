@@ -18,6 +18,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     override init() {
         super.init()
+        prepareUITestStateIfNeeded()
         loadSavedState()
         configureSession()
     }
@@ -170,6 +171,53 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
     }
 
+    private func prepareUITestStateIfNeeded() {
+        let arguments = ProcessInfo.processInfo.arguments
+        let defaults = UserDefaults.standard
+
+        if arguments.contains("--reset-watch-ui-test-data") {
+            defaults.removeObject(forKey: planStorageKey)
+            defaults.removeObject(forKey: activeSessionStorageKey)
+            defaults.removeObject(forKey: pendingSessionStorageKey)
+        }
+
+        guard arguments.contains("--seed-watch-ui-test-plan"),
+              let planData = try? encoder.encode(Self.uiTestPlan()) else {
+            return
+        }
+
+        defaults.set(planData, forKey: planStorageKey)
+    }
+
+    private static func uiTestPlan() -> WatchWorkoutPlanSnapshot {
+        let exerciseID = UUID(uuidString: "00000000-0000-0000-0000-000000000101")!
+
+        return WatchWorkoutPlanSnapshot(
+            id: UUID(uuidString: "00000000-0000-0000-0000-000000000100")!,
+            name: "Watch UIテスト",
+            weightUnit: .kg,
+            exercises: [
+                WatchPlanExerciseSnapshot(
+                    id: UUID(uuidString: "00000000-0000-0000-0000-000000000102")!,
+                    exerciseID: exerciseID,
+                    name: "ベンチプレス",
+                    primaryMuscleName: "胸",
+                    primaryMuscleRawValue: "chest",
+                    equipmentRawValue: "barbell",
+                    restSeconds: 5,
+                    sets: (1...3).map { setOrder in
+                        WatchPlanSetTargetSnapshot(
+                            id: UUID(uuidString: String(format: "00000000-0000-0000-0000-%012d", 200 + setOrder))!,
+                            setOrder: setOrder,
+                            targetWeight: 20,
+                            targetReps: 10
+                        )
+                    }
+                )
+            ]
+        )
+    }
+
     private func apply(plan snapshot: WatchWorkoutPlanSnapshot, data: Data) {
         plan = snapshot
         statusMessage = "\(snapshot.name) を受信しました"
@@ -249,17 +297,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             statusMessage = "\(finishedSession.title) をiPhoneへ送信中"
 
             if session.isReachable {
-                session.sendMessage(message, replyHandler: { [weak self] reply in
-                    let acknowledged = reply[WatchWorkoutTransfer.acknowledgementKey] as? Bool ?? true
-                    self?.updateSendResult(
-                        acknowledged: acknowledged,
-                        successMessage: "\(finishedSession.title) をiPhone履歴へ保存しました"
-                    )
-                }, errorHandler: { [weak self] error in
-                    session.transferUserInfo(message)
-                    self?.updateStatus("\(finishedSession.title) はiPhoneへ送信予約しました")
-                    NSLog("Watch workout result immediate send failed: \(error.localizedDescription)")
-                })
+                sendImmediately(message: message, title: finishedSession.title, session: session)
             } else {
                 session.transferUserInfo(message)
                 statusMessage = "\(finishedSession.title) はiPhoneへ送信予約しました"
@@ -269,10 +307,11 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
     }
 
-    private nonisolated func receive(userInfo: [String: Any]) {
+    @discardableResult
+    private nonisolated func receive(userInfo: [String: Any]) -> Bool {
         guard userInfo[WatchWorkoutTransfer.messageTypeKey] as? String == WatchWorkoutTransfer.planPushType,
               let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else {
-            return
+            return false
         }
 
         do {
@@ -280,8 +319,10 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             Task { @MainActor [weak self] in
                 self?.apply(plan: snapshot, data: data)
             }
+            return true
         } catch {
             updateStatus("計画データを読み込めませんでした")
+            return false
         }
     }
 
@@ -289,6 +330,24 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         Task { @MainActor [weak self] in
             self?.statusMessage = message
         }
+    }
+
+    private nonisolated func sendImmediately(
+        message: [String: Any],
+        title: String,
+        session: WCSession
+    ) {
+        session.sendMessage(message, replyHandler: { [weak self] reply in
+            let acknowledged = reply[WatchWorkoutTransfer.acknowledgementKey] as? Bool ?? true
+            self?.updateSendResult(
+                acknowledged: acknowledged,
+                successMessage: "\(title) をiPhone履歴へ保存しました"
+            )
+        }, errorHandler: { [weak self] error in
+            session.transferUserInfo(message)
+            self?.updateStatus("\(title) はiPhoneへ送信予約しました")
+            NSLog("Watch workout result immediate send failed: \(error.localizedDescription)")
+        })
     }
 
     private nonisolated func updateSendResult(acknowledged: Bool, successMessage: String) {
@@ -348,5 +407,14 @@ extension WatchWorkoutStore: WCSessionDelegate {
 
     nonisolated func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         receive(userInfo: message)
+    }
+
+    nonisolated func session(
+        _ session: WCSession,
+        didReceiveMessage message: [String: Any],
+        replyHandler: @escaping ([String: Any]) -> Void
+    ) {
+        let accepted = receive(userInfo: message)
+        replyHandler([WatchWorkoutTransfer.acknowledgementKey: accepted])
     }
 }

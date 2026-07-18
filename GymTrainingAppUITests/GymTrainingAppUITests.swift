@@ -87,6 +87,34 @@ final class GymTrainingAppUITests: XCTestCase {
         verifyAIReportFailureMessage()
     }
 
+    func testWatchPlanTransfer() throws {
+        app.tabBars.buttons["記録"].tap()
+
+        let sendButton = app.buttons["sendPlanToWatchButton"]
+        for _ in 0..<3 where !sendButton.isHittable {
+            app.swipeUp()
+        }
+
+        XCTAssertTrue(sendButton.waitForExistence(timeout: 5))
+
+        guard app.staticTexts["Apple Watchへ計画を送信できます"].waitForExistence(timeout: 8) else {
+            throw XCTSkip("ペアリング済みでWatchアプリが入った環境でのみ実行します")
+        }
+
+        XCTAssertTrue(sendButton.isHittable)
+        sendButton.tap()
+
+        let immediateResult = app.staticTexts["胸の日 をApple Watchへ送信しました"]
+        let queuedResult = app.staticTexts["Apple Watchが近くにないため、次回起動時に届くよう予約しました"]
+        let deadline = Date().addingTimeInterval(20)
+
+        while Date() < deadline && !immediateResult.exists && !queuedResult.exists {
+            RunLoop.current.run(until: Date().addingTimeInterval(0.2))
+        }
+
+        XCTAssertTrue(immediateResult.exists || queuedResult.exists)
+    }
+
     private func verifySeededPlan() {
         app.tabBars.buttons["計画"].tap()
 

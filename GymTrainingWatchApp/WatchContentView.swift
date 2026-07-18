@@ -308,6 +308,7 @@ private struct WatchSetControlRow: View {
                 } label: {
                     Label(rpeTitle, systemImage: "gauge")
                 }
+                .accessibilityIdentifier("watchSetRPE-\(exercise.sortOrder)-\(set.setOrder)")
 
                 Spacer()
 
@@ -354,6 +355,7 @@ private struct WatchRPESelectionView: View {
             } label: {
                 Label("なし", systemImage: currentRPE == nil ? "checkmark.circle.fill" : "circle")
             }
+            .accessibilityIdentifier("watchRPE-none")
 
             ForEach(6...10, id: \.self) { value in
                 Button {
@@ -362,6 +364,7 @@ private struct WatchRPESelectionView: View {
                 } label: {
                     Label("RPE \(value)", systemImage: currentRPE == Double(value) ? "checkmark.circle.fill" : "circle")
                 }
+                .accessibilityIdentifier("watchRPE-\(value)")
             }
         }
         .navigationTitle("RPE")

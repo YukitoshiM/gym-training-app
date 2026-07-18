@@ -210,7 +210,6 @@ private struct WatchPlanSyncCard: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .accessibilityIdentifier("watchPlanSyncCard")
     }
 
     private var tint: Color {

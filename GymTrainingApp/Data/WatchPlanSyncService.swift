@@ -91,13 +91,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             state = .sending("\(plan.name) をApple Watchへ送信中")
 
             if session.isReachable {
-                session.sendMessage(message, replyHandler: { [weak self] _ in
-                    self?.updateState(.sent("\(plan.name) をApple Watchへ送信しました"))
-                }, errorHandler: { [weak self] error in
-                    session.transferUserInfo(message)
-                    self?.updateState(.sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました"))
-                    NSLog("Watch immediate send failed: \(error.localizedDescription)")
-                })
+                sendImmediately(message: message, planName: plan.name, session: session)
             } else {
                 session.transferUserInfo(message)
                 state = .sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました")
@@ -121,6 +115,20 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         Task { @MainActor [weak self] in
             self?.state = state
         }
+    }
+
+    private nonisolated func sendImmediately(
+        message: [String: Any],
+        planName: String,
+        session: WCSession
+    ) {
+        session.sendMessage(message, replyHandler: { [weak self] _ in
+            self?.updateState(.sent("\(planName) をApple Watchへ送信しました"))
+        }, errorHandler: { [weak self] error in
+            session.transferUserInfo(message)
+            self?.updateState(.sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました"))
+            NSLog("Watch immediate send failed: \(error.localizedDescription)")
+        })
     }
 
     @discardableResult
