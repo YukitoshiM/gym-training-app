@@ -23,6 +23,17 @@ final class GymTrainingWatchAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["0/3セット・0回記録"].waitForExistence(timeout: 5))
 
+        let firstSetStartButton = findHittableElement(in: app, identifier: "watchSetStart-0-1")
+        XCTAssertTrue(firstSetStartButton.isHittable)
+        firstSetStartButton.tap()
+
+        let repsPlusButton = findHittableElement(in: app, identifier: "watchSetRepsPlus-0-1")
+        XCTAssertTrue(repsPlusButton.isHittable)
+        repsPlusButton.tap()
+
+        XCTAssertTrue(app.staticTexts["実績 20 kg × 11回"].exists)
+        attachScreenshot(named: "watch-set-result-entry", app: app)
+
         let rpeButton = findHittableElement(in: app, identifier: "watchSetRPE-0-1")
         XCTAssertTrue(rpeButton.isHittable)
         rpeButton.tap()
@@ -36,7 +47,20 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         firstSetButton.tap()
 
         XCUIDevice.shared.rotateDigitalCrown(delta: -1)
-        XCTAssertTrue(app.staticTexts["1/3セット・10回記録"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["1/3セット・11回記録"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["watchRestTimer"].waitForExistence(timeout: 5))
+        attachScreenshot(named: "watch-rest-timer", app: app)
+
+        let extendRestButton = app.buttons["+30秒"]
+        XCTAssertTrue(extendRestButton.isHittable)
+        extendRestButton.tap()
+
+        app.terminate()
+        app.launchArguments = []
+        app.launch()
+
+        XCTAssertTrue(app.staticTexts["1/3セット・11回記録"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.descendants(matching: .any)["watchRestTimer"].waitForExistence(timeout: 5))
 
         app.swipeUp()
         let finishButton = app.buttons["watchFinishWorkoutButton"]
@@ -64,5 +88,12 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         }
 
         return element
+    }
+
+    private func attachScreenshot(named name: String, app: XCUIApplication) {
+        let attachment = XCTAttachment(screenshot: app.screenshot())
+        attachment.name = name
+        attachment.lifetime = .keepAlways
+        add(attachment)
     }
 }

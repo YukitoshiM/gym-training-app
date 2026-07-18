@@ -147,6 +147,12 @@ private struct HistorySetRow: View {
                         .foregroundStyle(AppTheme.accent)
                         .accessibilityIdentifier("historySetRPE-\(set.setOrder)")
                 }
+
+                if let duration = set.duration {
+                    Text("セット時間 \(formatSetDuration(duration))")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Spacer()
@@ -157,6 +163,18 @@ private struct HistorySetRow: View {
         }
         .padding(.vertical, 4)
     }
+}
+
+private func formatSetDuration(_ duration: TimeInterval) -> String {
+    let totalSeconds = max(0, Int(duration.rounded()))
+    let minutes = totalSeconds / 60
+    let seconds = totalSeconds % 60
+
+    if minutes == 0 {
+        return "\(seconds)秒"
+    }
+
+    return "\(minutes)分\(seconds)秒"
 }
 
 #Preview {

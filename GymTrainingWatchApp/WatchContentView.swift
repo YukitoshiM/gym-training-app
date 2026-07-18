@@ -179,19 +179,34 @@ private struct WatchActiveWorkoutView: View {
 
             if workoutStore.isRestTimerRunning {
                 Section {
-                    HStack {
-                        Label(formatDuration(workoutStore.restRemaining), systemImage: "timer")
-                            .font(.headline)
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            Label("休憩 \(formatDuration(workoutStore.restRemaining))", systemImage: "timer")
+                                .font(.headline)
 
-                        Spacer()
+                            Spacer()
 
-                        Button {
-                            workoutStore.stopRestTimer()
-                        } label: {
-                            Image(systemName: "forward.end.fill")
+                            Button {
+                                workoutStore.stopRestTimer()
+                            } label: {
+                                Image(systemName: "forward.end.fill")
+                            }
+                            .accessibilityLabel("休憩をスキップ")
                         }
-                        .accessibilityLabel("休憩をスキップ")
+
+                        HStack(spacing: 8) {
+                            Button("-15秒") {
+                                workoutStore.adjustRestTimer(by: -15)
+                            }
+
+                            Button("+30秒") {
+                                workoutStore.adjustRestTimer(by: 30)
+                            }
+                        }
+                        .buttonStyle(.bordered)
+                        .font(.caption)
                     }
+                    .accessibilityIdentifier("watchRestTimer")
                 }
             }
 
@@ -258,77 +273,146 @@ private struct WatchSetControlRow: View {
                     .frame(width: 26, height: 26)
                     .background(set.isCompleted ? .green.opacity(0.22) : .secondary.opacity(0.16), in: Circle())
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("目標 \(formatWeight(set.targetWeight, unit: unit)) × \(set.targetReps)回")
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
-                    Text("\(formatWeight(set.actualWeight, unit: unit)) × \(set.actualReps)回")
-                        .font(.headline)
-                }
+                Text("目標 \(formatWeight(set.targetWeight, unit: unit)) × \(set.targetReps)回")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
 
                 Spacer()
+
+                Text(statusTitle)
+                    .font(.caption2.bold())
+                    .foregroundStyle(statusTint)
             }
 
+            if set.startedAt == nil && !set.isCompleted {
+                Button {
+                    workoutStore.startSet(exerciseID: exercise.id, setID: set.id)
+                } label: {
+                    Label("セット開始", systemImage: "play.fill")
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.green)
+                .accessibilityIdentifier("watchSetStart-\(exercise.sortOrder)-\(set.setOrder)")
+            } else {
+                Text("実績 \(formatWeight(set.actualWeight, unit: unit)) × \(set.actualReps)回")
+                    .font(.headline)
+                    .accessibilityIdentifier("watchSetActual-\(exercise.sortOrder)-\(set.setOrder)")
+
+                if set.isCompleted {
+                    HStack {
+                        if set.rpe != nil {
+                            Label(rpeTitle, systemImage: "gauge")
+                                .font(.caption)
+                        }
+
+                        Spacer()
+
+                        Button {
+                            workoutStore.setCompletion(
+                                exerciseID: exercise.id,
+                                setID: set.id,
+                                isCompleted: false
+                            )
+                        } label: {
+                            Label("修正", systemImage: "pencil")
+                        }
+                        .buttonStyle(.bordered)
+                        .accessibilityIdentifier("watchSetComplete-\(exercise.sortOrder)-\(set.setOrder)")
+                    }
+                } else {
+                    actualValueControls
+
+                    HStack {
+                        NavigationLink {
+                            WatchRPESelectionView(exerciseID: exercise.id, setID: set.id, currentRPE: set.rpe)
+                        } label: {
+                            Label(rpeTitle, systemImage: "gauge")
+                        }
+                        .accessibilityIdentifier("watchSetRPE-\(exercise.sortOrder)-\(set.setOrder)")
+
+                        Spacer()
+
+                        Button {
+                            workoutStore.setCompletion(
+                                exerciseID: exercise.id,
+                                setID: set.id,
+                                isCompleted: true
+                            )
+                        } label: {
+                            Label("完了", systemImage: "checkmark")
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        .accessibilityIdentifier("watchSetComplete-\(exercise.sortOrder)-\(set.setOrder)")
+                    }
+                    .font(.caption)
+                }
+            }
+        }
+        .padding(.vertical, 4)
+    }
+
+    private var actualValueControls: some View {
+        VStack(spacing: 8) {
             HStack {
+                Text("重量")
+                    .frame(width: 32, alignment: .leading)
+
                 Button {
                     workoutStore.adjustWeight(exerciseID: exercise.id, setID: set.id, delta: -2.5)
                 } label: {
-                    Image(systemName: "minus.circle")
+                    Image(systemName: "minus")
                 }
                 .accessibilityLabel("重量を下げる")
+
+                Text(formatWeight(set.actualWeight, unit: unit))
+                    .frame(minWidth: 48)
 
                 Button {
                     workoutStore.adjustWeight(exerciseID: exercise.id, setID: set.id, delta: 2.5)
                 } label: {
-                    Image(systemName: "plus.circle")
+                    Image(systemName: "plus")
                 }
                 .accessibilityLabel("重量を上げる")
+            }
 
-                Spacer()
+            HStack {
+                Text("回数")
+                    .frame(width: 32, alignment: .leading)
 
                 Button {
                     workoutStore.adjustReps(exerciseID: exercise.id, setID: set.id, delta: -1)
                 } label: {
-                    Image(systemName: "minus.square")
+                    Image(systemName: "minus")
                 }
                 .accessibilityLabel("回数を下げる")
+
+                Text("\(set.actualReps)回")
+                    .frame(minWidth: 48)
 
                 Button {
                     workoutStore.adjustReps(exerciseID: exercise.id, setID: set.id, delta: 1)
                 } label: {
-                    Image(systemName: "plus.square")
+                    Image(systemName: "plus")
                 }
                 .accessibilityLabel("回数を上げる")
+                .accessibilityIdentifier("watchSetRepsPlus-\(exercise.sortOrder)-\(set.setOrder)")
             }
-            .buttonStyle(.bordered)
-            .font(.caption)
-
-            HStack {
-                NavigationLink {
-                    WatchRPESelectionView(exerciseID: exercise.id, setID: set.id, currentRPE: set.rpe)
-                } label: {
-                    Label(rpeTitle, systemImage: "gauge")
-                }
-                .accessibilityIdentifier("watchSetRPE-\(exercise.sortOrder)-\(set.setOrder)")
-
-                Spacer()
-
-                Button {
-                    workoutStore.setCompletion(
-                        exerciseID: exercise.id,
-                        setID: set.id,
-                        isCompleted: !set.isCompleted
-                    )
-                } label: {
-                    Label(set.isCompleted ? "戻す" : "完了", systemImage: set.isCompleted ? "arrow.uturn.backward" : "checkmark")
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(set.isCompleted ? .orange : .green)
-                .accessibilityIdentifier("watchSetComplete-\(exercise.sortOrder)-\(set.setOrder)")
-            }
-            .font(.caption)
         }
-        .padding(.vertical, 4)
+        .buttonStyle(.bordered)
+        .font(.caption)
+    }
+
+    private var statusTitle: String {
+        if set.isCompleted { return "完了" }
+        if set.startedAt != nil { return "実績入力中" }
+        return "未開始"
+    }
+
+    private var statusTint: Color {
+        if set.isCompleted { return .green }
+        if set.startedAt != nil { return .orange }
+        return .secondary
     }
 
     private var rpeTitle: String {

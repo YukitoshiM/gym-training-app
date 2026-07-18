@@ -203,6 +203,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
     var actualReps: Int
     var isCompleted: Bool
     var rpe: Double?
+    var startedAt: Date?
     var completedAt: Date?
 
     init(
@@ -214,6 +215,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         actualReps: Int? = nil,
         isCompleted: Bool = false,
         rpe: Double? = nil,
+        startedAt: Date? = nil,
         completedAt: Date? = nil
     ) {
         self.id = id
@@ -224,6 +226,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         self.actualReps = actualReps ?? targetReps
         self.isCompleted = isCompleted
         self.rpe = rpe
+        self.startedAt = startedAt
         self.completedAt = completedAt
     }
 

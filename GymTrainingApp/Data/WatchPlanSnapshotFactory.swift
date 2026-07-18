@@ -94,6 +94,7 @@ private extension WorkoutSet {
             actualReps: watchSet.actualReps,
             isCompleted: watchSet.isCompleted,
             rpe: watchSet.rpe,
+            startedAt: watchSet.startedAt,
             completedAt: watchSet.completedAt
         )
     }

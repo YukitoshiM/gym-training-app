@@ -238,6 +238,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var isCompleted: Bool
     var isAdded: Bool
     var rpe: Double?
+    var startedAt: Date?
     var completedAt: Date?
 
     init(
@@ -250,6 +251,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         isCompleted: Bool = false,
         isAdded: Bool = false,
         rpe: Double? = nil,
+        startedAt: Date? = nil,
         completedAt: Date? = nil
     ) {
         self.id = id
@@ -261,6 +263,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         self.isCompleted = isCompleted
         self.isAdded = isAdded
         self.rpe = rpe
+        self.startedAt = startedAt
         self.completedAt = completedAt
     }
 
@@ -278,6 +281,14 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
 
     var targetVolume: Double {
         targetWeight * Double(targetReps)
+    }
+
+    var duration: TimeInterval? {
+        guard let startedAt, let completedAt, completedAt >= startedAt else {
+            return nil
+        }
+
+        return completedAt.timeIntervalSince(startedAt)
     }
 
     var achievementRate: Double {

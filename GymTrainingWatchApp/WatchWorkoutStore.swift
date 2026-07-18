@@ -1,4 +1,5 @@
 import Foundation
+import WatchKit
 @preconcurrency import WatchConnectivity
 
 @MainActor
@@ -13,8 +14,10 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     private let planStorageKey = "gym.training.watch.currentPlan"
     private let activeSessionStorageKey = "gym.training.watch.activeSession"
     private let pendingSessionStorageKey = "gym.training.watch.pendingFinishedSession"
+    private let restTimerEndStorageKey = "gym.training.watch.restTimerEnd"
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
+    private var restEndsAt: Date?
 
     override init() {
         super.init()
@@ -30,34 +33,43 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
 
         activeSession = WatchWorkoutSessionSnapshot(plan: plan)
-        restRemaining = 0
-        isRestTimerRunning = false
+        stopRestTimer()
         statusMessage = "\(plan.name) を開始しました"
         saveActiveSession()
     }
 
     func cancelWorkout() {
         activeSession = nil
-        restRemaining = 0
-        isRestTimerRunning = false
+        stopRestTimer()
         UserDefaults.standard.removeObject(forKey: activeSessionStorageKey)
         statusMessage = plan == nil ? "iPhoneから今日の計画を送信してください" : "ワークアウトを破棄しました"
     }
 
+    func startSet(exerciseID: UUID, setID: UUID) {
+        stopRestTimer()
+        updateSet(exerciseID: exerciseID, setID: setID) { set in
+            guard !set.isCompleted else { return }
+            set.startedAt = set.startedAt ?? Date()
+        }
+    }
+
     func adjustWeight(exerciseID: UUID, setID: UUID, delta: Double) {
         updateSet(exerciseID: exerciseID, setID: setID) { set in
+            guard set.startedAt != nil, !set.isCompleted else { return }
             set.actualWeight = max(0, min(999, set.actualWeight + delta))
         }
     }
 
     func adjustReps(exerciseID: UUID, setID: UUID, delta: Int) {
         updateSet(exerciseID: exerciseID, setID: setID) { set in
+            guard set.startedAt != nil, !set.isCompleted else { return }
             set.actualReps = max(0, min(999, set.actualReps + delta))
         }
     }
 
     func updateRPE(exerciseID: UUID, setID: UUID, rpe: Double?) {
         updateSet(exerciseID: exerciseID, setID: setID) { set in
+            guard set.startedAt != nil, !set.isCompleted else { return }
             set.rpe = rpe
         }
     }
@@ -72,12 +84,12 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             }
 
             restSeconds = session.exercises[exerciseIndex].restSeconds
+            if isCompleted {
+                session.exercises[exerciseIndex].sets[setIndex].startedAt =
+                    session.exercises[exerciseIndex].sets[setIndex].startedAt ?? Date()
+            }
             session.exercises[exerciseIndex].sets[setIndex].isCompleted = isCompleted
             session.exercises[exerciseIndex].sets[setIndex].completedAt = isCompleted ? Date() : nil
-
-            if !isCompleted {
-                session.exercises[exerciseIndex].sets[setIndex].rpe = nil
-            }
         }
 
         if isCompleted {
@@ -86,17 +98,11 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     func tickRestTimer() {
-        guard isRestTimerRunning else {
-            return
-        }
+        guard isRestTimerRunning else { return }
+        guard refreshRestTimer() else { return }
 
-        if restRemaining > 0 {
-            restRemaining -= 1
-        }
-
-        if restRemaining <= 0 {
-            restRemaining = 0
-            isRestTimerRunning = false
+        if restRemaining == 0 {
+            WKInterfaceDevice.current().play(.notification)
         }
     }
 
@@ -107,13 +113,31 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             return
         }
 
+        restEndsAt = Date().addingTimeInterval(TimeInterval(nextRest))
         restRemaining = nextRest
         isRestTimerRunning = true
+        UserDefaults.standard.set(restEndsAt, forKey: restTimerEndStorageKey)
+    }
+
+    func adjustRestTimer(by seconds: Int) {
+        guard let restEndsAt else { return }
+
+        let adjustedEnd = restEndsAt.addingTimeInterval(TimeInterval(seconds))
+        guard adjustedEnd > Date() else {
+            stopRestTimer()
+            return
+        }
+
+        self.restEndsAt = adjustedEnd
+        UserDefaults.standard.set(adjustedEnd, forKey: restTimerEndStorageKey)
+        refreshRestTimer()
     }
 
     func stopRestTimer() {
+        restEndsAt = nil
         restRemaining = 0
         isRestTimerRunning = false
+        UserDefaults.standard.removeObject(forKey: restTimerEndStorageKey)
     }
 
     func finishWorkout() {
@@ -125,8 +149,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         finished.endedAt = Date()
         pendingFinishedSession = finished
         activeSession = nil
-        restRemaining = 0
-        isRestTimerRunning = false
+        stopRestTimer()
         savePendingSession()
         UserDefaults.standard.removeObject(forKey: activeSessionStorageKey)
         sendFinishedSession(finished)
@@ -169,6 +192,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             pendingFinishedSession = pendingSession
             statusMessage = "\(pendingSession.title) はiPhoneへ再送できます"
         }
+
+        restoreRestTimer()
     }
 
     private func prepareUITestStateIfNeeded() {
@@ -179,6 +204,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             defaults.removeObject(forKey: planStorageKey)
             defaults.removeObject(forKey: activeSessionStorageKey)
             defaults.removeObject(forKey: pendingSessionStorageKey)
+            defaults.removeObject(forKey: restTimerEndStorageKey)
         }
 
         guard arguments.contains("--seed-watch-ui-test-plan"),
@@ -204,7 +230,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
                     primaryMuscleName: "胸",
                     primaryMuscleRawValue: "chest",
                     equipmentRawValue: "barbell",
-                    restSeconds: 5,
+                    restSeconds: 60,
                     sets: (1...3).map { setOrder in
                         WatchPlanSetTargetSnapshot(
                             id: UUID(uuidString: String(format: "00000000-0000-0000-0000-%012d", 200 + setOrder))!,
@@ -256,6 +282,37 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
 
         UserDefaults.standard.set(data, forKey: activeSessionStorageKey)
+    }
+
+    @discardableResult
+    private func refreshRestTimer(now: Date = Date()) -> Bool {
+        guard let restEndsAt else {
+            stopRestTimer()
+            return false
+        }
+
+        let remaining = max(0, Int(ceil(restEndsAt.timeIntervalSince(now))))
+        restRemaining = remaining
+
+        if remaining == 0 {
+            stopRestTimer()
+            return true
+        }
+
+        isRestTimerRunning = true
+        return true
+    }
+
+    private func restoreRestTimer() {
+        guard activeSession != nil,
+              let savedEnd = UserDefaults.standard.object(forKey: restTimerEndStorageKey) as? Date,
+              savedEnd > Date() else {
+            UserDefaults.standard.removeObject(forKey: restTimerEndStorageKey)
+            return
+        }
+
+        restEndsAt = savedEnd
+        refreshRestTimer()
     }
 
     private func savePendingSession() {
