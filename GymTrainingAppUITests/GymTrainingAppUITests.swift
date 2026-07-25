@@ -96,7 +96,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     func testAddingPlanSetCopiesPreviousSetTargets() throws {
-        app.tabBars.buttons["計画"].tap()
+        tapTab("計画")
         app.buttons["createPlanToolbarButton"].tap()
         app.buttons["planTemplate-back"].tap()
 
@@ -128,7 +128,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     func testGoalModeSelection() throws {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let goalCard = app.buttons["goalActionCard"]
         XCTAssertTrue(goalCard.waitForExistence(timeout: 5))
@@ -165,7 +165,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     func testWatchPlanTransfer() throws {
-        app.tabBars.buttons["記録"].tap()
+        tapTab("記録")
 
         let sendButton = app.buttons["sendPlanToWatchButton"]
         for _ in 0..<3 where !sendButton.isHittable {
@@ -221,21 +221,21 @@ final class GymTrainingAppUITests: XCTestCase {
         completeWorkoutFromPlan()
 
         for _ in 0..<2 {
-            app.tabBars.buttons["ホーム"].tap()
+            tapTab("ホーム")
             let conditionCard = app.buttons["conditionSummaryCard"]
             XCTAssertTrue(conditionCard.waitForExistence(timeout: 5))
             conditionCard.tap()
             XCTAssertTrue(app.navigationBars["コンディション"].waitForExistence(timeout: 5))
             app.navigationBars["コンディション"].buttons.firstMatch.tap()
 
-            app.tabBars.buttons["記録"].tap()
+            tapTab("記録")
             let bodyWeightLink = app.buttons["recordHubBodyWeightLink"]
             XCTAssertTrue(bodyWeightLink.waitForExistence(timeout: 5))
             bodyWeightLink.tap()
             XCTAssertTrue(app.navigationBars["体重"].waitForExistence(timeout: 5))
             app.navigationBars["体重"].buttons.firstMatch.tap()
 
-            app.tabBars.buttons["履歴"].tap()
+            tapTab("履歴")
             let historyRow = app.descendants(matching: .any)["historyRow-胸の日"]
             for _ in 0..<3 where !historyRow.exists {
                 app.swipeUp()
@@ -284,7 +284,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     func testAIDataSharingCanBeSelectedByCategory() throws {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
         app.buttons["settingsButton"].tap()
         XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
 
@@ -327,14 +327,14 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifySeededPlan() {
-        app.tabBars.buttons["計画"].tap()
+        tapTab("計画")
 
         XCTAssertTrue(app.staticTexts["胸の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス"].exists)
     }
 
     private func openSettings() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
         let settingsButton = app.buttons["settingsButton"]
         XCTAssertTrue(settingsButton.waitForExistence(timeout: 5))
         settingsButton.tap()
@@ -342,7 +342,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func createPlanFromQuickTemplate() {
-        app.tabBars.buttons["計画"].tap()
+        tapTab("計画")
 
         let createButton = app.buttons["createPlanToolbarButton"]
         XCTAssertTrue(createButton.waitForExistence(timeout: 5))
@@ -386,6 +386,18 @@ final class GymTrainingAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["20セット"].waitForExistence(timeout: 5))
     }
 
+    private func tapTab(_ title: String) {
+        let stableTabButton = app.buttons["rootTab-\(title)"]
+        if stableTabButton.waitForExistence(timeout: 1) {
+            stableTabButton.tap()
+            return
+        }
+
+        let systemTabButton = app.tabBars.buttons[title]
+        XCTAssertTrue(systemTabButton.waitForExistence(timeout: 5))
+        systemTabButton.tap()
+    }
+
     private func completeWorkoutFromPlan() {
         startWorkoutFromPlan()
 
@@ -414,7 +426,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func startWorkoutFromPlan() {
-        app.tabBars.buttons["記録"].tap()
+        tapTab("記録")
 
         let planButton = app.descendants(matching: .any)["startWorkout-胸の日"]
         XCTAssertTrue(planButton.waitForExistence(timeout: 5))
@@ -428,7 +440,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifyHistory() {
-        app.tabBars.buttons["履歴"].tap()
+        tapTab("履歴")
 
         XCTAssertTrue(app.descendants(matching: .any)["historyCalendar"].waitForExistence(timeout: 5))
 
@@ -454,7 +466,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func openBodyMetricDetail() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let bodyMetricListLink = app.buttons["bodyMetricListLink"]
         XCTAssertTrue(bodyMetricListLink.waitForExistence(timeout: 5))
@@ -521,7 +533,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifyFreeWorkoutEntryPoint() {
-        app.tabBars.buttons["記録"].tap()
+        tapTab("記録")
 
         XCTAssertTrue(app.descendants(matching: .any)["dailyRecordChecklistCard"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["recordHubBodyWeightLink"].exists)
@@ -532,7 +544,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func addCustomExercise() {
-        app.tabBars.buttons["種目"].tap()
+        tapTab("種目")
 
         let addButton = app.buttons["addCustomExerciseButton"]
         XCTAssertTrue(addButton.waitForExistence(timeout: 5))
@@ -552,7 +564,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifySettingsSurface() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let settingsButton = app.buttons["settingsButton"]
         XCTAssertTrue(settingsButton.waitForExistence(timeout: 5))
@@ -568,7 +580,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifyAISettingsFailureMessage() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let settingsButton = app.buttons["settingsButton"]
         XCTAssertTrue(settingsButton.waitForExistence(timeout: 5))
@@ -589,7 +601,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifyAIReportFailureMessage() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let aiReportLink = app.descendants(matching: .any)["aiReportLink"]
         XCTAssertTrue(aiReportLink.waitForExistence(timeout: 5))
@@ -604,10 +616,10 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifyHistoryAnalyticsLinks() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
         XCTAssertTrue(app.descendants(matching: .any)["aiReportLink"].waitForExistence(timeout: 5))
 
-        app.tabBars.buttons["履歴"].tap()
+        tapTab("履歴")
 
         let weeklyVolumeLink = app.descendants(matching: .any)["weeklyVolumeLink"]
         XCTAssertTrue(weeklyVolumeLink.waitForExistence(timeout: 5))
@@ -617,7 +629,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func verifyDailyJournalForManualLogs() {
-        app.tabBars.buttons["履歴"].tap()
+        tapTab("履歴")
 
         XCTAssertTrue(app.descendants(matching: .any)["historyCalendar"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.descendants(matching: .any)["dailyJournalSummary"].waitForExistence(timeout: 5))
@@ -638,7 +650,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func addManualMealEntry() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let mealListLink = app.buttons["mealListLink"]
         XCTAssertTrue(mealListLink.waitForExistence(timeout: 5))
@@ -684,7 +696,7 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func addBodyPhotoMemoEntry() {
-        app.tabBars.buttons["ホーム"].tap()
+        tapTab("ホーム")
 
         let bodyPhotoListLink = app.buttons["bodyPhotoListLink"]
         XCTAssertTrue(bodyPhotoListLink.waitForExistence(timeout: 5))
