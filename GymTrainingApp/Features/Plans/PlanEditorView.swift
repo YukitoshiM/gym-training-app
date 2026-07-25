@@ -176,7 +176,8 @@ struct PlanEditorView: View {
         draft.exercises.append(
             PlanExercise(
                 exercise: exercise,
-                sortOrder: nextOrder
+                sortOrder: nextOrder,
+                sets: suggestedSets(for: exercise)
             )
         )
     }
@@ -200,10 +201,11 @@ struct PlanEditorView: View {
                     exercise: exercise,
                     sortOrder: nextOrder,
                     restSeconds: template.restSeconds,
-                    sets: PlanSetTarget.quickSets(
+                    sets: suggestedSets(
+                        for: exercise,
                         count: template.setCount,
-                        targetWeight: template.targetWeight,
-                        targetReps: template.targetReps
+                        fallbackWeight: template.targetWeight,
+                        fallbackReps: template.targetReps
                     )
                 )
             )
@@ -212,6 +214,29 @@ struct PlanEditorView: View {
         }
 
         normalizeSortOrder()
+    }
+
+    private func suggestedSets(
+        for exercise: Exercise,
+        count: Int = 3,
+        fallbackWeight: Double = 50,
+        fallbackReps: Int = 10
+    ) -> [PlanSetTarget] {
+        let previousSets = appStore.latestCompletedSets(for: exercise)
+        return (1...max(count, 1)).map { setOrder in
+            let previous = previousSets.first { $0.setOrder == setOrder } ?? previousSets.last
+            let weight = (previous?.actualWeight ?? 0) > 0
+                ? previous?.actualWeight ?? fallbackWeight
+                : fallbackWeight
+            let reps = (previous?.actualReps ?? 0) > 0
+                ? previous?.actualReps ?? fallbackReps
+                : fallbackReps
+            return PlanSetTarget(
+                setOrder: setOrder,
+                targetWeight: weight,
+                targetReps: reps
+            )
+        }
     }
 
     private func applySetPreset(_ preset: PlanSetPreset) {
@@ -276,7 +301,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.accent,
             exerciseNames: ["ベンチプレス", "インクラインダンベルプレス", "ケーブルクロスオーバー", "トライセプスプレスダウン"],
             setCount: 3,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 90
         ),
@@ -288,7 +313,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.blue,
             exerciseNames: ["ラットプルダウン", "シーテッドロー", "ワンハンドダンベルロー", "フェイスプル"],
             setCount: 3,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 90
         ),
@@ -300,7 +325,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.orange,
             exerciseNames: ["レッグプレス", "レッグカール", "ヒップスラスト", "スタンディングカーフレイズ"],
             setCount: 3,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 120
         ),
@@ -312,7 +337,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.purple,
             exerciseNames: ["ショルダープレス", "サイドレイズ", "ダンベルカール", "トライセプスプレスダウン"],
             setCount: 3,
-            targetWeight: 15,
+            targetWeight: 50,
             targetReps: 12,
             restSeconds: 75
         ),
@@ -324,7 +349,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.accent,
             exerciseNames: ["スクワット", "ベンチプレス", "ラットプルダウン", "ショルダープレス"],
             setCount: 2,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 90
         )
@@ -341,10 +366,10 @@ private struct PlanSetPreset: Identifiable {
     let tint: Color
 
     static let defaults: [PlanSetPreset] = [
-        PlanSetPreset(id: "standard", title: "3x10", detail: "標準", setCount: 3, targetWeight: 20, targetReps: 10, tint: AppTheme.accent),
-        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: "筋肥大", setCount: 4, targetWeight: 20, targetReps: 8, tint: AppTheme.blue),
-        PlanSetPreset(id: "strength", title: "5x5", detail: "高重量", setCount: 5, targetWeight: 20, targetReps: 5, tint: AppTheme.orange),
-        PlanSetPreset(id: "pump", title: "2x15", detail: "軽め", setCount: 2, targetWeight: 20, targetReps: 15, tint: AppTheme.purple)
+        PlanSetPreset(id: "standard", title: "3x10", detail: "標準", setCount: 3, targetWeight: 50, targetReps: 10, tint: AppTheme.accent),
+        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: "筋肥大", setCount: 4, targetWeight: 50, targetReps: 8, tint: AppTheme.blue),
+        PlanSetPreset(id: "strength", title: "5x5", detail: "高重量", setCount: 5, targetWeight: 50, targetReps: 5, tint: AppTheme.orange),
+        PlanSetPreset(id: "pump", title: "2x15", detail: "軽め", setCount: 2, targetWeight: 50, targetReps: 15, tint: AppTheme.purple)
     ]
 }
 
@@ -477,7 +502,7 @@ private struct PlanExerciseEditorCard: View {
         planExercise.sets.append(
             PlanSetTarget(
                 setOrder: planExercise.sets.count + 1,
-                targetWeight: previous?.targetWeight ?? 20,
+                targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10
             )
         )

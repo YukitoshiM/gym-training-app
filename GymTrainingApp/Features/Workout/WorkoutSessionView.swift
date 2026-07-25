@@ -244,7 +244,7 @@ private struct WorkoutExerciseSection: View {
         workoutExercise.sets.append(
             WorkoutSet(
                 setOrder: workoutExercise.sets.count + 1,
-                targetWeight: previous?.targetWeight ?? 20,
+                targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10,
                 actualWeight: previous?.actualWeight,
                 actualReps: previous?.actualReps,

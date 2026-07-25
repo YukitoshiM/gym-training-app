@@ -33,9 +33,7 @@ struct RootTabView: View {
                 }
         }
         .tint(AppTheme.accent)
-        .toolbarBackground(AppTheme.cardBackground, for: .tabBar)
-        .toolbarBackground(.visible, for: .tabBar)
-        .foregroundStyle(AppTheme.ink)
+        .modifier(StableTabBarBackground())
         .onAppear {
             watchPlanSyncService.bind(appStore: appStore)
             gymLocationManager.bind(appStore: appStore)
@@ -55,6 +53,19 @@ struct RootTabView: View {
             }
         } message: {
             Text("\(appStore.pendingMissedGymPlanName ?? "選択したメニュー")の予定日に、ジム訪問またはトレーニング実績が見つかりませんでした。")
+        }
+    }
+}
+
+private struct StableTabBarBackground: ViewModifier {
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        if #available(iOS 26.0, *) {
+            content
+        } else {
+            content
+                .toolbarBackground(AppTheme.cardBackground, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
         }
     }
 }

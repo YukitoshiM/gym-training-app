@@ -486,7 +486,10 @@ final class AppStore: ObservableObject {
             exercises: [
                 PlanExercise(
                     exercise: PresetExerciseStore.exercises[0],
-                    sortOrder: 0
+                    sortOrder: 0,
+                    sets: (1...3).map {
+                        PlanSetTarget(setOrder: $0, targetWeight: 20, targetReps: 10)
+                    }
                 )
             ]
         )

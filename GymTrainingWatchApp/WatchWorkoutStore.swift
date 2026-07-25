@@ -1162,7 +1162,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
                             WatchPlanSetTargetSnapshot(
                                 id: UUID(uuidString: String(format: "00000000-0000-0000-0000-%012d", 200 + setOrder))!,
                                 setOrder: setOrder,
-                                targetWeight: 20,
+                                targetWeight: 50,
                                 targetReps: 10
                             )
                         }

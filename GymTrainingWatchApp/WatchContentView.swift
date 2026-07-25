@@ -1021,7 +1021,8 @@ private struct WatchWeightEntryView: View {
         self.exerciseID = exerciseID
         self.setID = setID
         self.unit = unit
-        let initialValue = unit == .kg ? currentWeight : currentWeight * 2.2046226218
+        let initialKilograms = currentWeight > 0 ? currentWeight : 50
+        let initialValue = unit == .kg ? initialKilograms : initialKilograms * 2.2046226218
         _displayedWeight = State(initialValue: initialValue)
         _editText = State(initialValue: Self.formatted(initialValue))
         _valueBeforeEditing = State(initialValue: initialValue)
@@ -1133,9 +1134,10 @@ private struct WatchRepsEntryView: View {
     init(exerciseID: UUID, setID: UUID, currentReps: Int) {
         self.exerciseID = exerciseID
         self.setID = setID
-        _reps = State(initialValue: currentReps)
-        _editText = State(initialValue: String(currentReps))
-        _valueBeforeEditing = State(initialValue: currentReps)
+        let initialReps = currentReps > 0 ? currentReps : 10
+        _reps = State(initialValue: initialReps)
+        _editText = State(initialValue: String(initialReps))
+        _valueBeforeEditing = State(initialValue: initialReps)
     }
 
     var body: some View {

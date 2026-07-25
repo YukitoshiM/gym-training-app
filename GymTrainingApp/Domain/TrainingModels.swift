@@ -68,7 +68,7 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
 
     static func defaultSets() -> [PlanSetTarget] {
         (1...3).map {
-            PlanSetTarget(setOrder: $0, targetWeight: 20, targetReps: 10)
+            PlanSetTarget(setOrder: $0, targetWeight: 50, targetReps: 10)
         }
     }
 }

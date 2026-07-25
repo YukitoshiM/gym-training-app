@@ -568,9 +568,21 @@ final class HealthDataManager: ObservableObject {
     }
 
     private func todayActivityProgress(now: Date) async -> ActivityProgress? {
-        let calendar = Calendar(identifier: .gregorian)
-        let components = calendar.dateComponents([.era, .year, .month, .day], from: now)
-        let predicate = HKQuery.predicate(forActivitySummariesBetweenStart: components, end: components)
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = .current
+        let startDate = calendar.startOfDay(for: now)
+        guard let endDate = calendar.date(byAdding: .day, value: 1, to: startDate) else {
+            return nil
+        }
+        let componentSet: Set<Calendar.Component> = [.era, .year, .month, .day]
+        var startComponents = calendar.dateComponents(componentSet, from: startDate)
+        startComponents.calendar = calendar
+        var endComponents = calendar.dateComponents(componentSet, from: endDate)
+        endComponents.calendar = calendar
+        let predicate = HKQuery.predicate(
+            forActivitySummariesBetweenStart: startComponents,
+            end: endComponents
+        )
 
         return await withCheckedContinuation { continuation in
             let query = HKActivitySummaryQuery(predicate: predicate) { _, summaries, _ in

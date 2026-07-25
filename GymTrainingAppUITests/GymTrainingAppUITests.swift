@@ -100,6 +100,10 @@ final class GymTrainingAppUITests: XCTestCase {
         app.buttons["createPlanToolbarButton"].tap()
         app.buttons["planTemplate-back"].tap()
 
+        let initialWeight = app.textFields["planWeightField-0-1"]
+        XCTAssertTrue(initialWeight.waitForExistence(timeout: 5))
+        XCTAssertEqual(initialWeight.value as? String, "50")
+
         let weightField = scrollToHittable(app.textFields["planWeightField-0-3"])
         XCTAssertTrue(weightField.isHittable)
         weightField.tap()

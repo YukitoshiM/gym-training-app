@@ -29,7 +29,8 @@ struct WeightInputControl: View {
 
             Button {
                 isTextFieldFocused = false
-                draftDisplayedWeight = displayedWeight.wrappedValue
+                let currentValue = displayedWeight.wrappedValue
+                draftDisplayedWeight = currentValue > 0 ? currentValue : defaultDisplayedWeight
                 isWheelPresented = true
             } label: {
                 Image(systemName: "dial.medium")
@@ -99,6 +100,15 @@ struct WeightInputControl: View {
                 weightInKilograms = Self.normalized(kilograms)
             }
         )
+    }
+
+    private var defaultDisplayedWeight: Double {
+        switch unit {
+        case .kg:
+            50
+        case .lb:
+            Self.normalized(50 * 2.2046226218)
+        }
     }
 
     private static func normalized(_ value: Double) -> Double {
@@ -239,7 +249,9 @@ struct RepsInputControl: View {
 
             Button {
                 isTextFieldFocused = false
-                draftReps = reps
+                draftReps = reps > 0
+                    ? reps
+                    : min(range.upperBound, max(range.lowerBound, 10))
                 isWheelPresented = true
             } label: {
                 Image(systemName: "dial.medium")
@@ -368,7 +380,7 @@ struct RestSecondsInputControl: View {
 
             Button {
                 isTextFieldFocused = false
-                draftSeconds = Self.normalized(seconds)
+                draftSeconds = seconds > 0 ? Self.normalized(seconds) : 90
                 isWheelPresented = true
             } label: {
                 Image(systemName: "dial.medium")
