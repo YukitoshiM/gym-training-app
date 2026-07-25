@@ -684,29 +684,47 @@ private struct LocalJSONStorage {
     }
 
     private func load<T: Decodable>(_ type: [T].Type, key: String) -> [T] {
-        guard let data = UserDefaults.standard.data(forKey: key),
-              let value = try? decoder.decode(type, from: data) else {
+        guard let data = UserDefaults.standard.data(forKey: key) else {
             return []
         }
-
-        return value
+        do {
+            return try decoder.decode(type, from: data)
+        } catch {
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "storage.decode",
+                message: "Failed to decode array for \(key)"
+            )
+            return []
+        }
     }
 
     private func load<T: Decodable>(_ type: T.Type, key: String) -> T? {
-        guard let data = UserDefaults.standard.data(forKey: key),
-              let value = try? decoder.decode(type, from: data) else {
+        guard let data = UserDefaults.standard.data(forKey: key) else {
             return nil
         }
-
-        return value
+        do {
+            return try decoder.decode(type, from: data)
+        } catch {
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "storage.decode",
+                message: "Failed to decode value for \(key)"
+            )
+            return nil
+        }
     }
 
     private func save<T: Encodable>(_ value: T, key: String) {
-        guard let data = try? encoder.encode(value) else {
-            return
+        do {
+            UserDefaults.standard.set(try encoder.encode(value), forKey: key)
+        } catch {
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "storage.encode",
+                message: "Failed to encode value for \(key)"
+            )
         }
-
-        UserDefaults.standard.set(data, forKey: key)
     }
 
     private func saveOptional<T: Encodable>(_ value: T?, key: String) {

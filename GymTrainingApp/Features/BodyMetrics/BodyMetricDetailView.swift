@@ -7,13 +7,16 @@ struct BodyMetricDetailView: View {
 
     @State private var isShowingEntryEditor = false
     @State private var isShowingGoalEditor = false
+    @State private var chartMode: BodyMetricChartMode = .records
 
     private var entries: [BodyMetricEntry] {
         appStore.bodyMetricEntries(for: kind)
     }
 
     private var chartEntries: [BodyMetricEntry] {
-        entries.sorted { $0.recordedAt < $1.recordedAt }
+        entries
+            .filter { $0.value.isFinite }
+            .sorted { $0.recordedAt < $1.recordedAt }
     }
 
     private var weeklyAverages: [BodyMetricWeeklyAverage] {
@@ -32,6 +35,36 @@ struct BodyMetricDetailView: View {
         entries.first
     }
 
+    private var chartPoints: [BodyMetricChartPoint] {
+        switch chartMode {
+        case .records:
+            chartEntries.map {
+                BodyMetricChartPoint(date: $0.recordedAt, value: $0.value)
+            }
+        case .weeklyAverage:
+            weeklyAverages
+                .filter { $0.value.isFinite }
+                .sorted { $0.weekStart < $1.weekStart }
+                .map {
+                    BodyMetricChartPoint(date: $0.weekStart, value: $0.value)
+                }
+        }
+    }
+
+    private var chartYDomain: ClosedRange<Double> {
+        let values = chartPoints.map(\.value)
+        guard let minimum = values.min(), let maximum = values.max() else {
+            return 0...1
+        }
+        let spread = maximum - minimum
+        let minimumPadding: Double = switch kind {
+        case .bodyWeight, .waist: 0.5
+        case .bodyFatPercentage: 0.25
+        }
+        let padding = max(minimumPadding, spread * 0.18)
+        return (minimum - padding)...(maximum + padding)
+    }
+
     private var goal: BodyMetricGoal {
         appStore.bodyMetricGoal(for: kind)
     }
@@ -45,7 +78,15 @@ struct BodyMetricDetailView: View {
             .listRowBackground(Color.clear)
 
             Section("推移") {
-                if chartEntries.isEmpty {
+                Picker("表示単位", selection: $chartMode) {
+                    ForEach(BodyMetricChartMode.allCases) { mode in
+                        Text(mode.displayName).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .accessibilityIdentifier("bodyMetricChartModePicker")
+
+                if chartPoints.isEmpty {
                     ContentUnavailableView {
                         Label("記録がありません", systemImage: "chart.line.uptrend.xyaxis")
                     } description: {
@@ -53,18 +94,19 @@ struct BodyMetricDetailView: View {
                     }
                     .frame(minHeight: 180)
                 } else {
-                    Chart(chartEntries) { entry in
+                    Chart(chartPoints) { point in
                         LineMark(
-                            x: .value("日付", entry.recordedAt),
-                            y: .value(kind.displayName, entry.value)
+                            x: .value("日付", point.date),
+                            y: .value(kind.displayName, point.value)
                         )
                         .interpolationMethod(.catmullRom)
 
                         PointMark(
-                            x: .value("日付", entry.recordedAt),
-                            y: .value(kind.displayName, entry.value)
+                            x: .value("日付", point.date),
+                            y: .value(kind.displayName, point.value)
                         )
                     }
+                    .chartYScale(domain: chartYDomain)
                     .chartYAxisLabel(kind.unit)
                     .frame(height: 220)
                     .accessibilityIdentifier("bodyMetricChart-\(kind.rawValue)")
@@ -145,6 +187,27 @@ struct BodyMetricDetailView: View {
             BodyMetricGoalEditorView(kind: kind)
         }
     }
+}
+
+private enum BodyMetricChartMode: String, CaseIterable, Identifiable {
+    case records
+    case weeklyAverage
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .records: "記録"
+        case .weeklyAverage: "週平均"
+        }
+    }
+}
+
+private struct BodyMetricChartPoint: Identifiable {
+    let date: Date
+    let value: Double
+
+    var id: Date { date }
 }
 
 private struct BodyMetricWeeklyAverage: Identifiable {

@@ -76,3 +76,68 @@ struct MealEntry: Identifiable, Codable, Hashable {
         confirmedByUser = try container.decodeIfPresent(Bool.self, forKey: .confirmedByUser) ?? true
     }
 }
+
+struct DailyNutritionProgress: Equatable {
+    let mealCount: Int
+    let calories: Double
+    let protein: Double
+    let fat: Double
+    let carbs: Double
+    let goals: NutritionGoals
+
+    init(meals: [MealEntry], goals: NutritionGoals) {
+        mealCount = meals.count
+        calories = meals.reduce(0) { $0 + $1.calories }
+        protein = meals.reduce(0) { $0 + $1.protein }
+        fat = meals.reduce(0) { $0 + $1.fat }
+        carbs = meals.reduce(0) { $0 + $1.carbs }
+        self.goals = goals.normalized()
+    }
+
+    var isMealCountAchieved: Bool {
+        mealCount >= goals.mealCount
+    }
+
+    var isCalorieAchieved: Bool {
+        reaches(calories, goal: goals.calories)
+    }
+
+    var isPFCAchieved: Bool {
+        reaches(protein, goal: goals.protein)
+            && withinUpperTarget(fat, goal: goals.fat)
+            && reaches(carbs, goal: goals.carbs)
+    }
+
+    var isNutritionAchieved: Bool {
+        isCalorieAchieved || isPFCAchieved
+    }
+
+    var calorieProgress: Double {
+        progress(calories, goal: goals.calories)
+    }
+
+    var proteinProgress: Double {
+        progress(protein, goal: goals.protein)
+    }
+
+    var fatProgress: Double {
+        progress(fat, goal: goals.fat)
+    }
+
+    var carbsProgress: Double {
+        progress(carbs, goal: goals.carbs)
+    }
+
+    private func reaches(_ value: Double, goal: Double) -> Bool {
+        goal <= 0 || value >= goal * 0.9
+    }
+
+    private func withinUpperTarget(_ value: Double, goal: Double) -> Bool {
+        goal <= 0 || (value >= goal * 0.8 && value <= goal * 1.1)
+    }
+
+    private func progress(_ value: Double, goal: Double) -> Double {
+        guard goal > 0 else { return 1 }
+        return min(1, max(0, value / goal))
+    }
+}

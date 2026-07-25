@@ -1,5 +1,6 @@
 import Foundation
 @preconcurrency import HealthKit
+@preconcurrency import UserNotifications
 import WatchKit
 @preconcurrency import WatchConnectivity
 
@@ -12,6 +13,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     @Published private(set) var statusMessage = "iPhoneからメニューを同期してください"
     @Published private(set) var restRemaining = 0
     @Published private(set) var isRestTimerRunning = false
+    @Published private(set) var restExerciseID: UUID?
+    @Published private(set) var lastCompletedSession: WatchWorkoutSessionSnapshot?
     @Published private(set) var liveMetrics = WatchLiveWorkoutMetrics.empty
     @Published private(set) var motionEstimate = WatchMotionEstimate.empty
     @Published private(set) var healthStatusMessage = "手入力で記録できます"
@@ -28,7 +31,10 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     private let planLibraryStorageKey = "gym.training.watch.planLibrary"
     private let activeSessionStorageKey = "gym.training.watch.activeSession"
     private let pendingSessionStorageKey = "gym.training.watch.pendingFinishedSession"
+    private let lastCompletedSessionStorageKey = "gym.training.watch.lastCompletedSession"
     private let restTimerEndStorageKey = "gym.training.watch.restTimerEnd"
+    private let restTimerExerciseStorageKey = "gym.training.watch.restTimerExercise"
+    private let restNotificationIdentifier = "gym.training.watch.restComplete"
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     private let healthStore = HKHealthStore()
@@ -49,11 +55,13 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     private var lastHeartRateZoneUpdatedAt: Date?
     private var automaticallyReducedSampling = false
     private var confirmedExerciseCandidate: (name: String, confidence: Double)?
+    private var lastLiveUpdateSentAt: Date?
     private let isUITestMode = ProcessInfo.processInfo.arguments.contains("--seed-watch-ui-test-plan")
 
     override init() {
         super.init()
         WKInterfaceDevice.current().isBatteryMonitoringEnabled = true
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
         motionAnalyzer.onEstimateChanged = { [weak self] estimate in
             guard let self else { return }
             motionEstimate = estimate
@@ -105,6 +113,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         saveActiveSession()
         beginSensorWorkout()
         startIdleMotionMonitoring()
+        sendLiveSessionUpdate(force: true)
     }
 
     func selectPlan(_ plan: WatchWorkoutPlanSnapshot) {
@@ -119,6 +128,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     func cancelWorkout() {
+        sendLiveSessionEnded()
         endSensorWorkout(discard: true)
         activeSession = nil
         selectedPlan = nil
@@ -151,6 +161,29 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         if sensorPreferences.hapticCoachingEnabled {
             WKInterfaceDevice.current().play(.start)
         }
+        sendLiveSessionUpdate(force: true)
+    }
+
+    func cancelSet(exerciseID: UUID, setID: UUID) {
+        guard activeSensorSet?.exerciseID == exerciseID,
+              activeSensorSet?.setID == setID else {
+            return
+        }
+        _ = motionAnalyzer.stop()
+        updateSet(exerciseID: exerciseID, setID: setID) { set in
+            guard !set.isCompleted else { return }
+            set.startedAt = nil
+            set.completedAt = nil
+            set.sensorSummary = nil
+        }
+        activeSensorSet = nil
+        motionEstimate = .empty
+        isSetCompletionSuggested = false
+        startIdleMotionMonitoring()
+        if sensorPreferences.hapticCoachingEnabled {
+            WKInterfaceDevice.current().play(.stop)
+        }
+        sendLiveSessionUpdate(force: true)
     }
 
     func setWeight(exerciseID: UUID, setID: UUID, weight: Double) {
@@ -314,7 +347,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
                 recoveryTracking = (exerciseID, setID, peak, Date())
             }
             let adjustedRest = adaptiveRestSeconds(base: restSeconds, heartRate: averageSetHeartRate, rpe: completedRPE)
-            startRestTimer(seconds: adjustedRest)
+            startRestTimer(seconds: adjustedRest, exerciseID: exerciseID)
             if sensorPreferences.hapticCoachingEnabled {
                 WKInterfaceDevice.current().play(.success)
             }
@@ -325,6 +358,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         updateLiveElapsed()
         accumulateHeartRateZoneDuration()
         refreshPowerPolicy()
+        sendLiveSessionUpdate(force: false)
         guard isRestTimerRunning else { return }
         guard refreshRestTimer() else { return }
 
@@ -336,7 +370,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
     }
 
-    func startRestTimer(seconds: Int? = nil) {
+    func startRestTimer(seconds: Int? = nil, exerciseID: UUID? = nil) {
         let fallbackRest = activeSession?.exercises.first?.restSeconds ?? 90
         let nextRest = seconds ?? fallbackRest
         guard nextRest > 0 else {
@@ -348,8 +382,16 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         restEndsAt = Date().addingTimeInterval(TimeInterval(nextRest))
         restRemaining = nextRest
         isRestTimerRunning = true
+        restExerciseID = exerciseID ?? restExerciseID
         restReadinessMessage = nil
         UserDefaults.standard.set(restEndsAt, forKey: restTimerEndStorageKey)
+        if let restExerciseID {
+            UserDefaults.standard.set(restExerciseID.uuidString, forKey: restTimerExerciseStorageKey)
+        } else {
+            UserDefaults.standard.removeObject(forKey: restTimerExerciseStorageKey)
+        }
+        scheduleRestCompletionNotification(after: nextRest)
+        sendLiveSessionUpdate(force: true)
     }
 
     func setRestTimer(seconds: Int) {
@@ -361,9 +403,15 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         restEndsAt = nil
         restRemaining = 0
         isRestTimerRunning = false
+        restExerciseID = nil
         restReadinessMessage = nil
         UserDefaults.standard.removeObject(forKey: restTimerEndStorageKey)
+        UserDefaults.standard.removeObject(forKey: restTimerExerciseStorageKey)
+        UNUserNotificationCenter.current().removePendingNotificationRequests(
+            withIdentifiers: [restNotificationIdentifier]
+        )
         startIdleMotionMonitoring()
+        sendLiveSessionUpdate(force: true)
     }
 
     func finishWorkout() {
@@ -377,6 +425,9 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         finished.healthKitSaveStatus = finished.healthKitSaveStatus
             ?? (sensorPreferences.healthWorkoutEnabled ? .collecting : .unavailable)
         pendingFinishedSession = finished
+        lastCompletedSession = finished
+        saveLastCompletedSession()
+        sendLiveSessionEnded()
         activeSession = nil
         selectedPlan = nil
         stopRestTimer()
@@ -1053,6 +1104,11 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             statusMessage = "\(pendingSession.title) はiPhoneへ再送できます"
         }
 
+        if let data = UserDefaults.standard.data(forKey: lastCompletedSessionStorageKey),
+           let completedSession = try? decoder.decode(WatchWorkoutSessionSnapshot.self, from: data) {
+            lastCompletedSession = completedSession
+        }
+
         restoreRestTimer()
     }
 
@@ -1065,7 +1121,9 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             defaults.removeObject(forKey: planLibraryStorageKey)
             defaults.removeObject(forKey: activeSessionStorageKey)
             defaults.removeObject(forKey: pendingSessionStorageKey)
+            defaults.removeObject(forKey: lastCompletedSessionStorageKey)
             defaults.removeObject(forKey: restTimerEndStorageKey)
+            defaults.removeObject(forKey: restTimerExerciseStorageKey)
             AppAppearanceSettings.reset(in: defaults)
             appearanceSettings = .default
         }
@@ -1183,6 +1241,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         body(&session)
         activeSession = session
         saveActiveSession()
+        sendLiveSessionUpdate(force: true)
     }
 
     private func updateSet(
@@ -1207,6 +1266,15 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
 
         UserDefaults.standard.set(data, forKey: activeSessionStorageKey)
+    }
+
+    private func saveLastCompletedSession() {
+        guard let lastCompletedSession,
+              let data = try? encoder.encode(lastCompletedSession) else {
+            return
+        }
+
+        UserDefaults.standard.set(data, forKey: lastCompletedSessionStorageKey)
     }
 
     private func savePlanLibrary() {
@@ -1253,7 +1321,120 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
 
         restEndsAt = savedEnd
+        restExerciseID = UserDefaults.standard
+            .string(forKey: restTimerExerciseStorageKey)
+            .flatMap(UUID.init(uuidString:))
         refreshRestTimer()
+    }
+
+    private func scheduleRestCompletionNotification(after seconds: Int) {
+        let content = UNMutableNotificationContent()
+        content.title = "休憩終了"
+        content.body = "次のセットを始められます"
+        content.sound = .default
+
+        let trigger = UNTimeIntervalNotificationTrigger(
+            timeInterval: TimeInterval(max(1, seconds)),
+            repeats: false
+        )
+        let request = UNNotificationRequest(
+            identifier: restNotificationIdentifier,
+            content: content,
+            trigger: trigger
+        )
+        UNUserNotificationCenter.current().removePendingNotificationRequests(
+            withIdentifiers: [restNotificationIdentifier]
+        )
+        UNUserNotificationCenter.current().add(request)
+    }
+
+    private func sendLiveSessionUpdate(force: Bool) {
+        guard let activeSession,
+              WCSession.isSupported() else {
+            return
+        }
+
+        let now = Date()
+        if !force,
+           let lastLiveUpdateSentAt,
+           now.timeIntervalSince(lastLiveUpdateSentAt) < 1.5 {
+            return
+        }
+
+        let session = WCSession.default
+        guard session.activationState == .activated, session.isReachable else {
+            return
+        }
+
+        do {
+            let snapshot = WatchLiveWorkoutSnapshot(
+                updatedAt: now,
+                session: activeSession,
+                restRemaining: restRemaining,
+                isRestTimerRunning: isRestTimerRunning,
+                restExerciseID: restExerciseID,
+                liveMetrics: liveMetrics
+            )
+            let payload = try encoder.encode(snapshot)
+            let message: [String: Any] = [
+                WatchWorkoutTransfer.messageTypeKey: WatchWorkoutTransfer.sessionLiveUpdateType,
+                WatchWorkoutTransfer.payloadKey: payload,
+                WatchWorkoutTransfer.eventIDKey: UUID().uuidString,
+                WatchWorkoutTransfer.sentAtKey: now
+            ]
+            lastLiveUpdateSentAt = now
+            session.sendMessage(message, replyHandler: nil) { error in
+                NSLog("Watch live update failed: \(error.localizedDescription)")
+            }
+        } catch {
+            NSLog("Watch live update encoding failed: \(error.localizedDescription)")
+        }
+    }
+
+    private func sendLiveSessionEnded() {
+        guard WCSession.isSupported() else { return }
+        let session = WCSession.default
+        guard session.activationState == .activated, session.isReachable else {
+            return
+        }
+
+        let message: [String: Any] = [
+            WatchWorkoutTransfer.messageTypeKey: WatchWorkoutTransfer.sessionLiveEndedType,
+            WatchWorkoutTransfer.eventIDKey: UUID().uuidString,
+            WatchWorkoutTransfer.sentAtKey: Date()
+        ]
+        session.sendMessage(message, replyHandler: nil) { error in
+            NSLog("Watch live end failed: \(error.localizedDescription)")
+        }
+    }
+
+    private func apply(command: WatchWorkoutCommand) {
+        switch command.action {
+        case .startSet:
+            guard let exerciseID = command.exerciseID, let setID = command.setID else { return }
+            startSet(exerciseID: exerciseID, setID: setID)
+        case .completeSet:
+            guard let exerciseID = command.exerciseID, let setID = command.setID else { return }
+            setCompletion(exerciseID: exerciseID, setID: setID, isCompleted: true)
+        case .cancelSet:
+            guard let exerciseID = command.exerciseID, let setID = command.setID else { return }
+            cancelSet(exerciseID: exerciseID, setID: setID)
+        case .updateSet:
+            guard let exerciseID = command.exerciseID, let setID = command.setID else { return }
+            if let actualWeight = command.actualWeight {
+                setWeight(exerciseID: exerciseID, setID: setID, weight: actualWeight)
+            }
+            if let actualReps = command.actualReps {
+                setReps(exerciseID: exerciseID, setID: setID, reps: actualReps)
+            }
+            updateRPE(exerciseID: exerciseID, setID: setID, rpe: command.rpe)
+        case .stopRestTimer:
+            stopRestTimer()
+        case .finishWorkout:
+            finishWorkout()
+        case .cancelWorkout:
+            cancelWorkout()
+        }
     }
 
     private func savePendingSession() {
@@ -1307,13 +1488,13 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     @discardableResult
     private nonisolated func receive(userInfo: [String: Any]) -> Bool {
-        guard let messageType = userInfo[WatchWorkoutTransfer.messageTypeKey] as? String,
-              let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else {
+        guard let messageType = userInfo[WatchWorkoutTransfer.messageTypeKey] as? String else {
             return false
         }
 
         switch messageType {
         case WatchWorkoutTransfer.planLibraryPushType:
+            guard let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return false }
             guard let library = try? JSONDecoder().decode(WatchWorkoutPlanLibrarySnapshot.self, from: data) else {
                 updateStatus("メニューデータを読み込めませんでした")
                 return false
@@ -1325,6 +1506,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
             return true
 
         case WatchWorkoutTransfer.planPushType:
+            guard let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return false }
             guard let snapshot = try? JSONDecoder().decode(WatchWorkoutPlanSnapshot.self, from: data) else {
                 updateStatus("メニューデータを読み込めませんでした")
                 return false
@@ -1332,6 +1514,16 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
             Task { @MainActor [weak self] in
                 self?.apply(library: WatchWorkoutPlanLibrarySnapshot(plans: [snapshot]))
+            }
+            return true
+
+        case WatchWorkoutTransfer.workoutCommandType:
+            guard let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data,
+                  let command = try? JSONDecoder().decode(WatchWorkoutCommand.self, from: data) else {
+                return false
+            }
+            Task { @MainActor [weak self] in
+                self?.apply(command: command)
             }
             return true
 

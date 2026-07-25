@@ -2,12 +2,13 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var appStore: AppStore
+    @EnvironmentObject private var watchSyncService: WatchPlanSyncService
     @State private var activeSession: WorkoutSession?
     @State private var isShowingGoalPicker = false
     @State private var isShowingSettings = false
 
     private var nextPlan: TrainingPlan? {
-        appStore.plans.first
+        appStore.todayPlan
     }
 
     var body: some View {
@@ -27,7 +28,14 @@ struct HomeView: View {
                     .accessibilityElement(children: .combine)
                     .accessibilityIdentifier("conditionSummaryCard")
 
-                    TodayTrainingCard(plan: nextPlan) {
+                    if let liveWorkout = watchSyncService.liveWatchWorkout {
+                        WatchLiveWorkoutCard(snapshot: liveWorkout)
+                    }
+
+                    TodayTrainingCard(
+                        plan: nextPlan,
+                        completedSessions: appStore.workoutSessions()
+                    ) {
                         if let nextPlan {
                             activeSession = WorkoutSession(plan: nextPlan)
                         }
@@ -36,7 +44,10 @@ struct HomeView: View {
                     DailyRecordChecklistCard(
                         bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
                         waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
-                        mealCount: appStore.mealEntries().count,
+                        nutritionProgress: DailyNutritionProgress(
+                            meals: appStore.mealEntries(),
+                            goals: appStore.userProfile.nutritionGoals
+                        ),
                         bodyPhotoCount: appStore.bodyPhotoEntries().count,
                         workoutCount: appStore.workoutSessions().count
                     )
@@ -218,6 +229,7 @@ private struct GoalPickerView: View {
 
 private struct TodayTrainingCard: View {
     let plan: TrainingPlan?
+    let completedSessions: [WorkoutSession]
     let onStart: () -> Void
 
     var body: some View {
@@ -237,12 +249,21 @@ private struct TodayTrainingCard: View {
 
                 Spacer()
 
-                Text(plan == nil ? "未設定" : "Ready")
+                Text(statusTitle)
                     .font(.caption.bold())
                     .foregroundStyle(plan == nil ? AppTheme.foregroundOnDark.opacity(0.65) : AppTheme.onAccent)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
-                    .background(plan == nil ? AppTheme.foregroundOnDark.opacity(0.12) : AppTheme.accent, in: Capsule())
+                    .background(
+                        completedSessions.isEmpty
+                            ? (plan == nil ? AppTheme.foregroundOnDark.opacity(0.12) : AppTheme.accent)
+                            : AppTheme.positive,
+                        in: Capsule()
+                )
+            }
+
+            if !completedSessions.isEmpty {
+                completedSessionList
             }
 
             if let plan {
@@ -261,7 +282,7 @@ private struct TodayTrainingCard: View {
                 Button(action: onStart) {
                     HStack {
                         Image(systemName: "play.fill")
-                        Text("この計画で記録を開始")
+                        Text(completedSessions.isEmpty ? "この計画で記録を開始" : "追加セッションを開始")
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
@@ -298,6 +319,49 @@ private struct TodayTrainingCard: View {
                 .stroke(AppTheme.accent.opacity(0.42), lineWidth: 1)
         )
         .shadow(color: AppTheme.gymFloor.opacity(0.28), radius: 24, x: 0, y: 16)
+    }
+
+    private var statusTitle: String {
+        if !completedSessions.isEmpty {
+            return "\(completedSessions.count)回完了"
+        }
+        return plan == nil ? "未設定" : "Ready"
+    }
+
+    private var completedSessionList: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            ForEach(completedSessions) { session in
+                NavigationLink {
+                    HistoryDetailView(session: session)
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(AppTheme.positive)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(session.title)
+                                .font(.caption.bold())
+                            Text(
+                                "\(AppFormatters.shortDateTime.string(from: session.startedAt))・"
+                                    + "\(session.completedPlannedSetCount)セット"
+                            )
+                            .font(.caption2)
+                            .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.68))
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption2.bold())
+                    }
+                    .foregroundStyle(AppTheme.foregroundOnDark)
+                    .padding(9)
+                    .background(
+                        AppTheme.foregroundOnDark.opacity(0.08),
+                        in: RoundedRectangle(cornerRadius: 8)
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("todayCompletedSession-\(session.id)")
+            }
+        }
     }
 }
 

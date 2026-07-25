@@ -51,6 +51,9 @@ targets:
     sources:
       - path: GymTrainingWatchApp
       - path: Shared
+    dependencies:
+      - target: GymTrainingWatchWidget
+        embed: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.watchkitapp
@@ -72,6 +75,25 @@ targets:
         NSMotionUsageDescription: 手首の動きからセット中の回数とテンポを推定します。
         WKBackgroundModes:
           - workout-processing
+  GymTrainingWatchWidget:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - path: GymTrainingWatchWidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.watchkitapp.widget
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+        SUPPORTED_PLATFORMS: "watchos watchsimulator"
+        TARGETED_DEVICE_FAMILY: 4
+        INFOPLIST_KEY_CFBundleDisplayName: Gym Session
+    info:
+      path: GymTrainingWatchWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Gym Session
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
   GymTrainingAppUITests:
     type: bundle.ui-testing
     platform: iOS

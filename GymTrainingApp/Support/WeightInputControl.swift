@@ -8,14 +8,12 @@ struct WeightInputControl: View {
     @FocusState private var isTextFieldFocused: Bool
     @State private var isWheelPresented = false
     @State private var draftDisplayedWeight = 0.0
+    @State private var editText = ""
+    @State private var valueBeforeEditing = 0.0
 
     var body: some View {
         HStack(spacing: 4) {
-            TextField(
-                "重量",
-                value: displayedWeight,
-                format: .number.precision(.fractionLength(0...1))
-            )
+            TextField("重量", text: $editText)
             .keyboardType(.decimalPad)
             .multilineTextAlignment(.trailing)
             .monospacedDigit()
@@ -42,15 +40,16 @@ struct WeightInputControl: View {
             .accessibilityIdentifier("wheel-\(accessibilityIdentifier)")
         }
         .sheet(isPresented: $isWheelPresented) {
-            WeightWheelPickerSheet(
-                displayedWeight: $draftDisplayedWeight,
-                unit: unit,
+                WeightWheelPickerSheet(
+                    displayedWeight: $draftDisplayedWeight,
+                    unit: unit,
                 onCancel: { isWheelPresented = false },
-                onSave: {
-                    displayedWeight.wrappedValue = draftDisplayedWeight
-                    isWheelPresented = false
-                }
-            )
+                    onSave: {
+                        displayedWeight.wrappedValue = draftDisplayedWeight
+                        editText = Self.formatted(draftDisplayedWeight)
+                        isWheelPresented = false
+                    }
+                )
             .presentationDetents([.height(330)])
         }
         .toolbar {
@@ -62,6 +61,21 @@ struct WeightInputControl: View {
                     }
                     .accessibilityIdentifier("dismiss-\(accessibilityIdentifier)")
                 }
+            }
+        }
+        .onAppear {
+            editText = Self.formatted(displayedWeight.wrappedValue)
+        }
+        .onChange(of: displayedWeight.wrappedValue) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = Self.formatted(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = displayedWeight.wrappedValue
+                editText = ""
+            } else {
+                commitManualEntry()
             }
         }
     }
@@ -91,6 +105,21 @@ struct WeightInputControl: View {
         guard value.isFinite else { return 0 }
         return min(999, max(0, (value * 10).rounded() / 10))
     }
+
+    private static func formatted(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(0...1)))
+    }
+
+    private func commitManualEntry() {
+        let normalizedText = editText.replacingOccurrences(of: ",", with: ".")
+        guard let value = Double(normalizedText), value.isFinite else {
+            displayedWeight.wrappedValue = valueBeforeEditing
+            editText = Self.formatted(valueBeforeEditing)
+            return
+        }
+        displayedWeight.wrappedValue = value
+        editText = Self.formatted(displayedWeight.wrappedValue)
+    }
 }
 
 private struct WeightWheelPickerSheet: View {
@@ -98,37 +127,41 @@ private struct WeightWheelPickerSheet: View {
     let unit: WeightUnit
     let onCancel: () -> Void
     let onSave: () -> Void
+    private let availableStepRange: ClosedRange<Int>
+
+    init(
+        displayedWeight: Binding<Double>,
+        unit: WeightUnit,
+        onCancel: @escaping () -> Void,
+        onSave: @escaping () -> Void
+    ) {
+        _displayedWeight = displayedWeight
+        self.unit = unit
+        self.onCancel = onCancel
+        self.onSave = onSave
+
+        let maximumStepIndex = unit == .kg ? 9_990 : 22_020
+        let center = min(
+            maximumStepIndex,
+            max(0, Int((displayedWeight.wrappedValue * 10).rounded()))
+        )
+        availableStepRange = max(0, center - 200)...min(maximumStepIndex, center + 200)
+    }
 
     var body: some View {
         NavigationStack {
             HStack(spacing: 0) {
-                Picker("整数", selection: wholePart) {
-                    ForEach(0...maximumWholePart, id: \.self) { value in
-                        Text("\(value)")
+                Picker("重量", selection: stepIndex) {
+                    ForEach(availableStepRange, id: \.self) { index in
+                        Text(Self.formatted(Double(index) / 10))
                             .monospacedDigit()
-                            .tag(value)
+                            .tag(index)
                     }
                 }
                 .pickerStyle(.wheel)
-                .frame(width: 116)
+                .frame(width: 170)
                 .clipped()
-                .accessibilityIdentifier("weightWholePicker")
-
-                Text(".")
-                    .font(.title2)
-                    .monospacedDigit()
-
-                Picker("小数", selection: tenthsPart) {
-                    ForEach(0...9, id: \.self) { value in
-                        Text("\(value)")
-                            .monospacedDigit()
-                            .tag(value)
-                    }
-                }
-                .pickerStyle(.wheel)
-                .frame(width: 72)
-                .clipped()
-                .accessibilityIdentifier("weightTenthsPicker")
+                .accessibilityIdentifier("weightPicker")
 
                 Text(unit.displayName)
                     .font(.headline)
@@ -151,22 +184,19 @@ private struct WeightWheelPickerSheet: View {
         }
     }
 
-    private var maximumWholePart: Int {
-        unit == .kg ? 999 : 2_202
+    private var maximumStepIndex: Int {
+        unit == .kg ? 9_990 : 22_020
     }
 
-    private var wholePart: Binding<Int> {
+    private var stepIndex: Binding<Int> {
         Binding(
-            get: { min(maximumWholePart, max(0, Int(displayedWeight.rounded(.down)))) },
-            set: { displayedWeight = Double($0) + Double(tenthsPart.wrappedValue) / 10 }
+            get: { min(maximumStepIndex, max(0, Int((displayedWeight * 10).rounded()))) },
+            set: { displayedWeight = Double($0) / 10 }
         )
     }
 
-    private var tenthsPart: Binding<Int> {
-        Binding(
-            get: { max(0, min(9, Int((displayedWeight * 10).rounded()) % 10)) },
-            set: { displayedWeight = Double(wholePart.wrappedValue) + Double($0) / 10 }
-        )
+    private static func formatted(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(1)))
     }
 }
 
@@ -178,6 +208,8 @@ struct RepsInputControl: View {
     @FocusState private var isTextFieldFocused: Bool
     @State private var isWheelPresented = false
     @State private var draftReps = 0
+    @State private var editText = ""
+    @State private var valueBeforeEditing = 0
 
     init(
         reps: Binding<Int>,
@@ -191,7 +223,7 @@ struct RepsInputControl: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            TextField("回数", value: normalizedReps, format: .number)
+            TextField("回数", text: $editText)
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.trailing)
                 .monospacedDigit()
@@ -224,6 +256,7 @@ struct RepsInputControl: View {
                 onCancel: { isWheelPresented = false },
                 onSave: {
                     reps = draftReps
+                    editText = String(reps)
                     isWheelPresented = false
                 }
             )
@@ -240,13 +273,25 @@ struct RepsInputControl: View {
                 }
             }
         }
-    }
-
-    private var normalizedReps: Binding<Int> {
-        Binding(
-            get: { reps },
-            set: { reps = min(range.upperBound, max(range.lowerBound, $0)) }
-        )
+        .onAppear {
+            editText = String(reps)
+        }
+        .onChange(of: reps) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = String(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = reps
+                editText = ""
+            } else if let value = Int(editText) {
+                reps = min(range.upperBound, max(range.lowerBound, value))
+                editText = String(reps)
+            } else {
+                reps = valueBeforeEditing
+                editText = String(valueBeforeEditing)
+            }
+        }
     }
 }
 
@@ -300,6 +345,8 @@ struct RestSecondsInputControl: View {
     @State private var isWheelPresented = false
     @State private var draftSeconds = 90
     @FocusState private var isTextFieldFocused: Bool
+    @State private var editText = ""
+    @State private var valueBeforeEditing = 90
 
     var body: some View {
         HStack(spacing: 8) {
@@ -307,7 +354,7 @@ struct RestSecondsInputControl: View {
 
             Spacer(minLength: 8)
 
-            TextField("秒数", value: normalizedSeconds, format: .number)
+            TextField("秒数", text: $editText)
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.trailing)
                 .monospacedDigit()
@@ -363,6 +410,7 @@ struct RestSecondsInputControl: View {
                     ToolbarItem(placement: .confirmationAction) {
                         Button("設定") {
                             seconds = draftSeconds
+                            editText = String(seconds)
                             isWheelPresented = false
                         }
                         .fontWeight(.semibold)
@@ -383,13 +431,25 @@ struct RestSecondsInputControl: View {
                 }
             }
         }
-    }
-
-    private var normalizedSeconds: Binding<Int> {
-        Binding(
-            get: { seconds },
-            set: { seconds = Self.normalized($0) }
-        )
+        .onAppear {
+            editText = String(seconds)
+        }
+        .onChange(of: seconds) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = String(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = seconds
+                editText = ""
+            } else if let value = Int(editText) {
+                seconds = Self.normalized(value)
+                editText = String(seconds)
+            } else {
+                seconds = valueBeforeEditing
+                editText = String(valueBeforeEditing)
+            }
+        }
     }
 
     private static func normalized(_ seconds: Int) -> Int {
@@ -413,6 +473,7 @@ struct NumericTextInputControl: View {
     @FocusState private var isTextFieldFocused: Bool
     @State private var isWheelPresented = false
     @State private var draftValue = 0.0
+    @State private var textBeforeEditing = ""
 
     var body: some View {
         HStack(spacing: 8) {
@@ -473,6 +534,16 @@ struct NumericTextInputControl: View {
                 }
             }
         }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                textBeforeEditing = text
+                text = ""
+            } else if let parsedValue {
+                text = formatted(normalized(parsedValue))
+            } else {
+                text = textBeforeEditing
+            }
+        }
     }
 
     private var parsedValue: Double? {
@@ -501,37 +572,50 @@ private struct NumericWheelPickerSheet: View {
     let usesTenths: Bool
     let onCancel: () -> Void
     let onSave: () -> Void
+    private let availableStepRange: ClosedRange<Int>
+
+    init(
+        value: Binding<Double>,
+        title: String,
+        unit: String,
+        range: ClosedRange<Double>,
+        usesTenths: Bool,
+        onCancel: @escaping () -> Void,
+        onSave: @escaping () -> Void
+    ) {
+        _value = value
+        self.title = title
+        self.unit = unit
+        self.range = range
+        self.usesTenths = usesTenths
+        self.onCancel = onCancel
+        self.onSave = onSave
+
+        let multiplier: Double = usesTenths ? 10 : 1
+        let minimumStepIndex = Int((range.lowerBound * multiplier).rounded())
+        let maximumStepIndex = Int((range.upperBound * multiplier).rounded())
+        let center = min(
+            maximumStepIndex,
+            max(minimumStepIndex, Int((value.wrappedValue * multiplier).rounded()))
+        )
+        let lowerBound = max(minimumStepIndex, center - 200)
+        let upperBound = min(maximumStepIndex, center + 200)
+        availableStepRange = lowerBound...upperBound
+    }
 
     var body: some View {
         NavigationStack {
             HStack(spacing: 0) {
-                Picker("整数", selection: wholePart) {
-                    ForEach(minimumWholePart...maximumWholePart, id: \.self) { number in
-                        Text("\(number)")
+                Picker(title, selection: stepIndex) {
+                    ForEach(availableStepRange, id: \.self) { index in
+                        Text(formattedValue(for: index))
                             .monospacedDigit()
-                            .tag(number)
+                            .tag(index)
                     }
                 }
                 .pickerStyle(.wheel)
-                .frame(width: 132)
+                .frame(width: 180)
                 .clipped()
-
-                if usesTenths {
-                    Text(".")
-                        .font(.title2)
-                        .monospacedDigit()
-
-                    Picker("小数", selection: tenthsPart) {
-                        ForEach(0...9, id: \.self) { number in
-                            Text("\(number)")
-                                .monospacedDigit()
-                                .tag(number)
-                        }
-                    }
-                    .pickerStyle(.wheel)
-                    .frame(width: 72)
-                    .clipped()
-                }
 
                 if !unit.isEmpty {
                     Text(unit)
@@ -557,30 +641,31 @@ private struct NumericWheelPickerSheet: View {
         }
     }
 
-    private var minimumWholePart: Int {
-        Int(range.lowerBound.rounded(.down))
+    private var multiplier: Double {
+        usesTenths ? 10 : 1
     }
 
-    private var maximumWholePart: Int {
-        Int(range.upperBound.rounded(.down))
+    private var minimumStepIndex: Int {
+        Int((range.lowerBound * multiplier).rounded())
     }
 
-    private var wholePart: Binding<Int> {
+    private var maximumStepIndex: Int {
+        Int((range.upperBound * multiplier).rounded())
+    }
+
+    private var stepIndex: Binding<Int> {
         Binding(
-            get: { min(maximumWholePart, max(minimumWholePart, Int(value.rounded(.down)))) },
-            set: { value = normalized(Double($0) + Double(tenthsPart.wrappedValue) / 10) }
+            get: { min(maximumStepIndex, max(minimumStepIndex, Int((value * multiplier).rounded()))) },
+            set: { value = Double($0) / multiplier }
         )
     }
 
-    private var tenthsPart: Binding<Int> {
-        Binding(
-            get: { max(0, min(9, Int((value * 10).rounded()) % 10)) },
-            set: { value = normalized(Double(wholePart.wrappedValue) + Double($0) / 10) }
-        )
-    }
-
-    private func normalized(_ candidate: Double) -> Double {
-        min(range.upperBound, max(range.lowerBound, candidate))
+    private func formattedValue(for index: Int) -> String {
+        let value = Double(index) / multiplier
+        if usesTenths {
+            return value.formatted(.number.precision(.fractionLength(1)))
+        }
+        return String(Int(value.rounded()))
     }
 }
 

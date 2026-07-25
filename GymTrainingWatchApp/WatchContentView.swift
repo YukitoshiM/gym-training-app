@@ -77,6 +77,10 @@ private struct WatchMenuSelectionView: View {
                 }
             }
 
+            if let lastCompletedSession = workoutStore.lastCompletedSession {
+                WatchRecentSessionSection(session: lastCompletedSession)
+            }
+
             Section("メニュー") {
                 ForEach(plans) { plan in
                     Button {
@@ -163,6 +167,10 @@ private struct WatchPlanDetailView: View {
                 }
             }
 
+            if let lastCompletedSession = workoutStore.lastCompletedSession {
+                WatchRecentSessionSection(session: lastCompletedSession)
+            }
+
             ForEach(plan.exercises) { exercise in
                 NavigationLink {
                     WatchExercisePreviewView(exercise: exercise, unit: plan.weightUnit)
@@ -178,6 +186,31 @@ private struct WatchPlanDetailView: View {
                     }
                 }
             }
+        }
+    }
+}
+
+private struct WatchRecentSessionSection: View {
+    let session: WatchWorkoutSessionSnapshot
+
+    var body: some View {
+        Section("前回の記録") {
+            NavigationLink {
+                WatchCompletedSetsArchiveView(session: session)
+            } label: {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(session.title)
+                        .font(.headline)
+                    Text(
+                        "\(session.completedSetCount)セット・"
+                            + "\(session.completedRepCount)回・"
+                            + "\(session.totalVolume.formatted(.number.precision(.fractionLength(0...1))))kg"
+                    )
+                    .font(.caption2)
+                    .foregroundStyle(WatchAppTheme.mutedInk)
+                }
+            }
+            .accessibilityIdentifier("watchRecentSession")
         }
     }
 }
@@ -230,174 +263,255 @@ private struct WatchActiveWorkoutView: View {
     @State private var isConfirmingCancel = false
     @State private var isEditingRestTimer = false
     @State private var isEditingWorkoutNote = false
+    @State private var selectedExerciseID: UUID?
 
     let session: WatchWorkoutSessionSnapshot
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        List {
-            Section {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(session.title)
-                        .font(.headline)
-                    Text("\(session.completedSetCount)/\(session.totalSetCount)セット・\(session.completedRepCount)回記録")
-                        .font(.caption)
-                        .foregroundStyle(WatchAppTheme.mutedInk)
-                        .accessibilityIdentifier("watchWorkoutProgress")
+        ScrollViewReader { proxy in
+            List {
+                Section {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(session.title)
+                            .font(.headline)
+                        Text("\(session.completedSetCount)/\(session.totalSetCount)セット・\(session.completedRepCount)回記録")
+                            .font(.caption)
+                            .foregroundStyle(WatchAppTheme.mutedInk)
+                            .accessibilityIdentifier("watchWorkoutProgress")
 
-                    if let nextSet {
-                        Button {
-                            workoutStore.startSet(exerciseID: nextSet.exerciseID, setID: nextSet.setID)
-                        } label: {
-                            Label("次のセットを開始", systemImage: "play.fill")
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .tint(WatchAppTheme.positive)
-                        .accessibilityIdentifier("watchStartNextSetButton")
-                    }
-
-                    ProgressView(
-                        value: Double(session.completedSetCount),
-                        total: Double(max(session.totalSetCount, 1))
-                    )
-                    .tint(WatchAppTheme.positive)
-
-                    WatchLiveMetricsView(
-                        metrics: workoutStore.liveMetrics,
-                        statusMessage: workoutStore.healthStatusMessage,
-                        powerModeMessage: workoutStore.sensorPowerModeMessage
-                    )
-
-                    if let suggestion = workoutStore.setStartSuggestion {
-                        VStack(alignment: .leading, spacing: 6) {
-                            Label("動作候補: \(suggestion.exerciseName)", systemImage: "sensor.tag.radiowaves.forward")
+                        if let activeSet {
+                            Text("\(activeSet.exercise.name)・セット\(activeSet.set.setOrder)")
                                 .font(.caption.bold())
-                            Text("信頼度 \(Int(suggestion.confidence * 100))%・\(suggestion.reason)")
-                                .font(.caption2)
-                                .foregroundStyle(WatchAppTheme.mutedInk)
+                                .foregroundStyle(WatchAppTheme.positive)
+
                             HStack {
-                                Button("開始") {
-                                    workoutStore.acceptSetStartSuggestion()
+                                Button {
+                                    workoutStore.cancelSet(
+                                        exerciseID: activeSet.exercise.id,
+                                        setID: activeSet.set.id
+                                    )
+                                } label: {
+                                    Label("開始取消", systemImage: "arrow.uturn.backward")
+                                }
+                                .buttonStyle(.bordered)
+                                .accessibilityIdentifier("watchCancelActiveSetButton")
+
+                                Button {
+                                    workoutStore.setCompletion(
+                                        exerciseID: activeSet.exercise.id,
+                                        setID: activeSet.set.id,
+                                        isCompleted: true
+                                    )
+                                } label: {
+                                    Label("セット完了", systemImage: "checkmark")
                                 }
                                 .buttonStyle(.borderedProminent)
                                 .tint(WatchAppTheme.positive)
-                                .accessibilityIdentifier("watchAcceptSetStartSuggestion")
-
-                                Button("違う") {
-                                    workoutStore.dismissSetStartSuggestion()
-                                }
-                                .buttonStyle(.bordered)
+                                .accessibilityIdentifier("watchCompleteActiveSetButton")
                             }
-                        }
-                        .accessibilityIdentifier("watchSetStartSuggestion")
-                    }
-                }
-            }
-
-            if workoutStore.isRestTimerRunning {
-                Section {
-                    VStack(alignment: .leading, spacing: 10) {
-                        HStack {
-                            Label("休憩 \(formatDuration(workoutStore.restRemaining))", systemImage: "timer")
-                                .font(.headline)
-                                .accessibilityIdentifier("watchRestTimer")
-
-                            Spacer()
+                            .font(.caption)
+                        } else if !pendingExercises.isEmpty {
+                            Picker("次の種目", selection: $selectedExerciseID) {
+                                ForEach(pendingExercises) { exercise in
+                                    Text(exercise.name)
+                                        .tag(Optional(exercise.id))
+                                }
+                            }
+                            .accessibilityIdentifier("watchNextExerciseMenu")
 
                             Button {
-                                workoutStore.stopRestTimer()
+                                guard let selectedNextSet else { return }
+                                workoutStore.startSet(
+                                    exerciseID: selectedNextSet.exerciseID,
+                                    setID: selectedNextSet.setID
+                                )
                             } label: {
-                                Image(systemName: "forward.end.fill")
+                                Label("セットを開始", systemImage: "play.fill")
                             }
-                            .accessibilityLabel("休憩をスキップ")
+                            .buttonStyle(.borderedProminent)
+                            .tint(WatchAppTheme.positive)
+                            .accessibilityIdentifier("watchStartNextSetButton")
                         }
 
-                        Button {
-                            isEditingRestTimer = true
-                        } label: {
-                            Label("時間を変更", systemImage: "dial.medium")
-                        }
-                        .buttonStyle(.bordered)
-                        .font(.caption)
-                        .accessibilityIdentifier("watchRestTimerEntry")
+                        ProgressView(
+                            value: Double(session.completedSetCount),
+                            total: Double(max(session.totalSetCount, 1))
+                        )
+                        .tint(WatchAppTheme.positive)
 
-                        if let restReadinessMessage = workoutStore.restReadinessMessage {
-                            Text(restReadinessMessage)
-                                .font(.caption2)
-                                .foregroundStyle(WatchAppTheme.mutedInk)
-                                .fixedSize(horizontal: false, vertical: true)
+                        WatchLiveMetricsView(
+                            metrics: workoutStore.liveMetrics,
+                            statusMessage: workoutStore.healthStatusMessage,
+                            powerModeMessage: workoutStore.sensorPowerModeMessage
+                        )
+
+                        if session.completedSetCount > 0 {
+                            NavigationLink {
+                                WatchCompletedSetsArchiveView(session: session)
+                            } label: {
+                                Label(
+                                    "完了セット \(session.completedSetCount)件",
+                                    systemImage: "archivebox.fill"
+                                )
+                            }
+                            .accessibilityIdentifier("watchCompletedSetsArchiveLink")
                         }
 
-                        if let suggestion = workoutStore.nextSetLoadSuggestion {
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text("次: \(suggestion.exerciseName) \(formatWeight(suggestion.suggestedWeight, unit: session.weightUnit)) × \(suggestion.suggestedReps)回")
+                        if let suggestion = workoutStore.setStartSuggestion {
+                            VStack(alignment: .leading, spacing: 6) {
+                                Label("動作候補: \(suggestion.exerciseName)", systemImage: "sensor.tag.radiowaves.forward")
                                     .font(.caption.bold())
-                                Text(suggestion.reason)
+                                Text("信頼度 \(Int(suggestion.confidence * 100))%・\(suggestion.reason)")
                                     .font(.caption2)
                                     .foregroundStyle(WatchAppTheme.mutedInk)
-                                Button("提案を反映") {
-                                    workoutStore.applyNextSetLoadSuggestion()
+                                HStack {
+                                    Button("開始") {
+                                        workoutStore.acceptSetStartSuggestion()
+                                    }
+                                    .buttonStyle(.borderedProminent)
+                                    .tint(WatchAppTheme.positive)
+                                    .accessibilityIdentifier("watchAcceptSetStartSuggestion")
+
+                                    Button("違う") {
+                                        workoutStore.dismissSetStartSuggestion()
+                                    }
+                                    .buttonStyle(.bordered)
                                 }
-                                .buttonStyle(.bordered)
-                                .font(.caption)
-                                .accessibilityIdentifier("watchApplyNextLoadSuggestion")
                             }
+                            .accessibilityIdentifier("watchSetStartSuggestion")
                         }
                     }
                 }
-            }
 
-            ForEach(session.exercises) { exercise in
-                Section(exercise.name) {
-                    ForEach(exercise.sets) { set in
-                        WatchSetControlRow(exercise: exercise, set: set, unit: session.weightUnit)
+                ForEach(visibleExercises) { exercise in
+                    Section(exercise.name) {
+                        ForEach(exercise.sets.filter { !$0.isCompleted }) { set in
+                            WatchSetControlRow(exercise: exercise, set: set, unit: session.weightUnit)
+                        }
+
+                        if workoutStore.isRestTimerRunning,
+                           workoutStore.restExerciseID == exercise.id {
+                            VStack(alignment: .leading, spacing: 10) {
+                                HStack {
+                                    Label("休憩 \(formatDuration(workoutStore.restRemaining))", systemImage: "timer")
+                                        .font(.headline.monospacedDigit())
+                                        .foregroundStyle(WatchAppTheme.positive)
+                                        .accessibilityIdentifier("watchRestTimer")
+
+                                    Spacer()
+
+                                    Button {
+                                        workoutStore.stopRestTimer()
+                                    } label: {
+                                        Image(systemName: "forward.end.fill")
+                                    }
+                                    .accessibilityLabel("休憩をスキップ")
+                                }
+
+                                Button {
+                                    isEditingRestTimer = true
+                                } label: {
+                                    Label("時間を変更", systemImage: "dial.medium")
+                                }
+                                .buttonStyle(.bordered)
+                                .font(.caption2)
+                                .accessibilityIdentifier("watchRestTimerEntry")
+
+                                if let restReadinessMessage = workoutStore.restReadinessMessage {
+                                    Text(restReadinessMessage)
+                                        .font(.caption2)
+                                        .foregroundStyle(WatchAppTheme.mutedInk)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+
+                                if let suggestion = workoutStore.nextSetLoadSuggestion {
+                                    VStack(alignment: .leading, spacing: 5) {
+                                        Text("次: \(suggestion.exerciseName) \(formatWeight(suggestion.suggestedWeight, unit: session.weightUnit)) × \(suggestion.suggestedReps)回")
+                                            .font(.caption.bold())
+                                        Text(suggestion.reason)
+                                            .font(.caption2)
+                                            .foregroundStyle(WatchAppTheme.mutedInk)
+                                        Button("提案を反映") {
+                                            workoutStore.applyNextSetLoadSuggestion()
+                                        }
+                                        .buttonStyle(.bordered)
+                                        .font(.caption)
+                                        .accessibilityIdentifier("watchApplyNextLoadSuggestion")
+                                    }
+                                }
+                            }
+                            .padding(.vertical, 4)
+                            .id(restTimerAnchor(for: exercise.id))
+                        }
+                    }
+                    .id(exercise.id)
+                }
+
+                Section {
+                    Button {
+                        if workoutStore.isWorkoutPaused {
+                            workoutStore.resumeWorkout()
+                        } else {
+                            workoutStore.pauseWorkout()
+                        }
+                    } label: {
+                        Label(
+                            workoutStore.isWorkoutPaused ? "再開" : "一時停止",
+                            systemImage: workoutStore.isWorkoutPaused ? "play.fill" : "pause.fill"
+                        )
+                    }
+                    .accessibilityIdentifier("watchPauseWorkoutButton")
+
+                    Button {
+                        isEditingWorkoutNote = true
+                    } label: {
+                        Label(session.note == nil ? "音声・文字メモ" : "メモを編集", systemImage: "mic")
+                    }
+                    .accessibilityIdentifier("watchWorkoutNoteButton")
+
+                    if let note = session.note {
+                        Text(note)
+                            .font(.caption2)
+                            .foregroundStyle(WatchAppTheme.mutedInk)
+                            .lineLimit(3)
+                    }
+
+                    Button {
+                        isConfirmingFinish = true
+                    } label: {
+                        Label("完了して送信", systemImage: "checkmark.circle.fill")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(WatchAppTheme.positive)
+                    .accessibilityIdentifier("watchFinishWorkoutButton")
+
+                    Button(role: .destructive) {
+                        isConfirmingCancel = true
+                    } label: {
+                        Label("破棄", systemImage: "xmark.circle")
                     }
                 }
             }
-
-            Section {
-                Button {
-                    if workoutStore.isWorkoutPaused {
-                        workoutStore.resumeWorkout()
-                    } else {
-                        workoutStore.pauseWorkout()
-                    }
-                } label: {
-                    Label(
-                        workoutStore.isWorkoutPaused ? "再開" : "一時停止",
-                        systemImage: workoutStore.isWorkoutPaused ? "play.fill" : "pause.fill"
-                    )
+            .onChange(of: workoutStore.restExerciseID) { _, exerciseID in
+                guard let exerciseID else { return }
+                withAnimation {
+                    proxy.scrollTo(restTimerAnchor(for: exerciseID), anchor: .center)
                 }
-                .accessibilityIdentifier("watchPauseWorkoutButton")
-
-                Button {
-                    isEditingWorkoutNote = true
-                } label: {
-                    Label(session.note == nil ? "音声・文字メモ" : "メモを編集", systemImage: "mic")
+            }
+            .onChange(of: session.completedSetCount) { _, _ in
+                ensureSelectedExercise()
+            }
+            .onAppear {
+                ensureSelectedExercise()
+                guard workoutStore.isRestTimerRunning,
+                      let restExerciseID = workoutStore.restExerciseID else {
+                    return
                 }
-                .accessibilityIdentifier("watchWorkoutNoteButton")
-
-                if let note = session.note {
-                    Text(note)
-                        .font(.caption2)
-                        .foregroundStyle(WatchAppTheme.mutedInk)
-                        .lineLimit(3)
-                }
-
-                Button {
-                    isConfirmingFinish = true
-                } label: {
-                    Label("完了して送信", systemImage: "checkmark.circle.fill")
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(WatchAppTheme.positive)
-                .accessibilityIdentifier("watchFinishWorkoutButton")
-
-                Button(role: .destructive) {
-                    isConfirmingCancel = true
-                } label: {
-                    Label("破棄", systemImage: "xmark.circle")
+                Task { @MainActor in
+                    await Task.yield()
+                    proxy.scrollTo(restTimerAnchor(for: restExerciseID), anchor: .center)
                 }
             }
         }
@@ -433,18 +547,83 @@ private struct WatchActiveWorkoutView: View {
         }
     }
 
-    private var nextSet: (exerciseID: UUID, setID: UUID)? {
-        let hasActiveSet = session.exercises.contains { exercise in
-            exercise.sets.contains { $0.startedAt != nil && !$0.isCompleted }
-        }
-        guard !hasActiveSet else { return nil }
-
+    private var activeSet: (exercise: WatchWorkoutExerciseSnapshot, set: WatchWorkoutSetSnapshot)? {
         for exercise in session.exercises {
-            if let set = exercise.sets.first(where: { $0.startedAt == nil && !$0.isCompleted }) {
-                return (exercise.id, set.id)
+            if let set = exercise.sets.first(where: { $0.startedAt != nil && !$0.isCompleted }) {
+                return (exercise, set)
             }
         }
         return nil
+    }
+
+    private var pendingExercises: [WatchWorkoutExerciseSnapshot] {
+        session.exercises.filter { exercise in
+            exercise.sets.contains { $0.startedAt == nil && !$0.isCompleted }
+        }
+    }
+
+    private var visibleExercises: [WatchWorkoutExerciseSnapshot] {
+        session.exercises.filter { exercise in
+            exercise.sets.contains { !$0.isCompleted }
+                || (workoutStore.isRestTimerRunning && workoutStore.restExerciseID == exercise.id)
+        }
+    }
+
+    private var selectedNextSet: (exerciseID: UUID, setID: UUID)? {
+        let exercise = pendingExercises.first(where: { $0.id == selectedExerciseID })
+            ?? pendingExercises.first
+        guard let exercise,
+              let set = exercise.sets.first(where: { $0.startedAt == nil && !$0.isCompleted }) else {
+            return nil
+        }
+        return (exercise.id, set.id)
+    }
+
+    private func ensureSelectedExercise() {
+        guard !pendingExercises.contains(where: { $0.id == selectedExerciseID }) else { return }
+        selectedExerciseID = pendingExercises.first?.id
+    }
+
+    private func restTimerAnchor(for exerciseID: UUID) -> String {
+        "rest-timer-\(exerciseID.uuidString)"
+    }
+}
+
+private struct WatchCompletedSetsArchiveView: View {
+    let session: WatchWorkoutSessionSnapshot
+
+    var body: some View {
+        List {
+            ForEach(session.exercises.filter { $0.completedSetCount > 0 }) { exercise in
+                Section(exercise.name) {
+                    ForEach(exercise.sets.filter(\.isCompleted)) { set in
+                        HStack {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundStyle(WatchAppTheme.positive)
+
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("セット \(set.setOrder)")
+                                    .font(.caption.bold())
+                                Text(
+                                    "\(formatWeight(set.actualWeight, unit: session.weightUnit)) × "
+                                        + "\(set.actualReps)回"
+                                )
+                                .font(.headline)
+                            }
+
+                            Spacer()
+
+                            if let rpe = set.rpe {
+                                Text("RPE \(rpe.formatted(.number.precision(.fractionLength(0...1))))")
+                                    .font(.caption2)
+                                    .foregroundStyle(WatchAppTheme.mutedInk)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navigationTitle("完了セット")
     }
 }
 
@@ -833,50 +1012,41 @@ private struct WatchWeightEntryView: View {
     let unit: WatchWeightUnit
 
     @State private var displayedWeight: Double
+    @State private var editText: String
+    @State private var valueBeforeEditing: Double
+    @FocusState private var isTextFieldFocused: Bool
+    private let availableStepRange: ClosedRange<Int>
 
     init(exerciseID: UUID, setID: UUID, currentWeight: Double, unit: WatchWeightUnit) {
         self.exerciseID = exerciseID
         self.setID = setID
         self.unit = unit
-        _displayedWeight = State(
-            initialValue: unit == .kg ? currentWeight : currentWeight * 2.2046226218
-        )
+        let initialValue = unit == .kg ? currentWeight : currentWeight * 2.2046226218
+        _displayedWeight = State(initialValue: initialValue)
+        _editText = State(initialValue: Self.formatted(initialValue))
+        _valueBeforeEditing = State(initialValue: initialValue)
+        let maximumStepIndex = unit == .kg ? 9_990 : 22_020
+        let center = min(maximumStepIndex, max(0, Int((initialValue * 10).rounded())))
+        availableStepRange = max(0, center - 200)...min(maximumStepIndex, center + 200)
     }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 8) {
-                HStack(spacing: 0) {
-                    Picker("整数", selection: wholePart) {
-                        ForEach(0...maximumWholePart, id: \.self) { value in
-                            Text("\(value)")
+                HStack(spacing: 4) {
+                    Picker("重量", selection: stepIndex) {
+                        ForEach(availableStepRange, id: \.self) { value in
+                            Text(Self.formatted(Double(value) / 10))
                                 .monospacedDigit()
                                 .tag(value)
                         }
                     }
                     .labelsHidden()
                     .pickerStyle(.wheel)
-                    .frame(width: 72, height: 76)
+                    .frame(width: 118, height: 76)
                     .clipped()
-                    .accessibilityLabel("重量の整数")
-                    .accessibilityIdentifier("watchWeightWholePicker")
-
-                    Text(".")
-                        .font(.headline)
-
-                    Picker("小数", selection: tenthsPart) {
-                        ForEach(0...9, id: \.self) { value in
-                            Text("\(value)")
-                                .monospacedDigit()
-                                .tag(value)
-                        }
-                    }
-                    .labelsHidden()
-                    .pickerStyle(.wheel)
-                    .frame(width: 48, height: 76)
-                    .clipped()
-                    .accessibilityLabel("重量の小数")
-                    .accessibilityIdentifier("watchWeightTenthsPicker")
+                    .accessibilityLabel("重量")
+                    .accessibilityIdentifier("watchWeightPicker")
 
                     Text(unit.displayName)
                         .font(.caption)
@@ -885,12 +1055,9 @@ private struct WatchWeightEntryView: View {
                 }
 
                 HStack(spacing: 6) {
-                    TextField(
-                        "手入力",
-                        value: $displayedWeight,
-                        format: .number.precision(.fractionLength(0...1))
-                    )
+                    TextField("手入力", text: $editText)
                     .multilineTextAlignment(.center)
+                    .focused($isTextFieldFocused)
                     .accessibilityIdentifier("watchWeightField")
 
                     Text(unit.displayName)
@@ -899,6 +1066,7 @@ private struct WatchWeightEntryView: View {
                 }
 
                 Button("反映") {
+                    commitManualEntry()
                     let kilograms = unit == .kg ? displayedWeight : displayedWeight / 2.2046226218
                     workoutStore.setWeight(exerciseID: exerciseID, setID: setID, weight: kilograms)
                     dismiss()
@@ -909,24 +1077,44 @@ private struct WatchWeightEntryView: View {
             }
         }
         .navigationTitle("重量")
+        .onChange(of: displayedWeight) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = Self.formatted(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = displayedWeight
+                editText = ""
+            } else {
+                commitManualEntry()
+            }
+        }
     }
 
-    private var maximumWholePart: Int {
-        unit == .kg ? 999 : 2_202
+    private var maximumStepIndex: Int {
+        unit == .kg ? 9_990 : 22_020
     }
 
-    private var wholePart: Binding<Int> {
+    private var stepIndex: Binding<Int> {
         Binding(
-            get: { min(maximumWholePart, max(0, Int(displayedWeight.rounded(.down)))) },
-            set: { displayedWeight = Double($0) + Double(tenthsPart.wrappedValue) / 10 }
+            get: { min(maximumStepIndex, max(0, Int((displayedWeight * 10).rounded()))) },
+            set: { displayedWeight = Double($0) / 10 }
         )
     }
 
-    private var tenthsPart: Binding<Int> {
-        Binding(
-            get: { max(0, min(9, Int((displayedWeight * 10).rounded()) % 10)) },
-            set: { displayedWeight = Double(wholePart.wrappedValue) + Double($0) / 10 }
-        )
+    private func commitManualEntry() {
+        let normalized = editText.replacingOccurrences(of: ",", with: ".")
+        guard let value = Double(normalized), value.isFinite else {
+            displayedWeight = valueBeforeEditing
+            editText = Self.formatted(valueBeforeEditing)
+            return
+        }
+        displayedWeight = min(Double(maximumStepIndex) / 10, max(0, (value * 10).rounded() / 10))
+        editText = Self.formatted(displayedWeight)
+    }
+
+    private static func formatted(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(1)))
     }
 }
 
@@ -938,11 +1126,16 @@ private struct WatchRepsEntryView: View {
     let setID: UUID
 
     @State private var reps: Int
+    @State private var editText: String
+    @State private var valueBeforeEditing: Int
+    @FocusState private var isTextFieldFocused: Bool
 
     init(exerciseID: UUID, setID: UUID, currentReps: Int) {
         self.exerciseID = exerciseID
         self.setID = setID
         _reps = State(initialValue: currentReps)
+        _editText = State(initialValue: String(currentReps))
+        _valueBeforeEditing = State(initialValue: currentReps)
     }
 
     var body: some View {
@@ -969,11 +1162,13 @@ private struct WatchRepsEntryView: View {
                         .frame(width: 28, alignment: .leading)
                 }
 
-                TextField("手入力", value: $reps, format: .number)
+                TextField("手入力", text: $editText)
                     .multilineTextAlignment(.center)
+                    .focused($isTextFieldFocused)
                     .accessibilityIdentifier("watchRepsField")
 
                 Button("反映") {
+                    commitManualEntry()
                     workoutStore.setReps(exerciseID: exerciseID, setID: setID, reps: reps)
                     dismiss()
                 }
@@ -983,6 +1178,28 @@ private struct WatchRepsEntryView: View {
             }
         }
         .navigationTitle("回数")
+        .onChange(of: reps) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = String(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = reps
+                editText = ""
+            } else {
+                commitManualEntry()
+            }
+        }
+    }
+
+    private func commitManualEntry() {
+        guard let value = Int(editText) else {
+            reps = valueBeforeEditing
+            editText = String(valueBeforeEditing)
+            return
+        }
+        reps = min(999, max(0, value))
+        editText = String(reps)
     }
 }
 
@@ -991,10 +1208,15 @@ private struct WatchRestTimerEntryView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var seconds: Int
+    @State private var editText: String
+    @State private var valueBeforeEditing: Int
+    @FocusState private var isTextFieldFocused: Bool
 
     init(currentSeconds: Int) {
         let normalized = min(600, max(5, Int((Double(currentSeconds) / 5).rounded()) * 5))
         _seconds = State(initialValue: normalized)
+        _editText = State(initialValue: String(normalized))
+        _valueBeforeEditing = State(initialValue: normalized)
     }
 
     var body: some View {
@@ -1022,8 +1244,9 @@ private struct WatchRestTimerEntryView: View {
                 }
 
                 HStack(spacing: 6) {
-                    TextField("手入力", value: $seconds, format: .number)
+                    TextField("手入力", text: $editText)
                         .multilineTextAlignment(.center)
+                        .focused($isTextFieldFocused)
                         .accessibilityIdentifier("watchRestSecondsField")
 
                     Text("秒")
@@ -1032,6 +1255,7 @@ private struct WatchRestTimerEntryView: View {
                 }
 
                 Button("反映") {
+                    commitManualEntry()
                     workoutStore.setRestTimer(seconds: seconds)
                     dismiss()
                 }
@@ -1041,6 +1265,28 @@ private struct WatchRestTimerEntryView: View {
             }
         }
         .navigationTitle("休憩時間")
+        .onChange(of: seconds) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = String(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = seconds
+                editText = ""
+            } else {
+                commitManualEntry()
+            }
+        }
+    }
+
+    private func commitManualEntry() {
+        guard let value = Int(editText) else {
+            seconds = valueBeforeEditing
+            editText = String(valueBeforeEditing)
+            return
+        }
+        seconds = min(600, max(5, Int((Double(value) / 5).rounded()) * 5))
+        editText = String(seconds)
     }
 }
 
@@ -1052,11 +1298,17 @@ private struct WatchRPESelectionView: View {
     let setID: UUID
 
     @State private var rpe: Double
+    @State private var editText: String
+    @State private var valueBeforeEditing: Double
+    @FocusState private var isTextFieldFocused: Bool
 
     init(exerciseID: UUID, setID: UUID, currentRPE: Double?) {
         self.exerciseID = exerciseID
         self.setID = setID
-        _rpe = State(initialValue: currentRPE ?? 8)
+        let initialRPE = currentRPE ?? 8
+        _rpe = State(initialValue: initialRPE)
+        _editText = State(initialValue: Self.formatted(initialRPE))
+        _valueBeforeEditing = State(initialValue: initialRPE)
     }
 
     var body: some View {
@@ -1084,15 +1336,13 @@ private struct WatchRPESelectionView: View {
                         .frame(width: 34, alignment: .leading)
                 }
 
-                TextField(
-                    "手入力",
-                    value: $rpe,
-                    format: .number.precision(.fractionLength(0...1))
-                )
-                .multilineTextAlignment(.center)
-                .accessibilityIdentifier("watchRPEField")
+                TextField("手入力", text: $editText)
+                    .multilineTextAlignment(.center)
+                    .focused($isTextFieldFocused)
+                    .accessibilityIdentifier("watchRPEField")
 
                 Button("反映") {
+                    commitManualEntry()
                     workoutStore.updateRPE(exerciseID: exerciseID, setID: setID, rpe: rpe)
                     dismiss()
                 }
@@ -1109,6 +1359,33 @@ private struct WatchRPESelectionView: View {
             }
         }
         .navigationTitle("RPE")
+        .onChange(of: rpe) { _, value in
+            guard !isTextFieldFocused else { return }
+            editText = Self.formatted(value)
+        }
+        .onChange(of: isTextFieldFocused) { _, isFocused in
+            if isFocused {
+                valueBeforeEditing = rpe
+                editText = ""
+            } else {
+                commitManualEntry()
+            }
+        }
+    }
+
+    private func commitManualEntry() {
+        let normalized = editText.replacingOccurrences(of: ",", with: ".")
+        guard let value = Double(normalized), value.isFinite else {
+            rpe = valueBeforeEditing
+            editText = Self.formatted(valueBeforeEditing)
+            return
+        }
+        rpe = min(10, max(1, (value * 2).rounded() / 2))
+        editText = Self.formatted(rpe)
+    }
+
+    private static func formatted(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(0...1)))
     }
 }
 

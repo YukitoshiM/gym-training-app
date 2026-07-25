@@ -7,6 +7,10 @@ struct GymTrainingApp: App {
     @StateObject private var healthDataManager = HealthDataManager()
     @StateObject private var gymLocationManager = GymLocationManager()
 
+    init() {
+        AppDiagnostics.shared.start()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootTabView()

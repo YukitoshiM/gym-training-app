@@ -117,6 +117,53 @@ enum WatchWorkoutTransfer {
     static let planPushType = "watch_plan_push"
     static let planLibraryPushType = "watch_plan_library_push"
     static let sessionFinishedType = "watch_session_finished"
+    static let sessionLiveUpdateType = "watch_session_live_update"
+    static let sessionLiveEndedType = "watch_session_live_ended"
+    static let workoutCommandType = "watch_workout_command"
+}
+
+struct WatchLiveWorkoutSnapshot: Codable, Hashable, Sendable {
+    var updatedAt: Date
+    var session: WatchWorkoutSessionSnapshot
+    var restRemaining: Int
+    var isRestTimerRunning: Bool
+    var restExerciseID: UUID?
+    var liveMetrics: WatchLiveWorkoutMetrics
+}
+
+enum WatchWorkoutCommandAction: String, Codable, Hashable, Sendable {
+    case startSet
+    case completeSet
+    case cancelSet
+    case updateSet
+    case stopRestTimer
+    case finishWorkout
+    case cancelWorkout
+}
+
+struct WatchWorkoutCommand: Codable, Hashable, Sendable {
+    var action: WatchWorkoutCommandAction
+    var exerciseID: UUID?
+    var setID: UUID?
+    var actualWeight: Double?
+    var actualReps: Int?
+    var rpe: Double?
+
+    init(
+        action: WatchWorkoutCommandAction,
+        exerciseID: UUID? = nil,
+        setID: UUID? = nil,
+        actualWeight: Double? = nil,
+        actualReps: Int? = nil,
+        rpe: Double? = nil
+    ) {
+        self.action = action
+        self.exerciseID = exerciseID
+        self.setID = setID
+        self.actualWeight = actualWeight
+        self.actualReps = actualReps
+        self.rpe = rpe
+    }
 }
 
 struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
@@ -345,7 +392,7 @@ struct WatchSetSensorSummary: Codable, Hashable, Sendable {
     var exerciseCandidateConfidence: Double?
 }
 
-struct WatchLiveWorkoutMetrics: Equatable, Sendable {
+struct WatchLiveWorkoutMetrics: Codable, Hashable, Sendable {
     var elapsedSeconds: Double = 0
     var currentHeartRate: Double?
     var averageHeartRate: Double?

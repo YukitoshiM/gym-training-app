@@ -4,6 +4,18 @@ import XCTest
 final class GymTrainingWatchAppUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
+        addUIInterruptionMonitor(withDescription: "Watch notification permission") { alert in
+            MainActor.assumeIsolated {
+                for label in ["許可", "Allow"] {
+                    let button = alert.buttons[label]
+                    if button.exists {
+                        button.tap()
+                        return true
+                    }
+                }
+                return false
+            }
+        }
     }
 
     func testWorkoutRecordingFlow() throws {
@@ -42,6 +54,15 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(firstSetStartButton.isHittable)
         firstSetStartButton.tap()
 
+        let cancelSetButton = app.buttons["watchCancelActiveSetButton"]
+        XCTAssertTrue(cancelSetButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].exists)
+        cancelSetButton.tap()
+
+        XCTAssertTrue(firstSetStartButton.waitForExistence(timeout: 5))
+        firstSetStartButton.tap()
+        XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].waitForExistence(timeout: 5))
+
         app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.78))
             .press(
                 forDuration: 0.2,
@@ -52,15 +73,12 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(weightEntryButton.isHittable)
         weightEntryButton.tap()
 
-        let wholePicker = app.descendants(matching: .any)["watchWeightWholePicker"]
-        let tenthsPicker = app.descendants(matching: .any)["watchWeightTenthsPicker"]
-        XCTAssertTrue(wholePicker.waitForExistence(timeout: 5))
-        XCTAssertTrue(tenthsPicker.waitForExistence(timeout: 5))
-        let initialTenths = integerValue(of: tenthsPicker)
-        tenthsPicker.swipeUp()
-        let selectedWhole = try XCTUnwrap(integerValue(of: wholePicker))
-        let selectedTenths = try XCTUnwrap(integerValue(of: tenthsPicker))
-        XCTAssertNotEqual(selectedTenths, initialTenths)
+        let weightPicker = app.descendants(matching: .any)["watchWeightPicker"]
+        XCTAssertTrue(weightPicker.waitForExistence(timeout: 5))
+        let initialWeight = decimalValue(of: weightPicker)
+        weightPicker.swipeUp()
+        let selectedWeightValue = try XCTUnwrap(decimalValue(of: weightPicker))
+        XCTAssertNotEqual(selectedWeightValue, initialWeight)
 
         let saveWeightButton = findHittableElement(in: app, identifier: "saveWatchWeightButton")
         XCTAssertTrue(saveWeightButton.isHittable)
@@ -81,8 +99,10 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(saveRepsButton.isHittable)
         saveRepsButton.tap()
 
-        let selectedWeight = "\(selectedWhole).\(selectedTenths) kg"
-        XCTAssertTrue(app.staticTexts["実績 \(selectedWeight) × \(selectedReps)回"].exists)
+        let selectedWeight = "\(selectedWeightValue.formatted(.number.precision(.fractionLength(0...1)))) kg"
+        let actualResult = app.staticTexts["watchSetActual-0-1"]
+        XCTAssertTrue(actualResult.waitForExistence(timeout: 5))
+        XCTAssertEqual(actualResult.label, "実績 \(selectedWeight) × \(selectedReps)回")
         attachScreenshot(named: "watch-set-result-entry", app: app)
 
         let rpeButton = findHittableElement(in: app, identifier: "watchSetRPE-0-1")
@@ -103,17 +123,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(firstSetButton.isHittable)
         firstSetButton.tap()
 
-        XCUIDevice.shared.rotateDigitalCrown(delta: -1)
-        let progressText = "1/3セット・\(selectedReps)回記録"
-        XCTAssertTrue(app.staticTexts[progressText].waitForExistence(timeout: 5))
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.76))
-            .press(
-                forDuration: 0.2,
-                thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.44))
-            )
-        let restLabel = app.staticTexts.matching(
-            NSPredicate(format: "label BEGINSWITH %@", "休憩 ")
-        ).firstMatch
+        let restLabel = app.descendants(matching: .any)["watchRestTimer"]
         XCTAssertTrue(restLabel.waitForExistence(timeout: 5))
         attachScreenshot(named: "watch-rest-timer", app: app)
 
@@ -141,16 +151,8 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         app.launchArguments = []
         app.launch()
 
-        XCTAssertTrue(app.staticTexts[progressText].waitForExistence(timeout: 10))
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.76))
-            .press(
-                forDuration: 0.2,
-                thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.44))
-            )
-        let restLabelAfterRelaunch = app.staticTexts.matching(
-            NSPredicate(format: "label BEGINSWITH %@", "休憩 ")
-        ).firstMatch
-        XCTAssertTrue(restLabelAfterRelaunch.waitForExistence(timeout: 5))
+        let restLabelAfterRelaunch = app.descendants(matching: .any)["watchRestTimer"]
+        XCTAssertTrue(restLabelAfterRelaunch.waitForExistence(timeout: 10))
 
         app.swipeUp()
         let finishButton = app.buttons["watchFinishWorkoutButton"]
@@ -164,7 +166,12 @@ final class GymTrainingWatchAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
         XCTAssertTrue(app.staticTexts["2件から選択"].exists)
-        XCTAssertTrue(app.descendants(matching: .any)["watchMenu-胸の日"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["watchRecentSession"].exists)
+        app.swipeUp()
+        XCTAssertTrue(
+            app.descendants(matching: .any)["watchMenu-胸の日"]
+                .waitForExistence(timeout: 5)
+        )
     }
 
     func testCanChooseAnotherMenu() throws {

@@ -18,6 +18,13 @@ struct RecordHubView: View {
         appStore.workoutSessions().count
     }
 
+    private var nutritionProgress: DailyNutritionProgress {
+        DailyNutritionProgress(
+            meals: appStore.mealEntries(),
+            goals: appStore.userProfile.nutritionGoals
+        )
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -31,10 +38,14 @@ struct RecordHubView: View {
                     DailyRecordChecklistCard(
                         bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
                         waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
-                        mealCount: mealCount,
+                        nutritionProgress: nutritionProgress,
                         bodyPhotoCount: bodyPhotoCount,
                         workoutCount: workoutCount
                     )
+
+                    if let liveWorkout = watchSyncService.liveWatchWorkout {
+                        WatchLiveWorkoutCard(snapshot: liveWorkout)
+                    }
 
                     VStack(alignment: .leading, spacing: 10) {
                         SectionHeader(title: "今日の入力", subtitle: "先に短い記録を済ませて、あとでまとめて振り返れます。")
@@ -73,10 +84,10 @@ struct RecordHubView: View {
                             } label: {
                                 RecordQuickActionCard(
                                     title: "食事",
-                                    detail: mealCount > 0 ? "\(mealCount)件" : "追加する",
+                                    detail: "\(mealCount)/\(nutritionProgress.goals.mealCount)回",
                                     systemImage: "fork.knife",
                                     tint: AppTheme.orange,
-                                    isCompleted: mealCount > 0
+                                    isCompleted: nutritionProgress.isMealCountAchieved
                                 )
                             }
                             .buttonStyle(.plain)

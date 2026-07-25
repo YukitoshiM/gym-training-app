@@ -113,6 +113,7 @@ struct UserProfile: Codable, Equatable {
     var sex: Sex
     var experienceLevel: ExperienceLevel
     var weightUnit: WeightUnit
+    var nutritionGoals: NutritionGoals
 
     static let `default` = UserProfile(
         goalType: .bodyShape,
@@ -120,7 +121,8 @@ struct UserProfile: Codable, Equatable {
         birthYear: nil,
         sex: .unspecified,
         experienceLevel: .beginner,
-        weightUnit: .kg
+        weightUnit: .kg,
+        nutritionGoals: .default
     )
 
     init(
@@ -129,7 +131,8 @@ struct UserProfile: Codable, Equatable {
         birthYear: Int?,
         sex: Sex,
         experienceLevel: ExperienceLevel,
-        weightUnit: WeightUnit
+        weightUnit: WeightUnit,
+        nutritionGoals: NutritionGoals = .default
     ) {
         self.goalType = goalType
         self.heightCm = heightCm
@@ -137,6 +140,7 @@ struct UserProfile: Codable, Equatable {
         self.sex = sex
         self.experienceLevel = experienceLevel
         self.weightUnit = weightUnit
+        self.nutritionGoals = nutritionGoals
     }
 
     init(from decoder: Decoder) throws {
@@ -148,5 +152,32 @@ struct UserProfile: Codable, Equatable {
         sex = try container.decodeIfPresent(Sex.self, forKey: .sex) ?? defaults.sex
         experienceLevel = try container.decodeIfPresent(ExperienceLevel.self, forKey: .experienceLevel) ?? defaults.experienceLevel
         weightUnit = try container.decodeIfPresent(WeightUnit.self, forKey: .weightUnit) ?? defaults.weightUnit
+        nutritionGoals = try container.decodeIfPresent(NutritionGoals.self, forKey: .nutritionGoals) ?? defaults.nutritionGoals
+    }
+}
+
+struct NutritionGoals: Codable, Equatable, Hashable {
+    var calories: Double
+    var protein: Double
+    var fat: Double
+    var carbs: Double
+    var mealCount: Int
+
+    static let `default` = NutritionGoals(
+        calories: 2_000,
+        protein: 120,
+        fat: 60,
+        carbs: 250,
+        mealCount: 3
+    )
+
+    func normalized() -> NutritionGoals {
+        NutritionGoals(
+            calories: min(10_000, max(0, calories)),
+            protein: min(1_000, max(0, protein)),
+            fat: min(1_000, max(0, fat)),
+            carbs: min(2_000, max(0, carbs)),
+            mealCount: min(12, max(1, mealCount))
+        )
     }
 }

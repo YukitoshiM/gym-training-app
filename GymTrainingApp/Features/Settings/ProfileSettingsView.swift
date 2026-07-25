@@ -12,11 +12,18 @@ struct ProfileSettingsView: View {
     @State private var appearanceDraft: AppAppearanceSettings
     @State private var heightText: String
     @State private var birthYearText: String
+    @State private var calorieGoalText: String
+    @State private var proteinGoalText: String
+    @State private var fatGoalText: String
+    @State private var carbsGoalText: String
+    @State private var mealCountGoalText: String
     @State private var isConfirmingReset = false
     @State private var isCheckingAI = false
     @State private var aiConnectionResult: AIConnectionCheckResult?
     @State private var isExportingData = false
     @State private var exportDocument = GymDataExportDocument()
+    @State private var isExportingDiagnostics = false
+    @State private var diagnosticDocument = DiagnosticLogDocument()
     @State private var exportErrorMessage: String?
     @State private var isAISharingExpanded = false
 
@@ -32,6 +39,11 @@ struct ProfileSettingsView: View {
         _appearanceDraft = State(initialValue: appearanceSettings)
         _heightText = State(initialValue: profile.heightCm.map { String(format: "%.1f", $0) } ?? "")
         _birthYearText = State(initialValue: profile.birthYear.map(String.init) ?? "")
+        _calorieGoalText = State(initialValue: profile.nutritionGoals.calories.formatted(.number.precision(.fractionLength(0))))
+        _proteinGoalText = State(initialValue: profile.nutritionGoals.protein.formatted(.number.precision(.fractionLength(0...1))))
+        _fatGoalText = State(initialValue: profile.nutritionGoals.fat.formatted(.number.precision(.fractionLength(0...1))))
+        _carbsGoalText = State(initialValue: profile.nutritionGoals.carbs.formatted(.number.precision(.fractionLength(0...1))))
+        _mealCountGoalText = State(initialValue: String(profile.nutritionGoals.mealCount))
     }
 
     var body: some View {
@@ -75,6 +87,58 @@ struct ProfileSettingsView: View {
                             Text(level.displayName).tag(level)
                         }
                     }
+                }
+
+                Section {
+                    NumericTextInputControl(
+                        text: $calorieGoalText,
+                        title: "カロリー",
+                        unit: "kcal",
+                        range: 0...10_000,
+                        step: 1,
+                        defaultValue: NutritionGoals.default.calories,
+                        accessibilityIdentifier: "nutritionCalorieGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $proteinGoalText,
+                        title: "たんぱく質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: NutritionGoals.default.protein,
+                        accessibilityIdentifier: "nutritionProteinGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $fatGoalText,
+                        title: "脂質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: NutritionGoals.default.fat,
+                        accessibilityIdentifier: "nutritionFatGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $carbsGoalText,
+                        title: "炭水化物",
+                        unit: "g",
+                        range: 0...2_000,
+                        step: 0.1,
+                        defaultValue: NutritionGoals.default.carbs,
+                        accessibilityIdentifier: "nutritionCarbsGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $mealCountGoalText,
+                        title: "食事回数",
+                        unit: "回",
+                        range: 1...12,
+                        step: 1,
+                        defaultValue: Double(NutritionGoals.default.mealCount),
+                        accessibilityIdentifier: "nutritionMealCountGoalField"
+                    )
+                } header: {
+                    Text("1日の食事目標")
+                } footer: {
+                    Text("食事回数の達成と、カロリー・PFCの達成を別々に表示します。")
                 }
 
                 Section("表示") {
@@ -191,6 +255,14 @@ struct ProfileSettingsView: View {
                     }
                     .accessibilityIdentifier("exportAllDataButton")
 
+                    Button {
+                        diagnosticDocument = DiagnosticLogDocument(data: AppDiagnostics.shared.exportData())
+                        isExportingDiagnostics = true
+                    } label: {
+                        Label("診断ログを書き出す", systemImage: "stethoscope")
+                    }
+                    .accessibilityIdentifier("exportDiagnosticsButton")
+
                     Button(role: .destructive) {
                         isConfirmingReset = true
                     } label: {
@@ -236,6 +308,16 @@ struct ProfileSettingsView: View {
                     exportErrorMessage = error.localizedDescription
                 }
             }
+            .fileExporter(
+                isPresented: $isExportingDiagnostics,
+                document: diagnosticDocument,
+                contentType: .json,
+                defaultFilename: "gym-training-diagnostics"
+            ) { result in
+                if case .failure(let error) = result {
+                    exportErrorMessage = error.localizedDescription
+                }
+            }
             .alert("書き出せませんでした", isPresented: Binding(
                 get: { exportErrorMessage != nil },
                 set: { if !$0 { exportErrorMessage = nil } }
@@ -250,6 +332,13 @@ struct ProfileSettingsView: View {
     private func save() {
         draft.heightCm = Double(heightText)
         draft.birthYear = Int(birthYearText)
+        draft.nutritionGoals = NutritionGoals(
+            calories: Double(calorieGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.calories,
+            protein: Double(proteinGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.protein,
+            fat: Double(fatGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.fat,
+            carbs: Double(carbsGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.carbs,
+            mealCount: Int(Double(mealCountGoalText) ?? Double(NutritionGoals.default.mealCount))
+        ).normalized()
         appStore.saveUserProfile(draft)
         if healthDataManager.accessState == .unavailable {
             sensorDraft.healthIntegrationEnabled = false

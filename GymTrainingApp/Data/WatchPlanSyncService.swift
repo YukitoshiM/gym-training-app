@@ -40,6 +40,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
     }
 
     @Published private(set) var state: SyncState = .idle
+    @Published private(set) var liveWatchWorkout: WatchLiveWorkoutSnapshot?
     private weak var appStore: AppStore?
 
     private var session: WCSession? {
@@ -124,6 +125,40 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             }
         } catch {
             state = .failed("Apple Watch用のメニューデータを作れませんでした")
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "watch.plan.encode",
+                message: "Failed to encode Watch plan library"
+            )
+        }
+    }
+
+    func send(command: WatchWorkoutCommand) {
+        guard let session else {
+            state = .unavailable("この端末ではApple Watch連携を利用できません")
+            return
+        }
+        guard session.activationState == .activated, session.isReachable else {
+            state = .failed("Apple Watchを開いてから、もう一度操作してください")
+            return
+        }
+
+        do {
+            let payload = try JSONEncoder().encode(command)
+            let message: [String: Any] = [
+                WatchWorkoutTransfer.messageTypeKey: WatchWorkoutTransfer.workoutCommandType,
+                WatchWorkoutTransfer.payloadKey: payload,
+                WatchWorkoutTransfer.eventIDKey: UUID().uuidString,
+                WatchWorkoutTransfer.sentAtKey: Date()
+            ]
+            sendCommandImmediately(message: message, action: command.action, session: session)
+        } catch {
+            state = .failed("Apple Watchへ送る操作データを作れませんでした")
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "watch.command.encode",
+                message: "Failed to encode Watch workout command"
+            )
         }
     }
 
@@ -153,7 +188,31 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         }, errorHandler: { [weak self] error in
             session.transferUserInfo(message)
             self?.updateState(.sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました"))
-            NSLog("Watch immediate send failed: \(error.localizedDescription)")
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "watch.plan.send",
+                message: "Immediate Watch plan transfer failed; queued user info"
+            )
+        })
+    }
+
+    private nonisolated func sendCommandImmediately(
+        message: [String: Any],
+        action: WatchWorkoutCommandAction,
+        session: WCSession
+    ) {
+        session.sendMessage(message, replyHandler: { [weak self] reply in
+            let acknowledged = reply[WatchWorkoutTransfer.acknowledgementKey] as? Bool ?? true
+            if !acknowledged {
+                self?.updateState(.failed("Apple Watchで操作を実行できませんでした"))
+            }
+        }, errorHandler: { [weak self] error in
+            self?.updateState(.failed("Apple Watchへ操作を送れませんでした"))
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "watch.command.send",
+                message: "Failed to send Watch workout command: \(action.rawValue)"
+            )
         })
     }
 
@@ -170,41 +229,65 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             workoutSession.endedAt = workoutSession.endedAt ?? Date()
             workoutSession.watchSyncState = .received
             appStore.saveWorkoutHistorySession(workoutSession)
+            liveWatchWorkout = nil
             state = .received("\(workoutSession.title) をApple Watchから履歴に保存しました")
             return true
         } catch {
             state = .failed("Apple Watchの記録を読み込めませんでした")
-            NSLog("Watch session decode failed: \(error.localizedDescription)")
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "watch.session.decode",
+                message: "Failed to decode finished Watch workout"
+            )
             return false
         }
     }
 
     private nonisolated func receive(userInfo: [String: Any]) {
-        guard userInfo[WatchWorkoutTransfer.messageTypeKey] as? String == WatchWorkoutTransfer.sessionFinishedType,
-              let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else {
+        guard let messageType = userInfo[WatchWorkoutTransfer.messageTypeKey] as? String else {
             return
         }
 
-        Task { @MainActor [weak self] in
-            self?.saveFinishedWatchSession(payload: payload)
+        switch messageType {
+        case WatchWorkoutTransfer.sessionFinishedType:
+            guard let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return }
+            Task { @MainActor [weak self] in
+                self?.saveFinishedWatchSession(payload: payload)
+            }
+        case WatchWorkoutTransfer.sessionLiveUpdateType:
+            guard let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data,
+                  let snapshot = try? JSONDecoder().decode(WatchLiveWorkoutSnapshot.self, from: payload) else {
+                return
+            }
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                if liveWatchWorkout?.updatedAt ?? .distantPast <= snapshot.updatedAt {
+                    liveWatchWorkout = snapshot
+                }
+            }
+        case WatchWorkoutTransfer.sessionLiveEndedType:
+            Task { @MainActor [weak self] in
+                self?.liveWatchWorkout = nil
+            }
+        default:
+            break
         }
     }
 
     private nonisolated func receive(message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
-        guard message[WatchWorkoutTransfer.messageTypeKey] as? String == WatchWorkoutTransfer.sessionFinishedType,
-              let payload = message[WatchWorkoutTransfer.payloadKey] as? Data else {
+        guard let messageType = message[WatchWorkoutTransfer.messageTypeKey] as? String else {
             replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
             return
         }
 
-        guard (try? JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: payload)) != nil else {
-            replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
-            return
+        if messageType == WatchWorkoutTransfer.sessionFinishedType {
+            guard let payload = message[WatchWorkoutTransfer.payloadKey] as? Data,
+                  (try? JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: payload)) != nil else {
+                replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
+                return
+            }
         }
-
-        Task { @MainActor [weak self] in
-            self?.saveFinishedWatchSession(payload: payload)
-        }
+        receive(userInfo: message)
         replyHandler([WatchWorkoutTransfer.acknowledgementKey: true])
     }
 }
