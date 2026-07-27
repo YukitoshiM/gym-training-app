@@ -66,7 +66,7 @@ struct GymTrainingWatchWidget: Widget {
         StaticConfiguration(kind: kind, provider: GymWidgetProvider()) { entry in
             GymTrainingWatchWidgetView(entry: entry)
         }
-        .configurationDisplayName("Gym Session")
+        .configurationDisplayName("BodyMode Session")
         .description("次のトレーニングへすぐ戻れます。")
         .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline])
     }

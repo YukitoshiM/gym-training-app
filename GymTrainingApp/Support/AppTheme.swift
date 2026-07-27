@@ -152,12 +152,12 @@ private extension Color {
 
 struct TrainingBackground: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             AppTheme.pageBackground
 
             GeometryReader { proxy in
                 Path { path in
-                    let spacing: CGFloat = 28
+                    let spacing: CGFloat = 44
                     var x: CGFloat = -proxy.size.height
                     while x < proxy.size.width {
                         path.move(to: CGPoint(x: x, y: 0))
@@ -165,15 +165,15 @@ struct TrainingBackground: View {
                         x += spacing
                     }
                 }
-                .stroke(AppTheme.ink.opacity(0.045), lineWidth: 1)
+                .stroke(AppTheme.ink.opacity(0.022), lineWidth: 1)
             }
+            .frame(height: 310)
+            .clipped()
 
-            VStack {
-                Rectangle()
-                    .fill(AppTheme.ink.opacity(0.035))
-                    .frame(height: 220)
-                Spacer()
-            }
+            Rectangle()
+                .fill(AppTheme.cardBackground.opacity(0.24))
+                .frame(height: 310)
+                .allowsHitTesting(false)
         }
         .ignoresSafeArea()
     }

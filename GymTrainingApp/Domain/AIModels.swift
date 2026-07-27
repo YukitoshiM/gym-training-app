@@ -20,17 +20,29 @@ struct AISettings: Codable, Equatable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        isEnabled = try container.decodeIfPresent(Bool.self, forKey: .isEnabled) ?? true
-        baseURLString = try container.decodeIfPresent(String.self, forKey: .baseURLString) ?? "http://127.0.0.1:8765"
-        apiKey = try container.decodeIfPresent(String.self, forKey: .apiKey) ?? "dev-local-key"
+        isEnabled = try container.decodeIfPresent(Bool.self, forKey: .isEnabled) ?? Self.default.isEnabled
+        baseURLString = try container.decodeIfPresent(String.self, forKey: .baseURLString) ?? Self.default.baseURLString
+        apiKey = try container.decodeIfPresent(String.self, forKey: .apiKey) ?? Self.default.apiKey
         dataSharing = try container.decodeIfPresent(AIDataSharingSettings.self, forKey: .dataSharing) ?? .default
     }
 
+    #if DEBUG
     static let `default` = AISettings(
         isEnabled: true,
         baseURLString: "http://127.0.0.1:8765",
         apiKey: "dev-local-key"
     )
+
+    static let configurationHelp = "Simulatorなら http://127.0.0.1:8765。実機はMacのLAN IPまたはTailscale名を使います。接続確認はAPI、Ollama、モデル取得状態まで確認します。"
+    #else
+    static let `default` = AISettings(
+        isEnabled: false,
+        baseURLString: "",
+        apiKey: ""
+    )
+
+    static let configurationHelp = "AIは初期状態ではオフです。利用する場合は、信頼できるローカルAIサーバーのURLとAPIキーを設定してください。AI未接続でも手動記録を利用できます。"
+    #endif
 }
 
 struct AIDataSharingSettings: Codable, Equatable {

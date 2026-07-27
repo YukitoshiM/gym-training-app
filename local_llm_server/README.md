@@ -1,6 +1,6 @@
-# Local LLM Server
+# Local AI Server
 
-Mac mini上のOllamaをiPhoneアプリから使うための開発用APIです。
+Mac mini上のCalorieCLIPとOllamaをiPhoneアプリから使うためのAPIです。
 
 ## 起動
 
@@ -9,6 +9,8 @@ cd local_llm_server
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+chmod +x install_calorie_clip.sh
+./install_calorie_clip.sh
 export LOCAL_AI_API_KEY=dev-local-key
 export OLLAMA_BASE_URL=http://127.0.0.1:11434
 export OLLAMA_MODEL=gemma4:12b
@@ -20,7 +22,7 @@ Simulatorからは `http://127.0.0.1:8765` を指定します。
 
 ## Ollama
 
-画像解析を使う場合は、画像対応モデルを用意します。
+CalorieCLIPがカロリーを推定します。Ollamaは料理名とPFCの補助推定に使います。
 
 ```bash
 ollama pull gemma4:12b
@@ -46,6 +48,20 @@ Ollamaに接続できない場合も、アプリ開発を止めないための�
 ## Endpoints
 
 - `GET /v1/health`
+- `GET /v1/coaches`
 - `POST /v1/meals/analyze-image`
 - `POST /v1/body-photos/analyze`
 - `POST /v1/reports/weekly`
+
+## 目的別コーチ
+
+週次レポートはアプリで選択したコーチの判断基準を使用します。
+
+- `fat_loss`: 減量
+- `hypertrophy`: 筋肥大
+- `strength`: 筋力向上
+- `body_recomposition`: ボディメイク
+- `wellness`: 健康維持
+- `return_to_training`: 復帰
+
+定義は `coach_profiles.py` に集約しています。各コーチは優先順位、判断ルール、伝え方、禁止事項を持ち、共通の安全ルールも必ず適用されます。

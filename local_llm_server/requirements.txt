@@ -2,3 +2,6 @@ fastapi==0.115.6
 uvicorn[standard]==0.34.0
 httpx==0.28.1
 pydantic==2.10.4
+Pillow>=10.4,<12
+torch>=2.5,<3
+open-clip-torch>=2.30,<3

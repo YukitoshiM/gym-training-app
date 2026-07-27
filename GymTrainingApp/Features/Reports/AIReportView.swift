@@ -14,6 +14,18 @@ struct AIReportView: View {
 
     var body: some View {
         List {
+            Section("担当コーチ") {
+                VStack(alignment: .leading, spacing: 6) {
+                    Label(appStore.userProfile.coachType.displayName, systemImage: "figure.strengthtraining.traditional")
+                        .font(.headline)
+                        .foregroundStyle(AppTheme.accent)
+                    Text(appStore.userProfile.coachType.characteristic)
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+                .accessibilityIdentifier("activeCoachCard")
+            }
+
             Section {
                 if let connectionNotice {
                     AIReportConnectionNoticeCard(notice: connectionNotice)
@@ -141,7 +153,7 @@ struct AIReportView: View {
 
         let payload = weeklyPayload()
         let record = AITransmissionRecord(
-            purpose: "週次レポート",
+            purpose: "\(appStore.userProfile.coachType.displayName)・週次レポート",
             sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
             itemCount: payload.bodyLogs.count
                 + payload.meals.count
@@ -202,6 +214,8 @@ struct AIReportView: View {
         let sharing = appStore.aiSettings.dataSharing
         return WeeklyReportRequest(
             profileGoal: appStore.userProfile.goalType.displayName,
+            coachID: appStore.userProfile.coachType.rawValue,
+            experienceLevel: appStore.userProfile.experienceLevel.rawValue,
             bodyLogs: sharing.bodyMetrics ? appStore.bodyMetricEntries.prefix(20).map {
                 "\($0.kind.displayName): \(AppFormatters.metricValue($0.value, unit: $0.kind.unit)) \(AppFormatters.shortDate.string(from: $0.recordedAt))"
             } : [],

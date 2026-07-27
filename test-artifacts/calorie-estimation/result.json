@@ -1,0 +1,44 @@
+{
+  "test_id": "calorie-clip-generated-meal-001",
+  "tested_at": "2026-07-26",
+  "image": "japanese-fitness-meal.png",
+  "reference": {
+    "meal_name": "鶏むね肉と白米のフィットネスプレート",
+    "ingredients": [
+      "白米 150g",
+      "鶏むね肉（皮なし）120g",
+      "ブロッコリー 80g",
+      "ゆで卵 1個"
+    ],
+    "estimated_calories": 540,
+    "note": "生成条件から一般的な食品成分値で算出した参考値で、実測値ではありません。"
+  },
+  "request": {
+    "endpoint": "POST /v1/meals/analyze-image",
+    "meal_type": "lunch"
+  },
+  "result": {
+    "http_status": 200,
+    "elapsed_ms": 73095.5,
+    "meal_name": "鶏の照り焼き風（または塩焼き）とブロッコリー、ゆで卵の白ごはん",
+    "calories": 483.1,
+    "protein": 45.0,
+    "fat": 22.0,
+    "carbs": 90.0,
+    "confidence": "medium"
+  },
+  "evaluation": {
+    "calorie_absolute_error": 56.9,
+    "calorie_percentage_error": 10.5,
+    "passed_http": true,
+    "passed_calorie_tolerance_100kcal": true,
+    "manual_correction_recommended": true,
+    "observations": [
+      "料理の主要構成は認識できた。",
+      "画像上の卵1個を2個分と誤認した。",
+      "白米150gを200gと多めに推定した。",
+      "カロリー推定は参考値との差が100kcal以内だった。",
+      "PFCは補助モデルによる概算のため手動確認が必要。"
+    ]
+  }
+}

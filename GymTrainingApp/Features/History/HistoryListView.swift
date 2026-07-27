@@ -51,55 +51,6 @@ struct HistoryListView: View {
                 } else {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 20) {
-                            if !appStore.workoutHistory.isEmpty {
-                                VStack(spacing: 0) {
-                                    NavigationLink {
-                                        WeeklyVolumeView()
-                                    } label: {
-                                        HistoryAnalyticsLink(
-                                            title: "週次ボリューム分析",
-                                            systemImage: "chart.bar.xaxis"
-                                        )
-                                    }
-                                    .accessibilityIdentifier("weeklyVolumeLink")
-
-                                    Divider()
-                                        .padding(.leading, 44)
-
-                                    NavigationLink {
-                                        ExerciseHistoryListView()
-                                    } label: {
-                                        HistoryAnalyticsLink(
-                                            title: "種目別履歴",
-                                            systemImage: "dumbbell"
-                                        )
-                                    }
-                                    .accessibilityIdentifier("exerciseHistoryLink")
-
-                                    Divider()
-                                        .padding(.leading, 44)
-
-                                    NavigationLink {
-                                        SensorTrainingAnalysisView()
-                                    } label: {
-                                        HistoryAnalyticsLink(
-                                            title: "Watchセンサー分析",
-                                            systemImage: "heart.text.square"
-                                        )
-                                    }
-                                    .accessibilityIdentifier("sensorTrainingAnalysisLink")
-                                }
-                                .buttonStyle(.plain)
-                                .background(
-                                    AppTheme.elevatedBackground,
-                                    in: RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                                )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                                        .stroke(AppTheme.cardBorder, lineWidth: 1)
-                                )
-                            }
-
                             WorkoutCalendarView(
                                 displayedMonth: $displayedMonth,
                                 selectedDate: $selectedDate,
@@ -154,6 +105,66 @@ struct HistoryListView: View {
                                             pendingDeleteSession = session
                                         }
                                     }
+                                }
+                            }
+
+                            if !appStore.workoutHistory.isEmpty {
+                                VStack(alignment: .leading, spacing: 10) {
+                                    VStack(alignment: .leading, spacing: 3) {
+                                        Text("分析")
+                                            .font(.headline)
+                                            .foregroundStyle(AppTheme.ink)
+                                        Text("蓄積した記録を期間・種目・センサー別に確認")
+                                            .font(.caption)
+                                            .foregroundStyle(AppTheme.mutedInk)
+                                    }
+
+                                    VStack(spacing: 0) {
+                                        NavigationLink {
+                                            WeeklyVolumeView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: "週次ボリューム分析",
+                                                systemImage: "chart.bar.xaxis"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("weeklyVolumeLink")
+
+                                        Divider()
+                                            .padding(.leading, 44)
+
+                                        NavigationLink {
+                                            ExerciseHistoryListView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: "種目別履歴",
+                                                systemImage: "dumbbell"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("exerciseHistoryLink")
+
+                                        Divider()
+                                            .padding(.leading, 44)
+
+                                        NavigationLink {
+                                            SensorTrainingAnalysisView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: "Watchセンサー分析",
+                                                systemImage: "heart.text.square"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("sensorTrainingAnalysisLink")
+                                    }
+                                    .buttonStyle(.plain)
+                                    .background(
+                                        AppTheme.elevatedBackground,
+                                        in: RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                                            .stroke(AppTheme.cardBorder, lineWidth: 1)
+                                    )
                                 }
                             }
                         }
@@ -296,10 +307,11 @@ private struct WorkoutCalendarView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("GYM CALENDAR")
+                    Text("PROGRESS CALENDAR")
                         .font(.caption.bold())
                         .tracking(1)
                         .foregroundStyle(AppTheme.accent)
+                        .accessibilityIdentifier("historyCalendar")
 
                     Text(monthTitle)
                         .font(.title3.bold())
@@ -361,6 +373,25 @@ private struct WorkoutCalendarView: View {
                     }
                 }
             }
+
+            Divider()
+
+            HStack(spacing: 0) {
+                ForEach(CalendarRecordKind.allCases) { kind in
+                    Label {
+                        Text(kind.title)
+                    } icon: {
+                        Image(systemName: kind.systemImage)
+                    }
+                    .font(.caption2.bold())
+                    .foregroundStyle(kind.tint)
+                    .frame(maxWidth: .infinity)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                }
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("記録種別の凡例")
         }
         .padding(16)
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
@@ -369,7 +400,6 @@ private struct WorkoutCalendarView: View {
                 .stroke(AppTheme.cardBorder, lineWidth: 1)
         )
         .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
-        .accessibilityIdentifier("historyCalendar")
     }
 
     private var monthTitle: String {
@@ -419,6 +449,56 @@ private struct CalendarDay: Identifiable {
     var id: Date { date }
 }
 
+private enum CalendarRecordKind: String, CaseIterable, Identifiable {
+    case workout
+    case bodyMetric
+    case meal
+    case bodyPhoto
+    case gymVisit
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .workout: "筋トレ"
+        case .bodyMetric: "身体"
+        case .meal: "食事"
+        case .bodyPhoto: "写真"
+        case .gymVisit: "ジム"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .workout: "dumbbell.fill"
+        case .bodyMetric: "scalemass.fill"
+        case .meal: "fork.knife"
+        case .bodyPhoto: "camera.fill"
+        case .gymVisit: "mappin.circle.fill"
+        }
+    }
+
+    var tint: Color {
+        switch self {
+        case .workout: AppTheme.accent
+        case .bodyMetric: AppTheme.blue
+        case .meal: AppTheme.orange
+        case .bodyPhoto: AppTheme.purple
+        case .gymVisit: AppTheme.tertiaryAccent
+        }
+    }
+
+    func count(in summary: DailyLogSummary?) -> Int {
+        switch self {
+        case .workout: summary?.workouts.count ?? 0
+        case .bodyMetric: summary?.bodyMetricEntries.count ?? 0
+        case .meal: summary?.meals.count ?? 0
+        case .bodyPhoto: summary?.bodyPhotos.count ?? 0
+        case .gymVisit: summary?.gymVisits.count ?? 0
+        }
+    }
+}
+
 private struct CalendarDayButton: View {
     let day: CalendarDay
     let summary: DailyLogSummary?
@@ -435,48 +515,25 @@ private struct CalendarDayButton: View {
                 Text("\(dayNumber)")
                     .font(.subheadline.weight(totalLogCount > 0 ? .bold : .regular))
 
-                HStack(spacing: 2) {
-                    if workoutCount > 0 {
-                        Circle()
-                            .fill(AppTheme.accent)
-                            .frame(width: 5, height: 5)
+                HStack(spacing: 1) {
+                    ForEach(recordKinds) { kind in
+                        Image(systemName: kind.systemImage)
+                            .font(.system(size: 6.5, weight: .bold))
+                            .foregroundStyle(indicatorColor(for: kind))
+                            .frame(width: 7, height: 7)
                     }
 
-                    if mealCount > 0 {
-                        Circle()
-                            .fill(AppTheme.orange)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if bodyMetricCount > 0 {
-                        Circle()
-                            .fill(AppTheme.blue)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if bodyPhotoCount > 0 {
-                        Circle()
-                            .fill(AppTheme.purple)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if gymVisitCount > 0 {
-                        Circle()
-                            .fill(AppTheme.tertiaryAccent)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if totalLogCount == 0 {
-                        Circle()
-                            .fill(Color.clear)
-                            .frame(width: 5, height: 5)
+                    if recordKinds.isEmpty {
+                        Color.clear
+                            .frame(width: 7, height: 7)
                     }
                 }
-                .frame(height: 5)
+                .frame(height: 7)
+                .opacity(day.isInDisplayedMonth ? 1 : 0.45)
             }
             .foregroundStyle(foregroundColor)
             .frame(maxWidth: .infinity)
-            .frame(height: 42)
+            .frame(height: 44)
             .background(isSelected ? AppTheme.accent : Color.clear, in: RoundedRectangle(cornerRadius: 8))
         }
         .buttonStyle(.plain)
@@ -496,7 +553,10 @@ private struct CalendarDayButton: View {
             return "\(dayNumber)日 記録なし"
         }
 
-        return "\(dayNumber)日 \(totalLogCount)件の記録"
+        let details = recordKinds
+            .map { "\($0.title)\($0.count(in: summary))件" }
+            .joined(separator: "、")
+        return "\(dayNumber)日 \(details)"
     }
 
     private var accessibilityDateID: String {
@@ -507,24 +567,12 @@ private struct CalendarDayButton: View {
         summary?.totalLogCount ?? 0
     }
 
-    private var workoutCount: Int {
-        summary?.workouts.count ?? 0
+    private var recordKinds: [CalendarRecordKind] {
+        CalendarRecordKind.allCases.filter { $0.count(in: summary) > 0 }
     }
 
-    private var mealCount: Int {
-        summary?.meals.count ?? 0
-    }
-
-    private var bodyMetricCount: Int {
-        summary?.bodyMetricEntries.count ?? 0
-    }
-
-    private var bodyPhotoCount: Int {
-        summary?.bodyPhotos.count ?? 0
-    }
-
-    private var gymVisitCount: Int {
-        summary?.gymVisits.count ?? 0
+    private func indicatorColor(for kind: CalendarRecordKind) -> Color {
+        isSelected ? AppTheme.onAccent : kind.tint
     }
 
     private static let identifierFormatter: DateFormatter = {

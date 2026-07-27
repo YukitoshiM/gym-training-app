@@ -56,6 +56,22 @@ struct ProfileSettingsView: View {
                         }
                     }
 
+                    Picker("担当コーチ", selection: $draft.coachType) {
+                        ForEach(CoachType.allCases) { coach in
+                            Text(coach.displayName).tag(coach)
+                        }
+                    }
+                    .accessibilityIdentifier("coachTypePicker")
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(draft.coachType.displayName)
+                            .font(.subheadline.bold())
+                        Text(draft.coachType.characteristic)
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                    .accessibilityIdentifier("coachCharacteristic")
+
                     NumericTextInputControl(
                         text: $heightText,
                         title: "身長",
@@ -224,9 +240,10 @@ struct ProfileSettingsView: View {
                     Button {
                         aiDraft.baseURLString = AISettings.default.baseURLString
                         aiDraft.apiKey = AISettings.default.apiKey
+                        aiDraft.isEnabled = AISettings.default.isEnabled
                         aiConnectionResult = nil
                     } label: {
-                        Label("Simulator推奨値に戻す", systemImage: "arrow.counterclockwise")
+                        Label("AI設定を初期値に戻す", systemImage: "arrow.counterclockwise")
                     }
                     .accessibilityIdentifier("resetAISettingsToSimulatorButton")
 
@@ -244,8 +261,10 @@ struct ProfileSettingsView: View {
                 } header: {
                     Text("ローカルLLM")
                 } footer: {
-                    Text("Simulatorなら http://127.0.0.1:8765。実機はMacのLAN IPまたはTailscale名を使います。接続確認はAPI、Ollama、モデル取得状態まで確認します。")
+                    Text(AISettings.configurationHelp)
                 }
+
+                LegalAndSupportSettingsSection()
 
                 Section("データ") {
                     Button {
@@ -302,7 +321,7 @@ struct ProfileSettingsView: View {
                 isPresented: $isExportingData,
                 document: exportDocument,
                 contentType: .json,
-                defaultFilename: "gym-training-export"
+                defaultFilename: "bodymode-export"
             ) { result in
                 if case .failure(let error) = result {
                     exportErrorMessage = error.localizedDescription
@@ -312,7 +331,7 @@ struct ProfileSettingsView: View {
                 isPresented: $isExportingDiagnostics,
                 document: diagnosticDocument,
                 contentType: .json,
-                defaultFilename: "gym-training-diagnostics"
+                defaultFilename: "bodymode-diagnostics"
             ) { result in
                 if case .failure(let error) = result {
                     exportErrorMessage = error.localizedDescription

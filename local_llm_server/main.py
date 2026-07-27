@@ -1,11 +1,14 @@
 import json
 import os
 import re
+import base64
 from typing import Any, Optional
 
 import httpx
 from fastapi import Depends, FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
+from calorie_clip_runtime import calorie_clip_runtime
+from coach_profiles import COMMON_SAFETY_RULES, COACH_PROFILES, get_coach_profile
 
 
 APP_NAME = "Gym Training Local LLM"
@@ -59,6 +62,8 @@ class BodyPhotoAIComment(BaseModel):
 
 class WeeklyReportRequest(BaseModel):
     profile_goal: str
+    coach_id: str = "body_recomposition"
+    experience_level: str = "beginner"
     body_logs: list[str] = []
     meals: list[str] = []
     workouts: list[str] = []
@@ -72,6 +77,13 @@ class WeeklyReportResponse(BaseModel):
     action_suggestion: str
 
 
+class CoachSummary(BaseModel):
+    id: str
+    name: str
+    identity: str
+    priorities: list[str]
+
+
 def require_api_key(authorization: Optional[str] = Header(default=None)) -> None:
     if not API_KEY:
         return
@@ -83,20 +95,37 @@ def require_api_key(authorization: Optional[str] = Header(default=None)) -> None
 @app.get("/v1/health")
 async def health(_: None = Depends(require_api_key)) -> dict[str, Any]:
     ollama = await ollama_status()
-    if not ollama["reachable"]:
-        message = f"Ollamaに接続できません。Mac miniで `ollama serve` を起動し、OLLAMA_BASE_URL={OLLAMA_BASE_URL} を確認してください。"
+    calorie_model_available = calorie_clip_runtime.installed
+    if not calorie_model_available:
+        message = "CalorieCLIPが未導入です。local_llm_server/install_calorie_clip.sh を実行してください。"
+    elif not ollama["reachable"]:
+        message = "CalorieCLIPは利用できます。料理名・PFCの補助推定にはOllamaを起動してください。"
     elif not ollama["model_available"]:
-        message = f"Ollamaは起動していますが、モデル {OLLAMA_MODEL} が見つかりません。`ollama pull {OLLAMA_MODEL}` を実行するか、OLLAMA_MODELを変更してください。"
+        message = f"CalorieCLIPは利用できます。Ollamaモデル {OLLAMA_MODEL} は未導入です。"
     else:
-        message = "local_llm_server、Ollama、指定モデルに接続できています。"
+        message = "CalorieCLIPと料理情報の補助モデルを利用できます。"
 
     return {
         "status": "ok",
-        "model": OLLAMA_MODEL,
+        "model": "CalorieCLIP",
+        "calorie_model_available": calorie_model_available,
         "ollama_reachable": ollama["reachable"],
         "model_available": ollama["model_available"],
         "message": message,
     }
+
+
+@app.get("/v1/coaches", response_model=list[CoachSummary])
+async def coaches(_: None = Depends(require_api_key)) -> list[dict[str, Any]]:
+    return [
+        {
+            "id": profile.id,
+            "name": profile.name,
+            "identity": profile.identity,
+            "priorities": list(profile.priorities),
+        }
+        for profile in COACH_PROFILES.values()
+    ]
 
 
 @app.post("/v1/meals/analyze-image", response_model=MealAIDraft)
@@ -121,7 +150,17 @@ async def analyze_meal_image(request: MealAnalysisRequest, _: None = Depends(req
 """.strip()
     fallback = fallback_meal(request)
     result = await ollama_json(prompt, fallback, images=[request.image_base64])
-    return normalize_meal(result, fallback)
+    normalized = normalize_meal(result, fallback)
+    try:
+        image_bytes = base64.b64decode(request.image_base64, validate=True)
+        normalized["calories"] = calorie_clip_runtime.predict(image_bytes)
+    except Exception as error:
+        raise HTTPException(
+            status_code=503,
+            detail=f"CalorieCLIPで推定できませんでした: {error}",
+        ) from error
+    normalized["comment"] = "AIの推定値です。料理名、量、カロリー、PFCを確認して必要なら修正してください。"
+    return normalized
 
 
 @app.post("/v1/body-photos/analyze", response_model=BodyPhotoAIComment)
@@ -147,8 +186,11 @@ async def analyze_body_photo(request: BodyPhotoAnalysisRequest, _: None = Depend
 
 @app.post("/v1/reports/weekly", response_model=WeeklyReportResponse)
 async def weekly_report(request: WeeklyReportRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
+    coach = get_coach_profile(request.coach_id)
     context = {
         "goal": request.profile_goal,
+        "coach": coach.name,
+        "experience_level": request.experience_level,
         "body_logs": request.body_logs,
         "meals": request.meals,
         "workouts": request.workouts,
@@ -156,9 +198,16 @@ async def weekly_report(request: WeeklyReportRequest, _: None = Depends(require_
         "sensor_metrics": request.sensor_metrics,
     }
     prompt = f"""
-あなたはAIボディメイクマネージャーです。
+あなたは次の特性を持つパーソナルトレーニングコーチです。
+{coach.prompt()}
+
+全コーチ共通の安全ルール:
+{chr(10).join(f"- {rule}" for rule in COMMON_SAFETY_RULES)}
+
 次の記録をもとに、医療診断ではなく、生活改善とトレーニング調整の観点で週次コメントを作ってください。
-無理な減量や断定表現は避けてください。
+経験レベルは {request.experience_level} です。経験に合わない高度または強すぎる提案を避けてください。
+入力に存在しない数値や出来事を作らないでください。
+良かった点を1つ示した後、このコーチの優先順位に沿って改善点を判断してください。
 必ず次のJSONだけを返してください。
 {{
   "input_summary": "入力データの短い要約",

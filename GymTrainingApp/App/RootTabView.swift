@@ -14,7 +14,7 @@ struct RootTabView: View {
                 gymLocationManager.bind(appStore: appStore)
             }
             .alert(
-                "予定したジム記録がありません",
+                "予定したトレーニング記録がありません",
                 isPresented: Binding(
                     get: { appStore.pendingMissedGymPlan != nil },
                     set: { if !$0 { appStore.resolveMissedGymPlan(rescheduleForToday: false) } }
