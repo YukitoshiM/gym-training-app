@@ -31,8 +31,12 @@ struct RecordHubView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     if gymLocationManager.isAtGym, let todayPlan = appStore.todayPlan {
                         GymArrivalPlanCard(plan: todayPlan) {
-                            activeSession = WorkoutSession(plan: todayPlan)
+                            activeSession = appStore.makeWorkoutSession(from: todayPlan)
                         }
+                    }
+
+                    if let liveWorkout = watchSyncService.liveWatchWorkout {
+                        WatchLiveWorkoutCard(snapshot: liveWorkout)
                     }
 
                     DailyRecordChecklistCard(
@@ -42,10 +46,6 @@ struct RecordHubView: View {
                         bodyPhotoCount: bodyPhotoCount,
                         workoutCount: workoutCount
                     )
-
-                    if let liveWorkout = watchSyncService.liveWatchWorkout {
-                        WatchLiveWorkoutCard(snapshot: liveWorkout)
-                    }
 
                     VStack(alignment: .leading, spacing: 10) {
                         SectionHeader(title: "今日の入力", subtitle: "先に短い記録を済ませて、あとでまとめて振り返れます。")
@@ -164,7 +164,7 @@ struct RecordHubView: View {
                         } else {
                             ForEach(appStore.plans) { plan in
                                 Button {
-                                    activeSession = WorkoutSession(plan: plan)
+                                    activeSession = appStore.makeWorkoutSession(from: plan)
                                 } label: {
                                     WorkoutStartCard(
                                         title: plan.name,

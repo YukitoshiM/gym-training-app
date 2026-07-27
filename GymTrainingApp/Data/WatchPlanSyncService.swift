@@ -85,12 +85,16 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         }
 
         guard session.isWatchAppInstalled else {
-            state = .unavailable("Apple Watch側にGym Trainingをインストールしてください")
+            state = .unavailable("Apple Watch側にBodyModeをインストールしてください")
             return
         }
 
         let library = WatchWorkoutPlanLibrarySnapshot(
-            plans: plans.map { WatchWorkoutPlanSnapshot(plan: $0, weightUnit: profile.weightUnit) },
+            plans: plans.map { plan in
+                WatchWorkoutPlanSnapshot(plan: plan, weightUnit: profile.weightUnit) { exercise in
+                    self.appStore?.latestCompletedExercise(for: exercise)
+                }
+            },
             preferredPlanID: preferredPlanID,
             userProfile: WatchUserProfileSnapshot(
                 birthYear: profile.birthYear,
@@ -308,7 +312,7 @@ extension WatchPlanSyncService: WCSessionDelegate {
             if session.isPaired && session.isWatchAppInstalled {
                 updateState(.ready("Apple Watchへメニューを同期できます"))
             } else if session.isPaired {
-                updateState(.unavailable("Apple Watch側にGym Trainingをインストールしてください"))
+                updateState(.unavailable("Apple Watch側にBodyModeをインストールしてください"))
             } else {
                 updateState(.unavailable("ペアリングされたApple Watchが見つかりません"))
             }

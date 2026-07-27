@@ -15,9 +15,27 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    GoalActionCard(goalType: appStore.userProfile.goalType) {
-                        isShowingGoalPicker = true
+                    if let liveWorkout = watchSyncService.liveWatchWorkout {
+                        HomeSectionHeader(
+                            title: "進行中",
+                            subtitle: "Apple Watchの記録をiPhoneでも確認できます"
+                        )
+                        WatchLiveWorkoutCard(snapshot: liveWorkout)
                     }
+
+                    TodayTrainingCard(
+                        plan: nextPlan,
+                        completedSessions: appStore.workoutSessions()
+                    ) {
+                        if let nextPlan {
+                            activeSession = appStore.makeWorkoutSession(from: nextPlan)
+                        }
+                    }
+
+                    HomeSectionHeader(
+                        title: "今日の状態",
+                        subtitle: "トレーニング前にコンディションを確認"
+                    )
 
                     NavigationLink {
                         ConditionDashboardView()
@@ -28,18 +46,10 @@ struct HomeView: View {
                     .accessibilityElement(children: .combine)
                     .accessibilityIdentifier("conditionSummaryCard")
 
-                    if let liveWorkout = watchSyncService.liveWatchWorkout {
-                        WatchLiveWorkoutCard(snapshot: liveWorkout)
-                    }
-
-                    TodayTrainingCard(
-                        plan: nextPlan,
-                        completedSessions: appStore.workoutSessions()
-                    ) {
-                        if let nextPlan {
-                            activeSession = WorkoutSession(plan: nextPlan)
-                        }
-                    }
+                    HomeSectionHeader(
+                        title: "今日の記録",
+                        subtitle: "未完了の項目を上から確認"
+                    )
 
                     DailyRecordChecklistCard(
                         bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
@@ -52,18 +62,15 @@ struct HomeView: View {
                         workoutCount: appStore.workoutSessions().count
                     )
 
-                    HStack(spacing: 10) {
-                        CompactStat(title: "計画", value: "\(appStore.plans.count)", suffix: "件", tint: AppTheme.blue)
-                        CompactStat(title: "履歴", value: "\(appStore.workoutHistory.count)", suffix: "件", tint: AppTheme.orange)
-                        CompactStat(title: "直近", value: latestAchievementText, suffix: "", tint: AppTheme.accent)
-                    }
-
                     DailyRecordStatusCard(
                         mealCount: appStore.mealEntries().count,
                         bodyPhotoCount: appStore.bodyPhotoEntries().count
                     )
 
-                    AIInsightStatusCard(insight: appStore.aiInsights.first { $0.insightType == .weekly })
+                    HomeSectionHeader(
+                        title: "進捗",
+                        subtitle: "身体の変化と週次コメント"
+                    )
 
                     BodyKPIDashboard(
                         kinds: BodyMetricKind.allCases,
@@ -71,12 +78,29 @@ struct HomeView: View {
                         goal: { appStore.bodyMetricGoal(for: $0) },
                         tint: metricTint(for:)
                     )
+
+                    AIInsightStatusCard(insight: appStore.aiInsights.first { $0.insightType == .weekly })
+
+                    HomeSectionHeader(
+                        title: "目標と実績",
+                        subtitle: "現在の目的と記録件数"
+                    )
+
+                    GoalActionCard(goalType: appStore.userProfile.goalType) {
+                        isShowingGoalPicker = true
+                    }
+
+                    HStack(spacing: 10) {
+                        CompactStat(title: "計画", value: "\(appStore.plans.count)", suffix: "件", tint: AppTheme.blue)
+                        CompactStat(title: "履歴", value: "\(appStore.workoutHistory.count)", suffix: "件", tint: AppTheme.orange)
+                        CompactStat(title: "直近", value: latestAchievementText, suffix: "", tint: AppTheme.accent)
+                    }
                 }
                 .padding(16)
                 .padding(.bottom, 96)
             }
             .background(TrainingBackground())
-            .navigationTitle("Gym Training")
+            .navigationTitle("BodyMode")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -128,56 +152,64 @@ struct HomeView: View {
     }
 }
 
+private struct HomeSectionHeader: View {
+    let title: String
+    let subtitle: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(title)
+                .font(.headline)
+                .foregroundStyle(AppTheme.ink)
+
+            Text(subtitle)
+                .font(.caption)
+                .foregroundStyle(AppTheme.mutedInk)
+        }
+        .padding(.top, 4)
+    }
+}
+
 private struct GoalActionCard: View {
     let goalType: GoalType
     let onEdit: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("BODYMAKE MODE")
+        Button(action: onEdit) {
+            HStack(spacing: 12) {
+                IconBadge(systemImage: "scope", tint: AppTheme.accent)
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("現在の目的")
                         .font(.caption.bold())
-                        .foregroundStyle(AppTheme.accent)
-                        .tracking(1)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     Text(goalType.displayName)
-                        .font(.title2.bold())
+                        .font(.headline)
+                        .foregroundStyle(AppTheme.ink)
+
+                    Text(goalType.shortAction)
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .lineLimit(1)
                 }
 
                 Spacer()
 
-                Button(action: onEdit) {
-                    Image(systemName: "slider.horizontal.3")
-                        .frame(width: 34, height: 34)
-                }
-                .buttonStyle(.borderless)
-                .accessibilityLabel("目的を変更")
-                .accessibilityIdentifier("editGoalButton")
-            }
-
-            Label(goalType.shortAction, systemImage: "checkmark.seal.fill")
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(AppTheme.ink)
-
-            VStack(alignment: .leading, spacing: 5) {
-                Text(goalType.insightTitle)
-                    .font(.caption.bold())
+                Image(systemName: "slider.horizontal.3")
+                    .font(.headline)
                     .foregroundStyle(AppTheme.mutedInk)
-
-                Text(goalType.insightBody)
-                    .font(.caption)
-                    .foregroundStyle(AppTheme.mutedInk)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: 34, height: 34)
             }
+            .padding(14)
+            .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            .overlay(
+                RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                    .stroke(AppTheme.cardBorder, lineWidth: 1)
+            )
         }
-        .padding(16)
-        .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
-        .overlay(
-            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(AppTheme.cardBorder, lineWidth: 1)
-        )
-        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
+        .buttonStyle(.plain)
+        .accessibilityLabel("目的を変更")
         .accessibilityIdentifier("goalActionCard")
     }
 }
@@ -497,9 +529,9 @@ private struct DailyRecordStatusCard: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("今日の記録")
+                    Text("すぐに記録")
                         .font(.headline)
-                    Text("AIなしでも手動で残せる項目です")
+                    Text("よく使う入力画面を直接開く")
                         .font(.caption)
                         .foregroundStyle(AppTheme.mutedInk)
                 }

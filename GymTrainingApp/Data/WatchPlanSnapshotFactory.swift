@@ -1,20 +1,37 @@
 import Foundation
 
 extension WatchWorkoutPlanSnapshot {
-    init(plan: TrainingPlan, weightUnit: WeightUnit) {
+    init(
+        plan: TrainingPlan,
+        weightUnit: WeightUnit,
+        previousExercise: (Exercise) -> WorkoutExercise? = { _ in nil }
+    ) {
         self.init(
             id: plan.id,
             name: plan.name,
             weightUnit: WatchWeightUnit(weightUnit),
             exercises: plan.exercises
                 .sorted { $0.sortOrder < $1.sortOrder }
-                .map { WatchPlanExerciseSnapshot(planExercise: $0) }
+                .map {
+                    WatchPlanExerciseSnapshot(
+                        planExercise: $0,
+                        previousExercise: previousExercise($0.exercise)
+                    )
+                }
         )
     }
 }
 
 private extension WatchPlanExerciseSnapshot {
-    init(planExercise: PlanExercise) {
+    init(planExercise: PlanExercise, previousExercise: WorkoutExercise?) {
+        let previousSets = previousExercise?
+            .sets
+            .filter(\.isCompleted)
+            .sorted { $0.setOrder < $1.setOrder } ?? []
+        let restSeconds = (previousExercise?.restSeconds ?? 0) > 0
+            ? previousExercise?.restSeconds ?? planExercise.restSeconds
+            : planExercise.restSeconds
+
         self.init(
             id: planExercise.id,
             exerciseID: planExercise.exercise.id,
@@ -22,21 +39,29 @@ private extension WatchPlanExerciseSnapshot {
             primaryMuscleName: planExercise.exercise.primaryMuscle.displayName,
             primaryMuscleRawValue: planExercise.exercise.primaryMuscle.rawValue,
             equipmentRawValue: planExercise.exercise.equipment.rawValue,
-            restSeconds: planExercise.restSeconds,
+            restSeconds: restSeconds,
             sets: planExercise.sets
                 .sorted { $0.setOrder < $1.setOrder }
-                .map { WatchPlanSetTargetSnapshot(planSet: $0) }
+                .map { planSet in
+                    let previous = previousSets.first { previousSet in
+                        previousSet.setOrder == planSet.setOrder
+                    } ?? previousSets.last
+                    return WatchPlanSetTargetSnapshot(planSet: planSet, previousSet: previous)
+                }
         )
     }
 }
 
 private extension WatchPlanSetTargetSnapshot {
-    init(planSet: PlanSetTarget) {
+    init(planSet: PlanSetTarget, previousSet: WorkoutSet?) {
         self.init(
             id: planSet.id,
             setOrder: planSet.setOrder,
             targetWeight: planSet.targetWeight,
-            targetReps: planSet.targetReps
+            targetReps: planSet.targetReps,
+            previousActualWeight: previousSet?.actualWeight,
+            previousActualReps: previousSet?.actualReps,
+            previousRPE: previousSet?.rpe
         )
     }
 }

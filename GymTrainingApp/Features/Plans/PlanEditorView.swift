@@ -177,6 +177,7 @@ struct PlanEditorView: View {
             PlanExercise(
                 exercise: exercise,
                 sortOrder: nextOrder,
+                restSeconds: appStore.latestRestSeconds(for: exercise) ?? 90,
                 sets: suggestedSets(for: exercise)
             )
         )
@@ -200,7 +201,7 @@ struct PlanEditorView: View {
                 PlanExercise(
                     exercise: exercise,
                     sortOrder: nextOrder,
-                    restSeconds: template.restSeconds,
+                    restSeconds: appStore.latestRestSeconds(for: exercise) ?? template.restSeconds,
                     sets: suggestedSets(
                         for: exercise,
                         count: template.setCount,

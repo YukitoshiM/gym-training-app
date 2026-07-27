@@ -46,6 +46,21 @@ final class GymTrainingAppUITests: XCTestCase {
         copyButton.tap()
     }
 
+    func testPreviousPerformancePrefillsNextWorkout() throws {
+        startWorkoutFromPlan()
+
+        replaceText(in: app.textFields["workoutWeightField-0-1"], with: "20.1")
+        app.buttons["dismiss-workoutWeightField-0-1"].tap()
+        replaceText(in: app.textFields["workoutRepsField-0-1"], with: "11")
+        app.buttons["dismiss-workoutRepsField-0-1"].tap()
+
+        completeCurrentWorkout()
+        startWorkoutFromPlan()
+
+        XCTAssertEqual(app.textFields["workoutWeightField-0-1"].value as? String, "20.1")
+        XCTAssertEqual(app.textFields["workoutRepsField-0-1"].value as? String, "11")
+    }
+
     func testWorkoutWeightSupportsManualDecimalEntry() throws {
         startWorkoutFromPlan()
 
@@ -130,7 +145,7 @@ final class GymTrainingAppUITests: XCTestCase {
     func testGoalModeSelection() throws {
         tapTab("ホーム")
 
-        let goalCard = app.buttons["goalActionCard"]
+        let goalCard = scrollToHittable(app.buttons["goalActionCard"])
         XCTAssertTrue(goalCard.waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["体型改善"].exists)
 
@@ -148,6 +163,59 @@ final class GymTrainingAppUITests: XCTestCase {
         addManualMealEntry()
         addBodyPhotoMemoEntry()
         verifyDailyJournalForManualLogs()
+    }
+
+    func testPreviousMealNutritionPrefillsSameMealType() throws {
+        addManualMealEntry()
+
+        let addMealButton = app.buttons["addMealButton"]
+        XCTAssertTrue(addMealButton.waitForExistence(timeout: 5))
+        addMealButton.tap()
+
+        XCTAssertEqual(app.textFields["mealProteinField"].value as? String, "31")
+        XCTAssertEqual(app.textFields["mealFatField"].value as? String, "20")
+        XCTAssertEqual(app.textFields["mealCarbsField"].value as? String, "52")
+        XCTAssertEqual(app.textFields["mealCaloriesField"].value as? String, "512")
+    }
+
+    func testMealPhotoAutoEstimateFromLocalServer() throws {
+        tapTab("記録")
+
+        let mealLink = app.buttons["recordHubMealLink"]
+        XCTAssertTrue(mealLink.waitForExistence(timeout: 5))
+        mealLink.tap()
+
+        let addButton = app.buttons["addMealButton"]
+        XCTAssertTrue(addButton.waitForExistence(timeout: 5))
+        addButton.tap()
+
+        let photoPicker = app.buttons["mealPhotoPicker"]
+        XCTAssertTrue(photoPicker.waitForExistence(timeout: 5))
+        photoPicker.tap()
+
+        let pickerContainer = app.otherElements["PXGSingleViewContainerView_AX"]
+        XCTAssertTrue(pickerContainer.waitForExistence(timeout: 5))
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.16, dy: 0.43)).tap()
+
+        let caloriesField = app.textFields["mealCaloriesField"]
+        XCTAssertTrue(caloriesField.waitForExistence(timeout: 120))
+
+        let deadline = Date().addingTimeInterval(120)
+        while Date() < deadline {
+            let value = caloriesField.value as? String ?? ""
+            if let numericValue = Double(value), numericValue > 0 {
+                break
+            }
+            RunLoop.current.run(until: Date().addingTimeInterval(0.5))
+        }
+
+        XCTAssertEqual(caloriesField.value as? String, "483")
+        XCTAssertFalse((app.textFields["mealNameField"].value as? String ?? "").isEmpty)
+
+        let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        attachment.name = "meal-photo-auto-estimate"
+        attachment.lifetime = .keepAlways
+        add(attachment)
     }
 
     func testAIFreeMVPSurfaces() throws {
@@ -304,26 +372,63 @@ final class GymTrainingAppUITests: XCTestCase {
     func testThemeAndAppearanceSelectionPersists() throws {
         openSettings()
 
-        let blackChampagne = app.buttons["themeOption-blackChampagne"]
-        XCTAssertTrue(blackChampagne.waitForExistence(timeout: 5))
+        let blackChampagne = scrollToHittable(app.buttons["themeOption-blackChampagne"])
+        XCTAssertTrue(blackChampagne.isHittable)
         blackChampagne.tap()
 
-        let appearancePicker = app.segmentedControls["appearanceModePicker"]
-        XCTAssertTrue(appearancePicker.waitForExistence(timeout: 5))
+        let appearancePicker = scrollToHittable(app.segmentedControls["appearanceModePicker"])
+        XCTAssertTrue(appearancePicker.isHittable)
         appearancePicker.buttons["ダーク"].tap()
         app.buttons["saveProfileSettingsButton"].tap()
 
         openSettings()
-        XCTAssertEqual(app.buttons["themeOption-blackChampagne"].value as? String, "選択中")
-        XCTAssertTrue(app.segmentedControls["appearanceModePicker"].buttons["ダーク"].isSelected)
+        let persistedBlackChampagne = scrollToHittable(app.buttons["themeOption-blackChampagne"])
+        XCTAssertEqual(persistedBlackChampagne.value as? String, "選択中")
+        let persistedDarkPicker = scrollToHittable(app.segmentedControls["appearanceModePicker"])
+        XCTAssertTrue(persistedDarkPicker.buttons["ダーク"].isSelected)
 
-        app.buttons["themeOption-royalCobalt"].tap()
-        app.segmentedControls["appearanceModePicker"].buttons["ライト"].tap()
+        let royalCobalt = scrollToHittable(app.buttons["themeOption-royalCobalt"])
+        XCTAssertTrue(royalCobalt.isHittable)
+        royalCobalt.tap()
+        persistedDarkPicker.buttons["ライト"].tap()
         app.buttons["saveProfileSettingsButton"].tap()
 
         openSettings()
-        XCTAssertEqual(app.buttons["themeOption-royalCobalt"].value as? String, "選択中")
-        XCTAssertTrue(app.segmentedControls["appearanceModePicker"].buttons["ライト"].isSelected)
+        let persistedRoyalCobalt = scrollToHittable(app.buttons["themeOption-royalCobalt"])
+        XCTAssertEqual(persistedRoyalCobalt.value as? String, "選択中")
+        let persistedLightPicker = scrollToHittable(app.segmentedControls["appearanceModePicker"])
+        XCTAssertTrue(persistedLightPicker.buttons["ライト"].isSelected)
+    }
+
+    func testLegalPrivacyAndSupportDocumentsAreAccessible() throws {
+        openSettings()
+
+        let termsLink = scrollToHittable(app.buttons["termsOfUseLink"])
+        XCTAssertTrue(termsLink.isHittable)
+        termsLink.tap()
+        XCTAssertTrue(app.navigationBars["利用規約"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["termsOfUseView"].exists)
+        app.navigationBars["利用規約"].buttons.firstMatch.tap()
+
+        let privacyLink = scrollToHittable(app.buttons["privacyPolicyLink"])
+        XCTAssertTrue(privacyLink.isHittable)
+        privacyLink.tap()
+        XCTAssertTrue(app.navigationBars["プライバシーポリシー"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["privacyPolicyView"].exists)
+        app.navigationBars["プライバシーポリシー"].buttons.firstMatch.tap()
+
+        let noticeLink = scrollToHittable(app.buttons["healthAINoticeLink"])
+        XCTAssertTrue(noticeLink.isHittable)
+        noticeLink.tap()
+        XCTAssertTrue(app.navigationBars["健康・AIに関する注意"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["healthAINoticeView"].exists)
+        app.navigationBars["健康・AIに関する注意"].buttons.firstMatch.tap()
+
+        let supportLink = scrollToHittable(app.buttons["supportInformationLink"])
+        XCTAssertTrue(supportLink.isHittable)
+        supportLink.tap()
+        XCTAssertTrue(app.navigationBars["サポート"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["supportInformationView"].exists)
     }
 
     private func verifySeededPlan() {
@@ -400,7 +505,10 @@ final class GymTrainingAppUITests: XCTestCase {
 
     private func completeWorkoutFromPlan() {
         startWorkoutFromPlan()
+        completeCurrentWorkout()
+    }
 
+    private func completeCurrentWorkout() {
         for index in 1...3 {
             let toggle = app.switches["completeSetToggle-0-\(index)"]
             XCTAssertTrue(toggle.waitForExistence(timeout: 5))
@@ -420,9 +528,14 @@ final class GymTrainingAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["計画セット"].exists)
         XCTAssertTrue(app.staticTexts["3/3"].exists)
         XCTAssertTrue(app.staticTexts["目標差"].exists)
-        XCTAssertTrue(app.staticTexts["0 kg"].exists)
 
         app.buttons["閉じる"].tap()
+    }
+
+    private func replaceText(in field: XCUIElement, with text: String) {
+        XCTAssertTrue(field.waitForExistence(timeout: 5))
+        field.tap(withNumberOfTaps: 3, numberOfTouches: 1)
+        field.typeText(text)
     }
 
     private func startWorkoutFromPlan() {
@@ -447,6 +560,7 @@ final class GymTrainingAppUITests: XCTestCase {
         let todayID = Self.calendarDayFormatter.string(from: Date())
         let todayCalendarButton = app.buttons["historyCalendarDay-\(todayID)"]
         XCTAssertTrue(todayCalendarButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(todayCalendarButton.label.contains("筋トレ1件"))
         todayCalendarButton.tap()
 
         let historyRow = app.descendants(matching: .any)["historyRow-胸の日"]
@@ -574,8 +688,8 @@ final class GymTrainingAppUITests: XCTestCase {
 
         let saveButton = app.buttons["saveProfileSettingsButton"]
         XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
-        app.swipeUp()
-        XCTAssertTrue(app.textFields["aiBaseURLField"].waitForExistence(timeout: 5))
+        let aiBaseURLField = scrollToHittable(app.textFields["aiBaseURLField"])
+        XCTAssertTrue(aiBaseURLField.isHittable)
         saveButton.tap()
     }
 
@@ -587,8 +701,8 @@ final class GymTrainingAppUITests: XCTestCase {
         settingsButton.tap()
 
         XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
-        app.swipeUp()
-        XCTAssertTrue(app.textFields["aiBaseURLField"].waitForExistence(timeout: 5))
+        let aiBaseURLField = scrollToHittable(app.textFields["aiBaseURLField"])
+        XCTAssertTrue(aiBaseURLField.isHittable)
 
         let checkButton = scrollToHittable(app.buttons["checkAIHealthButton"])
         XCTAssertTrue(checkButton.isHittable)
@@ -603,8 +717,8 @@ final class GymTrainingAppUITests: XCTestCase {
     private func verifyAIReportFailureMessage() {
         tapTab("ホーム")
 
-        let aiReportLink = app.descendants(matching: .any)["aiReportLink"]
-        XCTAssertTrue(aiReportLink.waitForExistence(timeout: 5))
+        let aiReportLink = scrollToHittable(app.descendants(matching: .any)["aiReportLink"])
+        XCTAssertTrue(aiReportLink.isHittable)
         aiReportLink.tap()
 
         let generateButton = app.buttons["generateWeeklyAIReportButton"]
@@ -632,6 +746,11 @@ final class GymTrainingAppUITests: XCTestCase {
         tapTab("履歴")
 
         XCTAssertTrue(app.descendants(matching: .any)["historyCalendar"].waitForExistence(timeout: 5))
+        let todayID = Self.calendarDayFormatter.string(from: Date())
+        let todayCalendarButton = app.buttons["historyCalendarDay-\(todayID)"]
+        XCTAssertTrue(todayCalendarButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(todayCalendarButton.label.contains("食事1件"))
+        XCTAssertTrue(todayCalendarButton.label.contains("写真1件"))
         XCTAssertTrue(app.descendants(matching: .any)["dailyJournalSummary"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["512 kcal"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["トレーニングは未記録"].exists)
@@ -652,8 +771,8 @@ final class GymTrainingAppUITests: XCTestCase {
     private func addManualMealEntry() {
         tapTab("ホーム")
 
-        let mealListLink = app.buttons["mealListLink"]
-        XCTAssertTrue(mealListLink.waitForExistence(timeout: 5))
+        let mealListLink = scrollToHittable(app.buttons["mealListLink"])
+        XCTAssertTrue(mealListLink.isHittable)
         mealListLink.tap()
 
         let addMealButton = app.buttons["addMealButton"]
@@ -696,10 +815,15 @@ final class GymTrainingAppUITests: XCTestCase {
     }
 
     private func addBodyPhotoMemoEntry() {
-        tapTab("ホーム")
+        let mealNavigationBar = app.navigationBars["食事"]
+        if mealNavigationBar.exists {
+            mealNavigationBar.buttons.firstMatch.tap()
+        } else {
+            tapTab("ホーム")
+        }
 
-        let bodyPhotoListLink = app.buttons["bodyPhotoListLink"]
-        XCTAssertTrue(bodyPhotoListLink.waitForExistence(timeout: 5))
+        let bodyPhotoListLink = scrollToHittable(app.buttons["bodyPhotoListLink"])
+        XCTAssertTrue(bodyPhotoListLink.isHittable)
         bodyPhotoListLink.tap()
 
         let addBodyPhotoButton = app.buttons["addBodyPhotoButton"]

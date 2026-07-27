@@ -94,6 +94,9 @@ struct WatchPlanSetTargetSnapshot: Codable, Hashable, Identifiable, Sendable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var previousActualWeight: Double? = nil
+    var previousActualReps: Int? = nil
+    var previousRPE: Double? = nil
 }
 
 enum WatchWeightUnit: String, Codable, Hashable, Sendable {
@@ -340,10 +343,20 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
     }
 
     init(planSet: WatchPlanSetTargetSnapshot) {
+        let actualWeight = (planSet.previousActualWeight ?? 0) > 0
+            ? planSet.previousActualWeight
+            : planSet.targetWeight
+        let actualReps = (planSet.previousActualReps ?? 0) > 0
+            ? planSet.previousActualReps
+            : planSet.targetReps
+
         self.init(
             setOrder: planSet.setOrder,
             targetWeight: planSet.targetWeight,
-            targetReps: planSet.targetReps
+            targetReps: planSet.targetReps,
+            actualWeight: actualWeight,
+            actualReps: actualReps,
+            rpe: planSet.previousRPE
         )
     }
 

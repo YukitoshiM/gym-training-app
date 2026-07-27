@@ -270,7 +270,7 @@ private struct MealEditorView: View {
                     Button {
                         analyzeMeal()
                     } label: {
-                        Label(isAnalyzing ? "AI下書き作成中" : "AI下書きを作成", systemImage: "sparkles")
+                        Label(isAnalyzing ? "カロリー推定中" : "もう一度推定", systemImage: "sparkles")
                     }
                     .disabled(imageData == nil || isAnalyzing || !appStore.aiSettings.isEnabled)
                     .accessibilityIdentifier("analyzeMealButton")
@@ -409,11 +409,24 @@ private struct MealEditorView: View {
             }
             .onChange(of: selectedPhoto) { _, item in
                 Task {
-                    imageData = try? await item?.loadTransferable(type: Data.self)
+                    guard let loadedData = try? await item?.loadTransferable(type: Data.self) else {
+                        return
+                    }
+                    imageData = loadedData
                     aiDraft = nil
                     aiErrorMessage = nil
                     aiErrorRecovery = nil
+                    if appStore.aiSettings.isEnabled {
+                        analyzeMeal()
+                    }
                 }
+            }
+            .onAppear {
+                restorePreviousNutritionValues(for: mealType)
+            }
+            .onChange(of: mealType) { _, newMealType in
+                guard imageData == nil, aiDraft == nil else { return }
+                restorePreviousNutritionValues(for: newMealType)
             }
             .onChange(of: protein) { _, _ in updateCalculatedCalories() }
             .onChange(of: fat) { _, _ in updateCalculatedCalories() }
@@ -439,16 +452,36 @@ private struct MealEditorView: View {
         calories = calculatedCalories.formatted(.number.precision(.fractionLength(0)))
     }
 
+    private func restorePreviousNutritionValues(for mealType: MealType) {
+        guard let previous = appStore.latestMealEntry(for: mealType) else {
+            calories = ""
+            protein = ""
+            fat = ""
+            carbs = ""
+            calculatesCaloriesFromPFC = true
+            return
+        }
+
+        protein = previous.protein.formatted(.number.precision(.fractionLength(0...1)))
+        fat = previous.fat.formatted(.number.precision(.fractionLength(0...1)))
+        carbs = previous.carbs.formatted(.number.precision(.fractionLength(0...1)))
+
+        let pfcCalories = previous.protein * 4 + previous.fat * 9 + previous.carbs * 4
+        calculatesCaloriesFromPFC = abs(previous.calories - pfcCalories) < 1
+        calories = previous.calories.formatted(.number.precision(.fractionLength(0)))
+        updateCalculatedCalories()
+    }
+
     private var aiHelpText: String {
         if !appStore.aiSettings.isEnabled {
             return "AI機能は設定でオフです。手動入力はこのまま保存できます。"
         }
 
         if imageData == nil {
-            return "写真を選ぶと、ローカルLLMで料理名とPFCの下書きを作れます。"
+            return "写真を選ぶと、カロリーなどを自動入力します。"
         }
 
-        return "AI下書きは参考値です。必ず量とPFCを確認してから保存してください。"
+        return "推定値は参考値です。下の入力欄で自由に修正できます。"
     }
 
     private func analyzeMeal() {
@@ -482,11 +515,11 @@ private struct MealEditorView: View {
     private func apply(_ draft: MealAIDraft) {
         aiDraft = draft
         name = draft.mealName
+        calculatesCaloriesFromPFC = false
         calories = draft.calories.formatted(.number.precision(.fractionLength(0)))
         protein = draft.protein.formatted(.number.precision(.fractionLength(0...1)))
         fat = draft.fat.formatted(.number.precision(.fractionLength(0...1)))
         carbs = draft.carbs.formatted(.number.precision(.fractionLength(0...1)))
-        updateCalculatedCalories()
     }
 
     private func save() {

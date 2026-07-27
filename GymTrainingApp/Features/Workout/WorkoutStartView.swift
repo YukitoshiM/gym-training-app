@@ -42,7 +42,7 @@ struct WorkoutStartView: View {
                         Section("計画から開始") {
                             ForEach(appStore.plans) { plan in
                                 Button {
-                                    activeSession = WorkoutSession(plan: plan)
+                                    activeSession = appStore.makeWorkoutSession(from: plan)
                                 } label: {
                                     CardContainer {
                                         HStack(spacing: 12) {

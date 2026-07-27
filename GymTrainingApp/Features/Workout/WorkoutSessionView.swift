@@ -116,21 +116,10 @@ struct WorkoutSessionView: View {
     }
 
     private func addExercise(_ exercise: Exercise) {
-        let nextOrder = session.exercises.count
-        let sets = PlanSetTarget.defaultSets().map {
-            WorkoutSet(
-                setOrder: $0.setOrder,
-                targetWeight: $0.targetWeight,
-                targetReps: $0.targetReps
-            )
-        }
-
         session.exercises.append(
-            WorkoutExercise(
-                exercise: exercise,
-                sortOrder: nextOrder,
-                restSeconds: 90,
-                sets: sets
+            appStore.makeWorkoutExercise(
+                for: exercise,
+                sortOrder: session.exercises.count
             )
         )
     }

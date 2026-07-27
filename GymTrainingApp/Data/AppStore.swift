@@ -366,19 +366,109 @@ final class AppStore: ObservableObject {
         return try encoder.encode(export)
     }
 
-    func latestCompletedSets(for exercise: Exercise) -> [WorkoutSet] {
+    func latestCompletedExercise(for exercise: Exercise) -> WorkoutExercise? {
         for session in workoutHistory {
             guard let workoutExercise = session.exercises.first(where: { $0.exercise.name == exercise.name }) else {
                 continue
             }
 
-            let completedSets = workoutExercise.sets.filter(\.isCompleted)
-            if !completedSets.isEmpty {
-                return completedSets.sorted { $0.setOrder < $1.setOrder }
+            if workoutExercise.sets.contains(where: \.isCompleted) {
+                return workoutExercise
             }
         }
 
-        return []
+        return nil
+    }
+
+    func latestCompletedSets(for exercise: Exercise) -> [WorkoutSet] {
+        latestCompletedExercise(for: exercise)?
+            .sets
+            .filter(\.isCompleted)
+            .sorted { $0.setOrder < $1.setOrder } ?? []
+    }
+
+    func latestRestSeconds(for exercise: Exercise) -> Int? {
+        guard let restSeconds = latestCompletedExercise(for: exercise)?.restSeconds,
+              restSeconds > 0 else {
+            return nil
+        }
+
+        return restSeconds
+    }
+
+    func makeWorkoutSession(from plan: TrainingPlan) -> WorkoutSession {
+        let exercises = plan.exercises
+            .sorted { $0.sortOrder < $1.sortOrder }
+            .map { planExercise in
+                makeWorkoutExercise(
+                    for: planExercise.exercise,
+                    sortOrder: planExercise.sortOrder,
+                    restSeconds: planExercise.restSeconds,
+                    planSets: planExercise.sets
+                )
+            }
+
+        return WorkoutSession(
+            title: plan.name,
+            sourcePlanID: plan.id,
+            exercises: exercises
+        )
+    }
+
+    func makeWorkoutExercise(
+        for exercise: Exercise,
+        sortOrder: Int,
+        restSeconds: Int = 90,
+        planSets: [PlanSetTarget]? = nil
+    ) -> WorkoutExercise {
+        let previousExercise = latestCompletedExercise(for: exercise)
+        let previousSets = previousExercise?
+            .sets
+            .filter(\.isCompleted)
+            .sorted { $0.setOrder < $1.setOrder } ?? []
+        let targets = planSets?.sorted { $0.setOrder < $1.setOrder }
+            ?? suggestedPlanSets(from: previousSets)
+
+        let sets = targets.map { target in
+            let previous = previousSets.first { $0.setOrder == target.setOrder } ?? previousSets.last
+            return WorkoutSet(
+                setOrder: target.setOrder,
+                targetWeight: target.targetWeight,
+                targetReps: target.targetReps,
+                actualWeight: positiveValue(previous?.actualWeight) ?? target.targetWeight,
+                actualReps: positiveValue(previous?.actualReps) ?? target.targetReps,
+                rpe: previous?.rpe
+            )
+        }
+
+        return WorkoutExercise(
+            exercise: exercise,
+            sortOrder: sortOrder,
+            restSeconds: positiveValue(previousExercise?.restSeconds) ?? restSeconds,
+            sets: sets
+        )
+    }
+
+    private func suggestedPlanSets(from previousSets: [WorkoutSet]) -> [PlanSetTarget] {
+        let setCount = max(previousSets.count, 3)
+        return (1...setCount).map { setOrder in
+            let previous = previousSets.first { $0.setOrder == setOrder } ?? previousSets.last
+            return PlanSetTarget(
+                setOrder: setOrder,
+                targetWeight: positiveValue(previous?.actualWeight) ?? 50,
+                targetReps: positiveValue(previous?.actualReps) ?? 10
+            )
+        }
+    }
+
+    private func positiveValue(_ value: Double?) -> Double? {
+        guard let value, value > 0 else { return nil }
+        return value
+    }
+
+    private func positiveValue(_ value: Int?) -> Int? {
+        guard let value, value > 0 else { return nil }
+        return value
     }
 
     func bodyMetricEntries(for kind: BodyMetricKind) -> [BodyMetricEntry] {
@@ -436,6 +526,10 @@ final class AppStore: ObservableObject {
         mealEntries
             .filter { Calendar.current.isDate($0.recordedAt, inSameDayAs: date) }
             .sorted { $0.recordedAt > $1.recordedAt }
+    }
+
+    func latestMealEntry(for mealType: MealType) -> MealEntry? {
+        mealEntries.first { $0.mealType == mealType }
     }
 
     func saveMealEntry(_ entry: MealEntry) {
