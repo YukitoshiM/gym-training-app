@@ -57,6 +57,8 @@ struct ExercisePickerView: View {
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("種目を選択")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText, prompt: "種目名・部位・手法")

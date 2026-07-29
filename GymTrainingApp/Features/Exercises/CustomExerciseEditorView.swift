@@ -45,6 +45,8 @@ struct CustomExerciseEditorView: View {
                         .lineLimit(4, reservesSpace: true)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("カスタム種目")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

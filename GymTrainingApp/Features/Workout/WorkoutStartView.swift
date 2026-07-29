@@ -25,7 +25,7 @@ struct WorkoutStartView: View {
                                             .font(.headline)
                                         Text("計画なしで種目を追加して記録します")
                                             .font(.caption)
-                                            .foregroundStyle(.secondary)
+                                            .foregroundStyle(AppTheme.mutedInk)
                                     }
 
                                     Spacer()
@@ -42,7 +42,7 @@ struct WorkoutStartView: View {
                         Section("計画から開始") {
                             ForEach(appStore.plans) { plan in
                                 Button {
-                                    activeSession = WorkoutSession(plan: plan)
+                                    activeSession = appStore.makeWorkoutSession(from: plan)
                                 } label: {
                                     CardContainer {
                                         HStack(spacing: 12) {
@@ -57,7 +57,7 @@ struct WorkoutStartView: View {
                                                     Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                                                 }
                                                 .font(.caption)
-                                                .foregroundStyle(.secondary)
+                                                .foregroundStyle(AppTheme.mutedInk)
                                             }
 
                                             Spacer()

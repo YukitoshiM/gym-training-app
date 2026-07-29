@@ -38,6 +38,8 @@ struct WeeklyVolumeView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("週次ボリューム")
     }
 }
@@ -70,11 +72,13 @@ struct ExerciseHistoryListView: View {
                             Label(AppFormatters.volume(summary.totalVolume, unit: appStore.userProfile.weightUnit), systemImage: "scalemass")
                         }
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle("種目別履歴")
     }
 }
@@ -147,11 +151,13 @@ struct ExerciseHistoryDetailView: View {
                             .font(.headline)
                         Text("\(AppFormatters.weight(record.maxWeight, unit: appStore.userProfile.weightUnit)) / \(AppFormatters.volume(record.exercise.totalVolume, unit: appStore.userProfile.weightUnit))")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
         .navigationTitle(exerciseName)
     }
 

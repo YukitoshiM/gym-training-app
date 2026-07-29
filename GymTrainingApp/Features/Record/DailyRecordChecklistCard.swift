@@ -3,7 +3,7 @@ import SwiftUI
 struct DailyRecordChecklistCard: View {
     let bodyWeightRecorded: Bool
     let waistRecorded: Bool
-    let mealCount: Int
+    let nutritionProgress: DailyNutritionProgress
     let bodyPhotoCount: Int
     let workoutCount: Int
 
@@ -16,7 +16,8 @@ struct DailyRecordChecklistCard: View {
         [
             bodyWeightRecorded,
             waistRecorded,
-            mealCount > 0,
+            nutritionProgress.isMealCountAchieved,
+            nutritionProgress.isNutritionAchieved,
             bodyPhotoCount > 0,
             workoutCount > 0
         ].filter { $0 }.count
@@ -29,21 +30,21 @@ struct DailyRecordChecklistCard: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("今日の記録チェック")
                             .font(.headline)
-                        Text("\(completedCount)/5 完了")
+                        Text("\(completedCount)/6 完了")
                             .font(.caption.bold())
-                            .foregroundStyle(completedCount == 5 ? .green : .secondary)
+                            .foregroundStyle(completedCount == 6 ? AppTheme.positive : AppTheme.mutedInk)
                     }
 
                     Spacer()
 
-                    Gauge(value: Double(completedCount), in: 0...5) {
+                    Gauge(value: Double(completedCount), in: 0...6) {
                         Text("完了")
                     }
                     .gaugeStyle(.accessoryCircularCapacity)
                     .tint(AppTheme.accent)
                 }
 
-                ProgressView(value: Double(completedCount), total: 5)
+                ProgressView(value: Double(completedCount), total: 6)
                     .tint(AppTheme.accent)
 
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
@@ -64,11 +65,19 @@ struct DailyRecordChecklistCard: View {
                     )
 
                     DailyRecordStatusChip(
-                        title: "食事",
-                        detail: mealCount > 0 ? "\(mealCount)件" : "未記録",
+                        title: "食事回数",
+                        detail: "\(nutritionProgress.mealCount)/\(nutritionProgress.goals.mealCount)回",
                         systemImage: "fork.knife",
-                        isCompleted: mealCount > 0,
+                        isCompleted: nutritionProgress.isMealCountAchieved,
                         tint: AppTheme.orange
+                    )
+
+                    DailyRecordStatusChip(
+                        title: "カロリー/PFC",
+                        detail: nutritionProgress.isNutritionAchieved ? "目標達成" : "記録中",
+                        systemImage: "chart.bar.fill",
+                        isCompleted: nutritionProgress.isNutritionAchieved,
+                        tint: AppTheme.accent
                     )
 
                     DailyRecordStatusChip(
@@ -104,7 +113,7 @@ private struct DailyRecordStatusChip: View {
         HStack(spacing: 10) {
             Image(systemName: isCompleted ? "checkmark.circle.fill" : systemImage)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(isCompleted ? .green : tint)
+                .foregroundStyle(isCompleted ? AppTheme.positive : tint)
                 .frame(width: 20)
 
             VStack(alignment: .leading, spacing: 2) {
@@ -115,17 +124,17 @@ private struct DailyRecordStatusChip: View {
 
                 Text(detail)
                     .font(.caption2.bold())
-                    .foregroundStyle(isCompleted ? .green : .secondary)
+                    .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
                     .lineLimit(1)
             }
         }
         .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
         .padding(.horizontal, 10)
         .padding(.vertical, 8)
-        .background((isCompleted ? Color.green : tint).opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
+        .background((isCompleted ? AppTheme.positive : tint).opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke((isCompleted ? Color.green : tint).opacity(0.18), lineWidth: 1)
+                .stroke((isCompleted ? AppTheme.positive : tint).opacity(0.18), lineWidth: 1)
         )
     }
 }

@@ -1,0 +1,384 @@
+import SwiftUI
+
+struct WatchLiveWorkoutCard: View {
+    let snapshot: WatchLiveWorkoutSnapshot
+
+    var body: some View {
+        NavigationLink {
+            WatchLiveWorkoutView()
+        } label: {
+            CardContainer {
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(spacing: 12) {
+                        IconBadge(systemImage: "applewatch.radiowaves.left.and.right", tint: AppTheme.accent)
+
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text("WATCHで記録中")
+                                .font(.caption.bold())
+                                .foregroundStyle(AppTheme.accent)
+                            Text(snapshot.session.title)
+                                .font(.headline)
+                                .foregroundStyle(AppTheme.ink)
+                        }
+
+                        Spacer()
+
+                        Text("\(snapshot.session.completedSetCount)/\(snapshot.session.totalSetCount)")
+                            .font(.headline.monospacedDigit())
+                            .foregroundStyle(AppTheme.ink)
+                    }
+
+                    ProgressView(
+                        value: Double(snapshot.session.completedSetCount),
+                        total: Double(max(1, snapshot.session.totalSetCount))
+                    )
+                    .tint(AppTheme.accent)
+
+                    HStack(spacing: 14) {
+                        Label(formatDuration(snapshot.liveMetrics.elapsedSeconds), systemImage: "clock")
+                        if let heartRate = snapshot.liveMetrics.currentHeartRate {
+                            Label("\(Int(heartRate.rounded())) bpm", systemImage: "heart.fill")
+                        }
+                        if snapshot.isRestTimerRunning {
+                            Label(formatDuration(Double(snapshot.restRemaining)), systemImage: "timer")
+                                .foregroundStyle(AppTheme.accent)
+                        }
+                    }
+                    .font(.caption.bold())
+                    .foregroundStyle(AppTheme.mutedInk)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier("watchLiveWorkoutCard")
+    }
+}
+
+struct WatchLiveWorkoutView: View {
+    @EnvironmentObject private var watchSyncService: WatchPlanSyncService
+    @State private var editor: LiveSetEditor?
+    @State private var isConfirmingFinish = false
+    @State private var isConfirmingCancel = false
+
+    var body: some View {
+        Group {
+            if let snapshot = watchSyncService.liveWatchWorkout {
+                List {
+                    Section {
+                        LiveWorkoutSummary(snapshot: snapshot)
+                    }
+
+                    ForEach(snapshot.session.exercises.sorted { $0.sortOrder < $1.sortOrder }) { exercise in
+                        Section {
+                            ForEach(exercise.sets.sorted { $0.setOrder < $1.setOrder }) { set in
+                                LiveSetRow(
+                                    exercise: exercise,
+                                    set: set,
+                                    unit: snapshot.session.weightUnit,
+                                    onEdit: {
+                                        editor = LiveSetEditor(
+                                            exercise: exercise,
+                                            set: set,
+                                            unit: snapshot.session.weightUnit
+                                        )
+                                    },
+                                    onCommand: watchSyncService.send(command:)
+                                )
+                            }
+
+                            if snapshot.isRestTimerRunning,
+                               snapshot.restExerciseID == exercise.id {
+                                HStack {
+                                    Label(
+                                        "休憩 \(formatDuration(Double(snapshot.restRemaining)))",
+                                        systemImage: "timer"
+                                    )
+                                    .font(.headline.monospacedDigit())
+                                    .foregroundStyle(AppTheme.accent)
+                                    Spacer()
+                                    Button("終了") {
+                                        watchSyncService.send(command: WatchWorkoutCommand(action: .stopRestTimer))
+                                    }
+                                    .buttonStyle(.bordered)
+                                }
+                                .accessibilityIdentifier("liveRestTimer-\(exercise.id)")
+                            }
+                        } header: {
+                            Text(exercise.name)
+                        } footer: {
+                            Text("\(exercise.completedSetCount)/\(exercise.sets.count)セット完了")
+                        }
+                    }
+
+                    Section {
+                        Button {
+                            isConfirmingFinish = true
+                        } label: {
+                            Label("トレーニングを完了", systemImage: "checkmark.circle.fill")
+                        }
+                        .foregroundStyle(AppTheme.positive)
+
+                        Button(role: .destructive) {
+                            isConfirmingCancel = true
+                        } label: {
+                            Label("記録を破棄", systemImage: "xmark.circle")
+                        }
+                    }
+                }
+                .scrollContentBackground(.hidden)
+                .background(TrainingBackground())
+                .sheet(item: $editor) { editor in
+                    LiveSetEditorView(editor: editor)
+                }
+                .confirmationDialog(
+                    "Watchのトレーニングを完了しますか？",
+                    isPresented: $isConfirmingFinish,
+                    titleVisibility: .visible
+                ) {
+                    Button("完了して履歴へ保存") {
+                        watchSyncService.send(command: WatchWorkoutCommand(action: .finishWorkout))
+                    }
+                    Button("続ける", role: .cancel) {}
+                }
+                .confirmationDialog(
+                    "Watchの記録を破棄しますか？",
+                    isPresented: $isConfirmingCancel,
+                    titleVisibility: .visible
+                ) {
+                    Button("破棄", role: .destructive) {
+                        watchSyncService.send(command: WatchWorkoutCommand(action: .cancelWorkout))
+                    }
+                    Button("続ける", role: .cancel) {}
+                }
+            } else {
+                ContentUnavailableView(
+                    "Watchの記録は終了しました",
+                    systemImage: "applewatch",
+                    description: Text("完了した記録は履歴から確認できます。")
+                )
+            }
+        }
+        .navigationTitle("Watchライブ")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+private struct LiveWorkoutSummary: View {
+    let snapshot: WatchLiveWorkoutSnapshot
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(snapshot.session.title)
+                .font(.title3.bold())
+
+            HStack(spacing: 16) {
+                summaryValue(
+                    title: "経過",
+                    value: formatDuration(snapshot.liveMetrics.elapsedSeconds),
+                    image: "clock"
+                )
+                summaryValue(
+                    title: "セット",
+                    value: "\(snapshot.session.completedSetCount)/\(snapshot.session.totalSetCount)",
+                    image: "checkmark.circle"
+                )
+                if let heartRate = snapshot.liveMetrics.currentHeartRate {
+                    summaryValue(title: "心拍", value: "\(Int(heartRate.rounded()))", image: "heart.fill")
+                }
+            }
+        }
+        .padding(.vertical, 4)
+    }
+
+    private func summaryValue(title: String, value: String, image: String) -> some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Label(title, systemImage: image)
+                .font(.caption2)
+                .foregroundStyle(AppTheme.mutedInk)
+            Text(value)
+                .font(.headline.monospacedDigit())
+        }
+    }
+}
+
+private struct LiveSetRow: View {
+    let exercise: WatchWorkoutExerciseSnapshot
+    let set: WatchWorkoutSetSnapshot
+    let unit: WatchWeightUnit
+    let onEdit: () -> Void
+    let onCommand: (WatchWorkoutCommand) -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Text("SET \(set.setOrder)")
+                    .font(.caption.bold())
+                    .foregroundStyle(AppTheme.mutedInk)
+                Spacer()
+                Text(status)
+                    .font(.caption.bold())
+                    .foregroundStyle(statusTint)
+            }
+
+            HStack {
+                Text("\(formatWeight(set.actualWeight)) \(unit.displayName) × \(set.actualReps)回")
+                    .font(.headline.monospacedDigit())
+                Spacer()
+                if set.startedAt != nil, !set.isCompleted {
+                    Button(action: onEdit) {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                    .buttonStyle(.borderless)
+                    .accessibilityLabel("実績値を編集")
+                }
+            }
+
+            if !set.isCompleted {
+                HStack {
+                    if set.startedAt == nil {
+                        Button {
+                            onCommand(
+                                WatchWorkoutCommand(
+                                    action: .startSet,
+                                    exerciseID: exercise.id,
+                                    setID: set.id
+                                )
+                            )
+                        } label: {
+                            Label("開始", systemImage: "play.fill")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    } else {
+                        Button(role: .destructive) {
+                            onCommand(
+                                WatchWorkoutCommand(
+                                    action: .cancelSet,
+                                    exerciseID: exercise.id,
+                                    setID: set.id
+                                )
+                            )
+                        } label: {
+                            Label("開始取消", systemImage: "arrow.uturn.backward")
+                        }
+                        .buttonStyle(.bordered)
+
+                        Spacer()
+
+                        Button {
+                            onCommand(
+                                WatchWorkoutCommand(
+                                    action: .completeSet,
+                                    exerciseID: exercise.id,
+                                    setID: set.id
+                                )
+                            )
+                        } label: {
+                            Label("完了", systemImage: "checkmark")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
+                }
+                .font(.caption)
+            }
+        }
+        .padding(.vertical, 4)
+        .accessibilityIdentifier("liveSet-\(exercise.sortOrder)-\(set.setOrder)")
+    }
+
+    private var status: String {
+        if set.isCompleted { return "完了" }
+        if set.startedAt != nil { return "実施中" }
+        return "待機"
+    }
+
+    private var statusTint: Color {
+        if set.isCompleted { return AppTheme.positive }
+        if set.startedAt != nil { return AppTheme.accent }
+        return AppTheme.mutedInk
+    }
+
+    private func formatWeight(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(0...1)))
+    }
+}
+
+private struct LiveSetEditor: Identifiable {
+    let id = UUID()
+    let exercise: WatchWorkoutExerciseSnapshot
+    let set: WatchWorkoutSetSnapshot
+    let unit: WatchWeightUnit
+}
+
+private struct LiveSetEditorView: View {
+    @EnvironmentObject private var watchSyncService: WatchPlanSyncService
+    @Environment(\.dismiss) private var dismiss
+    let editor: LiveSetEditor
+
+    @State private var weight: Double
+    @State private var reps: Int
+    @State private var rpeText: String
+
+    init(editor: LiveSetEditor) {
+        self.editor = editor
+        _weight = State(initialValue: editor.set.actualWeight)
+        _reps = State(initialValue: editor.set.actualReps)
+        _rpeText = State(initialValue: editor.set.rpe.map {
+            $0.formatted(.number.precision(.fractionLength(0...1)))
+        } ?? "8")
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section(editor.exercise.name) {
+                    WeightInputControl(
+                        weightInKilograms: $weight,
+                        unit: editor.unit == .kg ? .kg : .lb,
+                        kilogramRange: editor.exercise.supportsAssistedLoad
+                            ? AssistedLoadSupport.kilogramRange
+                            : 0...999,
+                        accessibilityIdentifier: "liveSetWeight"
+                    )
+                    RepsInputControl(reps: $reps, accessibilityIdentifier: "liveSetReps")
+                    NumericTextInputControl(
+                        text: $rpeText,
+                        title: "RPE",
+                        unit: "",
+                        range: 1...10,
+                        step: 0.5,
+                        defaultValue: 8,
+                        accessibilityIdentifier: "liveSetRPE"
+                    )
+                }
+            }
+            .navigationTitle("セット実績")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("キャンセル") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("反映") {
+                        watchSyncService.send(
+                            command: WatchWorkoutCommand(
+                                action: .updateSet,
+                                exerciseID: editor.exercise.id,
+                                setID: editor.set.id,
+                                actualWeight: weight,
+                                actualReps: reps,
+                                rpe: Double(rpeText.replacingOccurrences(of: ",", with: "."))
+                            )
+                        )
+                        dismiss()
+                    }
+                    .fontWeight(.semibold)
+                }
+            }
+        }
+    }
+}
+
+private func formatDuration(_ seconds: Double) -> String {
+    let total = max(0, Int(seconds.rounded()))
+    return String(format: "%02d:%02d", total / 60, total % 60)
+}

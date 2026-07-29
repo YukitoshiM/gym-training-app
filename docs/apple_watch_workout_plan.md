@@ -1,4 +1,4 @@
-# Apple Watch連携 W1設計
+# Apple Watch連携 W1〜W4設計・実装記録
 
 作成日: 2026-07-14
 対象: Apple Watchでのジム中トレーニング管理
@@ -44,10 +44,12 @@ Apple Watch側の価値は「ジム中にiPhoneを触らず、迷わず記録で
 
 ### W4: Apple連携
 
-- HealthKit権限を追加する
-- 必要に応じてHKWorkoutSessionを開始する
-- 心拍、運動時間、消費カロリーを取得または保存する
-- Apple標準ワークアウトアプリとの共存方針を確定する
+- [x] HealthKit権限を追加する
+- [x] `HKWorkoutSession` を本アプリから開始する
+- [x] 心拍、運動時間、活動エネルギーを取得・保存する
+- [x] Apple標準ワークアウトとの共存方針を確定する
+- [x] HealthKit失敗時もアプリ内記録を保持する
+- [x] セット単位の心拍・モーション要約をiPhoneへ同期する
 
 ## 3. W1で決めるMVP体験
 
@@ -213,12 +215,29 @@ Apple公式ドキュメントでは、HKWorkoutSessionはApple Watch上でユー
 
 ## 11. W4実装タスク
 
-1. HealthKit capabilityを追加
-2. HealthKit権限文言をInfo.plistに追加
-3. HKWorkoutSessionを使う案Bのプロトタイプを作る
-4. Apple標準ワークアウト併用案Aと体験比較する
-5. 心拍、時間、消費カロリーをWorkoutSessionに紐付ける設計を追加
-6. HealthKit保存/読み取りの失敗UXを作る
+1. [x] HealthKit capabilityを追加
+2. [x] HealthKit権限文言をInfo.plistに追加
+3. [x] HKWorkoutSessionを使う案Bを実装
+4. [x] Apple標準ワークアウト併用案Aと体験比較
+5. [x] 心拍、時間、消費カロリーをWorkoutSessionへ紐付け
+6. [x] HealthKit保存/読み取りの失敗UXを実装
+
+## 11.2 W4実装メモ
+
+実装日: 2026-07-18
+
+- 本アプリが屋内の筋力トレーニングとして `HKWorkoutSession` と `HKLiveWorkoutBuilder` を開始する案Bを採用した
+- Watchに現在心拍、平均・最大心拍、活動エネルギー、経過時間、参考心拍ゾーンを表示する
+- Watch上でHealthワークアウトを一時停止・再開できる
+- セットごとに開始・終了・平均・最大心拍、短時間の心拍回復を保存する
+- Core Motionから回数、平均反復時間、動作一貫性、信頼度を推定する
+- 目標回数到達、休憩終了を触覚で通知する
+- RPEと心拍を用いた適応休憩を任意設定として追加した
+- HealthKit保存の成否をiPhone履歴へ同期し、失敗時もローカル実績を残す
+- iPhone側に活動量、睡眠、安静時心拍、HRV、呼吸数、手首皮膚温、環境音、心拍回復をまとめたコンディション画面を追加した
+- 位置情報によるジム訪問と手動チェックインをカレンダーへ統合した
+- センサーをAIへ渡す設定は初期値OFFとし、端末内分析はAIなしで利用できる
+- 全ユーザーストーリーとプラットフォーム制約は `docs/apple_watch_sensor_user_stories.md` に記載した
 
 ## 11.1 W3実装メモ
 
@@ -263,10 +282,12 @@ Apple公式ドキュメントでは、HKWorkoutSessionはApple Watch上でユー
 
 ## 14. W4受け入れ基準
 
-- HealthKit権限をユーザーが理解できる文言で出せる
-- 心拍またはワークアウト時間を取得できる
-- Apple標準ワークアウト併用案と本アプリ開始案のどちらで進むか判断できる
-- HealthKit連携が失敗しても筋トレ記録自体は失われない
+- [x] HealthKit権限をユーザーが理解できる文言で出せる
+- [x] 心拍、ワークアウト時間、活動エネルギーを取得できる
+- [x] 本アプリ開始案を採用し、Apple標準アプリとの二重開始を避ける方針を表示できる
+- [x] HealthKit連携が失敗しても筋トレ記録自体は失われない
+- [x] センサー未搭載・未許可・欠測を0として評価しない
+- [x] 回数推定をユーザーが採用・修正できる
 
 ## 15. 参考にしたApple公式情報
 

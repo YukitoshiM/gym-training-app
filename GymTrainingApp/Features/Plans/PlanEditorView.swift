@@ -66,7 +66,7 @@ struct PlanEditorView: View {
                     if draft.exercises.isEmpty {
                         Text("種目を追加すると一括設定できます。")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         LazyVGrid(columns: setPresetColumns, spacing: 8) {
                             ForEach(setPresets) { preset in
@@ -113,6 +113,8 @@ struct PlanEditorView: View {
                 }
 
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .safeAreaInset(edge: .bottom) {
                 Button {
                     save()
@@ -123,7 +125,7 @@ struct PlanEditorView: View {
                 .buttonStyle(.borderedProminent)
                 .disabled(!canSave)
                 .padding()
-                .background(.bar)
+                .background(AppTheme.elevatedBackground)
                 .accessibilityIdentifier("savePlanPinnedButton")
             }
             .navigationTitle(draft.name.isEmpty ? "計画作成" : draft.name)
@@ -174,7 +176,9 @@ struct PlanEditorView: View {
         draft.exercises.append(
             PlanExercise(
                 exercise: exercise,
-                sortOrder: nextOrder
+                sortOrder: nextOrder,
+                restSeconds: appStore.latestRestSeconds(for: exercise) ?? 90,
+                sets: suggestedSets(for: exercise)
             )
         )
     }
@@ -197,11 +201,12 @@ struct PlanEditorView: View {
                 PlanExercise(
                     exercise: exercise,
                     sortOrder: nextOrder,
-                    restSeconds: template.restSeconds,
-                    sets: PlanSetTarget.quickSets(
+                    restSeconds: appStore.latestRestSeconds(for: exercise) ?? template.restSeconds,
+                    sets: suggestedSets(
+                        for: exercise,
                         count: template.setCount,
-                        targetWeight: template.targetWeight,
-                        targetReps: template.targetReps
+                        fallbackWeight: template.targetWeight,
+                        fallbackReps: template.targetReps
                     )
                 )
             )
@@ -210,6 +215,30 @@ struct PlanEditorView: View {
         }
 
         normalizeSortOrder()
+    }
+
+    private func suggestedSets(
+        for exercise: Exercise,
+        count: Int = 3,
+        fallbackWeight: Double = 50,
+        fallbackReps: Int = 10
+    ) -> [PlanSetTarget] {
+        let previousSets = appStore.latestCompletedSets(for: exercise)
+        return (1...max(count, 1)).map { setOrder in
+            let previous = previousSets.first { $0.setOrder == setOrder } ?? previousSets.last
+            let previousWeight = previous?.actualWeight
+            let weight = exercise.supportsAssistedLoad
+                ? previousWeight ?? 0
+                : ((previousWeight ?? 0) > 0 ? previousWeight ?? fallbackWeight : fallbackWeight)
+            let reps = (previous?.actualReps ?? 0) > 0
+                ? previous?.actualReps ?? fallbackReps
+                : fallbackReps
+            return PlanSetTarget(
+                setOrder: setOrder,
+                targetWeight: weight,
+                targetReps: reps
+            )
+        }
     }
 
     private func applySetPreset(_ preset: PlanSetPreset) {
@@ -274,7 +303,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.accent,
             exerciseNames: ["ベンチプレス", "インクラインダンベルプレス", "ケーブルクロスオーバー", "トライセプスプレスダウン"],
             setCount: 3,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 90
         ),
@@ -286,7 +315,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.blue,
             exerciseNames: ["ラットプルダウン", "シーテッドロー", "ワンハンドダンベルロー", "フェイスプル"],
             setCount: 3,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 90
         ),
@@ -298,7 +327,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.orange,
             exerciseNames: ["レッグプレス", "レッグカール", "ヒップスラスト", "スタンディングカーフレイズ"],
             setCount: 3,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 120
         ),
@@ -310,7 +339,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.purple,
             exerciseNames: ["ショルダープレス", "サイドレイズ", "ダンベルカール", "トライセプスプレスダウン"],
             setCount: 3,
-            targetWeight: 15,
+            targetWeight: 50,
             targetReps: 12,
             restSeconds: 75
         ),
@@ -322,7 +351,7 @@ private struct PlanTemplate: Identifiable {
             tint: AppTheme.accent,
             exerciseNames: ["スクワット", "ベンチプレス", "ラットプルダウン", "ショルダープレス"],
             setCount: 2,
-            targetWeight: 20,
+            targetWeight: 50,
             targetReps: 10,
             restSeconds: 90
         )
@@ -339,10 +368,10 @@ private struct PlanSetPreset: Identifiable {
     let tint: Color
 
     static let defaults: [PlanSetPreset] = [
-        PlanSetPreset(id: "standard", title: "3x10", detail: "標準", setCount: 3, targetWeight: 20, targetReps: 10, tint: AppTheme.accent),
-        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: "筋肥大", setCount: 4, targetWeight: 20, targetReps: 8, tint: AppTheme.blue),
-        PlanSetPreset(id: "strength", title: "5x5", detail: "高重量", setCount: 5, targetWeight: 20, targetReps: 5, tint: AppTheme.orange),
-        PlanSetPreset(id: "pump", title: "2x15", detail: "軽め", setCount: 2, targetWeight: 20, targetReps: 15, tint: AppTheme.purple)
+        PlanSetPreset(id: "standard", title: "3x10", detail: "標準", setCount: 3, targetWeight: 50, targetReps: 10, tint: AppTheme.accent),
+        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: "筋肥大", setCount: 4, targetWeight: 50, targetReps: 8, tint: AppTheme.blue),
+        PlanSetPreset(id: "strength", title: "5x5", detail: "高重量", setCount: 5, targetWeight: 50, targetReps: 5, tint: AppTheme.orange),
+        PlanSetPreset(id: "pump", title: "2x15", detail: "軽め", setCount: 2, targetWeight: 50, targetReps: 15, tint: AppTheme.purple)
     ]
 }
 
@@ -365,7 +394,7 @@ private struct PlanTemplateChip: View {
                     .foregroundStyle(AppTheme.ink)
                 Text(template.subtitle)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .frame(width: 150, alignment: .leading)
@@ -395,7 +424,7 @@ private struct SetPresetChip: View {
                     .foregroundStyle(AppTheme.ink)
                 Text(preset.detail)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Spacer()
@@ -420,7 +449,7 @@ private struct PlanExerciseEditorCard: View {
                         .font(.headline)
                     Text("\(planExercise.exercise.primaryMuscle.displayName)・\(planExercise.exercise.equipment.displayName)")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Spacer()
@@ -431,9 +460,10 @@ private struct PlanExerciseEditorCard: View {
                 .buttonStyle(.borderless)
             }
 
-            Stepper(value: $planExercise.restSeconds, in: 0...600, step: 30) {
-                Text("休憩 \(planExercise.restSeconds)秒")
-            }
+            RestSecondsInputControl(
+                seconds: $planExercise.restSeconds,
+                accessibilityIdentifier: "planRestSeconds-\(planExercise.sortOrder)"
+            )
 
             Menu {
                 ForEach(setPresets) { preset in
@@ -449,10 +479,20 @@ private struct PlanExerciseEditorCard: View {
 
             VStack(spacing: 8) {
                 ForEach($planExercise.sets) { $set in
-                    PlanSetTargetRow(set: $set) {
+                    PlanSetTargetRow(
+                        set: $set,
+                        exercise: planExercise.exercise,
+                        exerciseSortOrder: planExercise.sortOrder
+                    ) {
                         removeSet(set)
                     }
                 }
+            }
+
+            if planExercise.exercise.supportsAssistedLoad {
+                Label("加算重量を入力。アシスト重量はマイナスで記録できます。", systemImage: "plus.forwardslash.minus")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Button {
@@ -471,7 +511,7 @@ private struct PlanExerciseEditorCard: View {
         planExercise.sets.append(
             PlanSetTarget(
                 setOrder: planExercise.sets.count + 1,
-                targetWeight: previous?.targetWeight ?? 20,
+                targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10
             )
         )
@@ -499,7 +539,10 @@ private struct PlanExerciseEditorCard: View {
 }
 
 private struct PlanSetTargetRow: View {
+    @EnvironmentObject private var appStore: AppStore
     @Binding var set: PlanSetTarget
+    let exercise: Exercise
+    let exerciseSortOrder: Int
     let onDelete: () -> Void
 
     var body: some View {
@@ -507,17 +550,20 @@ private struct PlanSetTargetRow: View {
             Text("\(set.setOrder)")
                 .font(.headline)
                 .frame(width: 28, height: 28)
-                .background(.thinMaterial, in: Circle())
+                .background(AppTheme.ink.opacity(0.09), in: Circle())
 
-            Stepper(value: $set.targetWeight, in: 0...999, step: 2.5) {
-                Text(AppFormatters.weight(set.targetWeight))
-                    .frame(minWidth: 72, alignment: .leading)
-            }
+            WeightInputControl(
+                weightInKilograms: $set.targetWeight,
+                unit: appStore.userProfile.weightUnit,
+                kilogramRange: exercise.weightInputRange,
+                accessibilityIdentifier: "planWeightField-\(exerciseSortOrder)-\(set.setOrder)"
+            )
 
-            Stepper(value: $set.targetReps, in: 1...999) {
-                Text("\(set.targetReps)回")
-                    .frame(minWidth: 48, alignment: .leading)
-            }
+            RepsInputControl(
+                reps: $set.targetReps,
+                in: 1...999,
+                accessibilityIdentifier: "planRepsField-\(exerciseSortOrder)-\(set.setOrder)"
+            )
 
             Button(role: .destructive, action: onDelete) {
                 Image(systemName: "minus.circle")

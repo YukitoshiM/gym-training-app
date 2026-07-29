@@ -11,6 +11,7 @@ struct HistoryListView: View {
         || !appStore.bodyMetricEntries.isEmpty
         || !appStore.mealEntries.isEmpty
         || !appStore.bodyPhotoEntries.isEmpty
+        || !appStore.gymVisits.isEmpty
     }
 
     private var visibleSessions: [WorkoutSession] {
@@ -31,6 +32,7 @@ struct HistoryListView: View {
         appStore.bodyMetricEntries.forEach { dates.insert(calendar.startOfDay(for: $0.recordedAt)) }
         appStore.mealEntries.forEach { dates.insert(calendar.startOfDay(for: $0.recordedAt)) }
         appStore.bodyPhotoEntries.forEach { dates.insert(calendar.startOfDay(for: $0.recordedAt)) }
+        appStore.gymVisits.forEach { dates.insert(calendar.startOfDay(for: $0.arrivedAt)) }
 
         return dates
             .map { dailySummary(on: $0) }
@@ -47,85 +49,128 @@ struct HistoryListView: View {
                         Text("身体・食事・写真・トレーニングを記録すると、ここから日別にまとめて見返せます。")
                     }
                 } else {
-                    List {
-                        if !appStore.workoutHistory.isEmpty {
-                            Section {
-                                NavigationLink {
-                                    WeeklyVolumeView()
-                                } label: {
-                                    Label("週次ボリューム分析", systemImage: "chart.bar.xaxis")
-                                }
-                                .accessibilityIdentifier("weeklyVolumeLink")
-
-                                NavigationLink {
-                                    ExerciseHistoryListView()
-                                } label: {
-                                    Label("種目別履歴", systemImage: "dumbbell")
-                                }
-                                .accessibilityIdentifier("exerciseHistoryLink")
-                            }
-                        }
-
-                        Section {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 20) {
                             WorkoutCalendarView(
                                 displayedMonth: $displayedMonth,
                                 selectedDate: $selectedDate,
                                 summaries: dailySummaries
                             )
-                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-                            .listRowSeparator(.hidden)
-                            .listRowBackground(Color.clear)
-                        }
 
-                        if let selectedDate {
-                            Section {
-                                DailyJournalSummaryCard(
-                                    summary: dailySummary(on: selectedDate),
-                                    weightUnit: appStore.userProfile.weightUnit
-                                )
-                                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-                                .listRowSeparator(.hidden)
-                                .listRowBackground(Color.clear)
-                            } header: {
-                                Text("選択日のまとめ")
-                            }
-                        }
+                            if let selectedDate {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("選択日のまとめ")
+                                        .font(.caption.bold())
+                                        .foregroundStyle(AppTheme.mutedInk)
 
-                        Section {
-                            if visibleSessions.isEmpty {
-                                Text(selectedDate == nil ? "トレーニング履歴はありません" : "この日のトレーニングはありません")
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding(.vertical, 18)
-                                    .listRowSeparator(.hidden)
-                                    .listRowBackground(Color.clear)
-                            }
-
-                            ForEach(visibleSessions) { session in
-                                NavigationLink(value: session) {
-                                    HistoryRow(session: session)
+                                    DailyJournalSummaryCard(
+                                        summary: dailySummary(on: selectedDate),
+                                        weightUnit: appStore.userProfile.weightUnit
+                                    )
                                 }
-                                .listRowSeparator(.hidden)
-                                .listRowBackground(Color.clear)
-                                .accessibilityIdentifier("historyRow-\(session.title)")
                             }
-                            .onDelete(perform: confirmDeleteVisibleSessions)
-                        } header: {
-                            HStack {
-                                Text(selectedDateTitle)
-                                Spacer()
-                                if selectedDate != nil {
-                                    Button("すべて") {
-                                        selectedDate = nil
+
+                            VStack(alignment: .leading, spacing: 10) {
+                                HStack {
+                                    Text(selectedDateTitle)
+                                        .font(.headline)
+                                        .foregroundStyle(AppTheme.ink)
+
+                                    Spacer()
+
+                                    if selectedDate != nil {
+                                        Button("すべて") {
+                                            selectedDate = nil
+                                        }
+                                        .font(.caption.bold())
                                     }
-                                    .font(.caption.bold())
+                                }
+
+                                if visibleSessions.isEmpty {
+                                    Text(selectedDate == nil ? "トレーニング履歴はありません" : "この日のトレーニングはありません")
+                                        .font(.subheadline)
+                                        .foregroundStyle(AppTheme.mutedInk)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .padding(.vertical, 18)
+                                }
+
+                                ForEach(visibleSessions) { session in
+                                    NavigationLink(value: session) {
+                                        HistoryRow(session: session)
+                                    }
+                                    .buttonStyle(.plain)
+                                    .accessibilityIdentifier("historyRow-\(session.title)")
+                                    .contextMenu {
+                                        Button("削除", role: .destructive) {
+                                            pendingDeleteSession = session
+                                        }
+                                    }
+                                }
+                            }
+
+                            if !appStore.workoutHistory.isEmpty {
+                                VStack(alignment: .leading, spacing: 10) {
+                                    VStack(alignment: .leading, spacing: 3) {
+                                        Text("分析")
+                                            .font(.headline)
+                                            .foregroundStyle(AppTheme.ink)
+                                        Text("蓄積した記録を期間・種目・センサー別に確認")
+                                            .font(.caption)
+                                            .foregroundStyle(AppTheme.mutedInk)
+                                    }
+
+                                    VStack(spacing: 0) {
+                                        NavigationLink {
+                                            WeeklyVolumeView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: "週次ボリューム分析",
+                                                systemImage: "chart.bar.xaxis"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("weeklyVolumeLink")
+
+                                        Divider()
+                                            .padding(.leading, 44)
+
+                                        NavigationLink {
+                                            ExerciseHistoryListView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: "種目別履歴",
+                                                systemImage: "dumbbell"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("exerciseHistoryLink")
+
+                                        Divider()
+                                            .padding(.leading, 44)
+
+                                        NavigationLink {
+                                            SensorTrainingAnalysisView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: "Watchセンサー分析",
+                                                systemImage: "heart.text.square"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("sensorTrainingAnalysisLink")
+                                    }
+                                    .buttonStyle(.plain)
+                                    .background(
+                                        AppTheme.elevatedBackground,
+                                        in: RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                                            .stroke(AppTheme.cardBorder, lineWidth: 1)
+                                    )
                                 }
                             }
                         }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 12)
                     }
-                    .listStyle(.plain)
-                    .scrollContentBackground(.hidden)
                     .background(TrainingBackground())
                 }
             }
@@ -163,10 +208,6 @@ struct HistoryListView: View {
         return AppFormatters.shortDate.string(from: selectedDate)
     }
 
-    private func confirmDeleteVisibleSessions(at offsets: IndexSet) {
-        pendingDeleteSession = offsets.first.map { visibleSessions[$0] }
-    }
-
     private func dailySummary(on date: Date) -> DailyLogSummary {
         let bodyMetricEntries = BodyMetricKind.allCases.flatMap { kind in
             appStore.bodyMetricEntries(for: kind, on: date)
@@ -184,8 +225,35 @@ struct HistoryListView: View {
             workouts: appStore.workoutSessions(on: date),
             bodyMetricEntries: bodyMetricEntries,
             meals: appStore.mealEntries(on: date),
-            bodyPhotos: appStore.bodyPhotoEntries(on: date)
+            bodyPhotos: appStore.bodyPhotoEntries(on: date),
+            gymVisits: appStore.gymVisits(on: date)
         )
+    }
+}
+
+private struct HistoryAnalyticsLink: View {
+    let title: String
+    let systemImage: String
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: systemImage)
+                .foregroundStyle(AppTheme.accent)
+                .frame(width: 24)
+
+            Text(title)
+                .font(.subheadline.bold())
+                .foregroundStyle(AppTheme.ink)
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(.caption.bold())
+                .foregroundStyle(AppTheme.mutedInk)
+        }
+        .frame(minHeight: 48)
+        .padding(.horizontal, 14)
+        .contentShape(Rectangle())
     }
 }
 
@@ -195,11 +263,12 @@ private struct DailyLogSummary: Identifiable {
     let bodyMetricEntries: [BodyMetricEntry]
     let meals: [MealEntry]
     let bodyPhotos: [BodyPhotoEntry]
+    let gymVisits: [GymVisit]
 
     var id: Date { date }
 
     var totalLogCount: Int {
-        workouts.count + bodyMetricEntries.count + meals.count + bodyPhotos.count
+        workouts.count + bodyMetricEntries.count + meals.count + bodyPhotos.count + gymVisits.count
     }
 
     var totalCalories: Double {
@@ -230,17 +299,19 @@ private struct WorkoutCalendarView: View {
     let summaries: [DailyLogSummary]
 
     private let calendar = Calendar.current
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 6), count: 7)
     private let weekdays = ["日", "月", "火", "水", "木", "金", "土"]
 
     var body: some View {
+        let days = calendarDays
+
         VStack(alignment: .leading, spacing: 14) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("GYM CALENDAR")
+                    Text("PROGRESS CALENDAR")
                         .font(.caption.bold())
                         .tracking(1)
                         .foregroundStyle(AppTheme.accent)
+                        .accessibilityIdentifier("historyCalendar")
 
                     Text(monthTitle)
                         .font(.title3.bold())
@@ -269,33 +340,66 @@ private struct WorkoutCalendarView: View {
                 .foregroundStyle(AppTheme.ink)
             }
 
-            LazyVGrid(columns: columns, spacing: 8) {
-                ForEach(weekdays, id: \.self) { weekday in
-                    Text(weekday)
-                        .font(.caption.bold())
-                        .foregroundStyle(.secondary)
-                        .frame(maxWidth: .infinity)
+            Grid(horizontalSpacing: 6, verticalSpacing: 8) {
+                GridRow {
+                    ForEach(weekdays, id: \.self) { weekday in
+                        Text(weekday)
+                            .font(.caption.bold())
+                            .foregroundStyle(AppTheme.mutedInk)
+                            .frame(maxWidth: .infinity)
+                    }
                 }
 
-                ForEach(calendarDays) { day in
-                    CalendarDayButton(
-                        day: day,
-                        summary: summary(on: day.date),
-                        isSelected: selectedDate.map { calendar.isDate($0, inSameDayAs: day.date) } ?? false
-                    ) {
-                        selectedDate = day.date
+                ForEach(0..<((days.count + 6) / 7), id: \.self) { row in
+                    GridRow {
+                        ForEach(0..<7, id: \.self) { column in
+                            let index = row * 7 + column
+                            if index < days.count {
+                                let day = days[index]
+                                CalendarDayButton(
+                                    day: day,
+                                    summary: summary(on: day.date),
+                                    isSelected: selectedDate.map {
+                                        calendar.isDate($0, inSameDayAs: day.date)
+                                    } ?? false
+                                ) {
+                                    selectedDate = day.date
+                                }
+                            } else {
+                                Color.clear
+                                    .frame(maxWidth: .infinity, minHeight: 42)
+                            }
+                        }
                     }
                 }
             }
+
+            Divider()
+
+            HStack(spacing: 0) {
+                ForEach(CalendarRecordKind.allCases) { kind in
+                    Label {
+                        Text(kind.title)
+                    } icon: {
+                        Image(systemName: kind.systemImage)
+                    }
+                    .font(.caption2.bold())
+                    .foregroundStyle(kind.tint)
+                    .frame(maxWidth: .infinity)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                }
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("記録種別の凡例")
         }
         .padding(16)
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
         .overlay(
             RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                .stroke(AppTheme.cardBorder, lineWidth: 1)
         )
-        .shadow(color: AppTheme.ink.opacity(0.08), radius: 14, x: 0, y: 8)
-        .accessibilityIdentifier("historyCalendar")
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
     }
 
     private var monthTitle: String {
@@ -345,6 +449,56 @@ private struct CalendarDay: Identifiable {
     var id: Date { date }
 }
 
+private enum CalendarRecordKind: String, CaseIterable, Identifiable {
+    case workout
+    case bodyMetric
+    case meal
+    case bodyPhoto
+    case gymVisit
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .workout: "筋トレ"
+        case .bodyMetric: "身体"
+        case .meal: "食事"
+        case .bodyPhoto: "写真"
+        case .gymVisit: "ジム"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .workout: "dumbbell.fill"
+        case .bodyMetric: "scalemass.fill"
+        case .meal: "fork.knife"
+        case .bodyPhoto: "camera.fill"
+        case .gymVisit: "mappin.circle.fill"
+        }
+    }
+
+    var tint: Color {
+        switch self {
+        case .workout: AppTheme.accent
+        case .bodyMetric: AppTheme.blue
+        case .meal: AppTheme.orange
+        case .bodyPhoto: AppTheme.purple
+        case .gymVisit: AppTheme.tertiaryAccent
+        }
+    }
+
+    func count(in summary: DailyLogSummary?) -> Int {
+        switch self {
+        case .workout: summary?.workouts.count ?? 0
+        case .bodyMetric: summary?.bodyMetricEntries.count ?? 0
+        case .meal: summary?.meals.count ?? 0
+        case .bodyPhoto: summary?.bodyPhotos.count ?? 0
+        case .gymVisit: summary?.gymVisits.count ?? 0
+        }
+    }
+}
+
 private struct CalendarDayButton: View {
     let day: CalendarDay
     let summary: DailyLogSummary?
@@ -361,42 +515,25 @@ private struct CalendarDayButton: View {
                 Text("\(dayNumber)")
                     .font(.subheadline.weight(totalLogCount > 0 ? .bold : .regular))
 
-                HStack(spacing: 2) {
-                    if workoutCount > 0 {
-                        Circle()
-                            .fill(AppTheme.accent)
-                            .frame(width: 5, height: 5)
+                HStack(spacing: 1) {
+                    ForEach(recordKinds) { kind in
+                        Image(systemName: kind.systemImage)
+                            .font(.system(size: 6.5, weight: .bold))
+                            .foregroundStyle(indicatorColor(for: kind))
+                            .frame(width: 7, height: 7)
                     }
 
-                    if mealCount > 0 {
-                        Circle()
-                            .fill(AppTheme.orange)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if bodyMetricCount > 0 {
-                        Circle()
-                            .fill(AppTheme.blue)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if bodyPhotoCount > 0 {
-                        Circle()
-                            .fill(AppTheme.purple)
-                            .frame(width: 5, height: 5)
-                    }
-
-                    if totalLogCount == 0 {
-                        Circle()
-                            .fill(Color.clear)
-                            .frame(width: 5, height: 5)
+                    if recordKinds.isEmpty {
+                        Color.clear
+                            .frame(width: 7, height: 7)
                     }
                 }
-                .frame(height: 5)
+                .frame(height: 7)
+                .opacity(day.isInDisplayedMonth ? 1 : 0.45)
             }
             .foregroundStyle(foregroundColor)
             .frame(maxWidth: .infinity)
-            .frame(height: 42)
+            .frame(height: 44)
             .background(isSelected ? AppTheme.accent : Color.clear, in: RoundedRectangle(cornerRadius: 8))
         }
         .buttonStyle(.plain)
@@ -406,7 +543,7 @@ private struct CalendarDayButton: View {
 
     private var foregroundColor: Color {
         if isSelected {
-            return AppTheme.ink
+            return AppTheme.onAccent
         }
 
         return day.isInDisplayedMonth ? AppTheme.ink : AppTheme.mutedInk.opacity(0.45)
@@ -416,7 +553,10 @@ private struct CalendarDayButton: View {
             return "\(dayNumber)日 記録なし"
         }
 
-        return "\(dayNumber)日 \(totalLogCount)件の記録"
+        let details = recordKinds
+            .map { "\($0.title)\($0.count(in: summary))件" }
+            .joined(separator: "、")
+        return "\(dayNumber)日 \(details)"
     }
 
     private var accessibilityDateID: String {
@@ -427,20 +567,12 @@ private struct CalendarDayButton: View {
         summary?.totalLogCount ?? 0
     }
 
-    private var workoutCount: Int {
-        summary?.workouts.count ?? 0
+    private var recordKinds: [CalendarRecordKind] {
+        CalendarRecordKind.allCases.filter { $0.count(in: summary) > 0 }
     }
 
-    private var mealCount: Int {
-        summary?.meals.count ?? 0
-    }
-
-    private var bodyMetricCount: Int {
-        summary?.bodyMetricEntries.count ?? 0
-    }
-
-    private var bodyPhotoCount: Int {
-        summary?.bodyPhotos.count ?? 0
+    private func indicatorColor(for kind: CalendarRecordKind) -> Color {
+        isSelected ? AppTheme.onAccent : kind.tint
     }
 
     private static let identifierFormatter: DateFormatter = {
@@ -455,11 +587,6 @@ private struct CalendarDayButton: View {
 private struct DailyJournalSummaryCard: View {
     let summary: DailyLogSummary
     let weightUnit: WeightUnit
-
-    private let statColumns = [
-        GridItem(.flexible(), spacing: 8),
-        GridItem(.flexible(), spacing: 8)
-    ]
 
     var body: some View {
         CardContainer {
@@ -480,43 +607,59 @@ private struct DailyJournalSummaryCard: View {
 
                     Text("\(summary.totalLogCount)件")
                         .font(.caption.bold())
-                        .foregroundStyle(summary.totalLogCount > 0 ? AppTheme.ink : .secondary)
+                        .foregroundStyle(summary.totalLogCount > 0 ? AppTheme.ink : AppTheme.mutedInk)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
                         .background(
-                            (summary.totalLogCount > 0 ? AppTheme.accent : Color.secondary).opacity(0.16),
+                            (summary.totalLogCount > 0 ? AppTheme.accent : AppTheme.mutedInk).opacity(0.16),
                             in: Capsule()
                         )
                 }
 
-                LazyVGrid(columns: statColumns, spacing: 8) {
-                    DailyJournalStat(
-                        title: "身体",
-                        value: "\(summary.bodyMetricEntries.count)件",
-                        systemImage: "scalemass",
-                        tint: AppTheme.blue
-                    )
+                Grid(horizontalSpacing: 8, verticalSpacing: 8) {
+                    GridRow {
+                        DailyJournalStat(
+                            title: "身体",
+                            value: "\(summary.bodyMetricEntries.count)件",
+                            systemImage: "scalemass",
+                            tint: AppTheme.blue
+                        )
 
-                    DailyJournalStat(
-                        title: "食事",
-                        value: summary.meals.isEmpty ? "0件" : AppFormatters.calories(summary.totalCalories),
-                        systemImage: "fork.knife",
-                        tint: AppTheme.orange
-                    )
+                        DailyJournalStat(
+                            title: "食事",
+                            value: summary.meals.isEmpty ? "0件" : AppFormatters.calories(summary.totalCalories),
+                            systemImage: "fork.knife",
+                            tint: AppTheme.orange
+                        )
+                    }
 
-                    DailyJournalStat(
-                        title: "写真",
-                        value: "\(summary.bodyPhotos.count)件",
-                        systemImage: "camera",
-                        tint: AppTheme.purple
-                    )
+                    GridRow {
+                        DailyJournalStat(
+                            title: "写真",
+                            value: "\(summary.bodyPhotos.count)件",
+                            systemImage: "camera",
+                            tint: AppTheme.purple
+                        )
 
-                    DailyJournalStat(
-                        title: "トレーニング",
-                        value: summary.workouts.isEmpty ? "0件" : AppFormatters.volume(summary.totalVolume, unit: weightUnit),
-                        systemImage: "dumbbell",
-                        tint: AppTheme.accent
-                    )
+                        DailyJournalStat(
+                            title: "トレーニング",
+                            value: summary.workouts.isEmpty ? "0件" : AppFormatters.volume(summary.totalVolume, unit: weightUnit),
+                            systemImage: "dumbbell",
+                            tint: AppTheme.accent
+                        )
+                    }
+
+                    GridRow {
+                        DailyJournalStat(
+                            title: "ジム訪問",
+                            value: "\(summary.gymVisits.count)回",
+                            systemImage: "mappin.and.ellipse",
+                            tint: AppTheme.tertiaryAccent
+                        )
+
+                        Color.clear
+                            .frame(maxWidth: .infinity, minHeight: 44)
+                    }
                 }
 
                 Divider()
@@ -577,6 +720,19 @@ private struct DailyJournalSummaryCard: View {
                             )
                         }
                     }
+
+                    journalSectionHeader("ジム訪問", systemImage: "mappin.and.ellipse", tint: AppTheme.tertiaryAccent)
+                    if summary.gymVisits.isEmpty {
+                        DailyJournalEmptyLine(text: "ジム訪問は未記録")
+                    } else {
+                        ForEach(summary.gymVisits) { visit in
+                            DailyJournalLine(
+                                title: "ジム到着",
+                                detail: visit.departedAt.map { formatVisitDuration(from: visit.arrivedAt, to: $0) } ?? "滞在中",
+                                footnote: AppFormatters.shortDateTime.string(from: visit.arrivedAt)
+                            )
+                        }
+                    }
                 }
             }
         }
@@ -594,6 +750,14 @@ private struct DailyJournalSummaryCard: View {
         }
         .padding(.top, 2)
     }
+}
+
+private func formatVisitDuration(from start: Date, to end: Date) -> String {
+    let minutes = max(0, Int(end.timeIntervalSince(start) / 60))
+    if minutes < 60 {
+        return "\(minutes)分"
+    }
+    return "\(minutes / 60)時間\(minutes % 60)分"
 }
 
 private struct DailyJournalStat: View {
@@ -618,7 +782,7 @@ private struct DailyJournalStat: View {
                     .minimumScaleFactor(0.75)
                 Text(title)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Spacer(minLength: 0)
@@ -643,7 +807,7 @@ private struct DailyJournalLine: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Text(footnote)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
                     .lineLimit(2)
             }
 
@@ -665,7 +829,7 @@ private struct DailyJournalEmptyLine: View {
     var body: some View {
         Text(text)
             .font(.caption)
-            .foregroundStyle(.secondary)
+            .foregroundStyle(AppTheme.mutedInk)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
@@ -684,7 +848,7 @@ private struct HistoryRow: View {
                             .font(.headline)
                         Text(AppFormatters.shortDateTime.string(from: session.startedAt))
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     }
 
                     Spacer()
@@ -700,11 +864,11 @@ private struct HistoryRow: View {
                     Label("\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist")
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
 
                 Text("目標差 \(AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit))")
                     .font(.caption.bold())
-                    .foregroundStyle(session.volumeDelta >= 0 ? .green : AppTheme.orange)
+                    .foregroundStyle(session.volumeDelta >= 0 ? AppTheme.positive : AppTheme.orange)
 
                 VStack(spacing: 5) {
                     ForEach(session.exercises) { exercise in
@@ -715,13 +879,13 @@ private struct HistoryRow: View {
                             Spacer(minLength: 8)
 
                             Text(exercise.isSkipped ? "スキップ" : "\(exercise.completedSetCount)セット・\(exercise.completedRepCount)回")
-                                .foregroundStyle(exercise.isSkipped ? .secondary : AppTheme.ink)
+                                .foregroundStyle(exercise.isSkipped ? AppTheme.mutedInk : AppTheme.ink)
                         }
                         .accessibilityIdentifier("historyExerciseResult-\(exercise.sortOrder)")
                     }
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .padding(.vertical, 3)

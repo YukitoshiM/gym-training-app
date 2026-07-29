@@ -1,20 +1,37 @@
 import Foundation
 
 extension WatchWorkoutPlanSnapshot {
-    init(plan: TrainingPlan, weightUnit: WeightUnit) {
+    init(
+        plan: TrainingPlan,
+        weightUnit: WeightUnit,
+        previousExercise: (Exercise) -> WorkoutExercise? = { _ in nil }
+    ) {
         self.init(
             id: plan.id,
             name: plan.name,
             weightUnit: WatchWeightUnit(weightUnit),
             exercises: plan.exercises
                 .sorted { $0.sortOrder < $1.sortOrder }
-                .map { WatchPlanExerciseSnapshot(planExercise: $0) }
+                .map {
+                    WatchPlanExerciseSnapshot(
+                        planExercise: $0,
+                        previousExercise: previousExercise($0.exercise)
+                    )
+                }
         )
     }
 }
 
 private extension WatchPlanExerciseSnapshot {
-    init(planExercise: PlanExercise) {
+    init(planExercise: PlanExercise, previousExercise: WorkoutExercise?) {
+        let previousSets = previousExercise?
+            .sets
+            .filter(\.isCompleted)
+            .sorted { $0.setOrder < $1.setOrder } ?? []
+        let restSeconds = (previousExercise?.restSeconds ?? 0) > 0
+            ? previousExercise?.restSeconds ?? planExercise.restSeconds
+            : planExercise.restSeconds
+
         self.init(
             id: planExercise.id,
             exerciseID: planExercise.exercise.id,
@@ -22,21 +39,29 @@ private extension WatchPlanExerciseSnapshot {
             primaryMuscleName: planExercise.exercise.primaryMuscle.displayName,
             primaryMuscleRawValue: planExercise.exercise.primaryMuscle.rawValue,
             equipmentRawValue: planExercise.exercise.equipment.rawValue,
-            restSeconds: planExercise.restSeconds,
+            restSeconds: restSeconds,
             sets: planExercise.sets
                 .sorted { $0.setOrder < $1.setOrder }
-                .map { WatchPlanSetTargetSnapshot(planSet: $0) }
+                .map { planSet in
+                    let previous = previousSets.first { previousSet in
+                        previousSet.setOrder == planSet.setOrder
+                    } ?? previousSets.last
+                    return WatchPlanSetTargetSnapshot(planSet: planSet, previousSet: previous)
+                }
         )
     }
 }
 
 private extension WatchPlanSetTargetSnapshot {
-    init(planSet: PlanSetTarget) {
+    init(planSet: PlanSetTarget, previousSet: WorkoutSet?) {
         self.init(
             id: planSet.id,
             setOrder: planSet.setOrder,
             targetWeight: planSet.targetWeight,
-            targetReps: planSet.targetReps
+            targetReps: planSet.targetReps,
+            previousActualWeight: previousSet?.actualWeight,
+            previousActualReps: previousSet?.actualReps,
+            previousRPE: previousSet?.rpe
         )
     }
 }
@@ -64,7 +89,10 @@ extension WorkoutSession {
                 .sorted { $0.sortOrder < $1.sortOrder }
                 .map { WorkoutExercise(watchExercise: $0) },
             sourceDevice: .appleWatch,
-            watchSyncState: .received
+            watchSyncState: .received,
+            sensorSummary: watchSession.sensorSummary.map(WorkoutSensorSummary.init),
+            healthWorkoutSaveState: watchSession.healthKitSaveStatus.map(HealthWorkoutSaveState.init),
+            note: watchSession.note
         )
     }
 }
@@ -95,8 +123,61 @@ private extension WorkoutSet {
             isCompleted: watchSet.isCompleted,
             rpe: watchSet.rpe,
             startedAt: watchSet.startedAt,
-            completedAt: watchSet.completedAt
+            completedAt: watchSet.completedAt,
+            sensorSummary: watchSet.sensorSummary.map(SetSensorSummary.init),
+            note: watchSet.note
         )
+    }
+}
+
+private extension WorkoutSensorSummary {
+    init(_ summary: WatchWorkoutSensorSummary) {
+        self.init(
+            durationSeconds: summary.durationSeconds,
+            activeEnergyKilocalories: summary.activeEnergyKilocalories,
+            averageHeartRate: summary.averageHeartRate,
+            maximumHeartRate: summary.maximumHeartRate,
+            heartRateRecovery: summary.heartRateRecovery,
+            estimatedReps: summary.estimatedReps,
+            motionConfidence: summary.motionConfidence,
+            heartRateZoneDurations: summary.heartRateZoneDurations
+        )
+    }
+}
+
+private extension SetSensorSummary {
+    init(_ summary: WatchSetSensorSummary) {
+        self.init(
+            heartRateAtStart: summary.heartRateAtStart,
+            heartRateAtEnd: summary.heartRateAtEnd,
+            averageHeartRate: summary.averageHeartRate,
+            maximumHeartRate: summary.maximumHeartRate,
+            heartRateRecovery: summary.heartRateRecovery,
+            estimatedReps: summary.estimatedReps,
+            averageRepDuration: summary.averageRepDuration,
+            movementConsistency: summary.movementConsistency,
+            confidence: summary.confidence,
+            averageConcentricDuration: summary.averageConcentricDuration,
+            averageEccentricDuration: summary.averageEccentricDuration,
+            averagePauseDuration: summary.averagePauseDuration,
+            relativeRangeOfMotion: summary.relativeRangeOfMotion,
+            rangeOfMotionConsistency: summary.rangeOfMotionConsistency,
+            velocityLossPercent: summary.velocityLossPercent,
+            exerciseCandidateName: summary.exerciseCandidateName,
+            exerciseCandidateConfidence: summary.exerciseCandidateConfidence
+        )
+    }
+}
+
+private extension HealthWorkoutSaveState {
+    init(_ status: WatchHealthKitSaveStatus) {
+        switch status {
+        case .unavailable: self = .unavailable
+        case .permissionDenied: self = .permissionDenied
+        case .collecting: self = .collecting
+        case .saved: self = .saved
+        case .failed: self = .failed
+        }
     }
 }
 

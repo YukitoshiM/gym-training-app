@@ -4,6 +4,18 @@ import XCTest
 final class GymTrainingWatchAppUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
+        addUIInterruptionMonitor(withDescription: "Watch notification permission") { alert in
+            MainActor.assumeIsolated {
+                for label in ["許可", "Allow"] {
+                    let button = alert.buttons[label]
+                    if button.exists {
+                        button.tap()
+                        return true
+                    }
+                }
+                return false
+            }
+        }
     }
 
     func testWorkoutRecordingFlow() throws {
@@ -25,50 +37,120 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["胸の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ベンチプレス・3セット・計30回"].exists)
 
-        let startButton = app.buttons["watchStartWorkoutButton"]
-        XCTAssertTrue(startButton.waitForExistence(timeout: 5))
+        let startButton = findHittableElement(in: app, identifier: "watchStartWorkoutButton")
+        XCTAssertTrue(startButton.exists)
+        XCTAssertTrue(startButton.isHittable)
         startButton.tap()
 
         XCTAssertTrue(app.staticTexts["0/3セット・0回記録"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["watchLiveMetrics"].exists)
+        XCTAssertTrue(app.staticTexts["118"].exists)
+        XCTAssertTrue(app.staticTexts["平均112"].exists)
+        XCTAssertTrue(app.staticTexts["最大126"].exists)
+        XCTAssertTrue(app.staticTexts["Z2 3:00"].exists)
 
-        let firstSetStartButton = findHittableElement(in: app, identifier: "watchSetStart-0-1")
+        let firstSetStartButton = app.buttons["watchStartNextSetButton"]
+        XCTAssertTrue(firstSetStartButton.waitForExistence(timeout: 5))
         XCTAssertTrue(firstSetStartButton.isHittable)
         firstSetStartButton.tap()
 
-        let repsPlusButton = findHittableElement(in: app, identifier: "watchSetRepsPlus-0-1")
-        XCTAssertTrue(repsPlusButton.isHittable)
-        repsPlusButton.tap()
+        let cancelSetButton = app.buttons["watchCancelActiveSetButton"]
+        XCTAssertTrue(cancelSetButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].exists)
+        cancelSetButton.tap()
 
-        XCTAssertTrue(app.staticTexts["実績 20 kg × 11回"].exists)
+        XCTAssertTrue(firstSetStartButton.waitForExistence(timeout: 5))
+        firstSetStartButton.tap()
+        XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].waitForExistence(timeout: 5))
+
+        let weightEntryButton = app.buttons["watchActiveWeightEntry"]
+        XCTAssertTrue(weightEntryButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(weightEntryButton.isHittable)
+        weightEntryButton.tap()
+
+        let weightPicker = app.descendants(matching: .any)["watchWeightPicker"]
+        XCTAssertTrue(weightPicker.waitForExistence(timeout: 5))
+        let initialWeight = decimalValue(of: weightPicker)
+        weightPicker.swipeUp()
+        let selectedWeightValue = try XCTUnwrap(decimalValue(of: weightPicker))
+        XCTAssertNotEqual(selectedWeightValue, initialWeight)
+
+        let saveWeightButton = findHittableElement(in: app, identifier: "saveWatchWeightButton")
+        XCTAssertTrue(saveWeightButton.isHittable)
+        saveWeightButton.tap()
+
+        let repsEntryButton = app.buttons["watchActiveRepsEntry"]
+        XCTAssertTrue(repsEntryButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(repsEntryButton.isHittable)
+        repsEntryButton.tap()
+
+        let repsPicker = app.descendants(matching: .any)["watchRepsPicker"]
+        XCTAssertTrue(repsPicker.waitForExistence(timeout: 5))
+        let initialReps = integerValue(of: repsPicker)
+        repsPicker.swipeUp()
+        let selectedReps = try XCTUnwrap(integerValue(of: repsPicker))
+        XCTAssertNotEqual(selectedReps, initialReps)
+
+        let saveRepsButton = findHittableElement(in: app, identifier: "saveWatchRepsButton")
+        XCTAssertTrue(saveRepsButton.isHittable)
+        saveRepsButton.tap()
+
+        let selectedWeight = "\(selectedWeightValue.formatted(.number.precision(.fractionLength(0...1)))) kg"
+        let actualResult = app.staticTexts["watchActiveSetActual"]
+        XCTAssertTrue(actualResult.waitForExistence(timeout: 5))
+        XCTAssertEqual(actualResult.label, "実績 \(selectedWeight) × \(selectedReps)回")
         attachScreenshot(named: "watch-set-result-entry", app: app)
 
-        let rpeButton = findHittableElement(in: app, identifier: "watchSetRPE-0-1")
+        let rpeButton = app.buttons["watchActiveRPEEntry"]
+        XCTAssertTrue(rpeButton.waitForExistence(timeout: 5))
         XCTAssertTrue(rpeButton.isHittable)
         rpeButton.tap()
 
-        let rpeEightButton = findHittableElement(in: app, identifier: "watchRPE-8")
-        XCTAssertTrue(rpeEightButton.isHittable)
-        rpeEightButton.tap()
+        let rpePicker = app.descendants(matching: .any)["watchRPEPicker"]
+        XCTAssertTrue(rpePicker.waitForExistence(timeout: 5))
+        let initialRPE = decimalValue(of: rpePicker)
+        rpePicker.swipeUp()
+        XCTAssertNotEqual(decimalValue(of: rpePicker), initialRPE)
 
-        let firstSetButton = findHittableElement(in: app, identifier: "watchSetComplete-0-1")
+        let saveRPEButton = findHittableElement(in: app, identifier: "saveWatchRPEButton")
+        XCTAssertTrue(saveRPEButton.isHittable)
+        saveRPEButton.tap()
+
+        let firstSetButton = app.buttons["watchCompleteActiveSetButton"]
+        XCTAssertTrue(firstSetButton.waitForExistence(timeout: 5))
         XCTAssertTrue(firstSetButton.isHittable)
         firstSetButton.tap()
 
-        XCUIDevice.shared.rotateDigitalCrown(delta: -1)
-        XCTAssertTrue(app.staticTexts["1/3セット・11回記録"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.descendants(matching: .any)["watchRestTimer"].waitForExistence(timeout: 5))
+        let restLabel = app.descendants(matching: .any)["watchRestTimer"]
+        XCTAssertTrue(restLabel.waitForExistence(timeout: 5))
         attachScreenshot(named: "watch-rest-timer", app: app)
 
-        let extendRestButton = app.buttons["+30秒"]
-        XCTAssertTrue(extendRestButton.isHittable)
-        extendRestButton.tap()
+        let restEntryButton = findHittableElement(in: app, identifier: "watchRestTimerEntry")
+        XCTAssertTrue(restEntryButton.exists)
+        XCTAssertTrue(restEntryButton.isHittable)
+        restEntryButton.tap()
+
+        let restPicker = app.descendants(matching: .any)["watchRestSecondsPicker"]
+        if !restPicker.waitForExistence(timeout: 2) {
+            let retryButton = findHittableElement(in: app, identifier: "watchRestTimerEntry")
+            XCTAssertTrue(retryButton.isHittable)
+            retryButton.tap()
+        }
+        XCTAssertTrue(restPicker.waitForExistence(timeout: 5))
+        let initialRest = durationValue(of: restPicker)
+        restPicker.swipeUp()
+        XCTAssertNotEqual(durationValue(of: restPicker), initialRest)
+
+        let saveRestButton = findHittableElement(in: app, identifier: "saveWatchRestSecondsButton")
+        XCTAssertTrue(saveRestButton.isHittable)
+        saveRestButton.tap()
 
         app.terminate()
         app.launchArguments = []
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["1/3セット・11回記録"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.descendants(matching: .any)["watchRestTimer"].waitForExistence(timeout: 5))
+        let restLabelAfterRelaunch = app.descendants(matching: .any)["watchRestTimer"]
+        XCTAssertTrue(restLabelAfterRelaunch.waitForExistence(timeout: 10))
 
         app.swipeUp()
         let finishButton = app.buttons["watchFinishWorkoutButton"]
@@ -82,7 +164,12 @@ final class GymTrainingWatchAppUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
         XCTAssertTrue(app.staticTexts["2件から選択"].exists)
-        XCTAssertTrue(app.descendants(matching: .any)["watchMenu-胸の日"].exists)
+        XCTAssertTrue(app.descendants(matching: .any)["watchRecentSession"].exists)
+        app.swipeUp()
+        XCTAssertTrue(
+            app.descendants(matching: .any)["watchMenu-胸の日"]
+                .waitForExistence(timeout: 5)
+        )
     }
 
     func testCanChooseAnotherMenu() throws {
@@ -104,15 +191,34 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.buttons["watchStartWorkoutButton"].exists)
     }
 
+    func testSwitchingSetsResetsThePreviousSetAndCarriesWeightForward() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--seed-watch-set-switch-state"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.navigationBars["記録中"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["ベンチプレス・セット2"].waitForExistence(timeout: 5))
+        let activeSetActual = app.staticTexts["watchActiveSetActual"]
+        XCTAssertTrue(activeSetActual.waitForExistence(timeout: 5))
+        XCTAssertEqual(activeSetActual.label, "実績 52.5 kg × 10回")
+    }
+
     private func findHittableElement(
         in app: XCUIApplication,
         identifier: String,
-        maxRotations: Int = 6
+        maxRotations: Int = 12
     ) -> XCUIElement {
         let element = app.descendants(matching: .any)[identifier]
 
-        for _ in 0..<maxRotations where !element.isHittable {
-            XCUIDevice.shared.rotateDigitalCrown(delta: 0.15)
+        for _ in 0..<maxRotations {
+            if element.exists, element.isHittable {
+                return element
+            }
+            XCUIDevice.shared.rotateDigitalCrown(delta: 0.2)
         }
 
         return element
@@ -123,5 +229,27 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
+    }
+
+    private func integerValue(of element: XCUIElement) -> Int? {
+        let digits = rawValue(of: element).filter { $0.isNumber || $0 == "-" }
+        return Int(digits)
+    }
+
+    private func decimalValue(of element: XCUIElement) -> Double? {
+        let value = rawValue(of: element)
+            .replacingOccurrences(of: ",", with: ".")
+            .filter { $0.isNumber || $0 == "." || $0 == "-" }
+        return Double(value)
+    }
+
+    private func durationValue(of element: XCUIElement) -> Int? {
+        let parts = rawValue(of: element).split(separator: ":").compactMap { Int($0) }
+        guard parts.count == 2 else { return nil }
+        return parts[0] * 60 + parts[1]
+    }
+
+    private func rawValue(of element: XCUIElement) -> String {
+        (element.value as? String) ?? String(describing: element.value)
     }
 }

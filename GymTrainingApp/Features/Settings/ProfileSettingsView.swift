@@ -2,21 +2,48 @@ import SwiftUI
 
 struct ProfileSettingsView: View {
     @EnvironmentObject private var appStore: AppStore
+    @EnvironmentObject private var healthDataManager: HealthDataManager
+    @EnvironmentObject private var gymLocationManager: GymLocationManager
     @Environment(\.dismiss) private var dismiss
 
     @State private var draft: UserProfile
     @State private var aiDraft: AISettings
+    @State private var sensorDraft: SensorSettings
+    @State private var appearanceDraft: AppAppearanceSettings
     @State private var heightText: String
     @State private var birthYearText: String
+    @State private var calorieGoalText: String
+    @State private var proteinGoalText: String
+    @State private var fatGoalText: String
+    @State private var carbsGoalText: String
+    @State private var mealCountGoalText: String
     @State private var isConfirmingReset = false
     @State private var isCheckingAI = false
     @State private var aiConnectionResult: AIConnectionCheckResult?
+    @State private var isExportingData = false
+    @State private var exportDocument = GymDataExportDocument()
+    @State private var isExportingDiagnostics = false
+    @State private var diagnosticDocument = DiagnosticLogDocument()
+    @State private var exportErrorMessage: String?
+    @State private var isAISharingExpanded = false
 
-    init(profile: UserProfile, aiSettings: AISettings = .default) {
+    init(
+        profile: UserProfile,
+        aiSettings: AISettings = .default,
+        sensorSettings: SensorSettings = .default,
+        appearanceSettings: AppAppearanceSettings = .default
+    ) {
         _draft = State(initialValue: profile)
         _aiDraft = State(initialValue: aiSettings)
+        _sensorDraft = State(initialValue: sensorSettings)
+        _appearanceDraft = State(initialValue: appearanceSettings)
         _heightText = State(initialValue: profile.heightCm.map { String(format: "%.1f", $0) } ?? "")
         _birthYearText = State(initialValue: profile.birthYear.map(String.init) ?? "")
+        _calorieGoalText = State(initialValue: profile.nutritionGoals.calories.formatted(.number.precision(.fractionLength(0))))
+        _proteinGoalText = State(initialValue: profile.nutritionGoals.protein.formatted(.number.precision(.fractionLength(0...1))))
+        _fatGoalText = State(initialValue: profile.nutritionGoals.fat.formatted(.number.precision(.fractionLength(0...1))))
+        _carbsGoalText = State(initialValue: profile.nutritionGoals.carbs.formatted(.number.precision(.fractionLength(0...1))))
+        _mealCountGoalText = State(initialValue: String(profile.nutritionGoals.mealCount))
     }
 
     var body: some View {
@@ -29,11 +56,41 @@ struct ProfileSettingsView: View {
                         }
                     }
 
-                    TextField("身長 cm", text: $heightText)
-                        .keyboardType(.decimalPad)
+                    Picker("担当コーチ", selection: $draft.coachType) {
+                        ForEach(CoachType.allCases) { coach in
+                            Text(coach.displayName).tag(coach)
+                        }
+                    }
+                    .accessibilityIdentifier("coachTypePicker")
 
-                    TextField("生年", text: $birthYearText)
-                        .keyboardType(.numberPad)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(draft.coachType.displayName)
+                            .font(.subheadline.bold())
+                        Text(draft.coachType.characteristic)
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                    .accessibilityIdentifier("coachCharacteristic")
+
+                    NumericTextInputControl(
+                        text: $heightText,
+                        title: "身長",
+                        unit: "cm",
+                        range: 50...250,
+                        step: 0.1,
+                        defaultValue: 170,
+                        accessibilityIdentifier: "profileHeightField"
+                    )
+
+                    NumericTextInputControl(
+                        text: $birthYearText,
+                        title: "生年",
+                        unit: "年",
+                        range: 1900...Double(Calendar.current.component(.year, from: Date())),
+                        step: 1,
+                        defaultValue: Double(Calendar.current.component(.year, from: Date()) - 30),
+                        accessibilityIdentifier: "profileBirthYearField"
+                    )
 
                     Picker("性別", selection: $draft.sex) {
                         ForEach(Sex.allCases) { sex in
@@ -48,7 +105,81 @@ struct ProfileSettingsView: View {
                     }
                 }
 
+                Section {
+                    NumericTextInputControl(
+                        text: $calorieGoalText,
+                        title: "カロリー",
+                        unit: "kcal",
+                        range: 0...10_000,
+                        step: 1,
+                        defaultValue: NutritionGoals.default.calories,
+                        accessibilityIdentifier: "nutritionCalorieGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $proteinGoalText,
+                        title: "たんぱく質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: NutritionGoals.default.protein,
+                        accessibilityIdentifier: "nutritionProteinGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $fatGoalText,
+                        title: "脂質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: NutritionGoals.default.fat,
+                        accessibilityIdentifier: "nutritionFatGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $carbsGoalText,
+                        title: "炭水化物",
+                        unit: "g",
+                        range: 0...2_000,
+                        step: 0.1,
+                        defaultValue: NutritionGoals.default.carbs,
+                        accessibilityIdentifier: "nutritionCarbsGoalField"
+                    )
+                    NumericTextInputControl(
+                        text: $mealCountGoalText,
+                        title: "食事回数",
+                        unit: "回",
+                        range: 1...12,
+                        step: 1,
+                        defaultValue: Double(NutritionGoals.default.mealCount),
+                        accessibilityIdentifier: "nutritionMealCountGoalField"
+                    )
+                } header: {
+                    Text("1日の食事目標")
+                } footer: {
+                    Text("食事回数の達成と、カロリー・PFCの達成を別々に表示します。")
+                }
+
                 Section("表示") {
+                    ForEach(AppColorTheme.allCases) { theme in
+                        Button {
+                            appearanceDraft.colorTheme = theme
+                        } label: {
+                            ThemeOptionRow(
+                                theme: theme,
+                                isSelected: appearanceDraft.colorTheme == theme
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("themeOption-\(theme.rawValue)")
+                        .accessibilityValue(appearanceDraft.colorTheme == theme ? "選択中" : "未選択")
+                    }
+
+                    Picker("表示モード", selection: $appearanceDraft.mode) {
+                        ForEach(AppAppearanceMode.allCases) { mode in
+                            Text(mode.displayName).tag(mode)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .accessibilityIdentifier("appearanceModePicker")
+
                     Picker("重量単位", selection: $draft.weightUnit) {
                         ForEach(WeightUnit.allCases) { unit in
                             Text(unit.displayName).tag(unit)
@@ -58,7 +189,45 @@ struct ProfileSettingsView: View {
                 }
 
                 Section {
+                    Toggle("Apple Healthワークアウト", isOn: $sensorDraft.healthIntegrationEnabled)
+                        .disabled(healthDataManager.accessState == .unavailable)
+                    Toggle("Watchで動作回数を推定", isOn: $sensorDraft.motionRepDetectionEnabled)
+                    Toggle("心拍とRPEで休憩を調整", isOn: $sensorDraft.adaptiveRestEnabled)
+                    Toggle("Watchの触覚通知", isOn: $sensorDraft.hapticCoachingEnabled)
+                    Toggle("省電力サンプリング", isOn: $sensorDraft.reducedSensorSamplingEnabled)
+                    Toggle("ジム訪問を自動記録", isOn: $sensorDraft.gymVisitDetectionEnabled)
+
+                    Button {
+                        Task { await healthDataManager.requestAuthorization() }
+                    } label: {
+                        Label("Healthの共有項目を確認", systemImage: "heart.text.square")
+                    }
+                    .disabled(!sensorDraft.healthIntegrationEnabled)
+                    .accessibilityIdentifier("requestHealthFromSettingsButton")
+                } header: {
+                    Text("Apple Watch・センサー")
+                } footer: {
+                    Text("センサーが使えない場合も、重量・回数・RPEは手入力で記録できます。省電力サンプリングでは動作推定の更新頻度を下げます。")
+                }
+
+                Section {
                     Toggle("AI機能を使う", isOn: $aiDraft.isEnabled)
+
+                    DisclosureGroup("AIへ送るデータ", isExpanded: $isAISharingExpanded) {
+                        Toggle("身体KPI", isOn: $aiDraft.dataSharing.bodyMetrics)
+                        Toggle("食事", isOn: $aiDraft.dataSharing.meals)
+                        Toggle("筋トレ", isOn: $aiDraft.dataSharing.workouts)
+                        Toggle("体型写真", isOn: $aiDraft.dataSharing.bodyPhotos)
+                        Toggle("睡眠・回復", isOn: $aiDraft.dataSharing.sleepAndRecovery)
+                        Toggle("日常活動", isOn: $aiDraft.dataSharing.dailyActivity)
+                        Toggle("ジム訪問", isOn: $aiDraft.dataSharing.gymVisits)
+                        Toggle("心拍・モーション", isOn: $aiDraft.dataSharing.workoutSensors)
+                    }
+                    .disabled(!aiDraft.isEnabled)
+
+                    Text("現在選択: \(aiDraft.dataSharing.enabledCategoryNames.joined(separator: "、").ifEmpty("なし"))")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     TextField("サーバーURL", text: $aiDraft.baseURLString)
                         .textInputAutocapitalization(.never)
@@ -71,9 +240,10 @@ struct ProfileSettingsView: View {
                     Button {
                         aiDraft.baseURLString = AISettings.default.baseURLString
                         aiDraft.apiKey = AISettings.default.apiKey
+                        aiDraft.isEnabled = AISettings.default.isEnabled
                         aiConnectionResult = nil
                     } label: {
-                        Label("Simulator推奨値に戻す", systemImage: "arrow.counterclockwise")
+                        Label("AI設定を初期値に戻す", systemImage: "arrow.counterclockwise")
                     }
                     .accessibilityIdentifier("resetAISettingsToSimulatorButton")
 
@@ -91,10 +261,27 @@ struct ProfileSettingsView: View {
                 } header: {
                     Text("ローカルLLM")
                 } footer: {
-                    Text("Simulatorなら http://127.0.0.1:8765。実機はMacのLAN IPまたはTailscale名を使います。接続確認はAPI、Ollama、モデル取得状態まで確認します。")
+                    Text(AISettings.configurationHelp)
                 }
 
+                LegalAndSupportSettingsSection()
+
                 Section("データ") {
+                    Button {
+                        prepareExport()
+                    } label: {
+                        Label("全記録をJSONで書き出す", systemImage: "square.and.arrow.up")
+                    }
+                    .accessibilityIdentifier("exportAllDataButton")
+
+                    Button {
+                        diagnosticDocument = DiagnosticLogDocument(data: AppDiagnostics.shared.exportData())
+                        isExportingDiagnostics = true
+                    } label: {
+                        Label("診断ログを書き出す", systemImage: "stethoscope")
+                    }
+                    .accessibilityIdentifier("exportDiagnosticsButton")
+
                     Button(role: .destructive) {
                         isConfirmingReset = true
                     } label: {
@@ -103,6 +290,8 @@ struct ProfileSettingsView: View {
                     .accessibilityIdentifier("resetAllDataButton")
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("設定")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -128,14 +317,63 @@ struct ProfileSettingsView: View {
             } message: {
                 Text("計画、履歴、身体KPI、食事、写真、カスタム種目を削除します。")
             }
+            .fileExporter(
+                isPresented: $isExportingData,
+                document: exportDocument,
+                contentType: .json,
+                defaultFilename: "bodymode-export"
+            ) { result in
+                if case .failure(let error) = result {
+                    exportErrorMessage = error.localizedDescription
+                }
+            }
+            .fileExporter(
+                isPresented: $isExportingDiagnostics,
+                document: diagnosticDocument,
+                contentType: .json,
+                defaultFilename: "bodymode-diagnostics"
+            ) { result in
+                if case .failure(let error) = result {
+                    exportErrorMessage = error.localizedDescription
+                }
+            }
+            .alert("書き出せませんでした", isPresented: Binding(
+                get: { exportErrorMessage != nil },
+                set: { if !$0 { exportErrorMessage = nil } }
+            )) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text(exportErrorMessage ?? "不明なエラー")
+            }
         }
     }
 
     private func save() {
         draft.heightCm = Double(heightText)
         draft.birthYear = Int(birthYearText)
+        draft.nutritionGoals = NutritionGoals(
+            calories: Double(calorieGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.calories,
+            protein: Double(proteinGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.protein,
+            fat: Double(fatGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.fat,
+            carbs: Double(carbsGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.carbs,
+            mealCount: Int(Double(mealCountGoalText) ?? Double(NutritionGoals.default.mealCount))
+        ).normalized()
         appStore.saveUserProfile(draft)
+        if healthDataManager.accessState == .unavailable {
+            sensorDraft.healthIntegrationEnabled = false
+        }
+        sensorDraft.includeSensorDataInAI = aiDraft.dataSharing.sleepAndRecovery
+            || aiDraft.dataSharing.dailyActivity
+            || aiDraft.dataSharing.gymVisits
+            || aiDraft.dataSharing.workoutSensors
         appStore.saveAISettings(aiDraft)
+        appStore.saveSensorSettings(sensorDraft)
+        appStore.saveAppearanceSettings(appearanceDraft)
+        if sensorDraft.gymVisitDetectionEnabled {
+            gymLocationManager.enableBackgroundVisitDetection()
+        } else {
+            gymLocationManager.disableVisitDetection()
+        }
         dismiss()
     }
 
@@ -162,6 +400,55 @@ struct ProfileSettingsView: View {
                 }
             }
         }
+    }
+
+    private func prepareExport() {
+        do {
+            exportDocument = GymDataExportDocument(data: try appStore.makeExportData())
+            isExportingData = true
+        } catch {
+            exportErrorMessage = error.localizedDescription
+        }
+    }
+}
+
+private struct ThemeOptionRow: View {
+    let theme: AppColorTheme
+    let isSelected: Bool
+
+    var body: some View {
+        HStack(spacing: 12) {
+            HStack(spacing: 4) {
+                ForEach(Array(AppTheme.previewSwatches(for: theme).enumerated()), id: \.offset) { _, color in
+                    Circle()
+                        .fill(color)
+                        .frame(width: 18, height: 18)
+                        .overlay(Circle().stroke(AppTheme.ink.opacity(0.16), lineWidth: 1))
+                }
+            }
+            .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text("\(theme.shortCode)  \(theme.displayName)")
+                    .font(.subheadline.bold())
+                    .foregroundStyle(AppTheme.ink)
+                Text(theme.summary)
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.mutedInk)
+            }
+
+            Spacer()
+
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                .foregroundStyle(isSelected ? AppTheme.accent : AppTheme.mutedInk)
+        }
+        .contentShape(Rectangle())
+    }
+}
+
+private extension String {
+    func ifEmpty(_ fallback: String) -> String {
+        isEmpty ? fallback : self
     }
 }
 
@@ -228,9 +515,9 @@ private struct AIConnectionCheckResult {
 
     var tint: Color {
         switch level {
-        case .ready: .green
+        case .ready: AppTheme.positive
         case .warning: AppTheme.orange
-        case .failure: .red
+        case .failure: AppTheme.critical
         }
     }
 
@@ -259,7 +546,7 @@ private struct AIConnectionCheckCard: View {
             if let recovery = result.recovery, !recovery.isEmpty {
                 Text(recovery)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
         }
         .padding(.vertical, 4)
@@ -268,6 +555,8 @@ private struct AIConnectionCheckCard: View {
 }
 
 #Preview {
-    ProfileSettingsView(profile: .default, aiSettings: .default)
+    ProfileSettingsView(profile: .default, aiSettings: .default, appearanceSettings: .default)
         .environmentObject(AppStore())
+        .environmentObject(HealthDataManager())
+        .environmentObject(GymLocationManager())
 }

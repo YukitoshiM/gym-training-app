@@ -4,12 +4,80 @@ struct AISettings: Codable, Equatable {
     var isEnabled: Bool
     var baseURLString: String
     var apiKey: String
+    var dataSharing: AIDataSharingSettings
 
+    init(
+        isEnabled: Bool,
+        baseURLString: String,
+        apiKey: String,
+        dataSharing: AIDataSharingSettings = .default
+    ) {
+        self.isEnabled = isEnabled
+        self.baseURLString = baseURLString
+        self.apiKey = apiKey
+        self.dataSharing = dataSharing
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        isEnabled = try container.decodeIfPresent(Bool.self, forKey: .isEnabled) ?? Self.default.isEnabled
+        baseURLString = try container.decodeIfPresent(String.self, forKey: .baseURLString) ?? Self.default.baseURLString
+        apiKey = try container.decodeIfPresent(String.self, forKey: .apiKey) ?? Self.default.apiKey
+        dataSharing = try container.decodeIfPresent(AIDataSharingSettings.self, forKey: .dataSharing) ?? .default
+    }
+
+    #if DEBUG
     static let `default` = AISettings(
         isEnabled: true,
         baseURLString: "http://127.0.0.1:8765",
         apiKey: "dev-local-key"
     )
+
+    static let configurationHelp = "Simulatorなら http://127.0.0.1:8765。実機はMacのLAN IPまたはTailscale名を使います。接続確認はAPI、Ollama、モデル取得状態まで確認します。"
+    #else
+    static let `default` = AISettings(
+        isEnabled: false,
+        baseURLString: "",
+        apiKey: ""
+    )
+
+    static let configurationHelp = "AIは初期状態ではオフです。利用する場合は、信頼できるローカルAIサーバーのURLとAPIキーを設定してください。AI未接続でも手動記録を利用できます。"
+    #endif
+}
+
+struct AIDataSharingSettings: Codable, Equatable {
+    var bodyMetrics: Bool
+    var meals: Bool
+    var workouts: Bool
+    var bodyPhotos: Bool
+    var sleepAndRecovery: Bool
+    var dailyActivity: Bool
+    var gymVisits: Bool
+    var workoutSensors: Bool
+
+    static let `default` = AIDataSharingSettings(
+        bodyMetrics: true,
+        meals: true,
+        workouts: true,
+        bodyPhotos: true,
+        sleepAndRecovery: false,
+        dailyActivity: false,
+        gymVisits: false,
+        workoutSensors: false
+    )
+
+    var enabledCategoryNames: [String] {
+        [
+            bodyMetrics ? "身体KPI" : nil,
+            meals ? "食事" : nil,
+            workouts ? "筋トレ" : nil,
+            bodyPhotos ? "体型写真" : nil,
+            sleepAndRecovery ? "睡眠・回復" : nil,
+            dailyActivity ? "日常活動" : nil,
+            gymVisits ? "ジム訪問" : nil,
+            workoutSensors ? "ワークアウトセンサー" : nil
+        ].compactMap { $0 }
+    }
 }
 
 struct MealAIDraft: Codable, Hashable {
@@ -122,4 +190,35 @@ enum AIInsightType: String, Codable, Hashable {
     case weekly
     case meal
     case bodyPhoto
+}
+
+struct AITransmissionRecord: Identifiable, Codable, Equatable {
+    var id: UUID
+    var sentAt: Date
+    var purpose: String
+    var sharedCategories: [String]
+    var itemCount: Int
+    var status: AITransmissionStatus
+
+    init(
+        id: UUID = UUID(),
+        sentAt: Date = Date(),
+        purpose: String,
+        sharedCategories: [String],
+        itemCount: Int,
+        status: AITransmissionStatus = .sending
+    ) {
+        self.id = id
+        self.sentAt = sentAt
+        self.purpose = purpose
+        self.sharedCategories = sharedCategories
+        self.itemCount = itemCount
+        self.status = status
+    }
+}
+
+enum AITransmissionStatus: String, Codable {
+    case sending
+    case completed
+    case failed
 }

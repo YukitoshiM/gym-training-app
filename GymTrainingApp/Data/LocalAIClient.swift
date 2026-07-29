@@ -26,7 +26,6 @@ struct LocalAIClient {
     }
 
     func analyzeMealImage(imageData: Data, mealType: MealType, memo: String) async throws -> MealAIDraft {
-        try await ensureReady()
         let request = MealAnalysisRequest(
             imageBase64: imageData.base64EncodedString(),
             mealType: mealType.rawValue,
@@ -54,9 +53,7 @@ struct LocalAIClient {
         guard settings.isEnabled else {
             throw AIClientError.disabled
         }
-        guard let url = makeURL(path) else {
-            throw AIClientError.invalidBaseURL
-        }
+        let url = try makeURL(path)
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -69,9 +66,7 @@ struct LocalAIClient {
         guard settings.isEnabled else {
             throw AIClientError.disabled
         }
-        guard let url = makeURL(path) else {
-            throw AIClientError.invalidBaseURL
-        }
+        let url = try makeURL(path)
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -90,16 +85,28 @@ struct LocalAIClient {
         }
     }
 
-    private func makeURL(_ path: String) -> URL? {
-        guard let baseURL else {
-            return nil
+    private func makeURL(_ path: String) throws -> URL {
+        guard let baseURL,
+              let scheme = baseURL.scheme?.lowercased(),
+              ["http", "https"].contains(scheme),
+              baseURL.user == nil,
+              baseURL.password == nil,
+              let host = baseURL.host,
+              !host.isEmpty else {
+            throw AIClientError.invalidBaseURL
+        }
+        if scheme == "http", !host.isLocalAIHost {
+            throw AIClientError.insecureRemoteHTTPHost
         }
 
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
         let basePath = components?.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")) ?? ""
         let requestPath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         components?.path = "/" + [basePath, requestPath].filter { !$0.isEmpty }.joined(separator: "/")
-        return components?.url
+        guard let url = components?.url else {
+            throw AIClientError.invalidBaseURL
+        }
+        return url
     }
 
     private func send<Response: Decodable>(_ request: URLRequest, responseType: Response.Type) async throws -> Response {
@@ -132,6 +139,7 @@ struct LocalAIClient {
 enum AIClientError: LocalizedError {
     case disabled
     case invalidBaseURL
+    case insecureRemoteHTTPHost
     case invalidResponse
     case httpStatus(Int)
     case requestFailed(URLError)
@@ -146,6 +154,8 @@ enum AIClientError: LocalizedError {
             "AI利用設定がオフです。"
         case .invalidBaseURL:
             "ローカルLLMサーバーURLが不正です。"
+        case .insecureRemoteHTTPHost:
+            "外部サーバーへのHTTP接続は許可されていません。"
         case .invalidResponse:
             "ローカルLLMサーバーの応答を読めませんでした。"
         case .httpStatus(let statusCode):
@@ -169,6 +179,8 @@ enum AIClientError: LocalizedError {
             "設定で「AI機能を使う」をオンにしてください。手動記録はこのまま保存できます。"
         case .invalidBaseURL:
             "Simulatorでは http://127.0.0.1:8765、実機ではMacのLAN IPまたはTailscale名を入力してください。"
+        case .insecureRemoteHTTPHost:
+            "HTTPはlocalhost、LAN、Tailscale内だけ利用できます。外部サーバーにはHTTPSを使用してください。"
         case .invalidResponse:
             "local_llm_server が起動中か、アプリのサーバーURLが正しいか確認してください。"
         case .httpStatus(let statusCode):
@@ -247,6 +259,39 @@ enum AIClientError: LocalizedError {
     }
 }
 
+private extension String {
+    var isLocalAIHost: Bool {
+        let normalized = lowercased().trimmingCharacters(in: CharacterSet(charactersIn: "[]"))
+
+        if normalized == "localhost"
+            || normalized == "::1"
+            || normalized.hasSuffix(".local")
+            || !normalized.contains(".") {
+            return true
+        }
+
+        if normalized.hasPrefix("fc")
+            || normalized.hasPrefix("fd")
+            || normalized.hasPrefix("fe80:") {
+            return true
+        }
+
+        let parts = normalized.split(separator: ".").compactMap { Int($0) }
+        guard parts.count == 4, parts.allSatisfy({ 0...255 ~= $0 }) else {
+            return false
+        }
+
+        switch (parts[0], parts[1]) {
+        case (10, _), (127, _), (169, 254), (192, 168):
+            return true
+        case (172, 16...31), (100, 64...127):
+            return true
+        default:
+            return false
+        }
+    }
+}
+
 struct AIErrorPresentation: Hashable {
     var message: String
     var recovery: String?
@@ -255,6 +300,7 @@ struct AIErrorPresentation: Hashable {
 struct AIHealthResponse: Codable, Hashable {
     var status: String
     var model: String
+    var calorieModelAvailable: Bool?
     var ollamaReachable: Bool
     var modelAvailable: Bool?
     var message: String?
@@ -266,6 +312,7 @@ struct AIHealthResponse: Codable, Hashable {
     enum CodingKeys: String, CodingKey {
         case status
         case model
+        case calorieModelAvailable = "calorie_model_available"
         case ollamaReachable = "ollama_reachable"
         case modelAvailable = "model_available"
         case message
@@ -298,17 +345,23 @@ private struct BodyPhotoAnalysisRequest: Encodable {
 
 struct WeeklyReportRequest: Encodable {
     var profileGoal: String
+    var coachID: String
+    var experienceLevel: String
     var bodyLogs: [String]
     var meals: [String]
     var workouts: [String]
     var bodyPhotos: [String]
+    var sensorMetrics: [String]
 
     enum CodingKeys: String, CodingKey {
         case profileGoal = "profile_goal"
+        case coachID = "coach_id"
+        case experienceLevel = "experience_level"
         case bodyLogs = "body_logs"
         case meals
         case workouts
         case bodyPhotos = "body_photos"
+        case sensorMetrics = "sensor_metrics"
     }
 }
 

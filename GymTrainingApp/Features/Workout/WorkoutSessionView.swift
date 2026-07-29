@@ -54,7 +54,10 @@ struct WorkoutSessionView: View {
                 .listRowBackground(Color.clear)
 
                 ForEach($session.exercises) { $workoutExercise in
-                    WorkoutExerciseSection(workoutExercise: $workoutExercise)
+                    WorkoutExerciseSection(
+                        workoutExercise: $workoutExercise,
+                        workoutDate: session.startedAt
+                    )
                 }
 
                 Section {
@@ -116,21 +119,10 @@ struct WorkoutSessionView: View {
     }
 
     private func addExercise(_ exercise: Exercise) {
-        let nextOrder = session.exercises.count
-        let sets = PlanSetTarget.defaultSets().map {
-            WorkoutSet(
-                setOrder: $0.setOrder,
-                targetWeight: $0.targetWeight,
-                targetReps: $0.targetReps
-            )
-        }
-
         session.exercises.append(
-            WorkoutExercise(
-                exercise: exercise,
-                sortOrder: nextOrder,
-                restSeconds: 90,
-                sets: sets
+            appStore.makeWorkoutExercise(
+                for: exercise,
+                sortOrder: session.exercises.count
             )
         )
     }
@@ -146,6 +138,7 @@ struct WorkoutSessionView: View {
 private struct WorkoutExerciseSection: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var workoutExercise: WorkoutExercise
+    let workoutDate: Date
     @State private var restRemaining = 0
     @State private var isRestTimerRunning = false
 
@@ -166,7 +159,7 @@ private struct WorkoutExerciseSection: View {
 
                             Text("\(workoutExercise.exercise.primaryMuscle.displayName)・計画 \(workoutExercise.completedPlannedSetCount)/\(workoutExercise.plannedSetCount)セット・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
 
                         Spacer()
@@ -177,7 +170,7 @@ private struct WorkoutExerciseSection: View {
 
                     if workoutExercise.isSkipped {
                         Label("この種目はスキップされました", systemImage: "forward.end")
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         RestTimerControl(
                             restSeconds: workoutExercise.restSeconds,
@@ -192,7 +185,10 @@ private struct WorkoutExerciseSection: View {
                         ForEach($workoutExercise.sets) { $set in
                             WorkoutSetRow(
                                 set: $set,
+                                exercise: workoutExercise.exercise,
+                                exerciseSortOrder: workoutExercise.sortOrder,
                                 previousSet: previousSet(for: set),
+                                bodyWeight: appStore.bodyWeight(on: workoutDate),
                                 restSeconds: workoutExercise.restSeconds,
                                 onCompleted: startRestTimer
                             ) {
@@ -243,7 +239,7 @@ private struct WorkoutExerciseSection: View {
         workoutExercise.sets.append(
             WorkoutSet(
                 setOrder: workoutExercise.sets.count + 1,
-                targetWeight: previous?.targetWeight ?? 20,
+                targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10,
                 actualWeight: previous?.actualWeight,
                 actualReps: previous?.actualReps,
@@ -271,7 +267,10 @@ private struct WorkoutExerciseSection: View {
 private struct WorkoutSetRow: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var set: WorkoutSet
+    let exercise: Exercise
+    let exerciseSortOrder: Int
     let previousSet: WorkoutSet?
+    let bodyWeight: Double?
     let restSeconds: Int
     let onCompleted: () -> Void
     let onDelete: () -> Void
@@ -288,12 +287,12 @@ private struct WorkoutSetRow: View {
 
     private var statusTint: Color {
         if set.isAchieved {
-            return .green
+            return AppTheme.positive
         }
         if set.isCompleted {
             return AppTheme.orange
         }
-        return .secondary
+        return AppTheme.mutedInk
     }
 
     var body: some View {
@@ -302,7 +301,7 @@ private struct WorkoutSetRow: View {
                 HStack {
                     Label(previousText(for: previousSet), systemImage: "clock.arrow.circlepath")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     Spacer()
 
@@ -314,7 +313,7 @@ private struct WorkoutSetRow: View {
                     }
                     .font(.caption.bold())
                     .buttonStyle(.borderless)
-                    .accessibilityIdentifier("copyPreviousSet-\(set.setOrder)")
+                    .accessibilityIdentifier("copyPreviousSet-\(exerciseSortOrder)-\(set.setOrder)")
                 }
                 .padding(.horizontal, 10)
                 .padding(.vertical, 8)
@@ -325,12 +324,12 @@ private struct WorkoutSetRow: View {
                 Text("\(set.setOrder)")
                     .font(.headline)
                     .frame(width: 30, height: 30)
-                    .background(set.isCompleted ? Color.green.opacity(0.18) : Color(.secondarySystemFill), in: Circle())
+                    .background(set.isCompleted ? AppTheme.positive.opacity(0.18) : AppTheme.ink.opacity(0.09), in: Circle())
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("目標 \(AppFormatters.weight(set.targetWeight)) × \(set.targetReps)回")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 6) {
                         DeltaBadge(
@@ -344,7 +343,7 @@ private struct WorkoutSetRow: View {
                             tint: statusTint
                         )
                     }
-                    .accessibilityIdentifier("workoutSetDelta-\(set.setOrder)")
+                    .accessibilityIdentifier("workoutSetDelta-\(exerciseSortOrder)-\(set.setOrder)")
                 }
 
                 Spacer()
@@ -358,7 +357,7 @@ private struct WorkoutSetRow: View {
 
                 Toggle("完了", isOn: $set.isCompleted)
                     .labelsHidden()
-                    .accessibilityIdentifier("completeSetToggle-\(set.setOrder)")
+                    .accessibilityIdentifier("completeSetToggle-\(exerciseSortOrder)-\(set.setOrder)")
                     .onChange(of: set.isCompleted) { oldValue, newValue in
                         if !oldValue && newValue {
                             set.completedAt = Date()
@@ -376,17 +375,33 @@ private struct WorkoutSetRow: View {
             }
 
             HStack(spacing: 12) {
-                Stepper(value: $set.actualWeight, in: 0...999, step: 2.5) {
-                    Text(AppFormatters.weight(set.actualWeight, unit: appStore.userProfile.weightUnit))
-                        .frame(minWidth: 80, alignment: .leading)
-                }
+                WeightInputControl(
+                    weightInKilograms: $set.actualWeight,
+                    unit: appStore.userProfile.weightUnit,
+                    kilogramRange: exercise.weightInputRange,
+                    accessibilityIdentifier: "workoutWeightField-\(exerciseSortOrder)-\(set.setOrder)"
+                )
 
-                Stepper(value: $set.actualReps, in: 0...999) {
-                    Text("\(set.actualReps)回")
-                        .frame(minWidth: 52, alignment: .leading)
-                }
+                RepsInputControl(
+                    reps: $set.actualReps,
+                    accessibilityIdentifier: "workoutRepsField-\(exerciseSortOrder)-\(set.setOrder)"
+                )
             }
             .font(.subheadline)
+
+            if exercise.isDipExercise, let bodyWeight {
+                Label(
+                    AppFormatters.bodyweightLoadSummary(
+                        bodyWeight: bodyWeight,
+                        addedWeight: set.actualWeight,
+                        unit: appStore.userProfile.weightUnit
+                    ),
+                    systemImage: "figure.strengthtraining.traditional"
+                )
+                .font(.caption)
+                .foregroundStyle(AppTheme.mutedInk)
+                .accessibilityIdentifier("dipLoadSummary-\(exerciseSortOrder)-\(set.setOrder)")
+            }
 
             Button {
                 copyTarget()
@@ -395,10 +410,10 @@ private struct WorkoutSetRow: View {
             }
             .font(.caption.bold())
             .buttonStyle(.borderless)
-            .accessibilityIdentifier("copyTargetSet-\(set.setOrder)")
+            .accessibilityIdentifier("copyTargetSet-\(exerciseSortOrder)-\(set.setOrder)")
         }
         .padding(10)
-        .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .background(AppTheme.cardBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
     }
 
     private func previousText(for previousSet: WorkoutSet) -> String {
@@ -443,7 +458,7 @@ private struct WorkoutPlanProgressStrip: View {
     }
 
     private var progressTint: Color {
-        workoutExercise.achievementRate >= 1 ? .green : AppTheme.accent
+        workoutExercise.achievementRate >= 1 ? AppTheme.positive : AppTheme.accent
     }
 }
 
@@ -456,7 +471,7 @@ private struct DeltaBadge: View {
         VStack(alignment: .leading, spacing: 1) {
             Text(title)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
             Text(value)
                 .font(.caption.bold())
                 .foregroundStyle(tint)

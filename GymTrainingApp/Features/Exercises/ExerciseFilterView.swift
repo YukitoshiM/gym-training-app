@@ -37,7 +37,7 @@ private struct FilterRow<Item: Identifiable & Hashable>: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
                 .font(.caption.bold())
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppTheme.mutedInk)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
@@ -66,10 +66,10 @@ private struct FilterChip: View {
         Button(action: action) {
             Text(title)
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(isSelected ? AppTheme.ink : AppTheme.mutedInk)
+                .foregroundStyle(isSelected ? AppTheme.onAccent : AppTheme.mutedInk)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 7)
-                .background(isSelected ? AppTheme.accent : Color(.tertiarySystemGroupedBackground), in: Capsule())
+                .background(isSelected ? AppTheme.accent : AppTheme.cardBackground, in: Capsule())
         }
         .buttonStyle(.plain)
     }

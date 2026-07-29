@@ -15,13 +15,17 @@ struct MealListView: View {
                     }
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
+
+                    NutritionGoalCard(progress: nutritionProgress)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
                 }
 
                 Section("記録") {
                     if appStore.mealEntries.isEmpty {
                         Text("食事記録はまだありません")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.mutedInk)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.vertical, 18)
                             .listRowSeparator(.hidden)
@@ -63,6 +67,99 @@ struct MealListView: View {
     private var todayCalories: Double {
         appStore.mealEntries().reduce(0) { $0 + $1.calories }
     }
+
+    private var nutritionProgress: DailyNutritionProgress {
+        DailyNutritionProgress(
+            meals: appStore.mealEntries(),
+            goals: appStore.userProfile.nutritionGoals
+        )
+    }
+}
+
+private struct NutritionGoalCard: View {
+    let progress: DailyNutritionProgress
+
+    var body: some View {
+        CardContainer {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("今日の食事目標")
+                            .font(.headline)
+                        Text("回数と栄養を別々に判定")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                    Spacer()
+                    statusBadge(
+                        title: nutritionStatusTitle,
+                        isCompleted: progress.isNutritionAchieved
+                    )
+                }
+
+                HStack(spacing: 8) {
+                    nutritionProgress(title: "kcal", value: progress.calories, goal: progress.goals.calories, rate: progress.calorieProgress)
+                    nutritionProgress(title: "P", value: progress.protein, goal: progress.goals.protein, rate: progress.proteinProgress)
+                    nutritionProgress(title: "F", value: progress.fat, goal: progress.goals.fat, rate: progress.fatProgress)
+                    nutritionProgress(title: "C", value: progress.carbs, goal: progress.goals.carbs, rate: progress.carbsProgress)
+                }
+
+                Label(
+                    "\(progress.mealCount)/\(progress.goals.mealCount)回",
+                    systemImage: progress.isMealCountAchieved ? "checkmark.circle.fill" : "fork.knife"
+                )
+                .font(.caption.bold())
+                .foregroundStyle(progress.isMealCountAchieved ? AppTheme.positive : AppTheme.mutedInk)
+            }
+        }
+        .accessibilityIdentifier("nutritionGoalCard")
+    }
+
+    private var nutritionStatusTitle: String {
+        if progress.isCalorieAchieved, progress.isPFCAchieved {
+            return "kcal・PFC達成"
+        }
+        if progress.isCalorieAchieved {
+            return "kcal達成"
+        }
+        if progress.isPFCAchieved {
+            return "PFC達成"
+        }
+        return "栄養途中"
+    }
+
+    private func nutritionProgress(
+        title: String,
+        value: Double,
+        goal: Double,
+        rate: Double
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text(title)
+                .font(.caption2.bold())
+                .foregroundStyle(AppTheme.mutedInk)
+            ProgressView(value: rate)
+                .tint(rate >= 0.9 ? AppTheme.positive : AppTheme.accent)
+            Text("\(Int(value.rounded()))/\(Int(goal.rounded()))")
+                .font(.caption2)
+                .monospacedDigit()
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func statusBadge(title: String, isCompleted: Bool) -> some View {
+        Text(title)
+            .font(.caption2.bold())
+            .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 5)
+            .background(
+                (isCompleted ? AppTheme.positive : AppTheme.mutedInk).opacity(0.12),
+                in: Capsule()
+            )
+    }
 }
 
 private struct MealRow: View {
@@ -85,7 +182,7 @@ private struct MealRow: View {
 
                     Text(AppFormatters.shortDateTime.string(from: meal.recordedAt))
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 8) {
                         Text(AppFormatters.calories(meal.calories))
@@ -94,7 +191,7 @@ private struct MealRow: View {
                         Text("C \(AppFormatters.grams(meal.carbs))")
                     }
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.mutedInk)
 
                     if let aiDraft = meal.aiDraft {
                         Label("AI下書き: \(aiDraft.confidence)", systemImage: "sparkles")
@@ -150,6 +247,7 @@ private struct MealEditorView: View {
     @State private var isAnalyzing = false
     @State private var aiErrorMessage: String?
     @State private var aiErrorRecovery: String?
+    @State private var calculatesCaloriesFromPFC = true
 
     var body: some View {
         NavigationStack {
@@ -172,14 +270,14 @@ private struct MealEditorView: View {
                     Button {
                         analyzeMeal()
                     } label: {
-                        Label(isAnalyzing ? "AI下書き作成中" : "AI下書きを作成", systemImage: "sparkles")
+                        Label(isAnalyzing ? "カロリー推定中" : "もう一度推定", systemImage: "sparkles")
                     }
                     .disabled(imageData == nil || isAnalyzing || !appStore.aiSettings.isEnabled)
                     .accessibilityIdentifier("analyzeMealButton")
 
                     Text(aiHelpText)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Section("食事") {
@@ -194,16 +292,52 @@ private struct MealEditorView: View {
                 }
 
                 Section("PFC") {
-                    TextField("カロリー kcal", text: $calories)
-                        .keyboardType(.decimalPad)
-                        .accessibilityIdentifier("mealCaloriesField")
-                    TextField("たんぱく質 g", text: $protein)
-                        .keyboardType(.decimalPad)
-                        .accessibilityIdentifier("mealProteinField")
-                    TextField("脂質 g", text: $fat)
-                        .keyboardType(.decimalPad)
-                    TextField("炭水化物 g", text: $carbs)
-                        .keyboardType(.decimalPad)
+                    Toggle("PFCからカロリーを自動計算", isOn: $calculatesCaloriesFromPFC)
+                        .accessibilityIdentifier("mealAutoCalorieToggle")
+
+                    NumericTextInputControl(
+                        text: $calories,
+                        title: "カロリー",
+                        unit: "kcal",
+                        range: 0...5_000,
+                        step: 1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealCaloriesField"
+                    )
+                    .disabled(calculatesCaloriesFromPFC)
+                    NumericTextInputControl(
+                        text: $protein,
+                        title: "たんぱく質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealProteinField"
+                    )
+                    NumericTextInputControl(
+                        text: $fat,
+                        title: "脂質",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealFatField"
+                    )
+                    NumericTextInputControl(
+                        text: $carbs,
+                        title: "炭水化物",
+                        unit: "g",
+                        range: 0...1_000,
+                        step: 0.1,
+                        defaultValue: 0,
+                        accessibilityIdentifier: "mealCarbsField"
+                    )
+
+                    if calculatesCaloriesFromPFC {
+                        Text("P×4 + F×9 + C×4 = \(calculatedCalories.formatted(.number.precision(.fractionLength(0)))) kcal")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
                 }
 
                 Section("メモ") {
@@ -218,7 +352,7 @@ private struct MealEditorView: View {
                         if !aiDraft.comment.isEmpty {
                             Text(aiDraft.comment)
                                 .font(.subheadline)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
 
                         ForEach(aiDraft.items) { item in
@@ -227,7 +361,7 @@ private struct MealEditorView: View {
                                     .font(.headline)
                                 Text("\(item.amount) / \(AppFormatters.calories(item.calories)) / P \(AppFormatters.grams(item.protein))")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
                         }
                     }
@@ -238,22 +372,24 @@ private struct MealEditorView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label(aiErrorMessage, systemImage: "xmark.octagon.fill")
                                 .font(.subheadline.bold())
-                                .foregroundStyle(.red)
+                                .foregroundStyle(AppTheme.critical)
 
                             if let aiErrorRecovery {
                                 Text(aiErrorRecovery)
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppTheme.mutedInk)
                             }
 
                             Text("食事名とPFCを手動で入力すれば、このまま保存できます。")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(AppTheme.mutedInk)
                         }
                         .accessibilityIdentifier("mealAIErrorRecoveryCard")
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground)
             .navigationTitle("食事を記録")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -273,13 +409,67 @@ private struct MealEditorView: View {
             }
             .onChange(of: selectedPhoto) { _, item in
                 Task {
-                    imageData = try? await item?.loadTransferable(type: Data.self)
+                    guard let loadedData = try? await item?.loadTransferable(type: Data.self) else {
+                        return
+                    }
+                    imageData = loadedData
                     aiDraft = nil
                     aiErrorMessage = nil
                     aiErrorRecovery = nil
+                    if appStore.aiSettings.isEnabled {
+                        analyzeMeal()
+                    }
+                }
+            }
+            .onAppear {
+                restorePreviousNutritionValues(for: mealType)
+            }
+            .onChange(of: mealType) { _, newMealType in
+                guard imageData == nil, aiDraft == nil else { return }
+                restorePreviousNutritionValues(for: newMealType)
+            }
+            .onChange(of: protein) { _, _ in updateCalculatedCalories() }
+            .onChange(of: fat) { _, _ in updateCalculatedCalories() }
+            .onChange(of: carbs) { _, _ in updateCalculatedCalories() }
+            .onChange(of: calculatesCaloriesFromPFC) { _, isEnabled in
+                if isEnabled {
+                    updateCalculatedCalories()
                 }
             }
         }
+    }
+
+    private var calculatedCalories: Double {
+        parsed(protein) * 4 + parsed(fat) * 9 + parsed(carbs) * 4
+    }
+
+    private func parsed(_ text: String) -> Double {
+        Double(text.replacingOccurrences(of: ",", with: ".")) ?? 0
+    }
+
+    private func updateCalculatedCalories() {
+        guard calculatesCaloriesFromPFC else { return }
+        calories = calculatedCalories.formatted(.number.precision(.fractionLength(0)))
+    }
+
+    private func restorePreviousNutritionValues(for mealType: MealType) {
+        guard let previous = appStore.latestMealEntry(for: mealType) else {
+            calories = ""
+            protein = ""
+            fat = ""
+            carbs = ""
+            calculatesCaloriesFromPFC = true
+            return
+        }
+
+        protein = previous.protein.formatted(.number.precision(.fractionLength(0...1)))
+        fat = previous.fat.formatted(.number.precision(.fractionLength(0...1)))
+        carbs = previous.carbs.formatted(.number.precision(.fractionLength(0...1)))
+
+        let pfcCalories = previous.protein * 4 + previous.fat * 9 + previous.carbs * 4
+        calculatesCaloriesFromPFC = abs(previous.calories - pfcCalories) < 1
+        calories = previous.calories.formatted(.number.precision(.fractionLength(0)))
+        updateCalculatedCalories()
     }
 
     private var aiHelpText: String {
@@ -288,10 +478,10 @@ private struct MealEditorView: View {
         }
 
         if imageData == nil {
-            return "写真を選ぶと、ローカルLLMで料理名とPFCの下書きを作れます。"
+            return "写真を選ぶと、カロリーなどを自動入力します。"
         }
 
-        return "AI下書きは参考値です。必ず量とPFCを確認してから保存してください。"
+        return "推定値は参考値です。下の入力欄で自由に修正できます。"
     }
 
     private func analyzeMeal() {
@@ -325,6 +515,7 @@ private struct MealEditorView: View {
     private func apply(_ draft: MealAIDraft) {
         aiDraft = draft
         name = draft.mealName
+        calculatesCaloriesFromPFC = false
         calories = draft.calories.formatted(.number.precision(.fractionLength(0)))
         protein = draft.protein.formatted(.number.precision(.fractionLength(0...1)))
         fat = draft.fat.formatted(.number.precision(.fractionLength(0...1)))
@@ -336,10 +527,10 @@ private struct MealEditorView: View {
             MealEntry(
                 mealType: mealType,
                 name: name.trimmingCharacters(in: .whitespacesAndNewlines),
-                calories: Double(calories) ?? 0,
-                protein: Double(protein) ?? 0,
-                fat: Double(fat) ?? 0,
-                carbs: Double(carbs) ?? 0,
+                calories: parsed(calories),
+                protein: parsed(protein),
+                fat: parsed(fat),
+                carbs: parsed(carbs),
                 memo: memo,
                 imageData: imageData,
                 aiDraft: aiDraft,

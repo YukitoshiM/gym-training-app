@@ -8,9 +8,9 @@ options:
 settings:
   base:
     MARKETING_VERSION: 0.1.0
-    CURRENT_PROJECT_VERSION: 1
+    CURRENT_PROJECT_VERSION: 3
     SWIFT_VERSION: 6.0
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: PXJ45MLX8V
 targets:
   GymTrainingApp:
     type: application
@@ -23,33 +23,57 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp
-        INFOPLIST_KEY_CFBundleDisplayName: Gym Training
+        CODE_SIGN_ENTITLEMENTS: GymTrainingApp/GymTrainingApp.entitlements
+        INFOPLIST_KEY_CFBundleDisplayName: BodyMode
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     info:
       path: GymTrainingApp/Info.plist
       properties:
-        CFBundleDisplayName: Gym Training
+        CFBundleDisplayName: BodyMode
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        BodyModePrivacyPolicyURL: ""
+        BodyModeSupportEmail: ""
+        BodyModeSupportURL: ""
+        BodyModeTermsURL: ""
+        ITSAppUsesNonExemptEncryption: false
         NSAppTransportSecurity:
-          NSAllowsArbitraryLoads: true
           NSAllowsLocalNetworking: true
+        NSHealthShareUsageDescription: 歩数、活動量、睡眠、心拍などをまとめてコンディションとトレーニング傾向を表示します。
+        NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングと身体測定をApple Healthに保存します。
+        NSLocationAlwaysAndWhenInUseUsageDescription: 登録したジムへの到着と退出を記録する場合に位置情報を使用します。
+        NSLocationWhenInUseUsageDescription: 現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。
+        NSLocalNetworkUsageDescription: Mac miniなど、ユーザーが指定したローカルAIサーバーへ接続するためにローカルネットワークを使用します。
+        NSMotionUsageDescription: Apple Watchの動きからセット中の回数とテンポを推定します。
         UILaunchScreen:
           UIColorName: ""
           UIImageName: ""
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
   GymTrainingWatchApp:
     type: application
     platform: watchOS
     sources:
       - path: GymTrainingWatchApp
       - path: Shared
+    dependencies:
+      - target: GymTrainingWatchWidget
+        embed: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.watchkitapp
-        ASSETCATALOG_COMPILER_APPICON_NAME: ""
-        INFOPLIST_KEY_CFBundleDisplayName: Gym Watch
+        CODE_SIGN_ENTITLEMENTS: GymTrainingWatchApp/GymTrainingWatchApp.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_CFBundleDisplayName: BodyMode
         INFOPLIST_KEY_WKApplication: YES
         INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.yukitoshim.gymtrainingapp
         SUPPORTED_PLATFORMS: "watchos watchsimulator"
@@ -57,9 +81,37 @@ targets:
     info:
       path: GymTrainingWatchApp/Info.plist
       properties:
-        CFBundleDisplayName: Gym Watch
+        CFBundleDisplayName: BodyMode
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         WKApplication: true
         WKCompanionAppBundleIdentifier: com.yukitoshim.gymtrainingapp
+        NSHealthShareUsageDescription: ワークアウト中の心拍と消費エネルギーを表示し、セットごとの負荷を記録します。
+        NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングをApple Healthに保存します。
+        NSMotionUsageDescription: 手首の動きからセット中の回数とテンポを推定します。
+        WKBackgroundModes:
+          - workout-processing
+  GymTrainingWatchWidget:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - path: GymTrainingWatchWidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.watchkitapp.widget
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+        SUPPORTED_PLATFORMS: "watchos watchsimulator"
+        TARGETED_DEVICE_FAMILY: 4
+        INFOPLIST_KEY_CFBundleDisplayName: BodyMode Session
+    info:
+      path: GymTrainingWatchWidget/Info.plist
+      properties:
+        CFBundleDisplayName: BodyMode Session
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
   GymTrainingAppUITests:
     type: bundle.ui-testing
     platform: iOS

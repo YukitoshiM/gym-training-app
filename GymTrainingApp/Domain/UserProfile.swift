@@ -1,5 +1,48 @@
 import Foundation
 
+enum CoachType: String, CaseIterable, Identifiable, Codable {
+    case fatLoss = "fat_loss"
+    case hypertrophy
+    case strength
+    case bodyRecomposition = "body_recomposition"
+    case wellness
+    case returnToTraining = "return_to_training"
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .fatLoss: "減量コーチ"
+        case .hypertrophy: "筋肥大コーチ"
+        case .strength: "筋力向上コーチ"
+        case .bodyRecomposition: "ボディメイクコーチ"
+        case .wellness: "健康維持コーチ"
+        case .returnToTraining: "復帰コーチ"
+        }
+    }
+
+    var characteristic: String {
+        switch self {
+        case .fatLoss: "筋量を守りながら、カロリー・体重傾向・空腹対策を現実的に調整"
+        case .hypertrophy: "トレーニング量、漸進性過負荷、PFC、回復を一体で評価"
+        case .strength: "重量・回数・RPE・技術から、疲労を管理して主要種目を伸ばす"
+        case .bodyRecomposition: "体重だけでなく腹囲・写真・筋力を合わせて体型変化を評価"
+        case .wellness: "完璧さより継続性を優先し、活動量・睡眠・無理のない運動を支援"
+        case .returnToTraining: "ブランク後の痛みと反応を確認し、負荷を段階的に戻す"
+        }
+    }
+
+    static func recommended(for goal: GoalType) -> CoachType {
+        switch goal {
+        case .diet: .fatLoss
+        case .muscleGain: .hypertrophy
+        case .health: .wellness
+        case .bodyShape: .bodyRecomposition
+        case .performance: .strength
+        }
+    }
+}
+
 enum GoalType: String, CaseIterable, Identifiable, Codable {
     case diet
     case muscleGain
@@ -108,45 +151,82 @@ enum WeightUnit: String, CaseIterable, Identifiable, Codable {
 
 struct UserProfile: Codable, Equatable {
     var goalType: GoalType
+    var coachType: CoachType
     var heightCm: Double?
     var birthYear: Int?
     var sex: Sex
     var experienceLevel: ExperienceLevel
     var weightUnit: WeightUnit
+    var nutritionGoals: NutritionGoals
 
     static let `default` = UserProfile(
         goalType: .bodyShape,
+        coachType: .bodyRecomposition,
         heightCm: nil,
         birthYear: nil,
         sex: .unspecified,
         experienceLevel: .beginner,
-        weightUnit: .kg
+        weightUnit: .kg,
+        nutritionGoals: .default
     )
 
     init(
         goalType: GoalType,
+        coachType: CoachType? = nil,
         heightCm: Double?,
         birthYear: Int?,
         sex: Sex,
         experienceLevel: ExperienceLevel,
-        weightUnit: WeightUnit
+        weightUnit: WeightUnit,
+        nutritionGoals: NutritionGoals = .default
     ) {
         self.goalType = goalType
+        self.coachType = coachType ?? CoachType.recommended(for: goalType)
         self.heightCm = heightCm
         self.birthYear = birthYear
         self.sex = sex
         self.experienceLevel = experienceLevel
         self.weightUnit = weightUnit
+        self.nutritionGoals = nutritionGoals
     }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let defaults = Self.default
         goalType = try container.decodeIfPresent(GoalType.self, forKey: .goalType) ?? defaults.goalType
+        coachType = try container.decodeIfPresent(CoachType.self, forKey: .coachType)
+            ?? CoachType.recommended(for: goalType)
         heightCm = try container.decodeIfPresent(Double.self, forKey: .heightCm)
         birthYear = try container.decodeIfPresent(Int.self, forKey: .birthYear)
         sex = try container.decodeIfPresent(Sex.self, forKey: .sex) ?? defaults.sex
         experienceLevel = try container.decodeIfPresent(ExperienceLevel.self, forKey: .experienceLevel) ?? defaults.experienceLevel
         weightUnit = try container.decodeIfPresent(WeightUnit.self, forKey: .weightUnit) ?? defaults.weightUnit
+        nutritionGoals = try container.decodeIfPresent(NutritionGoals.self, forKey: .nutritionGoals) ?? defaults.nutritionGoals
+    }
+}
+
+struct NutritionGoals: Codable, Equatable, Hashable {
+    var calories: Double
+    var protein: Double
+    var fat: Double
+    var carbs: Double
+    var mealCount: Int
+
+    static let `default` = NutritionGoals(
+        calories: 2_000,
+        protein: 120,
+        fat: 60,
+        carbs: 250,
+        mealCount: 3
+    )
+
+    func normalized() -> NutritionGoals {
+        NutritionGoals(
+            calories: min(10_000, max(0, calories)),
+            protein: min(1_000, max(0, protein)),
+            fat: min(1_000, max(0, fat)),
+            carbs: min(2_000, max(0, carbs)),
+            mealCount: min(12, max(1, mealCount))
+        )
     }
 }
