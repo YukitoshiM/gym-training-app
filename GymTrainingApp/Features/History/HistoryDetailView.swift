@@ -79,7 +79,11 @@ struct HistoryDetailView: View {
                             .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         ForEach(exercise.sets) { set in
-                            HistorySetRow(set: set)
+                            HistorySetRow(
+                                set: set,
+                                exercise: exercise.exercise,
+                                bodyWeight: appStore.bodyWeight(on: currentSession.startedAt)
+                            )
                         }
                     }
                 } header: {
@@ -144,6 +148,8 @@ private struct HistorySetRow: View {
     @EnvironmentObject private var appStore: AppStore
 
     let set: WorkoutSet
+    let exercise: Exercise
+    let bodyWeight: Double?
 
     private var resultText: String {
         if !set.isCompleted {
@@ -188,6 +194,20 @@ private struct HistorySetRow: View {
                         .font(.caption2.bold())
                         .foregroundStyle(AppTheme.accent)
                         .accessibilityIdentifier("historySetRPE-\(set.setOrder)")
+                }
+
+                if exercise.isDipExercise, let bodyWeight {
+                    Label(
+                        AppFormatters.bodyweightLoadSummary(
+                            bodyWeight: bodyWeight,
+                            addedWeight: set.actualWeight,
+                            unit: appStore.userProfile.weightUnit
+                        ),
+                        systemImage: "figure.strengthtraining.traditional"
+                    )
+                    .font(.caption2)
+                    .foregroundStyle(AppTheme.mutedInk)
+                    .accessibilityIdentifier("historyDipLoadSummary-\(set.setOrder)")
                 }
 
                 if let duration = set.duration {

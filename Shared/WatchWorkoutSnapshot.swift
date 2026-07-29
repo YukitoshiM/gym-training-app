@@ -274,6 +274,7 @@ struct WatchWorkoutExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
     }
 
     init(planExercise: WatchPlanExerciseSnapshot, sortOrder: Int) {
+        let supportsAssistedLoad = AssistedLoadSupport.isSupported(exerciseName: planExercise.name)
         self.init(
             planExerciseID: planExercise.id,
             exerciseID: planExercise.exerciseID,
@@ -283,7 +284,12 @@ struct WatchWorkoutExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
             equipmentRawValue: planExercise.equipmentRawValue,
             sortOrder: sortOrder,
             restSeconds: planExercise.restSeconds,
-            sets: planExercise.sets.map { WatchWorkoutSetSnapshot(planSet: $0) }
+            sets: planExercise.sets.map {
+                WatchWorkoutSetSnapshot(
+                    planSet: $0,
+                    supportsAssistedLoad: supportsAssistedLoad
+                )
+            }
         )
     }
 
@@ -297,6 +303,35 @@ struct WatchWorkoutExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
 
     var completedRepCount: Int {
         sets.filter(\.isCompleted).reduce(0) { $0 + $1.actualReps }
+    }
+
+    var supportsAssistedLoad: Bool {
+        AssistedLoadSupport.isSupported(exerciseName: name)
+    }
+
+    var isDipExercise: Bool {
+        AssistedLoadSupport.isDip(exerciseName: name)
+    }
+}
+
+enum AssistedLoadSupport {
+    static let kilogramRange: ClosedRange<Double> = -300...999
+
+    static func isSupported(exerciseName: String) -> Bool {
+        isDip(exerciseName: exerciseName)
+            || containsAny(
+                exerciseName,
+                keywords: ["チンニング", "懸垂", "chin-up", "chin up", "pull-up", "pull up"]
+            )
+    }
+
+    static func isDip(exerciseName: String) -> Bool {
+        containsAny(exerciseName, keywords: ["ディップ", "dip"])
+    }
+
+    private static func containsAny(_ exerciseName: String, keywords: [String]) -> Bool {
+        let normalizedName = exerciseName.lowercased()
+        return keywords.contains { normalizedName.contains($0) }
     }
 }
 
@@ -342,10 +377,11 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         self.note = note
     }
 
-    init(planSet: WatchPlanSetTargetSnapshot) {
-        let actualWeight = (planSet.previousActualWeight ?? 0) > 0
-            ? planSet.previousActualWeight
-            : planSet.targetWeight
+    init(planSet: WatchPlanSetTargetSnapshot, supportsAssistedLoad: Bool = false) {
+        let previousWeight = planSet.previousActualWeight
+        let actualWeight = supportsAssistedLoad
+            ? previousWeight ?? planSet.targetWeight
+            : ((previousWeight ?? 0) > 0 ? previousWeight : planSet.targetWeight)
         let actualReps = (planSet.previousActualReps ?? 0) > 0
             ? planSet.previousActualReps
             : planSet.targetReps

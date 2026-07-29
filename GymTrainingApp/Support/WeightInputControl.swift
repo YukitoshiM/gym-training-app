@@ -3,6 +3,7 @@ import SwiftUI
 struct WeightInputControl: View {
     @Binding var weightInKilograms: Double
     let unit: WeightUnit
+    let kilogramRange: ClosedRange<Double>
     let accessibilityIdentifier: String
 
     @FocusState private var isTextFieldFocused: Bool
@@ -11,10 +12,22 @@ struct WeightInputControl: View {
     @State private var editText = ""
     @State private var valueBeforeEditing = 0.0
 
+    init(
+        weightInKilograms: Binding<Double>,
+        unit: WeightUnit,
+        kilogramRange: ClosedRange<Double> = 0...999,
+        accessibilityIdentifier: String
+    ) {
+        _weightInKilograms = weightInKilograms
+        self.unit = unit
+        self.kilogramRange = kilogramRange
+        self.accessibilityIdentifier = accessibilityIdentifier
+    }
+
     var body: some View {
         HStack(spacing: 4) {
             TextField("重量", text: $editText)
-            .keyboardType(.decimalPad)
+            .keyboardType(kilogramRange.lowerBound < 0 ? .numbersAndPunctuation : .decimalPad)
             .multilineTextAlignment(.trailing)
             .monospacedDigit()
             .textFieldStyle(.roundedBorder)
@@ -30,7 +43,9 @@ struct WeightInputControl: View {
             Button {
                 isTextFieldFocused = false
                 let currentValue = displayedWeight.wrappedValue
-                draftDisplayedWeight = currentValue > 0 ? currentValue : defaultDisplayedWeight
+                draftDisplayedWeight = currentValue != 0 || kilogramRange.lowerBound < 0
+                    ? currentValue
+                    : defaultDisplayedWeight
                 isWheelPresented = true
             } label: {
                 Image(systemName: "dial.medium")
@@ -44,7 +59,8 @@ struct WeightInputControl: View {
                 WeightWheelPickerSheet(
                     displayedWeight: $draftDisplayedWeight,
                     unit: unit,
-                onCancel: { isWheelPresented = false },
+                    kilogramRange: kilogramRange,
+                    onCancel: { isWheelPresented = false },
                     onSave: {
                         displayedWeight.wrappedValue = draftDisplayedWeight
                         editText = Self.formatted(draftDisplayedWeight)
@@ -70,6 +86,17 @@ struct WeightInputControl: View {
         .onChange(of: displayedWeight.wrappedValue) { _, value in
             guard !isTextFieldFocused else { return }
             editText = Self.formatted(value)
+        }
+        .onChange(of: editText) { _, value in
+            guard isTextFieldFocused else {
+                return
+            }
+            if value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                displayedWeight.wrappedValue = valueBeforeEditing
+                return
+            }
+            guard let parsedValue = parsed(value) else { return }
+            displayedWeight.wrappedValue = parsedValue
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {
@@ -97,7 +124,7 @@ struct WeightInputControl: View {
                 case .lb:
                     kilograms = value / 2.2046226218
                 }
-                weightInKilograms = Self.normalized(kilograms)
+                weightInKilograms = normalized(kilograms)
             }
         )
     }
@@ -105,15 +132,16 @@ struct WeightInputControl: View {
     private var defaultDisplayedWeight: Double {
         switch unit {
         case .kg:
-            50
+            normalized(50)
         case .lb:
-            Self.normalized(50 * 2.2046226218)
+            normalized(50) * 2.2046226218
         }
     }
 
-    private static func normalized(_ value: Double) -> Double {
-        guard value.isFinite else { return 0 }
-        return min(999, max(0, (value * 10).rounded() / 10))
+    private func normalized(_ value: Double) -> Double {
+        guard value.isFinite else { return kilogramRange.lowerBound }
+        let rounded = (value * 10).rounded() / 10
+        return min(kilogramRange.upperBound, max(kilogramRange.lowerBound, rounded))
     }
 
     private static func formatted(_ value: Double) -> String {
@@ -121,8 +149,7 @@ struct WeightInputControl: View {
     }
 
     private func commitManualEntry() {
-        let normalizedText = editText.replacingOccurrences(of: ",", with: ".")
-        guard let value = Double(normalizedText), value.isFinite else {
+        guard let value = parsed(editText) else {
             displayedWeight.wrappedValue = valueBeforeEditing
             editText = Self.formatted(valueBeforeEditing)
             return
@@ -130,11 +157,20 @@ struct WeightInputControl: View {
         displayedWeight.wrappedValue = value
         editText = Self.formatted(displayedWeight.wrappedValue)
     }
+
+    private func parsed(_ text: String) -> Double? {
+        let normalizedText = text.replacingOccurrences(of: ",", with: ".")
+        guard let value = Double(normalizedText), value.isFinite else {
+            return nil
+        }
+        return value
+    }
 }
 
 private struct WeightWheelPickerSheet: View {
     @Binding var displayedWeight: Double
     let unit: WeightUnit
+    let kilogramRange: ClosedRange<Double>
     let onCancel: () -> Void
     let onSave: () -> Void
     private let availableStepRange: ClosedRange<Int>
@@ -142,20 +178,24 @@ private struct WeightWheelPickerSheet: View {
     init(
         displayedWeight: Binding<Double>,
         unit: WeightUnit,
+        kilogramRange: ClosedRange<Double>,
         onCancel: @escaping () -> Void,
         onSave: @escaping () -> Void
     ) {
         _displayedWeight = displayedWeight
         self.unit = unit
+        self.kilogramRange = kilogramRange
         self.onCancel = onCancel
         self.onSave = onSave
 
-        let maximumStepIndex = unit == .kg ? 9_990 : 22_020
+        let conversion = unit == .kg ? 1.0 : 2.2046226218
+        let minimumStepIndex = Int((kilogramRange.lowerBound * conversion * 10).rounded(.up))
+        let maximumStepIndex = Int((kilogramRange.upperBound * conversion * 10).rounded(.down))
         let center = min(
             maximumStepIndex,
-            max(0, Int((displayedWeight.wrappedValue * 10).rounded()))
+            max(minimumStepIndex, Int((displayedWeight.wrappedValue * 10).rounded()))
         )
-        availableStepRange = max(0, center - 200)...min(maximumStepIndex, center + 200)
+        availableStepRange = max(minimumStepIndex, center - 200)...min(maximumStepIndex, center + 200)
     }
 
     var body: some View {
@@ -194,13 +234,21 @@ private struct WeightWheelPickerSheet: View {
         }
     }
 
-    private var maximumStepIndex: Int {
-        unit == .kg ? 9_990 : 22_020
+    private var displayedStepRange: ClosedRange<Int> {
+        let conversion = unit == .kg ? 1.0 : 2.2046226218
+        let lowerBound = Int((kilogramRange.lowerBound * conversion * 10).rounded(.up))
+        let upperBound = Int((kilogramRange.upperBound * conversion * 10).rounded(.down))
+        return lowerBound...upperBound
     }
 
     private var stepIndex: Binding<Int> {
         Binding(
-            get: { min(maximumStepIndex, max(0, Int((displayedWeight * 10).rounded()))) },
+            get: {
+                min(
+                    displayedStepRange.upperBound,
+                    max(displayedStepRange.lowerBound, Int((displayedWeight * 10).rounded()))
+                )
+            },
             set: { displayedWeight = Double($0) / 10 }
         )
     }
@@ -291,6 +339,14 @@ struct RepsInputControl: View {
         .onChange(of: reps) { _, value in
             guard !isTextFieldFocused else { return }
             editText = String(value)
+        }
+        .onChange(of: editText) { _, value in
+            guard isTextFieldFocused else { return }
+            if value.isEmpty {
+                reps = valueBeforeEditing
+            } else if let parsed = Int(value) {
+                reps = min(range.upperBound, max(range.lowerBound, parsed))
+            }
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {
@@ -449,6 +505,14 @@ struct RestSecondsInputControl: View {
         .onChange(of: seconds) { _, value in
             guard !isTextFieldFocused else { return }
             editText = String(value)
+        }
+        .onChange(of: editText) { _, value in
+            guard isTextFieldFocused else { return }
+            if value.isEmpty {
+                seconds = valueBeforeEditing
+            } else if let parsed = Int(value) {
+                seconds = Self.normalized(parsed)
+            }
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {

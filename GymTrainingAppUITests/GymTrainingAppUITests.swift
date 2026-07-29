@@ -142,6 +142,75 @@ final class GymTrainingAppUITests: XCTestCase {
         XCTAssertEqual(copiedReps.value as? String, "7")
     }
 
+    func testLastPlanSetWeightPersistsWhenSavedWhileFocused() throws {
+        tapTab("計画")
+        app.buttons["createPlanToolbarButton"].tap()
+        app.buttons["planTemplate-back"].tap()
+
+        let weightField = scrollToHittable(app.textFields["planWeightField-0-3"])
+        XCTAssertTrue(weightField.isHittable)
+        weightField.tap()
+        weightField.typeText("42.3")
+
+        let saveButton = app.buttons["savePlanPinnedButton"]
+        XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
+        saveButton.tap()
+
+        XCTAssertTrue(app.staticTexts["背中の日"].waitForExistence(timeout: 5))
+        app.staticTexts["背中の日"].firstMatch.tap()
+
+        let savedWeightField = scrollToHittable(app.textFields["planWeightField-0-3"])
+        XCTAssertTrue(savedWeightField.waitForExistence(timeout: 5))
+        XCTAssertEqual(savedWeightField.value as? String, "42.3")
+    }
+
+    func testWatchWeightSuggestionUpdatesTheSourcePlan() throws {
+        app.terminate()
+        app.launchArguments = [
+            "--reset-ui-test-data",
+            "--seed-alpha-ui-test-plan",
+            "--seed-watch-plan-weight-suggestion"
+        ]
+        app.launch()
+
+        let alert = app.alerts["計画重量を更新しますか？"]
+        XCTAssertTrue(alert.waitForExistence(timeout: 8))
+        XCTAssertTrue(alert.staticTexts["胸の日の目標重量を更新します。\nベンチプレス 20 kg → 22.5 kg（1セット）"].exists)
+        alert.buttons["計画に反映"].tap()
+
+        tapTab("計画")
+        XCTAssertTrue(app.navigationBars["計画"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["胸の日"].waitForExistence(timeout: 5))
+        app.staticTexts["胸の日"].firstMatch.tap()
+        XCTAssertTrue(app.navigationBars["胸の日"].waitForExistence(timeout: 5))
+
+        let updatedWeightField = app.textFields["planWeightField-0-1"]
+        XCTAssertTrue(updatedWeightField.waitForExistence(timeout: 5))
+        XCTAssertEqual(updatedWeightField.value as? String, "22.5")
+    }
+
+    func testAssistedDipWeightAndBodyweightSummary() throws {
+        app.terminate()
+        app.launchArguments = [
+            "--reset-ui-test-data",
+            "--seed-assisted-ui-test-plan"
+        ]
+        app.launch()
+
+        tapTab("記録")
+        let startButton = app.descendants(matching: .any)["startWorkout-アシスト種目"]
+        XCTAssertTrue(startButton.waitForExistence(timeout: 5))
+        startButton.tap()
+
+        let weightField = app.textFields["workoutWeightField-0-1"]
+        XCTAssertTrue(weightField.waitForExistence(timeout: 5))
+        XCTAssertEqual(weightField.value as? String, "-20")
+
+        let summary = app.staticTexts["dipLoadSummary-0-1"]
+        XCTAssertTrue(summary.waitForExistence(timeout: 5))
+        XCTAssertTrue(summary.label.contains("体重 70 kg - アシスト 20 kg = 参考負荷 50 kg"))
+    }
+
     func testGoalModeSelection() throws {
         tapTab("ホーム")
 

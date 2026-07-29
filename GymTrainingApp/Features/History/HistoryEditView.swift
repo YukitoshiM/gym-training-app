@@ -29,6 +29,7 @@ struct HistoryEditView: View {
                                 WeightInputControl(
                                     weightInKilograms: $set.actualWeight,
                                     unit: appStore.userProfile.weightUnit,
+                                    kilogramRange: exercise.exercise.weightInputRange,
                                     accessibilityIdentifier: "historyWeightField-\(exercise.sortOrder)-\(set.setOrder)"
                                 )
 

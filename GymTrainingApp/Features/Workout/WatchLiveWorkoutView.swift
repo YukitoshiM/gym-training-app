@@ -334,6 +334,9 @@ private struct LiveSetEditorView: View {
                     WeightInputControl(
                         weightInKilograms: $weight,
                         unit: editor.unit == .kg ? .kg : .lb,
+                        kilogramRange: editor.exercise.supportsAssistedLoad
+                            ? AssistedLoadSupport.kilogramRange
+                            : 0...999,
                         accessibilityIdentifier: "liveSetWeight"
                     )
                     RepsInputControl(reps: $reps, accessibilityIdentifier: "liveSetReps")

@@ -63,12 +63,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         firstSetStartButton.tap()
         XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].waitForExistence(timeout: 5))
 
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.78))
-            .press(
-                forDuration: 0.2,
-                thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.36))
-            )
-        let weightEntryButton = app.buttons["重量をリールで設定"].firstMatch
+        let weightEntryButton = app.buttons["watchActiveWeightEntry"]
         XCTAssertTrue(weightEntryButton.waitForExistence(timeout: 5))
         XCTAssertTrue(weightEntryButton.isHittable)
         weightEntryButton.tap()
@@ -84,7 +79,8 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(saveWeightButton.isHittable)
         saveWeightButton.tap()
 
-        let repsEntryButton = findHittableElement(in: app, identifier: "watchSetRepsEntry-0-1")
+        let repsEntryButton = app.buttons["watchActiveRepsEntry"]
+        XCTAssertTrue(repsEntryButton.waitForExistence(timeout: 5))
         XCTAssertTrue(repsEntryButton.isHittable)
         repsEntryButton.tap()
 
@@ -100,12 +96,13 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         saveRepsButton.tap()
 
         let selectedWeight = "\(selectedWeightValue.formatted(.number.precision(.fractionLength(0...1)))) kg"
-        let actualResult = app.staticTexts["watchSetActual-0-1"]
+        let actualResult = app.staticTexts["watchActiveSetActual"]
         XCTAssertTrue(actualResult.waitForExistence(timeout: 5))
         XCTAssertEqual(actualResult.label, "実績 \(selectedWeight) × \(selectedReps)回")
         attachScreenshot(named: "watch-set-result-entry", app: app)
 
-        let rpeButton = findHittableElement(in: app, identifier: "watchSetRPE-0-1")
+        let rpeButton = app.buttons["watchActiveRPEEntry"]
+        XCTAssertTrue(rpeButton.waitForExistence(timeout: 5))
         XCTAssertTrue(rpeButton.isHittable)
         rpeButton.tap()
 
@@ -119,7 +116,8 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(saveRPEButton.isHittable)
         saveRPEButton.tap()
 
-        let firstSetButton = findHittableElement(in: app, identifier: "watchSetComplete-0-1")
+        let firstSetButton = app.buttons["watchCompleteActiveSetButton"]
+        XCTAssertTrue(firstSetButton.waitForExistence(timeout: 5))
         XCTAssertTrue(firstSetButton.isHittable)
         firstSetButton.tap()
 
@@ -191,6 +189,22 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["背中の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ラットプルダウン・3セット・計36回"].exists)
         XCTAssertTrue(app.buttons["watchStartWorkoutButton"].exists)
+    }
+
+    func testSwitchingSetsResetsThePreviousSetAndCarriesWeightForward() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--seed-watch-set-switch-state"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.navigationBars["記録中"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["ベンチプレス・セット2"].waitForExistence(timeout: 5))
+        let activeSetActual = app.staticTexts["watchActiveSetActual"]
+        XCTAssertTrue(activeSetActual.waitForExistence(timeout: 5))
+        XCTAssertEqual(activeSetActual.label, "実績 52.5 kg × 10回")
     }
 
     private func findHittableElement(

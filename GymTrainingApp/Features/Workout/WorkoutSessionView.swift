@@ -54,7 +54,10 @@ struct WorkoutSessionView: View {
                 .listRowBackground(Color.clear)
 
                 ForEach($session.exercises) { $workoutExercise in
-                    WorkoutExerciseSection(workoutExercise: $workoutExercise)
+                    WorkoutExerciseSection(
+                        workoutExercise: $workoutExercise,
+                        workoutDate: session.startedAt
+                    )
                 }
 
                 Section {
@@ -135,6 +138,7 @@ struct WorkoutSessionView: View {
 private struct WorkoutExerciseSection: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var workoutExercise: WorkoutExercise
+    let workoutDate: Date
     @State private var restRemaining = 0
     @State private var isRestTimerRunning = false
 
@@ -181,8 +185,10 @@ private struct WorkoutExerciseSection: View {
                         ForEach($workoutExercise.sets) { $set in
                             WorkoutSetRow(
                                 set: $set,
+                                exercise: workoutExercise.exercise,
                                 exerciseSortOrder: workoutExercise.sortOrder,
                                 previousSet: previousSet(for: set),
+                                bodyWeight: appStore.bodyWeight(on: workoutDate),
                                 restSeconds: workoutExercise.restSeconds,
                                 onCompleted: startRestTimer
                             ) {
@@ -261,8 +267,10 @@ private struct WorkoutExerciseSection: View {
 private struct WorkoutSetRow: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var set: WorkoutSet
+    let exercise: Exercise
     let exerciseSortOrder: Int
     let previousSet: WorkoutSet?
+    let bodyWeight: Double?
     let restSeconds: Int
     let onCompleted: () -> Void
     let onDelete: () -> Void
@@ -370,6 +378,7 @@ private struct WorkoutSetRow: View {
                 WeightInputControl(
                     weightInKilograms: $set.actualWeight,
                     unit: appStore.userProfile.weightUnit,
+                    kilogramRange: exercise.weightInputRange,
                     accessibilityIdentifier: "workoutWeightField-\(exerciseSortOrder)-\(set.setOrder)"
                 )
 
@@ -379,6 +388,20 @@ private struct WorkoutSetRow: View {
                 )
             }
             .font(.subheadline)
+
+            if exercise.isDipExercise, let bodyWeight {
+                Label(
+                    AppFormatters.bodyweightLoadSummary(
+                        bodyWeight: bodyWeight,
+                        addedWeight: set.actualWeight,
+                        unit: appStore.userProfile.weightUnit
+                    ),
+                    systemImage: "figure.strengthtraining.traditional"
+                )
+                .font(.caption)
+                .foregroundStyle(AppTheme.mutedInk)
+                .accessibilityIdentifier("dipLoadSummary-\(exerciseSortOrder)-\(set.setOrder)")
+            }
 
             Button {
                 copyTarget()

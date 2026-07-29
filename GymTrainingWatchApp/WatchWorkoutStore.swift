@@ -95,6 +95,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         refreshPowerPolicy()
         prepareUITestStateIfNeeded()
         loadSavedState()
+        prepareSetSwitchUITestStateIfNeeded()
         configureSession()
         recoverSensorWorkoutIfNeeded()
     }
@@ -138,13 +139,42 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     func startSet(exerciseID: UUID, setID: UUID) {
+        guard let selectedSet = activeSession?
+            .exercises.first(where: { $0.id == exerciseID })?
+            .sets.first(where: { $0.id == setID }),
+              !selectedSet.isCompleted else {
+            return
+        }
+
         stopRestTimer()
         setStartSuggestion = nil
         nextSetLoadSuggestion = nil
         confirmedExerciseCandidate = nil
-        updateSet(exerciseID: exerciseID, setID: setID) { set in
-            guard !set.isCompleted else { return }
-            set.startedAt = set.startedAt ?? Date()
+        _ = motionAnalyzer.stop()
+        updateSession { session in
+            for exerciseIndex in session.exercises.indices {
+                for setIndex in session.exercises[exerciseIndex].sets.indices {
+                    let isSelectedSet = session.exercises[exerciseIndex].id == exerciseID
+                        && session.exercises[exerciseIndex].sets[setIndex].id == setID
+                    guard !isSelectedSet,
+                          session.exercises[exerciseIndex].sets[setIndex].startedAt != nil,
+                          !session.exercises[exerciseIndex].sets[setIndex].isCompleted else {
+                        continue
+                    }
+
+                    session.exercises[exerciseIndex].sets[setIndex].startedAt = nil
+                    session.exercises[exerciseIndex].sets[setIndex].completedAt = nil
+                    session.exercises[exerciseIndex].sets[setIndex].sensorSummary = nil
+                    session.exercises[exerciseIndex].sets[setIndex].rpe = nil
+                }
+            }
+
+            guard let exerciseIndex = session.exercises.firstIndex(where: { $0.id == exerciseID }),
+                  let setIndex = session.exercises[exerciseIndex].sets.firstIndex(where: { $0.id == setID }) else {
+                return
+            }
+            session.exercises[exerciseIndex].sets[setIndex].startedAt =
+                session.exercises[exerciseIndex].sets[setIndex].startedAt ?? Date()
         }
 
         activeSensorSet = (exerciseID, setID)
@@ -187,9 +217,24 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     func setWeight(exerciseID: UUID, setID: UUID, weight: Double) {
-        updateSet(exerciseID: exerciseID, setID: setID) { set in
-            guard set.startedAt != nil, !set.isCompleted else { return }
-            set.actualWeight = Self.normalizedWeight(weight)
+        updateSession { session in
+            guard let exerciseIndex = session.exercises.firstIndex(where: { $0.id == exerciseID }),
+                  session.exercises[exerciseIndex].sets.contains(where: {
+                      $0.id == setID && $0.startedAt != nil && !$0.isCompleted
+                  }) else {
+                return
+            }
+
+            let exercise = session.exercises[exerciseIndex]
+            let minimumWeight = exercise.supportsAssistedLoad
+                ? AssistedLoadSupport.kilogramRange.lowerBound
+                : 0
+            let normalizedWeight = Self.normalizedWeight(weight, minimum: minimumWeight)
+
+            for index in session.exercises[exerciseIndex].sets.indices
+            where !session.exercises[exerciseIndex].sets[index].isCompleted {
+                session.exercises[exerciseIndex].sets[index].actualWeight = normalizedWeight
+            }
         }
     }
 
@@ -278,9 +323,9 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
     }
 
-    private static func normalizedWeight(_ value: Double) -> Double {
+    private static func normalizedWeight(_ value: Double, minimum: Double = 0) -> Double {
         guard value.isFinite else { return 0 }
-        return min(999, max(0, (value * 10).rounded() / 10))
+        return min(999, max(minimum, (value * 10).rounded() / 10))
     }
 
     func setCompletion(exerciseID: UUID, setID: UUID, isCompleted: Bool) {
@@ -1139,6 +1184,30 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
 
         defaults.set(libraryData, forKey: planLibraryStorageKey)
+    }
+
+    private func prepareSetSwitchUITestStateIfNeeded() {
+        guard ProcessInfo.processInfo.arguments.contains("--seed-watch-set-switch-state"),
+              let plan = plans.first,
+              let exercise = plan.exercises.first,
+              exercise.sets.count >= 2 else {
+            return
+        }
+
+        selectPlan(plan)
+        startWorkout()
+        guard let activeExercise = activeSession?.exercises.first,
+              activeExercise.sets.count >= 2 else {
+            return
+        }
+
+        startSet(exerciseID: activeExercise.id, setID: activeExercise.sets[0].id)
+        setWeight(
+            exerciseID: activeExercise.id,
+            setID: activeExercise.sets[0].id,
+            weight: 52.5
+        )
+        startSet(exerciseID: activeExercise.id, setID: activeExercise.sets[1].id)
     }
 
     private static func uiTestPlans() -> [WatchWorkoutPlanSnapshot] {

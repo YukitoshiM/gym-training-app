@@ -1,6 +1,46 @@
 import Foundation
 @preconcurrency import WatchConnectivity
 
+struct PlanWeightUpdateSuggestion: Identifiable, Equatable {
+    struct Change: Identifiable, Equatable {
+        let planExerciseID: UUID
+        let exerciseName: String
+        let setOrder: Int
+        let previousWeight: Double
+        let proposedWeight: Double
+
+        var id: String {
+            "\(planExerciseID.uuidString)-\(setOrder)"
+        }
+    }
+
+    let id = UUID()
+    let planID: UUID
+    let planName: String
+    let unit: WeightUnit
+    let changes: [Change]
+
+    var message: String {
+        let groupedChanges = Dictionary(grouping: changes, by: \.exerciseName)
+        let summaries = groupedChanges.keys.sorted().compactMap { exerciseName -> String? in
+            guard let exerciseChanges = groupedChanges[exerciseName],
+                  let latestChange = exerciseChanges.max(by: { $0.setOrder < $1.setOrder }) else {
+                return nil
+            }
+            let previousWeight = AppFormatters.weight(
+                latestChange.previousWeight,
+                unit: unit
+            )
+            let proposedWeight = AppFormatters.weight(
+                latestChange.proposedWeight,
+                unit: unit
+            )
+            return "\(exerciseName) \(previousWeight) → \(proposedWeight)（\(exerciseChanges.count)セット）"
+        }
+        return "\(planName)の目標重量を更新します。\n\(summaries.joined(separator: "\n"))"
+    }
+}
+
 @MainActor
 final class WatchPlanSyncService: NSObject, ObservableObject {
     enum SyncState: Equatable, Sendable {
@@ -41,6 +81,7 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
 
     @Published private(set) var state: SyncState = .idle
     @Published private(set) var liveWatchWorkout: WatchLiveWorkoutSnapshot?
+    @Published private(set) var pendingPlanWeightUpdateSuggestion: PlanWeightUpdateSuggestion?
     private weak var appStore: AppStore?
 
     private var session: WCSession? {
@@ -54,6 +95,56 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
 
     func bind(appStore: AppStore) {
         self.appStore = appStore
+
+        guard ProcessInfo.processInfo.arguments.contains("--seed-watch-plan-weight-suggestion"),
+              pendingPlanWeightUpdateSuggestion == nil,
+              let plan = appStore.plans.first else {
+            return
+        }
+        let watchPlan = WatchWorkoutPlanSnapshot(
+            plan: plan,
+            weightUnit: appStore.userProfile.weightUnit
+        )
+        var watchSession = WatchWorkoutSessionSnapshot(plan: watchPlan)
+        if !watchSession.exercises.isEmpty, !watchSession.exercises[0].sets.isEmpty {
+            watchSession.exercises[0].sets[0].actualWeight += 2.5
+            watchSession.exercises[0].sets[0].actualReps =
+                watchSession.exercises[0].sets[0].targetReps
+            watchSession.exercises[0].sets[0].isCompleted = true
+            pendingPlanWeightUpdateSuggestion = makePlanWeightUpdateSuggestion(
+                for: watchSession,
+                appStore: appStore
+            )
+        }
+    }
+
+    func acceptPlanWeightUpdateSuggestion() {
+        guard let suggestion = pendingPlanWeightUpdateSuggestion,
+              let appStore,
+              var plan = appStore.plans.first(where: { $0.id == suggestion.planID }) else {
+            pendingPlanWeightUpdateSuggestion = nil
+            return
+        }
+
+        for change in suggestion.changes {
+            guard let exerciseIndex = plan.exercises.firstIndex(where: {
+                $0.id == change.planExerciseID
+            }),
+                  let setIndex = plan.exercises[exerciseIndex].sets.firstIndex(where: {
+                      $0.setOrder == change.setOrder
+                  }) else {
+                continue
+            }
+            plan.exercises[exerciseIndex].sets[setIndex].targetWeight = change.proposedWeight
+        }
+
+        appStore.savePlan(plan)
+        pendingPlanWeightUpdateSuggestion = nil
+        state = .received("\(plan.name)の目標重量を更新しました")
+    }
+
+    func declinePlanWeightUpdateSuggestion() {
+        pendingPlanWeightUpdateSuggestion = nil
     }
 
     func send(
@@ -233,6 +324,10 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             workoutSession.endedAt = workoutSession.endedAt ?? Date()
             workoutSession.watchSyncState = .received
             appStore.saveWorkoutHistorySession(workoutSession)
+            pendingPlanWeightUpdateSuggestion = makePlanWeightUpdateSuggestion(
+                for: watchSession,
+                appStore: appStore
+            )
             liveWatchWorkout = nil
             state = .received("\(workoutSession.title) をApple Watchから履歴に保存しました")
             return true
@@ -245,6 +340,56 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             )
             return false
         }
+    }
+
+    private func makePlanWeightUpdateSuggestion(
+        for watchSession: WatchWorkoutSessionSnapshot,
+        appStore: AppStore
+    ) -> PlanWeightUpdateSuggestion? {
+        guard let sourcePlanID = watchSession.sourcePlanID,
+              let plan = appStore.plans.first(where: { $0.id == sourcePlanID }) else {
+            return nil
+        }
+
+        var changes: [PlanWeightUpdateSuggestion.Change] = []
+
+        for watchExercise in watchSession.exercises {
+            guard let planExercise = plan.exercises.first(where: {
+                $0.id == watchExercise.planExerciseID
+                    || ($0.exercise.id == watchExercise.exerciseID && watchExercise.exerciseID != nil)
+            }) else {
+                continue
+            }
+
+            for watchSet in watchExercise.sets
+            where watchSet.isCompleted
+                && watchSet.actualReps >= watchSet.targetReps
+                && abs(watchSet.actualWeight - watchSet.targetWeight) >= 0.05 {
+                guard let planSet = planExercise.sets.first(where: {
+                    $0.setOrder == watchSet.setOrder
+                }),
+                      abs(planSet.targetWeight - watchSet.actualWeight) >= 0.05 else {
+                    continue
+                }
+                changes.append(
+                    PlanWeightUpdateSuggestion.Change(
+                        planExerciseID: planExercise.id,
+                        exerciseName: planExercise.exercise.name,
+                        setOrder: planSet.setOrder,
+                        previousWeight: planSet.targetWeight,
+                        proposedWeight: watchSet.actualWeight
+                    )
+                )
+            }
+        }
+
+        guard !changes.isEmpty else { return nil }
+        return PlanWeightUpdateSuggestion(
+            planID: plan.id,
+            planName: plan.name,
+            unit: appStore.userProfile.weightUnit,
+            changes: changes
+        )
     }
 
     private nonisolated func receive(userInfo: [String: Any]) {

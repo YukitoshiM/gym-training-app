@@ -447,72 +447,158 @@ final class HealthDataManager: ObservableObject {
                     return
                 }
 
-                let grouped = Dictionary(grouping: samples) {
-                    $0.sourceRevision.source.bundleIdentifier
+                let segments = samples.map {
+                    SleepSegment(
+                        value: $0.value,
+                        startedAt: $0.startDate,
+                        endedAt: $0.endDate,
+                        sourceIdentifier: $0.sourceRevision.source.bundleIdentifier
+                    )
                 }
-                let selected = grouped.values.max { lhs, rhs in
-                    let lhsDetailed = lhs.filter {
-                        [
-                            HKCategoryValueSleepAnalysis.asleepCore.rawValue,
-                            HKCategoryValueSleepAnalysis.asleepDeep.rawValue,
-                            HKCategoryValueSleepAnalysis.asleepREM.rawValue
-                        ].contains($0.value)
-                    }.count
-                    let rhsDetailed = rhs.filter {
-                        [
-                            HKCategoryValueSleepAnalysis.asleepCore.rawValue,
-                            HKCategoryValueSleepAnalysis.asleepDeep.rawValue,
-                            HKCategoryValueSleepAnalysis.asleepREM.rawValue
-                        ].contains($0.value)
-                    }.count
-                    if lhsDetailed != rhsDetailed { return lhsDetailed < rhsDetailed }
-                    return lhs.count < rhs.count
-                } ?? []
-
-                func hours(for values: Set<Int>) -> Double {
-                    selected
-                        .filter { values.contains($0.value) }
-                        .reduce(0) { $0 + $1.endDate.timeIntervalSince($1.startDate) } / 3_600
-                }
-
-                let total = hours(for: sleepingValues)
-                guard total > 0 else {
-                    continuation.resume(returning: nil)
-                    return
-                }
-
-                let core = hours(for: [HKCategoryValueSleepAnalysis.asleepCore.rawValue])
-                let deep = hours(for: [HKCategoryValueSleepAnalysis.asleepDeep.rawValue])
-                let rem = hours(for: [HKCategoryValueSleepAnalysis.asleepREM.rawValue])
-                let awakeSamples = selected.filter {
-                    $0.value == HKCategoryValueSleepAnalysis.awake.rawValue
-                        && $0.endDate.timeIntervalSince($0.startDate) >= 60
-                }
-                let awake = awakeSamples.reduce(0) {
-                    $0 + $1.endDate.timeIntervalSince($1.startDate)
-                } / 3_600
-                let hasStages = core + deep + rem > 0
-                let quality = Self.sleepQualityScore(
-                    totalHours: total,
-                    deepHours: hasStages ? deep : nil,
-                    remHours: hasStages ? rem : nil,
-                    interruptionCount: awakeSamples.count
-                )
-
                 continuation.resume(
-                    returning: SleepSummary(
-                        totalHours: total,
-                        coreHours: hasStages ? core : nil,
-                        deepHours: hasStages ? deep : nil,
-                        remHours: hasStages ? rem : nil,
-                        awakeHours: awake > 0 ? awake : nil,
-                        interruptionCount: awakeSamples.isEmpty ? 0 : awakeSamples.count,
-                        qualityScore: quality,
-                        hasDetailedStages: hasStages
+                    returning: Self.latestSleepSummary(
+                        segments: segments,
+                        sleepingValues: sleepingValues,
+                        end: end
                     )
                 )
             }
             healthStore.execute(query)
+        }
+    }
+
+    nonisolated private static func latestSleepSummary(
+        segments: [SleepSegment],
+        sleepingValues: Set<Int>,
+        end: Date
+    ) -> SleepSummary? {
+        let detailedValues: Set<Int> = [
+            HKCategoryValueSleepAnalysis.asleepCore.rawValue,
+            HKCategoryValueSleepAnalysis.asleepDeep.rawValue,
+            HKCategoryValueSleepAnalysis.asleepREM.rawValue
+        ]
+        let episodes = Dictionary(grouping: segments, by: \.sourceIdentifier)
+            .flatMap { sourceIdentifier, sourceSegments in
+                sleepEpisodes(
+                    sourceIdentifier: sourceIdentifier,
+                    segments: sourceSegments,
+                    sleepingValues: sleepingValues
+                )
+            }
+            .filter { episode in
+                let values = episode.sleepingSegments
+                let hasDetailedStages = values.contains { detailedValues.contains($0.value) }
+                let totalSeconds = values
+                    .filter {
+                        hasDetailedStages
+                            ? detailedValues.contains($0.value)
+                            : sleepingValues.contains($0.value)
+                    }
+                    .reduce(0) { $0 + $1.duration }
+                return totalSeconds >= 2 * 3_600
+            }
+
+        guard let latestEnd = episodes.map(\.endedAt).max(),
+              end.timeIntervalSince(latestEnd) <= 24 * 3_600 else {
+            return nil
+        }
+
+        let recentEpisodes = episodes.filter {
+            latestEnd.timeIntervalSince($0.endedAt) <= 2 * 3_600
+        }
+        guard var selected = recentEpisodes.max(by: { $0.endedAt < $1.endedAt }) else {
+            return nil
+        }
+
+        let detailedEpisodes = recentEpisodes.filter {
+            latestEnd.timeIntervalSince($0.endedAt) <= 30 * 60
+                && $0.sleepingSegments.contains { detailedValues.contains($0.value) }
+        }
+        if let detailed = detailedEpisodes.max(by: {
+            $0.sleepingSegments.count < $1.sleepingSegments.count
+        }) {
+            selected = detailed
+        }
+
+        let hasStages = selected.sleepingSegments.contains {
+            detailedValues.contains($0.value)
+        }
+        let totalValues = hasStages ? detailedValues : sleepingValues
+
+        func hours(for values: Set<Int>) -> Double {
+            selected.sleepingSegments
+                .filter { values.contains($0.value) }
+                .reduce(0) { $0 + $1.duration } / 3_600
+        }
+
+        let total = hours(for: totalValues)
+        guard total > 0 else { return nil }
+
+        let core = hours(for: [HKCategoryValueSleepAnalysis.asleepCore.rawValue])
+        let deep = hours(for: [HKCategoryValueSleepAnalysis.asleepDeep.rawValue])
+        let rem = hours(for: [HKCategoryValueSleepAnalysis.asleepREM.rawValue])
+        let awakeSegments = segments.filter {
+            $0.sourceIdentifier == selected.sourceIdentifier
+                && $0.value == HKCategoryValueSleepAnalysis.awake.rawValue
+                && $0.duration >= 60
+                && $0.startedAt < selected.endedAt
+                && $0.endedAt > selected.startedAt
+        }
+        let awake = awakeSegments.reduce(0) { $0 + $1.duration } / 3_600
+        let quality = sleepQualityScore(
+            totalHours: total,
+            deepHours: hasStages ? deep : nil,
+            remHours: hasStages ? rem : nil,
+            interruptionCount: awakeSegments.count
+        )
+
+        return SleepSummary(
+            totalHours: total,
+            coreHours: hasStages ? core : nil,
+            deepHours: hasStages ? deep : nil,
+            remHours: hasStages ? rem : nil,
+            awakeHours: awake > 0 ? awake : nil,
+            interruptionCount: awakeSegments.count,
+            qualityScore: quality,
+            hasDetailedStages: hasStages,
+            startedAt: selected.startedAt,
+            endedAt: selected.endedAt
+        )
+    }
+
+    nonisolated private static func sleepEpisodes(
+        sourceIdentifier: String,
+        segments: [SleepSegment],
+        sleepingValues: Set<Int>
+    ) -> [SleepEpisode] {
+        let sleepingSegments = segments
+            .filter { sleepingValues.contains($0.value) }
+            .sorted { $0.startedAt < $1.startedAt }
+        guard let first = sleepingSegments.first else { return [] }
+
+        var episodes: [[SleepSegment]] = [[first]]
+        var latestEnd = first.endedAt
+
+        for segment in sleepingSegments.dropFirst() {
+            if segment.startedAt.timeIntervalSince(latestEnd) > 4 * 3_600 {
+                episodes.append([segment])
+            } else {
+                episodes[episodes.count - 1].append(segment)
+            }
+            latestEnd = max(latestEnd, segment.endedAt)
+        }
+
+        return episodes.compactMap { episodeSegments in
+            guard let startedAt = episodeSegments.map(\.startedAt).min(),
+                  let endedAt = episodeSegments.map(\.endedAt).max() else {
+                return nil
+            }
+            return SleepEpisode(
+                sourceIdentifier: sourceIdentifier,
+                sleepingSegments: episodeSegments,
+                startedAt: startedAt,
+                endedAt: endedAt
+            )
         }
     }
 
@@ -699,7 +785,9 @@ final class HealthDataManager: ObservableObject {
             awakeHours: 0.2,
             interruptionCount: 2,
             qualityScore: 86,
-            hasDetailedStages: true
+            hasDetailedStages: true,
+            startedAt: Calendar.current.date(byAdding: .hour, value: -8, to: Date()),
+            endedAt: Calendar.current.date(byAdding: .minute, value: -30, to: Date())
         ),
         restingHeartRate: HealthMetricValue(value: 58, recordedAt: Date()),
         heartRateVariabilityMilliseconds: HealthMetricValue(value: 49, recordedAt: Date()),
@@ -755,6 +843,24 @@ final class HealthDataManager: ObservableObject {
         }
         return records
     }
+}
+
+private struct SleepSegment {
+    let value: Int
+    let startedAt: Date
+    let endedAt: Date
+    let sourceIdentifier: String
+
+    var duration: TimeInterval {
+        max(0, endedAt.timeIntervalSince(startedAt))
+    }
+}
+
+private struct SleepEpisode {
+    let sourceIdentifier: String
+    let sleepingSegments: [SleepSegment]
+    let startedAt: Date
+    let endedAt: Date
 }
 
 private final class RouteLocationAccumulator: @unchecked Sendable {

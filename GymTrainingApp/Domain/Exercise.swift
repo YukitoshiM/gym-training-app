@@ -133,6 +133,18 @@ enum Equipment: String, CaseIterable, Identifiable, Codable {
 }
 
 extension Exercise {
+    var supportsAssistedLoad: Bool {
+        AssistedLoadSupport.isSupported(exerciseName: name)
+    }
+
+    var isDipExercise: Bool {
+        AssistedLoadSupport.isDip(exerciseName: name)
+    }
+
+    var weightInputRange: ClosedRange<Double> {
+        supportsAssistedLoad ? AssistedLoadSupport.kilogramRange : 0...999
+    }
+
     func matches(muscle selectedMuscle: MuscleGroup?) -> Bool {
         guard let selectedMuscle else {
             return true

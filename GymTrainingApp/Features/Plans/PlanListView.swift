@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlanListView: View {
     @EnvironmentObject private var appStore: AppStore
-    @State private var isShowingEditor = false
+    @State private var isShowingNewPlanEditor = false
     @State private var planToEdit: TrainingPlan?
     @State private var pendingDeletePlan: TrainingPlan?
 
@@ -16,8 +16,7 @@ struct PlanListView: View {
                         Text("種目とセット目標を登録して、次のトレーニングを迷わず始めましょう。")
                     } actions: {
                         Button("計画を作成") {
-                            planToEdit = nil
-                            isShowingEditor = true
+                            isShowingNewPlanEditor = true
                         }
                         .buttonStyle(.borderedProminent)
                         .accessibilityIdentifier("createPlanEmptyButton")
@@ -27,7 +26,6 @@ struct PlanListView: View {
                         ForEach(appStore.plans) { plan in
                             Button {
                                 planToEdit = plan
-                                isShowingEditor = true
                             } label: {
                                 PlanRow(plan: plan)
                             }
@@ -46,8 +44,7 @@ struct PlanListView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        planToEdit = nil
-                        isShowingEditor = true
+                        isShowingNewPlanEditor = true
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -55,9 +52,14 @@ struct PlanListView: View {
                     .accessibilityIdentifier("createPlanToolbarButton")
                 }
             }
-            .sheet(isPresented: $isShowingEditor) {
-                PlanEditorView(plan: planToEdit) {
-                    isShowingEditor = false
+            .sheet(isPresented: $isShowingNewPlanEditor) {
+                PlanEditorView(plan: nil) {
+                    isShowingNewPlanEditor = false
+                }
+            }
+            .sheet(item: $planToEdit) { plan in
+                PlanEditorView(plan: plan) {
+                    planToEdit = nil
                 }
             }
             .confirmationDialog(

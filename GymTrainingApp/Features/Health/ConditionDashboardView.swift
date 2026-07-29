@@ -215,6 +215,13 @@ private struct SleepDetailsCard: View {
                 }
 
                 if let summary {
+                    if let startedAt = summary.startedAt, let endedAt = summary.endedAt {
+                        Text("\(startedAt.formatted(date: .abbreviated, time: .shortened))〜\(endedAt.formatted(date: .omitted, time: .shortened))")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.mutedInk)
+                            .accessibilityIdentifier("sleepPeriod")
+                    }
+
                     HStack {
                         CompactHealthValue(title: "合計", value: hours(summary.totalHours))
                         Divider()

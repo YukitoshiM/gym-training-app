@@ -58,6 +58,15 @@ final class AppStore: ObservableObject {
             storage.saveUserProfile(.default)
         }
 
+        if arguments.contains("--seed-assisted-ui-test-plan") {
+            storage.savePlans([Self.assistedUITestPlan()])
+            storage.saveWorkoutHistory([])
+            storage.saveBodyMetricEntries([
+                BodyMetricEntry(kind: .bodyWeight, value: 70, recordedAt: Date())
+            ])
+            storage.saveUserProfile(.default)
+        }
+
         userProfile = storage.loadUserProfile()
         plans = storage.loadPlans()
         workoutHistory = storage.loadWorkoutHistory()
@@ -427,7 +436,7 @@ final class AppStore: ObservableObject {
             .filter(\.isCompleted)
             .sorted { $0.setOrder < $1.setOrder } ?? []
         let targets = planSets?.sorted { $0.setOrder < $1.setOrder }
-            ?? suggestedPlanSets(from: previousSets)
+            ?? suggestedPlanSets(from: previousSets, exercise: exercise)
 
         let sets = targets.map { target in
             let previous = previousSets.first { $0.setOrder == target.setOrder } ?? previousSets.last
@@ -435,7 +444,7 @@ final class AppStore: ObservableObject {
                 setOrder: target.setOrder,
                 targetWeight: target.targetWeight,
                 targetReps: target.targetReps,
-                actualWeight: positiveValue(previous?.actualWeight) ?? target.targetWeight,
+                actualWeight: reusableWeight(previous?.actualWeight, for: exercise) ?? target.targetWeight,
                 actualReps: positiveValue(previous?.actualReps) ?? target.targetReps,
                 rpe: previous?.rpe
             )
@@ -449,13 +458,17 @@ final class AppStore: ObservableObject {
         )
     }
 
-    private func suggestedPlanSets(from previousSets: [WorkoutSet]) -> [PlanSetTarget] {
+    private func suggestedPlanSets(
+        from previousSets: [WorkoutSet],
+        exercise: Exercise
+    ) -> [PlanSetTarget] {
         let setCount = max(previousSets.count, 3)
         return (1...setCount).map { setOrder in
             let previous = previousSets.first { $0.setOrder == setOrder } ?? previousSets.last
             return PlanSetTarget(
                 setOrder: setOrder,
-                targetWeight: positiveValue(previous?.actualWeight) ?? 50,
+                targetWeight: reusableWeight(previous?.actualWeight, for: exercise)
+                    ?? (exercise.supportsAssistedLoad ? 0 : 50),
                 targetReps: positiveValue(previous?.actualReps) ?? 10
             )
         }
@@ -464,6 +477,17 @@ final class AppStore: ObservableObject {
     private func positiveValue(_ value: Double?) -> Double? {
         guard let value, value > 0 else { return nil }
         return value
+    }
+
+    private func reusableWeight(_ value: Double?, for exercise: Exercise) -> Double? {
+        guard let value, value.isFinite else { return nil }
+        if exercise.supportsAssistedLoad {
+            return min(
+                exercise.weightInputRange.upperBound,
+                max(exercise.weightInputRange.lowerBound, value)
+            )
+        }
+        return positiveValue(value)
     }
 
     private func positiveValue(_ value: Int?) -> Int? {
@@ -488,6 +512,10 @@ final class AppStore: ObservableObject {
 
     func latestBodyMetricEntry(for kind: BodyMetricKind) -> BodyMetricEntry? {
         bodyMetricEntries(for: kind).first
+    }
+
+    func bodyWeight(on date: Date) -> Double? {
+        bodyMetricEntries(for: .bodyWeight, on: date).first?.value
     }
 
     func bodyMetricGoal(for kind: BodyMetricKind) -> BodyMetricGoal {
@@ -583,6 +611,25 @@ final class AppStore: ObservableObject {
                     sortOrder: 0,
                     sets: (1...3).map {
                         PlanSetTarget(setOrder: $0, targetWeight: 20, targetReps: 10)
+                    }
+                )
+            ]
+        )
+    }
+
+    private static func assistedUITestPlan() -> TrainingPlan {
+        let dips = PresetExerciseStore.exercises.first {
+            $0.name == "ディップス"
+        } ?? PresetExerciseStore.exercises[0]
+
+        return TrainingPlan(
+            name: "アシスト種目",
+            exercises: [
+                PlanExercise(
+                    exercise: dips,
+                    sortOrder: 0,
+                    sets: (1...3).map {
+                        PlanSetTarget(setOrder: $0, targetWeight: -20, targetReps: 10)
                     }
                 )
             ]

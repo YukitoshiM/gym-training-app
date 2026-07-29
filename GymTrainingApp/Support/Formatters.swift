@@ -50,6 +50,18 @@ enum AppFormatters {
         return "\(prefix)\(value)回"
     }
 
+    static func bodyweightLoadSummary(
+        bodyWeight: Double,
+        addedWeight: Double,
+        unit: WeightUnit
+    ) -> String {
+        let effectiveLoad = max(0, bodyWeight + addedWeight)
+        if addedWeight < 0 {
+            return "体重 \(weight(bodyWeight, unit: unit)) - アシスト \(weight(abs(addedWeight), unit: unit)) = 参考負荷 \(weight(effectiveLoad, unit: unit))"
+        }
+        return "体重 \(weight(bodyWeight, unit: unit)) + 加算 \(weight(addedWeight, unit: unit)) = 参考負荷 \(weight(effectiveLoad, unit: unit))"
+    }
+
     static func calories(_ value: Double) -> String {
         value.formatted(.number.precision(.fractionLength(0))) + " kcal"
     }

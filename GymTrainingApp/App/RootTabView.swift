@@ -29,6 +29,26 @@ struct RootTabView: View {
             } message: {
                 Text("\(appStore.pendingMissedGymPlanName ?? "選択したメニュー")の予定日に、ジム訪問またはトレーニング実績が見つかりませんでした。")
             }
+            .alert(
+                "計画重量を更新しますか？",
+                isPresented: Binding(
+                    get: { watchPlanSyncService.pendingPlanWeightUpdateSuggestion != nil },
+                    set: {
+                        if !$0 {
+                            watchPlanSyncService.declinePlanWeightUpdateSuggestion()
+                        }
+                    }
+                )
+            ) {
+                Button("計画に反映") {
+                    watchPlanSyncService.acceptPlanWeightUpdateSuggestion()
+                }
+                Button("今回は変更しない", role: .cancel) {
+                    watchPlanSyncService.declinePlanWeightUpdateSuggestion()
+                }
+            } message: {
+                Text(watchPlanSyncService.pendingPlanWeightUpdateSuggestion?.message ?? "")
+            }
     }
 
     @ViewBuilder

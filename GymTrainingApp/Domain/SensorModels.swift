@@ -150,6 +150,8 @@ struct SleepSummary: Equatable {
     var interruptionCount: Int?
     var qualityScore: Int?
     var hasDetailedStages: Bool
+    var startedAt: Date? = nil
+    var endedAt: Date? = nil
 }
 
 struct SubjectiveRecoveryEntry: Identifiable, Codable, Equatable {

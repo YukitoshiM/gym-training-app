@@ -264,6 +264,9 @@ private struct WatchActiveWorkoutView: View {
     @State private var isEditingRestTimer = false
     @State private var isEditingWorkoutNote = false
     @State private var selectedExerciseID: UUID?
+    @State private var activeWeightEditor: WatchActiveWeightEditor?
+    @State private var activeRepsEditor: WatchActiveRepsEditor?
+    @State private var activeRPEEditor: WatchActiveRPEEditor?
 
     let session: WatchWorkoutSessionSnapshot
 
@@ -285,6 +288,50 @@ private struct WatchActiveWorkoutView: View {
                             Text("\(activeSet.exercise.name)・セット\(activeSet.set.setOrder)")
                                 .font(.caption.bold())
                                 .foregroundStyle(WatchAppTheme.positive)
+
+                            VStack(alignment: .leading, spacing: 6) {
+                                Text("実績 \(formatWeight(activeSet.set.actualWeight, unit: session.weightUnit)) × \(activeSet.set.actualReps)回")
+                                    .font(.caption)
+                                    .accessibilityIdentifier("watchActiveSetActual")
+
+                                HStack(spacing: 6) {
+                                    Button {
+                                        activeWeightEditor = WatchActiveWeightEditor(
+                                            exercise: activeSet.exercise,
+                                            set: activeSet.set,
+                                            unit: session.weightUnit
+                                        )
+                                    } label: {
+                                        Label("重量", systemImage: "dial.medium")
+                                    }
+                                    .accessibilityLabel("実行中セットの重量を変更")
+                                    .accessibilityIdentifier("watchActiveWeightEntry")
+
+                                    Button {
+                                        activeRepsEditor = WatchActiveRepsEditor(
+                                            exercise: activeSet.exercise,
+                                            set: activeSet.set
+                                        )
+                                    } label: {
+                                        Label("回数", systemImage: "number")
+                                    }
+                                    .accessibilityLabel("実行中セットの回数を変更")
+                                    .accessibilityIdentifier("watchActiveRepsEntry")
+
+                                    Button {
+                                        activeRPEEditor = WatchActiveRPEEditor(
+                                            exercise: activeSet.exercise,
+                                            set: activeSet.set
+                                        )
+                                    } label: {
+                                        Text("RPE")
+                                    }
+                                    .accessibilityLabel("実行中セットのRPEを変更")
+                                    .accessibilityIdentifier("watchActiveRPEEntry")
+                                }
+                                .buttonStyle(.bordered)
+                                .font(.caption2)
+                            }
 
                             HStack {
                                 Button {
@@ -312,7 +359,9 @@ private struct WatchActiveWorkoutView: View {
                                 .accessibilityIdentifier("watchCompleteActiveSetButton")
                             }
                             .font(.caption)
-                        } else if !pendingExercises.isEmpty {
+                        }
+
+                        if !pendingExercises.isEmpty {
                             Picker("次の種目", selection: $selectedExerciseID) {
                                 ForEach(pendingExercises) { exercise in
                                     Text(exercise.name)
@@ -328,11 +377,19 @@ private struct WatchActiveWorkoutView: View {
                                     setID: selectedNextSet.setID
                                 )
                             } label: {
-                                Label("セットを開始", systemImage: "play.fill")
+                                Label(
+                                    activeSet == nil ? "セットを開始" : "選択セットへ切替",
+                                    systemImage: activeSet == nil ? "play.fill" : "arrow.left.arrow.right"
+                                )
                             }
                             .buttonStyle(.borderedProminent)
                             .tint(WatchAppTheme.positive)
-                            .accessibilityIdentifier("watchStartNextSetButton")
+                            .accessibilityIdentifier(
+                                activeSet == nil
+                                    ? "watchStartNextSetButton"
+                                    : "watchSwitchSetButton"
+                            )
+                            .id("watch-set-switch-control")
                         }
 
                         ProgressView(
@@ -503,6 +560,29 @@ private struct WatchActiveWorkoutView: View {
             .onChange(of: session.completedSetCount) { _, _ in
                 ensureSelectedExercise()
             }
+            .onChange(of: activeWeightEditor?.id) { previousID, currentID in
+                guard previousID != nil, currentID == nil else { return }
+                Task { @MainActor in
+                    await Task.yield()
+                    withAnimation {
+                        proxy.scrollTo("watch-set-switch-control", anchor: .center)
+                    }
+                }
+            }
+            .onChange(of: activeRepsEditor?.id) { previousID, currentID in
+                guard previousID != nil, currentID == nil else { return }
+                Task { @MainActor in
+                    await Task.yield()
+                    proxy.scrollTo("watch-set-switch-control", anchor: .center)
+                }
+            }
+            .onChange(of: activeRPEEditor?.id) { previousID, currentID in
+                guard previousID != nil, currentID == nil else { return }
+                Task { @MainActor in
+                    await Task.yield()
+                    proxy.scrollTo("watch-set-switch-control", anchor: .center)
+                }
+            }
             .onAppear {
                 ensureSelectedExercise()
                 guard workoutStore.isRestTimerRunning,
@@ -527,6 +607,35 @@ private struct WatchActiveWorkoutView: View {
         .sheet(isPresented: $isEditingWorkoutNote) {
             NavigationStack {
                 WatchWorkoutNoteEntryView(currentNote: session.note ?? "")
+            }
+        }
+        .sheet(item: $activeWeightEditor) { editor in
+            NavigationStack {
+                WatchWeightEntryView(
+                    exerciseID: editor.exercise.id,
+                    setID: editor.set.id,
+                    currentWeight: editor.set.actualWeight,
+                    unit: editor.unit,
+                    supportsAssistedLoad: editor.exercise.supportsAssistedLoad
+                )
+            }
+        }
+        .sheet(item: $activeRepsEditor) { editor in
+            NavigationStack {
+                WatchRepsEntryView(
+                    exerciseID: editor.exercise.id,
+                    setID: editor.set.id,
+                    currentReps: editor.set.actualReps
+                )
+            }
+        }
+        .sheet(item: $activeRPEEditor) { editor in
+            NavigationStack {
+                WatchRPESelectionView(
+                    exerciseID: editor.exercise.id,
+                    setID: editor.set.id,
+                    currentRPE: editor.set.rpe
+                )
             }
         }
         .confirmationDialog("ワークアウトを完了しますか？", isPresented: $isConfirmingFinish, titleVisibility: .visible) {
@@ -587,6 +696,28 @@ private struct WatchActiveWorkoutView: View {
     private func restTimerAnchor(for exerciseID: UUID) -> String {
         "rest-timer-\(exerciseID.uuidString)"
     }
+}
+
+private struct WatchActiveWeightEditor: Identifiable {
+    let exercise: WatchWorkoutExerciseSnapshot
+    let set: WatchWorkoutSetSnapshot
+    let unit: WatchWeightUnit
+
+    var id: UUID { self.set.id }
+}
+
+private struct WatchActiveRepsEditor: Identifiable {
+    let exercise: WatchWorkoutExerciseSnapshot
+    let set: WatchWorkoutSetSnapshot
+
+    var id: UUID { self.set.id }
+}
+
+private struct WatchActiveRPEEditor: Identifiable {
+    let exercise: WatchWorkoutExerciseSnapshot
+    let set: WatchWorkoutSetSnapshot
+
+    var id: UUID { self.set.id }
 }
 
 private struct WatchCompletedSetsArchiveView: View {
@@ -795,7 +926,8 @@ private struct WatchSetControlRow: View {
                         exerciseID: exercise.id,
                         setID: set.id,
                         currentWeight: set.actualWeight,
-                        unit: unit
+                        unit: unit,
+                        supportsAssistedLoad: exercise.supportsAssistedLoad
                     )
                 case .reps:
                     WatchRepsEntryView(
@@ -1010,6 +1142,7 @@ private struct WatchWeightEntryView: View {
     let exerciseID: UUID
     let setID: UUID
     let unit: WatchWeightUnit
+    let kilogramRange: ClosedRange<Double>
 
     @State private var displayedWeight: Double
     @State private var editText: String
@@ -1017,18 +1150,30 @@ private struct WatchWeightEntryView: View {
     @FocusState private var isTextFieldFocused: Bool
     private let availableStepRange: ClosedRange<Int>
 
-    init(exerciseID: UUID, setID: UUID, currentWeight: Double, unit: WatchWeightUnit) {
+    init(
+        exerciseID: UUID,
+        setID: UUID,
+        currentWeight: Double,
+        unit: WatchWeightUnit,
+        supportsAssistedLoad: Bool
+    ) {
         self.exerciseID = exerciseID
         self.setID = setID
         self.unit = unit
-        let initialKilograms = currentWeight > 0 ? currentWeight : 50
+        kilogramRange = supportsAssistedLoad ? AssistedLoadSupport.kilogramRange : 0...999
+        let initialKilograms = currentWeight != 0 || supportsAssistedLoad ? currentWeight : 50
         let initialValue = unit == .kg ? initialKilograms : initialKilograms * 2.2046226218
         _displayedWeight = State(initialValue: initialValue)
         _editText = State(initialValue: Self.formatted(initialValue))
         _valueBeforeEditing = State(initialValue: initialValue)
-        let maximumStepIndex = unit == .kg ? 9_990 : 22_020
-        let center = min(maximumStepIndex, max(0, Int((initialValue * 10).rounded())))
-        availableStepRange = max(0, center - 200)...min(maximumStepIndex, center + 200)
+        let conversion = unit == .kg ? 1.0 : 2.2046226218
+        let minimumStepIndex = Int((kilogramRange.lowerBound * conversion * 10).rounded(.up))
+        let maximumStepIndex = Int((kilogramRange.upperBound * conversion * 10).rounded(.down))
+        let center = min(
+            maximumStepIndex,
+            max(minimumStepIndex, Int((initialValue * 10).rounded()))
+        )
+        availableStepRange = max(minimumStepIndex, center - 200)...min(maximumStepIndex, center + 200)
     }
 
     var body: some View {
@@ -1092,13 +1237,21 @@ private struct WatchWeightEntryView: View {
         }
     }
 
-    private var maximumStepIndex: Int {
-        unit == .kg ? 9_990 : 22_020
+    private var displayedStepRange: ClosedRange<Int> {
+        let conversion = unit == .kg ? 1.0 : 2.2046226218
+        let lowerBound = Int((kilogramRange.lowerBound * conversion * 10).rounded(.up))
+        let upperBound = Int((kilogramRange.upperBound * conversion * 10).rounded(.down))
+        return lowerBound...upperBound
     }
 
     private var stepIndex: Binding<Int> {
         Binding(
-            get: { min(maximumStepIndex, max(0, Int((displayedWeight * 10).rounded()))) },
+            get: {
+                min(
+                    displayedStepRange.upperBound,
+                    max(displayedStepRange.lowerBound, Int((displayedWeight * 10).rounded()))
+                )
+            },
             set: { displayedWeight = Double($0) / 10 }
         )
     }
@@ -1110,7 +1263,10 @@ private struct WatchWeightEntryView: View {
             editText = Self.formatted(valueBeforeEditing)
             return
         }
-        displayedWeight = min(Double(maximumStepIndex) / 10, max(0, (value * 10).rounded() / 10))
+        let rounded = (value * 10).rounded() / 10
+        let displayedMinimum = Double(displayedStepRange.lowerBound) / 10
+        let displayedMaximum = Double(displayedStepRange.upperBound) / 10
+        displayedWeight = min(displayedMaximum, max(displayedMinimum, rounded))
         editText = Self.formatted(displayedWeight)
     }
 

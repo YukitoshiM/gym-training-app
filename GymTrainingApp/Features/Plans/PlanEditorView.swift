@@ -226,9 +226,10 @@ struct PlanEditorView: View {
         let previousSets = appStore.latestCompletedSets(for: exercise)
         return (1...max(count, 1)).map { setOrder in
             let previous = previousSets.first { $0.setOrder == setOrder } ?? previousSets.last
-            let weight = (previous?.actualWeight ?? 0) > 0
-                ? previous?.actualWeight ?? fallbackWeight
-                : fallbackWeight
+            let previousWeight = previous?.actualWeight
+            let weight = exercise.supportsAssistedLoad
+                ? previousWeight ?? 0
+                : ((previousWeight ?? 0) > 0 ? previousWeight ?? fallbackWeight : fallbackWeight)
             let reps = (previous?.actualReps ?? 0) > 0
                 ? previous?.actualReps ?? fallbackReps
                 : fallbackReps
@@ -480,11 +481,18 @@ private struct PlanExerciseEditorCard: View {
                 ForEach($planExercise.sets) { $set in
                     PlanSetTargetRow(
                         set: $set,
+                        exercise: planExercise.exercise,
                         exerciseSortOrder: planExercise.sortOrder
                     ) {
                         removeSet(set)
                     }
                 }
+            }
+
+            if planExercise.exercise.supportsAssistedLoad {
+                Label("加算重量を入力。アシスト重量はマイナスで記録できます。", systemImage: "plus.forwardslash.minus")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Button {
@@ -533,6 +541,7 @@ private struct PlanExerciseEditorCard: View {
 private struct PlanSetTargetRow: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var set: PlanSetTarget
+    let exercise: Exercise
     let exerciseSortOrder: Int
     let onDelete: () -> Void
 
@@ -546,6 +555,7 @@ private struct PlanSetTargetRow: View {
             WeightInputControl(
                 weightInKilograms: $set.targetWeight,
                 unit: appStore.userProfile.weightUnit,
+                kilogramRange: exercise.weightInputRange,
                 accessibilityIdentifier: "planWeightField-\(exerciseSortOrder)-\(set.setOrder)"
             )
 
