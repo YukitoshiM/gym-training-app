@@ -1,6 +1,7 @@
 import XCTest
 @testable import GymTrainingApp
 
+@MainActor
 final class DailyRecommendationPersonalizationTests: XCTestCase {
     func testPersonalizationCanBeDisabledAndResetWithoutDeletingRecords() throws {
         let defaults = try XCTUnwrap(UserDefaults(suiteName: "DailyRecommendationPersonalizationTests"))

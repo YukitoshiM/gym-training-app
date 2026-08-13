@@ -1,6 +1,7 @@
 import Foundation
 @preconcurrency import UserNotifications
 
+@MainActor
 enum DailyRecommendationNotificationManager {
     static let enabledKey = "bodymode.omakase.notificationsEnabled"
     static let morningIdentifier = "bodymode.omakase.morning"
@@ -11,8 +12,6 @@ enum DailyRecommendationNotificationManager {
     private static let successfulSchedulesKey = "bodymode.omakase.notificationSuccessfulSchedules.v2"
     private static let responsesKey = "bodymode.omakase.notificationResponses.v2"
     private static let migrationVersionKey = "bodymode.omakase.notificationMeasurementMigrationVersion"
-    private static let optimizationQueue = DispatchQueue(label: "com.bodymode.notification-measurement")
-
     struct NotificationMetrics: Equatable {
         let scheduledCount: Int
         let openedCount: Int
@@ -56,7 +55,9 @@ enum DailyRecommendationNotificationManager {
             )
         )
         center.add(morningRequest) { error in
-            recordSchedulingResult(identifier: morningIdentifier, at: Date(), error: error)
+            Task { @MainActor in
+                recordSchedulingResult(identifier: morningIdentifier, at: Date(), error: error)
+            }
         }
 
         guard shouldScheduleEvening else { return }
@@ -74,7 +75,9 @@ enum DailyRecommendationNotificationManager {
             )
         )
         center.add(eveningRequest) { error in
-            recordSchedulingResult(identifier: eveningIdentifier, at: Date(), error: error)
+            Task { @MainActor in
+                recordSchedulingResult(identifier: eveningIdentifier, at: Date(), error: error)
+            }
         }
     }
 
@@ -100,19 +103,17 @@ enum DailyRecommendationNotificationManager {
         )
     }
 
-    static func shouldScheduleEvening(scheduledDayCount: Int, openedDayCount: Int) -> Bool {
+    nonisolated static func shouldScheduleEvening(scheduledDayCount: Int, openedDayCount: Int) -> Bool {
         guard scheduledDayCount >= 7 else { return true }
         return Double(max(0, openedDayCount)) / Double(max(1, scheduledDayCount)) >= 0.1
     }
 
     static func resetOptimization() {
-        optimizationQueue.sync {
-            UserDefaults.standard.removeObject(forKey: scheduledDaysKey)
-            UserDefaults.standard.removeObject(forKey: openedDaysKey)
-            UserDefaults.standard.removeObject(forKey: successfulSchedulesKey)
-            UserDefaults.standard.removeObject(forKey: responsesKey)
-            UserDefaults.standard.removeObject(forKey: migrationVersionKey)
-        }
+        UserDefaults.standard.removeObject(forKey: scheduledDaysKey)
+        UserDefaults.standard.removeObject(forKey: openedDaysKey)
+        UserDefaults.standard.removeObject(forKey: successfulSchedulesKey)
+        UserDefaults.standard.removeObject(forKey: responsesKey)
+        UserDefaults.standard.removeObject(forKey: migrationVersionKey)
     }
 
     static func recordSchedulingResult(
@@ -122,10 +123,8 @@ enum DailyRecommendationNotificationManager {
         defaults: UserDefaults = .standard
     ) {
         guard identifiers.contains(identifier), error == nil else { return }
-        optimizationQueue.sync {
-            migrateLegacyDataIfNeeded(defaults: defaults)
-            appendRecord(identifier: identifier, date: date, key: successfulSchedulesKey, defaults: defaults)
-        }
+        migrateLegacyDataIfNeeded(defaults: defaults)
+        appendRecord(identifier: identifier, date: date, key: successfulSchedulesKey, defaults: defaults)
     }
 
     static func recordOpen(
@@ -134,10 +133,8 @@ enum DailyRecommendationNotificationManager {
         defaults: UserDefaults
     ) {
         guard identifiers.contains(identifier) else { return }
-        optimizationQueue.sync {
-            migrateLegacyDataIfNeeded(defaults: defaults)
-            appendRecord(identifier: identifier, date: date, key: responsesKey, defaults: defaults)
-        }
+        migrateLegacyDataIfNeeded(defaults: defaults)
+        appendRecord(identifier: identifier, date: date, key: responsesKey, defaults: defaults)
     }
 
     static func metrics(
@@ -147,15 +144,13 @@ enum DailyRecommendationNotificationManager {
         guard identifiers.contains(identifier) else {
             return NotificationMetrics(scheduledCount: 0, openedCount: 0)
         }
-        return optimizationQueue.sync {
-            migrateLegacyDataIfNeeded(defaults: defaults)
-            let scheduled = records(for: identifier, key: successfulSchedulesKey, defaults: defaults)
-            let opened = records(for: identifier, key: responsesKey, defaults: defaults)
-            return NotificationMetrics(
-                scheduledCount: scheduled.count,
-                openedCount: scheduled.intersection(opened).count
-            )
-        }
+        migrateLegacyDataIfNeeded(defaults: defaults)
+        let scheduled = records(for: identifier, key: successfulSchedulesKey, defaults: defaults)
+        let opened = records(for: identifier, key: responsesKey, defaults: defaults)
+        return NotificationMetrics(
+            scheduledCount: scheduled.count,
+            openedCount: scheduled.intersection(opened).count
+        )
     }
 
     private static func migrateLegacyDataIfNeeded(defaults: UserDefaults) {

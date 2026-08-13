@@ -10,7 +10,9 @@ final class OmakaseModeUITests: XCTestCase {
             "--stub-ai-trainer",
             "--expand-home-details",
             "--disable-app-tour",
-            "--force-dark-appearance"
+            "--force-dark-appearance",
+            "-bodymode.omakase.notificationsEnabled",
+            "YES"
         ]
         app.launch()
 
