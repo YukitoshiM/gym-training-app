@@ -19,6 +19,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field, model_validator
 from calorie_clip_runtime import calorie_clip_runtime
 from coach_profiles import COMMON_SAFETY_RULES, COACH_PROFILES, get_coach_profile
+from evidence_rag import EvidenceStore, citation_dict
 
 
 APP_NAME = "Gym Training Local LLM"
@@ -49,6 +50,18 @@ AUTH_STATE_PATH = Path(
         str(Path.home() / "Library/Application Support/BodyMode/ai-auth-state.json"),
     )
 )
+EVIDENCE_RAG_ENABLED = os.getenv("EVIDENCE_RAG_ENABLED", "1").strip().lower() not in {
+    "0",
+    "false",
+    "no",
+}
+EVIDENCE_RAG_DB_PATH = Path(
+    os.getenv(
+        "EVIDENCE_RAG_DB_PATH",
+        str(Path.home() / "Library/Application Support/BodyMode/evidence-rag.sqlite3"),
+    )
+).expanduser()
+EVIDENCE_EMBEDDING_MODEL = os.getenv("EVIDENCE_EMBEDDING_MODEL", "bge-m3")
 
 if AUTH_MODE not in {"compat", "token_required"}:
     raise RuntimeError("AI_AUTH_MODE must be compat or token_required")
@@ -58,6 +71,7 @@ if AUTH_MODE == "token_required" and not TOKEN_SIGNING_SECRET:
 app = FastAPI(title=APP_NAME)
 WEB_DIR = Path(__file__).resolve().parent / "web"
 _inference_semaphore = asyncio.Semaphore(MAX_CONCURRENT_INFERENCE)
+evidence_store = EvidenceStore(EVIDENCE_RAG_DB_PATH)
 
 
 @app.get("/", include_in_schema=False)
@@ -151,6 +165,40 @@ MEAL_DRAFT_JSON_SCHEMA: dict[str, Any] = {
         "items",
     ],
 }
+
+
+def agent_chat_json_schema(evidence_count: int) -> dict[str, Any]:
+    evidence_ids = [f"E{index}" for index in range(1, evidence_count + 1)]
+    evidence_rules: dict[str, Any] = {
+        "type": "array",
+        "items": {"type": "string", "enum": evidence_ids} if evidence_ids else {"type": "string"},
+        "uniqueItems": True,
+        "maxItems": len(evidence_ids),
+    }
+    if evidence_ids:
+        evidence_rules["minItems"] = 1
+    else:
+        evidence_rules["maxItems"] = 0
+    return {
+        "type": "object",
+        "properties": {
+            "reply": {"type": "string"},
+            "memory_candidates": {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "content": {"type": "string"},
+                        "reason": {"type": "string"},
+                    },
+                    "required": ["content", "reason"],
+                },
+            },
+            "evidence_ids": evidence_rules,
+        },
+        "required": ["reply", "memory_candidates", "evidence_ids"],
+    }
 
 
 class BodyPhotoAnalysisRequest(BaseModel):
@@ -259,9 +307,29 @@ class MemoryCandidate(BaseModel):
     reason: str
 
 
+class EvidenceCitationResponse(BaseModel):
+    id: str
+    title: str
+    year: Optional[int] = None
+    study_type: str
+    confidence: str
+    url: str
+    doi: str = ""
+    relevance: float
+
+
+class EvidenceStatusResponse(BaseModel):
+    state: str
+    confidence: str = "insufficient"
+    last_updated_at: Optional[str] = None
+    searched_documents: int = 0
+
+
 class AgentChatResponse(BaseModel):
     reply: str
     memory_candidates: list[MemoryCandidate]
+    evidence: list[EvidenceCitationResponse] = Field(default_factory=list)
+    evidence_status: EvidenceStatusResponse
 
 
 class AccessTokenRequest(BaseModel):
@@ -622,6 +690,16 @@ async def coaches(_: None = Depends(require_api_key)) -> list[dict[str, Any]]:
     ]
 
 
+@app.get("/v1/evidence/status")
+async def evidence_status(_: None = Depends(require_api_key)) -> dict[str, Any]:
+    if not EVIDENCE_RAG_ENABLED:
+        return {"state": "disabled", "documents": 0, "usable_documents": 0}
+    try:
+        return evidence_store.status()
+    except Exception:
+        return {"state": "unavailable", "documents": 0, "usable_documents": 0}
+
+
 @app.post("/v1/agents/chat", response_model=AgentChatResponse)
 async def agent_chat(request: AgentChatRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
     coach = get_coach_profile(request.coach_id)
@@ -632,6 +710,36 @@ async def agent_chat(request: AgentChatRequest, _: None = Depends(require_api_ke
     )
     if len(context_json) + len(messages_json) > 60_000:
         raise HTTPException(status_code=413, detail="AIコンテキストが大きすぎます。集計してから再送してください。")
+
+    evidence_result = None
+    evidence_state = "disabled" if not EVIDENCE_RAG_ENABLED else "insufficient"
+    if EVIDENCE_RAG_ENABLED:
+        try:
+            index_status = evidence_store.status()
+            if int(index_status.get("usable_documents", 0)) > 0:
+                query_vector = None
+                if int(index_status.get("vector_chunks", 0)) > 0:
+                    query_vector = await ollama_embedding(request.message)
+                evidence_result = evidence_store.search(
+                    request.message,
+                    query_vector=query_vector,
+                    limit=5,
+                )
+                evidence_state = "ready" if evidence_result.citations else "insufficient"
+        except Exception:
+            evidence_state = "unavailable"
+
+    evidence_context = (
+        evidence_result.prompt_context
+        if evidence_result is not None and evidence_result.prompt_context
+        else "今回の質問に利用できる科学文献はありません。文献を見たふりはしないでください。"
+    )
+    evidence_instruction = (
+        "今回は利用可能な文献があります。一般的な科学的助言には少なくとも1件を使い、"
+        "replyの該当文末とevidence_idsの両方に同じIDを入れてください。"
+        if evidence_result is not None and evidence_result.citations
+        else "今回は利用可能な文献がないため、evidence_idsは空配列にしてください。"
+    )
 
     prompt = f"""
 あなたは次の特性を持つパーソナルトレーニングコーチです。
@@ -646,6 +754,16 @@ context内のmemoriesはユーザーが確認済みの長期記憶として扱�
 memory_candidatesには、今後も役立つ安定した目標、好み、制約、習慣のみを最大3件まで候補として返してください。
 既存のmemoriesと重複する内容、一時的な状態、推測、診断、写真から推定した身体情報は記憶候補にしないでください。
 記憶候補は確定事項ではなく、アプリがユーザーに保存確認するための候補です。
+
+科学文献の扱い:
+- 下の「科学文献コンテキスト」は一般的な科学的説明の根拠としてだけ使う
+- ユーザー自身の記録と、研究参加者の平均的な知見を混同しない
+- 文献の記載を超えた断定、医療診断、因果関係の作り足しをしない
+- 数値による推奨は、その数値がユーザー記録または引用する文献本文にある場合だけ使う
+- 実際に回答の根拠として使った文献だけ、evidence_idsへE1などのIDを入れる
+- 利用可能な文献がない場合はevidence_idsを空にする
+- reply内で文献に基づく重要な主張をした場合は、文末に[E1]のようにIDを付ける
+{evidence_instruction}
 
 replyの文章ルール:
 - 最初に結論を1〜2文で示す
@@ -663,8 +781,12 @@ replyの文章ルール:
   "reply": "結論。\n\n【現状】\n・根拠1\n・根拠2\n\n【次にやること】\n1. 行動1\n2. 行動2",
   "memory_candidates": [
     {{"content": "記憶候補", "reason": "今後の提案に役立つ理由"}}
-  ]
+  ],
+  "evidence_ids": ["E1"]
 }}
+
+科学文献コンテキスト:
+{evidence_context}
 
 最近の会話:
 {messages_json}
@@ -678,13 +800,35 @@ replyの文章ルール:
     fallback = {
         "reply": "AIトレーナーから回答を取得できませんでした。時間をおいてもう一度お試しください。",
         "memory_candidates": [],
+        "evidence_ids": [],
     }
-    result = await ollama_json(prompt, fallback)
+    result = await ollama_json(
+        prompt,
+        fallback,
+        format_schema=agent_chat_json_schema(
+            len(evidence_result.citations) if evidence_result is not None else 0
+        ),
+    )
     normalized = normalize_agent_chat(result, fallback)
     normalized["memory_candidates"] = remove_known_memories(
         normalized["memory_candidates"],
         request.context.get("memories"),
     )
+    citations_by_id = {
+        f"E{index}": citation
+        for index, citation in enumerate(evidence_result.citations, 1)
+    } if evidence_result is not None else {}
+    normalized["evidence"] = [
+        citation_dict(citations_by_id[evidence_id])
+        for evidence_id in normalized.pop("evidence_ids", [])
+        if evidence_id in citations_by_id
+    ]
+    normalized["evidence_status"] = {
+        "state": evidence_state,
+        "confidence": evidence_result.confidence if evidence_result is not None else "insufficient",
+        "last_updated_at": evidence_result.last_updated_at if evidence_result is not None else None,
+        "searched_documents": evidence_result.searched_documents if evidence_result is not None else 0,
+    }
     return normalized
 
 
@@ -1036,6 +1180,29 @@ async def ollama_json(
         return fallback
 
 
+async def ollama_embedding(text: str) -> Optional[list[float]]:
+    try:
+        async with _inference_semaphore:
+            async with httpx.AsyncClient(
+                timeout=min(OLLAMA_REQUEST_TIMEOUT_SECONDS, 60.0)
+            ) as client:
+                response = await client.post(
+                    f"{OLLAMA_BASE_URL}/api/embed",
+                    json={
+                        "model": EVIDENCE_EMBEDDING_MODEL,
+                        "input": text[:8_000],
+                        "truncate": True,
+                    },
+                )
+                response.raise_for_status()
+        embeddings = response.json().get("embeddings", [])
+        if not embeddings or not isinstance(embeddings[0], list):
+            return None
+        return [float(value) for value in embeddings[0]]
+    except Exception:
+        return None
+
+
 def extract_json(text: str) -> Any:
     try:
         return json.loads(text)
@@ -1180,9 +1347,18 @@ def normalize_agent_chat(result: dict[str, Any], fallback: dict[str, Any]) -> di
                 normalized_candidates.append({"content": content, "reason": reason})
 
     reply = pick_text(result, "reply", "response", "answer", "回答", default=fallback["reply"])
+    evidence_ids = result.get("evidence_ids")
+    if not isinstance(evidence_ids, list):
+        evidence_ids = []
+    normalized_evidence_ids = []
+    for value in evidence_ids:
+        evidence_id = str(value).strip().upper()
+        if re.fullmatch(r"E[1-8]", evidence_id) and evidence_id not in normalized_evidence_ids:
+            normalized_evidence_ids.append(evidence_id)
     return {
         "reply": format_agent_reply(reply),
         "memory_candidates": normalized_candidates,
+        "evidence_ids": normalized_evidence_ids,
     }
 
 

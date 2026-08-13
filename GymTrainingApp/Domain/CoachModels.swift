@@ -10,17 +10,105 @@ struct CoachChatMessage: Identifiable, Codable, Hashable {
     var role: CoachChatRole
     var content: String
     var createdAt: Date
+    var evidence: [CoachEvidenceCitation]
 
     init(
         id: UUID = UUID(),
         role: CoachChatRole,
         content: String,
-        createdAt: Date = Date()
+        createdAt: Date = Date(),
+        evidence: [CoachEvidenceCitation] = []
     ) {
         self.id = id
         self.role = role
         self.content = content
         self.createdAt = createdAt
+        self.evidence = evidence
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case role
+        case content
+        case createdAt
+        case evidence
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(UUID.self, forKey: .id)
+        role = try container.decode(CoachChatRole.self, forKey: .role)
+        content = try container.decode(String.self, forKey: .content)
+        createdAt = try container.decode(Date.self, forKey: .createdAt)
+        evidence = try container.decodeIfPresent(
+            [CoachEvidenceCitation].self,
+            forKey: .evidence
+        ) ?? []
+    }
+}
+
+struct CoachEvidenceCitation: Identifiable, Codable, Hashable {
+    var id: String
+    var title: String
+    var year: Int?
+    var studyType: String
+    var confidence: String
+    var url: String
+    var doi: String
+    var relevance: Double
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case year
+        case studyType = "study_type"
+        case confidence
+        case url
+        case doi
+        case relevance
+    }
+
+    var studyTypeLabel: String {
+        switch studyType {
+        case "guideline": return "ガイドライン"
+        case "meta_analysis": return "メタ解析"
+        case "systematic_review": return "系統的レビュー"
+        case "randomized_controlled_trial": return "ランダム化比較試験"
+        case "clinical_trial": return "臨床試験"
+        case "observational": return "観察研究"
+        case "review": return "レビュー"
+        default: return "研究論文"
+        }
+    }
+
+    var confidenceLabel: String {
+        switch confidence {
+        case "high": return "高"
+        case "moderate": return "中"
+        case "low": return "低"
+        default: return "参考"
+        }
+    }
+}
+
+struct CoachEvidenceStatus: Codable, Hashable {
+    var state: String
+    var confidence: String
+    var lastUpdatedAt: String?
+    var searchedDocuments: Int
+
+    static let unavailable = CoachEvidenceStatus(
+        state: "unavailable",
+        confidence: "insufficient",
+        lastUpdatedAt: nil,
+        searchedDocuments: 0
+    )
+
+    enum CodingKeys: String, CodingKey {
+        case state
+        case confidence
+        case lastUpdatedAt = "last_updated_at"
+        case searchedDocuments = "searched_documents"
     }
 }
 
@@ -190,15 +278,26 @@ struct CoachChatRequest: Encodable, Hashable {
 struct CoachChatResponse: Codable, Hashable {
     var reply: String
     var memoryCandidates: [CoachMemoryCandidate]
+    var evidence: [CoachEvidenceCitation]
+    var evidenceStatus: CoachEvidenceStatus
 
-    init(reply: String, memoryCandidates: [CoachMemoryCandidate] = []) {
+    init(
+        reply: String,
+        memoryCandidates: [CoachMemoryCandidate] = [],
+        evidence: [CoachEvidenceCitation] = [],
+        evidenceStatus: CoachEvidenceStatus = .unavailable
+    ) {
         self.reply = reply
         self.memoryCandidates = memoryCandidates
+        self.evidence = evidence
+        self.evidenceStatus = evidenceStatus
     }
 
     enum CodingKeys: String, CodingKey {
         case reply
         case memoryCandidates = "memory_candidates"
+        case evidence
+        case evidenceStatus = "evidence_status"
     }
 
     init(from decoder: Decoder) throws {
@@ -208,6 +307,14 @@ struct CoachChatResponse: Codable, Hashable {
             [CoachMemoryCandidate].self,
             forKey: .memoryCandidates
         ) ?? []
+        evidence = try container.decodeIfPresent(
+            [CoachEvidenceCitation].self,
+            forKey: .evidence
+        ) ?? []
+        evidenceStatus = try container.decodeIfPresent(
+            CoachEvidenceStatus.self,
+            forKey: .evidenceStatus
+        ) ?? .unavailable
     }
 }
 

@@ -358,7 +358,8 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
                     appStore.appendCoachChatMessage(
                         CoachChatMessage(
                             role: .assistant,
-                            content: CoachReplyPolicy.limitingFollowUpQuestions(response.reply)
+                            content: CoachReplyPolicy.limitingFollowUpQuestions(response.reply),
+                            evidence: response.evidence
                         )
                     )
                     pendingMemoryCandidates = appStore.newCoachMemoryCandidates(response.memoryCandidates)

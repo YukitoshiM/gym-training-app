@@ -257,7 +257,25 @@ struct AIAPIClient {
                         content: "重量は小刻みに上げたい",
                         reason: "今後の重量提案に役立つため"
                     )
-                ]
+                ],
+                evidence: [
+                    CoachEvidenceCitation(
+                        id: "PMID:12345678",
+                        title: "Resistance training volume and muscle hypertrophy",
+                        year: 2025,
+                        studyType: "systematic_review",
+                        confidence: "high",
+                        url: "https://pubmed.ncbi.nlm.nih.gov/12345678/",
+                        doi: "10.1000/bodymode-test",
+                        relevance: 0.91
+                    )
+                ],
+                evidenceStatus: CoachEvidenceStatus(
+                    state: "ready",
+                    confidence: "high",
+                    lastUpdatedAt: "2026-08-14T00:00:00Z",
+                    searchedDocuments: 42
+                )
             )
         }
         #endif

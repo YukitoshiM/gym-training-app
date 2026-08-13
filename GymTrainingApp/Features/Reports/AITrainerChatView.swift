@@ -425,6 +425,26 @@ private struct CoachChatBubble: View {
                 }
                 if message.role == .assistant {
                     CoachFormattedText(content: message.content)
+                    if !message.evidence.isEmpty {
+                        Divider()
+                            .padding(.vertical, 3)
+                        DisclosureGroup {
+                            VStack(alignment: .leading, spacing: 10) {
+                                ForEach(message.evidence) { citation in
+                                    CoachEvidenceCitationRow(citation: citation)
+                                }
+                            }
+                            .padding(.top, 8)
+                        } label: {
+                            Label(
+                                "科学的根拠 \(message.evidence.count)件",
+                                systemImage: "text.book.closed"
+                            )
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(AppTheme.accent)
+                            .accessibilityIdentifier("coachEvidenceSources")
+                        }
+                    }
                     HStack(spacing: 6) {
                         responseRatingButton(
                             rating: .helpful,
@@ -482,6 +502,45 @@ private struct CoachChatBubble: View {
         .accessibilityLabel(accessibilityLabel)
         .accessibilityAddTraits(rating == candidate ? .isSelected : [])
         .accessibilityIdentifier("coachReplyRating-\(candidate.rawValue)-\(message.id.uuidString)")
+    }
+}
+
+private struct CoachEvidenceCitationRow: View {
+    let citation: CoachEvidenceCitation
+
+    var body: some View {
+        Group {
+            if let url = URL(string: citation.url) {
+                Link(destination: url) {
+                    content
+                }
+            } else {
+                content
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("科学的根拠、\(citation.title)")
+    }
+
+    private var content: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(citation.title)
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(AppTheme.ink)
+                .multilineTextAlignment(.leading)
+            HStack(spacing: 5) {
+                if let year = citation.year {
+                    Text(String(year))
+                }
+                Text(citation.studyTypeLabel)
+                Text("確度 \(citation.confidenceLabel)")
+                Image(systemName: "arrow.up.right")
+                    .accessibilityHidden(true)
+            }
+            .font(.caption)
+            .foregroundStyle(AppTheme.mutedInk)
+        }
     }
 }
 

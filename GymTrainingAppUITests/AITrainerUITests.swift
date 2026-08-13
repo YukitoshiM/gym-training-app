@@ -149,6 +149,13 @@ final class AITrainerUITests: GymTrainingAppUITestCase {
 
         XCTAssertTrue(app.staticTexts["判断"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["次にやること"].exists)
+        let evidence = scrollToHittable(app.staticTexts["科学的根拠 1件"])
+        XCTAssertTrue(evidence.isHittable)
+        evidence.tap()
+        let citation = scrollToHittable(
+            app.staticTexts["Resistance training volume and muscle hypertrophy"]
+        )
+        XCTAssertTrue(citation.isHittable)
         let helpfulButton = app.buttons["役に立った"]
         XCTAssertTrue(helpfulButton.waitForExistence(timeout: 5))
         helpfulButton.tap()

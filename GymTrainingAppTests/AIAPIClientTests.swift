@@ -463,7 +463,23 @@ final class AIAPIClientTests: XCTestCase {
                 "memory_candidates":[{
                     "content":"重量は小刻みに上げたい",
                     "reason":"今後の提案に役立つため"
-                }]
+                }],
+                "evidence":[{
+                    "id":"PMID:12345678",
+                    "title":"Resistance training volume and muscle hypertrophy",
+                    "year":2025,
+                    "study_type":"systematic_review",
+                    "confidence":"high",
+                    "url":"https://pubmed.ncbi.nlm.nih.gov/12345678/",
+                    "doi":"10.1000/bodymode-test",
+                    "relevance":0.91
+                }],
+                "evidence_status":{
+                    "state":"ready",
+                    "confidence":"high",
+                    "last_updated_at":"2026-08-14T00:00:00Z",
+                    "searched_documents":42
+                }
             }
             """#.utf8)
             return (Self.response(for: request, statusCode: 200), data)
@@ -482,6 +498,9 @@ final class AIAPIClientTests: XCTestCase {
 
         XCTAssertEqual(response.reply, "次回は1kgだけ上げてみましょう。")
         XCTAssertEqual(response.memoryCandidates.first?.content, "重量は小刻みに上げたい")
+        XCTAssertEqual(response.evidence.first?.id, "PMID:12345678")
+        XCTAssertEqual(response.evidence.first?.studyTypeLabel, "系統的レビュー")
+        XCTAssertEqual(response.evidenceStatus.searchedDocuments, 42)
         let sentRequest = try XCTUnwrap(MockAIURLProtocol.lastRequest)
         XCTAssertEqual(sentRequest.url?.path, "/v1/agents/chat")
         XCTAssertEqual(sentRequest.timeoutInterval, 240, accuracy: 0.1)

@@ -1,0 +1,750 @@
+from __future__ import annotations
+
+import html
+import json
+import math
+import re
+import sqlite3
+from dataclasses import asdict, dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Iterable, Optional
+from urllib.parse import quote
+
+import httpx
+
+
+EUROPE_PMC_SEARCH_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+CROSSREF_WORK_URL = "https://api.crossref.org/works/{doi}"
+DEFAULT_EVIDENCE_QUERIES = {
+    "hypertrophy": '(TITLE_ABS:"resistance training" AND TITLE_ABS:hypertrophy) AND (META_ANALYSIS:y OR "systematic review" OR "randomized controlled trial")',
+    "strength": '(TITLE_ABS:"resistance training" AND TITLE_ABS:strength) AND (META_ANALYSIS:y OR "systematic review" OR "randomized controlled trial")',
+    "protein": '(TITLE_ABS:protein AND (TITLE_ABS:muscle OR TITLE_ABS:hypertrophy)) AND (META_ANALYSIS:y OR "systematic review")',
+    "fat_loss": '((TITLE_ABS:"weight loss" OR TITLE_ABS:"fat loss") AND (TITLE_ABS:exercise OR TITLE_ABS:diet)) AND (META_ANALYSIS:y OR "systematic review")',
+    "sleep_recovery": '(TITLE_ABS:sleep AND (TITLE_ABS:recovery OR TITLE_ABS:performance OR TITLE_ABS:muscle)) AND (META_ANALYSIS:y OR "systematic review")',
+    "fatigue": '((TITLE_ABS:fatigue OR TITLE_ABS:overreaching) AND TITLE_ABS:training) AND (META_ANALYSIS:y OR "systematic review")',
+    "wellness": '(TITLE_ABS:"physical activity" AND TITLE_ABS:health) AND (META_ANALYSIS:y OR "systematic review" OR guideline)',
+    "return_to_training": '((TITLE_ABS:"return to training" OR TITLE_ABS:"return to sport") AND TITLE_ABS:exercise) AND ("systematic review" OR guideline)',
+}
+
+QUERY_ALIASES = {
+    "筋肥大": "muscle hypertrophy resistance training",
+    "筋肉": "muscle hypertrophy",
+    "筋力": "muscle strength resistance training",
+    "重量": "training load strength",
+    "回数": "repetitions resistance training",
+    "セット": "sets resistance training volume",
+    "ボリューム": "resistance training volume",
+    "タンパク質": "protein muscle hypertrophy",
+    "たんぱく質": "protein muscle hypertrophy",
+    "どのくらい": "dose response recommended intake",
+    "必要": "requirement recommended dose",
+    "減量": "weight loss fat loss diet exercise",
+    "脂肪": "fat loss body composition",
+    "睡眠": "sleep recovery performance",
+    "疲労": "fatigue recovery training",
+    "回復": "recovery fatigue training",
+    "休養": "recovery rest training",
+    "健康": "physical activity health",
+    "初心者": "beginner novice resistance training",
+    "高齢": "older adults resistance training",
+    "復帰": "return to training return to sport",
+    "ベンチプレス": "bench press resistance training",
+    "スクワット": "squat resistance training",
+}
+
+QUERY_TOPIC_TERMS = {
+    "hypertrophy": ("筋肥大", "筋肉", "hypertrophy", "muscle growth"),
+    "strength": ("筋力", "重量", "strength", "one repetition maximum"),
+    "protein": ("タンパク質", "たんぱく質", "protein"),
+    "fat_loss": ("減量", "脂肪", "weight loss", "fat loss"),
+    "sleep_recovery": ("睡眠", "sleep"),
+    "fatigue": ("疲労", "回復", "休養", "fatigue", "recovery", "overreaching"),
+    "wellness": ("健康", "wellness", "physical activity"),
+    "return_to_training": ("復帰", "return to training", "return to sport"),
+}
+
+
+SCHEMA = """
+CREATE TABLE IF NOT EXISTS evidence_documents (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    pmid TEXT UNIQUE,
+    pmcid TEXT,
+    doi TEXT,
+    title TEXT NOT NULL,
+    abstract_text TEXT NOT NULL DEFAULT '',
+    authors TEXT NOT NULL DEFAULT '',
+    journal TEXT NOT NULL DEFAULT '',
+    publication_year INTEGER,
+    publication_types_json TEXT NOT NULL DEFAULT '[]',
+    keywords_json TEXT NOT NULL DEFAULT '[]',
+    topics_json TEXT NOT NULL DEFAULT '[]',
+    source_url TEXT NOT NULL,
+    is_open_access INTEGER NOT NULL DEFAULT 0,
+    retracted INTEGER NOT NULL DEFAULT 0,
+    corrected INTEGER NOT NULL DEFAULT 0,
+    study_type TEXT NOT NULL DEFAULT 'other',
+    quality_score REAL NOT NULL DEFAULT 0,
+    source_updated_at TEXT,
+    indexed_at TEXT NOT NULL
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_evidence_documents_doi
+ON evidence_documents(doi) WHERE doi IS NOT NULL AND doi != '';
+
+CREATE TABLE IF NOT EXISTS evidence_chunks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    document_id INTEGER NOT NULL,
+    chunk_kind TEXT NOT NULL,
+    text TEXT NOT NULL,
+    embedding_model TEXT,
+    vector_json TEXT,
+    UNIQUE(document_id, chunk_kind),
+    FOREIGN KEY(document_id) REFERENCES evidence_documents(id) ON DELETE CASCADE
+);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS evidence_chunks_fts USING fts5(
+    chunk_id UNINDEXED,
+    title,
+    text,
+    keywords,
+    tokenize='unicode61 remove_diacritics 2'
+);
+
+CREATE TABLE IF NOT EXISTS evidence_sync_state (
+    source TEXT PRIMARY KEY,
+    last_started_at TEXT,
+    last_completed_at TEXT,
+    last_status TEXT NOT NULL DEFAULT 'never',
+    document_count INTEGER NOT NULL DEFAULT 0,
+    error_message TEXT NOT NULL DEFAULT ''
+);
+"""
+
+
+@dataclass(frozen=True)
+class EvidenceDocument:
+    pmid: str
+    pmcid: str
+    doi: str
+    title: str
+    abstract_text: str
+    authors: str
+    journal: str
+    publication_year: Optional[int]
+    publication_types: tuple[str, ...]
+    keywords: tuple[str, ...]
+    source_url: str
+    is_open_access: bool
+    retracted: bool
+    corrected: bool
+    study_type: str
+    quality_score: float
+    source_updated_at: str
+    topics: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class EvidenceCitation:
+    id: str
+    title: str
+    year: Optional[int]
+    study_type: str
+    confidence: str
+    url: str
+    doi: str
+    relevance: float
+
+
+@dataclass(frozen=True)
+class EvidenceSearchResult:
+    citations: tuple[EvidenceCitation, ...]
+    prompt_context: str
+    confidence: str
+    searched_documents: int
+    last_updated_at: Optional[str]
+
+
+class EvidenceStore:
+    def __init__(self, path: Path):
+        self.path = path
+
+    def connect(self) -> sqlite3.Connection:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        connection = sqlite3.connect(str(self.path), timeout=30)
+        connection.row_factory = sqlite3.Row
+        connection.execute("PRAGMA foreign_keys = ON")
+        connection.execute("PRAGMA journal_mode = WAL")
+        connection.executescript(SCHEMA)
+        columns = {
+            str(row[1])
+            for row in connection.execute("PRAGMA table_info(evidence_documents)").fetchall()
+        }
+        if "topics_json" not in columns:
+            connection.execute(
+                "ALTER TABLE evidence_documents ADD COLUMN topics_json TEXT NOT NULL DEFAULT '[]'"
+            )
+        return connection
+
+    def upsert_documents(
+        self,
+        documents: Iterable[EvidenceDocument],
+        *,
+        embedding_model: Optional[str] = None,
+        vectors: Optional[dict[str, list[float]]] = None,
+    ) -> int:
+        vectors = vectors or {}
+        indexed_at = _utc_now()
+        count = 0
+        with self.connect() as connection:
+            for document in documents:
+                connection.execute(
+                    """
+                    INSERT INTO evidence_documents (
+                        pmid, pmcid, doi, title, abstract_text, authors, journal,
+                        publication_year, publication_types_json, keywords_json,
+                        topics_json, source_url, is_open_access, retracted, corrected, study_type,
+                        quality_score, source_updated_at, indexed_at
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(pmid) DO UPDATE SET
+                        pmcid=excluded.pmcid, doi=excluded.doi, title=excluded.title,
+                        abstract_text=excluded.abstract_text, authors=excluded.authors,
+                        journal=excluded.journal, publication_year=excluded.publication_year,
+                        publication_types_json=excluded.publication_types_json,
+                        keywords_json=excluded.keywords_json, topics_json=excluded.topics_json,
+                        source_url=excluded.source_url,
+                        is_open_access=excluded.is_open_access, retracted=excluded.retracted,
+                        corrected=excluded.corrected, study_type=excluded.study_type,
+                        quality_score=excluded.quality_score,
+                        source_updated_at=excluded.source_updated_at,
+                        indexed_at=excluded.indexed_at
+                    """,
+                    (
+                        document.pmid,
+                        document.pmcid,
+                        document.doi,
+                        document.title,
+                        document.abstract_text,
+                        document.authors,
+                        document.journal,
+                        document.publication_year,
+                        json.dumps(document.publication_types, ensure_ascii=False),
+                        json.dumps(document.keywords, ensure_ascii=False),
+                        json.dumps(document.topics, ensure_ascii=False),
+                        document.source_url,
+                        int(document.is_open_access),
+                        int(document.retracted),
+                        int(document.corrected),
+                        document.study_type,
+                        document.quality_score,
+                        document.source_updated_at,
+                        indexed_at,
+                    ),
+                )
+                row = connection.execute(
+                    "SELECT id FROM evidence_documents WHERE pmid = ?", (document.pmid,)
+                ).fetchone()
+                if row is None:
+                    continue
+                document_id = int(row["id"])
+                chunk_text = _chunk_text(document)
+                vector = vectors.get(document.pmid)
+                connection.execute(
+                    """
+                    INSERT INTO evidence_chunks (
+                        document_id, chunk_kind, text, embedding_model, vector_json
+                    ) VALUES (?, 'abstract', ?, ?, ?)
+                    ON CONFLICT(document_id, chunk_kind) DO UPDATE SET
+                        text=excluded.text,
+                        embedding_model=COALESCE(excluded.embedding_model, evidence_chunks.embedding_model),
+                        vector_json=COALESCE(excluded.vector_json, evidence_chunks.vector_json)
+                    """,
+                    (
+                        document_id,
+                        chunk_text,
+                        embedding_model if vector else None,
+                        json.dumps(vector) if vector else None,
+                    ),
+                )
+                chunk = connection.execute(
+                    "SELECT id FROM evidence_chunks WHERE document_id = ? AND chunk_kind = 'abstract'",
+                    (document_id,),
+                ).fetchone()
+                if chunk is None:
+                    continue
+                chunk_id = int(chunk["id"])
+                connection.execute("DELETE FROM evidence_chunks_fts WHERE chunk_id = ?", (chunk_id,))
+                connection.execute(
+                    "INSERT INTO evidence_chunks_fts(chunk_id, title, text, keywords) VALUES (?, ?, ?, ?)",
+                    (
+                        chunk_id,
+                        document.title,
+                        chunk_text,
+                        " ".join((*document.keywords, *document.topics)),
+                    ),
+                )
+                count += 1
+        return count
+
+    def record_sync(
+        self,
+        *,
+        status: str,
+        document_count: int = 0,
+        error_message: str = "",
+        completed: bool = False,
+    ) -> None:
+        now = _utc_now()
+        with self.connect() as connection:
+            connection.execute(
+                """
+                INSERT INTO evidence_sync_state (
+                    source, last_started_at, last_completed_at, last_status,
+                    document_count, error_message
+                ) VALUES ('europe_pmc', ?, ?, ?, ?, ?)
+                ON CONFLICT(source) DO UPDATE SET
+                    last_started_at=CASE WHEN excluded.last_status = 'running'
+                        THEN excluded.last_started_at ELSE evidence_sync_state.last_started_at END,
+                    last_completed_at=CASE WHEN ? THEN excluded.last_completed_at
+                        ELSE evidence_sync_state.last_completed_at END,
+                    last_status=excluded.last_status,
+                    document_count=excluded.document_count,
+                    error_message=excluded.error_message
+                """,
+                (now, now if completed else None, status, document_count, error_message[:500], int(completed)),
+            )
+
+    def clear_topics_outside(self, pmids: Iterable[str]) -> None:
+        retained = sorted({str(pmid) for pmid in pmids if str(pmid)})
+        with self.connect() as connection:
+            if not retained:
+                connection.execute("UPDATE evidence_documents SET topics_json = '[]'")
+                return
+            placeholders = ",".join("?" for _ in retained)
+            connection.execute(
+                f"UPDATE evidence_documents SET topics_json = '[]' WHERE pmid NOT IN ({placeholders})",
+                retained,
+            )
+
+    def status(self) -> dict[str, Any]:
+        with self.connect() as connection:
+            totals = connection.execute(
+                """
+                SELECT COUNT(*) AS documents,
+                       SUM(CASE WHEN retracted = 0 AND topics_json != '[]' THEN 1 ELSE 0 END)
+                           AS usable_documents
+                FROM evidence_documents
+                """
+            ).fetchone()
+            chunks = connection.execute(
+                """
+                SELECT COUNT(*) AS chunks,
+                       SUM(CASE WHEN vector_json IS NOT NULL THEN 1 ELSE 0 END) AS vector_chunks
+                FROM evidence_chunks
+                """
+            ).fetchone()
+            sync = connection.execute(
+                "SELECT * FROM evidence_sync_state WHERE source = 'europe_pmc'"
+            ).fetchone()
+        documents = int(totals["documents"] or 0)
+        return {
+            "state": "ready" if documents else "empty",
+            "documents": documents,
+            "usable_documents": int(totals["usable_documents"] or 0),
+            "chunks": int(chunks["chunks"] or 0),
+            "vector_chunks": int(chunks["vector_chunks"] or 0),
+            "last_updated_at": sync["last_completed_at"] if sync else None,
+            "last_sync_status": sync["last_status"] if sync else "never",
+        }
+
+    def search(
+        self,
+        query: str,
+        *,
+        query_vector: Optional[list[float]] = None,
+        limit: int = 5,
+        candidate_limit: int = 80,
+    ) -> EvidenceSearchResult:
+        expanded_query = expand_query(query)
+        fts_query = _fts_query(expanded_query)
+        query_topics = detect_query_topics(query)
+        status = self.status()
+        with self.connect() as connection:
+            lexical_rows: list[sqlite3.Row] = []
+            if fts_query:
+                try:
+                    lexical_rows = connection.execute(
+                        """
+                        SELECT d.*, c.text AS chunk_text, c.vector_json, c.embedding_model,
+                               bm25(evidence_chunks_fts, 0.0, 4.0, 1.0) AS lexical_rank
+                        FROM evidence_chunks_fts
+                        JOIN evidence_chunks c ON c.id = evidence_chunks_fts.chunk_id
+                        JOIN evidence_documents d ON d.id = c.document_id
+                        WHERE evidence_chunks_fts MATCH ? AND d.retracted = 0
+                        ORDER BY lexical_rank, d.quality_score DESC
+                        LIMIT ?
+                        """,
+                        (fts_query, candidate_limit),
+                    ).fetchall()
+                except sqlite3.OperationalError:
+                    lexical_rows = []
+
+            vector_rows: list[sqlite3.Row] = []
+            if query_vector:
+                vector_rows = connection.execute(
+                    """
+                    SELECT d.*, c.text AS chunk_text, c.vector_json, c.embedding_model,
+                           NULL AS lexical_rank
+                    FROM evidence_chunks c
+                    JOIN evidence_documents d ON d.id = c.document_id
+                    WHERE d.retracted = 0 AND c.vector_json IS NOT NULL
+                    ORDER BY d.quality_score DESC, d.publication_year DESC
+                    LIMIT ?
+                    """,
+                    (max(candidate_limit, 300),),
+                ).fetchall()
+
+        candidates: dict[int, dict[str, Any]] = {}
+        for position, row in enumerate(lexical_rows):
+            candidates[int(row["id"])] = {
+                "row": row,
+                "lexical": max(0.15, 1.0 - position / max(1, len(lexical_rows))),
+                "semantic": 0.0,
+            }
+        for row in vector_rows:
+            vector = _json_vector(row["vector_json"])
+            semantic = cosine_similarity(query_vector or [], vector)
+            if semantic < 0.35:
+                continue
+            item = candidates.setdefault(
+                int(row["id"]), {"row": row, "lexical": 0.0, "semantic": 0.0}
+            )
+            item["semantic"] = max(item["semantic"], semantic)
+
+        ranked = []
+        current_year = datetime.now(timezone.utc).year
+        for item in candidates.values():
+            row = item["row"]
+            document_topics = set(_json_strings(row["topics_json"]))
+            topic_matches = not query_topics or bool(query_topics & document_topics)
+            if not topic_matches:
+                continue
+            year = int(row["publication_year"] or 0)
+            recency = max(0.0, 1.0 - max(0, current_year - year) / 20.0) if year else 0.0
+            score = (
+                0.42 * item["lexical"]
+                + 0.28 * item["semantic"]
+                + 0.18 * float(row["quality_score"] or 0)
+                + 0.04 * recency
+                + (0.08 if query_topics else 0.0)
+            )
+            if score >= 0.18:
+                ranked.append((score, row))
+        ranked.sort(key=lambda value: value[0], reverse=True)
+        selected = ranked[: max(1, min(limit, 8))]
+
+        confidence = evidence_confidence([row for _, row in selected])
+        citations = tuple(
+            EvidenceCitation(
+                id=f"PMID:{row['pmid']}",
+                title=str(row["title"]),
+                year=int(row["publication_year"]) if row["publication_year"] else None,
+                study_type=str(row["study_type"]),
+                confidence=_quality_confidence(float(row["quality_score"] or 0)),
+                url=str(row["source_url"]),
+                doi=str(row["doi"] or ""),
+                relevance=round(score, 4),
+            )
+            for score, row in selected
+        )
+        context_blocks = []
+        for index, (score, row) in enumerate(selected, 1):
+            excerpt = str(row["chunk_text"] or "")[:1600]
+            context_blocks.append(
+                f"[E{index}] PMID:{row['pmid']} | {row['title']} | "
+                f"{row['publication_year'] or 'year unknown'} | {row['study_type']} | "
+                f"quality={float(row['quality_score'] or 0):.2f} | relevance={score:.3f}\n"
+                f"{excerpt}"
+            )
+        return EvidenceSearchResult(
+            citations=citations,
+            prompt_context="\n\n".join(context_blocks),
+            confidence=confidence,
+            searched_documents=int(status["usable_documents"]),
+            last_updated_at=status["last_updated_at"],
+        )
+
+
+class EuropePMCClient:
+    def __init__(self, *, timeout_seconds: float = 30.0):
+        self.timeout_seconds = timeout_seconds
+
+    async def search(self, query: str, *, page_size: int = 25) -> list[EvidenceDocument]:
+        params = {
+            "query": query,
+            "format": "json",
+            "resultType": "core",
+            "pageSize": str(max(1, min(page_size, 100))),
+            "sort": "FIRST_PDATE_D desc",
+        }
+        async with httpx.AsyncClient(timeout=self.timeout_seconds) as client:
+            response = await client.get(EUROPE_PMC_SEARCH_URL, params=params)
+            response.raise_for_status()
+        results = response.json().get("resultList", {}).get("result", [])
+        return [parse_europe_pmc_document(item) for item in results if item.get("pmid")]
+
+
+class CrossrefClient:
+    def __init__(self, *, mailto: str = "", timeout_seconds: float = 15.0):
+        self.mailto = mailto
+        self.timeout_seconds = timeout_seconds
+
+    async def update_flags(self, doi: str) -> tuple[bool, bool]:
+        if not doi:
+            return False, False
+        headers = {"User-Agent": "BodyMode-Evidence-RAG/0.1"}
+        params = {"mailto": self.mailto} if self.mailto else None
+        try:
+            async with httpx.AsyncClient(timeout=self.timeout_seconds, headers=headers) as client:
+                response = await client.get(
+                    CROSSREF_WORK_URL.format(doi=quote(doi, safe="")),
+                    params=params,
+                )
+                response.raise_for_status()
+            message = response.json().get("message", {})
+        except (httpx.HTTPError, ValueError, UnicodeError):
+            return False, False
+        updates = message.get("update-to", []) or []
+        update_types = {str(update.get("type", "")).lower() for update in updates}
+        return "retraction" in update_types, bool(update_types & {"correction", "update"})
+
+
+def parse_europe_pmc_document(item: dict[str, Any]) -> EvidenceDocument:
+    publication_types = tuple(_list_value(item.get("pubTypeList"), "pubType"))
+    keywords = tuple(_list_value(item.get("keywordList"), "keyword"))
+    title = _clean_markup(str(item.get("title") or "Untitled"))
+    abstract = _clean_markup(str(item.get("abstractText") or ""))
+    lowered_types = " ".join(publication_types).lower()
+    lowered_title = title.lower()
+    retracted = "retracted publication" in lowered_types or lowered_title.startswith("retracted:")
+    corrected = "corrected and republished article" in lowered_types
+    study_type = classify_study_type(publication_types, title)
+    pmid = str(item.get("pmid") or item.get("id") or "")
+    year_value = str(item.get("pubYear") or "")
+    year = int(year_value) if year_value.isdigit() else None
+    return EvidenceDocument(
+        pmid=pmid,
+        pmcid=str(item.get("pmcid") or ""),
+        doi=str(item.get("doi") or "").lower(),
+        title=title,
+        abstract_text=abstract,
+        authors=str(item.get("authorString") or ""),
+        journal=str(item.get("journalTitle") or ""),
+        publication_year=year,
+        publication_types=publication_types,
+        keywords=keywords,
+        source_url=f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+        is_open_access=str(item.get("isOpenAccess") or "").upper() == "Y",
+        retracted=retracted,
+        corrected=corrected,
+        study_type=study_type,
+        quality_score=study_quality_score(study_type),
+        source_updated_at=str(item.get("firstIndexDate") or item.get("dateOfRevision") or ""),
+    )
+
+
+def classify_study_type(publication_types: Iterable[str], title: str = "") -> str:
+    value = " ".join(publication_types).lower() + " " + title.lower()
+    if "practice guideline" in value or "guideline" in value or "consensus statement" in value:
+        return "guideline"
+    if "meta-analysis" in value or "meta analysis" in value:
+        return "meta_analysis"
+    if "systematic review" in value:
+        return "systematic_review"
+    if "randomized controlled trial" in value or "randomised controlled trial" in value:
+        return "randomized_controlled_trial"
+    if "clinical trial" in value:
+        return "clinical_trial"
+    if "review" in value:
+        return "review"
+    if "observational" in value or "cohort" in value or "cross-sectional" in value:
+        return "observational"
+    return "other"
+
+
+def study_quality_score(study_type: str) -> float:
+    return {
+        "guideline": 1.0,
+        "meta_analysis": 0.95,
+        "systematic_review": 0.9,
+        "randomized_controlled_trial": 0.8,
+        "clinical_trial": 0.7,
+        "review": 0.62,
+        "observational": 0.55,
+        "other": 0.4,
+    }.get(study_type, 0.4)
+
+
+def expand_query(query: str) -> str:
+    additions = [alias for key, alias in QUERY_ALIASES.items() if key in query]
+    return " ".join([query, *additions]).strip()
+
+
+def detect_query_topics(query: str) -> set[str]:
+    lowered = query.lower()
+    return {
+        topic
+        for topic, terms in QUERY_TOPIC_TERMS.items()
+        if any(term.lower() in lowered for term in terms)
+    }
+
+
+def document_matches_topic(document: EvidenceDocument, topic: str) -> bool:
+    title = document.title.lower()
+    value = f"{title} {document.abstract_text} {' '.join(document.keywords)}".lower()
+    if topic == "protein" and not (
+        any(term in title for term in ("protein", "amino acid"))
+        or any(
+            term in value
+            for term in (
+                "protein intake",
+                "protein supplementation",
+                "dietary protein",
+                "amino acid intake",
+                "amino acid supplementation",
+            )
+        )
+    ):
+        return False
+    if topic == "sleep_recovery" and not any(
+        term in title for term in ("sleep", "nap", "napping")
+    ):
+        return False
+    rules = {
+        "hypertrophy": (
+            ("hypertrophy", "muscle mass", "muscle growth"),
+            ("resistance", "strength training", "exercise"),
+        ),
+        "strength": (
+            ("strength", "one repetition maximum", "1rm"),
+            ("resistance", "strength training", "exercise"),
+        ),
+        "protein": (
+            ("protein",),
+            ("muscle", "resistance", "exercise", "athlete", "hypertrophy"),
+        ),
+        "fat_loss": (
+            ("weight loss", "fat loss", "fat mass", "body composition", "obesity"),
+            ("exercise", "physical activity", "diet", "energy restriction"),
+        ),
+        "sleep_recovery": (
+            ("sleep",),
+            ("exercise", "training", "athlete", "physical performance", "muscle"),
+        ),
+        "fatigue": (
+            ("fatigue", "recovery", "overreach", "overtraining"),
+            ("exercise", "training", "athlete", "resistance"),
+        ),
+        "wellness": (
+            ("physical activity", "exercise"),
+            ("health", "wellbeing", "well-being", "mortality", "cardiovascular"),
+        ),
+        "return_to_training": (
+            ("return to training", "return to sport", "return-to-sport"),
+            ("exercise", "training", "sport", "rehabilitation"),
+        ),
+    }
+    groups = rules.get(topic)
+    return bool(groups) and all(any(term in value for term in group) for group in groups)
+
+
+def cosine_similarity(left: list[float], right: list[float]) -> float:
+    if not left or not right or len(left) != len(right):
+        return 0.0
+    left_norm = math.sqrt(sum(value * value for value in left))
+    right_norm = math.sqrt(sum(value * value for value in right))
+    if left_norm == 0 or right_norm == 0:
+        return 0.0
+    return sum(a * b for a, b in zip(left, right)) / (left_norm * right_norm)
+
+
+def evidence_confidence(rows: list[sqlite3.Row]) -> str:
+    if not rows:
+        return "insufficient"
+    scores = [float(row["quality_score"] or 0) for row in rows]
+    if len(scores) >= 2 and max(scores) >= 0.9:
+        return "high"
+    if max(scores) >= 0.7:
+        return "moderate"
+    return "low"
+
+
+def _quality_confidence(score: float) -> str:
+    if score >= 0.9:
+        return "high"
+    if score >= 0.7:
+        return "moderate"
+    return "low"
+
+
+def _chunk_text(document: EvidenceDocument) -> str:
+    types = ", ".join(document.publication_types)
+    keywords = ", ".join(document.keywords)
+    return "\n".join(
+        part
+        for part in (
+            document.title,
+            f"Publication types: {types}" if types else "",
+            f"Keywords: {keywords}" if keywords else "",
+            document.abstract_text,
+        )
+        if part
+    )
+
+
+def _clean_markup(value: str) -> str:
+    with_breaks = re.sub(r"</?(?:h\d|p|br)[^>]*>", " ", value, flags=re.IGNORECASE)
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", with_breaks))).strip()
+
+
+def _list_value(value: Any, key: str) -> list[str]:
+    if isinstance(value, dict):
+        value = value.get(key, [])
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        return [str(item) for item in value if str(item).strip()]
+    return []
+
+
+def _fts_query(value: str) -> str:
+    tokens = re.findall(r"[A-Za-z0-9][A-Za-z0-9_-]+", value.lower())
+    unique = []
+    for token in tokens:
+        if len(token) >= 2 and token not in unique:
+            unique.append(token)
+    return " OR ".join(f'"{token}"' for token in unique[:16])
+
+
+def _json_vector(value: Any) -> list[float]:
+    try:
+        parsed = json.loads(str(value))
+        return [float(item) for item in parsed] if isinstance(parsed, list) else []
+    except (TypeError, ValueError, json.JSONDecodeError):
+        return []
+
+
+def _json_strings(value: Any) -> list[str]:
+    try:
+        parsed = json.loads(str(value))
+        return [str(item) for item in parsed] if isinstance(parsed, list) else []
+    except (TypeError, ValueError, json.JSONDecodeError):
+        return []
+
+
+def _utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def citation_dict(citation: EvidenceCitation) -> dict[str, Any]:
+    return asdict(citation)

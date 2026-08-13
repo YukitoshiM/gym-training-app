@@ -105,6 +105,7 @@ Tailscale Funnelは開発・TestFlight検証に限定します。正式リリー
 
 ```bash
 ollama pull gemma4:12b
+ollama pull bge-m3
 ollama serve
 ```
 
@@ -130,6 +131,7 @@ Ollamaに接続できない場合も、アプリ開発を止めないための�
 - `POST /v1/auth/token`
 - `POST /v1/auth/revoke`
 - `GET /v1/coaches`
+- `GET /v1/evidence/status`
 - `POST /v1/agents/chat`
 - `POST /v1/meals/analyze-image`
 - `POST /v1/meals/analyze-text`
@@ -158,4 +160,22 @@ Ollamaに接続できない場合も、アプリ開発を止めないための�
 
 ## AIトレーナーチャット
 
-`POST /v1/agents/chat` はステートレスです。会話履歴、集計済みコンテキスト、確認済みの長期記憶はアプリからリクエストごとに送信します。サーバーは回答と最大3件の記憶候補を返し、履歴やコンテキストを保存しません。
+`POST /v1/agents/chat` はステートレスです。会話履歴、集計済みコンテキスト、確認済みの長期記憶はアプリからリクエストごとに送信します。サーバーは回答、最大3件の記憶候補、実際に回答で使った文献だけを返し、履歴やコンテキストを保存しません。
+
+## Evidence RAG
+
+Europe PMCの固定検索式から筋肥大、筋力、栄養、減量、睡眠、疲労、健康維持、復帰に関する文献メタデータと抄録を同期します。Crossrefで訂正・撤回関係を照合し、SQLite FTS5とローカルOllamaの`bge-m3`を組み合わせて検索します。
+
+```bash
+cd local_llm_server
+./sync_evidence.sh --limit-per-topic 25
+```
+
+- 検索式は固定で、ユーザーの相談文や健康データをEurope PMC/Crossrefへ送りません。
+- ユーザーの質問はMac mini内でだけ埋め込み・検索します。
+- 撤回済み文献は検索結果から除外します。
+- RAGが空、停止、検索不能でも従来のAIチャットは継続します。
+- 文献本文や抄録をアプリへ再配布せず、タイトル、研究種別、年、PubMedリンクだけを表示します。
+
+同期状態は認証付き`GET /v1/evidence/status`で確認できます。詳細な設計と制約は`docs/evidence_rag_design.md`を参照してください。
+`scripts/install_local_ai_launch_agent.sh`を再実行すると、毎週月曜03:15の自動同期も同時に登録されます。

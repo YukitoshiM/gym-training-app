@@ -32,6 +32,8 @@ class AuthenticationTests(unittest.TestCase):
                 "AI_TOKEN_FAILURE_DELAY_SECONDS": "0",
                 "AI_ENROLLMENT_KEYS_FILE": str(enrollment_file),
                 "AI_AUTH_STATE_PATH": str(root / "auth-state.json"),
+                "EVIDENCE_RAG_ENABLED": "1",
+                "EVIDENCE_RAG_DB_PATH": str(root / "evidence.sqlite3"),
             }
         )
         sys.modules.pop("main", None)
@@ -188,6 +190,67 @@ class AuthenticationTests(unittest.TestCase):
         self.assertEqual(response.json()["challenges"], ["睡眠記録が少ない"])
         self.assertEqual(response.json()["rationales"], ["運動履歴3件を確認"])
         self.assertEqual(response.json()["next_actions"], ["睡眠を3日記録する"])
+
+    def test_agent_chat_returns_only_evidence_used_by_the_model(self) -> None:
+        from evidence_rag import EvidenceDocument
+
+        token = self.issue_token()
+        self.server.evidence_store.upsert_documents(
+            [
+                EvidenceDocument(
+                    pmid="12345678",
+                    pmcid="",
+                    doi="10.1000/bodymode-test",
+                    title="Resistance training volume and muscle hypertrophy",
+                    abstract_text="A systematic review of resistance training volume.",
+                    authors="Test Author",
+                    journal="Test Journal",
+                    publication_year=2025,
+                    publication_types=("Systematic Review",),
+                    keywords=("hypertrophy", "resistance training"),
+                    source_url="https://pubmed.ncbi.nlm.nih.gov/12345678/",
+                    is_open_access=False,
+                    retracted=False,
+                    corrected=False,
+                    study_type="systematic_review",
+                    quality_score=0.9,
+                    source_updated_at="2025-01-01",
+                    topics=("hypertrophy",),
+                )
+            ]
+        )
+        captured_prompts = []
+        captured_schemas = []
+
+        async def fake_ollama_json(prompt, fallback, images=None, format_schema=None):
+            captured_prompts.append(prompt)
+            captured_schemas.append(format_schema)
+            return {
+                "reply": "セット数は段階的に増やしましょう。[E1]",
+                "memory_candidates": [],
+                "evidence_ids": ["E1", "E8"],
+            }
+
+        self.server.ollama_json = fake_ollama_json
+        response = self.client.post(
+            "/v1/agents/chat",
+            headers={"Authorization": f"Bearer {token}"},
+            json={
+                "coach_id": "hypertrophy",
+                "message": "筋肥大のためにセット数を増やすべき？",
+                "context": {},
+                "recent_messages": [],
+            },
+        )
+
+        self.assertEqual(response.status_code, 200, response.text)
+        body = response.json()
+        self.assertEqual([item["id"] for item in body["evidence"]], ["PMID:12345678"])
+        self.assertEqual(body["evidence_status"]["state"], "ready")
+        self.assertIn("[E1] PMID:12345678", captured_prompts[-1])
+        evidence_schema = captured_schemas[-1]["properties"]["evidence_ids"]
+        self.assertEqual(evidence_schema["minItems"], 1)
+        self.assertEqual(evidence_schema["items"]["enum"], ["E1"])
 
     def test_meal_image_prompt_renders_json_example_without_format_error(self) -> None:
         token = self.issue_token()
