@@ -146,7 +146,7 @@ struct BodyMetricDetailView: View {
 
                             if !entry.note.isEmpty {
                                 Text(entry.note)
-                                    .font(.caption)
+                                    .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
                         }
@@ -239,7 +239,7 @@ private struct CurrentBodyMetricSummary: View {
                     Spacer()
 
                     Text(goal.direction.displayName)
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(AppTheme.mutedInk)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)

@@ -7,6 +7,7 @@ struct WatchWorkoutPlanLibrarySnapshot: Codable, Hashable, Sendable {
     var userProfile: WatchUserProfileSnapshot?
     var sensorPreferences: WatchSensorPreferences?
     var appearanceSettings: AppAppearanceSettings?
+    var dailyRecommendation: WatchDailyRecommendationSnapshot?
 
     init(
         generatedAt: Date = Date(),
@@ -14,7 +15,8 @@ struct WatchWorkoutPlanLibrarySnapshot: Codable, Hashable, Sendable {
         preferredPlanID: UUID? = nil,
         userProfile: WatchUserProfileSnapshot? = nil,
         sensorPreferences: WatchSensorPreferences? = nil,
-        appearanceSettings: AppAppearanceSettings? = nil
+        appearanceSettings: AppAppearanceSettings? = nil,
+        dailyRecommendation: WatchDailyRecommendationSnapshot? = nil
     ) {
         self.generatedAt = generatedAt
         self.plans = plans
@@ -22,9 +24,24 @@ struct WatchWorkoutPlanLibrarySnapshot: Codable, Hashable, Sendable {
         self.userProfile = userProfile
         self.sensorPreferences = sensorPreferences
         self.appearanceSettings = appearanceSettings
+        self.dailyRecommendation = dailyRecommendation
     }
 }
 
+struct WatchDailyRecommendationSnapshot: Codable, Hashable, Sendable {
+    struct Action: Codable, Hashable, Identifiable, Sendable {
+        var id: UUID
+        var title: String
+        var systemImage: String
+        var isCompleted: Bool
+    }
+
+    var date: Date
+    var readiness: String
+    var summary: String
+    var actions: [Action]
+    var preferredPlanID: UUID?
+}
 struct WatchUserProfileSnapshot: Codable, Hashable, Sendable {
     var birthYear: Int?
     var goalTypeRawValue: String
@@ -94,6 +111,9 @@ struct WatchPlanSetTargetSnapshot: Codable, Hashable, Identifiable, Sendable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var plannedConcentricSeconds: Int? = nil
+    var plannedEccentricSeconds: Int? = nil
+    var plannedTempoBeatSpeed: Int? = nil
     var previousActualWeight: Double? = nil
     var previousActualReps: Int? = nil
     var previousRPE: Double? = nil
@@ -109,381 +129,4 @@ enum WatchWeightUnit: String, Codable, Hashable, Sendable {
         case .lb: "lb"
         }
     }
-}
-
-enum WatchWorkoutTransfer {
-    static let messageTypeKey = "type"
-    static let payloadKey = "payload"
-    static let eventIDKey = "event_id"
-    static let sentAtKey = "sent_at"
-    static let acknowledgementKey = "acknowledged"
-    static let planPushType = "watch_plan_push"
-    static let planLibraryPushType = "watch_plan_library_push"
-    static let sessionFinishedType = "watch_session_finished"
-    static let sessionLiveUpdateType = "watch_session_live_update"
-    static let sessionLiveEndedType = "watch_session_live_ended"
-    static let workoutCommandType = "watch_workout_command"
-}
-
-struct WatchLiveWorkoutSnapshot: Codable, Hashable, Sendable {
-    var updatedAt: Date
-    var session: WatchWorkoutSessionSnapshot
-    var restRemaining: Int
-    var isRestTimerRunning: Bool
-    var restExerciseID: UUID?
-    var liveMetrics: WatchLiveWorkoutMetrics
-}
-
-enum WatchWorkoutCommandAction: String, Codable, Hashable, Sendable {
-    case startSet
-    case completeSet
-    case cancelSet
-    case updateSet
-    case stopRestTimer
-    case finishWorkout
-    case cancelWorkout
-}
-
-struct WatchWorkoutCommand: Codable, Hashable, Sendable {
-    var action: WatchWorkoutCommandAction
-    var exerciseID: UUID?
-    var setID: UUID?
-    var actualWeight: Double?
-    var actualReps: Int?
-    var rpe: Double?
-
-    init(
-        action: WatchWorkoutCommandAction,
-        exerciseID: UUID? = nil,
-        setID: UUID? = nil,
-        actualWeight: Double? = nil,
-        actualReps: Int? = nil,
-        rpe: Double? = nil
-    ) {
-        self.action = action
-        self.exerciseID = exerciseID
-        self.setID = setID
-        self.actualWeight = actualWeight
-        self.actualReps = actualReps
-        self.rpe = rpe
-    }
-}
-
-struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
-    var id: UUID
-    var sourcePlanID: UUID?
-    var title: String
-    var startedAt: Date
-    var endedAt: Date?
-    var weightUnit: WatchWeightUnit
-    var exercises: [WatchWorkoutExerciseSnapshot]
-    var sensorSummary: WatchWorkoutSensorSummary?
-    var healthKitSaveStatus: WatchHealthKitSaveStatus?
-    var note: String?
-
-    init(
-        id: UUID = UUID(),
-        sourcePlanID: UUID?,
-        title: String,
-        startedAt: Date = Date(),
-        endedAt: Date? = nil,
-        weightUnit: WatchWeightUnit,
-        exercises: [WatchWorkoutExerciseSnapshot],
-        sensorSummary: WatchWorkoutSensorSummary? = nil,
-        healthKitSaveStatus: WatchHealthKitSaveStatus? = nil,
-        note: String? = nil
-    ) {
-        self.id = id
-        self.sourcePlanID = sourcePlanID
-        self.title = title
-        self.startedAt = startedAt
-        self.endedAt = endedAt
-        self.weightUnit = weightUnit
-        self.exercises = exercises
-        self.sensorSummary = sensorSummary
-        self.healthKitSaveStatus = healthKitSaveStatus
-        self.note = note
-    }
-
-    init(plan: WatchWorkoutPlanSnapshot) {
-        self.init(
-            sourcePlanID: plan.id,
-            title: plan.name,
-            weightUnit: plan.weightUnit,
-            exercises: plan.exercises.enumerated().map { offset, exercise in
-                WatchWorkoutExerciseSnapshot(planExercise: exercise, sortOrder: offset)
-            }
-        )
-    }
-
-    var totalSetCount: Int {
-        exercises.reduce(0) { $0 + $1.sets.count }
-    }
-
-    var completedSetCount: Int {
-        exercises.reduce(0) { $0 + $1.sets.filter(\.isCompleted).count }
-    }
-
-    var completedRepCount: Int {
-        exercises.reduce(0) { $0 + $1.completedRepCount }
-    }
-
-    var totalVolume: Double {
-        exercises.reduce(0) { $0 + $1.totalVolume }
-    }
-
-    var isAllSetsCompleted: Bool {
-        totalSetCount > 0 && completedSetCount == totalSetCount
-    }
-}
-
-struct WatchWorkoutExerciseSnapshot: Codable, Hashable, Identifiable, Sendable {
-    var id: UUID
-    var planExerciseID: UUID
-    var exerciseID: UUID?
-    var name: String
-    var primaryMuscleName: String
-    var primaryMuscleRawValue: String?
-    var equipmentRawValue: String?
-    var sortOrder: Int
-    var restSeconds: Int
-    var sets: [WatchWorkoutSetSnapshot]
-
-    init(
-        id: UUID = UUID(),
-        planExerciseID: UUID,
-        exerciseID: UUID?,
-        name: String,
-        primaryMuscleName: String,
-        primaryMuscleRawValue: String?,
-        equipmentRawValue: String?,
-        sortOrder: Int,
-        restSeconds: Int,
-        sets: [WatchWorkoutSetSnapshot]
-    ) {
-        self.id = id
-        self.planExerciseID = planExerciseID
-        self.exerciseID = exerciseID
-        self.name = name
-        self.primaryMuscleName = primaryMuscleName
-        self.primaryMuscleRawValue = primaryMuscleRawValue
-        self.equipmentRawValue = equipmentRawValue
-        self.sortOrder = sortOrder
-        self.restSeconds = restSeconds
-        self.sets = sets
-    }
-
-    init(planExercise: WatchPlanExerciseSnapshot, sortOrder: Int) {
-        let supportsAssistedLoad = AssistedLoadSupport.isSupported(exerciseName: planExercise.name)
-        self.init(
-            planExerciseID: planExercise.id,
-            exerciseID: planExercise.exerciseID,
-            name: planExercise.name,
-            primaryMuscleName: planExercise.primaryMuscleName,
-            primaryMuscleRawValue: planExercise.primaryMuscleRawValue,
-            equipmentRawValue: planExercise.equipmentRawValue,
-            sortOrder: sortOrder,
-            restSeconds: planExercise.restSeconds,
-            sets: planExercise.sets.map {
-                WatchWorkoutSetSnapshot(
-                    planSet: $0,
-                    supportsAssistedLoad: supportsAssistedLoad
-                )
-            }
-        )
-    }
-
-    var totalVolume: Double {
-        sets.filter(\.isCompleted).reduce(0) { $0 + $1.volume }
-    }
-
-    var completedSetCount: Int {
-        sets.filter(\.isCompleted).count
-    }
-
-    var completedRepCount: Int {
-        sets.filter(\.isCompleted).reduce(0) { $0 + $1.actualReps }
-    }
-
-    var supportsAssistedLoad: Bool {
-        AssistedLoadSupport.isSupported(exerciseName: name)
-    }
-
-    var isDipExercise: Bool {
-        AssistedLoadSupport.isDip(exerciseName: name)
-    }
-}
-
-enum AssistedLoadSupport {
-    static let kilogramRange: ClosedRange<Double> = -300...999
-
-    static func isSupported(exerciseName: String) -> Bool {
-        isDip(exerciseName: exerciseName)
-            || containsAny(
-                exerciseName,
-                keywords: ["チンニング", "懸垂", "chin-up", "chin up", "pull-up", "pull up"]
-            )
-    }
-
-    static func isDip(exerciseName: String) -> Bool {
-        containsAny(exerciseName, keywords: ["ディップ", "dip"])
-    }
-
-    private static func containsAny(_ exerciseName: String, keywords: [String]) -> Bool {
-        let normalizedName = exerciseName.lowercased()
-        return keywords.contains { normalizedName.contains($0) }
-    }
-}
-
-struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
-    var id: UUID
-    var setOrder: Int
-    var targetWeight: Double
-    var targetReps: Int
-    var actualWeight: Double
-    var actualReps: Int
-    var isCompleted: Bool
-    var rpe: Double?
-    var startedAt: Date?
-    var completedAt: Date?
-    var sensorSummary: WatchSetSensorSummary?
-    var note: String?
-
-    init(
-        id: UUID = UUID(),
-        setOrder: Int,
-        targetWeight: Double,
-        targetReps: Int,
-        actualWeight: Double? = nil,
-        actualReps: Int? = nil,
-        isCompleted: Bool = false,
-        rpe: Double? = nil,
-        startedAt: Date? = nil,
-        completedAt: Date? = nil,
-        sensorSummary: WatchSetSensorSummary? = nil,
-        note: String? = nil
-    ) {
-        self.id = id
-        self.setOrder = setOrder
-        self.targetWeight = targetWeight
-        self.targetReps = targetReps
-        self.actualWeight = actualWeight ?? targetWeight
-        self.actualReps = actualReps ?? targetReps
-        self.isCompleted = isCompleted
-        self.rpe = rpe
-        self.startedAt = startedAt
-        self.completedAt = completedAt
-        self.sensorSummary = sensorSummary
-        self.note = note
-    }
-
-    init(planSet: WatchPlanSetTargetSnapshot, supportsAssistedLoad: Bool = false) {
-        let previousWeight = planSet.previousActualWeight
-        let actualWeight = supportsAssistedLoad
-            ? previousWeight ?? planSet.targetWeight
-            : ((previousWeight ?? 0) > 0 ? previousWeight : planSet.targetWeight)
-        let actualReps = (planSet.previousActualReps ?? 0) > 0
-            ? planSet.previousActualReps
-            : planSet.targetReps
-
-        self.init(
-            setOrder: planSet.setOrder,
-            targetWeight: planSet.targetWeight,
-            targetReps: planSet.targetReps,
-            actualWeight: actualWeight,
-            actualReps: actualReps,
-            rpe: planSet.previousRPE
-        )
-    }
-
-    var volume: Double {
-        actualWeight * Double(actualReps)
-    }
-}
-
-enum WatchHealthKitSaveStatus: String, Codable, Hashable, Sendable {
-    case unavailable
-    case permissionDenied
-    case collecting
-    case saved
-    case failed
-}
-
-struct WatchWorkoutSensorSummary: Codable, Hashable, Sendable {
-    var durationSeconds: Double
-    var activeEnergyKilocalories: Double?
-    var averageHeartRate: Double?
-    var maximumHeartRate: Double?
-    var heartRateRecovery: Double?
-    var completedSets: Int
-    var estimatedReps: Int?
-    var motionConfidence: Double?
-    var heartRateZoneDurations: [Int: Double]?
-}
-
-struct WatchSetSensorSummary: Codable, Hashable, Sendable {
-    var heartRateAtStart: Double?
-    var heartRateAtEnd: Double?
-    var averageHeartRate: Double?
-    var maximumHeartRate: Double?
-    var heartRateRecovery: Double?
-    var estimatedReps: Int?
-    var averageRepDuration: Double?
-    var movementConsistency: Double?
-    var confidence: Double?
-    var averageConcentricDuration: Double?
-    var averageEccentricDuration: Double?
-    var averagePauseDuration: Double?
-    var relativeRangeOfMotion: Double?
-    var rangeOfMotionConsistency: Double?
-    var velocityLossPercent: Double?
-    var exerciseCandidateName: String?
-    var exerciseCandidateConfidence: Double?
-}
-
-struct WatchLiveWorkoutMetrics: Codable, Hashable, Sendable {
-    var elapsedSeconds: Double = 0
-    var currentHeartRate: Double?
-    var averageHeartRate: Double?
-    var maximumHeartRate: Double?
-    var activeEnergyKilocalories: Double?
-    var heartRateZone: Int?
-    var heartRateZoneDurations: [Int: Double] = [:]
-
-    static let empty = WatchLiveWorkoutMetrics()
-}
-
-struct WatchMotionEstimate: Equatable, Sendable {
-    var estimatedReps: Int = 0
-    var averageRepDuration: Double?
-    var movementConsistency: Double?
-    var confidence: Double = 0
-    var averageConcentricDuration: Double?
-    var averageEccentricDuration: Double?
-    var averagePauseDuration: Double?
-    var relativeRangeOfMotion: Double?
-    var rangeOfMotionConsistency: Double?
-    var velocityLossPercent: Double?
-    var dominantAxis: String?
-    var rotationalMovementRatio: Double?
-    var isTempoDeviationDetected = false
-
-    static let empty = WatchMotionEstimate()
-}
-
-struct WatchSetStartSuggestion: Equatable, Sendable {
-    var exerciseID: UUID
-    var setID: UUID
-    var exerciseName: String
-    var confidence: Double
-    var reason: String
-}
-
-struct WatchNextSetLoadSuggestion: Equatable, Sendable {
-    var exerciseID: UUID
-    var setID: UUID
-    var exerciseName: String
-    var suggestedWeight: Double
-    var suggestedReps: Int
-    var reason: String
 }

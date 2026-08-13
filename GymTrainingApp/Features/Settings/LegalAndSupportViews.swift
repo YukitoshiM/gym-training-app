@@ -1,5 +1,119 @@
 import SwiftUI
 
+struct ReleaseConsentView: View {
+    let onAccept: () -> Void
+
+    @State private var hasConfirmed = false
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Image(systemName: "figure.mind.and.body")
+                            .font(.largeTitle)
+                            .foregroundStyle(AppTheme.accent)
+                            .accessibilityHidden(true)
+
+                        Text("BodyModeを始める")
+                            .font(.largeTitle.bold())
+
+                        Text("大切な3点だけ確認してください。")
+                            .font(.title3)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+
+                    VStack(alignment: .leading, spacing: 20) {
+                        consentPoint(
+                            icon: "iphone",
+                            title: "記録は端末内",
+                            detail: "健康記録は広告へ送りません"
+                        )
+                        consentPoint(
+                            icon: "cross.case",
+                            title: "医療診断ではありません",
+                            detail: "体調に不安があれば専門家へ"
+                        )
+                        consentPoint(
+                            icon: "hand.raised",
+                            title: "利用分析は任意",
+                            detail: "設定からいつでも変更・削除"
+                        )
+                        consentPoint(
+                            icon: "bubble.left.and.bubble.right",
+                            title: "AI送信は操作した時だけ",
+                            detail: "記憶候補も確認後に保存"
+                        )
+                        consentPoint(
+                            icon: "rectangle.badge.person.crop",
+                            title: "広告は別管理",
+                            detail: "パーソナライズせず、同意後に表示"
+                        )
+                    }
+
+                    HStack(spacing: 24) {
+                        NavigationLink("利用規約") {
+                            LegalDocumentView(document: .terms)
+                        }
+                        .accessibilityIdentifier("consentTermsLink")
+
+                        NavigationLink("プライバシー") {
+                            LegalDocumentView(document: .privacy)
+                        }
+                        .accessibilityIdentifier("consentPrivacyLink")
+                    }
+                    .font(.headline)
+
+                    Toggle("内容を確認し、同意します", isOn: $hasConfirmed)
+                        .font(.headline)
+                        .padding(.vertical, 8)
+                        .accessibilityIdentifier("legalConsentToggle")
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(24)
+            }
+            .safeAreaInset(edge: .bottom) {
+                Button {
+                    onAccept()
+                } label: {
+                    Label("同意して始める", systemImage: "arrow.right.circle.fill")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, minHeight: 54)
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(!hasConfirmed)
+                .padding(.horizontal, 24)
+                .padding(.vertical, 12)
+                .background(.bar)
+                .accessibilityIdentifier("acceptLegalConsentButton")
+            }
+            .background(AppTheme.pageBackground)
+            .navigationBarHidden(true)
+        }
+        .interactiveDismissDisabled()
+        .accessibilityIdentifier("legalConsentView")
+    }
+
+    private func consentPoint(icon: String, title: String, detail: String) -> some View {
+        HStack(alignment: .top, spacing: 16) {
+            Image(systemName: icon)
+                .font(.title2)
+                .foregroundStyle(AppTheme.accent)
+                .frame(width: 36, height: 36)
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.headline)
+                Text(detail)
+                    .font(.body)
+                    .foregroundStyle(AppTheme.mutedInk)
+            }
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
 struct LegalAndSupportSettingsSection: View {
     var body: some View {
         Section("法務・サポート") {
@@ -49,7 +163,7 @@ struct LegalDocumentView: View {
                         .foregroundStyle(AppTheme.ink)
 
                     Text("制定日: \(document.effectiveDate)")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
 
@@ -189,7 +303,7 @@ enum BodyModeLegalDocument {
     }
 
     var effectiveDate: String {
-        "2026年7月27日"
+        "2026年8月13日"
     }
 
     var summary: String {
@@ -237,7 +351,7 @@ enum BodyModeLegalDocument {
         ),
         .init(
             title: "4. AIによる出力",
-            body: "AIによる食事量・栄養の推定、写真比較、トレーニング提案、コメントには誤りが含まれる可能性があります。ユーザーは出力を確認し、自身の判断で修正・利用するものとします。体脂肪率や健康状態を写真だけから断定するものではありません。"
+            body: "AIによる食事量・栄養の推定、写真比較、トレーニング提案、会話、週次・月次コメントには誤りが含まれる可能性があります。食品成分表の値も標準的な参考値であり、個々の商品や調理状態と一致するとは限りません。ユーザーは出力、月次目標案、記憶候補を確認し、自身の判断で修正・利用するものとします。体脂肪率や健康状態を写真だけから断定するものではありません。"
         ),
         .init(
             title: "5. Apple Health・センサーデータ",
@@ -245,7 +359,7 @@ enum BodyModeLegalDocument {
         ),
         .init(
             title: "6. ユーザーの責任",
-            body: "ユーザーは、自身の体調、経験、設備、周囲の安全を確認し、適切な範囲で本サービスを利用します。端末、Apple ID、ローカルAIサーバーおよび記録データの管理もユーザーの責任となります。"
+            body: "ユーザーは、自身の体調、経験、設備、周囲の安全を確認し、適切な範囲で本サービスを利用します。端末、Apple ID、AIサーバーおよび記録データの管理もユーザーの責任となります。"
         ),
         .init(
             title: "7. 禁止事項",
@@ -257,26 +371,30 @@ enum BodyModeLegalDocument {
         ),
         .init(
             title: "9. 外部サービス",
-            body: "本サービスはApple Health、TestFlight、ユーザーが指定したAIサーバーなどの外部サービスと連携する場合があります。外部サービスには各提供者の利用条件とプライバシーポリシーが適用されます。"
+            body: "本サービスはApple Health、TestFlight、設定されたAIサーバー、Google AdMobなどの外部サービスと連携します。外部サービスには各提供者の利用条件とプライバシーポリシーが適用されます。"
         ),
         .init(
-            title: "10. 知的財産",
+            title: "10. 広告",
+            body: "iPhoneアプリに非パーソナライズ広告を表示する場合があります。広告の内容とリンク先は第三者が提供するものであり、BodyModeが商品・サービスを保証するものではありません。不適切な広告はアプリ内から報告できます。"
+        ),
+        .init(
+            title: "11. 知的財産",
             body: "本サービスに関するプログラム、デザイン、文章、商標その他の権利は、権利者に帰属します。ユーザーが記録した文章や写真の権利はユーザーに留保されます。"
         ),
         .init(
-            title: "11. 利用停止",
+            title: "12. 利用停止",
             body: "安全性、保守、法令対応、不可抗力その他やむを得ない事情により、本サービスの全部または一部を変更・停止する場合があります。"
         ),
         .init(
-            title: "12. 保証と責任の範囲",
+            title: "13. 保証と責任の範囲",
             body: "本サービスは、特定の減量、筋肥大、健康改善、競技成績その他の結果を保証しません。法令で認められる範囲において、本サービスの利用または利用不能から生じた間接的・特別な損害について責任を負いません。"
         ),
         .init(
-            title: "13. 規約の変更",
+            title: "14. 規約の変更",
             body: "機能追加、法令変更その他の必要に応じて本規約を変更する場合があります。重要な変更は、アプリ内または公開ページで告知します。"
         ),
         .init(
-            title: "14. 準拠法・管轄",
+            title: "15. 準拠法・管轄",
             body: "本規約は日本法を準拠法とします。本サービスに関する紛争は、法令上認められる範囲で、運営者の所在地を管轄する日本の裁判所を第一審の専属的合意管轄裁判所とします。"
         )
     ]
@@ -284,7 +402,7 @@ enum BodyModeLegalDocument {
     private static let privacySections: [LegalSection] = [
         .init(
             title: "1. 取得・保存する情報",
-            body: "ユーザーが入力または許可した場合に、プロフィール、目的、身体測定、食事、体型写真、トレーニング、睡眠、活動、コンディション、ジム訪問、設定を扱います。初期版ではアプリ内アカウントを作成しません。"
+            body: "ユーザーが入力または許可した場合に、プロフィール、目的、身体測定、食事、体型写真、トレーニング、睡眠、活動、コンディション、ジム訪問、設定を扱います。食事では、読み取った商品コード、商品名、栄養表示の基準量と栄養値を端末内の商品辞書へ保存する場合があります。初期版ではアプリ内アカウントを作成しません。"
         ),
         .init(
             title: "2. 利用目的",
@@ -292,7 +410,7 @@ enum BodyModeLegalDocument {
         ),
         .init(
             title: "3. 端末内保存",
-            body: "BodyModeの記録と設定は、原則としてiPhoneまたはApple Watch内へ保存されます。端末のバックアップ設定によっては、Appleが提供するバックアップへ含まれる場合があります。"
+            body: "BodyModeの記録、設定、バーコード商品辞書、日次提案の完了・スキップ傾向は、原則としてiPhoneまたはApple Watch内へ保存されます。行動傾向の利用は設定から停止・リセットできます。iPhone内の記録ファイルには端末ロックと連動するファイル保護を適用し、BodyModeの記録用フォルダは端末バックアップの対象外にしています。必要な記録は設定画面から書き出して保管してください。"
         ),
         .init(
             title: "4. Apple Health",
@@ -307,35 +425,39 @@ enum BodyModeLegalDocument {
             body: "ユーザーが機能を有効にした場合、ジム訪問の記録やApple Watchでの動作回数・テンポ推定に使用します。これらの情報を広告の選定には使用しません。"
         ),
         .init(
-            title: "7. ローカルAI",
-            body: "AI機能は初期状態では無効です。ユーザーが有効にし、接続先と共有カテゴリを設定した場合だけ、選択されたデータをユーザー指定のAIサーバーへ送信します。送信前に共有カテゴリを変更でき、AIを使わなくても手動記録を利用できます。接続先サーバーでの保存・処理は、そのサーバーの管理者が定める条件に従います。"
+            title: "7. AIサーバー",
+            body: "AI機能は、ユーザーが有効にして画像解析、週次・月次レポートまたはチャットを実行した場合だけ、設定されたAIサーバーへ選択中のデータを送信します。チャットでは入力文、直近の会話、許可カテゴリの記録要約、承認済みの記憶を送ります。月次レビューと翌月目標案は下書きとして表示し、確認・修正後だけ端末へ保存します。記憶候補は自動保存せず、ユーザーが選んだ内容だけ端末へ保存します。現在提供するAIトレーナー用バックエンドは会話や記憶を保存しないステートレス構成ですが、接続先を変更した場合の保存・処理はその管理者の条件に従います。"
         ),
         .init(
             title: "8. 診断情報",
-            body: "アプリは端末内に動作ログとAppleのMetricKitが提供する診断情報を保存する場合があります。これらは自動送信されません。ユーザーが診断ログを書き出し、問い合わせへ添付した場合に限り、提供された範囲で不具合調査に使用します。"
+            body: "アプリは端末内に動作ログとAppleのMetricKitが提供する診断情報を保存する場合があります。Apple Watchでは、ワークアウト・セット・休憩タイマーの操作、HealthKitの状態、iPhoneとの通信結果、重量・回数・RPEなどを最大14日または500件まで一時保存し、ペアリングされたiPhoneへ転送します。iPhone側では最大14日、1,000件、2MiBまで保持します。運営者や第三者へ自動送信せず、設定画面から削除できます。ユーザーが書き出して問い合わせへ添付した場合に限り、提供された範囲で不具合調査に使用します。"
         ),
         .init(
-            title: "9. 広告・追跡",
-            body: "現在のTestFlight版は広告SDKを組み込まず、クロスアプリ追跡を行いません。将来広告を導入する場合は、利用する事業者、送信データ、同意方法を本ポリシーとApp Storeのプライバシー表示へ追記してから有効にします。HealthKitや体型・食事などの機微な情報を広告ターゲティングへ使用しません。"
+            title: "9. 利用分析",
+            body: "利用分析は初期状態では無効です。ユーザーが有効にした場合、画面の選択、記録保存、日次提案の生成・変更・カテゴリ別完了、通知の開封など、使った機能の種類を端末内へ最大90日または1,000件保存します。体重などの入力値、写真、食事内容、心拍、位置情報、自由記述、AI本文、個人識別子は利用分析へ含めず、自動送信もしません。設定画面から書き出し、削除、無効化ができます。"
         ),
         .init(
-            title: "10. 第三者提供",
-            body: "法令に基づく場合を除き、ユーザーの情報を第三者へ販売しません。ユーザーが明示的に選択したAI接続、AppleのOS機能、共有操作など、機能提供に必要な場合のみ情報が移動します。"
+            title: "10. 広告・追跡",
+            body: "iPhone版はGoogle AdMob SDKでバナー広告を表示します。広告は非パーソナライズとし、クロスアプリ追跡の許可を求めません。配信のため、IPアドレス、IPアドレスから推定される概算位置、端末・アプリの概要情報、SDKの診断・パフォーマンス情報、広告の表示・操作情報がGoogleに送信または生成される場合があります。HealthKit、身体値、心拍、睡眠、食事、写真、トレーニング、目標、BodyModeで取得したGPS・ジム位置を広告選定やマーケティングに使用・送信しません。必要な地域ではGoogleの同意画面を表示し、設定から再表示できます。"
         ),
         .init(
-            title: "11. 保持・削除・書き出し",
-            body: "端末内データは、ユーザーが個別削除、全データ削除、またはアプリ削除を行うまで保持されます。設定画面から全記録をJSONで書き出し、全データを削除できます。Apple Healthに保存された情報は、ヘルスケアアプリ側でも管理してください。"
+            title: "11. 第三者提供",
+            body: "法令に基づく場合を除き、ユーザーの情報を第三者へ販売しません。AI接続、AppleのOS機能、共有操作、Google AdMobによる広告配信など、説明した機能提供に必要な範囲で情報が端末外へ移動する場合があります。"
         ),
         .init(
-            title: "12. 安全管理",
+            title: "12. 保持・削除・書き出し",
+            body: "記録とバーコード商品辞書は、ユーザーが個別削除、全データ削除、またはアプリ削除を行うまで端末内に保持されます。AIトレーナーの会話は最大200件、承認済みの記憶は最大100件を端末内へ保持し、各画面または全データ削除で消去できます。診断ログと利用分析には別途保持上限があります。設定画面から商品辞書を含む全記録をJSONで書き出せます。Apple Healthに保存された情報は、ヘルスケアアプリ側でも管理してください。"
+        ),
+        .init(
+            title: "13. 安全管理",
             body: "不要な外部送信を避け、権限を機能ごとに求め、AIへ送るデータをユーザーが選べるようにします。ユーザーは端末のパスコード、Apple ID、AIサーバーの認証情報を適切に管理してください。"
         ),
         .init(
-            title: "13. 子どもの利用",
+            title: "14. 子どもの利用",
             body: "年齢や健康状態に応じて、保護者または専門家の助言のもとで利用してください。本サービスは子どもを対象とした広告プロファイリングを行いません。"
         ),
         .init(
-            title: "14. 変更・問い合わせ",
+            title: "15. 変更・問い合わせ",
             body: "機能や取扱情報の変更に応じて本ポリシーを更新します。重要な変更はアプリ内または公開ページで告知します。問い合わせ方法は設定画面の「サポート」に表示します。"
         )
     ]
@@ -349,6 +471,8 @@ struct LegalSection: Identifiable {
 }
 
 enum LegalConfiguration {
+    static let currentConsentVersion = "2026-08-13-food-monthly"
+
     static var termsURL: URL? {
         configuredURL(for: "BodyModeTermsURL")
     }
@@ -390,3 +514,15 @@ enum LegalConfiguration {
     }
 }
 
+enum LegalConsentStore {
+    static let acceptedVersionKey = "bodymode.legal.acceptedVersion"
+
+    static func acceptCurrent() {
+        UserDefaults.standard.set(LegalConfiguration.currentConsentVersion, forKey: acceptedVersionKey)
+        UsageAnalytics.shared.record(.legalAccepted)
+    }
+
+    static func reset() {
+        UserDefaults.standard.removeObject(forKey: acceptedVersionKey)
+    }
+}

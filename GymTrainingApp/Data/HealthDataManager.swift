@@ -31,7 +31,7 @@ final class HealthDataManager: ObservableObject {
 
 
         if !isUITestMode,
-           let data = UserDefaults.standard.data(forKey: recoveryHistoryKey),
+           let data = ProtectedDataStore.shared.data(forKey: recoveryHistoryKey),
            let stored = try? JSONDecoder().decode([DailyRecoveryTrendRecord].self, from: data) {
             recoveryHistory = stored
         }
@@ -649,7 +649,7 @@ final class HealthDataManager: ObservableObject {
             .filter { $0.date >= cutoff }
             .sorted { $0.date > $1.date }
         if let data = try? JSONEncoder().encode(recoveryHistory) {
-            UserDefaults.standard.set(data, forKey: recoveryHistoryKey)
+            try? ProtectedDataStore.shared.set(data, forKey: recoveryHistoryKey)
         }
     }
 

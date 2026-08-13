@@ -37,10 +37,10 @@ struct WorkoutSummaryView: View {
                                 Text(exercise.exercise.name)
                                     .font(.headline)
                                 Text("計画 \(exercise.completedPlannedSetCount)/\(exercise.plannedSetCount)セット完了 / 達成 \(exercise.achievedPlannedSetCount)/\(exercise.plannedSetCount)")
-                                    .font(.caption)
+                                    .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                                 Text("目標差 \(AppFormatters.signedVolume(exercise.volumeDelta, unit: appStore.userProfile.weightUnit))")
-                                    .font(.caption.bold())
+                                    .font(.footnote.bold())
                                     .foregroundStyle(exercise.volumeDelta >= 0 ? AppTheme.positive : AppTheme.orange)
                             }
 
@@ -74,7 +74,7 @@ struct SummaryMetric: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
             Text(value)
                 .font(.title2.bold())

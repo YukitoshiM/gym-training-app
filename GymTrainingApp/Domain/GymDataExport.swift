@@ -20,6 +20,14 @@ struct GymDataExport: Codable {
     var gymVisits: [GymVisit]
     var subjectiveRecoveryEntries: [SubjectiveRecoveryEntry]
     var aiTransmissionHistory: [AITransmissionRecord]
+    var coachMemories: [CoachMemory]
+    var coachChatMessages: [CoachChatMessage]
+    var dailyRecommendations: [DailyRecommendation]
+    var recommendationRevisions: [RecommendationRevision]
+    var dailyReviews: [DailyReview]
+    var targetAdjustmentProposals: [TargetAdjustmentProposal]
+    var barcodeFoodProducts: [BarcodeFoodProduct]
+    var dailyWorkoutSelection: DailyWorkoutSelection?
 }
 
 struct GymDataExportDocument: FileDocument {

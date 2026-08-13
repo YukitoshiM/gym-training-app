@@ -51,11 +51,11 @@ private struct BodyMetricRow: View {
 
                     if let latestEntry {
                         Text(AppFormatters.shortDate.string(from: latestEntry.recordedAt))
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         Text("未記録")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
@@ -75,11 +75,11 @@ private struct BodyMetricRow: View {
                     if let latestEntry,
                        let delta = goal.delta(from: latestEntry.value) {
                         Text(deltaText(delta))
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         Text("目標未設定")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }

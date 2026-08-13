@@ -76,10 +76,10 @@ private struct SetQualityBreakdownCard: View {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             Text(dimension.title)
-                                .font(.caption.bold())
+                                .font(.footnote.bold())
                             Spacer()
                             Text(dimension.score.map { "\(Int($0 * 100))%" } ?? "未取得")
-                                .font(.caption.monospacedDigit())
+                                .font(.footnote.monospacedDigit())
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
                         ProgressView(value: dimension.score ?? 0)
@@ -87,7 +87,7 @@ private struct SetQualityBreakdownCard: View {
                     }
                 }
                 Text("取得できた重量・回数・テンポ・相対可動域・RPEだけで算出し、欠測値は0点にしません。")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -111,14 +111,14 @@ private struct ConditionComparisonCard: View {
                     ForEach(insights.prefix(8)) { insight in
                         HStack(alignment: .top) {
                             Text(insight.category)
-                                .font(.caption.bold())
+                                .font(.footnote.bold())
                                 .foregroundStyle(AppTheme.accent)
                                 .frame(width: 48, alignment: .leading)
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(insight.title)
                                     .font(.subheadline.bold())
                                 Text(insight.detail)
-                                    .font(.caption)
+                                    .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
                         }
@@ -141,15 +141,15 @@ private struct PlateauEvidenceCard: View {
                 ForEach(factors) { factor in
                     HStack(alignment: .top) {
                         Text(factor.title)
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .frame(width: 62, alignment: .leading)
                         Text(factor.detail)
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
                 Text("同時に変化した項目を候補として示すもので、原因や医療状態を断定しません。")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -164,7 +164,7 @@ private struct TrainingLoadOverviewCard: View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
                 Text("直近7日")
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(AppTheme.accent)
                 Text("トレーニング負荷")
                     .font(.title2.bold())
@@ -201,7 +201,7 @@ private struct SensorAnalysisMetric: View {
         CardContainer {
             VStack(alignment: .leading, spacing: 7) {
                 Text(title)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
                 Text(value)
                     .font(.title2.bold())
@@ -210,7 +210,7 @@ private struct SensorAnalysisMetric: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                 Text(detail)
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -228,7 +228,7 @@ private struct AnalysisCompactValue: View {
                 .font(.headline)
                 .monospacedDigit()
             Text(title)
-                .font(.caption2)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
         }
         .frame(maxWidth: .infinity)
@@ -247,7 +247,7 @@ private struct WeeklyComparisonCard: View {
                 ComparisonBar(title: "前週", value: analytics.previousWeekVolume, maximum: maximumVolume, tint: AppTheme.blue)
 
                 Text("ボリュームは完了セットの重量 × 回数。種目構成が大きく違う週は単純比較しすぎないでください。")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -268,10 +268,10 @@ private struct ComparisonBar: View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
                 Text(title)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                 Spacer()
                 Text(Int(value).formatted() + " kg")
-                    .font(.caption.monospacedDigit())
+                    .font(.footnote.monospacedDigit())
             }
             GeometryReader { proxy in
                 ZStack(alignment: .leading) {
@@ -298,11 +298,11 @@ private struct MovementQualityCard: View {
                     .font(.subheadline)
                 if analytics.motionCorrectionCount > 0 {
                     Text("手入力との差があったセット \(analytics.motionCorrectionCount)件")
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(AppTheme.orange)
                 }
                 Text("手首の動きだけでは種目やフォームを断定できません。推定回数は確認してから反映します。")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -326,7 +326,7 @@ private struct PlateauCard: View {
                             .font(.subheadline.bold())
                     }
                     Text("直近3回で最大使用重量が伸びていない候補です。フォーム、回数、RPEも合わせて判断してください。")
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -346,7 +346,7 @@ private struct TrainingSuggestionCard: View {
                 Text(analytics.suggestion(for: goal))
                     .font(.subheadline)
                 Text("体調や痛みがある場合は数値より本人の感覚を優先してください。")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }

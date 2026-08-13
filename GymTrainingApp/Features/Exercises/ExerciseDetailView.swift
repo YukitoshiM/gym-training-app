@@ -9,29 +9,48 @@ struct ExerciseDetailView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(exercise.name)
                         .font(.title2.bold())
-                    Text("\(exercise.primaryMuscle.displayName)・\(exercise.equipment.displayName)")
-                        .foregroundStyle(AppTheme.mutedInk)
+
+                    HStack(spacing: 12) {
+                        Label(exercise.primaryMuscle.displayName, systemImage: exercise.primaryMuscle.systemImage)
+                        Label(exercise.equipment.displayName, systemImage: exercise.equipment.systemImage)
+                    }
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppTheme.mutedInk)
+
+                    ExerciseIllustrationView(exercise: exercise)
+                        .padding(.top, 6)
                 }
                 .padding(.vertical, 8)
             }
 
             Section("対象部位") {
-                LabeledContent("メイン", value: exercise.primaryMuscle.displayName)
+                LabeledContent {
+                    Text(exercise.primaryMuscle.displayName)
+                } label: {
+                    Label("メイン", systemImage: exercise.primaryMuscle.systemImage)
+                }
 
                 if !exercise.secondaryMuscles.isEmpty {
-                    LabeledContent(
-                        "サブ",
-                        value: exercise.secondaryMuscles.map(\.displayName).joined(separator: "、")
-                    )
+                    LabeledContent {
+                        Text(exercise.secondaryMuscles.map(\.displayName).joined(separator: "、"))
+                    } label: {
+                        Label("サブ", systemImage: "figure.mixed.cardio")
+                    }
                 }
             }
 
             Section("器具") {
-                Text(exercise.equipment.displayName)
+                Label(exercise.equipmentSetupName, systemImage: exercise.equipment.systemImage)
+                Text(exercise.equipment.usageDescription)
+                    .font(.subheadline)
+                    .foregroundStyle(AppTheme.mutedInk)
             }
 
             Section("やり方") {
+                Label(exercise.movementName, systemImage: exercise.movementSystemImage)
+                    .font(.headline)
                 Text(exercise.instruction)
+                    .lineSpacing(3)
             }
         }
         .scrollContentBackground(.hidden)

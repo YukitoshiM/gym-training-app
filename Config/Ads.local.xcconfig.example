@@ -1,0 +1,4 @@
+// Create an AdMob iOS app and an anchored adaptive banner unit, then replace these values.
+// `/$()` prevents xcconfig from treating the second slash as a comment.
+BODYMODE_ADMOB_APP_ID = ca-app-pub-0000000000000000~0000000000
+BODYMODE_ADMOB_BANNER_AD_UNIT_ID = ca-app-pub-0000000000000000/$()0000000000

@@ -1,40 +1,209 @@
 import SwiftUI
 
 struct HomeView: View {
+    static let detailsExpandedKey = "bodymode.home.detailsExpanded"
+
+    @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject private var appStore: AppStore
     @EnvironmentObject private var watchSyncService: WatchPlanSyncService
+    @EnvironmentObject private var healthDataManager: HealthDataManager
+    @EnvironmentObject private var aiTrainerBackgroundService: AITrainerBackgroundService
+    @AppStorage(DailyRecommendationNotificationManager.enabledKey) private var notificationsEnabled = false
+    @AppStorage(DailyRecommendationPersonalizationStore.enabledKey) private var behaviorLearningEnabled = true
+    @State private var personalizationResetNotice = false
     @State private var activeSession: WorkoutSession?
     @State private var isShowingGoalPicker = false
     @State private var isShowingSettings = false
+    @AppStorage(Self.detailsExpandedKey) private var isShowingDetails = false
+    @State private var omakaseSheet: OmakaseHomeSheet?
+    @State private var isPreparingRecommendation = false
+
+    let onCreatePlan: () -> Void
+    let onOpenPlans: () -> Void
+    let onOpenRecord: () -> Void
+
+    init(
+        onCreatePlan: @escaping () -> Void = {},
+        onOpenPlans: @escaping () -> Void = {},
+        onOpenRecord: @escaping () -> Void = {}
+    ) {
+        self.onCreatePlan = onCreatePlan
+        self.onOpenPlans = onOpenPlans
+        self.onOpenRecord = onOpenRecord
+    }
 
     private var nextPlan: TrainingPlan? {
         appStore.todayPlan
     }
 
+    private var beginnerJourney: BeginnerJourneyProgress {
+        BeginnerJourneyProgress(
+            hasPlan: !appStore.plans.isEmpty,
+            completedWorkoutCount: appStore.workoutHistory.filter(\.isCompleted).count
+        )
+    }
+
     var body: some View {
+        recommendationObservedContent
+    }
+
+    private var navigationContent: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    if let recommendation = appStore.dailyRecommendation() {
+                        OmakaseHomeDashboard(
+                            recommendation: recommendation,
+                            progress: progress(for:),
+                            isAIRefreshing: aiTrainerBackgroundService.isSending
+                                && recommendation.aiEvaluatedAt == nil,
+                            isAIEnabled: appStore.aiSettings.isEnabled,
+                            coachName: appStore.userProfile.coachPersona.displayName,
+                            coachRole: appStore.userProfile.coachType.displayName,
+                            coachAvatarName: appStore.userProfile.coachPersona.assetName,
+                            review: appStore.dailyReview(),
+                            latestRevision: appStore.latestRecommendationRevision(),
+                            targetAdjustment: appStore.pendingTargetAdjustmentProposal,
+                            onOpen: openDailyAction,
+                            onToggleManual: { appStore.toggleManualDailyAction($0.id) },
+                            onWhy: { omakaseSheet = .why($0) },
+                            onReplace: replaceDailyAction,
+                            onQuickMeal: { omakaseSheet = .meal },
+                            onQuickWeight: { omakaseSheet = .bodyMetric(.bodyWeight) },
+                            onQuickPhoto: { omakaseSheet = .bodyPhoto },
+                            onOpenAICoach: { openAICoach(for: recommendation) },
+                            onAcceptTargetAdjustment: { appStore.acceptTargetAdjustmentProposal($0.id) },
+                            onDeclineTargetAdjustment: { appStore.declineTargetAdjustmentProposal($0.id) }
+                        )
+                    } else {
+                        HStack(spacing: 12) {
+                            ProgressView()
+                            Text("今日の3つを準備しています")
+                                .font(.headline)
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 120)
+                        .accessibilityIdentifier("omakaseLoading")
+                    }
+
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            isShowingDetails.toggle()
+                        }
+                    } label: {
+                        HStack {
+                            Label("詳しく見る", systemImage: "slider.horizontal.3")
+                                .font(.headline)
+                            Spacer()
+                            Image(systemName: isShowingDetails ? "chevron.up" : "chevron.down")
+                        }
+                        .foregroundStyle(AppTheme.ink)
+                        .frame(minHeight: 48)
+                    }
+                    .buttonStyle(.plain)
+                    .frame(maxWidth: .infinity, minHeight: 48)
+                    .contentShape(Rectangle())
+                    .accessibilityIdentifier("omakaseDetailsButton")
+                    .accessibilityValue(isShowingDetails ? "展開中" : "閉じています")
+
+                    if isShowingDetails {
+                        Toggle("行動通知", isOn: $notificationsEnabled)
+                            .font(.headline)
+                            .onChange(of: notificationsEnabled) { _, enabled in
+                                Task {
+                                    await DailyRecommendationNotificationManager.setEnabled(
+                                        enabled,
+                                        recommendation: appStore.dailyRecommendation()
+                                    )
+                                }
+                            }
+
+                        if notificationsEnabled {
+                            Text(DailyRecommendationNotificationManager.optimizationSummary)
+                                .font(.footnote)
+                                .foregroundStyle(AppTheme.mutedInk)
+                        }
+
+                        Toggle("行動パターンを学習", isOn: $behaviorLearningEnabled)
+                            .font(.headline)
+                            .onChange(of: behaviorLearningEnabled) { _, enabled in
+                                DailyRecommendationPersonalizationStore.setEnabled(enabled)
+                            }
+                            .accessibilityIdentifier("behaviorLearningToggle")
+
+                        Text(
+                            behaviorLearningEnabled
+                                ? DailyRecommendationPersonalizationStore.summary(from: appStore.dailyRecommendations)
+                                : "学習は停止中です。過去の記録自体は削除されません。"
+                        )
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+
+                        if behaviorLearningEnabled {
+                            let evaluation = DailyRecommendationPersonalizationStore.evaluation(
+                                recommendations: appStore.dailyRecommendations,
+                                revisions: appStore.recommendationRevisions
+                            )
+                            Text(
+                                "完了 \(evaluation.completionRate.formatted(.percent.precision(.fractionLength(0))))  "
+                                    + "着手 \(evaluation.adoptionRate.formatted(.percent.precision(.fractionLength(0))))  "
+                                    + "AI変更 \(evaluation.aiChangeRate.formatted(.percent.precision(.fractionLength(0))))"
+                            )
+                            .font(.footnote.monospacedDigit())
+                            .foregroundStyle(AppTheme.mutedInk)
+                            .accessibilityIdentifier("dailyRecommendationEvaluation")
+                        }
+
+                        Button {
+                            DailyRecommendationPersonalizationStore.reset()
+                            personalizationResetNotice = true
+                            refreshDailyRecommendation(force: true)
+                        } label: {
+                            Label("提案学習だけリセット", systemImage: "arrow.counterclockwise")
+                        }
+                        .disabled(!behaviorLearningEnabled)
+                        .accessibilityIdentifier("resetBehaviorLearningButton")
+
+                        if personalizationResetNotice {
+                            Label("今日から学び直します", systemImage: "checkmark.circle.fill")
+                                .font(.footnote)
+                                .foregroundStyle(AppTheme.positive)
+                        }
+
                     if let liveWorkout = watchSyncService.liveWatchWorkout {
                         HomeSectionHeader(
-                            title: "進行中",
-                            subtitle: "Apple Watchの記録をiPhoneでも確認できます"
+                            title: "進行中"
                         )
                         WatchLiveWorkoutCard(snapshot: liveWorkout)
                     }
 
                     TodayTrainingCard(
                         plan: nextPlan,
-                        completedSessions: appStore.workoutSessions()
-                    ) {
+                        completedSessions: appStore.workoutSessions(),
+                        onStart: {
                         if let nextPlan {
                             activeSession = appStore.makeWorkoutSession(from: nextPlan)
+                        }
+                        },
+                        onCreatePlan: onCreatePlan
+                    )
+
+                    if appStore.userProfile.experienceLevel == .beginner {
+                        if beginnerJourney.isFoundationComplete {
+                            BeginnerNextStageCard(
+                                profile: appStore.userProfile,
+                                completedWorkoutCount: beginnerJourney.completedWorkoutCount,
+                                onAction: onOpenPlans
+                            )
+                        } else {
+                            BeginnerJourneyCard(
+                                progress: beginnerJourney,
+                                onAction: performBeginnerJourneyAction
+                            )
                         }
                     }
 
                     HomeSectionHeader(
-                        title: "今日の状態",
-                        subtitle: "トレーニング前にコンディションを確認"
+                        title: "今日の状態"
                     )
 
                     NavigationLink {
@@ -46,11 +215,6 @@ struct HomeView: View {
                     .accessibilityElement(children: .combine)
                     .accessibilityIdentifier("conditionSummaryCard")
 
-                    HomeSectionHeader(
-                        title: "今日の記録",
-                        subtitle: "未完了の項目を上から確認"
-                    )
-
                     DailyRecordChecklistCard(
                         bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
                         waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
@@ -58,18 +222,9 @@ struct HomeView: View {
                             meals: appStore.mealEntries(),
                             goals: appStore.userProfile.nutritionGoals
                         ),
-                        bodyPhotoCount: appStore.bodyPhotoEntries().count,
-                        workoutCount: appStore.workoutSessions().count
-                    )
-
-                    DailyRecordStatusCard(
-                        mealCount: appStore.mealEntries().count,
-                        bodyPhotoCount: appStore.bodyPhotoEntries().count
-                    )
-
-                    HomeSectionHeader(
-                        title: "進捗",
-                        subtitle: "身体の変化と週次コメント"
+                        bodyPhotoCount: appStore.bodyPhotoSet() == nil ? 0 : 1,
+                        workoutCount: appStore.workoutSessions().count,
+                        showsQuickActions: true
                     )
 
                     BodyKPIDashboard(
@@ -79,14 +234,17 @@ struct HomeView: View {
                         tint: metricTint(for:)
                     )
 
-                    AIInsightStatusCard(insight: appStore.aiInsights.first { $0.insightType == .weekly })
-
-                    HomeSectionHeader(
-                        title: "目標と実績",
-                        subtitle: "現在の目的と記録件数"
+                    AIInsightStatusCard(
+                        insight: appStore.aiInsights.first { $0.insightType == .weekly },
+                        persona: appStore.userProfile.coachPersona,
+                        coachRole: appStore.userProfile.coachType.displayName
                     )
 
-                    GoalActionCard(goalType: appStore.userProfile.goalType) {
+                    HomeSectionHeader(
+                        title: "目標と実績"
+                    )
+
+                    GoalActionCard(profile: appStore.userProfile) {
                         isShowingGoalPicker = true
                     }
 
@@ -95,6 +253,8 @@ struct HomeView: View {
                         CompactStat(title: "履歴", value: "\(appStore.workoutHistory.count)", suffix: "件", tint: AppTheme.orange)
                         CompactStat(title: "直近", value: latestAchievementText, suffix: "", tint: AppTheme.accent)
                     }
+                    }
+
                 }
                 .padding(16)
                 .padding(.bottom, 96)
@@ -108,6 +268,8 @@ struct HomeView: View {
                         isShowingSettings = true
                     } label: {
                         Image(systemName: "gearshape")
+                            .font(.title3)
+                            .frame(width: 44, height: 44)
                     }
                     .accessibilityLabel("設定")
                     .accessibilityIdentifier("settingsButton")
@@ -119,7 +281,17 @@ struct HomeView: View {
             .sheet(isPresented: $isShowingGoalPicker) {
                 GoalPickerView(selectedGoal: appStore.userProfile.goalType) { goalType in
                     var profile = appStore.userProfile
+                    let usedRecommendedCoach = profile.coachType == CoachType.recommended(for: profile.goalType)
                     profile.goalType = goalType
+                    if usedRecommendedCoach {
+                        profile.coachType = CoachType.recommended(for: goalType)
+                    }
+                    if !OutcomeStyle.available(for: goalType).contains(profile.outcomeStyle) {
+                        profile.outcomeStyle = OutcomeStyle.recommended(for: goalType)
+                    }
+                    if !goalType.supportsFocusMuscles {
+                        profile.focusMuscles = []
+                    }
                     appStore.saveUserProfile(profile)
                     isShowingGoalPicker = false
                 }
@@ -132,7 +304,232 @@ struct HomeView: View {
                     appearanceSettings: appStore.appearanceSettings
                 )
             }
+            .sheet(item: $omakaseSheet) { sheet in
+                switch sheet {
+                case .meal:
+                    MealListView(startsWithEditor: true)
+                case .bodyMetric(let kind):
+                    BodyMetricEntryEditorView(kind: kind)
+                case .bodyPhoto:
+                    BodyPhotoListView(startsWithEditor: true)
+                case .condition:
+                    ConditionDashboardView()
+                case .why(let action):
+                    if let recommendation = appStore.dailyRecommendation() {
+                        DailyActionWhyView(
+                            action: action,
+                            recommendation: recommendation,
+                            latestRevision: appStore.latestRecommendationRevision(),
+                            coachPersona: appStore.userProfile.coachPersona
+                        )
+                    }
+                }
+            }
         }
+    }
+
+    private var recommendationObservedContent: some View {
+        navigationContent
+            .task {
+                await prepareDailyRecommendation()
+            }
+            .onChange(of: scenePhase) { _, phase in
+                handleScenePhaseChange(phase)
+            }
+            .onChange(of: recommendationProgressToken) {
+                guard !isPreparingRecommendation else { return }
+                refreshDailyRecommendation()
+            }
+            .onChange(of: recommendationRuleToken) {
+                refreshDailyRecommendation(force: true)
+            }
+            .onChange(of: appStore.dailyRecommendations) {
+                reconcileRecommendationOutput()
+            }
+    }
+
+    private var recommendationProgressToken: RecommendationProgressToken {
+        RecommendationProgressToken(
+            health: healthDataManager.snapshot,
+            workouts: appStore.workoutHistory,
+            meals: appStore.mealEntries,
+            bodyMetrics: appStore.bodyMetricEntries,
+            bodyPhotos: appStore.bodyPhotoEntries,
+            recovery: appStore.subjectiveRecoveryEntries
+        )
+    }
+
+    private var recommendationRuleToken: RecommendationRuleToken {
+        RecommendationRuleToken(
+            plans: appStore.plans,
+            selection: appStore.dailyWorkoutSelection,
+            profile: appStore.userProfile
+        )
+    }
+
+    private var readinessAssessment: ReadinessAssessment {
+        healthDataManager.readinessAssessment(
+            recentWorkouts: appStore.workoutHistory,
+            subjectiveRecovery: appStore.todaySubjectiveRecovery
+        )
+    }
+
+    private func handleScenePhaseChange(_ phase: ScenePhase) {
+        guard phase == .active else { return }
+        Task {
+            await prepareDailyRecommendation()
+        }
+    }
+
+    private func progress(for action: DailyAction) -> DailyActionProgress {
+        appStore.progress(
+            for: action,
+            healthSnapshot: healthDataManager.snapshot,
+            readinessAssessment: readinessAssessment
+        )
+    }
+
+    private func prepareDailyRecommendation() async {
+        guard !isPreparingRecommendation else { return }
+        isPreparingRecommendation = true
+        defer { isPreparingRecommendation = false }
+        let immediate = appStore.refreshDailyRecommendation(
+            healthSnapshot: healthDataManager.snapshot,
+            readinessAssessment: readinessAssessment
+        )
+        DailyRecommendationNotificationManager.schedule(recommendation: immediate)
+        syncRecommendationToWatch(immediate)
+        if appStore.sensorSettings.healthIntegrationEnabled {
+            await healthDataManager.refresh()
+        }
+        refreshDailyRecommendation()
+    }
+
+    private func refreshDailyRecommendation(force: Bool = false) {
+        let recommendation = appStore.refreshDailyRecommendation(
+            healthSnapshot: healthDataManager.snapshot,
+            readinessAssessment: readinessAssessment,
+            force: force
+        )
+        DailyRecommendationNotificationManager.schedule(recommendation: recommendation)
+        syncRecommendationToWatch(recommendation)
+        requestDailyAIAnalysisIfNeeded(recommendation)
+    }
+
+    private func reconcileRecommendationOutput() {
+        guard !isPreparingRecommendation,
+              appStore.dailyRecommendation() != nil else { return }
+        let recommendation = appStore.refreshDailyRecommendation(
+            healthSnapshot: healthDataManager.snapshot,
+            readinessAssessment: readinessAssessment
+        )
+        DailyRecommendationNotificationManager.schedule(recommendation: recommendation)
+        syncRecommendationToWatch(recommendation)
+    }
+
+    private func syncRecommendationToWatch(_ recommendation: DailyRecommendation) {
+        watchSyncService.syncDailyRecommendationIfPossible(
+            plans: appStore.plans,
+            profile: appStore.userProfile,
+            sensorSettings: appStore.sensorSettings,
+            appearanceSettings: appStore.appearanceSettings,
+            recommendation: recommendation
+        )
+    }
+
+    private func requestDailyAIAnalysisIfNeeded(_ recommendation: DailyRecommendation) {
+        #if DEBUG
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil,
+           !ProcessInfo.processInfo.arguments.contains("--stub-ai-trainer") {
+            return
+        }
+        #endif
+        guard appStore.shouldRequestDailyAIAnalysis(), !aiTrainerBackgroundService.isSending else { return }
+        let context = CoachContextBuilder().build(
+            profile: appStore.userProfile,
+            sharing: appStore.aiSettings.dataSharing,
+            bodyMetrics: appStore.bodyMetricEntries,
+            bodyMetricGoals: appStore.bodyMetricGoals,
+            meals: appStore.mealEntries,
+            bodyPhotos: appStore.bodyPhotoEntries,
+            workouts: appStore.workoutHistory,
+            gymVisits: appStore.gymVisits,
+            subjectiveRecovery: appStore.subjectiveRecoveryEntries,
+            healthSnapshot: healthDataManager.snapshot,
+            recoveryHistory: healthDataManager.recoveryHistory,
+            memories: appStore.coachMemories,
+            insights: appStore.aiInsights
+        )
+        let request = CoachChatRequest(
+            coachID: appStore.userProfile.coachType.rawValue,
+            message: appStore.dailyRecommendationPrompt(for: recommendation),
+            context: context,
+            recentMessages: []
+        )
+        let transmission = AITransmissionRecord(
+            purpose: "日次提案の点検",
+            sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
+            itemCount: context.itemCount
+        )
+        appStore.saveAITransmission(transmission)
+        Task { @MainActor in
+            do {
+                try await aiTrainerBackgroundService.submitDailyRecommendation(
+                    payload: request,
+                    transmissionID: transmission.id,
+                    settings: appStore.aiSettings,
+                    date: recommendation.date
+                )
+                appStore.markDailyRecommendationAIRequested(at: recommendation.date)
+            } catch {
+                appStore.updateAITransmission(id: transmission.id, status: .failed)
+                AppDiagnostics.shared.record(
+                    error: error,
+                    category: "daily_recommendation.ai",
+                    message: "Failed to queue daily recommendation analysis"
+                )
+            }
+        }
+    }
+
+    private func openDailyAction(_ action: DailyAction) {
+        appStore.markDailyActionAdopted(action.id)
+        switch action.destination {
+        case .workout(let planID):
+            let plan = planID.flatMap { id in appStore.plans.first { $0.id == id } } ?? appStore.todayPlan
+            if let plan {
+                activeSession = appStore.makeWorkoutSession(from: plan)
+            } else {
+                onCreatePlan()
+            }
+        case .steps, .condition:
+            omakaseSheet = .condition
+        case .meal:
+            omakaseSheet = .meal
+        case .bodyMetric(let kind):
+            omakaseSheet = .bodyMetric(kind)
+        case .bodyPhoto:
+            omakaseSheet = .bodyPhoto
+        case .none:
+            appStore.toggleManualDailyAction(action.id)
+        }
+    }
+
+    private func replaceDailyAction(_ action: DailyAction) {
+        appStore.replaceDailyAction(
+            action.id,
+            healthSnapshot: healthDataManager.snapshot,
+            readinessAssessment: readinessAssessment
+        )
+    }
+
+    private func openAICoach(for recommendation: DailyRecommendation) {
+        guard let action = recommendation.activeActions.first(where: {
+            $0.status != .completed && $0.status != .skipped
+        }) ?? recommendation.activeActions.first else {
+            return
+        }
+        omakaseSheet = .why(action)
     }
 
     private var latestAchievementText: String {
@@ -150,48 +547,142 @@ struct HomeView: View {
         case .bodyFatPercentage: AppTheme.purple
         }
     }
+
+    private func performBeginnerJourneyAction() {
+        switch beginnerJourney.nextAction {
+        case .createPlan:
+            onCreatePlan()
+        case .startWorkout:
+            onOpenRecord()
+        case .explorePlans:
+            onOpenPlans()
+        }
+    }
+}
+
+private struct RecommendationProgressToken: Equatable {
+    var health: DailyHealthSnapshot
+    var workouts: [WorkoutSession]
+    var meals: [MealEntry]
+    var bodyMetrics: [BodyMetricEntry]
+    var bodyPhotos: [BodyPhotoEntry]
+    var recovery: [SubjectiveRecoveryEntry]
+}
+
+private struct RecommendationRuleToken: Equatable {
+    var plans: [TrainingPlan]
+    var selection: DailyWorkoutSelection?
+    var profile: UserProfile
+}
+
+private enum OmakaseHomeSheet: Identifiable {
+    case meal
+    case bodyMetric(BodyMetricKind)
+    case bodyPhoto
+    case condition
+    case why(DailyAction)
+
+    var id: String {
+        switch self {
+        case .meal: "meal"
+        case .bodyMetric(let kind): "bodyMetric-\(kind.rawValue)"
+        case .bodyPhoto: "bodyPhoto"
+        case .condition: "condition"
+        case .why(let action): "why-\(action.id.uuidString)"
+        }
+    }
+}
+
+private struct BeginnerNextStageCard: View {
+    let profile: UserProfile
+    let completedWorkoutCount: Int
+    let onAction: () -> Void
+
+    private var progress: BeginnerJourneyProgress {
+        BeginnerJourneyProgress(hasPlan: true, completedWorkoutCount: completedWorkoutCount)
+    }
+
+    var body: some View {
+        Button(action: onAction) {
+            HStack(spacing: 12) {
+                IconBadge(systemImage: "sparkles", tint: AppTheme.accent)
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("BEGINNER LEVEL \(progress.level)")
+                        .font(.footnote.bold())
+                        .foregroundStyle(AppTheme.positive)
+                    Text("次は目的別メニュー")
+                        .font(.headline)
+                        .foregroundStyle(AppTheme.ink)
+                    Text("\(profile.outcomeStyle.displayName)・\(profile.availableEquipment.count)種類の器具")
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .lineLimit(1)
+                }
+
+                Spacer(minLength: 6)
+
+                VStack(alignment: .trailing, spacing: 4) {
+                    Text("\(completedWorkoutCount)回")
+                        .font(.subheadline.bold())
+                        .foregroundStyle(AppTheme.accent)
+                    Image(systemName: "chevron.right")
+                        .font(.footnote.bold())
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+            }
+            .padding(14)
+            .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            .overlay(
+                RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                    .stroke(AppTheme.accent.opacity(0.35), lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier("beginnerNextStageCard")
+        .overlay(alignment: .bottom) {
+            if progress.nextLevelWorkoutTarget != nil {
+                ProgressView(value: progress.levelProgressValue)
+                    .tint(AppTheme.accent)
+                    .padding(.horizontal, 14)
+                    .offset(y: -4)
+            }
+        }
+    }
 }
 
 private struct HomeSectionHeader: View {
     let title: String
-    let subtitle: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(title)
-                .font(.headline)
-                .foregroundStyle(AppTheme.ink)
-
-            Text(subtitle)
-                .font(.caption)
-                .foregroundStyle(AppTheme.mutedInk)
-        }
+        Text(title)
+            .font(.title3.bold())
+            .foregroundStyle(AppTheme.ink)
         .padding(.top, 4)
     }
 }
 
 private struct GoalActionCard: View {
-    let goalType: GoalType
+    let profile: UserProfile
     let onEdit: () -> Void
 
     var body: some View {
         Button(action: onEdit) {
             HStack(spacing: 12) {
-                IconBadge(systemImage: "scope", tint: AppTheme.accent)
+                IconBadge(systemImage: profile.outcomeStyle.systemImage, tint: AppTheme.accent)
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("現在の目的")
-                        .font(.caption.bold())
+                    Text("目的・目標")
+                        .font(.footnote.bold())
                         .foregroundStyle(AppTheme.mutedInk)
 
-                    Text(goalType.displayName)
+                    Text(profile.goalType.displayName)
                         .font(.headline)
                         .foregroundStyle(AppTheme.ink)
 
-                    Text(goalType.shortAction)
-                        .font(.caption)
+                    Text("\(profile.outcomeStyle.displayName)・週\(profile.weeklyTrainingDays)日")
+                        .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
-                        .lineLimit(1)
                 }
 
                 Spacer()
@@ -236,7 +727,7 @@ private struct GoalPickerView: View {
                                         .foregroundStyle(AppTheme.ink)
 
                                     Text(goalType.shortAction)
-                                        .font(.caption)
+                                        .font(.footnote)
                                         .foregroundStyle(AppTheme.mutedInk)
                                 }
                             }
@@ -259,22 +750,164 @@ private struct GoalPickerView: View {
     }
 }
 
+private struct BeginnerJourneyCard: View {
+    let progress: BeginnerJourneyProgress
+    let onAction: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .top, spacing: 12) {
+                IconBadge(systemImage: "flag.checkered", tint: AppTheme.accent)
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("BEGINNER LEVEL \(progress.level)")
+                        .font(.footnote.bold())
+                        .foregroundStyle(AppTheme.accent)
+                        .accessibilityIdentifier("beginnerJourneyCard")
+
+                    Text(levelTitle)
+                        .font(.title3.bold())
+                        .foregroundStyle(AppTheme.ink)
+                }
+
+                Spacer()
+
+                Text("\(progress.completedMilestoneCount)/3")
+                    .font(.headline.monospacedDigit())
+                    .foregroundStyle(AppTheme.mutedInk)
+            }
+
+            ProgressView(value: progress.progressValue)
+                .tint(AppTheme.accent)
+                .accessibilityHidden(true)
+
+            VStack(spacing: 10) {
+                BeginnerMissionRow(
+                    title: "初心者メニューを作る",
+                    isCompleted: progress.hasPlan,
+                    isCurrent: !progress.hasPlan
+                )
+                BeginnerMissionRow(
+                    title: "最初のトレーニングを完了",
+                    isCompleted: progress.completedWorkoutCount >= 1,
+                    isCurrent: progress.hasPlan && progress.completedWorkoutCount == 0
+                )
+                BeginnerMissionRow(
+                    title: "トレーニングを3回完了",
+                    isCompleted: progress.completedWorkoutCount >= 3,
+                    isCurrent: progress.completedWorkoutCount >= 1 && progress.completedWorkoutCount < 3
+                )
+            }
+
+            Button(action: onAction) {
+                HStack {
+                    Image(systemName: actionSystemImage)
+                    Text(actionTitle)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.footnote.bold())
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+            .tint(AppTheme.accent)
+            .accessibilityIdentifier("beginnerJourneyActionButton")
+        }
+        .padding(16)
+        .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .overlay(
+            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
+                .stroke(AppTheme.accent.opacity(0.35), lineWidth: 1)
+        )
+        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
+    }
+
+    private var levelTitle: String {
+        switch progress.level {
+        case 1: "全身メニューから始める"
+        case 2: "3回続けて動きを覚える"
+        default: "目的別メニューが解放"
+        }
+    }
+
+    private var actionTitle: String {
+        switch progress.nextAction {
+        case .createPlan: "初心者メニューを作る"
+        case .startWorkout: "トレーニングを開く"
+        case .explorePlans: "目的別メニューを見る"
+        }
+    }
+
+    private var actionSystemImage: String {
+        switch progress.nextAction {
+        case .createPlan: "plus.circle.fill"
+        case .startWorkout: "play.fill"
+        case .explorePlans: "list.bullet.rectangle"
+        }
+    }
+}
+
+private struct BeginnerMissionRow: View {
+    let title: String
+    let isCompleted: Bool
+    let isCurrent: Bool
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: statusSystemImage)
+                .font(.headline)
+                .foregroundStyle(statusColor)
+                .frame(width: 24)
+                .accessibilityHidden(true)
+
+            Text(title)
+                .font(.subheadline.weight(isCurrent ? .semibold : .regular))
+                .foregroundStyle(isCurrent || isCompleted ? AppTheme.ink : AppTheme.mutedInk)
+
+            Spacer()
+
+            if isCurrent {
+                Text("NEXT")
+                    .font(.caption.bold())
+                    .foregroundStyle(AppTheme.accent)
+            }
+        }
+    }
+
+    private var statusSystemImage: String {
+        if isCompleted {
+            return "checkmark.circle.fill"
+        }
+        return isCurrent ? "circle.inset.filled" : "lock.fill"
+    }
+
+    private var statusColor: Color {
+        if isCompleted {
+            return AppTheme.positive
+        }
+        return isCurrent ? AppTheme.accent : AppTheme.mutedInk
+    }
+}
+
 private struct TodayTrainingCard: View {
     let plan: TrainingPlan?
     let completedSessions: [WorkoutSession]
     let onStart: () -> Void
+    let onCreatePlan: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("TODAY'S SESSION")
-                        .font(.caption.bold())
-                        .foregroundStyle(AppTheme.accent)
-                        .tracking(1.2)
+                    Text("今日のメニュー")
+                        .font(.footnote.bold())
+                        .foregroundStyle(AppTheme.foregroundOnDark)
 
                     Text(plan?.name ?? "計画を作成しましょう")
-                        .font(.system(size: 30, weight: .black, design: .rounded))
+                        .font(.largeTitle.bold())
+                        .fontDesign(.rounded)
                         .foregroundStyle(AppTheme.foregroundOnDark)
                         .lineLimit(2)
                 }
@@ -282,7 +915,7 @@ private struct TodayTrainingCard: View {
                 Spacer()
 
                 Text(statusTitle)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(plan == nil ? AppTheme.foregroundOnDark.opacity(0.65) : AppTheme.onAccent)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
@@ -304,17 +937,12 @@ private struct TodayTrainingCard: View {
                     Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                 }
                 .font(.subheadline)
-                .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.72))
-
-                Text(plan.exercises.map { $0.exercise.name }.joined(separator: "、"))
-                    .font(.caption)
-                    .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.64))
-                    .lineLimit(2)
+                .foregroundStyle(AppTheme.foregroundOnDark)
 
                 Button(action: onStart) {
                     HStack {
                         Image(systemName: "play.fill")
-                        Text(completedSessions.isEmpty ? "この計画で記録を開始" : "追加セッションを開始")
+                        Text(completedSessions.isEmpty ? "トレーニング開始" : "追加で開始")
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
@@ -324,9 +952,19 @@ private struct TodayTrainingCard: View {
                 .tint(AppTheme.accent)
                 .foregroundStyle(AppTheme.onAccent)
             } else {
-                Text("計画タブで種目とセット目標を登録すると、ここからすぐ開始できます。")
-                    .font(.subheadline)
-                    .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.72))
+                Button(action: onCreatePlan) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("計画を作成")
+                            .fontWeight(.semibold)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .tint(AppTheme.accent)
+                .foregroundStyle(AppTheme.onAccent)
+                .accessibilityIdentifier("createPlanFromHomeButton")
             }
         }
         .padding(20)
@@ -371,17 +1009,17 @@ private struct TodayTrainingCard: View {
                             .foregroundStyle(AppTheme.positive)
                         VStack(alignment: .leading, spacing: 2) {
                             Text(session.title)
-                                .font(.caption.bold())
+                                .font(.footnote.bold())
                             Text(
                                 "\(AppFormatters.shortDateTime.string(from: session.startedAt))・"
                                     + "\(session.completedPlannedSetCount)セット"
                             )
-                            .font(.caption2)
-                            .foregroundStyle(AppTheme.foregroundOnDark.opacity(0.68))
+                            .font(.footnote)
+                            .foregroundStyle(AppTheme.foregroundOnDark)
                         }
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .font(.caption2.bold())
+                            .font(.footnote.bold())
                     }
                     .foregroundStyle(AppTheme.foregroundOnDark)
                     .padding(9)
@@ -406,14 +1044,14 @@ private struct CompactStat: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
             HStack(alignment: .firstTextBaseline, spacing: 2) {
                 Text(value)
                     .font(.title2.bold())
                 if !suffix.isEmpty {
                     Text(suffix)
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -447,9 +1085,6 @@ private struct BodyKPIDashboard: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("身体KPI")
                             .font(.headline)
-                        Text("目標差と推移をまとめて確認")
-                            .font(.caption)
-                            .foregroundStyle(AppTheme.mutedInk)
                     }
 
                     Spacer()
@@ -483,15 +1118,23 @@ private struct BodyKPIDashboard: View {
 
 private struct AIInsightStatusCard: View {
     let insight: AIInsight?
+    let persona: CoachPersona
+    let coachRole: String
 
     var body: some View {
         NavigationLink {
             AIReportView()
         } label: {
             VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Label("AIレポート", systemImage: "sparkles")
-                        .font(.headline)
+                HStack(spacing: 10) {
+                    CoachAvatarView(persona: persona, size: 42, cornerRadius: 8)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("\(persona.displayName)の週次レポート")
+                            .font(.headline)
+                        Text(coachRole)
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
                     Spacer()
                     Image(systemName: "chevron.right")
                         .foregroundStyle(AppTheme.mutedInk)
@@ -501,9 +1144,9 @@ private struct AIInsightStatusCard: View {
                     Text(insight.outputComment)
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
-                        .lineLimit(3)
+                        .lineLimit(2)
                 } else {
-                    Text("ローカルLLMから週次コメントを生成します")
+                    Text("AIサーバーから週次コメントを生成します")
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -518,88 +1161,6 @@ private struct AIInsightStatusCard: View {
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("aiReportLink")
-    }
-}
-
-private struct DailyRecordStatusCard: View {
-    let mealCount: Int
-    let bodyPhotoCount: Int
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("すぐに記録")
-                        .font(.headline)
-                    Text("よく使う入力画面を直接開く")
-                        .font(.caption)
-                        .foregroundStyle(AppTheme.mutedInk)
-                }
-
-                Spacer()
-            }
-
-            HStack(spacing: 10) {
-                NavigationLink {
-                    MealListView()
-                } label: {
-                    DailyRecordButton(
-                        title: "食事",
-                        value: "\(mealCount)件",
-                        systemImage: "fork.knife",
-                        tint: AppTheme.orange
-                    )
-                }
-                .buttonStyle(.plain)
-                .accessibilityIdentifier("mealListLink")
-
-                NavigationLink {
-                    BodyPhotoListView()
-                } label: {
-                    DailyRecordButton(
-                        title: "体型写真",
-                        value: "\(bodyPhotoCount)件",
-                        systemImage: "camera",
-                        tint: AppTheme.purple
-                    )
-                }
-                .buttonStyle(.plain)
-                .accessibilityIdentifier("bodyPhotoListLink")
-            }
-        }
-        .padding(16)
-        .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
-        .overlay(
-            RoundedRectangle(cornerRadius: AppTheme.cardRadius)
-                .stroke(AppTheme.cardBorder, lineWidth: 1)
-        )
-        .shadow(color: AppTheme.shadow, radius: 14, x: 0, y: 8)
-    }
-}
-
-private struct DailyRecordButton: View {
-    let title: String
-    let value: String
-    let systemImage: String
-    let tint: Color
-
-    var body: some View {
-        HStack(spacing: 10) {
-            IconBadge(systemImage: systemImage, tint: tint)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title)
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(AppTheme.ink)
-                Text(value)
-                    .font(.caption.bold())
-                    .foregroundStyle(AppTheme.mutedInk)
-            }
-
-            Spacer()
-        }
-        .padding(10)
-        .background(tint.opacity(0.08), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
     }
 }
 
@@ -632,7 +1193,7 @@ private struct BodyKPIProgressRow: View {
                 .tint(tint)
 
             Text(detailText)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
                 .lineLimit(1)
         }

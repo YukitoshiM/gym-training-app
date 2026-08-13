@@ -22,6 +22,29 @@ extension WatchWorkoutPlanSnapshot {
     }
 }
 
+extension WatchDailyRecommendationSnapshot {
+    init(recommendation: DailyRecommendation) {
+        let planID = recommendation.activeActions.compactMap { action -> UUID? in
+            if case .workout(let planID) = action.destination { return planID }
+            return nil
+        }.first
+        self.init(
+            date: recommendation.date,
+            readiness: recommendation.readiness.level.displayName,
+            summary: recommendation.summary,
+            actions: recommendation.activeActions.map {
+                Action(
+                    id: $0.id,
+                    title: $0.title,
+                    systemImage: $0.category.systemImage,
+                    isCompleted: $0.status == .completed
+                )
+            },
+            preferredPlanID: planID
+        )
+    }
+}
+
 private extension WatchPlanExerciseSnapshot {
     init(planExercise: PlanExercise, previousExercise: WorkoutExercise?) {
         let previousSets = previousExercise?
@@ -59,6 +82,8 @@ private extension WatchPlanSetTargetSnapshot {
             setOrder: planSet.setOrder,
             targetWeight: planSet.targetWeight,
             targetReps: planSet.targetReps,
+            plannedConcentricSeconds: planSet.plannedConcentricSeconds,
+            plannedEccentricSeconds: planSet.plannedEccentricSeconds,
             previousActualWeight: previousSet?.actualWeight,
             previousActualReps: previousSet?.actualReps,
             previousRPE: previousSet?.rpe
@@ -118,6 +143,8 @@ private extension WorkoutSet {
             setOrder: watchSet.setOrder,
             targetWeight: watchSet.targetWeight,
             targetReps: watchSet.targetReps,
+            plannedConcentricSeconds: watchSet.plannedConcentricSeconds,
+            plannedEccentricSeconds: watchSet.plannedEccentricSeconds,
             actualWeight: watchSet.actualWeight,
             actualReps: watchSet.actualReps,
             isCompleted: watchSet.isCompleted,

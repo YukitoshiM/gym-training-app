@@ -173,7 +173,7 @@ private struct WeightWheelPickerSheet: View {
     let kilogramRange: ClosedRange<Double>
     let onCancel: () -> Void
     let onSave: () -> Void
-    private let availableStepRange: ClosedRange<Int>
+    @State private var initialStepIndex: Int?
 
     init(
         displayedWeight: Binding<Double>,
@@ -187,15 +187,6 @@ private struct WeightWheelPickerSheet: View {
         self.kilogramRange = kilogramRange
         self.onCancel = onCancel
         self.onSave = onSave
-
-        let conversion = unit == .kg ? 1.0 : 2.2046226218
-        let minimumStepIndex = Int((kilogramRange.lowerBound * conversion * 10).rounded(.up))
-        let maximumStepIndex = Int((kilogramRange.upperBound * conversion * 10).rounded(.down))
-        let center = min(
-            maximumStepIndex,
-            max(minimumStepIndex, Int((displayedWeight.wrappedValue * 10).rounded()))
-        )
-        availableStepRange = max(minimumStepIndex, center - 200)...min(maximumStepIndex, center + 200)
     }
 
     var body: some View {
@@ -220,6 +211,9 @@ private struct WeightWheelPickerSheet: View {
             }
             .navigationTitle("重量")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                initialStepIndex = currentStepIndex
+            }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("キャンセル", action: onCancel)
@@ -238,6 +232,20 @@ private struct WeightWheelPickerSheet: View {
         let conversion = unit == .kg ? 1.0 : 2.2046226218
         let lowerBound = Int((kilogramRange.lowerBound * conversion * 10).rounded(.up))
         let upperBound = Int((kilogramRange.upperBound * conversion * 10).rounded(.down))
+        return lowerBound...upperBound
+    }
+
+    private var currentStepIndex: Int {
+        min(
+            displayedStepRange.upperBound,
+            max(displayedStepRange.lowerBound, Int((displayedWeight * 10).rounded()))
+        )
+    }
+
+    private var availableStepRange: ClosedRange<Int> {
+        let center = initialStepIndex ?? currentStepIndex
+        let lowerBound = max(displayedStepRange.lowerBound, center - 200)
+        let upperBound = min(displayedStepRange.upperBound, center + 200)
         return lowerBound...upperBound
     }
 
@@ -462,7 +470,7 @@ struct RestSecondsInputControl: View {
                     .accessibilityIdentifier("restSecondsPicker")
 
                     Text("分:秒")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                         .frame(width: 52, alignment: .leading)
                 }
@@ -648,7 +656,7 @@ private struct NumericWheelPickerSheet: View {
     let usesTenths: Bool
     let onCancel: () -> Void
     let onSave: () -> Void
-    private let availableStepRange: ClosedRange<Int>
+    @State private var initialStepIndex: Int?
 
     init(
         value: Binding<Double>,
@@ -666,17 +674,6 @@ private struct NumericWheelPickerSheet: View {
         self.usesTenths = usesTenths
         self.onCancel = onCancel
         self.onSave = onSave
-
-        let multiplier: Double = usesTenths ? 10 : 1
-        let minimumStepIndex = Int((range.lowerBound * multiplier).rounded())
-        let maximumStepIndex = Int((range.upperBound * multiplier).rounded())
-        let center = min(
-            maximumStepIndex,
-            max(minimumStepIndex, Int((value.wrappedValue * multiplier).rounded()))
-        )
-        let lowerBound = max(minimumStepIndex, center - 200)
-        let upperBound = min(maximumStepIndex, center + 200)
-        availableStepRange = lowerBound...upperBound
     }
 
     var body: some View {
@@ -692,6 +689,7 @@ private struct NumericWheelPickerSheet: View {
                 .pickerStyle(.wheel)
                 .frame(width: 180)
                 .clipped()
+                .accessibilityIdentifier("numericWheelPicker")
 
                 if !unit.isEmpty {
                     Text(unit)
@@ -700,9 +698,11 @@ private struct NumericWheelPickerSheet: View {
                         .frame(width: 52, alignment: .leading)
                 }
             }
-            .accessibilityIdentifier("numericWheelPicker")
             .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                initialStepIndex = currentStepIndex
+            }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("キャンセル", action: onCancel)
@@ -727,6 +727,15 @@ private struct NumericWheelPickerSheet: View {
 
     private var maximumStepIndex: Int {
         Int((range.upperBound * multiplier).rounded())
+    }
+
+    private var currentStepIndex: Int {
+        min(maximumStepIndex, max(minimumStepIndex, Int((value * multiplier).rounded())))
+    }
+
+    private var availableStepRange: ClosedRange<Int> {
+        let center = initialStepIndex ?? currentStepIndex
+        return max(minimumStepIndex, center - 200)...min(maximumStepIndex, center + 200)
     }
 
     private var stepIndex: Binding<Int> {

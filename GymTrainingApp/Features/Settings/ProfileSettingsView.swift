@@ -12,6 +12,8 @@ struct ProfileSettingsView: View {
     @State private var appearanceDraft: AppAppearanceSettings
     @State private var heightText: String
     @State private var birthYearText: String
+    @State private var weeklyTrainingDaysText: String
+    @State private var preferredSessionMinutesText: String
     @State private var calorieGoalText: String
     @State private var proteinGoalText: String
     @State private var fatGoalText: String
@@ -24,6 +26,10 @@ struct ProfileSettingsView: View {
     @State private var exportDocument = GymDataExportDocument()
     @State private var isExportingDiagnostics = false
     @State private var diagnosticDocument = DiagnosticLogDocument()
+    @State private var diagnosticSharePayload: DiagnosticSharePayload?
+    @State private var usageAnalyticsEnabled: Bool
+    @State private var isExportingUsageAnalytics = false
+    @State private var usageAnalyticsDocument = DiagnosticLogDocument()
     @State private var exportErrorMessage: String?
     @State private var isAISharingExpanded = false
 
@@ -37,8 +43,11 @@ struct ProfileSettingsView: View {
         _aiDraft = State(initialValue: aiSettings)
         _sensorDraft = State(initialValue: sensorSettings)
         _appearanceDraft = State(initialValue: appearanceSettings)
+        _usageAnalyticsEnabled = State(initialValue: UsageAnalytics.shared.isCollectionEnabled)
         _heightText = State(initialValue: profile.heightCm.map { String(format: "%.1f", $0) } ?? "")
         _birthYearText = State(initialValue: profile.birthYear.map(String.init) ?? "")
+        _weeklyTrainingDaysText = State(initialValue: String(profile.weeklyTrainingDays))
+        _preferredSessionMinutesText = State(initialValue: String(profile.preferredSessionMinutes))
         _calorieGoalText = State(initialValue: profile.nutritionGoals.calories.formatted(.number.precision(.fractionLength(0))))
         _proteinGoalText = State(initialValue: profile.nutritionGoals.protein.formatted(.number.precision(.fractionLength(0...1))))
         _fatGoalText = State(initialValue: profile.nutritionGoals.fat.formatted(.number.precision(.fractionLength(0...1))))
@@ -55,22 +64,55 @@ struct ProfileSettingsView: View {
                             Text(goal.displayName).tag(goal)
                         }
                     }
+                    .onChange(of: draft.goalType) { _, goal in
+                        if !OutcomeStyle.available(for: goal).contains(draft.outcomeStyle) {
+                            draft.outcomeStyle = OutcomeStyle.recommended(for: goal)
+                        }
+                        if !goal.supportsFocusMuscles {
+                            draft.focusMuscles = []
+                        }
+                    }
 
-                    Picker("担当コーチ", selection: $draft.coachType) {
+                    CoachRecommendationPicker(profile: $draft)
+
+                    Picker("すべての担当", selection: $draft.coachType) {
                         ForEach(CoachType.allCases) { coach in
                             Text(coach.displayName).tag(coach)
                         }
                     }
                     .accessibilityIdentifier("coachTypePicker")
 
+                    if draft.coachType != CoachType.recommended(for: draft.goalType) {
+                        Button {
+                            draft.coachType = CoachType.recommended(for: draft.goalType)
+                        } label: {
+                            Label("おすすめの担当を適用", systemImage: "sparkles")
+                        }
+                        .accessibilityIdentifier("applyRecommendedCoachButton")
+                    }
+
+                    CoachPersonaPicker(selection: $draft.coachPersona)
+
+                    Picker("話し方", selection: $draft.coachingStyle) {
+                        ForEach(CoachingStyle.allCases) { style in
+                            Text(style.displayName).tag(style)
+                        }
+                    }
+                    .accessibilityIdentifier("coachingStylePicker")
+
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(draft.coachType.displayName)
+                        Text(draft.coachType.expertiseProfile.promise)
                             .font(.subheadline.bold())
-                        Text(draft.coachType.characteristic)
-                            .font(.caption)
+                        Text(CoachType.recommendationReason(for: draft))
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                     .accessibilityIdentifier("coachCharacteristic")
+
+                    DisclosureGroup("担当コーチの方針") {
+                        CoachExpertiseSummary(profile: draft.coachType.expertiseProfile)
+                    }
+                    .accessibilityIdentifier("coachExpertiseDetails")
 
                     NumericTextInputControl(
                         text: $heightText,
@@ -103,6 +145,90 @@ struct ProfileSettingsView: View {
                             Text(level.displayName).tag(level)
                         }
                     }
+                }
+
+                Section("目標とペース") {
+                    Picker("目指すスタイル", selection: $draft.outcomeStyle) {
+                        ForEach(OutcomeStyle.available(for: draft.goalType)) { style in
+                            Text(style.displayName).tag(style)
+                        }
+                    }
+                    .accessibilityIdentifier("outcomeStylePicker")
+
+                    Text(draft.outcomeStyle.detail)
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+
+                    if draft.outcomeStyle == .custom {
+                        TextField("目指したい状態", text: $draft.customOutcomeText, axis: .vertical)
+                            .lineLimit(2...4)
+                            .accessibilityIdentifier("customOutcomeField")
+                    }
+
+                    if draft.goalType.supportsFocusMuscles {
+                        Menu {
+                            ForEach(MuscleGroup.focusSelectionCases) { muscle in
+                                Button {
+                                    toggleFocusMuscle(muscle)
+                                } label: {
+                                    Label(
+                                        muscle.displayName,
+                                        systemImage: draft.focusMuscles.contains(muscle) ? "checkmark" : muscle.systemImage
+                                    )
+                                }
+                            }
+                        } label: {
+                            LabeledContent("重点部位", value: focusMuscleSummary)
+                        }
+                        .accessibilityIdentifier("focusMuscleMenu")
+                    }
+
+                    NumericTextInputControl(
+                        text: $weeklyTrainingDaysText,
+                        title: "週の回数",
+                        unit: "日",
+                        range: 1...7,
+                        step: 1,
+                        defaultValue: 3,
+                        accessibilityIdentifier: "weeklyTrainingDaysField"
+                    )
+
+                    NumericTextInputControl(
+                        text: $preferredSessionMinutesText,
+                        title: "1回の時間",
+                        unit: "分",
+                        range: 10...240,
+                        step: 5,
+                        defaultValue: 60,
+                        accessibilityIdentifier: "preferredSessionMinutesField"
+                    )
+                }
+
+                Section {
+                    ForEach(Equipment.allCases) { equipment in
+                        Button {
+                            toggleEquipment(equipment)
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: equipment.systemImage)
+                                    .foregroundStyle(AppTheme.accent)
+                                    .frame(width: 28)
+                                Text(equipment.displayName)
+                                    .foregroundStyle(AppTheme.ink)
+                                Spacer()
+                                Image(systemName: draft.availableEquipment.contains(equipment) ? "checkmark.circle.fill" : "circle")
+                                    .foregroundStyle(
+                                        draft.availableEquipment.contains(equipment) ? AppTheme.accent : AppTheme.mutedInk
+                                    )
+                            }
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("availableEquipment-\(equipment.rawValue)")
+                    }
+                } header: {
+                    Text("使える器具")
+                } footer: {
+                    Text("AIコーチは選択した器具だけでトレーニング計画を作ります。最低1つは選択されます。")
                 }
 
                 Section {
@@ -226,7 +352,7 @@ struct ProfileSettingsView: View {
                     .disabled(!aiDraft.isEnabled)
 
                     Text("現在選択: \(aiDraft.dataSharing.enabledCategoryNames.joined(separator: "、").ifEmpty("なし"))")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
 
                     TextField("サーバーURL", text: $aiDraft.baseURLString)
@@ -237,13 +363,29 @@ struct ProfileSettingsView: View {
                     SecureField("APIキー", text: $aiDraft.apiKey)
                         .textInputAutocapitalization(.never)
 
+                    Toggle("端末ごとの短期認証を使う", isOn: $aiDraft.usesSessionTokens)
+                        .disabled(!aiDraft.isEnabled)
+
+                    if aiDraft.usesSessionTokens {
+                        Label(
+                            "APIキーは短期トークンの取得だけに使い、通常のAI通信には送信しません。",
+                            systemImage: "lock.shield"
+                        )
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                    }
+
                     Button {
                         aiDraft.baseURLString = AISettings.default.baseURLString
                         aiDraft.apiKey = AISettings.default.apiKey
+                        aiDraft.usesSessionTokens = AISettings.default.usesSessionTokens
                         aiDraft.isEnabled = AISettings.default.isEnabled
                         aiConnectionResult = nil
                     } label: {
-                        Label("AI設定を初期値に戻す", systemImage: "arrow.counterclockwise")
+                        Label(
+                            AISettings.hasBundledConfiguration ? "配布時のAI設定を読み込む" : "AI設定を初期値に戻す",
+                            systemImage: "arrow.counterclockwise"
+                        )
                     }
                     .accessibilityIdentifier("resetAISettingsToSimulatorButton")
 
@@ -259,14 +401,63 @@ struct ProfileSettingsView: View {
                         AIConnectionCheckCard(result: aiConnectionResult)
                     }
                 } header: {
-                    Text("ローカルLLM")
+                    Text("AIサーバー")
                 } footer: {
                     Text(AISettings.configurationHelp)
                 }
 
                 LegalAndSupportSettingsSection()
 
-                Section("データ") {
+                AdvertisingSettingsSection()
+
+                Section("ヘルプ") {
+                    Button {
+                        dismiss()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                            NotificationCenter.default.post(name: .startBodyModeAppTour, object: nil)
+                        }
+                    } label: {
+                        Label("画面ツアーを開始", systemImage: "hand.tap")
+                    }
+                    .accessibilityIdentifier("startAppTourButton")
+                }
+
+                Section {
+                    Toggle("利用分析に協力", isOn: $usageAnalyticsEnabled)
+                        .toggleStyle(.switch)
+                        .accessibilityIdentifier("usageAnalyticsToggle")
+                        .onChange(of: usageAnalyticsEnabled) { _, isEnabled in
+                            UsageAnalytics.shared.setCollectionEnabled(isEnabled)
+                        }
+
+                    Button {
+                        usageAnalyticsDocument = DiagnosticLogDocument(data: UsageAnalytics.shared.exportData())
+                        isExportingUsageAnalytics = true
+                    } label: {
+                        Label("利用状況を書き出す", systemImage: "square.and.arrow.up")
+                    }
+                    .accessibilityIdentifier("exportUsageAnalyticsButton")
+
+                    Button(role: .destructive) {
+                        UsageAnalytics.shared.deleteData()
+                    } label: {
+                        Label("利用状況を削除", systemImage: "trash")
+                    }
+                    .accessibilityIdentifier("deleteUsageAnalyticsButton")
+                } header: {
+                    Text("プライバシー")
+                } footer: {
+                    Text("使った機能の種類だけを端末内に保存します。体重、写真、食事内容、心拍、位置、メモは記録せず、自動送信もしません。")
+                }
+
+                Section {
+                    LabeledContent {
+                        Text("\(AppDiagnostics.shared.eventCount(categoryPrefix: "watch."))件")
+                            .foregroundStyle(AppTheme.mutedInk)
+                    } label: {
+                        Label("Apple Watchログ", systemImage: "applewatch")
+                    }
+
                     Button {
                         prepareExport()
                     } label: {
@@ -282,12 +473,30 @@ struct ProfileSettingsView: View {
                     }
                     .accessibilityIdentifier("exportDiagnosticsButton")
 
+                    Button {
+                        prepareDiagnosticShare()
+                    } label: {
+                        Label("診断ログを送る", systemImage: "paperplane")
+                    }
+                    .accessibilityIdentifier("shareDiagnosticsButton")
+
+                    Button(role: .destructive) {
+                        AppDiagnostics.shared.deleteData()
+                    } label: {
+                        Label("診断ログを削除", systemImage: "trash")
+                    }
+                    .accessibilityIdentifier("deleteDiagnosticsButton")
+
                     Button(role: .destructive) {
                         isConfirmingReset = true
                     } label: {
                         Label("全データ削除", systemImage: "trash")
                     }
                     .accessibilityIdentifier("resetAllDataButton")
+                } header: {
+                    Text("データ")
+                } footer: {
+                    Text("診断ログにはiPhoneとApple Watchの動作・通信・ワークアウト操作の記録が含まれます。外部へは自動送信されません。")
                 }
             }
             .scrollContentBackground(.hidden)
@@ -315,7 +524,7 @@ struct ProfileSettingsView: View {
                 }
                 Button("キャンセル", role: .cancel) {}
             } message: {
-                Text("計画、履歴、身体KPI、食事、写真、カスタム種目を削除します。")
+                Text("計画、履歴、身体KPI、食事、写真、AI会話・記憶、カスタム種目を削除します。")
             }
             .fileExporter(
                 isPresented: $isExportingData,
@@ -337,6 +546,19 @@ struct ProfileSettingsView: View {
                     exportErrorMessage = error.localizedDescription
                 }
             }
+            .fileExporter(
+                isPresented: $isExportingUsageAnalytics,
+                document: usageAnalyticsDocument,
+                contentType: .json,
+                defaultFilename: "bodymode-usage-events"
+            ) { result in
+                if case .failure(let error) = result {
+                    exportErrorMessage = error.localizedDescription
+                }
+            }
+            .sheet(item: $diagnosticSharePayload) { payload in
+                ActivityShareView(activityItems: [payload.url])
+            }
             .alert("書き出せませんでした", isPresented: Binding(
                 get: { exportErrorMessage != nil },
                 set: { if !$0 { exportErrorMessage = nil } }
@@ -349,8 +571,12 @@ struct ProfileSettingsView: View {
     }
 
     private func save() {
+        let previousProfile = appStore.userProfile
         draft.heightCm = Double(heightText)
         draft.birthYear = Int(birthYearText)
+        draft.customOutcomeText = draft.customOutcomeText.trimmingCharacters(in: .whitespacesAndNewlines)
+        draft.weeklyTrainingDays = min(7, max(1, Int(weeklyTrainingDaysText) ?? 3))
+        draft.preferredSessionMinutes = min(240, max(10, Int(preferredSessionMinutesText) ?? 60))
         draft.nutritionGoals = NutritionGoals(
             calories: Double(calorieGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.calories,
             protein: Double(proteinGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.protein,
@@ -358,6 +584,7 @@ struct ProfileSettingsView: View {
             carbs: Double(carbsGoalText.replacingOccurrences(of: ",", with: ".")) ?? NutritionGoals.default.carbs,
             mealCount: Int(Double(mealCountGoalText) ?? Double(NutritionGoals.default.mealCount))
         ).normalized()
+        recordCoachSelectionChanges(from: previousProfile, to: draft)
         appStore.saveUserProfile(draft)
         if healthDataManager.accessState == .unavailable {
             sensorDraft.healthIntegrationEnabled = false
@@ -377,6 +604,49 @@ struct ProfileSettingsView: View {
         dismiss()
     }
 
+    private func recordCoachSelectionChanges(from previous: UserProfile, to current: UserProfile) {
+        var changedDimensions: [String] = []
+        if previous.coachType != current.coachType { changedDimensions.append("expertise") }
+        if previous.coachPersona != current.coachPersona { changedDimensions.append("persona") }
+        if previous.coachingStyle != current.coachingStyle { changedDimensions.append("style") }
+
+        changedDimensions.forEach {
+            UsageAnalytics.shared.record(.coachSelectionChanged, dimension: $0)
+        }
+
+        let recommendedTypes = Set(CoachType.recommendations(for: current).map(\.coachType))
+        if previous.coachType != current.coachType,
+           recommendedTypes.contains(current.coachType) {
+            UsageAnalytics.shared.record(
+                .coachRecommendationAccepted,
+                dimension: current.coachType.rawValue
+            )
+        }
+    }
+
+    private var focusMuscleSummary: String {
+        let names = draft.focusMuscles.map(\.displayName)
+        return names.isEmpty ? "指定なし" : names.joined(separator: "・")
+    }
+
+    private func toggleFocusMuscle(_ muscle: MuscleGroup) {
+        if let index = draft.focusMuscles.firstIndex(of: muscle) {
+            draft.focusMuscles.remove(at: index)
+        } else if draft.focusMuscles.count < 3 {
+            draft.focusMuscles.append(muscle)
+        }
+    }
+
+    private func toggleEquipment(_ equipment: Equipment) {
+        if let index = draft.availableEquipment.firstIndex(of: equipment) {
+            guard draft.availableEquipment.count > 1 else { return }
+            draft.availableEquipment.remove(at: index)
+        } else {
+            draft.availableEquipment.append(equipment)
+            draft.availableEquipment = Equipment.allCases.filter(draft.availableEquipment.contains)
+        }
+    }
+
     private func checkAIHealth() {
         guard aiDraft.isEnabled else {
             aiConnectionResult = .disabled
@@ -388,9 +658,12 @@ struct ProfileSettingsView: View {
 
         Task {
             do {
-                let health = try await LocalAIClient(settings: aiDraft).health()
+                let client = AIAPIClient(settings: aiDraft)
+                async let healthRequest = client.health()
+                async let coachesRequest = client.coaches()
+                let (health, coaches) = try await (healthRequest, coachesRequest)
                 await MainActor.run {
-                    aiConnectionResult = .init(health: health)
+                    aiConnectionResult = .init(health: health, coaches: coaches)
                     isCheckingAI = false
                 }
             } catch {
@@ -406,6 +679,16 @@ struct ProfileSettingsView: View {
         do {
             exportDocument = GymDataExportDocument(data: try appStore.makeExportData())
             isExportingData = true
+        } catch {
+            exportErrorMessage = error.localizedDescription
+        }
+    }
+
+    private func prepareDiagnosticShare() {
+        do {
+            diagnosticSharePayload = DiagnosticSharePayload(
+                url: try AppDiagnostics.shared.makeShareFile()
+            )
         } catch {
             exportErrorMessage = error.localizedDescription
         }
@@ -433,7 +716,7 @@ private struct ThemeOptionRow: View {
                     .font(.subheadline.bold())
                     .foregroundStyle(AppTheme.ink)
                 Text(theme.summary)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
@@ -443,6 +726,63 @@ private struct ThemeOptionRow: View {
                 .foregroundStyle(isSelected ? AppTheme.accent : AppTheme.mutedInk)
         }
         .contentShape(Rectangle())
+    }
+}
+
+private struct CoachExpertiseSummary: View {
+    let profile: CoachExpertiseProfile
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 8) {
+                Label("助言で重視する割合", systemImage: "chart.bar.fill")
+                    .font(.caption.bold())
+                    .foregroundStyle(AppTheme.accent)
+                Text("能力や資格の評価ではありません。回答で優先する観点を示します。")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.mutedInk)
+                focusRow("筋肥大", value: profile.focus.hypertrophy)
+                focusRow("体型改善", value: profile.focus.bodyRecomposition)
+                focusRow("減量", value: profile.focus.fatLoss)
+                focusRow("食事", value: profile.focus.nutrition)
+                focusRow("動作", value: profile.focus.movement)
+                focusRow("回復", value: profile.focus.recovery)
+                focusRow("競技力", value: profile.focus.performance)
+            }
+            summaryGroup("向いている人", systemImage: "person.2.fill", items: profile.recommendedFor)
+            summaryGroup("特に重視", systemImage: "scope", items: profile.topFocusAreas)
+            summaryGroup("進め方", systemImage: "list.number", items: profile.approach)
+            summaryGroup("できないこと", systemImage: "shield.lefthalf.filled", items: profile.boundaries)
+        }
+        .padding(.vertical, 6)
+    }
+
+    private func focusRow(_ label: String, value: Int) -> some View {
+        HStack(spacing: 8) {
+            Text(label)
+                .font(.caption)
+                .frame(width: 54, alignment: .leading)
+            ProgressView(value: Double(value), total: 5)
+                .tint(AppTheme.accent)
+            Text("\(value)/5")
+                .font(.caption.monospacedDigit())
+                .foregroundStyle(AppTheme.mutedInk)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(label) \(value) / 5")
+    }
+
+    private func summaryGroup(_ title: String, systemImage: String, items: [String]) -> some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Label(title, systemImage: systemImage)
+                .font(.caption.bold())
+                .foregroundStyle(AppTheme.accent)
+            ForEach(items, id: \.self) { item in
+                Text(item)
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.ink)
+            }
+        }
     }
 }
 
@@ -478,27 +818,34 @@ private struct AIConnectionCheckResult {
         self.recovery = recovery
     }
 
-    init(health: AIHealthResponse) {
+    init(health: AIHealthResponse, coaches: [AICoachSummary]) {
         if health.isReady {
             self.init(
                 level: .ready,
-                title: "ローカルLLM接続OK",
-                detail: "APIサーバーとOllama \(health.model) に接続できています。",
+                title: "AIサーバー接続OK",
+                detail: "\(health.model)を利用できます。コーチ \(coaches.count)種類を確認しました。",
+                recovery: health.message
+            )
+        } else if health.calorieModelAvailable == false {
+            self.init(
+                level: .warning,
+                title: "カロリー推定モデル準備中",
+                detail: "APIサーバーは応答していますが、画像カロリー推定を利用できません。",
                 recovery: health.message
             )
         } else if !health.ollamaReachable {
             self.init(
                 level: .warning,
-                title: "APIは起動中 / Ollama未接続",
-                detail: "local_llm_server は応答していますが、Ollamaに届いていません。",
-                recovery: health.message ?? "Mac miniで `ollama serve` を起動してから、もう一度接続確認してください。"
+                title: "補助モデル未接続",
+                detail: "APIサーバーは応答していますが、料理・レポートの補助モデルを利用できません。",
+                recovery: health.message
             )
         } else {
             self.init(
                 level: .warning,
-                title: "Ollamaモデルが未取得です",
-                detail: "Ollamaは起動していますが、設定中のモデル \(health.model) が見つかりません。",
-                recovery: health.message ?? "Mac miniで `ollama pull \(health.model)` を実行するか、local_llm_server の OLLAMA_MODEL を変更してください。"
+                title: "AIモデル準備中",
+                detail: "APIサーバーは応答していますが、必要なモデルを利用できません。",
+                recovery: health.message
             )
         }
     }
@@ -540,12 +887,12 @@ private struct AIConnectionCheckCard: View {
                 .foregroundStyle(result.tint)
 
             Text(result.detail)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.ink)
 
             if let recovery = result.recovery, !recovery.isEmpty {
                 Text(recovery)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }

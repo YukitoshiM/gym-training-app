@@ -7,23 +7,50 @@ struct AIReportView: View {
     @State private var isCheckingConnection = false
     @State private var errorPresentation: AIErrorPresentation?
     @State private var connectionNotice: AIReportConnectionNotice?
+    @State private var pendingMonthlyReview: MonthlyReviewDraft?
 
     private var latestWeeklyInsight: AIInsight? {
         appStore.aiInsights.first { $0.insightType == .weekly }
     }
 
+    private var latestMonthlyInsight: AIInsight? {
+        appStore.aiInsights.first { $0.insightType == .monthly }
+    }
+
     var body: some View {
         List {
             Section("担当コーチ") {
-                VStack(alignment: .leading, spacing: 6) {
-                    Label(appStore.userProfile.coachType.displayName, systemImage: "figure.strengthtraining.traditional")
-                        .font(.headline)
-                        .foregroundStyle(AppTheme.accent)
-                    Text(appStore.userProfile.coachType.characteristic)
-                        .font(.caption)
-                        .foregroundStyle(AppTheme.mutedInk)
-                }
+                CoachIdentityView(
+                    persona: appStore.userProfile.coachPersona,
+                    role: appStore.userProfile.coachType.displayName,
+                    detail: appStore.userProfile.coachType.characteristic,
+                    avatarSize: 64
+                )
                 .accessibilityIdentifier("activeCoachCard")
+            }
+
+            Section("AIトレーナー") {
+                NavigationLink {
+                    AITrainerChatView()
+                } label: {
+                    HStack(spacing: 10) {
+                        CoachAvatarView(persona: appStore.userProfile.coachPersona, size: 38)
+                        Text("\(appStore.userProfile.coachPersona.displayName)に相談")
+                    }
+                }
+                .accessibilityIdentifier("aiTrainerChatLink")
+
+                NavigationLink {
+                    CoachMemoryListView()
+                } label: {
+                    HStack {
+                        Label("保存した記憶", systemImage: "brain.head.profile")
+                        Spacer()
+                        Text(appStore.coachMemories.count.formatted())
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                }
+                .accessibilityIdentifier("coachMemoryListLink")
             }
 
             Section {
@@ -40,20 +67,28 @@ struct AIReportView: View {
                 .accessibilityIdentifier("generateWeeklyAIReportButton")
 
                 Button {
+                    generateMonthlyReview()
+                } label: {
+                    Label(isGenerating ? "月次レビュー生成中" : "月次レビュー案を作成", systemImage: "calendar.badge.clock")
+                }
+                .disabled(isGenerating || !appStore.aiSettings.isEnabled)
+                .accessibilityIdentifier("generateMonthlyAIReviewButton")
+
+                Button {
                     checkConnection()
                 } label: {
-                    Label(isCheckingConnection ? "接続確認中" : "ローカルLLM接続を確認", systemImage: "network")
+                    Label(isCheckingConnection ? "接続確認中" : "AIサーバー接続を確認", systemImage: "network")
                 }
                 .disabled(isCheckingConnection || !appStore.aiSettings.isEnabled)
                 .accessibilityIdentifier("checkAIConnectionFromReportButton")
 
                 if !appStore.aiSettings.isEnabled {
                     Text("設定でAI機能がオフです。")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("接続できない場合でも、記録済みデータは消えません。手動記録を続けたまま、あとでAIコメントだけ生成できます。")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -62,18 +97,56 @@ struct AIReportView: View {
                 Section("最新レポート") {
                     VStack(alignment: .leading, spacing: 10) {
                         Text(AppFormatters.shortDateTime.string(from: latestWeeklyInsight.date))
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
 
-                        Text(latestWeeklyInsight.outputComment)
-                            .font(.headline)
+                        CoachAttributionLabel(
+                            persona: appStore.userProfile.coachPersona,
+                            text: "\(appStore.userProfile.coachPersona.displayName)の振り返り"
+                        )
 
-                        Text(latestWeeklyInsight.actionSuggestion)
-                            .font(.subheadline)
-                            .foregroundStyle(AppTheme.mutedInk)
+                        Text("今週の結論")
+                            .font(.subheadline.bold())
+                        CoachFormattedText(content: latestWeeklyInsight.outputComment)
+
+                        if latestWeeklyInsight.hasStructuredWeeklySections {
+                            AIReportBulletSection(
+                                title: "良かった点",
+                                systemImage: "checkmark.circle.fill",
+                                tint: AppTheme.positive,
+                                items: latestWeeklyInsight.goodPoints ?? []
+                            )
+                            AIReportBulletSection(
+                                title: "課題",
+                                systemImage: "exclamationmark.triangle.fill",
+                                tint: AppTheme.warning,
+                                items: latestWeeklyInsight.challenges ?? []
+                            )
+                            AIReportBulletSection(
+                                title: "判断の根拠",
+                                systemImage: "list.clipboard.fill",
+                                tint: AppTheme.blue,
+                                items: latestWeeklyInsight.rationales ?? []
+                            )
+                            AIReportBulletSection(
+                                title: "次の行動",
+                                systemImage: "arrow.right.circle.fill",
+                                tint: AppTheme.accent,
+                                items: latestWeeklyInsight.nextActions ?? []
+                            )
+                            if latestWeeklyInsight.nextActions?.isEmpty != false {
+                                Text("次の行動")
+                                    .font(.subheadline.bold())
+                                CoachFormattedText(content: latestWeeklyInsight.actionSuggestion)
+                            }
+                        } else {
+                            Text("次の行動")
+                                .font(.subheadline.bold())
+                            CoachFormattedText(content: latestWeeklyInsight.actionSuggestion)
+                        }
 
                         Text("入力データの傾向をもとにした提案で、医療上の診断ではありません。体調や痛みに不安がある場合は専門家へ相談してください。")
-                            .font(.caption2)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                     .padding(.vertical, 4)
@@ -87,11 +160,24 @@ struct AIReportView: View {
             } else {
                 Section {
                     ContentUnavailableView {
-                        Label("AIレポートはまだありません", systemImage: "sparkles")
+                        Label("\(appStore.userProfile.coachPersona.displayName)のレポートはまだありません", systemImage: "chart.line.text.clipboard")
                     } description: {
                         Text("身体KPI、食事、体型写真、筋トレ履歴から週次コメントを作成します。")
                     }
                     .frame(minHeight: 180)
+                }
+            }
+
+            if let latestMonthlyInsight {
+                Section("保存した月次レビュー") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        CoachAttributionLabel(
+                            persona: appStore.userProfile.coachPersona,
+                            text: "\(appStore.userProfile.coachPersona.displayName)の月次レビュー"
+                        )
+                        CoachFormattedText(content: latestMonthlyInsight.outputComment)
+                        CoachFormattedText(content: latestMonthlyInsight.actionSuggestion)
+                    }
                 }
             }
 
@@ -102,12 +188,12 @@ struct AIReportView: View {
             }
 
             Section("履歴") {
-                ForEach(appStore.aiInsights.filter { $0.insightType == .weekly }) { insight in
+                ForEach(appStore.aiInsights.filter { [.weekly, .monthly].contains($0.insightType) }) { insight in
                     VStack(alignment: .leading, spacing: 6) {
-                        Text(AppFormatters.shortDateTime.string(from: insight.date))
+                        Text("\(insight.insightType == .monthly ? "月次" : "週次")・\(AppFormatters.shortDateTime.string(from: insight.date))")
                             .font(.headline)
                         Text(insight.actionSuggestion)
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(2)
                     }
@@ -126,14 +212,14 @@ struct AIReportView: View {
                                     .font(.subheadline.bold())
                                 Spacer()
                                 Text(statusTitle(record.status))
-                                    .font(.caption.bold())
+                                    .font(.footnote.bold())
                                     .foregroundStyle(statusTint(record.status))
                             }
                             Text(record.sharedCategories.joined(separator: "、").ifEmpty("共有項目なし"))
-                                .font(.caption)
+                                .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
                             Text("\(record.itemCount)件・\(record.purpose)")
-                                .font(.caption2)
+                                .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
                     }
@@ -143,7 +229,24 @@ struct AIReportView: View {
         }
         .scrollContentBackground(.hidden)
         .background(AppTheme.pageBackground)
-        .navigationTitle("AIレポート")
+        .navigationTitle("\(appStore.userProfile.coachPersona.displayName)のレポート")
+        .sheet(item: $pendingMonthlyReview) { draft in
+            MonthlyReviewConfirmationView(draft: draft) { approved in
+                appStore.saveAIInsight(
+                    AIInsight(
+                        insightType: .monthly,
+                            inputSummary: approved.inputSummary,
+                            outputComment: approved.outputComment,
+                            actionSuggestion: approved.actionSuggestion,
+                            goodPoints: approved.goodPoints,
+                            challenges: approved.challenges,
+                            rationales: approved.rationales,
+                            nextActions: approved.nextActions
+                    )
+                )
+                pendingMonthlyReview = nil
+            }
+        }
     }
 
     private func generateWeeklyReport() {
@@ -165,7 +268,7 @@ struct AIReportView: View {
 
         Task {
             do {
-                let response = try await LocalAIClient(settings: appStore.aiSettings)
+                let response = try await AIAPIClient(settings: appStore.aiSettings)
                     .generateWeeklyReport(payload: payload)
                 await MainActor.run {
                     appStore.saveAIInsight(
@@ -173,9 +276,48 @@ struct AIReportView: View {
                             insightType: .weekly,
                             inputSummary: response.inputSummary,
                             outputComment: response.outputComment,
-                            actionSuggestion: response.actionSuggestion
+                            actionSuggestion: response.actionSuggestion,
+                            goodPoints: response.goodPoints,
+                            challenges: response.challenges,
+                            rationales: response.rationales,
+                            nextActions: response.nextActions
                         )
                     )
+                    appStore.updateAITransmission(id: record.id, status: .completed)
+                    isGenerating = false
+                }
+            } catch {
+                await MainActor.run {
+                    appStore.updateAITransmission(id: record.id, status: .failed)
+                    errorPresentation = AIClientError.presentation(for: error)
+                    isGenerating = false
+                }
+            }
+        }
+    }
+
+    private func generateMonthlyReview() {
+        isGenerating = true
+        errorPresentation = nil
+        connectionNotice = nil
+        let payload = reportPayload(days: 30, maximumBodyLogs: 80, maximumMeals: 150, maximumWorkouts: 40)
+        let record = AITransmissionRecord(
+            purpose: "\(appStore.userProfile.coachType.displayName)・月次レビュー案",
+            sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
+            itemCount: payload.bodyLogs.count
+                + payload.meals.count
+                + payload.workouts.count
+                + payload.bodyPhotos.count
+                + payload.sensorMetrics.count
+        )
+        appStore.saveAITransmission(record)
+
+        Task {
+            do {
+                let response = try await AIAPIClient(settings: appStore.aiSettings)
+                    .generateMonthlyReport(payload: payload)
+                await MainActor.run {
+                    pendingMonthlyReview = MonthlyReviewDraft(response: response)
                     appStore.updateAITransmission(id: record.id, status: .completed)
                     isGenerating = false
                 }
@@ -196,7 +338,7 @@ struct AIReportView: View {
 
         Task {
             do {
-                let health = try await LocalAIClient(settings: appStore.aiSettings).health()
+                let health = try await AIAPIClient(settings: appStore.aiSettings).health()
                 await MainActor.run {
                     connectionNotice = AIReportConnectionNotice(health: health)
                     isCheckingConnection = false
@@ -211,22 +353,36 @@ struct AIReportView: View {
     }
 
     private func weeklyPayload() -> WeeklyReportRequest {
+        reportPayload(days: 7, maximumBodyLogs: 20, maximumMeals: 30, maximumWorkouts: 12)
+    }
+
+    private func reportPayload(
+        days: Int,
+        maximumBodyLogs: Int,
+        maximumMeals: Int,
+        maximumWorkouts: Int
+    ) -> WeeklyReportRequest {
         let sharing = appStore.aiSettings.dataSharing
+        let cutoff = Date().addingTimeInterval(-Double(days) * 86_400)
         return WeeklyReportRequest(
             profileGoal: appStore.userProfile.goalType.displayName,
             coachID: appStore.userProfile.coachType.rawValue,
+            coach: AIRequestCoachContext(profile: appStore.userProfile),
             experienceLevel: appStore.userProfile.experienceLevel.rawValue,
-            bodyLogs: sharing.bodyMetrics ? appStore.bodyMetricEntries.prefix(20).map {
+            bodyLogs: sharing.bodyMetrics ? appStore.bodyMetricEntries.filter { $0.recordedAt >= cutoff }.prefix(maximumBodyLogs).map {
                 "\($0.kind.displayName): \(AppFormatters.metricValue($0.value, unit: $0.kind.unit)) \(AppFormatters.shortDate.string(from: $0.recordedAt))"
             } : [],
-            meals: sharing.meals ? appStore.mealEntries.prefix(20).map {
+            meals: sharing.meals ? appStore.mealEntries.filter { $0.recordedAt >= cutoff }.prefix(maximumMeals).map {
                 "\($0.mealType.displayName) \($0.name): \(AppFormatters.calories($0.calories)) P\(AppFormatters.grams($0.protein)) F\(AppFormatters.grams($0.fat)) C\(AppFormatters.grams($0.carbs))"
             } : [],
-            workouts: sharing.workouts ? appStore.workoutHistory.prefix(12).map {
+            workouts: sharing.workouts ? appStore.workoutHistory.filter { $0.startedAt >= cutoff }.prefix(maximumWorkouts).map {
                 "\($0.title): \(AppFormatters.volume($0.totalVolume, unit: appStore.userProfile.weightUnit)) 達成率 \(AppFormatters.percent($0.achievementRate))"
             } : [],
-            bodyPhotos: sharing.bodyPhotos ? appStore.bodyPhotoEntries.prefix(12).map {
-                "\($0.angle.displayName): \($0.aiComment?.summary ?? $0.memo)"
+            bodyPhotos: sharing.bodyPhotos ? appStore.bodyPhotoSets.filter { $0.date >= cutoff }.prefix(12).map { set in
+                let angles = set.angleEntries.map(\.angle.displayName).joined(separator: "・")
+                let angleSummary = angles.isEmpty ? "写真なし" : angles
+                let observation = set.analysis?.summary ?? set.memo
+                return "\(set.date.formatted(date: .numeric, time: .omitted)) \(set.photoEntries.count)枚（\(angleSummary)）: \(observation)"
             } : [],
             sensorMetrics: sensorMetricsForAI
         )
@@ -281,6 +437,106 @@ struct AIReportView: View {
     }
 }
 
+private struct MonthlyReviewDraft: Identifiable {
+    let id = UUID()
+    var inputSummary: String
+    var outputComment: String
+    var actionSuggestion: String
+    var goodPoints: [String]?
+    var challenges: [String]?
+    var rationales: [String]?
+    var nextActions: [String]?
+
+    init(response: WeeklyReportResponse) {
+        inputSummary = response.inputSummary
+        outputComment = response.outputComment
+        actionSuggestion = response.actionSuggestion
+        goodPoints = response.goodPoints
+        challenges = response.challenges
+        rationales = response.rationales
+        nextActions = response.nextActions
+    }
+}
+
+private struct AIReportBulletSection: View {
+    let title: String
+    let systemImage: String
+    let tint: Color
+    let items: [String]
+
+    var body: some View {
+        if !items.isEmpty {
+            VStack(alignment: .leading, spacing: 6) {
+                Label(title, systemImage: systemImage)
+                    .font(.subheadline.bold())
+                    .foregroundStyle(tint)
+
+                ForEach(items, id: \.self) { item in
+                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 5))
+                            .foregroundStyle(tint)
+                        Text(item)
+                            .font(.subheadline)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .accessibilityElement(children: .combine)
+        }
+    }
+}
+
+private extension AIInsight {
+    var hasStructuredWeeklySections: Bool {
+        [goodPoints, challenges, rationales, nextActions]
+            .compactMap { $0 }
+            .contains { !$0.isEmpty }
+    }
+}
+
+private struct MonthlyReviewConfirmationView: View {
+    @Environment(\.dismiss) private var dismiss
+    @State var draft: MonthlyReviewDraft
+    let onSave: (MonthlyReviewDraft) -> Void
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("入力データ") {
+                    TextEditor(text: $draft.inputSummary)
+                        .frame(minHeight: 90)
+                }
+                Section("月次レビュー") {
+                    TextEditor(text: $draft.outputComment)
+                        .frame(minHeight: 150)
+                }
+                Section("翌月目標案") {
+                    TextEditor(text: $draft.actionSuggestion)
+                        .frame(minHeight: 120)
+                    Text("内容を確認し、必要なら修正してから保存してください。目標は自動では確定しません。")
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+            }
+            .navigationTitle("月次レビューを確認")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("破棄", role: .destructive) { dismiss() }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button("保存") {
+                        onSave(draft)
+                        dismiss()
+                    }
+                    .accessibilityIdentifier("saveMonthlyAIReviewButton")
+                }
+            }
+        }
+    }
+}
+
 private extension String {
     func ifEmpty(_ fallback: String) -> String {
         isEmpty ? fallback : self
@@ -297,20 +553,20 @@ private struct AIReportConnectionNotice {
     init(health: AIHealthResponse) {
         if health.isReady {
             title = "接続OK"
-            detail = "Ollama \(health.model) で週次コメントを生成できます。"
+            detail = "\(health.model) と補助モデルで週次コメントを生成できます。"
             recovery = health.message
             tint = AppTheme.positive
             systemImage = "checkmark.circle.fill"
         } else if !health.ollamaReachable {
-            title = "Ollama未接続"
-            detail = "local_llm_server は起動していますが、Ollamaに接続できません。"
-            recovery = health.message ?? "Mac miniで `ollama serve` を起動してください。"
+            title = "補助モデル未接続"
+            detail = "APIサーバーは応答していますが、料理・レポートの補助モデルを利用できません。"
+            recovery = health.message
             tint = AppTheme.orange
             systemImage = "exclamationmark.triangle.fill"
         } else {
-            title = "モデル未取得"
-            detail = "Ollamaは起動していますが、\(health.model) が見つかりません。"
-            recovery = health.message ?? "`ollama pull \(health.model)` を実行してください。"
+            title = "AIモデル準備中"
+            detail = "APIサーバーは応答していますが、必要なモデルを利用できません。"
+            recovery = health.message
             tint = AppTheme.orange
             systemImage = "exclamationmark.triangle.fill"
         }
@@ -327,12 +583,12 @@ private struct AIReportConnectionNoticeCard: View {
                 .foregroundStyle(notice.tint)
 
             Text(notice.detail)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.ink)
 
             if let recovery = notice.recovery, !recovery.isEmpty {
                 Text(recovery)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -352,12 +608,12 @@ private struct AIErrorRecoveryCard: View {
 
             if let recovery = presentation.recovery, !recovery.isEmpty {
                 Text(recovery)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
             Text("記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。")
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
         }
         .padding(.vertical, 4)

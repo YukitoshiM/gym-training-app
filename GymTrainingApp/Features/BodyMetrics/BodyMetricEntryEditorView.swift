@@ -66,10 +66,10 @@ struct BodyMetricEntryEditorView: View {
                 }
             }
             .onAppear {
-                if valueText.isEmpty,
-                   let latest = appStore.latestBodyMetricEntry(for: kind) {
-                    valueText = latest.value.formatted(.number.precision(.fractionLength(0...1)))
-                }
+                guard valueText.isEmpty else { return }
+                let initialValue = appStore.latestBodyMetricEntry(for: kind)?.value
+                    ?? kind.defaultInputValue
+                valueText = initialValue.formatted(.number.precision(.fractionLength(0...1)))
             }
             .alert("保存できません", isPresented: $isShowingValidation) {
                 Button("OK", role: .cancel) {}

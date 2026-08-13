@@ -188,17 +188,17 @@ struct MetricPill: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Image(systemName: systemImage)
-                .font(.headline)
+                .font(.title3)
                 .foregroundStyle(tint)
 
             Text(value)
-                .font(.title3.bold())
+                .font(.title2.bold())
                 .foregroundStyle(AppTheme.ink)
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
 
             Text(title)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
                 .lineLimit(1)
         }
@@ -215,10 +215,11 @@ struct IconBadge: View {
 
     var body: some View {
         Image(systemName: systemImage)
-            .font(.headline)
+            .font(.title3)
             .foregroundStyle(tint)
-            .frame(width: 34, height: 34)
+            .frame(width: 44, height: 44)
             .background(tint.opacity(0.14), in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+            .accessibilityHidden(true)
     }
 }
 

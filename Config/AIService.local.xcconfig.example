@@ -1,0 +1,5 @@
+// `/$()` prevents xcconfig from treating the second slash as a comment.
+BODYMODE_AI_BASE_URL = https:/$()/your-ai-server.example.com
+BODYMODE_AI_API_KEY = replace-with-your-api-key
+BODYMODE_AI_USES_SESSION_TOKENS = YES
+BODYMODE_AI_CONFIGURATION_VERSION = 1

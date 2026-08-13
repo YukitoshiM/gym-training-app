@@ -43,11 +43,26 @@ struct HistoryListView: View {
         NavigationStack {
             Group {
                 if !hasAnyLog {
-                    ContentUnavailableView {
-                        Label("履歴はまだありません", systemImage: "clock.arrow.circlepath")
-                    } description: {
-                        Text("身体・食事・写真・トレーニングを記録すると、ここから日別にまとめて見返せます。")
+                    VStack {
+                        Spacer()
+
+                        VStack(spacing: 12) {
+                            Image(systemName: "clock.arrow.circlepath")
+                                .font(.system(size: 48, weight: .semibold))
+                                .foregroundStyle(AppTheme.mutedInk)
+                                .accessibilityHidden(true)
+                            Text("履歴はまだありません")
+                                .font(.title2.bold())
+                                .foregroundStyle(AppTheme.ink)
+                            Text("記録した内容を日別に見返せます。")
+                                .font(.body)
+                                .foregroundStyle(AppTheme.mutedInk)
+                        }
+                        .appTourTarget(.historyTimeline)
+
+                        Spacer()
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 20) {
@@ -56,11 +71,12 @@ struct HistoryListView: View {
                                 selectedDate: $selectedDate,
                                 summaries: dailySummaries
                             )
+                            .appTourTarget(.historyTimeline)
 
                             if let selectedDate {
                                 VStack(alignment: .leading, spacing: 8) {
                                     Text("選択日のまとめ")
-                                        .font(.caption.bold())
+                                        .font(.footnote.bold())
                                         .foregroundStyle(AppTheme.mutedInk)
 
                                     DailyJournalSummaryCard(
@@ -82,7 +98,7 @@ struct HistoryListView: View {
                                         Button("すべて") {
                                             selectedDate = nil
                                         }
-                                        .font(.caption.bold())
+                                        .font(.footnote.bold())
                                     }
                                 }
 
@@ -115,7 +131,7 @@ struct HistoryListView: View {
                                             .font(.headline)
                                             .foregroundStyle(AppTheme.ink)
                                         Text("蓄積した記録を期間・種目・センサー別に確認")
-                                            .font(.caption)
+                                            .font(.footnote)
                                             .foregroundStyle(AppTheme.mutedInk)
                                     }
 
@@ -248,7 +264,7 @@ private struct HistoryAnalyticsLink: View {
             Spacer()
 
             Image(systemName: "chevron.right")
-                .font(.caption.bold())
+                .font(.footnote.bold())
                 .foregroundStyle(AppTheme.mutedInk)
         }
         .frame(minHeight: 48)
@@ -267,8 +283,12 @@ private struct DailyLogSummary: Identifiable {
 
     var id: Date { date }
 
+    var bodyPhotoSets: [BodyPhotoSet] {
+        BodyPhotoSet.grouped(bodyPhotos)
+    }
+
     var totalLogCount: Int {
-        workouts.count + bodyMetricEntries.count + meals.count + bodyPhotos.count + gymVisits.count
+        workouts.count + bodyMetricEntries.count + meals.count + bodyPhotoSets.count + gymVisits.count
     }
 
     var totalCalories: Double {
@@ -308,7 +328,7 @@ private struct WorkoutCalendarView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("PROGRESS CALENDAR")
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .tracking(1)
                         .foregroundStyle(AppTheme.accent)
                         .accessibilityIdentifier("historyCalendar")
@@ -324,7 +344,7 @@ private struct WorkoutCalendarView: View {
                         moveMonth(by: -1)
                     } label: {
                         Image(systemName: "chevron.left")
-                            .frame(width: 32, height: 32)
+                            .frame(width: 44, height: 44)
                     }
                     .accessibilityLabel("前の月")
 
@@ -332,7 +352,7 @@ private struct WorkoutCalendarView: View {
                         moveMonth(by: 1)
                     } label: {
                         Image(systemName: "chevron.right")
-                            .frame(width: 32, height: 32)
+                            .frame(width: 44, height: 44)
                     }
                     .accessibilityLabel("次の月")
                 }
@@ -344,7 +364,7 @@ private struct WorkoutCalendarView: View {
                 GridRow {
                     ForEach(weekdays, id: \.self) { weekday in
                         Text(weekday)
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .foregroundStyle(AppTheme.mutedInk)
                             .frame(maxWidth: .infinity)
                     }
@@ -383,7 +403,7 @@ private struct WorkoutCalendarView: View {
                     } icon: {
                         Image(systemName: kind.systemImage)
                     }
-                    .font(.caption2.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(kind.tint)
                     .frame(maxWidth: .infinity)
                     .lineLimit(1)
@@ -391,7 +411,7 @@ private struct WorkoutCalendarView: View {
                 }
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel("記録種別の凡例")
+            .accessibilityLabel("記録種別、筋トレ、身体、食事、写真、ジム")
         }
         .padding(16)
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
@@ -493,7 +513,7 @@ private enum CalendarRecordKind: String, CaseIterable, Identifiable {
         case .workout: summary?.workouts.count ?? 0
         case .bodyMetric: summary?.bodyMetricEntries.count ?? 0
         case .meal: summary?.meals.count ?? 0
-        case .bodyPhoto: summary?.bodyPhotos.count ?? 0
+        case .bodyPhoto: summary?.bodyPhotoSets.count ?? 0
         case .gymVisit: summary?.gymVisits.count ?? 0
         }
     }
@@ -538,6 +558,7 @@ private struct CalendarDayButton: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(accessibilityLabel)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
         .accessibilityIdentifier("historyCalendarDay-\(accessibilityDateID)")
     }
 
@@ -549,14 +570,17 @@ private struct CalendarDayButton: View {
         return day.isInDisplayedMonth ? AppTheme.ink : AppTheme.mutedInk.opacity(0.45)
     }
     private var accessibilityLabel: String {
+        let date = day.date.formatted(
+            .dateTime.month().day().weekday(.wide).locale(Locale(identifier: "ja_JP"))
+        )
         if totalLogCount == 0 {
-            return "\(dayNumber)日 記録なし"
+            return "\(date)、記録なし"
         }
 
         let details = recordKinds
             .map { "\($0.title)\($0.count(in: summary))件" }
             .joined(separator: "、")
-        return "\(dayNumber)日 \(details)"
+        return "\(date)、\(details)"
     }
 
     private var accessibilityDateID: String {
@@ -594,7 +618,7 @@ private struct DailyJournalSummaryCard: View {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("DAY JOURNAL")
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .tracking(1)
                             .foregroundStyle(AppTheme.accent)
 
@@ -606,7 +630,7 @@ private struct DailyJournalSummaryCard: View {
                     Spacer()
 
                     Text("\(summary.totalLogCount)件")
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(summary.totalLogCount > 0 ? AppTheme.ink : AppTheme.mutedInk)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
@@ -636,7 +660,7 @@ private struct DailyJournalSummaryCard: View {
                     GridRow {
                         DailyJournalStat(
                             title: "写真",
-                            value: "\(summary.bodyPhotos.count)件",
+                            value: "\(summary.bodyPhotoSets.count)セット",
                             systemImage: "camera",
                             tint: AppTheme.purple
                         )
@@ -683,7 +707,7 @@ private struct DailyJournalSummaryCard: View {
                         DailyJournalEmptyLine(text: "食事は未記録")
                     } else {
                         Text("合計 \(AppFormatters.calories(summary.totalCalories)) / P \(AppFormatters.grams(summary.totalProtein)) F \(AppFormatters.grams(summary.totalFat)) C \(AppFormatters.grams(summary.totalCarbs))")
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .foregroundStyle(AppTheme.ink)
 
                         ForEach(summary.meals) { meal in
@@ -696,14 +720,16 @@ private struct DailyJournalSummaryCard: View {
                     }
 
                     journalSectionHeader("体型写真", systemImage: "camera", tint: AppTheme.purple)
-                    if summary.bodyPhotos.isEmpty {
+                    if summary.bodyPhotoSets.isEmpty {
                         DailyJournalEmptyLine(text: "体型写真は未記録")
                     } else {
-                        ForEach(summary.bodyPhotos) { photo in
+                        ForEach(summary.bodyPhotoSets) { set in
+                            let angles = set.angleEntries.map(\.angle.displayName).joined(separator: "・")
+                            let angleSummary = angles.isEmpty ? "写真なし" : angles
                             DailyJournalLine(
-                                title: photo.angle.displayName,
-                                detail: photo.memo.isEmpty ? "メモなし" : photo.memo,
-                                footnote: photo.aiComment?.summary ?? AppFormatters.shortDateTime.string(from: photo.recordedAt)
+                                title: "\(set.photoEntries.count)枚（\(angleSummary)）",
+                                detail: set.memo.isEmpty ? "撮影セット" : set.memo,
+                                footnote: set.analysis?.summary ?? AppFormatters.shortDateTime.string(from: set.recordedAt)
                             )
                         }
                     }
@@ -781,7 +807,7 @@ private struct DailyJournalStat: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                 Text(title)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
@@ -802,11 +828,11 @@ private struct DailyJournalLine: View {
         HStack(alignment: .top, spacing: 10) {
             VStack(alignment: .leading, spacing: 3) {
                 Text(title)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(AppTheme.ink)
                     .fixedSize(horizontal: false, vertical: true)
                 Text(footnote)
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
                     .lineLimit(2)
             }
@@ -814,7 +840,7 @@ private struct DailyJournalLine: View {
             Spacer()
 
             Text(detail)
-                .font(.caption.bold())
+                .font(.footnote.bold())
                 .foregroundStyle(AppTheme.ink)
                 .multilineTextAlignment(.trailing)
                 .lineLimit(2)
@@ -828,7 +854,7 @@ private struct DailyJournalEmptyLine: View {
 
     var body: some View {
         Text(text)
-            .font(.caption)
+            .font(.footnote)
             .foregroundStyle(AppTheme.mutedInk)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -847,7 +873,7 @@ private struct HistoryRow: View {
                         Text(session.title)
                             .font(.headline)
                         Text(AppFormatters.shortDateTime.string(from: session.startedAt))
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
 
@@ -863,11 +889,11 @@ private struct HistoryRow: View {
                     Label("\(session.exercises.count)種目", systemImage: "dumbbell")
                     Label("\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist")
                 }
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
 
                 Text("目標差 \(AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit))")
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(session.volumeDelta >= 0 ? AppTheme.positive : AppTheme.orange)
 
                 VStack(spacing: 5) {
@@ -884,7 +910,7 @@ private struct HistoryRow: View {
                         .accessibilityIdentifier("historyExerciseResult-\(exercise.sortOrder)")
                     }
                 }
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
             }
         }

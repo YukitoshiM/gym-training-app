@@ -1,0 +1,7 @@
+BODYMODE_AI_BASE_URL =
+BODYMODE_AI_API_KEY =
+BODYMODE_AI_USES_SESSION_TOKENS = NO
+BODYMODE_AI_CONFIGURATION_VERSION =
+
+// Developer-specific values stay outside Git. See AIService.local.xcconfig.example.
+#include? "AIService.local.xcconfig"

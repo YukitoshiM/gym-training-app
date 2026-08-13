@@ -1,9 +1,14 @@
+import AVFoundation
 import PhotosUI
 import SwiftUI
 
 struct MealListView: View {
     @EnvironmentObject private var appStore: AppStore
-    @State private var isShowingEditor = false
+    @State private var editorRequest: MealEditorRequest?
+
+    init(startsWithEditor: Bool = false) {
+        _editorRequest = State(initialValue: startsWithEditor ? .new : nil)
+    }
 
     var body: some View {
         NavigationStack {
@@ -19,6 +24,16 @@ struct MealListView: View {
                     NutritionGoalCard(progress: nutritionProgress)
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
+
+                    DailyMealSuggestionsCard(
+                        suggestions: DailyMealSuggestionEngine().suggestions(
+                            progress: nutritionProgress,
+                            goalType: appStore.userProfile.goalType
+                        ),
+                        coachPersona: appStore.userProfile.coachPersona
+                    )
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
                 }
 
                 Section("記録") {
@@ -33,9 +48,19 @@ struct MealListView: View {
                     }
 
                     ForEach(appStore.mealEntries) { meal in
-                        MealRow(meal: meal)
-                            .listRowSeparator(.hidden)
-                            .listRowBackground(Color.clear)
+                        Button {
+                            editorRequest = MealEditorRequest(meal: meal)
+                        } label: {
+                            MealRow(
+                                meal: meal,
+                                coachPersona: appStore.userProfile.coachPersona
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel("\(meal.name)を編集")
+                        .accessibilityIdentifier("mealRow-\(meal.name)")
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
                     }
                     .onDelete(perform: appStore.deleteMealEntries)
                 }
@@ -48,7 +73,7 @@ struct MealListView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        isShowingEditor = true
+                        editorRequest = .new
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -56,9 +81,9 @@ struct MealListView: View {
                     .accessibilityIdentifier("addMealButton")
                 }
             }
-            .sheet(isPresented: $isShowingEditor) {
-                MealEditorView {
-                    isShowingEditor = false
+            .sheet(item: $editorRequest) { request in
+                MealEditorView(existingMeal: request.meal) {
+                    editorRequest = nil
                 }
             }
         }
@@ -76,6 +101,53 @@ struct MealListView: View {
     }
 }
 
+private struct DailyMealSuggestionsCard: View {
+    let suggestions: [DailyMealSuggestion]
+    let coachPersona: CoachPersona
+
+    var body: some View {
+        CardContainer {
+            VStack(alignment: .leading, spacing: 12) {
+                CoachAttributionLabel(
+                    persona: coachPersona,
+                    text: "今日の食事候補",
+                    avatarSize: 30
+                )
+                ForEach(suggestions) { suggestion in
+                    HStack(alignment: .top, spacing: 10) {
+                        Image(systemName: "fork.knife.circle.fill")
+                            .foregroundStyle(AppTheme.orange)
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text(suggestion.title)
+                                .font(.subheadline.bold())
+                            Text(suggestion.detail)
+                                .font(.subheadline)
+                            Text(suggestion.rationale)
+                                .font(.footnote)
+                                .foregroundStyle(AppTheme.mutedInk)
+                        }
+                    }
+                }
+            }
+        }
+        .accessibilityIdentifier("dailyMealSuggestionsCard")
+    }
+}
+
+private struct MealEditorRequest: Identifiable {
+    let id: UUID
+    let meal: MealEntry?
+
+    static var new: MealEditorRequest {
+        MealEditorRequest(id: UUID(), meal: nil)
+    }
+
+    init(id: UUID = UUID(), meal: MealEntry?) {
+        self.id = id
+        self.meal = meal
+    }
+}
+
 private struct NutritionGoalCard: View {
     let progress: DailyNutritionProgress
 
@@ -87,7 +159,7 @@ private struct NutritionGoalCard: View {
                         Text("今日の食事目標")
                             .font(.headline)
                         Text("回数と栄養を別々に判定")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                     Spacer()
@@ -108,7 +180,7 @@ private struct NutritionGoalCard: View {
                     "\(progress.mealCount)/\(progress.goals.mealCount)回",
                     systemImage: progress.isMealCountAchieved ? "checkmark.circle.fill" : "fork.knife"
                 )
-                .font(.caption.bold())
+                .font(.footnote.bold())
                 .foregroundStyle(progress.isMealCountAchieved ? AppTheme.positive : AppTheme.mutedInk)
             }
         }
@@ -136,12 +208,12 @@ private struct NutritionGoalCard: View {
     ) -> some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title)
-                .font(.caption2.bold())
+                .font(.footnote.bold())
                 .foregroundStyle(AppTheme.mutedInk)
             ProgressView(value: rate)
                 .tint(rate >= 0.9 ? AppTheme.positive : AppTheme.accent)
             Text("\(Int(value.rounded()))/\(Int(goal.rounded()))")
-                .font(.caption2)
+                .font(.footnote)
                 .monospacedDigit()
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
@@ -151,7 +223,7 @@ private struct NutritionGoalCard: View {
 
     private func statusBadge(title: String, isCompleted: Bool) -> some View {
         Text(title)
-            .font(.caption2.bold())
+            .font(.footnote.bold())
             .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
             .padding(.horizontal, 8)
             .padding(.vertical, 5)
@@ -164,6 +236,7 @@ private struct NutritionGoalCard: View {
 
 private struct MealRow: View {
     let meal: MealEntry
+    let coachPersona: CoachPersona
 
     var body: some View {
         CardContainer {
@@ -176,12 +249,12 @@ private struct MealRow: View {
                             .font(.headline)
                         Spacer()
                         Text(meal.mealType.displayName)
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .foregroundStyle(AppTheme.orange)
                     }
 
                     Text(AppFormatters.shortDateTime.string(from: meal.recordedAt))
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 8) {
@@ -190,19 +263,20 @@ private struct MealRow: View {
                         Text("F \(AppFormatters.grams(meal.fat))")
                         Text("C \(AppFormatters.grams(meal.carbs))")
                     }
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
 
                     if let aiDraft = meal.aiDraft {
-                        Label("AI下書き: \(aiDraft.confidence)", systemImage: "sparkles")
-                            .font(.caption)
-                            .foregroundStyle(AppTheme.accent)
+                        CoachAttributionLabel(
+                            persona: coachPersona,
+                            text: "\(coachPersona.displayName)の下書き・\(aiDraft.confidence)",
+                            avatarSize: 24
+                        )
                     }
                 }
             }
         }
         .padding(.vertical, 3)
-        .accessibilityIdentifier("mealRow-\(meal.name)")
     }
 }
 
@@ -228,55 +302,256 @@ private struct MealThumbnail: View {
     }
 }
 
+private enum MealInputMode: String, CaseIterable, Identifiable {
+    case photo
+    case foodList
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .photo: "写真"
+        case .foodList: "食べたもの"
+        }
+    }
+}
+
+private struct MealFoodInput: Identifiable {
+    let id = UUID()
+    var text = ""
+}
+
 private struct MealEditorView: View {
     @EnvironmentObject private var appStore: AppStore
     @Environment(\.dismiss) private var dismiss
 
+    let existingMeal: MealEntry?
     let onSave: () -> Void
 
-    @State private var mealType: MealType = .lunch
-    @State private var name = ""
-    @State private var calories = ""
-    @State private var protein = ""
-    @State private var fat = ""
-    @State private var carbs = ""
-    @State private var memo = ""
+    @State private var mealType: MealType
+    @State private var name: String
+    @State private var calories: String
+    @State private var protein: String
+    @State private var fat: String
+    @State private var carbs: String
+    @State private var memo: String
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var imageData: Data?
     @State private var aiDraft: MealAIDraft?
     @State private var isAnalyzing = false
     @State private var aiErrorMessage: String?
     @State private var aiErrorRecovery: String?
-    @State private var calculatesCaloriesFromPFC = true
+    @State private var calculatesCaloriesFromPFC: Bool
+    @State private var inputMode: MealInputMode
+    @State private var foodInputs: [MealFoodInput]
+    @State private var compositionItems: [MealCompositionItem]
+    @State private var isShowingCamera = false
+    @State private var isShowingCameraPermissionAlert = false
+    @State private var isShowingFoodDatabase = false
+    @State private var isShowingBarcode = false
+
+    init(existingMeal: MealEntry? = nil, onSave: @escaping () -> Void) {
+        self.existingMeal = existingMeal
+        self.onSave = onSave
+
+        let protein = existingMeal?.protein ?? 0
+        let fat = existingMeal?.fat ?? 0
+        let carbs = existingMeal?.carbs ?? 0
+        let pfcCalories = protein * 4 + fat * 9 + carbs * 4
+        let storedCalories = existingMeal?.calories ?? 0
+        let foodItems = existingMeal?.foodItems ?? []
+
+        _mealType = State(initialValue: existingMeal?.mealType ?? .lunch)
+        _name = State(initialValue: existingMeal?.name ?? "")
+        _calories = State(initialValue: existingMeal.map {
+            $0.calories.formatted(.number.precision(.fractionLength(0)))
+        } ?? "")
+        _protein = State(initialValue: existingMeal.map {
+            $0.protein.formatted(.number.precision(.fractionLength(0...1)))
+        } ?? "")
+        _fat = State(initialValue: existingMeal.map {
+            $0.fat.formatted(.number.precision(.fractionLength(0...1)))
+        } ?? "")
+        _carbs = State(initialValue: existingMeal.map {
+            $0.carbs.formatted(.number.precision(.fractionLength(0...1)))
+        } ?? "")
+        _memo = State(initialValue: existingMeal?.memo ?? "")
+        _imageData = State(initialValue: existingMeal?.imageData)
+        _aiDraft = State(initialValue: existingMeal?.aiDraft)
+        _calculatesCaloriesFromPFC = State(
+            initialValue: existingMeal == nil || abs(storedCalories - pfcCalories) < 1
+        )
+        _inputMode = State(
+            initialValue: (!foodItems.isEmpty || !(existingMeal?.compositionItems.isEmpty ?? true))
+                && existingMeal?.imageData == nil ? .foodList : .photo
+        )
+        _foodInputs = State(
+            initialValue: foodItems.isEmpty
+                ? [MealFoodInput()]
+                : foodItems.map { MealFoodInput(text: $0) }
+        )
+        _compositionItems = State(initialValue: existingMeal?.compositionItems ?? [])
+    }
 
     var body: some View {
         NavigationStack {
             Form {
-                Section("写真") {
-                    PhotosPicker(selection: $selectedPhoto, matching: .images) {
-                        Label("写真を選択・変更", systemImage: "photo")
-                    }
-                    .accessibilityIdentifier("mealPhotoPicker")
+                Section("入力方法") {
+                    CoachIdentityView(
+                        persona: appStore.userProfile.coachPersona,
+                        role: "食事チェック",
+                        detail: "写真や食べたものから栄養の下書きを作ります。",
+                        avatarSize: 48
+                    )
+                    .accessibilityIdentifier("mealAICoachIdentity")
 
-                    if let imageData,
-                       let uiImage = UIImage(data: imageData) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(height: 180)
-                            .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+                    Picker("入力方法", selection: $inputMode) {
+                        ForEach(MealInputMode.allCases) { mode in
+                            Text(mode.title).tag(mode)
+                        }
                     }
+                    .pickerStyle(.segmented)
+                    .accessibilityIdentifier("mealInputModePicker")
 
-                    Button {
-                        analyzeMeal()
-                    } label: {
-                        Label(isAnalyzing ? "カロリー推定中" : "もう一度推定", systemImage: "sparkles")
+                    if inputMode == .photo {
+                        HStack(spacing: 12) {
+                            Button {
+                                requestCameraAccess()
+                            } label: {
+                                Label("撮影", systemImage: "camera.fill")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .disabled(!UIImagePickerController.isSourceTypeAvailable(.camera))
+                            .accessibilityIdentifier("mealCameraButton")
+
+                            PhotosPicker(selection: $selectedPhoto, matching: .images) {
+                                Label("ライブラリ", systemImage: "photo")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .accessibilityIdentifier("mealPhotoPicker")
+                        }
+
+                        if let imageData,
+                           let uiImage = UIImage(data: imageData) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(height: 180)
+                                .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+                        }
+
+                        Button {
+                            analyzeMealImage()
+                        } label: {
+                            Label(imageAnalysisButtonTitle, systemImage: "sparkles")
+                        }
+                        .disabled(
+                            imageData == nil
+                                || isAnalyzing
+                                || !canUseMealAI
+                        )
+                        .accessibilityIdentifier("analyzeMealButton")
+                    } else {
+                        ForEach($foodInputs) { $item in
+                            HStack(spacing: 8) {
+                                TextField("例：白ごはん 150g", text: $item.text)
+                                    .textInputAutocapitalization(.never)
+                                    .accessibilityIdentifier("mealFoodItemField-\(item.id.uuidString)")
+
+                                if foodInputs.count > 1 {
+                                    Button {
+                                        removeFoodInput(item.id)
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                    .buttonStyle(.borderless)
+                                    .foregroundStyle(AppTheme.critical)
+                                    .accessibilityLabel("削除")
+                                }
+                            }
+                        }
+
+                        Button {
+                            foodInputs.append(MealFoodInput())
+                        } label: {
+                            Label("食べたものを追加", systemImage: "plus")
+                        }
+                        .disabled(foodInputs.count >= 20)
+                        .accessibilityIdentifier("addMealFoodItemButton")
+
+                        HStack(spacing: 10) {
+                            Button {
+                                isShowingFoodDatabase = true
+                            } label: {
+                                Label("食品DB", systemImage: "books.vertical.fill")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .accessibilityIdentifier("openFoodDatabaseButton")
+
+                            Button {
+                                isShowingBarcode = true
+                            } label: {
+                                Label("バーコード", systemImage: "barcode.viewfinder")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .accessibilityIdentifier("openBarcodeFoodButton")
+                        }
+
+                        ForEach($compositionItems) { $item in
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack {
+                                    Text(item.name)
+                                        .font(.subheadline.bold())
+                                    Spacer()
+                                    Button {
+                                        compositionItems.removeAll { $0.id == item.id }
+                                        applyCompositionNutrition()
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                    .buttonStyle(.borderless)
+                                    .foregroundStyle(AppTheme.critical)
+                                    .accessibilityLabel("\(item.name)を削除")
+                                }
+
+                                NumericTextInputControl(
+                                    text: Binding(
+                                        get: { item.amountGrams.formatted(.number.precision(.fractionLength(0...1))) },
+                                        set: { item.amountGrams = parsed($0) }
+                                    ),
+                                    title: "実食量",
+                                    unit: "g",
+                                    range: 0...2_000,
+                                    step: 1,
+                                    defaultValue: item.amountGrams,
+                                    accessibilityIdentifier: "compositionAmount-\(item.id.uuidString)"
+                                )
+                                Text("\(Int(item.nutrition.calories.rounded()))kcal  P\(item.nutrition.protein.formatted(.number.precision(.fractionLength(0...1))))  F\(item.nutrition.fat.formatted(.number.precision(.fractionLength(0...1))))  C\(item.nutrition.carbs.formatted(.number.precision(.fractionLength(0...1))))")
+                                    .font(.footnote)
+                                    .foregroundStyle(AppTheme.mutedInk)
+                                if let note = item.dataQualityNote {
+                                    Text(note)
+                                        .font(.caption)
+                                        .foregroundStyle(AppTheme.warning)
+                                }
+                            }
+                        }
+
+                        Button {
+                            analyzeMealText()
+                        } label: {
+                            Label(textAnalysisButtonTitle, systemImage: "sparkles")
+                        }
+                        .disabled(allFoodItems.isEmpty || isAnalyzing || !canUseMealAI)
+                        .accessibilityIdentifier("analyzeMealTextButton")
                     }
-                    .disabled(imageData == nil || isAnalyzing || !appStore.aiSettings.isEnabled)
-                    .accessibilityIdentifier("analyzeMealButton")
 
                     Text(aiHelpText)
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
 
@@ -335,7 +610,7 @@ private struct MealEditorView: View {
 
                     if calculatesCaloriesFromPFC {
                         Text("P×4 + F×9 + C×4 = \(calculatedCalories.formatted(.number.precision(.fractionLength(0)))) kcal")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
@@ -346,7 +621,11 @@ private struct MealEditorView: View {
                 }
 
                 if let aiDraft {
-                    Section("AI下書き") {
+                    Section("\(appStore.userProfile.coachPersona.displayName)の下書き") {
+                        CoachAttributionLabel(
+                            persona: appStore.userProfile.coachPersona,
+                            text: "確認してから保存してください"
+                        )
                         LabeledContent("信頼度", value: aiDraft.confidence)
 
                         if !aiDraft.comment.isEmpty {
@@ -360,8 +639,17 @@ private struct MealEditorView: View {
                                 Text(item.name)
                                     .font(.headline)
                                 Text("\(item.amount) / \(AppFormatters.calories(item.calories)) / P \(AppFormatters.grams(item.protein))")
-                                    .font(.caption)
+                                    .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
+                                if item.nutritionSource == .mext {
+                                    Label("食品成分表で再計算", systemImage: "checkmark.seal.fill")
+                                        .font(.caption.bold())
+                                        .foregroundStyle(AppTheme.positive)
+                                } else {
+                                    Label("AI参考値・要確認", systemImage: "exclamationmark.triangle.fill")
+                                        .font(.caption.bold())
+                                        .foregroundStyle(AppTheme.warning)
+                                }
                             }
                         }
                     }
@@ -376,12 +664,12 @@ private struct MealEditorView: View {
 
                             if let aiErrorRecovery {
                                 Text(aiErrorRecovery)
-                                    .font(.caption)
+                                    .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
 
                             Text("食事名とPFCを手動で入力すれば、このまま保存できます。")
-                                .font(.caption)
+                                .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
                         .accessibilityIdentifier("mealAIErrorRecoveryCard")
@@ -390,7 +678,7 @@ private struct MealEditorView: View {
             }
             .scrollContentBackground(.hidden)
             .background(AppTheme.pageBackground)
-            .navigationTitle("食事を記録")
+            .navigationTitle(existingMeal == nil ? "食事を記録" : "食事を編集")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -412,20 +700,16 @@ private struct MealEditorView: View {
                     guard let loadedData = try? await item?.loadTransferable(type: Data.self) else {
                         return
                     }
-                    imageData = loadedData
-                    aiDraft = nil
-                    aiErrorMessage = nil
-                    aiErrorRecovery = nil
-                    if appStore.aiSettings.isEnabled {
-                        analyzeMeal()
-                    }
+                    receiveImageData(loadedData)
                 }
             }
             .onAppear {
-                restorePreviousNutritionValues(for: mealType)
+                if existingMeal == nil {
+                    restorePreviousNutritionValues(for: mealType)
+                }
             }
             .onChange(of: mealType) { _, newMealType in
-                guard imageData == nil, aiDraft == nil else { return }
+                guard existingMeal == nil, imageData == nil, aiDraft == nil else { return }
                 restorePreviousNutritionValues(for: newMealType)
             }
             .onChange(of: protein) { _, _ in updateCalculatedCalories() }
@@ -435,6 +719,45 @@ private struct MealEditorView: View {
                 if isEnabled {
                     updateCalculatedCalories()
                 }
+            }
+            .onChange(of: compositionItems) { _, _ in
+                applyCompositionNutrition()
+            }
+            .sheet(isPresented: $isShowingFoodDatabase) {
+                FoodCompositionPickerView { item in
+                    compositionItems.append(item)
+                    if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        name = item.name
+                    }
+                    applyCompositionNutrition()
+                }
+            }
+            .sheet(isPresented: $isShowingBarcode) {
+                BarcodeFoodPickerView { item in
+                    compositionItems.append(item)
+                    if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        name = item.name
+                    }
+                    applyCompositionNutrition()
+                }
+            }
+            .fullScreenCover(isPresented: $isShowingCamera) {
+                CameraImagePicker { data in
+                    isShowingCamera = false
+                    receiveImageData(data)
+                } onCancel: {
+                    isShowingCamera = false
+                }
+                .ignoresSafeArea()
+            }
+            .alert("カメラを使用できません", isPresented: $isShowingCameraPermissionAlert) {
+                Button("設定を開く") {
+                    guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                    UIApplication.shared.open(url)
+                }
+                Button("キャンセル", role: .cancel) {}
+            } message: {
+                Text("設定でBodyModeのカメラ利用を許可してください。")
             }
         }
     }
@@ -477,32 +800,176 @@ private struct MealEditorView: View {
             return "AI機能は設定でオフです。手動入力はこのまま保存できます。"
         }
 
-        if imageData == nil {
-            return "写真を選ぶと、カロリーなどを自動入力します。"
+        if !appStore.aiSettings.dataSharing.meals {
+            return "食事のAI共有は設定でオフです。"
         }
 
+        if inputMode == .foodList {
+            return "分かる範囲で量も書くと、推定精度が上がります。"
+        }
+
+        if imageData == nil { return "写真を選ぶと、カロリーなどを自動入力します。" }
         return "推定値は参考値です。下の入力欄で自由に修正できます。"
     }
 
-    private func analyzeMeal() {
-        guard let imageData else {
+    private var imageAnalysisButtonTitle: String {
+        if isAnalyzing { return "カロリー推定中" }
+        return aiDraft == nil ? "写真からカロリーを推定" : "もう一度推定"
+    }
+
+    private var textAnalysisButtonTitle: String {
+        if isAnalyzing { return "カロリー推定中" }
+        return aiDraft == nil ? "リストからカロリーを推定" : "もう一度推定"
+    }
+
+    private var canUseMealAI: Bool {
+        appStore.aiSettings.isEnabled && appStore.aiSettings.dataSharing.meals
+    }
+
+    private var validFoodItems: [String] {
+        foodInputs
+            .map { $0.text.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+    }
+
+    private var allFoodItems: [String] {
+        validFoodItems + compositionItems.map(\.displayText)
+    }
+
+    private func applyCompositionNutrition() {
+        guard !compositionItems.isEmpty else { return }
+        let total = compositionItems.reduce(NutritionAmount.zero) { $0 + $1.nutrition }
+        calculatesCaloriesFromPFC = false
+        calories = total.calories.formatted(.number.precision(.fractionLength(0)))
+        protein = total.protein.formatted(.number.precision(.fractionLength(0...1)))
+        fat = total.fat.formatted(.number.precision(.fractionLength(0...1)))
+        carbs = total.carbs.formatted(.number.precision(.fractionLength(0...1)))
+    }
+
+    private func removeFoodInput(_ id: UUID) {
+        foodInputs.removeAll { $0.id == id }
+        if foodInputs.isEmpty {
+            foodInputs = [MealFoodInput()]
+        }
+    }
+
+    private func requestCameraAccess() {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
+
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            isShowingCamera = true
+        case .notDetermined:
+            Task {
+                let granted = await AVCaptureDevice.requestAccess(for: .video)
+                await MainActor.run {
+                    if granted {
+                        isShowingCamera = true
+                    } else {
+                        isShowingCameraPermissionAlert = true
+                    }
+                }
+            }
+        case .denied, .restricted:
+            isShowingCameraPermissionAlert = true
+        @unknown default:
+            isShowingCameraPermissionAlert = true
+        }
+    }
+
+    private func receiveImageData(_ data: Data) {
+        inputMode = .photo
+        imageData = (try? AIImageUploadProcessor.jpegData(from: data)) ?? data
+        aiDraft = nil
+        aiErrorMessage = nil
+        aiErrorRecovery = nil
+        if appStore.aiSettings.isEnabled {
+            analyzeMealImage()
+        }
+    }
+
+    private func analyzeMealImage() {
+        guard let imageData,
+              appStore.aiSettings.isEnabled,
+              appStore.aiSettings.dataSharing.meals else {
             return
         }
 
         isAnalyzing = true
         aiErrorMessage = nil
         aiErrorRecovery = nil
+        let transmission = AITransmissionRecord(
+            purpose: "食事画像解析",
+            sharedCategories: ["食事写真"],
+            itemCount: 1
+        )
+        appStore.saveAITransmission(transmission)
 
         Task {
             do {
-                let draft = try await LocalAIClient(settings: appStore.aiSettings)
-                    .analyzeMealImage(imageData: imageData, mealType: mealType, memo: memo)
+                let draft = try await AIAPIClient(settings: appStore.aiSettings)
+                    .analyzeMealImage(
+                        imageData: imageData,
+                        mealType: mealType,
+                        memo: memo,
+                        coach: AIRequestCoachContext(profile: appStore.userProfile)
+                    )
                 await MainActor.run {
                     apply(draft)
+                    appStore.updateAITransmission(id: transmission.id, status: .completed)
                     isAnalyzing = false
                 }
             } catch {
                 await MainActor.run {
+                    appStore.updateAITransmission(id: transmission.id, status: .failed)
+                    let presentation = AIClientError.presentation(for: error)
+                    aiErrorMessage = presentation.message
+                    aiErrorRecovery = presentation.recovery
+                    isAnalyzing = false
+                }
+            }
+        }
+    }
+
+    private func analyzeMealText() {
+        let items = allFoodItems
+        guard !items.isEmpty,
+              appStore.aiSettings.isEnabled,
+              appStore.aiSettings.dataSharing.meals else {
+            return
+        }
+
+        if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            name = mealName(from: items)
+        }
+
+        isAnalyzing = true
+        aiErrorMessage = nil
+        aiErrorRecovery = nil
+        let transmission = AITransmissionRecord(
+            purpose: "食事内容解析",
+            sharedCategories: ["食事名・量"],
+            itemCount: items.count
+        )
+        appStore.saveAITransmission(transmission)
+
+        Task {
+            do {
+                let draft = try await AIAPIClient(settings: appStore.aiSettings)
+                    .analyzeMealText(
+                        items: items,
+                        mealType: mealType,
+                        memo: memo,
+                        coach: AIRequestCoachContext(profile: appStore.userProfile)
+                    )
+                await MainActor.run {
+                    apply(draft)
+                    appStore.updateAITransmission(id: transmission.id, status: .completed)
+                    isAnalyzing = false
+                }
+            } catch {
+                await MainActor.run {
+                    appStore.updateAITransmission(id: transmission.id, status: .failed)
                     let presentation = AIClientError.presentation(for: error)
                     aiErrorMessage = presentation.message
                     aiErrorRecovery = presentation.recovery
@@ -513,18 +980,33 @@ private struct MealEditorView: View {
     }
 
     private func apply(_ draft: MealAIDraft) {
-        aiDraft = draft
-        name = draft.mealName
+        let resolved = MealNutritionResolver().resolve(draft).draft
+        aiDraft = resolved
+        name = resolved.mealName
         calculatesCaloriesFromPFC = false
-        calories = draft.calories.formatted(.number.precision(.fractionLength(0)))
-        protein = draft.protein.formatted(.number.precision(.fractionLength(0...1)))
-        fat = draft.fat.formatted(.number.precision(.fractionLength(0...1)))
-        carbs = draft.carbs.formatted(.number.precision(.fractionLength(0...1)))
+        calories = resolved.calories.formatted(.number.precision(.fractionLength(0)))
+        protein = resolved.protein.formatted(.number.precision(.fractionLength(0...1)))
+        fat = resolved.fat.formatted(.number.precision(.fractionLength(0...1)))
+        carbs = resolved.carbs.formatted(.number.precision(.fractionLength(0...1)))
+    }
+
+    private func mealName(from items: [String]) -> String {
+        let names = items.prefix(3).map { item in
+            item.replacingOccurrences(
+                of: #"\s+(?:\d+(?:[.,]\d+)?\s*)?(?:g|kg|ml|l|個|枚|杯|本|切れ|食|人前)\b.*$"#,
+                with: "",
+                options: [.regularExpression, .caseInsensitive]
+            )
+        }
+        let suffix = items.count > 3 ? " ほか\(items.count - 3)品" : ""
+        return names.joined(separator: "・") + suffix
     }
 
     private func save() {
         appStore.saveMealEntry(
             MealEntry(
+                id: existingMeal?.id ?? UUID(),
+                recordedAt: existingMeal?.recordedAt ?? Date(),
                 mealType: mealType,
                 name: name.trimmingCharacters(in: .whitespacesAndNewlines),
                 calories: parsed(calories),
@@ -533,6 +1015,8 @@ private struct MealEditorView: View {
                 carbs: parsed(carbs),
                 memo: memo,
                 imageData: imageData,
+                foodItems: inputMode == .foodList ? validFoodItems : [],
+                compositionItems: inputMode == .foodList ? compositionItems : [],
                 aiDraft: aiDraft,
                 confirmedByUser: true
             )

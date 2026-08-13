@@ -6,10 +6,12 @@ struct PlanEditorView: View {
 
     @State private var draft: TrainingPlan
     @State private var isSelectingExercise = false
+    @State private var isShowingAIPlanCoach = false
     @State private var isShowingValidation = false
     @FocusState private var isPlanNameFocused: Bool
 
     let onSaved: () -> Void
+    let mode: PlanEditorMode
 
     private let quickTemplates = PlanTemplate.defaults
     private let setPresets = PlanSetPreset.defaults
@@ -18,8 +20,13 @@ struct PlanEditorView: View {
         GridItem(.flexible(), spacing: 8)
     ]
 
-    init(plan: TrainingPlan?, onSaved: @escaping () -> Void = {}) {
+    init(
+        plan: TrainingPlan?,
+        mode: PlanEditorMode = .standard,
+        onSaved: @escaping () -> Void = {}
+    ) {
         self.onSaved = onSaved
+        self.mode = mode
         _draft = State(
             initialValue: plan ?? TrainingPlan(
                 name: "",
@@ -37,51 +44,93 @@ struct PlanEditorView: View {
     var body: some View {
         NavigationStack {
             Form {
+                if mode == .beginnerStarter || mode == .beginnerProgression {
+                    Section {
+                        BeginnerStarterGuide(isProgression: mode == .beginnerProgression)
+                    }
+                    .listRowBackground(AppTheme.accent.opacity(0.1))
+                }
+
+                Section {
+                    Button {
+                        isShowingAIPlanCoach = true
+                    } label: {
+                        HStack(spacing: 12) {
+                            CoachAvatarView(
+                                persona: appStore.userProfile.coachPersona,
+                                size: 48,
+                                cornerRadius: 8
+                            )
+
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(
+                                    draft.exercises.isEmpty
+                                        ? "\(appStore.userProfile.coachPersona.displayName)に作ってもらう"
+                                        : "\(appStore.userProfile.coachPersona.displayName)に修正を相談"
+                                )
+                                    .font(.headline)
+                                    .foregroundStyle(AppTheme.ink)
+                                Text("目標・実績・使える器具を反映")
+                                    .font(.footnote)
+                                    .foregroundStyle(AppTheme.mutedInk)
+                            }
+
+                            Spacer(minLength: 4)
+                            Image(systemName: "chevron.right")
+                                .foregroundStyle(AppTheme.accent)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityIdentifier("consultAIFromPlanEditorButton")
+                }
+
                 Section("計画名") {
                     TextField("例: 胸の日", text: $draft.name)
                         .accessibilityIdentifier("planNameField")
                         .focused($isPlanNameFocused)
                 }
 
-                Section {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
-                            ForEach(quickTemplates) { template in
-                                Button {
-                                    applyTemplate(template)
-                                } label: {
-                                    PlanTemplateChip(template: template)
+                if mode == .standard {
+                    Section {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(quickTemplates) { template in
+                                    Button {
+                                        applyTemplate(template)
+                                    } label: {
+                                        PlanTemplateChip(template: template)
+                                    }
+                                    .buttonStyle(.plain)
+                                    .accessibilityIdentifier("planTemplate-\(template.id)")
                                 }
-                                .buttonStyle(.plain)
-                                .accessibilityIdentifier("planTemplate-\(template.id)")
                             }
+                            .padding(.vertical, 2)
                         }
-                        .padding(.vertical, 2)
+                    } header: {
+                        Text("クイック作成")
                     }
-                } header: {
-                    Text("クイック作成")
-                }
 
-                Section {
-                    if draft.exercises.isEmpty {
-                        Text("種目を追加すると一括設定できます。")
-                            .font(.subheadline)
-                            .foregroundStyle(AppTheme.mutedInk)
-                    } else {
-                        LazyVGrid(columns: setPresetColumns, spacing: 8) {
-                            ForEach(setPresets) { preset in
-                                Button {
-                                    applySetPreset(preset)
-                                } label: {
-                                    SetPresetChip(preset: preset)
+                    Section {
+                        if draft.exercises.isEmpty {
+                            Text("種目を追加すると一括設定できます。")
+                                .font(.subheadline)
+                                .foregroundStyle(AppTheme.mutedInk)
+                        } else {
+                            LazyVGrid(columns: setPresetColumns, spacing: 8) {
+                                ForEach(setPresets) { preset in
+                                    Button {
+                                        applySetPreset(preset)
+                                    } label: {
+                                        SetPresetChip(preset: preset)
+                                    }
+                                    .buttonStyle(.plain)
+                                    .accessibilityIdentifier("planSetPreset-\(preset.id)")
                                 }
-                                .buttonStyle(.plain)
-                                .accessibilityIdentifier("planSetPreset-\(preset.id)")
                             }
                         }
+                    } header: {
+                        Text("セット一括設定")
                     }
-                } header: {
-                    Text("セット一括設定")
                 }
 
                 Section {
@@ -119,7 +168,7 @@ struct PlanEditorView: View {
                 Button {
                     save()
                 } label: {
-                    Text("計画を保存")
+                    Text(saveButtonTitle)
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
@@ -161,6 +210,11 @@ struct PlanEditorView: View {
                 ExercisePickerView { exercise in
                     addExercise(exercise)
                     isSelectingExercise = false
+                }
+            }
+            .sheet(isPresented: $isShowingAIPlanCoach) {
+                AIPlanCoachView(startingPlan: draft.exercises.isEmpty ? nil : draft) { revisedPlan in
+                    draft = revisedPlan
                 }
             }
             .alert("保存できません", isPresented: $isShowingValidation) {
@@ -277,8 +331,54 @@ struct PlanEditorView: View {
         draft.name = draft.name.trimmingCharacters(in: .whitespacesAndNewlines)
         normalizeSortOrder()
         appStore.savePlan(draft)
+        if mode == .beginnerStarter || mode == .beginnerProgression {
+            appStore.selectTodayPlan(draft.id)
+        }
         onSaved()
         dismiss()
+    }
+
+    private var saveButtonTitle: String {
+        switch mode {
+        case .beginnerStarter:
+            "このメニューで始める"
+        case .beginnerProgression:
+            "このメニューを保存"
+        case .aiCoach:
+            "確認して計画を保存"
+        case .standard:
+            "計画を保存"
+        }
+    }
+}
+
+private struct BeginnerStarterGuide: View {
+    let isProgression: Bool
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "flag.checkered")
+                .font(.title2.bold())
+                .foregroundStyle(AppTheme.accent)
+                .frame(width: 40, height: 40)
+                .background(AppTheme.accent.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text(isProgression ? "目的・器具に合わせた次のレベル" : "LEVEL 1・全身スターター")
+                    .font(.headline)
+                    .foregroundStyle(AppTheme.ink)
+
+                Text(
+                    isProgression
+                        ? "過去の達成状況から重量・回数を調整しています。確認して保存します。"
+                        : "3種目を2セットずつ。無理のない重量に調整して保存します。"
+                )
+                    .font(.subheadline)
+                    .foregroundStyle(AppTheme.mutedInk)
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier(isProgression ? "beginnerProgressionGuide" : "beginnerStarterGuide")
     }
 }
 
@@ -384,7 +484,7 @@ private struct PlanTemplateChip: View {
                 IconBadge(systemImage: template.systemImage, tint: template.tint)
                 Spacer()
                 Text("\(template.exerciseNames.count)種目")
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(template.tint)
             }
 
@@ -393,7 +493,7 @@ private struct PlanTemplateChip: View {
                     .font(.headline)
                     .foregroundStyle(AppTheme.ink)
                 Text(template.subtitle)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -423,7 +523,7 @@ private struct SetPresetChip: View {
                     .font(.headline)
                     .foregroundStyle(AppTheme.ink)
                 Text(preset.detail)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
@@ -448,7 +548,7 @@ private struct PlanExerciseEditorCard: View {
                     Text(planExercise.exercise.name)
                         .font(.headline)
                     Text("\(planExercise.exercise.primaryMuscle.displayName)・\(planExercise.exercise.equipment.displayName)")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
 
@@ -491,7 +591,7 @@ private struct PlanExerciseEditorCard: View {
 
             if planExercise.exercise.supportsAssistedLoad {
                 Label("加算重量を入力。アシスト重量はマイナスで記録できます。", systemImage: "plus.forwardslash.minus")
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
@@ -512,7 +612,9 @@ private struct PlanExerciseEditorCard: View {
             PlanSetTarget(
                 setOrder: planExercise.sets.count + 1,
                 targetWeight: previous?.targetWeight ?? 50,
-                targetReps: previous?.targetReps ?? 10
+                targetReps: previous?.targetReps ?? 10,
+                plannedConcentricSeconds: previous?.plannedConcentricSeconds,
+                plannedEccentricSeconds: previous?.plannedEccentricSeconds
             )
         )
     }
@@ -544,33 +646,133 @@ private struct PlanSetTargetRow: View {
     let exercise: Exercise
     let exerciseSortOrder: Int
     let onDelete: () -> Void
+    @State private var isTempoEditorPresented = false
 
     var body: some View {
-        HStack(spacing: 10) {
-            Text("\(set.setOrder)")
-                .font(.headline)
-                .frame(width: 28, height: 28)
-                .background(AppTheme.ink.opacity(0.09), in: Circle())
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(spacing: 10) {
+                Text("\(set.setOrder)")
+                    .font(.headline)
+                    .frame(width: 28, height: 28)
+                    .background(AppTheme.ink.opacity(0.09), in: Circle())
 
-            WeightInputControl(
-                weightInKilograms: $set.targetWeight,
-                unit: appStore.userProfile.weightUnit,
-                kilogramRange: exercise.weightInputRange,
-                accessibilityIdentifier: "planWeightField-\(exerciseSortOrder)-\(set.setOrder)"
-            )
+                WeightInputControl(
+                    weightInKilograms: $set.targetWeight,
+                    unit: appStore.userProfile.weightUnit,
+                    kilogramRange: exercise.weightInputRange,
+                    accessibilityIdentifier: "planWeightField-\(exerciseSortOrder)-\(set.setOrder)"
+                )
 
-            RepsInputControl(
-                reps: $set.targetReps,
-                in: 1...999,
-                accessibilityIdentifier: "planRepsField-\(exerciseSortOrder)-\(set.setOrder)"
-            )
+                RepsInputControl(
+                    reps: $set.targetReps,
+                    in: 1...999,
+                    accessibilityIdentifier: "planRepsField-\(exerciseSortOrder)-\(set.setOrder)"
+                )
 
-            Button(role: .destructive, action: onDelete) {
-                Image(systemName: "minus.circle")
+                Button(role: .destructive, action: onDelete) {
+                    Image(systemName: "minus.circle")
+                }
+                .buttonStyle(.borderless)
+            }
+
+            Button {
+                isTempoEditorPresented = true
+            } label: {
+                Label(tempoTitle, systemImage: "metronome")
+                    .font(.caption)
             }
             .buttonStyle(.borderless)
+            .accessibilityIdentifier("planTempoButton-\(exerciseSortOrder)-\(set.setOrder)")
         }
         .font(.subheadline)
+        .sheet(isPresented: $isTempoEditorPresented) {
+            PlanSetTempoEditor(set: $set)
+                .presentationDetents([.height(390)])
+        }
+    }
+
+    private var tempoTitle: String {
+        guard let up = set.plannedConcentricSeconds,
+              let down = set.plannedEccentricSeconds else {
+            return "テンポを設定"
+        }
+        return "上げ \(up)秒・下げ \(down)秒"
+    }
+}
+
+private struct PlanSetTempoEditor: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var set: PlanSetTarget
+    @State private var isEnabled: Bool
+    @State private var concentricText: String
+    @State private var eccentricText: String
+
+    init(set: Binding<PlanSetTarget>) {
+        _set = set
+        let current = set.wrappedValue
+        _isEnabled = State(initialValue: current.plannedConcentricSeconds != nil)
+        _concentricText = State(initialValue: String(current.plannedConcentricSeconds ?? 2))
+        _eccentricText = State(initialValue: String(current.plannedEccentricSeconds ?? 3))
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    Toggle("触覚でテンポを案内", isOn: $isEnabled)
+                        .accessibilityIdentifier("planTempoEnabled")
+                } footer: {
+                    Text("セット中、Apple Watchが1秒ごとに触覚でカウントします。")
+                }
+
+                if isEnabled {
+                    Section("1回の動作") {
+                        NumericTextInputControl(
+                            text: $concentricText,
+                            title: "上げ",
+                            unit: "秒",
+                            range: 1...10,
+                            step: 1,
+                            defaultValue: 2,
+                            accessibilityIdentifier: "planConcentricSeconds"
+                        )
+                        NumericTextInputControl(
+                            text: $eccentricText,
+                            title: "下げ",
+                            unit: "秒",
+                            range: 1...10,
+                            step: 1,
+                            defaultValue: 3,
+                            accessibilityIdentifier: "planEccentricSeconds"
+                        )
+                    }
+                }
+            }
+            .navigationTitle("動作テンポ")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("キャンセル") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") {
+                        if isEnabled {
+                            set.plannedConcentricSeconds = parsed(concentricText, fallback: 2)
+                            set.plannedEccentricSeconds = parsed(eccentricText, fallback: 3)
+                        } else {
+                            set.plannedConcentricSeconds = nil
+                            set.plannedEccentricSeconds = nil
+                        }
+                        dismiss()
+                    }
+                    .accessibilityIdentifier("savePlanTempoButton")
+                }
+            }
+        }
+    }
+
+    private func parsed(_ text: String, fallback: Int) -> Int {
+        min(10, max(1, Int(Double(text.replacingOccurrences(of: ",", with: ".")) ?? Double(fallback))))
     }
 }
 
@@ -585,4 +787,5 @@ private extension PlanSetTarget {
 #Preview {
     PlanEditorView(plan: nil)
         .environmentObject(AppStore())
+        .environmentObject(HealthDataManager())
 }

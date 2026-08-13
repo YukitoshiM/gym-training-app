@@ -158,7 +158,7 @@ private struct WorkoutExerciseSection: View {
                                 .font(.headline)
 
                             Text("\(workoutExercise.exercise.primaryMuscle.displayName)・計画 \(workoutExercise.completedPlannedSetCount)/\(workoutExercise.plannedSetCount)セット・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
-                                .font(.caption)
+                                .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
 
@@ -241,6 +241,8 @@ private struct WorkoutExerciseSection: View {
                 setOrder: workoutExercise.sets.count + 1,
                 targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10,
+                plannedConcentricSeconds: previous?.plannedConcentricSeconds,
+                plannedEccentricSeconds: previous?.plannedEccentricSeconds,
                 actualWeight: previous?.actualWeight,
                 actualReps: previous?.actualReps,
                 isAdded: true
@@ -300,7 +302,7 @@ private struct WorkoutSetRow: View {
             if let previousSet {
                 HStack {
                     Label(previousText(for: previousSet), systemImage: "clock.arrow.circlepath")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
 
                     Spacer()
@@ -311,7 +313,7 @@ private struct WorkoutSetRow: View {
                         Label("コピー", systemImage: "doc.on.doc")
                             .labelStyle(.titleAndIcon)
                     }
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .buttonStyle(.borderless)
                     .accessibilityIdentifier("copyPreviousSet-\(exerciseSortOrder)-\(set.setOrder)")
                 }
@@ -328,7 +330,7 @@ private struct WorkoutSetRow: View {
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("目標 \(AppFormatters.weight(set.targetWeight)) × \(set.targetReps)回")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 6) {
@@ -349,7 +351,7 @@ private struct WorkoutSetRow: View {
                 Spacer()
 
                 Text(statusText)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(statusTint)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 5)
@@ -398,7 +400,7 @@ private struct WorkoutSetRow: View {
                     ),
                     systemImage: "figure.strengthtraining.traditional"
                 )
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
                 .accessibilityIdentifier("dipLoadSummary-\(exerciseSortOrder)-\(set.setOrder)")
             }
@@ -408,7 +410,7 @@ private struct WorkoutSetRow: View {
             } label: {
                 Label("目標値をコピー", systemImage: "target")
             }
-            .font(.caption.bold())
+            .font(.footnote.bold())
             .buttonStyle(.borderless)
             .accessibilityIdentifier("copyTargetSet-\(exerciseSortOrder)-\(set.setOrder)")
         }
@@ -470,10 +472,10 @@ private struct DeltaBadge: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
             Text(title)
-                .font(.caption2)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
             Text(value)
-                .font(.caption.bold())
+                .font(.footnote.bold())
                 .foregroundStyle(tint)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)

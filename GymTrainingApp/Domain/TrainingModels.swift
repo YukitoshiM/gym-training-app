@@ -53,17 +53,23 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var plannedConcentricSeconds: Int?
+    var plannedEccentricSeconds: Int?
 
     init(
         id: UUID = UUID(),
         setOrder: Int,
         targetWeight: Double,
-        targetReps: Int
+        targetReps: Int,
+        plannedConcentricSeconds: Int? = nil,
+        plannedEccentricSeconds: Int? = nil
     ) {
         self.id = id
         self.setOrder = setOrder
         self.targetWeight = targetWeight
         self.targetReps = targetReps
+        self.plannedConcentricSeconds = plannedConcentricSeconds
+        self.plannedEccentricSeconds = plannedEccentricSeconds
     }
 
     static func defaultSets() -> [PlanSetTarget] {
@@ -242,6 +248,8 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var plannedConcentricSeconds: Int?
+    var plannedEccentricSeconds: Int?
     var actualWeight: Double
     var actualReps: Int
     var isCompleted: Bool
@@ -250,6 +258,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var startedAt: Date?
     var completedAt: Date?
     var sensorSummary: SetSensorSummary?
+    var tempoPerformance: TempoPerformance?
     var note: String?
 
     init(
@@ -257,6 +266,8 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         setOrder: Int,
         targetWeight: Double,
         targetReps: Int,
+        plannedConcentricSeconds: Int? = nil,
+        plannedEccentricSeconds: Int? = nil,
         actualWeight: Double? = nil,
         actualReps: Int? = nil,
         isCompleted: Bool = false,
@@ -265,12 +276,15 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         startedAt: Date? = nil,
         completedAt: Date? = nil,
         sensorSummary: SetSensorSummary? = nil,
+        tempoPerformance: TempoPerformance? = nil,
         note: String? = nil
     ) {
         self.id = id
         self.setOrder = setOrder
         self.targetWeight = targetWeight
         self.targetReps = targetReps
+        self.plannedConcentricSeconds = plannedConcentricSeconds
+        self.plannedEccentricSeconds = plannedEccentricSeconds
         self.actualWeight = actualWeight ?? targetWeight
         self.actualReps = actualReps ?? targetReps
         self.isCompleted = isCompleted
@@ -279,6 +293,13 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         self.startedAt = startedAt
         self.completedAt = completedAt
         self.sensorSummary = sensorSummary
+        self.tempoPerformance = tempoPerformance ?? TempoPerformance(
+            plannedConcentricSeconds: plannedConcentricSeconds,
+            plannedEccentricSeconds: plannedEccentricSeconds,
+            observedConcentricSeconds: sensorSummary?.averageConcentricDuration,
+            observedEccentricSeconds: sensorSummary?.averageEccentricDuration,
+            wasManuallyCorrected: false
+        )
         self.note = note
     }
 
@@ -356,7 +377,9 @@ extension WorkoutSession {
                             WorkoutSet(
                                 setOrder: $0.setOrder,
                                 targetWeight: $0.targetWeight,
-                                targetReps: $0.targetReps
+                                targetReps: $0.targetReps,
+                                plannedConcentricSeconds: $0.plannedConcentricSeconds,
+                                plannedEccentricSeconds: $0.plannedEccentricSeconds
                             )
                         }
                 )

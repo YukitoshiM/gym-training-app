@@ -11,7 +11,7 @@ struct RecordHubView: View {
     }
 
     private var bodyPhotoCount: Int {
-        appStore.bodyPhotoEntries().count
+        appStore.bodyPhotoSet() == nil ? 0 : 1
     }
 
     private var workoutCount: Int {
@@ -38,14 +38,6 @@ struct RecordHubView: View {
                     if let liveWorkout = watchSyncService.liveWatchWorkout {
                         WatchLiveWorkoutCard(snapshot: liveWorkout)
                     }
-
-                    DailyRecordChecklistCard(
-                        bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
-                        waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
-                        nutritionProgress: nutritionProgress,
-                        bodyPhotoCount: bodyPhotoCount,
-                        workoutCount: workoutCount
-                    )
 
                     VStack(alignment: .leading, spacing: 10) {
                         SectionHeader(title: "今日の入力", subtitle: "先に短い記録を済ませて、あとでまとめて振り返れます。")
@@ -107,7 +99,16 @@ struct RecordHubView: View {
                             .buttonStyle(.plain)
                             .accessibilityIdentifier("recordHubBodyPhotoLink")
                         }
+                        .appTourTarget(.recordQuickActions)
                     }
+
+                    DailyRecordChecklistCard(
+                        bodyWeightRecorded: appStore.hasBodyMetricEntry(for: .bodyWeight),
+                        waistRecorded: appStore.hasBodyMetricEntry(for: .waist),
+                        nutritionProgress: nutritionProgress,
+                        bodyPhotoCount: bodyPhotoCount,
+                        workoutCount: workoutCount
+                    )
 
                     VStack(alignment: .leading, spacing: 10) {
                         SectionHeader(title: "トレーニング", subtitle: "計画から開始するか、その場で種目を追加して記録します。")
@@ -124,7 +125,8 @@ struct RecordHubView: View {
                                         profile: appStore.userProfile,
                                         sensorSettings: appStore.sensorSettings,
                                         appearanceSettings: appStore.appearanceSettings,
-                                        preferredPlanID: appStore.todayPlan?.id
+                                        preferredPlanID: appStore.todayPlan?.id,
+                                        dailyRecommendation: appStore.dailyRecommendation()
                                     )
                                 }
                             )
@@ -205,7 +207,7 @@ private struct GymArrivalPlanCard: View {
                     Text("ジムに到着しました")
                         .font(.headline)
                     Text("今日: \(plan.name)・\(plan.totalSetCount)セット")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
                 Spacer()
@@ -240,7 +242,7 @@ private struct WatchPlanSyncCard: View {
                             .font(.headline)
                             .foregroundStyle(AppTheme.ink)
                         Text("登録済みメニュー \(plans.count)件")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(1)
                     }
@@ -260,7 +262,7 @@ private struct WatchPlanSyncCard: View {
                 }
 
                 Text(state.message)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
                     .fixedSize(horizontal: false, vertical: true)
 
@@ -279,19 +281,21 @@ private struct WatchPlanSyncCard: View {
                 } label: {
                     HStack {
                         Label("今日のメニュー", systemImage: "calendar.badge.checkmark")
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                         Spacer()
                         Text(selectedPlanName)
-                            .font(.caption)
+                            .font(.footnote)
                             .lineLimit(1)
                         Image(systemName: "chevron.up.chevron.down")
-                            .font(.caption2)
+                            .font(.footnote)
                     }
                     .foregroundStyle(AppTheme.ink)
                     .padding(.horizontal, 12)
-                    .frame(height: 40)
+                    .frame(height: 44)
                     .background(AppTheme.pageBackground, in: RoundedRectangle(cornerRadius: 8))
                 }
+                .accessibilityLabel("今日のメニュー")
+                .accessibilityValue(selectedPlanName)
                 .accessibilityIdentifier("watchTodayPlanMenu")
             }
         }
@@ -322,7 +326,7 @@ private struct SectionHeader: View {
             Text(title)
                 .font(.headline)
             Text(subtitle)
-                .font(.caption)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
         }
     }
@@ -342,7 +346,7 @@ private struct RecordQuickActionCard: View {
                     IconBadge(systemImage: isCompleted ? "checkmark.circle.fill" : systemImage, tint: isCompleted ? AppTheme.positive : tint)
                     Spacer()
                     Image(systemName: "chevron.right")
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(AppTheme.mutedInk)
                 }
 
@@ -351,7 +355,7 @@ private struct RecordQuickActionCard: View {
                         .font(.headline)
                         .foregroundStyle(AppTheme.ink)
                     Text(detail)
-                        .font(.caption.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(isCompleted ? AppTheme.positive : AppTheme.mutedInk)
                 }
             }
@@ -377,14 +381,14 @@ private struct WorkoutStartCard: View {
                         .font(.headline)
                         .foregroundStyle(AppTheme.ink)
                     Text(detail)
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
 
                 Spacer()
 
                 Text(trailingText)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(tint)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)

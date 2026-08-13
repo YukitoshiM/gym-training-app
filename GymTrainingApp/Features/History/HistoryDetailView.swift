@@ -29,7 +29,7 @@ struct HistoryDetailView: View {
 
                     if currentSession.sourceDevice == .appleWatch {
                         Label("Apple Watchから同期", systemImage: "applewatch")
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .foregroundStyle(AppTheme.accent)
                     }
 
@@ -67,7 +67,7 @@ struct HistoryDetailView: View {
                     }
 
                     Label(healthSaveTitle, systemImage: healthSaveSystemImage)
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -181,17 +181,30 @@ private struct HistorySetRow: View {
                     .font(.headline)
 
                 Text("目標 \(AppFormatters.weight(set.targetWeight, unit: appStore.userProfile.weightUnit)) × \(set.targetReps)回")
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
 
+                if let tempo = set.tempoPerformance {
+                    Label(tempoOutcomeText(tempo), systemImage: "metronome")
+                        .font(.footnote.bold())
+                        .foregroundStyle(tempo.achievement == .onTarget ? AppTheme.positive : AppTheme.mutedInk)
+                        .accessibilityIdentifier("historyTempoOutcome-\(set.setOrder)")
+                } else if let up = set.plannedConcentricSeconds,
+                          let down = set.plannedEccentricSeconds {
+                    Label("テンポ計画 上げ\(up)秒・下げ\(down)秒", systemImage: "metronome")
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .accessibilityIdentifier("historyPlannedTempo-\(set.setOrder)")
+                }
+
                 Text("重量差 \(AppFormatters.signedWeight(set.weightDelta, unit: appStore.userProfile.weightUnit)) / 回数差 \(AppFormatters.signedReps(set.repsDelta))")
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(statusTint)
                     .accessibilityIdentifier("historySetDelta-\(set.setOrder)")
 
                 if let rpe = set.rpe {
                     Text("RPE \(rpe.formatted(.number.precision(.fractionLength(0...1))))")
-                        .font(.caption2.bold())
+                        .font(.footnote.bold())
                         .foregroundStyle(AppTheme.accent)
                         .accessibilityIdentifier("historySetRPE-\(set.setOrder)")
                 }
@@ -205,14 +218,14 @@ private struct HistorySetRow: View {
                         ),
                         systemImage: "figure.strengthtraining.traditional"
                     )
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
                     .accessibilityIdentifier("historyDipLoadSummary-\(set.setOrder)")
                 }
 
                 if let duration = set.duration {
                     Text("セット時間 \(formatSetDuration(duration))")
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
 
@@ -226,9 +239,20 @@ private struct HistorySetRow: View {
                         }
                         if let consistency = sensorSummary.movementConsistency {
                             Label("安定\(Int(consistency * 100))%", systemImage: "checkmark.circle")
-                        }
                     }
-                    .font(.caption2)
+
+                    if let up = sensorSummary.averageConcentricDuration,
+                       let down = sensorSummary.averageEccentricDuration {
+                        Label(
+                            "実測テンポ 上げ\(up.formatted(.number.precision(.fractionLength(1))))秒・下げ\(down.formatted(.number.precision(.fractionLength(1))))秒",
+                            systemImage: "waveform.path.ecg"
+                        )
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .accessibilityIdentifier("historyObservedTempo-\(set.setOrder)")
+                    }
+                }
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -253,6 +277,25 @@ private func formatSetDuration(_ duration: TimeInterval) -> String {
     }
 
     return "\(minutes)分\(seconds)秒"
+}
+
+private func tempoOutcomeText(_ performance: TempoPerformance) -> String {
+    let outcome: String
+    switch performance.achievement {
+    case .onTarget:
+        outcome = "計画どおり"
+    case .faster:
+        outcome = "計画より速め"
+    case .slower:
+        outcome = "計画よりゆっくり"
+    case .mixed:
+        outcome = "上下で差あり"
+    }
+
+    let up = String(format: "%+.1f", performance.concentricDifferenceSeconds)
+    let down = String(format: "%+.1f", performance.eccentricDifferenceSeconds)
+    let corrected = performance.wasManuallyCorrected ? "・補正済み" : ""
+    return "\(outcome) 上げ\(up)秒 / 下げ\(down)秒\(corrected)"
 }
 
 #Preview {

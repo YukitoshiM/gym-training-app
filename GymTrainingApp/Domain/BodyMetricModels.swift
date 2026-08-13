@@ -1,6 +1,6 @@
 import Foundation
 
-enum BodyMetricKind: String, CaseIterable, Identifiable, Codable, Hashable {
+enum BodyMetricKind: String, CaseIterable, Identifiable, Codable, Hashable, Sendable {
     case bodyWeight
     case waist
     case bodyFatPercentage

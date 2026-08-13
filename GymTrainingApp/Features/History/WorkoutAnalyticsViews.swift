@@ -71,7 +71,7 @@ struct ExerciseHistoryListView: View {
                             Label("\(summary.count)回", systemImage: "number")
                             Label(AppFormatters.volume(summary.totalVolume, unit: appStore.userProfile.weightUnit), systemImage: "scalemass")
                         }
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
@@ -150,7 +150,7 @@ struct ExerciseHistoryDetailView: View {
                         Text(AppFormatters.shortDate.string(from: record.date))
                             .font(.headline)
                         Text("\(AppFormatters.weight(record.maxWeight, unit: appStore.userProfile.weightUnit)) / \(AppFormatters.volume(record.exercise.totalVolume, unit: appStore.userProfile.weightUnit))")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }

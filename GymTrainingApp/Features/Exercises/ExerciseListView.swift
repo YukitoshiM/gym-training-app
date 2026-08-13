@@ -6,6 +6,11 @@ struct ExerciseListView: View {
     @State private var isShowingCustomEditor = false
     @State private var selectedMuscle: MuscleGroup?
     @State private var selectedEquipment: Equipment?
+    private let embedsInNavigationStack: Bool
+
+    init(embedsInNavigationStack: Bool = true) {
+        self.embedsInNavigationStack = embedsInNavigationStack
+    }
 
     private var filteredExercises: [Exercise] {
         appStore.allExercises.filter { exercise in
@@ -20,53 +25,61 @@ struct ExerciseListView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    ExerciseFilterView(selectedMuscle: $selectedMuscle, selectedEquipment: $selectedEquipment)
-                }
+        if embedsInNavigationStack {
+            NavigationStack {
+                content
+            }
+        } else {
+            content
+        }
+    }
 
-                if filteredExercises.isEmpty {
-                    Section {
-                        ContentUnavailableView {
-                            Label("該当する種目がありません", systemImage: "magnifyingglass")
-                        } description: {
-                            Text("右上の追加ボタンからカスタム種目を登録できます。")
-                        }
+    private var content: some View {
+        List {
+            Section {
+                ExerciseFilterView(selectedMuscle: $selectedMuscle, selectedEquipment: $selectedEquipment)
+            }
+
+            if filteredExercises.isEmpty {
+                Section {
+                    ContentUnavailableView {
+                        Label("該当する種目がありません", systemImage: "magnifyingglass")
+                    } description: {
+                        Text("右上の追加ボタンからカスタム種目を登録できます。")
                     }
-                } else {
-                    ForEach(groupedExercises) { group in
+                }
+            } else {
+                ForEach(groupedExercises) { group in
                         Section(group.title) {
                             ForEach(group.exercises) { exercise in
-                                NavigationLink(value: exercise) {
+                                NavigationLink {
+                                    ExerciseDetailView(exercise: exercise)
+                                } label: {
                                     ExerciseSummaryRow(exercise: exercise)
                                 }
+                                .accessibilityIdentifier("exerciseDetailLink-\(exercise.name)")
                             }
-                        }
                     }
                 }
             }
-            .scrollContentBackground(.hidden)
-            .background(AppTheme.pageBackground)
-            .navigationTitle("種目")
-            .searchable(text: $searchText, prompt: "種目名・部位・手法")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        isShowingCustomEditor = true
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-                    .accessibilityLabel("カスタム種目を追加")
-                    .accessibilityIdentifier("addCustomExerciseButton")
+        }
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground)
+        .navigationTitle("種目")
+        .searchable(text: $searchText, prompt: "種目名・部位・手法")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    isShowingCustomEditor = true
+                } label: {
+                    Image(systemName: "plus")
                 }
+                .accessibilityLabel("カスタム種目を追加")
+                .accessibilityIdentifier("addCustomExerciseButton")
             }
-            .navigationDestination(for: Exercise.self) { exercise in
-                ExerciseDetailView(exercise: exercise)
-            }
-            .sheet(isPresented: $isShowingCustomEditor) {
-                CustomExerciseEditorView(initialName: searchText)
-            }
+        }
+        .sheet(isPresented: $isShowingCustomEditor) {
+            CustomExerciseEditorView(initialName: searchText)
         }
     }
 
@@ -86,14 +99,31 @@ struct ExerciseSummaryRow: View {
     let exercise: Exercise
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(exercise.name)
-                .font(.headline)
-            Text("\(exercise.primaryMuscle.displayName)・\(exercise.equipment.displayName)")
-                .font(.subheadline)
+        HStack(spacing: 12) {
+            ExercisePhotoCropView(exercise: exercise)
+                .frame(width: 56, height: 56)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(AppTheme.cardBorder, lineWidth: 1)
+                }
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text(exercise.name)
+                    .font(.headline)
+
+                HStack(spacing: 10) {
+                    Label(exercise.primaryMuscle.displayName, systemImage: exercise.primaryMuscle.systemImage)
+                    Label(exercise.equipment.displayName, systemImage: exercise.equipment.systemImage)
+                }
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+            }
         }
         .padding(.vertical, 4)
+        .accessibilityElement(children: .combine)
     }
 }
 

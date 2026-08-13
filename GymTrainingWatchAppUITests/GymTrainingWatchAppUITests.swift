@@ -38,7 +38,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["ベンチプレス・3セット・計30回"].exists)
 
         let startButton = findHittableElement(in: app, identifier: "watchStartWorkoutButton")
-        XCTAssertTrue(startButton.exists)
+        XCTAssertTrue(startButton.waitForExistence(timeout: 10))
         XCTAssertTrue(startButton.isHittable)
         startButton.tap()
 
@@ -62,8 +62,11 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(firstSetStartButton.waitForExistence(timeout: 5))
         firstSetStartButton.tap()
         XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["watchTempoCue"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["watchTempoPauseButton"].exists)
+        XCTAssertTrue(app.buttons["watchTempoSkipButton"].exists)
 
-        let weightEntryButton = app.buttons["watchActiveWeightEntry"]
+        let weightEntryButton = findHittableElement(in: app, identifier: "watchActiveWeightEntry")
         XCTAssertTrue(weightEntryButton.waitForExistence(timeout: 5))
         XCTAssertTrue(weightEntryButton.isHittable)
         weightEntryButton.tap()
@@ -79,7 +82,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(saveWeightButton.isHittable)
         saveWeightButton.tap()
 
-        let repsEntryButton = app.buttons["watchActiveRepsEntry"]
+        let repsEntryButton = findHittableElement(in: app, identifier: "watchActiveRepsEntry")
         XCTAssertTrue(repsEntryButton.waitForExistence(timeout: 5))
         XCTAssertTrue(repsEntryButton.isHittable)
         repsEntryButton.tap()
@@ -101,7 +104,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertEqual(actualResult.label, "実績 \(selectedWeight) × \(selectedReps)回")
         attachScreenshot(named: "watch-set-result-entry", app: app)
 
-        let rpeButton = app.buttons["watchActiveRPEEntry"]
+        let rpeButton = findHittableElement(in: app, identifier: "watchActiveRPEEntry")
         XCTAssertTrue(rpeButton.waitForExistence(timeout: 5))
         XCTAssertTrue(rpeButton.isHittable)
         rpeButton.tap()
@@ -116,7 +119,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(saveRPEButton.isHittable)
         saveRPEButton.tap()
 
-        let firstSetButton = app.buttons["watchCompleteActiveSetButton"]
+        let firstSetButton = findHittableElement(in: app, identifier: "watchCompleteActiveSetButton")
         XCTAssertTrue(firstSetButton.waitForExistence(timeout: 5))
         XCTAssertTrue(firstSetButton.isHittable)
         firstSetButton.tap()
@@ -205,6 +208,64 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         let activeSetActual = app.staticTexts["watchActiveSetActual"]
         XCTAssertTrue(activeSetActual.waitForExistence(timeout: 5))
         XCTAssertEqual(activeSetActual.label, "実績 52.5 kg × 10回")
+    }
+
+    func testTutorialCanBeCompletedAndReopened() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--show-watch-tutorial"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 10))
+        for page in 1...5 {
+            XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-\(page)"].exists)
+            app.buttons["nextWatchTutorialButton"].tap()
+        }
+        XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-6"].waitForExistence(timeout: 5))
+        app.buttons["completeWatchTutorialButton"].tap()
+
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 5))
+        let tutorialButton = app.buttons["Apple Watchの使い方"].firstMatch
+        XCTAssertTrue(tutorialButton.waitForExistence(timeout: 5))
+        XCTAssertEqual(tutorialButton.label, "Apple Watchの使い方")
+        tutorialButton.tap()
+        XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 5))
+        app.buttons["skipWatchTutorialButton"].tap()
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 5))
+    }
+
+    func testTutorialCanBeSkippedWithoutAutomaticallyReappearing() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--show-watch-tutorial"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 10))
+        let skipButton = app.buttons["skipWatchTutorialButton"]
+        XCTAssertTrue(skipButton.exists)
+        XCTAssertEqual(skipButton.label, "チュートリアルをスキップ")
+        skipButton.tap()
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["skipWatchTutorialButton"].exists)
+
+        app.terminate()
+        app.launchArguments = []
+        app.launch()
+
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
+        XCTAssertFalse(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 2))
+
+        let tutorialButton = app.buttons["Apple Watchの使い方"].firstMatch
+        XCTAssertTrue(tutorialButton.waitForExistence(timeout: 5))
+        XCTAssertEqual(tutorialButton.label, "Apple Watchの使い方")
+        tutorialButton.tap()
+        XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 5))
     }
 
     private func findHittableElement(

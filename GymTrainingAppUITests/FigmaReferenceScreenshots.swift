@@ -4,7 +4,8 @@ import XCTest
 final class FigmaReferenceScreenshots: XCTestCase {
     private var app: XCUIApplication!
 
-    override func setUpWithError() throws {
+    override func setUp() async throws {
+        try await super.setUp()
         continueAfterFailure = false
         app = XCUIApplication()
         app.launchArguments = [
@@ -61,7 +62,7 @@ final class FigmaReferenceScreenshots: XCTestCase {
         let aiReportLink = scrollToHittable(app.descendants(matching: .any)["aiReportLink"])
         XCTAssertTrue(aiReportLink.isHittable)
         aiReportLink.tap()
-        XCTAssertTrue(app.navigationBars["AIレポート"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["Noorのレポート"].waitForExistence(timeout: 5))
         capture("07-iphone-ai-weekly-report")
     }
 
@@ -87,7 +88,9 @@ final class FigmaReferenceScreenshots: XCTestCase {
         app.navigationBars["種目を選択"].buttons["閉じる"].tap()
         app.navigationBars["背中の日"].buttons["キャンセル"].tap()
 
-        tapTab("種目")
+        let libraryLink = app.buttons["exerciseLibraryLink"]
+        XCTAssertTrue(libraryLink.waitForExistence(timeout: 5))
+        libraryLink.tap()
         XCTAssertTrue(app.navigationBars["種目"].waitForExistence(timeout: 5))
         capture("12-iphone-exercise-library")
 
@@ -101,7 +104,9 @@ final class FigmaReferenceScreenshots: XCTestCase {
         searchField.tap()
         searchField.typeText("ベンチプレス")
 
-        let benchPress = app.staticTexts["ベンチプレス"].firstMatch
+        let benchPress = app.buttons.matching(
+            NSPredicate(format: "label CONTAINS %@", "ベンチプレス")
+        ).firstMatch
         XCTAssertTrue(benchPress.waitForExistence(timeout: 5))
         benchPress.tap()
         XCTAssertTrue(app.navigationBars["種目詳細"].waitForExistence(timeout: 5))
@@ -148,7 +153,7 @@ final class FigmaReferenceScreenshots: XCTestCase {
         capture("22-iphone-body-photo-list")
 
         app.buttons["addBodyPhotoButton"].tap()
-        XCTAssertTrue(app.navigationBars["体型写真を記録"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["撮影セットを追加"].waitForExistence(timeout: 5))
         app.textFields["bodyPhotoMemoField"].tap()
         app.textFields["bodyPhotoMemoField"].typeText("正面・自然光・同じ姿勢")
         dismissKeyboardIfPresent()

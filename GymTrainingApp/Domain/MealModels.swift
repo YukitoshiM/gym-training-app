@@ -29,6 +29,8 @@ struct MealEntry: Identifiable, Codable, Hashable {
     var carbs: Double
     var memo: String
     var imageData: Data?
+    var foodItems: [String]
+    var compositionItems: [MealCompositionItem]
     var aiDraft: MealAIDraft?
     var confirmedByUser: Bool
 
@@ -43,6 +45,8 @@ struct MealEntry: Identifiable, Codable, Hashable {
         carbs: Double = 0,
         memo: String = "",
         imageData: Data? = nil,
+        foodItems: [String] = [],
+        compositionItems: [MealCompositionItem] = [],
         aiDraft: MealAIDraft? = nil,
         confirmedByUser: Bool = true
     ) {
@@ -56,6 +60,8 @@ struct MealEntry: Identifiable, Codable, Hashable {
         self.carbs = carbs
         self.memo = memo
         self.imageData = imageData
+        self.foodItems = foodItems
+        self.compositionItems = compositionItems
         self.aiDraft = aiDraft
         self.confirmedByUser = confirmedByUser
     }
@@ -72,6 +78,8 @@ struct MealEntry: Identifiable, Codable, Hashable {
         carbs = try container.decodeIfPresent(Double.self, forKey: .carbs) ?? 0
         memo = try container.decodeIfPresent(String.self, forKey: .memo) ?? ""
         imageData = try container.decodeIfPresent(Data.self, forKey: .imageData)
+        foodItems = try container.decodeIfPresent([String].self, forKey: .foodItems) ?? []
+        compositionItems = try container.decodeIfPresent([MealCompositionItem].self, forKey: .compositionItems) ?? []
         aiDraft = try container.decodeIfPresent(MealAIDraft.self, forKey: .aiDraft)
         confirmedByUser = try container.decodeIfPresent(Bool.self, forKey: .confirmedByUser) ?? true
     }

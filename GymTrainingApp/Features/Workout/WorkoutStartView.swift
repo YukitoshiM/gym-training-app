@@ -24,7 +24,7 @@ struct WorkoutStartView: View {
                                         Text("フリートレーニング")
                                             .font(.headline)
                                         Text("計画なしで種目を追加して記録します")
-                                            .font(.caption)
+                                            .font(.footnote)
                                             .foregroundStyle(AppTheme.mutedInk)
                                     }
 
@@ -56,14 +56,14 @@ struct WorkoutStartView: View {
                                                     Label("\(plan.exercises.count)種目", systemImage: "dumbbell")
                                                     Label("\(plan.totalSetCount)セット", systemImage: "checklist")
                                                 }
-                                                .font(.caption)
+                                                .font(.footnote)
                                                 .foregroundStyle(AppTheme.mutedInk)
                                             }
 
                                             Spacer()
 
                                             Text("開始")
-                                                .font(.caption.bold())
+                                                .font(.footnote.bold())
                                                 .foregroundStyle(AppTheme.accent)
                                                 .padding(.horizontal, 10)
                                                 .padding(.vertical, 6)

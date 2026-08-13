@@ -14,7 +14,7 @@ struct WatchLiveWorkoutCard: View {
 
                         VStack(alignment: .leading, spacing: 3) {
                             Text("WATCHで記録中")
-                                .font(.caption.bold())
+                                .font(.footnote.bold())
                                 .foregroundStyle(AppTheme.accent)
                             Text(snapshot.session.title)
                                 .font(.headline)
@@ -44,7 +44,7 @@ struct WatchLiveWorkoutCard: View {
                                 .foregroundStyle(AppTheme.accent)
                         }
                     }
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -103,11 +103,11 @@ struct WatchLiveWorkoutView: View {
                                 }
                                 .accessibilityIdentifier("liveRestTimer-\(exercise.id)")
                             }
-                        } header: {
-                            Text(exercise.name)
-                        } footer: {
-                            Text("\(exercise.completedSetCount)/\(exercise.sets.count)セット完了")
-                        }
+                } header: {
+                    Text(exercise.name)
+                } footer: {
+                    Text("\(exercise.completedSetCount)/\(exercise.sets.count)セット完了")
+                }
                     }
 
                     Section {
@@ -193,7 +193,7 @@ private struct LiveWorkoutSummary: View {
     private func summaryValue(title: String, value: String, image: String) -> some View {
         VStack(alignment: .leading, spacing: 3) {
             Label(title, systemImage: image)
-                .font(.caption2)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
             Text(value)
                 .font(.headline.monospacedDigit())
@@ -212,17 +212,18 @@ private struct LiveSetRow: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text("SET \(set.setOrder)")
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(AppTheme.mutedInk)
                 Spacer()
                 Text(status)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .foregroundStyle(statusTint)
             }
 
             HStack {
-                Text("\(formatWeight(set.actualWeight)) \(unit.displayName) × \(set.actualReps)回")
+                Text("\(formatWeight(set.actualWeight, unit: unit)) \(unit.displayName) × \(set.actualReps)回")
                     .font(.headline.monospacedDigit())
+                    .accessibilityIdentifier("liveSetActual-\(exercise.sortOrder)-\(set.setOrder)")
                 Spacer()
                 if set.startedAt != nil, !set.isCompleted {
                     Button(action: onEdit) {
@@ -278,8 +279,16 @@ private struct LiveSetRow: View {
                         .buttonStyle(.borderedProminent)
                     }
                 }
-                .font(.caption)
-            }
+                    .font(.footnote)
+
+                    if let concentric = set.plannedConcentricSeconds,
+                       let eccentric = set.plannedEccentricSeconds,
+                       let beatSpeed = set.plannedTempoBeatSpeed {
+                        Text("テンポ上げ\(concentric)s/\(beatSpeed)/下げ\(eccentric)s")
+                            .font(.caption2)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                }
         }
         .padding(.vertical, 4)
         .accessibilityIdentifier("liveSet-\(exercise.sortOrder)-\(set.setOrder)")
@@ -297,8 +306,9 @@ private struct LiveSetRow: View {
         return AppTheme.mutedInk
     }
 
-    private func formatWeight(_ value: Double) -> String {
-        value.formatted(.number.precision(.fractionLength(0...1)))
+    private func formatWeight(_ kilograms: Double, unit: WatchWeightUnit) -> String {
+        let displayValue = unit == .kg ? kilograms : kilograms * 2.2046226218
+        return displayValue.formatted(.number.precision(.fractionLength(0...1)))
     }
 }
 
@@ -317,6 +327,9 @@ private struct LiveSetEditorView: View {
     @State private var weight: Double
     @State private var reps: Int
     @State private var rpeText: String
+    @State private var concentricSeconds: Int
+    @State private var eccentricSeconds: Int
+    @State private var beatSpeed: Int
 
     init(editor: LiveSetEditor) {
         self.editor = editor
@@ -325,6 +338,9 @@ private struct LiveSetEditorView: View {
         _rpeText = State(initialValue: editor.set.rpe.map {
             $0.formatted(.number.precision(.fractionLength(0...1)))
         } ?? "8")
+        _concentricSeconds = State(initialValue: max(1, min(10, editor.set.plannedConcentricSeconds ?? 2)))
+        _eccentricSeconds = State(initialValue: max(1, min(10, editor.set.plannedEccentricSeconds ?? 3)))
+        _beatSpeed = State(initialValue: max(1, min(3, editor.set.plannedTempoBeatSpeed ?? 1)))
     }
 
     var body: some View {
@@ -349,6 +365,27 @@ private struct LiveSetEditorView: View {
                         defaultValue: 8,
                         accessibilityIdentifier: "liveSetRPE"
                     )
+
+                    Picker("上げ秒", selection: $concentricSeconds) {
+                        ForEach(1...10, id: \.self) { value in
+                            Text("\(value)秒").tag(value)
+                        }
+                    }
+                    .pickerStyle(.menu)
+
+                    Picker("下げ秒", selection: $eccentricSeconds) {
+                        ForEach(1...10, id: \.self) { value in
+                            Text("\(value)秒").tag(value)
+                        }
+                    }
+                    .pickerStyle(.menu)
+
+                    Picker("速度", selection: $beatSpeed) {
+                        ForEach(1...3, id: \.self) { value in
+                            Text("速度\(value)").tag(value)
+                        }
+                    }
+                    .pickerStyle(.menu)
                 }
             }
             .navigationTitle("セット実績")
@@ -366,7 +403,10 @@ private struct LiveSetEditorView: View {
                                 setID: editor.set.id,
                                 actualWeight: weight,
                                 actualReps: reps,
-                                rpe: Double(rpeText.replacingOccurrences(of: ",", with: "."))
+                                rpe: Double(rpeText.replacingOccurrences(of: ",", with: ".")),
+                                plannedConcentricSeconds: concentricSeconds,
+                                plannedEccentricSeconds: eccentricSeconds,
+                                plannedTempoBeatSpeed: beatSpeed
                             )
                         )
                         dismiss()

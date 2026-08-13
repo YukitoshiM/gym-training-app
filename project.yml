@@ -8,18 +8,32 @@ options:
 settings:
   base:
     MARKETING_VERSION: 0.1.0
-    CURRENT_PROJECT_VERSION: 3
+    CURRENT_PROJECT_VERSION: 12
     SWIFT_VERSION: 6.0
     DEVELOPMENT_TEAM: PXJ45MLX8V
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads.git
+    from: 13.7.0
+  GoogleUserMessagingPlatform:
+    url: https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git
+    from: 3.1.0
 targets:
   GymTrainingApp:
     type: application
     platform: iOS
+    configFiles:
+      Debug: Config/App.Debug.xcconfig
+      Release: Config/App.Release.xcconfig
     sources:
       - path: GymTrainingApp
       - path: Shared
     dependencies:
       - target: GymTrainingWatchApp
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
+      - package: GoogleUserMessagingPlatform
+        product: GoogleUserMessagingPlatform
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp
@@ -34,19 +48,78 @@ targets:
         CFBundleDisplayName: BodyMode
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        BodyModeAIAPIKey: $(BODYMODE_AI_API_KEY)
+        BodyModeAIBaseURL: $(BODYMODE_AI_BASE_URL)
+        BodyModeAIConfigurationVersion: $(BODYMODE_AI_CONFIGURATION_VERSION)
+        BodyModeAIUsesSessionTokens: $(BODYMODE_AI_USES_SESSION_TOKENS)
+        BodyModeAdBannerUnitID: $(BODYMODE_ADMOB_BANNER_AD_UNIT_ID)
         BodyModePrivacyPolicyURL: ""
         BodyModeSupportEmail: ""
         BodyModeSupportURL: ""
         BodyModeTermsURL: ""
+        GADApplicationIdentifier: $(BODYMODE_ADMOB_APP_ID)
+        GADDelayAppMeasurementInit: true
         ITSAppUsesNonExemptEncryption: false
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
         NSHealthShareUsageDescription: 歩数、活動量、睡眠、心拍などをまとめてコンディションとトレーニング傾向を表示します。
         NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングと身体測定をApple Healthに保存します。
+        NSCameraUsageDescription: 食事や体型の写真を撮影し、記録とAIによる参考分析に使用します。
         NSLocationAlwaysAndWhenInUseUsageDescription: 登録したジムへの到着と退出を記録する場合に位置情報を使用します。
         NSLocationWhenInUseUsageDescription: 現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。
         NSLocalNetworkUsageDescription: Mac miniなど、ユーザーが指定したローカルAIサーバーへ接続するためにローカルネットワークを使用します。
         NSMotionUsageDescription: Apple Watchの動きからセット中の回数とテンポを推定します。
+        SKAdNetworkItems:
+          - SKAdNetworkIdentifier: 22mmun2rn5.skadnetwork
+          - SKAdNetworkIdentifier: 2fnua5tdw4.skadnetwork
+          - SKAdNetworkIdentifier: 2u9pt9hc89.skadnetwork
+          - SKAdNetworkIdentifier: 3qcr597p9d.skadnetwork
+          - SKAdNetworkIdentifier: 3qy4746246.skadnetwork
+          - SKAdNetworkIdentifier: 3rd42ekr43.skadnetwork
+          - SKAdNetworkIdentifier: 3sh42y64q3.skadnetwork
+          - SKAdNetworkIdentifier: 4468km3ulz.skadnetwork
+          - SKAdNetworkIdentifier: 44jx6755aq.skadnetwork
+          - SKAdNetworkIdentifier: 47vhws6wlr.skadnetwork
+          - SKAdNetworkIdentifier: 4dzt52r2t5.skadnetwork
+          - SKAdNetworkIdentifier: 4fzdc2evr5.skadnetwork
+          - SKAdNetworkIdentifier: 578prtvx9j.skadnetwork
+          - SKAdNetworkIdentifier: 7ug5zh24hu.skadnetwork
+          - SKAdNetworkIdentifier: 8c4e2ghe7u.skadnetwork
+          - SKAdNetworkIdentifier: 8s468mfl3y.skadnetwork
+          - SKAdNetworkIdentifier: 97r2b46745.skadnetwork
+          - SKAdNetworkIdentifier: 9t245vhmpl.skadnetwork
+          - SKAdNetworkIdentifier: a2p9lx4jpn.skadnetwork
+          - SKAdNetworkIdentifier: c3frkrj4fj.skadnetwork
+          - SKAdNetworkIdentifier: c6k4g5qg8m.skadnetwork
+          - SKAdNetworkIdentifier: cp8zw746q7.skadnetwork
+          - SKAdNetworkIdentifier: cstr6suwn9.skadnetwork
+          - SKAdNetworkIdentifier: e5fvkxwrpn.skadnetwork
+          - SKAdNetworkIdentifier: f38h382jlk.skadnetwork
+          - SKAdNetworkIdentifier: gta9lk7p23.skadnetwork
+          - SKAdNetworkIdentifier: hs6bdukanm.skadnetwork
+          - SKAdNetworkIdentifier: k674qkevps.skadnetwork
+          - SKAdNetworkIdentifier: kbd757ywx3.skadnetwork
+          - SKAdNetworkIdentifier: kbmxgpxpgc.skadnetwork
+          - SKAdNetworkIdentifier: klf5c3l5u5.skadnetwork
+          - SKAdNetworkIdentifier: ludvb6z3bs.skadnetwork
+          - SKAdNetworkIdentifier: mlmmfzh3r3.skadnetwork
+          - SKAdNetworkIdentifier: n38lu8286q.skadnetwork
+          - SKAdNetworkIdentifier: p78axxw29g.skadnetwork
+          - SKAdNetworkIdentifier: ppxm28t8ap.skadnetwork
+          - SKAdNetworkIdentifier: s39g8k73mm.skadnetwork
+          - SKAdNetworkIdentifier: su67r6k2v3.skadnetwork
+          - SKAdNetworkIdentifier: t38b2kh725.skadnetwork
+          - SKAdNetworkIdentifier: tl55sbb4fm.skadnetwork
+          - SKAdNetworkIdentifier: uw77j35x4d.skadnetwork
+          - SKAdNetworkIdentifier: v4nxqhlyqp.skadnetwork
+          - SKAdNetworkIdentifier: v72qych5uu.skadnetwork
+          - SKAdNetworkIdentifier: v9wttpbfk9.skadnetwork
+          - SKAdNetworkIdentifier: vutu7akeur.skadnetwork
+          - SKAdNetworkIdentifier: wg4vff78zm.skadnetwork
+          - SKAdNetworkIdentifier: wzmmz9fp6w.skadnetwork
+          - SKAdNetworkIdentifier: y5ghdn5j9k.skadnetwork
+          - SKAdNetworkIdentifier: yclnxrl5pm.skadnetwork
+          - SKAdNetworkIdentifier: ydx93a7ass.skadnetwork
         UILaunchScreen:
           UIColorName: ""
           UIImageName: ""
@@ -123,6 +196,17 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.uitests
         TEST_TARGET_NAME: GymTrainingApp
+        GENERATE_INFOPLIST_FILE: YES
+  GymTrainingAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: GymTrainingAppTests
+    dependencies:
+      - target: GymTrainingApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yukitoshim.gymtrainingapp.tests
         GENERATE_INFOPLIST_FILE: YES
   GymTrainingWatchAppUITests:
     type: bundle.ui-testing

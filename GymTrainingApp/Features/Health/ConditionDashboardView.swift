@@ -26,12 +26,12 @@ struct ConditionDashboardView: View {
                                 Text("トレーニング分析")
                                     .font(.headline)
                                 Text("負荷・セット品質・心拍回復・停滞候補")
-                                    .font(.caption)
+                                    .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
                             Spacer()
                             Image(systemName: "chevron.right")
-                                .font(.caption.bold())
+                                .font(.footnote.bold())
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
                     }
@@ -128,16 +128,16 @@ struct ConditionSummaryCard: View {
                             .font(.headline)
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                     Text(healthDataManager.accessState == .notRequested ? "Apple Healthを連携" : assessment.level.title)
                         .font(.subheadline.bold())
                         .foregroundStyle(tint)
                     Text(healthDataManager.accessState == .notRequested ? "睡眠・回復・活動量をまとめて確認できます。" : assessment.summary)
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
-                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
         }
@@ -164,7 +164,7 @@ private struct SubjectiveRecoveryCard: View {
                     Text("今日の体感疲労")
                         .font(.headline)
                     Text(currentLabel)
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
                 Spacer()
@@ -217,7 +217,7 @@ private struct SleepDetailsCard: View {
                 if let summary {
                     if let startedAt = summary.startedAt, let endedAt = summary.endedAt {
                         Text("\(startedAt.formatted(date: .abbreviated, time: .shortened))〜\(endedAt.formatted(date: .omitted, time: .shortened))")
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                             .accessibilityIdentifier("sleepPeriod")
                     }
@@ -239,11 +239,11 @@ private struct SleepDetailsCard: View {
                     Text(summary.hasDetailedStages
                          ? "時間、深い睡眠、REM、中途覚醒から端末内で算出した参考スコアです。"
                          : "睡眠ステージが未取得のため、合計時間を中心にした参考スコアです。")
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("睡眠データは未取得です。未取得値を0として評価しません。")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -297,7 +297,8 @@ private struct ReadinessCard: View {
                     }
                     Spacer()
                     Text(assessment.score.map { "\($0)" } ?? "-")
-                        .font(.system(size: 40, weight: .bold, design: .rounded))
+                        .font(.largeTitle.bold())
+                        .fontDesign(.rounded)
                         .monospacedDigit()
                         .foregroundStyle(tint)
                 }
@@ -308,13 +309,13 @@ private struct ReadinessCard: View {
 
                 ForEach(assessment.factors.prefix(4), id: \.self) { factor in
                     Label(factor, systemImage: "circle.fill")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                         .symbolRenderingMode(.hierarchical)
                 }
 
                 Text("医療的な判定ではなく、取得できたデータの傾向をまとめた参考値です。")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -430,10 +431,10 @@ private struct ActivityLegendRow: View {
                 .frame(width: 8, height: 8)
             VStack(alignment: .leading, spacing: 1) {
                 Text(title)
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
                 Text(value)
-                    .font(.caption.bold())
+                    .font(.footnote.bold())
                     .lineLimit(1)
                     .minimumScaleFactor(0.8)
             }
@@ -453,7 +454,7 @@ private struct CompactHealthValue: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
             Text(title)
-                .font(.caption2)
+                .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
         }
         .frame(maxWidth: .infinity)
@@ -480,7 +481,7 @@ private struct RecoveryMetricsSection: View {
             if let current = snapshot.respiratoryRate?.value,
                let baseline = snapshot.baselines.respiratoryRate {
                 Text("呼吸数は14日平均 \(baseline.formatted(.number.precision(.fractionLength(1))))回/分に対して \(signed(current - baseline))回/分")
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -517,7 +518,7 @@ private struct EnergyBalanceCard: View {
                 .frame(height: 44)
 
                 Text(detailText)
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -558,7 +559,7 @@ private struct EnvironmentMetricsSection: View {
                     Text(audioValue)
                         .font(.subheadline.bold())
                     Text(audioGuidance)
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -626,11 +627,11 @@ private struct OutdoorRouteCard: View {
                     .frame(height: 44)
 
                     Text("Apple Healthに保存された最新のランニングルートを表示しています。")
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     Text("ルート付きの屋外ランニングが見つかると、距離・速度・高度差を表示します。")
-                        .font(.caption)
+                        .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
@@ -685,7 +686,7 @@ private struct HealthMetricCard: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
                 Text(title)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -704,7 +705,7 @@ private struct HealthDataQualityCard: View {
                 Text("取得できた主要項目 (availableCount)/8")
                     .font(.subheadline.bold())
                 Text("Apple Watchを適度にフィットさせて装着し、睡眠中も着用すると回復指標がそろいやすくなります。値がない項目は推測で補完しません。")
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
         }
@@ -737,19 +738,19 @@ private struct GymVisitCard: View {
                         Text(appStore.gymLocation?.name ?? "ジム訪問")
                             .font(.headline)
                         Text(visitSummary)
-                            .font(.caption)
+                            .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                     Spacer()
                     if gymLocationManager.isAtGym {
                         Text("滞在中")
-                            .font(.caption.bold())
+                            .font(.footnote.bold())
                             .foregroundStyle(AppTheme.positive)
                     }
                 }
 
                 Text(gymLocationManager.statusMessage)
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
 
                 if appStore.gymLocation == nil {
@@ -798,7 +799,7 @@ private struct GymVisitCard: View {
                     } label: {
                         Label("登録場所を削除", systemImage: "trash")
                     }
-                    .font(.caption)
+                    .font(.footnote)
                 }
             }
         }

@@ -41,6 +41,46 @@ struct PlanWeightUpdateSuggestion: Identifiable, Equatable {
     }
 }
 
+enum WatchFinishedSessionPersistenceResult: Equatable {
+    case saved
+    case duplicate
+    case failed
+
+    var canAcknowledge: Bool {
+        switch self {
+        case .saved, .duplicate:
+            true
+        case .failed:
+            false
+        }
+    }
+}
+
+enum WatchFinishedSessionPersistenceVerifier {
+    static func persist(
+        _ session: WorkoutSession,
+        loadPersistedSessions: () -> [WorkoutSession],
+        save: () -> Void
+    ) -> WatchFinishedSessionPersistenceResult {
+        if loadPersistedSessions().contains(where: { $0.id == session.id }) {
+            return .duplicate
+        }
+
+        save()
+        return loadPersistedSessions().contains(where: { $0.id == session.id })
+            ? .saved
+            : .failed
+    }
+}
+
+private struct WatchConnectivityReplyHandler: @unchecked Sendable {
+    let value: ([String: Any]) -> Void
+
+    func callAsFunction(_ reply: [String: Any]) {
+        value(reply)
+    }
+}
+
 @MainActor
 final class WatchPlanSyncService: NSObject, ObservableObject {
     enum SyncState: Equatable, Sendable {
@@ -152,15 +192,16 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
         profile: UserProfile,
         sensorSettings: SensorSettings,
         appearanceSettings: AppAppearanceSettings,
-        preferredPlanID: UUID?
+        preferredPlanID: UUID?,
+        dailyRecommendation: DailyRecommendation? = nil
     ) {
         guard let session else {
             state = .unavailable("この端末ではApple Watch連携を利用できません")
             return
         }
 
-        guard !plans.isEmpty else {
-            state = .failed("Apple Watchへ同期するメニューがありません")
+        guard !plans.isEmpty || dailyRecommendation != nil else {
+            state = .failed("Apple Watchへ同期する今日の内容がありません")
             return
         }
 
@@ -198,7 +239,8 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
                 hapticCoachingEnabled: sensorSettings.hapticCoachingEnabled,
                 reducedSensorSamplingEnabled: sensorSettings.reducedSensorSamplingEnabled
             ),
-            appearanceSettings: appearanceSettings
+            appearanceSettings: appearanceSettings,
+            dailyRecommendation: dailyRecommendation.map(WatchDailyRecommendationSnapshot.init)
         )
 
         do {
@@ -210,10 +252,15 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
                 WatchWorkoutTransfer.sentAtKey: Date()
             ]
 
-            state = .sending("\(plans.count)件のメニューをApple Watchへ同期中")
+            state = .sending("今日の内容をApple Watchへ同期中")
 
             if session.isReachable {
-                sendImmediately(message: message, menuCount: plans.count, session: session)
+                sendImmediately(
+                    message: message,
+                    menuCount: plans.count,
+                    includesDailyRecommendation: dailyRecommendation != nil,
+                    session: session
+                )
             } else {
                 session.transferUserInfo(message)
                 state = .sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました")
@@ -226,6 +273,32 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
                 message: "Failed to encode Watch plan library"
             )
         }
+    }
+
+    func syncDailyRecommendationIfPossible(
+        plans: [TrainingPlan],
+        profile: UserProfile,
+        sensorSettings: SensorSettings,
+        appearanceSettings: AppAppearanceSettings,
+        recommendation: DailyRecommendation
+    ) {
+        guard let session,
+              session.activationState == .activated,
+              session.isPaired,
+              session.isWatchAppInstalled else {
+            return
+        }
+        send(
+            plans: plans,
+            profile: profile,
+            sensorSettings: sensorSettings,
+            appearanceSettings: appearanceSettings,
+            preferredPlanID: recommendation.activeActions.compactMap { action -> UUID? in
+                if case .workout(let planID) = action.destination { return planID }
+                return nil
+            }.first ?? appStore?.todayPlan?.id,
+            dailyRecommendation: recommendation
+        )
     }
 
     func send(command: WatchWorkoutCommand) {
@@ -276,10 +349,16 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
     private nonisolated func sendImmediately(
         message: [String: Any],
         menuCount: Int,
+        includesDailyRecommendation: Bool,
         session: WCSession
     ) {
         session.sendMessage(message, replyHandler: { [weak self] _ in
-            self?.updateState(.sent("\(menuCount)件のメニューをApple Watchへ同期しました"))
+            let message = if menuCount == 0, includesDailyRecommendation {
+                "今日の内容をApple Watchへ同期しました"
+            } else {
+                "\(menuCount)件のメニューをApple Watchへ同期しました"
+            }
+            self?.updateState(.sent(message))
         }, errorHandler: { [weak self] error in
             session.transferUserInfo(message)
             self?.updateState(.sent("Apple Watchが近くにないため、次回起動時に届くよう予約しました"))
@@ -312,34 +391,52 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
     }
 
     @discardableResult
-    private func saveFinishedWatchSession(payload: Data) -> Bool {
+    private func saveFinishedWatchSession(
+        _ watchSession: WatchWorkoutSessionSnapshot
+    ) -> WatchFinishedSessionPersistenceResult {
         guard let appStore else {
             state = .failed("Apple Watchの記録を保存する準備ができていません")
-            return false
+            return .failed
         }
 
-        do {
-            let watchSession = try JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: payload)
-            var workoutSession = WorkoutSession(watchSession: watchSession)
-            workoutSession.endedAt = workoutSession.endedAt ?? Date()
-            workoutSession.watchSyncState = .received
-            appStore.saveWorkoutHistorySession(workoutSession)
+        var workoutSession = WorkoutSession(watchSession: watchSession)
+        workoutSession.endedAt = workoutSession.endedAt ?? Date()
+        workoutSession.watchSyncState = .received
+        let result = WatchFinishedSessionPersistenceVerifier.persist(
+            workoutSession,
+            loadPersistedSessions: { appStore.storage.loadWorkoutHistory() },
+            save: { appStore.saveWorkoutHistorySession(workoutSession) }
+        )
+
+        switch result {
+        case .saved:
             pendingPlanWeightUpdateSuggestion = makePlanWeightUpdateSuggestion(
                 for: watchSession,
                 appStore: appStore
             )
             liveWatchWorkout = nil
             state = .received("\(workoutSession.title) をApple Watchから履歴に保存しました")
-            return true
-        } catch {
-            state = .failed("Apple Watchの記録を読み込めませんでした")
+        case .duplicate:
+            appStore.workoutHistory = appStore.storage.loadWorkoutHistory()
+            liveWatchWorkout = nil
+            state = .received("\(workoutSession.title) はiPhone履歴に保存済みです")
             AppDiagnostics.shared.record(
-                error: error,
-                category: "watch.session.decode",
-                message: "Failed to decode finished Watch workout"
+                level: "info",
+                category: "watch.session.duplicate",
+                message: "Confirmed duplicate Watch workout in durable storage",
+                metadata: ["session_id": workoutSession.id.uuidString]
             )
-            return false
+        case .failed:
+            appStore.workoutHistory = appStore.storage.loadWorkoutHistory()
+            state = .failed("Apple Watchの記録をiPhoneへ保存できませんでした")
+            AppDiagnostics.shared.record(
+                level: "error",
+                category: "watch.session.persist",
+                message: "Finished Watch workout was not present after persistence",
+                metadata: ["session_id": workoutSession.id.uuidString]
+            )
         }
+        return result
     }
 
     private func makePlanWeightUpdateSuggestion(
@@ -399,9 +496,16 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
 
         switch messageType {
         case WatchWorkoutTransfer.sessionFinishedType:
-            guard let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return }
+            guard let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data,
+                  let watchSession = try? JSONDecoder().decode(
+                    WatchWorkoutSessionSnapshot.self,
+                    from: payload
+                  ) else {
+                updateState(.failed("Apple Watchの記録を読み込めませんでした"))
+                return
+            }
             Task { @MainActor [weak self] in
-                self?.saveFinishedWatchSession(payload: payload)
+                self?.saveFinishedWatchSession(watchSession)
             }
         case WatchWorkoutTransfer.sessionLiveUpdateType:
             guard let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data,
@@ -418,26 +522,69 @@ final class WatchPlanSyncService: NSObject, ObservableObject {
             Task { @MainActor [weak self] in
                 self?.liveWatchWorkout = nil
             }
+        case WatchWorkoutTransfer.diagnosticsBatchType:
+            guard let payload = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return }
+            do {
+                let events = try JSONDecoder().decode([WatchDiagnosticEvent].self, from: payload)
+                AppDiagnostics.shared.importWatchEvents(events)
+                AppDiagnostics.shared.record(
+                    level: "info",
+                    category: "watch.diagnostics.import",
+                    message: "Imported Apple Watch diagnostic events",
+                    metadata: ["event_count": String(events.count)]
+                )
+            } catch {
+                AppDiagnostics.shared.record(
+                    error: error,
+                    category: "watch.diagnostics.decode",
+                    message: "Failed to decode Apple Watch diagnostic events"
+                )
+            }
         default:
             break
         }
     }
 
     private nonisolated func receive(message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        let reply = WatchConnectivityReplyHandler(value: replyHandler)
         guard let messageType = message[WatchWorkoutTransfer.messageTypeKey] as? String else {
-            replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
+            reply([WatchWorkoutTransfer.acknowledgementKey: false])
             return
         }
 
         if messageType == WatchWorkoutTransfer.sessionFinishedType {
             guard let payload = message[WatchWorkoutTransfer.payloadKey] as? Data,
-                  (try? JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: payload)) != nil else {
-                replyHandler([WatchWorkoutTransfer.acknowledgementKey: false])
+                  let watchSession = try? JSONDecoder().decode(
+                    WatchWorkoutSessionSnapshot.self,
+                    from: payload
+                  ) else {
+                reply(WatchWorkoutTransfer.acknowledgement(accepted: false))
+                return
+            }
+            Task { @MainActor [weak self] in
+                guard let self else {
+                    reply(WatchWorkoutTransfer.acknowledgement(
+                        accepted: false,
+                        sessionID: watchSession.id
+                    ))
+                    return
+                }
+                let result = saveFinishedWatchSession(watchSession)
+                reply(WatchWorkoutTransfer.acknowledgement(
+                    accepted: result.canAcknowledge,
+                    sessionID: watchSession.id
+                ))
+            }
+            return
+        } else if messageType == WatchWorkoutTransfer.diagnosticsBatchType {
+            guard let payload = message[WatchWorkoutTransfer.payloadKey] as? Data,
+                  (try? JSONDecoder().decode([WatchDiagnosticEvent].self, from: payload)) != nil else {
+                reply([WatchWorkoutTransfer.acknowledgementKey: false])
                 return
             }
         }
         receive(userInfo: message)
-        replyHandler([WatchWorkoutTransfer.acknowledgementKey: true])
+        reply([WatchWorkoutTransfer.acknowledgementKey: true])
     }
 }
 
@@ -448,12 +595,26 @@ extension WatchPlanSyncService: WCSessionDelegate {
         error: Error?
     ) {
         if let error {
+            AppDiagnostics.shared.record(
+                error: error,
+                category: "watch.connectivity.activation",
+                message: "Apple Watch connectivity activation failed"
+            )
             updateState(.failed("Apple Watch接続に失敗しました: \(error.localizedDescription)"))
             return
         }
 
         switch activationState {
         case .activated:
+            AppDiagnostics.shared.record(
+                level: "info",
+                category: "watch.connectivity.activation",
+                message: "Apple Watch connectivity activated",
+                metadata: [
+                    "paired": String(session.isPaired),
+                    "watch_app_installed": String(session.isWatchAppInstalled)
+                ]
+            )
             if session.isPaired && session.isWatchAppInstalled {
                 updateState(.ready("Apple Watchへメニューを同期できます"))
             } else if session.isPaired {
