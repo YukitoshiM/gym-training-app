@@ -18,7 +18,8 @@
 12. `ai_trainer_integration.md`: AIトレーナーの会話、文脈、記憶、保持設計
 13. `coach_character_reference_2026-08-13.md`: AIトレーナーの人物、話し方、専門性の設計
 14. `advertising_integration.md`: 広告配信、同意、データ分離、AdMob設定
-15. `regression_report_2026-08-13.md`: iPhone最大2台と後続Watchによる複数エージェント回帰の結果と運用方法
+15. `regression_testing_policy.md`: L0〜L3の回帰範囲を決める強制条件と判定スコア
+16. `regression_report_2026-08-13.md`: iPhone最大2台と後続Watchによる複数エージェント回帰の結果と運用方法
 
 リファクタリングの行数とコンテキスト削減効果は`refactor_impact_2026-08-03.md`に記録している。
 
