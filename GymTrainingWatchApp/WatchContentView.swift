@@ -9,7 +9,7 @@ struct WatchContentView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if let activeSession = workoutStore.activeSession {
+                if workoutStore.activeSession != nil {
                     WatchActiveWorkoutView()
                 } else if let plan = workoutStore.selectedPlan {
                     WatchPlanDetailView(
@@ -50,7 +50,7 @@ struct WatchContentView: View {
             if arguments.contains("--show-watch-tutorial") {
                 completedTutorialVersion = ""
                 isShowingTutorial = true
-            } else if !arguments.contains("--seed-watch-ui-test-plan"),
+            } else if !arguments.contains("--suppress-watch-tutorial"),
                       completedTutorialVersion != WatchTutorialView.currentVersion {
                 isShowingTutorial = true
             }
@@ -75,7 +75,7 @@ struct WatchContentView: View {
 }
 
 struct WatchTutorialView: View {
-    static let currentVersion = "2"
+    static let currentVersion = "3"
     static let completedVersionKey = "watchTutorialCompletedVersion"
 
     let onComplete: () -> Void
@@ -90,17 +90,17 @@ struct WatchTutorialView: View {
         WatchTutorialStep(
             icon: "play.fill",
             title: "セットを開始",
-            detail: "種目とセットを選んで開始。間違えた時は取消で未実行に戻せます。"
+            detail: "種目とセットを選んで開始。間違えた時は「キャンセル」で未実行に戻せます。"
         ),
         WatchTutorialStep(
             icon: "dial.medium",
             title: "実績を合わせる",
-            detail: "重量・回数・RPEは完了前にリールで変更できます。"
+            detail: "重量・回数・RPE・休憩は開始前後にリールで変更できます。"
         ),
         WatchTutorialStep(
             icon: "metronome",
             title: "テンポを合わせる",
-            detail: "計画に動作時間があるセットは、上げ下げを1秒ごとの触覚で案内します。"
+            detail: "上げ・下げ時間をセットごとに設定。Apple Watchが1秒あたり1〜3回の触覚で案内します。"
         ),
         WatchTutorialStep(
             icon: "timer",

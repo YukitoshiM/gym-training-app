@@ -209,15 +209,14 @@ struct WatchTempoEntryView: View {
                 }
 
                 TextField("下げ時間を直接入力", text: $eccentricText)
-                    .keyboardType(.numberPad)
                     .multilineTextAlignment(.center)
                     .focused($focusedField, equals: .eccentric)
                     .accessibilityIdentifier("watchTempoEccentricField")
 
                 HStack(spacing: 0) {
-                    Picker("速度", selection: $beatSpeed) {
+                    Picker("振動速度", selection: $beatSpeed) {
                         ForEach(1...3, id: \.self) { value in
-                            Text("速度\(value)")
+                            Text("\(value)回/秒")
                                 .monospacedDigit()
                                 .tag(value)
                         }
@@ -226,7 +225,7 @@ struct WatchTempoEntryView: View {
                     .pickerStyle(.wheel)
                     .frame(width: 106, height: 76)
                     .clipped()
-                    .accessibilityLabel("テンポ速度")
+                    .accessibilityLabel("1秒あたりの振動回数")
                     .accessibilityIdentifier("watchTempoSpeedPicker")
 
                     Text("速")
@@ -235,8 +234,7 @@ struct WatchTempoEntryView: View {
                         .frame(width: 30, alignment: .leading)
                 }
 
-                TextField("速度(1〜3)", text: $beatSpeedText)
-                    .keyboardType(.numberPad)
+                TextField("振動回数(1〜3回/秒)", text: $beatSpeedText)
                     .multilineTextAlignment(.center)
                     .focused($focusedField, equals: .beatSpeed)
                     .accessibilityIdentifier("watchTempoSpeedField")
@@ -311,7 +309,6 @@ struct WatchTempoEntryView: View {
             }
 
             TextField("上げ時間を直接入力", text: $concentricText)
-                .keyboardType(.numberPad)
                 .multilineTextAlignment(.center)
                 .focused($focusedField, equals: .concentric)
                 .accessibilityIdentifier("watchTempoConcentricField")

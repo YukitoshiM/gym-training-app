@@ -33,6 +33,11 @@ struct WeightInputControl: View {
             .textFieldStyle(.roundedBorder)
             .frame(width: 64)
             .focused($isTextFieldFocused)
+            .simultaneousGesture(
+                TapGesture().onEnded {
+                    prepareManualEntryIfNeeded()
+                }
+            )
             .accessibilityLabel("重量")
             .accessibilityIdentifier(accessibilityIdentifier)
 
@@ -100,8 +105,7 @@ struct WeightInputControl: View {
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {
-                valueBeforeEditing = displayedWeight.wrappedValue
-                editText = ""
+                prepareManualEntryIfNeeded()
             } else {
                 commitManualEntry()
             }
@@ -156,6 +160,12 @@ struct WeightInputControl: View {
         }
         displayedWeight.wrappedValue = value
         editText = Self.formatted(displayedWeight.wrappedValue)
+    }
+
+    private func prepareManualEntryIfNeeded() {
+        guard !isTextFieldFocused || !editText.isEmpty else { return }
+        valueBeforeEditing = displayedWeight.wrappedValue
+        editText = ""
     }
 
     private func parsed(_ text: String) -> Double? {
@@ -294,10 +304,15 @@ struct RepsInputControl: View {
                 .multilineTextAlignment(.trailing)
                 .monospacedDigit()
                 .textFieldStyle(.roundedBorder)
-                .frame(width: 48)
-                .focused($isTextFieldFocused)
-                .accessibilityLabel("回数")
-                .accessibilityIdentifier(accessibilityIdentifier)
+            .frame(width: 48)
+            .focused($isTextFieldFocused)
+            .simultaneousGesture(
+                TapGesture().onEnded {
+                    prepareManualEntryIfNeeded()
+                }
+            )
+            .accessibilityLabel("回数")
+            .accessibilityIdentifier(accessibilityIdentifier)
 
             Text("回")
                 .foregroundStyle(AppTheme.mutedInk)
@@ -358,8 +373,7 @@ struct RepsInputControl: View {
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {
-                valueBeforeEditing = reps
-                editText = ""
+                prepareManualEntryIfNeeded()
             } else if let value = Int(editText) {
                 reps = min(range.upperBound, max(range.lowerBound, value))
                 editText = String(reps)
@@ -368,6 +382,12 @@ struct RepsInputControl: View {
                 editText = String(valueBeforeEditing)
             }
         }
+    }
+
+    private func prepareManualEntryIfNeeded() {
+        guard !isTextFieldFocused || !editText.isEmpty else { return }
+        valueBeforeEditing = reps
+        editText = ""
     }
 }
 
@@ -436,6 +456,11 @@ struct RestSecondsInputControl: View {
                 .monospacedDigit()
                 .frame(width: 64)
                 .focused($isTextFieldFocused)
+                .simultaneousGesture(
+                    TapGesture().onEnded {
+                        prepareManualEntryIfNeeded()
+                    }
+                )
                 .accessibilityLabel("休憩時間")
                 .accessibilityIdentifier("\(accessibilityIdentifier)-field")
 
@@ -524,8 +549,7 @@ struct RestSecondsInputControl: View {
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {
-                valueBeforeEditing = seconds
-                editText = ""
+                prepareManualEntryIfNeeded()
             } else if let value = Int(editText) {
                 seconds = Self.normalized(value)
                 editText = String(seconds)
@@ -534,6 +558,12 @@ struct RestSecondsInputControl: View {
                 editText = String(valueBeforeEditing)
             }
         }
+    }
+
+    private func prepareManualEntryIfNeeded() {
+        guard !isTextFieldFocused || !editText.isEmpty else { return }
+        valueBeforeEditing = seconds
+        editText = ""
     }
 
     private static func normalized(_ seconds: Int) -> Int {
@@ -571,6 +601,11 @@ struct NumericTextInputControl: View {
                 .monospacedDigit()
                 .frame(width: 88)
                 .focused($isTextFieldFocused)
+                .simultaneousGesture(
+                    TapGesture().onEnded {
+                        prepareManualEntryIfNeeded()
+                    }
+                )
                 .accessibilityLabel(title)
                 .accessibilityIdentifier(accessibilityIdentifier)
 
@@ -620,14 +655,19 @@ struct NumericTextInputControl: View {
         }
         .onChange(of: isTextFieldFocused) { _, isFocused in
             if isFocused {
-                textBeforeEditing = text
-                text = ""
+                prepareManualEntryIfNeeded()
             } else if let parsedValue {
                 text = formatted(normalized(parsedValue))
             } else {
                 text = textBeforeEditing
             }
         }
+    }
+
+    private func prepareManualEntryIfNeeded() {
+        guard !isTextFieldFocused || !text.isEmpty else { return }
+        textBeforeEditing = text
+        text = ""
     }
 
     private var parsedValue: Double? {

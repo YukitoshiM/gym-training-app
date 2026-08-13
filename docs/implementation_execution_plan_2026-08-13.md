@@ -23,7 +23,7 @@ SNS、コミュニティ、課金、ギフト、ゲーミフィケーション�
 - 現在のブランチは`codex/build-13-stability`。作業ツリーにはBuild 12以降の広範な変更があるため、既存差分を保持したまま実装している。
 - iPhone、Watch、Widget、単体テスト、iPhone UIテスト、Watch UIテストのターゲットが存在する。
 - 専用の`BodyMode iPhone 17 Pro`と`BodyMode Watch Series 11`を作成・ペアリングし、別タスクのSimulatorから分離済みである。
-- 回帰用に食事、AI、主要導線、設定・アクセシビリティ、Watchの5 Simulatorプールを分離し、`scripts/run_parallel_simulator_regression.sh`で3レーン並列実行できる。事前ビルドを全レーンで共有し、重いアクセシビリティ監査と利用分析テストの前には専用Simulatorを再起動する。結果は実行単位で`.build/parallel-regression/<run-id>/summary.txt`へ保存する。
+- 回帰用にiPhone 2台とWatch 1台を分離し、`scripts/run_parallel_simulator_regression.sh`でiPhoneを最大2レーン並列、Watchを後続実行する。事前ビルドを共有し、重いアクセシビリティ監査と利用分析テストの前にはiPhone Bを再起動する。実行後は対象Simulatorを自動停止し、結果を`.build/parallel-regression/<run-id>/summary.txt`へ保存する。
 - TestFlightのArchive、アップロード、外部グループ配布、フィードバック取得はスクリプト化済み。
 - AIはMac mini、Ollama、Tailscale FunnelでTestFlight利用中。正式公開には認証と公開経路の変更が必要である。
 - 現在のRelease広告はGoogle公式デモIDで、本番IDは未設定である。
@@ -297,7 +297,7 @@ M1開始時からM3と並行する。ユーザー作業待ちでも、Codex側�
 
 1. `WATCH-012`: 計画セットへ任意の挙上秒数・下降秒数を追加し、旧データの未設定を許容する。
 2. iPhone編集、共有モデル、Watch送受信、実績、履歴、書き出しを更新する。
-3. `WATCH-013`: 1秒単位の触覚、方向切替、停止、再開、スキップ、無効化の状態機械を作る。
+3. `WATCH-013`: 上げ・下げの各1秒を1〜3回の触覚で数え、方向切替、停止、再開、スキップ、無効化を扱う状態機械を作る。
 4. `WATCH-014`: 計画テンポ、観測可能な反復間隔、手動補正を別項目として保存する。
 5. `WATCH-015`: Simulatorでテンポ状態機械と既存の重量・チュートリアルを回帰テストする。
 6. `WATCH-016`: 実機で触覚とタイミングを評価する。
@@ -305,7 +305,7 @@ M1開始時からM3と並行する。ユーザー作業待ちでも、Codex側�
 ### 実機評価
 
 - 押す種目、引く種目、脚種目を各3セット
-- 1秒、2秒、3秒のテンポ
+- 上げ・下げ各1〜10秒、1秒あたり1回・2回・3回の触覚
 - 画面消灯、バックグラウンド、休憩移行、中断再開
 - 60分使用時の電池消費を既存モードと比較
 - 触覚が分かりにくい、集中を妨げる、テンポがずれる場合は初期オフを維持
@@ -408,7 +408,7 @@ RAGは**この実行計画が承認されても自動的には実装開始しな
 
 ## 17. テストマトリクス
 
-長い回帰では、同一Simulatorを複数プロセスから操作しない。食事、AI、主要導線、設定・アクセシビリティ、Watchを固有UUID・固有xcresultへ割り当て、`scripts/run_parallel_simulator_regression.sh`で共有ビルド後に3レーン並列実行する。複数エージェントへ分担する場合はDerivedDataも担当ごとに分離する。別プロジェクト用Simulatorは名前や起動状態にかかわらず操作対象にしない。完了後は`.build/parallel-regression/<run-id>/summary.txt`へ合否件数を集約する。
+長い回帰では、同一Simulatorを複数プロセスから操作しない。iPhoneは最大2台だけを固有UUID・固有xcresultへ割り当て、共有ビルド後に並列実行する。WatchはiPhoneレーン終了後に実行する。複数エージェントへ分担する場合もビルドは親で1回だけ行い、エージェントは`test-without-building`を使う。別プロジェクト用Simulatorは名前や起動状態にかかわらず操作対象にしない。完了後は今回使ったSimulatorだけを停止し、`.build/parallel-regression/<run-id>/summary.txt`へ合否件数を集約する。
 
 | 変更種別 | 単体 | iPhone UI | Watch UI | 実機 | Preflight |
 |---|:---:|:---:|:---:|:---:|:---:|

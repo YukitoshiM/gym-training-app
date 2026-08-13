@@ -26,6 +26,7 @@ fi
 export LOCAL_AI_API_KEY
 export OLLAMA_BASE_URL="${OLLAMA_BASE_URL:-http://127.0.0.1:11434}"
 export OLLAMA_MODEL="${OLLAMA_MODEL:-gemma4:12b}"
+export OLLAMA_REQUEST_TIMEOUT_SECONDS="${OLLAMA_REQUEST_TIMEOUT_SECONDS:-180}"
 
 if [[ -r "${ENV_FILE}" ]]; then
   set -a

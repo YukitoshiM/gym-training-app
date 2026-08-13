@@ -614,7 +614,8 @@ private struct PlanExerciseEditorCard: View {
                 targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10,
                 plannedConcentricSeconds: previous?.plannedConcentricSeconds,
-                plannedEccentricSeconds: previous?.plannedEccentricSeconds
+                plannedEccentricSeconds: previous?.plannedEccentricSeconds,
+                plannedTempoBeatSpeed: previous?.plannedTempoBeatSpeed
             )
         )
     }
@@ -696,7 +697,8 @@ private struct PlanSetTargetRow: View {
               let down = set.plannedEccentricSeconds else {
             return "テンポを設定"
         }
-        return "上げ \(up)秒・下げ \(down)秒"
+        let speed = min(3, max(1, set.plannedTempoBeatSpeed ?? 1))
+        return "上げ \(up)秒・下げ \(down)秒・\(speed)回/秒"
     }
 }
 
@@ -706,6 +708,7 @@ private struct PlanSetTempoEditor: View {
     @State private var isEnabled: Bool
     @State private var concentricText: String
     @State private var eccentricText: String
+    @State private var beatSpeed: Int
 
     init(set: Binding<PlanSetTarget>) {
         _set = set
@@ -713,6 +716,7 @@ private struct PlanSetTempoEditor: View {
         _isEnabled = State(initialValue: current.plannedConcentricSeconds != nil)
         _concentricText = State(initialValue: String(current.plannedConcentricSeconds ?? 2))
         _eccentricText = State(initialValue: String(current.plannedEccentricSeconds ?? 3))
+        _beatSpeed = State(initialValue: min(3, max(1, current.plannedTempoBeatSpeed ?? 1)))
     }
 
     var body: some View {
@@ -722,7 +726,7 @@ private struct PlanSetTempoEditor: View {
                     Toggle("触覚でテンポを案内", isOn: $isEnabled)
                         .accessibilityIdentifier("planTempoEnabled")
                 } footer: {
-                    Text("セット中、Apple Watchが1秒ごとに触覚でカウントします。")
+                    Text("Apple Watchが設定した上げ・下げ時間を、1秒あたり1〜3回の触覚で案内します。")
                 }
 
                 if isEnabled {
@@ -736,6 +740,13 @@ private struct PlanSetTempoEditor: View {
                             defaultValue: 2,
                             accessibilityIdentifier: "planConcentricSeconds"
                         )
+                        Picker("振動速度", selection: $beatSpeed) {
+                            ForEach(1...3, id: \.self) { value in
+                                Text("\(value)回/秒").tag(value)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .accessibilityIdentifier("planTempoBeatSpeed")
                         NumericTextInputControl(
                             text: $eccentricText,
                             title: "下げ",
@@ -759,9 +770,11 @@ private struct PlanSetTempoEditor: View {
                         if isEnabled {
                             set.plannedConcentricSeconds = parsed(concentricText, fallback: 2)
                             set.plannedEccentricSeconds = parsed(eccentricText, fallback: 3)
+                            set.plannedTempoBeatSpeed = beatSpeed
                         } else {
                             set.plannedConcentricSeconds = nil
                             set.plannedEccentricSeconds = nil
+                            set.plannedTempoBeatSpeed = nil
                         }
                         dismiss()
                     }

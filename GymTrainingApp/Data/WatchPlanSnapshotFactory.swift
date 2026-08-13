@@ -84,6 +84,7 @@ private extension WatchPlanSetTargetSnapshot {
             targetReps: planSet.targetReps,
             plannedConcentricSeconds: planSet.plannedConcentricSeconds,
             plannedEccentricSeconds: planSet.plannedEccentricSeconds,
+            plannedTempoBeatSpeed: planSet.plannedTempoBeatSpeed,
             previousActualWeight: previousSet?.actualWeight,
             previousActualReps: previousSet?.actualReps,
             previousRPE: previousSet?.rpe
@@ -145,6 +146,7 @@ private extension WorkoutSet {
             targetReps: watchSet.targetReps,
             plannedConcentricSeconds: watchSet.plannedConcentricSeconds,
             plannedEccentricSeconds: watchSet.plannedEccentricSeconds,
+            plannedTempoBeatSpeed: watchSet.plannedTempoBeatSpeed,
             actualWeight: watchSet.actualWeight,
             actualReps: watchSet.actualReps,
             isCompleted: watchSet.isCompleted,

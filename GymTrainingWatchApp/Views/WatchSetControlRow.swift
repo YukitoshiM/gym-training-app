@@ -16,7 +16,7 @@ struct WatchSetControlRow: View {
         return session.exercises.first { $0.id == exerciseID }
     }
 
-    private var set: WatchWorkoutSetSnapshot? {
+    private var workoutSet: WatchWorkoutSetSnapshot? {
         guard let exercise else {
             return nil
         }
@@ -24,7 +24,7 @@ struct WatchSetControlRow: View {
     }
 
     private var setSortOrder: Int {
-        set?.setOrder ?? 0
+        workoutSet?.setOrder ?? 0
     }
 
     private var exerciseSortOrder: Int {
@@ -47,6 +47,7 @@ struct WatchSetControlRow: View {
                 Text("目標 \(formatWeight(targetWeight, unit: unit)) × \(targetReps)回")
                     .font(.caption2)
                     .foregroundStyle(WatchAppTheme.mutedInk)
+                    .accessibilityIdentifier("watchSetTarget-\(exerciseSortOrder)-\(setSortOrder)")
 
                 Spacer()
 
@@ -55,9 +56,22 @@ struct WatchSetControlRow: View {
                     .foregroundStyle(statusColor)
             }
 
-            if set?.startedAt == nil && !isSetCompleted {
+            if workoutSet?.startedAt == nil && !isSetCompleted {
+                if let set = workoutSet {
+                    Button {
+                        activeEditor = .tempo
+                    } label: {
+                        Label(tempoStatusTitle(for: set), systemImage: "metronome")
+                    }
+                    .buttonStyle(.bordered)
+                    .font(.caption2)
+                    .accessibilityLabel("開始前にテンポを設定")
+                    .accessibilityValue(tempoStatusTitle(for: set))
+                    .accessibilityIdentifier("watchSetTempoEntry-\(exerciseSortOrder)-\(setSortOrder)")
+                }
+
                 Button {
-                    if let exercise, let set {
+                    if let exercise, let set = workoutSet {
                         workoutStore.startSet(exerciseID: exercise.id, setID: set.id)
                     }
                 } label: {
@@ -67,7 +81,7 @@ struct WatchSetControlRow: View {
                 .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("watchSetStart-\(exerciseSortOrder)-\(setSortOrder)")
             } else {
-                if let set {
+                if let set = workoutSet {
                     Text("実績 \(formatWeight(set.actualWeight, unit: unit)) × \(set.actualReps)回")
                         .font(.headline)
                         .accessibilityIdentifier("watchSetActual-\(exerciseSortOrder)-\(setSortOrder)")
@@ -82,51 +96,49 @@ struct WatchSetControlRow: View {
         }
         .padding(.vertical, 4)
         .sheet(item: $activeEditor) { editor in
-            guard let exercise, let set else {
-                return AnyView(EmptyView())
-            }
-
-            return NavigationStack {
-                switch editor {
-                case .weight:
-                    WatchWeightEntryView(
-                        exerciseID: exercise.id,
-                        setID: set.id,
-                        currentWeight: set.actualWeight,
-                        unit: unit,
-                        supportsAssistedLoad: exercise.supportsAssistedLoad
-                    )
-                case .reps:
-                    WatchRepsEntryView(
-                        exerciseID: exercise.id,
-                        setID: set.id,
-                        currentReps: set.actualReps
-                    )
-                case .rpe:
-                    WatchRPESelectionView(
-                        exerciseID: exercise.id,
-                        setID: set.id,
-                        currentRPE: set.rpe
-                    )
-                case .tempo:
-                    WatchTempoEntryView(
-                        exerciseID: exercise.id,
-                        setID: set.id,
-                        concentricSeconds: set.plannedConcentricSeconds,
-                        eccentricSeconds: set.plannedEccentricSeconds,
-                        beatSpeed: set.plannedTempoBeatSpeed
-                    )
+            if let exercise, let set = workoutSet {
+                NavigationStack {
+                    switch editor {
+                    case .weight:
+                        WatchWeightEntryView(
+                            exerciseID: exercise.id,
+                            setID: set.id,
+                            currentWeight: set.actualWeight,
+                            unit: unit,
+                            supportsAssistedLoad: exercise.supportsAssistedLoad
+                        )
+                    case .reps:
+                        WatchRepsEntryView(
+                            exerciseID: exercise.id,
+                            setID: set.id,
+                            currentReps: set.actualReps
+                        )
+                    case .rpe:
+                        WatchRPESelectionView(
+                            exerciseID: exercise.id,
+                            setID: set.id,
+                            currentRPE: set.rpe
+                        )
+                    case .tempo:
+                        WatchTempoEntryView(
+                            exerciseID: exercise.id,
+                            setID: set.id,
+                            concentricSeconds: set.plannedConcentricSeconds,
+                            eccentricSeconds: set.plannedEccentricSeconds,
+                            beatSpeed: set.plannedTempoBeatSpeed
+                        )
+                    }
                 }
             }
         }
     }
 
     private var isSetCompleted: Bool {
-        set?.isCompleted ?? false
+        workoutSet?.isCompleted ?? false
     }
 
     private var statusTitle: String {
-        guard let set else {
+        guard let set = workoutSet else {
             return ""
         }
         if set.isCompleted {
@@ -139,7 +151,7 @@ struct WatchSetControlRow: View {
     }
 
     private var statusColor: Color {
-        guard let set else {
+        guard let set = workoutSet else {
             return WatchAppTheme.mutedInk
         }
         if set.isCompleted { return WatchAppTheme.positive }
@@ -148,16 +160,16 @@ struct WatchSetControlRow: View {
     }
 
     private var targetWeight: Double {
-        set?.targetWeight ?? 0
+        workoutSet?.targetWeight ?? 0
     }
 
     private var targetReps: Int {
-        set?.targetReps ?? 0
+        workoutSet?.targetReps ?? 0
     }
 
     private var completedSetFooter: some View {
         Group {
-            if let set {
+            if let set = workoutSet {
                 VStack(alignment: .leading, spacing: 7) {
                     if let sensorSummary = set.sensorSummary {
                         WatchSetSensorSummaryView(summary: sensorSummary)
@@ -209,7 +221,7 @@ struct WatchSetControlRow: View {
 
     private var activeSetControls: some View {
         Group {
-            if let set {
+            if let set = workoutSet {
                 VStack(spacing: 8) {
                     actualValueControls(for: set)
 
@@ -332,7 +344,7 @@ struct WatchSetControlRow: View {
             return "テンポ"
         }
 
-        return "テンポ \(concentric)s/\(beatSpeed)/\(eccentric)s"
+        return "上\(concentric)s・下\(eccentric)s・\(beatSpeed)回/秒"
     }
 }
 

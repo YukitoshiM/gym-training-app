@@ -244,10 +244,12 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(toggle.isHittable)
         XCTAssertEqual(toggle.value as? String, "0")
         RunLoop.current.run(until: Date().addingTimeInterval(1))
+        app.swipeUp(velocity: .slow)
         let settledToggle = app.switches["usageAnalyticsToggle"]
+        XCTAssertTrue(settledToggle.waitForExistence(timeout: 5))
         XCTAssertTrue(settledToggle.isHittable)
-        settledToggle.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
-        XCTAssertTrue(waitForSwitchValue("1", identifier: "usageAnalyticsToggle"))
+        settledToggle.coordinate(withNormalizedOffset: CGVector(dx: 0.95, dy: 0.5)).tap()
+        XCTAssertTrue(waitForValue("1", of: settledToggle))
 
         XCTAssertTrue(scrollToHittable(app.buttons["exportUsageAnalyticsButton"]).isHittable)
         XCTAssertTrue(scrollToHittable(app.buttons["deleteUsageAnalyticsButton"]).isHittable)
@@ -310,15 +312,4 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         return XCTWaiter.wait(for: [expectation], timeout: 10) == .completed
     }
 
-    private func waitForSwitchValue(_ expectedValue: String, identifier: String) -> Bool {
-        let deadline = Date().addingTimeInterval(10)
-        while Date() < deadline {
-            let currentSwitch = app.switches[identifier]
-            if currentSwitch.exists, currentSwitch.value as? String == expectedValue {
-                return true
-            }
-            RunLoop.current.run(until: Date().addingTimeInterval(0.2))
-        }
-        return false
-    }
 }

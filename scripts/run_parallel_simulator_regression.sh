@@ -18,6 +18,7 @@ WATCH_DERIVED_DATA="${CACHE_ROOT}/DerivedData-watch"
 IOS_SCREENSHOT_SUITE="GymTrainingAppUITests/FigmaReferenceScreenshots"
 WATCH_SCREENSHOT_SUITE="GymTrainingWatchAppUITests/WatchFigmaReferenceScreenshots"
 RESULT_NAMES=(unit core meals ai settings accessibility analytics watch)
+SIMULATORS_TO_SHUTDOWN=()
 IOS_INVENTORY_JSON="${REPORT_DIR}/inventory-ios.json"
 WATCH_INVENTORY_JSON="${REPORT_DIR}/inventory-watch.json"
 IOS_EXECUTED_TESTS="${REPORT_DIR}/executed-ios-tests.txt"
@@ -37,9 +38,17 @@ cd "${ROOT_DIR}"
 
 cleanup() {
   local jobs
+  local simulator
+
   jobs=$(jobs -pr)
   if [[ -n "${jobs}" ]]; then
     kill ${jobs} 2>/dev/null || true
+  fi
+
+  if [[ "${BODYMODE_KEEP_SIMULATORS_RUNNING:-0}" != "1" ]]; then
+    for simulator in "${SIMULATORS_TO_SHUTDOWN[@]}"; do
+      xcrun simctl shutdown "${simulator}" 2>/dev/null || true
+    done
   fi
 }
 
@@ -372,14 +381,13 @@ run_watch_group() {
   return "${status}"
 }
 
-MEALS_ID=$(simulator_id "BodyMode QA Meals" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
-AI_ID=$(simulator_id "BodyMode QA AI" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
-CORE_ID=$(simulator_id "BodyMode QA Core" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
-SETTINGS_ID=$(simulator_id "BodyMode QA Settings" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
+IPHONE_A_ID=$(simulator_id "BodyMode QA Core" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
+IPHONE_B_ID=$(simulator_id "BodyMode QA Meals" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
 WATCH_ID=$(simulator_id "BodyMode QA Watch 2" "${WATCH_DEVICE_TYPE}" "${WATCH_RUNTIME}")
+SIMULATORS_TO_SHUTDOWN=("${IPHONE_A_ID}" "${IPHONE_B_ID}" "${WATCH_ID}")
 
 boot_pids=()
-for id in "${MEALS_ID}" "${AI_ID}" "${CORE_ID}" "${SETTINGS_ID}" "${WATCH_ID}"; do
+for id in "${IPHONE_A_ID}" "${IPHONE_B_ID}"; do
   boot_simulator "${id}" &
   boot_pids+=("$!")
 done
@@ -390,10 +398,9 @@ done
 xcodebuild build-for-testing -quiet \
   -project GymTrainingApp.xcodeproj \
   -scheme GymTrainingApp \
-  -destination "platform=iOS Simulator,id=${MEALS_ID}" \
+  -destination "platform=iOS Simulator,id=${IPHONE_A_ID}" \
   -derivedDataPath "${IOS_DERIVED_DATA}" \
   -clonedSourcePackagesDirPath "${ROOT_DIR}/.build/SourcePackages" \
-  CODE_SIGNING_ALLOWED=NO \
   >"${REPORT_DIR}/build-ios.log" 2>&1
 
 xcodebuild build-for-testing -quiet \
@@ -402,8 +409,8 @@ xcodebuild build-for-testing -quiet \
   -destination "platform=watchOS Simulator,id=${WATCH_ID}" \
   -derivedDataPath "${WATCH_DERIVED_DATA}" \
   -clonedSourcePackagesDirPath "${ROOT_DIR}/.build/SourcePackages" \
-  CODE_SIGNING_ALLOWED=NO \
   >"${REPORT_DIR}/build-watch.log" 2>&1
+xcrun simctl shutdown "${WATCH_ID}" 2>/dev/null || true
 
 IOS_XCTESTRUN=$(find "${IOS_DERIVED_DATA}/Build/Products" -name '*.xctestrun' -print -quit)
 WATCH_XCTESTRUN=$(find "${WATCH_DERIVED_DATA}/Build/Products" -name '*.xctestrun' -print -quit)
@@ -414,7 +421,7 @@ fi
 
 xcodebuild test-without-building -quiet \
   -xctestrun "${IOS_XCTESTRUN}" \
-  -destination "platform=iOS Simulator,id=${CORE_ID}" \
+  -destination "platform=iOS Simulator,id=${IPHONE_A_ID}" \
   -skip-testing:"${IOS_SCREENSHOT_SUITE}" \
   -enumerate-tests \
   -test-enumeration-style flat \
@@ -422,6 +429,51 @@ xcodebuild test-without-building -quiet \
   -test-enumeration-output-path "${IOS_INVENTORY_JSON}" \
   >"${REPORT_DIR}/inventory-ios.log" 2>&1
 
+run_iphone_a_lane() {
+  local status=0
+
+  run_ios_group unit "${IPHONE_A_ID}" \
+    -only-testing:GymTrainingAppTests || status=1
+  run_ios_group core "${IPHONE_A_ID}" \
+    -only-testing:GymTrainingAppUITests/IntegrationAndHealthUITests \
+    -only-testing:GymTrainingAppUITests/WorkoutFlowUITests \
+    -only-testing:GymTrainingAppUITests/InitialSetupUITests \
+    -only-testing:GymTrainingAppUITests/BeginnerOnboardingUITests || status=1
+  run_ios_group ai "${IPHONE_A_ID}" \
+    -only-testing:GymTrainingAppUITests/AITrainerUITests \
+    -only-testing:GymTrainingAppUITests/OmakaseModeUITests || status=1
+  return "${status}"
+}
+
+run_iphone_b_lane() {
+  local status=0
+
+  run_ios_group meals "${IPHONE_B_ID}" \
+    -only-testing:GymTrainingAppUITests/BodyAndNutritionUITests || status=1
+  run_ios_group settings "${IPHONE_B_ID}" \
+    -only-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests \
+    -skip-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testCoreScreensPassAutomatedAccessibilityAudit \
+    -skip-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testUsageAnalyticsIsOptInAndLocallyManageable || status=1
+  boot_simulator "${IPHONE_B_ID}" || status=1
+  run_ios_group accessibility "${IPHONE_B_ID}" \
+    -only-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testCoreScreensPassAutomatedAccessibilityAudit || status=1
+  boot_simulator "${IPHONE_B_ID}" || status=1
+  run_ios_group analytics "${IPHONE_B_ID}" \
+    -only-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testUsageAnalyticsIsOptInAndLocallyManageable || status=1
+  return "${status}"
+}
+
+# Keep UI automation to two concurrent iPhone simulators. Watch runs afterward so
+# CoreSimulator never has to service three XCTest UI sessions at once.
+run_iphone_a_lane &
+lane_iphone_a_pid=$!
+run_iphone_b_lane &
+lane_iphone_b_pid=$!
+
+execution_status=0
+wait "${lane_iphone_a_pid}" || execution_status=1
+wait "${lane_iphone_b_pid}" || execution_status=1
+boot_simulator "${WATCH_ID}" || execution_status=1
 xcodebuild test-without-building -quiet \
   -xctestrun "${WATCH_XCTESTRUN}" \
   -destination "platform=watchOS Simulator,id=${WATCH_ID}" \
@@ -431,61 +483,8 @@ xcodebuild test-without-building -quiet \
   -test-enumeration-style flat \
   -test-enumeration-format json \
   -test-enumeration-output-path "${WATCH_INVENTORY_JSON}" \
-  >"${REPORT_DIR}/inventory-watch.log" 2>&1
-
-run_core_lane() {
-  local status=0
-
-  run_ios_group unit "${CORE_ID}" \
-    -only-testing:GymTrainingAppTests || status=1
-  run_ios_group core "${CORE_ID}" \
-    -only-testing:GymTrainingAppUITests/IntegrationAndHealthUITests \
-    -only-testing:GymTrainingAppUITests/WorkoutFlowUITests \
-    -only-testing:GymTrainingAppUITests/InitialSetupUITests \
-    -only-testing:GymTrainingAppUITests/BeginnerOnboardingUITests || status=1
-  return "${status}"
-}
-
-run_meals_watch_lane() {
-  local status=0
-
-  run_ios_group meals "${MEALS_ID}" \
-    -only-testing:GymTrainingAppUITests/BodyAndNutritionUITests || status=1
-  run_watch_group "${WATCH_ID}" || status=1
-  return "${status}"
-}
-
-run_ai_settings_lane() {
-  local status=0
-
-  run_ios_group ai "${AI_ID}" \
-    -only-testing:GymTrainingAppUITests/AITrainerUITests \
-    -only-testing:GymTrainingAppUITests/OmakaseModeUITests || status=1
-  run_ios_group settings "${SETTINGS_ID}" \
-    -only-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests \
-    -skip-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testCoreScreensPassAutomatedAccessibilityAudit \
-    -skip-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testUsageAnalyticsIsOptInAndLocallyManageable || status=1
-  boot_simulator "${SETTINGS_ID}" || status=1
-  run_ios_group accessibility "${SETTINGS_ID}" \
-    -only-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testCoreScreensPassAutomatedAccessibilityAudit || status=1
-  boot_simulator "${SETTINGS_ID}" || status=1
-  run_ios_group analytics "${SETTINGS_ID}" \
-    -only-testing:GymTrainingAppUITests/SettingsAndAccessibilityUITests/testUsageAnalyticsIsOptInAndLocallyManageable || status=1
-  return "${status}"
-}
-
-# Three lanes proved more stable than five simultaneous Xcode test processes on this Mac.
-run_core_lane &
-lane_core_pid=$!
-run_meals_watch_lane &
-lane_meals_pid=$!
-run_ai_settings_lane &
-lane_ai_pid=$!
-
-execution_status=0
-wait "${lane_core_pid}" || execution_status=1
-wait "${lane_meals_pid}" || execution_status=1
-wait "${lane_ai_pid}" || execution_status=1
+  >"${REPORT_DIR}/inventory-watch.log" 2>&1 || execution_status=1
+run_watch_group "${WATCH_ID}" || execution_status=1
 
 write_summary "${execution_status}"
 summary_written=1

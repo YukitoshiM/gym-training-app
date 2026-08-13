@@ -124,9 +124,31 @@ struct WatchTempoCue: Codable, Hashable, Sendable {
     }
 
     var shouldEmitBeat: Bool {
-        guard hapticCue == .beat else { return false }
-        return second % beatSpeed == 0
+        return true
     }
+
+    var hapticCount: Int {
+        min(3, max(1, beatSpeed))
+    }
+
+    var hapticPattern: [WatchTempoHapticPulse] {
+        let first: WatchTempoHapticPulse = switch hapticCue {
+        case .concentricStart: .directionUp
+        case .eccentricStart: .directionDown
+        case .beat: .click
+        }
+        return [first] + Array(repeating: .click, count: hapticCount - 1)
+    }
+
+    var hapticIntervalNanoseconds: UInt64 {
+        UInt64(1_000_000_000 / hapticCount)
+    }
+}
+
+enum WatchTempoHapticPulse: String, Codable, Hashable, Sendable {
+    case directionUp
+    case directionDown
+    case click
 }
 
 struct WatchTempoGuideState: Codable, Hashable, Sendable {
@@ -370,6 +392,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
     var plannedTempoBeatSpeed: Int?
     var actualWeight: Double
     var actualReps: Int
+    var hasUserAdjustedWeight: Bool?
     var isCompleted: Bool
     var rpe: Double?
     var startedAt: Date?
@@ -388,6 +411,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         plannedTempoBeatSpeed: Int? = nil,
         actualWeight: Double? = nil,
         actualReps: Int? = nil,
+        hasUserAdjustedWeight: Bool? = nil,
         isCompleted: Bool = false,
         rpe: Double? = nil,
         startedAt: Date? = nil,
@@ -405,6 +429,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         self.plannedTempoBeatSpeed = plannedTempoBeatSpeed
         self.actualWeight = actualWeight ?? targetWeight
         self.actualReps = actualReps ?? targetReps
+        self.hasUserAdjustedWeight = hasUserAdjustedWeight
         self.isCompleted = isCompleted
         self.rpe = rpe
         self.startedAt = startedAt

@@ -4,7 +4,7 @@
 
 ## 結論
 
-回帰テストを5台の専用Simulatorと3本の実行レーンへ分離した。iPhoneとWatchは事前ビルドを1回だけ行い、同じ`xctestrun`を使ってテスト本体を並列実行する。2026-08-13に、この並列回帰をリリース候補の必須ゲートへ昇格した。
+回帰テストはiPhone 2台とWatch 1台の専用Simulatorへ分離する。iPhoneとWatchは事前ビルドを1回だけ行い、同じ`xctestrun`を使う。iPhone UIは最大2台で並列実行し、Watch UIはiPhone終了後に直列実行する。2026-08-13に、この回帰をリリース候補の必須ゲートへ昇格した。
 
 自動化強化前に実行した全体回帰の確認結果は次のとおり。
 
@@ -51,15 +51,15 @@ allowlist対象も結果へ明示し、暗黙のスキップにはしない。�
 
 | レーン | Simulator | テスト |
 |---|---|---|
-| Core | BodyMode QA Core | 単体、統合、Health、Workout、初期設定、初心者導線 |
-| Meals / Watch | BodyMode QA Meals、BodyMode QA Watch 2 | 身体・食事、Watch主要フロー |
-| AI / Settings | BodyMode QA AI、BodyMode QA Settings | AI、おまかせ、設定、アクセシビリティ、利用分析 |
+| iPhone A | BodyMode QA Core | 単体、統合、Health、Workout、初期設定、初心者導線、AI、おまかせ |
+| iPhone B | BodyMode QA Meals | 身体・食事、設定、アクセシビリティ、利用分析 |
+| Watch | BodyMode QA Watch 2 | iPhone 2レーン終了後にWatch主要フロー |
 
-5本同時のクリーンビルドはXcodeのSimulatorサービスを不安定にしたため採用しなかった。共有ビルド後の3レーン並列が、このMacでは速度と安定性のバランスがよい。
+3本以上のUIテストや複数のクリーンビルドを同時実行すると、`actool`、Swift Releaseコンパイル、CoreSimulatorのイベントループが競合した。共有ビルド後にiPhone 2レーンだけを並列化し、Watchを後続にする構成をこのMacの上限とする。
 
 共有キャッシュを使った全体周回は14分46秒だった。その周回で検出した3件も個別修正後に再実行し、すべて成功した。現在の`summary.txt`はGit SHA、dirty/clean、アプリ版・ビルド番号、レーン別と合計の成功・失敗・スキップ数、allowlist判定、総所要時間、最終ゲート判定を自動記録する。
 
-重いアクセシビリティ監査と利用分析テストは、通常の設定テスト後に専用Simulatorを再起動してから実行する。各テストは一時的なSimulator起動失敗に備えて失敗時のみ1回再試行する。
+重いアクセシビリティ監査と利用分析テストは、通常の設定テスト後にiPhone Bを再起動してから実行する。各テストは一時的なSimulator起動失敗に備えて失敗時のみ1回再試行する。実行終了時は、このスクリプトが起動した3台を自動停止する。画面確認のため残す場合だけ`BODYMODE_KEEP_SIMULATORS_RUNNING=1`を指定する。
 
 ## 今回検出して修正した内容
 
@@ -77,7 +77,7 @@ allowlist対象も結果へ明示し、暗黙のスキップにはしない。�
 ./scripts/run_parallel_simulator_regression.sh
 ```
 
-スクリプトは5台の専用Simulatorを必要に応じて作成・再起動し、共有ビルド後に3レーンを並列実行する。ほかのタスクが使うSimulatorとは名前とUDIDを分離しているため、同時作業時にもテスト状態を混ぜない。
+スクリプトは2台の専用iPhone Simulatorを並列実行し、その終了後に専用Watch Simulatorを実行する。共有ビルドを再利用し、ほかのタスクが使うSimulatorは起動・停止しない。通常は終了時に今回の3台だけを停止する。
 
 結果は`.build/parallel-regression/<run-id>/summary.txt`、各グループのログと`xcresult`は同じ実行ディレクトリへ保存される。ビルドキャッシュは`.build/parallel-regression/cache/`で再利用する。
 

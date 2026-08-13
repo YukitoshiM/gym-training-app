@@ -185,13 +185,20 @@ private struct HistorySetRow: View {
                     .foregroundStyle(AppTheme.mutedInk)
 
                 if let tempo = set.tempoPerformance {
-                    Label(tempoOutcomeText(tempo), systemImage: "metronome")
+                    Label(
+                        tempoOutcomeText(tempo, beatSpeed: set.plannedTempoBeatSpeed),
+                        systemImage: "metronome"
+                    )
                         .font(.footnote.bold())
                         .foregroundStyle(tempo.achievement == .onTarget ? AppTheme.positive : AppTheme.mutedInk)
                         .accessibilityIdentifier("historyTempoOutcome-\(set.setOrder)")
                 } else if let up = set.plannedConcentricSeconds,
                           let down = set.plannedEccentricSeconds {
-                    Label("テンポ計画 上げ\(up)秒・下げ\(down)秒", systemImage: "metronome")
+                    let speed = min(3, max(1, set.plannedTempoBeatSpeed ?? 1))
+                    Label(
+                        "テンポ計画 上げ\(up)秒・下げ\(down)秒・\(speed)回/秒",
+                        systemImage: "metronome"
+                    )
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                         .accessibilityIdentifier("historyPlannedTempo-\(set.setOrder)")
@@ -279,7 +286,7 @@ private func formatSetDuration(_ duration: TimeInterval) -> String {
     return "\(minutes)分\(seconds)秒"
 }
 
-private func tempoOutcomeText(_ performance: TempoPerformance) -> String {
+private func tempoOutcomeText(_ performance: TempoPerformance, beatSpeed: Int?) -> String {
     let outcome: String
     switch performance.achievement {
     case .onTarget:
@@ -294,8 +301,9 @@ private func tempoOutcomeText(_ performance: TempoPerformance) -> String {
 
     let up = String(format: "%+.1f", performance.concentricDifferenceSeconds)
     let down = String(format: "%+.1f", performance.eccentricDifferenceSeconds)
+    let speed = min(3, max(1, beatSpeed ?? 1))
     let corrected = performance.wasManuallyCorrected ? "・補正済み" : ""
-    return "\(outcome) 上げ\(up)秒 / 下げ\(down)秒\(corrected)"
+    return "\(outcome) 上げ\(up)秒 / 下げ\(down)秒・\(speed)回/秒\(corrected)"
 }
 
 #Preview {

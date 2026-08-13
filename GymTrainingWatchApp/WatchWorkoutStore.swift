@@ -62,6 +62,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     var lastLiveUpdateSentAt: Date?
     var tempoGuideState: WatchTempoGuideState?
     var tempoGuideTask: Task<Void, Never>?
+    var tempoHapticTask: Task<Void, Never>?
     let isUITestMode = ProcessInfo.processInfo.arguments.contains("--seed-watch-ui-test-plan")
 
     override init() {
@@ -381,9 +382,13 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     func applyNextSetLoadSuggestion() {
         guard let suggestion = nextSetLoadSuggestion else { return }
+        setWeight(
+            exerciseID: suggestion.exerciseID,
+            setID: suggestion.setID,
+            weight: suggestion.suggestedWeight
+        )
         updateSet(exerciseID: suggestion.exerciseID, setID: suggestion.setID) { set in
             guard !set.isCompleted else { return }
-            set.actualWeight = Self.normalizedWeight(suggestion.suggestedWeight)
             set.actualReps = max(0, min(999, suggestion.suggestedReps))
         }
         nextSetLoadSuggestion = nil
@@ -605,6 +610,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         tempoGuideState = state
         tempoGuideTask?.cancel()
         tempoGuideTask = nil
+        tempoHapticTask?.cancel()
+        tempoHapticTask = nil
         isTempoGuidePaused = state.isPaused
     }
 
@@ -622,6 +629,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         tempoGuideState = state
         tempoGuideTask?.cancel()
         tempoGuideTask = nil
+        tempoHapticTask?.cancel()
+        tempoHapticTask = nil
         tempoCue = nil
         isTempoGuidePaused = state.isPaused
         if enabled {
@@ -633,6 +642,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         guard var state = tempoGuideState, !state.isFinished else { return }
         state.skipCurrentPhase()
         tempoGuideState = state
+        tempoHapticTask?.cancel()
+        tempoHapticTask = nil
         tempoCue = nil
         if state.isFinished {
             finishTempoGuideNaturally()
@@ -640,6 +651,8 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     }
 
     private func startTempoGuide(for set: WatchWorkoutSetSnapshot) {
+        tempoHapticTask?.cancel()
+        tempoHapticTask = nil
         guard sensorPreferences.hapticCoachingEnabled,
               let target = WatchTempoTarget(
                 concentricSeconds: set.plannedConcentricSeconds,
@@ -677,42 +690,63 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
                 }
                 self.tempoGuideState = state
                 self.tempoCue = cue
-                self.playTempoHaptic(cue)
                 if state.isFinished {
-                    self.finishTempoGuideNaturally()
+                    self.finishTempoGuideNaturally(finalCue: cue)
                     return
                 }
+                self.playTempoHaptic(cue)
             }
         }
     }
 
-    private func playTempoHaptic(_ cue: WatchTempoCue) {
+    private func playTempoHaptic(_ cue: WatchTempoCue, playsSuccessAfterward: Bool = false) {
         guard cue.shouldEmitBeat || cue.hapticCue != .beat else {
             return
         }
 
-        switch cue.hapticCue {
-        case .concentricStart:
-            WKInterfaceDevice.current().play(.directionUp)
-        case .eccentricStart:
-            WKInterfaceDevice.current().play(.directionDown)
-        case .beat:
-            WKInterfaceDevice.current().play(.click)
+        tempoHapticTask?.cancel()
+        tempoHapticTask = Task {
+            for (index, pulse) in cue.hapticPattern.enumerated() {
+                guard !Task.isCancelled else { return }
+                WKInterfaceDevice.current().play(hapticType(for: pulse))
+                guard index < cue.hapticPattern.count - 1 else { continue }
+                try? await Task.sleep(nanoseconds: cue.hapticIntervalNanoseconds)
+            }
+            guard !Task.isCancelled, playsSuccessAfterward else { return }
+            try? await Task.sleep(nanoseconds: cue.hapticIntervalNanoseconds)
+            guard !Task.isCancelled else { return }
+            WKInterfaceDevice.current().play(.success)
         }
     }
 
-    private func finishTempoGuideNaturally() {
+    private func hapticType(for pulse: WatchTempoHapticPulse) -> WKHapticType {
+        switch pulse {
+        case .directionUp: .directionUp
+        case .directionDown: .directionDown
+        case .click: .click
+        }
+    }
+
+    private func finishTempoGuideNaturally(finalCue: WatchTempoCue? = nil) {
         tempoGuideTask?.cancel()
         tempoGuideTask = nil
+        tempoHapticTask?.cancel()
+        tempoHapticTask = nil
         tempoCue = nil
         isTempoGuidePaused = false
         isTempoGuideFinished = true
-        WKInterfaceDevice.current().play(.success)
+        if let finalCue {
+            playTempoHaptic(finalCue, playsSuccessAfterward: true)
+        } else {
+            WKInterfaceDevice.current().play(.success)
+        }
     }
 
     func stopTempoGuide() {
         tempoGuideTask?.cancel()
         tempoGuideTask = nil
+        tempoHapticTask?.cancel()
+        tempoHapticTask = nil
         tempoGuideState = nil
         tempoCue = nil
         isTempoGuidePaused = false

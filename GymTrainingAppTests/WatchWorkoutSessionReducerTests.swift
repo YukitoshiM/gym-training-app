@@ -121,6 +121,43 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
         XCTAssertEqual(session.exercises[0].sets[2].actualWeight, 52.5)
     }
 
+    func testStartSetRepairsStaleWeightFromPlanOnFirstStart() {
+        var session = makeSession()
+        let exerciseID = session.exercises[0].id
+        let secondSetID = session.exercises[0].sets[1].id
+
+        session.exercises[0].sets[1].actualWeight = 40
+        session.exercises[0].sets[1].actualReps = 6
+
+        XCTAssertTrue(WatchWorkoutSessionReducer.reduce(
+            session: &session,
+            action: .startSet(exerciseID: exerciseID, setID: secondSetID, startedAt: Date(timeIntervalSince1970: 111))
+        ))
+
+        XCTAssertEqual(session.exercises[0].sets[1].startedAt, Date(timeIntervalSince1970: 111))
+        XCTAssertEqual(session.exercises[0].sets[1].actualWeight, 50)
+        XCTAssertEqual(session.exercises[0].sets[1].actualReps, 6)
+    }
+
+    func testStartSetPreservesWeightPropagatedByUserInCurrentSession() {
+        var session = makeSession()
+        let exerciseID = session.exercises[0].id
+        let firstSetID = session.exercises[0].sets[0].id
+        let secondSetID = session.exercises[0].sets[1].id
+
+        XCTAssertTrue(WatchWorkoutSessionReducer.reduce(
+            session: &session,
+            action: .updateExerciseWeight(exerciseID: exerciseID, activeSetID: firstSetID, weight: 52.5)
+        ))
+        XCTAssertTrue(WatchWorkoutSessionReducer.reduce(
+            session: &session,
+            action: .startSet(exerciseID: exerciseID, setID: secondSetID, startedAt: Date())
+        ))
+
+        XCTAssertEqual(session.exercises[0].sets[1].actualWeight, 52.5)
+        XCTAssertEqual(session.exercises[0].sets[1].hasUserAdjustedWeight, true)
+    }
+
     func testEditableValuesAndCompletionAreReducedTogether() {
         var session = makeSession()
         let exerciseID = session.exercises[0].id
@@ -220,6 +257,77 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
         XCTAssertEqual(state.advance()?.hapticCue, .eccentricStart)
     }
 
+    func testTempoSpeedProducesOneToThreeHapticsPerSecond() throws {
+        for speed in 1...3 {
+            let target = try XCTUnwrap(WatchTempoTarget(
+                concentricSeconds: 2,
+                eccentricSeconds: 2,
+                repetitions: 1,
+                beatSpeed: speed
+            ))
+            var state = WatchTempoGuideState(target: target)
+            let startCue = try XCTUnwrap(state.advance())
+            let beatCue = try XCTUnwrap(state.advance())
+
+            XCTAssertEqual(startCue.hapticCount, speed)
+            XCTAssertEqual(beatCue.hapticCount, speed)
+            XCTAssertTrue(beatCue.shouldEmitBeat)
+            XCTAssertEqual(startCue.hapticPattern.first, .directionUp)
+            XCTAssertEqual(startCue.hapticPattern.count, speed)
+            XCTAssertEqual(beatCue.hapticPattern, Array(repeating: .click, count: speed))
+            XCTAssertEqual(startCue.hapticIntervalNanoseconds, UInt64(1_000_000_000 / speed))
+        }
+    }
+
+    func testTempoHapticPatternSignalsLiftAndLowerDirections() throws {
+        let target = try XCTUnwrap(WatchTempoTarget(
+            concentricSeconds: 1,
+            eccentricSeconds: 1,
+            repetitions: 1,
+            beatSpeed: 3
+        ))
+        var state = WatchTempoGuideState(target: target)
+
+        let liftCue = try XCTUnwrap(state.advance())
+        let lowerCue = try XCTUnwrap(state.advance())
+
+        XCTAssertEqual(liftCue.hapticPattern, [.directionUp, .click, .click])
+        XCTAssertEqual(lowerCue.hapticPattern, [.directionDown, .click, .click])
+    }
+
+    func testPlannedTempoIsStoredPerSetAndRejectsOutOfRangeValues() {
+        var session = makeSession()
+        let exerciseID = session.exercises[0].id
+        let firstSetID = session.exercises[0].sets[0].id
+
+        XCTAssertTrue(WatchWorkoutSessionReducer.reduce(
+            session: &session,
+            action: .updatePlannedTempo(
+                exerciseID: exerciseID,
+                setID: firstSetID,
+                concentricSeconds: 2,
+                eccentricSeconds: 4,
+                beatSpeed: 3
+            )
+        ))
+        XCTAssertEqual(session.exercises[0].sets[0].plannedConcentricSeconds, 2)
+        XCTAssertEqual(session.exercises[0].sets[0].plannedEccentricSeconds, 4)
+        XCTAssertEqual(session.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
+        XCTAssertNil(session.exercises[0].sets[1].plannedConcentricSeconds)
+
+        XCTAssertFalse(WatchWorkoutSessionReducer.reduce(
+            session: &session,
+            action: .updatePlannedTempo(
+                exerciseID: exerciseID,
+                setID: firstSetID,
+                concentricSeconds: 0,
+                eccentricSeconds: 4,
+                beatSpeed: 3
+            )
+        ))
+        XCTAssertEqual(session.exercises[0].sets[0].plannedConcentricSeconds, 2)
+    }
+
     func testTempoPerformancePersistsPlanDifferenceAndManualCorrection() throws {
         var session = makeSessionWithTempo()
         let exerciseID = session.exercises[0].id
@@ -294,11 +402,13 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
             JSONSerialization.jsonObject(with: JSONEncoder().encode(watchSet)) as? [String: Any]
         )
         watchJSON.removeValue(forKey: "tempoPerformance")
+        watchJSON.removeValue(forKey: "hasUserAdjustedWeight")
         let decodedWatchSet = try JSONDecoder().decode(
             WatchWorkoutSetSnapshot.self,
             from: JSONSerialization.data(withJSONObject: watchJSON)
         )
         XCTAssertNil(decodedWatchSet.tempoPerformance)
+        XCTAssertNil(decodedWatchSet.hasUserAdjustedWeight)
 
         let workoutSet = WorkoutSet(setOrder: 1, targetWeight: 50, targetReps: 10)
         var workoutJSON = try XCTUnwrap(
@@ -334,6 +444,45 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
 
         XCTAssertEqual(decoded.tempoPerformance, performance)
         XCTAssertTrue(decoded.tempoPerformance?.wasManuallyCorrected == true)
+    }
+
+    func testPlanTempoSpeedSurvivesWatchAndWorkoutRoundTrip() throws {
+        let plan = TrainingPlan(
+            name: "テンポ",
+            exercises: [
+                PlanExercise(
+                    exercise: Exercise(
+                        name: "ベンチプレス",
+                        primaryMuscle: .chest,
+                        equipment: .barbell,
+                        instruction: ""
+                    ),
+                    sortOrder: 0,
+                    sets: [
+                        PlanSetTarget(
+                            setOrder: 1,
+                            targetWeight: 50,
+                            targetReps: 8,
+                            plannedConcentricSeconds: 2,
+                            plannedEccentricSeconds: 4,
+                            plannedTempoBeatSpeed: 3
+                        )
+                    ]
+                )
+            ]
+        )
+
+        let watchPlan = WatchWorkoutPlanSnapshot(plan: plan, weightUnit: .kg)
+        XCTAssertEqual(watchPlan.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
+
+        var watchSession = WatchWorkoutSessionSnapshot(plan: watchPlan)
+        watchSession.exercises[0].sets[0].isCompleted = true
+        let workout = WorkoutSession(watchSession: watchSession)
+        XCTAssertEqual(workout.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
+
+        let data = try JSONEncoder().encode(workout)
+        let decoded = try JSONDecoder().decode(WorkoutSession.self, from: data)
+        XCTAssertEqual(decoded.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
     }
 
     private func makeSession() -> WatchWorkoutSessionSnapshot {

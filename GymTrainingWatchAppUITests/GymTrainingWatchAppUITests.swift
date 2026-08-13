@@ -22,7 +22,8 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = [
             "--reset-watch-ui-test-data",
-            "--seed-watch-ui-test-plan"
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial"
         ]
         app.launch()
 
@@ -149,7 +150,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         saveRestButton.tap()
 
         app.terminate()
-        app.launchArguments = []
+        app.launchArguments = ["--suppress-watch-tutorial"]
         app.launch()
 
         let restLabelAfterRelaunch = app.descendants(matching: .any)["watchRestTimer"]
@@ -179,7 +180,8 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = [
             "--reset-watch-ui-test-data",
-            "--seed-watch-ui-test-plan"
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial"
         ]
         app.launch()
 
@@ -199,6 +201,7 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         app.launchArguments = [
             "--reset-watch-ui-test-data",
             "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial",
             "--seed-watch-set-switch-state"
         ]
         app.launch()
@@ -208,6 +211,65 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         let activeSetActual = app.staticTexts["watchActiveSetActual"]
         XCTAssertTrue(activeSetActual.waitForExistence(timeout: 5))
         XCTAssertEqual(activeSetActual.label, "実績 52.5 kg × 10回")
+    }
+
+    func testSetStartsAtPlanTargetAndTempoCanBeConfiguredBeforeStart() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial"
+        ]
+        app.launch()
+
+        let chestMenu = findHittableElement(in: app, identifier: "watchMenu-胸の日")
+        XCTAssertTrue(chestMenu.waitForExistence(timeout: 10))
+        chestMenu.tap()
+        findHittableElement(in: app, identifier: "watchStartWorkoutButton").tap()
+
+        let tempoButton = findHittableElement(in: app, identifier: "watchSelectedTempoEntry-0-1")
+        XCTAssertTrue(tempoButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(tempoButton.isHittable)
+        XCTAssertEqual(tempoButton.value as? String, "上2s・下3s・1回/秒")
+        tempoButton.tap()
+
+        let speedPicker = app.descendants(matching: .any)["watchTempoSpeedPicker"]
+        XCTAssertTrue(speedPicker.waitForExistence(timeout: 5))
+        XCTAssertTrue(scrollToHittableElement(in: app, element: speedPicker))
+        speedPicker.swipeUp()
+        speedPicker.swipeUp()
+        findHittableElement(in: app, identifier: "saveWatchTempoButton").tap()
+
+        let savedTempoButton = findHittableElement(in: app, identifier: "watchSelectedTempoEntry-0-1")
+        XCTAssertTrue(savedTempoButton.waitForExistence(timeout: 5))
+        XCTAssertNotEqual(savedTempoButton.value as? String, "上2s・下3s・1回/秒")
+        let savedSpeed = savedTempoButton.value as? String
+        XCTAssertEqual(savedSpeed, "上2s・下3s・3回/秒")
+
+        let startButton = findHittableElement(in: app, identifier: "watchStartNextSetButton")
+        XCTAssertTrue(startButton.isHittable)
+        startButton.tap()
+
+        let actual = app.staticTexts["watchActiveSetActual"]
+        XCTAssertTrue(actual.waitForExistence(timeout: 5))
+        XCTAssertEqual(actual.label, "実績 50 kg × 10回")
+        let tempoCue = app.staticTexts["watchTempoCue"].firstMatch
+        XCTAssertTrue(tempoCue.waitForExistence(timeout: 5))
+        XCTAssertEqual(tempoCue.value as? String, savedSpeed?.components(separatedBy: "・").last)
+    }
+
+    func testTutorialAppearsOnFirstLaunchWithoutForceFlag() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 10))
+        XCTAssertEqual(app.descendants(matching: .any)["watchTutorialPage-1"].label, "メニューを選ぶ")
+        app.buttons["skipWatchTutorialButton"].tap()
+        XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 5))
     }
 
     func testTutorialCanBeCompletedAndReopened() throws {
@@ -283,6 +345,20 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         }
 
         return element
+    }
+
+    private func scrollToHittableElement(
+        in app: XCUIApplication,
+        element: XCUIElement,
+        maxRotations: Int = 12
+    ) -> Bool {
+        for _ in 0..<maxRotations {
+            if element.exists, element.isHittable {
+                return true
+            }
+            XCUIDevice.shared.rotateDigitalCrown(delta: 0.2)
+        }
+        return element.exists && element.isHittable
     }
 
     private func attachScreenshot(named name: String, app: XCUIApplication) {

@@ -25,6 +25,10 @@ APP_NAME = "Gym Training Local LLM"
 API_KEY = os.getenv("LOCAL_AI_API_KEY", "dev-local-key")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4:12b")
+OLLAMA_REQUEST_TIMEOUT_SECONDS = max(
+    30.0,
+    min(float(os.getenv("OLLAMA_REQUEST_TIMEOUT_SECONDS", "180")), 600.0),
+)
 AUTH_MODE = os.getenv("AI_AUTH_MODE", "compat").strip().lower()
 TOKEN_TTL_SECONDS = max(300, min(int(os.getenv("AI_TOKEN_TTL_SECONDS", "86400")), 604800))
 RATE_LIMIT_PER_MINUTE = max(1, int(os.getenv("AI_RATE_LIMIT_PER_MINUTE", "30")))
@@ -696,7 +700,7 @@ async def analyze_meal_image(request: MealAnalysisRequest, _: None = Depends(req
 画像だけで量は断定できないため、confidenceはlow/medium/highのいずれかにしてください。
 commentは最初に確認が必要な点を示し、目的に沿う次の行動を必要な場合だけ1件示してください。
 必ず次のJSONだけを返してください。
-{
+{{
   "meal_name": "料理名",
   "calories": 0,
   "protein": 0,
@@ -705,9 +709,9 @@ commentは最初に確認が必要な点を示し、目的に沿う次の行動�
   "confidence": "medium",
   "comment": "ユーザー補正を促す短いコメント",
   "items": [
-    {"name": "食材名", "amount": "150g", "calories": 0, "protein": 0, "fat": 0, "carbs": 0}
+    {{"name": "食材名", "amount": "150g", "calories": 0, "protein": 0, "fat": 0, "carbs": 0}}
   ]
-}
+}}
 """.strip()
     fallback = fallback_meal(request)
     result = await ollama_json(
@@ -1022,7 +1026,7 @@ async def ollama_json(
 
     try:
         async with _inference_semaphore:
-            async with httpx.AsyncClient(timeout=120.0) as client:
+            async with httpx.AsyncClient(timeout=OLLAMA_REQUEST_TIMEOUT_SECONDS) as client:
                 response = await client.post(f"{OLLAMA_BASE_URL}/api/generate", json=payload)
                 response.raise_for_status()
             text = response.json().get("response", "")

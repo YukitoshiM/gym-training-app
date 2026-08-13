@@ -56,6 +56,7 @@ extension WatchWorkoutStore {
             defaults.removeObject(forKey: lastCompletedSessionStorageKey)
             defaults.removeObject(forKey: restTimerEndStorageKey)
             defaults.removeObject(forKey: restTimerExerciseStorageKey)
+            defaults.removeObject(forKey: WatchTutorialView.completedVersionKey)
             AppAppearanceSettings.reset(in: defaults)
             appearanceSettings = .default
         }
@@ -121,7 +122,8 @@ extension WatchWorkoutStore {
                                 targetWeight: 50,
                                 targetReps: 10,
                                 plannedConcentricSeconds: setOrder == 1 ? 2 : nil,
-                                plannedEccentricSeconds: setOrder == 1 ? 3 : nil
+                                plannedEccentricSeconds: setOrder == 1 ? 3 : nil,
+                                plannedTempoBeatSpeed: setOrder == 1 ? 1 : nil
                             )
                         }
                     )

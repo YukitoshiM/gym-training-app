@@ -14,12 +14,18 @@ struct WatchActiveWorkoutView: View {
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
+    @ViewBuilder
     var body: some View {
-        guard let session = workoutStore.activeSession else {
-            return Text("記録中のワークアウトがありません").padding()
+        if let session = workoutStore.activeSession {
+            activeWorkoutContent(session: session)
+        } else {
+            Text("記録中のワークアウトがありません")
+                .padding()
         }
+    }
 
-        return ScrollViewReader { proxy in
+    private func activeWorkoutContent(session: WatchWorkoutSessionSnapshot) -> some View {
+        ScrollViewReader { proxy in
             List {
                 Section {
                     VStack(alignment: .leading, spacing: 10) {
@@ -121,7 +127,8 @@ struct WatchActiveWorkoutView: View {
                                 if let target = WatchTempoTarget(
                                     concentricSeconds: activeSet.set.plannedConcentricSeconds,
                                     eccentricSeconds: activeSet.set.plannedEccentricSeconds,
-                                    repetitions: activeSet.set.targetReps
+                                    repetitions: activeSet.set.targetReps,
+                                    beatSpeed: activeSet.set.resolvedTempoBeatSpeed
                                 ) {
                                     WatchTempoGuideView(target: target)
                                 }
@@ -137,6 +144,27 @@ struct WatchActiveWorkoutView: View {
                                 }
                             }
                             .accessibilityIdentifier("watchNextExerciseMenu")
+
+                            if activeSet == nil, let selectedPendingSet {
+                                Button {
+                                    activeTempoEditor = WatchActiveTempoEditor(
+                                        exercise: selectedPendingSet.exercise,
+                                        set: selectedPendingSet.set
+                                    )
+                                } label: {
+                                    Label(
+                                        tempoSummary(for: selectedPendingSet.set),
+                                        systemImage: "metronome"
+                                    )
+                                }
+                                .buttonStyle(.bordered)
+                                .font(.caption2)
+                                .accessibilityLabel("開始前にテンポを設定")
+                                .accessibilityValue(tempoSummary(for: selectedPendingSet.set))
+                                .accessibilityIdentifier(
+                                    "watchSelectedTempoEntry-\(selectedPendingSet.exercise.sortOrder)-\(selectedPendingSet.set.setOrder)"
+                                )
+                            }
 
                             Button {
                                 guard let selectedNextSet else { return }
@@ -483,13 +511,23 @@ struct WatchActiveWorkoutView: View {
     }
 
     private var selectedNextSet: (exerciseID: UUID, setID: UUID)? {
+        guard let selectedPendingSet else {
+            return nil
+        }
+        return (selectedPendingSet.exercise.id, selectedPendingSet.set.id)
+    }
+
+    private var selectedPendingSet: (
+        exercise: WatchWorkoutExerciseSnapshot,
+        set: WatchWorkoutSetSnapshot
+    )? {
         let exercise = pendingExercises.first(where: { $0.id == selectedExerciseID })
             ?? pendingExercises.first
         guard let exercise,
               let set = exercise.sets.first(where: { $0.startedAt == nil && !$0.isCompleted }) else {
             return nil
         }
-        return (exercise.id, set.id)
+        return (exercise, set)
     }
 
     private func ensureSelectedExercise() {
@@ -500,6 +538,14 @@ struct WatchActiveWorkoutView: View {
     private func restTimerAnchor(for exerciseID: UUID) -> String {
         "rest-timer-\(exerciseID.uuidString)"
     }
+
+    private func tempoSummary(for set: WatchWorkoutSetSnapshot) -> String {
+        guard let concentric = set.plannedConcentricSeconds,
+              let eccentric = set.plannedEccentricSeconds else {
+            return "テンポを設定"
+        }
+        return "上\(concentric)s・下\(eccentric)s・\(set.resolvedTempoBeatSpeed)回/秒"
+    }
 }
 
 private struct WatchTempoGuideView: View {
@@ -508,10 +554,12 @@ private struct WatchTempoGuideView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Label(statusText, systemImage: "metronome")
+            Text(statusText)
                 .font(.caption.bold().monospacedDigit())
                 .foregroundStyle(WatchAppTheme.positive)
+                .accessibilityValue("\(target.beatSpeed)回/秒")
                 .accessibilityIdentifier("watchTempoCue")
+                .accessibilityElement(children: .ignore)
 
             HStack(spacing: 6) {
                 if !workoutStore.isTempoGuideFinished {
@@ -621,7 +669,7 @@ struct WatchCompletedSetsArchiveView: View {
 
 struct WatchWorkoutNoteEntryView: View {
     @EnvironmentObject private var workoutStore: WatchWorkoutStore
-    @Environment(\.#dismiss) private var dismiss
+    @Environment(\.dismiss) private var dismiss
     @State private var note: String
 
     init(currentNote: String) {

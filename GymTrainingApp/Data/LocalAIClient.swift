@@ -1,6 +1,8 @@
 import Foundation
 
 struct AIAPIClient {
+    private static let inferenceTimeout: TimeInterval = 240
+
     let settings: AISettings
     private let session: URLSession
 
@@ -49,7 +51,7 @@ struct AIAPIClient {
             memo: memo,
             coach: coach
         )
-        let draft = try await post("/v1/meals/analyze-image", body: request, responseType: MealAIDraft.self, timeout: 120)
+        let draft = try await post("/v1/meals/analyze-image", body: request, responseType: MealAIDraft.self, timeout: Self.inferenceTimeout)
         return draft.reconciledFromItems()
     }
 
@@ -110,7 +112,7 @@ struct AIAPIClient {
             memo: memo,
             coach: coach
         )
-        let draft = try await post("/v1/meals/analyze-text", body: request, responseType: MealAIDraft.self, timeout: 120)
+        let draft = try await post("/v1/meals/analyze-text", body: request, responseType: MealAIDraft.self, timeout: Self.inferenceTimeout)
         return draft.reconciledFromItems()
     }
 
@@ -121,7 +123,7 @@ struct AIAPIClient {
             angle: angle.rawValue,
             memo: memo
         )
-        return try await post("/v1/body-photos/analyze", body: request, responseType: BodyPhotoAIComment.self, timeout: 120)
+        return try await post("/v1/body-photos/analyze", body: request, responseType: BodyPhotoAIComment.self, timeout: Self.inferenceTimeout)
     }
 
     func analyzeBodyPhotos(
@@ -178,12 +180,12 @@ struct AIAPIClient {
             "/v1/body-photos/analyze-set",
             body: request,
             responseType: BodyPhotoAIComment.self,
-            timeout: 120
+            timeout: Self.inferenceTimeout
         )
     }
 
     func generateWeeklyReport(payload: WeeklyReportRequest) async throws -> WeeklyReportResponse {
-        return try await post("/v1/reports/weekly", body: payload, responseType: WeeklyReportResponse.self, timeout: 120)
+        return try await post("/v1/reports/weekly", body: payload, responseType: WeeklyReportResponse.self, timeout: Self.inferenceTimeout)
     }
 
     func generateMonthlyReport(payload: WeeklyReportRequest) async throws -> WeeklyReportResponse {
@@ -197,7 +199,7 @@ struct AIAPIClient {
             )
         }
         #endif
-        return try await post("/v1/reports/monthly", body: payload, responseType: WeeklyReportResponse.self, timeout: 120)
+        return try await post("/v1/reports/monthly", body: payload, responseType: WeeklyReportResponse.self, timeout: Self.inferenceTimeout)
     }
 
     func chat(payload: CoachChatRequest) async throws -> CoachChatResponse {
@@ -273,7 +275,7 @@ struct AIAPIClient {
                 "/v1/agents/chat",
                 body: initialRequest,
                 responseType: CoachChatResponse.self,
-                timeout: 120
+                timeout: Self.inferenceTimeout
             )
         } catch AIClientError.httpStatus(413) {
             var retryRequest = payload.compactedForRetry()
@@ -283,7 +285,7 @@ struct AIAPIClient {
                     "/v1/agents/chat",
                     body: retryRequest,
                     responseType: CoachChatResponse.self,
-                    timeout: 120
+                    timeout: Self.inferenceTimeout
                 )
             } catch AIClientError.httpStatus(413) {
                 throw AITrainerError.contextTooLarge
@@ -319,7 +321,7 @@ struct AIAPIClient {
 
         var request = URLRequest(url: try makeURL("/v1/agents/chat"))
         request.httpMethod = "POST"
-        request.timeoutInterval = 120
+        request.timeoutInterval = Self.inferenceTimeout
         try await applyHeaders(to: &request)
         return AIBackgroundChatUpload(
             request: request,
@@ -677,7 +679,7 @@ enum AIClientError: LocalizedError {
         switch error.code {
         case .cannotConnectToHost, .cannotFindHost, .dnsLookupFailed,
              .networkConnectionLost, .notConnectedToInternet, .timedOut:
-            "ネットワークとAIサーバーの稼働状態を確認してください。画像解析は最大120秒かかる場合があります。"
+            "ネットワークとAIサーバーの稼働状態を確認してください。AI処理は最大240秒かかる場合があります。"
         case .unsupportedURL, .badURL:
             "URLはhttps://から始めてください。ローカル開発時のみhttp://も利用できます。"
         default:

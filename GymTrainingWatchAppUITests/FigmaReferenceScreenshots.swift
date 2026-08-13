@@ -10,7 +10,8 @@ final class WatchFigmaReferenceScreenshots: XCTestCase {
         app = XCUIApplication()
         app.launchArguments = [
             "--reset-watch-ui-test-data",
-            "--seed-watch-ui-test-plan"
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial"
         ]
         app.launch()
     }

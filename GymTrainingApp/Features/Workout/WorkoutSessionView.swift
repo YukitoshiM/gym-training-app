@@ -243,6 +243,7 @@ private struct WorkoutExerciseSection: View {
                 targetReps: previous?.targetReps ?? 10,
                 plannedConcentricSeconds: previous?.plannedConcentricSeconds,
                 plannedEccentricSeconds: previous?.plannedEccentricSeconds,
+                plannedTempoBeatSpeed: previous?.plannedTempoBeatSpeed,
                 actualWeight: previous?.actualWeight,
                 actualReps: previous?.actualReps,
                 isAdded: true

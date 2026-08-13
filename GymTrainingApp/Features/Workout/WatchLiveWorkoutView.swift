@@ -284,7 +284,7 @@ private struct LiveSetRow: View {
                     if let concentric = set.plannedConcentricSeconds,
                        let eccentric = set.plannedEccentricSeconds,
                        let beatSpeed = set.plannedTempoBeatSpeed {
-                        Text("テンポ上げ\(concentric)s/\(beatSpeed)/下げ\(eccentric)s")
+                        Text("上げ\(concentric)秒・下げ\(eccentric)秒・\(beatSpeed)回/秒")
                             .font(.caption2)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
@@ -380,9 +380,9 @@ private struct LiveSetEditorView: View {
                     }
                     .pickerStyle(.menu)
 
-                    Picker("速度", selection: $beatSpeed) {
+                    Picker("振動速度", selection: $beatSpeed) {
                         ForEach(1...3, id: \.self) { value in
-                            Text("速度\(value)").tag(value)
+                            Text("\(value)回/秒").tag(value)
                         }
                     }
                     .pickerStyle(.menu)

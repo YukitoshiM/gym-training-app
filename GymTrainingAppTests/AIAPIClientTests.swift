@@ -116,7 +116,7 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(MockAIURLProtocol.lastRequest?.url?.path, "/v1/coaches")
     }
 
-    func testMealAnalysisDownsamplesImageAndUses120SecondTimeout() async throws {
+    func testMealAnalysisDownsamplesImageAndUses240SecondTimeout() async throws {
         MockAIURLProtocol.requestHandler = { request in
             let data = Data(#"""
             {
@@ -143,7 +143,7 @@ final class AIAPIClientTests: XCTestCase {
 
         XCTAssertEqual(draft.calories, 650)
         let request = try XCTUnwrap(MockAIURLProtocol.lastRequest)
-        XCTAssertEqual(request.timeoutInterval, 120, accuracy: 0.1)
+        XCTAssertEqual(request.timeoutInterval, 240, accuracy: 0.1)
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         let encodedImage = try XCTUnwrap(json["image_base64"] as? String)
@@ -160,7 +160,7 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(coach["focus_areas"] as? [String], ["筋肥大", "回復", "食事・栄養"])
     }
 
-    func testMealTextAnalysisSendsFoodListAndUses120SecondTimeout() async throws {
+    func testMealTextAnalysisSendsFoodListAndUses240SecondTimeout() async throws {
         MockAIURLProtocol.requestHandler = { request in
             let data = Data(#"""
             {
@@ -191,7 +191,7 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(draft.calories, 427)
         let request = try XCTUnwrap(MockAIURLProtocol.lastRequest)
         XCTAssertEqual(request.url?.path, "/v1/meals/analyze-text")
-        XCTAssertEqual(request.timeoutInterval, 120, accuracy: 0.1)
+        XCTAssertEqual(request.timeoutInterval, 240, accuracy: 0.1)
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         XCTAssertEqual(
@@ -296,7 +296,7 @@ final class AIAPIClientTests: XCTestCase {
         }
     }
 
-    func testBodyPhotoSetAnalysisUploadsMultipleAnglesWith120SecondTimeout() async throws {
+    func testBodyPhotoSetAnalysisUploadsMultipleAnglesWith240SecondTimeout() async throws {
         MockAIURLProtocol.requestHandler = { request in
             let data = Data(#"""
             {
@@ -345,7 +345,7 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(comment.summary, "2方向を確認しました")
         let request = try XCTUnwrap(MockAIURLProtocol.lastRequest)
         XCTAssertEqual(request.url?.path, "/v1/body-photos/analyze-set")
-        XCTAssertEqual(request.timeoutInterval, 120, accuracy: 0.1)
+        XCTAssertEqual(request.timeoutInterval, 240, accuracy: 0.1)
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         let photos = try XCTUnwrap(json["photos"] as? [[String: Any]])
@@ -412,7 +412,7 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertTrue((coach["boundaries"] as? [String])?.contains("見た目だけで体脂肪率を断定しない") == true)
     }
 
-    func testMonthlyReportUsesDedicatedEndpointAnd120SecondTimeout() async throws {
+    func testMonthlyReportUsesDedicatedEndpointAnd240SecondTimeout() async throws {
         MockAIURLProtocol.requestHandler = { request in
             let data = Data(#"{"input_summary":"30日分","output_comment":"月次差分","action_suggestion":"翌月目標案"}"#.utf8)
             return (Self.response(for: request, statusCode: 200), data)
@@ -433,7 +433,7 @@ final class AIAPIClientTests: XCTestCase {
 
         XCTAssertEqual(response.actionSuggestion, "翌月目標案")
         XCTAssertEqual(MockAIURLProtocol.lastRequest?.url?.path, "/v1/reports/monthly")
-        XCTAssertEqual(MockAIURLProtocol.lastRequest?.timeoutInterval ?? 0, 120, accuracy: 0.1)
+        XCTAssertEqual(MockAIURLProtocol.lastRequest?.timeoutInterval ?? 0, 240, accuracy: 0.1)
     }
 
     func testBodyPhotoLegacyResponseDecodesWithoutStructuredAdvice() throws {
@@ -484,7 +484,7 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(response.memoryCandidates.first?.content, "重量は小刻みに上げたい")
         let sentRequest = try XCTUnwrap(MockAIURLProtocol.lastRequest)
         XCTAssertEqual(sentRequest.url?.path, "/v1/agents/chat")
-        XCTAssertEqual(sentRequest.timeoutInterval, 120, accuracy: 0.1)
+        XCTAssertEqual(sentRequest.timeoutInterval, 240, accuracy: 0.1)
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         XCTAssertEqual(json["coach_id"] as? String, "hypertrophy")
@@ -506,7 +506,7 @@ final class AIAPIClientTests: XCTestCase {
 
         XCTAssertEqual(upload.request.url?.path, "/v1/agents/chat")
         XCTAssertEqual(upload.request.httpMethod, "POST")
-        XCTAssertEqual(upload.request.timeoutInterval, 120, accuracy: 0.1)
+        XCTAssertEqual(upload.request.timeoutInterval, 240, accuracy: 0.1)
         XCTAssertEqual(
             upload.request.value(forHTTPHeaderField: "Authorization"),
             "Bearer test-api-key"

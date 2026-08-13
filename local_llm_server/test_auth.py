@@ -189,6 +189,31 @@ class AuthenticationTests(unittest.TestCase):
         self.assertEqual(response.json()["rationales"], ["運動履歴3件を確認"])
         self.assertEqual(response.json()["next_actions"], ["睡眠を3日記録する"])
 
+    def test_meal_image_prompt_renders_json_example_without_format_error(self) -> None:
+        token = self.issue_token()
+        captured_prompts = []
+
+        async def fake_ollama_json(prompt, fallback, images=None, format_schema=None):
+            captured_prompts.append(prompt)
+            return fallback
+
+        self.server.ollama_json = fake_ollama_json
+        self.server.calorie_clip_runtime.predict = lambda _: 321.0
+        response = self.client.post(
+            "/v1/meals/analyze-image",
+            headers={"Authorization": f"Bearer {token}"},
+            json={
+                "image_base64": "YWJjZGVmZ2hpamtsbW5vcA==",
+                "meal_type": "lunch",
+                "memo": "",
+            },
+        )
+
+        self.assertEqual(response.status_code, 200, response.text)
+        self.assertEqual(response.json()["calories"], 321.0)
+        self.assertIn('{\n  "meal_name": "料理名"', captured_prompts[-1])
+        self.assertIn('{"name": "食材名"', captured_prompts[-1])
+
     def test_body_photo_set_prompt_normalizes_partial_previous_metrics_and_deltas(self) -> None:
         token = self.issue_token()
         captured_prompts = []

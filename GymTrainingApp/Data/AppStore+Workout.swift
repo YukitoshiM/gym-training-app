@@ -228,6 +228,7 @@ extension AppStore {
                 targetReps: target.targetReps,
                 plannedConcentricSeconds: target.plannedConcentricSeconds,
                 plannedEccentricSeconds: target.plannedEccentricSeconds,
+                plannedTempoBeatSpeed: target.plannedTempoBeatSpeed,
                 actualWeight: reusableWeight(previous?.actualWeight, for: exercise) ?? target.targetWeight,
                 actualReps: positiveValue(previous?.actualReps) ?? target.targetReps,
                 rpe: previous?.rpe

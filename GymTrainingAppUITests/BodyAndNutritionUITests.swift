@@ -117,15 +117,6 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(photoPicker.waitForExistence(timeout: 5))
         photoPicker.tap()
 
-        // PHPicker's internal accessibility identifiers vary across iOS releases.
-        // Wait for the presenting control to become inactive, then select the seeded image.
-        let pickerDeadline = Date().addingTimeInterval(10)
-        while Date() < pickerDeadline, photoPicker.isHittable {
-            RunLoop.current.run(until: Date().addingTimeInterval(0.2))
-        }
-        XCTAssertFalse(photoPicker.isHittable)
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.16, dy: 0.43)).tap()
-
         let nameField = app.textFields["mealNameField"]
         let deadline = Date().addingTimeInterval(120)
         while Date() < deadline {

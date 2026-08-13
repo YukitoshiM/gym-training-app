@@ -55,6 +55,7 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
     var targetReps: Int
     var plannedConcentricSeconds: Int?
     var plannedEccentricSeconds: Int?
+    var plannedTempoBeatSpeed: Int?
 
     init(
         id: UUID = UUID(),
@@ -62,7 +63,8 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
         targetWeight: Double,
         targetReps: Int,
         plannedConcentricSeconds: Int? = nil,
-        plannedEccentricSeconds: Int? = nil
+        plannedEccentricSeconds: Int? = nil,
+        plannedTempoBeatSpeed: Int? = nil
     ) {
         self.id = id
         self.setOrder = setOrder
@@ -70,6 +72,7 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
         self.targetReps = targetReps
         self.plannedConcentricSeconds = plannedConcentricSeconds
         self.plannedEccentricSeconds = plannedEccentricSeconds
+        self.plannedTempoBeatSpeed = plannedTempoBeatSpeed
     }
 
     static func defaultSets() -> [PlanSetTarget] {
@@ -250,6 +253,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var targetReps: Int
     var plannedConcentricSeconds: Int?
     var plannedEccentricSeconds: Int?
+    var plannedTempoBeatSpeed: Int?
     var actualWeight: Double
     var actualReps: Int
     var isCompleted: Bool
@@ -268,6 +272,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         targetReps: Int,
         plannedConcentricSeconds: Int? = nil,
         plannedEccentricSeconds: Int? = nil,
+        plannedTempoBeatSpeed: Int? = nil,
         actualWeight: Double? = nil,
         actualReps: Int? = nil,
         isCompleted: Bool = false,
@@ -285,6 +290,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         self.targetReps = targetReps
         self.plannedConcentricSeconds = plannedConcentricSeconds
         self.plannedEccentricSeconds = plannedEccentricSeconds
+        self.plannedTempoBeatSpeed = plannedTempoBeatSpeed
         self.actualWeight = actualWeight ?? targetWeight
         self.actualReps = actualReps ?? targetReps
         self.isCompleted = isCompleted
@@ -379,7 +385,8 @@ extension WorkoutSession {
                                 targetWeight: $0.targetWeight,
                                 targetReps: $0.targetReps,
                                 plannedConcentricSeconds: $0.plannedConcentricSeconds,
-                                plannedEccentricSeconds: $0.plannedEccentricSeconds
+                                plannedEccentricSeconds: $0.plannedEccentricSeconds,
+                                plannedTempoBeatSpeed: $0.plannedTempoBeatSpeed
                             )
                         }
                 )

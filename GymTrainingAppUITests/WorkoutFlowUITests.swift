@@ -80,7 +80,7 @@ final class WorkoutFlowUITests: GymTrainingAppUITestCase {
 
         let weightField = app.textFields["workoutWeightField-0-1"]
         XCTAssertTrue(weightField.waitForExistence(timeout: 5))
-        weightField.tap(withNumberOfTaps: 3, numberOfTouches: 1)
+        weightField.tap()
         weightField.typeText("20.1")
 
         let dismissButton = app.buttons["dismiss-workoutWeightField-0-1"]

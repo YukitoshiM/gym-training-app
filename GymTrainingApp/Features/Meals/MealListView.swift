@@ -425,10 +425,7 @@ private struct MealEditorView: View {
                             .disabled(!UIImagePickerController.isSourceTypeAvailable(.camera))
                             .accessibilityIdentifier("mealCameraButton")
 
-                            PhotosPicker(selection: $selectedPhoto, matching: .images) {
-                                Label("ライブラリ", systemImage: "photo")
-                                    .frame(maxWidth: .infinity)
-                            }
+                            photoLibraryControl
                             .buttonStyle(.bordered)
                             .accessibilityIdentifier("mealPhotoPicker")
                         }
@@ -764,6 +761,30 @@ private struct MealEditorView: View {
 
     private var calculatedCalories: Double {
         parsed(protein) * 4 + parsed(fat) * 9 + parsed(carbs) * 4
+    }
+
+    @ViewBuilder
+    private var photoLibraryControl: some View {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--stub-meal-ai") {
+            Button {
+                receiveImageData(Data("meal-photo-ui-test".utf8))
+            } label: {
+                Label("ライブラリ", systemImage: "photo")
+                    .frame(maxWidth: .infinity)
+            }
+        } else {
+            PhotosPicker(selection: $selectedPhoto, matching: .images) {
+                Label("ライブラリ", systemImage: "photo")
+                    .frame(maxWidth: .infinity)
+            }
+        }
+        #else
+        PhotosPicker(selection: $selectedPhoto, matching: .images) {
+            Label("ライブラリ", systemImage: "photo")
+                .frame(maxWidth: .infinity)
+        }
+        #endif
     }
 
     private func parsed(_ text: String) -> Double {

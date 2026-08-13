@@ -63,12 +63,12 @@ enum WatchWorkoutSessionReducer {
                 }
             }
 
-            let previousStarted = session.exercises[selected.exercise].sets[selected.set].startedAt
+            let set = session.exercises[selected.exercise].sets[selected.set]
+            let previousStarted = set.startedAt
             session.exercises[selected.exercise].sets[selected.set].startedAt =
                 previousStarted ?? startedAt
-            if previousStarted == nil {
-                session.exercises[selected.exercise].sets[selected.set].actualWeight =
-                    session.exercises[selected.exercise].sets[selected.set].actualWeight
+            if previousStarted == nil, set.hasUserAdjustedWeight != true {
+                session.exercises[selected.exercise].sets[selected.set].actualWeight = set.targetWeight
             }
             return true
 
@@ -91,7 +91,18 @@ enum WatchWorkoutSessionReducer {
             ), !session.exercises[location.exercise].sets[location.set].isCompleted else {
                 return false
             }
+
             session.exercises[location.exercise].sets[location.set].actualWeight = weight
+            session.exercises[location.exercise].sets[location.set].hasUserAdjustedWeight = true
+
+            for setIndex in session.exercises[location.exercise].sets.indices {
+                guard setIndex != location.set,
+                      !session.exercises[location.exercise].sets[setIndex].isCompleted else {
+                    continue
+                }
+                session.exercises[location.exercise].sets[setIndex].actualWeight = weight
+                session.exercises[location.exercise].sets[setIndex].hasUserAdjustedWeight = true
+            }
             return true
 
         case let .updateReps(exerciseID, setID, reps):
