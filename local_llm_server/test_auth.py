@@ -1,5 +1,6 @@
 import hashlib
 import importlib
+import asyncio
 import json
 import os
 import sys
@@ -178,6 +179,111 @@ class AuthenticationTests(unittest.TestCase):
 
         self.assertEqual(response.status_code, 503, response.text)
         self.assertIn("再試行", response.json()["detail"])
+
+    def test_ollama_prompt_compaction_preserves_instruction_and_latest_input(self) -> None:
+        prompt = "INSTRUCTION:" + ("長い入力" * 2_000) + ":LATEST-QUESTION"
+
+        compacted = self.server._compact_ollama_prompt(prompt, 240)
+
+        self.assertLessEqual(len(compacted), 240)
+        self.assertTrue(compacted.startswith("INSTRUCTION:"))
+        self.assertTrue(compacted.endswith(":LATEST-QUESTION"))
+        self.assertIn("中間部分を省略", compacted)
+
+    def test_ollama_request_caps_prompt_and_reserves_output_tokens(self) -> None:
+        captured_payload = {}
+
+        class SuccessfulResponse:
+            def raise_for_status(self):
+                return None
+
+            def json(self):
+                return {"response": '{"ok": true}'}
+
+        class CapturingAsyncClient:
+            def __init__(self, *args, **kwargs):
+                pass
+
+            async def __aenter__(self):
+                return self
+
+            async def __aexit__(self, exc_type, exc, traceback):
+                return False
+
+            async def post(self, url, json):
+                captured_payload.update(json)
+                return SuccessfulResponse()
+
+        original_client = self.server.httpx.AsyncClient
+        original_limit = self.server.OLLAMA_MAX_PROMPT_CHARACTERS
+        self.server.httpx.AsyncClient = CapturingAsyncClient
+        self.server.OLLAMA_MAX_PROMPT_CHARACTERS = 220
+        try:
+            result = asyncio.run(
+                self.server.ollama_json(
+                    "IMPORTANT:" + ("context" * 300) + ":CURRENT-QUESTION",
+                    {},
+                )
+            )
+        finally:
+            self.server.httpx.AsyncClient = original_client
+            self.server.OLLAMA_MAX_PROMPT_CHARACTERS = original_limit
+
+        self.assertEqual(result, {"ok": True})
+        self.assertLessEqual(len(captured_payload["prompt"]), 220)
+        self.assertTrue(captured_payload["prompt"].startswith("IMPORTANT:"))
+        self.assertTrue(captured_payload["prompt"].endswith(":CURRENT-QUESTION"))
+        self.assertEqual(
+            captured_payload["options"],
+            {
+                "num_ctx": self.server.OLLAMA_CONTEXT_WINDOW,
+                "num_predict": self.server.OLLAMA_NUM_PREDICT,
+            },
+        )
+
+    def test_ollama_queue_rejects_second_request_without_calling_model(self) -> None:
+        original_timeout = self.server.INFERENCE_QUEUE_TIMEOUT_SECONDS
+        self.server.INFERENCE_QUEUE_TIMEOUT_SECONDS = 0.01
+
+        async def run_while_busy():
+            await self.server._inference_semaphore.acquire()
+            try:
+                with self.assertRaises(self.server.HTTPException) as captured:
+                    await self.server.ollama_json("prompt", {})
+                self.assertEqual(captured.exception.status_code, 503)
+                self.assertIn("混み合っています", captured.exception.detail)
+            finally:
+                self.server._inference_semaphore.release()
+
+        try:
+            asyncio.run(run_while_busy())
+        finally:
+            self.server.INFERENCE_QUEUE_TIMEOUT_SECONDS = original_timeout
+
+    def test_health_reports_recent_inference_failure_as_degraded(self) -> None:
+        token = self.issue_token()
+
+        async def available_ollama():
+            return {"reachable": True, "model_available": True, "models": ["gemma4:12b"]}
+
+        original_status = self.server.ollama_status
+        self.server.ollama_status = available_ollama
+        with self.server._inference_state_lock:
+            self.server._inference_state["last_success_at"] = 1
+            self.server._inference_state["last_failure_at"] = 2
+            self.server._inference_state["last_error_type"] = "ReadTimeout"
+        try:
+            response = self.client.get(
+                "/v1/health",
+                headers={"Authorization": f"Bearer {token}"},
+            )
+        finally:
+            self.server.ollama_status = original_status
+
+        self.assertEqual(response.status_code, 200, response.text)
+        self.assertEqual(response.json()["status"], "degraded")
+        self.assertFalse(response.json()["inference_ready"])
+        self.assertEqual(response.json()["last_inference_error"], "ReadTimeout")
 
     def test_token_issue_audit_log_never_contains_credentials_or_installation_id(self) -> None:
         installation_id = "00000000-0000-4000-8000-sensitive-device"

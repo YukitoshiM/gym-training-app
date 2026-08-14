@@ -32,6 +32,16 @@ OLLAMA_REQUEST_TIMEOUT_SECONDS = max(
     30.0,
     min(float(os.getenv("OLLAMA_REQUEST_TIMEOUT_SECONDS", "180")), 600.0),
 )
+OLLAMA_CONTEXT_WINDOW = max(2_048, min(int(os.getenv("OLLAMA_CONTEXT_WINDOW", "4096")), 32_768))
+OLLAMA_NUM_PREDICT = max(128, min(int(os.getenv("OLLAMA_NUM_PREDICT", "512")), 2_048))
+OLLAMA_MAX_PROMPT_CHARACTERS = max(
+    2_000,
+    min(int(os.getenv("OLLAMA_MAX_PROMPT_CHARACTERS", "3600")), 20_000),
+)
+OLLAMA_MAX_IMAGE_PROMPT_CHARACTERS = max(
+    1_500,
+    min(int(os.getenv("OLLAMA_MAX_IMAGE_PROMPT_CHARACTERS", "2600")), 12_000),
+)
 AUTH_MODE = os.getenv("AI_AUTH_MODE", "compat").strip().lower()
 TOKEN_TTL_SECONDS = max(300, min(int(os.getenv("AI_TOKEN_TTL_SECONDS", "86400")), 604800))
 RATE_LIMIT_PER_MINUTE = max(1, int(os.getenv("AI_RATE_LIMIT_PER_MINUTE", "30")))
@@ -47,7 +57,11 @@ TOKEN_FAILURE_DELAY_SECONDS = max(
     0.0,
     min(float(os.getenv("AI_TOKEN_FAILURE_DELAY_SECONDS", "0.25")), 2.0),
 )
-MAX_CONCURRENT_INFERENCE = max(1, min(int(os.getenv("AI_MAX_CONCURRENT_INFERENCE", "2")), 8))
+MAX_CONCURRENT_INFERENCE = max(1, min(int(os.getenv("AI_MAX_CONCURRENT_INFERENCE", "1")), 8))
+INFERENCE_QUEUE_TIMEOUT_SECONDS = max(
+    0.1,
+    min(float(os.getenv("AI_INFERENCE_QUEUE_TIMEOUT_SECONDS", "8")), 60.0),
+)
 TOKEN_SIGNING_SECRET = os.getenv("AI_TOKEN_SIGNING_SECRET", "")
 ENROLLMENT_KEYS_FILE = os.getenv("AI_ENROLLMENT_KEYS_FILE", "")
 AUTH_STATE_PATH = Path(
@@ -393,6 +407,87 @@ if not _inference_logger.handlers:
     _inference_handler.setFormatter(logging.Formatter("%(message)s"))
     _inference_logger.addHandler(_inference_handler)
 _inference_logger.propagate = False
+_inference_state_lock = threading.Lock()
+_inference_state: dict[str, Any] = {
+    "active": 0,
+    "waiting": 0,
+    "last_started_at": None,
+    "last_success_at": None,
+    "last_failure_at": None,
+    "last_error_type": None,
+    "last_duration_ms": None,
+}
+
+
+def _compact_ollama_prompt(prompt: str, maximum_characters: int) -> str:
+    cleaned = prompt.strip()
+    if len(cleaned) <= maximum_characters:
+        return cleaned
+
+    marker = "\n\n[長い入力の中間部分を省略]\n\n"
+    available = maximum_characters - len(marker)
+    head_length = max(1, int(available * 0.62))
+    tail_length = max(1, available - head_length)
+    return f"{cleaned[:head_length].rstrip()}{marker}{cleaned[-tail_length:].lstrip()}"
+
+
+def _inference_snapshot() -> dict[str, Any]:
+    with _inference_state_lock:
+        return dict(_inference_state)
+
+
+async def _acquire_inference_slot(kind: str) -> float:
+    with _inference_state_lock:
+        _inference_state["waiting"] += 1
+
+    acquired = False
+    try:
+        await asyncio.wait_for(
+            _inference_semaphore.acquire(),
+            timeout=INFERENCE_QUEUE_TIMEOUT_SECONDS,
+        )
+        acquired = True
+    except asyncio.TimeoutError as error:
+        now = time.time()
+        with _inference_state_lock:
+            _inference_state["last_failure_at"] = now
+            _inference_state["last_error_type"] = "QueueTimeout"
+        event = {
+            "event": "ollama_inference_rejected_busy",
+            "kind": kind,
+            "model": OLLAMA_MODEL,
+            "request_id": _request_id_context.get(),
+        }
+        _inference_logger.warning(json.dumps(event, separators=(",", ":"), sort_keys=True))
+        raise HTTPException(
+            status_code=503,
+            detail="AIサーバーが混み合っています。少し待ってから再試行してください。",
+        ) from error
+    finally:
+        with _inference_state_lock:
+            _inference_state["waiting"] = max(0, _inference_state["waiting"] - 1)
+
+    if acquired:
+        now = time.time()
+        with _inference_state_lock:
+            _inference_state["active"] += 1
+            _inference_state["last_started_at"] = now
+    return time.monotonic()
+
+
+def _finish_inference(started_at: float, *, error_type: Optional[str] = None) -> None:
+    duration_ms = max(0, round((time.monotonic() - started_at) * 1_000))
+    now = time.time()
+    with _inference_state_lock:
+        _inference_state["active"] = max(0, _inference_state["active"] - 1)
+        _inference_state["last_duration_ms"] = duration_ms
+        if error_type is None:
+            _inference_state["last_success_at"] = now
+            _inference_state["last_error_type"] = None
+        else:
+            _inference_state["last_failure_at"] = now
+            _inference_state["last_error_type"] = error_type
+    _inference_semaphore.release()
 
 
 def _base64url_encode(value: bytes) -> str:
@@ -697,22 +792,37 @@ def meal_confirmation_comment(
 @app.get("/v1/health")
 async def health(_: None = Depends(require_api_key)) -> dict[str, Any]:
     ollama = await ollama_status()
+    inference = _inference_snapshot()
     calorie_model_available = calorie_clip_runtime.installed
+    last_failure_at = inference["last_failure_at"] or 0
+    last_success_at = inference["last_success_at"] or 0
+    inference_ready = last_failure_at <= last_success_at and inference["waiting"] == 0
+    status = "ok"
     if not calorie_model_available:
         message = "CalorieCLIPが未導入です。local_llm_server/install_calorie_clip.sh を実行してください。"
     elif not ollama["reachable"]:
+        status = "degraded"
         message = "CalorieCLIPは利用できます。料理名・PFCの補助推定にはOllamaを起動してください。"
     elif not ollama["model_available"]:
+        status = "degraded"
         message = f"CalorieCLIPは利用できます。Ollamaモデル {OLLAMA_MODEL} は未導入です。"
+    elif not inference_ready:
+        status = "degraded"
+        message = "Ollamaは起動していますが、直近の推論が失敗または混雑しました。再試行してください。"
     else:
         message = "CalorieCLIPと料理情報の補助モデルを利用できます。"
 
     return {
-        "status": "ok",
+        "status": status,
         "model": "CalorieCLIP",
         "calorie_model_available": calorie_model_available,
         "ollama_reachable": ollama["reachable"],
         "model_available": ollama["model_available"],
+        "inference_ready": inference_ready,
+        "active_inference": inference["active"],
+        "queued_inference": inference["waiting"],
+        "last_inference_error": inference["last_error_type"],
+        "last_inference_duration_ms": inference["last_duration_ms"],
         "message": message,
     }
 
@@ -1217,34 +1327,57 @@ async def ollama_json(
     images: Optional[list[str]] = None,
     format_schema: Optional[dict[str, Any]] = None,
 ) -> dict[str, Any]:
+    image_count = len(images or [])
+    maximum_characters = (
+        OLLAMA_MAX_IMAGE_PROMPT_CHARACTERS
+        if image_count > 0
+        else OLLAMA_MAX_PROMPT_CHARACTERS
+    )
+    submitted_prompt = _compact_ollama_prompt(prompt, maximum_characters)
     payload: dict[str, Any] = {
         "model": OLLAMA_MODEL,
-        "prompt": prompt,
+        "prompt": submitted_prompt,
         "stream": False,
         "format": format_schema or "json",
         "think": False,
+        "options": {
+            "num_ctx": OLLAMA_CONTEXT_WINDOW,
+            "num_predict": OLLAMA_NUM_PREDICT,
+        },
     }
     if images:
         payload["images"] = images
 
+    started_at: Optional[float] = None
+    error_type: Optional[str] = None
     try:
-        async with _inference_semaphore:
-            async with httpx.AsyncClient(timeout=OLLAMA_REQUEST_TIMEOUT_SECONDS) as client:
-                response = await client.post(f"{OLLAMA_BASE_URL}/api/generate", json=payload)
-                response.raise_for_status()
-            text = response.json().get("response", "")
-            parsed = extract_json(text)
-            if not isinstance(parsed, dict):
-                raise ValueError("Ollama returned an invalid JSON object")
-            return parsed
+        started_at = await _acquire_inference_slot("image" if image_count else "text")
+        start_event = {
+            "event": "ollama_inference_started",
+            "image_count": image_count,
+            "model": OLLAMA_MODEL,
+            "original_prompt_characters": len(prompt),
+            "prompt_characters": len(submitted_prompt),
+            "request_id": _request_id_context.get(),
+        }
+        _inference_logger.info(json.dumps(start_event, separators=(",", ":"), sort_keys=True))
+        async with httpx.AsyncClient(timeout=OLLAMA_REQUEST_TIMEOUT_SECONDS) as client:
+            response = await client.post(f"{OLLAMA_BASE_URL}/api/generate", json=payload)
+            response.raise_for_status()
+        text = response.json().get("response", "")
+        parsed = extract_json(text)
+        if not isinstance(parsed, dict) or not parsed:
+            raise ValueError("Ollama returned an invalid JSON object")
+        return parsed
     except HTTPException:
         raise
     except Exception as error:
+        error_type = type(error).__name__
         event = {
             "event": "ollama_inference_failed",
-            "error_type": type(error).__name__,
+            "error_type": error_type,
             "model": OLLAMA_MODEL,
-            "image_count": len(images or []),
+            "image_count": image_count,
             "request_id": _request_id_context.get(),
         }
         _inference_logger.error(json.dumps(event, separators=(",", ":"), sort_keys=True))
@@ -1252,29 +1385,46 @@ async def ollama_json(
             status_code=503,
             detail="AIモデルから有効な回答を取得できませんでした。時間をおいて再試行してください。",
         ) from error
+    finally:
+        if started_at is not None:
+            _finish_inference(started_at, error_type=error_type)
+            if error_type is None:
+                event = {
+                    "event": "ollama_inference_completed",
+                    "image_count": image_count,
+                    "model": OLLAMA_MODEL,
+                    "request_id": _request_id_context.get(),
+                }
+                _inference_logger.info(json.dumps(event, separators=(",", ":"), sort_keys=True))
 
 
 async def ollama_embedding(text: str) -> Optional[list[float]]:
+    started_at: Optional[float] = None
+    error_type: Optional[str] = None
     try:
-        async with _inference_semaphore:
-            async with httpx.AsyncClient(
-                timeout=min(OLLAMA_REQUEST_TIMEOUT_SECONDS, 60.0)
-            ) as client:
-                response = await client.post(
-                    f"{OLLAMA_BASE_URL}/api/embed",
-                    json={
-                        "model": EVIDENCE_EMBEDDING_MODEL,
-                        "input": text[:8_000],
-                        "truncate": True,
-                    },
-                )
-                response.raise_for_status()
+        started_at = await _acquire_inference_slot("embedding")
+        async with httpx.AsyncClient(
+            timeout=min(OLLAMA_REQUEST_TIMEOUT_SECONDS, 60.0)
+        ) as client:
+            response = await client.post(
+                f"{OLLAMA_BASE_URL}/api/embed",
+                json={
+                    "model": EVIDENCE_EMBEDDING_MODEL,
+                    "input": text[:8_000],
+                    "truncate": True,
+                },
+            )
+            response.raise_for_status()
         embeddings = response.json().get("embeddings", [])
         if not embeddings or not isinstance(embeddings[0], list):
             return None
         return [float(value) for value in embeddings[0]]
-    except Exception:
+    except Exception as error:
+        error_type = type(error).__name__
         return None
+    finally:
+        if started_at is not None:
+            _finish_inference(started_at, error_type=error_type)
 
 
 def extract_json(text: str) -> Any:
