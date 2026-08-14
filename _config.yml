@@ -1,0 +1,8 @@
+title: BodyMode
+description: BodyModeの法務・サポート情報
+lang: ja
+theme: minima
+header_pages:
+  - privacy.md
+  - terms.md
+  - support.md
