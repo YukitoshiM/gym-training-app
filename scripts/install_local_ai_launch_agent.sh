@@ -18,6 +18,16 @@ INSTALLED_MONITOR_SCRIPT="${INSTALL_DIR}/check_local_ai_health.sh"
 LOG_DIR="${HOME}/Library/Logs/BodyMode"
 DOMAIN="gui/${UID}"
 
+bootstrap_agent() {
+  local plist_path="$1"
+
+  if launchctl bootstrap "${DOMAIN}" "${plist_path}"; then
+    return 0
+  fi
+  sleep 1
+  launchctl bootstrap "${DOMAIN}" "${plist_path}"
+}
+
 if [[ ! -x "${SOURCE_DIR}/run_server.sh" ]]; then
   print -u2 "Server runner is not executable: ${SOURCE_DIR}/run_server.sh"
   exit 1
@@ -25,6 +35,23 @@ fi
 
 if [[ ! -x "${SOURCE_DIR}/.venv/bin/python" ]]; then
   print -u2 "Create local_llm_server/.venv and install requirements first"
+  exit 1
+fi
+
+if ! "${SOURCE_DIR}/.venv/bin/python" - <<'PY'
+import sqlite3
+import sqlite_vec
+
+connection = sqlite3.connect(":memory:")
+if not hasattr(connection, "enable_load_extension"):
+    raise SystemExit(1)
+connection.enable_load_extension(True)
+sqlite_vec.load(connection)
+connection.enable_load_extension(False)
+connection.execute("SELECT vec_version()").fetchone()
+PY
+then
+  print -u2 "Python environment cannot load sqlite-vec; run local_llm_server/setup_environment.sh"
   exit 1
 fi
 
@@ -91,8 +118,8 @@ plutil -create xml1 "${EVIDENCE_PLIST_PATH}"
 /usr/libexec/PlistBuddy -c "Add :Label string ${EVIDENCE_LABEL}" "${EVIDENCE_PLIST_PATH}"
 /usr/libexec/PlistBuddy -c "Add :ProgramArguments array" "${EVIDENCE_PLIST_PATH}"
 /usr/libexec/PlistBuddy -c "Add :ProgramArguments:0 string ${INSTALL_DIR}/sync_evidence.sh" "${EVIDENCE_PLIST_PATH}"
-/usr/libexec/PlistBuddy -c "Add :ProgramArguments:1 string --limit-per-topic" "${EVIDENCE_PLIST_PATH}"
-/usr/libexec/PlistBuddy -c "Add :ProgramArguments:2 string 25" "${EVIDENCE_PLIST_PATH}"
+/usr/libexec/PlistBuddy -c "Add :ProgramArguments:1 string --limit-per-query" "${EVIDENCE_PLIST_PATH}"
+/usr/libexec/PlistBuddy -c "Add :ProgramArguments:2 string 160" "${EVIDENCE_PLIST_PATH}"
 /usr/libexec/PlistBuddy -c "Add :StartCalendarInterval dict" "${EVIDENCE_PLIST_PATH}"
 /usr/libexec/PlistBuddy -c "Add :StartCalendarInterval:Weekday integer 2" "${EVIDENCE_PLIST_PATH}"
 /usr/libexec/PlistBuddy -c "Add :StartCalendarInterval:Hour integer 3" "${EVIDENCE_PLIST_PATH}"
@@ -108,9 +135,9 @@ if [[ "${PLIST_MONITOR_SCRIPT}" != "${INSTALLED_MONITOR_SCRIPT}" ]]; then
   exit 1
 fi
 
-launchctl bootstrap "${DOMAIN}" "${PLIST_PATH}"
-launchctl bootstrap "${DOMAIN}" "${MONITOR_PLIST_PATH}"
-launchctl bootstrap "${DOMAIN}" "${EVIDENCE_PLIST_PATH}"
+bootstrap_agent "${PLIST_PATH}"
+bootstrap_agent "${MONITOR_PLIST_PATH}"
+bootstrap_agent "${EVIDENCE_PLIST_PATH}"
 launchctl kickstart -k "${DOMAIN}/${LABEL}"
 
 print "Installed ${LABEL}"

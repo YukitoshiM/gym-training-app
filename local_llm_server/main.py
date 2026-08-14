@@ -723,6 +723,7 @@ async def agent_chat(request: AgentChatRequest, _: None = Depends(require_api_ke
                 evidence_result = evidence_store.search(
                     request.message,
                     query_vector=query_vector,
+                    goal=request.coach_id,
                     limit=5,
                 )
                 evidence_state = "ready" if evidence_result.citations else "insufficient"

@@ -20,6 +20,7 @@
 14. `advertising_integration.md`: 広告配信、同意、データ分離、AdMob設定
 15. `regression_testing_policy.md`: L0〜L3の回帰範囲を決める強制条件と判定スコア
 16. `regression_report_2026-08-13.md`: iPhone最大2台と後続Watchによる複数エージェント回帰の結果と運用方法
+17. `evidence_rag_design.md`: 目的別学術文献収集、sqlite-vec検索、引用、安全境界の正本
 
 リファクタリングの行数とコンテキスト削減効果は`refactor_impact_2026-08-03.md`に記録している。
 
@@ -38,6 +39,7 @@
 - `app-store/`: 提出用スクリーンショット
 - `legal/`: 利用規約、プライバシーポリシー、サポート原稿
 - `ios_environment_setup.md`: 開発環境と実機導入
+- `third_party_notices.md`: ローカルAIサーバーを含む第三者OSSの告知
 
 ## Archive
 

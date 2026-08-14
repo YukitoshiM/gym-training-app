@@ -34,9 +34,9 @@ cp Config/Ads.local.xcconfig.example Config/Ads.local.xcconfig
 
 ```sh
 cd local_llm_server
-python3 -m venv .venv
+brew install python@3.11
+./setup_environment.sh
 source .venv/bin/activate
-pip install -r requirements.txt
 export LOCAL_AI_API_KEY=dev-local-key
 export OLLAMA_BASE_URL=http://127.0.0.1:11434
 export OLLAMA_MODEL=gemma4:12b

@@ -5,12 +5,13 @@ import asyncio
 import json
 import os
 from dataclasses import replace
+from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
 
+from evidence_collection import EVIDENCE_COLLECTION_PLAN, collection_text_matches
 from evidence_rag import (
-    DEFAULT_EVIDENCE_QUERIES,
     CrossrefClient,
     EvidenceDocument,
     EvidenceStore,
@@ -21,7 +22,11 @@ from evidence_rag import (
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sync BodyMode's local scientific evidence index.")
-    parser.add_argument("--limit-per-topic", type=int, default=25)
+    parser.add_argument("--limit-per-query", type=int, default=160)
+    parser.add_argument("--limit-per-topic", type=int, dest="legacy_limit", help=argparse.SUPPRESS)
+    parser.add_argument("--max-queries", type=int, default=0)
+    parser.add_argument("--minimum-documents", type=int, default=1500)
+    parser.add_argument("--crossref-limit", type=int, default=400)
     parser.add_argument("--skip-crossref", action="store_true")
     parser.add_argument("--skip-embeddings", action="store_true")
     return parser.parse_args()
@@ -41,8 +46,180 @@ async def ollama_embeddings(texts: list[str], model: str) -> list[list[float]]:
     return [[float(item) for item in vector] for vector in values]
 
 
+def merge_document(
+    existing: EvidenceDocument | None,
+    incoming: EvidenceDocument,
+    *,
+    goal_ids: tuple[str, ...],
+    topic: str,
+    subtopic: str,
+    collection_query: str,
+) -> EvidenceDocument:
+    return replace(
+        existing or incoming,
+        topics=tuple(sorted({*(existing.topics if existing else ()), topic})),
+        goals=tuple(sorted({*(existing.goals if existing else ()), *goal_ids})),
+        subtopics=tuple(sorted({*(existing.subtopics if existing else ()), subtopic})),
+        collection_queries=tuple(
+            sorted({*(existing.collection_queries if existing else ()), collection_query})
+        ),
+    )
+
+
+async def collect_documents(
+    *,
+    limit_per_query: int,
+    max_queries: int,
+) -> dict[str, EvidenceDocument]:
+    documents: dict[str, EvidenceDocument] = {}
+    plan = EVIDENCE_COLLECTION_PLAN[:max_queries] if max_queries else EVIDENCE_COLLECTION_PLAN
+    relevance_limit = max(1, int(limit_per_query * 0.375))
+    recent_limit = max(1, int(limit_per_query * 0.3125))
+    foundational_limit = max(1, limit_per_query - relevance_limit - recent_limit)
+    current_year = datetime.now(timezone.utc).year
+    semaphore = asyncio.Semaphore(4)
+
+    async def collect_item(item):
+        async with semaphore:
+            europe_pmc = EuropePMCClient()
+            batches = [
+                await europe_pmc.search_pages(
+                    item.query,
+                    max_results=relevance_limit,
+                    sort="relevance",
+                )
+            ]
+            if recent_limit:
+                recent_query = (
+                    f"({item.query}) AND FIRST_PDATE:[2017-01-01 TO {current_year}-12-31]"
+                )
+                batches.append(
+                    await europe_pmc.search_pages(
+                        recent_query,
+                        max_results=recent_limit,
+                        sort="recent",
+                    )
+                )
+            if foundational_limit:
+                foundational_query = (
+                    f"({item.query}) AND FIRST_PDATE:[1990-01-01 TO 2016-12-31]"
+                )
+                batches.append(
+                    await europe_pmc.search_pages(
+                        foundational_query,
+                        max_results=foundational_limit,
+                        sort="relevance",
+                    )
+                )
+            return item, batches
+
+    results = await asyncio.gather(*(collect_item(item) for item in plan))
+    for index, (item, batches) in enumerate(results, 1):
+        for document in (document for batch in batches for document in batch):
+            special_match = collection_text_matches(
+                item.identifier,
+                document.title,
+                document.abstract_text,
+            )
+            topic_match = (
+                special_match
+                if special_match is not None
+                else document_matches_topic(document, item.topic)
+            )
+            if not document.abstract_text or not topic_match:
+                continue
+            documents[document.pmid] = merge_document(
+                documents.get(document.pmid),
+                document,
+                goal_ids=item.goals,
+                topic=item.topic,
+                subtopic=item.subtopic,
+                collection_query=item.identifier,
+            )
+        if index % 5 == 0 or index == len(plan):
+            print(
+                json.dumps(
+                    {
+                        "stage": "collect",
+                        "queries_completed": index,
+                        "queries_total": len(plan),
+                        "unique_documents": len(documents),
+                    }
+                ),
+                flush=True,
+            )
+    return documents
+
+
+async def enrich_crossref(
+    documents: list[EvidenceDocument],
+    *,
+    limit: int,
+) -> list[EvidenceDocument]:
+    if limit <= 0:
+        return documents
+    selected_pmids = {
+        item.pmid
+        for item in sorted(
+            (item for item in documents if item.doi),
+            key=lambda item: (item.quality_score, item.publication_year or 0),
+            reverse=True,
+        )[:limit]
+    }
+    crossref = CrossrefClient(mailto=os.getenv("CROSSREF_MAILTO", ""))
+    semaphore = asyncio.Semaphore(6)
+
+    async def enrich(document: EvidenceDocument) -> EvidenceDocument:
+        if document.pmid not in selected_pmids:
+            return document
+        async with semaphore:
+            retracted, corrected = await crossref.update_flags(document.doi)
+        return replace(
+            document,
+            retracted=document.retracted or retracted,
+            corrected=document.corrected or corrected,
+        )
+
+    return list(await asyncio.gather(*(enrich(item) for item in documents)))
+
+
+async def embed_documents(
+    documents: list[EvidenceDocument],
+    *,
+    model: str,
+    existing_vectors: dict[str, list[float]] | None = None,
+) -> dict[str, list[float]]:
+    vectors = dict(existing_vectors or {})
+    pending = [item for item in documents if item.pmid not in vectors]
+    for offset in range(0, len(pending), 24):
+        batch = pending[offset : offset + 24]
+        embedded = await ollama_embeddings(
+            [f"{item.title}\n{item.abstract_text}"[:8000] for item in batch],
+            model,
+        )
+        if len(embedded) != len(batch):
+            raise RuntimeError(
+                f"embedding count mismatch at offset {offset}: {len(embedded)} != {len(batch)}"
+            )
+        vectors.update({item.pmid: vector for item, vector in zip(batch, embedded)})
+        if offset == 0 or offset + len(batch) == len(pending) or offset % 240 == 0:
+            print(
+                json.dumps(
+                    {
+                        "stage": "embed",
+                        "embedded": len(vectors),
+                        "total": len(documents),
+                        "reused": len(existing_vectors or {}),
+                    }
+                ),
+                flush=True,
+            )
+    return vectors
+
+
 async def main() -> int:
     args = parse_args()
+    limit_per_query = args.legacy_limit or args.limit_per_query
     database_path = Path(
         os.getenv(
             "EVIDENCE_RAG_DB_PATH",
@@ -53,59 +230,41 @@ async def main() -> int:
     store = EvidenceStore(database_path)
     store.record_sync(status="running")
     try:
-        europe_pmc = EuropePMCClient()
-        documents_by_pmid: dict[str, EvidenceDocument] = {}
-        for topic, query in DEFAULT_EVIDENCE_QUERIES.items():
-            for document in await europe_pmc.search(query, page_size=args.limit_per_topic):
-                if not document_matches_topic(document, topic):
-                    continue
-                existing = documents_by_pmid.get(document.pmid)
-                topics = set(existing.topics if existing else ())
-                topics.add(topic)
-                documents_by_pmid[document.pmid] = replace(
-                    document,
-                    topics=tuple(sorted(topics)),
-                )
-
+        documents_by_pmid = await collect_documents(
+            limit_per_query=max(2, limit_per_query),
+            max_queries=max(0, args.max_queries),
+        )
         documents = list(documents_by_pmid.values())
+        if len(documents) < args.minimum_documents:
+            raise RuntimeError(
+                f"collection validation failed: {len(documents)} documents; "
+                f"minimum is {args.minimum_documents}"
+            )
         if not args.skip_crossref:
-            crossref = CrossrefClient(mailto=os.getenv("CROSSREF_MAILTO", ""))
-            semaphore = asyncio.Semaphore(4)
-
-            async def enrich(document: EvidenceDocument) -> EvidenceDocument:
-                async with semaphore:
-                    retracted, corrected = await crossref.update_flags(document.doi)
-                return EvidenceDocument(
-                    **{
-                        **document.__dict__,
-                        "retracted": document.retracted or retracted,
-                        "corrected": document.corrected or corrected,
-                    }
-                )
-
-            documents = list(await asyncio.gather(*(enrich(item) for item in documents)))
+            documents = await enrich_crossref(documents, limit=max(0, args.crossref_limit))
 
         vectors: dict[str, list[float]] = {}
-        if not args.skip_embeddings and documents:
-            for offset in range(0, len(documents), 16):
-                batch = documents[offset : offset + 16]
-                try:
-                    embedded = await ollama_embeddings(
-                        [f"{item.title}\n{item.abstract_text}"[:8000] for item in batch],
-                        embedding_model,
-                    )
-                except httpx.HTTPError:
-                    embedded = []
-                if len(embedded) == len(batch):
-                    vectors.update({item.pmid: vector for item, vector in zip(batch, embedded)})
+        if not args.skip_embeddings:
+            existing_vectors = store.existing_vectors(
+                (item.pmid for item in documents),
+                embedding_model=embedding_model,
+            )
+            vectors = await embed_documents(
+                documents,
+                model=embedding_model,
+                existing_vectors=existing_vectors,
+            )
+            if len(vectors) != len(documents):
+                raise RuntimeError("not every document received an embedding")
 
         saved = store.upsert_documents(
             documents,
             embedding_model=embedding_model,
             vectors=vectors,
+            replace_existing=True,
         )
-        store.clear_topics_outside(item.pmid for item in documents)
         store.record_sync(status="completed", document_count=saved, completed=True)
+        status = store.status()
         print(
             json.dumps(
                 {
@@ -113,7 +272,9 @@ async def main() -> int:
                     "database": str(database_path),
                     "documents": saved,
                     "vectors": len(vectors),
-                    "topics": len(DEFAULT_EVIDENCE_QUERIES),
+                    "collection_queries": len(EVIDENCE_COLLECTION_PLAN),
+                    "goal_counts": status["goal_counts"],
+                    "sqlite_vec_version": status["sqlite_vec_version"],
                 },
                 ensure_ascii=False,
             )

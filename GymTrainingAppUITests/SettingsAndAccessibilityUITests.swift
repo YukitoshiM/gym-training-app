@@ -244,11 +244,9 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(toggle.isHittable)
         XCTAssertEqual(toggle.value as? String, "0")
         RunLoop.current.run(until: Date().addingTimeInterval(1))
-        app.swipeUp(velocity: .slow)
-        let settledToggle = app.switches["usageAnalyticsToggle"]
-        XCTAssertTrue(settledToggle.waitForExistence(timeout: 5))
+        let settledToggle = scrollToHittable(app.switches["usageAnalyticsToggle"])
         XCTAssertTrue(settledToggle.isHittable)
-        settledToggle.coordinate(withNormalizedOffset: CGVector(dx: 0.95, dy: 0.5)).tap()
+        settledToggle.tap()
         XCTAssertTrue(waitForValue("1", of: settledToggle))
 
         XCTAssertTrue(scrollToHittable(app.buttons["exportUsageAnalyticsButton"]).isHittable)

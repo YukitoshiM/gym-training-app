@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+import asyncio
+import array
 import html
 import json
-import math
 import re
 import sqlite3
 from dataclasses import asdict, dataclass
@@ -12,20 +13,13 @@ from typing import Any, Iterable, Optional
 from urllib.parse import quote
 
 import httpx
+import sqlite_vec
 
 
 EUROPE_PMC_SEARCH_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 CROSSREF_WORK_URL = "https://api.crossref.org/works/{doi}"
-DEFAULT_EVIDENCE_QUERIES = {
-    "hypertrophy": '(TITLE_ABS:"resistance training" AND TITLE_ABS:hypertrophy) AND (META_ANALYSIS:y OR "systematic review" OR "randomized controlled trial")',
-    "strength": '(TITLE_ABS:"resistance training" AND TITLE_ABS:strength) AND (META_ANALYSIS:y OR "systematic review" OR "randomized controlled trial")',
-    "protein": '(TITLE_ABS:protein AND (TITLE_ABS:muscle OR TITLE_ABS:hypertrophy)) AND (META_ANALYSIS:y OR "systematic review")',
-    "fat_loss": '((TITLE_ABS:"weight loss" OR TITLE_ABS:"fat loss") AND (TITLE_ABS:exercise OR TITLE_ABS:diet)) AND (META_ANALYSIS:y OR "systematic review")',
-    "sleep_recovery": '(TITLE_ABS:sleep AND (TITLE_ABS:recovery OR TITLE_ABS:performance OR TITLE_ABS:muscle)) AND (META_ANALYSIS:y OR "systematic review")',
-    "fatigue": '((TITLE_ABS:fatigue OR TITLE_ABS:overreaching) AND TITLE_ABS:training) AND (META_ANALYSIS:y OR "systematic review")',
-    "wellness": '(TITLE_ABS:"physical activity" AND TITLE_ABS:health) AND (META_ANALYSIS:y OR "systematic review" OR guideline)',
-    "return_to_training": '((TITLE_ABS:"return to training" OR TITLE_ABS:"return to sport") AND TITLE_ABS:exercise) AND ("systematic review" OR guideline)',
-}
+
+VECTOR_TABLE = "evidence_chunks_vec"
 
 QUERY_ALIASES = {
     "筋肥大": "muscle hypertrophy resistance training",
@@ -46,9 +40,14 @@ QUERY_ALIASES = {
     "回復": "recovery fatigue training",
     "休養": "recovery rest training",
     "健康": "physical activity health",
+    "歩": "daily steps walking physical activity health",
+    "ウォーキング": "walking daily steps physical activity health",
     "初心者": "beginner novice resistance training",
     "高齢": "older adults resistance training",
     "復帰": "return to training return to sport",
+    "再開": "retraining detraining return to training",
+    "ブランク": "detraining retraining return to training",
+    "休んだ": "detraining retraining return to training",
     "ベンチプレス": "bench press resistance training",
     "スクワット": "squat resistance training",
 }
@@ -60,8 +59,32 @@ QUERY_TOPIC_TERMS = {
     "fat_loss": ("減量", "脂肪", "weight loss", "fat loss"),
     "sleep_recovery": ("睡眠", "sleep"),
     "fatigue": ("疲労", "回復", "休養", "fatigue", "recovery", "overreaching"),
-    "wellness": ("健康", "wellness", "physical activity"),
-    "return_to_training": ("復帰", "return to training", "return to sport"),
+    "wellness": ("健康", "歩", "ウォーキング", "wellness", "physical activity", "steps"),
+    "return_to_training": (
+        "復帰",
+        "再開",
+        "ブランク",
+        "休んだ",
+        "return to training",
+        "return to sport",
+        "retraining",
+    ),
+}
+
+QUERY_SUBTOPIC_TERMS = {
+    "training_volume": ("セット数", "ボリューム", "weekly sets", "training volume"),
+    "daily_steps": ("何歩", "歩数", "daily steps", "step count"),
+    "steps_and_neat": ("何歩", "歩数", "daily steps", "step count", "walking"),
+    "detraining_retraining": (
+        "ブランク",
+        "休んだ",
+        "detraining",
+        "retraining",
+        "after a break",
+    ),
+    "physical_inactivity": ("ブランク", "休んだ", "deconditioning", "inactivity"),
+    "autoregulation": ("rpe", "rir", "repetitions in reserve", "自動調整"),
+    "proximity_to_failure": ("限界", "failure", "rir", "repetitions in reserve"),
 }
 
 
@@ -79,6 +102,9 @@ CREATE TABLE IF NOT EXISTS evidence_documents (
     publication_types_json TEXT NOT NULL DEFAULT '[]',
     keywords_json TEXT NOT NULL DEFAULT '[]',
     topics_json TEXT NOT NULL DEFAULT '[]',
+    goals_json TEXT NOT NULL DEFAULT '[]',
+    subtopics_json TEXT NOT NULL DEFAULT '[]',
+    collection_queries_json TEXT NOT NULL DEFAULT '[]',
     source_url TEXT NOT NULL,
     is_open_access INTEGER NOT NULL DEFAULT 0,
     retracted INTEGER NOT NULL DEFAULT 0,
@@ -119,6 +145,14 @@ CREATE TABLE IF NOT EXISTS evidence_sync_state (
     document_count INTEGER NOT NULL DEFAULT 0,
     error_message TEXT NOT NULL DEFAULT ''
 );
+
+CREATE TABLE IF NOT EXISTS evidence_vector_config (
+    id INTEGER PRIMARY KEY CHECK (id = 1),
+    dimension INTEGER NOT NULL,
+    embedding_model TEXT NOT NULL,
+    sqlite_vec_version TEXT NOT NULL,
+    migrated_at TEXT NOT NULL
+);
 """
 
 
@@ -142,6 +176,9 @@ class EvidenceDocument:
     quality_score: float
     source_updated_at: str
     topics: tuple[str, ...] = ()
+    goals: tuple[str, ...] = ()
+    subtopics: tuple[str, ...] = ()
+    collection_queries: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -173,6 +210,16 @@ class EvidenceStore:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         connection = sqlite3.connect(str(self.path), timeout=30)
         connection.row_factory = sqlite3.Row
+        if not hasattr(connection, "enable_load_extension"):
+            connection.close()
+            raise RuntimeError(
+                "sqlite-vec requires a Python SQLite build with extension loading enabled"
+            )
+        connection.enable_load_extension(True)
+        try:
+            sqlite_vec.load(connection)
+        finally:
+            connection.enable_load_extension(False)
         connection.execute("PRAGMA foreign_keys = ON")
         connection.execute("PRAGMA journal_mode = WAL")
         connection.executescript(SCHEMA)
@@ -184,7 +231,107 @@ class EvidenceStore:
             connection.execute(
                 "ALTER TABLE evidence_documents ADD COLUMN topics_json TEXT NOT NULL DEFAULT '[]'"
             )
+        for name in ("goals_json", "subtopics_json", "collection_queries_json"):
+            if name not in columns:
+                connection.execute(
+                    f"ALTER TABLE evidence_documents ADD COLUMN {name} TEXT NOT NULL DEFAULT '[]'"
+                )
+        self._migrate_legacy_vectors(connection)
         return connection
+
+    def _migrate_legacy_vectors(self, connection: sqlite3.Connection) -> None:
+        candidate = connection.execute(
+            "SELECT 1 FROM evidence_chunks WHERE vector_json IS NOT NULL LIMIT 1"
+        ).fetchone()
+        if not candidate:
+            return
+        connection.execute("BEGIN IMMEDIATE")
+        try:
+            rows = connection.execute(
+                """
+                SELECT id, embedding_model, vector_json
+                FROM evidence_chunks
+                WHERE vector_json IS NOT NULL
+                ORDER BY id
+                """
+            ).fetchall()
+            if not rows:
+                connection.commit()
+                return
+            first_vector = _json_vector(rows[0]["vector_json"])
+            if not first_vector:
+                connection.commit()
+                return
+            self._ensure_vector_table(
+                connection,
+                dimension=len(first_vector),
+                embedding_model=str(rows[0]["embedding_model"] or "legacy"),
+            )
+            migrated_ids = []
+            for row in rows:
+                vector = _json_vector(row["vector_json"])
+                if len(vector) != len(first_vector):
+                    continue
+                self._put_vector(connection, int(row["id"]), vector)
+                migrated_ids.append(int(row["id"]))
+            if migrated_ids:
+                placeholders = ",".join("?" for _ in migrated_ids)
+                connection.execute(
+                    f"UPDATE evidence_chunks SET vector_json = NULL WHERE id IN ({placeholders})",
+                    migrated_ids,
+                )
+            connection.commit()
+        except Exception:
+            connection.rollback()
+            raise
+
+    def _put_vector(
+        self,
+        connection: sqlite3.Connection,
+        chunk_id: int,
+        vector: list[float],
+    ) -> None:
+        connection.execute(f"DELETE FROM {VECTOR_TABLE} WHERE rowid = ?", (chunk_id,))
+        connection.execute(
+            f"INSERT INTO {VECTOR_TABLE}(rowid, embedding) VALUES (?, ?)",
+            (chunk_id, sqlite_vec.serialize_float32(vector)),
+        )
+
+    def _ensure_vector_table(
+        self,
+        connection: sqlite3.Connection,
+        *,
+        dimension: int,
+        embedding_model: str,
+    ) -> None:
+        config = connection.execute(
+            "SELECT dimension, embedding_model FROM evidence_vector_config WHERE id = 1"
+        ).fetchone()
+        table_exists = connection.execute(
+            "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+            (VECTOR_TABLE,),
+        ).fetchone()
+        if config and int(config["dimension"]) != dimension:
+            raise ValueError(
+                f"embedding dimension changed from {config['dimension']} to {dimension}; rebuild required"
+            )
+        if not table_exists:
+            connection.execute(
+                f"CREATE VIRTUAL TABLE {VECTOR_TABLE} USING "
+                f"vec0(embedding float[{dimension}] distance_metric=cosine)"
+            )
+        connection.execute(
+            """
+            INSERT INTO evidence_vector_config (
+                id, dimension, embedding_model, sqlite_vec_version, migrated_at
+            ) VALUES (1, ?, ?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET
+                embedding_model=excluded.embedding_model,
+                sqlite_vec_version=excluded.sqlite_vec_version,
+                migrated_at=excluded.migrated_at
+            """,
+            (dimension, embedding_model, sqlite_vec.__version__, _utc_now()),
+        )
 
     def upsert_documents(
         self,
@@ -192,26 +339,46 @@ class EvidenceStore:
         *,
         embedding_model: Optional[str] = None,
         vectors: Optional[dict[str, list[float]]] = None,
+        replace_existing: bool = False,
     ) -> int:
         vectors = vectors or {}
         indexed_at = _utc_now()
         count = 0
         with self.connect() as connection:
+            vector_dimension = next((len(value) for value in vectors.values() if value), 0)
+            if vector_dimension:
+                self._ensure_vector_table(
+                    connection,
+                    dimension=vector_dimension,
+                    embedding_model=embedding_model or "unknown",
+                )
+            if replace_existing:
+                if connection.execute(
+                    "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+                    (VECTOR_TABLE,),
+                ).fetchone():
+                    connection.execute(f"DELETE FROM {VECTOR_TABLE}")
+                connection.execute("DELETE FROM evidence_chunks_fts")
+                connection.execute("DELETE FROM evidence_chunks")
+                connection.execute("DELETE FROM evidence_documents")
             for document in documents:
                 connection.execute(
                     """
                     INSERT INTO evidence_documents (
                         pmid, pmcid, doi, title, abstract_text, authors, journal,
                         publication_year, publication_types_json, keywords_json,
-                        topics_json, source_url, is_open_access, retracted, corrected, study_type,
+                        topics_json, goals_json, subtopics_json, collection_queries_json,
+                        source_url, is_open_access, retracted, corrected, study_type,
                         quality_score, source_updated_at, indexed_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     ON CONFLICT(pmid) DO UPDATE SET
                         pmcid=excluded.pmcid, doi=excluded.doi, title=excluded.title,
                         abstract_text=excluded.abstract_text, authors=excluded.authors,
                         journal=excluded.journal, publication_year=excluded.publication_year,
                         publication_types_json=excluded.publication_types_json,
                         keywords_json=excluded.keywords_json, topics_json=excluded.topics_json,
+                        goals_json=excluded.goals_json, subtopics_json=excluded.subtopics_json,
+                        collection_queries_json=excluded.collection_queries_json,
                         source_url=excluded.source_url,
                         is_open_access=excluded.is_open_access, retracted=excluded.retracted,
                         corrected=excluded.corrected, study_type=excluded.study_type,
@@ -231,6 +398,9 @@ class EvidenceStore:
                         json.dumps(document.publication_types, ensure_ascii=False),
                         json.dumps(document.keywords, ensure_ascii=False),
                         json.dumps(document.topics, ensure_ascii=False),
+                        json.dumps(document.goals, ensure_ascii=False),
+                        json.dumps(document.subtopics, ensure_ascii=False),
+                        json.dumps(document.collection_queries, ensure_ascii=False),
                         document.source_url,
                         int(document.is_open_access),
                         int(document.retracted),
@@ -253,17 +423,15 @@ class EvidenceStore:
                     """
                     INSERT INTO evidence_chunks (
                         document_id, chunk_kind, text, embedding_model, vector_json
-                    ) VALUES (?, 'abstract', ?, ?, ?)
+                    ) VALUES (?, 'abstract', ?, ?, NULL)
                     ON CONFLICT(document_id, chunk_kind) DO UPDATE SET
                         text=excluded.text,
-                        embedding_model=COALESCE(excluded.embedding_model, evidence_chunks.embedding_model),
-                        vector_json=COALESCE(excluded.vector_json, evidence_chunks.vector_json)
+                        embedding_model=COALESCE(excluded.embedding_model, evidence_chunks.embedding_model)
                     """,
                     (
                         document_id,
                         chunk_text,
                         embedding_model if vector else None,
-                        json.dumps(vector) if vector else None,
                     ),
                 )
                 chunk = connection.execute(
@@ -273,6 +441,10 @@ class EvidenceStore:
                 if chunk is None:
                     continue
                 chunk_id = int(chunk["id"])
+                if vector:
+                    if len(vector) != vector_dimension:
+                        raise ValueError("all embedding vectors must have the same dimension")
+                    self._put_vector(connection, chunk_id, vector)
                 connection.execute("DELETE FROM evidence_chunks_fts WHERE chunk_id = ?", (chunk_id,))
                 connection.execute(
                     "INSERT INTO evidence_chunks_fts(chunk_id, title, text, keywords) VALUES (?, ?, ?, ?)",
@@ -280,7 +452,14 @@ class EvidenceStore:
                         chunk_id,
                         document.title,
                         chunk_text,
-                        " ".join((*document.keywords, *document.topics)),
+                        " ".join(
+                            (
+                                *document.keywords,
+                                *document.topics,
+                                *document.goals,
+                                *document.subtopics,
+                            )
+                        ),
                     ),
                 )
                 count += 1
@@ -318,11 +497,22 @@ class EvidenceStore:
         retained = sorted({str(pmid) for pmid in pmids if str(pmid)})
         with self.connect() as connection:
             if not retained:
-                connection.execute("UPDATE evidence_documents SET topics_json = '[]'")
+                connection.execute(
+                    """
+                    UPDATE evidence_documents
+                    SET topics_json = '[]', goals_json = '[]', subtopics_json = '[]',
+                        collection_queries_json = '[]'
+                    """
+                )
                 return
             placeholders = ",".join("?" for _ in retained)
             connection.execute(
-                f"UPDATE evidence_documents SET topics_json = '[]' WHERE pmid NOT IN ({placeholders})",
+                f"""
+                UPDATE evidence_documents
+                SET topics_json = '[]', goals_json = '[]', subtopics_json = '[]',
+                    collection_queries_json = '[]'
+                WHERE pmid NOT IN ({placeholders})
+                """,
                 retained,
             )
 
@@ -336,38 +526,89 @@ class EvidenceStore:
                 FROM evidence_documents
                 """
             ).fetchone()
-            chunks = connection.execute(
-                """
-                SELECT COUNT(*) AS chunks,
-                       SUM(CASE WHEN vector_json IS NOT NULL THEN 1 ELSE 0 END) AS vector_chunks
-                FROM evidence_chunks
-                """
+            chunks = connection.execute("SELECT COUNT(*) AS chunks FROM evidence_chunks").fetchone()
+            vector_config = connection.execute(
+                "SELECT dimension, embedding_model, sqlite_vec_version FROM evidence_vector_config WHERE id = 1"
             ).fetchone()
+            vector_chunks = 0
+            if vector_config:
+                vector_chunks = int(
+                    connection.execute(f"SELECT COUNT(*) FROM {VECTOR_TABLE}").fetchone()[0]
+                )
+            goal_rows = connection.execute(
+                """
+                SELECT goals_json FROM evidence_documents
+                WHERE retracted = 0 AND goals_json != '[]'
+                """
+            ).fetchall()
             sync = connection.execute(
                 "SELECT * FROM evidence_sync_state WHERE source = 'europe_pmc'"
             ).fetchone()
         documents = int(totals["documents"] or 0)
+        goal_counts: dict[str, int] = {}
+        for row in goal_rows:
+            for goal in _json_strings(row["goals_json"]):
+                goal_counts[goal] = goal_counts.get(goal, 0) + 1
         return {
             "state": "ready" if documents else "empty",
             "documents": documents,
             "usable_documents": int(totals["usable_documents"] or 0),
             "chunks": int(chunks["chunks"] or 0),
-            "vector_chunks": int(chunks["vector_chunks"] or 0),
+            "vector_chunks": vector_chunks,
+            "vector_dimension": int(vector_config["dimension"]) if vector_config else None,
+            "embedding_model": str(vector_config["embedding_model"]) if vector_config else None,
+            "sqlite_vec_version": str(vector_config["sqlite_vec_version"]) if vector_config else None,
+            "goal_counts": dict(sorted(goal_counts.items())),
             "last_updated_at": sync["last_completed_at"] if sync else None,
             "last_sync_status": sync["last_status"] if sync else "never",
         }
+
+    def existing_vectors(
+        self,
+        pmids: Iterable[str],
+        *,
+        embedding_model: str,
+    ) -> dict[str, list[float]]:
+        retained = {str(pmid) for pmid in pmids if str(pmid)}
+        if not retained:
+            return {}
+        with self.connect() as connection:
+            config = connection.execute(
+                "SELECT embedding_model FROM evidence_vector_config WHERE id = 1"
+            ).fetchone()
+            if not config or str(config["embedding_model"]) != embedding_model:
+                return {}
+            rows = connection.execute(
+                f"""
+                SELECT d.pmid, vectors.embedding
+                FROM {VECTOR_TABLE} AS vectors
+                JOIN evidence_chunks c ON c.id = vectors.rowid
+                JOIN evidence_documents d ON d.id = c.document_id
+                """
+            ).fetchall()
+        vectors: dict[str, list[float]] = {}
+        for row in rows:
+            pmid = str(row["pmid"])
+            if pmid not in retained:
+                continue
+            values = array.array("f")
+            values.frombytes(bytes(row["embedding"]))
+            vectors[pmid] = [float(value) for value in values]
+        return vectors
 
     def search(
         self,
         query: str,
         *,
         query_vector: Optional[list[float]] = None,
+        goal: Optional[str] = None,
         limit: int = 5,
         candidate_limit: int = 80,
     ) -> EvidenceSearchResult:
         expanded_query = expand_query(query)
         fts_query = _fts_query(expanded_query)
         query_topics = detect_query_topics(query)
+        query_subtopics = detect_query_subtopics(query)
         status = self.status()
         with self.connect() as connection:
             lexical_rows: list[sqlite3.Row] = []
@@ -390,18 +631,33 @@ class EvidenceStore:
                     lexical_rows = []
 
             vector_rows: list[sqlite3.Row] = []
-            if query_vector:
+            vector_config = connection.execute(
+                "SELECT dimension FROM evidence_vector_config WHERE id = 1"
+            ).fetchone()
+            if (
+                query_vector
+                and vector_config
+                and len(query_vector) == int(vector_config["dimension"])
+            ):
                 vector_rows = connection.execute(
-                    """
-                    SELECT d.*, c.text AS chunk_text, c.vector_json, c.embedding_model,
-                           NULL AS lexical_rank
-                    FROM evidence_chunks c
+                    f"""
+                    SELECT d.*, c.text AS chunk_text, c.embedding_model,
+                           NULL AS lexical_rank, neighbors.distance AS vector_distance
+                    FROM (
+                        SELECT rowid, distance
+                        FROM {VECTOR_TABLE}
+                        WHERE embedding MATCH ? AND k = ?
+                        ORDER BY distance
+                    ) AS neighbors
+                    JOIN evidence_chunks c ON c.id = neighbors.rowid
                     JOIN evidence_documents d ON d.id = c.document_id
-                    WHERE d.retracted = 0 AND c.vector_json IS NOT NULL
-                    ORDER BY d.quality_score DESC, d.publication_year DESC
-                    LIMIT ?
+                    WHERE d.retracted = 0
+                    ORDER BY neighbors.distance
                     """,
-                    (max(candidate_limit, 300),),
+                    (
+                        sqlite_vec.serialize_float32(query_vector),
+                        max(candidate_limit, 300),
+                    ),
                 ).fetchall()
 
         candidates: dict[int, dict[str, Any]] = {}
@@ -412,8 +668,7 @@ class EvidenceStore:
                 "semantic": 0.0,
             }
         for row in vector_rows:
-            vector = _json_vector(row["vector_json"])
-            semantic = cosine_similarity(query_vector or [], vector)
+            semantic = max(0.0, 1.0 - float(row["vector_distance"] or 0.0))
             if semantic < 0.35:
                 continue
             item = candidates.setdefault(
@@ -426,22 +681,39 @@ class EvidenceStore:
         for item in candidates.values():
             row = item["row"]
             document_topics = set(_json_strings(row["topics_json"]))
+            document_goals = set(_json_strings(row["goals_json"]))
+            document_subtopics = set(_json_strings(row["subtopics_json"]))
             topic_matches = not query_topics or bool(query_topics & document_topics)
             if not topic_matches:
                 continue
+            subtopic_match = bool(query_subtopics.intersection(document_subtopics))
+            if subtopic_match and "detraining_retraining" in query_subtopics:
+                title = str(row["title"] or "").lower()
+                subtopic_match = any(
+                    term in title
+                    for term in ("detraining", "retraining", "training cessation")
+                )
+            goal_match = bool(goal and goal in document_goals)
             year = int(row["publication_year"] or 0)
             recency = max(0.0, 1.0 - max(0, current_year - year) / 20.0) if year else 0.0
-            score = (
+            score = min(
+                1.0,
                 0.42 * item["lexical"]
                 + 0.28 * item["semantic"]
                 + 0.18 * float(row["quality_score"] or 0)
                 + 0.04 * recency
                 + (0.08 if query_topics else 0.0)
+                + (0.08 if goal_match else 0.0)
+                + (0.12 if subtopic_match else 0.0)
             )
             if score >= 0.18:
-                ranked.append((score, row))
+                ranked.append((score, row, subtopic_match))
         ranked.sort(key=lambda value: value[0], reverse=True)
-        selected = ranked[: max(1, min(limit, 8))]
+        if query_subtopics:
+            subtopic_ranked = [item for item in ranked if item[2]]
+            if subtopic_ranked:
+                ranked = subtopic_ranked
+        selected = [(score, row) for score, row, _ in ranked[: max(1, min(limit, 8))]]
 
         confidence = evidence_confidence([row for _, row in selected])
         citations = tuple(
@@ -476,22 +748,66 @@ class EvidenceStore:
 
 
 class EuropePMCClient:
-    def __init__(self, *, timeout_seconds: float = 30.0):
+    def __init__(
+        self,
+        *,
+        timeout_seconds: float = 30.0,
+        transport: Optional[httpx.AsyncBaseTransport] = None,
+    ):
         self.timeout_seconds = timeout_seconds
+        self.transport = transport
 
     async def search(self, query: str, *, page_size: int = 25) -> list[EvidenceDocument]:
-        params = {
-            "query": query,
-            "format": "json",
-            "resultType": "core",
-            "pageSize": str(max(1, min(page_size, 100))),
-            "sort": "FIRST_PDATE_D desc",
-        }
-        async with httpx.AsyncClient(timeout=self.timeout_seconds) as client:
-            response = await client.get(EUROPE_PMC_SEARCH_URL, params=params)
-            response.raise_for_status()
-        results = response.json().get("resultList", {}).get("result", [])
-        return [parse_europe_pmc_document(item) for item in results if item.get("pmid")]
+        return await self.search_pages(query, max_results=page_size, sort="relevance")
+
+    async def search_pages(
+        self,
+        query: str,
+        *,
+        max_results: int,
+        sort: str = "relevance",
+    ) -> list[EvidenceDocument]:
+        maximum = max(1, max_results)
+        cursor = "*"
+        collected: list[EvidenceDocument] = []
+        headers = {"User-Agent": "BodyMode-Evidence-RAG/0.2"}
+        async with httpx.AsyncClient(
+            timeout=self.timeout_seconds,
+            headers=headers,
+            transport=self.transport,
+        ) as client:
+            while len(collected) < maximum:
+                params = {
+                    "query": query,
+                    "format": "json",
+                    "resultType": "core",
+                    "pageSize": str(min(100, maximum - len(collected))),
+                    "cursorMark": cursor,
+                }
+                if sort == "recent":
+                    params["sort"] = "FIRST_PDATE_D desc"
+                response = None
+                for attempt in range(3):
+                    try:
+                        response = await client.get(EUROPE_PMC_SEARCH_URL, params=params)
+                        response.raise_for_status()
+                        break
+                    except httpx.HTTPError:
+                        if attempt == 2:
+                            raise
+                        await asyncio.sleep(1.5 * (attempt + 1))
+                if response is None:
+                    raise RuntimeError("Europe PMC returned no response")
+                payload = response.json()
+                results = payload.get("resultList", {}).get("result", [])
+                collected.extend(
+                    parse_europe_pmc_document(item) for item in results if item.get("pmid")
+                )
+                next_cursor = str(payload.get("nextCursorMark") or "")
+                if not results or not next_cursor or next_cursor == cursor:
+                    break
+                cursor = next_cursor
+        return collected[:maximum]
 
 
 class CrossrefClient:
@@ -599,6 +915,15 @@ def detect_query_topics(query: str) -> set[str]:
     }
 
 
+def detect_query_subtopics(query: str) -> set[str]:
+    lowered = query.lower()
+    return {
+        subtopic
+        for subtopic, terms in QUERY_SUBTOPIC_TERMS.items()
+        if any(term.lower() in lowered for term in terms)
+    }
+
+
 def document_matches_topic(document: EvidenceDocument, topic: str) -> bool:
     title = document.title.lower()
     value = f"{title} {document.abstract_text} {' '.join(document.keywords)}".lower()
@@ -656,16 +981,6 @@ def document_matches_topic(document: EvidenceDocument, topic: str) -> bool:
     }
     groups = rules.get(topic)
     return bool(groups) and all(any(term in value for term in group) for group in groups)
-
-
-def cosine_similarity(left: list[float], right: list[float]) -> float:
-    if not left or not right or len(left) != len(right):
-        return 0.0
-    left_norm = math.sqrt(sum(value * value for value in left))
-    right_norm = math.sqrt(sum(value * value for value in right))
-    if left_norm == 0 or right_norm == 0:
-        return 0.0
-    return sum(a * b for a, b in zip(left, right)) / (left_norm * right_norm)
 
 
 def evidence_confidence(rows: list[sqlite3.Row]) -> str:

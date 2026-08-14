@@ -6,9 +6,9 @@ Mac mini上のCalorieCLIPとOllamaをiPhoneアプリから使うためのAPIで�
 
 ```bash
 cd local_llm_server
-python3 -m venv .venv
+brew install python@3.11
+./setup_environment.sh
 source .venv/bin/activate
-pip install -r requirements.txt
 chmod +x install_calorie_clip.sh
 ./install_calorie_clip.sh
 export LOCAL_AI_API_KEY=dev-local-key
@@ -164,16 +164,18 @@ Ollamaに接続できない場合も、アプリ開発を止めないための�
 
 ## Evidence RAG
 
-Europe PMCの固定検索式から筋肥大、筋力、栄養、減量、睡眠、疲労、健康維持、復帰に関する文献メタデータと抄録を同期します。Crossrefで訂正・撤回関係を照合し、SQLite FTS5とローカルOllamaの`bge-m3`を組み合わせて検索します。
+Europe PMCの48個の固定検索式から、筋肥大、筋力、減量、ボディリコンポジション、健康維持、競技力、復帰に関する文献メタデータと抄録を同期します。各検索は関連度、直近研究、1990〜2016年の基礎研究を組み合わせます。Crossrefで高品質文献の訂正・撤回関係を補助照合し、SQLite FTS5、`sqlite-vec`、ローカルOllamaの`bge-m3`で検索します。
 
 ```bash
 cd local_llm_server
-./sync_evidence.sh --limit-per-topic 25
+./sync_evidence.sh --limit-per-query 160
 ```
 
 - 検索式は固定で、ユーザーの相談文や健康データをEurope PMC/Crossrefへ送りません。
 - ユーザーの質問はMac mini内でだけ埋め込み・検索します。
 - 撤回済み文献は検索結果から除外します。
+- 既存ベクトルをPMID単位で再利用し、新規・入替文献だけを埋め込みます。
+- 同期結果は全件検証後に1トランザクションで置換し、途中失敗時は以前のコーパスを維持します。
 - RAGが空、停止、検索不能でも従来のAIチャットは継続します。
 - 文献本文や抄録をアプリへ再配布せず、タイトル、研究種別、年、PubMedリンクだけを表示します。
 
