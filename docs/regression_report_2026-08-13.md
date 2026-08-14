@@ -125,3 +125,18 @@ BODYMODE_REGRESSION_IPHONE_WORKERS=1 ./scripts/run_parallel_simulator_regression
 | `.build/regression/l3-failure-fixes-20260814.xcresult` | コンタクトシート・食事写真フロー成功、利用分析修正前失敗 |
 | `.build/regression/usage-analytics-fix-20260814.xcresult` | 利用分析の単体2件・UI 1件成功 |
 | `.build/regression/barcode-input-fix-20260814.xcresult` | バーコード数値入力UI成功 |
+
+## 2026-08-14 Build 15配布前L3
+
+Git SHA `231f8be67be8`、クリーンな作業ツリー、アプリ`0.1.0 (14)`で配布前L3を実行した。アプリ動作コードはこの結果から変更せず、配布識別子だけをBuild 15へ更新する。
+
+| 領域 | 成功 | 失敗 | スキップ |
+|---|---:|---:|---:|
+| 単体 | 145 | 0 | 0 |
+| iPhone UI | 45 | 0 | 2（固定allowlist） |
+| Watch UI | 7 | 0 | 0 |
+| 合計 | 197 | 0 | 2 |
+
+iPhoneは期待192件・実行192件、Watchは期待7件・実行7件で、欠落と予定外テストはいずれも0件だった。`Gate: PASS`のため、これを新しいL3成功基準点とする。
+
+証跡: `.build/parallel-regression/20260814-build15-release/summary.txt`
