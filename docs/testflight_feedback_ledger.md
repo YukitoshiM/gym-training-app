@@ -2,7 +2,7 @@
 
 更新日: 2026-08-14
 最終取得: TestFlight Build 14 / スクリーンショットフィードバック23件 / App Store Connectクラッシュ提出0件
-最新配布: TestFlight `0.1.0 (15)` / Friends & Family / `IN_BETA_TESTING`
+最新配布: TestFlight `0.1.0 (16)` / Friends & Family / `IN_BETA_TESTING`
 
 この文書をTestFlightフィードバックの正本とする。日付付きの`testflight_feedback_*.md`は当時の判断を残すスナップショットであり、現在の状態判定には本書を使う。
 
@@ -10,6 +10,7 @@
 
 - 未解決の正規課題は9件。P0が2件、P1が6件、P2が1件
 - 9件すべてコード実装と対象自動テストを完了し、Build 15へ配布した。実機・TestFlight受入までは未解決として扱う
+- Build 15で確認したAIチャット画面のwatchdogデッドロックを修正し、Build 16へ配布した。原因と検証は`incidents/2026-08-14-ai-chat-freeze.md`を参照する
 - 実機ログの原因と修正対応は`device_log_analysis_2026-08-14.md`に保存した
 - 既に実装した機能でも、利用者に意味が伝わらない場合は「解決済み」のままにせず、UX課題として再オープンする
 - 完了したフィードバックは削除しない。根拠と対象ビルドを残して解決済みアーカイブへ移す
