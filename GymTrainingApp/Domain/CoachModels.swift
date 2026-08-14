@@ -251,7 +251,7 @@ struct CoachContext: Codable, Hashable {
 
 struct CoachChatRequest: Encodable, Hashable {
     static let maximumMessageCharacters = 4_000
-    static let maximumUserMessageCharacters = 1_500
+    static let maximumUserMessageCharacters = 300
     static let maximumRecentMessages = 20
     static let maximumSentRecentMessages = 8
     static let maximumContextCharacters = 60_000

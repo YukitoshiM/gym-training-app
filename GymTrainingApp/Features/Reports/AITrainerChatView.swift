@@ -193,7 +193,7 @@ struct AITrainerChatView: View {
                 .opacity(canSend ? 1 : 0.45)
             }
 
-            if draft.count >= 1_200 {
+            if draft.count >= 240 {
                 Text("\(draft.count.formatted()) / \(CoachChatRequest.maximumUserMessageCharacters.formatted())")
                     .font(.caption)
                     .foregroundStyle(draft.count > CoachChatRequest.maximumUserMessageCharacters ? AppTheme.critical : AppTheme.mutedInk)
