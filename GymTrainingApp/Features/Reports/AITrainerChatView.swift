@@ -154,6 +154,9 @@ struct AITrainerChatView: View {
             )
         }
         .onAppear(perform: consumeBackgroundServiceUpdates)
+        .task(id: appStore.coachChatMessages.map(\.id)) {
+            restoreResponseRatings()
+        }
         .onChange(of: aiTrainerBackgroundService.latestFailure) {
             consumeBackgroundServiceUpdates()
         }
@@ -230,7 +233,15 @@ struct AITrainerChatView: View {
 
     private func responseRating(for message: CoachChatMessage) -> CoachResponseRating? {
         guard message.role == .assistant else { return nil }
-        return responseRatings[message.id] ?? UsageAnalytics.shared.coachResponseRating(for: message.id)
+        return responseRatings[message.id]
+    }
+
+    private func restoreResponseRatings() {
+        let assistantMessageIDs = appStore.coachChatMessages
+            .filter { $0.role == .assistant }
+            .map(\.id)
+        let storedRatings = UsageAnalytics.shared.coachResponseRatings(for: assistantMessageIDs)
+        responseRatings.merge(storedRatings) { current, _ in current }
     }
 
     private func sendDraft() {

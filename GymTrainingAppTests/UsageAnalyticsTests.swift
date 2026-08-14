@@ -47,4 +47,35 @@ final class UsageAnalyticsTests: XCTestCase {
         let emptyObject = try JSONSerialization.jsonObject(with: analytics.exportData())
         XCTAssertEqual((emptyObject as? [[String: Any]])?.count, 0)
     }
+
+    func testConcurrentEventPersistenceDoesNotBlockRatingReads() throws {
+        let suiteName = "UsageAnalyticsTests.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let analytics = UsageAnalytics(defaults: defaults)
+        let messageID = UUID()
+        analytics.setCollectionEnabled(true)
+        analytics.recordCoachResponseRating(
+            messageID: messageID,
+            rating: .helpful,
+            coachType: "hypertrophy"
+        )
+
+        for _ in 0..<100 {
+            analytics.record(.tabSelected, dimension: "ai")
+            XCTAssertEqual(analytics.coachResponseRating(for: messageID), .helpful)
+        }
+
+        XCTAssertEqual(
+            analytics.coachResponseRatings(for: [messageID])[messageID],
+            .helpful
+        )
+
+        analytics.deleteData()
+        XCTAssertEqual(
+            (try JSONSerialization.jsonObject(with: analytics.exportData()) as? [[String: Any]])?.count,
+            0
+        )
+        XCTAssertNil(analytics.coachResponseRating(for: messageID))
+    }
 }

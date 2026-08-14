@@ -344,56 +344,64 @@ private struct UsageEvent: Codable {
 final class UsageAnalytics: @unchecked Sendable {
     static let shared = UsageAnalytics()
 
+    private static let enabledKey = "bodymode.usageAnalytics.enabled"
+    private static let eventsKey = "bodymode.usageAnalytics.events"
+    private static let coachResponseRatingsKey = "bodymode.usageAnalytics.coachResponseRatings"
+
     private let queue = DispatchQueue(label: "com.yukitoshim.gymtrainingapp.usage-analytics")
+    private let lock = NSLock()
     private let defaults: UserDefaults
-    private let enabledKey = "bodymode.usageAnalytics.enabled"
-    private let eventsKey = "bodymode.usageAnalytics.events"
-    private let coachResponseRatingsKey = "bodymode.usageAnalytics.coachResponseRatings"
     private let maximumEventCount = 1_000
     private let maximumCoachResponseRatingCount = 500
     private let retentionInterval: TimeInterval = 90 * 24 * 60 * 60
+    private var cachedEvents: [UsageEvent]
+    private var cachedCoachResponseRatings: [String: String]
+    private var persistenceGeneration: UInt = 0
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        cachedEvents = Self.decodeEvents(defaults.data(forKey: Self.eventsKey))
+        cachedCoachResponseRatings = defaults.dictionary(forKey: Self.coachResponseRatingsKey) as? [String: String] ?? [:]
     }
 
     var isCollectionEnabled: Bool {
-        defaults.bool(forKey: enabledKey)
+        defaults.bool(forKey: Self.enabledKey)
     }
 
     func setCollectionEnabled(_ isEnabled: Bool) {
-        defaults.set(isEnabled, forKey: enabledKey)
+        defaults.set(isEnabled, forKey: Self.enabledKey)
         if isEnabled {
             record(.analyticsEnabled)
         }
     }
 
     func record(_ name: UsageEventName, dimension: String? = nil) {
+        let generation = lock.withLock { persistenceGeneration }
         queue.async {
-            guard self.defaults.bool(forKey: self.enabledKey) else { return }
-
-            var events = self.loadEvents()
-            let now = Date()
-            events.append(
-                UsageEvent(
-                    timestamp: now,
-                    name: name,
-                    dimension: dimension.map { String($0.prefix(40)) },
-                    appVersion: LegalConfiguration.appVersion
-                )
-            )
-            events = events
-                .filter { now.timeIntervalSince($0.timestamp) <= self.retentionInterval }
-                .suffix(self.maximumEventCount)
-                .map { $0 }
+            guard self.defaults.bool(forKey: Self.enabledKey) else { return }
+            guard let events = self.appendEvent(
+                name,
+                dimension: dimension,
+                generation: generation
+            ) else { return }
             self.saveEvents(events)
         }
     }
 
     func coachResponseRating(for messageID: UUID) -> CoachResponseRating? {
-        queue.sync {
-            guard let rawValue = loadCoachResponseRatings()[messageID.uuidString] else { return nil }
+        lock.withLock {
+            guard let rawValue = cachedCoachResponseRatings[messageID.uuidString] else { return nil }
             return CoachResponseRating(rawValue: rawValue)
+        }
+    }
+
+    func coachResponseRatings(for messageIDs: [UUID]) -> [UUID: CoachResponseRating] {
+        lock.withLock {
+            Dictionary(uniqueKeysWithValues: messageIDs.compactMap { messageID in
+                guard let rawValue = cachedCoachResponseRatings[messageID.uuidString],
+                      let rating = CoachResponseRating(rawValue: rawValue) else { return nil }
+                return (messageID, rating)
+            })
         }
     }
 
@@ -402,66 +410,103 @@ final class UsageAnalytics: @unchecked Sendable {
         rating: CoachResponseRating,
         coachType: String
     ) {
-        var didChange = false
-        queue.sync {
-            var ratings = loadCoachResponseRatings()
-            guard ratings[messageID.uuidString] != rating.rawValue else { return }
-            ratings[messageID.uuidString] = rating.rawValue
-            if ratings.count > maximumCoachResponseRatingCount {
-                let retainedKeys = ratings.keys.sorted().suffix(maximumCoachResponseRatingCount)
-                ratings = Dictionary(uniqueKeysWithValues: retainedKeys.compactMap { key in
-                    ratings[key].map { (key, $0) }
+        let generation: UInt? = lock.withLock {
+            guard cachedCoachResponseRatings[messageID.uuidString] != rating.rawValue else {
+                return nil
+            }
+            cachedCoachResponseRatings[messageID.uuidString] = rating.rawValue
+            if cachedCoachResponseRatings.count > maximumCoachResponseRatingCount {
+                let retainedKeys = cachedCoachResponseRatings.keys.sorted().suffix(maximumCoachResponseRatingCount)
+                cachedCoachResponseRatings = Dictionary(uniqueKeysWithValues: retainedKeys.compactMap { key in
+                    cachedCoachResponseRatings[key].map { (key, $0) }
                 })
             }
-            defaults.set(ratings, forKey: coachResponseRatingsKey)
-            didChange = true
+            return persistenceGeneration
         }
-        guard didChange else { return }
-        record(
-            rating == .helpful ? .coachResponseHelpful : .coachResponseNeedsImprovement,
-            dimension: coachType
-        )
+        guard let generation else { return }
+        let shouldRecordEvent = isCollectionEnabled
+        if shouldRecordEvent {
+            _ = appendEvent(
+                rating == .helpful ? .coachResponseHelpful : .coachResponseNeedsImprovement,
+                dimension: coachType,
+                generation: generation
+            )
+        }
+        queue.async {
+            let current: ([String: String], [UsageEvent])? = self.lock.withLock {
+                guard self.persistenceGeneration == generation else { return nil }
+                return (self.cachedCoachResponseRatings, self.cachedEvents)
+            }
+            guard let current else { return }
+            self.defaults.set(current.0, forKey: Self.coachResponseRatingsKey)
+            if shouldRecordEvent {
+                self.saveEvents(current.1)
+            }
+        }
     }
 
     func exportData() -> Data {
-        queue.sync {
+        lock.withLock {
             let encoder = JSONEncoder()
             encoder.dateEncodingStrategy = .iso8601
             encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-            return (try? encoder.encode(loadEvents())) ?? Data("[]".utf8)
+            return (try? encoder.encode(cachedEvents)) ?? Data("[]".utf8)
         }
     }
 
     func deleteData() {
-        queue.sync {
-            defaults.removeObject(forKey: eventsKey)
-            defaults.removeObject(forKey: coachResponseRatingsKey)
+        lock.withLock {
+            persistenceGeneration &+= 1
+            cachedEvents = []
+            cachedCoachResponseRatings = [:]
+        }
+        queue.async {
+            self.defaults.removeObject(forKey: Self.eventsKey)
+            self.defaults.removeObject(forKey: Self.coachResponseRatingsKey)
         }
     }
 
     func reset() {
-        defaults.removeObject(forKey: enabledKey)
-        queue.sync {
-            defaults.removeObject(forKey: eventsKey)
-            defaults.removeObject(forKey: coachResponseRatingsKey)
-        }
+        defaults.removeObject(forKey: Self.enabledKey)
+        deleteData()
     }
 
-    private func loadEvents() -> [UsageEvent] {
-        guard let data = defaults.data(forKey: eventsKey) else { return [] }
+    private static func decodeEvents(_ data: Data?) -> [UsageEvent] {
+        guard let data else { return [] }
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         return (try? decoder.decode([UsageEvent].self, from: data)) ?? []
+    }
+
+    private func appendEvent(
+        _ name: UsageEventName,
+        dimension: String?,
+        generation: UInt
+    ) -> [UsageEvent]? {
+        let now = Date()
+        return lock.withLock {
+            guard persistenceGeneration == generation else { return nil }
+            cachedEvents.append(
+                UsageEvent(
+                    timestamp: now,
+                    name: name,
+                    dimension: dimension.map { String($0.prefix(40)) },
+                    appVersion: LegalConfiguration.appVersion
+                )
+            )
+            cachedEvents = cachedEvents
+                .filter { now.timeIntervalSince($0.timestamp) <= retentionInterval }
+                .suffix(maximumEventCount)
+                .map { $0 }
+            return cachedEvents
+        }
     }
 
     private func saveEvents(_ events: [UsageEvent]) {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         guard let data = try? encoder.encode(events) else { return }
-        defaults.set(data, forKey: eventsKey)
+        defaults.set(data, forKey: Self.eventsKey)
     }
 
-    private func loadCoachResponseRatings() -> [String: String] {
-        defaults.dictionary(forKey: coachResponseRatingsKey) as? [String: String] ?? [:]
-    }
 }
