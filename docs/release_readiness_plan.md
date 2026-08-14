@@ -1,6 +1,6 @@
 # BodyMode リリース準備ボード
 
-更新日: 2026-08-13
+更新日: 2026-08-14
 
 この文書をリリース準備の正本とする。状態は `完了`、`進行中`、`未着手`、`ブロック` の4種類だけを使う。
 
@@ -27,9 +27,9 @@
 | R-009 | 完了 | 利用者 | Apple Developer Program | Personal Teamではなく有料メンバーシップを有効化する |
 | R-010 | 完了 | 利用者 | App Store Connectアプリ | Bundle ID、SKU、Health & Fitnessカテゴリ、連絡先を登録する |
 | R-011 | 未着手 | 利用者 | App Store申告 | App Privacy、年齢レーティング、規制対象医療機器、輸出、DSA事業者状態を回答する |
-| R-012 | 進行中 | Codex/利用者 | Release提出物 | Build 12のアップロード・外部配布は完了。次回候補で必須自動回帰、本番preflight、Distribution署名Archive、Xcode Privacy Reportを確定する |
+| R-012 | 進行中 | Codex/利用者 | Release提出物 | Build 15のL3、アップロード、外部配布は完了。正式公開候補では本番URL、AdMob、Distribution署名Archive、Xcode Privacy Reportを確定する |
 | R-013 | 進行中 | Codex/利用者 | ストア素材 | 説明文、キーワード、審査メモ、iPhone 6枚、Watch 3枚は完成。運営者情報と公開URLを入れる |
-| R-014 | 進行中 | Codex/利用者 | TestFlight受入 | Build 12を外部TestFlightへ配布済み。iPhoneとWatchで主要フローを一周し、外部テスター5〜10人の受入を完了する |
+| R-014 | 進行中 | Codex/利用者 | TestFlight受入 | Build 15を外部TestFlightへ配布済み。iPhoneとWatchで主要フローを一周し、外部テスター5〜10人の受入を完了する |
 | R-015 | 完了 | Codex | 秘密情報の保護 | AI APIキーをKeychainへ移行し、既存値を安全に移行・削除する |
 | R-016 | 完了 | Codex | ローカルデータ保護 | 写真を含む記録を保護ファイルへ移行し、バックアップ対象外と保持方針を適用する |
 | R-017 | 完了 | Codex | 診断ログ管理 | 14日・1,000件・2MiBの保持上限、ファイル保護、アプリ内削除を実装する |
