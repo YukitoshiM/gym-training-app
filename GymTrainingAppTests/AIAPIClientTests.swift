@@ -149,6 +149,7 @@ final class AIAPIClientTests: XCTestCase {
         let encodedImage = try XCTUnwrap(json["image_base64"] as? String)
         XCTAssertFalse(encodedImage.hasPrefix("data:image"))
         let uploadedData = try XCTUnwrap(Data(base64Encoded: encodedImage))
+        XCTAssertLessThanOrEqual(uploadedData.count, AIImageUploadProcessor.maximumUploadBytes)
         let uploadedImage = try XCTUnwrap(UIImage(data: uploadedData))
         XCTAssertEqual(uploadedImage.size.width, 1_600, accuracy: 1)
         XCTAssertEqual(uploadedImage.size.height, 600, accuracy: 1)
@@ -508,7 +509,9 @@ final class AIAPIClientTests: XCTestCase {
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         XCTAssertEqual(json["coach_id"] as? String, "hypertrophy")
-        XCTAssertEqual((json["recent_messages"] as? [[String: Any]])?.count, 20)
+        let sentMessages = try XCTUnwrap(json["recent_messages"] as? [[String: Any]])
+        XCTAssertEqual(sentMessages.count, CoachChatRequest.maximumSentRecentMessages)
+        XCTAssertTrue(sentMessages.allSatisfy { Set($0.keys) == ["role", "content"] })
         let context = try XCTUnwrap(json["context"] as? [String: Any])
         XCTAssertEqual(context["memories"] as? [String], ["重量は小刻みに上げたい"])
     }
@@ -598,6 +601,32 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(MockAIURLProtocol.requests.count, 2)
         XCTAssertEqual(MockAIURLProtocol.requestBodies.count, 2)
         XCTAssertLessThan(MockAIURLProtocol.requestBodies[1].count, MockAIURLProtocol.requestBodies[0].count)
+
+        let initialJSON = try XCTUnwrap(
+            JSONSerialization.jsonObject(with: MockAIURLProtocol.requestBodies[0]) as? [String: Any]
+        )
+        let initialMessages = try XCTUnwrap(initialJSON["recent_messages"] as? [[String: Any]])
+        XCTAssertLessThanOrEqual(initialMessages.count, CoachChatRequest.maximumSentRecentMessages)
+        XCTAssertTrue(initialMessages.allSatisfy { message in
+            Set(message.keys) == ["role", "content"]
+                && ((message["content"] as? String)?.count ?? .max) <= 600
+        })
+        let initialContext = try XCTUnwrap(initialJSON["context"] as? [String: Any])
+        let initialRecentValues = (initialContext["recent_7_days"] as? [String: [String]])?.values.flatMap { $0 } ?? []
+        XCTAssertTrue(initialRecentValues.allSatisfy { $0.count <= 240 })
+
+        let retryJSON = try XCTUnwrap(
+            JSONSerialization.jsonObject(with: MockAIURLProtocol.requestBodies[1]) as? [String: Any]
+        )
+        let retryMessages = try XCTUnwrap(retryJSON["recent_messages"] as? [[String: Any]])
+        XCTAssertLessThanOrEqual(retryMessages.count, 4)
+        XCTAssertTrue(retryMessages.allSatisfy { message in
+            Set(message.keys) == ["role", "content"]
+                && ((message["content"] as? String)?.count ?? .max) <= 300
+        })
+        let retryContext = try XCTUnwrap(retryJSON["context"] as? [String: Any])
+        let retryRecentValues = (retryContext["recent_7_days"] as? [String: [String]])?.values.flatMap { $0 } ?? []
+        XCTAssertTrue(retryRecentValues.allSatisfy { $0.count <= 120 })
     }
 
     func testTrainerChatMaps422ToInvalidRequest() async {

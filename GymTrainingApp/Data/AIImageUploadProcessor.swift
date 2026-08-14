@@ -3,6 +3,9 @@ import UIKit
 enum AIImageUploadProcessor {
     static let maximumLongEdge: CGFloat = 1_600
     static let jpegQuality: CGFloat = 0.8
+    static let maximumUploadBytes = 1_500_000
+    private static let minimumLongEdge: CGFloat = 800
+    private static let qualitySteps: [CGFloat] = [0.8, 0.7, 0.6, 0.5, 0.42]
 
     static func jpegData(from sourceData: Data) throws -> Data {
         guard let sourceImage = UIImage(data: sourceData),
@@ -11,25 +14,8 @@ enum AIImageUploadProcessor {
             throw AIClientError.invalidImage
         }
 
-        let scale = min(1, maximumLongEdge / max(sourceImage.size.width, sourceImage.size.height))
-        let targetSize = CGSize(
-            width: max(1, (sourceImage.size.width * scale).rounded()),
-            height: max(1, (sourceImage.size.height * scale).rounded())
-        )
-        let format = UIGraphicsImageRendererFormat()
-        format.scale = 1
-        format.opaque = true
-        let renderer = UIGraphicsImageRenderer(size: targetSize, format: format)
-        let image = renderer.image { context in
-            UIColor.white.setFill()
-            context.fill(CGRect(origin: .zero, size: targetSize))
-            sourceImage.draw(in: CGRect(origin: .zero, size: targetSize))
-        }
-
-        guard let data = image.jpegData(compressionQuality: jpegQuality) else {
-            throw AIClientError.invalidImage
-        }
-        return data
+        let image = renderedImage(from: sourceImage, maximumLongEdge: maximumLongEdge)
+        return try adaptiveJPEGData(from: image, preferredQuality: jpegQuality)
     }
 
     static func bodyPhotoContactSheet(
@@ -68,10 +54,57 @@ enum AIImageUploadProcessor {
                 source.draw(in: aspectFitRect(for: source.size, inside: cell.insetBy(dx: 4, dy: 4)))
             }
         }
-        guard let data = image.jpegData(compressionQuality: 0.72) else {
-            throw AIClientError.invalidImage
+        return try adaptiveJPEGData(from: image, preferredQuality: 0.72)
+    }
+
+    private static func adaptiveJPEGData(
+        from sourceImage: UIImage,
+        preferredQuality: CGFloat
+    ) throws -> Data {
+        var image = sourceImage
+        var qualities = qualitySteps
+        qualities[0] = preferredQuality
+        var smallestData: Data?
+
+        while true {
+            for quality in qualities {
+                guard let data = image.jpegData(compressionQuality: quality) else { continue }
+                if smallestData == nil || data.count < (smallestData?.count ?? .max) {
+                    smallestData = data
+                }
+                if data.count <= maximumUploadBytes {
+                    return data
+                }
+            }
+
+            let currentLongEdge = max(image.size.width, image.size.height)
+            guard currentLongEdge > minimumLongEdge else { break }
+            let nextLongEdge = max(minimumLongEdge, (currentLongEdge * 0.8).rounded())
+            image = renderedImage(from: image, maximumLongEdge: nextLongEdge)
         }
-        return data
+
+        guard let smallestData else { throw AIClientError.invalidImage }
+        return smallestData
+    }
+
+    private static func renderedImage(
+        from sourceImage: UIImage,
+        maximumLongEdge: CGFloat
+    ) -> UIImage {
+        let scale = min(1, maximumLongEdge / max(sourceImage.size.width, sourceImage.size.height))
+        let targetSize = CGSize(
+            width: max(1, (sourceImage.size.width * scale).rounded()),
+            height: max(1, (sourceImage.size.height * scale).rounded())
+        )
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        format.opaque = true
+        let renderer = UIGraphicsImageRenderer(size: targetSize, format: format)
+        return renderer.image { context in
+            UIColor.white.setFill()
+            context.fill(CGRect(origin: .zero, size: targetSize))
+            sourceImage.draw(in: CGRect(origin: .zero, size: targetSize))
+        }
     }
 
     private static func aspectFitRect(for sourceSize: CGSize, inside bounds: CGRect) -> CGRect {

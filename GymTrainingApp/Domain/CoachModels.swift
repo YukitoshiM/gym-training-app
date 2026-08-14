@@ -1,5 +1,14 @@
 import Foundation
 
+private func compactAIText(_ text: String, maximumCharacters: Int) -> String {
+    guard text.count > maximumCharacters else { return text }
+    let marker = " … "
+    let available = max(2, maximumCharacters - marker.count)
+    let headCount = max(1, Int(Double(available) * 0.65))
+    let tailCount = max(1, available - headCount)
+    return String(text.prefix(headCount)) + marker + String(text.suffix(tailCount))
+}
+
 enum CoachChatRole: String, Codable, Hashable {
     case user
     case assistant
@@ -174,46 +183,80 @@ struct CoachContext: Codable, Hashable {
     }
 
     func compacted(aggressively: Bool = false) -> CoachContext {
-        CoachContext(
+        let maximumValueCharacters = aggressively ? 120 : 240
+        return CoachContext(
             recent7Days: Self.limited(
                 recent7Days,
                 maximumKeys: aggressively ? 6 : 12,
-                maximumValues: aggressively ? 2 : 4
+                maximumValues: aggressively ? 2 : 4,
+                maximumValueCharacters: maximumValueCharacters
             ),
             recent4Weeks: Self.limited(
                 recent4Weeks,
                 maximumKeys: aggressively ? 3 : 6,
-                maximumValues: aggressively ? 2 : 4
+                maximumValues: aggressively ? 2 : 4,
+                maximumValueCharacters: maximumValueCharacters
             ),
             longTermTrends: Self.limited(
                 longTermTrends,
                 maximumKeys: aggressively ? 3 : 6,
-                maximumValues: aggressively ? 1 : 3
+                maximumValues: aggressively ? 1 : 3,
+                maximumValueCharacters: maximumValueCharacters
             ),
-            personalRecords: Array(personalRecords.prefix(aggressively ? 6 : 12)),
-            goals: Array(goals.prefix(aggressively ? 6 : 12)),
-            preferences: Array(preferences.prefix(aggressively ? 6 : 12)),
-            memories: Array(memories.prefix(aggressively ? 20 : 50)),
-            previousSuggestion: previousSuggestion,
-            suggestionResult: suggestionResult
+            personalRecords: Self.limited(personalRecords, count: aggressively ? 6 : 12, characters: maximumValueCharacters),
+            goals: Self.limited(goals, count: aggressively ? 6 : 12, characters: maximumValueCharacters),
+            preferences: Self.limited(preferences, count: aggressively ? 6 : 12, characters: maximumValueCharacters),
+            memories: Self.limited(memories, count: aggressively ? 20 : 40, characters: maximumValueCharacters),
+            previousSuggestion: Self.limited(previousSuggestion, characters: maximumValueCharacters),
+            suggestionResult: Self.limited(suggestionResult, characters: maximumValueCharacters)
         )
     }
 
     private static func limited(
         _ source: [String: [String]],
         maximumKeys: Int,
-        maximumValues: Int
+        maximumValues: Int,
+        maximumValueCharacters: Int
     ) -> [String: [String]] {
         Dictionary(uniqueKeysWithValues: source.keys.sorted().prefix(maximumKeys).map { key in
-            (key, Array((source[key] ?? []).prefix(maximumValues)))
+            (
+                key,
+                (source[key] ?? []).prefix(maximumValues).map {
+                    compactAIText($0, maximumCharacters: maximumValueCharacters)
+                }
+            )
+        })
+    }
+
+    private static func limited(
+        _ source: [String],
+        count: Int,
+        characters: Int
+    ) -> [String] {
+        source.prefix(count).map { compactAIText($0, maximumCharacters: characters) }
+    }
+
+    private static func limited(
+        _ source: [String: String],
+        characters: Int
+    ) -> [String: String] {
+        Dictionary(uniqueKeysWithValues: source.keys.sorted().prefix(8).map { key in
+            (
+                key,
+                compactAIText(source[key] ?? "", maximumCharacters: characters)
+            )
         })
     }
 }
 
 struct CoachChatRequest: Encodable, Hashable {
     static let maximumMessageCharacters = 4_000
+    static let maximumUserMessageCharacters = 1_500
     static let maximumRecentMessages = 20
+    static let maximumSentRecentMessages = 8
     static let maximumContextCharacters = 60_000
+    static let preferredRequestCharacters = 8_000
+    static let compactedRequestCharacters = 4_000
 
     var coachID: String
     var message: String
@@ -228,37 +271,64 @@ struct CoachChatRequest: Encodable, Hashable {
     }
 
     func constrainedForInitialRequest() -> CoachChatRequest {
-        constrained(maximumMessages: Self.maximumRecentMessages, aggressively: false)
+        constrained(
+            maximumMessages: Self.maximumSentRecentMessages,
+            maximumMessageCharacters: 600,
+            targetCharacters: Self.preferredRequestCharacters,
+            aggressively: false
+        )
     }
 
     func compactedForRetry() -> CoachChatRequest {
-        constrained(maximumMessages: 8, aggressively: true)
+        constrained(
+            maximumMessages: 4,
+            maximumMessageCharacters: 300,
+            targetCharacters: Self.compactedRequestCharacters,
+            aggressively: true
+        )
     }
 
-    private func constrained(maximumMessages: Int, aggressively: Bool) -> CoachChatRequest {
+    private func constrained(
+        maximumMessages: Int,
+        maximumMessageCharacters: Int,
+        targetCharacters: Int,
+        aggressively: Bool
+    ) -> CoachChatRequest {
         var result = CoachChatRequest(
             coachID: coachID,
             message: message,
-            context: aggressively ? context.compacted(aggressively: true) : context,
-            recentMessages: Array(recentMessages.suffix(maximumMessages))
+            context: context.compacted(aggressively: aggressively),
+            recentMessages: recentMessages.suffix(maximumMessages).map {
+                var compacted = $0
+                compacted.content = compactAIText(
+                    $0.content,
+                    maximumCharacters: maximumMessageCharacters
+                )
+                compacted.evidence = []
+                return compacted
+            }
         )
 
-        guard result.contextAndMessagesCharacterCount > Self.maximumContextCharacters else {
-            return result
+        if result.requestInputCharacterCount > targetCharacters {
+            result.context = result.context.compacted(aggressively: true)
         }
 
-        result.context = result.context.compacted(aggressively: true)
-        while result.contextAndMessagesCharacterCount > Self.maximumContextCharacters,
+        while result.requestInputCharacterCount > targetCharacters,
               !result.recentMessages.isEmpty {
             result.recentMessages.removeFirst()
         }
         return result
     }
 
-    private var contextAndMessagesCharacterCount: Int {
+    private struct RequestMessage: Encodable {
+        var role: CoachChatRole
+        var content: String
+    }
+
+    private var requestInputCharacterCount: Int {
         struct Payload: Encodable {
             var context: CoachContext
-            var recentMessages: [CoachChatMessage]
+            var recentMessages: [RequestMessage]
 
             enum CodingKeys: String, CodingKey {
                 case context
@@ -266,12 +336,26 @@ struct CoachChatRequest: Encodable, Hashable {
             }
         }
 
-        let payload = Payload(context: context, recentMessages: recentMessages)
+        let payload = Payload(
+            context: context,
+            recentMessages: recentMessages.map { RequestMessage(role: $0.role, content: $0.content) }
+        )
         guard let data = try? JSONEncoder().encode(payload),
               let string = String(data: data, encoding: .utf8) else {
             return .max
         }
-        return string.count
+        return message.count + string.count
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(coachID, forKey: .coachID)
+        try container.encode(message, forKey: .message)
+        try container.encode(context, forKey: .context)
+        try container.encode(
+            recentMessages.map { RequestMessage(role: $0.role, content: $0.content) },
+            forKey: .recentMessages
+        )
     }
 }
 

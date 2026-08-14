@@ -193,10 +193,10 @@ struct AITrainerChatView: View {
                 .opacity(canSend ? 1 : 0.45)
             }
 
-            if draft.count >= 3_500 {
-                Text("\(draft.count.formatted()) / 4,000")
+            if draft.count >= 1_200 {
+                Text("\(draft.count.formatted()) / \(CoachChatRequest.maximumUserMessageCharacters.formatted())")
                     .font(.caption)
-                    .foregroundStyle(draft.count > CoachChatRequest.maximumMessageCharacters ? AppTheme.critical : AppTheme.mutedInk)
+                    .foregroundStyle(draft.count > CoachChatRequest.maximumUserMessageCharacters ? AppTheme.critical : AppTheme.mutedInk)
             }
         }
         .padding(.horizontal)
@@ -206,7 +206,7 @@ struct AITrainerChatView: View {
 
     private var canSend: Bool {
         !draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-            && draft.count <= CoachChatRequest.maximumMessageCharacters
+            && draft.count <= CoachChatRequest.maximumUserMessageCharacters
             && !isSending
     }
 
@@ -235,7 +235,8 @@ struct AITrainerChatView: View {
 
     private func sendDraft() {
         let message = draft.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !message.isEmpty else { return }
+        guard !message.isEmpty,
+              message.count <= CoachChatRequest.maximumUserMessageCharacters else { return }
         isComposerFocused = false
         draft = ""
         requestReply(for: message, appendUserMessage: true)
@@ -249,7 +250,7 @@ struct AITrainerChatView: View {
     private func requestReply(for message: String, appendUserMessage: Bool) {
         guard !isSending else { return }
 
-        var recentMessages = Array(appStore.coachChatMessages.suffix(CoachChatRequest.maximumRecentMessages))
+        var recentMessages = Array(appStore.coachChatMessages.suffix(CoachChatRequest.maximumSentRecentMessages))
         if !appendUserMessage,
            recentMessages.last?.role == .user,
            recentMessages.last?.content == message {

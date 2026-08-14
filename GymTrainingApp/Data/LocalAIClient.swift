@@ -2,6 +2,8 @@ import Foundation
 
 struct AIAPIClient: Sendable {
     private static let inferenceTimeout: TimeInterval = 240
+    private static let maximumAIMemoCharacters = 500
+    private static let maximumMealItemCharacters = 120
 
     let settings: AISettings
     private let session: URLSession
@@ -48,7 +50,7 @@ struct AIAPIClient: Sendable {
         let request = MealAnalysisRequest(
             imageBase64: uploadData.base64EncodedString(),
             mealType: mealType.rawValue,
-            memo: memo,
+            memo: memo.aiCompactedForUpload(maximumCharacters: Self.maximumAIMemoCharacters),
             coach: coach
         )
         let draft = try await post("/v1/meals/analyze-image", body: request, responseType: MealAIDraft.self, timeout: Self.inferenceTimeout)
@@ -104,12 +106,13 @@ struct AIAPIClient: Sendable {
         let normalizedItems = items
             .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
+            .map { $0.aiCompactedForUpload(maximumCharacters: Self.maximumMealItemCharacters) }
         guard !normalizedItems.isEmpty else { throw AIClientError.emptyMealItems }
 
         let request = MealTextAnalysisRequest(
             items: Array(normalizedItems.prefix(20)),
             mealType: mealType.rawValue,
-            memo: memo,
+            memo: memo.aiCompactedForUpload(maximumCharacters: Self.maximumAIMemoCharacters),
             coach: coach
         )
         let draft = try await post("/v1/meals/analyze-text", body: request, responseType: MealAIDraft.self, timeout: Self.inferenceTimeout)
@@ -121,7 +124,7 @@ struct AIAPIClient: Sendable {
         let request = BodyPhotoAnalysisRequest(
             imageBase64: uploadData.base64EncodedString(),
             angle: angle.rawValue,
-            memo: memo
+            memo: memo.aiCompactedForUpload(maximumCharacters: Self.maximumAIMemoCharacters)
         )
         return try await post("/v1/body-photos/analyze", body: request, responseType: BodyPhotoAIComment.self, timeout: Self.inferenceTimeout)
     }
@@ -174,7 +177,7 @@ struct AIAPIClient: Sendable {
         let request = BodyPhotoSetAnalysisRequest(
             photos: requestPhotos,
             comparisonPhotos: comparisonPhotos,
-            memo: memo,
+            memo: memo.aiCompactedForUpload(maximumCharacters: Self.maximumAIMemoCharacters),
             context: context
         )
         return try await post(
@@ -719,6 +722,15 @@ enum AIClientError: LocalizedError {
 }
 
 private extension String {
+    func aiCompactedForUpload(maximumCharacters: Int) -> String {
+        guard count > maximumCharacters else { return self }
+        let marker = " … "
+        let available = max(2, maximumCharacters - marker.count)
+        let headCount = max(1, Int(Double(available) * 0.65))
+        let tailCount = max(1, available - headCount)
+        return String(prefix(headCount)) + marker + String(suffix(tailCount))
+    }
+
     var isLocalAIHost: Bool {
         let normalized = lowercased().trimmingCharacters(in: CharacterSet(charactersIn: "[]"))
 
