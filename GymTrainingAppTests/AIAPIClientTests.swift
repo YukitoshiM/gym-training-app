@@ -296,7 +296,7 @@ final class AIAPIClientTests: XCTestCase {
         }
     }
 
-    func testBodyPhotoSetAnalysisUploadsMultipleAnglesWith240SecondTimeout() async throws {
+    func testBodyPhotoSetAnalysisUploadsContactSheetsWith240SecondTimeout() async throws {
         MockAIURLProtocol.requestHandler = { request in
             let data = Data(#"""
             {
@@ -349,7 +349,7 @@ final class AIAPIClientTests: XCTestCase {
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         let photos = try XCTUnwrap(json["photos"] as? [[String: Any]])
-        XCTAssertEqual(photos.compactMap { $0["angle"] as? String }, ["front", "side"])
+        XCTAssertEqual(photos.compactMap { $0["angle"] as? String }, ["capture_set_2"])
         XCTAssertEqual(json["memo"] as? String, "自然光")
         let context = try XCTUnwrap(json["context"] as? [String: Any])
         XCTAssertEqual(context["profile_goal"] as? String, "体型改善")
@@ -364,7 +364,8 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(metricDeltas["waist_cm"] as? Double, -1.1)
         XCTAssertEqual(metricDeltas["body_fat_percent"] as? Double, -0.8)
         XCTAssertEqual((context["coach"] as? [String: Any])?["coach_name"] as? String, "Maya")
-        XCTAssertEqual((json["comparison_photos"] as? [[String: Any]])?.count, 1)
+        let comparisonPhotos = try XCTUnwrap(json["comparison_photos"] as? [[String: Any]])
+        XCTAssertEqual(comparisonPhotos.compactMap { $0["angle"] as? String }, ["capture_set_1"])
         XCTAssertTrue(photos.allSatisfy { photo in
             guard let encoded = photo["image_base64"] as? String else { return false }
             return !encoded.hasPrefix("data:image") && Data(base64Encoded: encoded) != nil

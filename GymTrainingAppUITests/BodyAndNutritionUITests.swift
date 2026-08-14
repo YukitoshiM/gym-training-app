@@ -215,6 +215,7 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(visibleAmount.exists)
         replaceNumericText(in: visibleAmount, with: "150")
 
+        XCTAssertTrue(scrollToHittable(app.staticTexts["食品から自動集計"]).exists)
         let caloriesField = scrollToHittable(app.textFields["mealCaloriesField"])
         XCTAssertEqual(caloriesField.value as? String, "234")
         XCTAssertEqual(app.textFields["mealNameField"].value as? String, "こめ ［水稲めし］ 精白米 うるち米")

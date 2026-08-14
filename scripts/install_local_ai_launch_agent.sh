@@ -20,12 +20,16 @@ DOMAIN="gui/${UID}"
 
 bootstrap_agent() {
   local plist_path="$1"
+  local attempt
 
-  if launchctl bootstrap "${DOMAIN}" "${plist_path}"; then
-    return 0
-  fi
-  sleep 1
-  launchctl bootstrap "${DOMAIN}" "${plist_path}"
+  for attempt in 1 2 3 4 5; do
+    if launchctl bootstrap "${DOMAIN}" "${plist_path}"; then
+      return 0
+    fi
+    sleep "${attempt}"
+  done
+  print -u2 "Could not bootstrap LaunchAgent after 5 attempts: ${plist_path}"
+  return 1
 }
 
 if [[ ! -x "${SOURCE_DIR}/run_server.sh" ]]; then

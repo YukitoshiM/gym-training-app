@@ -133,7 +133,9 @@ class GymTrainingAppUITestCase: XCTestCase {
 
     func replaceNumericText(in field: XCUIElement, with text: String) {
         let identifier = field.identifier
-        replaceText(in: field, with: text)
+        XCTAssertTrue(field.waitForExistence(timeout: 5))
+        field.tap()
+        field.typeText(text)
 
         let dismissButton = app.buttons["dismiss-\(identifier)"]
         XCTAssertTrue(dismissButton.waitForExistence(timeout: 5))

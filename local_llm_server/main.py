@@ -9,6 +9,8 @@ import secrets
 import threading
 import time
 import asyncio
+import uuid
+from contextvars import ContextVar
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any, Optional
@@ -36,6 +38,10 @@ RATE_LIMIT_PER_MINUTE = max(1, int(os.getenv("AI_RATE_LIMIT_PER_MINUTE", "30")))
 TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE = max(
     1,
     min(int(os.getenv("AI_TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE", "8")), 120),
+)
+TOKEN_ISSUE_GLOBAL_LIMIT_PER_MINUTE = max(
+    TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE,
+    min(int(os.getenv("AI_TOKEN_ISSUE_GLOBAL_LIMIT_PER_MINUTE", "120")), 1_000),
 )
 TOKEN_FAILURE_DELAY_SECONDS = max(
     0.0,
@@ -71,7 +77,26 @@ if AUTH_MODE == "token_required" and not TOKEN_SIGNING_SECRET:
 app = FastAPI(title=APP_NAME)
 WEB_DIR = Path(__file__).resolve().parent / "web"
 _inference_semaphore = asyncio.Semaphore(MAX_CONCURRENT_INFERENCE)
+_request_id_context: ContextVar[str] = ContextVar("bodymode_request_id", default="unknown")
 evidence_store = EvidenceStore(EVIDENCE_RAG_DB_PATH)
+
+
+@app.middleware("http")
+async def attach_request_id(request: Request, call_next):
+    supplied_request_id = request.headers.get("X-Request-ID", "").strip()
+    request_id = (
+        supplied_request_id
+        if re.fullmatch(r"[A-Za-z0-9._-]{1,128}", supplied_request_id)
+        else str(uuid.uuid4())
+    )
+    request.state.request_id = request_id
+    token = _request_id_context.set(request_id)
+    try:
+        response = await call_next(request)
+        response.headers["X-Request-ID"] = request_id
+        return response
+    finally:
+        _request_id_context.reset(token)
 
 
 @app.get("/", include_in_schema=False)
@@ -249,6 +274,7 @@ class BodyPhotoAIComment(BaseModel):
     positive_findings: list[str] = []
     observed_changes: list[str] = []
     next_actions: list[str] = []
+    reference_estimates: list[dict[str, Any]] = []
 
 
 class WeeklyReportRequest(BaseModel):
@@ -360,6 +386,13 @@ if not _auth_audit_logger.handlers:
     _auth_audit_handler.setFormatter(logging.Formatter("%(message)s"))
     _auth_audit_logger.addHandler(_auth_audit_handler)
 _auth_audit_logger.propagate = False
+_inference_logger = logging.getLogger("bodymode.inference")
+_inference_logger.setLevel(logging.INFO)
+if not _inference_logger.handlers:
+    _inference_handler = logging.StreamHandler()
+    _inference_handler.setFormatter(logging.Formatter("%(message)s"))
+    _inference_logger.addHandler(_inference_handler)
+_inference_logger.propagate = False
 
 
 def _base64url_encode(value: bytes) -> str:
@@ -464,21 +497,28 @@ def _audit_token_issue(
     _auth_audit_logger.info(json.dumps(event, separators=(",", ":"), sort_keys=True))
 
 
-def _enforce_token_issue_rate_limit(request: Request) -> None:
+def _enforce_token_issue_rate_limit(request: Request, installation_id: str) -> None:
     now = time.monotonic()
-    remote_host = request.client.host if request.client else "unknown"
-    key = f"token:{remote_host}"
+    installation_key = f"token:installation:{installation_id}"
+    global_key = "token:global"
     with _auth_lock:
-        events = _token_issue_events[key]
-        while events and now - events[0] >= 60:
-            events.popleft()
-        if len(events) >= TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE:
+        limits = (
+            (installation_key, TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE),
+            (global_key, TOKEN_ISSUE_GLOBAL_LIMIT_PER_MINUTE),
+        )
+        for key, limit in limits:
+            events = _token_issue_events[key]
+            while events and now - events[0] >= 60:
+                events.popleft()
+            if len(events) < limit:
+                continue
             raise HTTPException(
                 status_code=429,
                 detail="Token issue rate limit exceeded",
                 headers={"Retry-After": "60"},
             )
-        events.append(now)
+        for key, _ in limits:
+            _token_issue_events[key].append(now)
 
 
 def _issue_access_token(subject: str, installation_id: str) -> AccessTokenResponse:
@@ -566,7 +606,7 @@ async def create_access_token(
     authorization: Optional[str] = Header(default=None),
 ) -> AccessTokenResponse:
     try:
-        _enforce_token_issue_rate_limit(request)
+        _enforce_token_issue_rate_limit(request, payload.installation_id)
     except HTTPException:
         _audit_token_issue(
             result="rate_limited",
@@ -811,6 +851,12 @@ replyの文章ルール:
         ),
     )
     normalized = normalize_agent_chat(result, fallback)
+    if "[BODYMODE_DAILY_JSON]" in request.message:
+        normalized["reply"] = normalize_daily_recommendation_reply(
+            normalized["reply"],
+            request.message,
+        )
+        normalized["memory_candidates"] = []
     normalized["memory_candidates"] = remove_known_memories(
         normalized["memory_candidates"],
         request.context.get("memories"),
@@ -969,12 +1015,18 @@ async def analyze_body_photo_set(
         "back": "背面",
         "abdomen": "腹部アップ",
     }
+    def angle_name(angle: str) -> str:
+        if angle.startswith("capture_set_"):
+            count = angle.removeprefix("capture_set_")
+            return f"{count}方向の撮影セット（左上: 正面、右上: 横、左下: 背面、右下: 腹部アップ。空欄は未撮影）"
+        return angle_names.get(angle, angle)
+
     photo_order = "\n".join(
-        f"{index + 1}. {angle_names.get(photo.angle, photo.angle)}"
+        f"{index + 1}. {angle_name(photo.angle)}"
         for index, photo in enumerate(request.photos)
     )
     comparison_order = "\n".join(
-        f"{index + 1}. {angle_names.get(photo.angle, photo.angle)}"
+        f"{index + 1}. {angle_name(photo.angle)}"
         for index, photo in enumerate(request.comparison_photos)
     ) or "なし"
     context = request.context or BodyPhotoAnalysisContext()
@@ -1017,6 +1069,9 @@ async def analyze_body_photo_set(
 欠測している実測値は推測・補完せず、現在値と前回値が揃っている項目だけを差分比較してください。
 結論、目標への意味、良い点、確認できた変化、次の一手の順で、控えめで具体的に返してください。
 次の一手は最大3件にしてください。
+体脂肪率の実測値が入力にない場合に限り、正面と横が十分写っていればreference_estimatesへ幅のある参考範囲を最大1件返せます。
+その場合metricはbody_fat_percent、unitは%、confidenceは必ずlow、範囲幅は最低4ポイントとし、服・姿勢・光で大きく変わることをrationaleに明記してください。
+体重や腹囲cmは写真に尺度がないため推定しないでください。判断できない場合はreference_estimatesを空配列にしてください。
 ユーザーメモ: {request.memo or "なし"}
 
 必ず次のJSONだけを返してください。
@@ -1030,7 +1085,10 @@ async def analyze_body_photo_set(
   "goal_relevance": "目標との関係",
   "positive_findings": ["確認できた良い点"],
   "observed_changes": ["前回比較画像がある時だけ確認できた変化"],
-  "next_actions": ["次に行う具体的な行動"]
+  "next_actions": ["次に行う具体的な行動"],
+  "reference_estimates": [
+    {{"metric": "body_fat_percent", "lower_bound": 15, "upper_bound": 20, "unit": "%", "confidence": "low", "rationale": "写真条件で大きく変わる参考範囲"}}
+  ]
 }}
 """.strip()
     fallback = fallback_body_photo_set(request)
@@ -1176,9 +1234,24 @@ async def ollama_json(
                 response.raise_for_status()
             text = response.json().get("response", "")
             parsed = extract_json(text)
-            return parsed if isinstance(parsed, dict) else fallback
-    except Exception:
-        return fallback
+            if not isinstance(parsed, dict):
+                raise ValueError("Ollama returned an invalid JSON object")
+            return parsed
+    except HTTPException:
+        raise
+    except Exception as error:
+        event = {
+            "event": "ollama_inference_failed",
+            "error_type": type(error).__name__,
+            "model": OLLAMA_MODEL,
+            "image_count": len(images or []),
+            "request_id": _request_id_context.get(),
+        }
+        _inference_logger.error(json.dumps(event, separators=(",", ":"), sort_keys=True))
+        raise HTTPException(
+            status_code=503,
+            detail="AIモデルから有効な回答を取得できませんでした。時間をおいて再試行してください。",
+        ) from error
 
 
 async def ollama_embedding(text: str) -> Optional[list[float]]:
@@ -1259,7 +1332,7 @@ def text_meal_name(items: list[dict[str, Any]], fallback: str) -> str:
 
 
 def normalize_body_photo(result: dict[str, Any], fallback: dict[str, Any]) -> dict[str, Any]:
-    return {
+    normalized = {
         "summary": pick_text(result, "summary", "全体", "要約", default=fallback["summary"]),
         "abdomen": pick_text(result, "abdomen", "腹部", default=fallback["abdomen"]),
         "waist": pick_text(result, "waist", "脇腹", "腹囲", default=fallback["waist"]),
@@ -1270,7 +1343,104 @@ def normalize_body_photo(result: dict[str, Any], fallback: dict[str, Any]) -> di
         "positive_findings": pick_string_list(result, "positive_findings", "positiveFindings", "良い点", fallback=fallback.get("positive_findings", [])),
         "observed_changes": pick_string_list(result, "observed_changes", "observedChanges", "確認できた変化", fallback=fallback.get("observed_changes", [])),
         "next_actions": pick_string_list(result, "next_actions", "nextActions", "次の一手", fallback=fallback.get("next_actions", []))[:3],
+        "reference_estimates": normalize_body_photo_estimates(result.get("reference_estimates")),
     }
+    return normalized
+
+
+def normalize_daily_recommendation_reply(reply: str, request_message: str) -> str:
+    readiness_match = re.search(
+        r"現在の調子:\s*(good|normal|tired|rest)",
+        request_message,
+        re.IGNORECASE,
+    )
+    fallback_readiness = readiness_match.group(1).lower() if readiness_match else None
+    fallback = {
+        "keep_existing": True,
+        "readiness_level": fallback_readiness,
+        "summary": "記録を確認し、端末内で作成した今日の提案を維持します。",
+        "change_reason": "",
+        "actions": [],
+    }
+    parsed = extract_json(reply)
+    if not isinstance(parsed, dict):
+        return json.dumps(fallback, ensure_ascii=False, separators=(",", ":"))
+
+    readiness = str(parsed.get("readiness_level", "")).lower()
+    if readiness not in {"good", "normal", "tired", "rest"}:
+        readiness = fallback_readiness
+    actions = []
+    allowed_categories = {
+        "workout", "steps", "protein", "mealGuidance", "bodyWeight",
+        "waist", "bodyPhoto", "sleep", "recovery", "lightActivity",
+    }
+    raw_actions = parsed.get("actions", [])
+    if isinstance(raw_actions, list):
+        for raw_action in raw_actions[:3]:
+            if not isinstance(raw_action, dict):
+                continue
+            category = str(raw_action.get("category", ""))
+            title = str(raw_action.get("title", "")).strip()
+            if category not in allowed_categories or not title:
+                continue
+            action: dict[str, Any] = {
+                "category": category,
+                "title": title[:80],
+                "target": pick_optional_float(raw_action, "target"),
+                "rationale": str(raw_action.get("rationale", "")).strip()[:240],
+            }
+            raw_id = str(raw_action.get("id", "")).strip()
+            try:
+                action["id"] = str(uuid.UUID(raw_id))
+            except (ValueError, AttributeError):
+                pass
+            actions.append(action)
+
+    keep_existing = parsed.get("keep_existing", True)
+    if not isinstance(keep_existing, bool):
+        keep_existing = True
+    normalized = {
+        "keep_existing": keep_existing,
+        "readiness_level": readiness,
+        "summary": str(parsed.get("summary", fallback["summary"])).strip()[:240]
+        or fallback["summary"],
+        "change_reason": str(parsed.get("change_reason", "")).strip()[:240],
+        "actions": actions,
+    }
+    if not normalized["keep_existing"] and not actions:
+        normalized = fallback
+    return json.dumps(normalized, ensure_ascii=False, separators=(",", ":"))
+
+
+def normalize_body_photo_estimates(value: Any) -> list[dict[str, Any]]:
+    if not isinstance(value, list):
+        return []
+    estimates = []
+    for item in value[:1]:
+        if not isinstance(item, dict) or item.get("metric") != "body_fat_percent":
+            continue
+        try:
+            lower = max(3.0, min(float(item.get("lower_bound")), 56.0))
+            upper = max(lower + 4.0, min(float(item.get("upper_bound")), 60.0))
+        except (TypeError, ValueError):
+            continue
+        if upper > 60.0:
+            continue
+        estimates.append(
+            {
+                "metric": "body_fat_percent",
+                "lower_bound": lower,
+                "upper_bound": upper,
+                "unit": "%",
+                "confidence": "low",
+                "rationale": pick_text(
+                    item,
+                    "rationale",
+                    default="服、姿勢、光で大きく変わる写真だけの参考範囲です。",
+                ),
+            }
+        )
+    return estimates
 
 
 def format_body_photo_metrics(
@@ -1504,7 +1674,8 @@ def fallback_body_photo(request: BodyPhotoAnalysisRequest) -> dict[str, Any]:
 
 
 def fallback_body_photo_set(request: BodyPhotoSetAnalysisRequest) -> dict[str, Any]:
-    angle_count = len({photo.angle for photo in request.photos})
+    capture_set = next((photo.angle for photo in request.photos if photo.angle.startswith("capture_set_")), None)
+    angle_count = int(capture_set.removeprefix("capture_set_")) if capture_set else len({photo.angle for photo in request.photos})
     has_comparison = bool(request.comparison_photos)
     context = request.context or BodyPhotoAnalysisContext()
     return {
@@ -1518,6 +1689,7 @@ def fallback_body_photo_set(request: BodyPhotoSetAnalysisRequest) -> dict[str, A
         "positive_findings": ["複数方向を同じ撮影セットとして記録できています。"],
         "observed_changes": ["前回写真との比較は参考範囲で確認してください。"] if has_comparison else [],
         "next_actions": ["次回も同じ角度、距離、光、姿勢で撮影してください。"],
+        "reference_estimates": [],
     }
 
 

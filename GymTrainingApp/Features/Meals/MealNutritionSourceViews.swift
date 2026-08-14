@@ -1,4 +1,7 @@
 import SwiftUI
+import PhotosUI
+import UIKit
+@preconcurrency import Vision
 import VisionKit
 
 struct FoodCompositionPickerView: View {
@@ -81,6 +84,10 @@ struct BarcodeFoodPickerView: View {
     @State private var fat = "0"
     @State private var carbs = "0"
     @State private var isShowingScanner = false
+    @State private var nutritionLabelPhoto: PhotosPickerItem?
+    @State private var isReadingNutritionLabel = false
+    @State private var nutritionSourceDescription: String?
+    @State private var nutritionSourceUpdatedAt: Date?
     @State private var notice: String?
 
     let onSelect: (MealCompositionItem) -> Void
@@ -110,6 +117,15 @@ struct BarcodeFoodPickerView: View {
                         }
                         .accessibilityIdentifier("scanBarcodeButton")
                     }
+
+                    PhotosPicker(selection: $nutritionLabelPhoto, matching: .images) {
+                        Label(
+                            isReadingNutritionLabel ? "栄養表示を読取中" : "栄養表示の写真から入力",
+                            systemImage: "text.viewfinder"
+                        )
+                    }
+                    .disabled(isReadingNutritionLabel)
+                    .accessibilityIdentifier("scanNutritionLabelButton")
 
                     if let notice {
                         Text(notice)
@@ -181,6 +197,14 @@ struct BarcodeFoodPickerView: View {
                     Text("未登録商品は入力後に端末へ保存し、次回の読取で再利用します。")
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
+                    if let nutritionSourceDescription {
+                        Text(
+                            "情報源：\(nutritionSourceDescription)"
+                            + (nutritionSourceUpdatedAt.map { "・\($0.formatted(date: .abbreviated, time: .omitted))" } ?? "")
+                        )
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
+                    }
                 }
             }
             .navigationTitle("バーコード")
@@ -205,6 +229,9 @@ struct BarcodeFoodPickerView: View {
                 }
                 .ignoresSafeArea()
             }
+            .onChange(of: nutritionLabelPhoto) { _, item in
+                readNutritionLabel(from: item)
+            }
         }
     }
 
@@ -228,7 +255,39 @@ struct BarcodeFoodPickerView: View {
         protein = formatted(product.nutritionPerBasis.protein)
         fat = formatted(product.nutritionPerBasis.fat)
         carbs = formatted(product.nutritionPerBasis.carbs)
+        nutritionSourceDescription = product.sourceDescription
+        nutritionSourceUpdatedAt = product.sourceUpdatedAt
         notice = "端末に保存した商品を読み込みました。"
+    }
+
+    private func readNutritionLabel(from item: PhotosPickerItem?) {
+        guard let item else { return }
+        isReadingNutritionLabel = true
+        notice = nil
+        Task {
+            do {
+                guard let data = try await item.loadTransferable(type: Data.self) else {
+                    throw NutritionLabelReaderError.invalidImage
+                }
+                let draft = try await NutritionLabelReader.read(from: data)
+                await MainActor.run {
+                    if let value = draft.basisAmountGrams { basisAmount = formatted(value) }
+                    if let value = draft.calories { calories = formatted(value) }
+                    if let value = draft.protein { protein = formatted(value) }
+                    if let value = draft.fat { fat = formatted(value) }
+                    if let value = draft.carbs { carbs = formatted(value) }
+                    nutritionSourceDescription = "栄養成分表示OCR（要確認）"
+                    nutritionSourceUpdatedAt = Date()
+                    notice = "栄養表示から数値を入力しました。基準量と各数値を確認してください。"
+                    isReadingNutritionLabel = false
+                }
+            } catch {
+                await MainActor.run {
+                    notice = "栄養表示を読み取れませんでした。明るい場所で正面から撮り直すか、手入力してください。"
+                    isReadingNutritionLabel = false
+                }
+            }
+        }
     }
 
     private func addProduct() {
@@ -241,7 +300,11 @@ struct BarcodeFoodPickerView: View {
                 protein: parsed(protein),
                 fat: parsed(fat),
                 carbs: parsed(carbs)
-            )
+            ),
+            sourceDescription: nutritionSourceDescription == "栄養成分表示OCR（要確認）"
+                ? "栄養成分表示OCR（ユーザー確認）"
+                : nutritionSourceDescription,
+            sourceUpdatedAt: nutritionSourceUpdatedAt
         )
         do {
             try BarcodeFoodProductStore().save(product)
@@ -259,6 +322,96 @@ struct BarcodeFoodPickerView: View {
 
     private func formatted(_ value: Double) -> String {
         value.formatted(.number.precision(.fractionLength(0...1)))
+    }
+}
+
+struct NutritionLabelDraft: Equatable, Sendable {
+    var basisAmountGrams: Double?
+    var calories: Double?
+    var protein: Double?
+    var fat: Double?
+    var carbs: Double?
+
+    var hasNutrition: Bool {
+        calories != nil || protein != nil || fat != nil || carbs != nil
+    }
+}
+
+enum NutritionLabelReaderError: Error {
+    case invalidImage
+    case nutritionNotFound
+}
+
+enum NutritionLabelReader {
+    static func read(from imageData: Data) async throws -> NutritionLabelDraft {
+        try await Task.detached(priority: .userInitiated) {
+            guard let image = UIImage(data: imageData), let cgImage = image.cgImage else {
+                throw NutritionLabelReaderError.invalidImage
+            }
+            let request = VNRecognizeTextRequest()
+            request.recognitionLevel = .accurate
+            request.recognitionLanguages = ["ja-JP", "en-US"]
+            request.usesLanguageCorrection = true
+            try VNImageRequestHandler(cgImage: cgImage, options: [:]).perform([request])
+            let text = (request.results ?? [])
+                .compactMap { $0.topCandidates(1).first?.string }
+                .joined(separator: " ")
+            return try parse(text)
+        }.value
+    }
+
+    static func parse(_ recognizedText: String) throws -> NutritionLabelDraft {
+        let text = normalizedNumbers(in: recognizedText)
+            .replacingOccurrences(of: "\n", with: " ")
+        let draft = NutritionLabelDraft(
+            basisAmountGrams: firstValue(
+                in: text,
+                patterns: [#"([0-9]+(?:\.[0-9]+)?)\s*g\s*(?:当たり|あたり|当り)"#]
+            ),
+            calories: firstValue(
+                in: text,
+                patterns: [#"(?:熱量|エネルギー|calories?)\s*[:：]?\s*([0-9]+(?:\.[0-9]+)?)\s*k?cal"#]
+            ),
+            protein: firstValue(
+                in: text,
+                patterns: [#"(?:たんぱく質|タンパク質|蛋白質|protein)\s*[:：]?\s*([0-9]+(?:\.[0-9]+)?)\s*g"#]
+            ),
+            fat: firstValue(
+                in: text,
+                patterns: [#"(?:脂質|fat)\s*[:：]?\s*([0-9]+(?:\.[0-9]+)?)\s*g"#]
+            ),
+            carbs: firstValue(
+                in: text,
+                patterns: [#"(?:炭水化物|糖質|carbohydrates?|carbs?)\s*[:：]?\s*([0-9]+(?:\.[0-9]+)?)\s*g"#]
+            )
+        )
+        guard draft.hasNutrition else { throw NutritionLabelReaderError.nutritionNotFound }
+        return draft
+    }
+
+    private static func normalizedNumbers(in text: String) -> String {
+        let replacements: [Character: Character] = [
+            "０": "0", "１": "1", "２": "2", "３": "3", "４": "4",
+            "５": "5", "６": "6", "７": "7", "８": "8", "９": "9",
+            "．": ".", "，": ","
+        ]
+        return String(text.map { replacements[$0] ?? $0 })
+    }
+
+    private static func firstValue(in text: String, patterns: [String]) -> Double? {
+        for pattern in patterns {
+            guard let expression = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]),
+                  let match = expression.firstMatch(
+                    in: text,
+                    range: NSRange(text.startIndex..., in: text)
+                  ),
+                  let range = Range(match.range(at: 1), in: text),
+                  let value = Double(text[range]) else {
+                continue
+            }
+            return value
+        }
+        return nil
     }
 }
 

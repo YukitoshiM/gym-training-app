@@ -5,6 +5,7 @@ import os
 import sys
 import tempfile
 import unittest
+import uuid
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -82,6 +83,7 @@ class AuthenticationTests(unittest.TestCase):
 
     def test_token_issue_endpoint_has_a_separate_client_rate_limit(self) -> None:
         self.server.TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE = 2
+        self.server.TOKEN_ISSUE_GLOBAL_LIMIT_PER_MINUTE = 100
         self.server._token_issue_events.clear()
         request = {
             "installation_id": "00000000-0000-4000-8000-000000000099",
@@ -108,6 +110,74 @@ class AuthenticationTests(unittest.TestCase):
         self.assertEqual(second.status_code, 401)
         self.assertEqual(limited.status_code, 429)
         self.assertEqual(limited.headers["Retry-After"], "60")
+
+    def test_token_issue_rate_limit_isolated_by_installation(self) -> None:
+        self.server.TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE = 1
+        self.server.TOKEN_ISSUE_GLOBAL_LIMIT_PER_MINUTE = 100
+        self.server._token_issue_events.clear()
+
+        first = self.client.post(
+            "/v1/auth/token",
+            headers={"Authorization": f"Bearer {self.enrollment_key}"},
+            json={"installation_id": "00000000-0000-4000-8000-000000000101", "app_version": "1.0"},
+        )
+        second = self.client.post(
+            "/v1/auth/token",
+            headers={"Authorization": f"Bearer {self.enrollment_key}"},
+            json={"installation_id": "00000000-0000-4000-8000-000000000102", "app_version": "1.0"},
+        )
+
+        self.assertEqual(first.status_code, 200, first.text)
+        self.assertEqual(second.status_code, 200, second.text)
+
+    def test_request_id_is_preserved_or_safely_generated(self) -> None:
+        supplied = self.client.get(
+            "/internal/health",
+            headers={"X-Request-ID": "bodymode-test-123"},
+        )
+        generated = self.client.get(
+            "/internal/health",
+            headers={"X-Request-ID": "invalid request id with spaces"},
+        )
+
+        self.assertEqual(supplied.headers["X-Request-ID"], "bodymode-test-123")
+        self.assertNotEqual(generated.headers["X-Request-ID"], "invalid request id with spaces")
+        uuid.UUID(generated.headers["X-Request-ID"])
+
+    def test_ollama_failure_returns_retryable_service_unavailable(self) -> None:
+        token = self.issue_token()
+
+        async def failing_post(*args, **kwargs):
+            raise RuntimeError("model unavailable")
+
+        original_client = self.server.httpx.AsyncClient
+
+        class FailingAsyncClient:
+            async def __aenter__(self):
+                return self
+
+            async def __aexit__(self, exc_type, exc, traceback):
+                return False
+
+            post = failing_post
+
+        self.server.httpx.AsyncClient = lambda *args, **kwargs: FailingAsyncClient()
+        try:
+            response = self.client.post(
+                "/v1/agents/chat",
+                headers={"Authorization": f"Bearer {token}"},
+                json={
+                    "coach_id": "hypertrophy",
+                    "message": "次回の重量を相談したい",
+                    "context": {},
+                    "recent_messages": [],
+                },
+            )
+        finally:
+            self.server.httpx.AsyncClient = original_client
+
+        self.assertEqual(response.status_code, 503, response.text)
+        self.assertIn("再試行", response.json()["detail"])
 
     def test_token_issue_audit_log_never_contains_credentials_or_installation_id(self) -> None:
         installation_id = "00000000-0000-4000-8000-sensitive-device"
@@ -333,6 +403,73 @@ class AuthenticationTests(unittest.TestCase):
         self.assertEqual(legacy_response.status_code, 200, legacy_response.text)
         self.assertIn("前回の実測値: なし", captured_prompts[-1])
         self.assertIn("実測差分（当日 - 前回）: なし", captured_prompts[-1])
+
+    def test_body_photo_reference_estimate_is_bounded_and_always_low_confidence(self) -> None:
+        normalized = self.server.normalize_body_photo_estimates(
+            [
+                {
+                    "metric": "body_fat_percent",
+                    "lower_bound": 18,
+                    "upper_bound": 19,
+                    "unit": "kg",
+                    "confidence": "high",
+                    "rationale": "写真からの参考",
+                },
+                {
+                    "metric": "waist_cm",
+                    "lower_bound": 70,
+                    "upper_bound": 80,
+                },
+            ]
+        )
+
+        self.assertEqual(len(normalized), 1)
+        self.assertEqual(normalized[0]["metric"], "body_fat_percent")
+        self.assertEqual(normalized[0]["lower_bound"], 18)
+        self.assertEqual(normalized[0]["upper_bound"], 22)
+        self.assertEqual(normalized[0]["unit"], "%")
+        self.assertEqual(normalized[0]["confidence"], "low")
+
+    def test_daily_recommendation_reply_falls_back_to_keep_existing_json(self) -> None:
+        reply = self.server.normalize_daily_recommendation_reply(
+            "提案はそのままでよいと思います。",
+            "[BODYMODE_DAILY_JSON]\n現在の調子: tired",
+        )
+
+        body = json.loads(reply)
+        self.assertTrue(body["keep_existing"])
+        self.assertEqual(body["readiness_level"], "tired")
+        self.assertEqual(body["actions"], [])
+
+    def test_daily_recommendation_reply_removes_invalid_actions_and_ids(self) -> None:
+        reply = self.server.normalize_daily_recommendation_reply(
+            json.dumps(
+                {
+                    "keep_existing": False,
+                    "readiness_level": "TIRED",
+                    "summary": "負荷を調整",
+                    "change_reason": "睡眠不足",
+                    "actions": [
+                        {
+                            "id": "not-a-uuid",
+                            "category": "recovery",
+                            "title": "回復を優先",
+                            "target": 1,
+                            "rationale": "睡眠が短い",
+                        },
+                        {"category": "unknown", "title": "不正"},
+                    ],
+                },
+                ensure_ascii=False,
+            ),
+            "[BODYMODE_DAILY_JSON]\n現在の調子: normal",
+        )
+
+        body = json.loads(reply)
+        self.assertFalse(body["keep_existing"])
+        self.assertEqual(body["readiness_level"], "tired")
+        self.assertEqual(len(body["actions"]), 1)
+        self.assertNotIn("id", body["actions"][0])
 
 
 if __name__ == "__main__":

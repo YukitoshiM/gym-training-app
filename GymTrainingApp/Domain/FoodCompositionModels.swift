@@ -338,6 +338,8 @@ struct BarcodeFoodProduct: Codable, Hashable, Identifiable {
     var name: String
     var basisAmountGrams: Double
     var nutritionPerBasis: NutritionAmount
+    var sourceDescription: String?
+    var sourceUpdatedAt: Date?
 
     var id: String { code }
 
@@ -345,12 +347,16 @@ struct BarcodeFoodProduct: Codable, Hashable, Identifiable {
         code: String,
         name: String,
         basisAmountGrams: Double,
-        nutritionPerBasis: NutritionAmount
+        nutritionPerBasis: NutritionAmount,
+        sourceDescription: String? = nil,
+        sourceUpdatedAt: Date? = nil
     ) {
         self.code = code
         self.name = name
         self.basisAmountGrams = max(0.1, basisAmountGrams)
         self.nutritionPerBasis = nutritionPerBasis
+        self.sourceDescription = sourceDescription
+        self.sourceUpdatedAt = sourceUpdatedAt
     }
 
     init(from decoder: Decoder) throws {
@@ -368,6 +374,8 @@ struct BarcodeFoodProduct: Codable, Hashable, Identifiable {
             NutritionAmount.self,
             forKey: .legacyNutritionPer100Grams
         ) ?? .zero
+        sourceDescription = try container.decodeIfPresent(String.self, forKey: .sourceDescription)
+        sourceUpdatedAt = try container.decodeIfPresent(Date.self, forKey: .sourceUpdatedAt)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -376,6 +384,8 @@ struct BarcodeFoodProduct: Codable, Hashable, Identifiable {
         try container.encode(name, forKey: .name)
         try container.encode(basisAmountGrams, forKey: .basisAmountGrams)
         try container.encode(nutritionPerBasis, forKey: .nutritionPerBasis)
+        try container.encodeIfPresent(sourceDescription, forKey: .sourceDescription)
+        try container.encodeIfPresent(sourceUpdatedAt, forKey: .sourceUpdatedAt)
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -384,6 +394,8 @@ struct BarcodeFoodProduct: Codable, Hashable, Identifiable {
         case basisAmountGrams
         case nutritionPerBasis
         case legacyNutritionPer100Grams = "nutritionPer100Grams"
+        case sourceDescription
+        case sourceUpdatedAt
     }
 
     var nutritionPer100Grams: NutritionAmount {
@@ -420,7 +432,9 @@ struct BarcodeFoodProductStore: Sendable {
             code: Self.normalizedCode(product.code),
             name: product.name.trimmingCharacters(in: .whitespacesAndNewlines),
             basisAmountGrams: max(0.1, product.basisAmountGrams),
-            nutritionPerBasis: product.nutritionPerBasis
+            nutritionPerBasis: product.nutritionPerBasis,
+            sourceDescription: product.sourceDescription,
+            sourceUpdatedAt: product.sourceUpdatedAt
         )
         values.removeAll { $0.code == normalized.code }
         values.append(normalized)

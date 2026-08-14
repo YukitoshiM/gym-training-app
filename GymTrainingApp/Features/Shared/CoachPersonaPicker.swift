@@ -59,6 +59,11 @@ struct CoachRecommendationPicker: View {
             Label("目的に合う担当", systemImage: "sparkles")
                 .font(.subheadline.bold())
 
+            Text("担当タイプを変えると、AIが優先して見る記録と提案内容が変わります。")
+                .font(.footnote)
+                .foregroundStyle(AppTheme.mutedInk)
+                .fixedSize(horizontal: false, vertical: true)
+
             ForEach(recommendations) { recommendation in
                 Button {
                     profile.coachType = recommendation.coachType
@@ -76,6 +81,10 @@ struct CoachRecommendationPicker: View {
                                 .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
                                 .fixedSize(horizontal: false, vertical: true)
+                            Text("選ぶと：\(recommendation.coachType.expertiseProfile.promise)")
+                                .font(.caption.bold())
+                                .foregroundStyle(AppTheme.accent)
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         Spacer(minLength: 0)
                     }
@@ -86,7 +95,7 @@ struct CoachRecommendationPicker: View {
                 .accessibilityAddTraits(profile.coachType == recommendation.coachType ? .isSelected : [])
             }
 
-            Text("人物と話し方は別に選べます。おすすめ以外の担当にも自由に変更できます。")
+            Text("担当タイプ＝提案の重点、人物＝名前とアバター、話し方＝言葉づかい。3つは別々に選べます。")
                 .font(.caption)
                 .foregroundStyle(AppTheme.mutedInk)
         }

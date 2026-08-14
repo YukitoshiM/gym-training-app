@@ -477,6 +477,7 @@ private struct BodyPhotoEditorView: View {
     @State private var imageDataByAngle: [BodyPhotoAngle: Data]
     @State private var entryIDByAngle: [BodyPhotoAngle: UUID]
     @State private var recordedAtByAngle: [BodyPhotoAngle: Date]
+    @State private var removedAngles: Set<BodyPhotoAngle> = []
     @State private var memo: String
     @State private var aiComment: BodyPhotoAIComment?
     @State private var isAnalyzing = false
@@ -512,11 +513,13 @@ private struct BodyPhotoEditorView: View {
                                 imageData: imageDataByAngle[angle],
                                 onSelect: { data in
                                     imageDataByAngle[angle] = data
+                                    removedAngles.remove(angle)
                                     aiComment = nil
                                     aiError = nil
                                 },
                                 onRemove: {
                                     imageDataByAngle.removeValue(forKey: angle)
+                                    removedAngles.insert(angle)
                                     aiComment = nil
                                     aiError = nil
                                 }
@@ -677,7 +680,11 @@ private struct BodyPhotoEditorView: View {
             ]
         }
 
-        appStore.saveBodyPhotoSet(entries, replacing: targetDate)
+        appStore.saveBodyPhotoSet(
+            entries,
+            replacing: targetDate,
+            removingAngles: removedAngles
+        )
         onSave()
         dismiss()
     }
@@ -812,28 +819,32 @@ private struct BodyPhotoSlotEditor: View {
 }
 
 private struct BodyPhotoCaptureGuide: View {
+    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
-        HStack(spacing: 8) {
-            guideItem("全身", systemImage: "figure.stand")
-            guideItem("同じ距離", systemImage: "arrow.left.and.right")
-            guideItem("同じ光", systemImage: "sun.max")
+        VStack(alignment: .leading, spacing: 10) {
+            Image("BodyPhotoCaptureGuide")
+                .resizable()
+                .scaledToFit()
+                .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+                .accessibilityHidden(true)
+
+            LazyVGrid(columns: columns, alignment: .leading, spacing: 6) {
+                ForEach(BodyPhotoAngle.allCases) { angle in
+                    Label(angle.guideLabel, systemImage: angle.guideSystemImage)
+                        .font(.caption.bold())
+                        .foregroundStyle(AppTheme.ink)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+
+            Label("同じ服・距離・光で、力を抜いて撮影", systemImage: "camera.metering.center.weighted")
+                .font(.caption)
+                .foregroundStyle(AppTheme.mutedInk)
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("撮影ガイド。全身、同じ距離、同じ光で撮影")
-    }
-
-    private func guideItem(_ title: String, systemImage: String) -> some View {
-        VStack(spacing: 4) {
-            Image(systemName: systemImage)
-                .font(.headline)
-                .foregroundStyle(AppTheme.accent)
-            Text(title)
-                .font(.caption2.bold())
-                .lineLimit(1)
-        }
-        .frame(maxWidth: .infinity, minHeight: 54)
-        .background(AppTheme.cardBackground)
-        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+        .accessibilityLabel("撮影見本。左上は正面全身、右上は真横全身、左下は背面全身、右下は肩から腰までの腹部アップ。同じ服、距離、光で撮影")
+        .accessibilityIdentifier("bodyPhotoCaptureGuide")
     }
 }
 
@@ -844,6 +855,24 @@ private extension BodyPhotoAngle {
         case .side: "figure.stand.line.dotted.figure.stand"
         case .back: "figure.walk"
         case .abdomen: "viewfinder"
+        }
+    }
+
+    var guideSystemImage: String {
+        switch self {
+        case .front: "arrow.up"
+        case .side: "arrow.right"
+        case .back: "arrow.down"
+        case .abdomen: "viewfinder"
+        }
+    }
+
+    var guideLabel: String {
+        switch self {
+        case .front: "左上  正面・全身"
+        case .side: "右上  真横・全身"
+        case .back: "左下  背面・全身"
+        case .abdomen: "右下  肩〜腰"
         }
     }
 }
@@ -867,33 +896,74 @@ private struct BodyPhotoAICommentCard: View {
 
 private struct BodyPhotoAICommentContent: View {
     let comment: BodyPhotoAIComment
+    @State private var isShowingDetails = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 10) {
             Text(comment.summary)
                 .font(.body.weight(.semibold))
-            if let goalRelevance = comment.goalRelevance, !goalRelevance.isEmpty {
-                BodyPhotoObservation(label: "目標への意味", value: goalRelevance)
+                .accessibilityIdentifier("bodyPhotoAnalysisSummary")
+
+            if let firstAction = comment.nextActions?.first, !firstAction.isEmpty {
+                Label(firstAction, systemImage: "arrow.forward.circle.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppTheme.accent)
+                    .accessibilityIdentifier("bodyPhotoAnalysisFirstAction")
             }
-            if let positiveFindings = comment.positiveFindings, !positiveFindings.isEmpty {
-                BodyPhotoBulletList(label: "良い点", items: positiveFindings)
+
+            if let estimates = comment.referenceEstimates, !estimates.isEmpty {
+                VStack(alignment: .leading, spacing: 6) {
+                    Label("写真からの参考範囲", systemImage: "ruler.fill")
+                        .font(.caption.bold())
+                        .foregroundStyle(AppTheme.warning)
+                    ForEach(estimates) { estimate in
+                        Text(
+                            "\(estimate.displayName) "
+                            + "\(estimate.lowerBound.formatted(.number.precision(.fractionLength(0...1))))"
+                            + "〜\(estimate.upperBound.formatted(.number.precision(.fractionLength(0...1))))"
+                            + "\(estimate.unit)"
+                        )
+                        .font(.subheadline.bold())
+                    }
+                    Text("低信頼度の参考値です。実測記録やグラフには保存しません。")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+                .padding(10)
+                .background(AppTheme.warning.opacity(0.1))
+                .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius))
+                .accessibilityIdentifier("bodyPhotoReferenceEstimates")
             }
-            if let observedChanges = comment.observedChanges, !observedChanges.isEmpty {
-                BodyPhotoBulletList(label: "確認できた変化", items: observedChanges)
+
+            DisclosureGroup("詳しい分析", isExpanded: $isShowingDetails) {
+                VStack(alignment: .leading, spacing: 12) {
+                    if let goalRelevance = comment.goalRelevance, !goalRelevance.isEmpty {
+                        BodyPhotoObservation(label: "目標への意味", value: goalRelevance)
+                    }
+                    if let positiveFindings = comment.positiveFindings, !positiveFindings.isEmpty {
+                        BodyPhotoBulletList(label: "良い点", items: positiveFindings)
+                    }
+                    if let observedChanges = comment.observedChanges, !observedChanges.isEmpty {
+                        BodyPhotoBulletList(label: "確認できた変化", items: observedChanges)
+                    }
+                    if let nextActions = comment.nextActions, !nextActions.isEmpty {
+                        BodyPhotoBulletList(label: "次の一手", items: Array(nextActions.prefix(3)))
+                    }
+                    BodyPhotoObservation(label: "腹部", value: comment.abdomen)
+                    BodyPhotoObservation(label: "ウエスト", value: comment.waist)
+                    BodyPhotoObservation(label: "姿勢", value: comment.posture)
+                    HStack {
+                        Text("信頼度")
+                        Spacer()
+                        Text(comment.confidence)
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                    .font(.footnote)
+                }
+                .padding(.top, 8)
             }
-            if let nextActions = comment.nextActions, !nextActions.isEmpty {
-                BodyPhotoBulletList(label: "次の一手", items: Array(nextActions.prefix(3)))
-            }
-            BodyPhotoObservation(label: "腹部", value: comment.abdomen)
-            BodyPhotoObservation(label: "ウエスト", value: comment.waist)
-            BodyPhotoObservation(label: "姿勢", value: comment.posture)
-            HStack {
-                Text("信頼度")
-                Spacer()
-                Text(comment.confidence)
-                    .foregroundStyle(AppTheme.mutedInk)
-            }
-            .font(.footnote)
+            .font(.subheadline.bold())
+            .accessibilityIdentifier("bodyPhotoAnalysisDetails")
         }
     }
 }

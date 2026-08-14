@@ -97,3 +97,31 @@ allowlist対象も結果へ明示し、暗黙のスキップにはしない。�
 - Google広告ネットワークを有効にした実通信
 
 これらはSimulator回帰と分け、TestFlight実機受入で確認する。
+
+## 2026-08-14 フィードバック修正回帰
+
+既存の別タスク用iPhone Simulatorを停止しないため、`BODYMODE_REGRESSION_IPHONE_WORKERS=1`を追加した。専用iPhone 1台で2レーンを直列実行し、同時にbootするiPhoneを合計2台以内に保つ。WatchはiPhone終了後に起動する。
+
+```bash
+BODYMODE_REGRESSION_IPHONE_WORKERS=1 ./scripts/run_parallel_simulator_regression.sh
+```
+
+1回目のL3は193件成功、3件失敗、許可スキップ2件だった。検出した内容は次のとおり。
+
+- 体型写真コンタクトシート化へ追随していない単体テスト期待値
+- 食事・写真UIテストプロセスの一時的なsignal kill。対象テストの再実行は成功
+- 利用分析トグルで、`UserDefaults`書込みとSwiftUI監視が待ち合うメインスレッド停止
+
+利用分析の同期書込みを修正し、単体2件とUI 1件の対象テストが成功した。
+
+2回目のL3は196件成功、1件失敗、許可スキップ2件だった。残った1件は、旧値を自動消去する数値欄へUIテストが3回タップし、キーボード表示後の2・3回目が数字キーを押すテスト不具合だった。1回タップへ変更後、未登録バーコード商品の対象UIテストは成功した。
+
+2回の`summary.txt`自体はいずれも`Gate: FAIL`のため、新しいL3成功基準点にはしない。コード変更の直接テストはすべて成功しているが、次の外部配布前に完全L3を1回成功させる。
+
+| 証跡 | 結果 |
+|---|---|
+| `.build/parallel-regression/20260814-142237/summary.txt` | 1回目L3、3件検出 |
+| `.build/parallel-regression/20260814-l3-final/summary.txt` | 2回目L3、製品196件成功、テスト入力1件失敗 |
+| `.build/regression/l3-failure-fixes-20260814.xcresult` | コンタクトシート・食事写真フロー成功、利用分析修正前失敗 |
+| `.build/regression/usage-analytics-fix-20260814.xcresult` | 利用分析の単体2件・UI 1件成功 |
+| `.build/regression/barcode-input-fix-20260814.xcresult` | バーコード数値入力UI成功 |

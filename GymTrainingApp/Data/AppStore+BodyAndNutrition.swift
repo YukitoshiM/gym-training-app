@@ -120,12 +120,27 @@ extension AppStore {
         storage.saveBodyPhotoEntries(bodyPhotoEntries)
     }
 
-    func saveBodyPhotoSet(_ entries: [BodyPhotoEntry], replacing date: Date) {
+    func saveBodyPhotoSet(
+        _ entries: [BodyPhotoEntry],
+        replacing date: Date,
+        removingAngles: Set<BodyPhotoAngle> = []
+    ) {
+        let incomingPhotoAngles = Set(
+            entries.compactMap { entry in entry.imageData == nil ? nil : entry.angle }
+        )
+        let retainedEntries = bodyPhotoEntries.filter { entry in
+            guard Calendar.current.isDate(entry.recordedAt, inSameDayAs: date) else {
+                return false
+            }
+            guard entry.imageData != nil else { return false }
+            return !incomingPhotoAngles.contains(entry.angle) && !removingAngles.contains(entry.angle)
+        }
         bodyPhotoEntries.removeAll { Calendar.current.isDate($0.recordedAt, inSameDayAs: date) }
+        bodyPhotoEntries.append(contentsOf: retainedEntries)
         bodyPhotoEntries.append(contentsOf: entries)
         bodyPhotoEntries.sort { $0.recordedAt > $1.recordedAt }
         storage.saveBodyPhotoEntries(bodyPhotoEntries)
-        if !entries.isEmpty {
+        if !entries.isEmpty || !retainedEntries.isEmpty {
             UsageAnalytics.shared.record(.bodyPhotoSaved)
         }
     }

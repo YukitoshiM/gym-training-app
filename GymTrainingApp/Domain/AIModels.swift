@@ -1,7 +1,7 @@
 import Foundation
 import Security
 
-struct AISettings: Codable, Equatable {
+struct AISettings: Codable, Equatable, Sendable {
     var isEnabled: Bool
     var baseURLString: String
     var apiKey: String
@@ -272,7 +272,7 @@ enum SecureSettingsStore {
     }
 }
 
-struct AICachedAccessToken: Codable, Equatable {
+struct AICachedAccessToken: Codable, Equatable, Sendable {
     var value: String
     var baseURLString: String
     var expiresAt: Date
@@ -287,6 +287,7 @@ final class AIAuthenticationStore: @unchecked Sendable {
 
     private let lock = NSLock()
     private var memoryToken: AICachedAccessToken?
+    private var tokenRequests: [String: (id: UUID, task: Task<AICachedAccessToken, Error>)] = [:]
 
     private init() {}
 
@@ -318,6 +319,43 @@ final class AIAuthenticationStore: @unchecked Sendable {
         memoryToken = nil
         SecureSettingsStore.deleteAccessToken()
     }
+
+    func coordinatedToken(
+        for baseURLString: String,
+        fetch: @escaping @Sendable () async throws -> AICachedAccessToken
+    ) async throws -> AICachedAccessToken {
+        if let cached = usableToken(for: baseURLString) {
+            return cached
+        }
+
+        let request = tokenRequest(for: baseURLString, fetch: fetch)
+        defer { clearTokenRequest(for: baseURLString, id: request.id) }
+        let token = try await request.task.value
+        save(token)
+        return token
+    }
+
+    private func tokenRequest(
+        for baseURLString: String,
+        fetch: @escaping @Sendable () async throws -> AICachedAccessToken
+    ) -> (id: UUID, task: Task<AICachedAccessToken, Error>) {
+        lock.lock()
+        defer { lock.unlock() }
+        if let existing = tokenRequests[baseURLString] {
+            return existing
+        }
+
+        let request = (id: UUID(), task: Task { try await fetch() })
+        tokenRequests[baseURLString] = request
+        return request
+    }
+
+    private func clearTokenRequest(for baseURLString: String, id: UUID) {
+        lock.lock()
+        defer { lock.unlock() }
+        guard tokenRequests[baseURLString]?.id == id else { return }
+        tokenRequests.removeValue(forKey: baseURLString)
+    }
 }
 
 struct AIAccessTokenResponse: Decodable {
@@ -342,7 +380,7 @@ struct AIAccessTokenRequest: Encodable {
     }
 }
 
-struct AIDataSharingSettings: Codable, Equatable {
+struct AIDataSharingSettings: Codable, Equatable, Sendable {
     var bodyMetrics: Bool
     var meals: Bool
     var workouts: Bool
@@ -515,6 +553,7 @@ struct BodyPhotoAIComment: Codable, Hashable {
     var positiveFindings: [String]? = nil
     var observedChanges: [String]? = nil
     var nextActions: [String]? = nil
+    var referenceEstimates: [BodyPhotoReferenceEstimate]? = nil
 
     enum CodingKeys: String, CodingKey {
         case summary
@@ -527,6 +566,7 @@ struct BodyPhotoAIComment: Codable, Hashable {
         case positiveFindings = "positive_findings"
         case observedChanges = "observed_changes"
         case nextActions = "next_actions"
+        case referenceEstimates = "reference_estimates"
     }
 
     init(
@@ -539,7 +579,8 @@ struct BodyPhotoAIComment: Codable, Hashable {
         goalRelevance: String? = nil,
         positiveFindings: [String]? = nil,
         observedChanges: [String]? = nil,
-        nextActions: [String]? = nil
+        nextActions: [String]? = nil,
+        referenceEstimates: [BodyPhotoReferenceEstimate]? = nil
     ) {
         self.summary = summary
         self.abdomen = abdomen
@@ -551,6 +592,7 @@ struct BodyPhotoAIComment: Codable, Hashable {
         self.positiveFindings = positiveFindings
         self.observedChanges = observedChanges
         self.nextActions = nextActions
+        self.referenceEstimates = referenceEstimates
     }
 
     init(from decoder: Decoder) throws {
@@ -565,6 +607,37 @@ struct BodyPhotoAIComment: Codable, Hashable {
         positiveFindings = try container.decodeIfPresent([String].self, forKey: .positiveFindings)
         observedChanges = try container.decodeIfPresent([String].self, forKey: .observedChanges)
         nextActions = try container.decodeIfPresent([String].self, forKey: .nextActions)
+        referenceEstimates = try container.decodeIfPresent(
+            [BodyPhotoReferenceEstimate].self,
+            forKey: .referenceEstimates
+        )
+    }
+}
+
+struct BodyPhotoReferenceEstimate: Codable, Hashable, Identifiable {
+    var metric: String
+    var lowerBound: Double
+    var upperBound: Double
+    var unit: String
+    var confidence: String
+    var rationale: String
+
+    var id: String { metric }
+
+    enum CodingKeys: String, CodingKey {
+        case metric
+        case lowerBound = "lower_bound"
+        case upperBound = "upper_bound"
+        case unit
+        case confidence
+        case rationale
+    }
+
+    var displayName: String {
+        switch metric {
+        case "body_fat_percent": "体脂肪率"
+        default: metric
+        }
     }
 }
 

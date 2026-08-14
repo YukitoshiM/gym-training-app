@@ -2,6 +2,19 @@ import XCTest
 @testable import GymTrainingApp
 
 final class UsageAnalyticsTests: XCTestCase {
+    func testCollectionPreferenceCanBeChangedWithoutEventQueueSynchronization() throws {
+        let suiteName = "UsageAnalyticsTests.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let analytics = UsageAnalytics(defaults: defaults)
+
+        analytics.setCollectionEnabled(true)
+        XCTAssertTrue(analytics.isCollectionEnabled)
+
+        analytics.setCollectionEnabled(false)
+        XCTAssertFalse(analytics.isCollectionEnabled)
+    }
+
     func testCoachResponseRatingPersistsAndExportsCoarseEvent() throws {
         let suiteName = "UsageAnalyticsTests.\(UUID().uuidString)"
         let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))

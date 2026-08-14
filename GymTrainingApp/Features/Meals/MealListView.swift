@@ -538,6 +538,26 @@ private struct MealEditorView: View {
                             }
                         }
 
+                        if !compositionItems.isEmpty {
+                            let total = compositionNutritionTotal
+                            VStack(alignment: .leading, spacing: 8) {
+                                Label("食品から自動集計", systemImage: "sum")
+                                    .font(.subheadline.bold())
+                                    .foregroundStyle(AppTheme.positive)
+                                    .accessibilityIdentifier("compositionNutritionSummary")
+                                Text(
+                                    "\(AppFormatters.calories(total.calories))  "
+                                    + "P \(AppFormatters.grams(total.protein))  "
+                                    + "F \(AppFormatters.grams(total.fat))  "
+                                    + "C \(AppFormatters.grams(total.carbs))"
+                                )
+                                .font(.headline)
+                                Text("食品DBとバーコードの追加・実食量変更をすぐ合計へ反映します。自由入力した食品はAI推定後に合算します。")
+                                    .font(.caption)
+                                    .foregroundStyle(AppTheme.mutedInk)
+                            }
+                        }
+
                         Button {
                             analyzeMealText()
                         } label: {
@@ -635,7 +655,7 @@ private struct MealEditorView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(item.name)
                                     .font(.headline)
-                                Text("\(item.amount) / \(AppFormatters.calories(item.calories)) / P \(AppFormatters.grams(item.protein))")
+                                Text("\(item.amount) / \(AppFormatters.calories(item.calories)) / P \(AppFormatters.preciseGrams(item.protein))")
                                     .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                                 if item.nutritionSource == .mext {
@@ -722,20 +742,18 @@ private struct MealEditorView: View {
             }
             .sheet(isPresented: $isShowingFoodDatabase) {
                 FoodCompositionPickerView { item in
-                    compositionItems.append(item)
+                    addCompositionItem(item)
                     if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                         name = item.name
                     }
-                    applyCompositionNutrition()
                 }
             }
             .sheet(isPresented: $isShowingBarcode) {
                 BarcodeFoodPickerView { item in
-                    compositionItems.append(item)
+                    addCompositionItem(item)
                     if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                         name = item.name
                     }
-                    applyCompositionNutrition()
                 }
             }
             .fullScreenCover(isPresented: $isShowingCamera) {
@@ -857,9 +875,24 @@ private struct MealEditorView: View {
         validFoodItems + compositionItems.map(\.displayText)
     }
 
+    private var compositionNutritionTotal: NutritionAmount {
+        compositionItems.reduce(.zero) { $0 + $1.nutrition }
+    }
+
+    private func addCompositionItem(_ item: MealCompositionItem) {
+        if let index = compositionItems.firstIndex(where: {
+            $0.sourceKind == item.sourceKind && $0.sourceID == item.sourceID
+        }) {
+            compositionItems[index].amountGrams += item.amountGrams
+        } else {
+            compositionItems.append(item)
+        }
+        applyCompositionNutrition()
+    }
+
     private func applyCompositionNutrition() {
         guard !compositionItems.isEmpty else { return }
-        let total = compositionItems.reduce(NutritionAmount.zero) { $0 + $1.nutrition }
+        let total = compositionNutritionTotal
         calculatesCaloriesFromPFC = false
         calories = total.calories.formatted(.number.precision(.fractionLength(0)))
         protein = total.protein.formatted(.number.precision(.fractionLength(0...1)))

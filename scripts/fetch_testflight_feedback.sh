@@ -5,6 +5,8 @@ set -euo pipefail
 APP_ID="${BODYMODE_APP_ID:-6799871527}"
 CONFIG_PATH="${BODYMODE_ASC_CONFIG_PATH:-${HOME}/Library/Application Support/BodyMode/AppStoreConnect/config.plist}"
 OUTPUT_DIR="${1:-.build/TestFlightFeedback}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LEDGER_PATH="${BODYMODE_FEEDBACK_LEDGER_PATH:-${SCRIPT_DIR}/../docs/testflight_feedback_ledger.md}"
 
 if [[ ! -r "${CONFIG_PATH}" ]]; then
   echo "error: App Store Connect API config not found: ${CONFIG_PATH}" >&2
@@ -109,11 +111,33 @@ jq -r '
   "- 画像: `screenshots/\($feedback.id).jpg`\n"
 ' "${OUTPUT_DIR}/feedback.json" > "${OUTPUT_DIR}/feedback.md"
 
+: > "${OUTPUT_DIR}/untriaged.md"
+while IFS= read -r feedback_id; do
+  if [[ -r "${LEDGER_PATH}" ]] && grep -Fq "\`${feedback_id}\`" "${LEDGER_PATH}"; then
+    continue
+  fi
+
+  jq -r --arg feedback_id "${feedback_id}" '
+    (.included // []) as $included |
+    .data[] |
+    select(.id == $feedback_id) |
+    . as $feedback |
+    ($included[]? | select(.type == "builds" and .id == $feedback.relationships.build.data.id)) as $build |
+    "## \($feedback.attributes.createdDate) / Build \($build.attributes.version // "不明")\n\n" +
+    "- ID: `\($feedback.id)`\n" +
+    "- 端末: \($feedback.attributes.deviceModel // "不明") / iOS \($feedback.attributes.osVersion // "不明")\n" +
+    "- コメント: \($feedback.attributes.comment // "コメントなし")\n" +
+    "- 画像: `screenshots/\($feedback.id).jpg`\n"
+  ' "${OUTPUT_DIR}/feedback.json" >> "${OUTPUT_DIR}/untriaged.md"
+done < <(jq -r '.data[].id' "${OUTPUT_DIR}/feedback.json")
+
 feedback_count="$(jq '.data | length' "${OUTPUT_DIR}/feedback.json")"
 crash_count="$(jq '.data | length' "${OUTPUT_DIR}/crashes.json")"
+untriaged_count="$(grep -c '^## ' "${OUTPUT_DIR}/untriaged.md" || true)"
 latest_build="$(jq -r '.data[0].attributes.version // "なし"' "${OUTPUT_DIR}/builds.json")"
 latest_build_state="$(jq -r '.data[0].attributes.processingState // "不明"' "${OUTPUT_DIR}/builds.json")"
 echo "TestFlight feedback: ${feedback_count}"
+echo "Untriaged feedback: ${untriaged_count}"
 echo "TestFlight crashes: ${crash_count}"
 echo "Latest build: ${latest_build} (${latest_build_state})"
 echo "Saved to: ${OUTPUT_DIR}"

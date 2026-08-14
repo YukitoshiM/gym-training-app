@@ -102,4 +102,58 @@ final class BodyPhotoSetTests: XCTestCase {
         XCTAssertNil(json["previous_metrics"])
         XCTAssertNil(json["metric_deltas"])
     }
+
+    @MainActor
+    func testSavingPartialPhotoSetPreservesUntouchedAngles() throws {
+        let day = try XCTUnwrap(calendar.date(from: DateComponents(year: 2026, month: 8, day: 14, hour: 8)))
+        let front = BodyPhotoEntry(recordedAt: day, angle: .front, imageData: Data([1]))
+        let side = BodyPhotoEntry(recordedAt: day, angle: .side, imageData: Data([2]))
+        let storage = TestAppDataRepository()
+        storage.bodyPhotoEntries = [front, side]
+        let store = AppStore(storage: storage)
+        let updatedFront = BodyPhotoEntry(
+            id: front.id,
+            recordedAt: front.recordedAt,
+            angle: .front,
+            imageData: Data([9])
+        )
+
+        store.saveBodyPhotoSet([updatedFront], replacing: day)
+
+        let savedSet = try XCTUnwrap(store.bodyPhotoSets.first)
+        XCTAssertEqual(savedSet.angleEntries.map(\.angle), [.front, .side])
+        XCTAssertEqual(savedSet.angleEntries.first(where: { $0.angle == .front })?.imageData, Data([9]))
+        XCTAssertEqual(savedSet.angleEntries.first(where: { $0.angle == .side })?.imageData, Data([2]))
+    }
+
+    @MainActor
+    func testSavingPhotoSetRemovesOnlyExplicitlyRemovedAngle() throws {
+        let day = try XCTUnwrap(calendar.date(from: DateComponents(year: 2026, month: 8, day: 14, hour: 8)))
+        let storage = TestAppDataRepository()
+        storage.bodyPhotoEntries = [
+            BodyPhotoEntry(recordedAt: day, angle: .front, imageData: Data([1])),
+            BodyPhotoEntry(recordedAt: day, angle: .side, imageData: Data([2])),
+            BodyPhotoEntry(recordedAt: day, angle: .back, imageData: Data([3]))
+        ]
+        let store = AppStore(storage: storage)
+
+        store.saveBodyPhotoSet([], replacing: day, removingAngles: [.side])
+
+        let savedSet = try XCTUnwrap(store.bodyPhotoSets.first)
+        XCTAssertEqual(savedSet.angleEntries.map(\.angle), [.front, .back])
+    }
+
+    func testBodyPhotoReferenceEstimateDecodesSeparatelyFromMeasuredMetrics() throws {
+        let data = Data(
+            #"{"summary":"要約","abdomen":"腹部","waist":"腰","posture":"姿勢","score":null,"confidence":"low","reference_estimates":[{"metric":"body_fat_percent","lower_bound":15,"upper_bound":20,"unit":"%","confidence":"low","rationale":"写真だけの参考"}]}"#.utf8
+        )
+
+        let comment = try JSONDecoder().decode(BodyPhotoAIComment.self, from: data)
+        let estimate = try XCTUnwrap(comment.referenceEstimates?.first)
+
+        XCTAssertEqual(estimate.metric, "body_fat_percent")
+        XCTAssertEqual(estimate.lowerBound, 15)
+        XCTAssertEqual(estimate.upperBound, 20)
+        XCTAssertEqual(estimate.confidence, "low")
+    }
 }

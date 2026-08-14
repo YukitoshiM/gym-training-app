@@ -12,6 +12,7 @@ IOS_RUNTIME="${BODYMODE_IOS_RUNTIME:-com.apple.CoreSimulator.SimRuntime.iOS-26-5
 WATCH_RUNTIME="${BODYMODE_WATCH_RUNTIME:-com.apple.CoreSimulator.SimRuntime.watchOS-26-5}"
 IOS_DEVICE_TYPE="com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro"
 WATCH_DEVICE_TYPE="com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-11-46mm"
+IPHONE_WORKERS="${BODYMODE_REGRESSION_IPHONE_WORKERS:-2}"
 CACHE_ROOT="${REPORT_ROOT}/cache"
 IOS_DERIVED_DATA="${CACHE_ROOT}/DerivedData-ios"
 WATCH_DERIVED_DATA="${CACHE_ROOT}/DerivedData-watch"
@@ -316,6 +317,11 @@ on_exit() {
 trap on_exit EXIT
 trap 'exit 130' INT TERM
 
+if [[ "${IPHONE_WORKERS}" != "1" && "${IPHONE_WORKERS}" != "2" ]]; then
+  printf 'BODYMODE_REGRESSION_IPHONE_WORKERS must be 1 or 2.\n' >&2
+  exit 2
+fi
+
 simulator_id() {
   local name="$1"
   local device_type="$2"
@@ -382,12 +388,23 @@ run_watch_group() {
 }
 
 IPHONE_A_ID=$(simulator_id "BodyMode QA Core" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
-IPHONE_B_ID=$(simulator_id "BodyMode QA Meals" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
+if [[ "${IPHONE_WORKERS}" == "1" ]]; then
+  IPHONE_B_ID="${IPHONE_A_ID}"
+else
+  IPHONE_B_ID=$(simulator_id "BodyMode QA Meals" "${IOS_DEVICE_TYPE}" "${IOS_RUNTIME}")
+fi
 WATCH_ID=$(simulator_id "BodyMode QA Watch 2" "${WATCH_DEVICE_TYPE}" "${WATCH_RUNTIME}")
-SIMULATORS_TO_SHUTDOWN=("${IPHONE_A_ID}" "${IPHONE_B_ID}" "${WATCH_ID}")
+SIMULATORS_TO_SHUTDOWN=("${IPHONE_A_ID}" "${WATCH_ID}")
+if [[ "${IPHONE_WORKERS}" == "2" ]]; then
+  SIMULATORS_TO_SHUTDOWN+=("${IPHONE_B_ID}")
+fi
 
 boot_pids=()
-for id in "${IPHONE_A_ID}" "${IPHONE_B_ID}"; do
+iphone_ids=("${IPHONE_A_ID}")
+if [[ "${IPHONE_WORKERS}" == "2" ]]; then
+  iphone_ids+=("${IPHONE_B_ID}")
+fi
+for id in "${iphone_ids[@]}"; do
   boot_simulator "${id}" &
   boot_pids+=("$!")
 done
@@ -463,16 +480,19 @@ run_iphone_b_lane() {
   return "${status}"
 }
 
-# Keep UI automation to two concurrent iPhone simulators. Watch runs afterward so
-# CoreSimulator never has to service three XCTest UI sessions at once.
-run_iphone_a_lane &
-lane_iphone_a_pid=$!
-run_iphone_b_lane &
-lane_iphone_b_pid=$!
-
 execution_status=0
-wait "${lane_iphone_a_pid}" || execution_status=1
-wait "${lane_iphone_b_pid}" || execution_status=1
+if [[ "${IPHONE_WORKERS}" == "1" ]]; then
+  run_iphone_a_lane || execution_status=1
+  run_iphone_b_lane || execution_status=1
+else
+  # Watch runs afterward so CoreSimulator handles at most two XCTest UI sessions.
+  run_iphone_a_lane &
+  lane_iphone_a_pid=$!
+  run_iphone_b_lane &
+  lane_iphone_b_pid=$!
+  wait "${lane_iphone_a_pid}" || execution_status=1
+  wait "${lane_iphone_b_pid}" || execution_status=1
+fi
 boot_simulator "${WATCH_ID}" || execution_status=1
 xcodebuild test-without-building -quiet \
   -xctestrun "${WATCH_XCTESTRUN}" \

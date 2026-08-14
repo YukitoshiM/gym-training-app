@@ -1,6 +1,6 @@
 import Foundation
 
-struct AIAPIClient {
+struct AIAPIClient: Sendable {
     private static let inferenceTimeout: TimeInterval = 240
 
     let settings: AISettings
@@ -148,24 +148,25 @@ struct AIAPIClient {
         }
         #endif
 
-        var requestPhotos: [BodyPhotoSetAnalysisPhotoRequest] = []
-        for photo in photos.prefix(BodyPhotoAngle.allCases.count) {
-            let uploadData = try await prepareImageForUpload(photo.imageData)
-            requestPhotos.append(
-                BodyPhotoSetAnalysisPhotoRequest(
-                    imageBase64: uploadData.base64EncodedString(),
-                    angle: photo.angle.rawValue
-                )
+        let currentSheet = try AIImageUploadProcessor.bodyPhotoContactSheet(
+            Array(photos.prefix(BodyPhotoAngle.allCases.count))
+        )
+        let requestPhotos = [
+            BodyPhotoSetAnalysisPhotoRequest(
+                imageBase64: currentSheet.base64EncodedString(),
+                angle: "capture_set_\(min(photos.count, BodyPhotoAngle.allCases.count))"
             )
-        }
+        ]
 
         var comparisonPhotos: [BodyPhotoSetAnalysisPhotoRequest] = []
-        for photo in previousPhotos.prefix(BodyPhotoAngle.allCases.count) {
-            let uploadData = try await prepareImageForUpload(photo.imageData)
+        if !previousPhotos.isEmpty {
+            let comparisonSheet = try AIImageUploadProcessor.bodyPhotoContactSheet(
+                Array(previousPhotos.prefix(BodyPhotoAngle.allCases.count))
+            )
             comparisonPhotos.append(
                 BodyPhotoSetAnalysisPhotoRequest(
-                    imageBase64: uploadData.base64EncodedString(),
-                    angle: photo.angle.rawValue
+                    imageBase64: comparisonSheet.base64EncodedString(),
+                    angle: "capture_set_\(min(previousPhotos.count, BodyPhotoAngle.allCases.count))"
                 )
             )
         }
@@ -395,6 +396,9 @@ struct AIAPIClient {
     private func applyHeaders(to request: inout URLRequest) async throws {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
+        if request.value(forHTTPHeaderField: "X-Request-ID") == nil {
+            request.setValue(UUID().uuidString, forHTTPHeaderField: "X-Request-ID")
+        }
         request.setValue("Bearer \(try await authorizationCredential())", forHTTPHeaderField: "Authorization")
     }
 
@@ -405,11 +409,19 @@ struct AIAPIClient {
             return cached.value
         }
 
+        let cached = try await AIAuthenticationStore.shared.coordinatedToken(for: normalizedBaseURL) {
+            try await requestAccessToken(normalizedBaseURL: normalizedBaseURL)
+        }
+        return cached.value
+    }
+
+    private func requestAccessToken(normalizedBaseURL: String) async throws -> AICachedAccessToken {
         var request = URLRequest(url: try makeURL("/v1/auth/token"))
         request.httpMethod = "POST"
         request.timeoutInterval = 20
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(UUID().uuidString, forHTTPHeaderField: "X-Request-ID")
         request.setValue("Bearer \(settings.apiKey)", forHTTPHeaderField: "Authorization")
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
         request.httpBody = try JSONEncoder.aiEncoder.encode(
@@ -424,8 +436,7 @@ struct AIAPIClient {
             baseURLString: normalizedBaseURL,
             expiresAt: Date().addingTimeInterval(max(0, response.expiresIn))
         )
-        AIAuthenticationStore.shared.save(cached)
-        return cached.value
+        return cached
     }
 
     private func makeURL(_ path: String) throws -> URL {
@@ -519,6 +530,7 @@ struct AIAPIClient {
         metadata["path"] = request.url?.path ?? "unknown"
         metadata["method"] = request.httpMethod ?? "unknown"
         metadata["timeout_seconds"] = String(Int(request.timeoutInterval))
+        metadata["request_id"] = request.value(forHTTPHeaderField: "X-Request-ID") ?? "unknown"
         AppDiagnostics.shared.record(
             category: category,
             message: "AI API request failed",

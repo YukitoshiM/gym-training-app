@@ -67,6 +67,10 @@ enum AppFormatters {
     }
 
     static func grams(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(0))) + "g"
+    }
+
+    static func preciseGrams(_ value: Double) -> String {
         value.formatted(.number.precision(.fractionLength(0...1))) + "g"
     }
 

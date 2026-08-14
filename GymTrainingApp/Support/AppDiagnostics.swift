@@ -358,13 +358,11 @@ final class UsageAnalytics: @unchecked Sendable {
     }
 
     var isCollectionEnabled: Bool {
-        queue.sync { defaults.bool(forKey: enabledKey) }
+        defaults.bool(forKey: enabledKey)
     }
 
     func setCollectionEnabled(_ isEnabled: Bool) {
-        queue.sync {
-            defaults.set(isEnabled, forKey: enabledKey)
-        }
+        defaults.set(isEnabled, forKey: enabledKey)
         if isEnabled {
             record(.analyticsEnabled)
         }
@@ -442,8 +440,8 @@ final class UsageAnalytics: @unchecked Sendable {
     }
 
     func reset() {
+        defaults.removeObject(forKey: enabledKey)
         queue.sync {
-            defaults.removeObject(forKey: enabledKey)
             defaults.removeObject(forKey: eventsKey)
             defaults.removeObject(forKey: coachResponseRatingsKey)
         }

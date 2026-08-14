@@ -113,4 +113,45 @@ final class FoodCompositionTests: XCTestCase {
         XCTAssertEqual(MealNutritionResolver.grams(from: "０．２ kg"), 200)
         XCTAssertNil(MealNutritionResolver.grams(from: "1杯"))
     }
+
+    func testNormalPFCFormattingUsesWholeGramsWhileDetailKeepsPrecision() {
+        XCTAssertEqual(AppFormatters.grams(12.6), "13g")
+        XCTAssertEqual(AppFormatters.preciseGrams(12.6), "12.6g")
+    }
+
+    func testNutritionLabelOCRParserExtractsJapanesePFC() throws {
+        let draft = try NutritionLabelReader.parse(
+            "栄養成分表示 100g当たり エネルギー 242kcal たんぱく質 12.6g 脂質 8.4g 炭水化物 29.1g"
+        )
+
+        XCTAssertEqual(draft.basisAmountGrams, 100)
+        XCTAssertEqual(draft.calories, 242)
+        XCTAssertEqual(draft.protein, 12.6)
+        XCTAssertEqual(draft.fat, 8.4)
+        XCTAssertEqual(draft.carbs, 29.1)
+    }
+
+    func testNutritionLabelOCRParserRejectsUnrelatedText() {
+        XCTAssertThrowsError(try NutritionLabelReader.parse("商品名 おいしい食品 内容量 100g"))
+    }
+
+    func testBarcodeProductPreservesNutritionLabelProvenance() throws {
+        let confirmedAt = Date(timeIntervalSince1970: 1_786_680_000)
+        let product = BarcodeFoodProduct(
+            code: "4900000000000",
+            name: "テスト食品",
+            basisAmountGrams: 100,
+            nutritionPerBasis: NutritionAmount(calories: 242, protein: 12.6, fat: 8.4, carbs: 29.1),
+            sourceDescription: "栄養成分表示OCR（ユーザー確認）",
+            sourceUpdatedAt: confirmedAt
+        )
+
+        let decoded = try JSONDecoder().decode(
+            BarcodeFoodProduct.self,
+            from: JSONEncoder().encode(product)
+        )
+
+        XCTAssertEqual(decoded.sourceDescription, product.sourceDescription)
+        XCTAssertEqual(decoded.sourceUpdatedAt, confirmedAt)
+    }
 }
