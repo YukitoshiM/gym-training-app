@@ -6,6 +6,8 @@ permalink: /terms/
 
 # BodyMode 利用規約
 
+[English]({{ '/en/terms/' | relative_url }})
+
 制定日: 2026年8月10日
 改定日: 2026年8月13日
 

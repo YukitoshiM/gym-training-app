@@ -6,6 +6,8 @@ permalink: /support/
 
 # BodyMode サポート
 
+[English]({{ '/en/support/' | relative_url }})
+
 BodyModeの不具合やTestFlight版への意見は、TestFlightアプリの「フィードバックを送信」から連絡できます。
 
 不具合を報告する場合は、次の情報があると調査しやすくなります。
