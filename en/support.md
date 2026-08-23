@@ -5,6 +5,8 @@ lang: en
 permalink: /en/support/
 ---
 
+<meta name="bodymode-legal-source-sha256" content="d6a71f65a625d7e744f24b2b1df180c5f08e04d0dd62975008e291eb29374ca1">
+
 # BodyMode Support
 
 [日本語]({{ '/support/' | relative_url }})

@@ -5,12 +5,14 @@ lang: en
 permalink: /en/terms/
 ---
 
+<meta name="bodymode-legal-source-sha256" content="5d1631652f341ca8c229c56d1f7bd904c9021900d9e77bb5e869ffdf191fc30e">
+
 # BodyMode Terms of Use
 
 [日本語]({{ '/terms/' | relative_url }})
 
 Effective date: August 10, 2026  
-Last updated: August 13, 2026
+Last updated: August 23, 2026
 
 These Terms of Use govern your use of BodyMode. Please review them before using the app.
 
@@ -48,28 +50,32 @@ The initial release stores most records on your device. Protect important record
 
 ## 9. External Services
 
-BodyMode works with external services including Apple Health, TestFlight, the configured AI server, and Google AdMob. Each provider's terms and privacy policy apply to its service.
+BodyMode works with external services including Apple Health, the App Store, Cloudflare, the OpenAI API, and Google AdMob. Each provider's terms and privacy policy apply to its service.
 
 ## 10. Advertising
 
-The iPhone app may display non-personalized ads. Ad content and destinations are supplied by third parties, and BodyMode does not guarantee the advertised products or services. You can report an inappropriate ad from within the app.
+The iPhone app displays non-personalized ads. Optional rewarded videos grant the stated AI credits only after completion. Declining or stopping a video does not prevent use of free features such as manual records. Ad content and destinations are supplied by third parties, and BodyMode does not guarantee the advertised products or services.
 
-## 11. Intellectual Property
+## 11. AI Credits and Purchases
+
+AI features consume the number of credits shown for each action. Credits purchased through the App Store are consumable digital goods. They do not expire, but cannot be transferred, redeemed for cash, or exchanged for another service. Apple controls purchase completion, pending status, and refunds. Unused credits from a refunded purchase are removed. Credits already used do not create a negative balance; the adjustment is applied to future purchased-credit grants. Deleting your account deletes all unused purchased and promotional credits, and they cannot be restored. Minimal transaction records needed to prevent duplicate bonuses and reconcile refunds are retained. Buying credits does not remove banner advertising.
+
+## 12. Intellectual Property
 
 Rights in BodyMode's software, design, text, trademarks, and other materials belong to their respective rights holders. You retain rights in text and photos that you record.
 
-## 12. Changes or Suspension
+## 13. Changes or Suspension
 
 All or part of the service may be changed or suspended for safety, maintenance, legal compliance, force majeure, or other unavoidable reasons.
 
-## 13. Disclaimer and Limitation of Liability
+## 14. Disclaimer and Limitation of Liability
 
 BodyMode does not guarantee any particular weight loss, muscle gain, health improvement, athletic result, or other outcome. To the extent permitted by applicable law, the service operator is not liable for indirect or special damages arising from use of, or inability to use, the service.
 
-## 14. Changes to These Terms
+## 15. Changes to These Terms
 
 These terms may be changed to reflect new features, legal changes, or other needs. Material changes will be announced in the app or on the public website.
 
-## 15. Governing Law and Jurisdiction
+## 16. Governing Law and Jurisdiction
 
 These terms are governed by the laws of Japan. To the extent permitted by applicable law, disputes relating to BodyMode are subject to the exclusive jurisdiction in the first instance of the Japanese court that has jurisdiction over the service operator's location.
