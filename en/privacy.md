@@ -5,7 +5,7 @@ lang: en
 permalink: /en/privacy/
 ---
 
-<meta name="bodymode-legal-source-sha256" content="c0ba6abd3edd60c8d8424d63a0912fee05c8e076e1323cee88f1e6a6e4f5f32c">
+<meta name="bodymode-legal-source-sha256" content="7dae2716bf3c28a7432ff067fa0eeded516e264e052b7cbde7b1c25d9903bf05">
 
 # BodyMode Privacy Policy
 
@@ -58,7 +58,7 @@ Usage analytics is off by default. If you enable it, BodyMode may send fixed eve
 
 ## 10. Advertising and Tracking
 
-The iPhone app uses Google AdMob for banner ads and rewarded video ads only when you choose to watch one. Ads are requested as non-personalized, and BodyMode does not request permission for cross-app tracking. Google may receive or generate your IP address, approximate location inferred from it, basic device and app information, SDK diagnostics, and ad impression or interaction data. Ad completion information and a unique reward transaction ID are used to prevent duplicate grants and add AI credits. BodyMode does not use or send HealthKit data, body values, heart rate, sleep, meals, photos, workouts, goals, GPS data, or gym locations for ad selection or marketing.
+The iPhone app uses Google AdMob for banner ads and rewarded video ads only when you choose to watch one. Ads are always requested as non-personalized. Before the advertising SDK starts, BodyMode requests permission through App Tracking Transparency. If permission is granted, the advertising identifier may be used only for ad frequency control and performance measurement. Declining does not restrict any app feature. Google may receive or generate your IP address, approximate location inferred from it, basic device and app information, SDK diagnostics, and ad impression or interaction data. Ad completion information and a unique reward transaction ID are used to prevent duplicate grants and add AI credits. BodyMode does not use or send HealthKit data, body values, heart rate, sleep, meals, photos, workouts, goals, GPS data, or gym locations for ad selection or marketing.
 
 ## 11. Sharing with Third Parties
 
