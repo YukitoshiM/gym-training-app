@@ -5,13 +5,13 @@ lang: en
 permalink: /en/privacy/
 ---
 
-<meta name="bodymode-legal-source-sha256" content="7dae2716bf3c28a7432ff067fa0eeded516e264e052b7cbde7b1c25d9903bf05">
+<meta name="bodymode-legal-source-sha256" content="de36be489d06ebbc22dd66f08ab2041ecb0936232d40575f775039965c35cb54">
 
 # BodyMode Privacy Policy
 
 [日本語]({{ '/privacy/' | relative_url }})
 
-Effective date: August 10, 2026  
+Effective date: August 10, 2026
 Last updated: August 23, 2026
 
 BodyMode is designed to help users remain in control of their health and training information. This policy explains where data is stored and how it is used.

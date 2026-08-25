@@ -5,13 +5,13 @@ lang: en
 permalink: /en/terms/
 ---
 
-<meta name="bodymode-legal-source-sha256" content="5d1631652f341ca8c229c56d1f7bd904c9021900d9e77bb5e869ffdf191fc30e">
+<meta name="bodymode-legal-source-sha256" content="1d6f5897a37d71a21a111a6841bd054929bac269f8529d2358b2d7b96b6683bb">
 
 # BodyMode Terms of Use
 
 [日本語]({{ '/terms/' | relative_url }})
 
-Effective date: August 10, 2026  
+Effective date: August 10, 2026
 Last updated: August 23, 2026
 
 These Terms of Use govern your use of BodyMode. Please review them before using the app.
