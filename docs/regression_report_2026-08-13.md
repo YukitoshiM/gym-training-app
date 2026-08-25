@@ -269,6 +269,18 @@ Build 23のL3成功後、アプリ動作コードを変更せず、公開version
 | Watch UI | 10 | 0 | 0 |
 | 合計 | 299 | 0 | 2 |
 
-iPhoneは期待291件・実行291件、Watchは期待10件・実行10件で、欠落・予定外テスト・想定外skipは0件だった。バックエンド57件とCloudflare production preflightも成功した。実行時Git SHAは`5de3b38a2800`、作業ツリーはBuild 33配布候補の未コミット変更を含む状態だった。
+iPhoneは期待291件・実行291件、Watchは期待10件・実行10件で、欠落・予定外テスト・想定外skipは0件だった。バックエンド57件とCloudflare production preflightも成功した。L3実行時は配布候補の未コミット変更を含んでいたが、同一内容をGit SHA `e72a5c131bbb`へ確定し、クリーンな作業ツリーから署名済み候補を作成した。
 
 証跡: `.build/parallel-regression/build33-coach-consistency/summary.txt`
+
+### Build 33 Cloudflare・TestFlight配布
+
+- Cloudflare production Version: `dfa927d0-b920-4297-bfc1-60f5bec42e1c`
+- production preflight: PASS。OpenAI `gpt-5.6-luna`の健康管理チャット実通信も成功
+- TestFlight preflight: PASS
+- Archive: `.build/BodyMode-AppStore-1.0-33.xcarchive`
+- IPA: `.build/AppStoreExport-1.0-33/GymTrainingApp.ipa`
+- Production release preflight: PASS
+- App Store Connect: Build 33 `VALID`、`Friends & Family`へ追加、`IN_BETA_TESTING`
+- `What to Test`: 日本語と英語でAIトレーナー一貫性、健康管理スコープ、体型写真の目的別助言、安全境界を登録
+- 公開リンク: `https://testflight.apple.com/join/1NVRKnKt`
