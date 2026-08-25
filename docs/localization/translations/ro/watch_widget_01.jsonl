@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"ro","translation":"Înregistrez {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"ro","translation":"Nu este suportat: {{value1}}. Poate fi introdus manual.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"ro","translation":"Numărul de vibrații pe secundă","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"ro","translation":"Salvat în Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"ro","translation":"Cum să folosiți Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"ro","translation":"Să o reluăm la următoarea sesiune","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"ro","translation":"Înregistrare fără permisiunea aplicației Health și introducere manuală","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"ro","translation":"Nu pot utiliza Health, deci înregistrez manual.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"ro","translation":"Nu pot începe utilizarea Health, deci înregistrez manual.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"ro","translation":"Health: Antrenament suspendat temporar","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"ro","translation":"Health: Proces de salvare","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"ro","translation":"Salvarea Health eșuată, dar înregistrarea Watch a fost salvată","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"ro","translation":"Înregistrarea Health nu a fost salvată, dar înregistrarea Watch a fost salvată","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"ro","translation":"Nu se poate recupera datele măsurate. Puteți continua să înregistrați manual.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"ro","translation":"Datele măsurate au fost recuperate. Continuă înregistrarea manual.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"ro","translation":"Health: Antrenament oprit, continuă înregistrarea manual","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"ro","translation":"Health: Sincronizare dezactivată, înregistrez manual","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"ro","translation":"Nu există valoare RPE (perceived rate of exertion)","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"ro","translation":"Înregistrările active de pe Watch vor fi șterse.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"ro","translation":"Am salvat înregistrarea de pe Watch.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"ro","translation":"Sincronizați meniul din iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"ro","translation":"Selectați și începeți meniul pentru astăzi, direct de pe iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"ro","translation":"Verificați meniul pentru astăzi pe iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"ro","translation":"Am conectat iPhone-ul.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"ro","translation":"Sincronizați conținutul de astăzi de pe iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"ro","translation":"Nu am putut crea datele de înregistrare pentru a le trimite către iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"ro","translation":"Nu am putut trimite datele. Păstrați înregistrarea și trimiteți-o din nou.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"ro","translation":"Nu am putut salva pe iPhone. Vă rog să le retrimiteți ulterior.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"ro","translation":"Suntem în proces de configurare a sincronizării cu iPhone. Vă rugăm să le retrimiteți ulterior.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"ro","translation":"{{value1}} × {{value2}} sesiuni × {{value3}} seturi","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"ro","translation":"Puteți retrimite {{value1}} pe iPhone.","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"ro","translation":"Am programat trimiterea lui {{value1}} către iPhone.","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"ro","translation":"Am trimis {{value1}} către iPhone.","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"ro","translation":"Trimit {{value1}} către iPhone.","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"ro","translation":"Am salvat {{value1}} în istoricul de pe iPhone.","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"ro","translation":"Reîncepeți {{value1}}.","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"ro","translation":"Puteți relua {{value1}}.","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"ro","translation":"Ați selectat {{value1}}.","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"ro","translation":"Am început {{value1}}.","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"ro","translation":"{{value1}}/{{value2}} sesiuni・{{value3}} înregistrări","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"ro","translation":"{{value1}} sesiuni・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"ro","translation":"{{value1}} sesiuni・Obiectiv: {{value2}} înregistrări","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"ro","translation":"{{value1}}・{{value2}} sesiuni・În total {{value3}} înregistrări","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"ro","translation":"{{value1}}・{{value2}} sesiuni","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"ro","translation":"Selectați dintr-un număr de {{value1}}.","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"ro","translation":"Am sincronizat meniul cu {{value1}}.","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"ro","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"ro","translation":"{{value1}} în secunda.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"watch_widget.d1749584e623","target_locale":"ro","translation":"{{value1}} repetări・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"ro","translation":"{{value1}} secunde","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"ro","translation":"{{value1}} exerciții・{{value2}} serii・în total {{value3}} repetări","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"ro","translation":"Nu este posibilă utilizarea sincronizării cu iPhone pe acest dispozitiv. Înregistrările sunt salvate pe dispozitiv.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"ro","translation":"Nu este posibilă utilizarea sincronizării pe acest dispozitiv.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"ro","translation":"Sarcina următoare","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"ro","translation":"Serie","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"ro","translation":"Serie {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"ro","translation":"Finalizează seria","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"ro","translation":"Începe seria","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"ro","translation":"Media seriei {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"ro","translation":"Seria nu a fost configurată","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"ro","translation":"Începe seria","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"ro","translation":"Anulează începerea seriei","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"ro","translation":"Măsurători prin senzor","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"ro","translation":"Nu pot pregăti elementul senzorului, deci înregistrez manual.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"ro","translation":"Sarcina următoare","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"ro","translation":"Ritm","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"ro","translation":"Ajustează ritmul","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"ro","translation":"Stabilește ritmul","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"ro","translation":"Pauză instrucțiunile despre ritm","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"ro","translation":"Reluare instrucțiunile despre ritm","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"ro","translation":"Flotări","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"ro","translation":"Meniu","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"ro","translation":"Selectează meniul","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"ro","translation":"Nu s-a putut încărca datele meniului","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"ro","translation":"Modifică meniul","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"ro","translation":"Așteptarea meniului","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"ro","translation":"Note","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"ro","translation":"Editează notele","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"ro","translation":"Mișcare","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"ro","translation":"Tracțiune cu bara","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"ro","translation":"Antrenament","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"ro","translation":"Vrei să finalizezi antrenamentul?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"ro","translation":"Antrenamentul a fost abandonat","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"ro","translation":"Pauză","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"ro","translation":"Pauză {{value1}} secunde / Continuare {{value2}} secunde","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"ro","translation":"În pauză","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"ro","translation":"Continuă","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"ro","translation":"{{value1}} secunde în sus・{{value2}} secunde în jos・{{value3}} repetări/secundă","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"ro","translation":"În sus","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"ro","translation":"În sus {{value1}} secunde・În jos {{value2}} secunde","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"ro","translation":"În sus{{value1}} secunde／În jos{{value2}} secunde","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"ro","translation":"Setează timpul de în sus și în jos pentru fiecare set. Apple Watch-ul oferă feedback tactil de 1 până la 3 ori pe secundă.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"ro","translation":"Timp în sus","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"ro","translation":"Introdu direct timpul în sus","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"ro","translation":"În jos","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"ro","translation":"În jos","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"ro","translation":"Timp în jos","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"ro","translation":"Introdu direct timpul în jos","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"ro","translation":"Astăzi","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"ro","translation":"Meniul pentru astăzi","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"ro","translation":"Meniul pentru astăzi: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"ro","translation":"Alege meniul pentru astăzi","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"ro","translation":"Pauză {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"ro","translation":"Pauză {{value1}} secunde","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"ro","translation":"Fă o pauză","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"ro","translation":"Omite pauza","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"ro","translation":"Timp de pauză","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"ro","translation":"Încheiere pauză","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"ro","translation":"Sugestie de 2,5% mai mare, bazată pe resursele și viteza de execuție","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"ro","translation":"Începe utilizarea","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"ro","translation":"Instrucțiuni: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"ro","translation":"Salvare","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"ro","translation":"Nivel de încredere: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"ro","translation":"Modificare","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"ro","translation":"Continuare","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"ro","translation":"Minut:Secundă","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"ro","translation":"Înregistrarea anterioară","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"ro","translation":"Stabilitate: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"ro","translation":"Opțiuni de execuție: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"ro","translation":"A fost detectată oprirea execuției","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"ro","translation":"Estimarea execuției: {{value1}} ori","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"ro","translation":"Estimarea execuției: {{value1}} ori・Nivel de încredere: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"ro","translation":"Variație a vitezei de execuție: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"ro","translation":"Reflectare","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"ro","translation":"Anulare","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"ro","translation":"Am evitat salvarea dublă către Health, deoarece există deja o înregistrare Fitness pentru aceeași oră.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"ro","translation":"Puteți alege dintr-un meniu sincronizat","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"ro","translation":"Runde","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"ro","translation":"Număr de runde","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"ro","translation":"Setează numărul de runde pe reel","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"ro","translation":"Terminat","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"ro","translation":"Trimite către iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"ro","translation":"Trimite","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"ro","translation":"După finalizarea sesiunii, începe cronometrul de pauză. Poți alege următoarea activitate în ordine diferită.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"ro","translation":"Nu există sesiuni finalizate","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"ro","translation":"Sesiune finalizată","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"ro","translation":"Sesiune finalizată {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"ro","translation":"Realizare: {{value1}} × {{value2}} runde","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"ro","translation":"Compară realizări","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"ro","translation":"Introdu realizare","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"ro","translation":"Modifică RPE pentru sesiunea curentă","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"ro","translation":"Modifică ritmul pentru sesiunea curentă","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"ro","translation":"Modifică numărul de runde pentru sesiunea curentă","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"ro","translation":"Modifică greutatea pentru sesiunea curentă","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"ro","translation":"Medie -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"ro","translation":"Medie {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"ro","translation":"Frecvența cardiacă este în scădere. Dacă simți că ești pregătit, poți începe următoarea sesiune","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"ro","translation":"Continuați să faceți pauze, monitorizând ritmul cardiac.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"ro","translation":"Măsurarea ritmului cardiac și a consumului de energie.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"ro","translation":"Introducere manuală","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"ro","translation":"Puteți înregistra prin introducere manuală.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"ro","translation":"Înregistrare prin introducere manuală.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"ro","translation":"Estimare pe baza mișcărilor de la încheietură și a ordinii seturilor nefinalizate.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"ro","translation":"Numărul de vibrații (1-3 vibrații/secundă)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"ro","translation":"Viteza vibrațiilor","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"ro","translation":"Eroare de conectare: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"ro","translation":"Reflectă estimarea {{value1}}","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"ro","translation":"Reflectă sugestiile","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"ro","translation":"Modifică timpul","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"ro","translation":"Max -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"ro","translation":"Max {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"ro","translation":"Dacă încheiați, datele sunt trimise către iPhone. Puteți retrimite înregistrările nefinalizate ulterior.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"ro","translation":"Salvați conținutul actual, inclusiv seturile nefinalizate.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"ro","translation":"Nefinalizat","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"ro","translation":"Nu există înregistrări de pe ceas care nu au fost finalizate.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"ro","translation":"Neînceput","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"ro","translation":"Următor: {{value1}} {{value2}} × {{value3}}","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"ro","translation":"Puteți începe următorul set.","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"ro","translation":"Puteți reveni imediat la antrenamentul următor.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"ro","translation":"Următoarea exercițiu","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"ro","translation":"Continuă","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"ro","translation":"Sări peste acțiunea curentă","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"ro","translation":"Obiectiv: {{value1}} × {{value2}} repetări","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"ro","translation":"Finalizarea ritmului țintă","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"ro","translation":"Sugestie de a reduce cu 5% din cauza neîndeplinirii obiectivului, RPE sau scăderii vitezei de execuție","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"ro","translation":"Interval de mișcare relativ: {{value1}}%, Coerență: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"ro","translation":"Eșantionare eficientă energetic (nivelul bateriei)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"ro","translation":"Eșantionare eficientă energetic (mod de joasă putere)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"ro","translation":"Setări eșantionare eficientă energetic","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"ro","translation":"Șterge","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"ro","translation":"Secunde","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"ro","translation":"Selectați exercițiul și setul pentru a începe. Dacă v-ați făcut o greșeală, puteți reveni la starea inițială apăsând \"Anulare\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"ro","translation":"Procent de exerciții candidate: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"ro","translation":"Încheie și sincronizează","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"ro","translation":"Continuă","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"ro","translation":"Spate","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"ro","translation":"Ziua pentru spate","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"ro","translation":"Piept","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"ro","translation":"Ziua pieptului","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"ro","translation":"Vrei să ștergi înregistrările?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"ro","translation":"Înregistrare în curs","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"ro","translation":"Nu există antrenamente înregistrate","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"ro","translation":"Eșantionare normală","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"ro","translation":"Rapid","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"ro","translation":"Sugerează aceeași greutate pe baza nivelului de performanță, RPE și vitezei","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"ro","translation":"Altul","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"ro","translation":"Schimbă setul selectat","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"ro","translation":"Greutate","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"ro","translation":"Setează greutatea cu ajutorul unui slider","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"ro","translation":"Poți modifica greutatea, numărul de repetări, RPE și pauzele înainte sau după antrenament folosind un slider.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"ro","translation":"Începe","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"ro","translation":"Stabilește ritmul înainte de începere","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"ro","translation":"Nu este suportat: {{value1}}. Poți introduce manual","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"ro","translation":"Note audio și textuale","review_note":""}

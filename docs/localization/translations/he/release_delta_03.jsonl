@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "he", "translation": "בדקו את ההישגים האחרונים, רמת ההשגת המטרות, RPE ומצב ההתאוששות, והתאימו את התוכנית כך שתהיה קלה יותר לביצוע בפעם הבאה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "he", "translation": "שינויים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "he", "translation": "{{value1}} להוספה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "he", "translation": "{{value1}} להסרה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "he", "translation": "{{value1}}: {{value2}} → {{value3}} חזרות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "he", "translation": "{{value1}}: הפסקה {{value2}} → {{value3}} שניות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "he", "translation": "{{value1}}: {{value2}} → {{value3}} סטים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "he", "translation": "ללא שינוי הפעם", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "he", "translation": "שמור והתחל", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "he", "translation": "שמור כתוכנית חדשה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "he", "translation": "הפעל פעם אחת בלבד", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "he", "translation": "ניתן לנסות פעם אחת או לשמור את התוכנית.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "he", "translation": "עדכן תוכנית קיימת", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "he", "translation": "רק בזמן האינטראקציה, נשלחות מידע על השימוש בפונקציות ומטרות, ניסיון ותחושה, באמצעות קטגוריות, בשילוב עם שם המשתמש. לא נשולח מידע גופני, תזונה, תמונות, דופק, זמן שינה, מיקום, הערות או מזהה פרסום.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "he", "translation": "גבוה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "he", "translation": "נמוך", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "he", "translation": "מרכז", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "he", "translation": "הערה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "he", "translation": "חיפש ב:", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "he", "translation": "תוצאות המחקר הן מגמות כלליות, ואינן מהוות הצהרה על השפעה אישית.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "he", "translation": "לא ניתן להשתמש בנתונים ממקור חיצוני, ולכן ההחלטה מתבססת בעיקר על הקווים הכלליים.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "he", "translation": "לא נמצאו מקורות רלוונטיים ישירות לתוכנית זו. ההחלטה מתבססת בעיקר על עקרונות אימונים כלליים.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "he", "translation": "רמת ביטחון כוללת", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "he", "translation": "לא נמצאו מקורות המתייחסים לאוכלוסייה דומה, ולכן ההחלטה מתבססת בעיקר על הקווים הכלליים.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "he", "translation": "הצדקה להמלצה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "he", "translation": "מקורות מרוחפים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "he", "translation": "מידע חיפוש", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "he", "translation": "לא ניתן היה להשתמש בחיפוש במקורות. לא ניתן לקבוע את ההצדקה, ולכן ההחלטה מתבססת בעיקר על הקווים הכלליים.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "he", "translation": "צפה בראיות המדעיות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "he", "translation": "סקירה כללית", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "he", "translation": "רלוונטיות לתוכנית זו", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "he", "translation": "דומה לאוכלוסייה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "he", "translation": "טקסט מלא", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "he", "translation": "התערבות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "he", "translation": "רישיון טקסט מלא", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "he", "translation": "מגבלות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "he", "translation": "התנאים של האוכלוסייה שונים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "he", "translation": "מחקר חדש", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "he", "translation": "פתח מאמר", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "he", "translation": "חלק מהתנאים דומים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "he", "translation": "אוכלוסייה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "he", "translation": "מסקנות המחקר", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "he", "translation": "טווח ההתייחסות של הממצאים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "he", "translation": "מידע לא ברור", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "he", "translation": "הדבקת יומן דיאגנוסטיקה אנונימי", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "he", "translation": "ביטול", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "he", "translation": "באג", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "he", "translation": "אחר", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "he", "translation": "סוג המשוב", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "he", "translation": "בקשה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "he", "translation": "קטגוריה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "he", "translation": "קלות שימוש", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "he", "translation": "העתק טקסט", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "he", "translation": "פרטים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "he", "translation": "יש להדביק את המידע על פעולת האפליקציה וה-Apple Watch, כולל תקשורת. לא ישולח מידע גופני, רשומות בריאות, תמונות, שיחות עם AI.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "he", "translation": "לא ניתן היה להדביק את יומן הדיאגנוסטיקה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "he", "translation": "דרכים אחרות לשליחה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "he", "translation": "משוב לגבי BodyMode\n\nסוג: {{value1}}\nתוכן:\n{{value2}}\n\nאפליקציה: {{value3}}\nמערכת הפעלה: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "he", "translation": "נסה שוב", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "he", "translation": "שלח משוב", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "he", "translation": "שלח במייל", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "he", "translation": "שלח ללא יומן דיאגנוסטיקה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "he", "translation": "אין לציין מידע אישי, כולל נתונים גופניים, תוכן תזונה, תמונות, שיחות עם AI או פרטי התחברות.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "he", "translation": "משוב", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "he", "translation": "שגיאה לא ידועה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "he", "translation": "מחכה לתוצאה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "he", "translation": "{{value1}} - גרסה מעודכנת", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "he", "translation": "התאמה אישית על ידי המאמן: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "he", "translation": "היסטוריית התאמות אישיות של AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "he", "translation": "הישגים עתידיים משופרים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "he", "translation": "בדיקה בתהליך", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "he", "translation": "בוטל", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "he", "translation": "בדוק שוב בתוכנית הבאה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "he", "translation": "שמר תוכנית חדשה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "he", "translation": "לא התאים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "he", "translation": "הישגים עתידיים יהיו בערך זה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "he", "translation": "עדכן", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "he", "translation": "התאם את התוכנית הבאה באמצעות AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "he", "translation": "המשך עם התוכנית הנוכחית.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "he", "translation": "\"{{value1}}\" שמרנו כתוכנית חדשה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "he", "translation": "עדכנו את התוכנית הבאה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "he", "translation": "הבא", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "he", "translation": "התוכנית הנוכחית לא תתעדכן עד שתאשר את השינויים.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "he", "translation": "הצלחת!", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "he", "translation": "לא הצלחת, ניתן להתאים את התוכנית הבאה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "he", "translation": "ניתן להשתמש בהישגים של היום בתוכנית הבאה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "he", "translation": "חזרנו לתוכנית הקודמת.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "he", "translation": "בטל את השינוי", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

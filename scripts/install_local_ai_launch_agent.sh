@@ -65,6 +65,7 @@ if [[ ! -s "${SOURCE_DIR}/.api_key" ]]; then
 fi
 
 mkdir -p "${HOME}/Library/LaunchAgents" "${LOG_DIR}" "${INSTALL_DIR}"
+"${SOURCE_DIR}/.venv/bin/python" "${REPO_ROOT}/scripts/provision_owner_ai_access.py"
 launchctl bootout "${DOMAIN}/${LABEL}" 2>/dev/null || true
 launchctl bootout "${DOMAIN}/${MONITOR_LABEL}" 2>/dev/null || true
 launchctl bootout "${DOMAIN}/${EVIDENCE_LABEL}" 2>/dev/null || true
@@ -77,16 +78,28 @@ rm -f "${EVIDENCE_PLIST_PATH}"
 rsync -a --delete \
   --exclude '__pycache__' \
   --exclude '*.pyc' \
+  --exclude 'enrollment_keys.json' \
+  --exclude 'owner_enrollment_key' \
+  --exclude '.health_enrollment_key' \
   "${SOURCE_DIR}/" "${INSTALL_DIR}/"
 chmod 700 "${SERVER_RUNNER}"
 chmod 700 "${INSTALL_DIR}/sync_evidence.sh"
 chmod 600 "${INSTALL_DIR}/.api_key"
+if [[ -f "${INSTALL_DIR}/enrollment_keys.json" ]]; then
+  chmod 600 "${INSTALL_DIR}/enrollment_keys.json"
+fi
+if [[ -f "${INSTALL_DIR}/owner_enrollment_key" ]]; then
+  chmod 600 "${INSTALL_DIR}/owner_enrollment_key"
+fi
 install -m 700 "${MONITOR_SCRIPT}" "${INSTALLED_MONITOR_SCRIPT}"
 if [[ -f "${INSTALL_DIR}/.health_enrollment_key" ]]; then
   chmod 600 "${INSTALL_DIR}/.health_enrollment_key"
 fi
 if [[ -f "${INSTALL_DIR}/.public_base_url" ]]; then
   chmod 600 "${INSTALL_DIR}/.public_base_url"
+fi
+if [[ -f "${INSTALL_DIR}/.gateway_shared_secret" ]]; then
+  chmod 600 "${INSTALL_DIR}/.gateway_shared_secret"
 fi
 
 SOURCE_MONITOR_HASH=$(shasum -a 256 "${MONITOR_SCRIPT}" | awk '{print $1}')
@@ -143,6 +156,20 @@ bootstrap_agent "${PLIST_PATH}"
 bootstrap_agent "${MONITOR_PLIST_PATH}"
 bootstrap_agent "${EVIDENCE_PLIST_PATH}"
 launchctl kickstart -k "${DOMAIN}/${LABEL}"
+
+server_ready=false
+for attempt in 1 2 3 4 5 6; do
+  if [[ "$(curl --silent --output /dev/null --write-out '%{http_code}' --max-time 5 \
+    'http://127.0.0.1:8765/internal/health' 2>/dev/null || true)" == "200" ]]; then
+    server_ready=true
+    break
+  fi
+  sleep "${attempt}"
+done
+if [[ "${server_ready}" != true ]]; then
+  print -u2 "Local AI server did not become ready after installation"
+  exit 1
+fi
 
 print "Installed ${LABEL}"
 print "Runtime: ${INSTALL_DIR}"

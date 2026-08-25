@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"he","translation":"סט צילום","review_note":""}
+{"id":"training.3064c4117490","target_locale":"he","translation":"יום","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"he","translation":"תאריך","review_note":""}
+{"id":"training.137012e67a97","target_locale":"he","translation":"שעה","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"he","translation":"קצב לב מקסימלי","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"he","translation":"משקל מקסימלי","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"he","translation":"חודש","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"he","translation":"יום רביעי","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"he","translation":"לא בוצע","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"he","translation":"לא הושלם","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"he","translation":"מוסתר בגלל שלא רשום: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"he","translation":"לא הושג","review_note":""}
+{"id":"training.379774690c05","target_locale":"he","translation":"חיפוש, פרטים והוספת תרגילים מותאמים אישית","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"he","translation":"סטנדרטי","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"he","translation":"החודש הבא","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"he","translation":"יש לשמור את המשקל, מספר החזרות והתרגיל בגישה הבאה.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"he","translation":"יום חמישי","review_note":""}
+{"id":"training.586036cfde65","target_locale":"he","translation":"צריכה","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"he","translation":"במהלך האימון","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"he","translation":"יום שישי","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"he","translation":"תרגילים רשומים","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"he","translation":"הערכה","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"he","translation":"מטרה","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"he","translation":"מטרה: {{value1}} × {{value2}} חזרות","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"he","translation":"מטרה, הישגים, ציוד זמין","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"he","translation":"העתק מטרה","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"he","translation":"הפרש מטרה","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"he","translation":"הפרש מטרה: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"he","translation":"רמה הבאה המתאימה למטרה ולציוד","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"he","translation":"יוצרת על סמך המטרה, אזורי הדגש, הציוד הזמין והישגים קודמים. ניתן לשנות את התרגיל והערכים לפני שמירה.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"he","translation":"התייעץ ושנה","review_note":""}
+{"id":"training.804773e6316f","target_locale":"he","translation":"בטל","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"he","translation":"בדוק ושמור את התוכנית","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"he","translation":"שניות","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"he","translation":"תרגיל","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"he","translation":"אין תרגיל","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"he","translation":"הוסף תרגיל ומטרה, ותתחיל באימונים הבאים בלי לחשוב.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"he","translation":"הוסף תרגיל","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"he","translation":"הוסף תרגיל והזן את המטרה עבור כל קבוצה.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"he","translation":"ניתן להגדיר מספר תרגילים בו זמנית.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"he","translation":"בחר תרגיל","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"he","translation":"ספריית תרגילים","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"he","translation":"לפי סוג פעילות","review_note":""}
+{"id":"training.f3db21504894","target_locale":"he","translation":"היסטוריית פעילויות לפי סוג","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"he","translation":"שם הפעילות","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"he","translation":"שם הפעילות, אזור גוף, שיטה","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"he","translation":"פרטי הפעילות","review_note":""}
+{"id":"training.0902af066756","target_locale":"he","translation":"אימון כוח","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"he","translation":"כוח A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"he","translation":"כוח B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"he","translation":"גדילת שרירים","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"he","translation":"סיום","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"he","translation":"התקדמות","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"he","translation":"להמשך","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"he","translation":"סה\"כ נפח","review_note":""}
+{"id":"training.299456e922c2","target_locale":"he","translation":"ערוך","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"he","translation":"כתף / דו-ברכי / תלת-ברכי","review_note":""}
+{"id":"training.14f202634605","target_locale":"he","translation":"כתפיים וזרועות","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"he","translation":"יום לחיזוק גב","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"he","translation":"יום לחיזוק חזה","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"he","translation":"רגליים / ירכיים","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"he","translation":"יום לחיזוק רגליים","review_note":""}
+{"id":"training.ed189402693b","target_locale":"he","translation":"השיא האישי שלך","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"he","translation":"בדוק את ההיסטוריה שלך לפי תקופה, סוג פעילות וסנסור.","review_note":""}
+{"id":"training.36467fec4916","target_locale":"he","translation":"קצב באמצעות מישוש","review_note":""}
+{"id":"training.84447148c208","target_locale":"he","translation":"תכנית","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"he","translation":"השלמת {{value1}}/{{value2}} סטים / השגת {{value3}}/{{value4}}","review_note":""}
+{"id":"training.170899739631","target_locale":"he","translation":"התחל מהתוכנית","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"he","translation":"עקוב אחר התוכנית","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"he","translation":"הוסף פעילות והגדר אותה באופן ידני","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"he","translation":"אין תוכנית כרגע","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"he","translation":"איטי יותר מהתוכנית","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"he","translation":"מהיר יותר מהתוכנית","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"he","translation":"צור תוכנית","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"he","translation":"צור תוכנית","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"he","translation":"שמור את התוכנית","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"he","translation":"סט תוכניות","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"he","translation":"צור תוכנית","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"he","translation":"שם התוכנית","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"he","translation":"הזן שם ותחום לפחות אחד.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"he","translation":"היסטוריה","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"he","translation":"בדוק את ההיסטוריה שלך לפי ימים.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"he","translation":"סגור בלי לשמור","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"he","translation":"הערכה נכונה על סמך רישום ומטרות","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"he","translation":"מחיקת רישום","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"he","translation":"סוג רישום: אימוני כוח, גוף, תזונה, צילומים, חדר כושר","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"he","translation":"אין סוג מתאים","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"he","translation":"גוף","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"he","translation":"מדידת גוף","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"he","translation":"מדידת גוף לא שרכובה","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"he","translation":"קל יותר","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"he","translation":"הוסף","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"he","translation":"שבוע","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"he","translation":"{{value1}} ימים בשבוע + {{value2}} דקות","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"he","translation":"לפי שבוע","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"he","translation":"נפח שבועי","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"he","translation":"ניתוח נפח שבועי","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"he","translation":"מתאים את המשקל והמספר בהתבסס על ההישגים הקודמים. בדוק ושמור.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"he","translation":"הצלחה","review_note":""}
+{"id":"training.90687409925b","target_locale":"he","translation":"סט הצלחה","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"he","translation":"אחוז הצלחה","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"he","translation":"אחוז הצלחה {{value1}}","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"he","translation":"התוכנית מציגה רק את התרגילים הרשומים המתאימים לציוד שנבחר למערכת הבינה המלאכותית.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"he","translation":"סיכום היום","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"he","translation":"חלק גוף","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"he","translation":"הבדל במשקל","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"he","translation":"הבדל במשקל {{value1}} / הבדל במספר חזרות {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"he","translation":"שינוי במשקל","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"he","translation":"זהב","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"he","translation":"סגור","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"he","translation":"התחל","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"he","translation":"ביטול התחלה","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"he","translation":"תזונה","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"he","translation":"לא נרשמה תזונה","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"he","translation":"משקל גבוה","review_note":""}

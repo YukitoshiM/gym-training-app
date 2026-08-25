@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "uk", "translation": "Орієнтовне значення. Не є виміром. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "uk", "translation": "Через проміжний час між останнім вимірюванням, зміни не можуть бути однозначно визначені, тому надається діапазон.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "uk", "translation": "На основі загальних орієнтовних значень для групи людей (залежно від зросту, ваги, віку та статі), це не є виміром індивідуальної жирової маси.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "uk", "translation": "Орієнтовно", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "uk", "translation": "Орієнтовне значення", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "uk", "translation": "Це орієнтовний діапазон, а не вимірювання. Збережено лише після натискання для перегляду.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "uk", "translation": "Зберегти орієнтовне значення?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "uk", "translation": "Зберегти як орієнтовне значення", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "uk", "translation": "{{value1}} {{value2}}. Вимірювання не перезаписуються.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "uk", "translation": "Заплановані звіти", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "uk", "translation": "Щотижневий звіт", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "uk", "translation": "День тижня", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "uk", "translation": "Місячний звіт", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "uk", "translation": "Дата", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "uk", "translation": "{{value1}} день", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "uk", "translation": "Час сповіщення", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "uk", "translation": "Автоматично генерується при першому відкритті програми після запланованого часу. Якщо не вдасться підключитися до AI, збережеться зведення в пристрої.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "uk", "translation": "Необхідно перевірити налаштування", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "uk", "translation": "Можна повторити", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "uk", "translation": "Використано ліміт", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "uk", "translation": "Ліміт не використаний", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "uk", "translation": "Наукові докази {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "uk", "translation": "Оскільки немає прямих доказів, використовується орієнтовне значення на основі записів.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "uk", "translation": "Не вдалося знайти прямі докази для цього запропонованого варіанту.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "uk", "translation": "Оскільки неможливо перевірити наукові докази, пропонується на основі записів та загальних принципів.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "uk", "translation": "Одиниці вимірювання розміру тіла", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

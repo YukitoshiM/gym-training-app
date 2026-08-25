@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "vi", "translation": "Xem lại kết quả gần đây, tỷ lệ đạt được, mức độ gắng sức (RPE), và tình trạng hồi phục, sau đó điều chỉnh kế hoạch để dễ thực hiện hơn trong lần tới. Nếu không muốn thay đổi, hãy giữ nguyên giá trị hiện tại.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "vi", "translation": "Thay đổi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "vi", "translation": "{{value1}} thêm vào", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "vi", "translation": "{{value1}} loại bỏ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "vi", "translation": "{{value1}}: {{value2}} → {{value3}} lần", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "vi", "translation": "{{value1}}: Nghỉ {{value2}} → {{value3}} giây", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "vi", "translation": "{{value1}}: {{value2}} → {{value3}} hiệp", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "vi", "translation": "Không thay đổi lần này", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "vi", "translation": "Lưu và bắt đầu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "vi", "translation": "Lưu dưới dạng kế hoạch mới", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "vi", "translation": "Thực hiện một lần duy nhất", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "vi", "translation": "Bạn có thể thử hoặc lưu kế hoạch này. (Lưu ý: Đây chỉ là gợi ý, không đảm bảo hiệu quả.)", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "vi", "translation": "Cập nhật kế hoạch hiện tại", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "vi", "translation": "Chỉ khi đồng ý, chúng tôi sẽ gửi thông tin về cách sử dụng và mục đích của ứng dụng, cũng như kinh nghiệm, tình trạng sức khỏe và đề xuất của bạn, dưới dạng dữ liệu tổng hợp không liên quan đến tên riêng. Chúng tôi sẽ không thu thập bất kỳ số liệu nào về cơ thể, chế độ ăn uống, hình ảnh, nhịp tim, thời gian ngủ, vị trí, ghi chú hoặc ID quảng cáo.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "vi", "translation": "Cao", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "vi", "translation": "Thấp", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "vi", "translation": "Trung bình", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "vi", "translation": "Tham khảo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "vi", "translation": "Các tài liệu đã tìm kiếm", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "vi", "translation": "Kết quả nghiên cứu chỉ là xu hướng chung và không đảm bảo hiệu quả cho bạn. (Lưu ý: Đây chỉ là gợi ý, không đảm bảo hiệu quả.)", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "vi", "translation": "Không thể sử dụng dữ liệu từ thư viện, vì vậy chúng tôi dựa vào các quy tắc chung để đưa ra quyết định.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "vi", "translation": "Chúng tôi không tìm thấy tài liệu nào có thể áp dụng trực tiếp cho đề xuất này. Chúng tôi dựa vào các quy tắc tập luyện chung.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "vi", "translation": "Mức độ tin cậy tổng thể", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "vi", "translation": "Chúng tôi không tìm thấy tài liệu nào liên quan đến đối tượng có điều kiện tương tự, vì vậy chúng tôi dựa vào các quy tắc chung.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "vi", "translation": "Bằng chứng cho đề xuất", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "vi", "translation": "Nghiên cứu tham khảo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "vi", "translation": "Thông tin tìm kiếm", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "vi", "translation": "Không thể sử dụng chức năng tìm kiếm. Chúng tôi không có đủ bằng chứng, vì vậy chúng tôi dựa vào các quy tắc chung.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "vi", "translation": "Xem bằng chứng khoa học", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "vi", "translation": "Xem tóm tắt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "vi", "translation": "Tính phù hợp với lần này", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "vi", "translation": "Đối tượng tương tự", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "vi", "translation": "Xem toàn bộ văn bản", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "vi", "translation": "Can thiệp", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "vi", "translation": "Giấy phép văn bản", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "vi", "translation": "Hạn chế", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "vi", "translation": "Điều kiện đối tượng khác nhau", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "vi", "translation": "Nghiên cứu mới", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "vi", "translation": "Mở tài liệu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "vi", "translation": "Một số điều kiện tương tự", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "vi", "translation": "Đối tượng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "vi", "translation": "Kết luận của nghiên cứu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "vi", "translation": "Áp dụng kết quả tóm tắt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "vi", "translation": "Thông tin không rõ ràng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "vi", "translation": "Gắn tệp nhật ký chẩn đoán", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "vi", "translation": "Hủy bỏ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "vi", "translation": "Lỗi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "vi", "translation": "Khác", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "vi", "translation": "Loại phản hồi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "vi", "translation": "Yêu cầu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "vi", "translation": "Phân loại", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "vi", "translation": "Khó sử dụng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "vi", "translation": "Sao chép văn bản", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "vi", "translation": "Chi tiết", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "vi", "translation": "Gửi tệp nhật ký hoạt động và giao tiếp giữa ứng dụng và Apple Watch. Không bao gồm dữ liệu về cơ thể, chế độ ăn uống, hình ảnh, cuộc trò chuyện với AI, hoặc thông tin xác thực.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "vi", "translation": "Không thể gắn tệp nhật ký chẩn đoán.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "vi", "translation": "Cách khác để gửi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "vi", "translation": "Phản hồi cho BodyMode\n\nLoại: {{value1}}\nNội dung:\n{{value2}}\n\nỨng dụng: {{value3}}\nHệ điều hành: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "vi", "translation": "Thử lại", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "vi", "translation": "Gửi phản hồi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "vi", "translation": "Gửi qua email", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "vi", "translation": "Gửi mà không có nhật ký chẩn đoán", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "vi", "translation": "Vui lòng không cung cấp thông tin về cơ thể, chế độ ăn uống, hình ảnh, cuộc trò chuyện với AI hoặc thông tin xác thực.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "vi", "translation": "Phản hồi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "vi", "translation": "Lỗi không xác định", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "vi", "translation": "Đang chờ kết quả đánh giá", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "vi", "translation": "{{value1}} - Phiên bản đã sửa đổi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "vi", "translation": "Sửa đổi kế hoạch theo gợi ý của huấn luyện viên: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "vi", "translation": "Lịch sử sửa đổi AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "vi", "translation": "Hiệu quả thực hiện lần tới được cải thiện", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "vi", "translation": "Đang chờ xác nhận", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "vi", "translation": "Đã hủy", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "vi", "translation": "Xem lại và điều chỉnh kế hoạch lần tới", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "vi", "translation": "Lưu dưới dạng kế hoạch mới", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "vi", "translation": "Bỏ qua", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "vi", "translation": "Hiệu quả thực hiện lần tới vẫn tương tự", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "vi", "translation": "Đã cập nhật", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "vi", "translation": "AI sẽ điều chỉnh kế hoạch cho lần tới.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "vi", "translation": "Tiếp tục với kế hoạch hiện tại.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "vi", "translation": "Kế hoạch mới '{{value1}}' đã được lưu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "vi", "translation": "Kế hoạch cho lần tới đã được cập nhật.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "vi", "translation": "Lần tới", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "vi", "translation": "Kế hoạch hiện tại sẽ không được thay đổi cho đến khi bạn xác nhận các thay đổi.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "vi", "translation": "Bạn đã đạt mục tiêu! Hãy kiểm tra hiệu suất của lần sau.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "vi", "translation": "Hiệu quả chưa đạt, bạn có thể điều chỉnh kế hoạch cho lần tới.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "vi", "translation": "Bạn đã sẵn sàng để thực hiện lại! Hãy sử dụng kết quả của lần trước.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "vi", "translation": "Đã khôi phục kế hoạch ban đầu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "vi", "translation": "Hủy bỏ sửa đổi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

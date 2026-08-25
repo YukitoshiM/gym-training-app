@@ -1,0 +1,3 @@
+{"id": "ai_credit.automatic_daily_credit_use", "source_locale": "ja", "source_ja": "今日の提案をAIが自動確認", "context": "BodyMode mobile UI", "placeholders": [], "source_refs": ["GymTrainingApp/Features/Settings/ProfileSettingsView.swift:587"]}
+{"id": "ai_credit.automatic_daily_credit_use_off", "source_locale": "ja", "source_ja": "端末内の今日の提案は無料で使えます。AIクレジットは自動消費しません。", "context": "BodyMode mobile UI", "placeholders": [], "source_refs": ["GymTrainingApp/Features/Settings/ProfileSettingsView.swift:601"]}
+{"id": "ai_credit.automatic_daily_credit_use_on", "source_locale": "ja", "source_ja": "1日最大1回、日次補正の1クレジットを自動で消費します。", "context": "BodyMode mobile UI", "placeholders": [], "source_refs": ["GymTrainingApp/Features/Settings/ProfileSettingsView.swift:597"]}

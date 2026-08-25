@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"id","translation":"Pilih satu yang paling sesuai","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"id","translation":"Setelah menetapkan tujuan awal, lakukan 3 hal setiap hari","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"id","translation":"Selesaikan latihan pertama","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"id","translation":"Catat nilai awal","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"id","translation":"Sebatas maksimal 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"id","translation":"Item yang belum diisi dapat ditambahkan nanti dari layar pencatatan.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"id","translation":"Belum selesai","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"id","translation":"Belum dilakukan","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"id","translation":"Belum dicatat","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"id","translation":"Belum ditetapkan","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"id","translation":"Belum dipilih","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"id","translation":"Sekarang, pilih menu berdasarkan tujuan","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"id","translation":"Berikutnya","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"id","translation":"Lihat jumlah langkah","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"id","translation":"Penurunan berat badan","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"id","translation":"Karbohidrat","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"id","translation":"Tidak berlaku","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"id","translation":"Atur jumlah dan waktu yang wajar","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"id","translation":"Terutama penting","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"id","translation":"Ketahui kondisi dan langkah selanjutnya","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"id","translation":"Periksa status","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"id","translation":"Saat ini","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"id","translation":"Informasi tubuh saat ini","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"id","translation":"Saat ini tidak tersedia","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"id","translation":"Menggunakan catatan dan pengaturan yang diperoleh saat ini.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"id","translation":"Saat ini dipilih: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"id","translation":"Lanjutkan menuju tubuh ideal Anda tanpa ragu.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"id","translation":"Alasan","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"id","translation":"Alasan: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"id","translation":"Tahun kelahiran","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"id","translation":"Mulai tur tampilan","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"id","translation":"Menu terdaftar {{value1}} item","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"id","translation":"Status yang ingin dicapai","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"id","translation":"Gaya yang ingin dicapai","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"id","translation":"Target","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"id","translation":"Target {{value1}} / Perbedaan {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"id","translation":"Target dan kecepatan","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"id","translation":"Target dan pencapaian","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"id","translation":"Opsi penyesuaian target","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"id","translation":"Target belum ditetapkan","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"id","translation":"Mencapai tujuan","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"id","translation":"Tujuan","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"id","translation":"Kami menyediakan 2 orang untuk setiap tujuan. Dengan mengubah orang tersebut, Anda akan mendapatkan tipe tubuh dan cara berbicara yang berbeda.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"id","translation":"Menemukan orang yang tepat untuk tujuan","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"id","translation":"Anda dapat mengubah titik pemeriksaan di beranda dan tindakan selanjutnya sesuai dengan tujuan.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"id","translation":"Mengubah tujuan","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"id","translation":"Pilih tujuan","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"id","translation":"Mode Tujuan","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"id","translation":"Tujuan & Target","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"id","translation":"Menu berdasarkan tujuan telah dibuka","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"id","translation":"Lihat menu berdasarkan tujuan","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"id","translation":"Terakhir","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"id","translation":"Perbaiki sambil berkonsultasi","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"id","translation":"Pengambilan sampel hemat energi","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"id","translation":"Mulai {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"id","translation":"Tidur & Pemulihan","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"id","translation":"Sedang diproses","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"id","translation":"Detik","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"id","translation":"Jumlah detik","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"id","translation":"Cari dan tambahkan latihan","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"id","translation":"Gunakan autentikasi jangka pendek khusus untuk perangkat.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"id","translation":"Di dalam perangkat","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"id","translation":"Keterampilan kompetitif","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"id","translation":"Latihan kekuatan","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"id","translation":"Menghubungkan latihan kekuatan, daya, dan pemulihan dengan kompetisi","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"id","translation":"Meningkatkan massa otot dan rekam jejak pelatihan","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"id","translation":"Hipertrofi otot","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"id","translation":"Pengalaman","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"id","translation":"Tingkat pengalaman","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"id","translation":"Tempo yang berkelanjutan","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"id","translation":"Ini bukan untuk mengevaluasi kemampuan atau kualifikasi. Menunjukkan perspektif yang akan diprioritaskan dalam jawaban.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"id","translation":"Lemak","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"id","translation":"Lingkar perut","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"id","translation":"Lingkar perut - opsional","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"id","translation":"Belajar pola perilaku","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"id","translation":"Notifikasi perilaku","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"id","translation":"Tampilkan","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"id","translation":"Mode tampilan","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"id","translation":"Metode tampilan","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"id","translation":"Kebijakan tampilan","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"id","translation":"Model pendukung belum terhubung","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"id","translation":"Catatan","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"id","translation":"Catatan: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"id","translation":"Rencana","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"id","translation":"Hapus rencana, riwayat, KPI tubuh, makanan, foto, percakapan/ingatan AI, dan kategori khusus.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"id","translation":"Mulai dari rencana atau tambahkan kategori di tempat untuk dicatat.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"id","translation":"Tambahkan kategori tanpa rencana","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"id","translation":"Terapkan ke rencana","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"id","translation":"Buat rencana","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"id","translation":"Mari buat rencana","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"id","translation":"Rencana & Watch","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"id","translation":"Perbarui berat badan dalam rencana?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"id","translation":"Catat","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"id","translation":"Catat","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"id","translation":"Catat. Tanyakan kepada AI. Lakukan. Hanya ada 3 hal yang perlu dilakukan setiap hari.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"id","translation":"Ketuk item untuk dicatat","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"id","translation":"Hasil pencatatan dan pelaksanaan akan diteruskan ke analisis AI berikutnya. Operasi pertama akan dipandu oleh misi di beranda.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"id","translation":"Pencatatan disimpan di sini","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"id","translation":"Sedang memverifikasi catatan. Tetap berjalan meskipun layar ditutup.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"id","translation":"Lihat catatan dan dapatkan saran tindakan selanjutnya","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"id","translation":"Sedang dicatat","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"id","translation":"Berdasarkan catatan, kami menyarankan perubahan positif, stagnasi, atau informasi yang kurang.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"id","translation":"Sudah dicatat","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"id","translation":"Pengaturan","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"id","translation":"Sudah diatur","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"id","translation":"Log diagnosis mencakup rekaman aktivitas dan komunikasi iPhone serta Apple Watch. Tidak dikirim secara otomatis ke pihak lain.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"id","translation":"Hapus log diagnosis","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"id","translation":"Ekspor log diagnosis","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"id","translation":"Kirim log diagnosis","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"id","translation":"Cara berbicara","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"id","translation":"Lihat lebih lanjut","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"id","translation":"Konten yang menyesatkan","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"id","translation":"Indikator Kinerja Tubuh (KPI)","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"id","translation":"Tinggi badan","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"id","translation":"Tinggi badan - Opsional","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"id","translation":"Jika bingung, lihat di sini","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"id","translation":"Tambahkan","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"id","translation":"Tambahkan","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"id","translation":"Mulai lagi","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"id","translation":"Kirim","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"id","translation":"Menunggu pengiriman","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"id","translation":"Pilih gym atau peralatan yang Anda miliki di rumah.","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"id","translation":"Setelah koneksi tersedia, kami akan memverifikasi catatan.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"id","translation":"Frekuensi per minggu","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"id","translation":"Berapa kali Anda berolahraga dalam seminggu?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"id","translation":"Cara melanjutkan","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"id","translation":"Sedang berjalan","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"id","translation":"Pertahankan kebiasaan olahraga, tidur, dan makan.","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"id","translation":"Pilih: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"id","translation":"Memilih","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"id","translation":"Distribusi","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"id","translation":"Muat pengaturan AI saat distribusi.","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"id","translation":"Area fokus","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"id","translation":"Berat","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"id","translation":"Atur berat menggunakan gulir.","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"id","translation":"Satuan berat","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"id","translation":"Menutup","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"id","translation":"Tutup","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"id","translation":"Mulai","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"id","translation":"Informasi terkait","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"id","translation":"Makanan","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"id","translation":"Makanan dan Bentuk Tubuh","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"id","translation":"Makanan dan bentuk tubuh dapat dilihat dalam foto. Berat badan, lingkar perut, dan jumlah set akan dicatat sebagai angka.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"id","translation":"Catat Makanan","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"id","translation":"Jumlah Makan","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"id","translation":"Jumlah makan dan pencapaian kalori serta PFC akan ditampilkan secara terpisah.","review_note":""}

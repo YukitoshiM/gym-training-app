@@ -4,7 +4,7 @@
 
 ## 目的
 
-BodyModeの食事画像、食べたものリスト、体型写真、週次記録を、ユーザーが設定したAI APIへ送信し、構造化された下書きと提案を受け取る。AI未接続時も、手動記録・編集・保存は継続できる。
+BodyModeの食事画像、食べたものリスト、体型写真、週次記録を、BodyModeが管理するAI APIへ送信し、構造化された下書きと提案を受け取る。AI未接続時も、手動記録・編集・保存は継続できる。
 
 ## 構成
 
@@ -12,7 +12,7 @@ BodyModeの食事画像、食べたものリスト、体型写真、週次記録
 flowchart LR
     UI["食事・体型写真セット・週次／月次レポート"] --> Client["AIAPIClient"]
     Client --> Image["画像前処理<br/>長辺1600px / JPEG 0.8"]
-    Client --> API["設定された /v1 API"]
+    Client --> API["BodyMode管理 /v1 API"]
     API --> Draft["構造化されたAI下書き"]
     Draft --> Confirm["ユーザー確認・手動補正"]
     Confirm --> Store["端末内の保護領域へ保存"]
@@ -45,12 +45,14 @@ flowchart LR
 
 ## 設定と秘密情報
 
-- Base URLとAPIキーは設定画面から変更できる。
+- 通常のRelease/TestFlight画面にはBase URL、ホスト名、APIキー、認証方式を表示しない。接続状態と接続確認だけを提供する。
+- Debugビルドで起動引数`--enable-ai-connection-editor`を明示した場合だけ、開発用の接続編集UIを表示する。
 - APIキーはKeychainの`WhenUnlockedThisDeviceOnly`で保存する。
 - Base URLは端末内の保護済み設定領域へ保存する。
 - 開発・配布ビルドの初期値は`Config/AIService.local.xcconfig`から注入する。このファイルはGit管理外とする。
-- Quick TunnelのURL変更時は設定画面で更新でき、コード変更は不要。
+- 接続設定の更新はGit管理外xcconfigと新しい管理設定バージョンを使い、配布ビルドで移行する。
 - モバイルアプリへ配布した共有APIキーは完全な秘密にはできない。公開範囲を広げる際は、ユーザー単位の短命トークンと失効・レート制限をサーバー側へ追加する。
+- 接続先のホスト名自体は配布バイナリから完全には秘匿できない。正式公開構成ではCloudflare Workerの中立名だけをアプリへ同梱し、Mac miniの直接ホスト名はWorker secretに保存する。全アクティブビルド移行後はMac mini側でWorkerの共有秘密を必須にする。
 
 ## 画像とプライバシー
 
@@ -72,4 +74,4 @@ flowchart LR
 | JSON不整合 | APIバージョン確認を促す |
 | すべてのAI失敗 | 入力内容と写真を保持し、手動補正・保存を可能にする |
 
-診断ログにはHTTP状態と障害カテゴリだけを残し、APIキー、画像、食事内容、身体データ、自由記述は記録しない。
+診断ログにはHTTP状態、APIパス、障害カテゴリだけを残し、ホスト名、Base URL、APIキー、画像、食事内容、身体データ、自由記述は記録しない。旧版ログの該当キーも整理・書き出し時にマスクする。

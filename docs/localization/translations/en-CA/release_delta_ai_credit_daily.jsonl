@@ -1,0 +1,3 @@
+{"id": "ai_credit.automatic_daily_credit_use", "target_locale": "en-CA", "translation": "Let AI review today's recommendations automatically", "review_note": "Reviewed payment consent wording."}
+{"id": "ai_credit.automatic_daily_credit_use_off", "target_locale": "en-CA", "translation": "Today's on-device recommendations remain free. AI credits will not be used automatically.", "review_note": "Reviewed payment consent wording."}
+{"id": "ai_credit.automatic_daily_credit_use_on", "target_locale": "en-CA", "translation": "Uses 1 credit for a daily AI adjustment, at most once per day.", "review_note": "Reviewed payment consent wording."}

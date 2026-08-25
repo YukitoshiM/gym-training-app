@@ -1,5 +1,7 @@
 #include "AIService.xcconfig"
+#include "Legal.xcconfig"
 
 // Google-provided demo IDs. Debug builds must never request production ads.
 BODYMODE_ADMOB_APP_ID = ca-app-pub-3940256099942544~1458002511
 BODYMODE_ADMOB_BANNER_AD_UNIT_ID = ca-app-pub-3940256099942544/2435281174
+BODYMODE_ADMOB_REWARDED_AD_UNIT_ID = ca-app-pub-3940256099942544/1712485313

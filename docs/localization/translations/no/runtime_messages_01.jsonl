@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"no","translation":"Fikk svar fra AI-treneren.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"no","translation":"Kunne ikke sende til AI-treneren.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"no","translation":"Dette er øvelser som er synkronisert fra Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"no","translation":"Du kan se svarene i BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"no","translation":"{{value1}} / {{value2}} oppnådd. La oss fortsette i et trygt tempo.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"no","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} ganger","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"no","translation":"Behandle {{value1}} som en egen avgjørelse, uten å endre plasseringen.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"no","translation":"{{value1}} timer","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"no","translation":"{{value1}} skritt","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"no","translation":"{{value1}} måltider","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"no","translation":"Denne enheten støtter ikke omgivelsessensing.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"no","translation":"Dette elementet er satt til \"ikke utfør i dag\".","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"no","translation":"Én ting er nok.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"no","translation":"Hvorfor dette?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"no","translation":"Øvelser","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"no","translation":"Åpne appen og prøv igjen.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"no","translation":"Har fjernet treningssenterets lokasjon.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"no","translation":"Registrerte ankomst til treningssenteret.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"no","translation":"Detekterer ankomst i nærheten av treningssenteret.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"no","translation":"Automatisk deteksjon av besøk på treningssenter er deaktivert.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"no","translation":"Registrerte utgang fra treningssenteret.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"no","translation":"Benkpress med stang","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"no","translation":"Mørkt","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"no","translation":"Chinu","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"no","translation":"Dykk","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"no","translation":"Dybdeøvelser","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"no","translation":"Jeg fortsetter treningen. Å øke antall treningslogger vil forbedre nøyaktigheten i neste ukes justeringer.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"no","translation":"Sort champagne","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"no","translation":"Mitt treningssenter","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"no","translation":"Brukeren har endret dagens aktiviteter.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"no","translation":"Dagens anbefalinger er oppdatert basert på brukerens handlinger.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"no","translation":"Lys","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"no","translation":"Royal cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"no","translation":"Øk","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"no","translation":"Reduser","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"no","translation":"En gang i dag","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"no","translation":"Jeg har nådd de tre målene for i dag. Dette vil bli reflektert i morgendagens anbefalinger.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"no","translation":"Dagens meny","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"no","translation":"Dagens anbefalinger er oppdatert","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"no","translation":"Plassering er ikke satt","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"no","translation":"Plassering er ikke aktivert. Du kan bruke manuell sjekkinn","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"no","translation":"Prøv igjen når plasseringen er stabil","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"no","translation":"Registrer først treningssenteret ditt som lokasjon","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"no","translation":"For nybegynnere: Start med hele kroppen","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"no","translation":"Jeg klarte ikke å starte sendingen av AI-trener igjen.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"no","translation":"Vennligst send den samme informasjonen på nytt.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"no","translation":"Prioriter gjenoppretting","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"no","translation":"Hvis du ikke ønsker endringer, skriv inn en tom streng.","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"no","translation":"Chins","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"no","translation":"Jeg har oppdatert gjenopprettingsdataene og justert dagens anbefalinger for å være tryggere.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"no","translation":"Jeg har lagret nye data.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"no","translation":"Eksisterende ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"no","translation":"Eksisterende eller nødvendige kategorier","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"no","translation":"Jeg har registrert din nåværende lokasjon som mitt treningsstudio.","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"no","translation":"Jeg klarte ikke å hente din nåværende lokasjon.","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"no","translation":"Jeg sjekker din nåværende lokasjon.","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"no","translation":"Jeg har kontrollert de siste 7 dagers treningshistorikk (3 økter) og kostholdsregistreringer (8).","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"no","translation":"Du mangler registrering av søvn.","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"no","translation":"Registrer søvnen i 3 dager, og fortsett med 3 treningsøkter per uke.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"no","translation":"Registrer søvnen i 3 dager","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"no","translation":"Intelligent, elegant og moderne","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"no","translation":"Kort sammendrag","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"no","translation":"Kort handling","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"no","translation":"Brystpress","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"no","translation":"Automatisk","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"no","translation":"Du kan registrere deg ved å gi tillatelse til posisjonsinformasjon i appen.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"no","translation":"Jeg har kontrollert 3 kroppsparametre, 8 måltider og 3 styrketreninger.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"no","translation":"En gang per uke","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"no","translation":"Jeg har fullført 3 treningsøkter per uke.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"no","translation":"Fortsett med 3 treningsøkter per uke.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"no","translation":"Intensivt, eksklusivt og stimulerende","review_note":""}

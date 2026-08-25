@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "ms", "translation": "Periksa prestasi terkini, kadar pencapaian, RPE, dan keadaan pemulihan, serta buat penyesuaian khusus untuk menjadikan rancangan itu lebih mudah dilaksanakan pada masa akan datang.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "ms", "translation": "Penukaran", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "ms", "translation": "{{value1}} ditambahkan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "ms", "translation": "{{value1}} dikeluarkan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "ms", "translation": "{{value1}}: {{value2}} → {{value3}} pengulangan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "ms", "translation": "{{value1}}: Istirahat {{value2}} → {{value3}} saat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "ms", "translation": "{{value1}}: {{value2}} → {{value3}} set", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "ms", "translation": "Tiada perubahan kali ini", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "ms", "translation": "Simpan dan mulakan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "ms", "translation": "Simpan sebagai rancangan baharu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "ms", "translation": "Laksanakan sekali sahaja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "ms", "translation": "Anda boleh mencuba atau menyimpan rancangan ini.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "ms", "translation": "Perbaharui rancangan yang sedia ada", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "ms", "translation": "Semata-mata untuk persetujuan, maklumat tentang penggunaan dan tujuan serta pengalaman, keadaan dan cadangan dikumpul dan dihantar dalam unit pemasangan. Maklumat berkaitan badan, makanan, foto, kadar jantung, masa tidur, lokasi, catatan, dan ID iklan tidak dihantar.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "ms", "translation": "Tinggi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "ms", "translation": "Rendah", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "ms", "translation": "Menengah", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "ms", "translation": "Rujukan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "ms", "translation": "Dokumen yang dicari", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "ms", "translation": "Ini adalah trend umum. Ia tidak menyertai kesan pada anda.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "ms", "translation": "Data dalam perpustakaan tidak tersedia, oleh itu, kami membuat keputusan berdasarkan rekod dan prinsip am.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "ms", "translation": "Kami tidak dapat menemui dokumen yang boleh digunakan secara langsung untuk cadangan ini. Kami membuat keputusan berdasarkan rekod dan prinsip latihan am.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "ms", "translation": "Tahap keyakinan keseluruhan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "ms", "translation": "Kami tidak menemui literatur yang berkaitan dengan populasi yang serupa, oleh itu, kami membuat keputusan berdasarkan rekod dan prinsip am.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "ms", "translation": "Bukti untuk cadangan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "ms", "translation": "Literatur yang dirujuk", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "ms", "translation": "Maklumat carian", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "ms", "translation": "Carian literatur tidak tersedia. Kami tidak dapat mengesahkan asasnya, oleh itu, kami membuat keputusan berdasarkan rekod.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "ms", "translation": "Lihat bukti saintifik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "ms", "translation": "Baca ringkasan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "ms", "translation": "Sesuai untuk ini", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "ms", "translation": "Objek yang serupa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "ms", "translation": "Baca teks penuh", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "ms", "translation": "Intervensi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "ms", "translation": "Lisensi teks penuh", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "ms", "translation": "Had", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "ms", "translation": "Kondisi populasi berbeza", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "ms", "translation": "Penelitian baharu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "ms", "translation": "Buka dokumen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "ms", "translation": "Kondisi sebahagiannya serupa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "ms", "translation": "Populasi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "ms", "translation": "Kesimpulan kajian", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "ms", "translation": "Ringkasan dan ruang lingkupnya", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "ms", "translation": "Maklumat tidak jelas", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "ms", "translation": "Lampirkan log diagnostik yang tidak berbayar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "ms", "translation": "Batalkan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "ms", "translation": "Masalah", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "ms", "translation": "Lain-lain", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "ms", "translation": "Kategori maklum balas", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "ms", "translation": "Permintaan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "ms", "translation": "Jenis", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "ms", "translation": "Kesukaran penggunaan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "ms", "translation": "Salin teks", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "ms", "translation": "Butiran", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "ms", "translation": "Lampirkan maklumat operasi dan komunikasi antara aplikasi dan Apple Watch. Ia tidak termasuk rekod badan, makanan, foto, perbualan dengan AI, atau maklumat pengautentikan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "ms", "translation": "Tidak dapat melampirkan log diagnostik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "ms", "translation": "Cara lain untuk menghantar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "ms", "translation": "Maklum balas tentang Mod Kसरत\n\nJenis: {{value1}}\nButiran:\n{{value2}}\n\nAplikasi: {{value3}}\nOS: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "ms", "translation": "Cuba semula", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "ms", "translation": "Hantar maklum balas", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "ms", "translation": "Hantar melalui e-mel", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "ms", "translation": "Hantar tanpa log diagnostik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "ms", "translation": "Jangan sertakan maklumat berkaitan badan, makanan, foto, perbualan dengan AI, atau maklumat pengautentikan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "ms", "translation": "Maklum balas", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "ms", "translation": "Ralat tidak diketahui", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "ms", "translation": "Menunggu keputusan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "ms", "translation": "{{value1}} - Versi yang direviu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "ms", "translation": "Reviu rancangan daripada {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "ms", "translation": "Sejarah reviu AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "ms", "translation": "Prestasi selanjutnya telah diperbaiki", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "ms", "translation": "Menunggu pengesahan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "ms", "translation": "Dibatalkan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "ms", "translation": "Reviu semula pada masa akan datang", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "ms", "translation": "Simpan sebagai baharu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "ms", "translation": "Ditolak", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "ms", "translation": "Prestasi selanjutnya akan sama", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "ms", "translation": "Diperbaharui", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "ms", "translation": "AI akan menyempurnakan rancangan pada masa akan datang", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "ms", "translation": "Teruskan dengan rancangan semasa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "ms", "translation": "\"{{value1}}\" telah disimpan sebagai baharu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "ms", "translation": "Rancangan pada masa akan datang telah diperbaharui.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "ms", "translation": "Pada masa akan datang", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "ms", "translation": "Rancangan semasa tidak akan ditulis semula sehingga kandungan yang diubah telah disemak.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "ms", "translation": "Anda telah mencapai matlamat. Mari kita lihat prestasi masa depan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "ms", "translation": "Anda hampir, tetapi perlu ditambah sedikit. Anda boleh menyesuaikan masa akan datang.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "ms", "translation": "Anda sedia untuk sesi masa depan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "ms", "translation": "Anda telah kembali ke rancangan sebelum reviu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "ms", "translation": "Batalkan reviu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

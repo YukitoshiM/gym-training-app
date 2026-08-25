@@ -2,6 +2,7 @@ import SwiftUI
 
 struct WorkoutSessionView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject private var appStore: AppStore
 
     @State private var session: WorkoutSession
@@ -9,6 +10,9 @@ struct WorkoutSessionView: View {
     @State private var isConfirmingFinish = false
     @State private var isConfirmingCancel = false
     @State private var completedSession: WorkoutSession?
+    @State private var isPaused = false
+    @State private var restTimerEndAt: Date?
+    @State private var restExerciseID: UUID?
 
     private let summaryColumns = [
         GridItem(.flexible(), spacing: 10),
@@ -22,28 +26,45 @@ struct WorkoutSessionView: View {
     var body: some View {
         NavigationStack {
             List {
+                if isPaused {
+                    Section {
+                        Button {
+                            isPaused = false
+                            appStore.setActiveWorkoutState(.active)
+                        } label: {
+                            Label(L10n.string("training.resume_workout", fallback: "トレーニングを再開"), systemImage: "play.fill")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity, minHeight: 48)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .accessibilityIdentifier("resumeActiveWorkoutButton")
+                    }
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                }
+
                 Section {
                     LazyVGrid(columns: summaryColumns, spacing: 10) {
                         MetricPill(
-                            title: "全体達成率",
+                            title: L10n.string("training.2f789b4bb6e5", fallback: "全体達成率"),
                             value: AppFormatters.percent(session.achievementRate),
                             systemImage: "target",
                             tint: AppTheme.accent
                         )
                         MetricPill(
-                            title: "計画セット",
+                            title: L10n.string("training.a85ababac45e", fallback: "計画セット"),
                             value: "\(session.completedPlannedSetCount)/\(session.plannedSetCount)",
                             systemImage: "checklist",
                             tint: AppTheme.blue
                         )
                         MetricPill(
-                            title: "総ボリューム",
+                            title: L10n.string("training.922870c3ac56", fallback: "総ボリューム"),
                             value: AppFormatters.volume(session.totalVolume, unit: appStore.userProfile.weightUnit),
                             systemImage: "scalemass",
                             tint: AppTheme.orange
                         )
                         MetricPill(
-                            title: "目標差",
+                            title: L10n.string("training.f85857b6a867", fallback: "目標差"),
                             value: AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit),
                             systemImage: "plusminus",
                             tint: session.volumeDelta >= 0 ? AppTheme.accent : AppTheme.orange
@@ -56,17 +77,21 @@ struct WorkoutSessionView: View {
                 ForEach($session.exercises) { $workoutExercise in
                     WorkoutExerciseSection(
                         workoutExercise: $workoutExercise,
-                        workoutDate: session.startedAt
+                        workoutDate: session.startedAt,
+                        sharedRestTimerEndAt: $restTimerEndAt,
+                        sharedRestExerciseID: $restExerciseID
                     )
+                    .disabled(isPaused)
                 }
 
                 Section {
                     Button {
                         isSelectingExercise = true
                     } label: {
-                        Label("種目を追加", systemImage: "plus.circle")
+                        Label(L10n.string("training.131342b755f7", fallback: "種目を追加"), systemImage: "plus.circle")
                     }
                 }
+                .disabled(isPaused)
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
             }
@@ -77,17 +102,30 @@ struct WorkoutSessionView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("終了") {
+                    Button(L10n.string("training.fd89f4db4ef1", fallback: "終了")) {
                         isConfirmingCancel = true
                     }
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button("完了") {
-                        isConfirmingFinish = true
+                    HStack {
+                        Button {
+                            isPaused.toggle()
+                            appStore.setActiveWorkoutState(isPaused ? .paused : .active)
+                        } label: {
+                            Image(systemName: isPaused ? "play.fill" : "pause.fill")
+                        }
+                        .accessibilityLabel(isPaused
+                            ? L10n.string("training.resume", fallback: "再開")
+                            : L10n.string("training.pause", fallback: "一時停止"))
+                        .accessibilityIdentifier("toggleWorkoutPauseButton")
+
+                        Button(L10n.string("training.4dce1b477edb", fallback: "完了")) {
+                            isConfirmingFinish = true
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .accessibilityIdentifier("finishWorkoutButton")
                     }
-                    .buttonStyle(.borderedProminent)
-                    .accessibilityIdentifier("finishWorkoutButton")
                 }
             }
             .sheet(isPresented: $isSelectingExercise) {
@@ -101,21 +139,57 @@ struct WorkoutSessionView: View {
                     dismiss()
                 }
             }
-            .confirmationDialog("ワークアウトを終了しますか？", isPresented: $isConfirmingCancel, titleVisibility: .visible) {
-                Button("記録せず閉じる", role: .destructive) {
+            .confirmationDialog(L10n.string("training.02fd70fbf77e", fallback: "ワークアウトを終了しますか？"), isPresented: $isConfirmingCancel, titleVisibility: .visible) {
+                Button(L10n.string("training.pause_and_close", fallback: "中断して閉じる")) {
+                    appStore.setActiveWorkoutState(.paused)
                     dismiss()
                 }
-                Button("続ける", role: .cancel) {}
+                Button(L10n.string("training.discard_workout", fallback: "記録を破棄"), role: .destructive) {
+                    _ = appStore.discardActiveWorkout()
+                    dismiss()
+                }
+                Button(L10n.string("training.ab9657692a70", fallback: "続ける"), role: .cancel) {}
             } message: {
-                Text("完了していない記録は保存されません。")
+                Text(L10n.string("training.active_workout_saved", fallback: "中断すると現在のセット内容を保存し、あとで続きから再開できます。"))
             }
-            .confirmationDialog("ワークアウトを完了しますか？", isPresented: $isConfirmingFinish, titleVisibility: .visible) {
-                Button("完了して履歴に保存") {
+            .confirmationDialog(L10n.string("training.f51fc1a0d598", fallback: "ワークアウトを完了しますか？"), isPresented: $isConfirmingFinish, titleVisibility: .visible) {
+                Button(L10n.string("training.b99f564095bb", fallback: "完了して履歴に保存")) {
                     finishWorkout()
                 }
-                Button("キャンセル", role: .cancel) {}
+                Button(L10n.string("training.76c1a8f001dd", fallback: "キャンセル"), role: .cancel) {}
+            }
+            .onAppear {
+                let restored = appStore.beginOrResumeWorkout(session)
+                session = restored
+                if let active = appStore.activeWorkoutSession, active.id == restored.id {
+                    isPaused = active.state != .active
+                    restTimerEndAt = active.restTimerEndAt
+                    restExerciseID = active.restExerciseID
+                }
+            }
+            .onChange(of: session) { _, value in
+                appStore.updateActiveWorkout(
+                    value,
+                    restTimerEndAt: restTimerEndAt,
+                    restExerciseID: restExerciseID
+                )
+            }
+            .onChange(of: restTimerEndAt) { _, _ in persistActiveSession() }
+            .onChange(of: restExerciseID) { _, _ in persistActiveSession() }
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .background, appStore.activeWorkoutSession?.id == session.id {
+                    appStore.setActiveWorkoutState(.interrupted)
+                }
             }
         }
+    }
+
+    private func persistActiveSession() {
+        appStore.updateActiveWorkout(
+            session,
+            restTimerEndAt: restTimerEndAt,
+            restExerciseID: restExerciseID
+        )
     }
 
     private func addExercise(_ exercise: Exercise) {
@@ -139,6 +213,8 @@ private struct WorkoutExerciseSection: View {
     @EnvironmentObject private var appStore: AppStore
     @Binding var workoutExercise: WorkoutExercise
     let workoutDate: Date
+    @Binding var sharedRestTimerEndAt: Date?
+    @Binding var sharedRestExerciseID: UUID?
     @State private var restRemaining = 0
     @State private var isRestTimerRunning = false
 
@@ -157,19 +233,19 @@ private struct WorkoutExerciseSection: View {
                             Text(workoutExercise.exercise.name)
                                 .font(.headline)
 
-                            Text("\(workoutExercise.exercise.primaryMuscle.displayName)・計画 \(workoutExercise.completedPlannedSetCount)/\(workoutExercise.plannedSetCount)セット・達成率 \(AppFormatters.percent(workoutExercise.achievementRate))")
+                            Text(L10n.string("training.f6878ce776cf", fallback: "{{value1}}・計画 {{value2}}/{{value3}}セット・達成率 {{value4}}", values: [String(describing: workoutExercise.exercise.primaryMuscle.displayName), String(describing: workoutExercise.completedPlannedSetCount), String(describing: workoutExercise.plannedSetCount), String(describing: AppFormatters.percent(workoutExercise.achievementRate))]))
                                 .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
 
                         Spacer()
 
-                        Toggle("スキップ", isOn: $workoutExercise.isSkipped)
+                        Toggle(L10n.string("training.17135f0f1ac6", fallback: "スキップ"), isOn: $workoutExercise.isSkipped)
                             .labelsHidden()
                     }
 
                     if workoutExercise.isSkipped {
-                        Label("この種目はスキップされました", systemImage: "forward.end")
+                        Label(L10n.string("training.cb7f0433f8fc", fallback: "この種目はスキップされました"), systemImage: "forward.end")
                             .foregroundStyle(AppTheme.mutedInk)
                     } else {
                         RestTimerControl(
@@ -199,7 +275,7 @@ private struct WorkoutExerciseSection: View {
                         Button {
                             addSet()
                         } label: {
-                            Label("セットを追加", systemImage: "plus")
+                            Label(L10n.string("training.0a9240ad4b7e", fallback: "セットを追加"), systemImage: "plus")
                         }
                         .buttonStyle(.borderless)
                     }
@@ -217,7 +293,17 @@ private struct WorkoutExerciseSection: View {
 
             if restRemaining <= 0 {
                 isRestTimerRunning = false
+                if sharedRestExerciseID == workoutExercise.id {
+                    sharedRestTimerEndAt = nil
+                    sharedRestExerciseID = nil
+                }
             }
+        }
+        .onAppear {
+            guard sharedRestExerciseID == workoutExercise.id,
+                  let endAt = sharedRestTimerEndAt else { return }
+            restRemaining = max(0, Int(ceil(endAt.timeIntervalSinceNow)))
+            isRestTimerRunning = restRemaining > 0
         }
     }
 
@@ -227,11 +313,17 @@ private struct WorkoutExerciseSection: View {
         }
         restRemaining = workoutExercise.restSeconds
         isRestTimerRunning = true
+        sharedRestExerciseID = workoutExercise.id
+        sharedRestTimerEndAt = Date().addingTimeInterval(TimeInterval(workoutExercise.restSeconds))
     }
 
     private func stopRestTimer() {
         isRestTimerRunning = false
         restRemaining = 0
+        if sharedRestExerciseID == workoutExercise.id {
+            sharedRestTimerEndAt = nil
+            sharedRestExerciseID = nil
+        }
     }
 
     private func addSet() {
@@ -241,6 +333,7 @@ private struct WorkoutExerciseSection: View {
                 setOrder: workoutExercise.sets.count + 1,
                 targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10,
+                targetRPE: previous?.targetRPE,
                 plannedConcentricSeconds: previous?.plannedConcentricSeconds,
                 plannedEccentricSeconds: previous?.plannedEccentricSeconds,
                 plannedTempoBeatSpeed: previous?.plannedTempoBeatSpeed,
@@ -280,12 +373,12 @@ private struct WorkoutSetRow: View {
 
     private var statusText: String {
         if set.isAdded {
-            return "追加"
+            return L10n.string("training.aef5c7b0939e", fallback: "追加")
         }
         if !set.isCompleted {
-            return "未完了"
+            return L10n.string("training.9720cc8de334", fallback: "未完了")
         }
-        return set.isAchieved ? "達成" : "未達"
+        return set.isAchieved ? L10n.string("training.6f68dd807f5f", fallback: "達成") : L10n.string("training.76bbf2a42b69", fallback: "未達")
     }
 
     private var statusTint: Color {
@@ -311,7 +404,7 @@ private struct WorkoutSetRow: View {
                     Button {
                         copyPrevious(previousSet)
                     } label: {
-                        Label("コピー", systemImage: "doc.on.doc")
+                        Label(L10n.string("training.0c7818c1fc9e", fallback: "コピー"), systemImage: "doc.on.doc")
                             .labelStyle(.titleAndIcon)
                     }
                     .font(.footnote.bold())
@@ -330,18 +423,18 @@ private struct WorkoutSetRow: View {
                     .background(set.isCompleted ? AppTheme.positive.opacity(0.18) : AppTheme.ink.opacity(0.09), in: Circle())
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("目標 \(AppFormatters.weight(set.targetWeight)) × \(set.targetReps)回")
+                    Text(L10n.string("training.ad1d41e268ba", fallback: "目標 {{value1}} × {{value2}}回", values: [String(describing: AppFormatters.weight(set.targetWeight)), String(describing: set.targetReps)]))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
 
                     HStack(spacing: 6) {
                         DeltaBadge(
-                            title: "重量差",
+                            title: L10n.string("training.37144dc3ed75", fallback: "重量差"),
                             value: AppFormatters.signedWeight(set.weightDelta, unit: appStore.userProfile.weightUnit),
                             tint: statusTint
                         )
                         DeltaBadge(
-                            title: "回数差",
+                            title: L10n.string("training.8e33a5a0f037", fallback: "回数差"),
                             value: AppFormatters.signedReps(set.repsDelta),
                             tint: statusTint
                         )
@@ -358,7 +451,7 @@ private struct WorkoutSetRow: View {
                     .padding(.vertical, 5)
                     .background(statusTint.opacity(0.12), in: Capsule())
 
-                Toggle("完了", isOn: $set.isCompleted)
+                Toggle(L10n.string("training.4dce1b477edb", fallback: "完了"), isOn: $set.isCompleted)
                     .labelsHidden()
                     .accessibilityIdentifier("completeSetToggle-\(exerciseSortOrder)-\(set.setOrder)")
                     .onChange(of: set.isCompleted) { oldValue, newValue in
@@ -409,7 +502,7 @@ private struct WorkoutSetRow: View {
             Button {
                 copyTarget()
             } label: {
-                Label("目標値をコピー", systemImage: "target")
+                Label(L10n.string("training.85006d7df5ce", fallback: "目標値をコピー"), systemImage: "target")
             }
             .font(.footnote.bold())
             .buttonStyle(.borderless)
@@ -420,7 +513,7 @@ private struct WorkoutSetRow: View {
     }
 
     private func previousText(for previousSet: WorkoutSet) -> String {
-        "前回 \(AppFormatters.weight(previousSet.actualWeight, unit: appStore.userProfile.weightUnit)) × \(previousSet.actualReps)回"
+        L10n.string("training.eef6e758977b", fallback: "前回 {{value1}} × {{value2}}回", values: [String(describing: AppFormatters.weight(previousSet.actualWeight, unit: appStore.userProfile.weightUnit)), String(describing: previousSet.actualReps)])
     }
 
     private func copyPrevious(_ previousSet: WorkoutSet) {
@@ -445,12 +538,12 @@ private struct WorkoutPlanProgressStrip: View {
 
             HStack(spacing: 8) {
                 DeltaBadge(
-                    title: "達成セット",
+                    title: L10n.string("training.90687409925b", fallback: "達成セット"),
                     value: "\(workoutExercise.achievedPlannedSetCount)/\(workoutExercise.plannedSetCount)",
                     tint: AppTheme.accent
                 )
                 DeltaBadge(
-                    title: "目標差",
+                    title: L10n.string("training.f85857b6a867", fallback: "目標差"),
                     value: AppFormatters.signedVolume(workoutExercise.volumeDelta, unit: appStore.userProfile.weightUnit),
                     tint: workoutExercise.volumeDelta >= 0 ? AppTheme.accent : AppTheme.orange
                 )
@@ -501,7 +594,7 @@ private struct RestTimerControl: View {
 
     var body: some View {
         HStack {
-            Label("休憩 \(format(displayRemaining))", systemImage: "timer")
+            Label(L10n.string("training.a0b0ff58b87b", fallback: "休憩 {{value1}}", values: [String(describing: format(displayRemaining))]), systemImage: "timer")
                 .font(.subheadline.weight(.semibold))
 
             Spacer()
@@ -509,7 +602,7 @@ private struct RestTimerControl: View {
             Button {
                 isRunning ? onStop() : onStart()
             } label: {
-                Label(isRunning ? "停止" : "開始", systemImage: isRunning ? "stop.fill" : "play.fill")
+                Label(isRunning ? L10n.string("training.e2374146acf3", fallback: "停止") : L10n.string("training.92f3acd01a38", fallback: "開始"), systemImage: isRunning ? "stop.fill" : "play.fill")
             }
             .buttonStyle(.borderless)
             .accessibilityIdentifier("restTimerButton")
@@ -528,7 +621,7 @@ private struct RestTimerControl: View {
 #Preview {
     WorkoutSessionView(
         session: WorkoutSession(plan: TrainingPlan(
-            name: "胸の日",
+            name: L10n.string("training.d30ca9b91ccb", fallback: "胸の日"),
             exercises: [
                 PlanExercise(exercise: PresetExerciseStore.exercises[0], sortOrder: 0)
             ]

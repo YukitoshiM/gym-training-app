@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"he","translation":"בחר את האפשרות הקרובה ביותר","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"he","translation":"לאחר שהגדרת את המטרה שלך, יש לבצע 3 פעולות ביום","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"he","translation":"השלם את האימון הראשון","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"he","translation":"רשום את הערך הראשוני","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"he","translation":"עד 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"he","translation":"ניתן להוסיף פריטים לא מלאים מאחר לאחר מכן.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"he","translation":"לא בוצע","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"he","translation":"לא התבצע","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"he","translation":"לא רשום","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"he","translation":"לא הגדר","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"he","translation":"לא נבחר","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"he","translation":"עבור למסלול בהתאם למטרה","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"he","translation":"הבא","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"he","translation":"בדוק את השלבים","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"he","translation":"ירידה במשקל","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"he","translation":"פחמימות","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"he","translation":"לא חוקי","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"he","translation":"הגדר מספר וזמן סבירים","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"he","translation":"במיוחד חשוב","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"he","translation":"לדעת את מצבך ואת הצעד הבא","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"he","translation":"בדוק את הסטטוס","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"he","translation":"היום","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"he","translation":"מידע גופני נוכחי","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"he","translation":"לא זמין כרגע","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"he","translation":"השתמשתי בנתונים והגדרות הנוכחיים.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"he","translation":"בחירה נוכחית: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"he","translation":"צעד בביטחון לעבר הגוף הרצוי.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"he","translation":"סיבה","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"he","translation":"סיבה: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"he","translation":"תאריך לידה","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"he","translation":"התחל את הסיור במסך","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"he","translation":"מספר תפריטים רשומים: {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"he","translation":"מצב שאליו שואפים","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"he","translation":"סגנון שאליו שואפים","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"he","translation":"מטרה","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"he","translation":"מטרה: {{value1}} / הבדל: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"he","translation":"מטרה וקצב","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"he","translation":"מטרה והישגים","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"he","translation":"הצעות לשינוי מטרה","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"he","translation":"מטרה לא מוגדרת","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"he","translation":"הגעה למטרה","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"he","translation":"מטרה","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"he","translation":"ישנן שתי דמויות שונות לכל מטרה. שינוי הדמויות משנה את הצורה האידיאלית ואת סגנון הדיבור.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"he","translation":"הדמות המתאימה למטרה","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"he","translation":"ניתן לשנות את נקודות הבדיקה בבית ומה לעשות בהמשך, בהתאם למטרה.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"he","translation":"שינוי מטרה","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"he","translation":"בחירת מטרה","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"he","translation":"מצב מטרה","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"he","translation":"מטרה ויעד","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"he","translation":"הופיעו תפריטים לפי מטרה","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"he","translation":"צפייה בתפריטים לפי מטרה","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"he","translation":"הקרוב ביותר","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"he","translation":"תיקון תוך שיחה","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"he","translation":"דגימה חסכונית","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"he","translation":"התחלה {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"he","translation":"שינה והתאוששות","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"he","translation":"בבדיקה","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"he","translation":"שניות","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"he","translation":"מספר שניות","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"he","translation":"חיפוש ו/או הוספת פעילות","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"he","translation":"השתמש באימות קצר עבור כל מכשיר","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"he","translation":"בתוך המכשיר","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"he","translation":"ביצועים ספורטיביים","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"he","translation":"אימוני כוח","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"he","translation":"חיבור ביצועים ספורטיביים, כוח וכושר, והתאוששות","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"he","translation":"הגדלת מסת שריר והישגים באימונים","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"he","translation":"גדילה של שרירים","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"he","translation":"ניסיון","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"he","translation":"רמת ניסיון","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"he","translation":"קצב שבו ניתן להמשיך","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"he","translation":"זה לא הערכה של יכולות או תעודות. הנה נקודות העדיפות בתשובה.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"he","translation":"שומן","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"he","translation":"היקף מותניים","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"he","translation":"היקף מותניים - אופציונלי","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"he","translation":"למידת דפוסי התנהגות","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"he","translation":"התראות התנהגותיות","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"he","translation":"הצגה","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"he","translation":"מצב הצגה","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"he","translation":"שיטת הצגה","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"he","translation":"גישה להצגה","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"he","translation":"מודל תמיכה לא מחובר","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"he","translation":"הערות","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"he","translation":"הערות: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"he","translation":"תכנית","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"he","translation":"מחק את התוכנית, היסטוריה, מדדי בריאות אישיים, תזונה, תמונות, שיחה וזיכרון AI, ומאפיינים מותאמים אישית.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"he","translation":"התחל מהתוכנית או הוסף מאפיינים ותעד בזמן אמת.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"he","translation":"הוספת מאפיינים ללא תוכנית","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"he","translation":"שילוב בתוכנית","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"he","translation":"צור תוכנית","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"he","translation":"בואו נצור תוכנית","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"he","translation":"תוכנית ו-Watch","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"he","translation":"האם תרצה לעדכן את המשקל?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"he","translation":"תיעוד","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"he","translation":"תעד","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"he","translation":"תעד. שאל את ה-AI. בצע. יש רק שלושה דברים שאפשר לעשות בכל יום.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"he","translation":"לחץ על פריט התיעוד","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"he","translation":"תוצאות התיעוד והביצוע יועברו לניתוח ה-AI הבא. הפעולה הראשונה תנחה אותך דרך המשימה בבית.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"he","translation":"התיעוד מאוחסן כאן","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"he","translation":"בדיקת תיעוד בתהליך. אפשר לסגור את המסך ולהמשיך.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"he","translation":"צפה בתיעוד והצע פעולה נוספת","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"he","translation":"בשימוש","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"he","translation":"מתוך הרשום, אציע שינויים חיוביים, הישארות או מידע חסר, וגם את ההמלצה הבאה.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"he","translation":"הרשום","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"he","translation":"הגדרות","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"he","translation":"הגדרות שמורות","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"he","translation":"יומן הדיאגנוזה כולל תיעוד של פעולת, תקשורת ופעילות גופנית במכשיר iPhone וב-Apple Watch. הוא לא נשלח אוטומטית למקום חיצוני.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"he","translation":"מחיקת יומן הדיאגנוזה","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"he","translation":"יצוא יומן הדיאגנוזה","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"he","translation":"שליחת יומן הדיאגנוזה","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"he","translation":"שיחה","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"he","translation":"לפרטים נוספים","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"he","translation":"מידע שעלול להטעות","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"he","translation":"מדדי בריאות","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"he","translation":"גובה","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"he","translation":"גובה - אופציונלי","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"he","translation":"אם אינך בטוח, פנה לכאן","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"he","translation":"הוספה","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"he","translation":"להוסיף","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"he","translation":"להתחיל מחדש","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"he","translation":"שלח","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"he","translation":"מחכה לשליחה","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"he","translation":"בחר את הסטודיו או את הציוד שיש לך בבית","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"he","translation":"אני אבדוק את ההקלטות ברגע שהתקשורת תושג.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"he","translation":"מספר פעמים בשבוע","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"he","translation":"כמה פעמים בשבוע אתה מתאמן?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"he","translation":"הוראות","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"he","translation":"מתבצע","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"he","translation":"שמור על הרגלי אימון, שינה ואכילה","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"he","translation":"בחירה: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"he","translation":"נבחר","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"he","translation":"שליחה","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"he","translation":"טען את ההגדרות של ה-AI בזמן ההפצה","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"he","translation":"אזורים ממוקדים","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"he","translation":"משקל","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"he","translation":"הגדר משקל באמצעות גלגל","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"he","translation":"יחידות משקל","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"he","translation":"סגור","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"he","translation":"סגור","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"he","translation":"התחל","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"he","translation":"מידע רלוונטי","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"he","translation":"תזונה","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"he","translation":"תזונה וגזרה","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"he","translation":"ניתן להכניס תמונות של התזונה והגזרה. ניתן לשמור את המשקל, היקף המותניים והסטים כערכים מספריים.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"he","translation":"תיעוד ארוחות","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"he","translation":"מספר ארוחות","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"he","translation":"הצגת השגת מספר הארוחות וכן השגת קלוריות ופחמימות/שומן/חלבונים בנפרד.","review_note":""}

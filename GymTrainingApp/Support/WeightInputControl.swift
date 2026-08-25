@@ -26,7 +26,7 @@ struct WeightInputControl: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            TextField("重量", text: $editText)
+            TextField(L10n.string("core_ui.a05dfd9b7b1f", fallback: "重量"), text: $editText)
             .keyboardType(kilogramRange.lowerBound < 0 ? .numbersAndPunctuation : .decimalPad)
             .multilineTextAlignment(.trailing)
             .monospacedDigit()
@@ -38,7 +38,7 @@ struct WeightInputControl: View {
                     prepareManualEntryIfNeeded()
                 }
             )
-            .accessibilityLabel("重量")
+            .accessibilityLabel(L10n.string("core_ui.a05dfd9b7b1f", fallback: "重量"))
             .accessibilityIdentifier(accessibilityIdentifier)
 
             Text(unit.displayName)
@@ -57,7 +57,7 @@ struct WeightInputControl: View {
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.borderless)
-            .accessibilityLabel("重量をリールで設定")
+            .accessibilityLabel(L10n.string("core_ui.9dc32540526b", fallback: "重量をリールで設定"))
             .accessibilityIdentifier("wheel-\(accessibilityIdentifier)")
         }
         .sheet(isPresented: $isWheelPresented) {
@@ -78,7 +78,7 @@ struct WeightInputControl: View {
             ToolbarItemGroup(placement: .keyboard) {
                 if isTextFieldFocused {
                     Spacer()
-                    Button("入力完了") {
+                    Button(L10n.string("core_ui.ce815d645805", fallback: "入力完了")) {
                         isTextFieldFocused = false
                     }
                     .accessibilityIdentifier("dismiss-\(accessibilityIdentifier)")
@@ -202,7 +202,7 @@ private struct WeightWheelPickerSheet: View {
     var body: some View {
         NavigationStack {
             HStack(spacing: 0) {
-                Picker("重量", selection: stepIndex) {
+                Picker(L10n.string("core_ui.a05dfd9b7b1f", fallback: "重量"), selection: stepIndex) {
                     ForEach(availableStepRange, id: \.self) { index in
                         Text(Self.formatted(Double(index) / 10))
                             .monospacedDigit()
@@ -219,18 +219,18 @@ private struct WeightWheelPickerSheet: View {
                     .foregroundStyle(AppTheme.mutedInk)
                     .frame(width: 44, alignment: .leading)
             }
-            .navigationTitle("重量")
+            .navigationTitle(L10n.string("core_ui.a05dfd9b7b1f", fallback: "重量"))
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 initialStepIndex = currentStepIndex
             }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル", action: onCancel)
+                    Button(L10n.string("core_ui.37a3754927b6", fallback: "キャンセル"), action: onCancel)
                 }
 
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("設定", action: onSave)
+                    Button(L10n.string("core_ui.347a70f8f182", fallback: "設定"), action: onSave)
                         .fontWeight(.semibold)
                         .accessibilityIdentifier("saveWeightWheelButton")
                 }
@@ -299,7 +299,7 @@ struct RepsInputControl: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            TextField("回数", text: $editText)
+            TextField(L10n.string("core_ui.60083756f428", fallback: "回数"), text: $editText)
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.trailing)
                 .monospacedDigit()
@@ -311,10 +311,10 @@ struct RepsInputControl: View {
                     prepareManualEntryIfNeeded()
                 }
             )
-            .accessibilityLabel("回数")
+            .accessibilityLabel(L10n.string("core_ui.60083756f428", fallback: "回数"))
             .accessibilityIdentifier(accessibilityIdentifier)
 
-            Text("回")
+            Text(L10n.string("core_ui.f894a2a47a50", fallback: "回"))
                 .foregroundStyle(AppTheme.mutedInk)
                 .frame(minWidth: 20, alignment: .leading)
 
@@ -329,7 +329,7 @@ struct RepsInputControl: View {
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.borderless)
-            .accessibilityLabel("回数をリールで設定")
+            .accessibilityLabel(L10n.string("core_ui.bc1c81c09d67", fallback: "回数をリールで設定"))
             .accessibilityIdentifier("wheel-\(accessibilityIdentifier)")
         }
         .sheet(isPresented: $isWheelPresented) {
@@ -349,7 +349,7 @@ struct RepsInputControl: View {
             ToolbarItemGroup(placement: .keyboard) {
                 if isTextFieldFocused {
                     Spacer()
-                    Button("入力完了") {
+                    Button(L10n.string("core_ui.ce815d645805", fallback: "入力完了")) {
                         isTextFieldFocused = false
                     }
                     .accessibilityIdentifier("dismiss-\(accessibilityIdentifier)")
@@ -400,7 +400,7 @@ private struct RepsWheelPickerSheet: View {
     var body: some View {
         NavigationStack {
             HStack(spacing: 0) {
-                Picker("回数", selection: $reps) {
+                Picker(L10n.string("core_ui.60083756f428", fallback: "回数"), selection: $reps) {
                     ForEach(range, id: \.self) { value in
                         Text("\(value)")
                             .monospacedDigit()
@@ -412,20 +412,20 @@ private struct RepsWheelPickerSheet: View {
                 .clipped()
                 .accessibilityIdentifier("repsPicker")
 
-                Text("回")
+                Text(L10n.string("core_ui.f894a2a47a50", fallback: "回"))
                     .font(.headline)
                     .foregroundStyle(AppTheme.mutedInk)
                     .frame(width: 44, alignment: .leading)
             }
-            .navigationTitle("回数")
+            .navigationTitle(L10n.string("core_ui.60083756f428", fallback: "回数"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル", action: onCancel)
+                    Button(L10n.string("core_ui.37a3754927b6", fallback: "キャンセル"), action: onCancel)
                 }
 
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("設定", action: onSave)
+                    Button(L10n.string("core_ui.347a70f8f182", fallback: "設定"), action: onSave)
                         .fontWeight(.semibold)
                         .accessibilityIdentifier("saveRepsWheelButton")
                 }
@@ -446,11 +446,11 @@ struct RestSecondsInputControl: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            Label("休憩", systemImage: "timer")
+            Label(L10n.string("core_ui.5f561feac629", fallback: "休憩"), systemImage: "timer")
 
             Spacer(minLength: 8)
 
-            TextField("秒数", text: $editText)
+            TextField(L10n.string("core_ui.289507ab2d81", fallback: "秒数"), text: $editText)
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.trailing)
                 .monospacedDigit()
@@ -461,10 +461,10 @@ struct RestSecondsInputControl: View {
                         prepareManualEntryIfNeeded()
                     }
                 )
-                .accessibilityLabel("休憩時間")
+                .accessibilityLabel(L10n.string("core_ui.d2f1acf908b5", fallback: "休憩時間"))
                 .accessibilityIdentifier("\(accessibilityIdentifier)-field")
 
-            Text("秒")
+            Text(L10n.string("core_ui.6d288403a166", fallback: "秒"))
                 .foregroundStyle(AppTheme.mutedInk)
 
             Button {
@@ -476,13 +476,13 @@ struct RestSecondsInputControl: View {
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.borderless)
-            .accessibilityLabel("休憩時間をリールで設定")
+            .accessibilityLabel(L10n.string("core_ui.f2fa32a7adcc", fallback: "休憩時間をリールで設定"))
             .accessibilityIdentifier(accessibilityIdentifier)
         }
         .sheet(isPresented: $isWheelPresented) {
             NavigationStack {
                 HStack(spacing: 0) {
-                    Picker("休憩時間", selection: $draftSeconds) {
+                    Picker(L10n.string("core_ui.d2f1acf908b5", fallback: "休憩時間"), selection: $draftSeconds) {
                         ForEach(Array(stride(from: 0, through: 600, by: 5)), id: \.self) { value in
                             Text(Self.formatted(value))
                                 .monospacedDigit()
@@ -494,22 +494,22 @@ struct RestSecondsInputControl: View {
                     .clipped()
                     .accessibilityIdentifier("restSecondsPicker")
 
-                    Text("分:秒")
+                    Text(L10n.string("core_ui.5a47abbc3654", fallback: "分:秒"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                         .frame(width: 52, alignment: .leading)
                 }
-                .navigationTitle("休憩時間")
+                .navigationTitle(L10n.string("core_ui.d2f1acf908b5", fallback: "休憩時間"))
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("キャンセル") {
+                        Button(L10n.string("core_ui.37a3754927b6", fallback: "キャンセル")) {
                             isWheelPresented = false
                         }
                     }
 
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("設定") {
+                        Button(L10n.string("core_ui.347a70f8f182", fallback: "設定")) {
                             seconds = draftSeconds
                             editText = String(seconds)
                             isWheelPresented = false
@@ -525,7 +525,7 @@ struct RestSecondsInputControl: View {
             ToolbarItemGroup(placement: .keyboard) {
                 if isTextFieldFocused {
                     Spacer()
-                    Button("入力完了") {
+                    Button(L10n.string("core_ui.ce815d645805", fallback: "入力完了")) {
                         isTextFieldFocused = false
                     }
                     .accessibilityIdentifier("dismiss-\(accessibilityIdentifier)-field")
@@ -624,7 +624,7 @@ struct NumericTextInputControl: View {
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.borderless)
-            .accessibilityLabel("\(title)をリールで設定")
+            .accessibilityLabel(L10n.string("core_ui.8aac861df779", fallback: "{{value1}}をリールで設定", values: [String(describing: title)]))
             .accessibilityIdentifier("wheel-\(accessibilityIdentifier)")
         }
         .sheet(isPresented: $isWheelPresented) {
@@ -646,7 +646,7 @@ struct NumericTextInputControl: View {
             ToolbarItemGroup(placement: .keyboard) {
                 if isTextFieldFocused {
                     Spacer()
-                    Button("入力完了") {
+                    Button(L10n.string("core_ui.ce815d645805", fallback: "入力完了")) {
                         isTextFieldFocused = false
                     }
                     .accessibilityIdentifier("dismiss-\(accessibilityIdentifier)")
@@ -745,11 +745,11 @@ private struct NumericWheelPickerSheet: View {
             }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル", action: onCancel)
+                    Button(L10n.string("core_ui.37a3754927b6", fallback: "キャンセル"), action: onCancel)
                 }
 
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("設定", action: onSave)
+                    Button(L10n.string("core_ui.347a70f8f182", fallback: "設定"), action: onSave)
                         .fontWeight(.semibold)
                         .accessibilityIdentifier("saveNumericWheelButton")
                 }

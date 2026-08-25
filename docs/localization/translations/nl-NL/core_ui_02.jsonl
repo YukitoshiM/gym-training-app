@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"nl-NL","translation":"Kies het meest relevante item.","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"nl-NL","translation":"Nadat je je eerste doel hebt vastgesteld, zijn er slechts 3 dingen die je elke dag moet doen.","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"nl-NL","translation":"Voltooi de eerste training.","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"nl-NL","translation":"Registreer de eerste waarde.","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"nl-NL","translation":"Maximaal 3 items.","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"nl-NL","translation":"Onvolledige velden kunnen later worden toegevoegd via het registratie-scherm.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"nl-NL","translation":"Niet voltooid","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"nl-NL","translation":"Niet uitgevoerd","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"nl-NL","translation":"Niet geregistreerd","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"nl-NL","translation":"Niet ingesteld","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"nl-NL","translation":"Niet geselecteerd","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"nl-NL","translation":"Ga verder naar de menu's op basis van je doel.","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"nl-NL","translation":"Volgende","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"nl-NL","translation":"Bekijk je stappen","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"nl-NL","translation":"Gewichtsverlies","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"nl-NL","translation":"Koolhydraten","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"nl-NL","translation":"Ongeldig","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"nl-NL","translation":"Stel een realistisch aantal en tijdsduur in.","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"nl-NL","translation":"Vooral belangrijk","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"nl-NL","translation":"Bekijk je status en de volgende stap","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"nl-NL","translation":"Status bekijken","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"nl-NL","translation":"Huidig","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"nl-NL","translation":"Huidige lichaamsinformatie","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"nl-NL","translation":"Op dit moment niet beschikbaar","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"nl-NL","translation":"Gebruik gemaakt van de huidige opgeslagen gegevens en instellingen.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"nl-NL","translation":"Momenteel geselecteerd: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"nl-NL","translation":"Ga onbeperkt vooruit naar je ideale lichaam.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"nl-NL","translation":"Reden","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"nl-NL","translation":"Reden: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"nl-NL","translation":"Geboortedatum","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"nl-NL","translation":"Tour door de app starten","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"nl-NL","translation":"Aantal geregistreerde opties: {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"nl-NL","translation":"Gewenste staat","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"nl-NL","translation":"Gewenste stijl","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"nl-NL","translation":"Doelstelling","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"nl-NL","translation":"Doelstelling: {{value1}} / Verschil: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"nl-NL","translation":"Doel en tempo","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"nl-NL","translation":"Doel en prestaties","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"nl-NL","translation":"Mogelijke aanpassingen voor je doelstelling","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"nl-NL","translation":"Doelstelling niet ingesteld","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"nl-NL","translation":"Doelen bereiken","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"nl-NL","translation":"Doel","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"nl-NL","translation":"Voor elk doel zijn er twee personen. Door de persoon te veranderen, verandert ook de manier van communiceren en het gewenste lichaam.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"nl-NL","translation":"De juiste persoon voor jouw doel","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"nl-NL","translation":"Je kunt de startpunten en de volgende stappen aanpassen op basis van je doel.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"nl-NL","translation":"Doel wijzigen","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"nl-NL","translation":"Doel selecteren","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"nl-NL","translation":"Doelmodus","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"nl-NL","translation":"Doel en doelen","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"nl-NL","translation":"Het menu voor specifieke doelen is beschikbaar","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"nl-NL","translation":"Bekijk het menu voor specifieke doelen","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"nl-NL","translation":"Recent","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"nl-NL","translation":"Aanpassen tijdens een gesprek","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"nl-NL","translation":"Energiebesparend meten","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"nl-NL","translation":"Begin {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"nl-NL","translation":"Slaap en herstel","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"nl-NL","translation":"In behandeling","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"nl-NL","translation":"Seconden","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"nl-NL","translation":"Aantal seconden","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"nl-NL","translation":"Oefening zoeken of toevoegen","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"nl-NL","translation":"Gebruik tijdelijke authenticatie per apparaat.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"nl-NL","translation":"Binnen het apparaat","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"nl-NL","translation":"Prestatie","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"nl-NL","translation":"Spierkrachttraining","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"nl-NL","translation":"Verbind spierkracht, uithoudingsvermogen en herstel met prestaties","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"nl-NL","translation":"Vergroot spiermassa en trainingsresultaten","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"nl-NL","translation":"Spiermassa","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"nl-NL","translation":"Ervaring","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"nl-NL","translation":"Niveau van ervaring","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"nl-NL","translation":"Tempo waarmee je kunt voortzetten","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"nl-NL","translation":"Dit is geen beoordeling van vaardigheden of certificeringen. De prioriteit wordt aangegeven op basis van de antwoorden.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"nl-NL","translation":"Vetgehalte","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"nl-NL","translation":"Omtrek taille","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"nl-NL","translation":"Optionele omtrek taille","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"nl-NL","translation":"Leer gedragspatronen","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"nl-NL","translation":"Gedragsnotificaties","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"nl-NL","translation":"Weergave","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"nl-NL","translation":"Weergavemodus","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"nl-NL","translation":"Weergavemethode","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"nl-NL","translation":"Weergavestrategie","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"nl-NL","translation":"Geen ondersteuningsmodel verbonden.","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"nl-NL","translation":"Opmerking","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"nl-NL","translation":"Opmerking: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"nl-NL","translation":"Planning","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"nl-NL","translation":"Verwijder planning, activiteitengeschiedenis, lichaamsmetingen, maaltijden, foto's, AI-gesprek en -herinneringen, en aangepaste activiteiten.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"nl-NL","translation":"Begin met de planning of voeg activiteiten direct toe en registreer deze.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"nl-NL","translation":"Activiteiten toevoegen zonder planning","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"nl-NL","translation":"Toevoegen aan de planning","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"nl-NL","translation":"Planning maken","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"nl-NL","translation":"Maak een planning","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"nl-NL","translation":"Planning & Watch","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"nl-NL","translation":"Wil je het gewicht in de planning bijwerken?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"nl-NL","translation":"Registreren","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"nl-NL","translation":"Registreer","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"nl-NL","translation":"Registreer. Stel vragen aan de AI. Voer uit. Er zijn slechts drie dingen die je elke dag moet doen.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"nl-NL","translation":"Tik op de te registreren activiteit","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"nl-NL","translation":"De registratie en uitvoeringsresultaten worden doorgegeven aan de volgende AI-analyse. De eerste actie wordt geleid door de missie op het startscherm.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"nl-NL","translation":"Registraties worden hieropgeslagen","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"nl-NL","translation":"Ik controleer je registraties. Het proces gaat verder, zelfs als je het scherm sluit.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"nl-NL","translation":"Bekijk je registraties en ontvang suggesties voor de volgende actie","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"nl-NL","translation":"In actieve status","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"nl-NL","translation":"Op basis van uw gegevens, stel ik verbeteringen, stagnatie of ontbrekende informatie voor.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"nl-NL","translation":"Gegevens opgeslagen","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"nl-NL","translation":"Instellingen","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"nl-NL","translation":"Instellingen voltooid","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"nl-NL","translation":"De diagnose-log bevat gegevens over de werking, communicatie en workouts op uw iPhone en Apple Watch. Deze worden niet automatisch naar buiten verzonden.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"nl-NL","translation":"Diagnose-log verwijderen","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"nl-NL","translation":"Diagnose-log opslaan","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"nl-NL","translation":"Diagnose-log versturen","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"nl-NL","translation":"Gesprekstijl","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"nl-NL","translation":"Meer informatie","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"nl-NL","translation":"Informatie die verwarring kan veroorzaken","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"nl-NL","translation":"Lichaamsindicatoren","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"nl-NL","translation":"Lengte","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"nl-NL","translation":"Lengte (optioneel)","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"nl-NL","translation":"Als u het niet weet, bekijk dan hier","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"nl-NL","translation":"Toevoegen","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"nl-NL","translation":"Toevoegen","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"nl-NL","translation":"Starten met toevoegen","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"nl-NL","translation":"Versturen","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"nl-NL","translation":"Wachten op verzending","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"nl-NL","translation":"Kies uit de sportschool of thuisapparatuur die je gebruikt.","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"nl-NL","translation":"De gegevens worden gecontroleerd zodra de verbinding is actief.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"nl-NL","translation":"Aantal keren per week","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"nl-NL","translation":"Hoeveel keer per week sport je?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"nl-NL","translation":"Instructies","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"nl-NL","translation":"In uitvoering","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"nl-NL","translation":"Houd je gewoonten aan voor training, slaap en voeding.","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"nl-NL","translation":"Kies: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"nl-NL","translation":"Selectie","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"nl-NL","translation":"Verzend","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"nl-NL","translation":"AI-instellingen bij verzending laden","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"nl-NL","translation":"Focusgebieden","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"nl-NL","translation":"Gewicht","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"nl-NL","translation":"Gewicht instellen met de knop","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"nl-NL","translation":"Eenheid gewicht","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"nl-NL","translation":"Gesloten","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"nl-NL","translation":"Sluiten","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"nl-NL","translation":"Starten","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"nl-NL","translation":"Gerelateerde informatie","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"nl-NL","translation":"Eten.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"nl-NL","translation":"Voeding en lichaamsconditie","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"nl-NL","translation":"Eten en lichaamsvorm worden weergegeven in foto's. Gewicht, tailleomtrek en gewicht worden digitaal bijgehouden.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"nl-NL","translation":"Maaltijden bijhouden","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"nl-NL","translation":"Aantal maaltijden","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"nl-NL","translation":"Het aantal maaltijden en het bereiken van calorieën en macronutriënten worden apart weergegeven.","review_note":""}

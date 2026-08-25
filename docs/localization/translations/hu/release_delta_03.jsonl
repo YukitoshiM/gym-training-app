@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "hu", "translation": "Ellenőrizze a legutóbbi teljesítményét, az elért szintet, az RPE-t és a regenerációs állapotot, és végső soron optimalizálja a következő edzéshez való tervet. Ha nem szeretne változtatni, akkor megőrizze a jelenlegi értéket. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "hu", "translation": "Változások", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "hu", "translation": "{{value1}} hozzáadás", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "hu", "translation": "{{value1}} eltávolítás", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "hu", "translation": "{{value1}}: {{value2}} → {{value3}} ismétlés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "hu", "translation": "{{value1}}: Pihenés {{value2}} → {{value3}} másodperc", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "hu", "translation": "{{value1}}: {{value2}} → {{value3}} edzés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "hu", "translation": "Most nincs módosítás", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "hu", "translation": "Mentés és kezdés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "hu", "translation": "Új terv létrehozása", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "hu", "translation": "Csak most végrehajtom", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "hu", "translation": "Próbálhatja meg egyszer, vagy a tervet is elmentheti. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "hu", "translation": "A meglévő terv frissítése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "hu", "translation": "Csak az alkalmazás használatának statisztikáit és céljait, valamint a tapasztalatait, az állapotát és a javaslatait fogjuk továbbítani, egyedi felhasználókkal összekötve. Nem küldünk fizikai vagy élelmiszeri adatokat, fotókat, pulzusmérő értéket, alvási időt, helyadatot, jegyzeteket vagy hirdetési azonosítókat. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "hu", "translation": "Magas", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "hu", "translation": "Alacsony", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "hu", "translation": "Közép", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "hu", "translation": "Tippek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "hu", "translation": "Keresett dokumentumok", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "hu", "translation": "A kutatási eredmények általános tendenciákat mutatnak. Nem jelzik, hogy ezek az eredmények Önre is alkalmazhatóak. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "hu", "translation": "Nem tudjuk használni a dokumentumokat, ezért a döntéseket a rekordok és az általános sporttani elvek alapján fogjuk meghozni. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "hu", "translation": "A javaslathoz közvetlenül használható dokumentumot nem találtam meg. A rekordokat és az általános edzéselvet fogom használni. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "hu", "translation": "Összességében", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "hu", "translation": "Nem található olyan dokumentum, amely hasonló feltételekkel dolgozik, ezért a rekordokat és az általános elveket fogom használni. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "hu", "translation": "A javaslat alapja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "hu", "translation": "Hivatkozott kutatások", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "hu", "translation": "Keresés információ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "hu", "translation": "A dokumentum keresést nem tudjuk elvégezni. Nem tudjuk megerősíteni a bizonyítékot, ezért a rekordokat fogom használni. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "hu", "translation": "Tudományos bizonyítékok megtekintése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "hu", "translation": "Összefoglaló megtekintése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "hu", "translation": "Alkalmazhatóság jelen esetben", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "hu", "translation": "A célcsoport hasonló", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "hu", "translation": "Teljes szöveg megtekintése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "hu", "translation": "Beavatkozás", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "hu", "translation": "Szöveges licence", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "hu", "translation": "Korlátok", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "hu", "translation": "A célcsoport feltételei eltérnek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "hu", "translation": "Újabb kutatások", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "hu", "translation": "Azt a papírt megnyitja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "hu", "translation": "Egy részleges feltétel hasonló", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "hu", "translation": "Célcsoport", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "hu", "translation": "Kutatás eredménye", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "hu", "translation": "Összefoglaló és alkalmazhatóság", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "hu", "translation": "Információ hiányos, nem világos", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "hu", "translation": "Adj meg egy anonim diagnosztikai logot", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "hu", "translation": "Mégsem", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "hu", "translation": "Hibák", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "hu", "translation": "Egyéb", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "hu", "translation": "Vélemény típusa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "hu", "translation": "Kérés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "hu", "translation": "Típus", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "hu", "translation": "Használhatóság", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "hu", "translation": "Másolás szöveg", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "hu", "translation": "Részletek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "hu", "translation": "Kérjük, adjon meg az alkalmazás és a Apple Watch működésével kapcsolatos adatokat. Nem tartalmazza fizikai vagy egészségügyi információkat, képeket, pulzusmérő értéket, alvási időt, helyadatot, jegyzeteket vagy hirdetési azonosítókat. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "hu", "translation": "Nem sikerült a diagnosztikai logot megküldeni", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "hu", "translation": "Egy másik módon küldje el", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "hu", "translation": "BodyMode vélemény\n\nTípus: {{value1}}\nTartalom:\n{{value2}}\n\nAplikáció: {{value3}}\nOperációs rendszer: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "hu", "translation": "Próbáld újra", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "hu", "translation": "Vélemény küldése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "hu", "translation": "E-mailben", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "hu", "translation": "Diagnosztika nélkül", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "hu", "translation": "Ne adjon meg fizikai, élelmiszeri, képi, AI-val kapcsolatos vagy hiteles információkat. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "hu", "translation": "Vélemény", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "hu", "translation": "Ismeretlen hiba", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "hu", "translation": "Értékelés alatt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "hu", "translation": "{{value1}} - Új terv", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "hu", "translation": "{{value1}} - A trener által módosított terv", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "hu", "translation": "AI-vel módosított tervek története", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "hu", "translation": "A következő edzésben jobb eredményt érhet el", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "hu", "translation": "Váró állapot", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "hu", "translation": "Visszaváltva", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "hu", "translation": "Ismét ellenőrizze a javaslatot", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "hu", "translation": "Új terv mentve", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "hu", "translation": "Elvetve", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "hu", "translation": "A következő edzésben hasonló eredményt ér el", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "hu", "translation": "Frissítve", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "hu", "translation": "Az AI segít a következő terv megtervezésében.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "hu", "translation": "Folytassa a jelenlegi tervet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "hu", "translation": "{{value1}} - Új terv mentve.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "hu", "translation": "A következő terv frissítve.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "hu", "translation": "Következő edzés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "hu", "translation": "A változtatások elfogadásához, a jelenlegi tervet nem fogjuk megváltoztatni. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "hu", "translation": "Elért az edzési célokat. Nézze meg a következő szintet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "hu", "translation": "Nem sikerült elérni, de a tervet módosíthatja a következő edzéshez.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "hu", "translation": "A mai edzés eredményét felhasználhatja a következő edzéshez.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "hu", "translation": "Visszaállította a korábbi tervet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "hu", "translation": "Visszaváltani a változtatást", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

@@ -6,6 +6,7 @@ struct AITrainerChatView: View {
     @EnvironmentObject private var aiTrainerBackgroundService: AITrainerBackgroundService
     @State private var draft: String
     @State private var errorPresentation: AIErrorPresentation?
+    @State private var creditAccessIssue: AICreditAccessIssue?
     @State private var failedMessage: String?
     @State private var memoryCandidates: [CoachMemoryCandidate] = []
     @State private var isReviewingMemories = false
@@ -25,7 +26,7 @@ struct AITrainerChatView: View {
                     CoachIdentityView(
                         persona: appStore.userProfile.coachPersona,
                         role: appStore.userProfile.coachType.displayName,
-                        detail: "あなたの記録を見ながら一緒に考えます。",
+                        detail: L10n.string("health_meals_body_ai.e8a45501dd61", fallback: "あなたの記録を見ながら一緒に考えます。"),
                         avatarSize: 58
                     )
                     .padding(.horizontal)
@@ -38,13 +39,26 @@ struct AITrainerChatView: View {
                                 size: 112,
                                 cornerRadius: 12
                             )
-                            Text("\(appStore.userProfile.coachPersona.displayName)に相談")
+                            Text(L10n.string("health_meals_body_ai.ea35bda4ca72", fallback: "{{value1}}に相談", values: [String(describing: appStore.userProfile.coachPersona.displayName)]))
                                 .font(.title2.bold())
                                 .foregroundStyle(AppTheme.ink)
-                            Text("次のトレーニングや食事について聞いてみましょう。")
+                            Text(
+                                L10n.string("health_meals_body_ai.402c5e169f80", fallback: "{{value1}}・", values: [String(describing: appStore.userProfile.coachType.displayName)])
+                                    + appStore.userProfile.coachingStyle.displayName
+                            )
+                            .font(.headline)
+                            .foregroundStyle(AppTheme.accent)
+                            Text(appStore.userProfile.coachType.expertiseProfile.promise)
                                 .font(.body)
                                 .foregroundStyle(AppTheme.mutedInk)
                                 .multilineTextAlignment(.center)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text(appStore.userProfile.coachingStyle.openingLine)
+                                .font(.body)
+                                .foregroundStyle(AppTheme.ink)
+                                .multilineTextAlignment(.center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.top, 4)
                         }
                         .frame(maxWidth: .infinity, minHeight: 270)
                         .padding(.horizontal, 28)
@@ -76,7 +90,7 @@ struct AITrainerChatView: View {
                                 cornerRadius: 7
                             )
                             ProgressView()
-                            Text("\(appStore.userProfile.coachPersona.displayName)が回答を考えています")
+                            Text(L10n.string("health_meals_body_ai.f31fb12d4b07", fallback: "{{value1}}が回答を考えています", values: [String(describing: appStore.userProfile.coachPersona.displayName)]))
                                 .font(.subheadline)
                                 .foregroundStyle(AppTheme.mutedInk)
                             Spacer()
@@ -94,12 +108,24 @@ struct AITrainerChatView: View {
                         .padding(.horizontal)
                     }
                 }
-                .padding(.vertical, 16)
+                .padding(.top, 16)
+                .padding(.bottom, 80)
             }
             .scrollDismissesKeyboard(.interactively)
+            .onAppear {
+                Task {
+                    try? await Task.sleep(for: .milliseconds(80))
+                    scrollToLatestMessage(proxy)
+                }
+            }
             .onChange(of: appStore.coachChatMessages.count) {
-                guard let last = appStore.coachChatMessages.last else { return }
-                withAnimation { proxy.scrollTo(last.id, anchor: .bottom) }
+                guard !appStore.coachChatMessages.isEmpty else { return }
+                Task {
+                    try? await Task.sleep(for: .milliseconds(80))
+                    withAnimation {
+                        scrollToLatestMessage(proxy)
+                    }
+                }
             }
         }
         .background(AppTheme.pageBackground)
@@ -115,8 +141,8 @@ struct AITrainerChatView: View {
                 } label: {
                     Image(systemName: "doc.text.magnifyingglass")
                 }
-                .accessibilityLabel("AIが参照する記録")
-                .accessibilityValue("参照可能\(contextCoverage.readyItems.count)件、不足\(contextCoverage.missingItems.count)件")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.9f3fa8dd0ea9", fallback: "AIが参照する記録"))
+                .accessibilityValue(L10n.string("health_meals_body_ai.02cbbe915d5f", fallback: "参照可能{{value1}}件、不足{{value2}}件", values: [String(describing: contextCoverage.readyItems.count), String(describing: contextCoverage.missingItems.count)]))
                 .accessibilityIdentifier("coachContextCoverageButton")
 
                 Button {
@@ -124,19 +150,19 @@ struct AITrainerChatView: View {
                 } label: {
                     Image(systemName: "trash")
                 }
-                .accessibilityLabel("会話を削除")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.41ce58020850", fallback: "会話を削除"))
                 .disabled(appStore.coachChatMessages.isEmpty || isSending)
             }
         }
-        .confirmationDialog("AIトレーナーとの会話を削除しますか？", isPresented: $isConfirmingClear) {
-            Button("会話を削除", role: .destructive) {
+        .confirmationDialog(L10n.string("health_meals_body_ai.ab8ec8a66973", fallback: "AIトレーナーとの会話を削除しますか？"), isPresented: $isConfirmingClear) {
+            Button(L10n.string("health_meals_body_ai.41ce58020850", fallback: "会話を削除"), role: .destructive) {
                 appStore.clearCoachChatMessages()
                 failedMessage = nil
                 errorPresentation = nil
             }
-            Button("キャンセル", role: .cancel) {}
+            Button(L10n.string("health_meals_body_ai.dd84abcb6681", fallback: "キャンセル"), role: .cancel) {}
         } message: {
-            Text("保存した記憶は削除されません。")
+            Text(L10n.string("health_meals_body_ai.de69cad40c07", fallback: "保存した記憶は削除されません。"))
         }
         .sheet(isPresented: $isReviewingMemories) {
             CoachMemoryCandidateReviewView(
@@ -153,6 +179,16 @@ struct AITrainerChatView: View {
                 coachRole: appStore.userProfile.coachType.displayName
             )
         }
+        .aiCreditRecoverySheet(
+            issue: $creditAccessIssue,
+            settings: appStore.aiSettings,
+            onResolved: {
+                await MainActor.run {
+                    errorPresentation = nil
+                    retryFailedMessage()
+                }
+            }
+        )
         .onAppear(perform: consumeBackgroundServiceUpdates)
         .task(id: appStore.coachChatMessages.map(\.id)) {
             restoreResponseRatings()
@@ -167,8 +203,10 @@ struct AITrainerChatView: View {
 
     private var composer: some View {
         VStack(alignment: .trailing, spacing: 6) {
+            AICreditCostStatusView(feature: "chat", settings: appStore.aiSettings)
+
             HStack(alignment: .bottom, spacing: 10) {
-                TextField("メッセージ", text: $draft, axis: .vertical)
+                TextField(L10n.string("health_meals_body_ai.340d133557fc", fallback: "メッセージ"), text: $draft, axis: .vertical)
                     .lineLimit(1...5)
                     .font(.body)
                     .padding(.horizontal, 14)
@@ -190,7 +228,7 @@ struct AITrainerChatView: View {
                         .frame(width: 46, height: 46)
                         .background(AppTheme.accent, in: Circle())
                 }
-                .accessibilityLabel("送信")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.28d11eaa4971", fallback: "送信"))
                 .accessibilityIdentifier("sendAITrainerMessageButton")
                 .disabled(!canSend)
                 .opacity(canSend ? 1 : 0.45)
@@ -284,20 +322,22 @@ struct AITrainerChatView: View {
             healthSnapshot: healthDataManager.snapshot,
             recoveryHistory: healthDataManager.recoveryHistory,
             memories: appStore.coachMemories,
-            insights: appStore.aiInsights
+            insights: appStore.aiInsights,
+            planRevisions: appStore.planRevisionProposals
         )
         let request = CoachChatRequest(
             coachID: appStore.userProfile.coachType.rawValue,
+            coach: AIRequestCoachContext(profile: appStore.userProfile),
             message: message,
             context: context,
             recentMessages: recentMessages
         )
-        var sharedCategories = appStore.aiSettings.dataSharing.enabledCategoryNames + ["会話"]
+        var sharedCategories = appStore.aiSettings.dataSharing.enabledCategoryNames + [L10n.string("health_meals_body_ai.abf6a2685234", fallback: "会話")]
         if !appStore.coachMemories.isEmpty {
-            sharedCategories.append("承認済みの記憶")
+            sharedCategories.append(L10n.string("health_meals_body_ai.c437a0ce5ac1", fallback: "承認済みの記憶"))
         }
         let transmission = AITransmissionRecord(
-            purpose: "\(appStore.userProfile.coachType.displayName)・チャット",
+            purpose: L10n.string("health_meals_body_ai.d1b5f3636ed7", fallback: "{{value1}}・チャット", values: [String(describing: appStore.userProfile.coachType.displayName)]),
             sharedCategories: sharedCategories,
             itemCount: context.itemCount + recentMessages.count
         )
@@ -314,8 +354,9 @@ struct AITrainerChatView: View {
                     settings: appStore.aiSettings
                 )
             } catch {
-                appStore.updateAITransmission(id: transmission.id, status: .failed)
+                appStore.recordAITransmissionFailure(id: transmission.id, error: error)
                 errorPresentation = AIClientError.presentation(for: error)
+                creditAccessIssue = AICreditAccessIssue(error: error)
                 failedMessage = message
             }
         }
@@ -324,6 +365,7 @@ struct AITrainerChatView: View {
     private func consumeBackgroundServiceUpdates() {
         if let failure = aiTrainerBackgroundService.takeLatestFailure() {
             errorPresentation = failure.presentation
+            creditAccessIssue = failure.creditAccessIssue
             failedMessage = failure.originalMessage
         }
 
@@ -335,6 +377,12 @@ struct AITrainerChatView: View {
                 guard !memoryCandidates.isEmpty else { return }
                 isReviewingMemories = true
             }
+        }
+    }
+
+    private func scrollToLatestMessage(_ proxy: ScrollViewProxy) {
+        if let last = appStore.coachChatMessages.last {
+            proxy.scrollTo(last.id, anchor: .bottom)
         }
     }
 }
@@ -352,13 +400,13 @@ private struct CoachContextCoverageView: View {
                     CoachIdentityView(
                         persona: coachPersona,
                         role: coachRole,
-                        detail: "この情報を使って提案します。",
+                        detail: L10n.string("health_meals_body_ai.9db16b95c403", fallback: "この情報を使って提案します。"),
                         avatarSize: 52
                     )
                 }
 
                 if !coverage.readyItems.isEmpty {
-                    Section("参照中") {
+                    Section(L10n.string("health_meals_body_ai.a01511b65af0", fallback: "参照中")) {
                         ForEach(coverage.readyItems) { item in
                             row(item, symbol: "checkmark.circle.fill")
                         }
@@ -366,7 +414,7 @@ private struct CoachContextCoverageView: View {
                 }
 
                 if !coverage.missingItems.isEmpty {
-                    Section("追加すると助言が安定") {
+                    Section(L10n.string("health_meals_body_ai.855dc416beda", fallback: "追加すると助言が安定")) {
                         ForEach(coverage.missingItems) { item in
                             row(
                                 item,
@@ -376,11 +424,11 @@ private struct CoachContextCoverageView: View {
                     }
                 }
             }
-            .navigationTitle("\(coachPersona.displayName)の参照情報")
+            .navigationTitle(L10n.string("health_meals_body_ai.6867358ace30", fallback: "{{value1}}の参照情報", values: [String(describing: coachPersona.displayName)]))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("完了") { dismiss() }
+                    Button(L10n.string("health_meals_body_ai.16f7a1da8526", fallback: "完了")) { dismiss() }
                 }
             }
         }
@@ -434,6 +482,7 @@ private struct CoachChatBubble: View {
                     Text(coachPersona.displayName)
                         .font(.caption.bold())
                         .foregroundStyle(AppTheme.accent)
+                        .accessibilityIdentifier("aiTrainerReply")
                 }
                 if message.role == .assistant {
                     CoachFormattedText(content: message.content)
@@ -449,7 +498,7 @@ private struct CoachChatBubble: View {
                             .padding(.top, 8)
                         } label: {
                             Label(
-                                "科学的根拠 \(message.evidence.count)件",
+                                L10n.string("health_meals_body_ai.24d491e59887", fallback: "科学的根拠 {{value1}}件", values: [String(describing: message.evidence.count)]),
                                 systemImage: "text.book.closed"
                             )
                             .font(.subheadline.weight(.semibold))
@@ -461,12 +510,12 @@ private struct CoachChatBubble: View {
                         responseRatingButton(
                             rating: .helpful,
                             systemImage: "hand.thumbsup",
-                            accessibilityLabel: "役に立った"
+                            accessibilityLabel: L10n.string("health_meals_body_ai.b82b07755169", fallback: "役に立った")
                         )
                         responseRatingButton(
                             rating: .needsImprovement,
                             systemImage: "hand.thumbsdown",
-                            accessibilityLabel: "改善が必要"
+                            accessibilityLabel: L10n.string("health_meals_body_ai.4307847306a2", fallback: "改善が必要")
                         )
                     }
                     .padding(.top, 3)
@@ -476,6 +525,7 @@ private struct CoachChatBubble: View {
                         .foregroundStyle(AppTheme.onAccent)
                         .lineSpacing(3)
                         .textSelection(.enabled)
+                        .accessibilityIdentifier("aiTrainerUserMessage")
                 }
             }
             .padding(13)
@@ -489,7 +539,6 @@ private struct CoachChatBubble: View {
                         .stroke(AppTheme.cardBorder, lineWidth: 1)
                 }
             }
-            .accessibilityIdentifier(message.role == .assistant ? "aiTrainerReply" : "aiTrainerUserMessage")
 
             if message.role == .assistant { Spacer(minLength: 28) }
         }
@@ -507,32 +556,72 @@ private struct CoachChatBubble: View {
             Image(systemName: rating == candidate ? "\(systemImage).fill" : systemImage)
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(rating == candidate ? AppTheme.accent : AppTheme.mutedInk)
-                .frame(width: 36, height: 36)
+                .frame(width: 44, height: 44)
                 .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .accessibilityLabel(accessibilityLabel)
+        .accessibilityValue(rating == candidate ? "selected" : "not selected")
         .accessibilityAddTraits(rating == candidate ? .isSelected : [])
         .accessibilityIdentifier("coachReplyRating-\(candidate.rawValue)-\(message.id.uuidString)")
     }
 }
 
-private struct CoachEvidenceCitationRow: View {
+struct CoachEvidenceCitationRow: View {
     let citation: CoachEvidenceCitation
 
     var body: some View {
-        Group {
+        VStack(alignment: .leading, spacing: 8) {
+            content
+            if hasDetails {
+                DisclosureGroup(
+                    L10n.string("health_meals_body_ai.evidence_summary_applicability", fallback: "要約と適用範囲")
+                ) {
+                    VStack(alignment: .leading, spacing: 7) {
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_summary", fallback: "研究の結論"),
+                            value: citation.evidenceSummary
+                        )
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_population", fallback: "対象者"),
+                            value: citation.population
+                        )
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_intervention", fallback: "介入"),
+                            value: citation.intervention
+                        )
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_limitations", fallback: "制約"),
+                            value: citation.limitations.joined(separator: "\n")
+                        )
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_applicability", fallback: "今回への適合"),
+                            value: applicabilityText
+                        )
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_newer", fallback: "新しい研究"),
+                            value: citation.newerEvidenceNote
+                        )
+                        evidenceDetail(
+                            title: L10n.string("health_meals_body_ai.evidence_license", fallback: "本文ライセンス"),
+                            value: citation.fullTextLicense
+                        )
+                    }
+                    .padding(.top, 6)
+                }
+                .font(.caption)
+            }
             if let url = URL(string: citation.url) {
                 Link(destination: url) {
-                    content
+                    Label(
+                        L10n.string("health_meals_body_ai.evidence_open_paper", fallback: "論文を開く"),
+                        systemImage: "arrow.up.right"
+                    )
+                    .font(.caption.weight(.semibold))
                 }
-            } else {
-                content
             }
         }
-        .buttonStyle(.plain)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("科学的根拠、\(citation.title)")
+        .accessibilityElement(children: .contain)
     }
 
     private var content: some View {
@@ -546,12 +635,40 @@ private struct CoachEvidenceCitationRow: View {
                     Text(String(year))
                 }
                 Text(citation.studyTypeLabel)
-                Text("確度 \(citation.confidenceLabel)")
-                Image(systemName: "arrow.up.right")
-                    .accessibilityHidden(true)
+                Text(L10n.string("health_meals_body_ai.d13068c0450c", fallback: "確度 {{value1}}", values: [String(describing: citation.confidenceLabel)]))
+                Text(citation.sourceScope == "full_text"
+                    ? L10n.string("health_meals_body_ai.evidence_full_text", fallback: "本文確認")
+                    : L10n.string("health_meals_body_ai.evidence_abstract", fallback: "抄録確認"))
             }
             .font(.caption)
             .foregroundStyle(AppTheme.mutedInk)
+        }
+    }
+
+    private var hasDetails: Bool {
+        !citation.evidenceSummary.isEmpty
+            || !citation.population.isEmpty
+            || !citation.intervention.isEmpty
+            || !citation.limitations.isEmpty
+            || !citation.newerEvidenceNote.isEmpty
+    }
+
+    private var applicabilityText: String {
+        switch citation.applicabilityLabel {
+        case "direct": return L10n.string("health_meals_body_ai.evidence_direct", fallback: "対象者が比較的近い")
+        case "partial": return L10n.string("health_meals_body_ai.evidence_partial", fallback: "一部条件が近い")
+        case "mismatch": return L10n.string("health_meals_body_ai.evidence_mismatch", fallback: "対象者条件が異なる")
+        default: return L10n.string("health_meals_body_ai.evidence_unclear", fallback: "情報不足で不明")
+        }
+    }
+
+    @ViewBuilder
+    private func evidenceDetail(title: String, value: String) -> some View {
+        if !value.isEmpty {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).fontWeight(.semibold)
+                Text(value).foregroundStyle(AppTheme.mutedInk)
+            }
         }
     }
 }
@@ -563,7 +680,7 @@ private struct AITrainerErrorView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("送信できませんでした", systemImage: "exclamationmark.triangle")
+            Label(L10n.string("health_meals_body_ai.a25f576fd5c5", fallback: "送信できませんでした"), systemImage: "exclamationmark.triangle")
                 .font(.headline)
                 .foregroundStyle(AppTheme.accent)
             Text(presentation.message)
@@ -573,7 +690,7 @@ private struct AITrainerErrorView: View {
                     .foregroundStyle(AppTheme.mutedInk)
             }
             if canRetry {
-                Button("再試行", action: retry)
+                Button(L10n.string("health_meals_body_ai.0a6efdc04529", fallback: "再試行"), action: retry)
                     .buttonStyle(.borderedProminent)
             }
         }
@@ -600,13 +717,13 @@ struct CoachMemoryCandidateReviewView: View {
                 Section {
                     CoachIdentityView(
                         persona: coachPersona,
-                        role: "記憶の候補",
-                        detail: "今後の提案に使ってよい内容だけ選んでください。",
+                        role: L10n.string("health_meals_body_ai.a6cf924ebc76", fallback: "記憶の候補"),
+                        detail: L10n.string("health_meals_body_ai.d6bc1c633432", fallback: "今後の提案に使ってよい内容だけ選んでください。"),
                         avatarSize: 52
                     )
                 }
 
-                Section("記憶の候補") {
+                Section(L10n.string("health_meals_body_ai.a6cf924ebc76", fallback: "記憶の候補")) {
                     ForEach(Array(candidates.enumerated()), id: \.element.id) { index, candidate in
                         Button {
                             if selectedIDs.contains(candidate.id) {
@@ -635,14 +752,14 @@ struct CoachMemoryCandidateReviewView: View {
                     }
                 }
             }
-            .navigationTitle("記憶を確認")
+            .navigationTitle(L10n.string("health_meals_body_ai.237f4919c9d9", fallback: "記憶を確認"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("保存しない") { dismiss() }
+                    Button(L10n.string("health_meals_body_ai.fe17bf85705c", fallback: "保存しない")) { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("保存") {
+                    Button(L10n.string("health_meals_body_ai.1e18f9b0644c", fallback: "保存")) {
                         approve(candidates.filter { selectedIDs.contains($0.id) })
                         dismiss()
                     }
@@ -665,16 +782,16 @@ struct CoachMemoryListView: View {
                 CoachIdentityView(
                     persona: appStore.userProfile.coachPersona,
                     role: appStore.userProfile.coachType.displayName,
-                    detail: "承認した内容だけを次の提案に使います。",
+                    detail: L10n.string("health_meals_body_ai.b271ea39b530", fallback: "承認した内容だけを次の提案に使います。"),
                     avatarSize: 52
                 )
             }
 
             if appStore.coachMemories.isEmpty {
                 ContentUnavailableView {
-                    Label("保存した記憶はありません", systemImage: "brain.head.profile")
+                    Label(L10n.string("health_meals_body_ai.65a30f6f427a", fallback: "保存した記憶はありません"), systemImage: "brain.head.profile")
                 } description: {
-                    Text("\(appStore.userProfile.coachPersona.displayName)の提案後に、保存を承認した内容だけ表示されます。")
+                    Text(L10n.string("health_meals_body_ai.7874427a15f4", fallback: "{{value1}}の提案後に、保存を承認した内容だけ表示されます。", values: [String(describing: appStore.userProfile.coachPersona.displayName)]))
                 }
                 .frame(minHeight: 300)
             } else {
@@ -699,7 +816,7 @@ struct CoachMemoryListView: View {
         }
         .scrollContentBackground(.hidden)
         .background(AppTheme.pageBackground)
-        .navigationTitle("\(appStore.userProfile.coachPersona.displayName)の記憶")
+        .navigationTitle(L10n.string("health_meals_body_ai.2ccfc30d5576", fallback: "{{value1}}の記憶", values: [String(describing: appStore.userProfile.coachPersona.displayName)]))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -707,15 +824,15 @@ struct CoachMemoryListView: View {
                 } label: {
                     Image(systemName: "trash")
                 }
-                .accessibilityLabel("記憶をすべて削除")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.1b92bb1ce7f3", fallback: "記憶をすべて削除"))
                 .disabled(appStore.coachMemories.isEmpty)
             }
         }
-        .confirmationDialog("保存した記憶をすべて削除しますか？", isPresented: $isConfirmingClear) {
-            Button("すべて削除", role: .destructive) { appStore.clearCoachMemories() }
-            Button("キャンセル", role: .cancel) {}
+        .confirmationDialog(L10n.string("health_meals_body_ai.a9219094c815", fallback: "保存した記憶をすべて削除しますか？"), isPresented: $isConfirmingClear) {
+            Button(L10n.string("health_meals_body_ai.0c64557b2b39", fallback: "すべて削除"), role: .destructive) { appStore.clearCoachMemories() }
+            Button(L10n.string("health_meals_body_ai.dd84abcb6681", fallback: "キャンセル"), role: .cancel) {}
         } message: {
-            Text("会話履歴は削除されません。")
+            Text(L10n.string("health_meals_body_ai.3a36a6db01f0", fallback: "会話履歴は削除されません。"))
         }
     }
 }

@@ -23,9 +23,9 @@ struct ConditionDashboardView: View {
                         HStack(spacing: 12) {
                             IconBadge(systemImage: "chart.xyaxis.line", tint: AppTheme.accent)
                             VStack(alignment: .leading, spacing: 3) {
-                                Text("トレーニング分析")
+                                Text(L10n.string("health_meals_body_ai.4e27cb296a97", fallback: "トレーニング分析"))
                                     .font(.headline)
-                                Text("負荷・セット品質・心拍回復・停滞候補")
+                                Text(L10n.string("health_meals_body_ai.b9428ba987dc", fallback: "負荷・セット品質・心拍回復・停滞候補"))
                                     .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
@@ -39,11 +39,15 @@ struct ConditionDashboardView: View {
                 .buttonStyle(.plain)
                 .accessibilityIdentifier("sensorTrainingAnalysisLink")
 
-                if healthDataManager.accessState == .notRequested {
-                    HealthPermissionCard {
-                        Task { await healthDataManager.requestAuthorization() }
-                    }
-                } else {
+                HealthKitDisclosureCard(accessState: healthDataManager.accessState) {
+                    Task { await healthDataManager.requestAuthorization() }
+                }
+
+                if healthDataManager.accessState == .requesting {
+                    ProgressView()
+                        .frame(maxWidth: .infinity)
+                        .accessibilityIdentifier("healthAuthorizationProgress")
+                } else if healthDataManager.accessState != .notRequested {
                     ReadinessCard(assessment: readiness)
                     SubjectiveRecoveryCard()
                     SleepDetailsCard(summary: healthDataManager.snapshot.sleepSummary)
@@ -70,7 +74,7 @@ struct ConditionDashboardView: View {
             .padding(.bottom, 40)
         }
         .background(TrainingBackground())
-        .navigationTitle("コンディション")
+        .navigationTitle(L10n.string("health_meals_body_ai.e8c88bb7608c", fallback: "コンディション"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -84,7 +88,7 @@ struct ConditionDashboardView: View {
                     }
                 }
                 .disabled(healthDataManager.isRefreshing || healthDataManager.accessState == .notRequested)
-                .accessibilityLabel("Healthデータを更新")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.fe02dc7991e6", fallback: "Healthデータを更新"))
                 .accessibilityIdentifier("refreshHealthDataButton")
             }
         }
@@ -124,17 +128,17 @@ struct ConditionSummaryCard: View {
 
                 VStack(alignment: .leading, spacing: 5) {
                     HStack {
-                        Label("コンディション", systemImage: "heart.text.square")
+                        Label(L10n.string("health_meals_body_ai.e8c88bb7608c", fallback: "コンディション"), systemImage: "heart.text.square")
                             .font(.headline)
                         Spacer()
                         Image(systemName: "chevron.right")
                             .font(.footnote.bold())
                             .foregroundStyle(AppTheme.mutedInk)
                     }
-                    Text(healthDataManager.accessState == .notRequested ? "Apple Healthを連携" : assessment.level.title)
+                    Text(healthDataManager.accessState == .notRequested ? L10n.string("health_meals_body_ai.4597562046d9", fallback: "Apple Healthを連携") : assessment.level.title)
                         .font(.subheadline.bold())
                         .foregroundStyle(tint)
-                    Text(healthDataManager.accessState == .notRequested ? "睡眠・回復・活動量をまとめて確認できます。" : assessment.summary)
+                    Text(healthDataManager.accessState == .notRequested ? L10n.string("health_meals_body_ai.051a5a9c5eea", fallback: "睡眠・回復・活動量をまとめて確認できます。") : assessment.summary)
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                         .fixedSize(horizontal: false, vertical: true)
@@ -155,48 +159,94 @@ struct ConditionSummaryCard: View {
 
 private struct SubjectiveRecoveryCard: View {
     @EnvironmentObject private var appStore: AppStore
+    @State private var isShowingEditor = false
 
     var body: some View {
         CardContainer {
             HStack(spacing: 12) {
                 IconBadge(systemImage: "gauge.with.dots.needle.33percent", tint: AppTheme.orange)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("今日の体感疲労")
+                    Text(L10n.string("health_meals_body_ai.e2d8e613515a", fallback: "今日の体感疲労"))
                         .font(.headline)
                     Text(currentLabel)
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
                 Spacer()
-                Menu {
-                    ForEach(Self.options, id: \.level) { option in
-                        Button(option.label) {
-                            appStore.saveSubjectiveFatigue(option.level)
-                        }
-                    }
+                Button {
+                    isShowingEditor = true
                 } label: {
-                    Label("記録", systemImage: "dial.medium")
+                    Label(L10n.string("health_meals_body_ai.88346340fae8", fallback: "記録"), systemImage: "dial.medium")
                 }
                 .buttonStyle(.bordered)
                 .accessibilityIdentifier("subjectiveFatigueMenu")
             }
         }
+        .sheet(isPresented: $isShowingEditor) {
+            SubjectiveRecoveryEditor(options: Self.options)
+                .environmentObject(appStore)
+        }
     }
 
     private var currentLabel: String {
         guard let level = appStore.todaySubjectiveRecovery?.fatigueLevel else {
-            return "未記録。体感も準備度の根拠に加えられます"
+            return L10n.string("health_meals_body_ai.7453de0b9772", fallback: "未記録。体感も準備度の根拠に加えられます")
         }
-        return Self.options.first(where: { $0.level == level })?.label ?? "記録済み"
+        return Self.options.first(where: { $0.level == level })?.label ?? L10n.string("health_meals_body_ai.212c4e7d1abf", fallback: "記録済み")
     }
 
     private static let options: [(level: Int, label: String)] = [
-        (1, "かなり元気"),
-        (2, "元気"),
-        (3, "普通"),
-        (4, "疲れている"),
-        (5, "かなり疲れている")
+        (1, L10n.string("health_meals_body_ai.5de8b517bd37", fallback: "かなり元気")),
+        (2, L10n.string("health_meals_body_ai.5ea6be912e53", fallback: "元気")),
+        (3, L10n.string("health_meals_body_ai.9058a5e61c76", fallback: "普通")),
+        (4, L10n.string("health_meals_body_ai.7ca7c3729503", fallback: "疲れている")),
+        (5, L10n.string("health_meals_body_ai.73102423924e", fallback: "かなり疲れている"))
     ]
+}
+
+private struct SubjectiveRecoveryEditor: View {
+    @EnvironmentObject private var appStore: AppStore
+    @Environment(\.dismiss) private var dismiss
+    let options: [(level: Int, label: String)]
+
+    @State private var recordedAt = Date()
+    @State private var fatigueLevel = 3
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    DatePicker(
+                        L10n.string("health_meals_body_ai.c5deaf60f00d", fallback: "記録日"),
+                        selection: $recordedAt,
+                        in: RecordDatePolicy.allowedRange(),
+                        displayedComponents: .date
+                    )
+                    Picker(L10n.string("health_meals_body_ai.e2d8e613515a", fallback: "体感疲労"), selection: $fatigueLevel) {
+                        ForEach(options, id: \.level) { option in
+                            Text(option.label).tag(option.level)
+                        }
+                    }
+                }
+            }
+            .navigationTitle(L10n.string("health_meals_body_ai.e2d8e613515a", fallback: "体感疲労"))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(L10n.string("health_meals_body_ai.dd84abcb6681", fallback: "キャンセル")) { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(L10n.string("health_meals_body_ai.1e18f9b0644c", fallback: "保存")) {
+                        appStore.saveSubjectiveFatigue(fatigueLevel, at: RecordDatePolicy.normalizedDay(recordedAt))
+                        dismiss()
+                    }
+                }
+            }
+            .onAppear {
+                recordedAt = RecordDatePolicy.normalizedDay(recordedAt)
+            }
+        }
+    }
 }
 
 private struct SleepDetailsCard: View {
@@ -206,10 +256,10 @@ private struct SleepDetailsCard: View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    Label("昨夜の睡眠", systemImage: "bed.double.fill")
+                    Label(L10n.string("health_meals_body_ai.5c0466a0d2f3", fallback: "昨夜の睡眠"), systemImage: "bed.double.fill")
                         .font(.headline)
                     Spacer()
-                    Text(summary?.qualityScore.map { "品質 \($0)" } ?? "品質 -")
+                    Text(summary?.qualityScore.map { L10n.string("health_meals_body_ai.e7357be38956", fallback: "品質 {{value1}}", values: [String(describing: $0)]) } ?? L10n.string("health_meals_body_ai.98a1dbcbd2a8", fallback: "品質 -"))
                         .font(.subheadline.bold())
                         .foregroundStyle(AppTheme.purple)
                 }
@@ -223,26 +273,26 @@ private struct SleepDetailsCard: View {
                     }
 
                     HStack {
-                        CompactHealthValue(title: "合計", value: hours(summary.totalHours))
+                        CompactHealthValue(title: L10n.string("health_meals_body_ai.b2312d1c369b", fallback: "合計"), value: hours(summary.totalHours))
                         Divider()
-                        CompactHealthValue(title: "深い", value: hours(summary.deepHours))
+                        CompactHealthValue(title: L10n.string("health_meals_body_ai.fe80292cae43", fallback: "深い"), value: hours(summary.deepHours))
                         Divider()
                         CompactHealthValue(title: "REM", value: hours(summary.remHours))
                         Divider()
                         CompactHealthValue(
-                            title: "中途覚醒",
-                            value: summary.interruptionCount.map { "\($0)回" } ?? "-"
+                            title: L10n.string("health_meals_body_ai.5849c46696c5", fallback: "中途覚醒"),
+                            value: summary.interruptionCount.map { L10n.string("health_meals_body_ai.f20927268a6d", fallback: "{{value1}}回", values: [String(describing: $0)]) } ?? "-"
                         )
                     }
                     .frame(height: 44)
 
                     Text(summary.hasDetailedStages
-                         ? "時間、深い睡眠、REM、中途覚醒から端末内で算出した参考スコアです。"
-                         : "睡眠ステージが未取得のため、合計時間を中心にした参考スコアです。")
+                         ? L10n.string("health_meals_body_ai.cf65f2670394", fallback: "時間、深い睡眠、REM、中途覚醒から端末内で算出した参考スコアです。")
+                         : L10n.string("health_meals_body_ai.0cce0b71e377", fallback: "睡眠ステージが未取得のため、合計時間を中心にした参考スコアです。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
-                    Text("睡眠データは未取得です。未取得値を0として評価しません。")
+                    Text(L10n.string("health_meals_body_ai.4060e1dc437c", fallback: "睡眠データは未取得です。未取得値を0として評価しません。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -252,32 +302,76 @@ private struct SleepDetailsCard: View {
     }
 
     private func hours(_ value: Double?) -> String {
-        value.map { $0.formatted(.number.precision(.fractionLength(1))) + "時間" } ?? "-"
+        value.map { $0.formatted(.number.precision(.fractionLength(1))) + L10n.string("health_meals_body_ai.041784c72fcd", fallback: "時間") } ?? "-"
     }
 }
 
-private struct HealthPermissionCard: View {
+private struct HealthKitDisclosureCard: View {
+    let accessState: HealthAccessState
     let onRequest: () -> Void
 
     var body: some View {
         CardContainer {
             VStack(alignment: .leading, spacing: 14) {
-                IconBadge(systemImage: "heart.text.square.fill", tint: AppTheme.critical)
-                Text("Apple Healthと連携")
-                    .font(.title3.bold())
-                Text("歩数、アクティビティ、睡眠、安静時心拍、HRV、呼吸数、手首皮膚温を必要な項目ごとに許可できます。許可しない項目は未取得として扱い、手入力はそのまま使えます。")
+                HStack(alignment: .top, spacing: 12) {
+                    IconBadge(systemImage: "heart.text.square.fill", tint: AppTheme.critical)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(verbatim: "Apple Health (HealthKit)")
+                            .font(.title3.bold())
+                        Text(accessState.title)
+                            .font(.footnote.bold())
+                            .foregroundStyle(AppTheme.mutedInk)
+                    }
+                }
+
+                Text(healthReadDescription)
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.mutedInk)
+                    .fixedSize(horizontal: false, vertical: true)
 
-                Button(action: onRequest) {
-                    Label("連携する項目を選ぶ", systemImage: "checkmark.shield")
-                        .frame(maxWidth: .infinity)
+                Text(healthWriteDescription)
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.mutedInk)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                if accessState == .notRequested || accessState == .deniedOrLimited || isFailed {
+                    Button(action: onRequest) {
+                        Label(L10n.string("health_meals_body_ai.8601f9d25351", fallback: "連携する項目を選ぶ"), systemImage: "checkmark.shield")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(AppTheme.accent)
+                    .disabled(accessState == .unavailable)
+                    .accessibilityIdentifier("requestHealthAuthorizationButton")
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(AppTheme.accent)
-                .accessibilityIdentifier("requestHealthAuthorizationButton")
             }
         }
+        .accessibilityIdentifier("healthKitDisclosureCard")
+    }
+
+    private var isFailed: Bool {
+        if case .failed = accessState { return true }
+        return false
+    }
+
+    private var healthReadDescription: String {
+        localizedInfoValue(
+            key: "NSHealthShareUsageDescription",
+            fallback: "BodyMode reads steps, activity, sleep, and heart-rate data from Apple Health to show condition and training trends."
+        )
+    }
+
+    private var healthWriteDescription: String {
+        localizedInfoValue(
+            key: "NSHealthUpdateUsageDescription",
+            fallback: "BodyMode saves Apple Watch workouts and body measurements to Apple Health."
+        )
+    }
+
+    private func localizedInfoValue(key: String, fallback: String) -> String {
+        (Bundle.main.localizedInfoDictionary?[key] as? String)
+            ?? (Bundle.main.object(forInfoDictionaryKey: key) as? String)
+            ?? fallback
     }
 }
 
@@ -289,7 +383,7 @@ private struct ReadinessCard: View {
             VStack(alignment: .leading, spacing: 14) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 3) {
-                        Text("今日の準備度")
+                        Text(L10n.string("health_meals_body_ai.3b27f523d6f1", fallback: "今日の準備度"))
                             .font(.headline)
                         Text(assessment.level.title)
                             .font(.title2.bold())
@@ -314,7 +408,7 @@ private struct ReadinessCard: View {
                         .symbolRenderingMode(.hierarchical)
                 }
 
-                Text("医療的な判定ではなく、取得できたデータの傾向をまとめた参考値です。")
+                Text(L10n.string("health_meals_body_ai.b20615d50842", fallback: "医療的な判定ではなく、取得できたデータの傾向をまとめた参考値です。"))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
@@ -340,7 +434,7 @@ private struct ActivityProgressCard: View {
     var body: some View {
         CardContainer {
             VStack(alignment: .leading, spacing: 14) {
-                Text("今日のアクティビティ")
+                Text(L10n.string("health_meals_body_ai.24d95a3f7ec3", fallback: "今日のアクティビティ"))
                     .font(.headline)
 
                 HStack(spacing: 16) {
@@ -349,18 +443,18 @@ private struct ActivityProgressCard: View {
 
                     VStack(alignment: .leading, spacing: 9) {
                         ActivityLegendRow(
-                            title: "ムーブ",
+                            title: L10n.string("health_meals_body_ai.8519bcac90ba", fallback: "ムーブ"),
                             value: progressText(progress?.moveKilocalories, goal: progress?.moveGoalKilocalories, unit: "kcal"),
                             tint: AppTheme.accent
                         )
                         ActivityLegendRow(
-                            title: "運動",
-                            value: progressText(progress?.exerciseMinutes, goal: progress?.exerciseGoalMinutes, unit: "分"),
+                            title: L10n.string("health_meals_body_ai.76a8b51a97f4", fallback: "運動"),
+                            value: progressText(progress?.exerciseMinutes, goal: progress?.exerciseGoalMinutes, unit: L10n.string("health_meals_body_ai.4e07f10d1d26", fallback: "分")),
                             tint: AppTheme.secondaryAccent
                         )
                         ActivityLegendRow(
-                            title: "スタンド",
-                            value: progressText(progress?.standHours, goal: progress?.standGoalHours, unit: "時間"),
+                            title: L10n.string("health_meals_body_ai.482b99ee1cad", fallback: "スタンド"),
+                            value: progressText(progress?.standHours, goal: progress?.standGoalHours, unit: L10n.string("health_meals_body_ai.041784c72fcd", fallback: "時間")),
                             tint: AppTheme.tertiaryAccent
                         )
                     }
@@ -369,11 +463,11 @@ private struct ActivityProgressCard: View {
                 Divider()
 
                 HStack {
-                    CompactHealthValue(title: "歩数", value: steps.map { Int($0).formatted() } ?? "-")
+                    CompactHealthValue(title: L10n.string("health_meals_body_ai.a64954d4ecda", fallback: "歩数"), value: steps.map { Int($0).formatted() } ?? "-")
                     Divider()
-                    CompactHealthValue(title: "距離", value: distance.map { $0.formatted(.number.precision(.fractionLength(1))) + " km" } ?? "-")
+                    CompactHealthValue(title: L10n.string("health_meals_body_ai.ea2c7c407ab9", fallback: "距離"), value: distance.map { AppFormatters.distance(kilometers: $0) } ?? "-")
                     Divider()
-                    CompactHealthValue(title: "上った階数", value: flights.map { Int($0).formatted() } ?? "-")
+                    CompactHealthValue(title: L10n.string("health_meals_body_ai.dc7014ca09f7", fallback: "上った階数"), value: flights.map { Int($0).formatted() } ?? "-")
                 }
                 .frame(height: 42)
             }
@@ -382,7 +476,7 @@ private struct ActivityProgressCard: View {
     }
 
     private func progressText(_ value: Double?, goal: Double?, unit: String) -> String {
-        guard let value else { return "未取得" }
+        guard let value else { return L10n.string("health_meals_body_ai.e7150bf221cb", fallback: "未取得") }
         let current = Int(value).formatted()
         guard let goal, goal > 0 else { return "\(current) \(unit)" }
         return "\(current) / \(Int(goal).formatted()) \(unit)"
@@ -466,21 +560,21 @@ private struct RecoveryMetricsSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("回復")
+            Text(L10n.string("health_meals_body_ai.5602244ffb3a", fallback: "回復"))
                 .font(.headline)
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                HealthMetricCard(title: "睡眠", value: format(snapshot.sleepHours, suffix: "時間", digits: 1), icon: "bed.double.fill", tint: AppTheme.purple)
-                HealthMetricCard(title: "安静時心拍", value: format(snapshot.restingHeartRate?.value, suffix: "bpm", digits: 0), icon: "heart.fill", tint: AppTheme.critical)
+                HealthMetricCard(title: L10n.string("health_meals_body_ai.8878e4c5b97f", fallback: "睡眠"), value: format(snapshot.sleepHours, suffix: L10n.string("health_meals_body_ai.041784c72fcd", fallback: "時間"), digits: 1), icon: "bed.double.fill", tint: AppTheme.purple)
+                HealthMetricCard(title: L10n.string("health_meals_body_ai.d8323e0a0c6c", fallback: "安静時心拍"), value: format(snapshot.restingHeartRate?.value, suffix: "bpm", digits: 0), icon: "heart.fill", tint: AppTheme.critical)
                 HealthMetricCard(title: "HRV", value: format(snapshot.heartRateVariabilityMilliseconds?.value, suffix: "ms", digits: 0), icon: "waveform.path.ecg", tint: AppTheme.blue)
-                HealthMetricCard(title: "呼吸数", value: format(snapshot.respiratoryRate?.value, suffix: "回/分", digits: 1), icon: "lungs.fill", tint: AppTheme.tertiaryAccent)
-                HealthMetricCard(title: "手首皮膚温", value: format(snapshot.wristTemperatureCelsius?.value, suffix: "°C", digits: 1), icon: "thermometer.medium", tint: AppTheme.orange)
-                HealthMetricCard(title: "心拍回復", value: format(snapshot.heartRateRecovery?.value, suffix: "bpm", digits: 0), icon: "arrow.down.heart.fill", tint: AppTheme.positive)
+                HealthMetricCard(title: L10n.string("health_meals_body_ai.f7e084d26a4b", fallback: "呼吸数"), value: format(snapshot.respiratoryRate?.value, suffix: L10n.string("health_meals_body_ai.3bbe0e753f4d", fallback: "回/分"), digits: 1), icon: "lungs.fill", tint: AppTheme.tertiaryAccent)
+                HealthMetricCard(title: L10n.string("health_meals_body_ai.17557a3ae4cb", fallback: "手首皮膚温"), value: format(snapshot.wristTemperatureCelsius?.value, suffix: "°C", digits: 1), icon: "thermometer.medium", tint: AppTheme.orange)
+                HealthMetricCard(title: L10n.string("health_meals_body_ai.7a101c9b7ca5", fallback: "心拍回復"), value: format(snapshot.heartRateRecovery?.value, suffix: "bpm", digits: 0), icon: "arrow.down.heart.fill", tint: AppTheme.positive)
             }
 
             if let current = snapshot.respiratoryRate?.value,
                let baseline = snapshot.baselines.respiratoryRate {
-                Text("呼吸数は14日平均 \(baseline.formatted(.number.precision(.fractionLength(1))))回/分に対して \(signed(current - baseline))回/分")
+                Text(L10n.string("health_meals_body_ai.aec3a3416e01", fallback: "呼吸数は14日平均 {{value1}}回/分に対して {{value2}}回/分", values: [String(describing: baseline.formatted(.number.precision(.fractionLength(1)))), String(describing: signed(current - baseline))]))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
@@ -488,7 +582,7 @@ private struct RecoveryMetricsSection: View {
     }
 
     private func format(_ value: Double?, suffix: String, digits: Int) -> String {
-        guard let value else { return "未取得" }
+        guard let value else { return L10n.string("health_meals_body_ai.e7150bf221cb", fallback: "未取得") }
         return value.formatted(.number.precision(.fractionLength(digits))) + " " + suffix
     }
 
@@ -505,15 +599,15 @@ private struct EnergyBalanceCard: View {
     var body: some View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
-                Label("今日のエネルギー収支", systemImage: "scale.3d")
+                Label(L10n.string("health_meals_body_ai.7267f6d11355", fallback: "今日のエネルギー収支"), systemImage: "scale.3d")
                     .font(.headline)
 
                 HStack {
-                    CompactHealthValue(title: "食事記録", value: mealCalories > 0 ? "\(Int(mealCalories)) kcal" : "未記録")
+                    CompactHealthValue(title: L10n.string("health_meals_body_ai.131d65f0becd", fallback: "食事記録"), value: mealCalories > 0 ? "\(Int(mealCalories)) kcal" : L10n.string("health_meals_body_ai.220b27fdd9bd", fallback: "未記録"))
                     Divider()
-                    CompactHealthValue(title: "推定消費", value: expenditure.map { "\(Int($0)) kcal" } ?? "未取得")
+                    CompactHealthValue(title: L10n.string("health_meals_body_ai.ceb6a96246a0", fallback: "推定消費"), value: expenditure.map { "\(Int($0)) kcal" } ?? L10n.string("health_meals_body_ai.e7150bf221cb", fallback: "未取得"))
                     Divider()
-                    CompactHealthValue(title: "差", value: balance.map(formatBalance) ?? "-")
+                    CompactHealthValue(title: L10n.string("health_meals_body_ai.26b7c3fa5902", fallback: "差"), value: balance.map(formatBalance) ?? "-")
                 }
                 .frame(height: 44)
 
@@ -540,9 +634,9 @@ private struct EnergyBalanceCard: View {
     }
 
     private var detailText: String {
-        guard mealCalories > 0 else { return "食事を記録すると、Apple Healthの安静時・活動時エネルギーとの差を確認できます。" }
-        guard expenditure != nil else { return "Healthの消費エネルギーが未取得です。食事記録だけは保存されています。" }
-        return "食事写真の量推定とHealthの消費エネルギーはいずれも参考値です。1日だけでなく週平均で確認してください。"
+        guard mealCalories > 0 else { return L10n.string("health_meals_body_ai.14d3b7bdf022", fallback: "食事を記録すると、Apple Healthの安静時・活動時エネルギーとの差を確認できます。") }
+        guard expenditure != nil else { return L10n.string("health_meals_body_ai.08b433c8bd55", fallback: "Healthの消費エネルギーが未取得です。食事記録だけは保存されています。") }
+        return L10n.string("health_meals_body_ai.aa2ce729eb99", fallback: "食事写真の量推定とHealthの消費エネルギーはいずれも参考値です。1日だけでなく週平均で確認してください。")
     }
 }
 
@@ -554,7 +648,7 @@ private struct EnvironmentMetricsSection: View {
             HStack(spacing: 12) {
                 IconBadge(systemImage: audioIcon, tint: audioTint)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("環境音への曝露")
+                    Text(L10n.string("health_meals_body_ai.0ea53fa197bc", fallback: "環境音への曝露"))
                         .font(.headline)
                     Text(audioValue)
                         .font(.subheadline.bold())
@@ -567,21 +661,21 @@ private struct EnvironmentMetricsSection: View {
     }
 
     private var audioValue: String {
-        guard let value = snapshot.environmentalAudioExposureDecibels?.value else { return "未取得" }
+        guard let value = snapshot.environmentalAudioExposureDecibels?.value else { return L10n.string("health_meals_body_ai.e7150bf221cb", fallback: "未取得") }
         return value.formatted(.number.precision(.fractionLength(0))) + " dBA"
     }
 
     private var audioGuidance: String {
         guard let value = snapshot.environmentalAudioExposureDecibels?.value else {
-            return "Noiseアプリなどが記録した最新値。未取得は0にしません。"
+            return L10n.string("health_meals_body_ai.6e80ae6c0ed4", fallback: "Noiseアプリなどが記録した最新値。未取得は0にしません。")
         }
         if value >= 90 {
-            return "高い曝露の記録です。音源から離れる、音量を下げる、聴覚保護具を使う判断材料にしてください。"
+            return L10n.string("health_meals_body_ai.1d91da8d5c82", fallback: "高い曝露の記録です。音源から離れる、音量を下げる、聴覚保護具を使う判断材料にしてください。")
         }
         if value >= 85 {
-            return "曝露が高めです。長時間続く場合は音量や滞在時間を抑える参考にしてください。"
+            return L10n.string("health_meals_body_ai.755d793eabaa", fallback: "曝露が高めです。長時間続く場合は音量や滞在時間を抑える参考にしてください。")
         }
-        return "直近値は85 dBA未満です。継続時間とあわせて確認してください。"
+        return L10n.string("health_meals_body_ai.9a20afa66267", fallback: "直近値は85 dBA未満です。継続時間とあわせて確認してください。")
     }
 
     private var audioTint: Color {
@@ -602,7 +696,7 @@ private struct OutdoorRouteCard: View {
     var body: some View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
-                Label("最新の屋外ランニング", systemImage: "figure.run")
+                Label(routeTitle, systemImage: routeIcon)
                     .font(.headline)
 
                 if let route, route.points.count >= 2 {
@@ -616,27 +710,47 @@ private struct OutdoorRouteCard: View {
                     .allowsHitTesting(false)
 
                     HStack {
-                        CompactHealthValue(title: "距離", value: value(route.distanceKilometers, suffix: "km", digits: 1))
+                        CompactHealthValue(title: L10n.string("health_meals_body_ai.ea2c7c407ab9", fallback: "距離"), value: route.distanceKilometers.map { AppFormatters.distance(kilometers: $0) } ?? "-")
                         Divider()
-                        CompactHealthValue(title: "平均速度", value: value(route.averageSpeedKilometersPerHour, suffix: "km/h", digits: 1))
+                        CompactHealthValue(title: L10n.string("health_meals_body_ai.a25deb7e2e15", fallback: "平均速度"), value: route.averageSpeedKilometersPerHour.map { AppFormatters.speed(kilometersPerHour: $0) } ?? "-")
                         Divider()
-                        CompactHealthValue(title: "高度差", value: value(route.elevationGainMeters, suffix: "m", digits: 0))
+                        CompactHealthValue(title: L10n.string("health_meals_body_ai.6e0a448de044", fallback: "高度差"), value: value(route.elevationGainMeters, suffix: "m", digits: 0))
                         Divider()
-                        CompactHealthValue(title: "時間", value: duration(route.durationSeconds))
+                        CompactHealthValue(title: L10n.string("health_meals_body_ai.041784c72fcd", fallback: "時間"), value: duration(route.durationSeconds))
                     }
                     .frame(height: 44)
 
-                    Text("Apple Healthに保存された最新のランニングルートを表示しています。")
+                    Text(L10n.string("health_meals_body_ai.fa00a282a7bd", fallback: "Apple Healthに保存された最新の屋外ルートを表示しています。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
-                    Text("ルート付きの屋外ランニングが見つかると、距離・速度・高度差を表示します。")
+                    Text(L10n.string("health_meals_body_ai.7dca00d85e73", fallback: "ルート付きの屋外運動が見つかると、距離・速度・高度差を表示します。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
         }
-        .accessibilityIdentifier("outdoorRunningRouteCard")
+        .accessibilityIdentifier("outdoorRouteCard")
+    }
+
+    private var routeTitle: String {
+        guard let route else {
+            return L10n.string("health_meals_body_ai.83b4c9182250", fallback: "最新の屋外運動")
+        }
+        return L10n.string(
+            "health_meals_body_ai.outdoor_route_title",
+            fallback: "最新の{{value1}}",
+            values: [route.activity.localizedName]
+        )
+    }
+
+    private var routeIcon: String {
+        switch route?.activity {
+        case .running: "figure.run"
+        case .walking: "figure.walk"
+        case .cycling: "figure.outdoor.cycle"
+        case nil: "map"
+        }
     }
 
     private func coordinate(_ point: OutdoorRoutePoint) -> CLLocationCoordinate2D {
@@ -665,7 +779,7 @@ private struct OutdoorRouteCard: View {
 
     private func duration(_ seconds: Double) -> String {
         let minutes = Int(seconds) / 60
-        return "\(minutes)分"
+        return L10n.string("health_meals_body_ai.e3e557893569", fallback: "{{value1}}分", values: [String(describing: minutes)])
     }
 }
 
@@ -700,11 +814,11 @@ private struct HealthDataQualityCard: View {
     var body: some View {
         CardContainer {
             VStack(alignment: .leading, spacing: 8) {
-                Label("データ品質", systemImage: "checkmark.shield")
+                Label(L10n.string("health_meals_body_ai.3b5b91c5855d", fallback: "データ品質"), systemImage: "checkmark.shield")
                     .font(.headline)
-                Text("取得できた主要項目 (availableCount)/8")
+                Text(L10n.string("health_meals_body_ai.8ba8689d50cb", fallback: "取得できた主要項目 (availableCount)/8"))
                     .font(.subheadline.bold())
-                Text("Apple Watchを適度にフィットさせて装着し、睡眠中も着用すると回復指標がそろいやすくなります。値がない項目は推測で補完しません。")
+                Text(L10n.string("health_meals_body_ai.097c8a28c9eb", fallback: "Apple Watchを適度にフィットさせて装着し、睡眠中も着用すると回復指標がそろいやすくなります。値がない項目は推測で補完しません。"))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
@@ -735,7 +849,7 @@ private struct GymVisitCard: View {
                 HStack(spacing: 12) {
                     IconBadge(systemImage: "mappin.and.ellipse", tint: AppTheme.accent)
                     VStack(alignment: .leading, spacing: 3) {
-                        Text(appStore.gymLocation?.name ?? "ジム訪問")
+                        Text(appStore.gymLocation?.name ?? L10n.string("health_meals_body_ai.cf3d3dbdd0f6", fallback: "ジム訪問"))
                             .font(.headline)
                         Text(visitSummary)
                             .font(.footnote)
@@ -743,7 +857,7 @@ private struct GymVisitCard: View {
                     }
                     Spacer()
                     if gymLocationManager.isAtGym {
-                        Text("滞在中")
+                        Text(L10n.string("health_meals_body_ai.fb5cc9f666a3", fallback: "滞在中"))
                             .font(.footnote.bold())
                             .foregroundStyle(AppTheme.positive)
                     }
@@ -758,7 +872,7 @@ private struct GymVisitCard: View {
                         gymLocationManager.registerCurrentLocationAsGym()
                     } label: {
                         Label(
-                            gymLocationManager.isLocating ? "現在地を確認中" : "現在地をマイジムに登録",
+                            gymLocationManager.isLocating ? L10n.string("health_meals_body_ai.2e02f2290c71", fallback: "現在地を確認中") : L10n.string("health_meals_body_ai.a83447b11951", fallback: "現在地をマイジムに登録"),
                             systemImage: "location.fill"
                         )
                         .frame(maxWidth: .infinity)
@@ -777,7 +891,7 @@ private struct GymVisitCard: View {
                             }
                         } label: {
                             Label(
-                                gymLocationManager.isAtGym ? "退出" : "到着",
+                                gymLocationManager.isAtGym ? L10n.string("health_meals_body_ai.fe32e34696b6", fallback: "退出") : L10n.string("health_meals_body_ai.8ed8b430d180", fallback: "到着"),
                                 systemImage: gymLocationManager.isAtGym ? "figure.walk.departure" : "figure.walk.arrival"
                             )
                         }
@@ -788,7 +902,7 @@ private struct GymVisitCard: View {
                         Button {
                             gymLocationManager.enableBackgroundVisitDetection()
                         } label: {
-                            Label("自動検知", systemImage: "location.circle")
+                            Label(L10n.string("health_meals_body_ai.1bb8b3868e2e", fallback: "自動検知"), systemImage: "location.circle")
                         }
                         .buttonStyle(.bordered)
                         .accessibilityIdentifier("enableGymDetectionButton")
@@ -797,7 +911,7 @@ private struct GymVisitCard: View {
                     Button(role: .destructive) {
                         gymLocationManager.removeGymLocation()
                     } label: {
-                        Label("登録場所を削除", systemImage: "trash")
+                        Label(L10n.string("health_meals_body_ai.506832e552c5", fallback: "登録場所を削除"), systemImage: "trash")
                     }
                     .font(.footnote)
                 }
@@ -810,9 +924,9 @@ private struct GymVisitCard: View {
         let weekStart = Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? .distantPast
         let weeklyCount = appStore.gymVisits.filter { $0.arrivedAt >= weekStart }.count
         if let distance = gymLocationManager.currentDistanceMeters {
-            return "今週 \(weeklyCount)回・現在 \(Int(distance))m"
+            return L10n.string("health_meals_body_ai.b1113781c4b4", fallback: "今週 {{value1}}回・現在 {{value2}}m", values: [String(describing: weeklyCount), String(describing: Int(distance))])
         }
-        return "今週 \(weeklyCount)回・累計 \(appStore.gymVisits.count)回"
+        return L10n.string("health_meals_body_ai.16365b4215a3", fallback: "今週 {{value1}}回・累計 {{value2}}回", values: [String(describing: weeklyCount), String(describing: appStore.gymVisits.count)])
     }
 }
 

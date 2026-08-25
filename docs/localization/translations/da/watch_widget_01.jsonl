@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"da","translation":"{{value1}} er registreret","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"da","translation":"Ikke understøttet: {{value1}}. Manuel indtastning er mulig.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"da","translation":"Antal vibrationer pr. sekund","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"da","translation":"Gemt i Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"da","translation":"Sådan bruger du Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"da","translation":"Fitnesscenter: Til næste session","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"da","translation":"Registrering uden tilladelse fra \"Health\" eller manuelt","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"da","translation":"Kan ikke bruge Health, derfor indtastes manuelt.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"da","translation":"Kan ikke starte Health, derfor indtastes manuelt.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"da","translation":"Health træning er midlertidigt stoppet.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"da","translation":"Health gemmes...","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"da","translation":"Health gemt fejlagtigt - Watch-data er gemt.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"da","translation":"Health gemt - Watch-data er gemt.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"da","translation":"Målingerne kan ikke gendannes. Du kan fortsætte med manuel indtastning.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"da","translation":"Målingerne er gendannet.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"da","translation":"Målinger stoppet - Manuel indtastning fortsat.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"da","translation":"Health er afbrudt - Indtastes manuelt.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"da","translation":"Ingen RPE-værdi.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"da","translation":"Data fra Watch vil blive slettet.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"da","translation":"Watch-data er gemt.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"da","translation":"Synkroniser menuen fra iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"da","translation":"Vælg og start i dagens menu, der er modtaget fra iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"da","translation":"Tjek i dagens menu på din iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"da","translation":"Er forbundet med iPhone.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"da","translation":"Synkroniser indholdet fra din iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"da","translation":"Kunne ikke oprette data til at sende til iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"da","translation":"Kunne ikke sende. Gem data og send igen.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"da","translation":"Kunne ikke gemme på iPhone. Kan sende igen senere.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"da","translation":"Forbereder integration med iPhone. Kan sende igen senere.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"da","translation":"{{value1}} × {{value2}} gange × {{value3}} sæt","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"da","translation":"Kan sende {{value1}} til iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"da","translation":"Har booket afsendelse af {{value1}} til iPhone","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"da","translation":"Har sendt {{value1}} til iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"da","translation":"Sender {{value1}} til iPhone","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"da","translation":"Har gemt {{value1}} i iPhone-historikken","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"da","translation":"Send {{value1}} igen","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"da","translation":"Kan genoptage {{value1}}","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"da","translation":"Har valgt {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"da","translation":"Har startet {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"da","translation":"{{value1}}/{{value2}} sæt · {{value3}} gange registreret","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"da","translation":"{{value1}} sæt ·","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"da","translation":"{{value1}} sæt · Mål: {{value2}} gange","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"da","translation":"{{value1}} · {{value2}} sæt · I alt {{value3}} gange","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"da","translation":"{{value1}} · {{value2}} sæt","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"da","translation":"Vælg fra {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"da","translation":"Har synkroniseret {{value1}} menuen","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"da","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"da","translation":"{{value1}} gange/sekund","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"da","translation":"{{value1}} gange・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"da","translation":"{{value1}} sekunder","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"da","translation":"{{value1}} øvelser・{{value2}} sæt・I alt {{value3}} gange","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"da","translation":"Denne enhed understøtter ikke iPhone-integration. Optagelserne gemmes på enheden.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"da","translation":"Denne enhed understøtter ikke integration","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"da","translation":"Spring over","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"da","translation":"Sæt","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"da","translation":"Sæt {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"da","translation":"Afslut sæt","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"da","translation":"Start sæt","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"da","translation":"Gennemsnitligt tempo: {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"da","translation":"Ikke sat op","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"da","translation":"Start sæt","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"da","translation":"Fortsæt med at starte sæt","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"da","translation":"Sensor måler","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"da","translation":"Kan ikke forberede sensor, derfor optages manuelt","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"da","translation":"Spring tutorial over","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"da","translation":"Tempo","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"da","translation":"Juster tempo","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"da","translation":"Angiv tempo","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"da","translation":"Pause tempo-vejledning","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"da","translation":"Genoptag tempo-vejledning","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"da","translation":"Bænkpres","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"da","translation":"Menu","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"da","translation":"Vælg menu","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"da","translation":"Kunne ikke indlæse menu","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"da","translation":"Ændr menu","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"da","translation":"Vent på menu","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"da","translation":"Noter","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"da","translation":"Rediger noter","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"da","translation":"Bevægelse","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"da","translation":"Træk i stang","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"da","translation":"Træning","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"da","translation":"Vil du fuldføre træningen?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"da","translation":"Træningen er afbrudt","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"da","translation":"Pause","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"da","translation":"Pause i {{value1}} sekunder / Fortsæt med {{value2}} sekunder","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"da","translation":"I pause","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"da","translation":"Op","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"da","translation":"{{value1}} op/ned, {{value2}} op/ned, {{value3}} gange/sekund","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"da","translation":"Op","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"da","translation":"Op i {{value1}} sekunder, ned i {{value2}} sekunder","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"da","translation":"Op {{value1}} sekunder / ned {{value2}} sekunder","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"da","translation":"Indstil op- og nedtid for hver sæt. Apple Watch giver 1-3 gange berøring pr. sekund.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"da","translation":"Op-tid","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"da","translation":"Angiv op-tiden direkte","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"da","translation":"Ned","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"da","translation":"Ned","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"da","translation":"Ned-tid","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"da","translation":"Angiv ned-tiden direkte","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"da","translation":"I dag","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"da","translation":"Dagens menu","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"da","translation":"Dagens menu: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"da","translation":"Vælg en daglig menu","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"da","translation":"Pause {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"da","translation":"Pause i {{value1}} sekunder","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"da","translation":"Tag en pause","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"da","translation":"Spring pausen over","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"da","translation":"Paustid","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"da","translation":"Afslut pausetilstand","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"da","translation":"Forslag om 2,5 % mere baseret på resterende energi og hastighed","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"da","translation":"Start brug","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"da","translation":"Sådan bruges det {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"da","translation":"Gem","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"da","translation":"Pålidelighed {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"da","translation":"Rediger","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"da","translation":"Fortsæt","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"da","translation":"Min:Sekund","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"da","translation":"Sidste registrering","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"da","translation":"Stabilitet {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"da","translation":"Mulige handlinger: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"da","translation":"Der er registreret en stop i bevægelsen","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"da","translation":"Estimerede bevægelser {{value1}} gange","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"da","translation":"Estimerede bevægelser {{value1}} gange・Pålidelighed {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"da","translation":"Bevægelseshastighedsændring {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"da","translation":"Anvend","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"da","translation":"Fortryd","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"da","translation":"Da der allerede er en Fitness-registrering for samme tid, blev det undgået at gemme dobbelt i Health.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"da","translation":"Vælg fra synkroniserede menuer","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"da","translation":"Runder","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"da","translation":"Antal","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"da","translation":"Indstil antallet med \"loop\"","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"da","translation":"Færdig","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"da","translation":"Send til iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"da","translation":"Send","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"da","translation":"Pauser timeren, når du er færdig. Du kan vælge den næste øvelse i en anden rækkefølge.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"da","translation":"Ingen færdige træninger","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"da","translation":"Færdigt sæt","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"da","translation":"{{value1}} færdige sæt","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"da","translation":"Resultat {{value1}} × {{value2}} gange","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"da","translation":"Juster resultater","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"da","translation":"Indtast resultat","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"da","translation":"Ændr RPE for det aktuelle sæt","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"da","translation":"Ændr tempo for det aktuelle sæt","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"da","translation":"Ændr antallet af gentagelser for det aktuelle sæt","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"da","translation":"Ændr vægten for det aktuelle sæt","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"da","translation":"Gennemsnit -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"da","translation":"Gennemsnit {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"da","translation":"Dit hjertefrekvens er ved at komme tilbage. Når du har fået en god følelse, kan du gå videre til næste sæt","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"da","translation":"Fortsæt med at tage pauser, mens du holder øje med din puls.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"da","translation":"Måler puls og energiforbrug","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"da","translation":"Manuelt indtastet","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"da","translation":"Kan indtaste manuelt","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"da","translation":"Indtaster manuelt","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"da","translation":"Estimeret ud fra bevægelse på håndleddet og rækkefølgen af uafsluttede sæt","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"da","translation":"Antal vibrationer (1-3 gange/sekund)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"da","translation":"Vibrationshastighed","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"da","translation":"Forbindelsesfejl: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"da","translation":"Reflekterer estimeret {{value1}} gang(e)","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"da","translation":"Reflekterer forslag","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"da","translation":"Ændr tid","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"da","translation":"Maksimum -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"da","translation":"Maksimum {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"da","translation":"Sendes til iPhone, når du afslutter. Usendte registreringer kan sendes igen senere.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"da","translation":"Gemmer den aktuelle indhold, inklusive uafsluttede sæt.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"da","translation":"Usendt","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"da","translation":"Ingen usendte Watch-registreringer","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"da","translation":"Ikke startet","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"da","translation":"Næste: {{value1}} {{value2}} × {{value3}} gange","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"da","translation":"Start næste sæt","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"da","translation":"Vend tilbage til næste træning med det samme.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"da","translation":"Næste øvelse","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"da","translation":"Næste","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"da","translation":"Spring den aktuelle aktivitet over","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"da","translation":"Mål: {{value1}} × {{value2}} gentagelser","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"da","translation":"Måltempo opnået","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"da","translation":"Forslag om at reducere intensiteten med 5% fra enten mål, RPE eller reduceret hastighed","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"da","translation":"Relativ bevægelsesbredde: {{value1}}%・Konsistens: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"da","translation":"Energibesparende prøvetagning (batteriniveau)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"da","translation":"Energibesparende prøvetagning (lavt strømforbrugstilstand)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"da","translation":"Energibesparende prøvetagning (indstillinger)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"da","translation":"Afslut","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"da","translation":"Sekunder","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"da","translation":"Vælg øvelse og sæt for at starte. Hvis du laver en fejl, kan du vende tilbage til uafgjort med \"Annuller\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"da","translation":"Mulige øvelser: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"da","translation":"Afslut og synkroniser","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"da","translation":"Fortsæt","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"da","translation":"Ryggen","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"da","translation":"Dag for ryggen","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"da","translation":"Bryst","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"da","translation":"Bryst-dag","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"da","translation":"Vil du slette dine data?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"da","translation":"Optager","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"da","translation":"Ingen træning registreret","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"da","translation":"Normal sampling","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"da","translation":"Hurtigt","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"da","translation":"Foreslå samme vægt baseret på fremskridt, RPE og hastighed","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"da","translation":"Nej","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"da","translation":"Skift til et andet sæt","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"da","translation":"Vægt","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"da","translation":"Indstil vægten med en rep-funktion","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"da","translation":"Vægt, antal gentagelser, RPE og pauser kan ændres før og efter træningen ved hjælp af rep-funktionen.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"da","translation":"Start","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"da","translation":"Indstil tempo før start","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"da","translation":"Ikke understøttet: {{value1}}. Manuel indtastning er tilgængelig","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"da","translation":"Stemme- og tekstnoter","review_note":""}

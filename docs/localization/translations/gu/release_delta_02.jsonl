@@ -1,0 +1,82 @@
+{"id": "core_ui.continue_workout", "target_locale": "gu", "translation": "આગળથી ચાલુ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.delete_permanently", "target_locale": "gu", "translation": "સતત દૂર કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.empty_trash", "target_locale": "gu", "translation": "કચરાપેટી ખાલી કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.empty_trash_confirm", "target_locale": "gu", "translation": "શું તમે બધું સતત દૂર કરવા માંગો છો?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.restore_record", "target_locale": "gu", "translation": "রেকર્ડ પુનઃસ્થાપિત કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.saved_workout_progress", "target_locale": "gu", "translation": "{{value1}}/{{value2}} સેટ પૂર્ણ • આપોઆપ સાચવેલ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.trash", "target_locale": "gu", "translation": "કચરાપેટી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.trash_empty", "target_locale": "gu", "translation": "કચરાપેટી ખાલી છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.trash_retention", "target_locale": "gu", "translation": "દૂર કરેલા રેકોર્ડ 30 દિવસ માટે અહીં રહેશે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.undo", "target_locale": "gu", "translation": "છેલ્લું કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.workout_discarded", "target_locale": "gu", "translation": "તાલીમને રદ કરી દેવામાં આવી છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_balanced_dinner", "target_locale": "gu", "translation": "સંતુલિત રાત્રિભોજન", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_balanced_lunch", "target_locale": "gu", "translation": "સંતુલિત લંચ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_lean_lunch", "target_locale": "gu", "translation": "ઓછી ચરબીવાળું લંચ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_light_breakfast", "target_locale": "gu", "translation": "હળવું નાસ્તો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_light_snack", "target_locale": "gu", "translation": "હળવો નાસ્તો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_power_breakfast", "target_locale": "gu", "translation": "પૌષ્ટિક નાસ્તો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_power_lunch", "target_locale": "gu", "translation": "સક્રિય લંચ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_protein_snack", "target_locale": "gu", "translation": "પ્રોટીનવાળું નાસ્તો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_rationale", "target_locale": "gu", "translation": "{{value1}}ના લક્ષ્ય અને આજની બાકી રહેતી વસ્તુ પરથી પસંદ કરવામાં આવ્યું છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_recovery_dinner", "target_locale": "gu", "translation": "પુનઃપ્રાપ્તિને ટેકો આપતું રાત્રિ ભોજન", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_separator", "target_locale": "gu", "translation": "•", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.ai_chat", "target_locale": "gu", "translation": "AI ચેટ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.ai_report", "target_locale": "gu", "translation": "AI અહેવાલ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.fatigue_record", "target_locale": "gu", "translation": "થાકનો રેકોર્ડ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.gym_visit", "target_locale": "gu", "translation": "જિમની મુલાકાત", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.outdoor_route_title", "target_locale": "gu", "translation": "નવીतम {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.progress_photo_set", "target_locale": "gu", "translation": "શરીરના ચિત્રોનો સમૂહ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.ai_unlimited", "target_locale": "gu", "translation": "AI નો ઉપયોગ અમર્યાદિત", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.photo_estimate_note", "target_locale": "gu", "translation": "શરીરના ચિત્રો દ્વારા AI દ્વારા કરવામાં આવેલ અંદાજ. આ વાસ્તવિક માપ નથી. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.active_workout_saved", "target_locale": "gu", "translation": "જો તમે વર્કઆઉટમાં વિરામ લો, તો તમારી વર્તમાન સેટની માહિતી સાચવવામાં આવશે અને તમે પછીથી ફરીથી શરૂ કરી શકો છો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.discard_workout", "target_locale": "gu", "translation": "રેકોર્ડ કાઢી નાખો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_average_volume", "target_locale": "gu", "translation": "એક સેટમાં સરેરાશ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_comparison_period", "target_locale": "gu", "translation": "સરખામણીનો સમયગાળો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_four_week_average", "target_locale": "gu", "translation": "રેખા 4 અઠવાડિયાની સરેરાશ દર્શાવે છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_moving_average", "target_locale": "gu", "translation": "સરેરાશ મૂલ્ય", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_new_activity", "target_locale": "gu", "translation": "નવું", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_period_comparison", "target_locale": "gu", "translation": "સમયગાળો સરખાવો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_previous_period_change", "target_locale": "gu", "translation": "અગાઉના સમયગાળાની તુલના {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_previous_period_section", "target_locale": "gu", "translation": "અગાઉના સમાન સમયગાળા સાથે સરખામણી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_month", "target_locale": "gu", "translation": "1 મહિનો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_six_months", "target_locale": "gu", "translation": "6 મહિના", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_three_months", "target_locale": "gu", "translation": "3 મહિના", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_week", "target_locale": "gu", "translation": "1 અઠવાડિયું", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_year", "target_locale": "gu", "translation": "1 વર્ષ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_seven_day_average", "target_locale": "gu", "translation": "આ આંકડો 7 દિવસનું સરેરાશ છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_volume_trend", "target_locale": "gu", "translation": "વોલ્યુમમાં ફેરફાર", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.keep_iphone_value", "target_locale": "gu", "translation": "iPhone ડેટાનો ઉપયોગ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_distance", "target_locale": "gu", "translation": "અંતર", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_pace", "target_locale": "gu", "translation": "સરેરાશ ગતિ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_route_health", "target_locale": "gu", "translation": "રૂટ Apple Health માં સાચવવામાં આવ્યો છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_route_unavailable", "target_locale": "gu", "translation": "રૂટ મળ્યું નથી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_summary", "target_locale": "gu", "translation": "આઉટડોર એરોબિક્સ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.pause", "target_locale": "gu", "translation": "વિરામ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.pause_and_close", "target_locale": "gu", "translation": "વિરામ અને બંધ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_adjust", "target_locale": "gu", "translation": "જો તમે લક્ષ્ય સુધી પહોંચતા નથી, તો આગામી વર્કઆઉટને સમાયોજિત કરી શકો છો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_declined", "target_locale": "gu", "translation": "હાલનો પ્લાન ચાલુ રાખો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_progress", "target_locale": "gu", "translation": "તમે લક્ષ્ય સુધી પહોંચી લીધું છે, તેથી આગામી વર્કઆઉટ તપાસો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_review", "target_locale": "gu", "translation": "તમે પરિણામો મેળવ્યા છે, તેથી આગામી પ્લાન જુઓ.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.resume", "target_locale": "gu", "translation": "ફરી શરૂ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.resume_workout", "target_locale": "gu", "translation": "તાલીમ ફરી શરૂ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.sync_conflict_message", "target_locale": "gu", "translation": "{{value1}} સેટ જ પસંદ કરવાની જરૂર છે. બાકીના સેટ આપોઆપ એકીકૃત થઈ ગયા છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.sync_conflict_title", "target_locale": "gu", "translation": "સમાન સેટ બંનેમાં બદલાયેલ છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.use_watch_value", "target_locale": "gu", "translation": "Apple Watch નો ઉપયોગ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor", "target_locale": "gu", "translation": "આઉટડોર કાર્ડિયો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_activity", "target_locale": "gu", "translation": "પ્રકાર", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_cycling", "target_locale": "gu", "translation": "આઉટડોર સાઇકલિંગ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_cycling_short", "target_locale": "gu", "translation": "સાઇકલિંગ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_distance", "target_locale": "gu", "translation": "અંતર", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_duration", "target_locale": "gu", "translation": "સમય", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_finish_confirm", "target_locale": "gu", "translation": "શું તમે આઉટડોર કસરત પૂર્ણ કરવા માંગો છો?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_goal", "target_locale": "gu", "translation": "ધ્યેય", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_open", "target_locale": "gu", "translation": "મુક્ત", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_pace", "target_locale": "gu", "translation": "ઝડપ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_route_privacy", "target_locale": "gu", "translation": "રૂટ Apple Health માં સંગ્રહિત થાય છે અને AI અથવા જાહેરાતો માટે મોકલવામાં આવતું નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_running", "target_locale": "gu", "translation": "આઉટડોર રનિંગ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_running_short", "target_locale": "gu", "translation": "રનિંગ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_start", "target_locale": "gu", "translation": "આઉટડોર કસરત શરૂ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_started", "target_locale": "gu", "translation": "{{value1}} શરૂ થઈ ગયું છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_target_pace", "target_locale": "gu", "translation": "ધ્યેયની ઝડપ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_walking", "target_locale": "gu", "translation": "બહાર ચાલવું", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_walking_short", "target_locale": "gu", "translation": "ચાલવું", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

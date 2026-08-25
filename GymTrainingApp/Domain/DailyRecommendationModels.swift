@@ -139,6 +139,8 @@ struct DailyRecommendation: Identifiable, Codable, Hashable, Sendable {
     var source: DailyRecommendationSource
     var aiRequestedAt: Date?
     var aiEvaluatedAt: Date?
+    var evidence: [CoachEvidenceCitation]? = nil
+    var evidenceStatus: CoachEvidenceStatus? = nil
 
     var id: Date { date }
 
@@ -208,6 +210,8 @@ struct TargetAdjustmentProposal: Identifiable, Codable, Hashable, Sendable {
     var proposedValue: Double
     var reason: String
     var status: TargetAdjustmentStatus
+    var evidence: [CoachEvidenceCitation]?
+    var evidenceStatus: CoachEvidenceStatus?
 
     init(
         id: UUID = UUID(),
@@ -216,7 +220,9 @@ struct TargetAdjustmentProposal: Identifiable, Codable, Hashable, Sendable {
         currentValue: Double,
         proposedValue: Double,
         reason: String,
-        status: TargetAdjustmentStatus = .pending
+        status: TargetAdjustmentStatus = .pending,
+        evidence: [CoachEvidenceCitation]? = nil,
+        evidenceStatus: CoachEvidenceStatus? = nil
     ) {
         self.id = id
         self.createdAt = createdAt
@@ -225,6 +231,8 @@ struct TargetAdjustmentProposal: Identifiable, Codable, Hashable, Sendable {
         self.proposedValue = proposedValue
         self.reason = reason
         self.status = status
+        self.evidence = evidence
+        self.evidenceStatus = evidenceStatus
     }
 }
 
@@ -292,6 +300,6 @@ enum DailyRecommendationAIError: LocalizedError {
     case invalidResponse
 
     var errorDescription: String? {
-        "AIの日次提案を読み取れませんでした。ローカル提案をそのまま使用します。"
+        L10n.string("domain_catalog.d88484d584a8", fallback: "AIの日次提案を読み取れませんでした。ローカル提案をそのまま使用します。")
     }
 }

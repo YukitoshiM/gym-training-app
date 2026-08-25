@@ -41,6 +41,20 @@ extension AppStore {
         UsageAnalytics.shared.record(.bodyMetricSaved, dimension: entry.kind.rawValue)
     }
 
+    @discardableResult
+    func saveMissingBodyPhotoEstimates(
+        from comment: BodyPhotoAIComment,
+        at date: Date
+    ) -> [BodyMetricEntry] {
+        let entries = BodyMetricEstimateService.photoEstimates(
+            from: comment.referenceEstimates ?? [],
+            existingEntries: bodyMetricEntries,
+            at: date
+        )
+        entries.forEach(saveBodyMetricEntry)
+        return entries
+    }
+
     func saveBodyMetricGoal(_ goal: BodyMetricGoal) {
         if let index = bodyMetricGoals.firstIndex(where: { $0.kind == goal.kind }) {
             bodyMetricGoals[index] = goal
@@ -53,9 +67,13 @@ extension AppStore {
 
     func deleteBodyMetricEntries(kind: BodyMetricKind, at offsets: IndexSet) {
         let visibleEntries = bodyMetricEntries(for: kind)
-        let idsToDelete = offsets.map { visibleEntries[$0].id }
+        let removed = offsets.compactMap { visibleEntries.indices.contains($0) ? visibleEntries[$0] : nil }
+        let idsToDelete = removed.map(\.id)
         bodyMetricEntries.removeAll { idsToDelete.contains($0.id) }
         storage.saveBodyMetricEntries(bodyMetricEntries)
+        for entry in removed {
+            moveToTrash(title: entry.kind.displayName, payload: .bodyMetric(entry))
+        }
     }
 
     func mealEntries(on date: Date = Date()) -> [MealEntry] {
@@ -82,7 +100,9 @@ extension AppStore {
 
     func deleteMealEntries(at offsets: IndexSet) {
         for offset in offsets.sorted(by: >) {
-            mealEntries.remove(at: offset)
+            guard mealEntries.indices.contains(offset) else { continue }
+            let entry = mealEntries.remove(at: offset)
+            moveToTrash(title: entry.name, payload: .meal(entry))
         }
         storage.saveMealEntries(mealEntries)
     }
@@ -115,7 +135,9 @@ extension AppStore {
 
     func deleteBodyPhotoEntries(at offsets: IndexSet) {
         for offset in offsets.sorted(by: >) {
-            bodyPhotoEntries.remove(at: offset)
+            guard bodyPhotoEntries.indices.contains(offset) else { continue }
+            let entry = bodyPhotoEntries.remove(at: offset)
+            moveToTrash(title: entry.angle.displayName, payload: .bodyPhotos([entry]))
         }
         storage.saveBodyPhotoEntries(bodyPhotoEntries)
     }
@@ -157,10 +179,19 @@ extension AppStore {
     func deleteBodyPhotoSets(at offsets: IndexSet) {
         let sets = bodyPhotoSets
         let dates = offsets.compactMap { sets.indices.contains($0) ? sets[$0].date : nil }
+        let removed = bodyPhotoEntries.filter { entry in
+            dates.contains { Calendar.current.isDate(entry.recordedAt, inSameDayAs: $0) }
+        }
         bodyPhotoEntries.removeAll { entry in
             dates.contains { Calendar.current.isDate(entry.recordedAt, inSameDayAs: $0) }
         }
         storage.saveBodyPhotoEntries(bodyPhotoEntries)
+        if !removed.isEmpty {
+            moveToTrash(
+                title: L10n.string("health_meals_body_ai.progress_photo_set", fallback: "体型写真セット"),
+                payload: .bodyPhotos(removed)
+            )
+        }
     }
 
 }

@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "fi", "translation": "Arvio, ei mitattu arvo. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "fi", "translation": "Koska viimeisestä mittauksesta on kulunut aika, muutosta ei voida varmasti todistaa. Arvioitu arvo.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "fi", "translation": "Arvioitu alue, joka perustuu pituus-, paino- ja ikään liittyviin yleisiin arvoihin. Ei ole yksilöllinen kehon rasvaprosentin mittaus.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "fi", "translation": "Arvioitu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "fi", "translation": "Viitearvo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "fi", "translation": "Viitealue, ei mitattu arvo. Tallennetaan vain, kun olet tarkastanut tiedot.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "fi", "translation": "Haluatko tallentaa arvion?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "fi", "translation": "Tallenna arvioksi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "fi", "translation": "{{value1}} {{value2}}. Mitattu arvo korvataan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "fi", "translation": "Aikataulutetut raportit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "fi", "translation": "Viikoittainen raportti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "fi", "translation": "Päivä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "fi", "translation": "Kuukausittainen raportti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "fi", "translation": "Päivä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "fi", "translation": "{{value1}} päivää", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "fi", "translation": "Ilmoitusaika", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "fi", "translation": "Luodaan automaattisesti, kun avaat sovelluksen ensimmäisen kerran aikataulutetun ajan jälkeen. Jos yhteys AI:hin ei onnistu, tallennetaan tiedot.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "fi", "translation": "Asetukset tarkistettava", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "fi", "translation": "Voit yrittää uudelleen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "fi", "translation": "Käytetty kapasiteetti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "fi", "translation": "Kapasiteettia jäljellä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "fi", "translation": "Tieteellisiä todisteita {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "fi", "translation": "Suoraa näyttöä on vähän, joten käytetään yleistä ohjeistusta.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "fi", "translation": "Tästä ehdotuksesta ei löydy suoria todisteita.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "fi", "translation": "Tieteellistä näyttöä ei ole saatavilla, joten pohditaan yleisiä periaatteita.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "fi", "translation": "Kehon mitat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

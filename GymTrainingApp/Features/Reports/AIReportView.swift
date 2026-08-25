@@ -6,8 +6,17 @@ struct AIReportView: View {
     @State private var isGenerating = false
     @State private var isCheckingConnection = false
     @State private var errorPresentation: AIErrorPresentation?
+    @State private var creditAccessIssue: AICreditAccessIssue?
+    @State private var creditRetryInsightType: AIInsightType?
     @State private var connectionNotice: AIReportConnectionNotice?
     @State private var pendingMonthlyReview: MonthlyReviewDraft?
+    @AppStorage(ReportScheduleStore.weeklyEnabledKey) private var weeklyScheduleEnabled = false
+    @AppStorage(ReportScheduleStore.weeklyWeekdayKey) private var weeklyWeekday = 2
+    @AppStorage(ReportScheduleStore.monthlyEnabledKey) private var monthlyScheduleEnabled = false
+    @AppStorage(ReportScheduleStore.monthlyDayKey) private var monthlyDay = 1
+    @AppStorage(ReportScheduleStore.hourKey) private var scheduleHour = 20
+    @AppStorage(ReportScheduleStore.minuteKey) private var scheduleMinute = 0
+    @AppStorage(ReportScheduleStore.automaticAICreditUseKey) private var automaticAICreditUse = false
 
     private var latestWeeklyInsight: AIInsight? {
         appStore.aiInsights.first { $0.insightType == .weekly }
@@ -19,7 +28,7 @@ struct AIReportView: View {
 
     var body: some View {
         List {
-            Section("担当コーチ") {
+            Section(L10n.string("health_meals_body_ai.d6fbb962587f", fallback: "担当コーチ")) {
                 CoachIdentityView(
                     persona: appStore.userProfile.coachPersona,
                     role: appStore.userProfile.coachType.displayName,
@@ -29,13 +38,13 @@ struct AIReportView: View {
                 .accessibilityIdentifier("activeCoachCard")
             }
 
-            Section("AIトレーナー") {
+            Section(L10n.string("health_meals_body_ai.4b6c42529d18", fallback: "AIトレーナー")) {
                 NavigationLink {
                     AITrainerChatView()
                 } label: {
                     HStack(spacing: 10) {
                         CoachAvatarView(persona: appStore.userProfile.coachPersona, size: 38)
-                        Text("\(appStore.userProfile.coachPersona.displayName)に相談")
+                        Text(L10n.string("health_meals_body_ai.ea35bda4ca72", fallback: "{{value1}}に相談", values: [String(describing: appStore.userProfile.coachPersona.displayName)]))
                     }
                 }
                 .accessibilityIdentifier("aiTrainerChatLink")
@@ -44,7 +53,7 @@ struct AIReportView: View {
                     CoachMemoryListView()
                 } label: {
                     HStack {
-                        Label("保存した記憶", systemImage: "brain.head.profile")
+                        Label(L10n.string("health_meals_body_ai.6ac95b24ca1e", fallback: "保存した記憶"), systemImage: "brain.head.profile")
                         Spacer()
                         Text(appStore.coachMemories.count.formatted())
                             .foregroundStyle(AppTheme.mutedInk)
@@ -58,18 +67,22 @@ struct AIReportView: View {
                     AIReportConnectionNoticeCard(notice: connectionNotice)
                 }
 
+                AICreditCostStatusView(feature: "weekly_report", settings: appStore.aiSettings)
+
                 Button {
                     generateWeeklyReport()
                 } label: {
-                    Label(isGenerating ? "週次レポート生成中" : "週次AIコメントを生成", systemImage: "sparkles")
+                    Label(isGenerating ? L10n.string("health_meals_body_ai.07a4aa136201", fallback: "週次レポート生成中") : L10n.string("health_meals_body_ai.406d8b52c4f0", fallback: "週次AIコメントを生成"), systemImage: "sparkles")
                 }
                 .disabled(isGenerating || !appStore.aiSettings.isEnabled)
                 .accessibilityIdentifier("generateWeeklyAIReportButton")
 
+                AICreditCostStatusView(feature: "monthly_report", settings: appStore.aiSettings)
+
                 Button {
                     generateMonthlyReview()
                 } label: {
-                    Label(isGenerating ? "月次レビュー生成中" : "月次レビュー案を作成", systemImage: "calendar.badge.clock")
+                    Label(isGenerating ? L10n.string("health_meals_body_ai.2e56b4936c7f", fallback: "月次レビュー生成中") : L10n.string("health_meals_body_ai.400cfd92d15f", fallback: "月次レビュー案を作成"), systemImage: "calendar.badge.clock")
                 }
                 .disabled(isGenerating || !appStore.aiSettings.isEnabled)
                 .accessibilityIdentifier("generateMonthlyAIReviewButton")
@@ -77,24 +90,82 @@ struct AIReportView: View {
                 Button {
                     checkConnection()
                 } label: {
-                    Label(isCheckingConnection ? "接続確認中" : "AIサーバー接続を確認", systemImage: "network")
+                    Label(isCheckingConnection ? L10n.string("health_meals_body_ai.b981046693bf", fallback: "接続確認中") : L10n.string("health_meals_body_ai.075a3448ee9c", fallback: "AIサーバー接続を確認"), systemImage: "network")
                 }
                 .disabled(isCheckingConnection || !appStore.aiSettings.isEnabled)
                 .accessibilityIdentifier("checkAIConnectionFromReportButton")
 
                 if !appStore.aiSettings.isEnabled {
-                    Text("設定でAI機能がオフです。")
+                    Text(L10n.string("health_meals_body_ai.7aefc85ff14d", fallback: "設定でAI機能がオフです。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
-                    Text("接続できない場合でも、記録済みデータは消えません。手動記録を続けたまま、あとでAIコメントだけ生成できます。")
+                    Text(L10n.string("health_meals_body_ai.eb9e09955b1e", fallback: "接続できない場合でも、記録済みデータは消えません。手動記録を続けたまま、あとでAIコメントだけ生成できます。"))
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                }
+            }
+
+            Section(L10n.string("release_delta.scheduled_reports", fallback: "予約レポート")) {
+                Toggle(L10n.string("release_delta.weekly_report", fallback: "週次レポート"), isOn: $weeklyScheduleEnabled)
+                if weeklyScheduleEnabled {
+                    Picker(L10n.string("release_delta.weekday", fallback: "曜日"), selection: $weeklyWeekday) {
+                        ForEach(1...7, id: \.self) { weekday in
+                            Text(Calendar.current.weekdaySymbols[weekday - 1]).tag(weekday)
+                        }
+                    }
+                }
+                Toggle(L10n.string("release_delta.monthly_report", fallback: "月次レポート"), isOn: $monthlyScheduleEnabled)
+                if monthlyScheduleEnabled {
+                    Picker(L10n.string("release_delta.day_of_month", fallback: "日付"), selection: $monthlyDay) {
+                        ForEach(1...28, id: \.self) { day in
+                            Text(L10n.string("release_delta.day_value", fallback: "{{value1}}日", values: [day.formatted()])).tag(day)
+                        }
+                    }
+                }
+                if weeklyScheduleEnabled || monthlyScheduleEnabled {
+                    Toggle(
+                        L10n.string(
+                            "ai_credit.automatic_report_credit_use",
+                            fallback: "AIクレジットを使って自動分析"
+                        ),
+                        isOn: $automaticAICreditUse
+                    )
+                    Text(
+                        automaticAICreditUse
+                            ? L10n.string(
+                                "ai_credit.automatic_report_credit_use_on",
+                                fallback: "予約実行時に週次または月次レポートのクレジットを消費します。"
+                            )
+                            : L10n.string(
+                                "ai_credit.automatic_report_credit_use_off",
+                                fallback: "クレジットは消費せず、端末内の記録だけで要約します。"
+                            )
+                    )
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.mutedInk)
+
+                    DatePicker(
+                        L10n.string("release_delta.report_time", fallback: "通知時刻"),
+                        selection: Binding(
+                            get: {
+                                Calendar.current.date(from: DateComponents(hour: scheduleHour, minute: scheduleMinute)) ?? Date()
+                            },
+                            set: {
+                                scheduleHour = Calendar.current.component(.hour, from: $0)
+                                scheduleMinute = Calendar.current.component(.minute, from: $0)
+                            }
+                        ),
+                        displayedComponents: .hourAndMinute
+                    )
+                    Text(L10n.string("release_delta.scheduled_report_explanation", fallback: "予定時刻後に最初にアプリを開いた時、自動生成します。AIに接続できない場合も端末内の要約を残します。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
 
             if let latestWeeklyInsight {
-                Section("最新レポート") {
+                Section(L10n.string("health_meals_body_ai.922efdd3ed8a", fallback: "最新レポート")) {
                     VStack(alignment: .leading, spacing: 10) {
                         Text(AppFormatters.shortDateTime.string(from: latestWeeklyInsight.date))
                             .font(.footnote)
@@ -102,57 +173,57 @@ struct AIReportView: View {
 
                         CoachAttributionLabel(
                             persona: appStore.userProfile.coachPersona,
-                            text: "\(appStore.userProfile.coachPersona.displayName)の振り返り"
+                            text: L10n.string("health_meals_body_ai.561be95fd706", fallback: "{{value1}}の振り返り", values: [String(describing: appStore.userProfile.coachPersona.displayName)])
                         )
 
-                        Text("今週の結論")
+                        Text(L10n.string("health_meals_body_ai.df10c0112692", fallback: "今週の結論"))
                             .font(.subheadline.bold())
                         CoachFormattedText(content: latestWeeklyInsight.outputComment)
 
                         if latestWeeklyInsight.hasStructuredWeeklySections {
                             AIReportBulletSection(
-                                title: "良かった点",
+                                title: L10n.string("health_meals_body_ai.02d8de91c3f5", fallback: "良かった点"),
                                 systemImage: "checkmark.circle.fill",
                                 tint: AppTheme.positive,
                                 items: latestWeeklyInsight.goodPoints ?? []
                             )
                             AIReportBulletSection(
-                                title: "課題",
+                                title: L10n.string("health_meals_body_ai.234f23b52f12", fallback: "課題"),
                                 systemImage: "exclamationmark.triangle.fill",
                                 tint: AppTheme.warning,
                                 items: latestWeeklyInsight.challenges ?? []
                             )
                             AIReportBulletSection(
-                                title: "判断の根拠",
+                                title: L10n.string("health_meals_body_ai.bde5657225e5", fallback: "判断の根拠"),
                                 systemImage: "list.clipboard.fill",
                                 tint: AppTheme.blue,
                                 items: latestWeeklyInsight.rationales ?? []
                             )
                             AIReportBulletSection(
-                                title: "次の行動",
+                                title: L10n.string("health_meals_body_ai.4fc4c85b1a6c", fallback: "次の行動"),
                                 systemImage: "arrow.right.circle.fill",
                                 tint: AppTheme.accent,
                                 items: latestWeeklyInsight.nextActions ?? []
                             )
                             if latestWeeklyInsight.nextActions?.isEmpty != false {
-                                Text("次の行動")
+                                Text(L10n.string("health_meals_body_ai.4fc4c85b1a6c", fallback: "次の行動"))
                                     .font(.subheadline.bold())
                                 CoachFormattedText(content: latestWeeklyInsight.actionSuggestion)
                             }
                         } else {
-                            Text("次の行動")
+                            Text(L10n.string("health_meals_body_ai.4fc4c85b1a6c", fallback: "次の行動"))
                                 .font(.subheadline.bold())
                             CoachFormattedText(content: latestWeeklyInsight.actionSuggestion)
                         }
 
-                        Text("入力データの傾向をもとにした提案で、医療上の診断ではありません。体調や痛みに不安がある場合は専門家へ相談してください。")
+                        Text(L10n.string("health_meals_body_ai.2494cf2da9de", fallback: "入力データの傾向をもとにした提案で、医療上の診断ではありません。体調や痛みに不安がある場合は専門家へ相談してください。"))
                             .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                     .padding(.vertical, 4)
                 }
 
-                Section("入力データ要約") {
+                Section(L10n.string("health_meals_body_ai.8a216fc82c1c", fallback: "入力データ要約")) {
                     Text(latestWeeklyInsight.inputSummary)
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
@@ -160,20 +231,20 @@ struct AIReportView: View {
             } else {
                 Section {
                     ContentUnavailableView {
-                        Label("\(appStore.userProfile.coachPersona.displayName)のレポートはまだありません", systemImage: "chart.line.text.clipboard")
+                        Label(L10n.string("health_meals_body_ai.c61497f4f0c1", fallback: "{{value1}}のレポートはまだありません", values: [String(describing: appStore.userProfile.coachPersona.displayName)]), systemImage: "chart.line.text.clipboard")
                     } description: {
-                        Text("身体KPI、食事、体型写真、筋トレ履歴から週次コメントを作成します。")
+                        Text(L10n.string("health_meals_body_ai.bc649c604570", fallback: "身体KPI、食事、体型写真、筋トレ履歴から週次コメントを作成します。"))
                     }
                     .frame(minHeight: 180)
                 }
             }
 
             if let latestMonthlyInsight {
-                Section("保存した月次レビュー") {
+                Section(L10n.string("health_meals_body_ai.d44c1e54131a", fallback: "保存した月次レビュー")) {
                     VStack(alignment: .leading, spacing: 10) {
                         CoachAttributionLabel(
                             persona: appStore.userProfile.coachPersona,
-                            text: "\(appStore.userProfile.coachPersona.displayName)の月次レビュー"
+                            text: L10n.string("health_meals_body_ai.81ad045e3190", fallback: "{{value1}}の月次レビュー", values: [String(describing: appStore.userProfile.coachPersona.displayName)])
                         )
                         CoachFormattedText(content: latestMonthlyInsight.outputComment)
                         CoachFormattedText(content: latestMonthlyInsight.actionSuggestion)
@@ -182,15 +253,15 @@ struct AIReportView: View {
             }
 
             if let errorPresentation {
-                Section("AIエラー") {
+                Section(L10n.string("health_meals_body_ai.7d80eebb209d", fallback: "AIエラー")) {
                     AIErrorRecoveryCard(presentation: errorPresentation)
                 }
             }
 
-            Section("履歴") {
+            Section(L10n.string("health_meals_body_ai.263add43eb28", fallback: "履歴")) {
                 ForEach(appStore.aiInsights.filter { [.weekly, .monthly].contains($0.insightType) }) { insight in
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("\(insight.insightType == .monthly ? "月次" : "週次")・\(AppFormatters.shortDateTime.string(from: insight.date))")
+                        Text(L10n.string("health_meals_body_ai.e7389b1be06a", fallback: "{{value1}}・{{value2}}", values: [String(describing: insight.insightType == .monthly ? "月次" : "週次"), String(describing: AppFormatters.shortDateTime.string(from: insight.date))]))
                             .font(.headline)
                         Text(insight.actionSuggestion)
                             .font(.footnote)
@@ -200,9 +271,9 @@ struct AIReportView: View {
                 }
             }
 
-            Section("AI送信履歴") {
+            Section(L10n.string("health_meals_body_ai.4d382e329510", fallback: "AI送信履歴")) {
                 if appStore.aiTransmissionHistory.isEmpty {
-                    Text("送信履歴はありません")
+                    Text(L10n.string("health_meals_body_ai.fbfadfb06d6e", fallback: "送信履歴はありません"))
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     ForEach(appStore.aiTransmissionHistory) { record in
@@ -215,12 +286,28 @@ struct AIReportView: View {
                                     .font(.footnote.bold())
                                     .foregroundStyle(statusTint(record.status))
                             }
-                            Text(record.sharedCategories.joined(separator: "、").ifEmpty("共有項目なし"))
+                            Text(record.sharedCategories.joined(separator: "、").ifEmpty(L10n.string("health_meals_body_ai.23efa56b6422", fallback: "共有項目なし")))
                                 .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
-                            Text("\(record.itemCount)件・\(record.purpose)")
+                            Text(L10n.string("health_meals_body_ai.d80a4d642fbb", fallback: "{{value1}}件・{{value2}}", values: [String(describing: record.itemCount), String(describing: record.purpose)]))
                                 .font(.footnote)
                                 .foregroundStyle(AppTheme.mutedInk)
+                            if record.status == .failed {
+                                Text(record.failureMessage ?? L10n.string("health_meals_body_ai.a8806f356dd5", fallback: "AIサーバーに接続できません。時間をおいて再試行してください。"))
+                                    .font(.footnote.bold())
+                                    .foregroundStyle(AppTheme.critical)
+                                if let recovery = record.recoverySuggestion {
+                                    Text(recovery)
+                                        .font(.caption)
+                                        .foregroundStyle(AppTheme.mutedInk)
+                                }
+                                HStack(spacing: 12) {
+                                    Label(record.canRetry == false ? L10n.string("release_delta.check_settings", fallback: "設定確認が必要") : L10n.string("release_delta.can_retry", fallback: "再試行できます"), systemImage: record.canRetry == false ? "gearshape" : "arrow.clockwise")
+                                    Label(record.consumedQuota == true ? L10n.string("release_delta.quota_consumed", fallback: "利用枠を消費") : L10n.string("release_delta.quota_not_consumed", fallback: "利用枠は未消費"), systemImage: "gauge.with.dots.needle.33percent")
+                                }
+                                .font(.caption)
+                                .foregroundStyle(AppTheme.mutedInk)
+                            }
                         }
                     }
                     .onDelete(perform: appStore.deleteAITransmissionHistory)
@@ -229,7 +316,7 @@ struct AIReportView: View {
         }
         .scrollContentBackground(.hidden)
         .background(AppTheme.pageBackground)
-        .navigationTitle("\(appStore.userProfile.coachPersona.displayName)のレポート")
+        .navigationTitle(L10n.string("health_meals_body_ai.b4254a2710b4", fallback: "{{value1}}のレポート", values: [String(describing: appStore.userProfile.coachPersona.displayName)]))
         .sheet(item: $pendingMonthlyReview) { draft in
             MonthlyReviewConfirmationView(draft: draft) { approved in
                 appStore.saveAIInsight(
@@ -247,6 +334,20 @@ struct AIReportView: View {
                 pendingMonthlyReview = nil
             }
         }
+        .aiCreditRecoverySheet(
+            issue: $creditAccessIssue,
+            settings: appStore.aiSettings,
+            onResolved: {
+                await MainActor.run {
+                    errorPresentation = nil
+                    if creditRetryInsightType == .monthly {
+                        generateMonthlyReview()
+                    } else {
+                        generateWeeklyReport()
+                    }
+                }
+            }
+        )
     }
 
     private func generateWeeklyReport() {
@@ -256,7 +357,7 @@ struct AIReportView: View {
 
         let payload = weeklyPayload()
         let record = AITransmissionRecord(
-            purpose: "\(appStore.userProfile.coachType.displayName)・週次レポート",
+            purpose: L10n.string("health_meals_body_ai.e8afca8b2ea3", fallback: "{{value1}}・週次レポート", values: [String(describing: appStore.userProfile.coachType.displayName)]),
             sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
             itemCount: payload.bodyLogs.count
                 + payload.meals.count
@@ -288,8 +389,10 @@ struct AIReportView: View {
                 }
             } catch {
                 await MainActor.run {
-                    appStore.updateAITransmission(id: record.id, status: .failed)
+                    appStore.recordAITransmissionFailure(id: record.id, error: error)
                     errorPresentation = AIClientError.presentation(for: error)
+                    creditAccessIssue = AICreditAccessIssue(error: error)
+                    creditRetryInsightType = .weekly
                     isGenerating = false
                 }
             }
@@ -302,7 +405,7 @@ struct AIReportView: View {
         connectionNotice = nil
         let payload = reportPayload(days: 30, maximumBodyLogs: 80, maximumMeals: 150, maximumWorkouts: 40)
         let record = AITransmissionRecord(
-            purpose: "\(appStore.userProfile.coachType.displayName)・月次レビュー案",
+            purpose: L10n.string("health_meals_body_ai.0bc6450c1c5b", fallback: "{{value1}}・月次レビュー案", values: [String(describing: appStore.userProfile.coachType.displayName)]),
             sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
             itemCount: payload.bodyLogs.count
                 + payload.meals.count
@@ -323,8 +426,10 @@ struct AIReportView: View {
                 }
             } catch {
                 await MainActor.run {
-                    appStore.updateAITransmission(id: record.id, status: .failed)
+                    appStore.recordAITransmissionFailure(id: record.id, error: error)
                     errorPresentation = AIClientError.presentation(for: error)
+                    creditAccessIssue = AICreditAccessIssue(error: error)
+                    creditRetryInsightType = .monthly
                     isGenerating = false
                 }
             }
@@ -376,13 +481,13 @@ struct AIReportView: View {
                 "\($0.mealType.displayName) \($0.name): \(AppFormatters.calories($0.calories)) P\(AppFormatters.grams($0.protein)) F\(AppFormatters.grams($0.fat)) C\(AppFormatters.grams($0.carbs))"
             } : [],
             workouts: sharing.workouts ? appStore.workoutHistory.filter { $0.startedAt >= cutoff }.prefix(maximumWorkouts).map {
-                "\($0.title): \(AppFormatters.volume($0.totalVolume, unit: appStore.userProfile.weightUnit)) 達成率 \(AppFormatters.percent($0.achievementRate))"
+                L10n.string("health_meals_body_ai.ca5bfb0e7766", fallback: "{{value1}}: {{value2}} 達成率 {{value3}}", values: [String(describing: $0.title), String(describing: AppFormatters.volume($0.totalVolume, unit: appStore.userProfile.weightUnit)), String(describing: AppFormatters.percent($0.achievementRate))])
             } : [],
             bodyPhotos: sharing.bodyPhotos ? appStore.bodyPhotoSets.filter { $0.date >= cutoff }.prefix(12).map { set in
-                let angles = set.angleEntries.map(\.angle.displayName).joined(separator: "・")
-                let angleSummary = angles.isEmpty ? "写真なし" : angles
+                let angles = set.angleEntries.map(\.angle.displayName).joined(separator: L10n.string("health_meals_body_ai.3654226ac56b", fallback: "・"))
+                let angleSummary = angles.isEmpty ? L10n.string("health_meals_body_ai.2071566e71be", fallback: "写真なし") : angles
                 let observation = set.analysis?.summary ?? set.memo
-                return "\(set.date.formatted(date: .numeric, time: .omitted)) \(set.photoEntries.count)枚（\(angleSummary)）: \(observation)"
+                return L10n.string("health_meals_body_ai.1913fa724bc8", fallback: "{{value1}} {{value2}}枚（{{value3}}）: {{value4}}", values: [String(describing: set.date.formatted(date: .numeric, time: .omitted)), String(describing: set.photoEntries.count), String(describing: angleSummary), String(describing: observation)])
             } : [],
             sensorMetrics: sensorMetricsForAI
         )
@@ -394,26 +499,26 @@ struct AIReportView: View {
         var values: [String] = []
 
         if sharing.sleepAndRecovery, let sleep = snapshot.sleepHours {
-            values.append("睡眠: \(sleep.formatted(.number.precision(.fractionLength(1))))時間")
+            values.append(L10n.string("health_meals_body_ai.5f3317f450fa", fallback: "睡眠: {{value1}}時間", values: [String(describing: sleep.formatted(.number.precision(.fractionLength(1))))]))
         }
         if sharing.sleepAndRecovery, let resting = snapshot.restingHeartRate?.value {
-            values.append("安静時心拍: \(Int(resting)) bpm")
+            values.append(L10n.string("health_meals_body_ai.2dc87f83e5a5", fallback: "安静時心拍: {{value1}} bpm", values: [String(describing: Int(resting))]))
         }
         if sharing.sleepAndRecovery, let hrv = snapshot.heartRateVariabilityMilliseconds?.value {
             values.append("HRV: \(Int(hrv)) ms")
         }
         if sharing.dailyActivity, let steps = snapshot.steps {
-            values.append("歩数: \(Int(steps))")
+            values.append(L10n.string("health_meals_body_ai.69f2ab157759", fallback: "歩数: {{value1}}", values: [String(describing: Int(steps))]))
         }
         if sharing.gymVisits, !appStore.gymVisits.isEmpty {
-            values.append("直近7日のジム訪問: \(appStore.gymVisits.filter { $0.arrivedAt >= Date().addingTimeInterval(-7 * 86_400) }.count)回")
+            values.append(L10n.string("health_meals_body_ai.e0cb665ec8d8", fallback: "直近7日のジム訪問: {{value1}}回", values: [String(describing: appStore.gymVisits.filter { $0.arrivedAt >= Date().addingTimeInterval(-7 * 86_400) }.count)]))
         }
 
         if sharing.workoutSensors {
             values.append(contentsOf: appStore.workoutHistory.prefix(6).compactMap { session in
                 guard let sensors = session.sensorSummary else { return nil }
-                let heartRate = sensors.averageHeartRate.map { "平均心拍 \(Int($0)) bpm" } ?? "心拍未取得"
-                let energy = sensors.activeEnergyKilocalories.map { "消費 \(Int($0)) kcal" } ?? "消費未取得"
+                let heartRate = sensors.averageHeartRate.map { L10n.string("health_meals_body_ai.6c784a6d3865", fallback: "平均心拍 {{value1}} bpm", values: [String(describing: Int($0))]) } ?? L10n.string("health_meals_body_ai.ea8e5fa4331a", fallback: "心拍未取得")
+                let energy = sensors.activeEnergyKilocalories.map { L10n.string("health_meals_body_ai.1a4c8a429964", fallback: "消費 {{value1}} kcal", values: [String(describing: Int($0))]) } ?? L10n.string("health_meals_body_ai.ef05cf14844b", fallback: "消費未取得")
                 return "\(session.title): \(heartRate), \(energy)"
             })
         }
@@ -422,9 +527,9 @@ struct AIReportView: View {
 
     private func statusTitle(_ status: AITransmissionStatus) -> String {
         switch status {
-        case .sending: "送信中"
-        case .completed: "完了"
-        case .failed: "失敗"
+        case .sending: L10n.string("health_meals_body_ai.e228355c530a", fallback: "送信中")
+        case .completed: L10n.string("health_meals_body_ai.16f7a1da8526", fallback: "完了")
+        case .failed: L10n.string("health_meals_body_ai.8ecbbfce44c6", fallback: "失敗")
         }
     }
 
@@ -503,30 +608,30 @@ private struct MonthlyReviewConfirmationView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("入力データ") {
+                Section(L10n.string("health_meals_body_ai.92d173b2e197", fallback: "入力データ")) {
                     TextEditor(text: $draft.inputSummary)
                         .frame(minHeight: 90)
                 }
-                Section("月次レビュー") {
+                Section(L10n.string("health_meals_body_ai.5b23cf84d4e8", fallback: "月次レビュー")) {
                     TextEditor(text: $draft.outputComment)
                         .frame(minHeight: 150)
                 }
-                Section("翌月目標案") {
+                Section(L10n.string("health_meals_body_ai.08a296b53ccb", fallback: "翌月目標案")) {
                     TextEditor(text: $draft.actionSuggestion)
                         .frame(minHeight: 120)
-                    Text("内容を確認し、必要なら修正してから保存してください。目標は自動では確定しません。")
+                    Text(L10n.string("health_meals_body_ai.c1b1833378f2", fallback: "内容を確認し、必要なら修正してから保存してください。目標は自動では確定しません。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
-            .navigationTitle("月次レビューを確認")
+            .navigationTitle(L10n.string("health_meals_body_ai.ff95423bda70", fallback: "月次レビューを確認"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("破棄", role: .destructive) { dismiss() }
+                    Button(L10n.string("health_meals_body_ai.5e978cf690d0", fallback: "破棄"), role: .destructive) { dismiss() }
                 }
                 ToolbarItem(placement: .primaryAction) {
-                    Button("保存") {
+                    Button(L10n.string("health_meals_body_ai.1e18f9b0644c", fallback: "保存")) {
                         onSave(draft)
                         dismiss()
                     }
@@ -552,20 +657,20 @@ private struct AIReportConnectionNotice {
 
     init(health: AIHealthResponse) {
         if health.isReady {
-            title = "接続OK"
-            detail = "\(health.model) と補助モデルで週次コメントを生成できます。"
+            title = L10n.string("health_meals_body_ai.ef2753a0d8e9", fallback: "接続OK")
+            detail = L10n.string("health_meals_body_ai.336d67026106", fallback: "{{value1}} と補助モデルで週次コメントを生成できます。", values: [String(describing: health.model)])
             recovery = health.message
             tint = AppTheme.positive
             systemImage = "checkmark.circle.fill"
         } else if !health.ollamaReachable {
-            title = "補助モデル未接続"
-            detail = "APIサーバーは応答していますが、料理・レポートの補助モデルを利用できません。"
+            title = L10n.string("health_meals_body_ai.b3ec9a0c94cd", fallback: "補助モデル未接続")
+            detail = L10n.string("health_meals_body_ai.4047b572f3a1", fallback: "APIサーバーは応答していますが、料理・レポートの補助モデルを利用できません。")
             recovery = health.message
             tint = AppTheme.orange
             systemImage = "exclamationmark.triangle.fill"
         } else {
-            title = "AIモデル準備中"
-            detail = "APIサーバーは応答していますが、必要なモデルを利用できません。"
+            title = L10n.string("health_meals_body_ai.75a1ae0d8cd7", fallback: "AIモデル準備中")
+            detail = L10n.string("health_meals_body_ai.abbfa3552a40", fallback: "APIサーバーは応答していますが、必要なモデルを利用できません。")
             recovery = health.message
             tint = AppTheme.orange
             systemImage = "exclamationmark.triangle.fill"
@@ -612,7 +717,7 @@ private struct AIErrorRecoveryCard: View {
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
-            Text("記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。")
+            Text(L10n.string("health_meals_body_ai.c656bd9e9244", fallback: "記録は保存されたままです。あとで接続できる状態になってから、もう一度生成できます。"))
                 .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
         }

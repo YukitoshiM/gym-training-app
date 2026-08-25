@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"bn","translation":"{{value1}} টি আইটেম","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"bn","translation":"{{value1}}: নির্ধারিত তারিখে জিমে যাওয়া বা ওয়ার্কআউটের কোনো রেকর্ড পাওয়া যায়নি।","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"bn","translation":"প্রতি সেশনের সময়","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"bn","translation":"দৈনিক পুষ্টির লক্ষ্য","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"bn","translation":"৩টি ওয়ার্কআউটে মুভমেন্ট শিখুন","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"bn","translation":"AI দিয়ে ওয়ার্কআউট তৈরি করুন","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"bn","translation":"AI ছাড়াও আজকের পরামর্শ ব্যবহার করা যাবে।","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"bn","translation":"AI-কে আপনার বর্তমান অবস্থা জিজ্ঞাসা করুন","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"bn","translation":"AI-কে জিজ্ঞাসা করুন","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"bn","translation":"AI-তে পাঠানো ডেটা","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"bn","translation":"AI কোচ শুধু আপনার নির্বাচিত সরঞ্জাম দিয়ে ওয়ার্কআউট পরিকল্পনা তৈরি করে। অন্তত একটি আইটেম সবসময় নির্বাচিত থাকবে।","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"bn","translation":"AI সার্ভার দিয়ে সাপ্তাহিক মতামত তৈরি করুন","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"bn","translation":"AI সার্ভার সংযুক্ত","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"bn","translation":"AI মডেল প্রস্তুত হচ্ছে","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"bn","translation":"AI খসড়া ও সাপ্তাহিক মতামত পাওয়া যাচ্ছে না, তবে আপনি হাতে লেখা রেকর্ড সংরক্ষণ করতে পারবেন।","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"bn","translation":"AI খসড়া ও সাপ্তাহিক মতামত ব্যবহার করতে AI ফিচার চালু করে সংযোগ পরীক্ষা করুন।","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"bn","translation":"AI পরিবর্তন {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"bn","translation":"AI সংযোগ","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"bn","translation":"AI ফিচার বন্ধ আছে","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"bn","translation":"AI ফিচার ব্যবহার করুন","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"bn","translation":"AI পরীক্ষা চলছে","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"bn","translation":"AI পরীক্ষা করেছে","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"bn","translation":"AI সেটিং ডিফল্টে ফিরিয়ে দিন","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"bn","translation":"API কী","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"bn","translation":"API কী শুধু স্বল্পমেয়াদি টোকেন নেওয়ার জন্য ব্যবহৃত হয় এবং সাধারণ AI অনুরোধের সঙ্গে পাঠানো হয় না।","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"bn","translation":"API সার্ভার সাড়া দিচ্ছে, কিন্তু প্রয়োজনীয় মডেল পাওয়া যাচ্ছে না।","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"bn","translation":"API সার্ভার সাড়া দিচ্ছে, কিন্তু খাবার ও রিপোর্টের সহায়ক মডেল পাওয়া যাচ্ছে না।","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"bn","translation":"API সার্ভার সাড়া দিচ্ছে, কিন্তু ছবি থেকে ক্যালোরি অনুমান পাওয়া যাচ্ছে না।","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"bn","translation":"Apple Health ওয়ার্কআউট","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"bn","translation":"ওয়ার্কআউট Apple Watch-এ সিঙ্ক করুন","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"bn","translation":"Apple Watch লগ","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"bn","translation":"Apple Watch ও সেন্সর","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"bn","translation":"BodyMode বিজ্ঞাপন রিপোর্ট","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"bn","translation":"BodyMode শুরু করুন","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"bn","translation":"BodyMode ব্যবস্থাপনা AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"bn","translation":"Google-এর বিজ্ঞাপন ডেটা ব্যবহার","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"bn","translation":"Google গোপনীয়তা নীতি","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"bn","translation":"Health শেয়ারিং পর্যালোচনা করুন","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"bn","translation":"Apple Watch দিয়ে রেপ অনুমান করুন","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"bn","translation":"Apple Watch হ্যাপটিক সতর্কতা","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"bn","translation":"{{value1}} / {{value2}} সম্পন্ন","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"bn","translation":"{{value1}} / {{value2}} অর্জিত","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"bn","translation":"{{value1}}/6 সম্পন্ন","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"bn","translation":"{{value1}}/{{value2}} রেপ","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"bn","translation":"{{value1}}{{value2}} রেপ","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"bn","translation":"{{value1}}-এর পরামর্শ","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"bn","translation":"{{value1}} পরীক্ষা করছে · পরামর্শ ব্যবহারযোগ্য","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"bn","translation":"{{value1}} পরীক্ষা করেছে","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"bn","translation":"{{value1}}-এর জন্য আজ এই পরামর্শ কেন দেওয়া হয়েছে তা ব্যাখ্যা করুন এবং সমন্বয় প্রস্তাব করুন।","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"bn","translation":"{{value1}}-কে জিজ্ঞাসা করুন","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"bn","translation":"{{value1}}-এর পরামর্শ","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"bn","translation":"{{value1}}-এর মূল্যায়ন","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"bn","translation":"{{value1}}-এর মূল পরামর্শ","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"bn","translation":"{{value1}}-এর পরীক্ষার অপেক্ষা · পরামর্শ ব্যবহারযোগ্য","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"bn","translation":"{{value1}}-এর সাপ্তাহিক রিপোর্ট","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"bn","translation":"পিকার দিয়ে {{value1}} সেট করুন","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"bn","translation":"{{value1}}-কে অন্য কাজে বদলান","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"bn","translation":"{{value1}} ব্যবহার করা যাবে। {{value2}} ধরনের কোচ পরীক্ষা করা হয়েছে।","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"bn","translation":"{{value1}} কেন পরামর্শ দেওয়া হয়েছে","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"bn","translation":"{{value1}} খুলুন","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"bn","translation":"{{value1}} সেট","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"bn","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"bn","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"bn","translation":"{{value1}} · {{value2}} আপডেট হয়েছে","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"bn","translation":"{{value1}} · {{value2}} ধরনের সরঞ্জাম","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"bn","translation":"{{value1}} · সপ্তাহে {{value2}} দিন","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"bn","translation":"{{value1}}টি আইটেম","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"bn","translation":"{{value1}} বার","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"bn","translation":"{{value1}} সম্পন্ন","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"bn","translation":"{{value1}}টি ব্যায়াম","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"bn","translation":"{{value1}}টি ব্যায়াম / {{value2}} সেট","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"bn","translation":"বাকিটা BodyMode-এর ওপর ছেড়ে দিন। এটি প্রতিদিন সর্বোচ্চ তিনটি কাজের পরামর্শ দেয়।","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"bn","translation":"মূল্যায়নকে আরও নির্ভরযোগ্য করে এমন ডেটা","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"bn","translation":"পরামর্শকৃত কোচ প্রয়োগ করুন","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"bn","translation":"এখান থেকে দিন শুরু করুন","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"bn","translation":"এই ওয়ার্কআউট শুরু করুন","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"bn","translation":"এই লক্ষ্য ব্যবহার করুন","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"bn","translation":"এই লক্ষ্যের প্রশিক্ষক","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"bn","translation":"এই কাজটি কেন বেছে নেওয়া হয়েছে","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"bn","translation":"সব কোচ","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"bn","translation":"অন্যান্য","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"bn","translation":"প্রোটিন","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"bn","translation":"যা এটি করতে পারে না","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"bn","translation":"প্রথমে ডিভাইসের রেকর্ড থেকে তৈরি হয় এবং প্রয়োজন হলেই AI সমন্বয় করে।","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"bn","translation":"প্রায় ব্যবহৃত ওয়ার্কআউট সংরক্ষণ করুন","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"bn","translation":"ক্যালোরি","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"bn","translation":"ক্যালোরি / ম্যাক্রো","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"bn","translation":"ক্যালোরি অনুমান মডেল প্রস্তুত হচ্ছে","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"bn","translation":"বাতিল","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"bn","translation":"দ্রুত রেকর্ড","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"bn","translation":"সার্ভার URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"bn","translation":"আমি জিমে পৌঁছেছি","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"bn","translation":"জিম ভিজিট","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"bn","translation":"জিম ভিজিট স্বয়ংক্রিয়ভাবে রেকর্ড করুন","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"bn","translation":"এড়িয়ে যান","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"bn","translation":"সেন্সর না থাকলেও ওজন, রেপ এবং RPE হাতে লিখে দিতে পারবেন। কম-শক্তির স্যাম্পলিং মুভমেন্ট অনুমানের আপডেটের হার কমায়।","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"bn","translation":"পরীক্ষামূলক বিজ্ঞাপন","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"bn","translation":"ডেটা","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"bn","translation":"ডেটার পূর্ণতা {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"bn","translation":"প্রশিক্ষক: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"bn","translation":"ওয়ার্কআউট","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"bn","translation":"৩টি ওয়ার্কআউট সম্পন্ন করুন","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"bn","translation":"ওয়ার্কআউট খুলুন","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"bn","translation":"ওয়ার্কআউট শুরু করুন","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"bn","translation":"ভার্সন: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"bn","translation":"ব্যক্তিগতকরণ ছাড়া","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"bn","translation":"ব্যক্তিগতকরণ বন্ধ","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"bn","translation":"ফ্রি ওয়ার্কআউট","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"bn","translation":"গোপনীয়তা","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"bn","translation":"প্রোফাইল","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"bn","translation":"সহায়তা","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"bn","translation":"হোম","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"bn","translation":"আপনার ওয়ার্কআউট এখানে","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"bn","translation":"ওয়ার্কআউট বেছে নিন বা শুরু করুন","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"bn","translation":"Mail-এর মতো গন্তব্য বেছে নিয়ে রিপোর্টটি BodyMode সহায়তায় পাঠান। রিপোর্টে শরীর বা স্বাস্থ্যের রেকর্ড থাকে না।","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"bn","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"bn","translation":"আপত্তিকর বিষয়বস্তু","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"bn","translation":"অজানা ত্রুটি","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"bn","translation":"অনুপযুক্ত বিষয়বস্তু","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"bn","translation":"অনুপযুক্ত বিজ্ঞাপনের রিপোর্ট করুন","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"bn","translation":"নির্ধারিত ওয়ার্কআউট পাওয়া যায়নি","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"bn","translation":"এবার পরিবর্তন করবেন না","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"bn","translation":"এবার কোনো পরিবর্তন নেই","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"bn","translation":"আজ: {{value1}} · {{value2}} সেট","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"bn","translation":"আজ থেকে আবার শেখা শুরু করুন","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"bn","translation":"আজকের ৩টি","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"bn","translation":"আজকের ৩টি প্রস্তুত হচ্ছে","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"bn","translation":"আজকের ওয়ার্কআউট","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"bn","translation":"আজকের ওয়ার্কআউট সম্পন্ন করুন","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"bn","translation":"আজকের ওয়ার্কআউট করুন","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"bn","translation":"আজকের ওয়ার্কআউট শুরু করুন","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"bn","translation":"আজকের এন্ট্রি","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"bn","translation":"আজকের পরামর্শ","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"bn","translation":"আজকের অবস্থা","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"bn","translation":"আজকের রেকর্ড","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"bn","translation":"আজকের প্রস্তুতি","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"bn","translation":"আজকের অগ্রগতি","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"bn","translation":"আজকে যান","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"bn","translation":"আজকের কাজগুলো এখানে","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"bn","translation":"টি আইটেম","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"bn","translation":"বিশ্রাম","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"bn","translation":"বিশ্রামের সময়","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"bn","translation":"পিকার দিয়ে বিশ্রামের সময় সেট করুন","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"bn","translation":"অগ্রগতির ছবি","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"bn","translation":"শরীরের গঠন","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"bn","translation":"ওজন","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"bn","translation":"শরীরের ওজন {{value1}} + অতিরিক্ত ওজন {{value2}} = রেফারেন্স লোড {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"bn","translation":"শরীরের ওজন {{value1}} - সহায়তা {{value2}} = রেফারেন্স লোড {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"bn","translation":"ওজন · ঐচ্ছিক","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"bn","translation":"টেকসই গতিতে ওজন ও কোমর উন্নত করুন","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"bn","translation":"ওজন · কোমর · খাবার · অগ্রগতির ছবি","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"bn","translation":"আপনার লক্ষ্য কী?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"bn","translation":"তৈরি করুন","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"bn","translation":"ব্যবহার নির্দেশিকা","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"bn","translation":"উপলভ্য সরঞ্জাম দিয়ে আমরা ওয়ার্কআউট তৈরি করব","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"bn","translation":"উপলভ্য সরঞ্জাম","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"bn","translation":"ডিভাইসে শুধু আপনার ব্যবহৃত ফিচারের ধরন সংরক্ষিত হয়। ওজন, ছবি, খাবারের বিবরণ, হৃদস্পন্দন, অবস্থান ও নোট রেকর্ড বা স্বয়ংক্রিয়ভাবে পাঠানো হয় না।","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"bn","translation":"সংরক্ষণ করুন","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"bn","translation":"আপনার সংরক্ষিত রেকর্ড দিয়ে পরীক্ষা করা হয়েছে।","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"bn","translation":"স্বাস্থ্য রেকর্ডকে বিজ্ঞাপন ডেটা থেকে আলাদা রাখুন","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"bn","translation":"এখন কয়েকটি বিষয় রেকর্ড করুন, পরে সব পর্যালোচনা করুন।","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"bn","translation":"হয়ে গেছে","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"bn","translation":"সব ডেটা মুছবেন?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"bn","translation":"সব ডেটা মুছুন","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"bn","translation":"সব রেকর্ড JSON হিসেবে এক্সপোর্ট করুন","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"bn","translation":"পুরো শরীরের ওয়ার্কআউট দিয়ে শুরু করুন","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"bn","translation":"ছবি","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"bn","translation":"ছবি সঙ্গে সঙ্গে বিশ্লেষণ করুন","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"bn","translation":"ছবি ও মাপ দিয়ে অগ্রগতি অনুসরণ করুন","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"bn","translation":"ছবি ও মাপ এখানে","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"bn","translation":"ছবি ও মাপ রেকর্ড করুন","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"bn","translation":"ছবি তুলুন","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"bn","translation":"দেহের আকৃতি, কোমর ও পেশির ভারসাম্য উন্নত করুন","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"bn","translation":" মিনিট","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"bn","translation":"মিনিট:সেকেন্ড","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"bn","translation":"নতুনদের ওয়ার্কআউট তৈরি করুন","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"bn","translation":"মূল্যায়নের বিস্তারিত দেখুন","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"bn","translation":"অন্য কাজ বেছে নিন","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"bn","translation":"কোন সরঞ্জাম উপলভ্য?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"bn","translation":"ব্যবহার বিশ্লেষণ শেয়ার করুন","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"bn","translation":"ব্যবহার ডেটা মুছুন","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"bn","translation":"ব্যবহার ডেটা এক্সপোর্ট করুন","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"bn","translation":"পরামর্শের অগ্রাধিকারের ভারসাম্য","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"bn","translation":"মুভমেন্ট","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"bn","translation":"ব্যবহৃত তথ্য","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"bn","translation":"সম্মতির অবস্থা পরীক্ষা হচ্ছে","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"bn","translation":"কার জন্য উপযুক্ত","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"bn","translation":"সরঞ্জাম বা পেশির গ্রুপ দিয়ে বেছে নিন","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"bn","translation":" রেপ","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"bn","translation":"রিকভারি","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"bn","translation":"রেপ","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"bn","translation":"পিকার দিয়ে রেপ সেট করুন","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"bn","translation":"স্থির পরীক্ষামূলক বিজ্ঞাপন","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"bn","translation":"শুরু করার পদ্ধতি","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"bn","translation":"মৌলিক তথ্য · ঐচ্ছিক","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"bn","translation":"রিপোর্ট পাঠান","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"bn","translation":"রিপোর্টের কারণ","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"bn","translation":"পরিবর্তন এখানে অনুসরণ করুন","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"bn","translation":"অনুসরণ করার মাপ বেছে নিন","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"bn","translation":"পরিবর্তন করুন","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"bn","translation":"পরিবর্তনের ইতিহাস","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"bn","translation":"শুরু করুন","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"bn","translation":"শেখা বিরতিতে আছে। আপনার আগের রেকর্ড মুছে যায়নি।","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"bn","translation":"হয়ে গেছে","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"bn","translation":"{{value1}} সম্পন্ন","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"bn","translation":"সম্পন্ন","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"bn","translation":"সম্পন্ন হিসেবে চিহ্নিত করুন","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"bn","translation":"সম্পন্ন","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"bn","translation":"করা হয়নি","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"bn","translation":"করুন","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"bn","translation":"যত বেশি করবেন, পরের ধাপ তত স্পষ্ট হবে","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"bn","translation":"আপনার ফলাফল পরবর্তী AI পরামর্শ উন্নত করে","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"bn","translation":"প্রসারিত","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"bn","translation":"ইতিহাস","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"bn","translation":" বছর","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"bn","translation":"বয়সের জন্য উপযুক্ত নয়","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"bn","translation":"বিজ্ঞাপন ID সেট করা নেই","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"bn","translation":"বিজ্ঞাপন ও ডেটা ব্যবহার","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"bn","translation":"বিজ্ঞাপন গোপনীয়তা সেটিং","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"bn","translation":"বিজ্ঞাপনের সম্মতি দেওয়া হয়নি।","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"bn","translation":"বিজ্ঞাপনে দেখা পণ্যের নাম বা সমস্যা","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"bn","translation":"বিজ্ঞাপন শুধু iPhone-এ দেখানো হয়। স্বাস্থ্য, খাবার, ছবি ও BodyMode অবস্থানের রেকর্ড বিজ্ঞাপন বাছাইয়ে ব্যবহার হয় না।","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"bn","translation":"বিজ্ঞাপনের রিপোর্ট করুন","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"bn","translation":"বিজ্ঞাপন লোড হচ্ছে","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"bn","translation":"বিজ্ঞাপন ও গোপনীয়তা","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"bn","translation":"বিজ্ঞাপন প্রদানকারী","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"bn","translation":"বিজ্ঞাপন দেখাতে Google আপনার IP ঠিকানা, ডিভাইস ও অ্যাপের মৌলিক তথ্য, SDK নির্ণয় ও কর্মক্ষমতা ডেটা এবং বিজ্ঞাপন দেখা ও ইন্টারঅ্যাকশনের তথ্য পায়। IP ঠিকানা থেকে আনুমানিক অবস্থান নির্ধারণ করা হতে পারে। BodyMode-এ রেকর্ড করা ওজন, হৃদস্পন্দন, ঘুম, খাবার, ছবি, ওয়ার্কআউট, লক্ষ্য, GPS ডেটা ও জিমের অবস্থান বিজ্ঞাপন অনুরোধে অন্তর্ভুক্ত হয় না।","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"bn","translation":"হৃদস্পন্দন ও RPE দিয়ে বিশ্রাম সমন্বয় করুন","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"bn","translation":"হৃদস্পন্দন ও মুভমেন্ট","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"bn","translation":"লিঙ্গ","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"bn","translation":"লিঙ্গ · ঐচ্ছিক","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"bn","translation":"ফিরুন","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"bn","translation":"হাতে রেকর্ড করা এখনো উপলভ্য।","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"bn","translation":"কোচ: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"bn","translation":"নির্ধারিত কোচ","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"bn","translation":"আপনার কোচকে জিজ্ঞাসা করুন","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"bn","translation":"কোচের পদ্ধতি","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"bn","translation":"কোচের ধরন বদলালে AI যে রেকর্ডকে অগ্রাধিকার দেয় এবং যে পরামর্শ দেয় তা বদলে যায়।","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"bn","translation":"নির্ধারিত প্রশিক্ষক: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"bn","translation":"উল্লেখ করা নেই","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"bn","translation":"সংযোগ পরীক্ষা করুন","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"bn","translation":"পরামর্শকৃত ওয়ার্কআউট সরাসরি iPhone বা Apple Watch-এ করুন।","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"bn","translation":"শুধু পরামর্শ শেখা রিসেট করুন","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"bn","translation":"কোনো বাধা ছাড়া শুধু ব্যানার বিজ্ঞাপন","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"bn","translation":"মাপ রেকর্ড করুন","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"bn","translation":" দিন","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"bn","translation":"তারিখ অনুযায়ী পর্যালোচনা করুন","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"bn","translation":"দৈনিক কার্যকলাপ","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"bn","translation":"দৈনিক পরামর্শ পরীক্ষা","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"bn","translation":"এক্সপোর্ট করা যায়নি","review_note":""}

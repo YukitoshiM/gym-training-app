@@ -1,0 +1,88 @@
+{"id":"ai_plan.automatic_revision_request","target_locale":"ro","translation":"Verificați rezultatele recente, rata de finalizare, RPE și starea recuperării și ajustați concret planul pentru a fi mai ușor de urmat începând cu următoarea sesiune. Dacă nu sunt necesare modificări, păstrați valorile actuale.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.changes","target_locale":"ro","translation":"変更内容","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.diff_add_exercise","target_locale":"ro","translation":"Adaugă {{value1}}","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.diff_remove_exercise","target_locale":"ro","translation":"Elimină {{value1}}","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.diff_reps","target_locale":"ro","translation":"{{value1}}：{{value2}}回 → {{value3}}回","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.diff_rest","target_locale":"ro","translation":"{{value1}}休憩{{value2}}秒 → {{value3}}秒","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.diff_sets","target_locale":"ro","translation":"{{value1}}: {{value2}} → {{value3}} seturi","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.not_now","target_locale":"ro","translation":"Nicio modificare de această dată","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.save_and_start","target_locale":"ro","translation":"Salvează și începe","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.save_as_new_plan","target_locale":"ro","translation":"Salvează ca plan nou","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.start_once","target_locale":"ro","translation":"Execută doar de data aceasta","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.try_or_save","target_locale":"ro","translation":"Poți încerca așa, o singură dată, sau poți salva ca plan.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.update_current_plan","target_locale":"ro","translation":"Actualizează planul existent","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"core_ui.analytics_privacy_explanation","target_locale":"ro","translation":"Doar cu consimțământul dvs., trimitem date despre utilizarea funcțiilor și clasificări privind scopul, experiența, starea și categoria sugestiei, la nivel de instalare, fără a le asocia cu numele sau alte date similare. Nu trimitem valori despre corp sau alimentație, fotografii, ritmul cardiac, durata somnului, locația, notițele sau ID-ul de publicitate.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.confidence_high","target_locale":"ro","translation":"Mare","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.confidence_low","target_locale":"ro","translation":"Redus","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.confidence_moderate","target_locale":"ro","translation":"Mediu","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.confidence_reference","target_locale":"ro","translation":"Pentru referință","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.documents_searched","target_locale":"ro","translation":"検索対象","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.general_trends_disclaimer","target_locale":"ro","translation":"Rezultatele cercetărilor indică tendințe generale. Ele nu afirmă că veți obține neapărat același efect.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.library_unavailable","target_locale":"ro","translation":"Deoarece datele din literatura de specialitate nu sunt disponibile, de această dată evaluarea se bazează în principal pe înregistrări și principii generale.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.no_direct_paper","target_locale":"ro","translation":"Nu am identificat literatură de specialitate care să poată fi utilizată direct pentru această propunere. Evaluarea se bazează în principal pe înregistrări și pe principiile generale ale exercițiilor fizice.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.overall_confidence","target_locale":"ro","translation":"Gradul general de certitudine","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.population_mismatch","target_locale":"ro","translation":"Nu am găsit literatură de specialitate despre persoane cu caracteristici suficient de similare, așa că, de această dată, evaluarea se bazează în principal pe înregistrări și pe principii generale.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.recommendation_evidence","target_locale":"ro","translation":"Baza propunerii","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.referenced_research","target_locale":"ro","translation":"Literatura de specialitate consultată","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.search_information","target_locale":"ro","translation":"検索情報","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.search_unavailable","target_locale":"ro","translation":"Căutarea în literatura de specialitate nu a fost disponibilă. Deoarece nu am putut verifica dovezile, evaluarea se bazează de această dată în principal pe înregistrări.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.view_scientific","target_locale":"ro","translation":"Vezi dovezile științifice","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_abstract","target_locale":"ro","translation":"抄録確認","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_applicability","target_locale":"ro","translation":"Relevanța pentru cazul de față","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_direct","target_locale":"ro","translation":"Participanții sunt relativ similari","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_full_text","target_locale":"ro","translation":"本文確認","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_intervention","target_locale":"ro","translation":"介入","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_license","target_locale":"ro","translation":"Licența articolului integral","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_limitations","target_locale":"ro","translation":"制約","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_mismatch","target_locale":"ro","translation":"Caracteristicile participanților diferă","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_newer","target_locale":"ro","translation":"Cercetare mai nouă","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_open_paper","target_locale":"ro","translation":"Deschide lucrarea","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_partial","target_locale":"ro","translation":"Unele condiții sunt similare","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_population","target_locale":"ro","translation":"対象者","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_summary","target_locale":"ro","translation":"Concluzia cercetării","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_summary_applicability","target_locale":"ro","translation":"Rezumat și domeniu de aplicare","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_unclear","target_locale":"ro","translation":"Neclar din cauza informațiilor insuficiente","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_attach_diagnostics","target_locale":"ro","translation":"Atașează jurnale de diagnostic anonime","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_cancel","target_locale":"ro","translation":"Anulează","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_category_bug","target_locale":"ro","translation":"不具合","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_other","target_locale":"ro","translation":"Altele","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_picker","target_locale":"ro","translation":"Tipul feedbackului","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_category_request","target_locale":"ro","translation":"要望","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_section","target_locale":"ro","translation":"種類","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_usability","target_locale":"ro","translation":"Dificultăți de utilizare","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_copy_text","target_locale":"ro","translation":"Copiază textul","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_details","target_locale":"ro","translation":"内容","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_diagnostics_explanation","target_locale":"ro","translation":"Atașează informații despre funcționarea și comunicarea aplicației și a Apple Watch. Nu includ înregistrări corporale sau de sănătate, fotografii ori conversații cu AI.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_diagnostics_failed","target_locale":"ro","translation":"Jurnalele de diagnostic nu au putut fi atașate","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_other_ways","target_locale":"ro","translation":"Alte modalități de trimitere","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_report_body","target_locale":"ro","translation":"Feedback BodyMode\n\nTip: {{value1}}\nConținut:\n{{value2}}\n\nAplicație: {{value3}}\nSistem de operare: {{value4}}","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_retry","target_locale":"ro","translation":"Reîncearcă","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_send","target_locale":"ro","translation":"Trimite feedback","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_send_email","target_locale":"ro","translation":"Trimite prin e-mail","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_send_without_diagnostics","target_locale":"ro","translation":"Trimite fără date de diagnosticare","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_sensitive_warning","target_locale":"ro","translation":"Nu includeți valori corporale, informații despre alimentație, fotografii, conversații cu AI sau date de autentificare.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_title","target_locale":"ro","translation":"Feedback","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_unknown_error","target_locale":"ro","translation":"Eroare necunoscută","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_awaiting_result","target_locale":"ro","translation":"Se așteaptă evaluarea","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_copy_name","target_locale":"ro","translation":"{{value1}} 改訂版","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_from_coach","target_locale":"ro","translation":"Revizuirea planului de la {{value1}}","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_history","target_locale":"ro","translation":"Istoricul revizuirilor AI","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_improved","target_locale":"ro","translation":"Performanța la următoarea sesiune s-a îmbunătățit","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_pending","target_locale":"ro","translation":"În așteptare de confirmare","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_reverted","target_locale":"ro","translation":"Anulat","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_review_again","target_locale":"ro","translation":"Posibilă reajustare data viitoare","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_saved_new","target_locale":"ro","translation":"新規保存","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_skipped","target_locale":"ro","translation":"Omitere","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_unchanged","target_locale":"ro","translation":"Rezultatul următor va fi aproximativ același","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_updated","target_locale":"ro","translation":"更新","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"workout_summary.adjust_next_plan_ai","target_locale":"ro","translation":"Ajustează următorul plan cu AI","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.keep_current_plan","target_locale":"ro","translation":"Vom continua cu planul actual.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.new_plan_saved","target_locale":"ro","translation":"A fost salvat un nou „{{value1}}”.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.next_plan_updated","target_locale":"ro","translation":"Următorul plan a fost actualizat.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.next_session","target_locale":"ro","translation":"次回","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"workout_summary.revision_approval_notice","target_locale":"ro","translation":"Planul actual nu va fi modificat până când nu verifici schimbările.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_headline_met","target_locale":"ro","translation":"Ai reușit. Hai să verificăm următoarea sarcină.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_headline_missed","target_locale":"ro","translation":"Nu ai reușit chiar complet, așa că poți ajusta următoarea sesiune.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_headline_ready","target_locale":"ro","translation":"Poți aplica rezultatele de azi pentru următoarea sesiune.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_restored","target_locale":"ro","translation":"Am revenit la planul de dinaintea actualizării.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.undo_revision","target_locale":"ro","translation":"Anulează actualizarea","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}

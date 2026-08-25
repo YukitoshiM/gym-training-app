@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"vi","translation":"Đây là đề xuất dựa trên xu hướng dữ liệu đầu vào, không phải là chẩn đoán y tế. Nếu bạn có bất kỳ lo ngại nào về sức khỏe hoặc cơn đau, hãy tham khảo ý kiến chuyên gia.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"vi","translation":"Tóm tắt dữ liệu đầu vào","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"vi","translation":"Phương pháp nhập","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"vi","translation":"Không có mục để chia sẻ","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"vi","translation":"Vui lòng xem xét và chỉnh sửa nếu cần rồi lưu. Mục tiêu sẽ không tự động được xác định.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"vi","translation":"Cần phân tích lại","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"vi","translation":"Thử lại","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"vi","translation":"Ảnh","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"vi","translation":"Phạm vi tham khảo từ ảnh","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"vi","translation":"Ước tính lượng calo từ ảnh","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"vi","translation":"Tạo bản nháp từ ảnh, giúp giảm bớt công đoạn nhập liệu.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"vi","translation":"Phân tích bằng ảnh","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"vi","translation":"Không có ảnh","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"vi","translation":"Chúng tôi sẽ kiểm tra sự thay đổi về ngoại hình và số liệu thông qua đo đạc thực tế.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"vi","translation":"Tạo bản nháp dinh dưỡng từ ảnh hoặc thức ăn đã ăn.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"vi","translation":"Bạn có thể phân tích khi chọn ít nhất một ảnh. Càng nhiều ảnh, bạn càng dễ dàng xác nhận.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"vi","translation":"Phân tích lại ảnh theo nhóm","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"vi","translation":"Phân tích ảnh theo nhóm","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"vi","translation":"Thêm ảnh","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"vi","translation":"Thêm và chỉnh sửa ảnh","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"vi","translation":"Khi chọn ảnh, lượng calo và các thông tin khác sẽ tự động điền.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"vi","translation":"Bạn có thể lưu bộ ảnh. Sau khi kết nối, bạn có thể phân tích lại từ chi tiết bộ ảnh.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"vi","translation":"Phút","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"vi","translation":"Việc ghi lại số lượng (nếu biết) sẽ giúp tăng độ chính xác của ước tính.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"vi","translation":"Đang phân tích","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"vi","translation":"Đã phân tích","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"vi","translation":"Lý do đưa ra quyết định","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"vi","translation":"Hoàn thành","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"vi","translation":"Xóa","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"vi","translation":"Sau buổi tập gần nhất, đã trôi qua {{value1}} ngày. Bạn còn dư thời gian cho các buổi tập trong tuần.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"vi","translation":"Đo vòng bụng lần trước đã hơn 7 ngày.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"vi","translation":"Nhập giá trị lần trước","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"vi","translation":"So sánh với lần trước: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"vi","translation":"Tuần trước","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"vi","translation":"Không có đủ dữ liệu so sánh với tuần trước","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"vi","translation":"Khối lượng tập luyện tăng hơn 30% so với tuần trước. Trong buổi tập tiếp theo, hãy cố gắng duy trì mức này và kiểm tra RPE (đánh giá chủ quan về mức độ mệt) và chỉ số phục hồi.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"vi","translation":"So sánh với tuần trước: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"vi","translation":"So sánh với tuần trước: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"vi","translation":"Chưa có dữ liệu hoạt động. Chúng tôi ước tính rằng việc bắt đầu trên đồng hồ sẽ hữu ích.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"vi","translation":"Ước tính hoạt động","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"vi","translation":"Đây là giá trị tham khảo được tổng hợp từ xu hướng dữ liệu đã thu thập, chứ không phải là đánh giá y tế.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"vi","translation":"Đang xem","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"vi","translation":"Có thể xem {{value1}} mục, còn thiếu {{value2}} mục","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"vi","translation":"Các mục chính đã thu thập (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"vi","translation":"Tính toán dựa trên trọng lượng, số lần, nhịp độ, phạm vi vận động tương đối và RPE (Rating of Perceived Exertion), không gán giá trị 0 cho các giá trị bị thiếu.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"vi","translation":"Phía trên bên phải: Vị trí thẳng hàng, toàn thân","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"vi","translation":"Phía dưới bên phải: Từ vai đến thắt lưng","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"vi","translation":"Tổng cộng","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"vi","translation":"Chụp ảnh với cùng trang phục, khoảng cách và ánh sáng, thư giãn","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"vi","translation":"Bạn có thể so sánh khi ghi lại nhiều lần cùng một bài tập, thực đơn và thời gian.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"vi","translation":"KPI đo được trong ngày","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"vi","translation":"Đây là danh sách các mục đã thay đổi, không đưa ra kết luận về nguyên nhân hoặc tình trạng sức khỏe.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"vi","translation":"Súp miso","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"vi","translation":"Số hơi thở","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"vi","translation":"Số hơi thở cao hơn mức trung bình 14 ngày","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"vi","translation":"Số hơi thở {{value1}} lần/phút so với mức trung bình 14 ngày là {{value2}} lần/phút","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"vi","translation":"Số hơi thở thấp hơn mức trung bình 14 ngày","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"vi","translation":"Số hơi thở trong phạm vi bình thường","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"vi","translation":"Chất lượng -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"vi","translation":"Chất lượng {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"vi","translation":"Sản phẩm","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"vi","translation":"Không thể lưu sản phẩm.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"vi","translation":"Mã sản phẩm","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"vi","translation":"Vui lòng nhập mã sản phẩm.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"vi","translation":"Nhập mã sản phẩm bằng tay.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"vi","translation":"Tên sản phẩm","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"vi","translation":"Lần/phút","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"vi","translation":"Hồi phục","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"vi","translation":"Hãy chọn ngày ưu tiên hồi phục.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"vi","translation":"Vì dữ liệu phục hồi thấp, hãy giảm trọng lượng hoặc số lần tập luyện của {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"vi","translation":"Hoàn thành ngày phục hồi","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"vi","translation":"Số lần","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"vi","translation":"Phân biệt giữa số lần và dinh dưỡng","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"vi","translation":"Theo tiêu chuẩn","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"vi","translation":"Không được phép kết nối HTTP đến máy chủ bên ngoài.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"vi","translation":"Đêm","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"vi","translation":"Tự động hoàn thành vào ban đêm","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"vi","translation":"Không có sự tăng đột biến hoặc tình trạng trì trệ lớn. Hãy thêm nhiều bản ghi để so sánh mục tiêu số lần và mức độ gắng sức (RPE) trong lần tập tiếp theo.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"vi","translation":"Thất bại","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"vi","translation":"Vị trí","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"vi","translation":"Nhịp tim khi nghỉ ngơi","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"vi","translation":"Nhịp tim khi nghỉ ngơi: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"vi","translation":"Nhịp tim khi nghỉ ngơi cao hơn so với mức trung bình 14 ngày","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"vi","translation":"Nhịp tim khi nghỉ ngơi thấp hơn mức trung bình","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"vi","translation":"Nhịp tim khi nghỉ ngơi như thường lệ","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"vi","translation":"Hoàn thành","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"vi","translation":"Các mục dễ hoàn thành: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"vi","translation":"Chúng tôi đang kiểm tra xu hướng hoàn thành và bỏ qua trong thiết bị.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"vi","translation":"Số lượng thực phẩm","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"vi","translation":"Độ dày","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"vi","translation":"Lịch sử","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"vi","translation":"Phía trên bên trái: Mặt trước, toàn thân","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"vi","translation":"Phía dưới bên trái: Lưng, toàn thân","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"vi","translation":"So sánh","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"vi","translation":"Nhịp tim trung bình: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"vi","translation":"Tốc độ trung bình","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"vi","translation":"Thích hợp","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"vi","translation":"Các mục dễ bỏ qua: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"vi","translation":"Thời gian phục hồi nhịp tim","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"vi","translation":"Không ghi nhận nhịp tim","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"vi","translation":"Nguồn: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"vi","translation":"Có sự khác biệt giữa dữ liệu tự động và nhập thủ công, tổng cộng {{value1}} lần.","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"vi","translation":"Chỉ dựa vào chuyển động cổ tay không thể xác định rõ bài tập và kỹ thuật. Vui lòng kiểm tra số lần ước tính trước khi cập nhật.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"vi","translation":"Nhiệt độ da ở cổ tay","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"vi","translation":"Nhiệt độ da ở cổ tay khác với bình thường","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"vi","translation":"Nhiệt độ da ở cổ tay trong phạm vi bình thường","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"vi","translation":"Chỉ sử dụng nội dung đã được phê duyệt cho đề xuất tiếp theo.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"vi","translation":"Dữ liệu đã được phê duyệt","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"vi","translation":"Người phụ trách: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"vi","translation":"Huấn luyện viên phụ trách","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"vi","translation":"Xem lại","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"vi","translation":"Kết nối thành công","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"vi","translation":"Ngay cả khi không kết nối, dữ liệu đã ghi sẽ không bị xóa. Bạn có thể tiếp tục ghi thủ công và sau đó tạo ra chỉ các bình luận của AI.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"vi","translation":"Đang kiểm tra kết nối","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"vi","translation":"Giá trị ước tính là giá trị tham khảo. Bạn có thể tự do chỉnh sửa trong ô nhập bên dưới.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"vi","translation":"Ước tính tiêu thụ","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"vi","translation":"Tiến triển","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"vi","translation":"Calo tiêu thụ","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"vi","translation":"Chụp ảnh","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"vi","translation":"Bộ chụp ảnh","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"vi","translation":"Chỉnh sửa bộ chụp ảnh","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"vi","translation":"Thêm bộ chụp ảnh","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"vi","translation":"Hướng chụp","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"vi","translation":"Số ngày chụp","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"vi","translation":"Ghi chú về điều kiện và ngoại hình chụp","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"vi","translation":"Đã chụp","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"vi","translation":"Ví dụ chụp. Góc trái trên là toàn thân, góc phải trên là toàn thân từ mặt trước, góc dưới trái là toàn thân từ phía sau, góc dưới phải là cận cảnh bụng từ vai đến eo. Chụp với cùng trang phục, khoảng cách và ánh sáng.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"vi","translation":"Cần cải thiện","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"vi","translation":"Hướng","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"vi","translation":"Kiểm tra sự khác biệt về tư thế theo hướng.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"vi","translation":"Sử dụng như một tiêu chí để đánh giá xu hướng hàng tuần, thay vì những thay đổi hàng ngày.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"vi","translation":"Ngày","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"vi","translation":"Số giờ ngủ đêm qua","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"vi","translation":"Buổi trưa","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"vi","translation":"Thời gian","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"vi","translation":"Điểm tham khảo được tính toán từ hệ thống là thời gian, giấc ngủ sâu, REM và tỉnh giấc giữa chừng.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"vi","translation":"Vui lòng chờ","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"vi","translation":"Nếu vẫn tiếp tục, vui lòng kiểm tra trạng thái mô hình trên máy chủ AI.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"vi","translation":"Nếu vẫn tiếp tục, vui lòng xem xét nhật ký trên máy chủ AI.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"vi","translation":"Thời gian","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"vi","translation":"Điều chỉnh theo mục tiêu thông thường, đồng thời tham khảo giá trị RPE.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"vi","translation":"Bình thường","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"vi","translation":"Nếu mức độ tiếp xúc cao, hãy tham khảo việc giảm thời gian và thời lượng để kiểm soát.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"vi","translation":"Chúng tôi sẽ tạo danh sách bài tập phù hợp với các thiết bị bạn có, giúp bạn bắt đầu dễ dàng.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"vi","translation":"Sau khi ghi lại giá trị ban đầu, bạn có thể theo dõi sự thay đổi và chênh lệch so với mục tiêu.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"vi","translation":"Chạy ngoài trời mới nhất","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"vi","translation":"Báo cáo mới nhất","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"vi","translation":"Đánh giá hàng tháng","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"vi","translation":"Xem đánh giá hàng tháng","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"vi","translation":"Lập kế hoạch đánh giá hàng tháng","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"vi","translation":"Đang tạo báo cáo đánh giá hàng tháng","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"vi","translation":"Báo cáo hàng tháng","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"vi","translation":"Buổi sáng","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"vi","translation":"Tôi đang thử tắt thông báo buổi sáng và tối.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"vi","translation":"Chưa phân tích","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"vi","translation":"Chưa thu thập","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"vi","translation":"Không xử lý các mục chưa có, hãy nhập 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"vi","translation":"Chưa thực hiện","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"vi","translation":"Chưa chụp ảnh","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"vi","translation":"Chưa đăng ký. Vui lòng nhập số lượng cho mỗi 100g nhãn.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"vi","translation":"Hàng hóa chưa đăng ký sẽ được lưu vào thiết bị sau khi nhập và sử dụng lại trong lần đọc tiếp theo.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"vi","translation":"Chưa ghi lại","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"vi","translation":"Chưa ghi lại. Cần thêm cơ sở cho cảm nhận và mức độ chuẩn bị","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"vi","translation":"So sánh theo điều kiện","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"vi","translation":"Nhận dạng văn bản (OCR) thông tin dinh dưỡng (xác minh người dùng)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"vi","translation":"Nhận dạng văn bản (OCR) thông tin dinh dưỡng (cần xác minh)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"vi","translation":"Tôi đã nhập số từ thông tin dinh dưỡng. Vui lòng kiểm tra so với lượng tiêu chuẩn và các giá trị này.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"vi","translation":"Nhập từ ảnh thông tin dinh dưỡng","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"vi","translation":"Không thể đọc được thông tin dinh dưỡng. Vui lòng chụp lại từ một nơi sáng, trực diện hoặc nhập thủ công.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"vi","translation":"Đang đọc thông tin dinh dưỡng","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"vi","translation":"Dữ liệu dinh dưỡng đang được tải","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"vi","translation":"Bước tiếp theo","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"vi","translation":"Hành động tiếp theo","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"vi","translation":"Điều chỉnh tiếp theo","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"vi","translation":"Tôi đã kiểm tra tình trạng bụng từ phía trước và hai bên.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"vi","translation":"Tôi đã đo vòng eo bằng cách kết hợp nhìn từ phía trước và phía sau.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"vi","translation":"Ghi lại các thông tin như phía trước, hai bên, phía sau trong một ngày.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"vi","translation":"Tổng hợp các thông tin như phía trước, hai bên, phía sau vào cùng một ngày. Bạn có thể lưu trữ ngay cả khi chỉ có một mục, và thêm vào sau này.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"vi","translation":"Số bước chân","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"vi","translation":"Số bước: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"vi","translation":"Bạn có thể cho phép thu thập số lượng bước, hoạt động, giấc ngủ, nhịp tim khi nghỉ ngơi, HRV, tần số thở, nhiệt độ da ở cổ tay theo các mục cần thiết. Các mục không được cho phép sẽ được coi là chưa thu thập và bạn vẫn có thể nhập thủ công.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"vi","translation":"Còn lại {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"vi","translation":"Không có dữ liệu hàng ngày nào để so sánh","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"vi","translation":"Đã tiêu thụ {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"vi","translation":"Dữ liệu tiêu thụ chưa có","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"vi","translation":"Sâu","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"vi","translation":"Trong quá trình","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"vi","translation":"Carbohydrate","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"vi","translation":"Không nên gắng sức","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"vi","translation":"Hiện tại: {{value1}}/4 lần","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"vi","translation":"Tự động cập nhật dựa trên số bước chân hiện tại","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"vi","translation":"Hiện tại là do tình trạng quá tải của máy chủ, không phải do hết hạn sử dụng. Vui lòng thử lại {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"vi","translation":"Đăng ký vị trí hiện tại vào phòng tập","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"vi","translation":"Đang xác định vị trí hiện tại","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"vi","translation":"Tiếp xúc với âm thanh môi trường","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"vi","translation":"Mệt mỏi","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"vi","translation":"Chúng tôi đã đề xuất những ngày không tăng cường hoạt động dựa trên dữ liệu về mệt và phục hồi.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"vi","translation":"Cảm thấy mệt","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"vi","translation":"Xóa địa điểm đã đăng ký","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"vi","translation":"Tìm kiếm sản phẩm đã đăng ký","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"vi","translation":"Cơm trắng","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"vi","translation":"Cơm trắng, thịt gà, súp miso","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"vi","translation":"Mục tiêu","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"vi","translation":"Bạn có thể xem sự khác biệt và tỷ lệ hoàn thành mục tiêu theo các chỉ số KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"vi","translation":"Hiển thị lượng protein còn lại dựa trên mục tiêu và nhật ký ăn uống ngày hôm nay.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"vi","translation":"Đây là kế hoạch kiểm tra phù hợp với mục tiêu và thiết bị bạn đang sử dụng.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"vi","translation":"Ý nghĩa của mục tiêu","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"vi","translation":"Giá trị mục tiêu","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"vi","translation":"Khi bạn đặt giá trị mục tiêu, chúng tôi sẽ hiển thị sự khác biệt và tỷ lệ hoàn thành.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"vi","translation":"Sự khác biệt so với mục tiêu","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"vi","translation":"Sự khác biệt: {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"vi","translation":"Mục tiêu chưa được thiết lập","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"vi","translation":"Thiết lập mục tiêu","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"vi","translation":"Đạt được mục tiêu và duy trì sự ổn định","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"vi","translation":"Tôi đã xem xét nhật ký tập luyện, chế độ ăn uống và thể chất trong 30 ngày gần nhất.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"vi","translation":"Có khả năng tăng trọng lượng tối đa trong 3 lần tập gần đây. Vui lòng đánh giá thêm về tư thế, số lần lặp lại và mức độ gắng sức (RPE).","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"vi","translation":"Trong 7 ngày gần đây","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"vi","translation":"Trong 7 ngày gần đây: {{value1}} lần","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"vi","translation":"Số lần đến phòng tập trong 7 ngày gần đây: {{value1}} lần","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"vi","translation":"Lượng tập luyện hiện tại nằm trong phạm vi bình thường","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"vi","translation":"Trọng lượng trung bình hàng tuần đang giảm. Đây là một lựa chọn để tăng lượng calo tiêu thụ, nhằm hỗ trợ phát triển cơ bắp.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"vi","translation":"Trọng lượng trung bình hàng tuần đang đi ngược hướng so với mục tiêu. Lựa chọn đầu tiên là điều chỉnh lượng calo tiêu thụ.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"vi","translation":"Trọng lượng trung bình hàng tuần đang giảm nhanh chóng. Để duy trì sự tiến bộ hợp lý, đây là một lựa chọn để tăng lượng calo tiêu thụ.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"vi","translation":"Trọng lượng trung bình hàng tuần đang tăng nhanh chóng. Đây là một lựa chọn để điều chỉnh tốc độ tăng trọng lượng bằng cách giảm lượng calo tiêu thụ.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"vi","translation":"Giá trị đo được là dưới 85 dBA. Vui lòng kiểm tra thêm về thời gian đo.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"vi","translation":"Trung bình trong các lần ghi lại gần đây: {{value1}} giờ","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"vi","translation":"Phạm vi chuyển động tương đối","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"vi","translation":"Hỏi ý kiến","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"vi","translation":"Ngủ","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"vi","translation":"Đảm bảo {{value1}} giờ ngủ","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"vi","translation":"Thời gian ngủ: {{value1}} giờ","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"vi","translation":"Thời gian ngủ ngắn","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"vi","translation":"Thời gian ngủ hơi ngắn","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"vi","translation":"Vì chưa có dữ liệu về giai đoạn giấc ngủ, đây là điểm số tham khảo dựa trên tổng thời gian.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"vi","translation":"Dữ liệu giấc ngủ chưa được thu thập. Không đánh giá các giá trị chưa có.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"vi","translation":"Bạn có thể xem tổng hợp dữ liệu giấc ngủ, phục hồi và hoạt động.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"vi","translation":"Xóa","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"vi","translation":"Độ chính xác {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"vi","translation":"Vui lòng kiểm tra trước khi lưu","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"vi","translation":"Các thay đổi đã được ghi nhận","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"vi","translation":"Đang chờ xác nhận","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"vi","translation":"{{value1}} lần ghi nhớ đã được xác nhận","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"vi","translation":"{{value1}} nguồn khoa học","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"vi","translation":"Nguồn khoa học, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"vi","translation":"Loại bài tập","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"vi","translation":"Loại","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"vi","translation":"Ứng dụng đã tải từ thiết bị.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"vi","translation":"Vui lòng khởi động lại thiết bị và thử lại.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"vi","translation":"Nếu mục tiêu là tăng cơ, bạn có thể cân nhắc thêm một buổi tập trong tuần với cường độ vừa phải.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"vi","translation":"Khoảng {{value1}} phút","review_note":""}

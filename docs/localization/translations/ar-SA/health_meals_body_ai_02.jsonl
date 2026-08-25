@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"ar-SA","translation":"هذا اقتراح يعتمد على الاتجاهات في البيانات المدخلة وليس تشخيصًا طبيًا. إذا كنت قلقًا بشأن صحتك أو ألمك، فيرجى استشارة أحد المتخصصين.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"ar-SA","translation":"ملخص بيانات الإدخال","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"ar-SA","translation":"طريقة الإدخال","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"ar-SA","translation":"لا توجد عناصر مشتركة","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"ar-SA","translation":"يرجى التحقق من المحتويات، وإجراء التصحيحات إذا لزم الأمر، ثم حفظها. لا يتم تحديد الأهداف تلقائيا.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"ar-SA","translation":"مطلوب إعادة التحليل","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"ar-SA","translation":"أعد المحاولة","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"ar-SA","translation":"الصورة","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"ar-SA","translation":"النطاق المرجعي من الصورة","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"ar-SA","translation":"تقدير السعرات الحرارية من الصور","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"ar-SA","translation":"قم بإنشاء مسودة من صورتك لتقليل وقت الإدخال.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"ar-SA","translation":"تحليل مع الصور","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"ar-SA","translation":"لا توجد صورة","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"ar-SA","translation":"الصور توضح التغيرات في المظهر، والأرقام مؤكدة بالقياسات الفعلية.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"ar-SA","translation":"قم بإنشاء مسودة غذائية من الصور والطعام الذي تتناوله.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"ar-SA","translation":"حدد صورة واحدة أو أكثر لتحليلها. كلما زاد عدد الاتجاهات التي لديك، أصبح من الأسهل التحقق منها.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"ar-SA","translation":"إعادة تحليل الصور دفعة واحدة","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"ar-SA","translation":"تحليل الصور في وقت واحد","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"ar-SA","translation":"أضف صورة","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"ar-SA","translation":"إضافة/تحرير الصور","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"ar-SA","translation":"عند تحديد صورة، سيتم إدخال السعرات الحرارية وما إلى ذلك تلقائيًا.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"ar-SA","translation":"يمكن حفظ مجموعات الصور. يمكنك إعادة التحليل من تفاصيل المجموعة بعد الاتصال.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"ar-SA","translation":"دقائق","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"ar-SA","translation":"ستزداد دقة التقدير إذا قمت بتدوين المبلغ بقدر ما تعرفه.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"ar-SA","translation":"تحت التحليل","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"ar-SA","translation":"تم تحليلها","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"ar-SA","translation":"أساس الحكم","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"ar-SA","translation":"وصول","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"ar-SA","translation":"حذف","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"ar-SA","translation":"لدي أيام {{value1}} مجانية منذ آخر تدريب لي، لذا لدي متسع من الوقت في جدول أعمالي لهذا الأسبوع.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"ar-SA","translation":"لقد مر أكثر من 7 أيام منذ آخر تسجيل لمحيط الخصر.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"ar-SA","translation":"الإدخال من القيمة السابقة","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"ar-SA","translation":"مقارنة بآخر مرة {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"ar-SA","translation":"الأسبوع السابق","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"ar-SA","translation":"بيانات المقارنة غير كافية مع الأسبوع السابق","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"ar-SA","translation":"وزاد حجم التداول بأكثر من 30% عن الأسبوع السابق. في المرة القادمة، دعونا نحافظ على نفس المستوى ونتحقق من RPE ومؤشرات الاسترداد.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"ar-SA","translation":"مقارنة بالأسبوع الماضي: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"ar-SA","translation":"مقارنة بالأسبوع الماضي: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"ar-SA","translation":"لا توجد بيانات تشغيلية حتى الآن. نحن نقدر أنك تبدأ المجموعة باستخدام Watch.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"ar-SA","translation":"تقدير الحركة","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"ar-SA","translation":"هذا ليس حكمًا طبيًا، ولكنه قيمة مرجعية تلخص اتجاهات البيانات التي تم الحصول عليها.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"ar-SA","translation":"التصفح","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"ar-SA","translation":"عناصر {{value1}} المتوفرة، عناصر {{value2}} المفقودة","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"ar-SA","translation":"العناصر الرئيسية التي يمكن الحصول عليها (العدد المتاح)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"ar-SA","translation":"سيتم حسابه باستخدام الوزن الذي تم الحصول عليه، وعدد التكرارات، والإيقاع، ونطاق الحركة النسبي، وRPE فقط، ولن يتم منح القيم المفقودة 0 نقطة.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"ar-SA","translation":"الجانب الأيمن العلوي، الجسم كله","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"ar-SA","translation":"أسفل الكتف الأيمن إلى الخصر","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"ar-SA","translation":"المجموع","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"ar-SA","translation":"التقط صورًا بنفس الملابس والمسافة والضوء.","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"ar-SA","translation":"يمكن إجراء المقارنات مع زيادة عدد السجلات لنفس الحدث والقائمة والفترة الزمنية.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"ar-SA","translation":"مؤشرات الأداء الرئيسية الفعلية في نفس اليوم","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"ar-SA","translation":"فهو يشير إلى العناصر التي تغيرت في نفس الوقت الذي تغير فيه المرشحون، ولا يحدد بشكل قاطع السبب أو الحالة الطبية.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"ar-SA","translation":"حساء ميسو","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"ar-SA","translation":"معدل التنفس","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"ar-SA","translation":"معدل التنفس أعلى من متوسط 14 يومًا","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"ar-SA","translation":"معدل التنفس هو متوسط 14 يومًا {{value1}} مرات/دقيقة مقابل {{value2}} مرات/دقيقة","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"ar-SA","translation":"معدل التنفس أقل من متوسط 14 يومًا","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"ar-SA","translation":"معدل التنفس ضمن المعدل الطبيعي","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"ar-SA","translation":"الجودة -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"ar-SA","translation":"جودة {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"ar-SA","translation":"المنتج","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"ar-SA","translation":"لا يمكن حفظ المنتج.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"ar-SA","translation":"رمز المنتج","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"ar-SA","translation":"الرجاء إدخال رمز المنتج.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"ar-SA","translation":"الرجاء إدخال رمز المنتج يدوياً.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"ar-SA","translation":"اسم المنتج","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"ar-SA","translation":"مرات / دقيقة","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"ar-SA","translation":"الانتعاش","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"ar-SA","translation":"اجعل تعافيك أولوية.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"ar-SA","translation":"نظرًا لأن بيانات الاسترداد منخفضة، قم بتقليل وزن أو عدد مجموعات {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"ar-SA","translation":"اكتمل كيوم للتعافي","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"ar-SA","translation":"عدد المرات","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"ar-SA","translation":"تحديد التردد والتغذية بشكل منفصل","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"ar-SA","translation":"لكل مبلغ قياسي","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"ar-SA","translation":"غير مسموح باتصالات HTTP بالخوادم الخارجية.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"ar-SA","translation":"ليلة","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"ar-SA","translation":"يكتمل تلقائيا في الليل","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"ar-SA","translation":"ولا يوجد مرشحون لارتفاعات كبيرة أو ركود. في المرة القادمة، دعونا نزيد السجلات التي يمكن مقارنتها عن طريق مطابقة العدد المستهدف من المرات وRPE.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"ar-SA","translation":"الفشل","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"ar-SA","translation":"الموقف","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"ar-SA","translation":"معدل ضربات القلب أثناء الراحة","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"ar-SA","translation":"معدل ضربات القلب أثناء الراحة: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"ar-SA","translation":"معدل ضربات القلب أثناء الراحة أعلى من متوسط 14 يومًا","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"ar-SA","translation":"معدل ضربات القلب أثناء الراحة أقل من المتوسط","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"ar-SA","translation":"معدل ضربات القلب أثناء الراحة طبيعي","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"ar-SA","translation":"مكتمل","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"ar-SA","translation":"من السهل إكمال العنصر: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"ar-SA","translation":"التحقق من الإكمال/تخطي الاتجاهات على الجهاز.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"ar-SA","translation":"تناول الطعام الفعلي","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"ar-SA","translation":"الكثافة","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"ar-SA","translation":"التاريخ","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"ar-SA","translation":"الجزء العلوي الأيسر من الأمام/كامل الجسم","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"ar-SA","translation":"أسفل الظهر الأيسر / الجسم كله","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"ar-SA","translation":"الفرق","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"ar-SA","translation":"متوسط معدل ضربات القلب {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"ar-SA","translation":"متوسط السرعة","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"ar-SA","translation":"لقد كان مفيدًا","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"ar-SA","translation":"العناصر التي يسهل تأجيلها: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"ar-SA","translation":"انتعاش معدل ضربات القلب","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"ar-SA","translation":"معدل ضربات القلب لم يكتسب","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"ar-SA","translation":"مصدر المعلومات: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"ar-SA","translation":"يتم التعيين مع اختلافات عن عناصر الإدخال اليدوي {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"ar-SA","translation":"لا يمكن تحديد نوع الحدث أو الشكل بناءً على حركات المعصم وحدها. سيتم تأكيد العدد المقدر للمرات وعكسه.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"ar-SA","translation":"درجة حرارة جلد المعصم","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"ar-SA","translation":"تميل درجة حرارة جلد المعصم إلى الاختلاف عن المعتاد","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"ar-SA","translation":"درجة حرارة جلد المعصم ضمن المعدل الطبيعي","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"ar-SA","translation":"سيتم استخدام المحتوى المعتمد فقط في الاقتراح التالي.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"ar-SA","translation":"الذاكرة المعتمدة","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"ar-SA","translation":"الشخص المسؤول {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"ar-SA","translation":"المدرب المسؤول","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"ar-SA","translation":"إذا نظرنا إلى الوراء","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"ar-SA","translation":"الاتصال موافق","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"ar-SA","translation":"حتى لو لم يكن الاتصال ممكنًا، فلن يتم حذف البيانات المسجلة. يمكنك الاستمرار في التسجيل يدويًا وإنشاء تعليقات الذكاء الاصطناعي فقط لاحقًا.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"ar-SA","translation":"التحقق من الاتصال","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"ar-SA","translation":"القيم المقدرة هي للإشارة فقط. يمكنك تحريره بحرية في حقل الإدخال أدناه.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"ar-SA","translation":"الاستهلاك المقدر","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"ar-SA","translation":"الانتقال","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"ar-SA","translation":"كمية kcal","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"ar-SA","translation":"اطلاق النار","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"ar-SA","translation":"مجموعة اطلاق النار","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"ar-SA","translation":"تحرير مجموعة التصوير","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"ar-SA","translation":"إضافة مجموعة التصوير","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"ar-SA","translation":"اتجاه اطلاق النار","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"ar-SA","translation":"أيام إطلاق النار","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"ar-SA","translation":"ملاحظات حول ظروف التصوير والمظهر","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"ar-SA","translation":"تم تصويرها بالفعل","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"ar-SA","translation":"عينة التصوير الفوتوغرافي. أعلى اليسار منظر أمامي للجسم كله، وأعلى اليمين منظر جانبي للجسم كله، وأسفل اليسار منظر خلفي للجسم كله، وأسفل اليمين صورة مقربة للبطن من الكتف إلى الخصر. تم التصوير بنفس الملابس والمسافة والضوء","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"ar-SA","translation":"يحتاج إلى تحسين","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"ar-SA","translation":"الاتجاه","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"ar-SA","translation":"لقد تأكدنا من اختلاف الوضعية حسب الاتجاه.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"ar-SA","translation":"استخدم هذا كأساس لتحديد متوسط الاتجاهات الأسبوعية، بدلاً من التغييرات اليومية.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"ar-SA","translation":"تاريخ","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"ar-SA","translation":"نوم الليلة الماضية","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"ar-SA","translation":"النهار","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"ar-SA","translation":"الوقت","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"ar-SA","translation":"هذه هي النتيجة المرجعية المحسوبة داخل الجهاز بناءً على الوقت، والنوم العميق، وحركة العين السريعة، ومنتصف الاستيقاظ.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"ar-SA","translation":"بعد مرور بعض الوقت","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"ar-SA","translation":"يرجى المحاولة مرة أخرى لاحقا. إذا استمرت المشكلة، يرجى التحقق من حالة نموذج خادم الذكاء الاصطناعي.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"ar-SA","translation":"يرجى المحاولة مرة أخرى لاحقا. إذا استمر الأمر، فيرجى التحقق من سجل خادم الذكاء الاصطناعي.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"ar-SA","translation":"المنطقة الزمنية","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"ar-SA","translation":"اضبط كالمعتاد أثناء النظر إلى RPE.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"ar-SA","translation":"عادي","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"ar-SA","translation":"التعرض مرتفع. إذا استمر لفترة طويلة، يرجى استخدامه كمرجع لتقليل حجم ومدة الإقامة.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"ar-SA","translation":"سنقوم بإنشاء قائمة وفقًا للمعدات المتاحة حتى تتمكن من بدء تدريبك الأول دون تردد.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"ar-SA","translation":"بمجرد تسجيل قيمك الأولية، يمكنك رؤية تقدمك وفارق الهدف.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"ar-SA","translation":"أحدث الجري في الهواء الطلق","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"ar-SA","translation":"أحدث تقرير","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"ar-SA","translation":"مراجعة شهرية","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"ar-SA","translation":"التحقق من المراجعات الشهرية","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"ar-SA","translation":"إنشاء مسودة مراجعة شهرية","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"ar-SA","translation":"يتم إنشاء المراجعة الشهرية","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"ar-SA","translation":"التقرير الشهري","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"ar-SA","translation":"صباح","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"ar-SA","translation":"أحاول إرسال الإشعارات بشكل مقتصد في الصباح والليل.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"ar-SA","translation":"غير محلل","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"ar-SA","translation":"لم يتم الحصول عليها","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"ar-SA","translation":"لا يتم التعامل مع العناصر التي لم يتم الحصول عليها على أنها 0.","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"ar-SA","translation":"لم يتم تنفيذه","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"ar-SA","translation":"لم يتم تصويرها","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"ar-SA","translation":"غير مسجل. الرجاء إدخال القيمة لكل 100 جرام على الملصق.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"ar-SA","translation":"سيتم حفظ المنتجات غير المسجلة على الجهاز بعد إدخالها وإعادة استخدامها للفحص التالي.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"ar-SA","translation":"لم يتم تسجيلها","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"ar-SA","translation":"لم يتم تسجيلها. وتضيف الخبرة أيضًا إلى أساس الاستعداد.","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"ar-SA","translation":"المقارنة حسب الحالة","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"ar-SA","translation":"المعلومات الغذائية التعرف الضوئي على الحروف (تأكيد المستخدم)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"ar-SA","translation":"المعلومات الغذائية التعرف الضوئي على الحروف (التأكيد مطلوب)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"ar-SA","translation":"لقد أدخلت الأرقام من ملصق التغذية. يرجى التحقق من المبلغ القياسي وكل قيمة.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"ar-SA","translation":"الإدخال من صورة ملصق التغذية","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"ar-SA","translation":"لم أستطع قراءة الملصق الغذائي. يرجى إعادة التقاط الصورة من الأمام في مكان مشرق، أو إدخالها يدوياً.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"ar-SA","translation":"قراءة الملصق الغذائي","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"ar-SA","translation":"التغذية قيد التقدم","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"ar-SA","translation":"الخطوة التالية","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"ar-SA","translation":"الإجراء التالي","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"ar-SA","translation":"التعديل التالي","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"ar-SA","translation":"تم فحص حالة البطن من الأمام والجانب.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"ar-SA","translation":"لقد قمت بفحص محيط الخصر مع الأمام والخلف معًا.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"ar-SA","translation":"يسجل الجزء الأمامي والجانبي والخلفي وما إلى ذلك كمجموعة ليوم واحد.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"ar-SA","translation":"قم بتجميع الجزء الأمامي والجانبي والخلفي وما إلى ذلك في نفس اليوم. يمكنك حفظ حتى صورة واحدة وإضافة المزيد لاحقًا.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"ar-SA","translation":"عدد الخطوات","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"ar-SA","translation":"الخطوات: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"ar-SA","translation":"يمكنك السماح بالخطوات والنشاط والنوم ومعدل ضربات القلب أثناء الراحة ومعدل ضربات القلب ومعدل التنفس ودرجة حرارة جلد المعصم لكل عنصر تحتاجه. سيتم التعامل مع العناصر غير المسموح بها على أنها لم يتم الحصول عليها بعد، ويمكن استخدام الإدخال اليدوي كما هو.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"ar-SA","translation":"المتبقي من {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"ar-SA","translation":"لا توجد بيانات يومية قابلة للمقارنة متاحة","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"ar-SA","translation":"الاستهلاك {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"ar-SA","translation":"لم يتم الحصول على الاستهلاك","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"ar-SA","translation":"عميق","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"ar-SA","translation":"أثناء إقامتك","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"ar-SA","translation":"الكربوهيدرات","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"ar-SA","translation":"لا تبالغي","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"ar-SA","translation":"حاليًا {{value1}}/4 قطع","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"ar-SA","translation":"يتم تحديثه تلقائيًا من عدد الخطوات الحالي","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"ar-SA","translation":"حاليًا، الخادم مزدحم، وليس حد الاستخدام. {{value1}}يرجى المحاولة مرة أخرى.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"ar-SA","translation":"قم بتسجيل موقعك الحالي في My Gym","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"ar-SA","translation":"التحقق من الموقع الحالي","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"ar-SA","translation":"التعرض للأصوات البيئية","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"ar-SA","translation":"أنا متعب","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"ar-SA","translation":"واستنادًا إلى بيانات التعب والتعافي، اقترحنا الأيام التي لن يتم فيها زيادة الحمل.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"ar-SA","translation":"الشعور بالتعب","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"ar-SA","translation":"حذف الموقع المسجل","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"ar-SA","translation":"البحث عن المنتجات المسجلة","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"ar-SA","translation":"أرز أبيض","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"ar-SA","translation":"أرز أبيض، صدر دجاج، شوربة ميسو","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"ar-SA","translation":"هدف","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"ar-SA","translation":"يمكنك التحقق من الفرق بين الهدف ومعدل الإنجاز لكل مؤشر أداء رئيسي.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"ar-SA","translation":"يعرض الكمية المتبقية من البروتين بناءً على هدفك وسجل الطعام اليوم.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"ar-SA","translation":"هذه خطة تأكيد مصممة خصيصًا لأهدافك والمعدات المتاحة.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"ar-SA","translation":"معنى للأهداف","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"ar-SA","translation":"القيمة المستهدفة","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"ar-SA","translation":"بعد تحديد القيمة المستهدفة، سيتم عرض الفارق ونسبة الإنجاز.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"ar-SA","translation":"فارق الهدف","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"ar-SA","translation":"فرق الهدف {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"ar-SA","translation":"لم يتم تحديد الهدف","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"ar-SA","translation":"تحديد الهدف","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"ar-SA","translation":"تحقيق الأهداف والتشغيل المستقر","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"ar-SA","translation":"لقد قمت بفحص سجلات جسدي وطعامي وتدريبي لآخر 30 يومًا.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"ar-SA","translation":"هذا هو المرشح الذي لم يزد الحد الأقصى لوزن استخدامه في المرات الثلاث الأخيرة. يرجى أيضًا مراعاة النموذج وعدد المرات وRPE.","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"ar-SA","translation":"آخر 7 أيام","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"ar-SA","translation":"آخر 7 أيام مرات {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"ar-SA","translation":"زيارات صالة الألعاب الرياضية في آخر 7 أيام: مرات {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"ar-SA","translation":"كمية التدريب الأخيرة ضمن المعدل الطبيعي","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"ar-SA","translation":"لقد انخفض متوسط وزني الأسبوعي الأخير. من أجل دعم تضخم العضلات، فهو مرشح لزيادة المدخول الموصى به قليلاً.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"ar-SA","translation":"متوسط وزني الأسبوعي الأخير يتحرك في الاتجاه المعاكس لهدفي. بادئ ذي بدء، إنه مرشح لتعديل المدخول الموصى به قليلاً.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"ar-SA","translation":"لقد انخفض متوسط وزني الأسبوعي الأخير بسرعة. هذا مرشح لزيادة الكمية الموصى بها قليلاً من أجل المضي قدمًا بطريقة معقولة.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"ar-SA","translation":"لقد زاد متوسط وزني الأسبوعي الأخير بسرعة. ومن أجل التحكم في وتيرة الزيادة، فهذا مرشح لخفض الكمية الموصى بها قليلاً.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"ar-SA","translation":"أحدث قيمة أقل من 85 ديسيبل. يرجى التحقق من المدة كذلك.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"ar-SA","translation":"أحدث متوسط قياسي للوقت {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"ar-SA","translation":"النطاق النسبي للحركة","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"ar-SA","translation":"استشر","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"ar-SA","translation":"نوم","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"ar-SA","translation":"النوم {{value1}} وقت آمن","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"ar-SA","translation":"النوم: ساعات {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"ar-SA","translation":"نوم قصير","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"ar-SA","translation":"النوم قصير بعض الشيء","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"ar-SA","translation":"وبما أنه لم يتم الحصول على مراحل النوم، فهذه درجة مرجعية تعتمد على الوقت الإجمالي.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"ar-SA","translation":"لم يتم الحصول على بيانات النوم. لا تقم بتقييم القيم التي لم يتم الحصول عليها على أنها 0.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"ar-SA","translation":"يمكنك التحقق من مستويات نومك وتعافيك ونشاطك مرة واحدة.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"ar-SA","translation":"تجاهل","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"ar-SA","translation":"دقة {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"ar-SA","translation":"يرجى التحقق والحفظ","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"ar-SA","translation":"التغييرات التي تم تأكيدها","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"ar-SA","translation":"في انتظار التأكيد","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"ar-SA","translation":"تم تأكيد الذكريات {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"ar-SA","translation":"الأساس العلمي عناصر {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"ar-SA","translation":"الأساس العلمي {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"ar-SA","translation":"حدث","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"ar-SA","translation":"اكتب","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"ar-SA","translation":"تم تحميل منتج محفوظ على جهازك.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"ar-SA","translation":"يرجى إعادة تشغيل جهازك والمحاولة مرة أخرى.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"ar-SA","translation":"إذا كان هدفك هو اكتساب العضلات، فيمكنك التفكير بشكل معقول في القيام بتمرين آخر هذا الأسبوع.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"ar-SA","translation":"حول دقائق {{value1}}","review_note":""}

@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"sv","translation":"0","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"sv","translation":"1 rörelse","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"sv","translation":"3 övningar, 2 set vardera. Justera vikten så att det är bekvämt och spara.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"sv","translation":"Jag kunde inte läsa AI-planen. Skapa den igen.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"sv","translation":"AI-träningsplan","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"sv","translation":"Sparad i Apple Health","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"sv","translation":"Synkroniseras från Apple Watch","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"sv","translation":"Apple Watch visar instruktioner för att öka/minska tiden, 1–3 gånger per sekund via känsel.","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"sv","translation":"Eftersom Apple Watch inte är nära, har jag bokat in den så att den når dig vid nästa start.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"sv","translation":"Jag kunde inte utföra operationen med Apple Watch","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"sv","translation":"Jag kunde inte spara Apple Watches data i iPhone","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"sv","translation":"Jag är inte redo att spara Apple Watches data","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"sv","translation":"Jag kunde inte läsa Apple Watches data","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"sv","translation":"Du kan synkronisera menyn till Apple Watch","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"sv","translation":"Ingen innehåll synkroniserat med Apple Watch för idag.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"sv","translation":"Kunde inte skicka operation till Apple Watch.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"sv","translation":"Kunde inte skapa data för att skicka till Apple Watch.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"sv","translation":"Öppna BodyMode på din iPhone och försök igen.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"sv","translation":"Installera BodyMode på din Apple Watch.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"sv","translation":"Apple Watch-anslutningen är tillfälligt avstängd.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"sv","translation":"Apple Watch-anslutningen är inte redo.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"sv","translation":"Fel vid anslutning till Apple Watch: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"sv","translation":"Förbereder anslutning till Apple Watch. Vänta en stund och försök igen.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"sv","translation":"Kan inte kontrollera status för anslutning till Apple Watch.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"sv","translation":"Kunde inte skapa data för menyn för Apple Watch.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"sv","translation":"Mätning med Apple Watch","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"sv","translation":"Hälsa sparad, apphistorik är sparad.","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"sv","translation":"Ingen information om hälsa sparad.","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"sv","translation":"Kontrollerar status för sparad hälsa.","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"sv","translation":"Hälsa inte godkänd, endast apphistorik sparad.","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"sv","translation":"LEVEL 1・Helkroppsstarter","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"sv","translation":"TRX-övning","review_note":""}
+{"id":"training.148b91e44188","target_locale":"sv","translation":"Sparade i Watch","review_note":""}
+{"id":"training.3e098891145f","target_locale":"sv","translation":"Avsluta din träning med Watch?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"sv","translation":"Registreringen med Watch har avslutats.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"sv","translation":"Vill du radera registreringen med Watch?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"sv","translation":"Analys av Watch-sensorer","review_note":""}
+{"id":"training.e9af98302821","target_locale":"sv","translation":"Live-funktion för Watch","review_note":""}
+{"id":"training.22db347214b9","target_locale":"sv","translation":"{{value1}} / {{value2}} gånger","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"sv","translation":"{{value1}} {{value2}} × {{value3}} gånger","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"sv","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} set)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"sv","translation":"{{value1}} har sparats i din iPhone-historik","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"sv","translation":"Du har sparat {{value1}} från din Apple Watch i historiken","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"sv","translation":"{{value1}}/{{value2}} set, {{value3}} sekunder upp/ner, {{value4}} gånger/sekund, pauser {{value5}} sekunder","review_note":""}
+{"id":"training.efc343f41739","target_locale":"sv","translation":"{{value1}}/{{value2}} set, {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"sv","translation":"{{value1}}/{{value2}} set slutfört","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"sv","translation":"{{value1}}: {{value2}} set, {{value3}} kg, {{value4}} gånger, paus {{value5}} sekunder","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"sv","translation":"{{value1}}{{value2}} gånger","review_note":""}
+{"id":"training.4547089161d9","target_locale":"sv","translation":"{{value1}}, ingen registrering","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"sv","translation":"Skapa en plan för {{value1}}","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"sv","translation":"Skapa en plan för {{value1}}","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"sv","translation":"Låt oss skapa en plan för {{value1}}","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"sv","translation":"Konsultera om ändringar för {{value1}}","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"sv","translation":"Konsultera om {{value1}}","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"sv","translation":"Exempelbild för formen av {{value1}}. Huvudmusklerna används med {{value2}} och {{value3}} för {{value4}} övningar.","review_note":""}
+{"id":"training.859660768503","target_locale":"sv","translation":"Utkast till {{value1}}","review_note":""}
+{"id":"training.7544024a8347","target_locale":"sv","translation":"Målvikten för {{value1}} har uppdaterats.","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"sv","translation":"Uppdatera målvikten för {{value1}}.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"sv","translation":"{{value1}} set","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"sv","translation":"{{value1}} set × {{value2}} gånger・{{value3}} kg・paus {{value4}} sekunder","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"sv","translation":"{{value1}} set・{{value2}} gånger","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"sv","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"sv","translation":"{{value1}}・Plan: {{value2}}/{{value3}} set・Genomförandegrad {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"sv","translation":"Skapa plan för {{value1}}","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"sv","translation":"{{value1}} objekt","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"sv","translation":"Synkroniserade {{value1}} objekt till Apple Watch.","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"sv","translation":"{{value1}} minuter","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"sv","translation":"{{value1}} minuter {{value2}} sekunder","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"sv","translation":"{{value1}} gånger","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"sv","translation":"{{value1}} gånger/sekund","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"sv","translation":"{{value1}} timmar {{value2}} minuter","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"sv","translation":"{{value1}} ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"sv","translation":"{{value1}} sekunder","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"sv","translation":"{{value1}} övningar","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"sv","translation":"{{value1}} övning ⋅ {{value2}} set ⋅ {{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"sv","translation":"{{value1}} typer","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"sv","translation":"Börja med denna meny","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"sv","translation":"Spara denna meny","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"sv","translation":"Vill du radera den här historiken?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"sv","translation":"Inga träningspass för idag","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"sv","translation":"Den här övningen hoppades över","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"sv","translation":"Det är inte möjligt att använda Apple Watch-integration på detta enhet","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"sv","translation":"Hur ska jag justera det här schemat?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"sv","translation":"Vill du ta bort det här schemat?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"sv","translation":"Alla","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"sv","translation":"Alla resultat","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"sv","translation":"Inga","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"sv","translation":"Instruktioner","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"sv","translation":"Spara endast apphistoriken","review_note":""}
+{"id":"training.39029011b26a","target_locale":"sv","translation":"Incline dumbbell press","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"sv","translation":"Fel","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"sv","translation":"Anpassad övning","review_note":""}
+{"id":"training.42254297b975","target_locale":"sv","translation":"Lägg till egna övningar","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"sv","translation":"Avbryt","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"sv","translation":"Snabb skapande","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"sv","translation":"Knäböj","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"sv","translation":"Glute bridge","review_note":""}
+{"id":"training.1792e5824127","target_locale":"sv","translation":"Armhäv med kabel","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"sv","translation":"Armhäv bakåt med kabel","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"sv","translation":"Armhäv korsvis","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"sv","translation":"Kopiera","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"sv","translation":"Önskemål till coach (valfritt)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"sv","translation":"Goblet squat","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"sv","translation":"Sido-planka","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"sv","translation":"Sida-lyft","review_note":""}
+{"id":"training.5722403a802d","target_locale":"sv","translation":"Under","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"sv","translation":"Axelpress","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"sv","translation":"Benböj sittande","review_note":""}
+{"id":"training.861902f328fe","target_locale":"sv","translation":"Rodd sittande","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"sv","translation":"Gymmet","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"sv","translation":"Ankomst till gymmet","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"sv","translation":"Besök på gym","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"sv","translation":"Besök på gymet är inte registrerat.","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"sv","translation":"Hoppa över","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"sv","translation":"Knäböj","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"sv","translation":"Stående vaderöv","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"sv","translation":"Squats med hantelmaskin","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"sv","translation":"Set","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"sv","translation":"Set {{value1}} slutfört","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"sv","translation":"Lägg till set","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"sv","translation":"Konfigurera flera set","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"sv","translation":"Set-historik","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"sv","translation":"Set-tid {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"sv","translation":"Set-konfiguration","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"sv","translation":"Målet för set kopieras vid start av träningen och sparas i historiken.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"sv","translation":"Rubrik","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"sv","translation":"Hantelcurls","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"sv","translation":"Hantelpress","review_note":""}
+{"id":"training.0d799718504b","target_locale":"sv","translation":"Hantelrumänska marklyft","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"sv","translation":"Bröstpress","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"sv","translation":"Chins","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"sv","translation":"Ställ in tempo","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"sv","translation":"Tempo-plan: Öka med {{value1}} sekunder, minska med {{value2}} sekunder, {{value3}} gånger/sekund.","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"sv","translation":"Död bugg","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"sv","translation":"Triceps press nedåt","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"sv","translation":"Träning","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"sv","translation":"Ingen träning registrerad","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"sv","translation":"Avsluta träningen","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"sv","translation":"Inga träningshistorik","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"sv","translation":"Träningsplan","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"sv","translation":"Hammer curl","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"sv","translation":"Höftabduktion","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"sv","translation":"Höftlyft","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"sv","translation":"Face pull","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"sv","translation":"Form och tips","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"sv","translation":"Se exempel på form","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"sv","translation":"Fri träning","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"sv","translation":"Armhävningar","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"sv","translation":"Plank","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"sv","translation":"Bänkpress","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"sv","translation":"Ingen Apple Watch hittades","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"sv","translation":"Volym","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"sv","translation":"Maskinaxelpress","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"sv","translation":"Huvud","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"sv","translation":"Anteckningar","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"sv","translation":"Lägg till övning för användaren","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"sv","translation":"Latsdrag","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"sv","translation":"Utfall","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"sv","translation":"Rumänska marklyft","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"sv","translation":"Benböj","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"sv","translation":"Benpress","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"sv","translation":"Enhands hantelrodd","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"sv","translation":"Träningspass","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"sv","translation":"Vill du avsluta träningspasset?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"sv","translation":"Vill du avsluta träningspasset?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"sv","translation":"•","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"sv","translation":"• Korrigerad","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"sv","translation":"Upp","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"sv","translation":"Upp {{value1}} sekunder, ner {{value2}} sekunder, {{value3}} gånger/sekund","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"sv","translation":"Upp{{value1}} sekunder, ner{{value2}} sekunder, {{value3}} gånger/sekund","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"sv","translation":"Upp i sekunder","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"sv","translation":"Med skillnad upp och ner","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"sv","translation":"Överkropp","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"sv","translation":"Nedåt","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"sv","translation":"Nedåtgång per sekund","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"sv","translation":"Underkropp","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"sv","translation":"Huvudområden","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"sv","translation":"Utrustning som kan användas denna gång","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"sv","translation":"Idag har innehållet synkroniserats med Apple Watch","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"sv","translation":"Synkroniserar innehåll med Apple Watch","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"sv","translation":"Vila {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"sv","translation":"Bild av kroppsform","review_note":""}
+{"id":"training.82865627f395","target_locale":"sv","translation":"Kroppsformen är inte registrerad","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"sv","translation":"Exempel: Minska antalet övningar för att få en längre vila","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"sv","translation":"Exempel: Träning för bröstmusklerna","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"sv","translation":"Exempel: Lätta ben, fokus på bröstmusklerna","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"sv","translation":"Spara","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"sv","translation":"Kunde inte spara","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"sv","translation":"Övningsnamn i listan","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"sv","translation":"Stoppa","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"sv","translation":"Inmatning klar","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"sv","translation":"Total framgång","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"sv","translation":"Helkropp","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"sv","translation":"Helkropp / Underhåll","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"sv","translation":"Helkropp A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"sv","translation":"Helkropp B","review_note":""}
+{"id":"training.f74271660465","target_locale":"sv","translation":"Helkropp C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"sv","translation":"Lätt helkropp","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"sv","translation":"Foto","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"sv","translation":"Ingen foto","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"sv","translation":"Analys","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"sv","translation":"Inga analysdata finns","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"sv","translation":"För nybörjare, start med helkropp","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"sv","translation":"Det angivna antalet övningar ingick inte i planen. Se över utrustningen och skapa om den.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"sv","translation":"Tillgänglig utrustning","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"sv","translation":"Ta bort","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"sv","translation":"Föregående månad","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"sv","translation":"Senast {{value1}} × {{value2}} gånger","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"sv","translation":"Ange vikten för assistansen. Vikten kan registreras som negativt värde.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"sv","translation":"Tempo","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"sv","translation":"Uppskattat tempo, totalt {{value1}} gånger","review_note":""}
+{"id":"training.e1472f598358","target_locale":"sv","translation":"Reflektera","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"sv","translation":"Du kan lägga till anpassade övningar från knappen högst upp till vänster.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"sv","translation":"Totalt: {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"sv","translation":"Utrustning","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"sv","translation":"Antal repetitioner","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"sv","translation":"Jord","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"sv","translation":"Grundläggande","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"sv","translation":"Stabilisering: {{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"sv","translation":"Avslutad","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"sv","translation":"Du kan se avslutade träningar i historiken.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"sv","translation":"Oavslutade träningar sparas inte.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"sv","translation":"Spara och visa i historiken","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"sv","translation":"Spara och visa i historiken","review_note":""}
+{"id":"training.1784283f2316","target_locale":"sv","translation":"Pågående","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"sv","translation":"Antal repetitioner","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"sv","translation":"Mätning: Öka med {{value1}} sekunder / Minska med {{value2}} sekunder","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"sv","translation":"Resultat: {{value1}} × {{value2}} repetitioner","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"sv","translation":"Redigera resultat","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"sv","translation":"Målsida","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"sv","translation":"Historik","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"sv","translation":"Ingen historik","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"sv","translation":"Inga tidigare värden finns ännu.","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"sv","translation":"Ta bort historik","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"sv","translation":"Redigera historik","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"sv","translation":"Redigera historik","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"sv","translation":"Detaljerad historik","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"sv","translation":"Genomsnittlig puls","review_note":""}
+{"id":"training.461619512206","target_locale":"sv","translation":"Drag / Djup","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"sv","translation":"Vänta","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"sv","translation":"Puls","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"sv","translation":"Du kan lägga till övningar som anpassade övningar.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"sv","translation":"Metod","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"sv","translation":"Tryck / Över bröstet","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"sv","translation":"Ansvarig tränare","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"sv","translation":"Ingen specifik","review_note":""}
+{"id":"training.6532391678cf","target_locale":"sv","translation":"Vibrationshastighet","review_note":""}
+{"id":"training.f57690abba57","target_locale":"sv","translation":"Uppskattad 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"sv","translation":"Uppskattat {{value1}} gånger","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"sv","translation":"Ge en kort förklaring till varför","review_note":""}

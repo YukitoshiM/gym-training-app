@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"hu","translation":"0 nap","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"hu","translation":"1 edzés","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"hu","translation":"3 feladat 2x. Azonnali igényt kielégítő súlyra állítsuk be, majd rögzítsük.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"hu","translation":"Az AI tervet nem tudtam feldolgozni. Kérlek, hozz létre egy új tervet.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"hu","translation":"AI edzőterv","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"hu","translation":"Az Apple Health-hez mentve","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"hu","translation":"Az Apple Watch-ról szinkronizálva","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"hu","translation":"Az Apple Watch beállított emelési/csökkentési időt 1 másodperc alatt 1-3 érintéssel jelenti.","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"hu","translation":"Mivel az Apple Watch nincs közel, a következő indításkor értesítést küldtem.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"hu","translation":"Nem tudtam elvégezni az Apple Watch-on történő műveletet","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"hu","translation":"Nem tudtam az Apple Watch adatait az iPhone-ra menteni","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"hu","translation":"Az Apple Watch adatai nem készen állnak a mentésre","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"hu","translation":"Nem tudtam az Apple Watch adatait rögzíteni","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"hu","translation":"Az Apple Watch-hoz szinkronizálhatod","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"hu","translation":"Nincs adatok a mai naphoz az Apple Watch-ra történő szinkronizáláshoz.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"hu","translation":"Nem sikerült parancsot küldeni az Apple Watch-ra.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"hu","translation":"Nem sikerült létrehozni a parancst adatokat az Apple Watch-ra küldéséhez.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"hu","translation":"Kérjük, nyissa meg az Apple Watch-t, majd próbálja újra.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"hu","translation":"Kérjük, telepítse a BodyMode-ot az Apple Watch-ra.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"hu","translation":"Az Apple Watch-hoz való kapcsolat ideiglenesen megszakadt.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"hu","translation":"Az Apple Watch-hoz való kapcsolat nem áll rendelkezésre.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"hu","translation":"Az Apple Watch-hoz való kapcsolás sikertelen: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"hu","translation":"Az Apple Watch-hoz való kapcsolást beállítom. Kérjük, várjon egy pillanatot, majd próbálja újra elküldeni.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"hu","translation":"Nem tudom ellenőrizni az Apple Watch állapotát.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"hu","translation":"Nem sikerült létrehozni a menü adatokat az Apple Watch-ra.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"hu","translation":"Mérés az Apple Watch-on.","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"hu","translation":"Az egészségadatok mentve, de az alkalmazás előzményei nem.","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"hu","translation":"Nincs egészségadatok.","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"hu","translation":"Ellenőrzem az egészségadatok állapotát.","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"hu","translation":"Nem engedélyezve, csak az alkalmazás előzményeit mentettük el.","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"hu","translation":"LEVEL 1 – Teljes test edzés","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"hu","translation":"TRX – Magas intenzitású","review_note":""}
+{"id":"training.148b91e44188","target_locale":"hu","translation":"Rögzítve az Apple Watch-on.","review_note":""}
+{"id":"training.3e098891145f","target_locale":"hu","translation":"Még elvégezheti az edzést az Apple Watch-on?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"hu","translation":"A Watch adatok rögzítése befejeződött.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"hu","translation":"Telen a Watch adatok törlését?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"hu","translation":"Watch szenzorok elemzése","review_note":""}
+{"id":"training.e9af98302821","target_locale":"hu","translation":"Live Watch","review_note":""}
+{"id":"training.22db347214b9","target_locale":"hu","translation":"{{value1}} / {{value2}} alkalom","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"hu","translation":"{{value1}} {{value2}} x {{value3}} alkalom","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"hu","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} alkalom)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"hu","translation":"A {{value1}} már a iPhone naplóban található.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"hu","translation":"A {{value1}}-t rögzítettem az Apple Watch-ról.","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"hu","translation":"{{value1}}-al fel, {{value2}} másodpercre / le, {{value3}} másodpercre · {{value4}} alkalom/másodperc · {{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"hu","translation":"{{value1}}/{{value2}} alkalom {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"hu","translation":"{{value1}}/{{value2}} alkalom befejezve","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"hu","translation":"{{value1}}: {{value2}} alkalom, {{value3}} kg, {{value4}} alkalom, pihenés {{value5}} másodperc","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"hu","translation":"{{value1}}{{value2}} alkalom","review_note":""}
+{"id":"training.4547089161d9","target_locale":"hu","translation":"{{value1}}, nincs rögzítve","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"hu","translation":"Készítsd el a {{value1}}-t!","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"hu","translation":"Készíts {{value1}}-t!","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"hu","translation":"Hozd létre a {{value1}}-t","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"hu","translation":"[{{value1}}]-ra konzultáljunk","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"hu","translation":"Kérjen tanácsot a {{value1}}-hoz.","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"hu","translation":"{{value1}}-hez tartozó beállítások. A fő részek: {{value2}}, {{value3}}, és a következő edzések: {{value4}}.","review_note":""}
+{"id":"training.859660768503","target_locale":"hu","translation":"{{value1}} – Draft","review_note":""}
+{"id":"training.7544024a8347","target_locale":"hu","translation":"{{value1}}-hoz tartozó terv.","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"hu","translation":"{{value1}}-hez tartozó célállapotot frissítsd.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"hu","translation":"{{value1}}","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"hu","translation":"{{value1}} adag × {{value2}} alkalom・{{value3}} kg・pihenés {{value4}} másodperc","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"hu","translation":"{{value1}}-hoz tartozó edzés × {{value2}} alkalom.","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"hu","translation":"{{value1}} × {{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"hu","translation":"{{value1}} · Terv: {{value2}}/{{value3}} napos program · Teljesítési arány: {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"hu","translation":"{{value1}} · Tervezés","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"hu","translation":"{{value1}} eredmény","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"hu","translation":"{{value1}} receptet synced a Apple Watch-ra.","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"hu","translation":"{{value1}} perc","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"hu","translation":"{{value1}} perc {{value2}} másodperc","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"hu","translation":"{{value1}} alkalom","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"hu","translation":"{{value1}} alkalom/másodperc","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"hu","translation":"{{value1}} óra {{value2}} perc","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"hu","translation":"{{value1}} db ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"hu","translation":"{{value1}} másodperc","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"hu","translation":"{{value1}} edzés","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"hu","translation":"{{value1}} edzés · {{value2}} ismétlés · {{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"hu","translation":"{{value1}} típusú","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"hu","translation":"Ezzel a menüvel kezdj","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"hu","translation":"Ez a menü mentésre kerül","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"hu","translation":"Telen ez a napi edzés?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"hu","translation":"Nincs edzés ebben a napban","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"hu","translation":"Ez az edzés kihagyva lett","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"hu","translation":"Ebben a készüléken nem használható az Apple Watch-szal való összekapcsolás","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"hu","translation":"Hogyan javítsuk ezt a tervet?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"hu","translation":"Telen ez a terv?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"hu","translation":"Mindent","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"hu","translation":"Minden rekord","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"hu","translation":"Nincs","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"hu","translation":"Hogyan végezd?","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"hu","translation":"Csak az alkalmazási előzményeket mentsd el","review_note":""}
+{"id":"training.39029011b26a","target_locale":"hu","translation":"Incline dumbbell press","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"hu","translation":"Hibás","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"hu","translation":"Egyedi edzés","review_note":""}
+{"id":"training.42254297b975","target_locale":"hu","translation":"Új edzéscikket hozzáadni","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"hu","translation":"Még egyszer","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"hu","translation":"Gyors létrehozás","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"hu","translation":"Csontozás","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"hu","translation":"Glute bridge","review_note":""}
+{"id":"training.1792e5824127","target_locale":"hu","translation":"Kábeltorzítás","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"hu","translation":"Kábel visszahúzás","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"hu","translation":"Kábel átlépés","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"hu","translation":"Másolat","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"hu","translation":"Edzői kérés (önálló)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"hu","translation":"Goblet squat","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"hu","translation":"Oldalsó plank","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"hu","translation":"Oldalsó fekvés","review_note":""}
+{"id":"training.5722403a802d","target_locale":"hu","translation":"Alap edzés","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"hu","translation":"Shoulder press","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"hu","translation":"Ültve történő bokaemelés","review_note":""}
+{"id":"training.861902f328fe","target_locale":"hu","translation":"Ültve történő húzogatás","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"hu","translation":"Edzőterem","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"hu","translation":"Érkezés az edzőterembe","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"hu","translation":"Edzőteremben","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"hu","translation":"Vizsgálat nem rögzítve","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"hu","translation":"Ugrás","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"hu","translation":"Tét","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"hu","translation":"Nyílt helyzetben felsőtest edzés","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"hu","translation":"Smith-géppel végzett tetés","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"hu","translation":"Szett","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"hu","translation":"{{value1}} szett befejezve","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"hu","translation":"Szett hozzáadása","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"hu","translation":"Szettek egyidejű beállítása","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"hu","translation":"Szettek teljesítménye","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"hu","translation":"{{value1}} szett időtartama","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"hu","translation":"Szett konfiguráció","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"hu","translation":"A szett célja, hogy a gyakorlat elkezdésekor másolva, az előzményekben is megjelenjen.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"hu","translation":"Cím","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"hu","translation":"Domberekkel végzett karok edzése","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"hu","translation":"Domberekkel végzett mell edzés","review_note":""}
+{"id":"training.0d799718504b","target_locale":"hu","translation":"Domberekkel végzett háti edzés","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"hu","translation":"Mell edzés","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"hu","translation":"Magasan fekvő gólnak való kapaszkodás","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"hu","translation":"Tempus beállítása","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"hu","translation":"Tempótervezés: növelje{{value1}} másodperccal, csökkentse{{value2}} másodperccal, végezzön{{value3}} alkalommal/másodperc alatt.","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"hu","translation":"Dead bug","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"hu","translation":"Triceps press","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"hu","translation":"Edzés","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"hu","translation":"Az edzés nem rögzítve","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"hu","translation":"Befejezze az edzést","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"hu","translation":"Nincs edzés előzmény","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"hu","translation":"Edzéstervezés","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"hu","translation":"Hammer curl","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"hu","translation":"Hajlásság","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"hu","translation":"Hajlítás","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"hu","translation":"Arc húzás","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"hu","translation":"Forma és figyelmeztetések","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"hu","translation":"Forma referenciák","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"hu","translation":"Folytonos edzés","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"hu","translation":"Push-up","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"hu","translation":"Plank","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"hu","translation":"Bench press","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"hu","translation":"Nem található párosított Apple Watch","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"hu","translation":"Hajlítás","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"hu","translation":"Gépelt vállfejtés","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"hu","translation":"Főmenü","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"hu","translation":"Megjegyzések","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"hu","translation":"Felhasználói edzés hozzáadása","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"hu","translation":"Lat pulldown","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"hu","translation":"Láng","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"hu","translation":"Romániás fekvőt","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"hu","translation":"Izomkaró","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"hu","translation":"Izomgömb fejtés","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"hu","translation":"Egykezes käszeletelés","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"hu","translation":"Edzés","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"hu","translation":"Elvégezted az edzést?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"hu","translation":"Bezártad az edzést?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"hu","translation":"•","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"hu","translation":"• Javítva","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"hu","translation":"Fel","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"hu","translation":"{{value1}} másodperc fel, {{value2}} másodperc le, {{value3}} alkalom/másodperc","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"hu","translation":"{{value1}} másodperc fel, {{value2}} másodperc le, {{value3}} alkalom/másodperc","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"hu","translation":"Felseconds","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"hu","translation":"Felfelé és lefelé","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"hu","translation":"Felsőtest","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"hu","translation":"Csökkentés","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"hu","translation":"Csökkentési idő","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"hu","translation":"Alsótest","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"hu","translation":"Főbb részek","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"hu","translation":"Amennyiben hasznos eszközök","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"hu","translation":"A mai edzés adatait az Apple Watch-ra szinkronizáltam","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"hu","translation":"A mai edzés adatait az Apple Watch-ra szinkronizálom","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"hu","translation":"Pihenés {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"hu","translation":"Testkép","review_note":""}
+{"id":"training.82865627f395","target_locale":"hu","translation":"A testkép nem kaydedve","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"hu","translation":"Példa: Egyetlen gyakorlatot csökkents, hogy hosszabb legyen a pihenő idő","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"hu","translation":"Példa: Csak a mell gyakorlata","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"hu","translation":"Példa: A lábak könnyebb, a mell hangsúlyos","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"hu","translation":"Mentés","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"hu","translation":"Nem sikerült menteni","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"hu","translation":"A javasolt gyakorlatok neve","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"hu","translation":"Megállít","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"hu","translation":"Befejezve","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"hu","translation":"Teljes teljesítés","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"hu","translation":"Teljes test","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"hu","translation":"Teljes test / Állapotok","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"hu","translation":"Teljes test A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"hu","translation":"Teljes test B","review_note":""}
+{"id":"training.f74271660465","target_locale":"hu","translation":"Teljes test C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"hu","translation":"Könnyű teljes test","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"hu","translation":"Fotó","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"hu","translation":"Nincs fotó","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"hu","translation":"Elemzés","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"hu","translation":"Nincs elemzési adatok","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"hu","translation":"Első lépés / Teljes test","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"hu","translation":"A megadott program nem tartalmazza a rendelkezésre álló edzésciklot. Kérjük, ellenőrizze és frissítse a programot.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"hu","translation":"Diszkontált eszközök","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"hu","translation":"Törlés","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"hu","translation":"Előző hónap","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"hu","translation":"Korábbi {{value1}} × {{value2}} alkalom","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"hu","translation":"Adja meg a hozzáadott súlyt. A segítő súlyt negatív értékkel lehet rögzíteni.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"hu","translation":"Mozgás tempó","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"hu","translation":"Javasolt mozgás, összesen {{value1}} alkalom","review_note":""}
+{"id":"training.e1472f598358","target_locale":"hu","translation":"Frissítés","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"hu","translation":"A jobb oldalon található \"Hozzáadás\" gomb segítségével létrehozhat személyre szabott edzéseket.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"hu","translation":"Összesen: {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"hu","translation":"Felszerelés","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"hu","translation":"Ismétlések","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"hu","translation":"Talaj","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"hu","translation":"Alap","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"hu","translation":"Stabilitás: {{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"hu","translation":"Befejezve","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"hu","translation":"A befejezett edzések a \"Történet\" menüben megtekinthetők.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"hu","translation":"A befejezetlen edzéseket nem mentjük el.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"hu","translation":"Befejezve és történetbe mentve","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"hu","translation":"Befejezve, történetbe mentve","review_note":""}
+{"id":"training.1784283f2316","target_locale":"hu","translation":"Folyamatban","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"hu","translation":"Ismétlések száma","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"hu","translation":"Valós tempó: növelés {{value1}} másodpercre / csökkentés {{value2}} másodpercre","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"hu","translation":"Teljesítmény: {{value1}} × {{value2}} ismétlés","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"hu","translation":"Teljesítmény érték szerkesztése","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"hu","translation":"Célzott terület","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"hu","translation":"Történet","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"hu","translation":"Nincs történet","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"hu","translation":"<0> még nincs adat</0>","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"hu","translation":"Történet törlése","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"hu","translation":"Bejegyzések szerkesztése","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"hu","translation":"Bejegyzések szerkesztése","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"hu","translation":"Bejegyzések részletei","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"hu","translation":"Átlagos pulzus","review_note":""}
+{"id":"training.461619512206","target_locale":"hu","translation":"Húzó/vastagodás","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"hu","translation":"Várakozás","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"hu","translation":"Pulzus","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"hu","translation":"A kívánt tevékenységet lehet hozzáadni a saját tevékenységek listájához.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"hu","translation":"Technika","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"hu","translation":"Nyomással/a felsőtesten","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"hu","translation":"Felügyelő edző","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"hu","translation":"Nem igényel","review_note":""}
+{"id":"training.6532391678cf","target_locale":"hu","translation":"Vibrációs sebesség","review_note":""}
+{"id":"training.f57690abba57","target_locale":"hu","translation":"Becsült maximális teljesítmény","review_note":""}
+{"id":"training.86351613651a","target_locale":"hu","translation":"Becsült {{value1}} alkalom","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"hu","translation":"Adjon rövid magyarázatot a javaslatra","review_note":""}

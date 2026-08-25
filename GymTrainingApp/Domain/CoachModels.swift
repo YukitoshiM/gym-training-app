@@ -65,6 +65,19 @@ struct CoachEvidenceCitation: Identifiable, Codable, Hashable {
     var url: String
     var doi: String
     var relevance: Double
+    var sourceScope: String
+    var evidenceSummary: String
+    var population: String
+    var intervention: String
+    var outcomes: [String]
+    var limitations: [String]
+    var applicabilityScore: Double
+    var applicabilityLabel: String
+    var versionStatus: String
+    var conclusionConsistency: String
+    var newerEvidenceNote: String
+    var fullTextLicense: String
+    var sourceDetailURL: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -75,27 +88,111 @@ struct CoachEvidenceCitation: Identifiable, Codable, Hashable {
         case url
         case doi
         case relevance
+        case sourceScope = "source_scope"
+        case evidenceSummary = "evidence_summary"
+        case population
+        case intervention
+        case outcomes
+        case limitations
+        case applicabilityScore = "applicability_score"
+        case applicabilityLabel = "applicability_label"
+        case versionStatus = "version_status"
+        case conclusionConsistency = "conclusion_consistency"
+        case newerEvidenceNote = "newer_evidence_note"
+        case fullTextLicense = "full_text_license"
+        case sourceDetailURL = "source_detail_url"
+    }
+
+    init(
+        id: String,
+        title: String,
+        year: Int?,
+        studyType: String,
+        confidence: String,
+        url: String,
+        doi: String,
+        relevance: Double,
+        sourceScope: String = "abstract",
+        evidenceSummary: String = "",
+        population: String = "",
+        intervention: String = "",
+        outcomes: [String] = [],
+        limitations: [String] = [],
+        applicabilityScore: Double = 0.5,
+        applicabilityLabel: String = "unclear",
+        versionStatus: String = "current",
+        conclusionConsistency: String = "unknown",
+        newerEvidenceNote: String = ""
+        , fullTextLicense: String = ""
+        , sourceDetailURL: String = ""
+    ) {
+        self.id = id
+        self.title = title
+        self.year = year
+        self.studyType = studyType
+        self.confidence = confidence
+        self.url = url
+        self.doi = doi
+        self.relevance = relevance
+        self.sourceScope = sourceScope
+        self.evidenceSummary = evidenceSummary
+        self.population = population
+        self.intervention = intervention
+        self.outcomes = outcomes
+        self.limitations = limitations
+        self.applicabilityScore = applicabilityScore
+        self.applicabilityLabel = applicabilityLabel
+        self.versionStatus = versionStatus
+        self.conclusionConsistency = conclusionConsistency
+        self.newerEvidenceNote = newerEvidenceNote
+        self.fullTextLicense = fullTextLicense
+        self.sourceDetailURL = sourceDetailURL
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        title = try container.decode(String.self, forKey: .title)
+        year = try container.decodeIfPresent(Int.self, forKey: .year)
+        studyType = try container.decode(String.self, forKey: .studyType)
+        confidence = try container.decode(String.self, forKey: .confidence)
+        url = try container.decode(String.self, forKey: .url)
+        doi = try container.decodeIfPresent(String.self, forKey: .doi) ?? ""
+        relevance = try container.decodeIfPresent(Double.self, forKey: .relevance) ?? 0
+        sourceScope = try container.decodeIfPresent(String.self, forKey: .sourceScope) ?? "abstract"
+        evidenceSummary = try container.decodeIfPresent(String.self, forKey: .evidenceSummary) ?? ""
+        population = try container.decodeIfPresent(String.self, forKey: .population) ?? ""
+        intervention = try container.decodeIfPresent(String.self, forKey: .intervention) ?? ""
+        outcomes = try container.decodeIfPresent([String].self, forKey: .outcomes) ?? []
+        limitations = try container.decodeIfPresent([String].self, forKey: .limitations) ?? []
+        applicabilityScore = try container.decodeIfPresent(Double.self, forKey: .applicabilityScore) ?? 0.5
+        applicabilityLabel = try container.decodeIfPresent(String.self, forKey: .applicabilityLabel) ?? "unclear"
+        versionStatus = try container.decodeIfPresent(String.self, forKey: .versionStatus) ?? "current"
+        conclusionConsistency = try container.decodeIfPresent(String.self, forKey: .conclusionConsistency) ?? "unknown"
+        newerEvidenceNote = try container.decodeIfPresent(String.self, forKey: .newerEvidenceNote) ?? ""
+        fullTextLicense = try container.decodeIfPresent(String.self, forKey: .fullTextLicense) ?? ""
+        sourceDetailURL = try container.decodeIfPresent(String.self, forKey: .sourceDetailURL) ?? ""
     }
 
     var studyTypeLabel: String {
         switch studyType {
-        case "guideline": return "ガイドライン"
-        case "meta_analysis": return "メタ解析"
-        case "systematic_review": return "系統的レビュー"
-        case "randomized_controlled_trial": return "ランダム化比較試験"
-        case "clinical_trial": return "臨床試験"
-        case "observational": return "観察研究"
-        case "review": return "レビュー"
-        default: return "研究論文"
+        case "guideline": return L10n.string("domain_catalog.ff3d4ff54fbf", fallback: "ガイドライン")
+        case "meta_analysis": return L10n.string("domain_catalog.06d5ac3d8c2e", fallback: "メタ解析")
+        case "systematic_review": return L10n.string("domain_catalog.7aeed2d99541", fallback: "系統的レビュー")
+        case "randomized_controlled_trial": return L10n.string("domain_catalog.a42741ed272e", fallback: "ランダム化比較試験")
+        case "clinical_trial": return L10n.string("domain_catalog.7f75bc969b66", fallback: "臨床試験")
+        case "observational": return L10n.string("domain_catalog.24f122d18ea7", fallback: "観察研究")
+        case "review": return L10n.string("domain_catalog.ef0b3d8cfce0", fallback: "レビュー")
+        default: return L10n.string("domain_catalog.4305a22657cf", fallback: "研究論文")
         }
     }
 
     var confidenceLabel: String {
         switch confidence {
-        case "high": return "高"
-        case "moderate": return "中"
-        case "low": return "低"
-        default: return "参考"
+        case "high": return L10n.string("domain_catalog.c28b6b0b1e5e", fallback: "高")
+        case "moderate": return L10n.string("domain_catalog.f09327f3d764", fallback: "中")
+        case "low": return L10n.string("domain_catalog.f58e9d61af58", fallback: "低")
+        default: return L10n.string("domain_catalog.39171b27dcf6", fallback: "参考")
         }
     }
 }
@@ -105,12 +202,16 @@ struct CoachEvidenceStatus: Codable, Hashable {
     var confidence: String
     var lastUpdatedAt: String?
     var searchedDocuments: Int
+    var matchedDocuments: Int
+    var reason: String
 
     static let unavailable = CoachEvidenceStatus(
         state: "unavailable",
         confidence: "insufficient",
         lastUpdatedAt: nil,
-        searchedDocuments: 0
+        searchedDocuments: 0,
+        matchedDocuments: 0,
+        reason: ""
     )
 
     enum CodingKeys: String, CodingKey {
@@ -118,6 +219,34 @@ struct CoachEvidenceStatus: Codable, Hashable {
         case confidence
         case lastUpdatedAt = "last_updated_at"
         case searchedDocuments = "searched_documents"
+        case matchedDocuments = "matched_documents"
+        case reason
+    }
+
+    init(
+        state: String,
+        confidence: String,
+        lastUpdatedAt: String?,
+        searchedDocuments: Int,
+        matchedDocuments: Int = 0,
+        reason: String = ""
+    ) {
+        self.state = state
+        self.confidence = confidence
+        self.lastUpdatedAt = lastUpdatedAt
+        self.searchedDocuments = searchedDocuments
+        self.matchedDocuments = matchedDocuments
+        self.reason = reason
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        state = try container.decode(String.self, forKey: .state)
+        confidence = try container.decodeIfPresent(String.self, forKey: .confidence) ?? "insufficient"
+        lastUpdatedAt = try container.decodeIfPresent(String.self, forKey: .lastUpdatedAt)
+        searchedDocuments = try container.decodeIfPresent(Int.self, forKey: .searchedDocuments) ?? 0
+        matchedDocuments = try container.decodeIfPresent(Int.self, forKey: .matchedDocuments) ?? 0
+        reason = try container.decodeIfPresent(String.self, forKey: .reason) ?? ""
     }
 }
 
@@ -259,15 +388,21 @@ struct CoachChatRequest: Encodable, Hashable {
     static let compactedRequestCharacters = 4_000
 
     var coachID: String
+    var coach: AIRequestCoachContext? = nil
+    var purpose: AIRequestPurpose = .chat
     var message: String
     var context: CoachContext
     var recentMessages: [CoachChatMessage]
+    var responseLocale: String = AppLanguagePreference.aiLocaleIdentifier
 
     enum CodingKeys: String, CodingKey {
         case coachID = "coach_id"
+        case coach
+        case purpose
         case message
         case context
         case recentMessages = "recent_messages"
+        case responseLocale = "response_locale"
     }
 
     func constrainedForInitialRequest() -> CoachChatRequest {
@@ -296,6 +431,8 @@ struct CoachChatRequest: Encodable, Hashable {
     ) -> CoachChatRequest {
         var result = CoachChatRequest(
             coachID: coachID,
+            coach: coach,
+            purpose: purpose,
             message: message,
             context: context.compacted(aggressively: aggressively),
             recentMessages: recentMessages.suffix(maximumMessages).map {
@@ -306,7 +443,8 @@ struct CoachChatRequest: Encodable, Hashable {
                 )
                 compacted.evidence = []
                 return compacted
-            }
+            },
+            responseLocale: responseLocale
         )
 
         if result.requestInputCharacterCount > targetCharacters {
@@ -350,13 +488,22 @@ struct CoachChatRequest: Encodable, Hashable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(coachID, forKey: .coachID)
+        try container.encodeIfPresent(coach, forKey: .coach)
+        try container.encode(purpose, forKey: .purpose)
         try container.encode(message, forKey: .message)
         try container.encode(context, forKey: .context)
+        try container.encode(responseLocale, forKey: .responseLocale)
         try container.encode(
             recentMessages.map { RequestMessage(role: $0.role, content: $0.content) },
             forKey: .recentMessages
         )
     }
+}
+
+enum AIRequestPurpose: String, Codable, Hashable {
+    case chat
+    case planGeneration = "plan_generation"
+    case dailyRecommendation = "daily_recommendation"
 }
 
 struct CoachChatResponse: Codable, Hashable {
@@ -443,15 +590,15 @@ enum AITrainerError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .emptyMessage:
-            "メッセージを入力してください。"
+            L10n.string("domain_catalog.c6b16105b918", fallback: "メッセージを入力してください。")
         case .messageTooLong:
-            "メッセージは4,000文字以内で入力してください。"
+            L10n.string("domain_catalog.3645d68d6247", fallback: "メッセージは4,000文字以内で入力してください。")
         case .contextTooLarge:
-            "AIへ送る履歴が大きすぎます。記録をさらに集計してから再試行してください。"
+            L10n.string("domain_catalog.a02090ea0171", fallback: "AIへ送る履歴が大きすぎます。記録をさらに集計してから再試行してください。")
         case .invalidRequest:
-            "AIトレーナーへ送る内容の形式が正しくありません。"
+            L10n.string("domain_catalog.0fe0841c2b17", fallback: "AIトレーナーへ送る内容の形式が正しくありません。")
         case .connection:
-            "AIトレーナーに接続できません。時間をおいて再試行してください。"
+            L10n.string("domain_catalog.7864c3fcb9ae", fallback: "AIトレーナーに接続できません。時間をおいて再試行してください。")
         }
     }
 
@@ -460,11 +607,11 @@ enum AITrainerError: LocalizedError {
         case .emptyMessage, .messageTooLong:
             nil
         case .contextTooLarge:
-            "会話履歴を整理するか、時間をおいてもう一度送信してください。"
+            L10n.string("domain_catalog.78e438f50d22", fallback: "会話履歴を整理するか、時間をおいてもう一度送信してください。")
         case .invalidRequest:
-            "アプリとAIサーバーを最新の仕様へ更新してください。"
+            L10n.string("domain_catalog.1438eb05085d", fallback: "アプリとAIサーバーを最新の仕様へ更新してください。")
         case .connection:
-            "ネットワーク状態、サーバーURL、AIサーバーの稼働状態を確認してください。"
+            L10n.string("domain_catalog.d68a2b5a32a9", fallback: "ネットワーク状態、サーバーURL、AIサーバーの稼働状態を確認してください。")
         }
     }
 }

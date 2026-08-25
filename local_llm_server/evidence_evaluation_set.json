@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "cases": [
+    {"id":"daily-hypertrophy-volume","purpose":"daily_recommendation","query":"筋肥大のため今週のセット数をどう調整する？","goal":"hypertrophy","expected_subtopics":["training_volume"],"user_profile":{"experience_level":"intermediate"}},
+    {"id":"daily-fat-loss-steps","purpose":"daily_recommendation","query":"減量中の今日の歩数目標は？","goal":"fat_loss","expected_subtopics":["steps_and_neat","daily_steps"],"user_profile":{"experience_level":"beginner"}},
+    {"id":"plan-strength-load","purpose":"plan_generation","query":"筋力向上の負荷と回数を組んで","goal":"strength","expected_subtopics":["loading","autoregulation"],"user_profile":{"experience_level":"intermediate"}},
+    {"id":"plan-hypertrophy-rest","purpose":"plan_generation","query":"筋肥大メニューのセット間休憩を決めて","goal":"hypertrophy","expected_subtopics":["rest_intervals"],"user_profile":{"experience_level":"beginner"}},
+    {"id":"chat-protein","purpose":"chat","query":"筋肥大に必要なたんぱく質について教えて","goal":"hypertrophy","expected_subtopics":["protein_dose"],"user_profile":{"experience_level":"beginner"}},
+    {"id":"chat-retraining","purpose":"chat","query":"長いブランク後に筋トレを再開したい","goal":"return_to_training","expected_subtopics":["detraining_retraining","graded_loading"],"user_profile":{"experience_level":"beginner"}},
+    {"id":"safety-older-adult","purpose":"safety","query":"高齢者が筋力トレーニングを再開する際の注意点","goal":"wellness","expected_subtopics":["older_adults"],"user_profile":{"age":70,"population_tags":["older adults"]}}
+  ]
+}

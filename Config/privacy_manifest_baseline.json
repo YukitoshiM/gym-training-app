@@ -1,0 +1,83 @@
+{
+  "accessed_api_types": {
+    "NSPrivacyAccessedAPICategoryDiskSpace": [
+      "E174.1"
+    ],
+    "NSPrivacyAccessedAPICategorySystemBootTime": [
+      "35F9.1"
+    ],
+    "NSPrivacyAccessedAPICategoryUserDefaults": [
+      "CA92.1"
+    ]
+  },
+  "any_data_type_tracking": true,
+  "collected_data_types": {
+    "NSPrivacyCollectedDataTypeAdvertisingData": {
+      "linked": true,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics",
+        "NSPrivacyCollectedDataTypePurposeDeveloperAdvertising",
+        "NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising"
+      ],
+      "tracking": false
+    },
+    "NSPrivacyCollectedDataTypeCoarseLocation": {
+      "linked": true,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics",
+        "NSPrivacyCollectedDataTypePurposeAppFunctionality",
+        "NSPrivacyCollectedDataTypePurposeDeveloperAdvertising",
+        "NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising"
+      ],
+      "tracking": false
+    },
+    "NSPrivacyCollectedDataTypeCrashData": {
+      "linked": false,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics"
+      ],
+      "tracking": false
+    },
+    "NSPrivacyCollectedDataTypeDeviceID": {
+      "linked": true,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics",
+        "NSPrivacyCollectedDataTypePurposeDeveloperAdvertising",
+        "NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising"
+      ],
+      "tracking": true
+    },
+    "NSPrivacyCollectedDataTypeOtherDiagnosticData": {
+      "linked": false,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics",
+        "NSPrivacyCollectedDataTypePurposeDeveloperAdvertising",
+        "NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising"
+      ],
+      "tracking": false
+    },
+    "NSPrivacyCollectedDataTypePerformanceData": {
+      "linked": false,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics",
+        "NSPrivacyCollectedDataTypePurposeAppFunctionality",
+        "NSPrivacyCollectedDataTypePurposeDeveloperAdvertising",
+        "NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising"
+      ],
+      "tracking": false
+    },
+    "NSPrivacyCollectedDataTypeProductInteraction": {
+      "linked": true,
+      "purposes": [
+        "NSPrivacyCollectedDataTypePurposeAnalytics",
+        "NSPrivacyCollectedDataTypePurposeAppFunctionality",
+        "NSPrivacyCollectedDataTypePurposeDeveloperAdvertising",
+        "NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising"
+      ],
+      "tracking": false
+    }
+  },
+  "manifest_count": 4,
+  "root_tracking": false,
+  "tracking_domains": []
+}

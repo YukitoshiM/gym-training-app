@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"it","translation":"Stiamo registrando {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"it","translation":"Non supportato: {{value1}}. È possibile inserire manualmente i dati.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"it","translation":"Numero di vibrazioni al secondo","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"it","translation":"Salvo in Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"it","translation":"Come utilizzare Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"it","translation":"Palestra: Prossima sessione","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"it","translation":"Registrazione senza autorizzazione di Health o tramite inserimento manuale","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"it","translation":"Non è possibile utilizzare Health, quindi registro manualmente.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"it","translation":"Non è possibile avviare Health, quindi registro manualmente.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"it","translation":"Health: allenamento sospeso","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"it","translation":"Health: salvataggio in corso","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"it","translation":"Salvataggio di Health fallito, ma i dati di Watch sono stati salvati.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"it","translation":"Dati di Health non salvati, ma i dati di Watch sono stati salvati.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"it","translation":"Non è possibile ripristinare le misurazioni di Health. È comunque possibile continuare a registrare manualmente.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"it","translation":"Le misurazioni di Health sono state ripristinate.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"it","translation":"Misurazioni di Health interrotte, registrazione manuale in corso.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"it","translation":"Health disconnesso, registro manualmente.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"it","translation":"Nessuna valutazione RPE disponibile.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"it","translation":"I dati di allenamento attualmente registrati su Watch verranno eliminati.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"it","translation":"Dati di allenamento salvati su Watch.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"it","translation":"Sincronizza il menu da iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"it","translation":"Seleziona e avvia il menu di oggi da iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"it","translation":"Verifica il menu di oggi su iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"it","translation":"Connessione a iPhone stabilita.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"it","translation":"Sincronizza i contenuti di oggi da iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"it","translation":"Non è stato possibile creare i dati di registrazione da inviare a iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"it","translation":"Impossibile inviare i dati. Salva la registrazione e riprova.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"it","translation":"Non è stato possibile salvare su iPhone. Potrò inviarlo di nuovo più tardi.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"it","translation":"Sto preparando la sincronizzazione con iPhone. Potrò inviarlo di nuovo più tardi.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"it","translation":"{{value1}} × {{value2}} volte × {{value3}} serie","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"it","translation":"È possibile inviare {{value1}} su iPhone.","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"it","translation":"Ho programmato l'invio di {{value1}} su iPhone.","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"it","translation":"Ho inviato {{value1}} su iPhone.","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"it","translation":"Invio {{value1}} su iPhone.","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"it","translation":"Ho salvato {{value1}} nella cronologia di iPhone.","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"it","translation":"Riprova l'invio di {{value1}}.","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"it","translation":"È possibile riprendere {{value1}}.","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"it","translation":"Ho selezionato {{value1}}.","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"it","translation":"Ho iniziato {{value1}}.","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"it","translation":"{{value1}}/{{value2}} serie · {{value3}} volte registrate","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"it","translation":"{{value1}} serie ·","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"it","translation":"{{value1}} serie · Obiettivo Totale {{value2}} volte","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"it","translation":"{{value1}} · {{value2}} serie · Totale {{value3}} volte","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"it","translation":"{{value1}} · Serie {{value2}}","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"it","translation":"Selezionato da {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"it","translation":"Ho sincronizzato il menu di {{value1}}.","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"it","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"it","translation":"{{value1}} volte/secondo","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"it","translation":"{{value1}} volte・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"it","translation":"{{value1}} secondi","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"it","translation":"{{value1}} esercizi・{{value2}} serie・totale {{value3}} volte","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"it","translation":"Non è possibile utilizzare l'integrazione con iPhone su questo dispositivo. I dati sono salvati sul dispositivo.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"it","translation":"Non è possibile utilizzare l'integrazione su questo dispositivo.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"it","translation":"Salta","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"it","translation":"Serie","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"it","translation":"Serie {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"it","translation":"Completa la serie","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"it","translation":"Avvia la serie","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"it","translation":"Media della serie {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"it","translation":"Serie non impostata","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"it","translation":"Inizia la serie","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"it","translation":"Annulla l'inizio della serie","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"it","translation":"Sensore in fase di misurazione","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"it","translation":"Non è possibile preparare i dati del sensore, quindi inserisci manualmente i valori.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"it","translation":"Salta la guida","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"it","translation":"Ritmo","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"it","translation":"Adatta il ritmo","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"it","translation":"Imposta il ritmo","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"it","translation":"Sospendi la guida al ritmo","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"it","translation":"Riprendi la guida al ritmo","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"it","translation":"Panca piana","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"it","translation":"Menu","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"it","translation":"Seleziona un menu","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"it","translation":"Impossibile caricare i dati del menu","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"it","translation":"Modifica menu","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"it","translation":"Attesa menu","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"it","translation":"Note","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"it","translation":"Modifica le note","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"it","translation":"Movimento","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"it","translation":"Tirata alla sbarra","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"it","translation":"Allenamento","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"it","translation":"Completare l'allenamento?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"it","translation":"Allenamento interrotto","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"it","translation":"Pausa","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"it","translation":"Pausa per {{value1}} secondi / Riprendi per {{value2}} secondi","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"it","translation":"In pausa","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"it","translation":"Ricomincia","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"it","translation":"{{value1}} secondi in su・{{value2}} secondi in giù・{{value3}} volte/secondo","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"it","translation":"In alto","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"it","translation":"In alto per {{value1}} secondi, in basso per {{value2}} secondi","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"it","translation":"In alto per {{value1}} secondi / in basso per {{value2}} secondi","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"it","translation":"Imposta i tempi di \"in alto\" e \"in basso\" per ogni set. Apple Watch fornisce indicazioni con 1-3 tocchi al secondo.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"it","translation":"Tempo di \"in alto\"","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"it","translation":"Inserisci direttamente il tempo di \"in alto\"","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"it","translation":"In basso","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"it","translation":"In basso","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"it","translation":"Tempo di \"in basso\"","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"it","translation":"Inserisci direttamente il tempo di \"in basso\"","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"it","translation":"Oggi","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"it","translation":"Menu del giorno","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"it","translation":"Menu del giorno: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"it","translation":"Seleziona il menu del giorno","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"it","translation":"Pausa {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"it","translation":"Pausa per {{value1}} secondi","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"it","translation":"Fare una pausa","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"it","translation":"Salta la pausa","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"it","translation":"Tempo di pausa","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"it","translation":"Fine pausa","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"it","translation":"Suggerimento del 2,5% più pesante in base a energia e velocità di esecuzione","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"it","translation":"Inizia l'allenamento","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"it","translation":"Istruzioni: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"it","translation":"Salva","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"it","translation":"Affidabilità: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"it","translation":"Modifica","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"it","translation":"Riprendi","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"it","translation":"Minuti:secondi","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"it","translation":"Ultimo allenamento","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"it","translation":"Stabilità dell'allenamento: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"it","translation":"Opzioni di allenamento: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"it","translation":"Rilevato arresto dell'allenamento","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"it","translation":"Stima dell'allenamento: {{value1}} volte","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"it","translation":"Stima dell'allenamento: {{value1}} volte・Affidabilità: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"it","translation":"Variazione della velocità di allenamento: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"it","translation":"Aggiorna","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"it","translation":"Annulla","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"it","translation":"Evitato il salvataggio doppio su Health a causa della presenza di un allenamento simile in questo orario.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"it","translation":"Scegli da menu sincronizzati","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"it","translation":"Ripetizioni","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"it","translation":"Numero di ripetizioni","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"it","translation":"Imposta il numero di ripetizioni tramite la barra scorrevole","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"it","translation":"Completato","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"it","translation":"Invia a iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"it","translation":"Invia","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"it","translation":"Il timer di riposo inizia quando completi. Puoi scegliere l'esercizio successivo in ordine sparso.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"it","translation":"Nessun allenamento completato","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"it","translation":"Serie completate","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"it","translation":"Serie completate {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"it","translation":"Risultati {{value1}} × {{value2}} ripetizioni","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"it","translation":"Sincronizza i risultati","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"it","translation":"Inserimento dei risultati","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"it","translation":"Modifica l'intensità percepita (RPE) della serie in corso","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"it","translation":"Modifica il ritmo della serie in corso","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"it","translation":"Modifica il numero di ripetizioni della serie in corso","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"it","translation":"Modifica il peso della serie in corso","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"it","translation":"Media -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"it","translation":"Media {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"it","translation":"Il battito cardiaco è in fase di recupero. Quando ti senti pronto, puoi passare alla serie successiva","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"it","translation":"Continua a fare delle pause, monitorando il battito cardiaco.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"it","translation":"Misurazione del battito cardiaco e dell'energia consumata.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"it","translation":"Inserimento manuale","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"it","translation":"Puoi registrare manualmente.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"it","translation":"In corso di registrazione manuale.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"it","translation":"Stima in base al movimento del polso e all'ordine degli esercizi non completati.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"it","translation":"Numero di vibrazioni (1-3 volte/secondo)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"it","translation":"Velocità delle vibrazioni","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"it","translation":"Connessione fallita: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"it","translation":"Aggiornamento a {{value1}}","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"it","translation":"Applica suggerimenti","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"it","translation":"Modifica il tempo","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"it","translation":"Massimo -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"it","translation":"Massimo {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"it","translation":"Quando termini, i dati verranno inviati all'iPhone. Puoi ri-inviare le registrazioni non inviate in seguito.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"it","translation":"Salva il contenuto attuale, inclusi gli esercizi non completati.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"it","translation":"Non inviato","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"it","translation":"Nessuna registrazione su smartwatch non inviata","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"it","translation":"In corso","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"it","translation":"Prossimo: {{value1}} {{value2}} × {{value3}}","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"it","translation":"Inizia il prossimo set","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"it","translation":"Torna subito all'allenamento successivo.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"it","translation":"Prossimo esercizio","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"it","translation":"Avanti","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"it","translation":"Salta l'attività corrente","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"it","translation":"Obiettivo: {{value1}} × {{value2}} ripetizioni","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"it","translation":"Obiettivo completato","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"it","translation":"Suggerimento del 5% per raggiungere l'obiettivo, in base a: obiettivo non raggiunto, RPE (percezione dello sforzo), o diminuzione della velocità","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"it","translation":"Gamma di movimento relativa: {{value1}}%, Coerenza: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"it","translation":"Campionamento a basso consumo energetico (stato batteria)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"it","translation":"Campionamento a basso consumo energetico (modalità a basso consumo)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"it","translation":"Impostazioni campionamento a basso consumo energetico","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"it","translation":"Elimina","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"it","translation":"Secondi","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"it","translation":"Seleziona l'esercizio e il set per iniziare. Se hai sbagliato, puoi tornare indietro premendo \"Annulla\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"it","translation":"Esercizio suggerito: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"it","translation":"Termina e sincronizza","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"it","translation":"Continua","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"it","translation":"Schiena","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"it","translation":"Giorno dedicato alla schiena","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"it","translation":"Petto","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"it","translation":"Giorno del petto","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"it","translation":"Vuoi eliminare i dati?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"it","translation":"In fase di registrazione","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"it","translation":"Non ci sono allenamenti registrati","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"it","translation":"Campionamento standard","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"it","translation":"Veloce","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"it","translation":"Suggerisci lo stesso peso in base a livello di difficoltà, RPE e velocità","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"it","translation":"No","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"it","translation":"Passa al set selezionato","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"it","translation":"Peso","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"it","translation":"Imposta il peso tramite la rotellina","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"it","translation":"Puoi modificare peso, ripetizioni, RPE e pause prima o dopo l'allenamento utilizzando la rotellina.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"it","translation":"Inizia","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"it","translation":"Imposta il ritmo prima di iniziare","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"it","translation":"Non supportato: {{value1}}. È disponibile l'inserimento manuale","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"it","translation":"Note vocali e testuali","review_note":""}

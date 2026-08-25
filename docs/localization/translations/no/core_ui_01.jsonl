@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"no","translation":"{{value1}} elementer","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"no","translation":"{{value1}}: Ingen treningsbesøk eller treningsøkt ble funnet på den planlagte datoen.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"no","translation":"Varighet per økt","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"no","translation":"Daglige ernæringsmål","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"no","translation":"Lær bevegelsene over 3 økter","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"no","translation":"Lag en treningsøkt med AI","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"no","translation":"Dagens anbefalinger kan fortsatt brukes uten AI.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"no","translation":"Spør AI om din nåværende status","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"no","translation":"Spør AI","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"no","translation":"Data som sendes til AI","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"no","translation":"AI-coachen lager treningsplaner med bare utstyret du har valgt. Minst ett element vil alltid være valgt.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"no","translation":"Generer ukentlig tilbakemelding via AI-serveren","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"no","translation":"AI-server tilkoblet","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"no","translation":"Forbereder AI-modell","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"no","translation":"AI-utkast og ukentlig tilbakemelding er ikke tilgjengelig, men manuelle registreringer kan fortsatt lagres.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"no","translation":"For å bruke AI-utkast og ukentlig tilbakemelding må du slå på AI-funksjoner og deretter teste tilkoblingen.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"no","translation":"AI-endring {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"no","translation":"AI-tilkobling","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"no","translation":"AI-funksjoner er av","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"no","translation":"Bruk AI-funksjoner","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"no","translation":"AI-gjennomgang pågår","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"no","translation":"Gjennomgått av AI","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"no","translation":"Tilbakestill AI-innstillinger","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"no","translation":"API-nøkkel","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"no","translation":"API-nøkkelen brukes bare til å hente kortvarige tokener og sendes ikke med vanlige AI-forespørsler.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"no","translation":"API-serveren svarer, men den nødvendige modellen er ikke tilgjengelig.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"no","translation":"API-serveren svarer, men støttemodellen for måltider og rapporter er ikke tilgjengelig.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"no","translation":"API-serveren svarer, men bildebasert kaloriestimering er ikke tilgjengelig.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"no","translation":"Apple Health-treningsøkter","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"no","translation":"Synkroniser treningsøkt med Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"no","translation":"Apple Watch-logger","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"no","translation":"Apple Watch og sensorer","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"no","translation":"BodyMode-annonsereport","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"no","translation":"Kom i gang med BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"no","translation":"BodyMode-administrasjons-AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"no","translation":"Googles bruk av annonsedata","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"no","translation":"Googles personvernregler","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"no","translation":"Se gjennom deling med Helse","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"no","translation":"Estimer repetisjoner med Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"no","translation":"Haptiske varsler på Apple Watch","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"no","translation":"{{value1}} / {{value2}} fullført","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"no","translation":"{{value1}} / {{value2}} oppnådd","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"no","translation":"{{value1}}/6 fullført","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"no","translation":"{{value1}}/{{value2}} repetisjoner","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"no","translation":"{{value1}}{{value2}} repetisjoner","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"no","translation":"Anbefaling fra {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"no","translation":"{{value1}} gjennomgår · Anbefaling tilgjengelig","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"no","translation":"Gjennomgått av {{value1}}","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"no","translation":"Forklar for {{value1}} hvorfor dette ble anbefalt i dag, og foreslå justeringer.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"no","translation":"Spør {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"no","translation":"{{value1}}s anbefaling","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"no","translation":"{{value1}}s vurdering","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"no","translation":"{{value1}}s grunnanbefaling","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"no","translation":"Venter på gjennomgang fra {{value1}} · Anbefaling tilgjengelig","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"no","translation":"{{value1}}s ukesrapport","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"no","translation":"Angi {{value1}} med velgeren","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"no","translation":"Erstatt {{value1}} med en annen handling","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"no","translation":"{{value1}} er tilgjengelig. {{value2}} coachtyper er kontrollert.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"no","translation":"Hvorfor {{value1}} ble anbefalt","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"no","translation":"Åpne {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"no","translation":"{{value1}} sett","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"no","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"no","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"no","translation":"{{value1}} · {{value2}} oppdatert","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"no","translation":"{{value1}} · {{value2}} typer utstyr","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"no","translation":"{{value1}} · {{value2}} dager/uke","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"no","translation":"{{value1}} elementer","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"no","translation":"{{value1}} ganger","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"no","translation":"{{value1}} fullført","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"no","translation":"{{value1}} øvelser","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"no","translation":"{{value1}} øvelser / {{value2}} sett","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"no","translation":"La BodyMode ta over herfra. Hver dag foreslås opptil tre handlinger.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"no","translation":"Data som gjør vurderingen mer pålitelig","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"no","translation":"Bruk anbefalt coach","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"no","translation":"Start dagen her","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"no","translation":"Start denne treningsøkten","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"no","translation":"Bruk dette målet","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"no","translation":"Trener for dette målet","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"no","translation":"Hvorfor denne handlingen ble valgt","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"no","translation":"Alle coacher","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"no","translation":"Annet","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"no","translation":"Protein","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"no","translation":"Hva den ikke kan gjøre","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"no","translation":"Bygges først fra data på enheten, med AI-justeringer bare når det er nødvendig.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"no","translation":"Lagre en ofte brukt treningsøkt","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"no","translation":"Kalorier","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"no","translation":"Kalorier / makroer","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"no","translation":"Forbereder modell for kaloriestimering","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"no","translation":"Avbryt","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"no","translation":"Hurtigregistrering","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"no","translation":"Server-URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"no","translation":"Jeg har kommet til treningssenteret","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"no","translation":"Besøk på treningssenter","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"no","translation":"Registrer treningssenterbesøk automatisk","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"no","translation":"Hopp over","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"no","translation":"Hvis sensorene ikke er tilgjengelige, kan du fortsatt legge inn vekt, repetisjoner og RPE manuelt. Strømsparende sampling reduserer hvor ofte bevegelsesestimater oppdateres.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"no","translation":"Testannonse","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"no","translation":"Data","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"no","translation":"Datadekning {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"no","translation":"Trenere: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"no","translation":"Treningsøkt","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"no","translation":"Fullfør 3 treningsøkter","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"no","translation":"Åpne treningsøkter","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"no","translation":"Start treningsøkt","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"no","translation":"Versjon: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"no","translation":"Ikke personlig tilpasset","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"no","translation":"Personlig tilpasning av","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"no","translation":"Fri trening","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"no","translation":"Personvern","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"no","translation":"Profil","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"no","translation":"Hjelp","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"no","translation":"Hjem","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"no","translation":"Treningsøktene dine er her","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"no","translation":"Velg eller start en treningsøkt","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"no","translation":"Velg et mål, for eksempel Mail, og send rapporten til BodyMode Support. Rapporten inneholder ikke kropps- eller helsedata.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"no","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"no","translation":"Støtende innhold","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"no","translation":"Ukjent feil","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"no","translation":"Upassende innhold","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"no","translation":"Rapporter en upassende annonse","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"no","translation":"Ingen planlagt treningsøkt funnet","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"no","translation":"Ikke endre denne gangen","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"no","translation":"Ingen endring denne gangen","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"no","translation":"I dag: {{value1}} · {{value2}} sett","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"no","translation":"Start læringen på nytt i dag","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"no","translation":"Dagens 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"no","translation":"Forbereder dagens 3","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"no","translation":"Dagens treningsøkt","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"no","translation":"Fullfør dagens treningsøkt","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"no","translation":"Gjør dagens treningsøkt","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"no","translation":"Start dagens treningsøkt","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"no","translation":"Dagens registreringer","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"no","translation":"Dagens anbefaling","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"no","translation":"Dagens status","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"no","translation":"Dagens logg","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"no","translation":"Dagens form","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"no","translation":"Dagens fremgang","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"no","translation":"Gå til i dag","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"no","translation":"Dagens handlinger er her","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"no","translation":" elementer","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"no","translation":"Hvile","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"no","translation":"Hviletid","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"no","translation":"Angi hviletid med velgeren","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"no","translation":"Fremgangsbilder","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"no","translation":"Kroppssammensetning","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"no","translation":"Vekt","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"no","translation":"Kroppsvekt {{value1}} + ekstra vekt {{value2}} = referansebelastning {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"no","translation":"Kroppsvekt {{value1}} - assistanse {{value2}} = referansebelastning {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"no","translation":"Vekt · Valgfritt","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"no","translation":"Forbedre vekt og midjemål i et bærekraftig tempo","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"no","translation":"Vekt · Midje · Måltider · Fremgangsbilder","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"no","translation":"Hva er målet ditt?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"no","translation":"Opprett","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"no","translation":"Brukerveiledning","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"no","translation":"Vi lager treningsøkter med tilgjengelig utstyr","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"no","translation":"Tilgjengelig utstyr","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"no","translation":"Bare typene funksjoner du bruker, lagres på enheten. Vekt, bilder, måltidsdetaljer, puls, posisjon og notater registreres eller sendes ikke automatisk.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"no","translation":"Lagre","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"no","translation":"Gjennomgått med de lagrede registreringene dine.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"no","translation":"Hold helsedata atskilt fra annonsedata","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"no","translation":"Registrer noen få ting nå, og se gjennom alt senere.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"no","translation":"Ferdig","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"no","translation":"Slette alle data?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"no","translation":"Slett alle data","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"no","translation":"Eksporter alle registreringer som JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"no","translation":"Start med en helkroppsøkt","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"no","translation":"Bilde","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"no","translation":"Analyser et bilde med én gang","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"no","translation":"Følg fremgangen med bilder og målinger","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"no","translation":"Bilder og målinger er her","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"no","translation":"Registrer bilder og målinger","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"no","translation":"Ta bilde","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"no","translation":"Forbedre utseende, midje og muskelbalanse","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"no","translation":" min","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"no","translation":"min:sek","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"no","translation":"Lag en nybegynnerøkt","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"no","translation":"Se vurderingsdetaljer","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"no","translation":"Velg en annen handling","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"no","translation":"Hvilket utstyr er tilgjengelig?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"no","translation":"Del bruksanalyse","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"no","translation":"Slett bruksdata","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"no","translation":"Eksporter bruksdata","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"no","translation":"Fordeling av rådgivningsprioriteter","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"no","translation":"Bevegelse","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"no","translation":"Informasjon som ble brukt","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"no","translation":"Kontrollerer samtykkestatus","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"no","translation":"Hvem den passer for","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"no","translation":"Velg etter utstyr eller muskelgruppe","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"no","translation":" repetisjoner","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"no","translation":"Restitusjon","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"no","translation":"Repetisjoner","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"no","translation":"Angi repetisjoner med velgeren","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"no","translation":"Fast testannonse","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"no","translation":"Kom i gang","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"no","translation":"Grunnleggende informasjon · Valgfritt","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"no","translation":"Send rapport","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"no","translation":"Årsak til rapportering","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"no","translation":"Følg endringer her","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"no","translation":"Velg målinger du vil følge","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"no","translation":"Endre","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"no","translation":"Endringshistorikk","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"no","translation":"Kom i gang","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"no","translation":"Læring er satt på pause. Tidligere registreringer er ikke slettet.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"no","translation":"Ferdig","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"no","translation":"{{value1}} fullført","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"no","translation":"Fullført","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"no","translation":"Merk som fullført","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"no","translation":"Fullført","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"no","translation":"Ikke utført","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"no","translation":"Utfør","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"no","translation":"Jo mer du gjør, desto tydeligere blir neste steg","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"no","translation":"Resultatene dine forbedrer den neste AI-anbefalingen","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"no","translation":"Utvidet","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"no","translation":"Historikk","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"no","translation":" år","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"no","translation":"Ikke egnet for alderen","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"no","translation":"Annonse-ID ikke konfigurert","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"no","translation":"Annonser og databruk","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"no","translation":"Personverninnstillinger for annonser","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"no","translation":"Samtykke til annonser er ikke gitt.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"no","translation":"Produktnavn eller problem i annonsen","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"no","translation":"Annonser vises bare på iPhone. Helse-, måltids-, bilde- og BodyMode-posisjonsdata brukes ikke til å velge annonser.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"no","translation":"Rapporter annonse","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"no","translation":"Laster annonse","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"no","translation":"Annonser og personvern","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"no","translation":"Annonseleverandør","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"no","translation":"For annonselevering mottar Google IP-adressen din, grunnleggende informasjon om enheten og appen, SDK-diagnostikk- og ytelsesdata samt data om annonsevisninger og interaksjoner. Omtrentlig posisjon kan utledes fra IP-adressen. Vekt, puls, søvn, måltider, bilder, treningsøkter, mål, GPS-data og treningssenterposisjoner registrert i BodyMode inkluderes ikke i annonseforespørsler.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"no","translation":"Juster hvile med puls og RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"no","translation":"Puls og bevegelse","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"no","translation":"Kjønn","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"no","translation":"Kjønn · Valgfritt","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"no","translation":"Tilbake","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"no","translation":"Manuell registrering er fortsatt tilgjengelig.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"no","translation":"Coach: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"no","translation":"Tildelt coach","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"no","translation":"Spør coachen din","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"no","translation":"Coachens tilnærming","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"no","translation":"Når du endrer coachtype, endres hvilke registreringer AI prioriterer og hvilke anbefalinger du får.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"no","translation":"Tildelt trener: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"no","translation":"Ikke angitt","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"no","translation":"Test tilkobling","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"no","translation":"Følg den anbefalte treningsøkten på iPhone eller Apple Watch.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"no","translation":"Tilbakestill bare anbefalingslæring","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"no","translation":"Bare bannerannonser uten avbrudd","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"no","translation":"Registrer målinger","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"no","translation":" dager","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"no","translation":"Se gjennom etter dato","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"no","translation":"Daglig aktivitet","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"no","translation":"Gjennomgang av daglig anbefaling","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"no","translation":"Kunne ikke eksportere","review_note":""}

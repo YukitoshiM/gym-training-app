@@ -1,4 +1,5 @@
 import Foundation
+@preconcurrency import CoreLocation
 @preconcurrency import HealthKit
 @preconcurrency import UserNotifications
 import WatchKit
@@ -10,21 +11,21 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     @Published var selectedPlan: WatchWorkoutPlanSnapshot?
     @Published var activeSession: WatchWorkoutSessionSnapshot?
     @Published var pendingFinishedSession: WatchWorkoutSessionSnapshot?
-    @Published var statusMessage = "iPhoneからメニューを同期してください"
+    @Published var statusMessage = L10n.string("watch_widget.84664872f4c8", fallback: "iPhoneからメニューを同期してください")
     @Published var restRemaining = 0
     @Published var isRestTimerRunning = false
     @Published var restExerciseID: UUID?
     @Published var lastCompletedSession: WatchWorkoutSessionSnapshot?
     @Published var liveMetrics = WatchLiveWorkoutMetrics.empty
     @Published var motionEstimate = WatchMotionEstimate.empty
-    @Published var healthStatusMessage = "手入力で記録できます"
+    @Published var healthStatusMessage = L10n.string("watch_widget.abe1f768e53b", fallback: "手入力で記録できます")
     @Published var isHealthWorkoutActive = false
     @Published var isWorkoutPaused = false
     @Published var isSetCompletionSuggested = false
     @Published var restReadinessMessage: String?
     @Published var setStartSuggestion: WatchSetStartSuggestion?
     @Published var nextSetLoadSuggestion: WatchNextSetLoadSuggestion?
-    @Published var sensorPowerModeMessage = "通常サンプリング"
+    @Published var sensorPowerModeMessage = L10n.string("watch_widget.2f9be1574e74", fallback: "通常サンプリング")
     @Published var appearanceSettings: AppAppearanceSettings = .load()
     @Published var dailyRecommendation: WatchDailyRecommendationSnapshot?
     @Published var tempoCue: WatchTempoCue?
@@ -46,6 +47,10 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     var restEndsAt: Date?
     var workoutSession: HKWorkoutSession?
     var workoutBuilder: HKLiveWorkoutBuilder?
+    let workoutLocationManager = CLLocationManager()
+    var workoutRouteBuilder: HKWorkoutRouteBuilder?
+    var workoutRoutePointCount = 0
+    var outdoorGoalHapticSent = false
     var sensorPreferences = WatchSensorPreferences.default
     var userProfile: WatchUserProfileSnapshot?
     var activeSensorSet: (exerciseID: UUID, setID: UUID)?
@@ -67,6 +72,10 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     override init() {
         super.init()
+        workoutLocationManager.delegate = self
+        workoutLocationManager.activityType = .fitness
+        workoutLocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        workoutLocationManager.distanceFilter = 5
         WKInterfaceDevice.current().isBatteryMonitoringEnabled = true
         motionAnalyzer.onEstimateChanged = { [weak self] estimate in
             guard let self else { return }
@@ -116,7 +125,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     func startWorkout() {
         guard let selectedPlan else {
-            statusMessage = "今日のメニューを選んでください"
+            statusMessage = L10n.string("watch_widget.7624bd6c72ec", fallback: "今日のメニューを選んでください")
             return
         }
 
@@ -124,7 +133,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         activeSession?.healthKitSaveStatus = sensorPreferences.healthWorkoutEnabled ? .collecting : .unavailable
         stopRestTimer()
         resetSensorState()
-        statusMessage = "\(selectedPlan.name) を開始しました"
+        statusMessage = L10n.string("watch_widget.0bb63860cfdd", fallback: "{{value1}} を開始しました", values: [String(describing: selectedPlan.name)])
         saveActiveSession()
         beginSensorWorkout()
         startIdleMotionMonitoring()
@@ -145,7 +154,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     func startRecommendedWorkout() {
         guard let planID = dailyRecommendation?.preferredPlanID,
               let plan = plans.first(where: { $0.id == planID }) else {
-            statusMessage = "iPhoneで今日のメニューを確認してください"
+            statusMessage = L10n.string("watch_widget.8bdf19ffeed6", fallback: "iPhoneで今日のメニューを確認してください")
             return
         }
         selectPlan(plan)
@@ -155,7 +164,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
     func selectPlan(_ plan: WatchWorkoutPlanSnapshot) {
         guard plans.contains(where: { $0.id == plan.id }) else { return }
         selectedPlan = plan
-        statusMessage = "\(plan.name) を選択しました"
+        statusMessage = L10n.string("watch_widget.8c241f2be831", fallback: "{{value1}} を選択しました", values: [String(describing: plan.name)])
         WatchDiagnostics.shared.record(
             category: "workout.plan_selected",
             message: "Workout plan selected",
@@ -167,9 +176,44 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         )
     }
 
+    func startOutdoorWorkout(
+        activity: OutdoorCardioActivity,
+        target: OutdoorCardioTarget
+    ) {
+        guard activeSession == nil else { return }
+        let title: String = switch activity {
+        case .running: L10n.string("watch_widget.outdoor_running", fallback: "屋外ランニング")
+        case .walking: L10n.string("watch_widget.outdoor_walking", fallback: "屋外ウォーキング")
+        case .cycling: L10n.string("watch_widget.outdoor_cycling", fallback: "屋外サイクリング")
+        }
+        activeSession = WatchWorkoutSessionSnapshot(
+            sourcePlanID: nil,
+            title: title,
+            weightUnit: .kg,
+            exercises: [],
+            outdoorCardio: OutdoorCardioSnapshot(activity: activity, target: target)
+        )
+        activeSession?.healthKitSaveStatus = sensorPreferences.healthWorkoutEnabled ? .collecting : .unavailable
+        stopRestTimer()
+        resetSensorState()
+        statusMessage = L10n.string("watch_widget.outdoor_started", fallback: "{{value1}}を開始しました", values: [title])
+        saveActiveSession()
+        beginSensorWorkout()
+        sendLiveSessionUpdate(force: true)
+        WatchDiagnostics.shared.record(
+            category: "outdoor.started",
+            message: "Outdoor cardio workout started",
+            metadata: [
+                "session_id": activeSession?.id.uuidString ?? "unknown",
+                "activity": activity.rawValue,
+                "goal": target.kind.rawValue
+            ]
+        )
+    }
+
     func clearPlanSelection() {
         selectedPlan = nil
-        statusMessage = "今日のメニューを選んでください"
+        statusMessage = L10n.string("watch_widget.7624bd6c72ec", fallback: "今日のメニューを選んでください")
     }
 
     func cancelWorkout() {
@@ -182,7 +226,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         selectedPlan = nil
         stopRestTimer()
         UserDefaults.standard.removeObject(forKey: activeSessionStorageKey)
-        statusMessage = plans.isEmpty ? "iPhoneからメニューを同期してください" : "ワークアウトを破棄しました"
+        statusMessage = plans.isEmpty ? L10n.string("watch_widget.84664872f4c8", fallback: "iPhoneからメニューを同期してください") : L10n.string("watch_widget.66f5e3987c92", fallback: "ワークアウトを破棄しました")
         WatchDiagnostics.shared.record(
             category: "workout.cancelled",
             message: "Workout cancelled",
@@ -346,7 +390,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         _ = motionAnalyzer.stop()
         pauseTempoGuide()
         isWorkoutPaused = true
-        healthStatusMessage = "一時停止中"
+        healthStatusMessage = L10n.string("watch_widget.114f06b70d1a", fallback: "一時停止中")
         WatchDiagnostics.shared.record(category: "workout.paused", message: "Workout paused")
     }
 
@@ -360,7 +404,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
         }
         isWorkoutPaused = false
         resumeTempoGuide()
-        healthStatusMessage = isHealthWorkoutActive ? "心拍・消費エネルギーを計測中" : "手入力で記録中"
+        healthStatusMessage = isHealthWorkoutActive ? L10n.string("watch_widget.fdc98ee0d134", fallback: "心拍・消費エネルギーを計測中") : L10n.string("watch_widget.85d6ce62e862", fallback: "手入力で記録中")
         WatchDiagnostics.shared.record(category: "workout.resumed", message: "Workout resumed")
     }
 
@@ -572,12 +616,19 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     func finishWorkout() {
         guard var finished = activeSession else {
-            statusMessage = "完了するワークアウトがありません"
+            statusMessage = L10n.string("watch_widget.4fe891ea4590", fallback: "完了するワークアウトがありません")
             return
         }
         stopTempoGuide()
 
         finished.endedAt = Date()
+        if let distance = liveMetrics.distanceKilometers,
+           let cardio = finished.outdoorCardio {
+            finished.outdoorCardio = cardio.updating(
+                distanceKilometers: distance,
+                elapsedSeconds: liveMetrics.elapsedSeconds
+            )
+        }
         finished.sensorSummary = makeWorkoutSensorSummary(for: finished)
         finished.healthKitSaveStatus = finished.healthKitSaveStatus
             ?? (sensorPreferences.healthWorkoutEnabled ? .collecting : .unavailable)
@@ -755,7 +806,7 @@ final class WatchWorkoutStore: NSObject, ObservableObject {
 
     func resendPendingSession() {
         guard let pendingFinishedSession else {
-            statusMessage = "未送信のWatch記録はありません"
+            statusMessage = L10n.string("watch_widget.dd99ab962c51", fallback: "未送信のWatch記録はありません")
             return
         }
 

@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"kn","translation":"{{value1}} ಐಟಂಗಳು","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"kn","translation":"{{value1}}: ನಿಗದಿತ ದಿನಾಂಕದಲ್ಲಿ ಜಿಮ್ ಭೇಟಿ ಅಥವಾ ವರ್ಕೌಟ್ ದಾಖಲೆ ಕಂಡುಬಂದಿಲ್ಲ.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"kn","translation":"ಪ್ರತಿ ಸೆಷನ್ ಅವಧಿ","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"kn","translation":"ದೈನಂದಿನ ಪೋಷಣಾ ಗುರಿಗಳು","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"kn","translation":"3 ವರ್ಕೌಟ್‌ಗಳಲ್ಲಿ ಚಲನೆಗಳನ್ನು ಕಲಿಯಿರಿ","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"kn","translation":"AI ಜೊತೆ ವರ್ಕೌಟ್ ರಚಿಸಿ","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"kn","translation":"AI ಇಲ್ಲದಿದ್ದರೂ ಇಂದಿನ ಸಲಹೆಗಳು ಲಭ್ಯವಿರುತ್ತವೆ.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"kn","translation":"ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಸ್ಥಿತಿಯ ಬಗ್ಗೆ AI ಅನ್ನು ಕೇಳಿ","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"kn","translation":"AI ಅನ್ನು ಕೇಳಿ","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"kn","translation":"AI ಗೆ ಕಳುಹಿಸುವ ಡೇಟಾ","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"kn","translation":"AI ಕೋಚ್ ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ ಉಪಕರಣಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ ವರ್ಕೌಟ್ ಯೋಜನೆಗಳನ್ನು ರಚಿಸುತ್ತದೆ. ಕನಿಷ್ಠ ಒಂದು ಉಪಕರಣ ಯಾವಾಗಲೂ ಆಯ್ಕೆಯಾಗಿರುತ್ತದೆ.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"kn","translation":"AI ಸರ್ವರ್ ಬಳಸಿ ವಾರದ ಪ್ರತಿಕ್ರಿಯೆ ರಚಿಸಿ","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"kn","translation":"AI ಸರ್ವರ್ ಸಂಪರ್ಕಗೊಂಡಿದೆ","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"kn","translation":"AI ಮಾದರಿಯನ್ನು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"kn","translation":"AI ಕರಡುಗಳು ಮತ್ತು ವಾರದ ಪ್ರತಿಕ್ರಿಯೆ ಲಭ್ಯವಿಲ್ಲ, ಆದರೆ ಕೈಯಾರೆ ದಾಖಲಿಸಿದ ಮಾಹಿತಿಯನ್ನು ಉಳಿಸಬಹುದು.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"kn","translation":"AI ಕರಡುಗಳು ಮತ್ತು ವಾರದ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಬಳಸಲು, AI ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಆನ್ ಮಾಡಿ ನಂತರ ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"kn","translation":"AI ನವೀಕರಣ {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"kn","translation":"AI ಸಂಪರ್ಕ","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"kn","translation":"AI ವೈಶಿಷ್ಟ್ಯಗಳು ಆಫ್ ಆಗಿವೆ","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"kn","translation":"AI ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಿ","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"kn","translation":"AI ಪರಿಶೀಲನೆ ನಡೆಯುತ್ತಿದೆ","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"kn","translation":"AI ಪರಿಶೀಲಿಸಿದೆ","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"kn","translation":"AI ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಡೀಫಾಲ್ಟ್‌ಗೆ ಮರುಹೊಂದಿಸಿ","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"kn","translation":"API ಕೀ","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"kn","translation":"API ಕೀಯನ್ನು ಅಲ್ಪಾವಧಿಯ ಟೋಕನ್‌ಗಳನ್ನು ಪಡೆಯಲು ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ; ಸಾಮಾನ್ಯ AI ವಿನಂತಿಗಳೊಂದಿಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"kn","translation":"API ಸರ್ವರ್ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿದೆ, ಆದರೆ ಅಗತ್ಯ ಮಾದರಿ ಲಭ್ಯವಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"kn","translation":"API ಸರ್ವರ್ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿದೆ, ಆದರೆ ಆಹಾರ ಮತ್ತು ವರದಿಗಳ ಸಹಾಯಕ ಮಾದರಿ ಲಭ್ಯವಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"kn","translation":"API ಸರ್ವರ್ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿದೆ, ಆದರೆ ಚಿತ್ರ ಆಧಾರಿತ ಕ್ಯಾಲೊರಿ ಅಂದಾಜು ಲಭ್ಯವಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"kn","translation":"Apple Health ವರ್ಕೌಟ್‌ಗಳು","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"kn","translation":"ವರ್ಕೌಟ್ ಅನ್ನು Apple Watch ಗೆ ಸಿಂಕ್ ಮಾಡಿ","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"kn","translation":"Apple Watch ಲಾಗ್‌ಗಳು","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"kn","translation":"Apple Watch ಮತ್ತು ಸೆನ್ಸರ್‌ಗಳು","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"kn","translation":"BodyMode ಜಾಹೀರಾತು ವರದಿ","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"kn","translation":"BodyMode ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"kn","translation":"BodyMode ನಿರ್ವಹಣಾ AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"kn","translation":"Google ನ ಜಾಹೀರಾತು ಡೇಟಾ ಬಳಕೆ","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"kn","translation":"Google ಗೌಪ್ಯತಾ ನೀತಿ","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"kn","translation":"Health ಹಂಚಿಕೆ ಪರಿಶೀಲಿಸಿ","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"kn","translation":"Apple Watch ಮೂಲಕ ರೆಪ್ಸ್ ಅಂದಾಜಿಸಿ","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"kn","translation":"Apple Watch ಹ್ಯಾಪ್ಟಿಕ್ ಸೂಚನೆಗಳು","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"kn","translation":"{{value1}} / {{value2}} ಪೂರ್ಣ","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"kn","translation":"{{value1}} / {{value2}} ಸಾಧಿಸಲಾಗಿದೆ","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"kn","translation":"{{value1}}/6 ಪೂರ್ಣ","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"kn","translation":"{{value1}}/{{value2}} ರೆಪ್ಸ್","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"kn","translation":"{{value1}}{{value2}} ರೆಪ್ಸ್","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"kn","translation":"{{value1}} ಅವರ ಸಲಹೆ","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"kn","translation":"{{value1}} ಪರಿಶೀಲಿಸುತ್ತಿದೆ · ಸಲಹೆ ಲಭ್ಯವಿದೆ","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"kn","translation":"{{value1}} ಪರಿಶೀಲಿಸಿದೆ","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"kn","translation":"{{value1}} ಕುರಿತು ಇಂದು ಈ ಸಲಹೆ ನೀಡಿದ ಕಾರಣವನ್ನು ವಿವರಿಸಿ ಮತ್ತು ಹೊಂದಾಣಿಕೆಗಳನ್ನು ಸೂಚಿಸಿ.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"kn","translation":"{{value1}} ಅವರನ್ನು ಕೇಳಿ","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"kn","translation":"{{value1}} ಅವರ ಸಲಹೆ","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"kn","translation":"{{value1}} ಅವರ ಮೌಲ್ಯಮಾಪನ","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"kn","translation":"{{value1}} ಅವರ ಮೂಲ ಸಲಹೆ","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"kn","translation":"{{value1}} ಪರಿಶೀಲನೆಗಾಗಿ ಕಾಯುತ್ತಿದೆ · ಸಲಹೆ ಲಭ್ಯವಿದೆ","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"kn","translation":"{{value1}} ಅವರ ವಾರದ ವರದಿ","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"kn","translation":"ಪಿಕರ್ ಮೂಲಕ {{value1}} ಹೊಂದಿಸಿ","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"kn","translation":"{{value1}} ಅನ್ನು ಬೇರೆ ಕ್ರಿಯೆಯಿಂದ ಬದಲಿಸಿ","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"kn","translation":"{{value1}} ಲಭ್ಯವಿದೆ. {{value2}} ಕೋಚ್ ಪ್ರಕಾರಗಳನ್ನು ಪರಿಶೀಲಿಸಲಾಗಿದೆ.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"kn","translation":"{{value1}} ಅನ್ನು ಸಲಹೆ ಮಾಡಿದ ಕಾರಣ","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"kn","translation":"{{value1}} ತೆರೆಯಿರಿ","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"kn","translation":"{{value1}} ಸೆಟ್‌ಗಳು","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"kn","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"kn","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"kn","translation":"{{value1}} · {{value2}} ನವೀಕರಿಸಲಾಗಿದೆ","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"kn","translation":"{{value1}} · {{value2}} ಉಪಕರಣ ಪ್ರಕಾರಗಳು","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"kn","translation":"{{value1}} · ವಾರಕ್ಕೆ {{value2}} ದಿನಗಳು","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"kn","translation":"{{value1}} ಐಟಂಗಳು","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"kn","translation":"{{value1}} ಬಾರಿ","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"kn","translation":"{{value1}} ಪೂರ್ಣಗೊಂಡಿವೆ","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"kn","translation":"{{value1}} ವ್ಯಾಯಾಮಗಳು","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"kn","translation":"{{value1}} ವ್ಯಾಯಾಮಗಳು / {{value2}} ಸೆಟ್‌ಗಳು","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"kn","translation":"ಇಲ್ಲಿಂದ BodyMode ನೋಡಿಕೊಳ್ಳಲಿ. ಪ್ರತಿದಿನ ಗರಿಷ್ಠ ಮೂರು ಕ್ರಿಯೆಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"kn","translation":"ಮೌಲ್ಯಮಾಪನದ ವಿಶ್ವಾಸಾರ್ಹತೆಯನ್ನು ಹೆಚ್ಚಿಸುವ ಡೇಟಾ","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"kn","translation":"ಶಿಫಾರಸು ಮಾಡಿದ ಕೋಚ್ ಅನ್ವಯಿಸಿ","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"kn","translation":"ನಿಮ್ಮ ದಿನವನ್ನು ಇಲ್ಲಿ ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"kn","translation":"ಈ ವರ್ಕೌಟ್ ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"kn","translation":"ಈ ಗುರಿಯನ್ನು ಬಳಸಿ","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"kn","translation":"ಈ ಗುರಿಗೆ ಕೋಚ್","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"kn","translation":"ಈ ಕ್ರಿಯೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿದ ಕಾರಣ","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"kn","translation":"ಎಲ್ಲಾ ಕೋಚ್‌ಗಳು","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"kn","translation":"ಇತರೆ","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"kn","translation":"ಪ್ರೋಟೀನ್","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"kn","translation":"ಇದು ಮಾಡಲಾಗದವು","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"kn","translation":"ಮೊದಲು ಸಾಧನದಲ್ಲಿರುವ ದಾಖಲೆಗಳಿಂದ ರಚಿಸಲಾಗುತ್ತದೆ; ಅಗತ್ಯವಿದ್ದಾಗ ಮಾತ್ರ AI ಹೊಂದಾಣಿಕೆ ಮಾಡುತ್ತದೆ.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"kn","translation":"ಹೆಚ್ಚಾಗಿ ಬಳಸುವ ವರ್ಕೌಟ್ ಉಳಿಸಿ","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"kn","translation":"ಕ್ಯಾಲೊರಿಗಳು","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"kn","translation":"ಕ್ಯಾಲೊರಿಗಳು / ಮ್ಯಾಕ್ರೋಗಳು","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"kn","translation":"ಕ್ಯಾಲೊರಿ ಅಂದಾಜು ಮಾದರಿಯನ್ನು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"kn","translation":"ರದ್ದುಮಾಡಿ","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"kn","translation":"ತ್ವರಿತ ದಾಖಲೆ","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"kn","translation":"ಸರ್ವರ್ URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"kn","translation":"ನಾನು ಜಿಮ್‌ಗೆ ಬಂದಿದ್ದೇನೆ","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"kn","translation":"ಜಿಮ್ ಭೇಟಿಗಳು","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"kn","translation":"ಜಿಮ್ ಭೇಟಿಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ದಾಖಲಿಸಿ","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"kn","translation":"ಬಿಟ್ಟುಬಿಡಿ","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"kn","translation":"ಸೆನ್ಸರ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲದಿದ್ದರೂ ತೂಕ, ರೆಪ್ಸ್ ಮತ್ತು RPE ಅನ್ನು ಕೈಯಾರೆ ನಮೂದಿಸಬಹುದು. ಕಡಿಮೆ ವಿದ್ಯುತ್ ಸ್ಯಾಂಪ್ಲಿಂಗ್ ಚಲನೆಯ ಅಂದಾಜು ನವೀಕರಣದ ಆವರ್ತನವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"kn","translation":"ಪರೀಕ್ಷಾ ಜಾಹೀರಾತು","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"kn","translation":"ಡೇಟಾ","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"kn","translation":"ಡೇಟಾ ಪೂರ್ಣತೆ {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"kn","translation":"ಟ್ರೈನರ್‌ಗಳು: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"kn","translation":"ವರ್ಕೌಟ್","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"kn","translation":"3 ವರ್ಕೌಟ್‌ಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"kn","translation":"ವರ್ಕೌಟ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"kn","translation":"ವರ್ಕೌಟ್ ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"kn","translation":"ಆವೃತ್ತಿ: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"kn","translation":"ವೈಯಕ್ತೀಕರಿಸದ","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"kn","translation":"ವೈಯಕ್ತೀಕರಣ ಆಫ್","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"kn","translation":"ಮುಕ್ತ ವರ್ಕೌಟ್","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"kn","translation":"ಗೌಪ್ಯತೆ","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"kn","translation":"ಪ್ರೊಫೈಲ್","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"kn","translation":"ಸಹಾಯ","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"kn","translation":"ಮುಖಪುಟ","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"kn","translation":"ನಿಮ್ಮ ವರ್ಕೌಟ್‌ಗಳು ಇಲ್ಲಿವೆ","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"kn","translation":"ವರ್ಕೌಟ್ ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"kn","translation":"Mail ಮುಂತಾದ ಗಮ್ಯಸ್ಥಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ವರದಿಯನ್ನು BodyMode Support ಗೆ ಕಳುಹಿಸಿ. ವರದಿಯಲ್ಲಿ ದೇಹ ಅಥವಾ ಆರೋಗ್ಯ ದಾಖಲೆಗಳು ಇರುವುದಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"kn","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"kn","translation":"ಅಪಮಾನಕಾರಿ ವಿಷಯ","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"kn","translation":"ತಿಳಿಯದ ದೋಷ","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"kn","translation":"ಅನುಚಿತ ವಿಷಯ","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"kn","translation":"ಅನುಚಿತ ಜಾಹೀರಾತನ್ನು ವರದಿ ಮಾಡಿ","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"kn","translation":"ನಿಗದಿತ ವರ್ಕೌಟ್ ಕಂಡುಬಂದಿಲ್ಲ","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"kn","translation":"ಈ ಬಾರಿ ಬದಲಿಸಬೇಡಿ","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"kn","translation":"ಈ ಬಾರಿ ಬದಲಾವಣೆ ಬೇಡ","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"kn","translation":"ಇಂದು: {{value1}} · {{value2}} ಸೆಟ್‌ಗಳು","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"kn","translation":"ಇಂದಿನಿಂದ ಮತ್ತೆ ಕಲಿಯಲು ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"kn","translation":"ಇಂದಿನ 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"kn","translation":"ಇಂದಿನ 3 ಅನ್ನು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"kn","translation":"ಇಂದಿನ ವರ್ಕೌಟ್","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"kn","translation":"ಇಂದಿನ ವರ್ಕೌಟ್ ಪೂರ್ಣಗೊಳಿಸಿ","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"kn","translation":"ಇಂದಿನ ವರ್ಕೌಟ್ ಮಾಡಿ","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"kn","translation":"ಇಂದಿನ ವರ್ಕೌಟ್ ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"kn","translation":"ಇಂದಿನ ನಮೂದುಗಳು","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"kn","translation":"ಇಂದಿನ ಸಲಹೆ","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"kn","translation":"ಇಂದಿನ ಸ್ಥಿತಿ","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"kn","translation":"ಇಂದಿನ ದಾಖಲೆ","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"kn","translation":"ಇಂದಿನ ಸಿದ್ಧತೆ","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"kn","translation":"ಇಂದಿನ ಪ್ರಗತಿ","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"kn","translation":"ಇಂದಿಗೆ ಸರಿಸಿ","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"kn","translation":"ಇಂದಿನ ಕ್ರಿಯೆಗಳು ಇಲ್ಲಿವೆ","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"kn","translation":" ಐಟಂಗಳು","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"kn","translation":"ವಿಶ್ರಾಂತಿ","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"kn","translation":"ವಿಶ್ರಾಂತಿ ಸಮಯ","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"kn","translation":"ಪಿಕರ್ ಮೂಲಕ ವಿಶ್ರಾಂತಿ ಸಮಯ ಹೊಂದಿಸಿ","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"kn","translation":"ಪ್ರಗತಿ ಫೋಟೋಗಳು","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"kn","translation":"ದೇಹ ಸಂಯೋಜನೆ","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"kn","translation":"ತೂಕ","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"kn","translation":"ದೇಹದ ತೂಕ {{value1}} + ಹೆಚ್ಚುವರಿ ತೂಕ {{value2}} = ಉಲ್ಲೇಖ ಭಾರ {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"kn","translation":"ದೇಹದ ತೂಕ {{value1}} - ಸಹಾಯ {{value2}} = ಉಲ್ಲೇಖ ಭಾರ {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"kn","translation":"ತೂಕ · ಐಚ್ಛಿಕ","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"kn","translation":"ದೀರ್ಘಕಾಲ ಅನುಸರಿಸಬಹುದಾದ ವೇಗದಲ್ಲಿ ತೂಕ ಮತ್ತು ಸೊಂಟದ ಅಳತೆಯನ್ನು ಸುಧಾರಿಸಿ","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"kn","translation":"ತೂಕ · ಸೊಂಟ · ಆಹಾರ · ಪ್ರಗತಿ ಫೋಟೋಗಳು","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"kn","translation":"ನಿಮ್ಮ ಗುರಿ ಏನು?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"kn","translation":"ರಚಿಸಿ","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"kn","translation":"ಬಳಕೆದಾರ ಮಾರ್ಗದರ್ಶಿ","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"kn","translation":"ಲಭ್ಯವಿರುವ ಉಪಕರಣಗಳಿಂದ ವರ್ಕೌಟ್‌ಗಳನ್ನು ರಚಿಸುತ್ತೇವೆ","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"kn","translation":"ಲಭ್ಯವಿರುವ ಉಪಕರಣಗಳು","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"kn","translation":"ನೀವು ಬಳಸುವ ವೈಶಿಷ್ಟ್ಯಗಳ ಪ್ರಕಾರಗಳನ್ನು ಮಾತ್ರ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಉಳಿಸಲಾಗುತ್ತದೆ. ತೂಕ, ಫೋಟೋಗಳು, ಆಹಾರದ ವಿವರಗಳು, ಹೃದಯ ಬಡಿತ, ಸ್ಥಳ ಮತ್ತು ಟಿಪ್ಪಣಿಗಳನ್ನು ದಾಖಲಿಸಲಾಗುವುದಿಲ್ಲ ಅಥವಾ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"kn","translation":"ಉಳಿಸಿ","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"kn","translation":"ನೀವು ಉಳಿಸಿದ ದಾಖಲೆಗಳನ್ನು ಬಳಸಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"kn","translation":"ಆರೋಗ್ಯ ದಾಖಲೆಗಳನ್ನು ಜಾಹೀರಾತು ಡೇಟಾದಿಂದ ಪ್ರತ್ಯೇಕವಾಗಿಡಿ","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"kn","translation":"ಈಗ ಕೆಲವು ವಿಷಯಗಳನ್ನು ದಾಖಲಿಸಿ, ನಂತರ ಎಲ್ಲವನ್ನೂ ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಿ.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"kn","translation":"ಮುಗಿದಿದೆ","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"kn","translation":"ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಬೇಕೆ?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"kn","translation":"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"kn","translation":"ಎಲ್ಲಾ ದಾಖಲೆಗಳನ್ನು JSON ಆಗಿ ರಫ್ತು ಮಾಡಿ","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"kn","translation":"ಪೂರ್ಣ ದೇಹದ ವರ್ಕೌಟ್‌ನಿಂದ ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"kn","translation":"ಫೋಟೋ","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"kn","translation":"ಫೋಟೋವನ್ನು ತಕ್ಷಣ ವಿಶ್ಲೇಷಿಸಿ","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"kn","translation":"ಫೋಟೋಗಳು ಮತ್ತು ಅಳತೆಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಪ್ರಗತಿಯನ್ನು ಗಮನಿಸಿ","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"kn","translation":"ಫೋಟೋಗಳು ಮತ್ತು ಅಳತೆಗಳು ಇಲ್ಲಿವೆ","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"kn","translation":"ಫೋಟೋಗಳು ಮತ್ತು ಅಳತೆಗಳನ್ನು ದಾಖಲಿಸಿ","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"kn","translation":"ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"kn","translation":"ದೇಹದ ರೂಪ, ಸೊಂಟ ಮತ್ತು ಸ್ನಾಯು ಸಮತೋಲನವನ್ನು ಸುಧಾರಿಸಿ","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"kn","translation":" ನಿಮಿಷ","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"kn","translation":"ನಿಮಿಷ:ಸೆಕೆಂಡ್","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"kn","translation":"ಆರಂಭಿಕರ ವರ್ಕೌಟ್ ರಚಿಸಿ","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"kn","translation":"ಮೌಲ್ಯಮಾಪನ ವಿವರಗಳನ್ನು ನೋಡಿ","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"kn","translation":"ಬೇರೆ ಕ್ರಿಯೆ ಆಯ್ಕೆಮಾಡಿ","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"kn","translation":"ಯಾವ ಉಪಕರಣಗಳು ಲಭ್ಯವಿವೆ?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"kn","translation":"ಬಳಕೆ ವಿಶ್ಲೇಷಣೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"kn","translation":"ಬಳಕೆ ಡೇಟಾ ಅಳಿಸಿ","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"kn","translation":"ಬಳಕೆ ಡೇಟಾ ರಫ್ತು ಮಾಡಿ","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"kn","translation":"ಸಲಹೆಯ ಆದ್ಯತಾ ಸಮತೋಲನ","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"kn","translation":"ಚಲನೆ","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"kn","translation":"ಬಳಸಿದ ಮಾಹಿತಿ","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"kn","translation":"ಸಮ್ಮತಿ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"kn","translation":"ಇದು ಯಾರಿಗಾಗಿ","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"kn","translation":"ಉಪಕರಣ ಅಥವಾ ಸ್ನಾಯು ಗುಂಪಿನ ಪ್ರಕಾರ ಆಯ್ಕೆಮಾಡಿ","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"kn","translation":" ರೆಪ್ಸ್","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"kn","translation":"ಚೇತರಿಕೆ","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"kn","translation":"ರೆಪ್ಸ್","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"kn","translation":"ಪಿಕರ್ ಮೂಲಕ ರೆಪ್ಸ್ ಹೊಂದಿಸಿ","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"kn","translation":"ಸ್ಥಿರ ಪರೀಕ್ಷಾ ಜಾಹೀರಾತು","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"kn","translation":"ಪ್ರಾರಂಭಿಸುವ ವಿಧಾನ","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"kn","translation":"ಮೂಲ ಮಾಹಿತಿ · ಐಚ್ಛಿಕ","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"kn","translation":"ವರದಿ ಕಳುಹಿಸಿ","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"kn","translation":"ವರದಿ ಮಾಡುವ ಕಾರಣ","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"kn","translation":"ಬದಲಾವಣೆಗಳನ್ನು ಇಲ್ಲಿ ಗಮನಿಸಿ","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"kn","translation":"ಗಮನಿಸಬೇಕಾದ ಅಳತೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"kn","translation":"ಬದಲಿಸಿ","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"kn","translation":"ಬದಲಾವಣೆ ಇತಿಹಾಸ","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"kn","translation":"ಪ್ರಾರಂಭಿಸಿ","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"kn","translation":"ಕಲಿಕೆ ವಿರಾಮದಲ್ಲಿದೆ. ನಿಮ್ಮ ಹಿಂದಿನ ದಾಖಲೆಗಳನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"kn","translation":"ಮುಗಿದಿದೆ","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"kn","translation":"{{value1}} ಪೂರ್ಣಗೊಂಡಿದೆ","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"kn","translation":"ಪೂರ್ಣಗೊಂಡಿದೆ","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"kn","translation":"ಪೂರ್ಣ ಎಂದು ಗುರುತಿಸಿ","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"kn","translation":"ಪೂರ್ಣಗೊಂಡಿದೆ","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"kn","translation":"ಮಾಡಲಿಲ್ಲ","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"kn","translation":"ಮಾಡಿ","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"kn","translation":"ನೀವು ಹೆಚ್ಚು ಮಾಡಿದಂತೆ ಮುಂದಿನ ಹೆಜ್ಜೆ ಇನ್ನಷ್ಟು ಸ್ಪಷ್ಟವಾಗುತ್ತದೆ","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"kn","translation":"ನಿಮ್ಮ ಫಲಿತಾಂಶಗಳು ಮುಂದಿನ AI ಸಲಹೆಯನ್ನು ಸುಧಾರಿಸುತ್ತವೆ","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"kn","translation":"ವಿಸ್ತರಿಸಲಾಗಿದೆ","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"kn","translation":"ಇತಿಹಾಸ","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"kn","translation":" ವರ್ಷಗಳು","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"kn","translation":"ವಯಸ್ಸಿಗೆ ಸೂಕ್ತವಲ್ಲ","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"kn","translation":"ಜಾಹೀರಾತು ID ಹೊಂದಿಸಲಾಗಿಲ್ಲ","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"kn","translation":"ಜಾಹೀರಾತುಗಳು ಮತ್ತು ಡೇಟಾ ಬಳಕೆ","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"kn","translation":"ಜಾಹೀರಾತು ಗೌಪ್ಯತಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"kn","translation":"ಜಾಹೀರಾತು ಸಮ್ಮತಿ ನೀಡಲಾಗಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"kn","translation":"ಜಾಹೀರಾತಿನಲ್ಲಿ ಕಂಡ ಉತ್ಪನ್ನದ ಹೆಸರು ಅಥವಾ ಸಮಸ್ಯೆ","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"kn","translation":"ಜಾಹೀರಾತುಗಳು iPhone ನಲ್ಲಿ ಮಾತ್ರ ಕಾಣಿಸುತ್ತವೆ. ಆರೋಗ್ಯ, ಆಹಾರ, ಫೋಟೋ ಮತ್ತು BodyMode ಸ್ಥಳ ದಾಖಲೆಗಳನ್ನು ಜಾಹೀರಾತು ಆಯ್ಕೆಗಾಗಿ ಬಳಸುವುದಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"kn","translation":"ಜಾಹೀರಾತನ್ನು ವರದಿ ಮಾಡಿ","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"kn","translation":"ಜಾಹೀರಾತು ಲೋಡ್ ಆಗುತ್ತಿದೆ","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"kn","translation":"ಜಾಹೀರಾತುಗಳು ಮತ್ತು ಗೌಪ್ಯತೆ","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"kn","translation":"ಜಾಹೀರಾತು ಪೂರೈಕೆದಾರ","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"kn","translation":"ಜಾಹೀರಾತು ವಿತರಣೆಗಾಗಿ Google ನಿಮ್ಮ IP ವಿಳಾಸ, ಸಾಧನ ಮತ್ತು ಆ್ಯಪ್‌ನ ಮೂಲ ಮಾಹಿತಿ, SDK ರೋಗನಿರ್ಣಯ ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತಾ ಡೇಟಾ, ಹಾಗೂ ಜಾಹೀರಾತು ಪ್ರದರ್ಶನ ಮತ್ತು ಸಂವಹನ ಡೇಟಾವನ್ನು ಪಡೆಯುತ್ತದೆ. IP ವಿಳಾಸದಿಂದ ನಿಮ್ಮ ಅಂದಾಜು ಸ್ಥಳವನ್ನು ನಿರ್ಧರಿಸಬಹುದು. BodyMode ನಲ್ಲಿ ದಾಖಲಿಸಿದ ತೂಕ, ಹೃದಯ ಬಡಿತ, ನಿದ್ರೆ, ಆಹಾರ, ಫೋಟೋಗಳು, ವರ್ಕೌಟ್‌ಗಳು, ಗುರಿಗಳು, GPS ಡೇಟಾ ಮತ್ತು ಜಿಮ್ ಸ್ಥಳಗಳನ್ನು ಜಾಹೀರಾತು ವಿನಂತಿಗಳಲ್ಲಿ ಸೇರಿಸಲಾಗುವುದಿಲ್ಲ.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"kn","translation":"ಹೃದಯ ಬಡಿತ ಮತ್ತು RPE ಬಳಸಿ ವಿಶ್ರಾಂತಿಯನ್ನು ಹೊಂದಿಸಿ","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"kn","translation":"ಹೃದಯ ಬಡಿತ ಮತ್ತು ಚಲನೆ","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"kn","translation":"ಲಿಂಗ","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"kn","translation":"ಲಿಂಗ · ಐಚ್ಛಿಕ","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"kn","translation":"ಹಿಂದೆ","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"kn","translation":"ಕೈಯಾರೆ ದಾಖಲಿಸುವುದು ಇನ್ನೂ ಲಭ್ಯವಿದೆ.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"kn","translation":"ಕೋಚ್: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"kn","translation":"ನಿಯೋಜಿತ ಕೋಚ್","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"kn","translation":"ನಿಮ್ಮ ಕೋಚ್ ಅನ್ನು ಕೇಳಿ","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"kn","translation":"ಕೋಚ್ ವಿಧಾನ","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"kn","translation":"ಕೋಚ್ ಪ್ರಕಾರವನ್ನು ಬದಲಿಸಿದರೆ AI ಯಾವ ದಾಖಲೆಗಳಿಗೆ ಆದ್ಯತೆ ನೀಡುತ್ತದೆ ಮತ್ತು ಯಾವ ಸಲಹೆಗಳನ್ನು ನೀಡುತ್ತದೆ ಎಂಬುದು ಬದಲಾಗುತ್ತದೆ.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"kn","translation":"ನಿಯೋಜಿತ ಟ್ರೈನರ್: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"kn","translation":"ನಿರ್ದಿಷ್ಟಪಡಿಸಿಲ್ಲ","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"kn","translation":"ಸಂಪರ್ಕ ಪರೀಕ್ಷಿಸಿ","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"kn","translation":"iPhone ಅಥವಾ Apple Watch ನಲ್ಲಿ ಶಿಫಾರಸು ಮಾಡಿದ ವರ್ಕೌಟ್ ಅನುಸರಿಸಿ.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"kn","translation":"ಸಲಹೆ ಕಲಿಕೆಯನ್ನು ಮಾತ್ರ ಮರುಹೊಂದಿಸಿ","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"kn","translation":"ಅಡ್ಡಿಪಡಿಸದ ಬ್ಯಾನರ್ ಜಾಹೀರಾತುಗಳು ಮಾತ್ರ","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"kn","translation":"ಅಳತೆಗಳನ್ನು ದಾಖಲಿಸಿ","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"kn","translation":" ದಿನಗಳು","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"kn","translation":"ದಿನಾಂಕದ ಪ್ರಕಾರ ಪರಿಶೀಲಿಸಿ","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"kn","translation":"ದೈನಂದಿನ ಚಟುವಟಿಕೆ","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"kn","translation":"ದೈನಂದಿನ ಸಲಹೆ ಪರಿಶೀಲನೆ","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"kn","translation":"ರಫ್ತು ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ","review_note":""}

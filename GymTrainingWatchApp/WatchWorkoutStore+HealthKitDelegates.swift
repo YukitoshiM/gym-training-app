@@ -14,7 +14,7 @@ extension WatchWorkoutStore: HKWorkoutSessionDelegate {
             case .running:
                 isHealthWorkoutActive = true
             case .paused:
-                healthStatusMessage = "Healthワークアウト一時停止中"
+                healthStatusMessage = L10n.string("watch_widget.152f186dda7a", fallback: "Healthワークアウト一時停止中")
             case .ended, .stopped:
                 isHealthWorkoutActive = false
             case .notStarted, .prepared:
@@ -28,7 +28,7 @@ extension WatchWorkoutStore: HKWorkoutSessionDelegate {
     nonisolated func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
         Task { @MainActor [weak self] in
             guard let self else { return }
-            setHealthFallback(status: .failed, message: "Health計測停止・手入力は継続中")
+            setHealthFallback(status: .failed, message: L10n.string("watch_widget.eeccc1fae145", fallback: "Health計測停止・手入力は継続中"))
             WatchDiagnostics.shared.record(
                 level: "error",
                 category: "health.session",

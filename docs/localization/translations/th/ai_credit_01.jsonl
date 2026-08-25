@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "th", "translation": "บัญชี AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "th", "translation": "ใช้ {{value1}} ครีดิตในครั้งนี้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "th", "translation": "เพิ่ม ครีดิต", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "th", "translation": "ปรับยอดคงเหลือ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "th", "translation": "ใช้ ครีดิตเพื่อวิเคราะห์อัตโนมัติ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "th", "translation": "ไม่ใช้ ครีดิต, ใช้เฉพาะข้อมูลในเครื่อง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "th", "translation": "ใช้ ครีดิตสำหรับรายงานรายสัปดาห์หรือรายเดือนเมื่อเริ่มการทำงาน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "th", "translation": "ยอด ครีดิต", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "th", "translation": "กำลังตรวจสอบยอดคงเหลือ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "th", "translation": "ยอดคงเหลือ {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "th", "translation": "{{value1}} ครีดิตได้รับแล้ว", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "th", "translation": "ซื้อ ครีดิต", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "th", "translation": "ใช้ AI ต่อ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "th", "translation": "ลบข้อมูลทั้งหมดและบัญชี BodyMode, ยอดคงเหลือที่เหลือจะหายไปและไม่สามารถกู้คืนได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "th", "translation": "ประวัติการใช้ ครีดิต", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "th", "translation": "รับ ครีดิตจากวิดีโอ หรือซื้อตามต้องการ, การบันทึกด้วยตนเองยังคงใช้งานได้ฟรี", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "th", "translation": "รับจากโฆษณา หรือซื้อ ครีดิต, การบันทึกด้วยตนเองยังคงใช้งานได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "th", "translation": "ยอด ครีดิตไม่เพียงพอ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "th", "translation": "รายงานรายเดือน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "th", "translation": "ไม่มีวันหมดอายุ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "th", "translation": "{{value1}} ครีดิต", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "th", "translation": "กำลังเตรียมสินค้าสำหรับการซื้อ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "th", "translation": "กำลังปรับยอดเงินคืน และเพิ่มเครดิต {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "th", "translation": "เพิ่มเครดิตแล้ว", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "th", "translation": "กำลังรอการอนุมัติ โปรแกรมจะแสดงผลโดยอัตโนมัติเมื่อเสร็จสมบูรณ์", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "th", "translation": "เครดิตสำหรับการซื้อจะไม่หมดอายุ ไม่สามารถโอนหรือแลกเปลี่ยนได้ แม้ซื้อแล้วก็ยังแสดงโฆษณาได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "th", "translation": "ไม่สามารถตรวจสอบสถานะการซื้อได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "th", "translation": "ไม่สามารถตรวจสอบการซื้อจาก App Store ได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "th", "translation": "ปรับยอดเงินคืน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "th", "translation": "คุณได้รับโบนัสโฆษณาแล้วสำหรับวันนี้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "th", "translation": "กำลังดำเนินการตรวจสอบวิดีโอ โปรแกรมจะแสดงผลเครดิตหลังจากตรวจสอบเสร็จ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "th", "translation": "เปิดแอป AI ใหม่เพื่อดูยอดคงเหลือล่าสุด ไม่จำเป็นต้องดูวิดีโออีกครั้ง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "th", "translation": "ได้รับ 5 เครดิต", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "th", "translation": "เซสชันหมดอายุ กรุณาเข้าสู่ระบบอีกครั้ง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "th", "translation": "เข้าสู่ระบบด้วย Apple แล้ว", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "th", "translation": "ลงทะเบียนกับ Apple ผ่านแอป AI เพื่อรับเครดิตครั้งแรก สามารถใช้งานบันทึกด้วยตนเองได้โดยไม่ต้องลงทะเบียน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "th", "translation": "สำหรับใช้ฟังก์ชัน AI โปรดลงทะเบียนใน Apple", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "th", "translation": "กำลังลงทะเบียน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "th", "translation": "รับ 20 เครดิตเมื่อลงทะเบียนใน Apple ไม่มีการชำระเงินหรืออัปเดตอัตโนมัติ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "th", "translation": "รับ 20 เครดิตเมื่อลงทะเบียนใน Apple ไม่มีค่าใช้จ่ายและไม่สามารถยกเลิกได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "th", "translation": "รับ 20 เครดิตด้วยการลงทะเบียน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "th", "translation": "โฆษณา (รับเครดิต)", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "th", "translation": "ได้รับจากผู้ดูแลระบบ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "th", "translation": "ซื้อ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "th", "translation": "รับเครดิตเมื่อสมัครสมาชิกครั้งแรก", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "th", "translation": "เริ่มต้นใช้งาน AI เทรนเนอร์", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "th", "translation": "เครดิต AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "th", "translation": "ลองอีกครั้งในภายหลัง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "th", "translation": "ใช้ได้ไม่จำกัด", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "th", "translation": "รับ 5 เครดิตจากการดูโฆษณา", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "th", "translation": "รายงานรายสัปดาห์", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

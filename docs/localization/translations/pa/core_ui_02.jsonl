@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"pa","translation":"सबसे करीब वाला एक विकल्प चुनें","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"pa","translation":"जब आप अपना लक्ष्य निर्धारित कर लें, तो हर दिन करने के लिए 3 चीजें ही तय करें।","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"pa","translation":"पहला प्रशिक्षण पूरा करें।","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"pa","translation":"पहले मान दर्ज करें।","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"pa","translation":"अधिकतम 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"pa","translation":"जिन क्षेत्रों में जानकारी नहीं दी गई है, उन्हें बाद में रिकॉर्डिंग स्क्रीन से जोड़ा जा सकता है।","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"pa","translation":"अधूरा","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"pa","translation":"नहीं किया गया","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"pa","translation":"रिकॉर्ड नहीं किया गया","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"pa","translation":"न सेट किया गया","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"pa","translation":"चयनित नहीं","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"pa","translation":"अब लक्ष्य के अनुसार मेनू देखें","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"pa","translation":"आगे बढ़ें","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"pa","translation":"पैरों की संख्या देखें","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"pa","translation":"वजन कम करना","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"pa","translation":"कार्बोहाइड्रेट","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"pa","translation":"अमान्य","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"pa","translation":"अपनी क्षमता के अनुसार व्यायाम की संख्या और समय निर्धारित करें।","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"pa","translation":"विशेष रूप से ध्यान दें","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"pa","translation":"स्थिति और अगले चरण को जानें","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"pa","translation":"स्थिति की जाँच करें","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"pa","translation":"वर्तमान","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"pa","translation":"वर्तमान शारीरिक जानकारी","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"pa","translation":"वर्तमान में उपलब्ध नहीं","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"pa","translation":"वर्तमान में प्राप्त रिकॉर्ड और सेटिंग्स का उपयोग किया गया।","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"pa","translation":"वर्तमान में चयनित: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"pa","translation":"अपने आदर्श शरीर की ओर, बिना किसी हिचकिचाहट के आगे बढ़ें।","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"pa","translation":"कारण","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"pa","translation":"कारण: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"pa","translation":"जन्म तिथि","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"pa","translation":"स्क्रीन टूर शुरू करें","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"pa","translation":"पंजीकृत मेनू {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"pa","translation":"वांछित स्थिति","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"pa","translation":"वांछित शैली","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"pa","translation":"लक्ष्य","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"pa","translation":"लक्ष्य {{value1}} / अंतर {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"pa","translation":"लक्ष्य और गति","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"pa","translation":"लक्ष्य और परिणाम","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"pa","translation":"लक्ष्य को समायोजित करने के विकल्प","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"pa","translation":"लक्ष्य निर्धारित नहीं","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"pa","translation":"लक्ष्य प्राप्ति","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"pa","translation":"उद्देश","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"pa","translation":"प्रत्येक उद्देश्य के लिए, हमने दो व्यक्तियों को शामिल किया है। व्यक्ति बदलने से, आदर्श शरीर और बातचीत बदल जाएगी।","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"pa","translation":"उद्देश के अनुसार सही व्यक्ति","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"pa","translation":"उद्देश के अनुसार, होम पेज पर जांचने के बिंदु और आगे क्या करना है, इसे बदलें।","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"pa","translation":"उद्देश बदलना","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"pa","translation":"उद्देश का चयन करें","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"pa","translation":"उद्देश मोड","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"pa","translation":"उद्देश और लक्ष्य","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"pa","translation":"उद्देश के अनुसार मेनू खुल गया है","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"pa","translation":"उद्देश के अनुसार मेनू देखें","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"pa","translation":"नवीनतम","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"pa","translation":"सलाह लेकर सुधार करें","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"pa","translation":"ऊर्जा बचाने वाला नमूना","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"pa","translation":"शुरू करें {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"pa","translation":"नींद और पुनर्प्राप्ति","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"pa","translation":"जाँच में","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"pa","translation":"सेकंड","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"pa","translation":"सेकंड की संख्या","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"pa","translation":"अभ्यास खोजें या जोड़ें","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"pa","translation":"अपने डिवाइस के लिए अल्पकालिक प्रमाणीकरण का उपयोग करें।","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"pa","translation":"डिवाइस के भीतर","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"pa","translation":"प्रतिस्पर्धात्मकता","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"pa","translation":"मांसपेशियों का व्यायाम","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"pa","translation":"मांसपेशियों की ताकत, फिटनेस और रिकवरी को प्रतिस्पर्धा में शामिल करना","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"pa","translation":"मांसपेशियों की मात्रा और प्रशिक्षण के अनुभव को बढ़ाना","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"pa","translation":"मांसपेशियों का विकास","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"pa","translation":"अनुभव","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"pa","translation":"अनुभव स्तर","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"pa","translation":"वह गति जिस पर आप जारी रख सकते हैं।","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"pa","translation":"यह आपकी क्षमताओं या योग्यताओं का मूल्यांकन नहीं है। यह बताता है कि किस पहलू पर ध्यान केंद्रित करना है।","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"pa","translation":"वसा","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"pa","translation":"पेट का घेरा","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"pa","translation":"पेट का घेरा - वैकल्पिक","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"pa","translation":"व्यवहार के पैटर्न को सीखें","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"pa","translation":"व्यवहार की सूचनाएं","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"pa","translation":"प्रदर्शन","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"pa","translation":"प्रदर्शन मोड","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"pa","translation":"प्रदर्शन का तरीका","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"pa","translation":"प्रदर्शन नीति","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"pa","translation":"सहायक मॉडल कनेक्ट नहीं है","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"pa","translation":"टिप्पणी","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"pa","translation":"टिप्पणी: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"pa","translation":"योजना","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"pa","translation":"योजना, इतिहास, शारीरिक KPI, भोजन, तस्वीरें, AI बातचीत और स्मृति, कस्टम आइटम हटाएं।","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"pa","translation":"योजना से शुरू करें या मौके पर आइटम जोड़ें और रिकॉर्ड करें।","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"pa","translation":"बिना योजना के आइटम जोड़ें","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"pa","translation":"योजना में शामिल करें","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"pa","translation":"योजना बनाएं","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"pa","translation":"योजना बनाएं","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"pa","translation":"योजना और वॉच","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"pa","translation":"क्या आप योजना का वजन अपडेट करना चाहते हैं?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"pa","translation":"रिकॉर्ड करें","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"pa","translation":"रिकॉर्ड करें","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"pa","translation":"रिकॉर्ड करें। AI से पूछें। चलाएं। हर दिन केवल 3 चीजें करें।","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"pa","translation":"रिकॉर्ड करने वाले आइटम पर टैप करें","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"pa","translation":"रिकॉर्ड और क्रियान्वयन के परिणाम अगले AI विश्लेषण में स्थानांतरित किए जाएंगे। पहला ऑपरेशन होम मिशन द्वारा मार्गदर्शन करेगा।","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"pa","translation":"रिकॉर्ड यहां जमा होते हैं","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"pa","translation":"रिकॉर्ड की जांच की जा रही है। स्क्रीन बंद करने पर भी यह जारी रहेगा।","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"pa","translation":"रिकॉर्ड देखें और अगला कदम सुझाएं","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"pa","translation":"रिकॉर्ड किया जा रहा है","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"pa","translation":"पूरे रिकॉर्ड से, अच्छे बदलाव, स्थिर स्थिति और लापता जानकारी के साथ, आगे की कार्रवाई का सुझाव दिया गया है।","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"pa","translation":"रिकॉर्ड किया गया","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"pa","translation":"सेटिंग","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"pa","translation":"सेटिंग की गई","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"pa","translation":"निदान लॉग में iPhone और Apple Watch के संचालन, संचार और वर्कआउट संचालन का रिकॉर्ड शामिल है। यह स्वचालित रूप से बाहर नहीं भेजा जाता है।","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"pa","translation":"निदान लॉग को हटाएँ","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"pa","translation":"निदान लॉग को सहेजें","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"pa","translation":"निदान लॉग भेजें","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"pa","translation":"बातचीत","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"pa","translation":"और देखें","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"pa","translation":"भ्रम पैदा करने वाली जानकारी","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"pa","translation":"शारीरिक KPI","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"pa","translation":"ऊंचाई","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"pa","translation":"ऊंचाई - वैकल्पिक","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"pa","translation":"यदि संदेह हो तो यहाँ","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"pa","translation":"जोड़ें","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"pa","translation":"जोड़ें","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"pa","translation":"आगे शुरू करें","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"pa","translation":"भेजें","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"pa","translation":"प्रतीक्षा में","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"pa","translation":"अपनी पसंद की जिम या घर पर मौजूद चीजों का चयन करें","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"pa","translation":"संचार स्थापित होने पर, रिकॉर्ड की जांच की जाएगी।","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"pa","translation":"सप्ताह में कितनी बार","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"pa","translation":"आप प्रति सप्ताह कितनी बार व्यायाम कर सकते हैं?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"pa","translation":"तरीका","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"pa","translation":"प्रगति जारी है","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"pa","translation":"व्यायाम, नींद और भोजन की आदतों को बनाए रखें","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"pa","translation":"चुनें: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"pa","translation":"चयनित","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"pa","translation":"भेजें","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"pa","translation":"वितरण के समय AI सेटिंग्स लोड करें","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"pa","translation":"मुख्य क्षेत्र","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"pa","translation":"वजन","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"pa","translation":"वजन को रीलों पर सेट करें","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"pa","translation":"वजन की इकाई","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"pa","translation":"बंद कर दिया गया है","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"pa","translation":"बंद करें","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"pa","translation":"शुरू करें","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"pa","translation":"संबंधित जानकारी","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"pa","translation":"भोजन","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"pa","translation":"भोजन और शरीर का आकार","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"pa","translation":"भोजन और शरीर का आकार, तस्वीरों में दर्ज करें। वजन, कमर और सेट को संख्याओं में दर्ज करें।","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"pa","translation":"भोजन का रिकॉर्ड","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"pa","translation":"भोजन की संख्या","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"pa","translation":"भोजन की संख्या के लक्ष्य और कैलोरी और PFC के लक्ष्यों को अलग-अलग दिखाएं।","review_note":""}

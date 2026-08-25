@@ -1,0 +1,82 @@
+{"id": "core_ui.continue_workout", "target_locale": "te", "translation": "కొనసాగించండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.delete_permanently", "target_locale": "te", "translation": "శాశ్వతంగా తొలగించు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.empty_trash", "target_locale": "te", "translation": "డస్ట్‌బాస్‌ను ఖాళీ చేయండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.empty_trash_confirm", "target_locale": "te", "translation": "అన్నింటినీ శాశ్వతంగా తొలగించాలా?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.restore_record", "target_locale": "te", "translation": "రికార్డ్‌ను పునరుద్ధరించు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.saved_workout_progress", "target_locale": "te", "translation": "{{value1}}/{{value2}} సెట్లు పూర్తయ్యాయి, ఆటోమేటిక్‌గా సేవ్ చేయబడింది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.trash", "target_locale": "te", "translation": "డస్ట్‌బాస్", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.trash_empty", "target_locale": "te", "translation": "డస్ట్‌బాస్ ఖాళీగా ఉంది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.trash_retention", "target_locale": "te", "translation": "తొలగించిన రికార్డులు 30 రోజుల వరకు ఇక్కడ ఉంటాయి.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.undo", "target_locale": "te", "translation": "తిరిగి వెళ్ళు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.workout_discarded", "target_locale": "te", "translation": "వ్యాయామం రద్దు చేయబడింది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_balanced_dinner", "target_locale": "te", "translation": "సమతుల్య సాయంత్ర భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_balanced_lunch", "target_locale": "te", "translation": "సమతుల్య మధ్యాహ్న భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_lean_lunch", "target_locale": "te", "translation": "తక్కువ కొవ్వుతో కూడిన మధ్యాహ్న భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_light_breakfast", "target_locale": "te", "translation": "తేలికపాటి ఉదయం భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_light_snack", "target_locale": "te", "translation": "తేలికపాటి స్నాక్", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_power_breakfast", "target_locale": "te", "translation": "ప్రోటీన్ అధికంగా ఉండే ఉదయం భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_power_lunch", "target_locale": "te", "translation": "శక్తివంతమైన మధ్యాహ్న భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_protein_snack", "target_locale": "te", "translation": "ప్రోటీన్ స్నాక్", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_rationale", "target_locale": "te", "translation": "{{value1}} లక్ష్యానికి మరియు ఈరోజు మిగిలి ఉన్న ఆహారం ఆధారంగా ఎంపిక చేయబడింది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_recovery_dinner", "target_locale": "te", "translation": "నయం చేయడానికి రాత్రి భోజనం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "domain_catalog.meal_template_separator", "target_locale": "te", "translation": "•", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.ai_chat", "target_locale": "te", "translation": "AI చాట్", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.ai_report", "target_locale": "te", "translation": "AI నివేదిక", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.fatigue_record", "target_locale": "te", "translation": "సோர்వు యొక్క రికార్డు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.gym_visit", "target_locale": "te", "translation": "జిమ్ సందర్శన", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.outdoor_route_title", "target_locale": "te", "translation": "తాజా {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.progress_photo_set", "target_locale": "te", "translation": "శరీర ఆకృతి ఫోటోల సెట్", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.ai_unlimited", "target_locale": "te", "translation": "AI వినియోగ పరిమితి లేదు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.photo_estimate_note", "target_locale": "te", "translation": "శరీర ఆకృతి ఫోటోల ద్వారా AI సహాయంతో అంచనా. ఇది ఖచ్చితమైన కొలత కాదు. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.active_workout_saved", "target_locale": "te", "translation": "మీరు వ్యాయామం మధ్యలో ఆపి, తర్వాత కొనసాగించవచ్చు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.discard_workout", "target_locale": "te", "translation": "రికార్డును తొలగించు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_average_volume", "target_locale": "te", "translation": "ఒక్కో సెట్‌కు సగటు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_comparison_period", "target_locale": "te", "translation": "పోలిక వ్యవధి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_four_week_average", "target_locale": "te", "translation": "4 వారాల సగటు (గ్రాఫ్)", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_moving_average", "target_locale": "te", "translation": "సగటు విలువ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_new_activity", "target_locale": "te", "translation": "కొత్తగా", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_period_comparison", "target_locale": "te", "translation": "వ్యవధి పోలిక", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_previous_period_change", "target_locale": "te", "translation": "మునుపటి వ్యవధితో పోలిస్తే {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_previous_period_section", "target_locale": "te", "translation": "మునుపటి అదే కాలంతో పోలిక", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_month", "target_locale": "te", "translation": "1 నెల", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_six_months", "target_locale": "te", "translation": "6 నెలలు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_three_months", "target_locale": "te", "translation": "3 నెలలు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_week", "target_locale": "te", "translation": "1 వారం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_range_year", "target_locale": "te", "translation": "1 సంవత్సరం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_seven_day_average", "target_locale": "te", "translation": "7 రోజుల సగటు రేఖ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.history_volume_trend", "target_locale": "te", "translation": "పరిమాణం యొక్క ధోరణి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.keep_iphone_value", "target_locale": "te", "translation": "iPhone డేటాను ఉపయోగించండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_distance", "target_locale": "te", "translation": "దూరం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_pace", "target_locale": "te", "translation": "సగటు వేగం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_route_health", "target_locale": "te", "translation": "రూట్ Apple హెల్త్‌లో నిల్వ చేయబడింది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_route_unavailable", "target_locale": "te", "translation": "రూట్ అందుబాటులో లేదు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.outdoor_summary", "target_locale": "te", "translation": "బయట వ్యాయామం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.pause", "target_locale": "te", "translation": "తొలగించు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.pause_and_close", "target_locale": "te", "translation": "తొలగించి మూసివేయండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_adjust", "target_locale": "te", "translation": "మీ లక్ష్యాన్ని చేరుకోలేకపోతే, తదుపరి వ్యాయామ తీవ్రతను సర్దుబాటు చేయవచ్చు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_declined", "target_locale": "te", "translation": "ప్రస్తుత ప్రణాళికను కొనసాగించండి.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_progress", "target_locale": "te", "translation": "మీ లక్ష్యాన్ని చేరుకున్నారు, కాబట్టి తదుపరి వ్యాయామ తీవ్రతను చూడవచ్చు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.plan_revision_review", "target_locale": "te", "translation": "మీరు మీ లక్ష్యాలను చేరుకున్నందున, తదుపరి ప్రణాళికను సమీక్షించవచ్చు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.resume", "target_locale": "te", "translation": "కొనసాగించండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.resume_workout", "target_locale": "te", "translation": "వ్యాయామను కొనసాగించండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.sync_conflict_message", "target_locale": "te", "translation": "{{value1}} సెట్లని మాత్రమే ఎంచుకోండి. మిగిలిన సెట్లు స్వయంచాలకంగా ఏకీకృతం చేయబడ్డాయి.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.sync_conflict_title", "target_locale": "te", "translation": "ఒకే సెట్ రెండు చోట్ల మార్చబడింది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.use_watch_value", "target_locale": "te", "translation": "Apple వాచ్ డేటాను ఉపయోగించండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor", "target_locale": "te", "translation": "బయట వ్యాయామం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_activity", "target_locale": "te", "translation": "రకం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_cycling", "target_locale": "te", "translation": "బయట సైకిల్ తొక్కడం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_cycling_short", "target_locale": "te", "translation": "సైకిల్ తొక్కడం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_distance", "target_locale": "te", "translation": "దూరం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_duration", "target_locale": "te", "translation": "సమయం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_finish_confirm", "target_locale": "te", "translation": "బయట వ్యాయామం పూర్తి చేయాలా?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_goal", "target_locale": "te", "translation": "లక్ష్యం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_open", "target_locale": "te", "translation": "స్వేచ్ఛగా", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_pace", "target_locale": "te", "translation": "వేగం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_route_privacy", "target_locale": "te", "translation": "రూట్ Apple హెల్త్‌లో నిల్వ చేయబడుతుంది మరియు AI లేదా ప్రకటనలకు పంపబడదు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_running", "target_locale": "te", "translation": "బయట పరిగెత్తడం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_running_short", "target_locale": "te", "translation": "పరిగెత్తడం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_start", "target_locale": "te", "translation": "బయట వ్యాయామం ప్రారంభించండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_started", "target_locale": "te", "translation": "{{value1}} ప్రారంభించబడింది", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_target_pace", "target_locale": "te", "translation": "లక్ష్య వేగం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_walking", "target_locale": "te", "translation": "బయట నడవడం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "watch_widget.outdoor_walking_short", "target_locale": "te", "translation": "నడవడం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

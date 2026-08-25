@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"ml","translation":"{{value1}} ഇനങ്ങൾ","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"ml","translation":"{{value1}}: നിശ്ചയിച്ച തീയതിയിൽ ജിം സന്ദർശനമോ വർക്കൗട്ട് രേഖയോ കണ്ടെത്തിയില്ല.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"ml","translation":"ഓരോ സെഷന്റെ ദൈർഘ്യം","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"ml","translation":"ദിവസത്തെ പോഷക ലക്ഷ്യങ്ങൾ","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"ml","translation":"3 വർക്കൗട്ടുകളിൽ ചലനങ്ങൾ പഠിക്കുക","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"ml","translation":"AI ഉപയോഗിച്ച് വർക്കൗട്ട് തയ്യാറാക്കുക","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"ml","translation":"AI ഇല്ലാതെയും ഇന്നത്തെ ശുപാർശകൾ ലഭ്യമായിരിക്കും.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"ml","translation":"നിലവിലെ അവസ്ഥയെക്കുറിച്ച് AI-യോട് ചോദിക്കുക","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"ml","translation":"AI-യോട് ചോദിക്കുക","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"ml","translation":"AI-യിലേക്ക് അയക്കുന്ന ഡാറ്റ","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"ml","translation":"നിങ്ങൾ തിരഞ്ഞെടുത്ത ഉപകരണങ്ങൾ മാത്രം ഉപയോഗിച്ചാണ് AI കോച്ച് വർക്കൗട്ട് പ്ലാനുകൾ തയ്യാറാക്കുന്നത്. കുറഞ്ഞത് ഒരു ഉപകരണമെങ്കിലും എപ്പോഴും തിരഞ്ഞെടുത്തിരിക്കും.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"ml","translation":"AI സെർവർ ഉപയോഗിച്ച് ആഴ്ചയിലെ അഭിപ്രായം സൃഷ്ടിക്കുക","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"ml","translation":"AI സെർവർ കണക്റ്റ് ചെയ്തു","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"ml","translation":"AI മോഡൽ തയ്യാറാക്കുന്നു","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"ml","translation":"AI ഡ്രാഫ്റ്റുകളും ആഴ്ചയിലെ അഭിപ്രായവും ലഭ്യമല്ല, എന്നാൽ കൈമുറയായി നൽകിയ രേഖകൾ സംരക്ഷിക്കാം.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"ml","translation":"AI ഡ്രാഫ്റ്റുകളും ആഴ്ചയിലെ അഭിപ്രായവും ഉപയോഗിക്കാൻ AI ഫീച്ചറുകൾ ഓൺ ചെയ്ത ശേഷം കണക്ഷൻ പരിശോധിക്കുക.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"ml","translation":"AI അപ്ഡേറ്റ് {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"ml","translation":"AI കണക്ഷൻ","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"ml","translation":"AI ഫീച്ചറുകൾ ഓഫ് ആണ്","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"ml","translation":"AI ഫീച്ചറുകൾ ഉപയോഗിക്കുക","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"ml","translation":"AI പരിശോധന പുരോഗമിക്കുന്നു","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"ml","translation":"AI പരിശോധിച്ചു","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"ml","translation":"AI ക്രമീകരണങ്ങൾ ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യുക","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"ml","translation":"API കീ","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"ml","translation":"API കീ ഹ്രസ്വകാല ടോക്കണുകൾ നേടാൻ മാത്രം ഉപയോഗിക്കുന്നു; സാധാരണ AI അഭ്യർത്ഥനകളോടൊപ്പം അത് അയയ്ക്കില്ല.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"ml","translation":"API സെർവർ പ്രതികരിക്കുന്നു, എന്നാൽ ആവശ്യമായ മോഡൽ ലഭ്യമല്ല.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"ml","translation":"API സെർവർ പ്രതികരിക്കുന്നു, എന്നാൽ ഭക്ഷണത്തിനും റിപ്പോർട്ടുകൾക്കും വേണ്ട സഹായി മോഡൽ ലഭ്യമല്ല.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"ml","translation":"API സെർവർ പ്രതികരിക്കുന്നു, എന്നാൽ ചിത്രത്തെ അടിസ്ഥാനമാക്കിയ കലോറി കണക്ക് ലഭ്യമല്ല.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"ml","translation":"Apple Health വർക്കൗട്ടുകൾ","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"ml","translation":"വർക്കൗട്ട് Apple Watch-ലേക്ക് സിങ്ക് ചെയ്യുക","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"ml","translation":"Apple Watch ലോഗുകൾ","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"ml","translation":"Apple Watch & സെൻസറുകൾ","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"ml","translation":"BodyMode പരസ്യ റിപ്പോർട്ട്","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"ml","translation":"BodyMode ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"ml","translation":"BodyMode മാനേജ്മെന്റ് AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"ml","translation":"Google-ന്റെ പരസ്യ ഡാറ്റ ഉപയോഗം","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"ml","translation":"Google സ്വകാര്യതാ നയം","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"ml","translation":"Health പങ്കിടൽ പരിശോധിക്കുക","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"ml","translation":"Apple Watch ഉപയോഗിച്ച് റെപ്പുകൾ കണക്കാക്കുക","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"ml","translation":"Apple Watch ഹാപ്റ്റിക് അറിയിപ്പുകൾ","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"ml","translation":"{{value1}} / {{value2}} പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"ml","translation":"{{value1}} / {{value2}} നേടി","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"ml","translation":"{{value1}}/6 പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"ml","translation":"{{value1}}/{{value2}} റെപ്പുകൾ","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"ml","translation":"{{value1}}{{value2}} റെപ്പുകൾ","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"ml","translation":"{{value1}}-ൽ നിന്നുള്ള ശുപാർശ","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"ml","translation":"{{value1}} പരിശോധിക്കുന്നു · ശുപാർശ ലഭ്യമാണ്","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"ml","translation":"{{value1}} പരിശോധിച്ചു","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"ml","translation":"{{value1}} സംബന്ധിച്ച് ഇന്ന് ഈ ശുപാർശ നൽകിയ കാരണം വിശദീകരിക്കുകയും ക്രമീകരണങ്ങൾ നിർദ്ദേശിക്കുകയും ചെയ്യുക.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"ml","translation":"{{value1}}-യോട് ചോദിക്കുക","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"ml","translation":"{{value1}}-ന്റെ ശുപാർശ","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"ml","translation":"{{value1}}-ന്റെ വിലയിരുത്തൽ","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"ml","translation":"{{value1}}-ന്റെ അടിസ്ഥാന ശുപാർശ","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"ml","translation":"{{value1}} പരിശോധനയ്ക്കായി കാത്തിരിക്കുന്നു · ശുപാർശ ലഭ്യമാണ്","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"ml","translation":"{{value1}}-ന്റെ ആഴ്ചയിലെ റിപ്പോർട്ട്","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"ml","translation":"പിക്കർ ഉപയോഗിച്ച് {{value1}} സജ്ജമാക്കുക","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"ml","translation":"{{value1}} മറ്റൊരു പ്രവർത്തനമായി മാറ്റുക","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"ml","translation":"{{value1}} ലഭ്യമാണ്. {{value2}} കോച്ച് തരങ്ങൾ പരിശോധിച്ചു.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"ml","translation":"{{value1}} ശുപാർശ ചെയ്ത കാരണം","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"ml","translation":"{{value1}} തുറക്കുക","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"ml","translation":"{{value1}} സെറ്റുകൾ","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"ml","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"ml","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"ml","translation":"{{value1}} · {{value2}} അപ്ഡേറ്റ് ചെയ്തു","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"ml","translation":"{{value1}} · {{value2}} ഉപകരണ തരങ്ങൾ","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"ml","translation":"{{value1}} · ആഴ്ചയിൽ {{value2}} ദിവസം","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"ml","translation":"{{value1}} ഇനങ്ങൾ","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"ml","translation":"{{value1}} തവണ","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"ml","translation":"{{value1}} പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"ml","translation":"{{value1}} വ്യായാമങ്ങൾ","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"ml","translation":"{{value1}} വ്യായാമങ്ങൾ / {{value2}} സെറ്റുകൾ","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"ml","translation":"ഇനി BodyMode നോക്കിക്കൊള്ളും. ഓരോ ദിവസവും പരമാവധി മൂന്ന് പ്രവർത്തനങ്ങൾ ശുപാർശ ചെയ്യും.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"ml","translation":"വിലയിരുത്തലിന്റെ വിശ്വാസ്യത മെച്ചപ്പെടുത്തുന്ന ഡാറ്റ","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"ml","translation":"ശുപാർശ ചെയ്ത കോച്ച് പ്രയോഗിക്കുക","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"ml","translation":"നിങ്ങളുടെ ദിവസം ഇവിടെ ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"ml","translation":"ഈ വർക്കൗട്ട് ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"ml","translation":"ഈ ലക്ഷ്യം ഉപയോഗിക്കുക","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"ml","translation":"ഈ ലക്ഷ്യത്തിനുള്ള പരിശീലകൻ","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"ml","translation":"ഈ പ്രവർത്തനം തിരഞ്ഞെടുത്ത കാരണം","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"ml","translation":"എല്ലാ കോച്ചുകളും","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"ml","translation":"മറ്റുള്ളവ","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"ml","translation":"പ്രോട്ടീൻ","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"ml","translation":"ഇതിന് ചെയ്യാനാകാത്തത്","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"ml","translation":"ആദ്യം ഉപകരണത്തിലെ രേഖകളിൽ നിന്ന് തയ്യാറാക്കുന്നു; ആവശ്യമുള്ളപ്പോൾ മാത്രം AI ക്രമീകരിക്കും.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"ml","translation":"പതിവായി ഉപയോഗിക്കുന്ന വർക്കൗട്ട് സംരക്ഷിക്കുക","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"ml","translation":"കലോറി","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"ml","translation":"കലോറി / മാക്രോകൾ","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"ml","translation":"കലോറി കണക്കാക്കുന്ന മോഡൽ തയ്യാറാക്കുന്നു","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"ml","translation":"റദ്ദാക്കുക","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"ml","translation":"ദ്രുത രേഖ","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"ml","translation":"സെർവർ URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"ml","translation":"ഞാൻ ജിമ്മിൽ എത്തി","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"ml","translation":"ജിം സന്ദർശനങ്ങൾ","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"ml","translation":"ജിം സന്ദർശനങ്ങൾ സ്വയമേവ രേഖപ്പെടുത്തുക","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"ml","translation":"ഒഴിവാക്കുക","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"ml","translation":"സെൻസറുകൾ ലഭ്യമല്ലെങ്കിലും ഭാരം, റെപ്പുകൾ, RPE എന്നിവ കൈമുറയായി നൽകാം. കുറഞ്ഞ വൈദ്യുതി സാംപ്ലിംഗ് ചലന കണക്കുകളുടെ അപ്ഡേറ്റ് ആവൃത്തി കുറയ്ക്കും.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"ml","translation":"പരീക്ഷണ പരസ്യം","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"ml","translation":"ഡാറ്റ","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"ml","translation":"ഡാറ്റ പൂർണ്ണത {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"ml","translation":"പരിശീലകർ: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"ml","translation":"വർക്കൗട്ട്","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"ml","translation":"3 വർക്കൗട്ടുകൾ പൂർത്തിയാക്കുക","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"ml","translation":"വർക്കൗട്ടുകൾ തുറക്കുക","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"ml","translation":"വർക്കൗട്ട് ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"ml","translation":"പതിപ്പ്: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"ml","translation":"വ്യക്തിഗതമല്ലാത്തത്","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"ml","translation":"വ്യക്തിഗതമാക്കൽ ഓഫ് ആണ്","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"ml","translation":"ഫ്രീ വർക്കൗട്ട്","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"ml","translation":"സ്വകാര്യത","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"ml","translation":"പ്രൊഫൈൽ","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"ml","translation":"സഹായം","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"ml","translation":"ഹോം","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"ml","translation":"നിങ്ങളുടെ വർക്കൗട്ടുകൾ ഇവിടെയുണ്ട്","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"ml","translation":"ഒരു വർക്കൗട്ട് തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"ml","translation":"Mail പോലുള്ള അയയ്ക്കൽ മാർഗം തിരഞ്ഞെടുത്ത് റിപ്പോർട്ട് BodyMode Support-ലേക്ക് അയയ്ക്കുക. റിപ്പോർട്ടിൽ ശരീരമോ ആരോഗ്യ രേഖകളോ ഉൾപ്പെടില്ല.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"ml","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"ml","translation":"അപമാനകരമായ ഉള്ളടക്കം","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"ml","translation":"അജ്ഞാത പിശക്","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"ml","translation":"അനുചിതമായ ഉള്ളടക്കം","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"ml","translation":"അനുചിതമായ പരസ്യം റിപ്പോർട്ട് ചെയ്യുക","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"ml","translation":"നിശ്ചയിച്ച വർക്കൗട്ട് കണ്ടെത്തിയില്ല","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"ml","translation":"ഇത്തവണ മാറ്റേണ്ട","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"ml","translation":"ഇത്തവണ മാറ്റമില്ല","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"ml","translation":"ഇന്ന്: {{value1}} · {{value2}} സെറ്റുകൾ","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"ml","translation":"ഇന്ന് മുതൽ വീണ്ടും പഠിക്കാൻ തുടങ്ങുക","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"ml","translation":"ഇന്നത്തെ 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"ml","translation":"ഇന്നത്തെ 3 തയ്യാറാക്കുന്നു","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"ml","translation":"ഇന്നത്തെ വർക്കൗട്ട്","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"ml","translation":"ഇന്നത്തെ വർക്കൗട്ട് പൂർത്തിയാക്കുക","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"ml","translation":"ഇന്നത്തെ വർക്കൗട്ട് ചെയ്യുക","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"ml","translation":"ഇന്നത്തെ വർക്കൗട്ട് ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"ml","translation":"ഇന്നത്തെ എൻട്രികൾ","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"ml","translation":"ഇന്നത്തെ ശുപാർശ","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"ml","translation":"ഇന്നത്തെ നില","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"ml","translation":"ഇന്നത്തെ രേഖ","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"ml","translation":"ഇന്നത്തെ സന്നദ്ധത","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"ml","translation":"ഇന്നത്തെ പുരോഗതി","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"ml","translation":"ഇന്നത്തേക്ക് മാറ്റുക","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"ml","translation":"ഇന്നത്തെ പ്രവർത്തനങ്ങൾ ഇവിടെയുണ്ട്","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"ml","translation":" ഇനങ്ങൾ","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"ml","translation":"വിശ്രമം","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"ml","translation":"വിശ്രമ സമയം","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"ml","translation":"പിക്കർ ഉപയോഗിച്ച് വിശ്രമ സമയം സജ്ജമാക്കുക","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"ml","translation":"പുരോഗതി ഫോട്ടോകൾ","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"ml","translation":"ശരീര ഘടന","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"ml","translation":"ഭാരം","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"ml","translation":"ശരീരഭാരം {{value1}} + ചേർത്ത ഭാരം {{value2}} = റഫറൻസ് ലോഡ് {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"ml","translation":"ശരീരഭാരം {{value1}} - സഹായം {{value2}} = റഫറൻസ് ലോഡ് {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"ml","translation":"ഭാരം · ഐച്ഛികം","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"ml","translation":"തുടരാനാകുന്ന വേഗത്തിൽ ഭാരവും അരക്കെട്ടും മെച്ചപ്പെടുത്തുക","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"ml","translation":"ഭാരം · അരക്കെട്ട് · ഭക്ഷണം · പുരോഗതി ഫോട്ടോകൾ","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"ml","translation":"നിങ്ങളുടെ ലക്ഷ്യം എന്താണ്?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"ml","translation":"സൃഷ്ടിക്കുക","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"ml","translation":"ഉപയോക്തൃ മാർഗ്ഗനിർദ്ദേശം","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"ml","translation":"ലഭ്യമായ ഉപകരണങ്ങൾ ഉപയോഗിച്ച് വർക്കൗട്ടുകൾ തയ്യാറാക്കും","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"ml","translation":"ലഭ്യമായ ഉപകരണങ്ങൾ","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"ml","translation":"നിങ്ങൾ ഉപയോഗിക്കുന്ന ഫീച്ചറുകളുടെ തരങ്ങൾ മാത്രം ഉപകരണത്തിൽ സൂക്ഷിക്കും. ഭാരം, ഫോട്ടോകൾ, ഭക്ഷണ വിശദാംശങ്ങൾ, ഹൃദയമിടിപ്പ്, സ്ഥലം, കുറിപ്പുകൾ എന്നിവ രേഖപ്പെടുത്തുകയോ സ്വയമേവ അയയ്ക്കുകയോ ചെയ്യില്ല.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"ml","translation":"സംരക്ഷിക്കുക","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"ml","translation":"സംരക്ഷിച്ച രേഖകൾ ഉപയോഗിച്ച് പരിശോധിച്ചു.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"ml","translation":"ആരോഗ്യ രേഖകൾ പരസ്യ ഡാറ്റയിൽ നിന്ന് വേർതിരിക്കുക","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"ml","translation":"ഇപ്പോൾ കുറച്ച് കാര്യങ്ങൾ രേഖപ്പെടുത്തി പിന്നീട് എല്ലാം ഒരുമിച്ച് അവലോകനം ചെയ്യാം.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"ml","translation":"പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"ml","translation":"എല്ലാ ഡാറ്റയും ഇല്ലാതാക്കണോ?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"ml","translation":"എല്ലാ ഡാറ്റയും ഇല്ലാതാക്കുക","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"ml","translation":"എല്ലാ രേഖകളും JSON ആയി എക്സ്പോർട്ട് ചെയ്യുക","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"ml","translation":"ഫുൾ-ബോഡി വർക്കൗട്ടിൽ നിന്ന് ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"ml","translation":"ഫോട്ടോ","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"ml","translation":"ഫോട്ടോ ഉടൻ വിശകലനം ചെയ്യുക","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"ml","translation":"ഫോട്ടോകളും അളവുകളും ഉപയോഗിച്ച് പുരോഗതി പിന്തുടരുക","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"ml","translation":"ഫോട്ടോകളും അളവുകളും ഇവിടെയുണ്ട്","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"ml","translation":"ഫോട്ടോകളും അളവുകളും രേഖപ്പെടുത്തുക","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"ml","translation":"ഫോട്ടോ എടുക്കുക","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"ml","translation":"ശരീര രൂപം, അരക്കെട്ട്, പേശി സമതുലനം എന്നിവ മെച്ചപ്പെടുത്തുക","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"ml","translation":" മിനിറ്റ്","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"ml","translation":"മിനിറ്റ്:സെക്കൻഡ്","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"ml","translation":"തുടക്കക്കാർക്കുള്ള വർക്കൗട്ട് സൃഷ്ടിക്കുക","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"ml","translation":"വിലയിരുത്തൽ വിശദാംശങ്ങൾ കാണുക","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"ml","translation":"മറ്റൊരു പ്രവർത്തനം തിരഞ്ഞെടുക്കുക","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"ml","translation":"ഏത് ഉപകരണങ്ങൾ ലഭ്യമാണ്?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"ml","translation":"ഉപയോഗ വിശകലനം പങ്കിടുക","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"ml","translation":"ഉപയോഗ ഡാറ്റ ഇല്ലാതാക്കുക","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"ml","translation":"ഉപയോഗ ഡാറ്റ എക്സ്പോർട്ട് ചെയ്യുക","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"ml","translation":"ഉപദേശ മുൻഗണനാ സമതുലനം","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"ml","translation":"ചലനം","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"ml","translation":"ഉപയോഗിച്ച വിവരം","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"ml","translation":"സമ്മത നില പരിശോധിക്കുന്നു","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"ml","translation":"ഇത് ആർക്കാണ്","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"ml","translation":"ഉപകരണമോ പേശി ഗ്രൂപ്പോ അനുസരിച്ച് തിരഞ്ഞെടുക്കുക","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"ml","translation":" റെപ്പുകൾ","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"ml","translation":"വീണ്ടെടുക്കൽ","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"ml","translation":"റെപ്പുകൾ","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"ml","translation":"പിക്കർ ഉപയോഗിച്ച് റെപ്പുകൾ സജ്ജമാക്കുക","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"ml","translation":"സ്ഥിര പരീക്ഷണ പരസ്യം","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"ml","translation":"തുടങ്ങാം","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"ml","translation":"അടിസ്ഥാന വിവരങ്ങൾ · ഐച്ഛികം","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"ml","translation":"റിപ്പോർട്ട് അയയ്ക്കുക","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"ml","translation":"റിപ്പോർട്ട് ചെയ്യാനുള്ള കാരണം","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"ml","translation":"മാറ്റങ്ങൾ ഇവിടെ പിന്തുടരുക","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"ml","translation":"പിന്തുടരേണ്ട അളവുകൾ തിരഞ്ഞെടുക്കുക","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"ml","translation":"മാറ്റുക","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"ml","translation":"മാറ്റ ചരിത്രം","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"ml","translation":"ആരംഭിക്കുക","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"ml","translation":"പഠനം നിർത്തിവെച്ചിരിക്കുന്നു. പഴയ രേഖകൾ ഇല്ലാതാക്കിയിട്ടില്ല.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"ml","translation":"പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"ml","translation":"{{value1}} പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"ml","translation":"പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"ml","translation":"പൂർത്തിയായതായി അടയാളപ്പെടുത്തുക","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"ml","translation":"പൂർത്തിയായി","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"ml","translation":"ചെയ്തില്ല","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"ml","translation":"ചെയ്യുക","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"ml","translation":"കൂടുതൽ ചെയ്യുമ്പോൾ അടുത്ത ഘട്ടം കൂടുതൽ വ്യക്തമാകും","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"ml","translation":"നിങ്ങളുടെ ഫലങ്ങൾ അടുത്ത AI ശുപാർശ മെച്ചപ്പെടുത്തുന്നു","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"ml","translation":"വിപുലീകരിച്ചു","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"ml","translation":"ചരിത്രം","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"ml","translation":" വർഷം","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"ml","translation":"പ്രായത്തിന് അനുയോജ്യമല്ല","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"ml","translation":"പരസ്യ ID ക്രമീകരിച്ചിട്ടില്ല","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"ml","translation":"പരസ്യങ്ങളും ഡാറ്റ ഉപയോഗവും","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"ml","translation":"പരസ്യ സ്വകാര്യതാ ക്രമീകരണങ്ങൾ","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"ml","translation":"പരസ്യ സമ്മതം നൽകിയിട്ടില്ല.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"ml","translation":"പരസ്യത്തിലെ ഉൽപ്പന്നത്തിന്റെ പേരോ ശ്രദ്ധിച്ച പ്രശ്നമോ","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"ml","translation":"പരസ്യങ്ങൾ iPhone-ൽ മാത്രം കാണിക്കും. ആരോഗ്യ, ഭക്ഷണം, ഫോട്ടോ, BodyMode ലൊക്കേഷൻ രേഖകൾ പരസ്യങ്ങൾ തിരഞ്ഞെടുക്കാൻ ഉപയോഗിക്കില്ല.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"ml","translation":"പരസ്യം റിപ്പോർട്ട് ചെയ്യുക","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"ml","translation":"പരസ്യം ലോഡ് ചെയ്യുന്നു","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"ml","translation":"പരസ്യങ്ങളും സ്വകാര്യതയും","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"ml","translation":"പരസ്യ ദാതാവ്","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"ml","translation":"പരസ്യ വിതരണത്തിനായി Google നിങ്ങളുടെ IP വിലാസം, ഉപകരണത്തിന്റെയും ആപ്പിന്റെയും അടിസ്ഥാന വിവരങ്ങൾ, SDK പരിശോധനയും പ്രകടന ഡാറ്റയും, പരസ്യ പ്രദർശന-ഇടപെടൽ ഡാറ്റയും സ്വീകരിക്കുന്നു. IP വിലാസത്തിൽ നിന്ന് ഏകദേശ സ്ഥലം കണക്കാക്കാം. BodyMode-ൽ രേഖപ്പെടുത്തിയ ഭാരം, ഹൃദയമിടിപ്പ്, ഉറക്കം, ഭക്ഷണം, ഫോട്ടോകൾ, വർക്കൗട്ടുകൾ, ലക്ഷ്യങ്ങൾ, GPS ഡാറ്റ, ജിം ലൊക്കേഷനുകൾ എന്നിവ പരസ്യ അഭ്യർത്ഥനകളിൽ ഉൾപ്പെടില്ല.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"ml","translation":"ഹൃദയമിടിപ്പും RPE-യും ഉപയോഗിച്ച് വിശ്രമം ക്രമീകരിക്കുക","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"ml","translation":"ഹൃദയമിടിപ്പും ചലനവും","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"ml","translation":"ലിംഗം","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"ml","translation":"ലിംഗം · ഐച്ഛികം","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"ml","translation":"തിരികെ","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"ml","translation":"കൈമുറ രേഖപ്പെടുത്തൽ ഇപ്പോഴും ലഭ്യമാണ്.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"ml","translation":"കോച്ച്: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"ml","translation":"നിയോഗിച്ച കോച്ച്","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"ml","translation":"നിങ്ങളുടെ കോച്ചിനോട് ചോദിക്കുക","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"ml","translation":"കോച്ചിന്റെ സമീപനം","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"ml","translation":"കോച്ച് തരം മാറ്റുമ്പോൾ AI ഏത് രേഖകൾക്ക് മുൻഗണന നൽകുന്നു എന്നും നൽകുന്ന ശുപാർശകളും മാറും.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"ml","translation":"നിയോഗിച്ച പരിശീലകൻ: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"ml","translation":"വ്യക്തമാക്കിയിട്ടില്ല","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"ml","translation":"കണക്ഷൻ പരിശോധിക്കുക","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"ml","translation":"iPhone അല്ലെങ്കിൽ Apple Watch-ൽ ശുപാർശ ചെയ്ത വർക്കൗട്ട് പിന്തുടരുക.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"ml","translation":"ശുപാർശ പഠനം മാത്രം റീസെറ്റ് ചെയ്യുക","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"ml","translation":"തടസ്സമില്ലാത്ത ബാനർ പരസ്യങ്ങൾ മാത്രം","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"ml","translation":"അളവുകൾ രേഖപ്പെടുത്തുക","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"ml","translation":" ദിവസം","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"ml","translation":"തീയതി അനുസരിച്ച് അവലോകനം ചെയ്യുക","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"ml","translation":"ദൈനംദിന പ്രവർത്തനം","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"ml","translation":"ദൈനംദിന ശുപാർശ പരിശോധന","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"ml","translation":"എക്സ്പോർട്ട് ചെയ്യാനായില്ല","review_note":""}

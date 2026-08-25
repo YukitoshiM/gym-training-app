@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"cs","translation":"0 jídl","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"cs","translation":"1 pohyb","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"cs","translation":"3 položky, 2 série. Upravte váhu tak, aby byla bezpečně proveditelná a uložte ji.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"cs","translation":"Nepodařilo se načíst plán od AI. Vytvořte jej znovu.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"cs","translation":"Plán od AI","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"cs","translation":"Uloženo v Apple Health","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"cs","translation":"Synchronizace s Apple Watch","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"cs","translation":"Apple Watch vás upozorní na změny, které jste nastavili (např. 1-3x dotykem za sekundu).","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"cs","translation":"Protože Apple Watch není poblíž, jsem jej rezervoval pro příští spuštění.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"cs","translation":"Nepodařilo se provést akci na Apple Watch","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"cs","translation":"Nezaznamenali jsme data z Apple Watch do iPhone.","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"cs","translation":"Není připraveno pro uložení dat z Apple Watch.","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"cs","translation":"Nezobrazili jsme data z Apple Watch.","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"cs","translation":"Můžete synchronizovat menu s Apple Watch","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"cs","translation":"Neexistuje žádný obsah, který byl synchronizován s Apple Watch.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"cs","translation":"Nebylo možné odeslat operaci na Apple Watch.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"cs","translation":"Nebylo možné vytvořit data pro odeslání na Apple Watch.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"cs","translation":"Otevřete aplikaci BodyMode a zkuste to znovu.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"cs","translation":"Ujistěte se, že je aplikace BodyMode nainstalována na vašem zařízení Apple Watch.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"cs","translation":"Připojení k Apple Watch bylo dočasně přerušeno.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"cs","translation":"Připojení k Apple Watch není připraveno.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"cs","translation":"Chyba připojení k Apple Watch: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"cs","translation":"Připojování k Apple Watch probíhá... Počkejte prosím a zkuste to znovu.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"cs","translation":"Nemohu ověřit stav připojení k Apple Watch.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"cs","translation":"Nebylo možné vytvořit data pro menu pro Apple Watch.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"cs","translation":"Měření pomocí Apple Watch","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"cs","translation":"Uložení Health selhalo, ale historie aplikací byla uložena.","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"cs","translation":"Žádné informace o uložení Health.","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"cs","translation":"Kontroluji stav uložení Health.","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"cs","translation":"Health není povolen, pouze historie aplikací je uložena.","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"cs","translation":"Úroveň 1 – Celkové cvičení","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"cs","translation":"TRX (cvičení s gumou)","review_note":""}
+{"id":"training.148b91e44188","target_locale":"cs","translation":"Záznam probíhá na zařízení Apple Watch.","review_note":""}
+{"id":"training.3e098891145f","target_locale":"cs","translation":"Dokončíte trénink pomocí Apple Watch?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"cs","translation":"Záznamy z Watch byly ukončeny.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"cs","translation":"Chcete smazat záznamy z Watch?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"cs","translation":"Analýza senzorů Watch","review_note":""}
+{"id":"training.e9af98302821","target_locale":"cs","translation":"Live Watch","review_note":""}
+{"id":"training.22db347214b9","target_locale":"cs","translation":"{{value1}} / {{value2}}x","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"cs","translation":"{{value1}} {{value2}} × {{value3}}x","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"cs","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} sérií)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"cs","translation":"{{value1}} je uloženo v historii iPhone.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"cs","translation":"Uložili jste {{value1}} do historie na Apple Watch.","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"cs","translation":"{{value1}} – Zvýšit {{value2}} sekund / Snížit {{value3}} sekund · {{value4}} krát/sekundu {{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"cs","translation":"{{value1}}/{{value2}} sérií, {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"cs","translation":"{{value1}}/{{value2}} sérií dokončeno","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"cs","translation":"{{value1}}: {{value2}} sérií, {{value3}} kg, {{value4}}x, odpočinek {{value5}} sekund","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"cs","translation":"{{value1}}{{value2}} sérií","review_note":""}
+{"id":"training.4547089161d9","target_locale":"cs","translation":"{{value1}}, žádné záznamy","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"cs","translation":"Vytvořte plán pro {{value1}}","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"cs","translation":"Vytvořte plán pro {{value1}}","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"cs","translation":"Nechte, aby {{value1}} vytvořil plán","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"cs","translation":"Zkontrolovat {{value1}}","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"cs","translation":"Konzultovat {{value1}}","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"cs","translation":"Ukázka formuláře pro {{value1}}. Hlavní cvičení jsou {{value2}}, {{value3}} a {{value4}} položek.","review_note":""}
+{"id":"training.859660768503","target_locale":"cs","translation":"Návrh {{value1}}","review_note":""}
+{"id":"training.7544024a8347","target_locale":"cs","translation":"Aktualizováno cílové váhy v {{value1}}","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"cs","translation":"Aktualizuji cílovou váhu v {{value1}}.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"cs","translation":"Sady v {{value1}}","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"cs","translation":"{{value1}} sady × {{value2}} opakování × {{value3}} kg × pauza {{value4}} sekund","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"cs","translation":"{{value1}} sady × {{value2}} opakování","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"cs","translation":"{{value1}} × {{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"cs","translation":"{{value1}} × Plán: {{value2}}/{{value3}} sad, Úspěšnost: {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"cs","translation":"Vytvořit plán pro {{value1}}","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"cs","translation":"{{value1}} položek","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"cs","translation":"Synchronizováno {{value1}} jídel s Apple Watch.","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"cs","translation":"{{value1}} minut","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"cs","translation":"{{value1}} minut {{value2}} sekund","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"cs","translation":"{{value1}} opakování","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"cs","translation":"{{value1}} opakování/sekundu","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"cs","translation":"{{value1}} hodin {{value2}} minut","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"cs","translation":"{{value1}} ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"cs","translation":"{{value1}} sekund","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"cs","translation":"{{value1}} cvičení","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"cs","translation":"{{value1}} cvičení · {{value2}} série · {{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"cs","translation":"{{value1}} typů","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"cs","translation":"Začněte s tímto plánem","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"cs","translation":"Uložte tento plán","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"cs","translation":"Chcete smazat tuto historii?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"cs","translation":"Dnes neexistuje žádné tréninkové cvičení","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"cs","translation":"Toto cvičení bylo vynecháno","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"cs","translation":"Na tomto zařízení nelze použít integraci s Apple Watch","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"cs","translation":"Jak upravit tento plán?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"cs","translation":"Chcete smazat tento plán?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"cs","translation":"Vše","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"cs","translation":"Všechny záznamy","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"cs","translation":"Žádné","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"cs","translation":"Postup","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"cs","translation":"Uložit pouze historii aplikace","review_note":""}
+{"id":"training.39029011b26a","target_locale":"cs","translation":"Dřep s činkou","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"cs","translation":"Chyba","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"cs","translation":"Přizpůsobené cvičení","review_note":""}
+{"id":"training.42254297b975","target_locale":"cs","translation":"Přidat vlastní cvičení","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"cs","translation":"Zrušit","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"cs","translation":"Rychlé vytvoření","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"cs","translation":"Kliky","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"cs","translation":"Bridge s váhou","review_note":""}
+{"id":"training.1792e5824127","target_locale":"cs","translation":"Cvičení s činkou","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"cs","translation":"Cvičení s činkou (zpětný pohyb)","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"cs","translation":"Cvičení s činkou (křížení)","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"cs","translation":"Kopírovat","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"cs","translation":"Požadavky na trenéra (volitelné)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"cs","translation":"Kliky s váhou","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"cs","translation":"Plank (strana)","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"cs","translation":"Výpony v bočním postoji","review_note":""}
+{"id":"training.5722403a802d","target_locale":"cs","translation":"Sub","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"cs","translation":"Tlaky s činkou","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"cs","translation":"Výpony nohou na židli","review_note":""}
+{"id":"training.861902f328fe","target_locale":"cs","translation":"Výtahy na židli","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"cs","translation":"Posilovna","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"cs","translation":"Příchod do posilovny","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"cs","translation":"Návštěva posilovny","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"cs","translation":"Nezaznamenáno návštěvu posilovny","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"cs","translation":"Přeskoč","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"cs","translation":"Kliky","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"cs","translation":"Výpony na stojici pozici","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"cs","translation":"Kliky na stroji Smith","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"cs","translation":"Sada","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"cs","translation":"Sada {{value1}} dokončena","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"cs","translation":"Přidat sadu","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"cs","translation":"Nastavit více sad","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"cs","translation":"Historie sad","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"cs","translation":"Čas sady {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"cs","translation":"Konfigurace sady","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"cs","translation":"Cíle sady se kopírují při zahájení cvičení a jsou uloženy v historii.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"cs","translation":"Název","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"cs","translation":"Kliky s činkami","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"cs","translation":"Kliky na lavici","review_note":""}
+{"id":"training.0d799718504b","target_locale":"cs","translation":"Kliky s činkami Rumunský deadlift","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"cs","translation":"Kliky na stroji","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"cs","translation":"Přítahy","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"cs","translation":"Nastavit tempo","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"cs","translation":"Plán tréninku: Zvýšit {{value1}} sekund, snížit {{value2}} sekund, {{value3}}krát/sekundu","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"cs","translation":"Odstranit chybu","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"cs","translation":"Překonávání paží","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"cs","translation":"Trénink","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"cs","translation":"Trénink nebyl zaznamenán","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"cs","translation":"Dokončit trénink","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"cs","translation":"Žádný záznam o tréninku","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"cs","translation":"Plán tréninku","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"cs","translation":"Kliky s činkami","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"cs","translation":"Odklon boků","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"cs","translation":"Výtlak boků","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"cs","translation":"Táhnutí obličeje","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"cs","translation":"Forma a důležité body","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"cs","translation":"Příklad formy","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"cs","translation":"Volný trénink","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"cs","translation":"Kliky","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"cs","translation":"Plank","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"cs","translation":"Bench press","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"cs","translation":"Nenašel jsem spárovaný Apple Watch","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"cs","translation":"Objem","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"cs","translation":"Přední zdvih s váhou","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"cs","translation":"Hlavní","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"cs","translation":"Poznámky","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"cs","translation":"Přidat vlastní cvičení","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"cs","translation":"Přítahy v lavici","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"cs","translation":"Dřepy","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"cs","translation":"Rumunský mrtvý tah","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"cs","translation":"Zaklesy na lýtka","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"cs","translation":"Tlak na nohy","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"cs","translation":"Přítah jednoručkou","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"cs","translation":"Trénink","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"cs","translation":"Chcete dokončit trénink?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"cs","translation":"Chcete ukončit trénink?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"cs","translation":"・","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"cs","translation":"・Opraveno","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"cs","translation":"Výška","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"cs","translation":"Výška {{value1}} sekund, snížení {{value2}} sekund, {{value3}}krát/sekundu","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"cs","translation":"Výška{{value1}} sekund, snížení{{value2}} sekund, {{value3}}krát/sekundu","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"cs","translation":"Výška v sekundách","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"cs","translation":"S rozdílem mezi výškou a snížením","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"cs","translation":"Horní část těla","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"cs","translation":"Snížení","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"cs","translation":"Snížení za sekundu","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"cs","translation":"Dolní část těla","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"cs","translation":"Hlavní partie","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"cs","translation":"Za daný den použitelné vybavení","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"cs","translation":"Dnes se synchronizovalo do Apple Watch","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"cs","translation":"Synchronizace do Apple Watch probíhá","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"cs","translation":"Odpočinek {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"cs","translation":"Fotografie postavy","review_note":""}
+{"id":"training.82865627f395","target_locale":"cs","translation":"Fotografie postavy nebyla zaznamenána","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"cs","translation":"Příklad: Snižte počet cviků a prodlužte odpočinek","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"cs","translation":"Příklad: Cviky na hrudník","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"cs","translation":"Příklad: Lehčí cvičení nohou, zaměření na hrudník","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"cs","translation":"Uložit","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"cs","translation":"Není možné uložit","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"cs","translation":"Název cviku z možností","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"cs","translation":"Zastavit","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"cs","translation":"Dokončeno","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"cs","translation":"Celkový pokrok","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"cs","translation":"Celé tělo","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"cs","translation":"Celé tělo / Udržování","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"cs","translation":"Celé tělo A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"cs","translation":"Celé tělo B","review_note":""}
+{"id":"training.f74271660465","target_locale":"cs","translation":"Celé tělo C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"cs","translation":"Lehké celé tělo","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"cs","translation":"Fotografie","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"cs","translation":"Žádná fotografie","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"cs","translation":"Analýza","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"cs","translation":"Neexistují žádné analýzní údaje","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"cs","translation":"Začátečník, celé tělo","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"cs","translation":"Zadané cvičení není zahrnuto v plánu. Zkontrolujte vybavení a aktualizujte plán.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"cs","translation":"Dostupné vybavení","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"cs","translation":"Odstranit","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"cs","translation":"Předchozí měsíc","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"cs","translation":"Poslední {{value1}} × {{value2}}krát","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"cs","translation":"Zadejte váhu pro přidání. Pro asistovanou váhu můžete zadat zápornou hodnotu.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"cs","translation":"Rychlost pohybu","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"cs","translation":"Odhadovaný počet pohybů: celkem {{value1}}","review_note":""}
+{"id":"training.e1472f598358","target_locale":"cs","translation":"Reflex","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"cs","translation":"Můžete přidat vlastní typ cvičení z tlačítka v pravém horním rohu.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"cs","translation":"Celkem: {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"cs","translation":"Zařízení","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"cs","translation":"Rozdíl počtů","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"cs","translation":"Zemina","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"cs","translation":"Základní","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"cs","translation":"Stabilita: {{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"cs","translation":"Dokončeno","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"cs","translation":"Dokončené záznamy můžete zkontrolovat v historii.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"cs","translation":"Nezakončené záznamy se neukládají.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"cs","translation":"Uložit do historie","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"cs","translation":"Uložit do historie","review_note":""}
+{"id":"training.1784283f2316","target_locale":"cs","translation":"Běží","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"cs","translation":"Počet provedených pokynů","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"cs","translation":"Skutečný temp: Zvýšit {{value1}} sekund / Snížit {{value2}} sekund","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"cs","translation":"Výkon: {{value1}} × {{value2}}krát","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"cs","translation":"Upravit výkon","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"cs","translation":"Cílová oblast","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"cs","translation":"Historie","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"cs","translation":"Žádná historie","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"cs","translation":"Historie ještě neexistuje.","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"cs","translation":"Smazat historii","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"cs","translation":"Upravit historii","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"cs","translation":"Úprava historie","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"cs","translation":"Podrobnosti o historii","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"cs","translation":"Průměrná srdeční frekvence","review_note":""}
+{"id":"training.461619512206","target_locale":"cs","translation":"Tlak / Hloubka","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"cs","translation":"Připraven","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"cs","translation":"Srdeční frekvence","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"cs","translation":"Můžete přidat vlastní cvičení.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"cs","translation":"Metoda","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"cs","translation":"Stisknout / Horní část hrudníku","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"cs","translation":"Odpovědný trenér","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"cs","translation":"Bez specifikace","review_note":""}
+{"id":"training.6532391678cf","target_locale":"cs","translation":"Rychlost vibrací","review_note":""}
+{"id":"training.f57690abba57","target_locale":"cs","translation":"Odhad 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"cs","translation":"Odhad {{value1}} opakování","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"cs","translation":"Krátce uveďte důvod návrhu","review_note":""}

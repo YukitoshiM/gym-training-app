@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "de-DE", "translation": "KI-Konto", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "de-DE", "translation": "{{value1}} KI-Credits für diese Aktion", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "de-DE", "translation": "Credits hinzufügen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "de-DE", "translation": "Guthaben anpassen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "de-DE", "translation": "KI-Credits für automatische Analysen nutzen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "de-DE", "translation": "Verbrauchen Sie keine Credits und erstellen Sie Berichte nur anhand der Daten auf Ihrem Gerät.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "de-DE", "translation": "Verbrauchen Sie Credits für wöchentliche oder monatliche Berichte bei Ausführung einer Reservierung.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "de-DE", "translation": "KI-Credits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "de-DE", "translation": "Guthaben wird überprüft", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "de-DE", "translation": "Guthaben: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "de-DE", "translation": "{{value1}} Credits erhalten.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "de-DE", "translation": "Credits kaufen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "de-DE", "translation": "KI weiterhin ohne Credits nutzen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "de-DE", "translation": "Löscht alle Daten und Ihr BodyMode-Konto. Alle verbleibenden Kauf- und Bonus-Credits gehen verloren und können nicht wiederhergestellt werden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "de-DE", "translation": "Credits-Historie", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "de-DE", "translation": "Sie erhalten Credits durch ein Video oder können die benötigte Menge kaufen. Manuelle Aufzeichnungen sind weiterhin kostenlos.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "de-DE", "translation": "Gewinnen Sie Credits durch Werbung oder kaufen Sie sie. Manuelle Aufzeichnungen funktionieren weiterhin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "de-DE", "translation": "Nicht genügend KI-Credits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "de-DE", "translation": "Monatlicher Bericht", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "de-DE", "translation": "Kein Ablaufdatum", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "de-DE", "translation": "{{value1}} KI-Credits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "de-DE", "translation": "Die ausgewählten Produkte werden vorbereitet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "de-DE", "translation": "Rückerstattung wurde angepasst. {{value1}} Credits hinzugefügt.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "de-DE", "translation": "Credits wurden hinzugefügt.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "de-DE", "translation": "Die Bestellung wird geprüft. Nach Abschluss werden die Credits automatisch gutgeschrieben.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "de-DE", "translation": "Kauf-Credits sind nicht abnutzbar. Sie können nicht übertragen oder verkauft werden. Bannerwerbung ist auch nach dem Kauf sichtbar.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "de-DE", "translation": "Der Bestellstatus konnte nicht ermittelt werden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "de-DE", "translation": "Der Kauf im App Store konnte nicht überprüft werden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "de-DE", "translation": "Anpassung der Rückerstattung", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "de-DE", "translation": "Das heutige Werbeangebot wurde bereits eingelöst.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "de-DE", "translation": "Die Überprüfung des Videos dauert noch. Nach der Überprüfung werden die Credits gutgeschrieben.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "de-DE", "translation": "Öffnen Sie den AI-Bereich, um Ihr aktuelles Guthaben zu überprüfen. Sie müssen das Video nicht erneut ansehen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "de-DE", "translation": "5 Credits erhalten.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "de-DE", "translation": "Die Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "de-DE", "translation": "Sie haben sich mit Ihrem Apple-Konto angemeldet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "de-DE", "translation": "Melden Sie sich über Apple an, um die ersten 20 Credits zu erhalten. Die manuelle Aufzeichnung kann ohne Registrierung verwendet werden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "de-DE", "translation": "Um die AI-Funktionen nutzen zu können, müssen Sie sich über Apple registrieren.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "de-DE", "translation": "Registrierung...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "de-DE", "translation": "Melden Sie sich bei Apple an, um 20 Credits zu erhalten. Die manuelle Aufzeichnung kann ohne Registrierung verwendet werden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "de-DE", "translation": "Melden Sie sich bei Apple an, um 20 Credits zu erhalten. Es entstehen keine Kosten oder automatischen Abonnements.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "de-DE", "translation": "Registrieren Sie sich und erhalten Sie 20 Credits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "de-DE", "translation": "Videoanzeige", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "de-DE", "translation": "Von den Betreibern gewährt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "de-DE", "translation": "Kauf", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "de-DE", "translation": "Bonus für die Anmeldung", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "de-DE", "translation": "AI-Trainer starten", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "de-DE", "translation": "AI-Credits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "de-DE", "translation": "Bitte später erneut ausprobieren.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "de-DE", "translation": "Unbegrenzt nutzbar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "de-DE", "translation": "5 Credits durch Videoanzeige erhalten", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "de-DE", "translation": "Wöchentlicher Bericht", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

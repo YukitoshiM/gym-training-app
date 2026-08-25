@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "cs", "translation": "Orientační odhad. Není reálná měření. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "cs", "translation": "Kvůli dlouhé době bez posledního reálného měření, změny nejsou potvrzeny a jsou odhadovány.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "cs", "translation": "Na základě statistických údajů pro skupiny lidí (v závislosti na výšce, váze, věku a pohlaví), není to přesné měření tělesného tuku.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "cs", "translation": "Odhad", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "cs", "translation": "Orientační odhad", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "cs", "translation": "Jedná se o orientační hodnotu, nikoli o reálné měření. Uložte pouze po přečtení obsahu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "cs", "translation": "Chcete uložit odhad?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "cs", "translation": "Uložit jako odhad", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "cs", "translation": "{{value1}} {{value2}}. Reálná měření se nepřepisují.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "cs", "translation": "Naplánovaná zpráva", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "cs", "translation": "Týdenní zpráva", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "cs", "translation": "Den v týdnu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "cs", "translation": "Měsíční zpráva", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "cs", "translation": "Den v měsíci", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "cs", "translation": "{{value1}} dní", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "cs", "translation": "Čas notifikace", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "cs", "translation": "Automaticky generuje zprávu po prvním otevření aplikace po naplánovaném čase. Pokud není možné připojení k AI, zůstane uložená souhrn.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "cs", "translation": "Je třeba zkontrolovat nastavení", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "cs", "translation": "Můžete zkusit znovu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "cs", "translation": "Spotřebováno", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "cs", "translation": "Ne, nevyčerpáno", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "cs", "translation": "Důkaz ({{value1}})", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "cs", "translation": "Kvůli nedostatku přímých důkazů, je to pouze orientační doporučení založené na trendech.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "cs", "translation": "Přímé důkazy pro tuto doporučení nebyly nalezeny.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "cs", "translation": "Kvůli nedostatku vědeckých důkazů, doporučujeme na základě obecných principů a záznamů.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "cs", "translation": "Jednotka pro velikost těla", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

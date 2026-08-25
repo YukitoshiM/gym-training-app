@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "tr", "translation": "AI hesabı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "tr", "translation": "Bu işlemde {{value1}} kredi kullanıldı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "tr", "translation": "Kredi ekle", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "tr", "translation": "Bakiye ayarla", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "tr", "translation": "AI kredilerini kullanarak otomatik analiz yap", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "tr", "translation": "Kredi harcamadan, cihazdaki verilerle özet oluştur.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "tr", "translation": "Rezervasyon tamamlandığında haftalık veya aylık rapor için kredileri kullan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "tr", "translation": "AI kredisi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "tr", "translation": "Bakiye kontrol ediliyor", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "tr", "translation": "Kalan bakiye {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "tr", "translation": "{{value1}} kredi kazandın.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "tr", "translation": "Kredi satın al", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "tr", "translation": "AI'yi kullanmadan devam et", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "tr", "translation": "Cihazdaki tüm verileri ve BodyMode hesabını siler. Kalan kredi ve bonus krediler de kaybolur ve geri alınamaz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "tr", "translation": "Kredi geçmişi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "tr", "translation": "Videodan kredi alabilir veya ihtiyacın kadar satın alabilirsin. Manuel kayıtlar ücretsiz olarak kullanılabilir.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "tr", "translation": "Reklamlardan kazanabilir veya kredi satın al. Manuel kayıtlar kullanmaya devam edebilirsin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "tr", "translation": "Yeterli AI kredisi yok", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "tr", "translation": "Aylık rapor", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "tr", "translation": "Geçerlilik süresi yok", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "tr", "translation": "{{value1}} AI kredisi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "tr", "translation": "Satın alınan ürünleri hazırlıyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "tr", "translation": "İade miktarını ayarladık ve {{value1}} kredi ekledik.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "tr", "translation": "Kredi eklendi.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "tr", "translation": "Satın alma işlemi onay bekliyor. Tamamlandıktan sonra otomatik olarak yansıtılır.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "tr", "translation": "Satın alınan krediler geçersiz olmaz. Devredilemez veya nakde çevrilemez. Banner reklamları satın alırsanız da görünmeyecektir.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "tr", "translation": "Satın alma durumunu belirleyemedik.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "tr", "translation": "App Store'daki satın alma işlemini doğrulayamadık.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "tr", "translation": "İade ayarı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "tr", "translation": "Bugünün reklam ödülü zaten alınmıştır.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "tr", "translation": "Videoyu izlemek biraz zaman alıyor. İzledikten sonra krediye yansıtılır.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "tr", "translation": "AI ekranını açtığınızda en güncel bakiyenizi görebilirsiniz. Videoyu tekrar izlemenize gerek yoktur.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "tr", "translation": "5 kredi aldınız.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "tr", "translation": "Oturum süresi doldu. Lütfen tekrar giriş yapın.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "tr", "translation": "Apple hesabınızla giriş yaptınız.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "tr", "translation": "AI ekranından Apple üzerinden kayıt yaparak ilk kredi alabilirsiniz. Manuel kayıt, herhangi bir kaydın gerektirmez.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "tr", "translation": "AI özelliklerini kullanmak için lütfen Apple üzerinden kayıt olun.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "tr", "translation": "Kaydoluyoruz...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "tr", "translation": "Apple üzerinden kayıt yaptığınızda ilk 20 krediyi alırsınız. Manuel kayıt, herhangi bir kaydın gerektirmez.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "tr", "translation": "Apple üzerinden kayıt yaptığınızda ilk 20 krediyi alırsınız. Abonelik veya otomatik yenileme başlamaz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "tr", "translation": "Kaydolarak 20 kredi kazanın", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "tr", "translation": "Video reklamı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "tr", "translation": "Yöneticiden al", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "tr", "translation": "Satın al", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "tr", "translation": "İlk kez kaydolun, bonus alın", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "tr", "translation": "AI antrenörüne başlayın", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "tr", "translation": "AI kredileri", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "tr", "translation": "Lütfen daha sonra tekrar deneyin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "tr", "translation": "Sınırsız kullanım", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "tr", "translation": "Video izleyerek 5 kredi kazanın", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "tr", "translation": "Haftalık rapor", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"bn","translation":"নিকটতম একটি নির্বাচন করুন","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"bn","translation":"একবার আপনি প্রথমে আপনার লক্ষ্যগুলি সেট করলে, আপনাকে প্রতিদিন মাত্র তিনটি জিনিস করতে হবে।","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"bn","translation":"আপনার প্রথম প্রশিক্ষণ সম্পূর্ণ করুন","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"bn","translation":"প্রথম মান রেকর্ড করুন","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"bn","translation":"3 পর্যন্ত","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"bn","translation":"যে আইটেমগুলি প্রবেশ করা হয়নি সেগুলি পরে রেকর্ডিং স্ক্রীন থেকে যোগ করা যেতে পারে৷","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"bn","translation":"অসম্পূর্ণ","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"bn","translation":"বাস্তবায়িত হয়নি","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"bn","translation":"রেকর্ড করা হয়নি","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"bn","translation":"সেট করা হয়নি","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"bn","translation":"নির্বাচিত হয়নি","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"bn","translation":"পরবর্তী উদ্দেশ্য-নির্দিষ্ট মেনু","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"bn","translation":"পরবর্তী","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"bn","translation":"ধাপ সংখ্যা দেখুন","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"bn","translation":"ওজন হ্রাস","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"bn","translation":"কার্বোহাইড্রেট","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"bn","translation":"অবৈধ","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"bn","translation":"সময় এবং সময় একটি যুক্তিসঙ্গত সংখ্যা সেট করুন","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"bn","translation":"বিশেষ করে গুরুত্বপূর্ণ","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"bn","translation":"অবস্থা এবং পরবর্তী পদক্ষেপ জানুন","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"bn","translation":"স্থিতি পরীক্ষা করুন","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"bn","translation":"বর্তমানে","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"bn","translation":"বর্তমান শারীরিক তথ্য","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"bn","translation":"বর্তমানে অনুপলব্ধ","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"bn","translation":"আমি বর্তমানে উপলব্ধ রেকর্ড এবং সেটিংস ব্যবহার করেছি।","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"bn","translation":"বর্তমানে নির্বাচিত: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"bn","translation":"বিনা দ্বিধায় আপনার আদর্শ শরীরের দিকে এগিয়ে যান।","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"bn","translation":"কারণ","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"bn","translation":"কারণ: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"bn","translation":"জন্মের বছর","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"bn","translation":"স্ক্রিন ট্যুর শুরু করুন","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"bn","translation":"নিবন্ধিত মেনু {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"bn","translation":"রাষ্ট্র আপনি লক্ষ্য করতে চান","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"bn","translation":"আপনি লক্ষ্য করছেন শৈলী","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"bn","translation":"লক্ষ্য","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"bn","translation":"লক্ষ্য {{value1}} / পার্থক্য {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"bn","translation":"লক্ষ্য এবং গতি","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"bn","translation":"লক্ষ্য এবং অর্জন","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"bn","translation":"লক্ষ্য সমন্বয় প্রার্থীদের","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"bn","translation":"লক্ষ্য সেট করা হয়নি","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"bn","translation":"লক্ষ্য অর্জন","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"bn","translation":"উদ্দেশ্য","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"bn","translation":"প্রতিটি কাজের জন্য আমাদের দুজন লোক আছে। আপনি যখন ব্যক্তি পরিবর্তন করবেন, তখন আপনার আদর্শ শরীরের ধরন এবং কথা বলার ধরণ পরিবর্তন হবে।","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"bn","translation":"দায়িত্ব আপনার উদ্দেশ্য মাপসই","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"bn","translation":"হোম পেজে চেক পয়েন্টের মধ্যে পরিবর্তন করুন এবং আপনার উদ্দেশ্যের উপর নির্ভর করে পরবর্তী কি করতে হবে।","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"bn","translation":"উদ্দেশ্য পরিবর্তন","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"bn","translation":"আপনার উদ্দেশ্য চয়ন করুন","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"bn","translation":"উদ্দেশ্য মোড","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"bn","translation":"উদ্দেশ্য/লক্ষ্য","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"bn","translation":"উদ্দেশ্য-নির্দিষ্ট মেনু প্রকাশ করা হয়","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"bn","translation":"উদ্দেশ্য অনুসারে মেনু দেখুন","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"bn","translation":"অতি সাম্প্রতিক","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"bn","translation":"পরামর্শ করার সময় পরিবর্তন করুন","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"bn","translation":"শক্তি সঞ্চয় নমুনা","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"bn","translation":"{{value1}} শুরু করুন","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"bn","translation":"ঘুম/পুনরুদ্ধার","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"bn","translation":"নিশ্চিতকরণ অধীনে","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"bn","translation":"সেকেন্ড","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"bn","translation":"সেকেন্ডের সংখ্যা","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"bn","translation":"অনুসন্ধান/একটি ইভেন্ট যোগ করুন","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"bn","translation":"ডিভাইস প্রতি স্বল্পমেয়াদী প্রমাণীকরণ ব্যবহার করুন","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"bn","translation":"টার্মিনালের ভিতরে","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"bn","translation":"প্রতিযোগিতা","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"bn","translation":"পেশী প্রশিক্ষণ","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"bn","translation":"পেশী শক্তি, শারীরিক শক্তি, এবং প্রতিযোগিতায় পুনরুদ্ধার সংযোগ করা","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"bn","translation":"পেশী ভর এবং প্রশিক্ষণ কর্মক্ষমতা বৃদ্ধি","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"bn","translation":"পেশী হাইপারট্রফি","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"bn","translation":"অভিজ্ঞতা","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"bn","translation":"অভিজ্ঞতার স্তর","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"bn","translation":"গতি যা অব্যাহত রাখা যেতে পারে","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"bn","translation":"এটি যোগ্যতা বা যোগ্যতার মূল্যায়ন নয়। আপনার উত্তরে আপনার পছন্দের দৃষ্টিভঙ্গি নির্দেশ করুন।","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"bn","translation":"লিপিড","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"bn","translation":"কোমরের পরিধি","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"bn","translation":"কোমরের পরিধি/ঐচ্ছিক","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"bn","translation":"আচরণগত নিদর্শন শিখুন","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"bn","translation":"কর্ম বিজ্ঞপ্তি","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"bn","translation":"প্রদর্শন","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"bn","translation":"প্রদর্শন মোড","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"bn","translation":"প্রদর্শন পদ্ধতি","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"bn","translation":"প্রদর্শন নীতি","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"bn","translation":"অক্জিলিয়ারী মডেল সংযুক্ত নয়","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"bn","translation":"সাপ্লিমেন্ট","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"bn","translation":"অতিরিক্ত: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"bn","translation":"পরিকল্পনা","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"bn","translation":"পরিকল্পনা, ইতিহাস, শারীরিক কেপিআই, খাবার, ফটো, এআই কথোপকথন/স্মৃতি এবং কাস্টম ইভেন্টগুলি মুছুন।","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"bn","translation":"একটি পরিকল্পনা দিয়ে শুরু করুন বা ফ্লাইতে ইভেন্ট যোগ করুন এবং রেকর্ড করুন।","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"bn","translation":"পরিকল্পনা ছাড়া ইভেন্ট যোগ করুন","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"bn","translation":"পরিকল্পনায় প্রতিফলিত হয়","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"bn","translation":"একটি পরিকল্পনা তৈরি করুন","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"bn","translation":"আসুন একটি পরিকল্পনা তৈরি করি","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"bn","translation":"প্ল্যান/ওয়াচ","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"bn","translation":"আপনি কি পরিকল্পিত ওজন আপডেট করতে চান?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"bn","translation":"রেকর্ড","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"bn","translation":"রেকর্ড","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"bn","translation":"রেকর্ড। এআইকে জিজ্ঞাসা করুন। চালান। আমি প্রতিদিন মাত্র তিনটি জিনিস করি।","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"bn","translation":"রেকর্ড করতে আইটেমটি আলতো চাপুন","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"bn","translation":"রেকর্ডিং এবং সম্পাদনের ফলাফল পরবর্তী AI বিশ্লেষণে নিয়ে যাওয়া হবে। প্রথম অপারেশন হোম মিশন দ্বারা পরিচালিত হবে.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"bn","translation":"রেকর্ড এখানে সংরক্ষণ করা হয়","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"bn","translation":"রেকর্ড পরীক্ষা করা হচ্ছে। আপনি পর্দা বন্ধ করলেও এটি চলতে থাকে।","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"bn","translation":"রেকর্ড দেখুন এবং পরবর্তী পদক্ষেপের পরামর্শ দিন","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"bn","translation":"রেকর্ডিং","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"bn","translation":"সম্পূর্ণ রেকর্ড থেকে, আমরা ভাল পরিবর্তন, স্থবিরতা, এবং অনুপস্থিত তথ্য, সেইসাথে পরবর্তী পদক্ষেপগুলি সুপারিশ করব৷","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"bn","translation":"রেকর্ড করা","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"bn","translation":"সেটিংস","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"bn","translation":"ইতিমধ্যে সেট","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"bn","translation":"ডায়াগনস্টিক লগ আইফোন এবং Apple Watch এর গতিবিধি, যোগাযোগ এবং ওয়ার্কআউট অপারেশনের রেকর্ড অন্তর্ভুক্ত করে। এটি স্বয়ংক্রিয়ভাবে বাহ্যিকভাবে পাঠানো হয় না।","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"bn","translation":"ডায়গনিস্টিক লগ মুছুন","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"bn","translation":"ডায়াগনস্টিক লগ রপ্তানি করুন","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"bn","translation":"ডায়াগনস্টিক লগ পাঠান","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"bn","translation":"কথা বলার উপায়","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"bn","translation":"বিস্তারিত দেখুন","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"bn","translation":"বিভ্রান্তিকর বিষয়বস্তু","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"bn","translation":"শরীর KPI","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"bn","translation":"উচ্চতা","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"bn","translation":"উচ্চতা/যেকোন","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"bn","translation":"আপনি হারিয়ে গেলে, এখানে ক্লিক করুন","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"bn","translation":"যোগ করুন","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"bn","translation":"যোগ করুন","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"bn","translation":"অ্যাড দিয়ে শুরু করুন","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"bn","translation":"পাঠান","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"bn","translation":"পাঠানোর অপেক্ষায়","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"bn","translation":"আপনি যে জিমে যান বা আপনার বাড়িতে আছে সেটি নির্বাচন করুন।","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"bn","translation":"যত তাড়াতাড়ি আমি যোগাযোগ করতে পারি আমি রেকর্ডগুলি পরীক্ষা করব।","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"bn","translation":"প্রতি সপ্তাহে বার সংখ্যা","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"bn","translation":"আপনি সপ্তাহে কতবার ব্যায়াম করতে পারেন?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"bn","translation":"কিভাবে এগিয়ে যেতে হবে","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"bn","translation":"চলছে","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"bn","translation":"ভাল ব্যায়াম, ঘুম এবং খাদ্যাভ্যাস বজায় রাখুন","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"bn","translation":"নির্বাচন করুন: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"bn","translation":"নির্বাচিত","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"bn","translation":"বিতরণ","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"bn","translation":"বিতরণের সময় AI সেটিংস লোড করুন","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"bn","translation":"মূল এলাকা","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"bn","translation":"ওজন","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"bn","translation":"রিলের উপর ওজন সেট করুন","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"bn","translation":"ওজন ইউনিট","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"bn","translation":"বন্ধ","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"bn","translation":"বন্ধ","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"bn","translation":"শুরু","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"bn","translation":"সম্পর্কিত তথ্য","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"bn","translation":"খাবার","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"bn","translation":"খাদ্য এবং শরীরের আকৃতি","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"bn","translation":"খাবার এবং শরীরের ধরন ফটো. ওজন, কোমরের পরিধি এবং সেট সংখ্যাসূচক মান হিসাবে রেকর্ড করা হয়।","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"bn","translation":"আপনার খাবার রেকর্ড করুন","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"bn","translation":"খাবারের সংখ্যা","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"bn","translation":"খাবারের সংখ্যার কৃতিত্ব এবং ক্যালোরির অর্জন/PFC আলাদাভাবে প্রদর্শিত হয়।","review_note":""}

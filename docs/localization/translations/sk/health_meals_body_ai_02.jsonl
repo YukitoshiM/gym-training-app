@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"sk","translation":"Tieto návrhy vychádzajú z trendu vstupných údajov a nie sú lekárskou diagnostikou. Ak máte obavy ohľadom vášho zdravia, poraďte sa so špecialistom.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"sk","translation":"Zhrnutie vstupných údajov","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"sk","translation":"Metóda vstupu","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"sk","translation":"Žiadne zdieľané položky","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"sk","translation":"Skontrolujte obsah a v prípade potreby ho upravte a potom uložte. Ciele nie sú automaticky potvrdené.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"sk","translation":"Je potrebné znova analyzovať","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"sk","translation":"Opäť skúsiť","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"sk","translation":"Fotografie","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"sk","translation":"Rozsah, ktorý môžete použiť na referenciu z fotografií","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"sk","translation":"Odhadnite kalórie z fotografie","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"sk","translation":"Vytvorte zápis z fotografie a zjednodušte zadávanie údajov.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"sk","translation":"Analýza pomocou fotografie","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"sk","translation":"Bez fotografie","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"sk","translation":"Zmena vzhľadu sa hodnotí vizuálne, čísla sa overujú meraním.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"sk","translation":"Vytvorte zápis o potravinách na základe fotografií.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"sk","translation":"Ak vyberiete viacero fotografií, analýza je jednoduchšia. Čím viac fotografií, tým presnejšie výsledky.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"sk","translation":"Analýza fotografií v skupine","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"sk","translation":"Analýza fotografií","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"sk","translation":"Pridajte fotografiu","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"sk","translation":"Pridajte a upravte fotografiu","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"sk","translation":"Výber fotografie automaticky pridá kalórie a ďalšie údaje.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"sk","translation":"Skupinu fotografií môžete uložiť. Po pripojení môžete z detailov skupiny znovu analyzovať.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"sk","translation":"Minúty","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"sk","translation":"Ak uvediete odhad, presnosť sa zvýši.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"sk","translation":"Analýza v priebehu","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"sk","translation":"Analýza dokončená","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"sk","translation":"Zdôvodnenie rozhodnutia","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"sk","translation":"Príchod","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"sk","translation":"Odstrániť","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"sk","translation":"Od posledného tréningu uplynulo {{value1}} dní, takže máte viac času na tento týždeň.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"sk","translation":"Posledný meranie brušnej obvodu je už viac ako 7 dní.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"sk","translation":"Zadaná hodnota oproti predchádzajúcemu meraniu","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"sk","translation":"Porovnanie s predchádzajúcou hodnotou: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"sk","translation":"Predtým","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"sk","translation":"Nedostatočné údaje pre porovnanie s predchádzajúcou týždňovou hodnotou.","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"sk","translation":"Objem je o viac ako 30 % vyšší, než v predchádzajúcom týždni. Nasledujúci tréning sa snažte udržať podobný objem a skontrolujte svoje hodnotiace stupnice (RPE) a ukazovatele regenerácie.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"sk","translation":"Porovnanie s predchádzajúcim týždňom: {{value1}} %","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"sk","translation":"Porovnanie s predchádzajoucím týždňom: {{value1}} %","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"sk","translation":"Zatiaľ žiadne údaje. Odhadujeme, že spustenie cez hodiny vám pomôže.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"sk","translation":"Odhadovaný objem","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"sk","translation":"Toto je referenčná hodnota, ktorá sumarizuje trendy získaných údajov, nie lekárska diagnóza.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"sk","translation":"Aktívne meranie","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"sk","translation":"Možnosť zmerať {{value1}} krát, chýba {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"sk","translation":"Získané údaje (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"sk","translation":"Vypočítajte objem a ďalšie údaje (váha, počet opakovaní, tempo, relatívna rozsiahosť pohybu, RPE) a nezakladajte hodnoty na 0.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"sk","translation":"Vpravo hore: rovná pozícia, celé telo","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"sk","translation":"Vpravo dole: od ramien po pás","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"sk","translation":"Celkové","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"sk","translation":"Použite rovnaké oblečenie, vzdialenosť a osvetlenie a urobte fotografiu s uvoľnením","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"sk","translation":"Porovnanie je možné, ak zaznamenáte viacero záznamov pre rovnaký tréning, rovnakú stravu a rovnaký čas.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"sk","translation":"Skutočné KPI pre daný deň","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"sk","translation":"Toto zobrazuje potenciálne zmeny, ale neposudzuje príčiny ani zdravotný stav.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"sk","translation":"Rýžový polievka","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"sk","translation":"Dýchavosť","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"sk","translation":"Dýchavosť je vyššia ako priemerná hodnota za 14 dní","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"sk","translation":"Dýchavosť je {{value1}} dychov/min, zatiaľ čo priemerná hodnota za 14 dní je {{value2}} dychov/min","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"sk","translation":"Dýchavosť je nižšia ako priemerná hodnota za 14 dní","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"sk","translation":"Dýchavosť je v norme","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"sk","translation":"Kvalita -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"sk","translation":"Kvalita {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"sk","translation":"Produkt","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"sk","translation":"Nepodarilo sa uložiť produkt.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"sk","translation":"Produktový kód","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"sk","translation":"Zadajte produktový kód.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"sk","translation":"Ručne zadajte produktový kód.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"sk","translation":"Názov produktu","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"sk","translation":"Dychov/min","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"sk","translation":"Zotavenie","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"sk","translation":"Vyberte deň, na ktorý uprednostňujete zotavenie.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"sk","translation":"Kvôli nižšiemu množstvu získejúcich dát, minimalizujte váhu alebo počet opakovaní pre {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"sk","translation":"Zoznam dokončených aktivít","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"sk","translation":"Počet","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"sk","translation":"Rozlište počet a výživu","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"sk","translation":"Na jednotku referenčnej hodnoty","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"sk","translation":"Pripojenie na externý server cez HTTP nie je povolené.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"sk","translation":"Večer","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"sk","translation":"Automatické dokončenie večer","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"sk","translation":"Neočakávajte výrazné nárasty alebo stagnáciu. V budúcnosti si vytvorte viac záznamov, kde budete môcť porovnávať svoje ciele a RPE.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"sk","translation":"Neúspech","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"sk","translation":"Poloha","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"sk","translation":"Pulz pri odpočinku","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"sk","translation":"Pulz pri odpočinku: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"sk","translation":"Pulz pri odpočinku je vyšší ako priemerná hodnota za 14 dní","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"sk","translation":"Pulz pri odpočinku je nižší ako priemerná hodnota","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"sk","translation":"Pulz pri odpočinku je v norme","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"sk","translation":"Dokončené","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"sk","translation":"Jednotky, ktoré sa ľahko dokončia: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"sk","translation":"Momentálne analyzujeme tendencie dokončenia a preskakovania.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"sk","translation":"Skutočná konzumovaná dávka","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"sk","translation":"Hustota","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"sk","translation":"História","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"sk","translation":"Vľavo hore: Predná strana / Celá farba tela","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"sk","translation":"Vľavo dole: Zadná strana / Celá farba tela","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"sk","translation":"Rozdiely","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"sk","translation":"Priemerná frekvencia srdcových úderov {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"sk","translation":"Priemerná rýchlosť","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"sk","translation":"Pomohlo mi to","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"sk","translation":"Jednotky, ktoré je ľahšie odložiť: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"sk","translation":"Znova","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"sk","translation":"Nepodarilo sa získať údaje o tepovej frekvencii.","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"sk","translation":"Zdroj: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"sk","translation":"Sada, kde boli údaje získané iným spôsobom ako manuálne zadávanie: {{value1}} položiek","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"sk","translation":"Pouhý pohyb zápästia nestačí na určení druhu a formy cvičenia. Po potvrdení odhadnú počty opakovaní.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"sk","translation":"Teplota kože na zápasťí","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"sk","translation":"Zápästná teplota kože je odlišná od bežnej hodnoty","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"sk","translation":"Bežná teplota kože na zápasťí","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"sk","translation":"Použijeme len schválené údaje pre nasledujúce návrhy.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"sk","translation":"Schválené údaje","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"sk","translation":"Odpovedný: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"sk","translation":"Špecializovaný tréner","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"sk","translation":"Zhodnotenie","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"sk","translation":"Pripojenie OK","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"sk","translation":"Aj keď pripojenie nie je možné, uložené údaje sa nezmiznú. Môžete pokračovať v manuálnom zaznamenávaní a neskôr generovať len AI komentáre.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"sk","translation":"Kontrola pripojenia","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"sk","translation":"Odhadované hodnoty sú len orientačné. Môžete ich vo vstupnom poli slobodne upraviť.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"sk","translation":"Odhadovaný príjem kalórií","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"sk","translation":"Pokračovanie","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"sk","translation":"Prísun kcal","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"sk","translation":"Záznam","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"sk","translation":"Nastavenie pre nahrávanie","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"sk","translation":"Upraviť nastavenia pre nahrávanie","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"sk","translation":"Pridať nastavenie pre nahrávanie","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"sk","translation":"Orientácia pri nahrávaní","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"sk","translation":"Počet dní nahrávania","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"sk","translation":"Poznámky o podmienkach a vzhľade","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"sk","translation":"Nahrávané","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"sk","translation":"Ukážka nahrávky. Vľavo hore je celá postava, vpravo hore je celá postava z boku, vľavo dole je celá postava zo zadku, a vpravo dole je detail brucha od ramien po pás. Nahrávanie s rovnakým oblečením, vzdialenosťou a osvietením.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"sk","translation":"Je potrebné zlepšiť","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"sk","translation":"Orientácia","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"sk","translation":"Potvrdili sme rozdiel v polohe podľa smeru.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"sk","translation":"Používajte ako materiál na posúdenie, nie denné zmeny, ale priemerné hodnoty za týždeň.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"sk","translation":"Dátum","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"sk","translation":"Spánok včera","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"sk","translation":"Obedia","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"sk","translation":"Čas","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"sk","translation":"Toto je odhadovaný skóre vypočítaný aplikáciou na základe času, hlbokého spánku, REM spánku a prebudenia.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"sk","translation":"Počkajte","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"sk","translation":"Ak to budete opakovať, overte si stav modelu na AI serveri.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"sk","translation":"Ak to budete opakovať, overte si logy na AI serveri.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"sk","translation":"Časový rozsah","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"sk","translation":"Prispôsobte sa RPE (scale of perceived exertion), ako je zvyčajne, a upravujte podľa toho.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"sk","translation":"Normálny","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"sk","translation":"Ak trvá dlho, použite to ako referenčný bod pre zníženie hlasitosti a dĺžky trvania.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"sk","translation":"Vytvoríme si plán na základe dostupného vybavenia, aby ste mohli bez váhaní začať prvý tréning.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"sk","translation":"Po zaznamenaní prvých hodnôt môžete sledovať ich vývoj a rozdiel oproti cieľu.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"sk","translation":"Najnovšie outdoorové behanie","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"sk","translation":"Najaktuálnejší report","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"sk","translation":"Mesačná kontrola","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"sk","translation":"Skontrolujte mesačnú kontrolu","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"sk","translation":"Vytvorenie návrhu mesačnej analýzy","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"sk","translation":"Generovanie mesačnej analýzy","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"sk","translation":"Mesačná správa","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"sk","translation":"Ráno","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"sk","translation":"Skúšam potlačiť upozornenia ráno a večer.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"sk","translation":"Neanalyzované","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"sk","translation":"Nepotiahnuté","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"sk","translation":"Hodnoty pre nepotiahnuté položky sa nezaznamenávajú","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"sk","translation":"Nevykonané","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"sk","translation":"Nefotografované","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"sk","translation":"Zatiaľ nie je zaregistrované. Zadejte hodnotu pre 100g etikety.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"sk","translation":"Produkt, ktorý zatiaľ nie je zaregistrovaný, sa po zadávaní uloží do zariadenia a bude použit pri nasledujúcom čítaní.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"sk","translation":"Nezaznamenané","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"sk","translation":"Zaznamenané len subjektívne vnímanie a dôvod prípravy.","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"sk","translation":"Porovnanie podľa podmienok","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"sk","translation":"OCR pre zobrazenie nutričných hodnôt (potvrdenie používateľa)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"sk","translation":"OCR pre zobrazenie nutričných hodnôt (nutná kontrola)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"sk","translation":"Zadali hodnoty z údajov o výžive. Skontrolujte referenčné hodnoty a jednotlivé čísla.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"sk","translation":"Vstup z fotografie údajov o výžive","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"sk","translation":"Nepodarilo sa prečítať údaje o výžive. Počkajte na svetlú lokáciu, fotografujte priamo alebo zadajte ručne.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"sk","translation":"Čítam údaje o výžive","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"sk","translation":"Výživa – priebeh","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"sk","translation":"Ďalšia aktivita","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"sk","translation":"Nasledujúci krok","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"sk","translation":"Nasledujúca úprava","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"sk","translation":"Skontrolujeme stav brucha z prednej a bočnej strany.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"sk","translation":"Skontrolujeme obvod pása z prednej, zadnej a bočnej strany.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"sk","translation":"Zaznamenávame údaje pre jeden deň (predná, bočná, zadná strana).","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"sk","translation":"Zaznamenávame údaje pre jeden deň (predná, bočná, zadná strana). Môžete uložiť aj jednotlivé záznamy a neskôr ich pridávať.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"sk","translation":"Počet krokov","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"sk","translation":"Počet krokov: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"sk","translation":"Môžete povoliť zber údajov pre konkrétne položky: počet krokov, aktivita, spánok, tepová frekvencia v kluse, HRV, dýchanie, teplota na zápästí. Nezneužité údaje sa zobrazia ako \"nie získané\" a môžete ich manuálne zadávať.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"sk","translation":"Zostávajú: {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"sk","translation":"Neexistujú porovnateľné denné dáta","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"sk","translation":"Spotené kalórie: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"sk","translation":"Kalórie – nie získané","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"sk","translation":"Hlboký","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"sk","translation":"Bolo to trvalé","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"sk","translation":"Sacharidy","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"sk","translation":"Nepotláčaj sa","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"sk","translation":"Aktuálne {{value1}}/4","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"sk","translation":"Automatické aktualizovanie na základe aktuálnej aktivít","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"sk","translation":"V súčasnosti dôvodom je preplnenie servera, nie nedostatok využitých zdrojov. {{value1}} Prosím, skúste to znova.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"sk","translation":"Pridajte svoju fitness halu ako preferovanú","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"sk","translation":"Kontrola polohy","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"sk","translation":"Expozícia na zvuky prostredia","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"sk","translation":"Som unavený/á","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"sk","translation":"Na základe údajov o únave a regenerácii, navrhujeme dni s nižšou náročnosťou.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"sk","translation":"Pocit únavy","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"sk","translation":"Odstrániť registrované miesto","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"sk","translation":"Vyhľadať registrované produkty","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"sk","translation":"Biela ryža","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"sk","translation":"Biela ryža, kuracie prsia, sójová polievka","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"sk","translation":"Ciele","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"sk","translation":"Môžete sledovať rozdiel a percentuálnu úspešnosť pre každý KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"sk","translation":"Na základe vašich cieľov a denného záznamu o strave, zobrazuje zostatok bielkovín.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"sk","translation":"Plán špecifický pre vaše ciele a dostupné vybavenie.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"sk","translation":"Význam cieľa","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"sk","translation":"Hodnoty cieľa","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"sk","translation":"Po nastavení hodnoty cieľa, zobrazí rozdiel a percentuálnu úspešnosť.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"sk","translation":"Cieľový rozdiel","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"sk","translation":"Cieľový rozdiel {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"sk","translation":"Cieľ nebol nastavený","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"sk","translation":"Nastaviť cieľ","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"sk","translation":"Dosiahnutie cieľa a stabilita","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"sk","translation":"Skontrolujte svoje posledné 30 dní aktívneho života, stravy a tréningu.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"sk","translation":"Je možné, že vaše maximálne zaťaženie v posledných 3 tréningoch neporostlo. Zvážte aj svoj typ vykonávania, počet opakovaní a subjektívne hodnotenie námahy (RPE).","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"sk","translation":"Posledné 7 dní","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"sk","translation":"Posledné 7 dní {{value1}}x","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"sk","translation":"Posledných 7 dní návštev posilňovne: {{value1}}x","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"sk","translation":"Vaša aktuálna tréningová aktivita je v norme.","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"sk","translation":"Vaša priemerná hmotnosť za poslednú týždeň klesla. Je to možné, aby ste podopreli svalový rast, preto zvážte mierne zvýšenie odporúčanej dávky.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"sk","translation":"Vaša priemerná hmotnosť za poslednú týždeň sa pohybuje opačne ako cieľ. Najprv zvážte mierne úpravu odporúčanej dávky.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"sk","translation":"Vaša priemerná hmotnosť za poslednú týždeň klesla rýchlo. Aby ste dosiahli realistický pokrok, zvážte mierne zvýšenie odporúčanej dávky.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"sk","translation":"Vaša priemerná hmotnosť za poslednú týždeň rýchlo stúpla. Aby ste udržali stabilný rast, zvážte mierne zníženie odporúčanej dávky.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"sk","translation":"Hodnota je menej ako 85 dBA. Skontrolujte aj trvanie.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"sk","translation":"Priemerná doba {{value1}} hodín","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"sk","translation":"Relatívny rozsah pohybu","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"sk","translation":"Požiadať o poradenstvo","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"sk","translation":"Spánok","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"sk","translation":"Zabezpečte si {{value1}} hodín spánku.","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"sk","translation":"Spánok: {{value1}} hodín","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"sk","translation":"Spánok je mierne kratší.","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"sk","translation":"Spánok je trochu kratší.","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"sk","translation":"Vzhľadom na nedostatočné údaje o spánku, toto je referenčný skóre založený na celkovom čase.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"sk","translation":"Údaje o spánku nie sú dostupné. Hodnotenie neobsahuje hodnotu 0.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"sk","translation":"Môžete získať prehľad o spánku, regenerácii a aktivitách.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"sk","translation":"Vymazanie","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"sk","translation":"Presnosť {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"sk","translation":"Uistite sa, že ste údaje uložili.","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"sk","translation":"Zistené zmeny","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"sk","translation":"Čakám na potvrdenie","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"sk","translation":"Potvrdené spomienky {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"sk","translation":"Vedecké dôkazy {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"sk","translation":"Vedecké dôkazy, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"sk","translation":"Kategória","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"sk","translation":"Typ","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"sk","translation":"Na zariadení boli načítané uložené produkty.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"sk","translation":"Po reštarte zariadenia skúste to znovu.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"sk","translation":"Ak je vaším cieľom budovanie svalov, môžete zvážiť ďalší tréning v tomto týždni, pričom sa budete držať rozumných hraníc.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"sk","translation":"Cca {{value1}} min","review_note":""}

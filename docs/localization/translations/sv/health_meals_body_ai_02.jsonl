@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"sv","translation":"Detta är inte en medicinsk diagnos, utan ett förslag baserat på inmatad data. Om du har oro över din hälsa eller smärta, kontakta en läkare.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"sv","translation":"Sammanfattning av inmatad data","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"sv","translation":"Inmatningsmetod","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"sv","translation":"Inga delar att dela","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"sv","translation":"Granska innehållet och redigera vid behov innan du sparar. Målet fastställs automatiskt.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"sv","translation":"Analys krävs","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"sv","translation":"Försök igen","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"sv","translation":"Foto","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"sv","translation":"Referensområde från foto","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"sv","translation":"Uppskatta kalorier från foto","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"sv","translation":"Skapa en anteckning från ett foto och minska inmatningsarbetet.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"sv","translation":"Analysera med foto","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"sv","translation":"Inga bilder","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"sv","translation":"Bilder används för att se förändringar, siffror verifieras genom mätningar.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"sv","translation":"Skapa en anteckning om näring baserat på bilder eller mat du har ätit.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"sv","translation":"Du kan analysera när du väljer ett eller flera bilder. Ju fler bilder, desto lättare blir det att kontrollera.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"sv","translation":"Analysera bilder i batch","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"sv","translation":"Analysera bilder i batch","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"sv","translation":"Lägg till bild","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"sv","translation":"Lägg till och redigera bild","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"sv","translation":"När du väljer en bild, fylls kalorier etc. automatiskt i.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"sv","translation":"Du kan spara bildset. Du kan analysera om igen från detaljerna efter anslutning.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"sv","translation":"Minuter","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"sv","translation":"Ju mer du skriver, desto högre blir uppskattningsnoggrannheten.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"sv","translation":"Analyseras","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"sv","translation":"Analyserad","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"sv","translation":"Motivering för bedömningen","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"sv","translation":"Använd","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"sv","translation":"Ta bort","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"sv","translation":"Det har gått {{value1}} dagar sedan senaste träningen, och det finns utrymme för fler pass under den här veckan.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"sv","translation":"Det har gått mer än 7 dagar sedan senaste mätningen av midjemått.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"sv","translation":"Ange tidigare värde","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"sv","translation":"Jämfört med tidigare: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"sv","translation":"Förra veckan","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"sv","translation":"Brist på jämföringsdata från förra veckan","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"sv","translation":"Volymen har ökat med mer än 30 % sedan förra veckan. Nästa gång bör du försöka bibehålla ungefär samma nivå och kontrollera din RPE (Rate of Perceived Exertion) och återhämtningsindikator.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"sv","translation":"Jämfört med förra veckan: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"sv","translation":"Jämfört med förra veckan: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"sv","translation":"Inga data har ännu samlats in. Vi uppskattar att du kan starta med en Watch.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"sv","translation":"Uppskattning av aktivitet","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"sv","translation":"Detta är ett referensvärde som sammanfattar de insamlade datans trender, och inte en medicinsk bedömning.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"sv","translation":"Visas","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"sv","translation":"Kan visas {{value1}} gånger, saknas {{value2}} gånger","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"sv","translation":"De viktigaste värdena (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"sv","translation":"Beräkna med hjälp av vikt, antal, tempo, relativ rörelseomfång och RPE, och sätt alla saknade värden till 0.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"sv","translation":"Övre högra: Stående, full kropp","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"sv","translation":"Nedre högra: Axlar till midja","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"sv","translation":"Totalt","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"sv","translation":"Använd samma kläder, distans och ljus, och fokusera på att slappna av","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"sv","translation":"Ju fler gånger du registrerar samma övning, samma meny och samma tidsperiod, desto lättare blir det att jämföra.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"sv","translation":"Dagens faktiska KPI:er","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"sv","translation":"Det visar potentiella förändringar samtidigt, men fastställer inte orsaker eller medicinska tillstånd.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"sv","translation":"Miso-soppa","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"sv","translation":"Andningsfrekvens","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"sv","translation":"Andningsfrekvensen är högre än genomsnittet på 14 dagar","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"sv","translation":"Andningsfrekvensen är {{value1}} gånger/minut, jämfört med {{value2}} gånger/minut (genomsnitt över 14 dagar)","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"sv","translation":"Andningsfrekvensen är lägre än genomsnittet på 14 dagar","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"sv","translation":"Andningsfrekvensen ligger inom normalt område","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"sv","translation":"Kvalitet -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"sv","translation":"Kvalitet {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"sv","translation":"Produkt","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"sv","translation":"Det gick inte att spara produkten.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"sv","translation":"Produktkod","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"sv","translation":"Ange produktkoden.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"sv","translation":"Skriv in produktkoden manuellt.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"sv","translation":"Produktnamn","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"sv","translation":"Gånger/minut","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"sv","translation":"Återhämtning","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"sv","translation":"Välj en dag för återhämtning.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"sv","translation":"Eftersom återhämtningsdata är låga, begränsa vikten eller antalet set för \"{{value1}}\"","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"sv","translation":"Avslutad som återhämtningsdag","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"sv","translation":"Antal","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"sv","translation":"Separera återhämtning och näring","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"sv","translation":"Per referensmängd","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"sv","translation":"HTTP-anslutning till extern server är inte tillåten.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"sv","translation":"Kväll","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"sv","translation":"Automatisk avslutning på kvällen","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"sv","translation":"Inga stora ökningar eller stagnation, skapa fler inspel med målad antal och RPE för att kunna jämföra nästa gång.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"sv","translation":"Misslyckad","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"sv","translation":"Position","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"sv","translation":"Pulsvärde i vila","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"sv","translation":"Pulsvärde i vila: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"sv","translation":"Pulsvärdet är högre än genomsnittet under 14 dagar","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"sv","translation":"Pulsvärdet är lägre än genomsnittet","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"sv","translation":"Pulsvärdet är normalt","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"sv","translation":"Avslutad","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"sv","translation":"Enkla att slutföra: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"sv","translation":"Vi undersöker trender för avslut och hopp.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"sv","translation":"Faktiskt intaget","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"sv","translation":"Densitet","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"sv","translation":"Historik","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"sv","translation":"Övre vänster: Framifrån/Helkropp","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"sv","translation":"Nedre vänster: Från baksidan/Helkropp","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"sv","translation":"Skillnad","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"sv","translation":"Genomsnittlig puls: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"sv","translation":"Genomsnittlig hastighet","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"sv","translation":"Hjälpsamt","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"sv","translation":"Enkla att skjuta upp: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"sv","translation":"Pulsåterhämtning","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"sv","translation":"Ingen puls registrerad","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"sv","translation":"Källa: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"sv","translation":"Sätt med skillnad mot manuell inmatning: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"sv","translation":"Det är omöjligt att fastställa övningen och formen enbart baserat på armrörelser. Bekräfta uppskattad tid innan du sparar den.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"sv","translation":"Armtemperatur","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"sv","translation":"Armtemperaturen avviker från normalt","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"sv","translation":"Normal armtemperatur","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"sv","translation":"Använd endast godkända inställningar i nästa förslag.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"sv","translation":"Godkända minnen","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"sv","translation":"Ansvarig: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"sv","translation":"Ansvarig tränare","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"sv","translation":"Reflektion","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"sv","translation":"Anslutning lyckades","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"sv","translation":"Även om anslutningen inte fungerar, kommer de sparade data att förbli. Du kan fortsätta med manuell registrering och sedan generera AI-kommentarer.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"sv","translation":"Kontrollerar anslutning","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"sv","translation":"Uppskattningarna är endast vägledande. Du kan fritt justera värdena i nedanstående fält.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"sv","translation":"Uppskattad förbrukning","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"sv","translation":"Övergång","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"sv","translation":"Intag kcal","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"sv","translation":"Fotografera","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"sv","translation":"Fotograferingsuppsättning","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"sv","translation":"Redigera fotograferingsuppsättning","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"sv","translation":"Lägg till fotograferingsuppsättning","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"sv","translation":"Fotograferingsriktning","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"sv","translation":"Antal fotograferingar","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"sv","translation":"Anteckningar om fotograferingsförhållanden och utseende","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"sv","translation":"Fotograferat","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"sv","translation":"Exempel på fotografering. Övre vänster är helkropp framifrån, övre höger är helkropp från sidan, nedre vänster är helkropp från baksidan, och nedre höger är en detalj av magen från axlar till midja. Ta samma kläder, samma avstånd och samma ljus.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"sv","translation":"Behöver förbättras","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"sv","translation":"Riktning","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"sv","translation":"Kontrollerade skillnader i position beroende på riktning.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"sv","translation":"Använd som underlag för att bedöma veckovisa trender, inte enskilda dagars variationer.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"sv","translation":"Datum","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"sv","translation":"Sömn igår kväll","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"sv","translation":"Lunch","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"sv","translation":"Tid","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"sv","translation":"Detta är ett referensvärde som beräknats i appen baserat på tid, djup sömn, REM-sömn och vaknande.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"sv","translation":"Vänta en stund","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"sv","translation":"Om du behöver göra om det, kontrollera AI-serverns status.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"sv","translation":"Om du behöver göra om det, kontrollera AI-serverns logg.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"sv","translation":"Tidpunkt","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"sv","translation":"Använd RPE som riktmärke och justera efter behov.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"sv","translation":"Normalt","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"sv","translation":"Om exponeringen är hög, använd ljudnivå och tidsuppehåll som en guide för att minska den.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"sv","translation":"Vi skapar ett träningsprogram baserat på tillgänglig utrustning så att du enkelt kan börja.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"sv","translation":"När du har registrerat de första värdena kan du se hur de förändras och jämföra med dina mål.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"sv","translation":"Senaste löpningen utomhus","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"sv","translation":"Senaste rapport","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"sv","translation":"Månatliga sammanfattning","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"sv","translation":"Kontrollera månatlig sammanfattning","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"sv","translation":"Skapa ett förslag till månatlig sammanfattning","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"sv","translation":"Genererar månatlig sammanfattning","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"sv","translation":"Månatligt rapport","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"sv","translation":"Morgon","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"sv","translation":"Testar att begränsa notifikationer till morgon och kväll.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"sv","translation":"Ej analyserat","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"sv","translation":"Ej insamlat","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"sv","translation":"Ej insamlade värden behandlas som 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"sv","translation":"Ej utfört","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"sv","translation":"Ej fotograferat","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"sv","translation":"Ej registrerat. Ange antalet per 100g för etiketten.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"sv","translation":"Ej registrerad produkt sparas på enheten efter inmatning och återanvänds vid nästa läsning.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"sv","translation":"Ej registrerat","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"sv","translation":"Ej registrerat. Kroppsupplevelse och beredskap kan inkluderas","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"sv","translation":"Jämförelse per kategori","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"sv","translation":"OCR för näringsdeklaration (användarbekräftelse)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"sv","translation":"OCR för näringsdeklaration (kräver verifiering)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"sv","translation":"Jag har matat in värden från näringsdeklarationen. Kontrollera basvärdet och varje värde.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"sv","translation":"Ange från bild av näringsdeklaration","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"sv","translation":"Kunde inte läsa näringsdeklarationen. Ta en ny bild i bra ljus, framifrån, eller ange manuellt.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"sv","translation":"Läser av näringsinformation","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"sv","translation":"Näringsstatus (delvis)","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"sv","translation":"Nästa steg","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"sv","translation":"Nästa åtgärd","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"sv","translation":"Nästa justering","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"sv","translation":"Kontrollerade mage från framsida och sida.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"sv","translation":"Kontrollerade midjan genom att kombinera fram- och baksida.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"sv","translation":"Registrera fram, sida och baksida som en daglig uppgift.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"sv","translation":"Sammanfatta fram, sida och baksida på samma dag. Du kan spara även om du bara har en, och lägga till fler senare.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"sv","translation":"Stegantal","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"sv","translation":"Steg: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"sv","translation":"Du kan ge tillåtelse för steg, aktivitet, sömn, vilopuls, HRV, andningsfrekvens och hudtemperatur på handleden, efter behov. Om du inte ger tillåtelse kommer dessa värden att behandlas som \"icke-upptagna\", och du kan fortfarande använda dem manuellt.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"sv","translation":"Återstående {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"sv","translation":"Inga dagliga data finns för jämförelse","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"sv","translation":"Förbrukade {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"sv","translation":"Förbrukning ej registrerad","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"sv","translation":"Djupare","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"sv","translation":"Under tiden","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"sv","translation":"Kolhydrater","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"sv","translation":"Ta det lugnt","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"sv","translation":"Nuvarande: {{value1}}/4","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"sv","translation":"Uppdateras automatiskt baserat på nuvarande stegräkning","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"sv","translation":"Det är för närvarande inte tillgängligt, utan serverbelastning. Försök igen efter {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"sv","translation":"Registrera din plats i \"Mitt gym\"","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"sv","translation":"Kontrollerar din plats","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"sv","translation":"Exponering mot omgivningsljud","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"sv","translation":"Jag känner mig trött","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"sv","translation":"Baserat på dina trötthets- och återhämtningsdata föreslås en dag med lägre belastning.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"sv","translation":"Trötthet","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"sv","translation":"Ta bort registrerad plats","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"sv","translation":"Sök efter sparade produkter","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"sv","translation":"Vit ris","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"sv","translation":"Vit ris, kycklingbröst, miso-soppa","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"sv","translation":"Mål","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"sv","translation":"Du kan kontrollera skillnaden och framgångsgraden för dina mål per KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"sv","translation":"Baserat på ditt mål och dagens måltidslogg visas mängden protein som återstår.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"sv","translation":"En anpassad plan baserad på ditt mål och tillgänglig utrustning.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"sv","translation":"Betydelsen av målet","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"sv","translation":"Målvärde","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"sv","translation":"När du har ställt in ett målvärde visas skillnaden och framgångsgraden.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"sv","translation":"Målskillnad","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"sv","translation":"Målskillnad {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"sv","translation":"Inga mål satta","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"sv","translation":"Sätt mål","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"sv","translation":"Uppnå mål och stabil träning","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"sv","translation":"Jag har granskat dina senaste 30 dagars aktiviteter, kost och träning.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"sv","translation":"Du verkar ha en potentiell ökning av det maximala vikten du lyfter under de senaste 3 gångerna. Bedöm även form, antal repetitioner och RPE (Rate of Perceived Exertion).","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"sv","translation":"Senaste 7 dagar","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"sv","translation":"Senaste 7 dagar {{value1}} gånger","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"sv","translation":"Antal besök på gymmet senaste 7 dagarna: {{value1}} gånger","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"sv","translation":"Din träningsvolym ligger inom normalt område.","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"sv","translation":"Du har tappat i genomsnittsvikt under den senaste veckan. Detta kan vara en indikation på att du behöver öka ditt kaloriintag något för att stödja muskeluppbyggnad.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"sv","translation":"Din genomsnittliga vikttapp under den senaste veckan är i motsatt riktning mot målet. Först bör du justera ditt kaloriintag något.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"sv","translation":"Du har tappat i genomsnittsvikt snabbare än förväntat. För att undvika överträning, kan det vara bra att öka ditt kaloriintag något.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"sv","translation":"Din genomsnittliga vikttillväxt under den senaste veckan är snabbare än förväntat. För att stabilisera tillväxten, kan du minska ditt kaloriintag något.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"sv","translation":"Senaste värdet är mindre än 85 dBA. Kontrollera även varaktigheten.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"sv","translation":"Genomsnittlig tid senaste {{value1}} timmar","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"sv","translation":"Relativ rörelseomfång","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"sv","translation":"Fråga om råd","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"sv","translation":"Sömn","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"sv","translation":"Sömn: {{value1}} timmar","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"sv","translation":"Se till att få {{value1}} timmars sömn.","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"sv","translation":"Lite kortare sömn","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"sv","translation":"Sömnen är lite kortare","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"sv","translation":"Eftersom du inte har registrerat sömnsteg, är detta ett referensresultat baserat på den totala tiden.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"sv","translation":"Sömns data har ännu inte hämtats. Värden som saknas kommer inte att användas.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"sv","translation":"Du kan enkelt se din sömn, återhämtning och aktivitetsnivå tillsammans.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"sv","translation":"Kasta bort","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"sv","translation":"Noggrannhet: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"sv","translation":"Spara först","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"sv","translation":"Bekräftade förändringar","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"sv","translation":"Väntar på bekräftelse","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"sv","translation":"{{value1}} bekräftade minnen","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"sv","translation":"{{value1}} vetenskapligt underbyggda resultat","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"sv","translation":"Vetenskapligt underbyggda resultat, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"sv","translation":"Övningar","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"sv","translation":"Typ","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"sv","translation":"Läs in produkter som sparats på enheten.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"sv","translation":"Försök igen efter att ha startat om enheten.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"sv","translation":"Om målet är muskeluppbyggnad kan du överväga ett extra träningspass den här veckan, inom rimliga gränser.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"sv","translation":"Ungefär {{value1}} min","review_note":""}

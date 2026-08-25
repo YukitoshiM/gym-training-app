@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"ko","translation":"AI 트레이너로부터 답변을 받았습니다","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"ko","translation":"AI 트레이너에게 전송할 수 없습니다.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"ko","translation":"Apple Watch에서 동기화된 항목입니다.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"ko","translation":"BodyMode를 열어 답변을 확인할 수 있습니다.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"ko","translation":"{{value1}} / {{value2}}를 달성했습니다. 나머지는 불가능한 범위로 진행하겠습니다.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"ko","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}}회","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"ko","translation":"{{value1}}는 재배치하지 않고, 본인의 선택으로 처리합니다.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"ko","translation":"{{value1}} 시간","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"ko","translation":"{{value1}} 걷기","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"ko","translation":"{{value1}} 식사","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"ko","translation":"이 기기는 주변 감지를 사용할 수 없습니다.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"ko","translation":"오늘 이 항목은 진행하지 않도록 설정했습니다.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"ko","translation":"가능한 것 하나만으로 충분합니다.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"ko","translation":"왜 이런 행동을 할까요?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"ko","translation":"운동 종류","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"ko","translation":"앱을 열고 다시 시도해주세요.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"ko","translation":"짐 위치를 삭제했습니다.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"ko","translation":"짐 도착 시간을 기록했습니다.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"ko","translation":"짐 주변 도착을 감지합니다.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"ko","translation":"짐 방문 자동 감지는 꺼져 있습니다.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"ko","translation":"짐 퇴장 시간을 기록했습니다.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"ko","translation":"덤벨 벤치 프레스","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"ko","translation":"어두운 모드","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"ko","translation":"턱걸이","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"ko","translation":"딥 (Dip)","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"ko","translation":"딥스 (Dips)","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"ko","translation":"운동을 꾸준히 하고 있습니다. 회복 기록을 늘리면 다음 주에 조정 정확도가 향상됩니다.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"ko","translation":"블랙 샴페인","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"ko","translation":"마이짐","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"ko","translation":"사용자가 오늘의 활동을 변경했습니다.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"ko","translation":"사용자 조작으로 오늘의 제안을 다시 만들었습니다.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"ko","translation":"라이트 (Light)","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"ko","translation":"로얄 코발트","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"ko","translation":"올라가기","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"ko","translation":"내려가기","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"ko","translation":"오늘 1회","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"ko","translation":"오늘의 3가지 목표를 달성했습니다. 내일 제안에 반영합니다.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"ko","translation":"오늘의 메뉴","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"ko","translation":"오늘의 제안을 업데이트했습니다","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"ko","translation":"위치 정보는 설정되지 않았습니다","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"ko","translation":"위치 정보를 허용하지 않습니다. 수동 체크인도 가능합니다","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"ko","translation":"위치 정확도가 안정되면 다시 시도해 주세요","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"ko","translation":"먼저 현재 위치를 짐으로 등록해주세요","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"ko","translation":"초보자 전체 운동 시작","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"ko","translation":"이전 AI 트레이너 전송을 다시 시작할 수 없습니다.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"ko","translation":"동일한 내용을 다시 보내주세요.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"ko","translation":"복구를 우선시","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"ko","translation":"변경하지 않는 경우 빈 문자열","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"ko","translation":"턱걸이","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"ko","translation":"새로운 복구 데이터를 반영하고, 안전 측으로 오늘의 제안을 조정했습니다.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"ko","translation":"새로운 기록을 반영했습니다.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"ko","translation":"기존 ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"ko","translation":"기존 또는 필요한 카테고리","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"ko","translation":"현재 위치를 마이짐으로 등록했습니다","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"ko","translation":"현재 위치를 가져올 수 없습니다","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"ko","translation":"현재 위치 확인 중","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"ko","translation":"최근 7일 운동 기록 3건 및 식사 기록 8건을 확인했습니다","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"ko","translation":"수면 기록이 부족합니다","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"ko","translation":"수면을 3일 동안 기록하고, 주 3회 운동을 계속 진행해주세요.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"ko","translation":"수면을 3일 동안 기록하기","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"ko","translation":"지적, 고귀, 선진적인","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"ko","translation":"짧은 전체 코멘트","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"ko","translation":"짧은 행동","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"ko","translation":"가슴 운동","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"ko","translation":"자동","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"ko","translation":"설정 앱에서 위치 정보 접근을 허용하면 등록할 수 있습니다.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"ko","translation":"신체 KPI 3개, 식단 8개, 근력 운동 3개를 확인했습니다.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"ko","translation":"매주 1회","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"ko","translation":"매주 3회 운동을 완료했습니다.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"ko","translation":"매주 3회 운동을 지속합니다.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"ko","translation":"견고하고 고급스럽고 자극적인","review_note":""}

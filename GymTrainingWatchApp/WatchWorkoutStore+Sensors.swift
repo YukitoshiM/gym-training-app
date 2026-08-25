@@ -100,6 +100,28 @@ extension WatchWorkoutStore {
             liveMetrics.activeEnergyKilocalories = energy
         }
 
+        if let distanceType = activeDistanceType,
+           identifiers.contains(distanceType.identifier),
+           let meters = builder.statistics(for: distanceType)?
+            .sumQuantity()?
+            .doubleValue(for: .meter()) {
+            let kilometers = max(0, meters / 1_000)
+            liveMetrics.distanceKilometers = kilometers
+            if let cardio = activeSession?.outdoorCardio {
+                let updated = cardio.updating(
+                    distanceKilometers: kilometers,
+                    elapsedSeconds: builder.elapsedTime
+                )
+                activeSession?.outdoorCardio = updated
+                if !outdoorGoalHapticSent,
+                   (updated.progress(elapsedSeconds: builder.elapsedTime) ?? 0) >= 1 {
+                    outdoorGoalHapticSent = true
+                    WKInterfaceDevice.current().play(.success)
+                }
+                saveActiveSession()
+            }
+        }
+
         liveMetrics.elapsedSeconds = builder.elapsedTime
     }
 
@@ -132,13 +154,13 @@ extension WatchWorkoutStore {
         let shouldAutomaticallyReduce = lowPowerMode || lowBattery
 
         if sensorPreferences.reducedSensorSamplingEnabled {
-            sensorPowerModeMessage = "省電力サンプリング（設定）"
+            sensorPowerModeMessage = L10n.string("watch_widget.7c8493ad4a26", fallback: "省電力サンプリング（設定）")
         } else if lowPowerMode {
-            sensorPowerModeMessage = "省電力サンプリング（低電力モード）"
+            sensorPowerModeMessage = L10n.string("watch_widget.2bf7693c376f", fallback: "省電力サンプリング（低電力モード）")
         } else if lowBattery {
-            sensorPowerModeMessage = "省電力サンプリング（バッテリー残量）"
+            sensorPowerModeMessage = L10n.string("watch_widget.62acc0267a84", fallback: "省電力サンプリング（バッテリー残量）")
         } else {
-            sensorPowerModeMessage = "通常サンプリング"
+            sensorPowerModeMessage = L10n.string("watch_widget.2f9be1574e74", fallback: "通常サンプリング")
         }
 
         guard automaticallyReducedSampling != shouldAutomaticallyReduce else { return }
@@ -221,7 +243,7 @@ extension WatchWorkoutStore {
             setID: best.1.id,
             exerciseName: best.0.name,
             confidence: best.2,
-            reason: "手首の動きと未完了セットの順序から推定"
+            reason: L10n.string("watch_widget.baf368705ac0", fallback: "手首の動きと未完了セットの順序から推定")
         )
         if sensorPreferences.hapticCoachingEnabled {
             WKInterfaceDevice.current().play(.click)
@@ -249,15 +271,15 @@ extension WatchWorkoutStore {
             || (rpe ?? 0) >= 9
             || (velocityLoss ?? 0) >= 20 {
             suggestedWeight = Self.normalizedWeight(baseWeight * 0.95)
-            reason = "目標未達、RPE、動作速度低下のいずれかから5%軽く提案"
+            reason = L10n.string("watch_widget.343b2fe4308b", fallback: "目標未達、RPE、動作速度低下のいずれかから5%軽く提案")
         } else if completedSet.actualReps >= completedSet.targetReps + 2
                     && (rpe ?? 7) <= 7.5
                     && (velocityLoss ?? 0) < 12 {
             suggestedWeight = Self.normalizedWeight(baseWeight * 1.025)
-            reason = "余力と動作速度から2.5%重く提案"
+            reason = L10n.string("watch_widget.b871438c85a2", fallback: "余力と動作速度から2.5%重く提案")
         } else {
             suggestedWeight = Self.normalizedWeight(baseWeight)
-            reason = "達成度、RPE、動作速度から同じ重量を提案"
+            reason = L10n.string("watch_widget.423b784208d1", fallback: "達成度、RPE、動作速度から同じ重量を提案")
         }
 
         return WatchNextSetLoadSuggestion(
@@ -282,8 +304,8 @@ extension WatchWorkoutStore {
         }
         if sensorPreferences.adaptiveRestEnabled, isRestTimerRunning {
             restReadinessMessage = recovery >= 25
-                ? "心拍は回復傾向です。感覚が整えば次のセットへ"
-                : "心拍を見ながら休憩を続けましょう"
+                ? L10n.string("watch_widget.24aa552350de", fallback: "心拍は回復傾向です。感覚が整えば次のセットへ")
+                : L10n.string("watch_widget.2e7eb94e9ba2", fallback: "心拍を見ながら休憩を続けましょう")
             if recovery >= 25, sensorPreferences.hapticCoachingEnabled {
                 WKInterfaceDevice.current().play(.directionUp)
             }

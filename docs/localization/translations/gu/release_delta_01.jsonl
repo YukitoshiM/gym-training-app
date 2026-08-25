@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "gu", "translation": "આપની અંદાજિત ગણતરી. આ વાસ્તવિક માપ નથી. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "gu", "translation": "છેલ્લું વાસ્તવિક માપથી સમયગાળો પસાર થયો હોવાથી, તેમાં ફેરફારને ચોક્કસ રીતે જણાવતા નથી. તે અંદાજિત છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "gu", "translation": "આ ઊંચાઈ, વજન અને ઉંમરના આધારે સામાન્ય શ્રેણીમાં ગણતરી કરેલ છે. આ વ્યક્તિગત શરીરનું ચામડીનું પ્રમાણ નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "gu", "translation": "અંદાજિત", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "gu", "translation": "સંદર્ભ અંદાજ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "gu", "translation": "આ માત્ર સંદર્ભ શ્રેણી છે, માપન નથી. જ્યારે તમે આ પર ટેપ કરો છો ત્યારે જ સાચવવામાં આવશે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "gu", "translation": "શું તમે અંદાજને સાચવવા માંગો છો?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "gu", "translation": "અંદાજ તરીકે સાચવો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "gu", "translation": "{{value1}} {{value2}}. વાસ્તવિક માપ બદલવામાં આવશે નહીં.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "gu", "translation": "નિયત અહેવાલો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "gu", "translation": "સાપ્તાહિક અહેવાલ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "gu", "translation": "દિવસ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "gu", "translation": "માસિક અહેવાલ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "gu", "translation": "તારીખ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "gu", "translation": "{{value1}} દિવસ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "gu", "translation": "સૂચનાનો સમય", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "gu", "translation": "આપની અપેક્ષિત સમયે એપ્લિકેશન ખોલ્યા પછી, આપોઆપ જનરેટ થશે. જો AI સાથે કનેક્શન ન થઈ શકે, તો ઉપકરણ પરનો સારાંશ સચવાયેલ રહેશે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "gu", "translation": "સેટિંગ્સ તપાસવાની જરૂર છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "gu", "translation": "તમે ફરી પ્રયાસ કરી શકો છો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "gu", "translation": "ઉપયોગની મર્યાદા પૂરી થઈ ગઈ છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "gu", "translation": "ઉપયોગની મર્યાદા હજુ સુધી વપરાઈ નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "gu", "translation": "વૈજ્ઞાનિક પુરાવા {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "gu", "translation": "સીધી રીતે ઉપયોગ કરી શકાય તેવા પુરાવાની અછતને કારણે, આ રેકોર્ડિંગના વલણને ધ્યાનમાં રાખીને માર્ગદર્શન આપવામાં આવે છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "gu", "translation": "આ દરખાસ્ત માટે સીધી રીતે ઉપયોગ કરી શકાય તેવું કોઈ પુરાવા મળ્યું નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "gu", "translation": "વૈજ્ઞાનિક પુરાવા મેળવી શકાતા નથી, તેથી રેકોર્ડિંગ અને સામાન્ય સિદ્ધાંતો પર આધારિત દરખાસ્ત આપવામાં આવી છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "gu", "translation": "શરીરનું કદ માપન એકમ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

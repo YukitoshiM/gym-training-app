@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"hu","translation":"Válasszon ki a legközelebb állót","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"hu","translation":"Miután megállapította az első célokat, csak 3 dolgot kell csinálni naponta","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"hu","translation":"Tudományos edzés befejezve","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"hu","translation":"Jegyezze fel az első értéket","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"hu","translation":"Legfeljebb 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"hu","translation":"A hiányzó mezőket később hozzáadhatja a rekordozási képernyőről.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"hu","translation":"Nem befejezett","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"hu","translation":"Nem elvégzett","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"hu","translation":"Nem rögzítve","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"hu","translation":"Nem beállított","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"hu","translation":"Nem kiválasztva","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"hu","translation":"Most a célok szerint válassza ki az opciókat","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"hu","translation":"Következő","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"hu","translation":"Lépés számlálása","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"hu","translation":"Csökkentés","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"hu","translation":"Szénhidrát","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"hu","translation":"Érvénytelen","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"hu","translation":"Állítsa be a megengedhető számot és időtartamot","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"hu","translation":"Különösen fontos","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"hu","translation":"Tudjon meg állapotról és a következő lépésekről","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"hu","translation":"Állapot ellenőrzése","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"hu","translation":"Jelenleg","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"hu","translation":"Jelenlegi testadatok","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"hu","translation":"Jelenleg nem elérhető","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"hu","translation":"A jelenlegi adatok és beállítások használatára került.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"hu","translation":"Jelenleg kiválasztva: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"hu","translation":"Kényelmesen haladjunk a tökéletes test felé.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"hu","translation":"Ok","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"hu","translation":"Ok: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"hu","translation":"Születési év","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"hu","translation":"Túra indítása","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"hu","translation":"Regisztrált menüpontok: {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"hu","translation":"Célállapot","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"hu","translation":"Célstílus","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"hu","translation":"Cél","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"hu","translation":"Cél: {{value1}} / Előrelépés: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"hu","translation":"Cél és tempó","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"hu","translation":"Cél és eredmények","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"hu","translation":"Cél beállítási lehetőségek","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"hu","translation":"Cél még nem megadva","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"hu","translation":"Cél elérése","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"hu","translation":"Cél","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"hu","translation":"Minden célhoz két személyt definiálhat. A személyek megváltoztatása esetén az ideális testformáról és a kommunikációs stílusról is változnak.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"hu","translation":"A célhoz megfelelő szakember","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"hu","translation":"A cél alapján automatikusan átváltja a kezdőképernyőn megjelenő pontokat és a következő lépéseket.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"hu","translation":"Cél megváltoztatása","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"hu","translation":"Cél kiválasztása","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"hu","translation":"Cél mód","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"hu","translation":"Cél és célok","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"hu","translation":"Új cél-specifikus menü megnyitva","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"hu","translation":"Cél-specifikus menü megtekintése","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"hu","translation":"Legutóbbi","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"hu","translation":"Konszultáció közben történő módosítás","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"hu","translation":"Energiahatékony mintavételek","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"hu","translation":"Elindítása: {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"hu","translation":"Alvás és regenerálódás","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"hu","translation":"Értékelés alatt","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"hu","translation":"Másodpercek","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"hu","translation":"Másodpercek száma","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"hu","translation":"Sporttípusok keresése és hozzáadása","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"hu","translation":"Használja a készüléken történő rövid bejelentkezést.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"hu","translation":"Készülvén belül","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"hu","translation":"Versenyképesség","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"hu","translation":"Izomgyakorlat","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"hu","translation":"Az izomgyakorlatokat a versenyképességhez kapcsolja","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"hu","translation":"Növelje az izomtömegét és a gyakorlati eredményeit","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"hu","translation":"Izomfejlesztés","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"hu","translation":"Tapasztalat","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"hu","translation":"Tapasztalatszint","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"hu","translation":"Megtartható tempó","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"hu","translation":"Ez nem értékel egy képességet vagy képesítést. A válaszban megmutatja, hogy mely szempontokat kell figyelembe venni.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"hu","translation":"Zsírtartalom","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"hu","translation":"Derék kör","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"hu","translation":"Derék kör - opcionális","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"hu","translation":"Tanulja meg a szokásos viselkedési mintákat","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"hu","translation":"Viselkedés figyelmeztetések","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"hu","translation":"Megjelenítés","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"hu","translation":"Megjelenítési mód","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"hu","translation":"Megjelenítési mód","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"hu","translation":"Megjelenítési irányelv","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"hu","translation":"Nem csatlakozott segítő modell","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"hu","translation":"Megjegyzés","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"hu","translation":"Megjegyzés: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"hu","translation":"Tervezés","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"hu","translation":"A terv, az előzmények, a testhez tartozó mutatók, az étkezés, a képek, az AI-val való beszélgetés és a memória, valamint a saját beállítások eltávolítása.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"hu","translation":"Elindíthatja a tervet, vagy azonnal hozzáadhatja az elemeket és rögzítheti őket.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"hu","translation":"Elemek hozzáadása a tervhez nélkül","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"hu","translation":"Beépítés a tervbe","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"hu","translation":"Terv létrehozása","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"hu","translation":"Készítsünk egy tervezt","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"hu","translation":"Terv és Watch","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"hu","translation":"Frissíteni szeretne a terv súlyát?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"hu","translation":"Rögzítés","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"hu","translation":"Rögzítsd","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"hu","translation":"Rögzítsem. Kérdezzem meg az AI-t. Futtassam. Csak három dolgot kell csinálni naponta.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"hu","translation":"A rögzítéshez tartozó elemekre kattintson","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"hu","translation":"A rögzített és a végrehajtott eredmények átkerülnek a következő AI elemzésbe. Az első lépés a háttérben található feladatok segítenek.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"hu","translation":"A rögzítések itt tárolódnak","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"hu","translation":"Rögzítés ellenőrzése. A képernyő bezárása után is folytatódik.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"hu","translation":"Rögzített adatokat megtekintve, javaslatok","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"hu","translation":"Adatok rögzítve","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"hu","translation":"Az adatok alapján javaslatok a fejlődés, változatosság vagy hiányzó információk esetén.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"hu","translation":"Adatok rögzítve","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"hu","translation":"Beállítások","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"hu","translation":"Beállított","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"hu","translation":"A diagnosztikai napló tartalmazza az iPhone és Apple Watch működésének, kommunikációjának és edzésvezérlésének adatait. Automatikusan nem küldődik ki.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"hu","translation":"Diagnosztikai napló törlése","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"hu","translation":"Diagnosztikai napló exportálása","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"hu","translation":"Diagnosztikai napló elküldése","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"hu","translation":"Stílus","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"hu","translation":"Részletezve","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"hu","translation":"Felhívások, amelyek félrevezetőek lehetnek","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"hu","translation":"Test-KPI","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"hu","translation":"Magasság","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"hu","translation":"Magasság - opcionális","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"hu","translation":"Ha nem érted, itt találsz segítséget","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"hu","translation":"Hozzáadás","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"hu","translation":"Hozzáad","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"hu","translation":"Újabb kezdés","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"hu","translation":"Küldés","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"hu","translation":"Váratlan állapot","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"hu","translation":"Válasszon a használt edzőteremből vagy otthoni felszerelésből","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"hu","translation":"Amint az kapcsolat létrejön, ellenőrizzük az adatokat.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"hu","translation":"Heti frekvencia","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"hu","translation":"Mennyi alkalommal tud edzeni egy héten?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"hu","translation":"Előrehaladás","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"hu","translation":"Folyamatban","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"hu","translation":"Tartsa meg a mozgás-, alvás- és táplálkozási szokásait","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"hu","translation":"Válasszon: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"hu","translation":"Kiválasztva","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"hu","translation":"Küldés","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"hu","translation":"A terjesztési időpontban beállított AI beállításokat betöltjük","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"hu","translation":"Fókuszpontok","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"hu","translation":"Súly","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"hu","translation":"A súlyt a görgővel állíthatja be","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"hu","translation":"Súlyegység","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"hu","translation":"Bezárva","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"hu","translation":"Bezár","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"hu","translation":"Kezdés","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"hu","translation":"Kapcsolódó információ","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"hu","translation":"Étel","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"hu","translation":"Étel és testformát","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"hu","translation":"Az étel és a testformát képekkel rögzítjük. A súlyt, a mellszéletet és az edzésadatokat számokkal rögzítjük.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"hu","translation":"Étel napok rögzítése","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"hu","translation":"Étel napok száma","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"hu","translation":"Az étel napok számának elérését és a kalóriák/PFC-ek elérését külön megjelenítjük.","review_note":""}

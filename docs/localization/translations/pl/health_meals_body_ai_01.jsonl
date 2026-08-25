@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"pl","translation":"Zresetuje się do {{value1}}. Możesz nadal ręcznie rejestrować.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"pl","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"pl","translation":"Podaj wartość większą niż 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"pl","translation":"1. Utrzymuj 3 treningi tygodniowo\n2. Zarejestruj cel spożycia białka\n3. Porównaj zdjęcia sylwetki na końcu miesiąca","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"pl","translation":"Spróbuj ponownie po około 1 minucie.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"pl","translation":"1 szklanka","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"pl","translation":"Nie ma wyraźnych punktów stagnacji dla ćwiczeń, które zostały zarejestrowane co najmniej 3 razy.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"pl","translation":"Wiele sesji treningowych w ciągu 48 godzin.","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"pl","translation":"Analiza całego ciała dzięki AI","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"pl","translation":"Dane, na których bazuje AI","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"pl","translation":"Obecnie występuje duże obciążenie serwera AI.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"pl","translation":"Informacje uwierzytelniające do AI są nieprawidłowe lub wygasły.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"pl","translation":"Błąd AI","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"pl","translation":"Trener AI","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"pl","translation":"Nieprawidłowy adres URL serwera AI.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"pl","translation":"Serwer AI zwrócił błąd: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"pl","translation":"Nie znaleziono wymaganych API na serwerze AI.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"pl","translation":"Nie można połączyć się z serwerem AI. Spróbuj ponownie później.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"pl","translation":"Format JSON serwera AI różni się od tego, który oczekuje aplikacja.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"pl","translation":"Nie udało się odczytać odpowiedzi serwera AI.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"pl","translation":"Wystąpił błąd na serwerze AI: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"pl","translation":"Sprawdź połączenie z serwerem AI","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"pl","translation":"Trener AI","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"pl","translation":"Czy chcesz usunąć rozmowę z trenerem AI?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"pl","translation":"Model AI jest niedostępny lub analiza obrazu nie powiodła się.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"pl","translation":"Model AI w przygotowaniu","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"pl","translation":"Analiza AI","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"pl","translation":"Zostało jeszcze miejsce w ramach wykorzystania AI.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"pl","translation":"Sprawdź dostępne miejsce na wykorzystanie AI.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"pl","translation":"Funkcja wykorzystująca AI jest wyłączona.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"pl","translation":"Wartości referencyjne AI – należy sprawdzić.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"pl","translation":"Połączenie z AI jest aktywne.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"pl","translation":"Nie udało się bezpiecznie zapisać informacji o połączeniu z AI.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"pl","translation":"Funkcje AI","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"pl","translation":"Funkcje AI są wyłączone w ustawieniach.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"pl","translation":"Funkcje AI są wyłączone w ustawieniach. Zdjęcia można zachować w obecnym stanie.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"pl","translation":"Funkcje AI są wyłączone w ustawieniach. Można zachować ręczne wpisy w obecnym stanie.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"pl","translation":"Historia wysyłania danych do AI","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"pl","translation":"Klucz API nie został ustawiony.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"pl","translation":"Sprawdź wersję serwera API. Szczegóły: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"pl","translation":"Serwer API odpowiada, ale nie można wykorzystać wymaganych modeli.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"pl","translation":"Serwer API odpowiada, ale nie można wykorzystać modeli do pomocy w przygotowywaniu posiłków i tworzeniu raportów.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"pl","translation":"Integracja z Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"pl","translation":"Wyświetlamy najnowszy trasę biegu zapisany w Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"pl","translation":"Połącz się z Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"pl","translation":"Noś Apple Watch na nadgarstku, nawet podczas snu, aby ułatwić zbieranie danych dotyczących regeneracji. Wartości brakujące nie są uzupełniane automatycznie.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"pl","translation":"Sprawdź adres URL podstawowy i wersję serwera API.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"pl","translation":"HRV jest niższe niż średnia z ostatnich 14 dni.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"pl","translation":"Brak danych HRV na dłuższy okres.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"pl","translation":"HRV jest wyższe niż średnia.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"pl","translation":"HRV w normalnym zakresie.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"pl","translation":"Średnia wartość HRV {{value1}}% (w porównaniu do indywidualnej wartości).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"pl","translation":"HTTP działa tylko lokalnie, w sieci LAN i w Tailscale. Do połączenia z zewnętrznymi serwerami należy używać HTTPS.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"pl","translation":"Nie udało się pobrać zużycia energii przez aplikację Health. Zapisano jedynie dane dotyczące posiłków.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"pl","translation":"Zaktualizuj dane Health.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"pl","translation":"Wybierz inną grafikę JPEG lub PNG.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"pl","translation":"Zarejestruj wskaźniki KPI.","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"pl","translation":"Najnowsze wartości z aplikacji Noise (jeśli dostępne). W przypadku braku danych, wartość pozostaje na 0.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"pl","translation":"Automatyczne obliczanie kalorii przez PFC.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"pl","translation":"Osiągnięto cel PFC.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"pl","translation":"Zmniejsz RPE o jeden poziom.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"pl","translation":"Adres URL powinien zaczynać się od https://. W środowisku lokalnym można również używać adresów HTTP dla localhost, IP w sieci LAN i Tailscale.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"pl","translation":"Adres URL powinien zaczynać się od https://. W środowisku lokalnym można również używać adresu http://.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"pl","translation":"Zintegrowany z czujnikiem pulsometrem.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"pl","translation":"BPM / 30 sekund.","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"pl","translation":"Osiągnięto cel kalorii i PFC.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"pl","translation":"Osiągnięto cel kalorii.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"pl","translation":"kg / minuta","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"pl","translation":"{\"id\":\"{{value1}}\",\"kategoria\":\"{{value2}}\",\"tytuł\":\"{{value3}}\",\"cel\":0,\"uzasadnienie\":\"Sprawdziłem/łam historię i cel\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"pl","translation":"{\"zachowaj_istniejące\":true,\"poziom_przygotowania\":\"normalny\",\"podsumowanie\":\"Kontynuuj proponowane działania.\",\"powód_zmiany\":\"\",\"działania\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"pl","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"pl","translation":"{{value1}} / {{value2}} godzin","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"pl","translation":"{{value1}} / {{value2}} kroków","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"pl","translation":"{{value1}} / {{value2}} posiłków","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"pl","translation":"{{value1}} {{value2}} sztuk ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"pl","translation":"Możesz generować cotygodniowe komentarze z {{value1}} i modelem pomocowym.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"pl","translation":"{{value1}}/{{value2}} razy","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"pl","translation":"{{value1}}: {{value2}} - poziom realizacji {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"pl","translation":"{{value1}}Sprawdź cały zestaw","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"pl","translation":"{{value1}} rozważa odpowiedź.","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"pl","translation":"{{value1}} sprawdza posiłki i wartości odżywcze.","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"pl","translation":"{{value1}} analizuje różne aspekty.","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"pl","translation":"{{value1}}: rzeczy, które zapamiętało.","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"pl","translation":"{{value1}}: tworzy i konsultuje poprawki.","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"pl","translation":"{{value1}}: prosi o pomoc.","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"pl","translation":"Raport {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"pl","translation":"Raport {{value1}} jeszcze nie istnieje.","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"pl","translation":"Propozycja {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"pl","translation":"Propozycja {{value1}} oraz {{value2}}.","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"pl","translation":"Analiza {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"pl","translation":"Wyniki analizy {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"pl","translation":"Informacje referencyjne dla {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"pl","translation":"Przegląd {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"pl","translation":"Wyświetlane są tylko te elementy, które zostały zatwierdzone po propozycji {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"pl","translation":"Miesięczny przegląd {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"pl","translation":"Pamięć {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"pl","translation":"Wybierz {{value1}} z biblioteki.","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"pl","translation":"Usuń {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"pl","translation":"Zrób zdjęcie {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"pl","translation":"Edytuj {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"pl","translation":"Zapisz {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"pl","translation":"{{value1}} – spożywaj z umiarem","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"pl","translation":"Średnia stabilność zestawu {{value1}} wynosi {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"pl","translation":"{{value1}}・","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"pl","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"pl","translation":"{{value1}}・Rozmowa","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"pl","translation":"{{value1}} • Propozycja miesięcznej analizy","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"pl","translation":"{{value1}} · Poprawka {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"pl","translation":"{{value1}} • Raport tygodniowy","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"pl","translation":"{{value1}} zestawów・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"pl","translation":"{{value1}}Spróbuj ponownie. Możesz nadal ręcznie wprowadzać dane.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"pl","translation":"{{value1}}Spróbuj ponownie. Jeśli problem nadal występuje, sprawdź stan działania serwera AI.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"pl","translation":"{{value1}} Usuń zdjęcie","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"pl","translation":"{{value1}} minut","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"pl","translation":"{{value1}} razy","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"pl","translation":"{{value1}} razy・Średnia skuteczność {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"pl","translation":"{{value1}} - Analizujemy zdjęcia w tym kierunku. Nie możemy jednoznacznie stwierdzić, np. jaki jest Twój poziom tkanki tłuszczowej.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"pl","translation":"{{value1}} zdjęć","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"pl","translation":"Zestaw zdjęć {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"pl","translation":"{{value1}} kroków","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"pl","translation":"\"-\" oznacza, że wartość nie została zmierzona i jest pomijana w sumie, a \"Tr\" oznacza niewielką ilość, która jest szacowana na 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"pl","translation":"Dodatkowo {{value1}} g","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"pl","translation":"Razem przeanalizujemy Twoje dane.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"pl","translation":"Czuję się całkiem dobrze","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"pl","translation":"Czuję się całkiem zmęczony","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"pl","translation":"Możemy to teraz przeanalizować. Dodanie danych z boku lub tyłu pozwoli na weryfikację z różnych perspektyw.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"pl","translation":"Przeanalizuj ten zestaw","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"pl","translation":"Wykorzystam te informacje, aby zaproponować coś nowego.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"pl","translation":"Usuń wszystko","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"pl","translation":"Białko","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"pl","translation":"Zastosuję to do sugestii na jutro.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"pl","translation":"Dodatkowe {{value1}} pozycji","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"pl","translation":"Wciąż nie mamy danych treningowych.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"pl","translation":"Wciąż nie masz żadnych zapisanych danych.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"pl","translation":"Ponownie oszacuj","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"pl","translation":"Obwód talii","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"pl","translation":"Zeskanuj za pomocą aparatu","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"pl","translation":"Nie można użyć aparatu","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"pl","translation":"Funkcja skanowania aparatem niedostępna","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"pl","translation":"Kalorie","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"pl","translation":"Obliczanie kalorii...","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"pl","translation":"Anuluj","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"pl","translation":"Stan","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"pl","translation":"Sprawdź adres URL serwera, klucz API i stan działania serwera API.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"pl","translation":"Trening w siłowni","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"pl","translation":"Statyw","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"pl","translation":"Seria ćwiczeń","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"pl","translation":"Analizowanie serii ćwiczeń...","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"pl","translation":"Jakość serii ćwiczeń","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"pl","translation":"Szczegóły dotyczące jakości serii ćwiczeń","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"pl","translation":"Białko {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"pl","translation":"Wyciskanie na ławce","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"pl","translation":"To są przybliżone wartości.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"pl","translation":"Tempo","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"pl","translation":"Po zebraniu danych, możesz sprawdzić sen, regenerację i aktywność fizyczną razem.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"pl","translation":"Jakość danych","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"pl","translation":"Konsultacja z trenerem","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"pl","translation":"Trening","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"pl","translation":"Analiza treningu","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"pl","translation":"Historia treningów","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"pl","translation":"Plan treningowy","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"pl","translation":"Intensywność treningu","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"pl","translation":"Sprawdź, czy sieć i serwer AI są włączone. Przetwarzanie przez AI może trwać do 240 sekund.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"pl","translation":"Po sprawdzeniu stanu sieci i adresu URL serwera spróbuj ponownie.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"pl","translation":"Sprawdź stan sieci i adres URL serwera.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"pl","translation":"Kod QR","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"pl","translation":"Objętość","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"pl","translation":"Objętość to waga zestawu × liczba powtórzeń. Przy dużych różnicach w składzie ćwiczeń, unikaj uproszczonych porównań.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"pl","translation":"Ćwiczenie","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"pl","translation":"Komunikat","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"pl","translation":"Menu","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"pl","translation":"Rozpocznij od stworzenia menu","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"pl","translation":"Notatki","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"pl","translation":"Biblioteka","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"pl","translation":"Podciągnięcie","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"pl","translation":"Próg wartości","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"pl","translation":"Oszacuj kalorie z listy","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"pl","translation":"Spróbuj ponownie po zresetowaniu. Możesz nadal korzystać z ręcznego rejestrowania.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"pl","translation":"Jeśli znajdziesz trasę biegu na świeżym powietrzu, wyświetli się odległość, prędkość i różnica wysokości.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"pl","translation":"Ćwiczenia na nogi","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"pl","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"pl","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"pl","translation":"Liczba podniesionych pięter","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"pl","translation":"Nagłe przebudzenie","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"pl","translation":"Główne wskaźniki","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"pl","translation":"Subiektywne zmęczenie jest wysokie","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"pl","translation":"Subiektywne zmęczenie jest niskie","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"pl","translation":"Subiektywne zmęczenie mieści się w normie","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"pl","translation":"Proszę wybrać tylko te informacje, które mogą być użyte w przyszłych propozycjach.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"pl","translation":"Aby pomóc w proponowaniu wag","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"pl","translation":"Dzisiejsze 3 ćwiczenia są ustalone","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"pl","translation":"Dziś","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"pl","translation":"Dzisiejszy bilans energii","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"pl","translation":"Dzisiejsze serie","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"pl","translation":"Dzisiejsze subiektywne zmęczenie","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"pl","translation":"Dzisiejsza propozycja","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"pl","translation":"Edytuj dzisiejszą serię zdjęć","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"pl","translation":"Dodaj dzisiejszą serię zdjęć","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"pl","translation":"Dzisiaj wykonano dużo ćwiczeń","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"pl","translation":"Odzwierciedl dzisiejszą aktywność","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"pl","translation":"Przygotowanie na dziś","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"pl","translation":"Dzisiejsze działania","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"pl","translation":"Sprawdź postęp dzisiaj","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"pl","translation":"Dzisiejszy posiłek","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"pl","translation":"Proponowane posiłki na dziś","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"pl","translation":"Cele dotyczące diety na dziś","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"pl","translation":"Dziś priorytetem jest regeneracja","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"pl","translation":"Dziś skupiamy się na umiarkowanej aktywności, zachowując odpowiednie odstępy między treningami siłowymi.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"pl","translation":"Dzisiaj zmniejszamy obciążenie.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"pl","translation":"Możesz wybrać opcję ograniczenia wagi i liczby serii, aby priorytetowo traktować regenerację.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"pl","translation":"Sprawdź, co chcesz dzisiaj zrobić.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"pl","translation":"Tydzień","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"pl","translation":"Tego tygodnia {{value1}} razy / aktualnie {{value2}} m","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"pl","translation":"Tego tygodnia {{value1}} razy / łącznie {{value2}} razy","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"pl","translation":"Podsumowanie tego tygodnia","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"pl","translation":"Opcjonalne","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"pl","translation":"Rozmowa","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"pl","translation":"Usuń rozmowę","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"pl","translation":"Historia rozmów nie zostanie usunięta.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"pl","translation":"Są to wartości orientacyjne, które należy traktować z ostrożnością. Nie należy ich zapisywać w wynikach pomiarów ani na wykresach.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"pl","translation":"Zdjęcia sylwetki","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"pl","translation":"AI do analizy zdjęć sylwetki","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"pl","translation":"Udostępnianie zdjęć sylwetki za pomocą AI jest wyłączone w ustawieniach.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"pl","translation":"Na razie nie masz żadnych zdjęć sylwetki.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"pl","translation":"Zrób zdjęcie sylwetki","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"pl","translation":"Analiza zestawu zdjęć sylwetki","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"pl","translation":"Sprawdź swoją sylwetkę","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"pl","translation":"Jeśli odczuwasz dyskomfort lub ból, priorytetowo traktuj swoje odczucia, a nie wartości.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"pl","translation":"Postępuj zgodnie z planem, obserwując swój stan zdrowia.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"pl","translation":"Waga","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"pl","translation":"Wartości, takie jak waga i obwód talii, mogą się zmieniać każdego dnia, dlatego należy je analizować na wykresach.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"pl","translation":"Zapisz swoją wagę","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"pl","translation":"Proponowane urządzenia","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"pl","translation":"Przykład: Ryż biały 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"pl","translation":"Zapisz","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"pl","translation":"Przegląd miesięczny zapisanych danych","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"pl","translation":"Zapisane wspomnienia","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"pl","translation":"Nie mam żadnych zapisanych wspomnień.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"pl","translation":"Zapisane wspomnienia nie są usuwane.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"pl","translation":"Czy chcesz usunąć wszystkie zapisane dane?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"pl","translation":"Nie zapisuj","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"pl","translation":"Nie można zapisać","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"pl","translation":"Poziom zaufania","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"pl","translation":"Wartość","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"pl","translation":"Dodanie wartości wyświetli tutaj wynik.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"pl","translation":"Sprawdzenie stagnacji","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"pl","translation":"Aby sprawdzić, czy występuje stagnacja, spróbuj zmniejszyć wagę i doprowadzić do osiągnięcia docelowej liczby powtórzeń lub wydłuż 15–30 sekund przerwy i porównaj.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"pl","translation":"Materiały wpływające na stagnację","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"pl","translation":"Energia","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"pl","translation":"Dane wejściowe","review_note":""}

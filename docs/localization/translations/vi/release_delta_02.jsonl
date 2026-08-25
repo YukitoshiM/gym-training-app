@@ -1,0 +1,82 @@
+{"id":"core_ui.continue_workout","target_locale":"vi","translation":"Tiếp tục","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.delete_permanently","target_locale":"vi","translation":"Xóa vĩnh viễn","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.empty_trash","target_locale":"vi","translation":"Xóa","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.empty_trash_confirm","target_locale":"vi","translation":"Bạn có muốn xóa hoàn toàn không?","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.restore_record","target_locale":"vi","translation":"Khôi phục","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.saved_workout_progress","target_locale":"vi","translation":"{{value1}} / {{value2}} hiệp đã hoàn thành, tự động lưu","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.trash","target_locale":"vi","translation":"Thùng rác","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.trash_empty","target_locale":"vi","translation":"Thùng rác trống","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.trash_retention","target_locale":"vi","translation":"Các bản ghi đã xóa sẽ tồn tại trong 30 ngày.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.undo","target_locale":"vi","translation":"Hoàn tác","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.workout_discarded","target_locale":"vi","translation":"Huấn luyện đã hủy","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_balanced_dinner","target_locale":"vi","translation":"Bữa tối cân bằng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_balanced_lunch","target_locale":"vi","translation":"Bữa trưa cân bằng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_lean_lunch","target_locale":"vi","translation":"Bữa trưa ít chất béo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_light_breakfast","target_locale":"vi","translation":"Bữa sáng nhẹ","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_light_snack","target_locale":"vi","translation":"Snack nhẹ","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_power_breakfast","target_locale":"vi","translation":"Bữa sáng giàu protein","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_power_lunch","target_locale":"vi","translation":"Bữa trưa năng lượng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_protein_snack","target_locale":"vi","translation":"Snack giàu protein","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_rationale","target_locale":"vi","translation":"Chọn từ mục tiêu {{value1}} và lượng còn lại ngày này.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_recovery_dinner","target_locale":"vi","translation":"Bữa ăn hỗ trợ phục hồi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_separator","target_locale":"vi","translation":"・","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.ai_chat","target_locale":"vi","translation":"Trò chuyện với AI","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.ai_report","target_locale":"vi","translation":"Báo cáo từ AI","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.fatigue_record","target_locale":"vi","translation":"Ghi lại mức độ mệt mỏi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.gym_visit","target_locale":"vi","translation":"Đã tập gym","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.outdoor_route_title","target_locale":"vi","translation":"{{value1}} mới nhất","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.progress_photo_set","target_locale":"vi","translation":"Bộ ảnh thể hiện tiến độ","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"release_delta.ai_unlimited","target_locale":"vi","translation":"Sử dụng AI không giới hạn","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"release_delta.photo_estimate_note","target_locale":"vi","translation":"Ước tính từ ảnh, không phải giá trị thực tế. {{value1}}","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.active_workout_saved","target_locale":"vi","translation":"Lưu lại tập hiện tại để tiếp tục sau.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.discard_workout","target_locale":"vi","translation":"Xóa lịch tập","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_average_volume","target_locale":"vi","translation":"Trung bình mỗi lần","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_comparison_period","target_locale":"vi","translation":"So sánh theo thời gian","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_four_week_average","target_locale":"vi","translation":"Đường cong trung bình 4 tuần","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_moving_average","target_locale":"vi","translation":"Trung bình động","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_new_activity","target_locale":"vi","translation":"Mới","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_period_comparison","target_locale":"vi","translation":"So sánh theo giai đoạn","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_previous_period_change","target_locale":"vi","translation":"Thay đổi so với kỳ trước {{value1}}","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_previous_period_section","target_locale":"vi","translation":"So sánh với cùng giai đoạn trước","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_month","target_locale":"vi","translation":"1 tháng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_six_months","target_locale":"vi","translation":"6 tháng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_three_months","target_locale":"vi","translation":"3 tháng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_week","target_locale":"vi","translation":"1 tuần","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_year","target_locale":"vi","translation":"1 năm","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_seven_day_average","target_locale":"vi","translation":"Đường trung bình 7 ngày","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_volume_trend","target_locale":"vi","translation":"Xu hướng thể tích","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.keep_iphone_value","target_locale":"vi","translation":"Sử dụng dữ liệu từ iPhone","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_distance","target_locale":"vi","translation":"Quãng đường","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_pace","target_locale":"vi","translation":"Tốc độ trung bình","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_route_health","target_locale":"vi","translation":"Đường đã lưu trong Apple Health","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_route_unavailable","target_locale":"vi","translation":"Không có dữ liệu đường","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_summary","target_locale":"vi","translation":"Tập thể dục ngoài trời","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.pause","target_locale":"vi","translation":"Dừng lại","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.pause_and_close","target_locale":"vi","translation":"Dừng và đóng","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_adjust","target_locale":"vi","translation":"Bạn có thể điều chỉnh cường độ tập luyện để tránh không đạt mục tiêu.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_declined","target_locale":"vi","translation":"Tiếp tục kế hoạch hiện tại.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_progress","target_locale":"vi","translation":"Bạn có thể xem lại cường độ tập luyện cho lần sau vì đã đạt mục tiêu.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_review","target_locale":"vi","translation":"Bạn có thể xem lại kế hoạch tập luyện dựa trên kết quả hiện tại.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.resume","target_locale":"vi","translation":"Tiếp tục","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.resume_workout","target_locale":"vi","translation":"Tiếp tục tập luyện","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.sync_conflict_message","target_locale":"vi","translation":"{{value1}} lần duy nhất cần chọn. Các lần còn lại đã tự động hợp nhất.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.sync_conflict_title","target_locale":"vi","translation":"Cả hai đều đã thay đổi cùng một lượt tập","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.use_watch_value","target_locale":"vi","translation":"Sử dụng dữ liệu từ Apple Watch","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor","target_locale":"vi","translation":"Tập thể dục ngoài trời","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_activity","target_locale":"vi","translation":"Loại hoạt động","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_cycling","target_locale":"vi","translation":"Đạp xe ngoài trời","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_cycling_short","target_locale":"vi","translation":"Đạp xe","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_distance","target_locale":"vi","translation":"Quãng đường","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_duration","target_locale":"vi","translation":"Thời gian","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_finish_confirm","target_locale":"vi","translation":"Hoàn thành tập thể dục ngoài trời?","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_goal","target_locale":"vi","translation":"Mục tiêu","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_open","target_locale":"vi","translation":"Tự do","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_pace","target_locale":"vi","translation":"Tốc độ","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_route_privacy","target_locale":"vi","translation":"Đường đi được lưu trong Apple Health và không được gửi cho AI hoặc quảng cáo.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_running","target_locale":"vi","translation":"Chạy bộ ngoài trời","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_running_short","target_locale":"vi","translation":"Chạy bộ","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_start","target_locale":"vi","translation":"Bắt đầu tập thể dục ngoài trời","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_started","target_locale":"vi","translation":"{{value1}} đã bắt đầu","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_target_pace","target_locale":"vi","translation":"Tốc độ mục tiêu","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_walking","target_locale":"vi","translation":"Đi bộ ngoài trời","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_walking_short","target_locale":"vi","translation":"Đi bộ","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

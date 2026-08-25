@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"sk","translation":"Vyberte si jednu z najbližších možností.","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"sk","translation":"Po stanovení cieľa, robte každý deň len 3 veci.","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"sk","translation":"Dokončite prvý tréning.","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"sk","translation":"Zaznamenite prvú hodnotu.","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"sk","translation":"Maximal 3.","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"sk","translation":"Poláprvné položky môžete pridať neskôr z obrazovky záznamov.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"sk","translation":"Nevyplnené","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"sk","translation":"Nespôsobené","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"sk","translation":"Nezaznamenané","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"sk","translation":"Neznastavené","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"sk","translation":"Nevybrané","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"sk","translation":"Ďalej, vyberte si menu podľa cieľa.","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"sk","translation":"Pokračovať","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"sk","translation":"Zobraziť počet krokov","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"sk","translation":"Redukcia hmotnosti","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"sk","translation":"Sacharidy","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"sk","translation":"Neplatné","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"sk","translation":"Nastavte realistické množstvo a čas.","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"sk","translation":"Zvlášť dôležité","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"sk","translation":"Zistite svoje aktuálne zdravie a ďalší krok","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"sk","translation":"Zkontrolať stav","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"sk","translation":"Aktuálne","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"sk","translation":"Aktuálna informácia o tele","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"sk","translation":"V súčasnosti nedostupné","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"sk","translation":"Použili ste aktuálne zaznamenané údaje a nastavenia.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"sk","translation":"Aktívne: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"sk","translation":"Postupujte k svojmu ideálnemu telu bez váhaní.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"sk","translation":"Dôvod","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"sk","translation":"Dôvod: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"sk","translation":"Rok narodenia","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"sk","translation":"Spustite sprievodný program","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"sk","translation":"Zaregistrované položky {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"sk","translation":"Cieľový stav","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"sk","translation":"Želaný štýl","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"sk","translation":"Ciele","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"sk","translation":"Ciel: {{value1}} / Rozdiel: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"sk","translation":"Ciele a tempo","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"sk","translation":"Ciele a pokrok","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"sk","translation":"Možné úpravy cieľov","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"sk","translation":"Ciele neustavené","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"sk","translation":"Dosiahnutie cieľov","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"sk","translation":"Ciele","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"sk","translation":"Pre každý cieľ máme pripravených dvoch ľudí. Zmena osoby zmení aj váš ideálny vzhľad a spôsob komunikácie.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"sk","translation":"Správny osobný tréner pre cieľ","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"sk","translation":"Na základe cieľa upravíte svoje hlavné body a ďalšie kroky.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"sk","translation":"Zmeniť cieľ","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"sk","translation":"Vybrať cieľ","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"sk","translation":"Režim cieľov","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"sk","translation":"Ciele a plány","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"sk","translation":"Otvorené sú špecifické menu pre každý cieľ","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"sk","translation":"Pozrieť špecifické menu","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"sk","translation":"Posledné","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"sk","translation":"Upraviť pomocou konzultácie","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"sk","translation":"Úsporné vzorkovanie","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"sk","translation":"Začať {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"sk","translation":"Spánok a regenerácia","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"sk","translation":"Kontrola","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"sk","translation":"Sekundy","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"sk","translation":"Počet sekúnd","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"sk","translation":"Hľadať a pridávať cvičenia","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"sk","translation":"Použite krátkodobú autentifikáciu pre každé zariadenie.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"sk","translation":"Vnútri zariadenia","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"sk","translation":"Úroveň výkonu","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"sk","translation":"Tréning svalov","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"sk","translation":"Spojte tréning svalov, fyzickú kondíciu a regeneráciu","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"sk","translation":"Zvýraznite objem a históriu tréningu","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"sk","translation":"Hypertrofia svalov","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"sk","translation":"Skúsenosti","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"sk","translation":"Úroveň skúseností","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"sk","translation":"Rýchlosť, v ktorej môžete pokračovať","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"sk","translation":"Toto nie je hodnota vašich schopností alebo kvalifikácií. Uvádzame priority, ktoré by ste mali zvážiť pri odpovedi.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"sk","translation":"Tuky","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"sk","translation":"Obvod pása","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"sk","translation":"Voliteľný obvod pása","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"sk","translation":"Učte sa vaše vzorce správania","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"sk","translation":"Notifikácie o správe","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"sk","translation":"Zobrazenie","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"sk","translation":"Režim zobrazenia","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"sk","translation":"Metóda zobrazenia","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"sk","translation":"Politika zobrazenia","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"sk","translation":"Použitie modelu nebolo aktivované.","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"sk","translation":"Poznámka","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"sk","translation":"Poznámka: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"sk","translation":"Plán","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"sk","translation":"Odstráňte plán, históriu, fyzické KPI, stravu, fotografie a konverzáciu s AI/pamäť.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"sk","translation":"Začnite s plánom alebo pridajte nové aktivity a zaznamenávajte ich.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"sk","translation":"Pridajte aktivitu bez plánu","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"sk","translation":"Zahrňte do plánu","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"sk","translation":"Vytvorte plán","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"sk","translation":"Vytvorte si plán","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"sk","translation":"Plán a sledovanie","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"sk","translation":"Chcete aktualizovať váhu v pláne?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"sk","translation":"Záznam","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"sk","translation":"Zažite záznam","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"sk","translation":"Zaznamenajte. Pýtajte sa AI. Spustite. Denne robte len 3 veci.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"sk","translation":"Kliknite na položku, ktorú chcete zaznamenať","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"sk","translation":"Výsledky a záznamy budú prenesené do ďalšej analýzy AI. Prvý krok vás navede domovská stránka.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"sk","translation":"Záznam sa tu uchováva","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"sk","translation":"Aktualizácia záznamu. Po zatvorení obrazovky pokračuje.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"sk","translation":"Pozrite si záznam a získejte návrh ďalšieho kroku","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"sk","translation":"Záznam v priebehu","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"sk","translation":"Na základe záznamov navrhujeme, či došlo k zlepšeniu, stagnácii alebo nedostatku informácií.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"sk","translation":"Záznam uložený","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"sk","translation":"Nastavenia","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"sk","translation":"Nastavenia uložené","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"sk","translation":"Diagnostický log obsahuje záznamy o fungovaní, komunikácii a aktivitách na iPhone a Apple Watch. Neposielajú sa automaticky na externé servery.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"sk","translation":"Odstrániť diagnostický log","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"sk","translation":"Exportovať diagnostický log","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"sk","translation":"Odoslať diagnostický log","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"sk","translation":"Rozhovor","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"sk","translation":"Zobraziť viac","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"sk","translation":"Nejasné informácie","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"sk","translation":"KPI pre telo","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"sk","translation":"Výška","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"sk","translation":"Výška - voliteľná","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"sk","translation":"Ak si nie ste istí, začnite tu","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"sk","translation":"Pridať","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"sk","translation":"Pridávať","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"sk","translation":"Začať s ďalším","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"sk","translation":"Odoslať","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"sk","translation":"Čaká na odeslanie","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"sk","translation":"Vyberte si, ktoré cvičenie alebo aktivity vykonávate v posilňovni alebo doma.","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"sk","translation":"Po pripojení k internetu overíme vaše záznamy.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"sk","translation":"Počet tréningov za týždeň","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"sk","translation":"Koľkokrát denne sa chcete venovať cvičeniam?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"sk","translation":"Postup","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"sk","translation":"Trénujete","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"sk","translation":"Udržujte si zvyk cvičiť, spánku a zdravého stravovania.","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"sk","translation":"Vyberte: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"sk","translation":"Zvolené","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"sk","translation":"Odoslanie","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"sk","translation":"Načítanie nastavení AI pri distribúcii","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"sk","translation":"Hlavné oblasti","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"sk","translation":"Hmotnosť","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"sk","translation":"Nastavenie hmotnosti pomocou reťazca","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"sk","translation":"Jednotky hmotnosti","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"sk","translation":"Uzavreté","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"sk","translation":"Zavrieť","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"sk","translation":"Začať","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"sk","translation":"Použiteľné informácie","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"sk","translation":"Strava","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"sk","translation":"Strava a tvar tela","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"sk","translation":"Strava a tvar tela môžete zaznamenať pomocou fotografií. Váhu, obvod pasu a počet tréningov zaznamenávajte ako čísla.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"sk","translation":"Zaznamenajte si stravu","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"sk","translation":"Počet jedál","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"sk","translation":"Počet jedál zobrazte oddelene, spolu s dosiahnutím cieľov v kalórie a PFC.","review_note":""}

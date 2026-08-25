@@ -25,7 +25,7 @@ final class FigmaReferenceScreenshots: XCTestCase {
         launch(
             additionalArguments: [
                 "--seed-theme-black-champagne",
-                "--force-dark-appearance",
+                "--force-light-appearance",
                 "--seed-sensor-ui-test-data"
             ]
         )
@@ -33,37 +33,9 @@ final class FigmaReferenceScreenshots: XCTestCase {
         capture("02-iphone-theme-d-black-champagne-dark")
     }
 
-    func test02HomeConditionAndReports() throws {
+    func test02HomeDashboard() {
         waitForHome()
         capture("03-iphone-home-dashboard")
-
-        let goalCard = scrollToHittable(app.buttons["goalActionCard"])
-        XCTAssertTrue(goalCard.isHittable)
-        goalCard.tap()
-        XCTAssertTrue(app.navigationBars["目的を選択"].waitForExistence(timeout: 5))
-        capture("04-iphone-goal-selection")
-        app.buttons["goalOption-bodyShape"].tap()
-
-        let conditionCard = app.buttons["conditionSummaryCard"]
-        XCTAssertTrue(conditionCard.waitForExistence(timeout: 5))
-        conditionCard.tap()
-        XCTAssertTrue(app.navigationBars["コンディション"].waitForExistence(timeout: 5))
-        capture("05-iphone-condition-dashboard")
-
-        let analysisLink = app.descendants(matching: .any)["sensorTrainingAnalysisLink"]
-        XCTAssertTrue(analysisLink.waitForExistence(timeout: 5))
-        analysisLink.tap()
-        XCTAssertTrue(app.navigationBars["トレーニング分析"].waitForExistence(timeout: 5))
-        capture("06-iphone-sensor-training-analysis")
-
-        navigateBack(from: "トレーニング分析")
-        navigateBack(from: "コンディション")
-
-        let aiReportLink = scrollToHittable(app.descendants(matching: .any)["aiReportLink"])
-        XCTAssertTrue(aiReportLink.isHittable)
-        aiReportLink.tap()
-        XCTAssertTrue(app.navigationBars["Noorのレポート"].waitForExistence(timeout: 5))
-        capture("07-iphone-ai-weekly-report")
     }
 
     func test03PlansAndExerciseLibrary() throws {
@@ -154,8 +126,10 @@ final class FigmaReferenceScreenshots: XCTestCase {
 
         app.buttons["addBodyPhotoButton"].tap()
         XCTAssertTrue(app.navigationBars["撮影セットを追加"].waitForExistence(timeout: 5))
-        app.textFields["bodyPhotoMemoField"].tap()
-        app.textFields["bodyPhotoMemoField"].typeText("正面・自然光・同じ姿勢")
+        let memoField = scrollToHittable(app.descendants(matching: .any)["bodyPhotoMemoField"])
+        XCTAssertTrue(memoField.isHittable)
+        memoField.tap()
+        memoField.typeText("正面・自然光・同じ姿勢")
         dismissKeyboardIfPresent()
         capture("23-iphone-body-photo-editor")
     }
@@ -225,9 +199,100 @@ final class FigmaReferenceScreenshots: XCTestCase {
         XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
         capture("32-iphone-settings-profile-and-appearance")
 
-        let aiField = scrollToHittable(app.textFields["aiBaseURLField"])
-        XCTAssertTrue(aiField.isHittable)
+        let aiStatus = scrollToHittable(app.descendants(matching: .any)["aiManagedConnectionStatus"])
+        XCTAssertTrue(aiStatus.isHittable)
         capture("33-iphone-settings-health-and-local-ai")
+    }
+
+    func test07AICoachExperience() throws {
+        launch(
+            additionalArguments: [
+                "--seed-theme-royal-cobalt",
+                "--force-light-appearance",
+                "--stub-ai-trainer"
+            ]
+        )
+        tapTab("AI")
+        XCTAssertTrue(app.navigationBars["AI"].waitForExistence(timeout: 5))
+        capture("34-iphone-ai-coach-hub")
+
+        app.buttons["aiHubTrainerLink"].tap()
+        XCTAssertTrue(app.navigationBars["Nia"].waitForExistence(timeout: 5))
+        capture("35-iphone-ai-coach-chat")
+    }
+
+    func test08EnglishSocialPromoScreenshots() throws {
+        launch(
+            additionalArguments: [
+                "--seed-theme-royal-cobalt",
+                "--force-light-appearance",
+                "--stub-ai-trainer",
+                "--disable-app-tour",
+                "-AppleLanguages", "(en)",
+                "-AppleLocale", "en_US"
+            ]
+        )
+
+        waitForHome()
+        try captureEnglishStoreScreenshot("01-home-dashboard")
+
+        tapTab("AI")
+        XCTAssertTrue(app.navigationBars["AI"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("02-ai-coach-hub")
+
+        app.buttons["aiHubTrainerLink"].tap()
+        XCTAssertTrue(app.navigationBars["Nia"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("03-ai-coach-chat")
+
+        tapTab("Plan")
+        XCTAssertTrue(app.navigationBars["Plan"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("07-plan-list")
+
+        tapTab("Record")
+        XCTAssertTrue(app.navigationBars["Record"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("08-record-hub")
+
+        app.buttons["recordHubBodyWeightLink"].tap()
+        XCTAssertTrue(app.navigationBars["Weight"].waitForExistence(timeout: 5))
+
+        app.buttons["addBodyMetricEntryButton"].tap()
+        let metricField = app.textFields["bodyMetricValueField"]
+        XCTAssertTrue(metricField.waitForExistence(timeout: 5))
+        metricField.tap()
+        metricField.typeText("72.4")
+        let dismissButton = app.buttons["dismiss-bodyMetricValueField"]
+        if dismissButton.waitForExistence(timeout: 2) {
+            dismissButton.tap()
+        }
+        app.buttons["saveBodyMetricEntryButton"].tap()
+        XCTAssertTrue(app.navigationBars["Weight"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("06-body-progress")
+        app.navigationBars["Weight"].buttons.firstMatch.tap()
+
+        let workoutButton = scrollToHittable(
+            app.buttons.matching(
+                NSPredicate(format: "identifier BEGINSWITH %@", "startWorkout-")
+            ).firstMatch
+        )
+        XCTAssertTrue(workoutButton.isHittable)
+        workoutButton.tap()
+        XCTAssertTrue(app.buttons["finishWorkoutButton"].waitForExistence(timeout: 5))
+
+        for index in 1...3 {
+            let toggle = app.switches["completeSetToggle-0-\(index)"]
+            XCTAssertTrue(toggle.waitForExistence(timeout: 5))
+            toggle.tap()
+        }
+        app.buttons["finishWorkoutButton"].tap()
+        XCTAssertTrue(app.buttons["Save to history"].waitForExistence(timeout: 5))
+        app.buttons["Save to history"].tap()
+        XCTAssertTrue(app.navigationBars["Completed"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("04-workout-session")
+        app.buttons["Close"].tap()
+
+        tapTab("History")
+        XCTAssertTrue(app.descendants(matching: .any)["historyCalendar"].waitForExistence(timeout: 5))
+        try captureEnglishStoreScreenshot("05-history-calendar")
     }
 
     private func launch(additionalArguments: [String]) {
@@ -322,5 +387,12 @@ final class FigmaReferenceScreenshots: XCTestCase {
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
+    }
+
+    private func captureEnglishStoreScreenshot(_ name: String) throws {
+        RunLoop.current.run(until: Date().addingTimeInterval(0.4))
+        let directory = URL(fileURLWithPath: "/tmp/bodymode-app-store-en", isDirectory: true)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        try app.screenshot().pngRepresentation.write(to: directory.appendingPathComponent("\(name).png"))
     }
 }

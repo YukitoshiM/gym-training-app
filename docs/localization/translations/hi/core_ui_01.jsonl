@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"hi","translation":"{{value1}} आइटम","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"hi","translation":"{{value1}}: तय तारीख पर जिम विज़िट या वर्कआउट रिकॉर्ड नहीं मिला।","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"hi","translation":"एक सत्र का समय","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"hi","translation":"रोज़ के पोषण लक्ष्य","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"hi","translation":"3 वर्कआउट में मूवमेंट सीखें","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"hi","translation":"AI के साथ वर्कआउट बनाएँ","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"hi","translation":"AI के बिना भी आज के सुझाव उपलब्ध रहेंगे।","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"hi","translation":"अपनी मौजूदा स्थिति के बारे में AI से पूछें","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"hi","translation":"AI से पूछें","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"hi","translation":"AI को भेजा जाने वाला डेटा","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"hi","translation":"AI कोच केवल आपके चुने हुए उपकरणों से वर्कआउट प्लान बनाता है। कम से कम एक उपकरण हमेशा चुना रहेगा।","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"hi","translation":"AI सर्वर से साप्ताहिक टिप्पणी बनाएँ","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"hi","translation":"AI सर्वर कनेक्ट है","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"hi","translation":"AI मॉडल तैयार हो रहा है","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"hi","translation":"AI ड्राफ़्ट और साप्ताहिक टिप्पणी उपलब्ध नहीं हैं, लेकिन आप मैन्युअल रिकॉर्ड सहेज सकते हैं।","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"hi","translation":"AI ड्राफ़्ट और साप्ताहिक टिप्पणी उपयोग करने के लिए AI सुविधाएँ चालू करें, फिर कनेक्शन जाँचें।","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"hi","translation":"AI अपडेट {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"hi","translation":"AI कनेक्शन","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"hi","translation":"AI सुविधाएँ बंद हैं","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"hi","translation":"AI सुविधाएँ उपयोग करें","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"hi","translation":"AI समीक्षा जारी है","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"hi","translation":"AI ने समीक्षा कर ली","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"hi","translation":"AI सेटिंग्स को डिफ़ॉल्ट पर रीसेट करें","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"hi","translation":"API कुंजी","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"hi","translation":"API कुंजी केवल कम अवधि वाले टोकन लेने के लिए उपयोग होती है और सामान्य AI अनुरोधों के साथ नहीं भेजी जाती।","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"hi","translation":"API सर्वर जवाब दे रहा है, लेकिन ज़रूरी मॉडल उपलब्ध नहीं है।","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"hi","translation":"API सर्वर जवाब दे रहा है, लेकिन भोजन और रिपोर्ट का सहायक मॉडल उपलब्ध नहीं है।","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"hi","translation":"API सर्वर जवाब दे रहा है, लेकिन फ़ोटो से कैलोरी अनुमान उपलब्ध नहीं है।","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"hi","translation":"Apple Health वर्कआउट","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"hi","translation":"वर्कआउट को Apple Watch से सिंक करें","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"hi","translation":"Apple Watch लॉग","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"hi","translation":"Apple Watch और सेंसर","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"hi","translation":"BodyMode विज्ञापन रिपोर्ट","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"hi","translation":"BodyMode के साथ शुरू करें","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"hi","translation":"BodyMode प्रबंधन AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"hi","translation":"Google द्वारा विज्ञापन डेटा का उपयोग","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"hi","translation":"Google गोपनीयता नीति","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"hi","translation":"Health शेयरिंग की समीक्षा करें","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"hi","translation":"Apple Watch से रेप्स का अनुमान लगाएँ","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"hi","translation":"Apple Watch हैप्टिक अलर्ट","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"hi","translation":"{{value1}} / {{value2}} पूरे","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"hi","translation":"{{value1}} / {{value2}} हासिल","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"hi","translation":"{{value1}}/6 पूरे","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"hi","translation":"{{value1}}/{{value2}} रेप्स","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"hi","translation":"{{value1}}{{value2}} रेप्स","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"hi","translation":"{{value1}} का सुझाव","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"hi","translation":"{{value1}} समीक्षा कर रहा है · सुझाव उपलब्ध है","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"hi","translation":"{{value1}} ने समीक्षा कर ली","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"hi","translation":"{{value1}} के लिए बताएँ कि आज यह सुझाव क्यों दिया गया और बदलाव सुझाएँ।","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"hi","translation":"{{value1}} से पूछें","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"hi","translation":"{{value1}} का सुझाव","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"hi","translation":"{{value1}} का आकलन","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"hi","translation":"{{value1}} का मूल सुझाव","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"hi","translation":"{{value1}} की समीक्षा बाकी · सुझाव उपलब्ध है","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"hi","translation":"{{value1}} की साप्ताहिक रिपोर्ट","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"hi","translation":"पिकर से {{value1}} सेट करें","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"hi","translation":"{{value1}} को किसी और कार्रवाई से बदलें","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"hi","translation":"{{value1}} उपलब्ध है। {{value2}} कोच प्रकार सत्यापित किए गए।","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"hi","translation":"{{value1}} सुझाने का कारण","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"hi","translation":"{{value1}} खोलें","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"hi","translation":"{{value1}} सेट","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"hi","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"hi","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"hi","translation":"{{value1}} · {{value2}} अपडेट हुआ","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"hi","translation":"{{value1}} · {{value2}} प्रकार के उपकरण","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"hi","translation":"{{value1}} · सप्ताह में {{value2}} दिन","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"hi","translation":"{{value1}} आइटम","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"hi","translation":"{{value1}} बार","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"hi","translation":"{{value1}} पूरे","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"hi","translation":"{{value1}} एक्सरसाइज़","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"hi","translation":"{{value1}} एक्सरसाइज़ / {{value2}} सेट","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"hi","translation":"अब बाकी BodyMode पर छोड़ दें। यह हर दिन अधिकतम तीन काम सुझाता है।","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"hi","translation":"आकलन को अधिक भरोसेमंद बनाने वाला डेटा","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"hi","translation":"सुझाया गया कोच लागू करें","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"hi","translation":"अपना दिन यहाँ से शुरू करें","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"hi","translation":"यह वर्कआउट शुरू करें","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"hi","translation":"यह लक्ष्य उपयोग करें","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"hi","translation":"इस लक्ष्य का ट्रेनर","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"hi","translation":"यह कार्रवाई चुनने का कारण","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"hi","translation":"सभी कोच","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"hi","translation":"अन्य","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"hi","translation":"प्रोटीन","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"hi","translation":"यह क्या नहीं कर सकता","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"hi","translation":"पहले डिवाइस के रिकॉर्ड से बनाया जाता है, AI केवल ज़रूरत होने पर बदलाव करता है।","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"hi","translation":"अक्सर उपयोग होने वाला वर्कआउट सहेजें","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"hi","translation":"कैलोरी","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"hi","translation":"कैलोरी / मैक्रोज़","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"hi","translation":"कैलोरी अनुमान मॉडल तैयार हो रहा है","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"hi","translation":"रद्द करें","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"hi","translation":"त्वरित रिकॉर्ड","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"hi","translation":"सर्वर URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"hi","translation":"मैं जिम पहुँच गया हूँ","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"hi","translation":"जिम विज़िट","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"hi","translation":"जिम विज़िट अपने-आप रिकॉर्ड करें","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"hi","translation":"छोड़ें","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"hi","translation":"सेंसर उपलब्ध न होने पर भी आप वज़न, रेप्स और RPE मैन्युअल रूप से दर्ज कर सकते हैं। कम ऊर्जा वाली सैंपलिंग मूवमेंट अनुमान की अपडेट दर घटाती है।","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"hi","translation":"टेस्ट विज्ञापन","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"hi","translation":"डेटा","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"hi","translation":"डेटा पूर्णता {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"hi","translation":"ट्रेनर: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"hi","translation":"वर्कआउट","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"hi","translation":"3 वर्कआउट पूरे करें","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"hi","translation":"वर्कआउट खोलें","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"hi","translation":"वर्कआउट शुरू करें","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"hi","translation":"वर्ज़न: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"hi","translation":"बिना वैयक्तिकरण","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"hi","translation":"वैयक्तिकरण बंद","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"hi","translation":"फ़्री वर्कआउट","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"hi","translation":"गोपनीयता","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"hi","translation":"प्रोफ़ाइल","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"hi","translation":"मदद","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"hi","translation":"होम","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"hi","translation":"आपके वर्कआउट यहाँ हैं","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"hi","translation":"वर्कआउट चुनें या शुरू करें","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"hi","translation":"Mail जैसा गंतव्य चुनें और रिपोर्ट BodyMode सहायता को भेजें। रिपोर्ट में शरीर या स्वास्थ्य के रिकॉर्ड शामिल नहीं होते।","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"hi","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"hi","translation":"आपत्तिजनक सामग्री","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"hi","translation":"अज्ञात त्रुटि","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"hi","translation":"अनुचित सामग्री","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"hi","translation":"अनुचित विज्ञापन की रिपोर्ट करें","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"hi","translation":"तय वर्कआउट नहीं मिला","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"hi","translation":"इस बार न बदलें","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"hi","translation":"इस बार कोई बदलाव नहीं","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"hi","translation":"आज: {{value1}} · {{value2}} सेट","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"hi","translation":"आज से फिर सीखना शुरू करें","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"hi","translation":"आज के 3 काम","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"hi","translation":"आज के 3 काम तैयार हो रहे हैं","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"hi","translation":"आज का वर्कआउट","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"hi","translation":"आज का वर्कआउट पूरा करें","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"hi","translation":"आज का वर्कआउट करें","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"hi","translation":"आज का वर्कआउट शुरू करें","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"hi","translation":"आज की एंट्री","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"hi","translation":"आज का सुझाव","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"hi","translation":"आज की स्थिति","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"hi","translation":"आज का रिकॉर्ड","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"hi","translation":"आज की तैयारी","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"hi","translation":"आज की प्रगति","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"hi","translation":"आज पर जाएँ","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"hi","translation":"आज के काम यहाँ हैं","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"hi","translation":" आइटम","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"hi","translation":"आराम","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"hi","translation":"आराम का समय","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"hi","translation":"पिकर से आराम का समय सेट करें","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"hi","translation":"प्रगति की फ़ोटो","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"hi","translation":"शारीरिक संरचना","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"hi","translation":"वज़न","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"hi","translation":"शरीर का वज़न {{value1}} + जोड़ा गया वज़न {{value2}} = संदर्भ भार {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"hi","translation":"शरीर का वज़न {{value1}} - सहायता {{value2}} = संदर्भ भार {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"hi","translation":"वज़न · वैकल्पिक","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"hi","translation":"वज़न और कमर को टिकाऊ गति से बेहतर करें","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"hi","translation":"वज़न · कमर · भोजन · प्रगति की फ़ोटो","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"hi","translation":"आपका लक्ष्य क्या है?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"hi","translation":"बनाएँ","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"hi","translation":"उपयोग गाइड","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"hi","translation":"हम उपलब्ध उपकरणों से वर्कआउट बनाएँगे","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"hi","translation":"उपलब्ध उपकरण","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"hi","translation":"आपके उपयोग किए गए फ़ीचर के केवल प्रकार डिवाइस पर सहेजे जाते हैं। वज़न, फ़ोटो, भोजन का विवरण, हृदय गति, स्थान और नोट रिकॉर्ड या अपने-आप नहीं भेजे जाते।","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"hi","translation":"सहेजें","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"hi","translation":"आपके सहेजे गए रिकॉर्ड से समीक्षा की गई।","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"hi","translation":"स्वास्थ्य रिकॉर्ड को विज्ञापन डेटा से अलग रखें","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"hi","translation":"अभी कुछ चीज़ें दर्ज करें और बाद में सबकी समीक्षा करें।","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"hi","translation":"हो गया","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"hi","translation":"सारा डेटा हटाएँ?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"hi","translation":"सारा डेटा हटाएँ","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"hi","translation":"सभी रिकॉर्ड JSON में निर्यात करें","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"hi","translation":"पूरे शरीर के वर्कआउट से शुरू करें","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"hi","translation":"फ़ोटो","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"hi","translation":"फ़ोटो का तुरंत विश्लेषण करें","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"hi","translation":"फ़ोटो और माप से अपनी प्रगति देखें","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"hi","translation":"फ़ोटो और माप यहाँ हैं","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"hi","translation":"फ़ोटो और माप दर्ज करें","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"hi","translation":"फ़ोटो लें","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"hi","translation":"अपनी बनावट, कमर और मांसपेशियों का संतुलन बेहतर करें","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"hi","translation":" मिनट","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"hi","translation":"मिनट:सेकंड","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"hi","translation":"शुरुआती वर्कआउट बनाएँ","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"hi","translation":"आकलन का विवरण देखें","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"hi","translation":"कोई दूसरी कार्रवाई चुनें","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"hi","translation":"कौन से उपकरण उपलब्ध हैं?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"hi","translation":"उपयोग विश्लेषण साझा करें","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"hi","translation":"उपयोग डेटा हटाएँ","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"hi","translation":"उपयोग डेटा निर्यात करें","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"hi","translation":"सलाह की प्राथमिकता का संतुलन","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"hi","translation":"मूवमेंट","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"hi","translation":"उपयोग की गई जानकारी","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"hi","translation":"सहमति की स्थिति जाँची जा रही है","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"hi","translation":"यह किसके लिए है","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"hi","translation":"उपकरण या मांसपेशी समूह से चुनें","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"hi","translation":" रेप्स","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"hi","translation":"रिकवरी","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"hi","translation":"रेप्स","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"hi","translation":"पिकर से रेप्स सेट करें","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"hi","translation":"स्थिर टेस्ट विज्ञापन","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"hi","translation":"शुरू करना","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"hi","translation":"मूल जानकारी · वैकल्पिक","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"hi","translation":"रिपोर्ट भेजें","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"hi","translation":"रिपोर्ट करने का कारण","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"hi","translation":"बदलाव यहाँ देखें","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"hi","translation":"ट्रैक करने वाले मेट्रिक चुनें","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"hi","translation":"बदलें","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"hi","translation":"बदलाव का इतिहास","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"hi","translation":"शुरू करें","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"hi","translation":"सीखना रुका हुआ है। आपके पुराने रिकॉर्ड हटाए नहीं गए हैं।","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"hi","translation":"हो गया","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"hi","translation":"{{value1}} पूरा","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"hi","translation":"पूरा हुआ","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"hi","translation":"पूरा चिह्नित करें","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"hi","translation":"पूरा हुआ","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"hi","translation":"नहीं किया","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"hi","translation":"करें","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"hi","translation":"आप जितना करेंगे, अगला कदम उतना साफ़ होगा","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"hi","translation":"आपके नतीजे अगले AI सुझाव को बेहतर बनाते हैं","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"hi","translation":"विस्तृत","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"hi","translation":"इतिहास","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"hi","translation":" वर्ष","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"hi","translation":"उम्र के लिए उपयुक्त नहीं","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"hi","translation":"विज्ञापन ID सेट नहीं है","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"hi","translation":"विज्ञापन और डेटा उपयोग","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"hi","translation":"विज्ञापन गोपनीयता सेटिंग्स","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"hi","translation":"विज्ञापन की सहमति नहीं दी गई है।","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"hi","translation":"विज्ञापन में दिखा उत्पाद नाम या समस्या","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"hi","translation":"विज्ञापन केवल iPhone पर दिखते हैं। BodyMode के स्वास्थ्य, भोजन, फ़ोटो और स्थान रिकॉर्ड विज्ञापन चुनने में उपयोग नहीं होते।","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"hi","translation":"विज्ञापन की रिपोर्ट करें","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"hi","translation":"विज्ञापन लोड हो रहा है","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"hi","translation":"विज्ञापन और गोपनीयता","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"hi","translation":"विज्ञापन प्रदाता","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"hi","translation":"विज्ञापन दिखाने के लिए Google आपका IP पता, डिवाइस और ऐप की मूल जानकारी, SDK के निदान और प्रदर्शन डेटा तथा विज्ञापन दिखने और इंटरैक्शन का डेटा प्राप्त करता है। IP पते से अनुमानित स्थान निकाला जा सकता है। BodyMode में दर्ज वज़न, हृदय गति, नींद, भोजन, फ़ोटो, वर्कआउट, लक्ष्य, GPS डेटा और जिम स्थान विज्ञापन अनुरोधों में शामिल नहीं होते।","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"hi","translation":"हृदय गति और RPE से आराम समायोजित करें","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"hi","translation":"हृदय गति और मूवमेंट","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"hi","translation":"लिंग","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"hi","translation":"लिंग · वैकल्पिक","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"hi","translation":"वापस","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"hi","translation":"मैन्युअल रिकॉर्डिंग अभी भी उपलब्ध है।","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"hi","translation":"कोच: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"hi","translation":"नियुक्त कोच","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"hi","translation":"अपने कोच से पूछें","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"hi","translation":"कोच का तरीका","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"hi","translation":"कोच का प्रकार बदलने से AI द्वारा प्राथमिकता दिए जाने वाले रिकॉर्ड और उसके सुझाव बदल जाते हैं।","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"hi","translation":"नियुक्त ट्रेनर: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"hi","translation":"निर्दिष्ट नहीं","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"hi","translation":"कनेक्शन जाँचें","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"hi","translation":"iPhone या Apple Watch पर सुझाया गया वर्कआउट करें।","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"hi","translation":"केवल सुझाव सीखने को रीसेट करें","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"hi","translation":"केवल बैनर विज्ञापन, बिना रुकावट","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"hi","translation":"माप दर्ज करें","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"hi","translation":" दिन","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"hi","translation":"तारीख के अनुसार समीक्षा करें","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"hi","translation":"दैनिक गतिविधि","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"hi","translation":"दैनिक सुझाव की समीक्षा","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"hi","translation":"निर्यात नहीं हो सका","review_note":""}

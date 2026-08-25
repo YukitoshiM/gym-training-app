@@ -22,6 +22,34 @@ final class DailyRecommendationEngineTests: XCTestCase {
         XCTAssertEqual(recommendation.activeActions.first?.destination, .workout(planID: plan.id))
     }
 
+    @MainActor
+    func testDailyAIAnalysisRequiresExplicitAutomaticCreditConsent() throws {
+        let suiteName = "DailyRecommendationEngineTests.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let storage = TestAppDataRepository()
+        var settings = AISettings.default
+        settings.isEnabled = true
+        storage.saveAISettings(settings)
+        let store = AppStore(storage: storage)
+        _ = store.refreshDailyRecommendation(
+            healthSnapshot: .empty,
+            readinessAssessment: ReadinessAssessment(
+                score: nil,
+                level: .moderate,
+                summary: "",
+                factors: [],
+                availableFactorCount: 0
+            ),
+            force: true
+        )
+
+        XCTAssertFalse(store.shouldRequestDailyAIAnalysis(defaults: defaults))
+
+        defaults.set(true, forKey: DailyRecommendationAICreditPolicy.automaticUseKey)
+        XCTAssertTrue(store.shouldRequestDailyAIAnalysis(defaults: defaults))
+    }
+
     func testNoPlanMakesPlanCreationThePrimaryAction() throws {
         let now = try date(day: 12, hour: 8)
         let input = makeInput(now: now, plans: [], selectedPlan: nil)
@@ -54,6 +82,36 @@ final class DailyRecommendationEngineTests: XCTestCase {
         XCTAssertEqual(recommendation.readiness.level, .rest)
         XCTAssertEqual(recommendation.activeActions.first?.category, .recovery)
         XCTAssertEqual(recommendation.activeActions.first?.completionRule, .recoveryDayObserved)
+    }
+
+    func testRecordedExerciseSymptomsAvoidWorkoutRecommendation() throws {
+        let now = try date(day: 12, hour: 8)
+        var profile = UserProfile.default
+        profile.healthIntake.safetyStatus = .hasConsiderations
+        profile.healthIntake.considerations = [.chestPainOrPressure]
+        let plan = TrainingPlan(name: "脚")
+        let input = makeInput(now: now, profile: profile, plans: [plan], selectedPlan: plan)
+
+        let recommendation = DailyRecommendationEngine(calendar: calendar).makeRecommendation(from: input)
+
+        XCTAssertEqual(recommendation.readiness.level, .rest)
+        XCTAssertEqual(recommendation.activeActions.first?.category, .recovery)
+        XCTAssertTrue(recommendation.activeActions.first?.title.contains("状態を確認") == true)
+    }
+
+    func testNonAcuteConsiderationLowersPlannedWorkoutLoad() throws {
+        let now = try date(day: 12, hour: 8)
+        var profile = UserProfile.default
+        profile.healthIntake.safetyStatus = .hasConsiderations
+        profile.healthIntake.considerations = [.jointOrMuscleDiscomfort]
+        let plan = TrainingPlan(name: "背中")
+        let input = makeInput(now: now, profile: profile, plans: [plan], selectedPlan: plan)
+
+        let recommendation = DailyRecommendationEngine(calendar: calendar).makeRecommendation(from: input)
+
+        XCTAssertEqual(recommendation.readiness.level, .tired)
+        XCTAssertTrue(recommendation.activeActions.first?.title.contains("軽め") == true)
+        XCTAssertTrue(recommendation.activeActions.first?.rationale.contains("配慮事項") == true)
     }
 
     func testCompletionRulesReadRecordedSourceData() throws {
@@ -162,6 +220,70 @@ final class DailyRecommendationEngineTests: XCTestCase {
 
         XCTAssertEqual(store.userProfile.nutritionGoals.calories, 2_100)
         XCTAssertEqual(store.targetAdjustmentProposals.first?.status, .accepted)
+    }
+
+    @MainActor
+    func testDailyAIResponsePersistsRAGEvidenceOnPendingNutritionProposal() throws {
+        let storage = TestAppDataRepository()
+        let proposal = TargetAdjustmentProposal(
+            kind: .calorieTarget,
+            currentValue: 2_000,
+            proposedValue: 2_100,
+            reason: "確認用"
+        )
+        storage.saveTargetAdjustmentProposals([proposal])
+        let store = AppStore(storage: storage)
+        let now = Date()
+        let recommendation = DailyRecommendationEngine().makeRecommendation(
+            from: makeInput(now: now)
+        )
+        store.dailyRecommendations = [recommendation]
+        let citation = CoachEvidenceCitation(
+            id: "PMID:123",
+            title: "Protein intake review",
+            year: 2025,
+            studyType: "systematic_review",
+            confidence: "high",
+            url: "https://pubmed.ncbi.nlm.nih.gov/123",
+            doi: "",
+            relevance: 0.9
+        )
+        let status = CoachEvidenceStatus(
+            state: "ready",
+            confidence: "high",
+            lastUpdatedAt: "2026-08-15",
+            searchedDocuments: 2_836
+        )
+        let response = CoachChatResponse(
+            reply: #"{"keep_existing":true,"readiness_level":"normal","summary":"維持","change_reason":"","actions":[]}"#,
+            evidence: [citation],
+            evidenceStatus: status
+        )
+
+        store.applyDailyAIResponse(response, for: now)
+
+        XCTAssertEqual(store.dailyRecommendation(on: now)?.evidence, [citation])
+        XCTAssertEqual(store.dailyRecommendation(on: now)?.evidenceStatus, status)
+        XCTAssertEqual(storage.dailyRecommendations.first?.evidence, [citation])
+        XCTAssertEqual(store.targetAdjustmentProposals.first?.evidence, [citation])
+        XCTAssertEqual(store.targetAdjustmentProposals.first?.evidenceStatus, status)
+        XCTAssertEqual(storage.targetAdjustmentProposals.first?.evidenceStatus?.searchedDocuments, 2_836)
+    }
+
+    func testLegacyDailyRecommendationWithoutEvidenceStillDecodes() throws {
+        let recommendation = DailyRecommendationEngine().makeRecommendation(
+            from: makeInput(now: Date())
+        )
+        let encoded = try JSONEncoder().encode(recommendation)
+        var payload = try XCTUnwrap(JSONSerialization.jsonObject(with: encoded) as? [String: Any])
+        payload.removeValue(forKey: "evidence")
+        payload.removeValue(forKey: "evidenceStatus")
+        let legacyData = try JSONSerialization.data(withJSONObject: payload)
+
+        let decoded = try JSONDecoder().decode(DailyRecommendation.self, from: legacyData)
+
+        XCTAssertNil(decoded.evidence)
+        XCTAssertNil(decoded.evidenceStatus)
     }
 
     func testAIDraftParserAcceptsCodeFenceAndTypedActions() throws {

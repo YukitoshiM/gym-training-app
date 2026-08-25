@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "sv", "translation": "Uppskattning. Inte baserad på mätningar. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "sv", "translation": "Eftersom det har gått en tid sedan senaste mätningen, är förändringen inte fastställd och värdet är ungefärligt.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "sv", "translation": "Baserat på gruppreferensområde för längd, vikt, ålder och kön. Inte en individuell mätning av kroppsfett.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "sv", "translation": "Uppskattat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "sv", "translation": "Referensuppskattning", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "sv", "translation": "Baserat på ett referensområde, inte en mätning. Sparas endast om du trycker för att se innehållet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "sv", "translation": "Spara uppskattningen?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "sv", "translation": "Spara som uppskattning", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "sv", "translation": "{{value1}} {{value2}}. Överskriver inte tidigare mätningar.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "sv", "translation": "Schemalagda rapporter", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "sv", "translation": "Veckorapport", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "sv", "translation": "Dag i veckan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "sv", "translation": "Månadsrapport", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "sv", "translation": "Datum", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "sv", "translation": "{{value1}} dagar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "sv", "translation": "Noteringstid", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "sv", "translation": "Genereras automatiskt vid första öppningen efter schemalagd tid. Om anslutning till AI misslyckas, sparas en sammanfattning på enheten.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "sv", "translation": "Kontrollera inställningar krävs", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "sv", "translation": "Kan försöka igen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "sv", "translation": "Använt kvot", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "sv", "translation": "Kvot är inte använd", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "sv", "translation": "Vetenskapligt stöd {{value1}} st", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "sv", "translation": "Eftersom det saknas direkt bevis, är detta en uppskattning baserad på trendanalys.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "sv", "translation": "Direkt användbart bevis hittades inte för denna rekommendation.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "sv", "translation": "Eftersom det är omöjligt att verifiera vetenskapliga bevis, baseras rekommendationen på en sammanfattning och allmänna principer.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "sv", "translation": "Enhet för kroppsmått", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

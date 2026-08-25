@@ -43,8 +43,8 @@ enum DailyRecommendationNotificationManager {
         center.removePendingNotificationRequests(withIdentifiers: identifiers)
 
         let morning = UNMutableNotificationContent()
-        morning.title = "今日の3つが決まりました"
-        morning.body = recommendation?.activeActions.first?.title ?? "今日やることを確認しましょう。"
+        morning.title = L10n.string("health_meals_body_ai.79c97ab01e64", fallback: "今日の3つが決まりました")
+        morning.body = recommendation?.activeActions.first?.title ?? L10n.string("health_meals_body_ai.2984f299585f", fallback: "今日やることを確認しましょう。")
         morning.sound = .default
         let morningRequest = UNNotificationRequest(
             identifier: morningIdentifier,
@@ -63,8 +63,8 @@ enum DailyRecommendationNotificationManager {
         guard shouldScheduleEvening else { return }
 
         let evening = UNMutableNotificationContent()
-        evening.title = "今日の進み具合を確認"
-        evening.body = "できたことを明日の提案へ反映します。"
+        evening.title = L10n.string("health_meals_body_ai.41cc3b9ae0d5", fallback: "今日の進み具合を確認")
+        evening.body = L10n.string("health_meals_body_ai.c8c7a19a1169", fallback: "できたことを明日の提案へ反映します。")
         evening.sound = .default
         let eveningRequest = UNNotificationRequest(
             identifier: eveningIdentifier,
@@ -89,10 +89,10 @@ enum DailyRecommendationNotificationManager {
 
     static var optimizationSummary: String {
         let evening = metrics(for: eveningIdentifier)
-        guard evening.scheduledCount >= 7 else { return "朝・夜の通知を控えめに試しています。" }
+        guard evening.scheduledCount >= 7 else { return L10n.string("health_meals_body_ai.d11125844b6c", fallback: "朝・夜の通知を控えめに試しています。") }
         return shouldScheduleEvening
-            ? "通知への反応を見ながら朝・夜に案内します。"
-            : "通知への反応が少ないため、夜の通知を自動で休止しています。"
+            ? L10n.string("health_meals_body_ai.499175873569", fallback: "通知への反応を見ながら朝・夜に案内します。")
+            : L10n.string("health_meals_body_ai.a65c82a761d0", fallback: "通知への反応が少ないため、夜の通知を自動で休止しています。")
     }
 
     private static var shouldScheduleEvening: Bool {

@@ -1,0 +1,10 @@
+{"id":"permissions.8a6dea64cf71","target_locale":"ko","translation":"Apple Watch에서 기록한 근력 운동과 신체 측정을 Apple Health에 저장합니다.","review_note":""}
+{"id":"permissions.762ae96a716f","target_locale":"ko","translation":"Apple Watch에서 기록한 근력 운동을 Apple Health에 저장합니다.","review_note":""}
+{"id":"permissions.724cb79d3bb9","target_locale":"ko","translation":"Apple Watch의 움직임을 기반으로 세트당 횟수와 속도를 추정합니다.","review_note":""}
+{"id":"permissions.6415e75e7c3f","target_locale":"ko","translation":"Mac mini 등, 사용자가 지정한 로컬 AI 서버에 연결하기 위해 로컬 네트워크를 사용합니다.","review_note":""}
+{"id":"permissions.39f94ffbfc0b","target_locale":"ko","translation":"운동 중 심박수와 소비 에너지를 표시하고, 세트별 부하를 기록합니다.","review_note":""}
+{"id":"permissions.42e6eda276f8","target_locale":"ko","translation":"손목 움직임을 기반으로 세트당 횟수와 속도를 추정합니다.","review_note":""}
+{"id":"permissions.0dfc4eb17b3c","target_locale":"ko","translation":"걸음 수, 활동량, 수면, 심박수 등을 종합하여 컨디션과 운동 경향을 표시합니다.","review_note":""}
+{"id":"permissions.2cb9c37e0a02","target_locale":"ko","translation":"현재 위치를 헬스로 등록하고, 헬스 방문 기록을 위해 위치 정보를 사용합니다.","review_note":""}
+{"id":"permissions.b81b5b9d3c09","target_locale":"ko","translation":"등록한 헬스장 도착 및 퇴장을 기록할 때 위치 정보를 사용합니다.","review_note":""}
+{"id":"permissions.44744ac4ed80","target_locale":"ko","translation":"음식과 체형 사진을 촬영하여 기록하고, AI 기반 분석에 활용합니다.","review_note":""}

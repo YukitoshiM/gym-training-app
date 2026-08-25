@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BodyMode コア体験調査</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #edf2f7;
+      --surface: #ffffff;
+      --subtle: #f4f7fa;
+      --ink: #142033;
+      --muted: #617084;
+      --line: #cbd5e1;
+      --accent: #2857d9;
+      --good: #087a55;
+      --warn: #9a4b00;
+      --danger: #b42318;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      letter-spacing: 0;
+    }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(760px, 100%); margin: 0 auto; padding: 24px 18px 64px; }
+    .masthead { margin-bottom: 20px; }
+    .masthead h1 { margin: 0 0 8px; font-size: 30px; }
+    .masthead p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .band {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+    .band + .band { margin-top: 16px; }
+    h2 { margin: 0 0 16px; font-size: 23px; }
+    h3 { margin: 0 0 10px; font-size: 19px; }
+    p { line-height: 1.55; }
+    .field { display: grid; gap: 7px; margin-top: 14px; }
+    .field label { font-weight: 700; }
+    .field small { color: var(--muted); }
+    input, select, textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+    }
+    textarea { min-height: 92px; resize: vertical; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .primary, .secondary, .danger {
+      min-height: 50px;
+      padding: 0 18px;
+      border-radius: 7px;
+      font-weight: 800;
+    }
+    .primary { border: 0; background: var(--accent); color: white; }
+    .secondary { border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+    .danger { border: 1px solid var(--danger); background: transparent; color: var(--danger); }
+    .status { margin: 0 0 14px; color: var(--muted); font-weight: 700; }
+    .timer { color: var(--accent); font-variant-numeric: tabular-nums; }
+    .phone {
+      width: min(390px, 100%);
+      min-height: 650px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgb(20 32 51 / 12%);
+    }
+    .topline { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-weight: 700; }
+    .good { color: var(--good); }
+    .phone h2 { margin: 18px 0 12px; font-size: 29px; }
+    .hero-result { padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .hero-result strong { display: block; font-size: 28px; line-height: 1.25; }
+    .hero-result span { display: block; margin-top: 6px; color: var(--muted); }
+    .metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin: 16px 0; background: var(--line); }
+    .metric { min-height: 92px; padding: 14px; background: var(--surface); }
+    .metric b { display: block; font-size: 23px; }
+    .metric span { color: var(--muted); font-size: 14px; }
+    .proposal, .evidence {
+      margin-top: 16px;
+      padding: 16px;
+      border-left: 4px solid var(--accent);
+      background: var(--subtle);
+    }
+    .proposal p, .evidence p { margin: 5px 0 0; }
+    .phone-button {
+      width: 100%;
+      min-height: 54px;
+      margin-top: 18px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .phone-links { display: flex; justify-content: center; gap: 22px; margin-top: 15px; color: var(--accent); font-weight: 750; }
+    .hidden-screen {
+      display: grid;
+      min-height: 440px;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+    }
+    .question { padding: 16px 0; border-top: 1px solid var(--line); }
+    .question:first-of-type { border-top: 0; }
+    .score-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+    .score-row label { display: flex; min-height: 44px; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); border-radius: 6px; }
+    .score-row input { width: auto; min-height: auto; }
+    .notice { color: var(--muted); font-size: 14px; }
+    .complete { color: var(--good); font-weight: 800; }
+    [hidden] { display: none !important; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #071426;
+        --surface: #0d2039;
+        --subtle: #132a49;
+        --ink: #f5f8fc;
+        --muted: #b5c1d2;
+        --line: #36516f;
+        --accent: #6e93ff;
+        --good: #5fd5a8;
+        --warn: #ffb36b;
+        --danger: #ff8a80;
+      }
+    }
+    @media (max-width: 520px) {
+      .shell { padding: 16px 12px 48px; }
+      .band { padding: 18px 14px; }
+      .score-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <h1>BodyMode コア体験調査</h1>
+      <p>画面を5秒見た後、覚えている内容を回答します。氏名、メール、健康記録は入力しません。</p>
+    </header>
+
+    <section id="setup" class="band">
+      <h2>開始前</h2>
+      <div class="field">
+        <label for="participant">参加者コード</label>
+        <input id="participant" maxlength="32" autocomplete="off" placeholder="例: TF-023">
+        <small>同じ人は毎回同じコードを使います。氏名は使わないでください。</small>
+      </div>
+      <div class="field">
+        <label for="familiarity">BodyModeの経験</label>
+        <select id="familiarity">
+          <option value="first_time">初めて見る</option>
+          <option value="tester">テスターとして使用中</option>
+          <option value="knowledgeable">仕様を詳しく知っている</option>
+          <option value="developer">開発者</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="watchUse">Apple Watch利用</label>
+        <select id="watchUse">
+          <option value="none">使っていない</option>
+          <option value="sometimes">時々使う</option>
+          <option value="regular">日常的に使う</option>
+        </select>
+      </div>
+      <div class="actions"><button id="begin" class="primary">調査を開始</button></div>
+    </section>
+
+    <section id="instruction" class="band" hidden>
+      <h2 id="instructionTitle"></h2>
+      <p id="instructionBody"></p>
+      <p class="notice">準備ができてから表示してください。表示後は自動で5秒後に隠れます。</p>
+      <div class="actions"><button id="showStimulus" class="primary">画面を表示</button></div>
+    </section>
+
+    <section id="stimulus" class="band" hidden>
+      <p class="status">残り <span id="countdown" class="timer">5.0</span> 秒</p>
+      <div id="stimulusContent"></div>
+    </section>
+
+    <section id="recall" class="band" hidden>
+      <h2>覚えている内容を回答</h2>
+      <p class="notice">画面を見直さず、まず自由回答を入力してください。</p>
+      <div id="questions"></div>
+      <div class="actions"><button id="saveRecall" class="primary">回答を保存</button></div>
+    </section>
+
+    <section id="interaction" class="band" hidden>
+      <h2>次に押す場所を選択</h2>
+      <p>同じ画面をもう一度表示します。普段なら次に押す場所を1つ選んでください。</p>
+      <div id="interactionContent"></div>
+    </section>
+
+    <section id="complete" class="band" hidden>
+      <h2>調査完了</h2>
+      <p class="complete">回答はこのブラウザ内に保存されました。</p>
+      <p>下のボタンでJSONを書き出し、調査担当者へ渡してください。健康記録は含まれません。</p>
+      <div class="actions">
+        <button id="download" class="primary">結果JSONを書き出す</button>
+        <button id="restart" class="secondary">別の参加者で開始</button>
+        <button id="erase" class="danger">このブラウザの調査結果を削除</button>
+      </div>
+      <p id="storedCount" class="notice"></p>
+    </section>
+  </main>
+
+  <script>
+    const storageKey = "bodymode.coreResearch.responses.v1";
+    const screens = {
+      r5A: {
+        title: "R5 完了画面",
+        body: "トレーニング完了画面を5秒見ます。",
+        html: completionScreen("次回の仮提案", "次回はベンチプレスを2.5kg上げる候補があります。", "提案を見る", "完了して閉じる", "詳細を見る"),
+        questions: [
+          ["achievement", "今日できたことは何ですか？"],
+          ["next", "次に何をする画面だと思いましたか？"]
+        ],
+        interaction: true
+      },
+      r5B: {
+        title: "R5 完了画面",
+        body: "トレーニング完了画面を5秒見ます。",
+        html: completionScreen("今日の達成", "全8セット完了 · ベンチプレスPR更新", "完了して閉じる", "提案を見る", "詳細を見る"),
+        questions: [
+          ["achievement", "今日できたことは何ですか？"],
+          ["next", "次に何をする画面だと思いましたか？"]
+        ],
+        interaction: true
+      },
+      r5C: {
+        title: "R5 完了画面",
+        body: "トレーニング完了画面を5秒見ます。",
+        html: completionScreen("今回の数値", "総ボリューム 4,820kg · 8セット · 62回", "詳細を見る", "完了して閉じる", "提案を見る"),
+        questions: [
+          ["achievement", "今日できたことは何ですか？"],
+          ["next", "次に何をする画面だと思いましたか？"]
+        ],
+        interaction: true
+      },
+      r9A: {
+        title: "R9 通常表示",
+        body: "今日の提案画面を5秒見ます。",
+        html: rationaleScreen("GOOD", "今日の3つ", "背中・肩 45分", "通常強度 · 6種目", "トレーニングを開始", "なぜ？", "変更", ""),
+        questions: [
+          ["action", "今日何をする提案でしたか？"],
+          ["change", "提案が合わない時はどうすればよいですか？"]
+        ]
+      },
+      r9B: {
+        title: "R9 理由と判断材料",
+        body: "提案理由の画面を5秒見ます。",
+        html: rationaleScreen("信頼度 高", "この提案の理由", "背中は4日空いています", "睡眠7時間12分 · 疲労2/5 · 不足データなし", "この内容で開始", "行動を変更", "根拠を見る", "端末内ルール · AI補正なし"),
+        questions: [
+          ["reason", "この提案になった理由を1つ書いてください。"],
+          ["source", "AIが提案を補正していましたか？"]
+        ]
+      },
+      r9C: {
+        title: "R9 データ不足",
+        body: "データ不足を含む提案画面を5秒見ます。",
+        html: rationaleScreen("信頼度 中", "この提案の理由", "軽い全身運動 25分", "睡眠・疲労・痛み・最近の活動量が未記録", "不足情報を入力", "そのまま開始", "行動を変更", "端末内ルール · AI補正なし"),
+        questions: [
+          ["missing", "不足していた情報を1つ書いてください。"],
+          ["fallback", "不足情報を入力しなくても開始できると思いましたか？"]
+        ]
+      },
+      r9D: {
+        title: "R9 文献の層",
+        body: "研究根拠を説明する画面を5秒見ます。",
+        html: evidenceScreen(),
+        questions: [
+          ["evidence", "研究が説明していたのは一般的傾向ですか、あなた個人への効果ですか？"],
+          ["personal", "今回の個人向け判断には何が使われていましたか？"]
+        ]
+      }
+    };
+
+    let session = null;
+    let taskIndex = 0;
+    let timer = null;
+
+    function hashCode(value) {
+      let hash = 2166136261;
+      for (const char of value) {
+        hash ^= char.codePointAt(0);
+        hash = Math.imul(hash, 16777619);
+      }
+      return hash >>> 0;
+    }
+
+    function completionScreen(heading, summary, primary, secondary, tertiary) {
+      return `<div class="phone" data-screen="completion">
+        <div class="topline"><span>トレーニング完了</span><span class="good">保存済み</span></div>
+        <h2>おつかれさまでした</h2>
+        <div class="hero-result"><strong>${heading}</strong><span>${summary}</span></div>
+        <div class="metric-grid">
+          <div class="metric"><b>8</b><span>完了セット</span></div>
+          <div class="metric"><b>4,820kg</b><span>総ボリューム</span></div>
+        </div>
+        <div class="proposal"><b>次回の候補</b><p>ベンチプレスを2.5kg上げる候補があります。</p></div>
+        <button class="phone-button" data-choice="${primary}">${primary}</button>
+        <div class="phone-links"><button class="secondary" data-choice="${secondary}">${secondary}</button><button class="secondary" data-choice="${tertiary}">${tertiary}</button></div>
+      </div>`;
+    }
+
+    function rationaleScreen(badge, heading, title, meta, primary, secondary, tertiary, source) {
+      return `<div class="phone" data-screen="rationale">
+        <div class="topline"><span>今日のBodyMode</span><span class="good">${badge}</span></div>
+        <h2>${heading}</h2>
+        <div class="hero-result"><strong>${title}</strong><span>${meta}</span></div>
+        ${source ? `<div class="proposal"><b>提案の出所</b><p>${source}</p></div>` : ""}
+        <button class="phone-button" data-choice="${primary}">${primary}</button>
+        <div class="phone-links"><button class="secondary" data-choice="${secondary}">${secondary}</button><button class="secondary" data-choice="${tertiary}">${tertiary}</button></div>
+      </div>`;
+    }
+
+    function evidenceScreen() {
+      return `<div class="phone" data-screen="evidence">
+        <div class="topline"><span>一般的な研究根拠</span><span class="good">2件</span></div>
+        <h2>提案を支える根拠</h2>
+        <div class="evidence"><b>筋力・筋肥大</b><p>健康な成人の研究では、複数セットの筋力トレーニングが筋力・筋肥大を支える一般的傾向があります。</p></div>
+        <div class="evidence"><b>今回の個人判断</b><p>あなたの最終実施日、睡眠、疲労、利用器具を使いました。</p></div>
+        <p class="notice">研究は個人の効果を保証しません。</p>
+        <button class="phone-button" data-choice="PubMedで確認">PubMedで確認</button>
+        <div class="phone-links"><button class="secondary" data-choice="提案へ戻る">提案へ戻る</button></div>
+      </div>`;
+    }
+
+    function buildTaskOrder(participant) {
+      const hash = hashCode(participant);
+      const r5 = ["r5A", "r5B", "r5C"][hash % 3];
+      const r9 = ["r9A", "r9B", "r9C", "r9D"];
+      const offset = hash % r9.length;
+      return [r5, ...r9.slice(offset), ...r9.slice(0, offset)];
+    }
+
+    function showOnly(id) {
+      for (const section of ["setup", "instruction", "stimulus", "recall", "interaction", "complete"]) {
+        document.getElementById(section).hidden = section !== id;
+      }
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    function prepareTask() {
+      if (taskIndex >= session.taskOrder.length) {
+        finishSession();
+        return;
+      }
+      const task = screens[session.taskOrder[taskIndex]];
+      document.getElementById("instructionTitle").textContent = `${taskIndex + 1} / ${session.taskOrder.length} · ${task.title}`;
+      document.getElementById("instructionBody").textContent = task.body;
+      showOnly("instruction");
+    }
+
+    function beginExposure() {
+      const taskID = session.taskOrder[taskIndex];
+      const task = screens[taskID];
+      document.getElementById("stimulusContent").innerHTML = task.html;
+      document.getElementById("countdown").textContent = "5.0";
+      session.current = { taskID, shownAt: new Date().toISOString(), responses: {}, scores: {} };
+      showOnly("stimulus");
+      const started = performance.now();
+      timer = setInterval(() => {
+        const remaining = Math.max(0, 5000 - (performance.now() - started));
+        document.getElementById("countdown").textContent = (remaining / 1000).toFixed(1);
+        if (remaining <= 0) {
+          clearInterval(timer);
+          session.current.hiddenAt = new Date().toISOString();
+          renderQuestions(task);
+        }
+      }, 50);
+    }
+
+    function renderQuestions(task) {
+      const host = document.getElementById("questions");
+      host.innerHTML = task.questions.map(([key, label]) => `<div class="question">
+        <div class="field"><label for="answer-${key}">${label}</label><textarea id="answer-${key}" data-answer="${key}" required></textarea></div>
+        <div class="field"><label>進行役の採点</label><div class="score-row">
+          <label><input type="radio" name="score-${key}" value="correct">正答</label>
+          <label><input type="radio" name="score-${key}" value="incorrect">誤答</label>
+          <label><input type="radio" name="score-${key}" value="unscored" checked>未採点</label>
+        </div></div>
+      </div>`).join("");
+      showOnly("recall");
+    }
+
+    function saveRecall() {
+      const task = screens[session.current.taskID];
+      for (const [key] of task.questions) {
+        const answer = document.querySelector(`[data-answer="${key}"]`).value.trim();
+        if (!answer) {
+          document.querySelector(`[data-answer="${key}"]`).focus();
+          return;
+        }
+        session.current.responses[key] = answer;
+        session.current.scores[key] = document.querySelector(`input[name="score-${key}"]:checked`).value;
+      }
+      session.current.recalledAt = new Date().toISOString();
+      if (task.interaction) {
+        const host = document.getElementById("interactionContent");
+        host.innerHTML = task.html;
+        host.querySelectorAll("[data-choice]").forEach(button => {
+          button.addEventListener("click", () => recordInteraction(button.dataset.choice));
+        });
+        showOnly("interaction");
+      } else {
+        commitTask();
+      }
+    }
+
+    function recordInteraction(choice) {
+      session.current.interactionChoice = choice;
+      session.current.interactedAt = new Date().toISOString();
+      commitTask();
+    }
+
+    function commitTask() {
+      session.tasks.push(session.current);
+      session.current = null;
+      taskIndex += 1;
+      persistDraft();
+      prepareTask();
+    }
+
+    function persistDraft() {
+      sessionStorage.setItem("bodymode.coreResearch.draft", JSON.stringify({ session, taskIndex }));
+    }
+
+    function finishSession() {
+      session.completedAt = new Date().toISOString();
+      const all = loadStored();
+      all.push(session);
+      localStorage.setItem(storageKey, JSON.stringify(all));
+      sessionStorage.removeItem("bodymode.coreResearch.draft");
+      document.getElementById("storedCount").textContent = `このブラウザに保存済み: ${all.length}セッション`;
+      showOnly("complete");
+    }
+
+    function loadStored() {
+      try { return JSON.parse(localStorage.getItem(storageKey) || "[]"); }
+      catch { return []; }
+    }
+
+    function downloadResults() {
+      const data = JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), sessions: loadStored() }, null, 2);
+      const blob = new Blob([data], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = `bodymode-core-research-${new Date().toISOString().slice(0, 10)}.json`;
+      anchor.click();
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById("begin").addEventListener("click", () => {
+      const participant = document.getElementById("participant").value.trim();
+      if (!participant) {
+        document.getElementById("participant").focus();
+        return;
+      }
+      session = {
+        schemaVersion: 1,
+        participantCode: participant,
+        familiarity: document.getElementById("familiarity").value,
+        watchUse: document.getElementById("watchUse").value,
+        startedAt: new Date().toISOString(),
+        r5Variant: ["A", "B", "C"][hashCode(participant) % 3],
+        taskOrder: buildTaskOrder(participant),
+        tasks: []
+      };
+      taskIndex = 0;
+      persistDraft();
+      prepareTask();
+    });
+    document.getElementById("showStimulus").addEventListener("click", beginExposure);
+    document.getElementById("saveRecall").addEventListener("click", saveRecall);
+    document.getElementById("download").addEventListener("click", downloadResults);
+    document.getElementById("restart").addEventListener("click", () => location.reload());
+    document.getElementById("erase").addEventListener("click", () => {
+      if (!confirm("このブラウザに保存された調査結果を削除しますか？")) return;
+      localStorage.removeItem(storageKey);
+      document.getElementById("storedCount").textContent = "保存済みの調査結果はありません。";
+    });
+  </script>
+</body>
+</html>

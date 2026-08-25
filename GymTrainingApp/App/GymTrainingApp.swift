@@ -9,6 +9,7 @@ struct GymTrainingApp: App {
     @StateObject private var healthDataManager = HealthDataManager()
     @StateObject private var gymLocationManager = GymLocationManager()
     @AppStorage(LegalConsentStore.acceptedVersionKey) private var acceptedLegalVersion = ""
+    @AppStorage(AppLanguagePreference.storageKey) private var appLanguageIdentifier = AppLanguagePreference.systemIdentifier
     @State private var forceConsentPresentation = ProcessInfo.processInfo.arguments.contains("--force-legal-consent-ui-test")
     @State private var initialSetupVersion: Int
 
@@ -21,14 +22,22 @@ struct GymTrainingApp: App {
     var body: some Scene {
         WindowGroup {
             Group {
-                if shouldShowLegalConsent {
+                if isShowingCreditStoreForReview {
+                    AICreditStoreView(
+                        settings: appStore.aiSettings,
+                        reviewPreview: true
+                    ) {}
+                } else if shouldShowLegalConsent {
                     ReleaseConsentView {
                         LegalConsentStore.acceptCurrent()
                         acceptedLegalVersion = LegalConfiguration.currentConsentVersion
                         forceConsentPresentation = false
                     }
                 } else if initialSetupVersion < InitialSetupStateStore.currentVersion {
-                    InitialSetupView(profile: appStore.userProfile) {
+                    InitialSetupView(
+                        profile: appStore.userProfile,
+                        aiSettings: appStore.aiSettings
+                    ) {
                         AppTourStateStore.schedule()
                         InitialSetupStateStore.markCompleted()
                         initialSetupVersion = InitialSetupStateStore.currentVersion
@@ -43,11 +52,12 @@ struct GymTrainingApp: App {
                 }
             }
             .environmentObject(aiTrainerBackgroundService)
+            .environment(\.locale, AppLanguagePreference.locale)
             .onAppear {
                 aiTrainerBackgroundService.bind(appStore: appStore)
             }
             .preferredColorScheme(AppTheme.preferredColorScheme(for: appStore.appearanceSettings.mode))
-            .id("\(appStore.appearanceSettings.colorTheme.rawValue)-\(appStore.appearanceSettings.mode.rawValue)")
+            .id("\(appStore.appearanceSettings.colorTheme.rawValue)-\(appStore.appearanceSettings.mode.rawValue)-\(appLanguageIdentifier)")
         }
     }
 
@@ -62,6 +72,10 @@ struct GymTrainingApp: App {
         }
 
         return acceptedLegalVersion != LegalConfiguration.currentConsentVersion
+    }
+
+    private var isShowingCreditStoreForReview: Bool {
+        ProcessInfo.processInfo.arguments.contains("--show-ai-credit-store-review")
     }
 }
 

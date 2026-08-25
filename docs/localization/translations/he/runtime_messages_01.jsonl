@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"he","translation":"קיבלתי תשובה מהמאמן ה-AI.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"he","translation":"לא ניתן לשלוח למאמן ה-AI.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"he","translation":"סוג פעילות המזוהה מ-Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"he","translation":"ניתן לבדוק את התשובות ביישום BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"he","translation":"{{value1}} / {{value2}} השג. נמשיך בקצב נוח.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"he","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} פעמים","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"he","translation":"אל תשנו את {{value1}}, אלא התייחסו לבחירה של המשתמש","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"he","translation":"{{value1}} שעות","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"he","translation":"{{value1}} צעדים","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"he","translation":"{{value1}} ארוחות","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"he","translation":"התכונה הזו אינה זמינה במכשיר זה.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"he","translation":"הגדרתי שלא לבצע את הפעולה הזו היום.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"he","translation":"פעולה אחת מספיקה.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"he","translation":"מדוע בוחרים בפעולה זו?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"he","translation":"סוג פעילות","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"he","translation":"נא פתחו את האפליקציה ונסו שוב.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"he","translation":"הסרתי את מיקום הסטודיו.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"he","translation":"תיעדתי הגעה לסטודיו.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"he","translation":"מזהים הגעה לאזור הסטודיו.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"he","translation":"זיהוי אוטומטי של ביקור בסטודיו כבטל.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"he","translation":"תיעדו יציאה מהסטודיו.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"he","translation":"דחיפת משקולות על ספסל","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"he","translation":"כהה","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"he","translation":"מתח","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"he","translation":"דיפ","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"he","translation":"דיפס","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"he","translation":"אני ממשיך להתאמן. הגדלת רישום ההתאוששות תשפר את הדיוק של ההמלצות בשבוע הבא.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"he","translation":"שמפניה שחורה","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"he","translation":"החדר שלי","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"he","translation":"המשתמש שינה את הפעולות שלו היום.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"he","translation":"יצרתי מחדש את ההמלצות של היום באמצעות פעולות המשתמש.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"he","translation":"בהיר","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"he","translation":"רויאל קובלט","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"he","translation":"להעלות","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"he","translation":"להוריד","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"he","translation":"פעם אחת היום","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"he","translation":"השגתי את שלושת ההמלצות של היום. אפרסם אותן בהמלצות של מחר.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"he","translation":"תפריט היום","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"he","translation":"עדכנתי את ההמלצות של היום","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"he","translation":"מיקום לא מוגדר","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"he","translation":"לא ניתן להשתמש במידע על מיקום. אפשר לבצע בדיקה ידנית.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"he","translation":"נסה שוב לאחר שהמיקום יהיה מדויק יותר.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"he","translation":"יש לרשום תחילה את המיקום כחדר כושר.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"he","translation":"מתחילים: תוכנית אימונים מלאה","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"he","translation":"לא הצלחתי לשלוח שוב את המאמן הווירטואלי הקודם.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"he","translation":"אנא שלחו שוב את אותו תוכן.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"he","translation":"תעדיפו החלמה","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"he","translation":"אם לא רוצים לשנות, השאירו ריק","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"he","translation":"מתח","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"he","translation":"עדכנו את נתוני ההחלמה ושימו לב להמלצות היום בצד הבטוח.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"he","translation":"הוספתי את הרשומות החדשות.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"he","translation":"מזהה קיים","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"he","translation":"קטגוריה קיימת או נדרשת","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"he","translation":"רשמתי את המיקום הנוכחי כחדר הכושר שלי","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"he","translation":"לא הצלחתי לקבל את המיקום הנוכחי","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"he","translation":"בדיקת מיקום נוכחי","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"he","translation":"בדקתי 3 פעילויות ו-8 רשומות תזונה מהשבוע האחרון.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"he","translation":"חסרות רשומות שינה","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"he","translation":"רשמו שינה במשך 3 ימים והמשיכו להתאמן 3 פעמים בשבוע.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"he","translation":"רשמו שינה במשך 3 ימים","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"he","translation":"אינטלקטואלי, מכובד, מתקדם","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"he","translation":"הערה כללית קצרה","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"he","translation":"פעולה קצרה","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"he","translation":"תרגיל לחיזוק החזה","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"he","translation":"אוטומטי","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"he","translation":"ניתן להירשם על ידי מתן אישור למיקום באפליקציית ההגדרות.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"he","translation":"בדקתי 3 מדדי גוף, 8 ארוחות ו-3 אימוני כוח.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"he","translation":"פעם בשבוע","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"he","translation":"השלמתי 3 אימונים בשבוע.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"he","translation":"אני ממשיך להתאמן 3 פעמים בשבוע.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"he","translation":"אינטנסיבי, יוקרתי ומאתגר","review_note":""}

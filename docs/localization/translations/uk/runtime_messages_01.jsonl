@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"uk","translation":"Від AI-тренера отримано відповідь.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"uk","translation":"Не вдалося відправити запит до AI-тренера.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"uk","translation":"Це дані, синхронізовані з Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"uk","translation":"Ви можете перевірити відповіді у BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"uk","translation":"{{value1}} / {{value2}} досягнуто. Продовжуйте в розумному темпі.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"uk","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} разів","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"uk","translation":"Не змінюйте {{value1}}, розгляньте це як вибір особисто.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"uk","translation":"{{value1}} годин","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"uk","translation":"{{value1}} кроків","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"uk","translation":"{{value1}} прийом їжі","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"uk","translation":"На цьому пристрої неможливо використовувати функцію визначення навколишнього середовища.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"uk","translation":"Цей пункт сьогодні не буде виконуватися.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"uk","translation":"Достатньо зробити лише одну справу.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"uk","translation":"Чому ви це робите?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"uk","translation":"Види тренувань","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"uk","translation":"Відкрийте додаток і спробуйте ще раз.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"uk","translation":"Видалили місцезнаходження фітнес-клубу.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"uk","translation":"Записано прибуття до фітнес-клубу.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"uk","translation":"Виявляє прибуття до фітнес-клубу.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"uk","translation":"Автоматичне виявлення відвідування фітнес-клубу вимкнено.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"uk","translation":"Записано вихід з фітнес-клубу.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"uk","translation":"Підйом на штангу лежачи","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"uk","translation":"Темний режим","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"uk","translation":"Підтягування","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"uk","translation":"Замочування","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"uk","translation":"Замочування","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"uk","translation":"Я продовжую тренуватися. Збільшення записів про відновлення покращить точність налаштувань наступного тижня.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"uk","translation":"Чорний шампанський напій","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"uk","translation":"Мій фітнес-центр","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"uk","translation":"Користувач змінив свої дії сьогодні.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"uk","translation":"Я оновив запропоновані дії для сьогодні.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"uk","translation":"Світле","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"uk","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"uk","translation":"Підвищити","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"uk","translation":"Знизити","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"uk","translation":"Один раз сьогодні","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"uk","translation":"Я досяг усіх трьох цілей на сьогодні. Це буде враховано в наступних рекомендаціях.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"uk","translation":"Меню на сьогодні","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"uk","translation":"Я оновив запропоновані дії","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"uk","translation":"Місцезнаходження не встановлено","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"uk","translation":"Доступ до місцезнаходження відсутній. Можна використовувати ручний чек-ін.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"uk","translation":"Будь ласка, спробуйте ще раз після стабілізації точності місцезнаходження.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"uk","translation":"Спочатку зареєструйте свій фітнес-центр як місцезнаходження.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"uk","translation":"Для початківців: Комплексне тренування","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"uk","translation":"Не вдалося повторно надіслати попередні дані від AI-тренера.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"uk","translation":"Будь ласка, повторно надішліть ті самі дані.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"uk","translation":"Пріоритет – відновлення","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"uk","translation":"Якщо не змінювати, введіть порожній рядок","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"uk","translation":"Підтягування","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"uk","translation":"Оновлені дані про відновлення та безпечні рекомендації на сьогодні.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"uk","translation":"Оновлено записи.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"uk","translation":"Існуючий ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"uk","translation":"Існуюча або необхідна категорія","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"uk","translation":"Зареєстровано поточне місцезнаходження як \"Мій спортзал\"","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"uk","translation":"Не вдалося отримати поточне місцезнаходження","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"uk","translation":"Перевіряю поточне місцезнаходження","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"uk","translation":"Переглянуто 3 записи про фізичну активність за останні 7 днів та 8 записів про харчування.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"uk","translation":"Відсутні записи про сон","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"uk","translation":"Записуйте сон протягом 3 днів і продовжуйте займатися спортом 3 рази на тиждень.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"uk","translation":"Записувати сон протягом 3 днів","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"uk","translation":"Інтелектуальний, витончений, передовий","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"uk","translation":"Короткий загальний коментар","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"uk","translation":"Короткі дії","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"uk","translation":"Віджимання від грудей","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"uk","translation":"Автоматично","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"uk","translation":"Зареєструватися можна, якщо у додатку \"Налаштування\" дозволено доступ до місцезнаходження.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"uk","translation":"Перевірено 3 показники фізичного стану, 8 прийомів їжі та 3 тренування зі зміцнення м'язів.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"uk","translation":"1 раз на тиждень","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"uk","translation":"Завершено 3 тренування на тиждень","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"uk","translation":"Продовжувати тренуватися 3 рази на тиждень","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"uk","translation":"Серйозні, преміальні та захоплюючі","review_note":""}

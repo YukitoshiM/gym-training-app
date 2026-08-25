@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"el","translation":"Επιλέξτε το πιο κοντινό","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"el","translation":"Αφού ορίσετε τον στόχο σας, κάνετε μόνο 3 πράγματα κάθε μέρα.","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"el","translation":"Ολοκληρώστε την πρώτη προπόνηση.","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"el","translation":"Καταγράψτε την τιμή.","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"el","translation":"Μέγιστο 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"el","translation":"Τα κενά πεδία μπορούν να προσθέσετε αργότερα από την οθόνη καταγραφής.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"el","translation":"Μη ολοκληρωμένο","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"el","translation":"Μη εκτελεσμένο","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"el","translation":"Μη καταγεγραμμένο","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"el","translation":"Μη ρυθμισμένο","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"el","translation":"Μη επιλεγμένο","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"el","translation":"Στη συνέχεια, επιλέξτε το κατάλληλο μενού.","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"el","translation":"Επόμενο","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"el","translation":"Δείτε τα βήματα","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"el","translation":"Απώλεια βάρους","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"el","translation":"Υδατάνθρακες","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"el","translation":"Άκυρο","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"el","translation":"Ορίστε έναν λογικό αριθμό και χρόνο.","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"el","translation":"Πολύ σημαντικό","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"el","translation":"Μάθετε την κατάσταση και το επόμενο βήμα","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"el","translation":"Ελέγξτε την κατάσταση","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"el","translation":"Τρέχων","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"el","translation":"Τρέχουσα πληροφορία για το σώμα","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"el","translation":"Δεν είναι διαθέσιμο αυτή τη στιγμή","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"el","translation":"Χρησιμοποιήθηκαν οι τρέχουσες καταγραφές και ρυθμίσεις.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"el","translation":"Επιλεγμένο τώρα: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"el","translation":"Προχωρήστε με αυτοπεποίθηση προς τον ιδανικό σας σωματότυπο.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"el","translation":"Λόγος","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"el","translation":"Λόγος: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"el","translation":"Ημερομηνία γέννησης","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"el","translation":"Ξεκινήστε την περιήγηση στην εφαρμογή","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"el","translation":"Επιλεγμένα μενού {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"el","translation":"Στόχος","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"el","translation":"Στυλ που επιθυμείτε","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"el","translation":"Στόχος","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"el","translation":"Στόχος: {{value1}} / Διαφορά: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"el","translation":"Στόχοι και ρυθμός προόδου","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"el","translation":"Στόχοι και αποτελέσματα","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"el","translation":"Προτάσεις για την προσαρμογή του στόχου","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"el","translation":"Δεν έχει οριστεί στόχος","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"el","translation":"Επίτευξη στόχων","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"el","translation":"Σκοπός","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"el","translation":"Έχουμε δύο διαφορετικούς χαρακτήρες για κάθε στόχο. Αλλάζοντας τον χαρακτήρα, αλλάζει και ο τρόπος που μιλάει και η ιδανική σωματική διάπλαση.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"el","translation":"Επιλογή κατάλληλου χαρακτήρα","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"el","translation":"Αλλάζετε τα σημεία ελέγχου στην αρχική σελίδα και την επόμενη ενέργεια ανάλογα με τον στόχο.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"el","translation":"Αλλαγή στόχου","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"el","translation":"Επιλογή στόχου","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"el","translation":"Λειτουργία στόχου","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"el","translation":"Στόχος και στόχοι","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"el","translation":"Έχουν ξεκλειδωθεί οι επιλογές για κάθε στόχο","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"el","translation":"Δείτε τις επιλογές για κάθε στόχο","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"el","translation":"Τελευταίες ενέργειες","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"el","translation":"Επεξεργασία με καθοδήγηση","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"el","translation":"Αποδοτική δειγματοληψία","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"el","translation":"Ξεκινήστε {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"el","translation":"Ύπνος και αποκατάσταση","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"el","translation":"Σε εξέλιξη","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"el","translation":"Δευτερόλεπτα","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"el","translation":"Δευτερόλεπτα","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"el","translation":"Εύρεση και προσθήκη ασκήσεων","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"el","translation":"Χρησιμοποιήστε την προσωρινή αυθεντικοποίηση ανά συσκευή.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"el","translation":"Μέσα στη συσκευή","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"el","translation":"Ανταγωνιστικότητα","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"el","translation":"Άσκηση μυών","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"el","translation":"Σύνδεση της άσκησης με τη φυσική κατάσταση και την ανάρρωση","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"el","translation":"Αύξηση του όγκου των μυών και των αποτελεσμάτων της προπόνησης","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"el","translation":"Μυϊκή υπερτροφία","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"el","translation":"Εμπειρία","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"el","translation":"Επίπεδο εμπειρίας","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"el","translation":"Ρυθμός που μπορείτε να διατηρήσετε","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"el","translation":"Δεν πρόκειται για αξιολόγηση δεξιοτήτων ή προσόντων. Δείχνει τα κριτήρια που θα χρησιμοποιήσετε στις απαντήσεις σας.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"el","translation":"Λιπαρά","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"el","translation":"Εύρος κοιλιάς","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"el","translation":"Εύρος κοιλιάς (προαιρετικό)","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"el","translation":"Μάθηση προτύπων συμπεριφοράς","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"el","translation":"Ειδοποιήσεις για τις ενέργειές σας","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"el","translation":"Εμφάνιση","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"el","translation":"Τρόπος εμφάνισης","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"el","translation":"Μέθοδος εμφάνισης","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"el","translation":"Πολιτική εμφάνισης","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"el","translation":"Μοντέλο υποστήριξης μη συνδεδεμένο","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"el","translation":"Σημείωση","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"el","translation":"Σημείωση: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"el","translation":"Πλάνο","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"el","translation":"Διαγράφετε το πλάνο, το ιστορικό, τις φυσικές μετρήσεις, τη διατροφή, φωτογραφίες, συνομιλία και μνήμη AI, καθώς και προσαρμοσμένες δραστηριότητες.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"el","translation":"Ξεκινήστε από το πλάνο ή προσθέστε δραστηριότητες και καταγράψτε τις αμέσως.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"el","translation":"Προσθήκη δραστηριοτήτων χωρίς πλάνο","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"el","translation":"Ενσωμάτωση στο πλάνο","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"el","translation":"Δημιουργία πλάνου","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"el","translation":"Ας δημιουργήσουμε ένα πλάνο","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"el","translation":"Πλάνο & Παρακολούθηση","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"el","translation":"Θέλετε να ενημερώσετε το βάρος σας στο πλάνο;","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"el","translation":"Καταγραφή","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"el","translation":"Καταγράψτε","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"el","translation":"Καταγράψτε. Ρωτήστε την AI. Εκτελέστε. Μόνο τρεις πράγματα κάνετε κάθε μέρα.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"el","translation":"Πατήστε στο στοιχείο που θέλετε να καταγράψετε","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"el","translation":"Τα αποτελέσματα της καταγραφής και εκτέλεσης θα μεταφερθούν στην επόμενη ανάλυση AI. Η πρώτη λειτουργία σας καθοδηγεί από την κύρια οθόνη.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"el","translation":"Οι καταγραφές αποθηκεύονται εδώ","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"el","translation":"Επεξεργασία καταγραφής... Μπορείτε να κλείσετε την οθόνη και θα συνεχιστεί.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"el","translation":"Δείτε τις καταγραφές και λάβετε προτάσεις για την επόμενη ενέργεια","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"el","translation":"Σε εξέλιξη","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"el","translation":"Με βάση τις καταγραφές, προτείνουμε θετικές αλλαγές, σταθερότητα ή ελλείψεις πληροφοριών και την επόμενη κίνηση.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"el","translation":"Καταγεγραμμένες","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"el","translation":"Ρυθμίσεις","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"el","translation":"Ρυθμίσεις ολοκληρωμένες","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"el","translation":"Το αρχείο καταγραφής διαθέτει καταγραφή της λειτουργίας, επικοινωνίας και των δραστηριοτήτων του iPhone και του Apple Watch. Δεν αποστέλλεται αυτόματα στο εξωτερικό.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"el","translation":"Διαγραφή αρχείου καταγραφής","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"el","translation":"Εξαγωγή αρχείου καταγραφής","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"el","translation":"Αποστολή αρχείου καταγραφής","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"el","translation":"Συζήτηση","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"el","translation":"Δείτε περισσότερα","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"el","translation":"Πληροφορίες που μπορεί να δημιουργούν σύγχυση","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"el","translation":"Βιομετρικά στοιχεία","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"el","translation":"Ύψος","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"el","translation":"Ύψος - Προαιρετικό","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"el","translation":"Αν δεν είστε σίγουροι, επισκεφτείτε εδώ","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"el","translation":"Προσθήκη","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"el","translation":"Προσθήκη","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"el","translation":"Ξεκινήστε ξανά","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"el","translation":"Αποστολή","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"el","translation":"Σε αναμονή αποστολής","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"el","translation":"Επιλέξτε το γυμναστήριο που επισκέπτεστε ή τα αντικείμενα που έχετε στο σπίτι σας.","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"el","translation":"Θα ελέγξουμε τις καταγραφές μόλις γίνει η σύνδεση.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"el","translation":"Αριθμός προπονήσεων ανά εβδομάδα","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"el","translation":"Πόσες φορές την εβδομάδα μπορείτε να γυμναστείτε;","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"el","translation":"Οδηγίες","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"el","translation":"Σε εξέλιξη","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"el","translation":"Διατηρήστε τις συνήθειες άσκησης, ύπνου και διατροφής.","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"el","translation":"Επιλέξτε: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"el","translation":"Επιλογή σε εξέλιξη","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"el","translation":"Αποστολή","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"el","translation":"Φόρτωση ρυθμίσεων AI κατά την καταγραφή","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"el","translation":"Εστιασμένες περιοχές","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"el","translation":"Βάρος","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"el","translation":"Ορίστε το βάρος με τη χρήση του scroll","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"el","translation":"Μονάδα μέτρησης βάρους","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"el","translation":"Κλείνω","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"el","translation":"Κλείσιμο","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"el","translation":"Έναρξη","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"el","translation":"Σχετικές πληροφορίες","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"el","translation":"Διατροφή","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"el","translation":"Διατροφή και σωματική διάπλαση","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"el","translation":"Η διατροφή και η σωματική διάπλαση μπορούν να καταγραφούν με φωτογραφίες. Το βάρος, οι αναλογίες και οι ενέργειες θα καταγράφονται ως αριθμοί.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"el","translation":"Καταγραφή διατροφής","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"el","translation":"Αριθμός γευμάτων","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"el","translation":"Θα εμφανίζονται ξεχωριστά η επίτευξη του αριθμού των γευμάτων και η επίτευξη των θερμίδων και των PFC.","review_note":""}

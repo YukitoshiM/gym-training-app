@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"cs","translation":"Bude se resetovat na {{value1}}. Manuální záznamy jsou stále k dispozici.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"cs","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"cs","translation":"Zadejte číslo větší než 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"cs","translation":"1. Udržujte 3 cvičení týdně\n2. Zaznamenejte si cílový příjem bílkovin\n3. Porovnejte fotografie svého těla na konci měsíce","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"cs","translation":"Po chvíli počkejte a zkuste to znovu.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"cs","translation":"1 sklenka","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"cs","translation":"Neexistuje žádný jasný návrh pro zastavení u cviků, které byly zaznamenány více než 3krát.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"cs","translation":"Více tréninkových cyklů za 48 hodin","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"cs","translation":"AI – celková rovnováha","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"cs","translation":"Záznamy, které používá AI","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"cs","translation":"Používání AI je v danou chvíli zvýšené.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"cs","translation":"Informace pro ověření AI jsou neplatné nebo vypršely.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"cs","translation":"Chyba AI","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"cs","translation":"AI trenér","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"cs","translation":"URL pro AI server je neplatné.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"cs","translation":"AI server vrátil chybu: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"cs","translation":"Není možné najít potřebný API pro AI server.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"cs","translation":"Nelze se připojit k serveru AI. Zkuste to znovu později.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"cs","translation":"Formát JSON na serveru AI neodpovídá požadavkům aplikace.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"cs","translation":"Nemožno číst odpověď ze serveru AI.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"cs","translation":"Na straně serveru AI došlo k chybě: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"cs","translation":"Zkontrolovat připojení k serveru AI","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"cs","translation":"AI trenér","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"cs","translation":"Chcete smazat konverzaci s AI trenérem?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"cs","translation":"Nelze použít model AI, nebo selhala analýza obrázků.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"cs","translation":"Model AI se načítá...","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"cs","translation":"Analýza pomocí AI","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"cs","translation":"Zůstává vám volných AI využitých prostředků.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"cs","translation":"Zkontrolujte využití AI prostředků.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"cs","translation":"Funkce AI je vypnutá.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"cs","translation":"AI referenční hodnoty – prosím zkontrolujte.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"cs","translation":"Připojení k AI je aktivní.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"cs","translation":"Nepodařilo se bezpečně uložit informace o připojení k AI.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"cs","translation":"Funkce AI","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"cs","translation":"Funkce AI je vypnutá v nastavení.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"cs","translation":"Funkce AI je vypnutá v nastavení. Fotografie můžete uložit tak, jak jsou.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"cs","translation":"Funkce AI je vypnutá v nastavení. Ruční zadávání můžete uložit tak, jak je.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"cs","translation":"Historie odeslaných dat pomocí AI","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"cs","translation":"API klíč nebyl nastaven.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"cs","translation":"Zkontrolujte verzi serveru API. Podrobnosti: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"cs","translation":"Server API reaguje, ale nemůžete použít potřebný model.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"cs","translation":"Server API reaguje, ale nemůžete použít modely pro pomoc s recepty a reporty.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"cs","translation":"Propojení s Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"cs","translation":"Zobrazujeme nejnovější trasu běhu uloženou v Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"cs","translation":"Propojte se s Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"cs","translation":"Používejte Apple Watch, abyste je nosili i během spánku, což usnadní získání všech ukazatelů. Chybějící hodnoty nebudeme odhadovat.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"cs","translation":"Zkontrolujte základní URL a verzi serveru API.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"cs","translation":"HRV je nižší než průměr za posledních 14 dní.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"cs","translation":"Chybí údaje o HRV v průběhu času.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"cs","translation":"HRV je nad průměrem.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"cs","translation":"HRV se nachází v normálním rozsahu.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"cs","translation":"Průměrná hodnota HRV {{value1}} % (v porovnání s osobními hodnotami).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"cs","translation":"HTTP je k dispozici pouze pro localhost, LAN a Tailscale. Pro externí servery používejte HTTPS.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"cs","translation":"Spotřeba energie v aplikaci Health nebyla zaznamenána. Záznam stravy však byl uložen.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"cs","translation":"Aktualizovat data Health.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"cs","translation":"Vyberte jinou JPEG nebo PNG fotografii.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"cs","translation":"Zaznamenat KPI.","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"cs","translation":"Nejnovější hodnoty zaznamenané v aplikaci Noise. Pokud není hodnota k dispozici, ponechte ji na 0.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"cs","translation":"Automatické výpočty kalorií z PFC.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"cs","translation":"Dosáhnout cíle PFC.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"cs","translation":"Snížit RPE o jednu jednotku.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"cs","translation":"URL začněte s https://. Pro lokální vývoj můžete použít HTTP i pro localhost, IP adresy LAN a Tailscale.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"cs","translation":"URL začněte s https://. Během lokálního vývoje můžete použít i http://.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"cs","translation":"S senzorem pro měření tepu.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"cs","translation":"bpm / 30 sekund.","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"cs","translation":"Dosáhnout cíle kalorií a PFC.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"cs","translation":"Dosáhnout cíle kalorií.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"cs","translation":"kg / minuta","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"cs","translation":"{\"id\":\"{{value1}}\",\"kategorie\":\"{{value2}}\",\"název\":\"{{value3}}\",\"cíl\":0,\"zdůvodnění\":\"Zkontroloval jsem záznamy a cíle\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"cs","translation":"{\"zachovat_stávající\":true,\"úroveň připravenosti\":\"normální\",\"shrnutí\":\"Pokračujme v dnešních návrzích.\",\"důvod změny\":\"\",\"akce\":[{{value1}}]","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"cs","translation":"{{value1}} / {{value2}} položek","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"cs","translation":"{{value1}} / {{value2}} hodin","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"cs","translation":"{{value1}} / {{value2}} kroků","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"cs","translation":"{{value1}} / {{value2}} jídel","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"cs","translation":"{{value1}} {{value2}} kusů ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"cs","translation":"Můžete generovat týdenní komentáře s {{value1}} a pomocným modelem.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"cs","translation":"{{value1}}/{{value2}}krát","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"cs","translation":"{{value1}}: {{value2}} Úspěšnost {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"cs","translation":"{{value1}} zkontroluje celý soubor","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"cs","translation":"{{value1}} přemýšlí o odpovědi","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"cs","translation":"{{value1}} kontroluje jídlo a PFC","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"cs","translation":"{{value1}} kontroluje více směrů","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"cs","translation":"{{value1}} si pamatuje","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"cs","translation":"{{value1}} navrhuje a konzultuje úpravy","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"cs","translation":"Konzultace s {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"cs","translation":"Zpráva od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"cs","translation":"Zpráva od {{value1}} ještě neexistuje","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"cs","translation":"Návrh od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"cs","translation":"Návrh od {{value1}} a {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"cs","translation":"Analýza od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"cs","translation":"Výsledky analýzy od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"cs","translation":"Reference od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"cs","translation":"Reflexe od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"cs","translation":"Zobrazí se pouze obsah, který jste schválili po návrhu od {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"cs","translation":"Měsíční přehled od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"cs","translation":"Paměť od {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"cs","translation":"Vyberte {{value1}} z knihovny","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"cs","translation":"Odstraňte {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"cs","translation":"Zaznamenejte {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"cs","translation":"Úpravit hodnotu {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"cs","translation":"Zaznamenat hodnotu {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"cs","translation":"Použít hodnotu {{value1}} lehce","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"cs","translation":"Průměrná stabilita pro sadu {{value1}} je {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"cs","translation":"{{value1}}・","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"cs","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"cs","translation":"{{value1}}・Rozhovor","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"cs","translation":"Návrh měsíční revize {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"cs","translation":"{{value1}} · Oprava {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"cs","translation":"{{value1}} · Týdenní zpráva","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"cs","translation":"{{value1}} položek・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"cs","translation":"{{value1}} Zkuste to znovu. Ruční záznamy jsou stále k dispozici.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"cs","translation":"{{value1}} Zkuste to znovu. Pokud pokračujete, ověřte, zda je AI server v provozu.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"cs","translation":"{{value1}} Odstranit fotografii","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"cs","translation":"{{value1}} minut","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"cs","translation":"{{value1}}krát","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"cs","translation":"{{value1}}krát・Průměrná úspěšnost {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"cs","translation":"Analyzujeme soubor fotografií {{value1}}. Neinterpretujeme hodnoty jako procento tělesného tuku.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"cs","translation":"{{value1}} fotek","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"cs","translation":"Sada fotografií {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"cs","translation":"{{value1}} kroků","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"cs","translation":"„-“ označuje hodnotu, která nebyla změřena, a je odečtena ze souhrnu. „Tr“ označuje malou hodnotu a je odhadována na 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"cs","translation":"Zbývá {{value1}} g","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"cs","translation":"Společně probereme vaše výsledky.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"cs","translation":"Velmi dobře","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"cs","translation":"Velmi unavený/á","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"cs","translation":"Můžeme pokračovat s analýzou. Přidáním údajů o stranách a zadní části můžeme získat komplexnější pohled.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"cs","translation":"Analyzujte tento soubor","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"cs","translation":"Na základě těchto informací vám navrhnu...","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"cs","translation":"Vymazat vše","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"cs","translation":"Bílkoviny","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"cs","translation":"Zaznamenané údaje budou použity pro návrh na zítra.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"cs","translation":"Další {{value1}} položek","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"cs","translation":"V současné době nemáme žádná data k učení.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"cs","translation":"Žádné záznamy nejsou k dispozici.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"cs","translation":"Opakovat odhad","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"cs","translation":"Pas","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"cs","translation":"Skenování pomocí kamery","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"cs","translation":"Není možné použít kameru","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"cs","translation":"Funkce skenování kamery není dostupná","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"cs","translation":"Kalorie","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"cs","translation":"Odhad kalorického příjmu","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"cs","translation":"Zrušit","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"cs","translation":"Stav","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"cs","translation":"Prosím, zkontrolujte URL serveru, API klíč a stav provozu API serveru.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"cs","translation":"Návštěva posilovny","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"cs","translation":"Statice","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"cs","translation":"Sada","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"cs","translation":"Analýza sady","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"cs","translation":"Kvalita sady","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"cs","translation":"Rozpis kvality tréninku","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"cs","translation":"Bílkoviny {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"cs","translation":"Tlak na hrudní svaly","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"cs","translation":"Toto je odhad.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"cs","translation":"Rychlost","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"cs","translation":"Po shromáždění dat můžete zkontrolovat spánek, regeneraci a množství cvičení společně.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"cs","translation":"Kvalita dat","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"cs","translation":"Porada s trenérem","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"cs","translation":"Trénink","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"cs","translation":"Analýza tréninku","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"cs","translation":"Historie tréninků","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"cs","translation":"Plán tréninku","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"cs","translation":"Intenzita tréninku","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"cs","translation":"Ujistěte se, že jsou aktivní síť a server AI. Zpracování pomocí AI může trvat až 240 sekund.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"cs","translation":"Než zkusíte znovu, ověřte si stav sítě a URL serveru.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"cs","translation":"Ověřte si stav sítě a URL serveru.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"cs","translation":"Kód pro skenování","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"cs","translation":"Objem","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"cs","translation":"Objem je součet váhy kompletní série × počet opakování. Při výrazně odlišných tréninkových programech se vyhněte přílišnému porovnávání.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"cs","translation":"Cvičení","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"cs","translation":"Zprávy","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"cs","translation":"Menu","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"cs","translation":"Začněte s vytvořeným menu","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"cs","translation":"Poznámky","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"cs","translation":"Knihovna","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"cs","translation":"Přitahování","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"cs","translation":"Referenční množství","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"cs","translation":"Odhad kalorií z seznamu","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"cs","translation":"Pokud se nepodaří, zkuste to znovu. Manuální záznamy jsou stále k dispozici.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"cs","translation":"Pokud najdete trasu s běháním venku, zobrazí se vzdálenost, rychlost a rozdíl nadmořské výšky.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"cs","translation":"Legní tisk.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"cs","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"cs","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"cs","translation":"Počet schodů nahoru.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"cs","translation":"Střední probuzení.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"cs","translation":"Hlavní KPI","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"cs","translation":"Většinu subjektivní únavy.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"cs","translation":"Objektní únava je nižší.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"cs","translation":"Objektní únava je obvykle rozsah","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"cs","translation":"Použijte pouze tyto informace pro budoucí návrhy.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"cs","translation":"Pro pomoc při návrhu váhy","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"cs","translation":"Dnes se rozhodli o 3 aktivitách","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"cs","translation":"Dnešní aktivita","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"cs","translation":"Dnešní energetický výdej","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"cs","translation":"Dnešní série","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"cs","translation":"Dnešní subjektivní únava","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"cs","translation":"Dnešní návrh","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"cs","translation":"Upravte dnešní sérii pro nahrávání","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"cs","translation":"Přidejte dnešní sérii pro nahrávání","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"cs","translation":"Dnes je hodně aktivních","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"cs","translation":"Zobrazí vaši aktivitu dne","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"cs","translation":"Vaše připravenost pro dnešní den","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"cs","translation":"Vaše aktivity dne","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"cs","translation":"Zkontrolujte svůj pokrok dne","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"cs","translation":"Vaše jídlo dne","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"cs","translation":"Možnosti jídla dne","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"cs","translation":"Cíl vašeho jídla dne","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"cs","translation":"Dne upřednostněte regeneraci","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"cs","translation":"Dnes se zaměřte na rozložení cvičení a prioritizujte bezpečné aktivity.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"cs","translation":"Dnes snižte zátěž.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"cs","translation":"Můžete si vybrat, zda snížíte váhu nebo počet sérií a upřednostníte regeneraci.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"cs","translation":"Ujistěte se, co chcete dnes dělat.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"cs","translation":"Tento týden","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"cs","translation":"Tento týden {{value1}}x・aktuálně {{value2}}m","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"cs","translation":"Tento týden {{value1}}x・celkem {{value2}}x","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"cs","translation":"Závěr tohoto týdne","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"cs","translation":"Volitelné","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"cs","translation":"Rozhovor","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"cs","translation":"Smazat rozhovor","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"cs","translation":"Historie rozhovorů nebude smazána.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"cs","translation":"Toto jsou pouze orientační hodnoty. Neukládejte je do záznamů nebo grafů.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"cs","translation":"Fotografie postavy","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"cs","translation":"AI pro analýzu fotografií postavy","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"cs","translation":"Sdílení fotografií postavy pomocí AI je vypnuto ve nastavení.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"cs","translation":"Momentálně nemáte žádné fotografie postavy.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"cs","translation":"Zaznamenat fotografii postavy","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"cs","translation":"Analýza sady fotografií postavy","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"cs","translation":"Kontrola fotografií postavy","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"cs","translation":"Pokud máte problémy se zdravím nebo bolest, upřednostněte své vlastní pocity před číslami.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"cs","translation":"Sledujte svůj zdravotní stav a postupujte podle plánu.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"cs","translation":"Hmotnost","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"cs","translation":"Hodnoty jako hmotnost a obvod pasu se mohou denně měnit, proto je sledujte v grafu.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"cs","translation":"Zaznamenat hmotnost","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"cs","translation":"Doporučení na základě dostupných zařízení","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"cs","translation":"Příklad: Bílé rýže 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"cs","translation":"Uložit","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"cs","translation":"Měsíční přehled uložených dat","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"cs","translation":"Uložené vzpomínky","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"cs","translation":"Nemám žádné uložené vzpomínky.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"cs","translation":"Uložené vzpomínky se nesmazávají.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"cs","translation":"Chcete smazat všechny uložené údaje?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"cs","translation":"Ne, nechci ukládat","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"cs","translation":"Ukládání selhalo","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"cs","translation":"Spolehlivost","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"cs","translation":"Hodnota","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"cs","translation":"Pokud přidáte hodnotu, zde se zobrazí odvozená hodnota.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"cs","translation":"Kontrola stagnace","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"cs","translation":"Pro kontrolu stagnace zkuste snížit váhu na cílový počet opakování nebo prodlužte pauzu o 15–30 sekund a porovnejte.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"cs","translation":"Materiály pro identifikaci stagnace","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"cs","translation":"Energie","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"cs","translation":"Zadaná data","review_note":""}

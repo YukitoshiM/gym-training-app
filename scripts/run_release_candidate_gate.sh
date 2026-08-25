@@ -4,10 +4,10 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 STARTED_AT=$(date +%s)
-ARCHIVE_PATH="${1:-${BODYMODE_RELEASE_ARCHIVE_PATH:-}}"
+RELEASE_ARTIFACT_PATH="${1:-${BODYMODE_RELEASE_ARTIFACT_PATH:-${BODYMODE_RELEASE_ARCHIVE_PATH:-}}}"
 
 if [[ "$#" -gt 1 ]]; then
-  printf 'Usage: %s [archive.xcarchive]\n' "$0" >&2
+  printf 'Usage: %s [archive.xcarchive|exported.ipa]\n' "$0" >&2
   exit 64
 fi
 
@@ -19,7 +19,13 @@ if [[ -z "${BODYMODE_REGRESSION_RUN_ID:-}" ]]; then
 fi
 REGRESSION_SUMMARY="${ROOT_DIR}/.build/parallel-regression/${BODYMODE_REGRESSION_RUN_ID}/summary.txt"
 
-printf '[1/2] Full non-screenshot unit, iPhone, and Watch regression gate\n'
+printf '[1/3] Lightweight production prerequisites\n'
+if ! ./scripts/release_prerequisites.sh; then
+  printf 'Release candidate gate: BLOCKED before regression\n' >&2
+  exit 1
+fi
+
+printf '\n[2/3] Full non-screenshot unit, iPhone, and Watch regression gate\n'
 set +e
 ./scripts/run_parallel_simulator_regression.sh
 regression_status=$?
@@ -28,12 +34,14 @@ if [[ "${regression_status}" -eq 130 ]]; then
   exit 130
 fi
 
-printf '\n[2/2] Production configuration and optional archive preflight\n'
+printf '\n[3/3] Production configuration and optional archive preflight\n'
 set +e
-if [[ -n "${ARCHIVE_PATH}" ]]; then
-  ./scripts/release_production_preflight.sh "${ARCHIVE_PATH}"
+if [[ -n "${RELEASE_ARTIFACT_PATH}" ]]; then
+  BODYMODE_SKIP_RELEASE_PREREQUISITES=1 \
+    ./scripts/release_production_preflight.sh "${RELEASE_ARTIFACT_PATH}"
 else
-  ./scripts/release_production_preflight.sh
+  BODYMODE_SKIP_RELEASE_PREREQUISITES=1 \
+    ./scripts/release_production_preflight.sh
 fi
 preflight_status=$?
 set -e

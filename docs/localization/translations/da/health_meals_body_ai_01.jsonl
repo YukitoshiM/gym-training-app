@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"da","translation":"Vil blive nulstillet til {{value1}}. Manuel registrering kan stadig bruges.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"da","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"da","translation":"Indtast et tal større end 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"da","translation":"1. Oprethold 3 træninger om ugen\n2. Registrer dit proteinmål\n3. Sammenlign din kropsform med et foto i slutningen af måneden","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"da","translation":"Vent et par minutter og prøv igen.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"da","translation":"1 kop","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"da","translation":"Der er ingen klare forslag til stagnation for øvelser, der er registreret 3 gange eller flere.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"da","translation":"Flere træningssessioner på 48 timer","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"da","translation":"AI-baseret helkropsanalyse","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"da","translation":"Data, som AI refererer til","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"da","translation":"AI-brugen er midlertidigt overbelastet.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"da","translation":"AI-adgangskoden er ugyldig eller udløbet.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"da","translation":"AI-fejl","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"da","translation":"AI-træner","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"da","translation":"Forkert URL for AI-serveren.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"da","translation":"AI-serveren returnerer en fejl: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"da","translation":"Nødvendige API'er for AI-serveren er ikke fundet.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"da","translation":"Kan ikke oprette forbindelse til AI-serveren. Prøv igen senere.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"da","translation":"JSON-formatet fra AI-serveren stemmer ikke overens med appens forventninger.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"da","translation":"Kunne ikke læse svaret fra AI-serveren.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"da","translation":"Fejl er opstået på AI-serveren: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"da","translation":"Bekræft forbindelse til AI-serveren","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"da","translation":"AI-træner","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"da","translation":"Vil du slette samtalen med AI-træneren?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"da","translation":"AI-modellen er ikke tilgængelig eller billedanalyse mislykkedes.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"da","translation":"AI-model er ved at blive forberedt","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"da","translation":"AI-analyse","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"da","translation":"Der er plads til flere AI-brug.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"da","translation":"Tjek din AI-brugsgrænse.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"da","translation":"AI-brugen er slået fra.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"da","translation":"AI-anbefalinger – skal gennemgås.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"da","translation":"AI-forbindelsen er aktiveret.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"da","translation":"Det var ikke muligt at gemme AI-oplysninger sikkert.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"da","translation":"AI-funktioner","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"da","translation":"AI-funktionerne er slået fra i indstillingerne.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"da","translation":"AI-funktionerne er slået fra i indstillingerne. Du kan gemme dette foto sæt som det er.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"da","translation":"AI-funktionerne er slået fra i indstillingerne. Manuel input kan gemmes som det er.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"da","translation":"AI-brugshistorik","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"da","translation":"API-nøglen er ikke konfigureret.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"da","translation":"Tjek versionen af API-serveren. Detaljer: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"da","translation":"API-serveren svarer, men den nødvendige model kan ikke bruges.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"da","translation":"API-serveren svarer, men modellen til mad og rapporter kan ikke bruges.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"da","translation":"Integration med Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"da","translation":"Vi viser den seneste løbestræk, der er gemt i Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"da","translation":"Integrer med Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"da","translation":"Brug et smartwatch passende og bær det, også mens du sover, for at få en bedre oversigt over dine resultater. Vi udfylder ikke manglende værdier med gæt.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"da","translation":"Tjek Base URL og versionen af API-serveren.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"da","translation":"HRV er lavere end den gennemsnitlige værdi over 14 dage.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"da","translation":"Ingen kontinuerlige HRV-data er tilgængelige.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"da","translation":"HRV er højere end gennemsnittet.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"da","translation":"HRV ligger inden for normalområdet.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"da","translation":"Gennemsnitlig HRV-ratio {{value1}}% (sammenlignet med personens egen værdi).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"da","translation":"HTTP kan kun bruges på localhost, LAN og Tailscale. Brug HTTPS til eksterne servere.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"da","translation":"Energiforbrug i \"Health\" er ikke registreret. Kostregistreringen er dog gemt.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"da","translation":"Opdater Health-data.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"da","translation":"Vælg venligst et andet JPEG- eller PNG-billede.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"da","translation":"Registrer KPI'er.","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"da","translation":"Seneste værdi fra Noise-appen osv. 0, hvis ikke registreret.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"da","translation":"Beregn automatisk kalorier fra PFC.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"da","translation":"PFC er opnået.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"da","translation":"Reducer RPE med et trin.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"da","translation":"URL skal starte med https://. Under lokal udvikling kan du også bruge HTTP på localhost, LAN IP og Tailscale-navne.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"da","translation":"URL skal starte med https://. Du kan kun bruge http:// under lokal udvikling.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"da","translation":"Med sensor","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"da","translation":"bpm / 30 sekunder","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"da","translation":"kcal og PFC opnået","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"da","translation":"Kcal opnået","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"da","translation":"kg / minut","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"da","translation":"{\"id\":\"{{value1}}\",\"kategori\":\"{{value2}}\",\"titel\":\"{{value3}}\",\"mål\":0,\"begrundelse\":\"Jeg har gennemgået dine registreringer og mål\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"da","translation":"{\"behold_eksisterende\":true,\"beredskabsniveau\":\"normal\",\"resume\":\"Lad os fortsætte med dagens forslag, som det er.\",\"ændringsgrund\":\"\",\"handlinger\":[{{value1}}]","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"da","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"da","translation":"{{value1}} / {{value2}} timer","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"da","translation":"{{value1}} / {{value2}} trin","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"da","translation":"{{value1}} / {{value2}} måltider","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"da","translation":"{{value1}} {{value2}} ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"da","translation":"{{value1}} og med hjælp fra en assistentmodel kan du generere ugentlige kommentarer.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"da","translation":"{{value1}}/{{value2}} gange","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"da","translation":"{{value1}}: {{value2}} Opnået niveau {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"da","translation":"{{value1}} gennemgår hele sættet","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"da","translation":"{{value1}}Jeg overvejer mulige svar.","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"da","translation":"{{value1}} for at se dine måltider og PFC-værdier","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"da","translation":"{{value1}} kan ses fra flere vinkler ¶","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"da","translation":"{{value1}} husker","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"da","translation":"{{value1}} og oprette/konsultere for at rette","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"da","translation":"Spørg om {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"da","translation":"{{value1}}Din rapport","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"da","translation":"{{value1}} er endnu ikke rapporteret.","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"da","translation":"{{value1}}Udkast","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"da","translation":"Forslag til {{value1}} og {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"da","translation":"{{value1}} analyse","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"da","translation":"{{value1}} - Analyseresultat","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"da","translation":"{{value1}} - Referencetekst","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"da","translation":"Refleksion over {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"da","translation":"Efter at have accepteret forslaget {{value1}}>, vil kun de indhold, der er blevet godkendt, blive vist.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"da","translation":"{{value1}}Månedlig gennemgang","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"da","translation":"{{value1}} - Gemt","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"da","translation":"Vælg {{value1}} fra biblioteket ¶","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"da","translation":"Slet {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"da","translation":"{{value1}}Tag et billede af","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"da","translation":"Rediger {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"da","translation":"Registrer {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"da","translation":"Lettere med {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"da","translation":"Den gennemsnitlige stabilitet for {{value1}} er {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"da","translation":"{{value1}}・","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"da","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"da","translation":"{{value1}}・Chat","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"da","translation":"{{value1}}・Månedlig gennemgangsforslag","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"da","translation":"{{value1}}・Ret {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"da","translation":"{{value1}}・Ugentlig rapport","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"da","translation":"{{value1}} antal・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"da","translation":"{{value1}}Prøv igen. Manuel registrering er stadig tilgængelig.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"da","translation":"{{value1}}Prøv igen. Hvis du fortsætter, skal du kontrollere, at AI-serveren er i drift.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"da","translation":"Slet foto {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"da","translation":"{{value1}} minutter","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"da","translation":"{{value1}} gange","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"da","translation":"{{value1}} gange・Gennemsnitlig gennemførelsesrate {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"da","translation":"Analyser fotos i {{value1}} retning sammen. Vi kan ikke fastslå tal som kropsfedtprocent.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"da","translation":"{{value1}} stk.","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"da","translation":"Et sæt med {{value1}} billeder","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"da","translation":"{{value1}}Skridt","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"da","translation":"\"-\" indgår ikke i den samlede sum, og \"Tr\" estimeres til 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"da","translation":"Og {{value1}} gram","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"da","translation":"Vi kan sammenligne dine resultater.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"da","translation":"Meget energisk","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"da","translation":"Meget træt","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"da","translation":"Dette kan analyseres videre. Ved at tilføje målinger fra siden og bagsiden, kan vi få et mere komplet billede.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"da","translation":"Analyser dette sæt","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"da","translation":"Jeg vil give dig forslag baseret på disse oplysninger.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"da","translation":"Slet alt","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"da","translation":"Protein","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"da","translation":"Jeg vil indtaste dine resultater i morgendagens forslag.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"da","translation":"Og andre {{value1}} varer","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"da","translation":"Der er endnu ikke nogen træningsdata.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"da","translation":"Du har endnu ikke registreret noget.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"da","translation":"Gør en ny vurdering","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"da","translation":"Talje","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"da","translation":"Læs via kamera","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"da","translation":"Kamera kan ikke bruges","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"da","translation":"Kamera-læsning er ikke tilgængelig","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"da","translation":"Kalorier","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"da","translation":"Estimerer kalorier","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"da","translation":"Annullér","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"da","translation":"Tilstand","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"da","translation":"Kontroller serverens URL, API-nøgle og status for API-serveren.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"da","translation":"Besøg i fitnesscenter","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"da","translation":"Stativ","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"da","translation":"Sæt","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"da","translation":"Analyserer sæt","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"da","translation":"Sæts kvalitet","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"da","translation":"Detaljer om sæts kvalitet","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"da","translation":"Protein {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"da","translation":"Brystpres","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"da","translation":"Dette er et estimat.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"da","translation":"Tempo","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"da","translation":"Når data er tilgængelige, kan du se din søvn, restitution og træningsmængde sammen.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"da","translation":"Datakvalitet","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"da","translation":"Konsultation med træner","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"da","translation":"Træning","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"da","translation":"Analyse af træning","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"da","translation":"Træningshistorik","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"da","translation":"Træningsplan","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"da","translation":"Træningsintensitet","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"da","translation":"Kontroller, at netværket og AI-serveren er i drift. AI-behandlingen kan tage op til 240 sekunder.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"da","translation":"Kontroller netværksstatus og serverens URL, før du prøver igen.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"da","translation":"Kontroller netværksstatus og serverens URL.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"da","translation":"Barcode","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"da","translation":"Volumen","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"da","translation":"Volumen er vægten af det fuldførte sæt × antal gentagelser. Undgå at sammenligne ugentlige træningsprogrammer for meget, hvis der er store forskelle i øvelserne.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"da","translation":"Move","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"da","translation":"Besked","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"da","translation":"Menu","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"da","translation":"Start med at oprette en menu","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"da","translation":"Noter","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"da","translation":"Bibliotek","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"da","translation":"Ratchetsdrag","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"da","translation":"Mål for volumen","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"da","translation":"Estimer kalorieindtag fra listen","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"da","translation":"Prøv igen efter nulstilling. Manuel registrering er stadig tilgængelig.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"da","translation":"Hvis et løb med GPS-sporing findes, vises distance, hastighed og højdeforskel.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"da","translation":"Benpres","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"da","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"da","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"da","translation":"Antal etager, der er besteges","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"da","translation":"Midt i træningen","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"da","translation":"Vigtige KPI'er","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"da","translation":"Subjektiv træthed er høj","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"da","translation":"Subjektiv træthed er lav","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"da","translation":"Subjektiv træthed er normal","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"da","translation":"Kun vælg de relevante punkter til fremtidige forslag.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"da","translation":"For at kunne bruge i fremtidige vægtforslag","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"da","translation":"De 3 aktiviteter er fastlagt","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"da","translation":"I dagens aktivitet","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"da","translation":"I dagens energibalance","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"da","translation":"I dagens sæt","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"da","translation":"I dagens subjektive træthed","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"da","translation":"I dagens forslag","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"da","translation":"Rediger i dagens optagelsesæt","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"da","translation":"Tilføj i dagens optagelsesæt","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"da","translation":"Aktivitetsniveau er højt","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"da","translation":"Reflekterer over din aktivitet i dag","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"da","translation":"Din forberedelse i dag","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"da","translation":"Dine handlinger i dag","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"da","translation":"Bekræft din fremskridt i dag","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"da","translation":"Dit måltid i dag","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"da","translation":"Forslag til dit måltid","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"da","translation":"Dit mål for måltidet","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"da","translation":"Prioriter restitution i dag","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"da","translation":"I dag prioriteres hvile og moderat aktivitet frem for hård træning.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"da","translation":"Reducér belastningen lidt i dag.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"da","translation":"Du kan vælge at reducere vægt og antal sæt, og prioritere restitution.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"da","translation":"Lad os gennemgå, hvad du vil gøre i dag.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"da","translation":"Denne uge","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"da","translation":"{{value1}} gange denne uge・Nu {{value2}}m","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"da","translation":"{{value1}} gange denne uge・Samlet {{value2}} gange","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"da","translation":"Konklusion for denne uge","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"da","translation":"Valgfrit","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"da","translation":"Samtale","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"da","translation":"Slet samtale","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"da","translation":"Samtalelisten slettes ikke.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"da","translation":"Dette er kun vejledende værdier. Gem ikke målinger eller grafer.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"da","translation":"Kropsfoto","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"da","translation":"AI-analyse af kropsfoto","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"da","translation":"Funktionen til at dele kropsfotos via AI er slået fra i indstillingerne.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"da","translation":"Du har endnu ikke taget et kropsfoto.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"da","translation":"Tag et kropsfoto","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"da","translation":"Analyse af kropsfoto-sæt","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"da","translation":"Kropsfoto-tjek","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"da","translation":"Hvis du føler dig utilpas eller har smerter, skal du prioritere din egen fornemmelse frem for tallene.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"da","translation":"Følg planen, mens du holder øje med dit helbred.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"da","translation":"Vægt","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"da","translation":"Tal som vægt og taljelængde kan variere fra dag til dag, så det er bedst at se udviklingen.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"da","translation":"Registrer din vægt","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"da","translation":"Forslag baseret på de tilgængelige redskaber","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"da","translation":"Eksempel: Hvid ris 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"da","translation":"Gem","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"da","translation":"Gennemgå dine månedlige gemte data","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"da","translation":"Gemt hukommelse","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"da","translation":"Jeg har ikke gemt noget.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"da","translation":"Gemte minder slettes ikke.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"da","translation":"Vil du slette alle dine gemte data?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"da","translation":"Ikke gem","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"da","translation":"Gemning mislykkedes","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"da","translation":"Tillid","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"da","translation":"Værdi","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"da","translation":"Når du tilføjer en værdi, vises her en overgang.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"da","translation":"Kontroller stagnation","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"da","translation":"For at kontrollere stagnation, sammenlign om du har reduceret vægten én gang og opnået det ønskede antal gentagelser, eller om du har forlængt pausen med 15-30 sekunder.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"da","translation":"Materialer til at identificere stagnation","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"da","translation":"Energi","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"da","translation":"Inputdata","review_note":""}

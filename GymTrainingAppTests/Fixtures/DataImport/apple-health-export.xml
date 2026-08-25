@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HealthData [
+<!ELEMENT HealthData (Record*, Workout*)>
+<!ATTLIST HealthData locale CDATA #REQUIRED>
+]>
+<HealthData locale="en_JP">
+ <Record type="HKQuantityTypeIdentifierBodyMass" sourceName="Scale" unit="lb" creationDate="2026-08-01 07:00:00 +0900" startDate="2026-08-01 07:00:00 +0900" endDate="2026-08-01 07:00:00 +0900" value="154.324"/>
+ <Record type="HKQuantityTypeIdentifierWaistCircumference" sourceName="BodyMode" unit="m" creationDate="2026-08-01 07:01:00 +0900" startDate="2026-08-01 07:01:00 +0900" endDate="2026-08-01 07:01:00 +0900" value="0.82"/>
+ <Record type="HKQuantityTypeIdentifierBodyFatPercentage" sourceName="Scale" unit="%" creationDate="2026-08-01 07:02:00 +0900" startDate="2026-08-01 07:02:00 +0900" endDate="2026-08-01 07:02:00 +0900" value="18.5"/>
+ <Workout workoutActivityType="HKWorkoutActivityTypeTraditionalStrengthTraining" duration="45" durationUnit="min" sourceName="Apple Watch" startDate="2026-08-01 18:00:00 +0900" endDate="2026-08-01 18:45:00 +0900"/>
+</HealthData>

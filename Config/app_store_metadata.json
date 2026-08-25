@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "primaryCategory": "HEALTH_AND_FITNESS",
+  "usesIdfa": true,
+  "copyright": "2026 Murase Yukitoshi",
+  "reviewNotesFile": "docs/app_store_connect/app_review_notes_en-US.md",
+  "reuseBetaReviewContact": true,
+  "ageRating": {
+    "advertising": true,
+    "healthOrWellnessTopics": true,
+    "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+    "contests": "NONE",
+    "gambling": false,
+    "gamblingSimulated": "NONE",
+    "gunsOrOtherWeapons": "NONE",
+    "lootBox": false,
+    "medicalOrTreatmentInformation": "NONE",
+    "messagingAndChat": false,
+    "parentalControls": false,
+    "ageAssurance": false,
+    "profanityOrCrudeHumor": "NONE",
+    "sexualContentGraphicAndNudity": "NONE",
+    "sexualContentOrNudity": "NONE",
+    "socialMedia": false,
+    "socialMediaAgeRestricted": false,
+    "horrorOrFearThemes": "NONE",
+    "matureOrSuggestiveThemes": "NONE",
+    "unrestrictedWebAccess": false,
+    "userGeneratedContent": false,
+    "violenceCartoonOrFantasy": "NONE",
+    "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+    "violenceRealistic": "NONE"
+  },
+  "localizations": {
+    "ja": {
+      "name": "BodyMode",
+      "subtitle": "AIコーチと今日の3つを実行",
+      "privacyPolicyUrl": "https://yukitoshim.github.io/gym-training-app/privacy/",
+      "supportUrl": "https://yukitoshim.github.io/gym-training-app/support/",
+      "promotionalText": "12人のAIコーチから理想に近い担当を選び、今日やることを最大3つに。食事・身体・運動をiPhoneとApple Watchで迷わず続けられます。",
+      "description": "BodyModeは、自分の身体について「今日何をすればいいか」を分かりやすくする健康・フィットネスアプリです。\n\n理想の身体や目的に合う12人のコーチから担当を選択。体重、食事、睡眠、疲労、活動、トレーニング履歴をもとに、今日の調子と優先アクションを最大3つに整理します。詳細な記録や分析は必要な時だけ確認できます。\n\n主な機能\n\n・今日の調子と「今日やること」最大3件\n・個性と専門性を持つ12人のAIコーチ\n・体重、腹囲、体脂肪率、各部位の記録とグラフ\n・食事写真のAI推定、手動補正、カロリー・PFC記録\n・複数方向の体型写真をまとめたAI参考分析\n・豊富な種目から作るトレーニング計画\n・セットごとの重量、回数、RPE、休憩時間の記録\n・計画と実績の差分、PR、ボリュームの確認\n・睡眠、活動、回復状態をまとめたコンディション表示\n・Apple Watchでのメニュー選択、セット操作、テンポ触覚、休憩タイマー\n・Apple Healthとの任意連携\n・ライト／ダークモードと2種類のカラーテーマ\n・全記録のJSON書き出しと端末内データ削除\n\n手動記録やトレーニングにアカウントは不要です。AI機能とAIクレジット購入を使う時だけSign in with Appleで登録します。登録時に一度だけ20 AIクレジットを受け取れます。記録は主に端末内へ保存され、Apple HealthやAIを使わなくても手動機能を利用できます。\n\nAI機能はクレジットと通信を必要とします。AIへ送る記録カテゴリは設定で管理でき、写真解析はユーザーの明示操作で実行します。AIが利用できない場合も手動記録、履歴、トレーニング、Apple Watch連携を利用できます。AIの推定や提案は参考情報であり、ユーザーが確認・修正できます。\n\nBodyModeは医療機器ではなく、診断、治療、疾病の判定を行いません。体調に不安がある場合は医療専門家へ相談してください。",
+      "keywords": "筋トレ,健康管理,体重,腹囲,食事,PFC,ワークアウト,睡眠,体型",
+      "iphoneScreenshots": "docs/app-store/screenshots",
+      "ipadScreenshots": "docs/app-store/ipad-screenshots",
+      "watchScreenshots": "docs/app-store/watch-screenshots"
+    },
+    "en-US": {
+      "name": "BodyMode: AI Fitness Coach",
+      "subtitle": "AI coach for today's 3",
+      "privacyPolicyUrl": "https://yukitoshim.github.io/gym-training-app/en/privacy/",
+      "supportUrl": "https://yukitoshim.github.io/gym-training-app/en/support/",
+      "promotionalText": "Choose a coach who fits your goal, then focus on up to three actions today. Track meals, progress, recovery, and workouts with iPhone and Apple Watch.",
+      "description": "BodyMode is a health and fitness app that makes the answer to ‘What should I do today?’ easier to see.\n\nChoose from 12 coaches with different specialties and personalities. BodyMode uses the information you choose to record, such as weight, meals, sleep, readiness, activity, and workout history, to organize your readiness and up to three priority actions for today. Detailed records and analysis stay available when you need them.\n\nKEY FEATURES\n\n• Today's readiness and up to three priority actions\n• 12 AI coaches with distinct goals, expertise, and communication styles\n• Weight, waist, body-fat estimate, and body-measurement charts\n• AI-assisted meal photo estimates with editable calories and macros\n• Multi-angle progress-photo sets with AI reference analysis\n• Workout plans built from a broad exercise library\n• Set-by-set weight, reps, RPE, tempo, and rest tracking\n• Plan-versus-result comparisons, PRs, and training volume\n• Condition views combining sleep, activity, recovery, and sensor data\n• Apple Watch menu selection, set controls, tempo haptics, and rest timers\n• Optional Apple Health integration\n• Light and dark appearance with two color themes\n• JSON export and on-device data deletion\n\nNo account is required for manual records or workouts. Sign in with Apple is requested only when you use AI features or buy AI credits. Registration includes a one-time grant of 20 AI credits. Records are stored primarily on your device, and all manual features remain available without Apple Health or AI.\n\nAI features require credits and a network connection. You control which record categories may be shared with AI, and photo analysis starts only when you explicitly request it. If AI is unavailable, manual records, history, workouts, and Apple Watch features remain available. AI estimates and recommendations are reference information and may be reviewed or corrected.\n\nBodyMode is not a medical device and does not diagnose, treat, or determine disease. Consult a qualified healthcare professional if you have health concerns.",
+      "keywords": "workout,fitness,AI coach,weight,meal,macros,gym,training,sleep,progress",
+      "iphoneScreenshots": "docs/app-store/screenshots-en",
+      "ipadScreenshots": "docs/app-store/ipad-screenshots-en",
+      "watchScreenshots": "docs/app-store/watch-screenshots-en"
+    }
+  }
+}

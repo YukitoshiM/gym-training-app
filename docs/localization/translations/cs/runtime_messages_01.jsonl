@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"cs","translation":"Odpověď od AI trenéra byla obdržena.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"cs","translation":"Nemožno odeslat odpověď do AI trenéra.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"cs","translation":"Záznamy ze synchronizace s Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"cs","translation":"Můžete zkontrolovat odpovědi v aplikaci BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"cs","translation":"{{value1}} / {{value2}} dosaženo. Pokračujte postupně, v rozumném tempu.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"cs","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}}x","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"cs","translation":"{{value1}} ponechte ve stávajícím stavu, jako osobní volbu","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"cs","translation":"{{value1}} minut","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"cs","translation":"{{value1}} kroků","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"cs","translation":"{{value1}} jídlo","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"cs","translation":"Na tomto zařízení není možné využít detekci okolí.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"cs","translation":"Tento úkol dnes neprovádíme.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"cs","translation":"Stačí se zaměřit na jednu věc.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"cs","translation":"Proč toto děláte?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"cs","translation":"Typ cvičení","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"cs","translation":"Otevřete aplikaci a zkuste to znovu.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"cs","translation":"Odstranili jsme lokalitu posilovny.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"cs","translation":"Zaznamenali jsme příjezd do posilovny.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"cs","translation":"Detekujeme příchod do okolí posilovny.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"cs","translation":"Automatická detekce návštěvy posilovny je vypnuta.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"cs","translation":"Zaznamenali jsme odchod z posilovny.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"cs","translation":"Dřep s činkami","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"cs","translation":"Tmavý režim","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"cs","translation":"Přítahy","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"cs","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"cs","translation":"Dips","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"cs","translation":"Dokončujete trénink. Zvyšováním počtu záznamů o regeneraci zlepšíte přesnost příštího plánu.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"cs","translation":"Černý šampaň","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"cs","translation":"Můj gym","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"cs","translation":"Uživatel změnil své dnešní aktivity.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"cs","translation":"Dnešní návrh byl vytvořen na základě uživatelského vstupu.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"cs","translation":"Světlo","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"cs","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"cs","translation":"Zvýšit","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"cs","translation":"Snížit","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"cs","translation":"Jednou dnes","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"cs","translation":"Dosáhli jste všech tří cílů dne. Budou zahrnuty do návrhu pro zítra.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"cs","translation":"Dnešní menu","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"cs","translation":"Aktualizoval jsem dnešní návrh","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"cs","translation":"Poloha není nastavena","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"cs","translation":"Polohu povoleno. Můžete použít ruční přihlášení.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"cs","translation":"Zkuste to znovu, až se poloha stabilizuje.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"cs","translation":"Nejprve zaregistrujte své současné místo jako \"gym\".","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"cs","translation":"Začátečník - Celkový trénink","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"cs","translation":"Není možné znovu odeslat předchozí data od AI trenéra.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"cs","translation":"Prosím, zadejte stejná data znovu.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"cs","translation":"Prioritizujte obnovu","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"cs","translation":"Pokud nechcete provést změny, zadejte prázdný řetězec.","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"cs","translation":"Přítahy","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"cs","translation":"Aktualizujeme data a upravíme doporučení pro dnešní den, abychom zajistili bezpečnost.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"cs","translation":"Zaznamenali jsme nové údaje.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"cs","translation":"Stávající ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"cs","translation":"Stávající nebo potřebné kategorie","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"cs","translation":"Zaregistroval jsem svou současnou polohu jako \"moje posilovna\".","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"cs","translation":"Nemůžu získat vaši aktuální polohu.","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"cs","translation":"Kontroluji vaši aktuální polohu.","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"cs","translation":"Prohlédl jsem 3 poslední záznamy o cvičení a 8 záznamů o jídle za posledních 7 dní.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"cs","translation":"Chybí záznamy o spánku.","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"cs","translation":"Prosím, zaznamenávejte spánek po dobu 3 dnů a pokračujte v cvičení 3x týdně.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"cs","translation":"Zaznamenat spánek po dobu 3 dnů","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"cs","translation":"Inteligentní, ušlechtilé, moderní","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"cs","translation":"Krátký celkový komentář","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"cs","translation":"Krátké akce","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"cs","translation":"Cviky na hrudník","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"cs","translation":"Automaticky","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"cs","translation":"Pro registr povolte přístup k poloze v aplikaci Nastavení.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"cs","translation":"Zkontroloval jsem 3 KPI pro tělo, 8 jídel a 3 série cvičení.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"cs","translation":"Jednou týdně","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"cs","translation":"Dokončil jsem 3 série tréninku týdně.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"cs","translation":"Pokračujte v tréninku 3x týdně.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"cs","translation":"Intenzivní, prémiový, stimulující","review_note":""}

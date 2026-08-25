@@ -1,0 +1,82 @@
+{"id":"core_ui.continue_workout","target_locale":"it","translation":"Continua","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.delete_permanently","target_locale":"it","translation":"Elimina definitivamente","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.empty_trash","target_locale":"it","translation":"Svuota il cestino","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.empty_trash_confirm","target_locale":"it","translation":"Elimini tutto definitivamente?","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.restore_record","target_locale":"it","translation":"Ripristina","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.saved_workout_progress","target_locale":"it","translation":"{{value1}} / {{value2}} serie completate e salvate automaticamente","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.trash","target_locale":"it","translation":"Cestino","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.trash_empty","target_locale":"it","translation":"Il cestino è vuoto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.trash_retention","target_locale":"it","translation":"I record eliminati rimangono qui per 30 giorni.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.undo","target_locale":"it","translation":"Annulla","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"core_ui.workout_discarded","target_locale":"it","translation":"Allenamento abbandonato","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_balanced_dinner","target_locale":"it","translation":"Cena equilibrata","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_balanced_lunch","target_locale":"it","translation":"Pranzo equilibrato","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_lean_lunch","target_locale":"it","translation":"Pranzo a basso contenuto di grassi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_light_breakfast","target_locale":"it","translation":"Colazione leggera","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_light_snack","target_locale":"it","translation":"Spuntino leggero","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_power_breakfast","target_locale":"it","translation":"Colazione ricca di proteine","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_power_lunch","target_locale":"it","translation":"Pranzo energizzante","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_protein_snack","target_locale":"it","translation":"Spuntino proteico","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_rationale","target_locale":"it","translation":"Scegli tra l'obiettivo di {{value1}} e il resto disponibile per oggi.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_recovery_dinner","target_locale":"it","translation":"Pasto per il recupero","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"domain_catalog.meal_template_separator","target_locale":"it","translation":"・","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.ai_chat","target_locale":"it","translation":"Chat con l'AI","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.ai_report","target_locale":"it","translation":"Report AI","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.fatigue_record","target_locale":"it","translation":"Registra la fatica","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.gym_visit","target_locale":"it","translation":"Visita in palestra","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.outdoor_route_title","target_locale":"it","translation":"Più recente: {{value1}}","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.progress_photo_set","target_locale":"it","translation":"Set di foto del corpo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"release_delta.ai_unlimited","target_locale":"it","translation":"Utilizzo AI illimitato","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"release_delta.photo_estimate_note","target_locale":"it","translation":"Stima del corpo tramite AI. Non è una misurazione diretta. {{value1}}","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.active_workout_saved","target_locale":"it","translation":"Interrompere salva l'allenamento corrente, per riprenderlo in seguito.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.discard_workout","target_locale":"it","translation":"Elimina l'allenamento","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_average_volume","target_locale":"it","translation":"Volume medio per allenamento","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_comparison_period","target_locale":"it","translation":"Periodo di confronto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_four_week_average","target_locale":"it","translation":"Media su 4 settimane (linea)","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_moving_average","target_locale":"it","translation":"Media mobile","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_new_activity","target_locale":"it","translation":"Nuovo allenamento","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_period_comparison","target_locale":"it","translation":"Confronta periodi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_previous_period_change","target_locale":"it","translation":"Variazione rispetto al periodo precedente {{value1}}","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_previous_period_section","target_locale":"it","translation":"Confronto con lo stesso periodo del mese precedente","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_month","target_locale":"it","translation":"1 mese","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_six_months","target_locale":"it","translation":"6 mesi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_three_months","target_locale":"it","translation":"3 mesi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_week","target_locale":"it","translation":"1 settimana","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_range_year","target_locale":"it","translation":"1 anno","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_seven_day_average","target_locale":"it","translation":"Media su 7 giorni","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.history_volume_trend","target_locale":"it","translation":"Andamento del volume","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.keep_iphone_value","target_locale":"it","translation":"Usa i dati di iPhone","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_distance","target_locale":"it","translation":"Distanza","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_pace","target_locale":"it","translation":"Velocità media","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_route_health","target_locale":"it","translation":"Percorso salvato in Apple Health","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_route_unavailable","target_locale":"it","translation":"Percorso non disponibile","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.outdoor_summary","target_locale":"it","translation":"Attività aerobica all'aperto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.pause","target_locale":"it","translation":"Pausa","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.pause_and_close","target_locale":"it","translation":"Interrompi e chiudi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_adjust","target_locale":"it","translation":"Puoi regolare il carico per i prossimi allenamenti, in modo da non avere periodi di inattività.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_declined","target_locale":"it","translation":"Continua con il piano attuale.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_progress","target_locale":"it","translation":"Hai raggiunto l'obiettivo, puoi controllare il carico per i prossimi allenamenti.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.plan_revision_review","target_locale":"it","translation":"Con i risultati ottenuti, puoi rivedere il piano.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.resume","target_locale":"it","translation":"Riprendi","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.resume_workout","target_locale":"it","translation":"Riprendi l'allenamento","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.sync_conflict_message","target_locale":"it","translation":"{{value1}} serie selezionate. Le altre sono state automaticamente integrate.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.sync_conflict_title","target_locale":"it","translation":"La stessa serie è stata modificata in entrambi i file","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.use_watch_value","target_locale":"it","translation":"Utilizza i dati di Apple Watch","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor","target_locale":"it","translation":"Attività all'aperto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_activity","target_locale":"it","translation":"Tipo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_cycling","target_locale":"it","translation":"Ciclismo all'aperto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_cycling_short","target_locale":"it","translation":"Ciclismo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_distance","target_locale":"it","translation":"Distanza","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_duration","target_locale":"it","translation":"Durata","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_finish_confirm","target_locale":"it","translation":"Completare l'attività all'aperto?","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_goal","target_locale":"it","translation":"Obiettivo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_open","target_locale":"it","translation":"Libera","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_pace","target_locale":"it","translation":"Ritmo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_route_privacy","target_locale":"it","translation":"Il percorso viene salvato in Apple Health e non viene condiviso con AI o pubblicità.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_running","target_locale":"it","translation":"Corsa all'aperto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_running_short","target_locale":"it","translation":"Corsa","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_start","target_locale":"it","translation":"Inizia l'attività all'aperto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_started","target_locale":"it","translation":"{{value1}} avviato","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_target_pace","target_locale":"it","translation":"Ritmo obiettivo","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_walking","target_locale":"it","translation":"Camminata all'aperto","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"watch_widget.outdoor_walking_short","target_locale":"it","translation":"Camminata","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

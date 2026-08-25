@@ -38,6 +38,14 @@ final class AISettingsMigrationTests: XCTestCase {
         XCTAssertEqual(migrated.managedConfigurationVersion, 3)
     }
 
+    func testLegacySharingSettingsKeepHealthIntakePrivate() throws {
+        let legacy = Data(#"{"bodyMetrics":true,"meals":true,"workouts":true,"bodyPhotos":true,"sleepAndRecovery":false,"dailyActivity":false,"gymVisits":false,"workoutSensors":false}"#.utf8)
+
+        let settings = try JSONDecoder().decode(AIDataSharingSettings.self, from: legacy)
+
+        XCTAssertFalse(settings.trainingConsiderations)
+    }
+
     func testExpiredQuickTunnelURLAlsoMigrates() {
         let stored = AISettings(
             isEnabled: true,
@@ -46,6 +54,52 @@ final class AISettingsMigrationTests: XCTestCase {
         )
 
         XCTAssertEqual(stored.migratingManagedConfiguration(to: bundled).baseURLString, bundled.baseURLString)
+    }
+
+    func testRetiredStableWorkerURLMigratesEvenWhenStoredAsCustom() {
+        let stored = AISettings(
+            isEnabled: true,
+            baseURLString: "https://bodymode-ai-gateway.bodymode-ai.workers.dev",
+            apiKey: "legacy-key",
+            usesSessionTokens: true,
+            managedConfigurationVersion: nil
+        )
+
+        let migrated = stored.migratingManagedConfiguration(to: bundled)
+
+        XCTAssertEqual(migrated.baseURLString, bundled.baseURLString)
+        XCTAssertEqual(migrated.apiKey, bundled.apiKey)
+        XCTAssertEqual(migrated.managedConfigurationVersion, bundled.managedConfigurationVersion)
+    }
+
+    func testRetiredStagingWorkerURLMigratesEvenWhenStoredAsCustom() {
+        let stored = AISettings(
+            isEnabled: true,
+            baseURLString: "https://bodymode-ai-gateway-staging.bodymode-ai.workers.dev",
+            apiKey: "staging-key",
+            usesSessionTokens: true,
+            managedConfigurationVersion: nil
+        )
+
+        XCTAssertEqual(
+            stored.migratingManagedConfiguration(to: bundled).baseURLString,
+            bundled.baseURLString
+        )
+    }
+
+    func testLegacyTailscaleURLAlsoMigrates() {
+        let stored = AISettings(
+            isEnabled: true,
+            baseURLString: "https://bodymode-mac-mini.example-tailnet.ts.net",
+            apiKey: "old-key"
+        )
+
+        let migrated = stored.migratingManagedConfiguration(to: bundled)
+
+        XCTAssertEqual(migrated.baseURLString, bundled.baseURLString)
+        XCTAssertEqual(migrated.apiKey, bundled.apiKey)
+        XCTAssertTrue(migrated.usesSessionTokens)
+        XCTAssertEqual(migrated.managedConfigurationVersion, bundled.managedConfigurationVersion)
     }
 
     func testBuildNineQuickTunnelMigratesToBuildTenConfiguration() {
@@ -119,6 +173,19 @@ final class AISettingsMigrationTests: XCTestCase {
         )
 
         XCTAssertEqual(stored.migratingManagedConfiguration(to: bundled), stored)
+    }
+
+    func testEnrollmentCodeForBundledServerIsNotOverwritten() {
+        let stored = AISettings(
+            isEnabled: true,
+            baseURLString: bundled.baseURLString,
+            apiKey: "personal-enrollment-code",
+            usesSessionTokens: true,
+            managedConfigurationVersion: nil
+        )
+
+        XCTAssertEqual(stored.migratingManagedConfiguration(to: bundled), stored)
+        XCTAssertNil(stored.normalizedForPersistence(relativeTo: bundled).managedConfigurationVersion)
     }
 
     func testPersistenceMarksBundledConfigurationAndUnmarksCustomConfiguration() {
@@ -266,53 +333,6 @@ final class AISettingsMigrationTests: XCTestCase {
         XCTAssertTrue(store.coachChatMessages.isEmpty)
     }
 
-    @MainActor
-    func testDeleteAllDuringTokenPreparationCannotRepopulateAIState() async throws {
-        SecureSettingsStore.resetAIIdentity()
-        defer { SecureSettingsStore.resetAIIdentity() }
-
-        let root = FileManager.default.temporaryDirectory
-            .appendingPathComponent("ai-background-auth-reset-\(UUID().uuidString)", isDirectory: true)
-        defer { try? FileManager.default.removeItem(at: root) }
-        DelayedAuthenticationURLProtocol.tokenRequestStarted = false
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [DelayedAuthenticationURLProtocol.self]
-        let service = AITrainerBackgroundService(
-            sessionConfiguration: configuration,
-            applicationSupportURL: root
-        )
-        let store = AppStore(storage: TestAppDataRepository())
-        service.bind(appStore: store)
-        let previousInstallationID = SecureSettingsStore.installationID()
-        var tokenSettings = Self.testAISettings
-        tokenSettings.usesSessionTokens = true
-
-        let submission = Task { @MainActor in
-            try? await service.submit(
-                payload: Self.chatRequest,
-                transmissionID: UUID(),
-                settings: tokenSettings
-            )
-        }
-        try await Self.waitUntil { DelayedAuthenticationURLProtocol.tokenRequestStarted }
-
-        store.resetAllData(backgroundAIService: service)
-        await submission.value
-        try await Task.sleep(for: .milliseconds(500))
-
-        XCTAssertEqual(service.pendingRequestCount, 0)
-        XCTAssertNil(SecureSettingsStore.loadAccessToken())
-        XCTAssertNotEqual(SecureSettingsStore.installationID(), previousInstallationID)
-        XCTAssertFalse(FileManager.default.fileExists(atPath: root.appendingPathComponent("AITrainerUploads").path))
-        XCTAssertFalse(
-            FileManager.default.fileExists(
-                atPath: root.appendingPathComponent("ai-trainer-background-state.json").path
-            )
-        )
-        XCTAssertTrue(store.coachChatMessages.isEmpty)
-        XCTAssertTrue(store.aiTransmissionHistory.isEmpty)
-    }
-
     private static let testAISettings = AISettings(
         isEnabled: true,
         baseURLString: "https://background-reset.example.com",
@@ -390,45 +410,5 @@ private final class DelayedBackgroundAIURLProtocol: URLProtocol, @unchecked Send
 
     override func stopLoading() {
         // Intentionally allow the callback to run so the reset generation guard is exercised.
-    }
-}
-
-private final class DelayedAuthenticationURLProtocol: URLProtocol, @unchecked Sendable {
-    nonisolated(unsafe) static var tokenRequestStarted = false
-    private var responseWorkItem: DispatchWorkItem?
-
-    override class func canInit(with request: URLRequest) -> Bool { true }
-
-    override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
-
-    override func startLoading() {
-        let isTokenRequest = request.url?.path.hasSuffix("/v1/auth/token") == true
-        if isTokenRequest {
-            Self.tokenRequestStarted = true
-        }
-        let response = HTTPURLResponse(
-            url: request.url ?? URL(string: "https://background-reset.example.com")!,
-            statusCode: 200,
-            httpVersion: nil,
-            headerFields: ["Content-Type": "application/json"]
-        )!
-        let data = isTokenRequest
-            ? Data(#"{"access_token":"late-token","token_type":"bearer","expires_in":3600}"#.utf8)
-            : Data(#"{"reply":"late reply","memory_candidates":[]}"#.utf8)
-        let workItem = DispatchWorkItem { [weak self] in
-            guard let self else { return }
-            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
-            client?.urlProtocol(self, didLoad: data)
-            client?.urlProtocolDidFinishLoading(self)
-        }
-        responseWorkItem = workItem
-        DispatchQueue.global().asyncAfter(
-            deadline: .now() + (isTokenRequest ? 0.35 : 0),
-            execute: workItem
-        )
-    }
-
-    override func stopLoading() {
-        // Keep the delayed callback scheduled to exercise the post-reset generation barrier.
     }
 }

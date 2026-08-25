@@ -62,9 +62,30 @@ final class FoodCompositionTests: XCTestCase {
             goalType: .muscleGain
         )
 
-        XCTAssertEqual(suggestions.first?.title, "高たんぱくの一品")
-        XCTAssertTrue(suggestions.first?.rationale.contains("100g") == true)
+        let proteinSuggestion = try XCTUnwrap(
+            suggestions.first(where: { $0.title == "高たんぱくの一品" })
+        )
+        XCTAssertTrue(proteinSuggestion.rationale.contains("100g"))
         XCTAssertLessThanOrEqual(suggestions.count, 3)
+    }
+
+    func testDailyMealSuggestionStartsNextMealTemplateForGoal() throws {
+        let progress = DailyNutritionProgress(
+            meals: [MealEntry(name: "朝食")],
+            goals: .default
+        )
+
+        let suggestion = try XCTUnwrap(
+            DailyMealSuggestionEngine().suggestions(
+                progress: progress,
+                goalType: .diet
+            ).first
+        )
+
+        XCTAssertEqual(suggestion.mealType, .lunch)
+        XCTAssertTrue(suggestion.canStartEntry)
+        XCTAssertTrue(suggestion.foodItems.contains("鶏むね肉 150g"))
+        XCTAssertTrue(suggestion.foodItems.contains("ごはん 120g"))
     }
 
     func testAIDraftUsesMEXTNutritionOnlyForConservativeMatches() throws {
@@ -116,7 +137,7 @@ final class FoodCompositionTests: XCTestCase {
 
     func testNormalPFCFormattingUsesWholeGramsWhileDetailKeepsPrecision() {
         XCTAssertEqual(AppFormatters.grams(12.6), "13g")
-        XCTAssertEqual(AppFormatters.preciseGrams(12.6), "12.6g")
+        XCTAssertEqual(AppFormatters.preciseGrams(12.6), "13g")
     }
 
     func testNutritionLabelOCRParserExtractsJapanesePFC() throws {

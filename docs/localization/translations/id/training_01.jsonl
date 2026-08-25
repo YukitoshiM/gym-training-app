@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"id","translation":"0 item","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"id","translation":"1 gerakan","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"id","translation":"3 jenis dalam 2 set. Sesuaikan beratnya agar sesuai, lalu simpan.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"id","translation":"Tidak dapat membaca rencana pelatih AI. Buat ulang.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"id","translation":"Rencana Pelatih AI","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"id","translation":"Sudah disimpan ke Apple Health","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"id","translation":"Sinkronisasi dari Apple Watch","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"id","translation":"Apple Watch akan memberikan panduan melalui sentuhan 1 hingga 3 kali per detik untuk mengatur waktu naik dan turun.","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"id","translation":"Karena Apple Watch tidak berada di dekat, saya telah menjadwalkannya agar tiba saat dinyalakan berikutnya.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"id","translation":"Tidak dapat menjalankan operasi pada Apple Watch","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"id","translation":"Tidak dapat menyimpan catatan dari Apple Watch ke iPhone","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"id","translation":"Belum siap untuk menyimpan catatan dari Apple Watch","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"id","translation":"Tidak dapat membaca catatan dari Apple Watch","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"id","translation":"Anda dapat menyinkronkan menu ke Apple Watch","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"id","translation":"Tidak ada konten hari ini yang disinkronkan ke Apple Watch.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"id","translation":"Tidak dapat mengirim perintah ke Apple Watch.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"id","translation":"Tidak dapat membuat data perintah untuk dikirim ke Apple Watch.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"id","translation":"Buka aplikasi BodyMode, lalu coba lagi.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"id","translation":"Instal aplikasi BodyMode di perangkat Apple Watch Anda.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"id","translation":"Koneksi dengan Apple Watch sedang terputus sementara.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"id","translation":"Koneksi dengan Apple Watch belum siap.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"id","translation":"Gagal terhubung ke Apple Watch: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"id","translation":"Sedang menyiapkan koneksi ke Apple Watch. Mohon tunggu sebentar, lalu coba lagi.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"id","translation":"Tidak dapat memeriksa status koneksi Apple Watch.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"id","translation":"Tidak dapat membuat data menu untuk Apple Watch.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"id","translation":"Pengukuran dengan Apple Watch","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"id","translation":"Penyimpanan Kesehatan gagal, riwayat aplikasi tersimpan.","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"id","translation":"Tidak ada informasi penyimpanan Kesehatan.","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"id","translation":"Memeriksa status penyimpanan Kesehatan.","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"id","translation":"Kesehatan belum diizinkan, hanya riwayat aplikasi yang tersimpan.","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"id","translation":"TINGKAT 1・Latihan Seluruh Tubuh","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"id","translation":"TRX Low","review_note":""}
+{"id":"training.148b91e44188","target_locale":"id","translation":"Sedang merekam dengan Apple Watch","review_note":""}
+{"id":"training.3e098891145f","target_locale":"id","translation":"Apakah Anda ingin menyelesaikan latihan dengan Apple Watch?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"id","translation":"Rekam Watch telah selesai.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"id","translation":"Hapus rekaman Watch?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"id","translation":"Analisis sensor Watch","review_note":""}
+{"id":"training.e9af98302821","target_locale":"id","translation":"Watch langsung","review_note":""}
+{"id":"training.22db347214b9","target_locale":"id","translation":"{{value1}} / {{value2}} kali","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"id","translation":"{{value1}} {{value2}} × {{value3}} kali","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"id","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} set)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"id","translation":"{{value1}} telah disimpan di riwayat iPhone.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"id","translation":"{{value1}} telah disimpan dari Apple Watch ke riwayat.","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"id","translation":"{{value1}} naik {{value2}} detik / turun {{value3}} detik・{{value4}} kali/detik{{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"id","translation":"{{value1}}/{{value2}} set {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"id","translation":"{{value1}}/{{value2}} set selesai","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"id","translation":"{{value1}}: {{value2}} set, {{value3}} kg, {{value4}} kali, istirahat {{value5}} detik","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"id","translation":"{{value1}}{{value2}} item","review_note":""}
+{"id":"training.4547089161d9","target_locale":"id","translation":"{{value1}}, tidak ada rekaman","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"id","translation":"Buat rencana untuk {{value1}}","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"id","translation":"Buat rencana untuk {{value1}}","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"id","translation":"Buatkan {{value1}}","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"id","translation":"Konsultasikan perubahan untuk {{value1}}","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"id","translation":"Konsultasikan tentang {{value1}}","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"id","translation":"Gambar referensi formulir untuk {{value1}}. Bagian utama menggunakan {{value2}}, {{value3}} untuk {{value4}} jenis latihan.","review_note":""}
+{"id":"training.859660768503","target_locale":"id","translation":"Draf {{value1}}","review_note":""}
+{"id":"training.7544024a8347","target_locale":"id","translation":"Menyegarkan target berat untuk {{value1}}","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"id","translation":"Menyegarkan target berat untuk {{value1}}.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"id","translation":"Set {{value1}}","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"id","translation":"{{value1}} set × {{value2}} kali・{{value3}} kg・istirahat {{value4}} detik","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"id","translation":"{{value1}} set・{{value2}} kali","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"id","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"id","translation":"{{value1}}・Rencana {{value2}}/{{value3}} set・Persentase pencapaian {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"id","translation":"Buat rencana untuk {{value1}}","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"id","translation":"{{value1}} item","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"id","translation":"Menyinkronkan {{value1}} item ke Apple Watch","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"id","translation":"{{value1}} menit","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"id","translation":"{{value1}} menit {{value2}} detik","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"id","translation":"{{value1}} kali","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"id","translation":"{{value1}} kali/detik","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"id","translation":"{{value1}} jam {{value2}} menit","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"id","translation":"{{value1}} ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"id","translation":"{{value1}} detik","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"id","translation":"{{value1}} latihan","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"id","translation":"{{value1}} latihan・{{value2}} set・{{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"id","translation":"{{value1}} jenis","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"id","translation":"Mulai dengan menu ini","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"id","translation":"Simpan menu ini","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"id","translation":"Apakah Anda ingin menghapus riwayat ini?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"id","translation":"Tidak ada latihan hari ini","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"id","translation":"Latihan ini dihilangkan","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"id","translation":"Tidak dapat menggunakan integrasi Apple Watch pada perangkat ini","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"id","translation":"Bagaimana cara memperbaiki rencana ini?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"id","translation":"Hapus rencana ini?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"id","translation":"Semua","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"id","translation":"Semua catatan","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"id","translation":"Kosong","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"id","translation":"Cara","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"id","translation":"Simpan hanya riwayat aplikasi","review_note":""}
+{"id":"training.39029011b26a","target_locale":"id","translation":"Incline Dumbbell Press","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"id","translation":"Kesalahan","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"id","translation":"Latihan khusus","review_note":""}
+{"id":"training.42254297b975","target_locale":"id","translation":"Tambahkan jenis latihan khusus","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"id","translation":"Batal","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"id","translation":"Buat dengan cepat","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"id","translation":"Crunch","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"id","translation":"Glute Bridge","review_note":""}
+{"id":"training.1792e5824127","target_locale":"id","translation":"Cable Curl","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"id","translation":"Cable Kickback","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"id","translation":"Cable Cross Over","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"id","translation":"Salin","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"id","translation":"Permintaan ke pelatih (opsional)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"id","translation":"Goblet Squat","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"id","translation":"Side Plank","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"id","translation":"Side Raise","review_note":""}
+{"id":"training.5722403a802d","target_locale":"id","translation":"Sub","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"id","translation":"Shoulder Press","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"id","translation":"Seated Calf Raises","review_note":""}
+{"id":"training.861902f328fe","target_locale":"id","translation":"Seated Row","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"id","translation":"Gym","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"id","translation":"Tiba di Gym","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"id","translation":"Kunjungi Gym","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"id","translation":"Kunjungan ke gym belum tercatat","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"id","translation":"Lewati","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"id","translation":"Squat","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"id","translation":"Standing Calf Raises","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"id","translation":"Squat dengan Mesin Smith","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"id","translation":"Set","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"id","translation":"Set {{value1}} selesai","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"id","translation":"Tambahkan Set","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"id","translation":"Pengaturan Set Massal","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"id","translation":"Riwayat Set","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"id","translation":"Waktu Set {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"id","translation":"Konfigurasi Set","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"id","translation":"Target Set disalin saat memulai latihan dan disimpan dalam riwayat.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"id","translation":"Judul","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"id","translation":"Dumbbell Curl","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"id","translation":"Dumbbell Bench Press","review_note":""}
+{"id":"training.0d799718504b","target_locale":"id","translation":"Dumbbell Romanian Deadlift","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"id","translation":"Chest Press","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"id","translation":"Chin-up","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"id","translation":"Atur Tempo","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"id","translation":"Rencana tempo: Naik{{value1}} detik・Turun{{value2}} detik・{{value3}} kali/detik","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"id","translation":"Dead bug","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"id","translation":"Triceps press down","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"id","translation":"Latihan","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"id","translation":"Tidak ada catatan latihan","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"id","translation":"Selesaikan latihan","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"id","translation":"Tidak ada riwayat latihan","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"id","translation":"Rencana latihan","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"id","translation":"Hammer curl","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"id","translation":"Hip abduction","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"id","translation":"Hip thrust","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"id","translation":"Face pull","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"id","translation":"Tips dan perhatian","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"id","translation":"Referensi bentuk","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"id","translation":"Freestyle training","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"id","translation":"Push-up","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"id","translation":"Plank","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"id","translation":"Bench press","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"id","translation":"Tidak menemukan Apple Watch yang dipasangkan","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"id","translation":"Volume","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"id","translation":"Latihan Bahu dengan Mesin","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"id","translation":"Utama","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"id","translation":"Catatan","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"id","translation":"Tambahkan Latihan Pengguna","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"id","translation":"Lat Pull-down","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"id","translation":"Lunges","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"id","translation":"Romanian Deadlift","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"id","translation":"Leg Curl","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"id","translation":"Leg Press","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"id","translation":"One-Hand Dumbbell Row","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"id","translation":"Latihan","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"id","translation":"Apakah Anda ingin menyelesaikan latihan?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"id","translation":"Apakah Anda ingin mengakhiri latihan?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"id","translation":"・","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"id","translation":"・Sudah Dikoreksi","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"id","translation":"Angkat","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"id","translation":"Angkat {{value1}} detik・Turun {{value2}} detik・{{value3}} kali/detik","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"id","translation":"Angkat{{value1}} detik・Turun{{value2}} detik・{{value3}} kali/detik","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"id","translation":"Angkat (detik)","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"id","translation":"Perbedaan antara atas dan bawah","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"id","translation":"Bagian Atas Tubuh","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"id","translation":"Turun","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"id","translation":"Turun dalam Detik","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"id","translation":"Bagian Bawah Tubuh","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"id","translation":"Area Utama","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"id","translation":"Peralatan yang Dapat Digunakan Saat Ini","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"id","translation":"Konten Hari Ini Disinkronkan ke Apple Watch","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"id","translation":"Menyinkronkan Konten Hari Ini ke Apple Watch","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"id","translation":"Istirahat {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"id","translation":"Foto Bentuk Tubuh","review_note":""}
+{"id":"training.82865627f395","target_locale":"id","translation":"Foto Bentuk Tubuh Belum Dicatat","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"id","translation":"Contoh: Kurangi jumlah latihan dan perpanjang istirahat","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"id","translation":"Contoh: Latihan Dada","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"id","translation":"Contoh: Kaki dengan intensitas ringan, fokus pada dada","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"id","translation":"Simpan","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"id","translation":"Tidak Dapat Disimpan","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"id","translation":"Nama Latihan dalam Pilihan","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"id","translation":"Berhenti","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"id","translation":"Selesai Masukkan","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"id","translation":"Tingkat Pencapaian Keseluruhan","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"id","translation":"Seluruh tubuh","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"id","translation":"Seluruh tubuh / Pemeliharaan","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"id","translation":"Seluruh tubuh A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"id","translation":"Seluruh tubuh B","review_note":""}
+{"id":"training.f74271660465","target_locale":"id","translation":"Seluruh tubuh C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"id","translation":"Seluruh tubuh Ringan","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"id","translation":"Foto","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"id","translation":"Tidak ada foto","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"id","translation":"Analisis","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"id","translation":"Tidak ada data analisis","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"id","translation":"Pemula, Mulai Seluruh Tubuh","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"id","translation":"Tidak ada jenis latihan yang tercantum dalam rencana. Silakan periksa peralatan dan buat ulang.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"id","translation":"Peralatan yang tersedia","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"id","translation":"Hapus","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"id","translation":"Bulan sebelumnya","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"id","translation":"{{value1}} × {{value2}} kali sebelumnya","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"id","translation":"Masukkan berat tambahan. Berat bantuan dapat dicatat sebagai angka negatif.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"id","translation":"Tempo gerakan","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"id","translation":"Perkiraan tempo, Total {{value1}} kali","review_note":""}
+{"id":"training.e1472f598358","target_locale":"id","translation":"Refleks","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"id","translation":"Anda dapat menambahkan kategori khusus dari tombol \"Tambah\" di pojok kanan.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"id","translation":"Total: {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"id","translation":"Perlengkapan","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"id","translation":"Selisih Jumlah","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"id","translation":"Tanah","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"id","translation":"Dasar","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"id","translation":"Stabilitas{{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"id","translation":"Selesai","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"id","translation":"Anda dapat melihat catatan yang sudah selesai dari riwayat.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"id","translation":"Catatan yang belum selesai tidak disimpan.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"id","translation":"Simpan ke riwayat setelah selesai","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"id","translation":"Simpan ke riwayat setelah selesai","review_note":""}
+{"id":"training.1784283f2316","target_locale":"id","translation":"Sedang Berlangsung","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"id","translation":"Jumlah Pelaksanaan","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"id","translation":"Tempo Aktual Naik{{value1}} detik / Turun{{value2}} detik","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"id","translation":"Prestasi {{value1}} × {{value2}} kali","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"id","translation":"Edit nilai prestasi","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"id","translation":"Area yang Ditargetkan","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"id","translation":"Riwayat","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"id","translation":"Tidak ada riwayat","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"id","translation":"Tidak ada riwayat.","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"id","translation":"Hapus riwayat","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"id","translation":"Edit riwayat","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"id","translation":"Edit riwayat","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"id","translation":"Detail riwayat","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"id","translation":"Detak jantung rata-rata","review_note":""}
+{"id":"training.461619512206","target_locale":"id","translation":"Tarik / Ketegangan","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"id","translation":"Menunggu","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"id","translation":"Detak jantung","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"id","translation":"Anda dapat menambahkan latihan khusus sebagai latihan kustom.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"id","translation":"Metode","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"id","translation":"Tekan / Bagian dada atas","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"id","translation":"Pelatih yang ditunjuk","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"id","translation":"Tidak ada","review_note":""}
+{"id":"training.6532391678cf","target_locale":"id","translation":"Kecepatan getaran","review_note":""}
+{"id":"training.f57690abba57","target_locale":"id","translation":"Perkiraan 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"id","translation":"Perkiraan {{value1}} kali","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"id","translation":"Berikan alasan singkat","review_note":""}

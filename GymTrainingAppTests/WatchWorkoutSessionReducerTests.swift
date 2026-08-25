@@ -22,6 +22,7 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
                             setOrder: 1,
                             targetWeight: 60,
                             targetReps: 8,
+                            targetRPE: 7.5,
                             plannedConcentricSeconds: 2,
                             plannedEccentricSeconds: 3,
                             previousActualWeight: 52.5,
@@ -39,6 +40,7 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
         XCTAssertEqual(set.targetWeight, 60)
         XCTAssertEqual(set.actualWeight, 60)
         XCTAssertEqual(set.targetReps, 8)
+        XCTAssertEqual(set.targetRPE, 7.5)
         XCTAssertEqual(set.actualReps, 8)
         XCTAssertEqual(set.rpe, 7)
         XCTAssertEqual(set.plannedConcentricSeconds, 2)
@@ -403,23 +405,27 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
         )
         watchJSON.removeValue(forKey: "tempoPerformance")
         watchJSON.removeValue(forKey: "hasUserAdjustedWeight")
+        watchJSON.removeValue(forKey: "targetRPE")
         let decodedWatchSet = try JSONDecoder().decode(
             WatchWorkoutSetSnapshot.self,
             from: JSONSerialization.data(withJSONObject: watchJSON)
         )
         XCTAssertNil(decodedWatchSet.tempoPerformance)
         XCTAssertNil(decodedWatchSet.hasUserAdjustedWeight)
+        XCTAssertNil(decodedWatchSet.targetRPE)
 
         let workoutSet = WorkoutSet(setOrder: 1, targetWeight: 50, targetReps: 10)
         var workoutJSON = try XCTUnwrap(
             JSONSerialization.jsonObject(with: JSONEncoder().encode(workoutSet)) as? [String: Any]
         )
         workoutJSON.removeValue(forKey: "tempoPerformance")
+        workoutJSON.removeValue(forKey: "targetRPE")
         let decodedWorkoutSet = try JSONDecoder().decode(
             WorkoutSet.self,
             from: JSONSerialization.data(withJSONObject: workoutJSON)
         )
         XCTAssertNil(decodedWorkoutSet.tempoPerformance)
+        XCTAssertNil(decodedWorkoutSet.targetRPE)
     }
 
     func testWorkoutSetRoundTripPreservesManualTempoCorrection() throws {
@@ -463,6 +469,7 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
                             setOrder: 1,
                             targetWeight: 50,
                             targetReps: 8,
+                            targetRPE: 8,
                             plannedConcentricSeconds: 2,
                             plannedEccentricSeconds: 4,
                             plannedTempoBeatSpeed: 3
@@ -474,15 +481,151 @@ final class WatchWorkoutSessionReducerTests: XCTestCase {
 
         let watchPlan = WatchWorkoutPlanSnapshot(plan: plan, weightUnit: .kg)
         XCTAssertEqual(watchPlan.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
+        XCTAssertEqual(watchPlan.exercises[0].sets[0].targetRPE, 8)
 
         var watchSession = WatchWorkoutSessionSnapshot(plan: watchPlan)
         watchSession.exercises[0].sets[0].isCompleted = true
         let workout = WorkoutSession(watchSession: watchSession)
         XCTAssertEqual(workout.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
+        XCTAssertEqual(workout.exercises[0].sets[0].targetRPE, 8)
 
         let data = try JSONEncoder().encode(workout)
         let decoded = try JSONDecoder().decode(WorkoutSession.self, from: data)
         XCTAssertEqual(decoded.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
+        XCTAssertEqual(decoded.exercises[0].sets[0].targetRPE, 8)
+    }
+
+    func testSessionConflictResolverMergesIndependentSetChanges() {
+        var watch = makeSession()
+        var localSession = WorkoutSession(watchSession: watch)
+        localSession.exercises[0].sets[0].actualReps = 8
+        localSession.exercises[0].sets[0].isCompleted = true
+        let local = ActiveWorkoutSession(
+            session: localSession,
+            updatedAt: Date(timeIntervalSince1970: 100)
+        )
+        watch.exercises[0].sets[1].actualReps = 9
+        watch.exercises[0].sets[1].isCompleted = true
+        let incoming = WorkoutSession(watchSession: watch)
+
+        let result = WorkoutSessionConflictResolver.merge(
+            local: local,
+            incoming: incoming,
+            incomingUpdatedAt: Date(timeIntervalSince1970: 200)
+        )
+
+        XCTAssertEqual(result.disposition, .merged)
+        XCTAssertEqual(result.session.exercises[0].sets[0].actualReps, 8)
+        XCTAssertEqual(result.session.exercises[0].sets[1].actualReps, 9)
+        XCTAssertTrue(result.conflictingSetIDs.isEmpty)
+    }
+
+    func testSessionConflictResolverReportsSameSetConflictWithoutOverwritingLocalValue() {
+        var watch = makeSession()
+        var localSession = WorkoutSession(watchSession: watch)
+        localSession.exercises[0].sets[0].actualWeight = 52.5
+        localSession.exercises[0].sets[0].actualReps = 8
+        localSession.exercises[0].sets[0].isCompleted = true
+        let local = ActiveWorkoutSession(session: localSession)
+        watch.exercises[0].sets[0].actualWeight = 55
+        watch.exercises[0].sets[0].actualReps = 10
+        watch.exercises[0].sets[0].isCompleted = true
+
+        let result = WorkoutSessionConflictResolver.merge(
+            local: local,
+            incoming: WorkoutSession(watchSession: watch),
+            incomingUpdatedAt: Date()
+        )
+
+        XCTAssertEqual(result.disposition, .conflict)
+        XCTAssertEqual(result.conflictingSetIDs, [localSession.exercises[0].sets[0].id])
+        XCTAssertEqual(result.session.exercises[0].sets[0].actualWeight, 52.5)
+    }
+
+    func testSessionConflictResolverKeepsDifferentSessionSeparate() {
+        let local = ActiveWorkoutSession(
+            session: WorkoutSession(watchSession: makeSession())
+        )
+        var other = makeSession()
+        other.id = UUID()
+
+        let result = WorkoutSessionConflictResolver.merge(
+            local: local,
+            incoming: WorkoutSession(watchSession: other),
+            incomingUpdatedAt: Date()
+        )
+
+        XCTAssertEqual(result.disposition, .separateSession)
+        XCTAssertEqual(result.session.id, other.id)
+    }
+
+    func testOutdoorCardioDistanceAndDurationGoalsProduceBoundedProgress() throws {
+        let distance = OutdoorCardioSnapshot(
+            activity: .running,
+            target: OutdoorCardioTarget(kind: .distance, distanceKilometers: 5),
+            distanceKilometers: 2.5
+        )
+        let duration = OutdoorCardioSnapshot(
+            activity: .walking,
+            target: OutdoorCardioTarget(kind: .duration, durationSeconds: 1_800)
+        )
+
+        XCTAssertEqual(try XCTUnwrap(distance.progress(elapsedSeconds: 600)), 0.5, accuracy: 0.0001)
+        XCTAssertEqual(try XCTUnwrap(duration.progress(elapsedSeconds: 900)), 0.5, accuracy: 0.0001)
+        XCTAssertEqual(try XCTUnwrap(duration.progress(elapsedSeconds: 3_600)), 1, accuracy: 0.0001)
+    }
+
+    func testOutdoorCardioUpdateCalculatesAveragePace() throws {
+        let snapshot = OutdoorCardioSnapshot(activity: .running)
+            .updating(distanceKilometers: 5, elapsedSeconds: 1_800)
+
+        XCTAssertEqual(snapshot.distanceKilometers, 5, accuracy: 0.0001)
+        XCTAssertEqual(try XCTUnwrap(snapshot.averagePaceSecondsPerKilometer), 360, accuracy: 0.0001)
+    }
+
+    func testOutdoorCardioRoundTripAndWorkoutConversionPreserveSummary() throws {
+        let cardio = OutdoorCardioSnapshot(
+            activity: .cycling,
+            target: OutdoorCardioTarget(
+                kind: .duration,
+                durationSeconds: 2_700,
+                targetPaceSecondsPerKilometer: 180
+            ),
+            distanceKilometers: 15,
+            averagePaceSecondsPerKilometer: 180,
+            routePointCount: 120,
+            routeStoredInHealthKit: true
+        )
+        let watch = WatchWorkoutSessionSnapshot(
+            sourcePlanID: nil,
+            title: "Outdoor Cycling",
+            endedAt: Date(),
+            weightUnit: .kg,
+            exercises: [],
+            outdoorCardio: cardio
+        )
+
+        let decoded = try JSONDecoder().decode(
+            WatchWorkoutSessionSnapshot.self,
+            from: JSONEncoder().encode(watch)
+        )
+        let workout = WorkoutSession(watchSession: decoded)
+
+        XCTAssertEqual(decoded.outdoorCardio, cardio)
+        XCTAssertEqual(workout.outdoorCardio, cardio)
+        XCTAssertTrue(workout.exercises.isEmpty)
+    }
+
+    func testLegacyWatchSessionWithoutOutdoorCardioStillDecodes() throws {
+        let data = try JSONEncoder().encode(makeSession())
+        var object = try XCTUnwrap(JSONSerialization.jsonObject(with: data) as? [String: Any])
+        object.removeValue(forKey: "outdoorCardio")
+        let legacyData = try JSONSerialization.data(withJSONObject: object)
+
+        let decoded = try JSONDecoder().decode(WatchWorkoutSessionSnapshot.self, from: legacyData)
+
+        XCTAssertNil(decoded.outdoorCardio)
+        XCTAssertFalse(decoded.isOutdoorCardio)
     }
 
     private func makeSession() -> WatchWorkoutSessionSnapshot {

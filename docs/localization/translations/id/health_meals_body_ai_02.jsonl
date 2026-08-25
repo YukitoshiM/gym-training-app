@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"id","translation":"Ini adalah saran berdasarkan tren data yang diinput, bukan diagnosis medis. Jika Anda merasa khawatir tentang kondisi kesehatan atau rasa sakit, konsultasikan dengan ahli.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"id","translation":"Ringkasan Data yang Diinput","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"id","translation":"Cara Memasukkan Data","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"id","translation":"Tidak ada item untuk dibagikan","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"id","translation":"Periksa dan perbaiki jika perlu sebelum menyimpan. Tujuan tidak akan otomatis ditetapkan.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"id","translation":"Perlu Analisis Ulang","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"id","translation":"Coba Lagi","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"id","translation":"Foto","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"id","translation":"Rentang referensi dari foto","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"id","translation":"Perkirakan kalori dari foto","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"id","translation":"Buat draf dari foto, untuk mengurangi usaha input.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"id","translation":"Analisis dengan foto","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"id","translation":"Tanpa foto","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"id","translation":"Perubahan penampilan terlihat, angka diverifikasi melalui pengukuran.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"id","translation":"Buat draf nutrisi dari foto atau makanan yang dimakan.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"id","translation":"Dengan memilih satu atau lebih foto, analisis dapat dilakukan. Semakin banyak arah yang dipilih, semakin mudah untuk diperiksa.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"id","translation":"Analisis ulang foto secara otomatis","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"id","translation":"Analisis foto secara otomatis","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"id","translation":"Tambahkan foto","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"id","translation":"Tambahkan dan edit foto","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"id","translation":"Saat memilih foto, kalori dan lainnya akan diisi secara otomatis.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"id","translation":"Set foto dapat disimpan. Setelah terhubung, Anda dapat menganalisis ulang dari detail set.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"id","translation":"Menit","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"id","translation":"Dengan mencantumkan jumlah yang diketahui, akurasi perkiraan meningkat.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"id","translation":"Sedang menganalisis","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"id","translation":"Sudah selesai menganalisis","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"id","translation":"Dasar penilaian","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"id","translation":"Tiba","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"id","translation":"Hapus","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"id","translation":"Sudah {{value1}} hari sejak latihan terakhir, jadi masih ada waktu luang untuk minggu ini.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"id","translation":"Catatan lingkar perut terakhir sudah lebih dari 7 hari.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"id","translation":"Masukkan nilai sebelumnya","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"id","translation":"Perbandingan dengan nilai sebelumnya: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"id","translation":"Minggu lalu","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"id","translation":"Data perbandingan dengan minggu lalu tidak tersedia","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"id","translation":"Volume telah meningkat lebih dari 30% dibandingkan minggu lalu. Pada latihan berikutnya, usahakan untuk mempertahankan volume ini dan periksa RPE serta indikator pemulihan.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"id","translation":"Perbandingan dengan minggu lalu: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"id","translation":"Perbandingan dengan minggu lalu: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"id","translation":"Data aktivitas belum tersedia. Kami memperkirakan bahwa memulai dengan Watch akan membantu.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"id","translation":"Estimasi aktivitas","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"id","translation":"Ini adalah nilai referensi yang dikumpulkan berdasarkan tren data yang diperoleh, bukan penilaian medis.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"id","translation":"Sedang direferensikan","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"id","translation":"Dapat direferensikan {{value1}} item, kurang {{value2}} item","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"id","translation":"Nilai yang diperoleh (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"id","translation":"Hitung dengan menggunakan berat, jumlah, tempo, rentang gerak relatif, dan RPE saja. Jangan memberikan nilai 0 untuk data yang hilang.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"id","translation":"Bagian atas kanan: Horizontal, seluruh tubuh","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"id","translation":"Bagian bawah kanan: Bahu hingga pinggang","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"id","translation":"Total","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"id","translation":"Gunakan pakaian, jarak, dan pencahayaan yang sama, dan ambil foto dengan rileks","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"id","translation":"Semakin banyak catatan untuk jenis latihan, menu, dan waktu yang sama, Anda dapat membandingkannya.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"id","translation":"KPI pengukuran harian","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"id","translation":"Ini menunjukkan item yang berubah secara bersamaan sebagai kemungkinan penyebab, tetapi tidak menentukan alasan atau kondisi medis.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"id","translation":"Sup Miso","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"id","translation":"Jumlah napas","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"id","translation":"Jumlah napas lebih tinggi dari rata-rata 14 hari","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"id","translation":"Jumlah napas {{value1}} kali/menit dibandingkan dengan rata-rata 14 hari yaitu {{value2}} kali/menit","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"id","translation":"Jumlah napas lebih rendah dari rata-rata 14 hari","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"id","translation":"Jumlah napas dalam rentang normal","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"id","translation":"Kualitas -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"id","translation":"Kualitas {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"id","translation":"Produk","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"id","translation":"Tidak dapat menyimpan produk.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"id","translation":"Kode Produk","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"id","translation":"Masukkan kode produk.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"id","translation":"Masukkan kode produk secara manual.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"id","translation":"Nama Produk","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"id","translation":"Kali/menit","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"id","translation":"Pemulihan","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"id","translation":"Pilih hari untuk memprioritaskan pemulihan.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"id","translation":"Karena data pemulihan rendah, usahakan untuk membatasi berat atau jumlah set sebesar {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"id","translation":"Selesai sebagai hari pemulihan","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"id","translation":"Jumlah","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"id","translation":"Memisahkan penilaian berdasarkan jumlah dan nutrisi","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"id","translation":"Per satuan standar","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"id","translation":"Koneksi HTTP ke server eksternal tidak diizinkan.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"id","translation":"Malam","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"id","translation":"Otomatis selesai pada malam hari","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"id","translation":"Tidak ada peningkatan atau stagnasi yang signifikan. Mari tambahkan catatan yang memungkinkan Anda membandingkan kembali jumlah target dan RPE di masa mendatang.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"id","translation":"Gagal","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"id","translation":"Posisi","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"id","translation":"Detak jantung saat istirahat","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"id","translation":"Detak jantung saat istirahat: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"id","translation":"Detak jantung saat istirahat lebih tinggi dari rata-rata 14 hari","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"id","translation":"Detak jantung saat istirahat lebih rendah dari rata-rata","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"id","translation":"Detak jantung saat istirahat normal","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"id","translation":"Selesai","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"id","translation":"Item yang mudah diselesaikan: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"id","translation":"Kami sedang memverifikasi tren penyelesaian dan melewati.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"id","translation":"Konsumsi makanan","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"id","translation":"Kepadatan","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"id","translation":"Riwayat","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"id","translation":"Bagian atas kiri: Depan & Tubuh Utuh","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"id","translation":"Bagian bawah kiri: Belakang & Tubuh Utuh","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"id","translation":"Perbedaan","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"id","translation":"Detak Jantung Rata-rata {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"id","translation":"Kecepatan Rata-Rata","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"id","translation":"Berguna","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"id","translation":"Item yang mudah ditunda: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"id","translation":"Pemulihan Detak Jantung","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"id","translation":"Detak Jantung Belum Diperoleh","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"id","translation":"Sumber Informasi: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"id","translation":"Set dengan perbedaan dari input manual {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"id","translation":"Gerakan pergelangan tangan saja tidak dapat menentukan jenis dan bentuk. Periksa perkiraan jumlah sebelum diterapkan.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"id","translation":"Suhu Kulit Pergelangan Tangan","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"id","translation":"Perubahan suhu kulit pergelangan tangan dibandingkan biasanya","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"id","translation":"Suhu kulit pergelangan tangan dalam rentang normal","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"id","translation":"Hanya gunakan konten yang disetujui untuk saran berikutnya.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"id","translation":"Ingatan yang Disetujui","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"id","translation":"Penanggung Jawab: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"id","translation":"Pelatih yang Ditugaskan","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"id","translation":"Tinjauan","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"id","translation":"Koneksi berhasil","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"id","translation":"Meskipun koneksi tidak berhasil, data yang sudah dicatat tidak akan hilang. Anda dapat melanjutkan pencatatan manual dan kemudian hanya menghasilkan komentar AI.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"id","translation":"Memeriksa Koneksi","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"id","translation":"Perkiraan adalah nilai referensi. Anda dapat menyesuaikannya secara bebas di kolom input di bawah.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"id","translation":"Perkiraan Kalori Terbakar","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"id","translation":"Transisi","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"id","translation":"Kalori yang Dikonsumsi","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"id","translation":"Ambil Foto","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"id","translation":"Set Foto","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"id","translation":"Edit Set Foto","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"id","translation":"Tambahkan Set Foto","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"id","translation":"Arah Foto","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"id","translation":"Jumlah Hari Foto","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"id","translation":"Catatan tentang kondisi dan penampilan saat foto diambil","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"id","translation":"Foto Sudah Terambil","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"id","translation":"Contoh foto. Bagian kiri atas adalah seluruh tubuh dari depan, bagian kanan atas adalah seluruh tubuh dari samping, bagian kiri bawah adalah seluruh tubuh dari belakang, dan bagian kanan bawah adalah close-up perut dari bahu hingga pinggang. Ambil foto dengan pakaian, jarak, dan pencahayaan yang sama.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"id","translation":"Perlu Ditingkatkan","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"id","translation":"Arah","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"id","translation":"Periksa perbedaan posisi berdasarkan arah.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"id","translation":"Gunakan sebagai bahan untuk menilai tren mingguan, bukan perubahan harian.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"id","translation":"Tanggal","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"id","translation":"Tidur malam ini","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"id","translation":"Siang","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"id","translation":"Waktu","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"id","translation":"Skor referensi yang dihitung oleh aplikasi, berdasarkan waktu, tidur nyenyak, REM, dan bangun di tengah malam.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"id","translation":"Tunggu sebentar","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"id","translation":"Jika masih belum berhasil, periksa status model pada server AI.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"id","translation":"Jika masih belum berhasil, periksa log pada server AI.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"id","translation":"Zona Waktu","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"id","translation":"Sesuaikan RPE Anda sesuai dengan kondisi normal.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"id","translation":"Normal","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"id","translation":"Jika terpapar terlalu lama, gunakan sebagai panduan untuk mengurangi volume dan durasi.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"id","translation":"Buat menu yang sesuai dengan peralatan yang tersedia agar Anda dapat memulai latihan pertama tanpa ragu.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"id","translation":"Setelah mencatat nilai awal, Anda dapat melihat perubahan dan perbedaan target.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"id","translation":"Lari luar ruangan terbaru","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"id","translation":"Laporan terbaru","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"id","translation":"Tinjauan bulanan","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"id","translation":"Periksa tinjauan bulanan","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"id","translation":"Buat rancangan tinjauan bulanan","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"id","translation":"Sedang membuat tinjauan bulanan","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"id","translation":"Laporan bulanan","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"id","translation":"Pagi","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"id","translation":"Saya sedang mencoba untuk mengurangi notifikasi pagi dan malam.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"id","translation":"Belum dianalisis","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"id","translation":"Belum diperoleh","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"id","translation":"Item yang belum diperoleh tidak diperhitungkan sebagai 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"id","translation":"Belum dilaksanakan","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"id","translation":"Belum difoto","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"id","translation":"Belum terdaftar. Masukkan jumlah pada label 100g.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"id","translation":"Barang yang belum terdaftar akan disimpan ke perangkat setelah diinput, dan dapat digunakan kembali pada pengambilan berikutnya.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"id","translation":"Belum dicatat","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"id","translation":"Belum dicatat. Ini juga mencakup dasar untuk merasakan dan mempersiapkan diri","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"id","translation":"Perbandingan berdasarkan kondisi","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"id","translation":"OCR tampilan nutrisi (konfirmasi pengguna)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"id","translation":"OCR tampilan nutrisi (perlu dikonfirmasi)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"id","translation":"Saya telah memasukkan angka dari tampilan nutrisi. Periksa jumlah dan setiap angka.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"id","translation":"Masukkan dari foto tampilan nutrisi","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"id","translation":"Tidak dapat membaca tampilan nutrisi. Ambil kembali dari tempat yang terang dengan memotret langsung, atau masukkan secara manual.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"id","translation":"Membaca informasi nutrisi","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"id","translation":"Nutrisi sedang diproses","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"id","translation":"Langkah berikutnya","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"id","translation":"Tindakan selanjutnya","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"id","translation":"Penyesuaian berikutnya","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"id","translation":"Memeriksa kondisi perut dari depan dan samping.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"id","translation":"Memeriksa lingkar pinggang dengan melihat bagian depan dan belakang secara bersamaan.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"id","translation":"Merekam data harian, seperti bagian depan, samping, dan belakang.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"id","translation":"Menggabungkan data harian, seperti bagian depan, samping, dan belakang. Dapat disimpan dalam satu file, dan dapat ditambahkan nanti.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"id","translation":"Jumlah langkah","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"id","translation":"Langkah: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"id","translation":"Anda dapat memberikan izin untuk jumlah langkah, aktivitas, tidur, detak jantung saat istirahat, HRV, pernapasan, dan suhu kulit di pergelangan tangan sesuai dengan item yang diperlukan. Item yang tidak diberikan akan ditangani sebagai \"belum diperoleh\", dan Anda dapat menggunakannya secara manual.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"id","translation":"Sisa {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"id","translation":"Tidak ada data harian yang dapat dibandingkan","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"id","translation":"Kalori yang terbakar: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"id","translation":"Kalori yang belum tercatat","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"id","translation":"Dalam keadaan relaks","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"id","translation":"Sedang berlangsung","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"id","translation":"Karbohidrat","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"id","translation":"Jangan memaksakan diri","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"id","translation":"Sekarang ada {{value1}}/4","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"id","translation":"Otomatis diperbarui berdasarkan jumlah langkah saat ini","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"id","translation":"Saat ini, bukan karena batas penggunaan, melainkan karena server sedang sibuk. {{value1}} Silakan mencoba lagi.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"id","translation":"Mendaftarkan lokasi Anda ke Gym Pribadi","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"id","translation":"Memeriksa lokasi Anda","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"id","translation":"Paparan terhadap suara lingkungan","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"id","translation":"Merasa lelah","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"id","translation":"Kami telah menyarankan hari di mana Anda tidak perlu meningkatkan beban berdasarkan data kelelahan dan pemulihan.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"id","translation":"Perasaan lelah","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"id","translation":"Menghapus lokasi yang terdaftar","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"id","translation":"Mencari produk yang sudah terdaftar","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"id","translation":"Nasi putih","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"id","translation":"Nasi putih, dada ayam, sup miso","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"id","translation":"Target","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"id","translation":"Anda dapat melihat perbedaan dan tingkat pencapaian untuk setiap KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"id","translation":"Dari target dan catatan makanan Anda hari ini, kami menampilkan sisa protein yang tersedia.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"id","translation":"Ini adalah rencana verifikasi yang sesuai dengan target dan peralatan yang tersedia.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"id","translation":"Arti dari target","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"id","translation":"Nilai target","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"id","translation":"Setelah menetapkan nilai target, perbedaan dan tingkat pencapaian akan ditampilkan.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"id","translation":"Perbedaan Target","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"id","translation":"Perbedaan Target {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"id","translation":"Target belum ditetapkan","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"id","translation":"Menetapkan target","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"id","translation":"Mencapai target dan stabilitas aktivitas","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"id","translation":"Saya telah memeriksa catatan aktivitas, makanan, dan olahraga Anda selama 30 hari terakhir.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"id","translation":"Kemungkinan besar, beban maksimal yang digunakan dalam 3 sesi terakhir belum meningkat. Pertimbangkan juga aspek postur, jumlah repetisi, dan skala persepsi usaha (RPE).","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"id","translation":"7 hari terakhir","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"id","translation":"7 hari terakhir {{value1}} kali","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"id","translation":"Jumlah kunjungan gym selama 7 hari terakhir: {{value1}} kali","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"id","translation":"Volume latihan saat ini berada dalam rentang normal","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"id","translation":"Berat badan rata-rata mingguan Anda menurun. Ini mungkin karena peningkatan asupan kalori untuk mendukung pertumbuhan otot.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"id","translation":"Berat badan rata-rata mingguan Anda bergerak berlawanan dengan target. Pertimbangkan untuk menyesuaikan asupan kalori terlebih dahulu.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"id","translation":"Berat badan rata-rata mingguan Anda menurun dengan cepat. Untuk menjaga kemajuan yang berkelanjutan, pertimbangkan untuk meningkatkan asupan kalori sedikit.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"id","translation":"Berat badan rata-rata mingguan Anda meningkat dengan cepat. Untuk menyeimbangkan laju peningkatan, pertimbangkan untuk mengurangi asupan kalori sedikit.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"id","translation":"Nilai terakhir adalah kurang dari 85 dBA. Periksa juga durasi penggunaan.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"id","translation":"Rata-rata catatan {{value1}} jam","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"id","translation":"Rentang Gerak Relatif","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"id","translation":"Konsultasikan","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"id","translation":"Tidur","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"id","translation":"Pastikan waktu tidur {{value1}} jam","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"id","translation":"Waktu tidur: {{value1}} jam","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"id","translation":"Waktu tidur kurang","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"id","translation":"Waktu tidur sedikit kurang","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"id","translation":"Karena belum ada data tahap tidur, ini adalah skor referensi berdasarkan total waktu.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"id","translation":"Data tidur belum tersedia. Nilai yang tidak tersedia akan dinilai sebagai 0.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"id","translation":"Anda dapat melihat total waktu tidur, pemulihan, dan aktivitas.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"id","translation":"Hapus","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"id","translation":"Tingkat akurasi {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"id","translation":"Simpan setelah dikonfirmasi","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"id","translation":"Perubahan yang terkonfirmasi","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"id","translation":"Menunggu konfirmasi","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"id","translation":"Ingatan yang sudah dikonfirmasi {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"id","translation":"Bukti ilmiah {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"id","translation":"Bukti ilmiah, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"id","translation":"Jenis latihan","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"id","translation":"Jenis","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"id","translation":"Produk yang disimpan di perangkat telah dimuat.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"id","translation":"Silakan coba lagi setelah me-restart perangkat.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"id","translation":"Jika tujuan Anda adalah membangun otot, Anda dapat mempertimbangkan untuk melakukan satu sesi latihan tambahan minggu ini dalam rentang yang wajar.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"id","translation":"Sekitar {{value1}} menit","review_note":""}

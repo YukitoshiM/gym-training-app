@@ -18,6 +18,11 @@ from evidence_rag import (
     EuropePMCClient,
     document_matches_topic,
 )
+from evidence_enrichment import (
+    EuropePMCFullTextClient,
+    enrich_document_structure,
+    with_full_text,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -27,7 +32,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-queries", type=int, default=0)
     parser.add_argument("--minimum-documents", type=int, default=1500)
     parser.add_argument("--crossref-limit", type=int, default=400)
+    parser.add_argument("--full-text-limit", type=int, default=500)
     parser.add_argument("--skip-crossref", action="store_true")
+    parser.add_argument("--skip-full-text", action="store_true")
     parser.add_argument("--skip-embeddings", action="store_true")
     return parser.parse_args()
 
@@ -173,11 +180,44 @@ async def enrich_crossref(
         if document.pmid not in selected_pmids:
             return document
         async with semaphore:
-            retracted, corrected = await crossref.update_flags(document.doi)
+            status = await crossref.update_status(document.doi)
         return replace(
             document,
-            retracted=document.retracted or retracted,
-            corrected=document.corrected or corrected,
+            retracted=document.retracted or status.retracted,
+            corrected=document.corrected or status.corrected,
+            correction_of_doi=status.correction_of_doi,
+            corrected_by_doi=status.corrected_by_doi,
+            version_status="superseded" if status.corrected_by_doi else document.version_status,
+        )
+
+    return list(await asyncio.gather(*(enrich(item) for item in documents)))
+
+
+async def enrich_full_text(
+    documents: list[EvidenceDocument],
+    *,
+    limit: int,
+) -> list[EvidenceDocument]:
+    selected_pmids = {
+        item.pmid
+        for item in sorted(
+            (item for item in documents if item.is_open_access and item.pmcid),
+            key=lambda item: (item.quality_score, item.publication_year or 0),
+            reverse=True,
+        )[: max(0, limit)]
+    }
+    client = EuropePMCFullTextClient()
+    semaphore = asyncio.Semaphore(4)
+
+    async def enrich(document: EvidenceDocument) -> EvidenceDocument:
+        if document.pmid not in selected_pmids:
+            return enrich_document_structure(document)
+        async with semaphore:
+            full_text = await client.fetch(document)
+        return (
+            with_full_text(document, full_text)
+            if full_text is not None
+            else enrich_document_structure(document)
         )
 
     return list(await asyncio.gather(*(enrich(item) for item in documents)))
@@ -242,6 +282,10 @@ async def main() -> int:
             )
         if not args.skip_crossref:
             documents = await enrich_crossref(documents, limit=max(0, args.crossref_limit))
+        if not args.skip_full_text:
+            documents = await enrich_full_text(documents, limit=max(0, args.full_text_limit))
+        else:
+            documents = [enrich_document_structure(item) for item in documents]
 
         vectors: dict[str, list[float]] = {}
         if not args.skip_embeddings:
@@ -274,6 +318,7 @@ async def main() -> int:
                     "vectors": len(vectors),
                     "collection_queries": len(EVIDENCE_COLLECTION_PLAN),
                     "goal_counts": status["goal_counts"],
+                    "full_text_documents": status["full_text_documents"],
                     "sqlite_vec_version": status["sqlite_vec_version"],
                 },
                 ensure_ascii=False,

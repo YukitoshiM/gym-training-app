@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"mr","translation":"{{value1}} नोंदवले जात आहे","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"mr","translation":"असमर्थ: {{value1}}. तुम्ही स्वतःहून नोंदी करू शकता","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"mr","translation":"प्रति सेकंद कंपनांची संख्या","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"mr","translation":"Apple Health मध्ये जतन केले","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"mr","translation":"Apple Watch कसे वापरावे","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"mr","translation":"जिम: पुढील सत्रासाठी","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"mr","translation":"आरोग्याची माहिती Apple Health मध्ये नाही.","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"mr","translation":"हेल्थ वापरता येत नसल्यामुळे, मॅन्युअल पद्धतीने रेकॉर्ड करत आहे.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"mr","translation":"हेल्थ सुरू करता येत नसल्यामुळे, मॅन्युअल पद्धतीने रेकॉर्ड करत आहे.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"mr","translation":"हेल्थ वर्कआउट तात्पुरते थांबवले आहे.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"mr","translation":"हेल्थ डेटा सेव्ह करत आहे...","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"mr","translation":"हेल्थ डेटा सेव्ह करण्यात अयशस्वी. वॉच रेकॉर्ड सेव्ह केले आहे.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"mr","translation":"हेल्थ डेटा सेव्ह नाही. वॉच रेकॉर्ड सेव्ह केले आहे.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"mr","translation":"हेल्थमधील मापन पुन्हा सुरू करता येत नाही. तुम्ही मॅन्युअल पद्धतीने रेकॉर्डिंग चालू ठेवू शकता.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"mr","translation":"हेल्थमधील मापन पुन्हा सुरू केले आहे.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"mr","translation":"हेल्थमधील मापन थांबवले आहे. मॅन्युअल रेकॉर्डिंग चालू आहे.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"mr","translation":"हेल्थ आणि वॉचचे कनेक्शन बंद केले आहे. मॅन्युअल पद्धतीने रेकॉर्ड करत आहे.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"mr","translation":"RPE (रेटेड पर्सेप्शन ऑफ एक्सर्शन) नाही","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"mr","translation":"वॉचवरचे सध्याचे रेकॉर्ड डिलीट होतील.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"mr","translation":"वॉच रेकॉर्ड सेव्ह केले आहे.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"mr","translation":"आयफोनवरून मेनू सिंक करा.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"mr","translation":"आयफोनवरून आलेला आजचा मेनू निवडा आणि सुरू करा.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"mr","translation":"आजचा मेनू आयफोनवर तपासा.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"mr","translation":"आयफोन कनेक्ट केले आहे.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"mr","translation":"आयफोनच्या होम स्क्रीनवरून आजच्या नोंदी सिंक करा.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"mr","translation":"आयफोनवर पाठवण्यासाठी रेकॉर्ड डेटा तयार करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"mr","translation":"आयफोनवर पाठवण्यात अयशस्वी. रेकॉर्ड ठेवा आणि पुन्हा पाठवा.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"mr","translation":"आयफोनवर सेव्ह करता आले नाही. नंतर पुन्हा पाठवता येईल.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"mr","translation":"आयफोन सिंक करण्याची तयारी करत आहे. नंतर पुन्हा पाठवता येईल.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"mr","translation":"{{value1}} × {{value2}} वेळा × {{value3}} सेट","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"mr","translation":"{{value1}} आयफोनवर पुन्हा पाठवता येईल.","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"mr","translation":"{{value1}} आयफोनवर पाठवण्याची नोंद केली आहे.","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"mr","translation":"{{value1}} आयफोनवर पाठवले आहे.","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"mr","translation":"{{value1}} आयफोनवर पाठवत आहे.","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"mr","translation":"{{value1}} आयफोनच्या इतिहासात सेव्ह केले आहे.","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"mr","translation":"{{value1}} पुन्हा पाठवा","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"mr","translation":"{{value1}} पुन्हा सुरू करता येईल.","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"mr","translation":"{{value1}} निवडले आहे.","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"mr","translation":"{{value1}} सुरू केले आहे.","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"mr","translation":"{{value1}}/{{value2}} सेट・{{value3}} वेळा नोंद","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"mr","translation":"{{value1}} सेट・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"mr","translation":"{{value1}} सेट・लक्ष्य एकूण {{value2}} वेळा","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"mr","translation":"{{value1}}・{{value2}} सेट・एकूण {{value3}} वेळा","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"mr","translation":"{{value1}}・सेट {{value2}}","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"mr","translation":"{{value1}} मधून निवड","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"mr","translation":"{{value1}} मेनू सिंक केले आहेत.","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"mr","translation":"{{value1}} वेळा","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"mr","translation":"{{value1}} वेळा/सेकंद","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"mr","translation":"{{value1}} वेळा・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"mr","translation":"{{value1}} सेकंद","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"mr","translation":"{{value1}} व्यायाम प्रकार・{{value2}} सेट・एकूण {{value3}} वेळा","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"mr","translation":"या वॉचमध्ये iPhone सोबत जोडणी करणे शक्य नाही. रेकॉर्ड वॉचमध्ये साठवले आहेत.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"mr","translation":"या वॉचमध्ये जोडणी करणे शक्य नाही","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"mr","translation":"उ ignored करा","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"mr","translation":"सेट","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"mr","translation":"सेट {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"mr","translation":"सेट पूर्ण करा","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"mr","translation":"सेट सुरू करा","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"mr","translation":"सेटचा सरासरी वेग {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"mr","translation":"सेट सेट केलेला नाही","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"mr","translation":"सेट सुरू करा","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"mr","translation":"सेट सुरू करणे रद्द करा","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"mr","translation":"सेन्सरद्वारे मापन करत आहे","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"mr","translation":"सेन्सर डेटा तयार होऊ शकत नसल्यामुळे, मॅन्युअली रेकॉर्ड करत आहोत.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"mr","translation":"ट्यूटोरियल वगळा","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"mr","translation":"गती","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"mr","translation":"गती जुळवा","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"mr","translation":"गती सेट करा","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"mr","translation":"गती सूचना थांबवा","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"mr","translation":"गती सूचना पुन्हा सुरू करा","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"mr","translation":"बेंच प्रेस","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"mr","translation":"मेनू","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"mr","translation":"मेनू निवडा","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"mr","translation":"मेनू डेटा लोड करण्यात अयशस्वी","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"mr","translation":"मेनू बदला","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"mr","translation":"मेनूची प्रतीक्षा करत आहे","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"mr","translation":"नोंदी","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"mr","translation":"नोंदी संपादित करा","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"mr","translation":"हालचाल","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"mr","translation":"रॅट पुल डाउन","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"mr","translation":"वर्कआउट","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"mr","translation":"वर्कआउट पूर्ण करायचे आहे?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"mr","translation":"वर्कआउट रद्द केले","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"mr","translation":"थांबा","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"mr","translation":"{{value1}} सेकंद थांबा / {{value2}} सेकंद वर","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"mr","translation":"थांबलेले","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"mr","translation":"वर","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"mr","translation":"वर{{value1}}s・खाली{{value2}}s・{{value3}}वेळ/सेकंद","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"mr","translation":"उचलणे","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"mr","translation":"उचलणे {{value1}} सेकंद・खाली {{value2}} सेकंद","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"mr","translation":"उचलणे{{value1}} सेकंद／खाली{{value2}} सेकंद","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"mr","translation":"उचलण्याची आणि खाली करण्याची वेळ सेट करा. ॲपल वॉच दर 1 सेकंदाला 1 ते 3 वेळा स्पर्श करून मार्गदर्शन करेल.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"mr","translation":"उचलण्याची वेळ","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"mr","translation":"उचलण्याची वेळ थेट प्रविष्ट करा","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"mr","translation":"खाली","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"mr","translation":"खाली करणे","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"mr","translation":"खाली करण्याची वेळ","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"mr","translation":"खाली करण्याची वेळ थेट प्रविष्ट करा","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"mr","translation":"आज","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"mr","translation":"आजचे जेवण","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"mr","translation":"आजचे जेवण: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"mr","translation":"आजचे जेवण निवडा","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"mr","translation":"विश्रांती {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"mr","translation":"{{value1}} सेकंदांची विश्रांती","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"mr","translation":"विश्रांती घ्या","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"mr","translation":"विश्रांती वगळा","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"mr","translation":"विश्रांतीचा वेळ","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"mr","translation":"विश्रांती पूर्ण","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"mr","translation":"तुमच्या क्षमतेनुसार आणि हालचालींच्या वेगावर आधारित, 2.5% जास्त वजन सुचवले आहे.","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"mr","translation":"सुरुवात करा","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"mr","translation":"वापरण्याची पद्धत: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"mr","translation":"जतन करा","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"mr","translation":"विश्वासार्हता: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"mr","translation":"सुधारा","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"mr","translation":"पुन्हा सुरू करा","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"mr","translation":"मिनिट:सेकंड","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"mr","translation":"मागील नोंद","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"mr","translation":"अंमलबजावणीची स्थिरता {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"mr","translation":"अंमलबजावणीचे पर्याय: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"mr","translation":"अंमलबजावणी थांबलेली आढळली","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"mr","translation":"अंमलबजावणीचा अंदाज {{value1}} वेळा","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"mr","translation":"अंमलबजावणीचा अंदाज {{value1}} वेळा・विश्वसनीयता {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"mr","translation":"अंमलबजावणीची गती बदल: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"mr","translation":"सिंचन","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"mr","translation":"रद्द करा","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"mr","translation":"समान वेळेत Fitness रेकॉर्ड असल्यामुळे Health मध्ये दुहेरी साठवण टाळली आहे.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"mr","translation":"सिंक्रोनाइज्ड मेनूमधून निवड उपलब्ध आहे","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"mr","translation":"पुनरावृत्ती","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"mr","translation":"पुनरावृत्तीची संख्या","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"mr","translation":"पुनरावृत्तीची संख्या रीअलमध्ये सेट करा","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"mr","translation":"पूर्ण","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"mr","translation":"पूर्ण झाल्यावर iPhone वर पाठवा","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"mr","translation":"पूर्ण झाल्यावर पाठवा","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"mr","translation":"पूर्ण झाल्यावर ब्रेक टाइमर सुरू होईल. पुढील व्यायाम निवडण्यासाठी क्रम बदलू शकता.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"mr","translation":"कोणताही वर्कआउट पूर्ण नाही","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"mr","translation":"पूर्ण सेट","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"mr","translation":"{{value1}} पूर्ण सेट","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"mr","translation":"{{value1}} × {{value2}} वेळा पूर्ण","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"mr","translation":"पूर्ण आकडेवारी जुळवा","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"mr","translation":"आकडेवारी प्रविष्ट करत आहे","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"mr","translation":"चालू असलेल्या सेटचे RPE बदला","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"mr","translation":"चालू असलेल्या सेटची गती बदला","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"mr","translation":"चालू असलेल्या सेटची पुनरावृत्तीची संख्या बदला","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"mr","translation":"चालू असलेल्या सेटचे वजन बदला","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"mr","translation":"सरासरी-","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"mr","translation":"सरासरी {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"mr","translation":"हृदयाचा दर सुधारत आहे. जेव्हा तुम्हाला योग्य वाटेल, तेव्हा पुढील सेटमध्ये जा","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"mr","translation":"आपल्या हृदय गतीनुसार विश्रांती करत राहा.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"mr","translation":"हृदय गती आणि ऊर्जा वापर मोजत आहे.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"mr","translation":"हाताने प्रविष्ट करा","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"mr","translation":"हाताने रेकॉर्ड करता येते.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"mr","translation":"हाताने रेकॉर्ड करत आहे.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"mr","translation":"घड्याळाच्या हालचाली आणि अपूर्ण सेटच्या क्रमानुसार अंदाज","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"mr","translation":"कंपनांची संख्या (1 ते 3 वेळा/सेकंद)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"mr","translation":"कंपनाची गती","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"mr","translation":"कनेक्शन अयशस्वी: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"mr","translation":"अंदाजे {{value1}} वेळा प्रतिबिंबित करा","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"mr","translation":"शिफारस प्रतिबिंबित करा","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"mr","translation":"वेळ बदला","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"mr","translation":"कमाल -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"mr","translation":"कमाल {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"mr","translation":"शेवटी समाप्त केल्यावर iPhone वर पाठवले जाईल. न पाठवलेले रेकॉर्ड नंतर पुन्हा पाठवता येईल.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"mr","translation":"अपूर्ण सेटसह सध्याची माहिती जतन करा.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"mr","translation":"न पाठवलेले","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"mr","translation":"घड्याळाचे न पाठवलेले रेकॉर्ड नाही","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"mr","translation":"न सुरू केलेले","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"mr","translation":"पुढील: {{value1}} {{value2}} × {{value3}} वेळा","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"mr","translation":"पुढील सेट सुरू करा","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"mr","translation":"तत्काळ मागील प्रशिक्षणात परत जा.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"mr","translation":"पुढील व्यायाम","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"mr","translation":"पुढे","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"mr","translation":"सध्याचे कार्य वगळा","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"mr","translation":"{{value1}} × {{value2}} वेळा उद्दिष्ट पूर्ण करा","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"mr","translation":"उद्दिष्टाचे tempo पूर्ण","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"mr","translation":"उद्दिष्ट पूर्ण नाही, RPE (रेटेड perceपट), किंवा हालचालीची गती कमी झाल्यास 5% ने कमी करण्याचा पर्याय","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"mr","translation":"सापेक्ष हालचाल: {{value1}}%, सातत्य: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"mr","translation":"कमी ऊर्जा वापरणारे सॅम्पलिंग (बॅटरी शिल्लक)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"mr","translation":"कमी ऊर्जा वापरणारे सॅम्पलिंग (कमी ऊर्जे मोड)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"mr","translation":"कमी ऊर्जा वापरणारे सॅम्पलिंग (सेटिंग)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"mr","translation":"काढून टाका","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"mr","translation":"सेकंद","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"mr","translation":"व्यायाम आणि सेट निवडून सुरू करा. चुकून निवडल्यास, \"रद्द करा\" वर क्लिक करून मागील स्थितीत परत या.","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"mr","translation":"व्यायामाचे पर्याय: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"mr","translation":"समाप्त आणि सिंक करा","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"mr","translation":"जारी ठेवा","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"mr","translation":"पाठ","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"mr","translation":"पठाचा दिवस","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"mr","translation":"छाती","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"mr","translation":"छातीच्या दिवसासाठी","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"mr","translation":"नोंदी हटवायची आहे?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"mr","translation":"नोंदी चालू आहे","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"mr","translation":"चालू असलेल्या वर्कआउटची नोंद नाही","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"mr","translation":"सामान्य नमुना","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"mr","translation":"जलद","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"mr","translation":"प्राप्ती, RPE, आणि हालचालीच्या वेगावरून समान वजन सुचवा","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"mr","translation":"नाही","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"mr","translation":"निवडलेल्या सेटमध्ये बदला","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"mr","translation":"वजन","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"mr","translation":"वजनासाठी रील सेट करा","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"mr","translation":"वजन, संख्या, RPE, आणि विश्रांती रीलवर सुरू करण्यापूर्वी आणि नंतर बदलता येते.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"mr","translation":"सुरू करा","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"mr","translation":"सुरू करण्यापूर्वी टेम्पो सेट करा","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"mr","translation":"समर्थित नाही: {{value1}}. मॅन्युअल इनपुट उपलब्ध आहे","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"mr","translation":"आवाज आणि टेक्स्ट नोट्स","review_note":""}

@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"ca","translation":"Aquest és un suggeriment basat en les tendències de les dades d'entrada i no és un diagnòstic mèdic. Si us preocupa la vostra salut o el vostre dolor, consulteu un especialista.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"ca","translation":"Resum de dades d'entrada","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"ca","translation":"Mètode d'entrada","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"ca","translation":"No hi ha elements compartits","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"ca","translation":"Si us plau, comproveu el contingut, feu les correccions si cal i després deseu. Els objectius no es determinen automàticament.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"ca","translation":"Reanàlisi necessària","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"ca","translation":"torna-ho a provar","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"ca","translation":"foto","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"ca","translation":"Interval de referència de la foto","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"ca","translation":"Estima les calories a partir de les fotos","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"ca","translation":"Creeu un esborrany a partir de la vostra foto per reduir el temps d'entrada.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"ca","translation":"Anàlisi amb fotografies","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"ca","translation":"Cap foto","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"ca","translation":"Les fotos mostren els canvis d'aparença i els números es confirmen amb mesures reals.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"ca","translation":"Crea un esborrany nutricional a partir de fotos i dels aliments que menges.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"ca","translation":"Seleccioneu una o més fotos per analitzar-les. Com més indicacions tingueu, més fàcil serà comprovar-ho.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"ca","translation":"Torneu a analitzar les fotos alhora","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"ca","translation":"Analitza les fotos alhora","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"ca","translation":"Afegeix una foto","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"ca","translation":"Afegeix/edita fotos","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"ca","translation":"Quan seleccioneu una foto, les calories, etc. s'introduiran automàticament.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"ca","translation":"Es poden desar conjunts de fotos. Podeu tornar a analitzar els detalls establerts després de connectar-vos.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"ca","translation":"minuts","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"ca","translation":"La precisió de l'estimació augmentarà si anoteu la quantitat tant com sabeu.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"ca","translation":"En anàlisi","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"ca","translation":"Analitzat","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"ca","translation":"Base per al judici","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"ca","translation":"arribada","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"ca","translation":"Suprimeix","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"ca","translation":"Tinc {{value1}} dies lliures des del meu darrer entrenament, així que em queda molt de temps a la meva agenda d'aquesta setmana.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"ca","translation":"Han passat més de 7 dies des de l'últim registre de circumferència de cintura.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"ca","translation":"Entrada del valor anterior","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"ca","translation":"En comparació amb l'última vegada {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"ca","translation":"setmana anterior","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"ca","translation":"Dades de comparació insuficients amb la setmana anterior","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"ca","translation":"El volum ha augmentat més d'un 30% respecte a la setmana anterior. La propera vegada, mantenim el mateix nivell i comprovem RPE i els indicadors de recuperació.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"ca","translation":"Comparació amb la setmana anterior: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"ca","translation":"Comparació amb la setmana anterior: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"ca","translation":"Encara no hi ha dades operatives. Calculem que comenceu el conjunt amb Watch.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"ca","translation":"Estimació del moviment","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"ca","translation":"No es tracta d'un judici mèdic, sinó d'un valor de referència que resumeix les tendències de les dades obtingudes.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"ca","translation":"Navegació","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"ca","translation":"Elements {{value1}} disponibles, articles {{value2}} que falten","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"ca","translation":"Elements principals que es poden obtenir (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"ca","translation":"Es calcularà utilitzant només el pes obtingut, el nombre de repeticions, el tempo, el rang relatiu de moviment i RPE, i els valors que faltin no rebran 0 punts.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"ca","translation":"Part superior dreta, cos sencer","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"ca","translation":"Espatlla inferior dreta fins a la cintura","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"ca","translation":"total","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"ca","translation":"Fes fotos amb la mateixa roba, distància i llum.","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"ca","translation":"Es poden fer comparacions a mesura que augmenta el nombre de registres per al mateix esdeveniment, menú i període de temps.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"ca","translation":"KPI real el mateix dia","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"ca","translation":"Indica elements que han canviat al mateix temps que els candidats, i no determina de manera definitiva la causa o la condició mèdica.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"ca","translation":"sopa de miso","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"ca","translation":"freqüència respiratòria","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"ca","translation":"La freqüència respiratòria és superior a la mitjana dels 14 dies","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"ca","translation":"La freqüència respiratòria és de mitjana de 14 dies {{value1}} vegades/minut versus {{value2}} vegades/minut","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"ca","translation":"Freqüència respiratòria inferior a la mitjana de 14 dies","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"ca","translation":"La freqüència respiratòria està dins del rang normal","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"ca","translation":"Qualitat -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"ca","translation":"Qualitat {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"ca","translation":"producte","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"ca","translation":"No s'ha pogut desar el producte.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"ca","translation":"Codi de producte","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"ca","translation":"Introduïu el codi del producte.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"ca","translation":"Introduïu el codi del producte manualment.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"ca","translation":"Nom del producte","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"ca","translation":"vegades/min","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"ca","translation":"recuperació","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"ca","translation":"Feu que la vostra recuperació sigui una prioritat.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"ca","translation":"Com que les dades de recuperació són baixes, reduïu el pes o el nombre de conjunts de {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"ca","translation":"Completat com a dia de recuperació","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"ca","translation":"nombre de vegades","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"ca","translation":"Determina per separat la freqüència i la nutrició","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"ca","translation":"per quantitat estàndard","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"ca","translation":"No es permeten connexions HTTP a servidors externs.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"ca","translation":"nit","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"ca","translation":"Es completa automàticament a la nit","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"ca","translation":"No hi ha candidats a pics o estancaments importants. La propera vegada, augmentem els registres que es poden comparar fent coincidir el nombre objectiu de vegades i RPE.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"ca","translation":"fracàs","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"ca","translation":"Postura","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"ca","translation":"freqüència cardíaca en repòs","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"ca","translation":"Freqüència cardíaca en repòs: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"ca","translation":"La freqüència cardíaca en repòs és superior a la mitjana dels 14 dies","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"ca","translation":"La freqüència cardíaca en repòs és inferior a la mitjana","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"ca","translation":"La freqüència cardíaca en repòs és normal","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"ca","translation":"Completat","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"ca","translation":"Element fàcil de completar: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"ca","translation":"Comprovació de les tendències de finalització/omissió al dispositiu.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"ca","translation":"Ingesta real d'aliments","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"ca","translation":"densitat","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"ca","translation":"Història","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"ca","translation":"Front superior esquerre/cos sencer","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"ca","translation":"Esquena inferior esquerra/tot el cos","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"ca","translation":"diferència","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"ca","translation":"Freqüència cardíaca mitjana {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"ca","translation":"velocitat mitjana","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"ca","translation":"Va ser útil","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"ca","translation":"Elements fàcils de posposar: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"ca","translation":"recuperació de la freqüència cardíaca","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"ca","translation":"Freqüència cardíaca no adquirida","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"ca","translation":"Font d'informació: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"ca","translation":"Conjunts amb diferències amb els elements d'entrada manual {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"ca","translation":"No és possible determinar el tipus d'esdeveniment o forma basant-se només en els moviments del canell. Es confirmarà i reflectirà el nombre estimat de vegades.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"ca","translation":"Temperatura de la pell del canell","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"ca","translation":"La temperatura de la pell del canell acostuma a ser diferent de l'habitual","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"ca","translation":"La temperatura de la pell del canell està dins del rang normal","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"ca","translation":"Només s'utilitzarà el contingut aprovat per a la propera proposta.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"ca","translation":"Memòria aprovada","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"ca","translation":"Responsable {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"ca","translation":"Entrenador responsable","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"ca","translation":"mirant enrere","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"ca","translation":"Connexió correcte","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"ca","translation":"Encara que la connexió no sigui possible, les dades enregistrades no s'eliminaran. Podeu continuar gravant manualment i només generar comentaris d'IA més tard.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"ca","translation":"S'està comprovant la connexió","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"ca","translation":"Els valors estimats són només de referència. Podeu editar-lo lliurement al camp d'entrada següent.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"ca","translation":"Consum estimat","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"ca","translation":"Transició","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"ca","translation":"Admissió kcal","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"ca","translation":"Tir","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"ca","translation":"conjunt de tir","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"ca","translation":"Edita el conjunt de rodatge","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"ca","translation":"Afegeix un conjunt de trets","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"ca","translation":"Direcció de tir","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"ca","translation":"Dies de rodatge","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"ca","translation":"Notes sobre condicions i aspecte de rodatge","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"ca","translation":"Ja fotografiat","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"ca","translation":"Mostra de fotografia. La part superior esquerra és una vista frontal de tot el cos, la part superior dreta és una vista lateral de tot el cos, la part inferior esquerra és una vista posterior de tot el cos i la part inferior dreta és un primer pla de l'abdomen des de l'espatlla fins a la cintura. Fotografiat amb la mateixa roba, distància i llum","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"ca","translation":"Necessita millora","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"ca","translation":"direcció","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"ca","translation":"Hem confirmat la diferència de postura segons la direcció.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"ca","translation":"Utilitzeu-ho com a base per determinar les tendències mitjanes setmanals, en lloc dels canvis diaris.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"ca","translation":"data","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"ca","translation":"el son d'ahir","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"ca","translation":"durant el dia","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"ca","translation":"temps","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"ca","translation":"Aquesta és una puntuació de referència calculada dins del dispositiu en funció del temps, el son profund, la REM i la vigília mitjana.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"ca","translation":"després d'un temps","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"ca","translation":"Si us plau, torna-ho a provar més tard. Si el problema persisteix, comproveu l'estat del model del servidor AI.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"ca","translation":"Si us plau, torna-ho a provar més tard. Si continua, comproveu el registre del servidor AI.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"ca","translation":"zona horària","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"ca","translation":"Ajusteu-vos com de costum mentre mireu RPE.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"ca","translation":"Normal","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"ca","translation":"L'exposició és alta. Si continua durant molt de temps, utilitzeu-lo com a referència per reduir el volum i la durada de l'estada.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"ca","translation":"Elaborarem un menú segons l'equipament disponible perquè puguis començar el teu primer entrenament sense dubtar-ho.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"ca","translation":"Un cop hàgiu registrat els vostres valors inicials, podreu veure el vostre progrés i la diferència d'objectius.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"ca","translation":"últim córrer a l'aire lliure","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"ca","translation":"Últim informe","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"ca","translation":"revisió mensual","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"ca","translation":"Consulta les revisions mensuals","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"ca","translation":"Creeu un esborrany de revisió mensual","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"ca","translation":"S'està generant una revisió mensual","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"ca","translation":"informe mensual","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"ca","translation":"matí","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"ca","translation":"Estic intentant enviar notificacions amb moderació al matí i a la nit.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"ca","translation":"sense analitzar","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"ca","translation":"No adquirit","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"ca","translation":"Els elements no obtinguts no es tracten com a 0.","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"ca","translation":"No implementat","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"ca","translation":"No fotografiat","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"ca","translation":"No registrat. Introduïu el valor per 100 g a l'etiqueta.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"ca","translation":"Els productes no registrats es desaran al dispositiu després de ser introduïts i reutilitzats per a la següent exploració.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"ca","translation":"No gravat","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"ca","translation":"No gravat. L'experiència també s'afegeix a la base de la preparació.","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"ca","translation":"Comparació per condició","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"ca","translation":"Informació nutricional OCR (confirmació de l'usuari)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"ca","translation":"Informació nutricional OCR (necessita confirmació)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"ca","translation":"Vaig introduir els números de l'etiqueta nutricional. Si us plau, comproveu la quantitat estàndard i cada valor.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"ca","translation":"Entrada de la foto de l'etiqueta nutricional","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"ca","translation":"No he pogut llegir l'etiqueta nutricional. Si us plau, torneu a prendre la foto de la part frontal en un lloc lluminós o introduïu-la manualment.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"ca","translation":"Lectura de l'etiqueta nutricional","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"ca","translation":"Nutrició en curs","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"ca","translation":"següent moviment","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"ca","translation":"següent acció","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"ca","translation":"Següent ajust","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"ca","translation":"Es va comprovar l'estat de l'abdomen des de la part frontal i lateral.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"ca","translation":"Vaig comprovar la circumferència de la cintura amb el davant i l'esquena junts.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"ca","translation":"Enregistra la part davantera, lateral, posterior, etc. com a conjunt durant un dia.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"ca","translation":"Agrupeu la part davantera, lateral, posterior, etc. el mateix dia. Podeu desar fins i tot una imatge i afegir-ne més més tard.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"ca","translation":"nombre de passos","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"ca","translation":"Passos: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"ca","translation":"Podeu permetre passos, activitat, son, freqüència cardíaca en repòs, HRV, freqüència respiratòria i temperatura de la pell del canell per a cada element que necessiteu. Els elements que no estiguin permesos es tractaran com a no obtinguts encara i l'entrada manual es pot utilitzar tal qual.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"ca","translation":"{{value1}} / {{value2}} restant","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"ca","translation":"No hi ha dades diàries comparables disponibles","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"ca","translation":"Consum {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"ca","translation":"consum no obtingut","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"ca","translation":"profunda","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"ca","translation":"Durant la teva estada","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"ca","translation":"hidrats de carboni","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"ca","translation":"no t'excedeixis","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"ca","translation":"Actualment {{value1}}/4 peces","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"ca","translation":"S'actualitza automàticament a partir del recompte de passos actual","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"ca","translation":"Actualment, el servidor està congestionat, no el límit d'ús. {{value1}}Si us plau, torna-ho a provar.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"ca","translation":"Registreu la vostra ubicació actual a My Gym","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"ca","translation":"Comprovant la ubicació actual","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"ca","translation":"Exposició a sons ambientals","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"ca","translation":"Estic cansat","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"ca","translation":"A partir de les dades de fatiga i recuperació, vam suggerir dies en què no s'incrementaria la càrrega.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"ca","translation":"sensació de cansament","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"ca","translation":"Suprimeix la ubicació registrada","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"ca","translation":"Cerca productes registrats","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"ca","translation":"arròs blanc","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"ca","translation":"Arròs blanc, pit de pollastre, sopa de miso","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"ca","translation":"objectiu","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"ca","translation":"Podeu comprovar la diferència amb l'objectiu i la taxa d'assoliment de cada KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"ca","translation":"Mostra la quantitat restant de proteïnes en funció del vostre objectiu i del registre d'aliments d'avui.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"ca","translation":"Aquest és un pla de confirmació adaptat als vostres objectius i a l'equip disponible.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"ca","translation":"significat dels objectius","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"ca","translation":"Valor objectiu","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"ca","translation":"Després d'establir el valor objectiu, es mostraran la diferència i la taxa d'assoliment.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"ca","translation":"diferència d'objectiu","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"ca","translation":"Diferència objectiu {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"ca","translation":"Objectiu no marcat","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"ca","translation":"fixació d'objectius","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"ca","translation":"Assoliment dels objectius i funcionament estable","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"ca","translation":"Vaig comprovar el meu cos, el meu menjar i els registres d'entrenament dels darrers 30 dies.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"ca","translation":"Es tracta d'un candidat el pes màxim d'ús del qual no ha augmentat en les últimes tres vegades. Tingueu en compte també la forma, el nombre de vegades i RPE.","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"ca","translation":"Últims 7 dies","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"ca","translation":"Els darrers 7 dies {{value1}} vegades","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"ca","translation":"Visites al gimnàs en els darrers 7 dies: {{value1}} vegades","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"ca","translation":"La quantitat d'entrenament recent està dins del rang normal","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"ca","translation":"El meu pes mitjà setmanal recent ha disminuït. Per tal de donar suport a la hipertròfia muscular, és un candidat per augmentar lleugerament la ingesta recomanada.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"ca","translation":"El meu pes mitjà setmanal recent s'està movent en la direcció oposada al meu objectiu. En primer lloc, és un candidat per ajustar lleugerament la ingesta recomanada.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"ca","translation":"El meu pes mitjà setmanal recent ha anat disminuint ràpidament. Aquest és un candidat per augmentar una mica la ingesta recomanada per tal de procedir d'una manera raonable.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"ca","translation":"El meu pes mitjà setmanal recent ha augmentat ràpidament. Per tal de controlar el ritme d'augment, aquest és un candidat per reduir lleugerament la ingesta recomanada.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"ca","translation":"El valor més recent és inferior a 85 dBA. Si us plau, comproveu també la durada.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"ca","translation":"Últim rècord de temps mitjà {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"ca","translation":"rang relatiu de moviment","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"ca","translation":"consultar","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"ca","translation":"dormir","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"ca","translation":"Dormir {{value1}}Hora segura","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"ca","translation":"Son: {{value1}} hores","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"ca","translation":"son breu","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"ca","translation":"el son és una mica curt","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"ca","translation":"Com que no s'han obtingut les etapes del son, aquesta és una puntuació de referència basada en el temps total.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"ca","translation":"No s'han obtingut dades de son. No avalueu els valors no obtinguts com a 0.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"ca","translation":"Podeu comprovar els vostres nivells de son, recuperació i activitat alhora.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"ca","translation":"Descartar","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"ca","translation":"Precisió {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"ca","translation":"Si us plau, comproveu i deseu","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"ca","translation":"Canvis que es van confirmar","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"ca","translation":"Esperant la confirmació","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"ca","translation":"Memòries confirmades {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"ca","translation":"Elements de base científica {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"ca","translation":"Base científica, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"ca","translation":"Esdeveniment","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"ca","translation":"tipus","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"ca","translation":"S'ha carregat un producte desat al dispositiu.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"ca","translation":"Reinicieu el dispositiu i torneu-ho a provar.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"ca","translation":"Si el vostre objectiu és guanyar múscul, podeu considerar raonablement fer un entrenament més aquesta setmana.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"ca","translation":"Sobre {{value1}} minuts","review_note":""}

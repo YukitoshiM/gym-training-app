@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "fi", "translation": "AI-tili", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "fi", "translation": "{{value1}} krediittiä tällä kertaa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "fi", "translation": "Lisää krediittejä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "fi", "translation": "Saldo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "fi", "translation": "Käytä AI-krediittejä automaattiseen analyysiin", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "fi", "translation": "Ei käytetä krediittejä, raportit luodaan laitteen sisäisistä tiedoista.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "fi", "translation": "Krediitejä käytetään varattujen analyysien yhteydessä (viikoittain tai kuukausittain).", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "fi", "translation": "AI-krediitit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "fi", "translation": "Saldo tarkistetaan...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "fi", "translation": "Saldo: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "fi", "translation": "{{value1}} krediittiä vastaanotettu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "fi", "translation": "Osta krediittejä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "fi", "translation": "Jatka manuaalista kirjausta", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "fi", "translation": "Poistetaan kaikki laitteen tiedot ja BodyMode-tili. Kaikki jäljellä olevat ostokset ja bonukset menetetään, eikä niitä voi palauttaa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "fi", "translation": "Krediittihistoria", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "fi", "translation": "Saat krediittejä videon kautta tai osta tarvitsemasi määrä. Manuaalinen kirjaus on edelleen ilmainen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "fi", "translation": "Hae krediittejä mainosten avulla tai osta niitä. Manuaalinen kirjaus toimii edelleen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "fi", "translation": "Riittävästi AI-krediittejä ei ole", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "fi", "translation": "Kuukausittainen raportti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "fi", "translation": "Ei vanhenemista", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "fi", "translation": "{{value1}} AI-krediittiä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "fi", "translation": "Ostettavat tuotteet ovat parannosvaiheessa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "fi", "translation": "Palautuksen määrä on mukautettu, {{value1}} krediittiä lisättiin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "fi", "translation": "Krediittejä lisätty.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "fi", "translation": "Osto on hyväksymässä.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "fi", "translation": "Ostokrediitit eivät vanhene. Niitä ei voi siirtää tai vaihtaa rahaksi. Banner-mainoksia ei näy ostamisen jälkeen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "fi", "translation": "Oston tilaa ei voida tarkistaa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "fi", "translation": "App Store -ostosta ei voida tarkistaa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "fi", "translation": "Palautuksen säätö", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "fi", "translation": "Tänään saatavat mainosbonukset on lunastettu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "fi", "translation": "Videoiden tarkistus kestää kauemmin. Krediitiksi siirretään, kun tarkistus on valmis.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "fi", "translation": "Avaa AI-näyttö nähdäksesi uusimman saldon. Et tarvitse videon katsomista uudelleen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "fi", "translation": "Saat 5 krediittiä.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "fi", "translation": "Istunto on päättynyt. Kirjaudu uudelleen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "fi", "translation": "Kirjautunut Apple-tilillä.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "fi", "translation": "Rekisteröidy Appleen AI-näytöltä, niin saat ensimmäisen krediitin. Manuaalinen kirjaus toimii ilman rekisteröintiä.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "fi", "translation": "Käyttämällä AI-ominaisuuksia, rekisteröidy Appleen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "fi", "translation": "Rekisteröity...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "fi", "translation": "Rekisteröidy Appleen, niin saat 20 krediittiä ensimmäisenä. Manuaalinen kirjaus toimii ilman rekisteröintiä.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "fi", "translation": "Rekisteröidy Appleen, niin saat 20 krediittiä ensimmäisenä. Ei vaadi tilausta tai automaattista päivitystä.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "fi", "translation": "20 krediittiä rekisteröitymällä", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "fi", "translation": "Video-mainos", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "fi", "translation": "Järjestäjän lahja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "fi", "translation": "Osta", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "fi", "translation": "Aloitusbonuksen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "fi", "translation": "Aloita AI-valmentajan kanssa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "fi", "translation": "AI-luottoja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "fi", "translation": "Kokeile myöhemmin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "fi", "translation": "Ilmainen käyttö", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "fi", "translation": "Katso mainos ja saat 5 luottoa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "fi", "translation": "Viikoittainen raportti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

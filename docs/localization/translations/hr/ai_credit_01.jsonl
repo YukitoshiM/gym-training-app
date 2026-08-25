@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "hr", "translation": "AI račun", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "hr", "translation": "Koristite {{value1}} kredita", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "hr", "translation": "Dodajte kredite", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "hr", "translation": "Izmjena balansa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "hr", "translation": "Koristite AI kredite za automatsko izvješće", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "hr", "translation": "Ne trošite kredite, izvješće generirajte samo iz internih podataka.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "hr", "translation": "Koristite kredite za tjedno ili mjesečno izvješće prilikom izvršavanja rezervacije.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "hr", "translation": "AI krediti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "hr", "translation": "Provjera balansa", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "hr", "translation": "Saldo: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "hr", "translation": "{{value1}} kredita ste dobili.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "hr", "translation": "Kupite kredite", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "hr", "translation": "Nastavite s ručnim unosom podataka bez AI-a.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "hr", "translation": "Izbrisat ćete sve podatke i račun BodyMode. Ostali kupljeni krediti i nagrade će biti izgubljeni i ne mogu se vratiti.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "hr", "translation": "Povijest korištenja kredita", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "hr", "translation": "Možete dobiti kredite putem videa ili kupiti potrebnu količinu. Ručni unos podataka je besplatan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "hr", "translation": "Dobijte ih gledanjem oglasa ili kupite kredite. Ručni unos podataka možete nastaviti koristiti.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "hr", "translation": "Nedostaje AI kredita", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "hr", "translation": "Mjesečno izvješće", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "hr", "translation": "Nema isteka", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "hr", "translation": "{{value1}} AI kredita", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "hr", "translation": "Priprema kupenih proizvoda.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "hr", "translation": "Ajustirano povrat novca, dodano {{value1}} kredita.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "hr", "translation": "Dodato kredite.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "hr", "translation": "Naloga se čeka potvrda. Automatski će biti ažurirana nakon potvrde.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "hr", "translation": "Krediti za kupnju ne istječu. Ne mogu se prenositi ili prodavati. Nakon kupnje, oglasi neće biti prikazani.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "hr", "translation": "Ne možemo provjeriti status naloge.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "hr", "translation": "Ne možemo provjeriti kupnju u App Storeu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "hr", "translation": "Ajustiranje povrata novca", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "hr", "translation": "Dnevni nagradni program je već iskoristio.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "hr", "translation": "Potreban je vremen za pregled videa. Kredit će biti dodan nakon potvrde.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "hr", "translation": "Ponovno otvorite AI ekran da biste provjerili najnoviji iznos. Ne trebate ponovno gledati video.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "hr", "translation": "Primljeno 5 kredita.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "hr", "translation": "Vaš se sesija je istekla. Molimo, ponovno se prijavite.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "hr", "translation": "Prijava s Apple računa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "hr", "translation": "Registracija putem Apple-a vam omogućuje primanje prvih 20 kredita. Ručni zapis možete koristiti bez registracije.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "hr", "translation": "Za korištenje AI funkcija, registrirajte se putem Apple-a.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "hr", "translation": "Registracija...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "hr", "translation": "Registracija putem Apple-a vam omogućuje primanje prvih 20 kredita. Ručni zapis možete koristiti bez registracije.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "hr", "translation": "Registracija putem Apple-a vam omogućuje primanje prvih 20 kredita. Nećete imati mjesečne naknade ili automatsko nadogradnje.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "hr", "translation": "20 kredita pri registraciji", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "hr", "translation": "Video reklama", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "hr", "translation": "Dodato od administratora", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "hr", "translation": "Kupnja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "hr", "translation": "Bonus za prvi put", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "hr", "translation": "Počnite s AI trenerom", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "hr", "translation": "AI krediti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "hr", "translation": "Molimo, pokušajte kasnije.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "hr", "translation": "Neograničeno korištenje", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "hr", "translation": "Pogledajte video i dobijte 5 kredita", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "hr", "translation": "Tjedno izvješće", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

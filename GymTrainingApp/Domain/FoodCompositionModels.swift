@@ -35,10 +35,10 @@ enum FoodCompositionNutrient: String, Codable, Hashable {
 
     var displayName: String {
         switch self {
-        case .calories: "カロリー"
-        case .protein: "たんぱく質"
-        case .fat: "脂質"
-        case .carbs: "炭水化物"
+        case .calories: L10n.string("domain_catalog.4cdb07aaaf3c", fallback: "カロリー")
+        case .protein: L10n.string("domain_catalog.b1193c3dc300", fallback: "たんぱく質")
+        case .fat: L10n.string("domain_catalog.9ccfd9ce11b0", fallback: "脂質")
+        case .carbs: L10n.string("domain_catalog.73e7406bf6c3", fallback: "炭水化物")
         }
     }
 }
@@ -72,10 +72,10 @@ struct FoodCompositionItem: Codable, Hashable, Identifiable {
 
     var dataQualityNote: String? {
         if !unavailableNutrients.isEmpty {
-            return "未測定: \(unavailableNutrients.map(\.displayName).joined(separator: "・"))"
+            return L10n.string("domain_catalog.62cd183776b4", fallback: "未測定: {{value1}}", values: [String(describing: unavailableNutrients.map(\.displayName).joined(separator: "・"))])
         }
         if !traceNutrients.isEmpty {
-            return "微量: \(traceNutrients.map(\.displayName).joined(separator: "・"))"
+            return L10n.string("domain_catalog.38e39b744499", fallback: "微量: {{value1}}", values: [String(describing: traceNutrients.map(\.displayName).joined(separator: "・"))])
         }
         return nil
     }
@@ -129,12 +129,12 @@ final class FoodCompositionDatabase: @unchecked Sendable {
         guard !candidate.isEmpty else { return nil }
 
         let aliases = [
-            "白ごはん": "01088",
-            "白ご飯": "01088",
-            "ごはん": "01088",
-            "ご飯": "01088",
-            "炊いた白ごはん": "01088",
-            "炊いた白ご飯": "01088",
+            L10n.string("domain_catalog.6ce7d9cac229", fallback: "白ごはん"): "01088",
+            L10n.string("domain_catalog.46d395e1c0df", fallback: "白ご飯"): "01088",
+            L10n.string("domain_catalog.08b84157877f", fallback: "ごはん"): "01088",
+            L10n.string("domain_catalog.abdd5f5af45a", fallback: "ご飯"): "01088",
+            L10n.string("domain_catalog.9cce4fe3a016", fallback: "炊いた白ごはん"): "01088",
+            L10n.string("domain_catalog.566f35486eb5", fallback: "炊いた白ご飯"): "01088",
         ]
         if let sourceID = aliases[candidate] {
             return catalog.items.first { $0.id == sourceID }
@@ -163,11 +163,11 @@ final class FoodCompositionDatabase: @unchecked Sendable {
             message: "Bundled MEXT food composition database could not be loaded"
         )
         return FoodCompositionCatalog(
-            sourceName: "日本食品標準成分表（八訂）増補2023年",
+            sourceName: L10n.string("domain_catalog.cdf02b5e0616", fallback: "日本食品標準成分表（八訂）増補2023年"),
             sourceURL: "https://www.mext.go.jp/a_menu/syokuhinseibun/mext_00001.html",
             correctionDate: "2026-03-27",
-            basis: "可食部100g当たり",
-            attribution: "日本食品標準成分表（八訂）増補2023年から引用",
+            basis: L10n.string("domain_catalog.7d7297146ecd", fallback: "可食部100g当たり"),
+            attribution: L10n.string("domain_catalog.cf16f035c1eb", fallback: "日本食品標準成分表（八訂）増補2023年から引用"),
             items: []
         )
     }
@@ -236,10 +236,10 @@ struct MealCompositionItem: Codable, Hashable, Identifiable {
 
     var dataQualityNote: String? {
         if let unavailableNutrients, !unavailableNutrients.isEmpty {
-            return "未測定のため合計に含まれない項目: \(unavailableNutrients.map(\.displayName).joined(separator: "・"))"
+            return L10n.string("domain_catalog.399c25a67c14", fallback: "未測定のため合計に含まれない項目: {{value1}}", values: [String(describing: unavailableNutrients.map(\.displayName).joined(separator: "・"))])
         }
         if let traceNutrients, !traceNutrients.isEmpty {
-            return "微量を0として概算: \(traceNutrients.map(\.displayName).joined(separator: "・"))"
+            return L10n.string("domain_catalog.d9da629fef3f", fallback: "微量を0として概算: {{value1}}", values: [String(describing: traceNutrients.map(\.displayName).joined(separator: "・"))])
         }
         return nil
     }
@@ -301,8 +301,8 @@ struct MealNutritionResolver {
         draft = draft.reconciledFromItems()
         if matchedCount > 0 {
             let note = unresolvedNames.isEmpty
-                ? "全食品の栄養値を日本食品標準成分表から再計算しました。"
-                : "\(matchedCount)品の栄養値を日本食品標準成分表から再計算しました。未照合の食品はAI参考値です。"
+                ? L10n.string("domain_catalog.20465297f989", fallback: "全食品の栄養値を日本食品標準成分表から再計算しました。")
+                : L10n.string("domain_catalog.99b48c1f8791", fallback: "{{value1}}品の栄養値を日本食品標準成分表から再計算しました。未照合の食品はAI参考値です。", values: [String(describing: matchedCount)])
             draft.comment = draft.comment.isEmpty ? note : "\(draft.comment)\n\(note)"
         }
 
@@ -446,6 +446,20 @@ struct BarcodeFoodProductStore: Sendable {
         return (try? JSONDecoder().decode([BarcodeFoodProduct].self, from: data)) ?? []
     }
 
+    func replaceAll(with products: [BarcodeFoodProduct]) throws {
+        let normalized = products.map {
+            BarcodeFoodProduct(
+                code: Self.normalizedCode($0.code),
+                name: $0.name.trimmingCharacters(in: .whitespacesAndNewlines),
+                basisAmountGrams: max(0.1, $0.basisAmountGrams),
+                nutritionPerBasis: $0.nutritionPerBasis,
+                sourceDescription: $0.sourceDescription,
+                sourceUpdatedAt: $0.sourceUpdatedAt
+            )
+        }
+        try dataStore.set(try JSONEncoder().encode(normalized), forKey: Self.storageKey)
+    }
+
     private static func normalizedCode(_ code: String) -> String {
         code.filter(\.isNumber)
     }
@@ -456,6 +470,12 @@ struct DailyMealSuggestion: Identifiable, Equatable {
     var title: String
     var detail: String
     var rationale: String
+    var mealType: MealType? = nil
+    var foodItems: [String] = []
+
+    var canStartEntry: Bool {
+        mealType != nil && !foodItems.isEmpty
+    }
 }
 
 struct DailyMealSuggestionEngine {
@@ -467,14 +487,14 @@ struct DailyMealSuggestionEngine {
         let calorieRemaining = max(0, progress.goals.calories - progress.calories)
         let proteinRemaining = max(0, progress.goals.protein - progress.protein)
         let fatOver = max(0, progress.fat - progress.goals.fat)
-        var result: [DailyMealSuggestion] = []
+        var result: [DailyMealSuggestion] = [mealTemplate(progress: progress, goalType: goalType)]
 
         if proteinRemaining >= 20 {
             result.append(
                 DailyMealSuggestion(
-                    title: "高たんぱくの一品",
-                    detail: fatOver > 0 ? "鶏むね肉、白身魚、無脂肪ヨーグルト" : "魚、卵、鶏肉、豆腐から選ぶ",
-                    rationale: "たんぱく質があと約\(Int(proteinRemaining.rounded()))gです"
+                    title: L10n.string("domain_catalog.4bf874b42a7f", fallback: "高たんぱくの一品"),
+                    detail: fatOver > 0 ? L10n.string("domain_catalog.918a4c632091", fallback: "鶏むね肉、白身魚、無脂肪ヨーグルト") : L10n.string("domain_catalog.993f91638066", fallback: "魚、卵、鶏肉、豆腐から選ぶ"),
+                    rationale: L10n.string("domain_catalog.42ad467d3e9d", fallback: "たんぱく質があと約{{value1}}gです", values: [String(describing: Int(proteinRemaining.rounded()))])
                 )
             )
         }
@@ -482,20 +502,20 @@ struct DailyMealSuggestionEngine {
         if fatOver > 0 {
             result.append(
                 DailyMealSuggestion(
-                    title: "脂質を控えめに",
-                    detail: "揚げ物より、焼く・蒸す・茹でる料理",
-                    rationale: "脂質が目標を約\(Int(fatOver.rounded()))g上回っています"
+                    title: L10n.string("domain_catalog.7b7a324e3141", fallback: "脂質を控えめに"),
+                    detail: L10n.string("domain_catalog.64bc6a080ea2", fallback: "揚げ物より、焼く・蒸す・茹でる料理"),
+                    rationale: L10n.string("domain_catalog.4cdffe201223", fallback: "脂質が目標を約{{value1}}g上回っています", values: [String(describing: Int(fatOver.rounded()))])
                 )
             )
         } else if calorieRemaining >= 300 {
             let detail = goalType == .muscleGain
-                ? "ごはんとたんぱく源を組み合わせる"
-                : "主食・主菜・野菜を小さめに組み合わせる"
+                ? L10n.string("domain_catalog.1553cb74a7c5", fallback: "ごはんとたんぱく源を組み合わせる")
+                : L10n.string("domain_catalog.ea51e0101b7a", fallback: "主食・主菜・野菜を小さめに組み合わせる")
             result.append(
                 DailyMealSuggestion(
-                    title: "残りの食事目安",
+                    title: L10n.string("domain_catalog.596d696f6a77", fallback: "残りの食事目安"),
                     detail: detail,
-                    rationale: "摂取目安まで約\(Int(calorieRemaining.rounded()))kcalです"
+                    rationale: L10n.string("domain_catalog.e49d4e84a53b", fallback: "摂取目安まで約{{value1}}kcalです", values: [String(describing: Int(calorieRemaining.rounded()))])
                 )
             )
         }
@@ -503,9 +523,9 @@ struct DailyMealSuggestionEngine {
         if !progress.isMealCountAchieved {
             result.append(
                 DailyMealSuggestion(
-                    title: "次の記録",
-                    detail: "食べたら写真か食品DBですぐ記録",
-                    rationale: "今日の記録は\(progress.mealCount)/\(progress.goals.mealCount)回です"
+                    title: L10n.string("domain_catalog.f706d60d6a72", fallback: "次の記録"),
+                    detail: L10n.string("domain_catalog.d8aff8197bf1", fallback: "食べたら写真か食品DBですぐ記録"),
+                    rationale: L10n.string("domain_catalog.54a38292197e", fallback: "今日の記録は{{value1}}/{{value2}}回です", values: [String(describing: progress.mealCount), String(describing: progress.goals.mealCount)])
                 )
             )
         }
@@ -513,12 +533,72 @@ struct DailyMealSuggestionEngine {
         if result.isEmpty {
             result.append(
                 DailyMealSuggestion(
-                    title: "今のペースを維持",
-                    detail: "空腹と体調を見ながら無理なく続ける",
-                    rationale: "今日の栄養目安に近づいています"
+                    title: L10n.string("domain_catalog.433fc347a506", fallback: "今のペースを維持"),
+                    detail: L10n.string("domain_catalog.75b203866563", fallback: "空腹と体調を見ながら無理なく続ける"),
+                    rationale: L10n.string("domain_catalog.4444cbea1c84", fallback: "今日の栄養目安に近づいています")
                 )
             )
         }
         return Array(result.prefix(max(1, limit)))
+    }
+
+    private func mealTemplate(
+        progress: DailyNutritionProgress,
+        goalType: GoalType
+    ) -> DailyMealSuggestion {
+        let mealType = nextMealType(after: progress.mealCount)
+        let foods: [String]
+        let title: String
+
+        switch (mealType, goalType) {
+        case (.breakfast, .muscleGain), (.breakfast, .performance):
+            title = L10n.string("domain_catalog.meal_template_power_breakfast", fallback: "たんぱく質を取る朝食")
+            foods = ["オートミール 60g", "無糖ヨーグルト 200g", "バナナ 1本", "卵 2個"]
+        case (.breakfast, _):
+            title = L10n.string("domain_catalog.meal_template_light_breakfast", fallback: "軽く整える朝食")
+            foods = ["無糖ヨーグルト 150g", "オートミール 40g", "果物 100g", "卵 1個"]
+        case (.lunch, .diet), (.lunch, .bodyShape):
+            title = L10n.string("domain_catalog.meal_template_lean_lunch", fallback: "脂質を抑えた昼食")
+            foods = ["鶏むね肉 150g", "ごはん 120g", "野菜 200g"]
+        case (.lunch, .muscleGain), (.lunch, .performance):
+            title = L10n.string("domain_catalog.meal_template_power_lunch", fallback: "動ける昼食")
+            foods = ["鶏むね肉 180g", "ごはん 200g", "野菜 150g"]
+        case (.lunch, .health):
+            title = L10n.string("domain_catalog.meal_template_balanced_lunch", fallback: "バランス昼食")
+            foods = ["魚 120g", "ごはん 150g", "野菜 200g"]
+        case (.dinner, .muscleGain), (.dinner, .performance):
+            title = L10n.string("domain_catalog.meal_template_recovery_dinner", fallback: "回復を支える夕食")
+            foods = ["赤身肉または魚 180g", "ごはん 180g", "野菜 200g"]
+        case (.dinner, _):
+            title = L10n.string("domain_catalog.meal_template_balanced_dinner", fallback: "整える夕食")
+            foods = ["魚または豆腐 150g", "ごはん 120g", "野菜 200g"]
+        case (.snack, .muscleGain), (.snack, .performance):
+            title = L10n.string("domain_catalog.meal_template_protein_snack", fallback: "たんぱく質の間食")
+            foods = ["無糖ヨーグルト 200g", "バナナ 1本"]
+        case (.snack, _):
+            title = L10n.string("domain_catalog.meal_template_light_snack", fallback: "軽い間食")
+            foods = ["無糖ヨーグルト 150g", "果物 100g"]
+        }
+
+        return DailyMealSuggestion(
+            title: title,
+            detail: foods.joined(separator: L10n.string("domain_catalog.meal_template_separator", fallback: "・")),
+            rationale: L10n.string(
+                "domain_catalog.meal_template_rationale",
+                fallback: "{{value1}}の目標と今日の残りから選びました",
+                values: [goalType.displayName]
+            ),
+            mealType: mealType,
+            foodItems: foods
+        )
+    }
+
+    private func nextMealType(after mealCount: Int) -> MealType {
+        switch mealCount {
+        case ..<1: .breakfast
+        case 1: .lunch
+        case 2: .dinner
+        default: .snack
+        }
     }
 }

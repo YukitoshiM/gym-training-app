@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "gu", "translation": "AI એકાઉન્ટ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "gu", "translation": "આ વખતે {{value1}} ક્રેડિટ વપરાય છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "gu", "translation": "ક્રેડિટ ઉમેરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "gu", "translation": "બૅલેન્સમાં ફેરફાર કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "gu", "translation": "AI ક્રેડિટનો ઉપયોગ કરીને આપોઆપ રિપોર્ટ બનાવો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "gu", "translation": "ક્રેડિટનો ઉપયોગ કરશો નહીં, ફક્ત ઉપકરણમાંના રેકોર્ડ પરથી સારાંશ મેળવો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "gu", "translation": "જગ્યા માટે રિપોર્ટ બનાવતી વખતે અઠવાડિક અથવા માસિક ક્રેડિટનો ઉપયોગ કરો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "gu", "translation": "AI ક્રેડિટ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "gu", "translation": "બૅલેન્સ તપાસવામાં આવી રહ્યું છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "gu", "translation": "બૅલેન્સ {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "gu", "translation": "{{value1}} ક્રેડિટ મળ્યા.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "gu", "translation": "ક્રેડિટ ખરીદો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "gu", "translation": "AI નો ઉપયોગ કર્યા વગર ચાલુ રાખો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "gu", "translation": " ઉપકરણમાંના તમામ રેકોર્ડ અને BodyMode એકાઉન્ટને કાઢી નાખો. બાકી રહેલી ખરીદી અને બોનસ ક્રેડિટ પણ ગુમાવશો, અને તેને પાછી મેળવી શકાશે નહીં.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "gu", "translation": "ક્રેડિટનો ઇતિહાસ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "gu", "translation": "તમે વિડિયો દ્વારા ક્રેડિટ મેળવી શકો છો અથવા જરૂર મુજબ ખરીદી કરી શકો છો. મેન્યુઅલ રેકોર્ડિંગ મફતમાં વાપરી શકાય છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "gu", "translation": "જાહેરાત જોઈને મેળવો અથવા ક્રેડિટ ખરીદો. મેન્યુઅલ રેકોર્ડિંગનો ઉપયોગ કરી શકાય છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "gu", "translation": "AI ક્રેડિટ પૂરતી નથી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "gu", "translation": "માસિક રિપોર્ટ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "gu", "translation": "મર્યાદા નથી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "gu", "translation": "{{value1}} AI ક્રેડિટ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "gu", "translation": "ખરીદીની વસ્તુઓ તૈયાર થઈ રહી છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "gu", "translation": "કાયદાને સમાયોજિત કરવામાં આવી છે અને {{value1}} ક્રેડિટ ઉમેરવામાં આવી છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "gu", "translation": "ક્રેડિટ ઉમેરવામાં આવી છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "gu", "translation": "ખરીદીની પ્રક્રિયા સમતલ થઈ રહી છે. પૂર્ણ થયા પછી આપોઆપ પ્રતિબિંબિત થશે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "gu", "translation": "ખરીદી ક્રેડિટ સમાપ્ત થતી નથી. ટ્રાન્સફર અથવા વેચાણ શક્ય નથી. ખરીદ્યા પછી પણ જાહેરાતો દેખાશે નહીં.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "gu", "translation": "ખરીદીની સ્થિતિ ચકાસી શકી નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "gu", "translation": "App Store પરથી ખરીદી ચકાસી શકી નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "gu", "translation": "ખરીદી પરત કરવાની પ્રક્રિયામાં ફેરફાર", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "gu", "translation": "આજેની જાહેરાત માટેના પુરસ્કાર પ્રાપ્ત થઈ ગયા છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "gu", "translation": "વિડિઓ જોવા માટે સમય લાગી રહ્યો છે. ચકાસ્યા પછી ક્રેડિટમાં પ્રતિબિંબિત થશે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "gu", "translation": "AI સ્ક્રીન ફરીથી ખોલો, જેથી નવી સપાટી જોઈ શકાય. તમારે ફરીથી વિડિઓ જોવાની જરૂર નથી.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "gu", "translation": "5 ક્રેડિટ મળ્યા છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "gu", "translation": "સેશન સમય સમાપ્ત થઈ ગયો છે. ફરીથી સાઇન ઇન કરો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "gu", "translation": "તમે Apple એકાઉન્ટથી સાઇન ઇન કર્યું છે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "gu", "translation": "AI સ્ક્રીન પરથી Apple માં રજીસ્ટર કરવાથી, તમને પ્રથમ ક્રેડિટ મળશે. તમે મેન્યુઅલી પણ ઉપયોગ કરી શકો છો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "gu", "translation": "AI સુવિધાઓનો ઉપયોગ કરવા માટે, તમારે Apple માં રજીસ્ટર કરવું પડશે.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "gu", "translation": "રજીસ્ટર થઈ રહ્યો છે", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "gu", "translation": "Apple માં રજીસ્ટર કરવાથી, તમને પ્રથમ 20 ક્રેડિટ મળશે. તમે મેન્યુઅલી પણ ઉપયોગ કરી શકો છો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "gu", "translation": "Apple માં રજીસ્ટર કરવાથી, તમને પ્રથમ 20 ક્રેડિટ મળશે. કોઈ ચુકવણી અથવા આપોઆપ અપડેટ થશે નહીં.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "gu", "translation": "સાઇન અપ કરીને 20 ક્રેડિટ મેળવો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "gu", "translation": "વિડિયો જાહેરાત", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "gu", "translation": "સંચાલક દ્વારા આપેલ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "gu", "translation": "ખરીદી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "gu", "translation": "પ્રથમ વખત માટે વિશેષ ઓફર", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "gu", "translation": "AI ટ્રેનર શરૂ કરો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "gu", "translation": "AI ક્રેડિટ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "gu", "translation": "લગભગ થો સમય પછી ફરી પ્રયાસ કરો.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "gu", "translation": "ઉપયોગ માટે કોઈ મર્યાદા નથી", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "gu", "translation": "વિડિયો જોઈને 5 ક્રેડિટ મેળવો", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "gu", "translation": "સાપ્તાહિક અહેવાલ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

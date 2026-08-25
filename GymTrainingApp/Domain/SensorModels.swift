@@ -30,12 +30,12 @@ enum HealthAccessState: Equatable {
 
     var title: String {
         switch self {
-        case .unavailable: "この端末では利用できません"
-        case .notRequested: "未連携"
-        case .requesting: "連携を確認中"
-        case .ready: "連携済み"
-        case .deniedOrLimited: "一部データを取得できません"
-        case .failed: "取得に失敗しました"
+        case .unavailable: L10n.string("domain_catalog.c6670e068de2", fallback: "この端末では利用できません")
+        case .notRequested: L10n.string("domain_catalog.846cc0e68461", fallback: "未連携")
+        case .requesting: L10n.string("domain_catalog.950746d7a474", fallback: "連携を確認中")
+        case .ready: L10n.string("domain_catalog.729f872dbf2d", fallback: "連携済み")
+        case .deniedOrLimited: L10n.string("domain_catalog.e33e990219bc", fallback: "一部データを取得できません")
+        case .failed: L10n.string("domain_catalog.eeda02c01499", fallback: "取得に失敗しました")
         }
     }
 }
@@ -119,6 +119,7 @@ struct DailyHealthSnapshot: Equatable {
 
 struct OutdoorWorkoutRouteSummary: Equatable {
     var workoutID: UUID
+    var activity: OutdoorCardioActivity
     var startedAt: Date
     var durationSeconds: Double
     var distanceKilometers: Double?
@@ -184,9 +185,9 @@ struct ReadinessAssessment: Equatable {
 
         var title: String {
             switch self {
-            case .good: "良好"
-            case .moderate: "通常"
-            case .recover: "回復優先"
+            case .good: L10n.string("domain_catalog.195d9d15f53f", fallback: "良好")
+            case .moderate: L10n.string("domain_catalog.08e62f5e0c54", fallback: "通常")
+            case .recover: L10n.string("domain_catalog.cb08534c4b77", fallback: "回復優先")
             }
         }
     }

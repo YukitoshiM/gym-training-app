@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"te","translation":"{{value1}} అంశాలు","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"te","translation":"{{value1}}: నిర్ణయించిన తేదీన జిమ్ సందర్శన లేదా వర్కౌట్ రికార్డు కనబడలేదు.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"te","translation":"ఒక్కో సెషన్ వ్యవధి","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"te","translation":"రోజువారీ పోషక లక్ష్యాలు","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"te","translation":"3 వర్కౌట్లలో కదలికలను నేర్చుకోండి","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"te","translation":"AIతో వర్కౌట్ రూపొందించండి","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"te","translation":"AI లేకపోయినా ఈరోజు సిఫార్సులు అందుబాటులో ఉంటాయి.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"te","translation":"మీ ప్రస్తుత స్థితి గురించి AIని అడగండి","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"te","translation":"AIని అడగండి","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"te","translation":"AIకి పంపే డేటా","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"te","translation":"AI కోచ్ మీరు ఎంచుకున్న పరికరాలతో మాత్రమే వర్కౌట్ ప్లాన్‌లను రూపొందిస్తుంది. కనీసం ఒక పరికరం ఎల్లప్పుడూ ఎంపికై ఉంటుంది.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"te","translation":"AI సర్వర్‌తో వారపు ఫీడ్‌బ్యాక్ రూపొందించండి","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"te","translation":"AI సర్వర్ కనెక్ట్ అయింది","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"te","translation":"AI మోడల్ సిద్ధమవుతోంది","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"te","translation":"AI డ్రాఫ్ట్‌లు మరియు వారపు ఫీడ్‌బ్యాక్ అందుబాటులో లేవు, కానీ చేతితో చేసిన ఎంట్రీలను సేవ్ చేయవచ్చు.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"te","translation":"AI డ్రాఫ్ట్‌లు మరియు వారపు ఫీడ్‌బ్యాక్ ఉపయోగించడానికి AI ఫీచర్లను ఆన్ చేసి, తర్వాత కనెక్షన్‌ను పరీక్షించండి.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"te","translation":"AI అప్‌డేట్ {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"te","translation":"AI కనెక్షన్","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"te","translation":"AI ఫీచర్లు ఆఫ్‌లో ఉన్నాయి","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"te","translation":"AI ఫీచర్లను ఉపయోగించండి","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"te","translation":"AI తనిఖీ జరుగుతోంది","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"te","translation":"AI తనిఖీ చేసింది","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"te","translation":"AI సెట్టింగ్‌లను డిఫాల్ట్‌కు రీసెట్ చేయండి","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"te","translation":"API కీ","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"te","translation":"API కీ తక్కువ కాలం ఉండే టోకెన్లు పొందడానికి మాత్రమే ఉపయోగించబడుతుంది; సాధారణ AI అభ్యర్థనలతో పంపబడదు.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"te","translation":"API సర్వర్ స్పందిస్తోంది, కానీ అవసరమైన మోడల్ అందుబాటులో లేదు.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"te","translation":"API సర్వర్ స్పందిస్తోంది, కానీ భోజనం మరియు రిపోర్టులకు సహాయక మోడల్ అందుబాటులో లేదు.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"te","translation":"API సర్వర్ స్పందిస్తోంది, కానీ ఫోటో ఆధారిత కేలరీ అంచనా అందుబాటులో లేదు.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"te","translation":"Apple Health వర్కౌట్లు","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"te","translation":"వర్కౌట్‌ను Apple Watchకు సింక్ చేయండి","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"te","translation":"Apple Watch లాగ్‌లు","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"te","translation":"Apple Watch మరియు సెన్సర్లు","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"te","translation":"BodyMode ప్రకటన రిపోర్టు","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"te","translation":"BodyMode ప్రారంభించండి","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"te","translation":"BodyMode నిర్వహణ AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"te","translation":"Google ప్రకటన డేటా వినియోగం","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"te","translation":"Google గోప్యతా విధానం","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"te","translation":"Health షేరింగ్‌ను తనిఖీ చేయండి","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"te","translation":"Apple Watchతో రెప్స్‌ను అంచనా వేయండి","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"te","translation":"Apple Watch హ్యాప్టిక్ నోటిఫికేషన్లు","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"te","translation":"{{value1}} / {{value2}} పూర్తైంది","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"te","translation":"{{value1}} / {{value2}} సాధించారు","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"te","translation":"{{value1}}/6 పూర్తైంది","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"te","translation":"{{value1}}/{{value2}} రెప్స్","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"te","translation":"{{value1}}{{value2}} రెప్స్","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"te","translation":"{{value1}} నుంచి సిఫార్సు","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"te","translation":"{{value1}} తనిఖీ చేస్తోంది · సిఫార్సు అందుబాటులో ఉంది","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"te","translation":"{{value1}} తనిఖీ చేసింది","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"te","translation":"{{value1}} కోసం ఈరోజు ఈ సిఫార్సు ఎందుకు ఇచ్చారో వివరించి, మార్పులను సూచించండి.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"te","translation":"{{value1}}ను అడగండి","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"te","translation":"{{value1}} సిఫార్సు","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"te","translation":"{{value1}} అంచనా","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"te","translation":"{{value1}} ప్రాథమిక సిఫార్సు","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"te","translation":"{{value1}} తనిఖీ కోసం వేచి ఉంది · సిఫార్సు అందుబాటులో ఉంది","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"te","translation":"{{value1}} వారపు రిపోర్టు","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"te","translation":"పికర్‌తో {{value1}} సెట్ చేయండి","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"te","translation":"{{value1}}ను మరో చర్యతో మార్చండి","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"te","translation":"{{value1}} అందుబాటులో ఉంది. {{value2}} కోచ్ రకాలు తనిఖీ చేయబడ్డాయి.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"te","translation":"{{value1}}ను సిఫార్సు చేసిన కారణం","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"te","translation":"{{value1}}ను తెరవండి","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"te","translation":"{{value1}} సెట్లు","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"te","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"te","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"te","translation":"{{value1}} · {{value2}} అప్‌డేట్ అయింది","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"te","translation":"{{value1}} · {{value2}} పరికర రకాలు","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"te","translation":"{{value1}} · వారానికి {{value2}} రోజులు","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"te","translation":"{{value1}} అంశాలు","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"te","translation":"{{value1}} సార్లు","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"te","translation":"{{value1}} పూర్తయ్యాయి","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"te","translation":"{{value1}} వ్యాయామాలు","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"te","translation":"{{value1}} వ్యాయామాలు / {{value2}} సెట్లు","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"te","translation":"ఇక నుంచి BodyMode చూసుకుంటుంది. ప్రతి రోజు గరిష్ఠంగా మూడు చర్యలను సిఫార్సు చేస్తుంది.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"te","translation":"అంచనా విశ్వసనీయతను మెరుగుపరిచే డేటా","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"te","translation":"సిఫార్సు చేసిన కోచ్‌ను వర్తింపజేయండి","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"te","translation":"మీ రోజును ఇక్కడ ప్రారంభించండి","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"te","translation":"ఈ వర్కౌట్‌ను ప్రారంభించండి","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"te","translation":"ఈ లక్ష్యాన్ని ఉపయోగించండి","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"te","translation":"ఈ లక్ష్యానికి ట్రైనర్","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"te","translation":"ఈ చర్యను ఎంచుకున్న కారణం","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"te","translation":"అన్ని కోచ్‌లు","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"te","translation":"ఇతర","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"te","translation":"ప్రోటీన్","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"te","translation":"ఇది చేయలేనివి","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"te","translation":"మొదట పరికరంలోని రికార్డుల నుంచి రూపొందించబడుతుంది; అవసరమైనప్పుడు మాత్రమే AI సర్దుబాటు చేస్తుంది.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"te","translation":"తరచుగా ఉపయోగించే వర్కౌట్‌ను సేవ్ చేయండి","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"te","translation":"కేలరీలు","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"te","translation":"కేలరీలు / మ్యాక్రోలు","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"te","translation":"కేలరీ అంచనా మోడల్ సిద్ధమవుతోంది","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"te","translation":"రద్దు చేయండి","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"te","translation":"త్వరిత రికార్డు","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"te","translation":"సర్వర్ URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"te","translation":"నేను జిమ్‌కు చేరుకున్నాను","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"te","translation":"జిమ్ సందర్శనలు","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"te","translation":"జిమ్ సందర్శనలను ఆటోమేటిక్‌గా రికార్డ్ చేయండి","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"te","translation":"దాటవేయండి","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"te","translation":"సెన్సర్లు అందుబాటులో లేకపోయినా బరువు, రెప్స్ మరియు RPEని చేతితో నమోదు చేయవచ్చు. తక్కువ-పవర్ శాంప్లింగ్ కదలిక అంచనాల అప్‌డేట్ తరచుదనాన్ని తగ్గిస్తుంది.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"te","translation":"పరీక్ష ప్రకటన","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"te","translation":"డేటా","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"te","translation":"డేటా సంపూర్ణత {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"te","translation":"ట్రైనర్లు: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"te","translation":"వర్కౌట్","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"te","translation":"3 వర్కౌట్లు పూర్తి చేయండి","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"te","translation":"వర్కౌట్లను తెరవండి","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"te","translation":"వర్కౌట్ ప్రారంభించండి","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"te","translation":"వెర్షన్: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"te","translation":"వ్యక్తిగతీకరించనిది","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"te","translation":"వ్యక్తిగతీకరణ ఆఫ్‌లో ఉంది","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"te","translation":"ఫ్రీ వర్కౌట్","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"te","translation":"గోప్యత","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"te","translation":"ప్రొఫైల్","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"te","translation":"సహాయం","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"te","translation":"హోమ్","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"te","translation":"మీ వర్కౌట్లు ఇక్కడ ఉన్నాయి","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"te","translation":"వర్కౌట్‌ను ఎంచుకోండి లేదా ప్రారంభించండి","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"te","translation":"Mail వంటి పంపే గమ్యాన్ని ఎంచుకుని రిపోర్టును BodyMode Supportకు పంపండి. రిపోర్టులో శరీర లేదా ఆరోగ్య రికార్డులు ఉండవు.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"te","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"te","translation":"అభ్యంతరకరమైన విషయం","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"te","translation":"తెలియని లోపం","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"te","translation":"అనుచితమైన విషయం","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"te","translation":"అనుచిత ప్రకటనను రిపోర్ట్ చేయండి","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"te","translation":"నిర్ణయించిన వర్కౌట్ కనబడలేదు","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"te","translation":"ఈసారి మార్చవద్దు","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"te","translation":"ఈసారి మార్పు లేదు","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"te","translation":"ఈరోజు: {{value1}} · {{value2}} సెట్లు","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"te","translation":"ఈరోజు నుంచి మళ్లీ నేర్చుకోవడం ప్రారంభించండి","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"te","translation":"ఈరోజు 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"te","translation":"ఈరోజు 3 సిద్ధమవుతున్నాయి","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"te","translation":"ఈరోజు వర్కౌట్","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"te","translation":"ఈరోజు వర్కౌట్‌ను పూర్తి చేయండి","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"te","translation":"ఈరోజు వర్కౌట్ చేయండి","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"te","translation":"ఈరోజు వర్కౌట్‌ను ప్రారంభించండి","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"te","translation":"ఈరోజు ఎంట్రీలు","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"te","translation":"ఈరోజు సిఫార్సు","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"te","translation":"ఈరోజు స్థితి","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"te","translation":"ఈరోజు రికార్డు","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"te","translation":"ఈరోజు సిద్ధత","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"te","translation":"ఈరోజు ప్రగతి","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"te","translation":"ఈరోజుకు తరలించండి","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"te","translation":"ఈరోజు చర్యలు ఇక్కడ ఉన్నాయి","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"te","translation":" అంశాలు","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"te","translation":"విశ్రాంతి","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"te","translation":"విశ్రాంతి సమయం","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"te","translation":"పికర్‌తో విశ్రాంతి సమయాన్ని సెట్ చేయండి","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"te","translation":"ప్రగతి ఫోటోలు","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"te","translation":"శరీర నిర్మాణం","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"te","translation":"బరువు","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"te","translation":"శరీర బరువు {{value1}} + అదనపు బరువు {{value2}} = సూచన లోడ్ {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"te","translation":"శరీర బరువు {{value1}} - సహాయం {{value2}} = సూచన లోడ్ {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"te","translation":"బరువు · ఐచ్ఛికం","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"te","translation":"కొనసాగించగలిగే వేగంతో బరువు మరియు నడుము కొలతను మెరుగుపరచండి","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"te","translation":"బరువు · నడుము · భోజనం · ప్రగతి ఫోటోలు","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"te","translation":"మీ లక్ష్యం ఏమిటి?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"te","translation":"రూపొందించండి","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"te","translation":"వినియోగదారు మార్గదర్శిని","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"te","translation":"అందుబాటులో ఉన్న పరికరాలతో వర్కౌట్లు రూపొందిస్తాము","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"te","translation":"అందుబాటులో ఉన్న పరికరాలు","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"te","translation":"మీరు ఉపయోగించే ఫీచర్ల రకాలు మాత్రమే పరికరంలో సేవ్ అవుతాయి. బరువు, ఫోటోలు, భోజన వివరాలు, హృదయ స్పందన, స్థానం మరియు నోట్లు రికార్డ్ చేయబడవు లేదా ఆటోమేటిక్‌గా పంపబడవు.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"te","translation":"సేవ్ చేయండి","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"te","translation":"మీ సేవ్ చేసిన రికార్డులను ఉపయోగించి తనిఖీ చేయబడింది.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"te","translation":"ఆరోగ్య రికార్డులను ప్రకటన డేటా నుంచి వేరుగా ఉంచండి","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"te","translation":"ఇప్పుడు కొన్ని విషయాలను రికార్డ్ చేసి, తర్వాత అన్నింటినీ ఒకేసారి సమీక్షించండి.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"te","translation":"పూర్తైంది","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"te","translation":"మొత్తం డేటాను తొలగించాలా?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"te","translation":"మొత్తం డేటాను తొలగించండి","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"te","translation":"అన్ని రికార్డులను JSONగా ఎగుమతి చేయండి","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"te","translation":"ఫుల్-బాడీ వర్కౌట్‌తో ప్రారంభించండి","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"te","translation":"ఫోటో","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"te","translation":"ఫోటోను వెంటనే విశ్లేషించండి","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"te","translation":"ఫోటోలు మరియు కొలతలతో మీ ప్రగతిని ట్రాక్ చేయండి","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"te","translation":"ఫోటోలు మరియు కొలతలు ఇక్కడ ఉన్నాయి","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"te","translation":"ఫోటోలు మరియు కొలతలను రికార్డ్ చేయండి","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"te","translation":"ఫోటో తీయండి","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"te","translation":"శరీర ఆకృతి, నడుము మరియు కండరాల సమతుల్యాన్ని మెరుగుపరచండి","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"te","translation":" నిమిషాలు","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"te","translation":"నిమి:సెకను","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"te","translation":"ప్రారంభ స్థాయి వర్కౌట్‌ను రూపొందించండి","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"te","translation":"అంచనా వివరాలను చూడండి","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"te","translation":"మరో చర్యను ఎంచుకోండి","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"te","translation":"ఏ పరికరాలు అందుబాటులో ఉన్నాయి?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"te","translation":"వినియోగ విశ్లేషణను షేర్ చేయండి","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"te","translation":"వినియోగ డేటాను తొలగించండి","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"te","translation":"వినియోగ డేటాను ఎగుమతి చేయండి","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"te","translation":"సలహా ప్రాధాన్యత సమతుల్యం","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"te","translation":"కదలిక","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"te","translation":"ఉపయోగించిన సమాచారం","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"te","translation":"సమ్మతి స్థితిని తనిఖీ చేస్తున్నారు","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"te","translation":"ఇది ఎవరి కోసం","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"te","translation":"పరికరం లేదా కండరాల సమూహం ఆధారంగా ఎంచుకోండి","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"te","translation":" రెప్స్","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"te","translation":"రికవరీ","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"te","translation":"రెప్స్","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"te","translation":"పికర్‌తో రెప్స్‌ను సెట్ చేయండి","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"te","translation":"స్థిర పరీక్ష ప్రకటన","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"te","translation":"ప్రారంభించడం","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"te","translation":"ప్రాథమిక సమాచారం · ఐచ్ఛికం","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"te","translation":"రిపోర్టును పంపండి","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"te","translation":"రిపోర్ట్ చేయడానికి కారణం","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"te","translation":"మార్పులను ఇక్కడ ట్రాక్ చేయండి","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"te","translation":"ట్రాక్ చేయాల్సిన కొలతలను ఎంచుకోండి","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"te","translation":"మార్చండి","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"te","translation":"మార్పుల చరిత్ర","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"te","translation":"ప్రారంభించండి","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"te","translation":"నేర్చుకోవడం నిలిపివేయబడింది. మీ పాత రికార్డులు తొలగించబడలేదు.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"te","translation":"పూర్తైంది","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"te","translation":"{{value1}} పూర్తైంది","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"te","translation":"పూర్తైంది","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"te","translation":"పూర్తైనట్లు గుర్తించండి","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"te","translation":"పూర్తైంది","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"te","translation":"చేయలేదు","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"te","translation":"చేయండి","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"te","translation":"మీరు ఎక్కువగా చేస్తే తదుపరి దశ మరింత స్పష్టమవుతుంది","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"te","translation":"మీ ఫలితాలు తదుపరి AI సిఫార్సును మెరుగుపరుస్తాయి","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"te","translation":"విస్తరించబడింది","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"te","translation":"చరిత్ర","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"te","translation":" సంవత్సరాలు","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"te","translation":"వయస్సుకు తగినది కాదు","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"te","translation":"ప్రకటన ID సెట్ చేయబడలేదు","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"te","translation":"ప్రకటనలు మరియు డేటా వినియోగం","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"te","translation":"ప్రకటన గోప్యతా సెట్టింగ్‌లు","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"te","translation":"ప్రకటన సమ్మతి ఇవ్వబడలేదు.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"te","translation":"ప్రకటనలో కనిపించిన ఉత్పత్తి పేరు లేదా సమస్య","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"te","translation":"ప్రకటనలు iPhoneలో మాత్రమే కనిపిస్తాయి. ఆరోగ్యం, భోజనం, ఫోటో మరియు BodyMode స్థానం రికార్డులు ప్రకటనలను ఎంచుకోవడానికి ఉపయోగించబడవు.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"te","translation":"ప్రకటనను రిపోర్ట్ చేయండి","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"te","translation":"ప్రకటన లోడ్ అవుతోంది","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"te","translation":"ప్రకటనలు మరియు గోప్యత","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"te","translation":"ప్రకటన ప్రదాత","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"te","translation":"ప్రకటనలను అందించడానికి Google మీ IP చిరునామా, పరికరం మరియు యాప్ ప్రాథమిక సమాచారం, SDK నిర్ధారణ మరియు పనితీరు డేటా, అలాగే ప్రకటన ప్రదర్శన మరియు పరస్పర చర్య డేటాను స్వీకరిస్తుంది. IP చిరునామా నుంచి సుమారు స్థానం అంచనా వేయబడవచ్చు. BodyModeలో రికార్డ్ చేసిన బరువు, హృదయ స్పందన, నిద్ర, భోజనం, ఫోటోలు, వర్కౌట్లు, లక్ష్యాలు, GPS డేటా మరియు జిమ్ స్థానాలు ప్రకటన అభ్యర్థనల్లో చేర్చబడవు.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"te","translation":"హృదయ స్పందన మరియు RPEతో విశ్రాంతిని సర్దుబాటు చేయండి","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"te","translation":"హృదయ స్పందన మరియు కదలిక","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"te","translation":"లింగం","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"te","translation":"లింగం · ఐచ్ఛికం","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"te","translation":"వెనుకకు","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"te","translation":"చేతితో రికార్డ్ చేయడం ఇంకా అందుబాటులో ఉంది.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"te","translation":"కోచ్: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"te","translation":"కేటాయించిన కోచ్","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"te","translation":"మీ కోచ్‌ను అడగండి","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"te","translation":"కోచ్ విధానం","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"te","translation":"కోచ్ రకాన్ని మార్చితే AI ఏ రికార్డులకు ప్రాధాన్యత ఇస్తుందో మరియు ఇచ్చే సిఫార్సులు మారుతాయి.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"te","translation":"కేటాయించిన ట్రైనర్: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"te","translation":"పేర్కొనలేదు","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"te","translation":"కనెక్షన్‌ను పరీక్షించండి","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"te","translation":"iPhone లేదా Apple Watchలో సిఫార్సు చేసిన వర్కౌట్‌ను అనుసరించండి.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"te","translation":"సిఫార్సు నేర్చుకోవడాన్ని మాత్రమే రీసెట్ చేయండి","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"te","translation":"అంతరాయం కలిగించని బ్యానర్ ప్రకటనలు మాత్రమే","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"te","translation":"కొలతలను రికార్డ్ చేయండి","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"te","translation":" రోజులు","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"te","translation":"తేదీ ఆధారంగా సమీక్షించండి","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"te","translation":"రోజువారీ కార్యకలాపం","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"te","translation":"రోజువారీ సిఫార్సు తనిఖీ","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"te","translation":"ఎగుమతి చేయలేకపోయింది","review_note":""}

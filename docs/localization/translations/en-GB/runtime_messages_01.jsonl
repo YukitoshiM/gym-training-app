@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"en-GB","translation":"Received a response from the AI trainer.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.83e511abe728","target_locale":"en-GB","translation":"Could not send to the AI trainer.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"en-GB","translation":"This is an activity that has been synced from Apple Watch.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"en-GB","translation":"You can check your answers by opening BodyMode.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.7439490555e5","target_locale":"en-GB","translation":"{{value1}} / {{value2}} achieved. Let's continue at a comfortable pace.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"en-GB","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.0d127efd525d","target_locale":"en-GB","translation":"Do not re-arrange {{value1}}. Please treat this as your personal choice.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"en-GB","translation":"{{value1}} minutes","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"en-GB","translation":"{{value1}} steps","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"en-GB","translation":"{{value1}} meals","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"en-GB","translation":"This device cannot use location detection.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.f989482e8b85","target_locale":"en-GB","translation":"I have set this activity to \"Not Today\".","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"en-GB","translation":"One thing at a time is enough.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"en-GB","translation":"Why am I doing this?","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"en-GB","translation":"Assist exercise","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"en-GB","translation":"Please open the app and try again.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"en-GB","translation":"The gym location has been deleted.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"en-GB","translation":"Gym arrival recorded.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"en-GB","translation":"Detecting arrival near the gym.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"en-GB","translation":"Automatic gym detection is turned off.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.48a731fa2573","target_locale":"en-GB","translation":"Gym departure recorded.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"en-GB","translation":"Dumbbell bench press","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"en-GB","translation":"Dark","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"en-GB","translation":"Chin-ups","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"en-GB","translation":"Dip","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"en-GB","translation":"Dips","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"en-GB","translation":"I'm continuing my training. Increasing recovery records will improve the accuracy of next week's adjustments.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"en-GB","translation":"Black Champagne","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.ec6df6460320","target_locale":"en-GB","translation":"My Gym","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"en-GB","translation":"The user has changed their today's activities.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"en-GB","translation":"I have recreated today's suggestions based on the user's actions.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"en-GB","translation":"Light","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.381a8ceae643","target_locale":"en-GB","translation":"Royal Cobalt","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"en-GB","translation":"Up","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"en-GB","translation":"Down","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"en-GB","translation":"Once today","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"en-GB","translation":"I have achieved all three for today. This will be reflected in tomorrow's suggestions.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"en-GB","translation":"Today's Menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.b9096002d34b","target_locale":"en-GB","translation":"Today's suggestions have been updated","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.2c69e0809480","target_locale":"en-GB","translation":"Location is not set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"en-GB","translation":"Location permission has not been granted. Manual check-in is available.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.fef93188027e","target_locale":"en-GB","translation":"Please try again after location accuracy is stable.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"en-GB","translation":"Please register your current location as a gym first.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"en-GB","translation":"Beginner Full Body Start","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"en-GB","translation":"I was unable to resend the previous AI trainer message.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.dccb743b791b","target_locale":"en-GB","translation":"Please send the same message again.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"en-GB","translation":"Prioritize recovery","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.292ff42d336e","target_locale":"en-GB","translation":"If you do not want to change it, enter an empty string.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"en-GB","translation":"Pull-ups","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"en-GB","translation":"Updated recovery data and adjusted today's recommendations to the safer side.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"en-GB","translation":"Updated new records.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.c9091516c87d","target_locale":"en-GB","translation":"Existing ID","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.79540619d261","target_locale":"en-GB","translation":"Existing or required category","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"en-GB","translation":"I have registered my local gym as my current location.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"en-GB","translation":"Unable to obtain current location.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.aae5c414579e","target_locale":"en-GB","translation":"Checking current location","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"en-GB","translation":"Reviewed the last 7 days of exercise history (3 entries) and dietary record (8 entries).","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"en-GB","translation":"There is a lack of sleep records.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"en-GB","translation":"Please record your sleep for 3 days and continue exercising 3 times per week.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"en-GB","translation":"Record sleep for 3 days","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"en-GB","translation":"Intelligent, sophisticated, and advanced","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"en-GB","translation":"Short overall comment","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"en-GB","translation":"Short action","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"en-GB","translation":"Chest Day","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"en-GB","translation":"Automatic","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"en-GB","translation":"You can register by granting location permissions in the app settings.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"en-GB","translation":"I have reviewed 3 body KPIs, 8 meals, and 3 strength training sessions.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"en-GB","translation":"Once a week","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"en-GB","translation":"I have completed 3 workouts per week.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"en-GB","translation":"Continue with 3 workouts per week.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"en-GB","translation":"Intense, premium, and stimulating","review_note":"Neutral English draft based on en-AU; regional review required."}

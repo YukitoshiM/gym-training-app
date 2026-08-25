@@ -17,6 +17,7 @@ CACHE_ROOT="${REPORT_ROOT}/cache"
 IOS_DERIVED_DATA="${CACHE_ROOT}/DerivedData-ios"
 WATCH_DERIVED_DATA="${CACHE_ROOT}/DerivedData-watch"
 IOS_SCREENSHOT_SUITE="GymTrainingAppUITests/FigmaReferenceScreenshots"
+IOS_APP_STORE_SCREENSHOT_SUITE="GymTrainingAppUITests/AppStoreReviewScreenshotUITests"
 WATCH_SCREENSHOT_SUITE="GymTrainingWatchAppUITests/WatchFigmaReferenceScreenshots"
 RESULT_NAMES=(unit core meals ai settings accessibility analytics watch)
 SIMULATORS_TO_SHUTDOWN=()
@@ -168,7 +169,7 @@ analyze_result() {
       printf '%s\n' "${identifier}" >>"${IOS_EXECUTED_TESTS}"
     fi
     case "${identifier}" in
-      FigmaReferenceScreenshots/* | WatchFigmaReferenceScreenshots/*)
+      FigmaReferenceScreenshots/* | AppStoreReviewScreenshotUITests/* | WatchFigmaReferenceScreenshots/*)
         printf '  ERROR screenshot-only test entered the release gate: %s\n' "${identifier}"
         unexpected_screenshots=$((unexpected_screenshots + 1))
         analysis_failed=1
@@ -272,8 +273,8 @@ write_summary() {
     printf 'Working tree: %s\n' "${GIT_STATE}"
     printf 'Version: %s\n' "${version}"
     printf 'Scope: all unit, iPhone UI, and Watch UI tests except screenshot-only suites\n'
-    printf 'Screenshot suites: NON-GATING and excluded (%s, %s)\n\n' \
-      "${IOS_SCREENSHOT_SUITE}" "${WATCH_SCREENSHOT_SUITE}"
+    printf 'Screenshot suites: NON-GATING and excluded (%s, %s, %s)\n\n' \
+      "${IOS_SCREENSHOT_SUITE}" "${IOS_APP_STORE_SCREENSHOT_SUITE}" "${WATCH_SCREENSHOT_SUITE}"
 
     for name in "${RESULT_NAMES[@]}"; do
       analyze_result "${name}"
@@ -356,6 +357,7 @@ run_ios_group() {
     -retry-tests-on-failure \
     -test-iterations 2 \
     -skip-testing:"${IOS_SCREENSHOT_SUITE}" \
+    -skip-testing:"${IOS_APP_STORE_SCREENSHOT_SUITE}" \
     -resultBundlePath "${REPORT_DIR}/${group}.xcresult" \
     "$@" >"${REPORT_DIR}/${group}.log" 2>&1; then
     status=0
@@ -440,6 +442,7 @@ xcodebuild test-without-building -quiet \
   -xctestrun "${IOS_XCTESTRUN}" \
   -destination "platform=iOS Simulator,id=${IPHONE_A_ID}" \
   -skip-testing:"${IOS_SCREENSHOT_SUITE}" \
+  -skip-testing:"${IOS_APP_STORE_SCREENSHOT_SUITE}" \
   -enumerate-tests \
   -test-enumeration-style flat \
   -test-enumeration-format json \

@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","source_locale":"ja","source_ja":"{{value1}} を記録中","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:465"]}
+{"id":"watch_widget.2501cba5bc6d","source_locale":"ja","source_ja":"非対応: {{value1}}。手入力は利用できます","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:193"]}
+{"id":"watch_widget.040f06159cfe","source_locale":"ja","source_ja":"1秒あたりの振動回数","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:228"]}
+{"id":"watch_widget.a0272546c24a","source_locale":"ja","source_ja":"Apple Healthへ保存しました","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:283"]}
+{"id":"watch_widget.762361d25a0e","source_locale":"ja","source_ja":"Apple Watchの使い方","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:38"]}
+{"id":"watch_widget.47f7d3a16f1c","source_locale":"ja","source_ja":"Gym: 次のセッションへ","placeholders":[],"source_refs":["GymTrainingWatchWidget/GymTrainingWatchWidget.swift:40"]}
+{"id":"watch_widget.919f5d735c32","source_locale":"ja","source_ja":"Healthの許可なし・手入力で記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:102"]}
+{"id":"watch_widget.6c39297531fa","source_locale":"ja","source_ja":"Healthを利用できないため手入力で記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:80"]}
+{"id":"watch_widget.41e43dbbf218","source_locale":"ja","source_ja":"Healthを開始できないため手入力で記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:154"]}
+{"id":"watch_widget.152f186dda7a","source_locale":"ja","source_ja":"Healthワークアウト一時停止中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKitDelegates.swift:17"]}
+{"id":"watch_widget.b9b1cb7b9197","source_locale":"ja","source_ja":"Health保存を処理中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:291"]}
+{"id":"watch_widget.e29bbf1b3ab8","source_locale":"ja","source_ja":"Health保存失敗・Watch記録は保存済み","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:287"]}
+{"id":"watch_widget.775a658d59cf","source_locale":"ja","source_ja":"Health未保存・Watch記録は保存済み","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:285"]}
+{"id":"watch_widget.875a5d223149","source_locale":"ja","source_ja":"Health計測は復元できません。手入力は継続できます","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:48"]}
+{"id":"watch_widget.b1bb5fa8c916","source_locale":"ja","source_ja":"Health計測を復元しました","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:68"]}
+{"id":"watch_widget.eeccc1fae145","source_locale":"ja","source_ja":"Health計測停止・手入力は継続中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKitDelegates.swift:31"]}
+{"id":"watch_widget.c7c0bd2400ae","source_locale":"ja","source_ja":"Health連携オフ・手入力で記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:8"]}
+{"id":"watch_widget.3e36ab9a7f63","source_locale":"ja","source_ja":"RPEなし","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:579"]}
+{"id":"watch_widget.cbeb009a0ca4","source_locale":"ja","source_ja":"Watch上の実行中記録は削除されます。","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:477"]}
+{"id":"watch_widget.2e494aa6c8a6","source_locale":"ja","source_ja":"Watch記録を保存しました","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:289"]}
+{"id":"watch_widget.84664872f4c8","source_locale":"ja","source_ja":"iPhoneからメニューを同期してください","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:13","GymTrainingWatchApp/WatchWorkoutStore.swift:185"]}
+{"id":"watch_widget.172b72b0e366","source_locale":"ja","source_ja":"iPhoneから届いた今日のメニューを選び、開始します。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:88"]}
+{"id":"watch_widget.8bdf19ffeed6","source_locale":"ja","source_ja":"iPhoneで今日のメニューを確認してください","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:148"]}
+{"id":"watch_widget.67df75393fee","source_locale":"ja","source_ja":"iPhoneと接続しました","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:465"]}
+{"id":"watch_widget.8e03ffd59ca7","source_locale":"ja","source_ja":"iPhoneのホームから今日の内容を同期します。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:215"]}
+{"id":"watch_widget.7ef6982792b8","source_locale":"ja","source_ja":"iPhoneへ送る記録データを作れませんでした","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:230"]}
+{"id":"watch_widget.05e4231f9dca","source_locale":"ja","source_ja":"iPhoneへ送信できませんでした。記録を残して再送します","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:421"]}
+{"id":"watch_widget.2035fb2564b8","source_locale":"ja","source_ja":"iPhone側で保存できませんでした。あとで再送できます","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:386"]}
+{"id":"watch_widget.62d8e367decc","source_locale":"ja","source_ja":"iPhone連携を準備中です。あとで再送できます","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:192"]}
+{"id":"watch_widget.c27de027c299","source_locale":"ja","source_ja":"{{value1}} × {{value2}}回 × {{value3}}セット","placeholders":["{{value1}}","{{value2}}","{{value3}}"],"source_refs":["GymTrainingWatchApp/WatchFormatting.swift:22"]}
+{"id":"watch_widget.3f81f9df08a8","source_locale":"ja","source_ja":"{{value1}} はiPhoneへ再送できます","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:36"]}
+{"id":"watch_widget.31645ef37c0c","source_locale":"ja","source_ja":"{{value1}} はiPhoneへ送信予約しました","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:218","GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:359"]}
+{"id":"watch_widget.64bd9f2dda21","source_locale":"ja","source_ja":"{{value1}} をiPhoneへ送信しました","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:414"]}
+{"id":"watch_widget.638bb341594f","source_locale":"ja","source_ja":"{{value1}} をiPhoneへ送信中","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:207"]}
+{"id":"watch_widget.26513765e70e","source_locale":"ja","source_ja":"{{value1}} をiPhone履歴へ保存しました","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:355"]}
+{"id":"watch_widget.8a6e496052a2","source_locale":"ja","source_ja":"{{value1}} を再送","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:285","GymTrainingWatchApp/WatchContentView.swift:338"]}
+{"id":"watch_widget.7f66dfd79322","source_locale":"ja","source_ja":"{{value1}} を再開できます","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:30"]}
+{"id":"watch_widget.8c241f2be831","source_locale":"ja","source_ja":"{{value1}} を選択しました","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:158"]}
+{"id":"watch_widget.0bb63860cfdd","source_locale":"ja","source_ja":"{{value1}} を開始しました","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:127"]}
+{"id":"watch_widget.fcce7b71cb97","source_locale":"ja","source_ja":"{{value1}}/{{value2}}セット・{{value3}}回記録","placeholders":["{{value1}}","{{value2}}","{{value3}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:34"]}
+{"id":"watch_widget.9ae2c6a9fa00","source_locale":"ja","source_ja":"{{value1}}セット・","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:425"]}
+{"id":"watch_widget.54998c4de19e","source_locale":"ja","source_ja":"{{value1}}セット・目標 合計{{value2}}回","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/WatchFormatting.swift:26"]}
+{"id":"watch_widget.b37eb49c5125","source_locale":"ja","source_ja":"{{value1}}・{{value2}}セット・計{{value3}}回","placeholders":["{{value1}}","{{value2}}","{{value3}}"],"source_refs":["GymTrainingWatchApp/WatchFormatting.swift:31"]}
+{"id":"watch_widget.bbe1d3c236c4","source_locale":"ja","source_ja":"{{value1}}・セット{{value2}}","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:40"]}
+{"id":"watch_widget.3148813301ee","source_locale":"ja","source_ja":"{{value1}}件から選択","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:241"]}
+{"id":"watch_widget.e28d7cc26f9a","source_locale":"ja","source_ja":"{{value1}}件のメニューを同期しました","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:171"]}
+{"id":"watch_widget.672403542889","source_locale":"ja","source_ja":"{{value1}}回","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:649","GymTrainingWatchApp/Views/WatchSetControlRow.swift:322","GymTrainingWatchApp/WatchContentView.swift:468"]}
+{"id":"watch_widget.8cfae2e66c26","source_locale":"ja","source_ja":"{{value1}}回/秒","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:560","GymTrainingWatchApp/Views/WatchSetEditors.swift:219"]}
+{"id":"watch_widget.d1749584e623","source_locale":"ja","source_ja":"{{value1}}回・","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:426"]}
+{"id":"watch_widget.e90e08ac6f9b","source_locale":"ja","source_ja":"{{value1}}秒","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:193","GymTrainingWatchApp/Views/WatchSetEditors.swift:293"]}
+{"id":"watch_widget.2411abd90241","source_locale":"ja","source_ja":"{{value1}}種目・{{value2}}セット・計{{value3}}回","placeholders":["{{value1}}","{{value2}}","{{value3}}"],"source_refs":["GymTrainingWatchApp/WatchFormatting.swift:34"]}
+{"id":"watch_widget.b3cc40dc0bf1","source_locale":"ja","source_ja":"このWatchではiPhone連携を利用できません。記録はWatchに残しています","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:186"]}
+{"id":"watch_widget.7c2ed04ca304","source_locale":"ja","source_ja":"このWatchでは連携を利用できません","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:7"]}
+{"id":"watch_widget.5e1713107aae","source_locale":"ja","source_ja":"スキップ","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:149"]}
+{"id":"watch_widget.558199564f3f","source_locale":"ja","source_ja":"セット","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:457"]}
+{"id":"watch_widget.cf0fe40d1182","source_locale":"ja","source_ja":"セット {{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:645"]}
+{"id":"watch_widget.8223803cd257","source_locale":"ja","source_ja":"セットを完了","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:122"]}
+{"id":"watch_widget.864ffb74d301","source_locale":"ja","source_ja":"セットを開始","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:177","GymTrainingWatchApp/WatchContentView.swift:92"]}
+{"id":"watch_widget.828c11816565","source_locale":"ja","source_ja":"セット平均 {{value1}} bpm","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:446"]}
+{"id":"watch_widget.1a782a782a5d","source_locale":"ja","source_ja":"セット未設定","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchFormatting.swift:14"]}
+{"id":"watch_widget.f76b7ad40815","source_locale":"ja","source_ja":"セット開始","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:78"]}
+{"id":"watch_widget.f6a396814054","source_locale":"ja","source_ja":"セット開始を取り消す","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:108"]}
+{"id":"watch_widget.2e0ad9fc3b1a","source_locale":"ja","source_ja":"センサー計測中","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:393","GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:28"]}
+{"id":"watch_widget.2315bef407c9","source_locale":"ja","source_ja":"センサー項目を準備できないため手入力で記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:86"]}
+{"id":"watch_widget.db540f633c8c","source_locale":"ja","source_ja":"チュートリアルをスキップ","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:151"]}
+{"id":"watch_widget.d7e6f512c71c","source_locale":"ja","source_ja":"テンポ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:79","GymTrainingWatchApp/Views/WatchSetControlRow.swift:344","GymTrainingWatchApp/Views/WatchSetEditors.swift:258"]}
+{"id":"watch_widget.19550a012210","source_locale":"ja","source_ja":"テンポを合わせる","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:102"]}
+{"id":"watch_widget.2ab8c8962b18","source_locale":"ja","source_ja":"テンポを設定","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:545","GymTrainingWatchApp/Views/WatchSetControlRow.swift:238"]}
+{"id":"watch_widget.f8a940f32407","source_locale":"ja","source_ja":"テンポ案内を一時停止","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:575"]}
+{"id":"watch_widget.d30b38ecfe50","source_locale":"ja","source_ja":"テンポ案内を再開","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:575"]}
+{"id":"watch_widget.40e95ebae744","source_locale":"ja","source_ja":"ベンチプレス","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:113"]}
+{"id":"watch_widget.54ef1a234c86","source_locale":"ja","source_ja":"メニュー","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:254"]}
+{"id":"watch_widget.2b5f588ea836","source_locale":"ja","source_ja":"メニューを選ぶ","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:87"]}
+{"id":"watch_widget.3131fa35f883","source_locale":"ja","source_ja":"メニューデータを読み込めませんでした","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:250","GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:272"]}
+{"id":"watch_widget.137725ad45aa","source_locale":"ja","source_ja":"メニュー変更","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:330"]}
+{"id":"watch_widget.12ffae136992","source_locale":"ja","source_ja":"メニュー待ち","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:206"]}
+{"id":"watch_widget.a2c4001d98d3","source_locale":"ja","source_ja":"メモ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:682","GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:695"]}
+{"id":"watch_widget.6dacb17a2939","source_locale":"ja","source_ja":"メモを編集","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:325"]}
+{"id":"watch_widget.8dffc87acbb9","source_locale":"ja","source_ja":"モーション","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:190"]}
+{"id":"watch_widget.e031879b0b11","source_locale":"ja","source_ja":"ラットプルダウン","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:140"]}
+{"id":"watch_widget.328184940a77","source_locale":"ja","source_ja":"ワークアウト","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:412"]}
+{"id":"watch_widget.1b2df563ab78","source_locale":"ja","source_ja":"ワークアウトを完了しますか？","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:463"]}
+{"id":"watch_widget.66f5e3987c92","source_locale":"ja","source_ja":"ワークアウトを破棄しました","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:185"]}
+{"id":"watch_widget.68283c0be6f6","source_locale":"ja","source_ja":"一時停止","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:316"]}
+{"id":"watch_widget.97c1d37f643b","source_locale":"ja","source_ja":"一時停止・上げ{{value1}}秒／下げ{{value2}}秒","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:596"]}
+{"id":"watch_widget.114f06b70d1a","source_locale":"ja","source_ja":"一時停止中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:68","GymTrainingWatchApp/WatchWorkoutStore.swift:349"]}
+{"id":"watch_widget.49b442f82f9b","source_locale":"ja","source_ja":"上","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:305"]}
+{"id":"watch_widget.f1b303fe38bd","source_locale":"ja","source_ja":"上{{value1}}s・下{{value2}}s・{{value3}}回/秒","placeholders":["{{value1}}","{{value2}}","{{value3}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:547","GymTrainingWatchApp/Views/WatchSetControlRow.swift:347"]}
+{"id":"watch_widget.434b69b48377","source_locale":"ja","source_ja":"上げ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:291"]}
+{"id":"watch_widget.1ba7a8ff8414","source_locale":"ja","source_ja":"上げ {{value1}}秒・下げ {{value2}}秒","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:454"]}
+{"id":"watch_widget.53a48095c684","source_locale":"ja","source_ja":"上げ{{value1}}秒／下げ{{value2}}秒","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:599"]}
+{"id":"watch_widget.9a3e26289146","source_locale":"ja","source_ja":"上げ・下げ時間をセットごとに設定。Apple Watchが1秒あたり1〜3回の触覚で案内します。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:103"]}
+{"id":"watch_widget.6a959494f4ff","source_locale":"ja","source_ja":"上げ時間","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:302"]}
+{"id":"watch_widget.0caface262a2","source_locale":"ja","source_ja":"上げ時間を直接入力","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:311"]}
+{"id":"watch_widget.1bee52246397","source_locale":"ja","source_ja":"下","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:205"]}
+{"id":"watch_widget.065c7d0ae56f","source_locale":"ja","source_ja":"下げ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:191"]}
+{"id":"watch_widget.af7f47ccca87","source_locale":"ja","source_ja":"下げ時間","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:202"]}
+{"id":"watch_widget.75d55853c35e","source_locale":"ja","source_ja":"下げ時間を直接入力","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:211"]}
+{"id":"watch_widget.9890a0a76fc6","source_locale":"ja","source_ja":"今日","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:373"]}
+{"id":"watch_widget.686a6c522309","source_locale":"ja","source_ja":"今日のメニュー","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:239"]}
+{"id":"watch_widget.7a379d574423","source_locale":"ja","source_ja":"今日のメニュー: {{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:170","GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:19"]}
+{"id":"watch_widget.7624bd6c72ec","source_locale":"ja","source_ja":"今日のメニューを選んでください","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:119","GymTrainingWatchApp/WatchWorkoutStore.swift:172"]}
+{"id":"watch_widget.bc91575d959a","source_locale":"ja","source_ja":"休憩 {{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:251"]}
+{"id":"watch_widget.09998c5a6ec8","source_locale":"ja","source_ja":"休憩 {{value1}}秒","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:451"]}
+{"id":"watch_widget.c69c7fb85f9b","source_locale":"ja","source_ja":"休憩する","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:107"]}
+{"id":"watch_widget.9101acbdbd05","source_locale":"ja","source_ja":"休憩をスキップ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:263"]}
+{"id":"watch_widget.4d0773120c03","source_locale":"ja","source_ja":"休憩時間","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:452","GymTrainingWatchApp/Views/WatchSetEditors.swift:463","GymTrainingWatchApp/Views/WatchSetEditors.swift:493"]}
+{"id":"watch_widget.8ada25b32266","source_locale":"ja","source_ja":"休憩終了","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:311"]}
+{"id":"watch_widget.b871438c85a2","source_locale":"ja","source_ja":"余力と動作速度から2.5%重く提案","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:257"]}
+{"id":"watch_widget.afec905a94f5","source_locale":"ja","source_ja":"使い始める","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:161"]}
+{"id":"watch_widget.508051ad5c0a","source_locale":"ja","source_ja":"使い方 {{value1}}/{{value2}}","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:170"]}
+{"id":"watch_widget.139ccbf8df18","source_locale":"ja","source_ja":"保存","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:686"]}
+{"id":"watch_widget.65047314093f","source_locale":"ja","source_ja":"信頼度 {{value1}}%・{{value2}}","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:219"]}
+{"id":"watch_widget.75b83d4abde6","source_locale":"ja","source_ja":"修正","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:212"]}
+{"id":"watch_widget.0c6172650d06","source_locale":"ja","source_ja":"再開","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:316"]}
+{"id":"watch_widget.c6128f953672","source_locale":"ja","source_ja":"分:秒","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:466"]}
+{"id":"watch_widget.a6830bdb3dd4","source_locale":"ja","source_ja":"前回の記録","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:417"]}
+{"id":"watch_widget.21c62ab53877","source_locale":"ja","source_ja":"動作の安定 {{value1}}%","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:449"]}
+{"id":"watch_widget.39817f548ab9","source_locale":"ja","source_ja":"動作候補: {{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:217"]}
+{"id":"watch_widget.c29bd2f0c3ed","source_locale":"ja","source_ja":"動作停止を検知しました","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:253"]}
+{"id":"watch_widget.86202b9c17fc","source_locale":"ja","source_ja":"動作推定 {{value1}}回","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:443"]}
+{"id":"watch_widget.4690f738b016","source_locale":"ja","source_ja":"動作推定 {{value1}}回・信頼度 {{value2}}%","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:243"]}
+{"id":"watch_widget.0d7c2e67eb1b","source_locale":"ja","source_ja":"動作速度変化 {{value1}}%","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:463"]}
+{"id":"watch_widget.e9b84e3ea7ac","source_locale":"ja","source_ja":"反映","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:242","GymTrainingWatchApp/Views/WatchSetEditors.swift:396","GymTrainingWatchApp/Views/WatchSetEditors.swift:483","GymTrainingWatchApp/Views/WatchSetEditors.swift:570","GymTrainingWatchApp/Views/WatchSetEditors.swift:79"]}
+{"id":"watch_widget.e04ccdac55cd","source_locale":"ja","source_ja":"取消","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:105"]}
+{"id":"watch_widget.56dc053a7297","source_locale":"ja","source_ja":"同時間帯のFitness記録があるためHealthへの二重保存を避けました","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:113"]}
+{"id":"watch_widget.184f5906186f","source_locale":"ja","source_ja":"同期済みメニューから選べます","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:19","GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:24"]}
+{"id":"watch_widget.a62be7ac164d","source_locale":"ja","source_ja":"回","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:385"]}
+{"id":"watch_widget.83fdf5d78dd0","source_locale":"ja","source_ja":"回数","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:68","GymTrainingWatchApp/Views/WatchSetControlRow.swift:314","GymTrainingWatchApp/Views/WatchSetEditors.swift:371","GymTrainingWatchApp/Views/WatchSetEditors.swift:382","GymTrainingWatchApp/Views/WatchSetEditors.swift:406"]}
+{"id":"watch_widget.02ce68bb4689","source_locale":"ja","source_ja":"回数をリールで設定","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:324"]}
+{"id":"watch_widget.01657c68d2fc","source_locale":"ja","source_ja":"完了","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:118","GymTrainingWatchApp/Views/WatchSetControlRow.swift:145","GymTrainingWatchApp/Views/WatchSetControlRow.swift:277"]}
+{"id":"watch_widget.5a4fab46f0a5","source_locale":"ja","source_ja":"完了してiPhoneへ送信","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:464"]}
+{"id":"watch_widget.b1deb806b237","source_locale":"ja","source_ja":"完了して送信","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:339"]}
+{"id":"watch_widget.8dbc8435b124","source_locale":"ja","source_ja":"完了すると休憩タイマーが開始。次の種目は順番を変えて選べます。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:108"]}
+{"id":"watch_widget.4fe891ea4590","source_locale":"ja","source_ja":"完了するワークアウトがありません","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:575"]}
+{"id":"watch_widget.31a26178d3b4","source_locale":"ja","source_ja":"完了セット","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:666"]}
+{"id":"watch_widget.f7114d6c4059","source_locale":"ja","source_ja":"完了セット {{value1}}件","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:208"]}
+{"id":"watch_widget.3e06adb84ec0","source_locale":"ja","source_ja":"実績 {{value1}} × {{value2}}回","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:45","GymTrainingWatchApp/Views/WatchSetControlRow.swift:85"]}
+{"id":"watch_widget.11f4022e0437","source_locale":"ja","source_ja":"実績を合わせる","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:97"]}
+{"id":"watch_widget.c8d66636dee6","source_locale":"ja","source_ja":"実績入力中","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:148"]}
+{"id":"watch_widget.ec4ab4872cdb","source_locale":"ja","source_ja":"実行中セットのRPEを変更","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:92"]}
+{"id":"watch_widget.d782504f8bde","source_locale":"ja","source_ja":"実行中セットのテンポを変更","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:81"]}
+{"id":"watch_widget.55fbfa481026","source_locale":"ja","source_ja":"実行中セットの回数を変更","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:70"]}
+{"id":"watch_widget.27c9510ceaed","source_locale":"ja","source_ja":"実行中セットの重量を変更","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:59"]}
+{"id":"watch_widget.316ef65deb04","source_locale":"ja","source_ja":"平均-","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:365"]}
+{"id":"watch_widget.a8407dcee209","source_locale":"ja","source_ja":"平均{{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:365"]}
+{"id":"watch_widget.24aa552350de","source_locale":"ja","source_ja":"心拍は回復傾向です。感覚が整えば次のセットへ","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:285"]}
+{"id":"watch_widget.2e7eb94e9ba2","source_locale":"ja","source_ja":"心拍を見ながら休憩を続けましょう","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:286"]}
+{"id":"watch_widget.fdc98ee0d134","source_locale":"ja","source_ja":"心拍・消費エネルギーを計測中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+HealthKit.swift:145","GymTrainingWatchApp/WatchWorkoutStore.swift:363"]}
+{"id":"watch_widget.31d0f75e46f9","source_locale":"ja","source_ja":"手入力","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:391","GymTrainingWatchApp/Views/WatchSetEditors.swift:473","GymTrainingWatchApp/Views/WatchSetEditors.swift:565","GymTrainingWatchApp/Views/WatchSetEditors.swift:69"]}
+{"id":"watch_widget.abe1f768e53b","source_locale":"ja","source_ja":"手入力で記録できます","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:20"]}
+{"id":"watch_widget.85d6ce62e862","source_locale":"ja","source_ja":"手入力で記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:363"]}
+{"id":"watch_widget.baf368705ac0","source_locale":"ja","source_ja":"手首の動きと未完了セットの順序から推定","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:224"]}
+{"id":"watch_widget.fe02518c224f","source_locale":"ja","source_ja":"振動回数(1〜3回/秒)","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:237"]}
+{"id":"watch_widget.a102da2a71e9","source_locale":"ja","source_ja":"振動速度","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:217"]}
+{"id":"watch_widget.d0f48676bebb","source_locale":"ja","source_ja":"接続失敗: {{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Connectivity.swift:450"]}
+{"id":"watch_widget.3178ee43fe66","source_locale":"ja","source_ja":"推定{{value1}}回を反映","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:187"]}
+{"id":"watch_widget.b15c1f0ea25c","source_locale":"ja","source_ja":"提案を反映","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:291"]}
+{"id":"watch_widget.7b9526eff5f9","source_locale":"ja","source_ja":"時間を変更","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:269"]}
+{"id":"watch_widget.4abcf3c60406","source_locale":"ja","source_ja":"最大-","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:370"]}
+{"id":"watch_widget.240979de36e1","source_locale":"ja","source_ja":"最大{{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:370"]}
+{"id":"watch_widget.7b80546b6322","source_locale":"ja","source_ja":"最後に終了するとiPhoneへ送信。未送信の記録はあとから再送できます。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:113"]}
+{"id":"watch_widget.0e66f9cd10a3","source_locale":"ja","source_ja":"未完了セットも含めて現在の内容を保存します。","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:469"]}
+{"id":"watch_widget.51caea1e57ce","source_locale":"ja","source_ja":"未送信","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:281"]}
+{"id":"watch_widget.dd99ab962c51","source_locale":"ja","source_ja":"未送信のWatch記録はありません","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore.swift:758"]}
+{"id":"watch_widget.2c96777bbcd1","source_locale":"ja","source_ja":"未開始","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:150"]}
+{"id":"watch_widget.ac9b2200eb4a","source_locale":"ja","source_ja":"次: {{value1}} {{value2}} × {{value3}}回","placeholders":["{{value1}}","{{value2}}","{{value3}}"],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:285"]}
+{"id":"watch_widget.45268b5fcf2c","source_locale":"ja","source_ja":"次のセットを始められます","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:312"]}
+{"id":"watch_widget.cf20cadc0998","source_locale":"ja","source_ja":"次のトレーニングへすぐ戻れます。","placeholders":[],"source_refs":["GymTrainingWatchWidget/GymTrainingWatchWidget.swift:70"]}
+{"id":"watch_widget.218a9aa6d716","source_locale":"ja","source_ja":"次の種目","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:140"]}
+{"id":"watch_widget.c8c2bdae1bbc","source_locale":"ja","source_ja":"次へ","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:161"]}
+{"id":"watch_widget.96ff4778f70e","source_locale":"ja","source_ja":"現在の動作をスキップ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:583"]}
+{"id":"watch_widget.ae259f92b4e5","source_locale":"ja","source_ja":"目標 {{value1}} × {{value2}}回","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:47"]}
+{"id":"watch_widget.8e715c8cf147","source_locale":"ja","source_ja":"目標テンポ完了","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:593"]}
+{"id":"watch_widget.343b2fe4308b","source_locale":"ja","source_ja":"目標未達、RPE、動作速度低下のいずれかから5%軽く提案","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:252"]}
+{"id":"watch_widget.0992ae1fad52","source_locale":"ja","source_ja":"相対可動域 {{value1}}%・一貫性 {{value2}}%","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:460"]}
+{"id":"watch_widget.62acc0267a84","source_locale":"ja","source_ja":"省電力サンプリング（バッテリー残量）","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:139"]}
+{"id":"watch_widget.2bf7693c376f","source_locale":"ja","source_ja":"省電力サンプリング（低電力モード）","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:137"]}
+{"id":"watch_widget.7c8493ad4a26","source_locale":"ja","source_ja":"省電力サンプリング（設定）","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:135"]}
+{"id":"watch_widget.49e3394121fb","source_locale":"ja","source_ja":"破棄","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:348","GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:472"]}
+{"id":"watch_widget.586175148774","source_locale":"ja","source_ja":"秒","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:478"]}
+{"id":"watch_widget.e71bb44afc57","source_locale":"ja","source_ja":"種目とセットを選んで開始。間違えた時は「キャンセル」で未実行に戻せます。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:93"]}
+{"id":"watch_widget.12f8054dc126","source_locale":"ja","source_ja":"種目候補 {{value1}} {{value2}}%","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:467"]}
+{"id":"watch_widget.64b1330508b2","source_locale":"ja","source_ja":"終了して同期","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:112"]}
+{"id":"watch_widget.5ce04d515d1c","source_locale":"ja","source_ja":"続ける","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:467","GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:475"]}
+{"id":"watch_widget.8361420226c3","source_locale":"ja","source_ja":"背中","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:141"]}
+{"id":"watch_widget.52e036cf79ae","source_locale":"ja","source_ja":"背中の日","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:134"]}
+{"id":"watch_widget.f4f93e827213","source_locale":"ja","source_ja":"胸","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:114"]}
+{"id":"watch_widget.349df198921f","source_locale":"ja","source_ja":"胸の日","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:107"]}
+{"id":"watch_widget.a9bcd1d54574","source_locale":"ja","source_ja":"記録を破棄しますか？","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:471"]}
+{"id":"watch_widget.31d6157ec148","source_locale":"ja","source_ja":"記録中","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:409"]}
+{"id":"watch_widget.e7c120e0433a","source_locale":"ja","source_ja":"記録中のワークアウトがありません","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:22"]}
+{"id":"watch_widget.2f9be1574e74","source_locale":"ja","source_ja":"通常サンプリング","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:141","GymTrainingWatchApp/WatchWorkoutStore.swift:27"]}
+{"id":"watch_widget.a0b5240a769f","source_locale":"ja","source_ja":"速","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetEditors.swift:231"]}
+{"id":"watch_widget.423b784208d1","source_locale":"ja","source_ja":"達成度、RPE、動作速度から同じ重量を提案","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Sensors.swift:260"]}
+{"id":"watch_widget.2db35aa51fee","source_locale":"ja","source_ja":"違う","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:230"]}
+{"id":"watch_widget.b5ad6016c9a4","source_locale":"ja","source_ja":"選択セットへ切替","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:177"]}
+{"id":"watch_widget.74211dc96bd5","source_locale":"ja","source_ja":"重量","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:57","GymTrainingWatchApp/Views/WatchSetControlRow.swift:299","GymTrainingWatchApp/Views/WatchSetEditors.swift:48","GymTrainingWatchApp/Views/WatchSetEditors.swift:59","GymTrainingWatchApp/Views/WatchSetEditors.swift:90"]}
+{"id":"watch_widget.7d01b80b03ac","source_locale":"ja","source_ja":"重量をリールで設定","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchSetControlRow.swift:309"]}
+{"id":"watch_widget.50b4d8445e1e","source_locale":"ja","source_ja":"重量・回数・RPE・休憩は開始前後にリールで変更できます。","placeholders":[],"source_refs":["GymTrainingWatchApp/WatchContentView.swift:98"]}
+{"id":"watch_widget.73efe52b65c2","source_locale":"ja","source_ja":"開始","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:223","GymTrainingWatchApp/WatchContentView.swift:322","GymTrainingWatchApp/WatchContentView.swift:400"]}
+{"id":"watch_widget.2f3d8874afc6","source_locale":"ja","source_ja":"開始前にテンポを設定","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:162","GymTrainingWatchApp/Views/WatchSetControlRow.swift:68"]}
+{"id":"watch_widget.2a072a116cb4","source_locale":"ja","source_ja":"非対応: {{value1}}。手入力は利用できます","placeholders":["{{value1}}"],"source_refs":["GymTrainingWatchApp/WatchWorkoutStore+Persistence.swift:193"]}
+{"id":"watch_widget.784d61a7d1fe","source_locale":"ja","source_ja":"音声・文字メモ","placeholders":[],"source_refs":["GymTrainingWatchApp/Views/WatchActiveWorkoutView.swift:325"]}

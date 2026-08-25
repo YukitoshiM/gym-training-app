@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"hr","translation":"{{value1}} se bilježi","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"hr","translation":"Ne podržano: {{value1}}. Možete unijeti ručno.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"hr","translation":"Broj vibracija u sekundi","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"hr","translation":"Spremi u Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"hr","translation":"Kako koristiti Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"hr","translation":"Fitness: Nastavite s sljedećom sesijom","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"hr","translation":"Bilježi se bez dopuštenja za Health i ručnim unosom","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"hr","translation":"Koristite Health, stoga podaci se unose ručno.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"hr","translation":"Ne možete koristiti Health, stoga podaci se unose ručno.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"hr","translation":"Health treniranje je trenutno zaustavljeno.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"hr","translation":"U procesu spremanja Health-a.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"hr","translation":"Spremanje Health-a nije uspjelo, ali su podaci s Watch-a spremni.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"hr","translation":"Podaci s Watch-a su spremni, ali podaci u Health-u nisu.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"hr","translation":"Ne možete obnoviti mjerenja. Možete nastaviti unos ručno.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"hr","translation":"Obnovljeno mjerenje u Health-u.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"hr","translation":"Mjerenje je zaustavljeno, a unos se nastavlja ručno.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"hr","translation":"Health je isključen, unos podataka se provodi ručno.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"hr","translation":"Nema vrijednosti RPE (Rate of Perceived Exertion).","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"hr","translation":"Podaci s Watch-a koji su trenutno u izvođenju će biti uklonjeni.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"hr","translation":"Podaci s Watch-a su spremni.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"hr","translation":"Sinkronizirajte meniju s iPhone-a.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"hr","translation":"Odaberite i pokrenite danšnji meni s iPhone-a.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"hr","translation":"Provjerite danšnji meni na iPhone-u.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"hr","translation":"Uspostavljena je veza s iPhone-om.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"hr","translation":"Sinkronizirajte sadržaj s iPhone-a.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"hr","translation":"Nisam mogao/la kreirati podatke za slanje na iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"hr","translation":"Ne mogu poslati podatke. Možete ih ponovno poslati sačuvanima.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"hr","translation":"Nisam uspio/la spremiti za spremanje na iPhoneu. Možemo to ponovno poslati kasnije.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"hr","translation":"Pripremam povezivanje s iPhoneom. Možemo to ponovno poslati kasnije.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"hr","translation":"{{value1}} × {{value2}} puta × {{value3}} setova","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"hr","translation":"Možete ponovno poslati {{value1}} na iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"hr","translation":"Rezervirao/la sam slanje {{value1}} na iPhone","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"hr","translation":"Pošaljio/la sam {{value1}} na iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"hr","translation":"Pošiljamo {{value1}} na iPhone","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"hr","translation":"{{value1}} spremljeno u povijest na iPhoneu","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"hr","translation":"Ponovno pošljite {{value1}}","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"hr","translation":"Možete ponovno započeti {{value1}}","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"hr","translation":"Odabrali/la sam {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"hr","translation":"Počeo/la sam s {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"hr","translation":"{{value1}}/{{value2}} setova · {{value3}} puta zabilježeno","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"hr","translation":"{{value1}} setova ·","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"hr","translation":"{{value1}} setova · Cilj ukupno {{value2}} puta","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"hr","translation":"{{value1}} · {{value2}} setova · Ukupno {{value3}} puta","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"hr","translation":"{{value1}} · {{value2}} setova","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"hr","translation":"Odaberite od {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"hr","translation":"Sinkronizirao/la sam {{value1}} meniju","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"hr","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"hr","translation":"{{value1}} puta/sekundu","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"hr","translation":"{{value1}} puta・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"hr","translation":"{{value1}} sekundi","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"hr","translation":"{{value1}} aktivnosti・{{value2}} serija・ukupno {{value3}} puta","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"hr","translation":"Ovaj uređaj ne podržava povezivanje s iPhoneom. Zapis se čuva na uređaju.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"hr","translation":"Ovaj uređaj ne podržava povezivanje","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"hr","translation":"Pasmaj","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"hr","translation":"Serija","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"hr","translation":"Serija {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"hr","translation":"Završiti seriju","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"hr","translation":"Pokrenuti seriju","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"hr","translation":"Prosjek serije {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"hr","translation":"Serija nije definirana","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"hr","translation":"Pokrenite seriju","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"hr","translation":"Odustati od pokretanja serije","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"hr","translation":"Mjerenje senzora","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"hr","translation":"Nemogu se pripremiti za mjerenje senzora, stoga se zapisuje ručno.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"hr","translation":"Preskoči tutorijal","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"hr","translation":"Tempo","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"hr","translation":"Ujediniti tempo","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"hr","translation":"Postavite tempo","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"hr","translation":"Zaustavite savjet o tempu","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"hr","translation":"Pokrenite savjet o tempu","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"hr","translation":"Bench press","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"hr","translation":"Izbornik","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"hr","translation":"Odaberite izbornik","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"hr","translation":"Nisam uspio/la učitati podatke izbornika","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"hr","translation":"Promjena izbornika","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"hr","translation":"Čekanje na izbornik","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"hr","translation":"Napomena","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"hr","translation":"Uredi napomenu","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"hr","translation":"Pokret","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"hr","translation":"Rastavljanje s utega","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"hr","translation":"Trening","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"hr","translation":"Želite dovršiti trening?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"hr","translation":"Odustao/la sam od treninga","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"hr","translation":"Zaustavite","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"hr","translation":"Zaustavite i pauzira {{value1}} sekundi / Nastavite {{value2}} sekundi","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"hr","translation":"U pauzi","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"hr","translation":"Na gore","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"hr","translation":"{{value1}} puta/sekundu (gore)・{{value2}} puta/sekundu (dolje)・{{value3}} puta/sekundu","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"hr","translation":"Gore","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"hr","translation":"Gore {{value1}} sekundi, dolje {{value2}} sekundi","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"hr","translation":"Gore {{value1}} sekundi / dolje {{value2}} sekundi","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"hr","translation":"Postavite vrijeme za gore i dolje po setu. Apple Watch vas upoznjava 1 do 3 puta na sekundu.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"hr","translation":"Vrijeme za gore","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"hr","translation":"Unesite vrijeme za gore izravno","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"hr","translation":"Dolje","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"hr","translation":"Dolje","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"hr","translation":"Vrijeme za dolje","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"hr","translation":"Unesite vrijeme za dolje izravno","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"hr","translation":"Danas","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"hr","translation":"Dnevni meni","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"hr","translation":"Dnevni meni: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"hr","translation":"Odaberite dnevni meni","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"hr","translation":"Pauza {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"hr","translation":"Pauza {{value1}} sekundi","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"hr","translation":"Odmoriti se","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"hr","translation":"Preskoči pauzu","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"hr","translation":"Vrijeme za pauzu","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"hr","translation":"Završeno s pauzom","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"hr","translation":"Preporučujem povećanje za 2,5% na temelju vaših resursa i brzine rada.","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"hr","translation":"Počnite koristiti","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"hr","translation":"Kako koristiti: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"hr","translation":"Spremi","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"hr","translation":"Pouzdnost: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"hr","translation":"Izmjeni","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"hr","translation":"Nastavi","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"hr","translation":"Minuta:Sekunda","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"hr","translation":"Posljednji zapis","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"hr","translation":"Stabilnost rada: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"hr","translation":"Predloženo: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"hr","translation":"Detektirano je zaustavljanje rada","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"hr","translation":"Procijenjeno: {{value1}} puta","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"hr","translation":"Procijenjeno: {{value1}} puta・Pouzdnost: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"hr","translation":"Promjena brzine: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"hr","translation":"Primijeni","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"hr","translation":"Otkaži","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"hr","translation":"Izbjegavamo duplu pohranu u Health zbog postojećih Fitness zapisa u isto vrijeme.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"hr","translation":"Možete odabrati iz synchroniziranog menija","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"hr","translation":"Putanja","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"hr","translation":"Broj puta","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"hr","translation":"Postavite broj puta pomoću gumba","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"hr","translation":"Gotovo","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"hr","translation":"Pošaljite na iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"hr","translation":"Pošaljite","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"hr","translation":"Kada se dovrši, aktivira se timer za odmor. Možete odabrati sljedeći zadatak u drugačijem redoslijedu.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"hr","translation":"Nema dovršenih treninga","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"hr","translation":"Dovršeno","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"hr","translation":"{{value1}} puta dovršeno","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"hr","translation":"Postignuće {{value1}} × {{value2}} puta","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"hr","translation":"Usporedite postignuća","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"hr","translation":"Unos postignuća","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"hr","translation":"Promijenite RPE za trenutni set","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"hr","translation":"Promijenite tempo za trenutni set","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"hr","translation":"Promijenite broj puta za trenutni set","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"hr","translation":"Promijenite težinu za trenutni set","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"hr","translation":"Prosjek -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"hr","translation":"Prosječno {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"hr","translation":"Srčani ritam se vraća u normalu. Kada osjetite da ste spremni, nastavite","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"hr","translation":"Nastavite s odmornom uz praćenje otkucaja srca.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"hr","translation":"Mjerenje otkucaja srca i potrošnje energije","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"hr","translation":"Ručno unos","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"hr","translation":"Možete zabilježiti ručnim unosom","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"hr","translation":"Zabilježavanje ručnim unosom","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"hr","translation":"Procjena na temelju pokreta na zapešću i reda neizmrsenih setova","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"hr","translation":"Broj vibracija (1-3 puta/sekundu)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"hr","translation":"Brzina vibracije","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"hr","translation":"Neuspješna veza: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"hr","translation":"Reflektira se procjena {{value1}} puta","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"hr","translation":"Primjenjuje se prijedlog","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"hr","translation":"Promijenite vrijeme","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"hr","translation":"Najveće -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"hr","translation":"Najviše {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"hr","translation":"Kada završite, podaci će biti poslani na iPhone. Neizbrisane podatke možete ponovno poslati kasnije.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"hr","translation":"Spremi trenutne podatke, uključujući i neizmrsene setove.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"hr","translation":"Neizbrisano","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"hr","translation":"Nema Watch podataka koji nisu izbrisani","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"hr","translation":"Ne započeto","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"hr","translation":"Sljedeće: {{value1}} {{value2}} × {{value3}} puta","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"hr","translation":"Možete početi s sljedećom serijom.","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"hr","translation":"Možete odmah vratiti se na sljedeći trening.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"hr","translation":"Sljedeća vježba","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"hr","translation":"Nastavak","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"hr","translation":"Preskoči trenutnu aktivnost","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"hr","translation":"Cilj: {{value1}} × {{value2}} puta","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"hr","translation":"Završeno s ciljem, RPE, smanjenje brzine aktivnosti","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"hr","translation":"Predložite 5% manju vrijednost iz bilo koje od: relativnog dometa, konzistentnosti","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"hr","translation":"Relativni domet: {{value1}}%, Konzistentnost: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"hr","translation":"Ušteda energije (ostalo naprijed)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"hr","translation":"Ušteda energije (nizkodržajni način)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"hr","translation":"Ušteda energije (postavke)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"hr","translation":"Obriši","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"hr","translation":"Sekunde","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"hr","translation":"Odaberite vježbu i seriju za početak. Ako ste pogrešili, možete se vratiti na prethodni stav \"Otkaži\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"hr","translation":"Vježbe: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"hr","translation":"Završiti i sinkronizirati","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"hr","translation":"Nastaviti","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"hr","translation":"Stražnja strana","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"hr","translation":"Dan za stražnju stranu","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"hr","translation":"Grudni mišiji","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"hr","translation":"Dan za grudi","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"hr","translation":"Želite izbrisati podatke?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"hr","translation":"Podaci se snimaju","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"hr","translation":"Nema vježbi u snimljenom programu","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"hr","translation":"Standardno uzorkovanje","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"hr","translation":"Brzo","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"hr","translation":"Predlagamo isti teret na temelju postignuća, RPE i brzine pokreta","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"hr","translation":"Ne","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"hr","translation":"Prebacite se na drugi set","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"hr","translation":"Teret","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"hr","translation":"Postavite teret pomoću gumba","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"hr","translation":"Možete promijeniti teret, broj, RPE i pauzu prije i poslije početka.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"hr","translation":"Početak","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"hr","translation":"Postavite tempo prije početka","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"hr","translation":"Ne podržano: {{value1}}. Dostupna je ručna upis","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"hr","translation":"Glasovni i tekstualni bilješki","review_note":""}

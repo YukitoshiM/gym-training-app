@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"tr","translation":"{{value1}}'i kaydettim","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"tr","translation":"Desteklenmiyor: {{value1}}. Manuel olarak girme seçeneği mevcut","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"tr","translation":"Saniyede titreşim sayısı","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"tr","translation":"Apple Health'e kaydettim","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"tr","translation":"Apple Watch kullanımı","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"tr","translation":"Spor salonu: Bir sonraki antrenmana geç","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"tr","translation":"Sağlık uygulamasının izin vermeden veya manuel olarak kaydetme","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"tr","translation":"Health'i kullanılamadığı için elle kaydediliyor.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"tr","translation":"Health başlatılamadığı için elle kaydediliyor.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"tr","translation":"Health antrenmanını geçici olarak durduruldu.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"tr","translation":"Health kaydını işliyor...","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"tr","translation":"Health kaydı başarısız - Watch kaydı kaydedildi.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"tr","translation":"Health kaydı alınamadı - Watch kaydı kaydedildi.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"tr","translation":"Health ölçümü geri yüklenemiyor. Elle kaydetmeye devam edebilirsiniz.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"tr","translation":"Health ölçümü geri yüklendi.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"tr","translation":"Health ölçümü durduruldu - Elle kaydetme devam ediyor.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"tr","translation":"Health bağlantısı kapalı - Elle kaydediliyor.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"tr","translation":"RPE yok","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"tr","translation":"Saat üzerindeki mevcut kayıtlar silinir.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"tr","translation":"Saat üzerindeki kayıtları kaydettiniz.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"tr","translation":"iPhone'dan menüyü senkronize edin.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"tr","translation":"iPhone'dan gelen günün menüsünü seçip başlayın.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"tr","translation":"Günlük menüyü iPhone'da kontrol edin.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"tr","translation":"iPhone ile bağlantı kuruldu.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"tr","translation":"iPhone'daki ana ekrandan güncel verileri senkronize edin.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"tr","translation":"iPhone'a göndermek için kayıt verisi oluşturamadım. Kaydı tekrar gönderin.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"tr","translation":"iPhone'a göndermeyi başaramadım.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"tr","translation":"iPhone'a kaydedemedim. Daha sonra tekrar gönderebilirim.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"tr","translation":"iPhone ile bağlantı ayarlanıyor. Daha sonra tekrar gönderebilirim.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"tr","translation":"{{value1}} × {{value2}} kez × {{value3}} set","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"tr","translation":"{{value1}}, iPhone'a tekrar gönderebilirsiniz.","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"tr","translation":"{{value1}}, iPhone'a gönderim için planlandı.","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"tr","translation":"{{value1}}, iPhone'a gönderildi.","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"tr","translation":"{{value1}}, iPhone'a gönderiliyor.","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"tr","translation":"{{value1}}, iPhone geçmişine kaydedildi.","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"tr","translation":"{{value1}}'i tekrar gönder","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"tr","translation":"{{value1}}'i yeniden başlatabilirsiniz.","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"tr","translation":"{{value1}}'i seçtiniz.","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"tr","translation":"{{value1}}'i başlattınız.","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"tr","translation":"{{value1}}/{{value2}} set・{{value3}} kez kaydetti","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"tr","translation":"{{value1}} set・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"tr","translation":"{{value1}} set・Hedef Toplam {{value2}} kez","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"tr","translation":"{{value1}}・{{value2}} set・Toplam {{value3}} kez","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"tr","translation":"{{value1}}・{{value2}} set","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"tr","translation":"{{value1}}'den seçim yapıldı","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"tr","translation":"{{value1}} menüsünü senkronize ettiniz.","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"tr","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"tr","translation":"{{value1}} tekrar/saniye","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"tr","translation":"{{value1}} tekrar・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"tr","translation":"{{value1}} saniye","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"tr","translation":"{{value1}} egzersiz türü・{{value2}} set・Toplam {{value3}} tekrar","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"tr","translation":"Bu akıllı sahte ile iPhone bağlantısı kullanılamaz. Veriler akıllı saatte saklanmaktadır.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"tr","translation":"Bu akıllı sahte ile bağlantı kullanamazsınız.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"tr","translation":"Atla","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"tr","translation":"Set","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"tr","translation":"Set {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"tr","translation":"Set'i tamamla","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"tr","translation":"Set'i başlat","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"tr","translation":"Set ortalaması {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"tr","translation":"Set henüz ayarlanmamış","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"tr","translation":"Set başlat","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"tr","translation":"Set başlatmayı iptal et","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"tr","translation":"Sensör ölçüm yapıyor","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"tr","translation":"Sensör verisi hazırlanamıyor, manuel olarak kaydediliyor.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"tr","translation":"Talimatları atla","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"tr","translation":"Tempo","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"tr","translation":"Tempo'yu senkronize et","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"tr","translation":"Tempo'yu ayarlayın","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"tr","translation":"Tempo rehberini geçici olarak durdurun","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"tr","translation":"Tempo rehberini yeniden başlatın","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"tr","translation":"Barfiks","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"tr","translation":"Menü","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"tr","translation":"Menüyü seçin","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"tr","translation":"Menü verilerini okuyamadım","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"tr","translation":"Menü değiştir","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"tr","translation":"Menü bekleme","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"tr","translation":"Notlar","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"tr","translation":"Notları düzenleyin","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"tr","translation":"Hareket","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"tr","translation":"Çekme","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"tr","translation":"Egzersiz","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"tr","translation":"Egzersizi tamamlamak ister misiniz?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"tr","translation":"Egzersizi iptal ettiniz","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"tr","translation":"Duraklatın","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"tr","translation":"{{value1}} saniye duraklat/{{value2}} saniye ileri","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"tr","translation":"Duraklatma sırasında","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"tr","translation":"Yukarı","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"tr","translation":"{{value1}} yukarı/{{value2}} aşağı/{{value3}} saniye/dakika","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"tr","translation":"Yukarı","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"tr","translation":"Yukarı {{value1}} saniye / Aşağı {{value2}} saniye","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"tr","translation":"Yukarı {{value1}} saniye / Aşağı {{value2}} saniye","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"tr","translation":"Yukarı ve aşağı sürelerini ayrı ayrı ayarlayın. Apple Watch, her bir hareketi 1 ila 3 kez dokunma ile size bildirir.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"tr","translation":"Yukarı süresi","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"tr","translation":"Yukarı süresini doğrudan girin","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"tr","translation":"Aşağı","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"tr","translation":"Aşağı","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"tr","translation":"Aşağı süresi","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"tr","translation":"Aşağı süresini doğrudan girin","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"tr","translation":"Bugün","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"tr","translation":"Bugünün menüsü","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"tr","translation":"Bugünün menüsü: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"tr","translation":"Bugünün menüsünü seçin","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"tr","translation":"Dinlenme {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"tr","translation":"{{value1}} saniye dinlenme","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"tr","translation":"Dinlen","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"tr","translation":"Dinlemeyi atla","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"tr","translation":"Dinlenme süresi","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"tr","translation":"Dinlenme tamamlandı","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"tr","translation":"Kalan enerji ve hareket hızına göre %2.5 daha yüksek bir değer önerildi","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"tr","translation":"Başlat","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"tr","translation":"Nasıl kullanılır {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"tr","translation":"Kaydet","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"tr","translation":"Güvenilirlik: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"tr","translation":"Düzelt","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"tr","translation":"Yeniden başlat","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"tr","translation":"Dakika:Saniye","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"tr","translation":"Son kaydınız","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"tr","translation":"Hareketin istikrarı: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"tr","translation":"Olası hareketler: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"tr","translation":"Hareket durduruldu tespit edildi","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"tr","translation":"Tahmini hareket sayısı: {{value1}}","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"tr","translation":"Tahmini hareket sayısı: {{value1}}・Güvenilirlik: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"tr","translation":"Hareket hızı değişimi: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"tr","translation":"Güncelleyin","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"tr","translation":"İptal et","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"tr","translation":"Aynı saatte Fitness kaydı mevcut olduğu için Health'e çift yedekleme yapılmadı","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"tr","translation":"Senkronize menüden seçim yapabilirsiniz","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"tr","translation":"Tekrar","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"tr","translation":"Tekrar sayısı","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"tr","translation":"Tekrar sayısını tekrarla seçerek ayarlayın","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"tr","translation":"Tamamlandı","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"tr","translation":"Tamamlandı ve iPhone'a gönderildi","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"tr","translation":"Tamamlandı ve gönderildi","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"tr","translation":"Tamamlandığında dinlenme zamanlayıcısı başlar. Bir sonraki egzersizi sırayı değiştirerek seçebilirsiniz.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"tr","translation":"Tamamlanmış bir antrenman yok","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"tr","translation":"Tamamlanan setler","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"tr","translation":"Tamamlanan {{value1}} set","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"tr","translation":"Başarı {{value1}} × {{value2}} tekrar","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"tr","translation":"Başarıları senkronize et","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"tr","translation":"Başarı girişi yapılıyor","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"tr","translation":"Çalışan setin RPE'sini değiştir","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"tr","translation":"Çalışan setin temposunu değiştir","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"tr","translation":"Çalışan setin tekrar sayısını değiştir","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"tr","translation":"Çalışan setin ağırlığını değiştir","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"tr","translation":"Ortalama -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"tr","translation":"Ortalama {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"tr","translation":"Kalp atışları iyileşme eğiliminde. Duyularınız düzenlendiğinde bir sonraki sete geçebilirsiniz","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"tr","translation":"Dinlenme sırasında kalp atışlarınızı takip etmeye devam edin.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"tr","translation":"Kalp atışı ve enerji harcama değerlerini ölçüyoruz.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"tr","translation":"Manuel giriş","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"tr","translation":"Manuel olarak kaydedebilirsiniz.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"tr","translation":"Şu anda manuel olarak kaydediyoruz.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"tr","translation":"Saat bileğinin hareketleri ve tamamlanmamış setlerin sırasına göre tahmin ediyoruz.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"tr","translation":"Vibrasyon sayısı (1-3 kez/saniye)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"tr","translation":"Vibrasyon hızı","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"tr","translation":"Bağlantı başarısız: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"tr","translation":"Tahmini {{value1}} tekrarı güncellendi.","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"tr","translation":"Önerileri uygulayın","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"tr","translation":"Zamanı değiştirin","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"tr","translation":"Maksimum -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"tr","translation":"Maksimum {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"tr","translation":"Son kez bitirdiğinizde iPhone'a gönderilir. Gönderilmemiş kayıtları daha sonra yeniden gönderebilirsiniz.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"tr","translation":"Tamamlanmamış setleri de dahil olmak üzere mevcut içeriği kaydedin.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"tr","translation":"Gönderilmemiş","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"tr","translation":"Saat üzerinde henüz kaydedilen bir şey yok.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"tr","translation":"Başlatılmadı","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"tr","translation":"Sonra: {{value1}} {{value2}} × {{value3}} tekrar","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"tr","translation":"Son seti başlatın","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"tr","translation":"Hemen bir sonraki antrenmana geçin.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"tr","translation":"Son egzersiz","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"tr","translation":"İleri","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"tr","translation":"Mevcut hareketi atla","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"tr","translation":"Hedef: {{value1}} × {{value2}} tekrar","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"tr","translation":"Hedefe ulaşıldı","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"tr","translation":"Hedef ulaşmadı, RPE veya hareket hızı düşüşünden %5 daha hafif bir öneri","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"tr","translation":"Göreli hareket aralığı: {{value1}}% ve tutarlılık: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"tr","translation":"Enerji tasarruflu örnekleme (pil seviyesi)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"tr","translation":"Güç tasarrufu modu (Düşük Güç Modu)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"tr","translation":"Güç tasarrufu modu (Ayarlar)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"tr","translation":"Sil","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"tr","translation":"Saniye","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"tr","translation":"İsteği ve set'i seçip başlayın. Yanlış bir seçim yaparsanız, \"İptal\" ile geri dönebilirsiniz.","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"tr","translation":"İstekler: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"tr","translation":"Bitişi ve senkronizasyonu başlat","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"tr","translation":"Devam et","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"tr","translation":"Sırt","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"tr","translation":"Sırt günü","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"tr","translation":"Göğüs","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"tr","translation":"Göğüs Günü","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"tr","translation":"Kaydı silmek ister misiniz?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"tr","translation":"Kaydediliyor","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"tr","translation":"Kaydedilen antrenman yok","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"tr","translation":"Normal örnekleme","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"tr","translation":"Hızlı","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"tr","translation":"Başarı, RPE ve hareket hızıdan aynı ağırlığı öner","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"tr","translation":"Farklı","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"tr","translation":"Seçili sete geç","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"tr","translation":"Ağırlık","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"tr","translation":"Ağırlığı tekrarla şeklinde ayarla","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"tr","translation":"Ağırlık, tekrar sayısı, RPE ve dinlenme, başlangıç ve sonrasında tekrarla ile değiştirilebilir.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"tr","translation":"Başlat","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"tr","translation":"Başlamadan önce tempoyu ayarla","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"tr","translation":"Desteklenmiyor: {{value1}}. Elle giriş yapmak mümkün","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"tr","translation":"Sesli not ve metin not","review_note":""}

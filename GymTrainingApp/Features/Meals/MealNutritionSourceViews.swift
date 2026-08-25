@@ -17,12 +17,12 @@ struct FoodCompositionPickerView: View {
         NavigationStack {
             List {
                 Section {
-                    TextField("食品名を検索", text: $query)
+                    TextField(L10n.string("health_meals_body_ai.4d24a28d4ef0", fallback: "食品名を検索"), text: $query)
                         .textInputAutocapitalization(.never)
                         .accessibilityIdentifier("foodDatabaseSearchField")
                 }
 
-                Section("食品") {
+                Section(L10n.string("health_meals_body_ai.51b278066b12", fallback: "食品")) {
                     if results.isEmpty {
                         ContentUnavailableView.search(text: query)
                     } else {
@@ -35,7 +35,7 @@ struct FoodCompositionPickerView: View {
                                     Text(food.name)
                                         .font(.body.bold())
                                         .foregroundStyle(AppTheme.ink)
-                                    Text("100g: \(Int(food.calories.rounded()))kcal  P\(food.protein.formatted(.number.precision(.fractionLength(0...1))))  F\(food.fat.formatted(.number.precision(.fractionLength(0...1))))  C\(food.carbs.formatted(.number.precision(.fractionLength(0...1))))")
+                                    Text("100g: \(Int(food.calories.rounded()))kcal  P\(Int(food.protein.rounded()))  F\(Int(food.fat.rounded()))  C\(Int(food.carbs.rounded()))")
                                         .font(.footnote)
                                         .foregroundStyle(AppTheme.mutedInk)
                                     if let note = food.dataQualityNote {
@@ -54,19 +54,19 @@ struct FoodCompositionPickerView: View {
                     Text(FoodCompositionDatabase.shared.catalog.attribution)
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
-                    Text("\(FoodCompositionDatabase.shared.catalog.basis)・訂正 \(FoodCompositionDatabase.shared.catalog.correctionDate)")
+                    Text(L10n.string("health_meals_body_ai.066be6f8dc2d", fallback: "{{value1}}・訂正 {{value2}}", values: [String(describing: FoodCompositionDatabase.shared.catalog.basis), String(describing: FoodCompositionDatabase.shared.catalog.correctionDate)]))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
-                    Text("「-」は未測定として合計から除外し、「Tr」は微量として0で概算します。")
+                    Text(L10n.string("health_meals_body_ai.42539e8231ed", fallback: "「-」は未測定として合計から除外し、「Tr」は微量として0で概算します。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
             }
-            .navigationTitle("食品DB")
+            .navigationTitle(L10n.string("health_meals_body_ai.3d6e7d3996d5", fallback: "食品DB"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("閉じる") { dismiss() }
+                    Button(L10n.string("health_meals_body_ai.ffadd0622088", fallback: "閉じる")) { dismiss() }
                 }
             }
         }
@@ -93,9 +93,13 @@ struct BarcodeFoodPickerView: View {
     let onSelect: (MealCompositionItem) -> Void
 
     var body: some View {
+        let nutritionLabelButtonTitle = isReadingNutritionLabel
+            ? L10n.string("health_meals_body_ai.78cd1b7ccb8e", fallback: "栄養表示を読取中")
+            : L10n.string("health_meals_body_ai.a3f776f9b426", fallback: "栄養表示の写真から入力")
+
         NavigationStack {
             Form {
-                Section("商品コード") {
+                Section(L10n.string("health_meals_body_ai.5ce14bc41fd3", fallback: "商品コード")) {
                     HStack(spacing: 10) {
                         TextField("JAN / EAN", text: $code)
                             .keyboardType(.numberPad)
@@ -105,7 +109,7 @@ struct BarcodeFoodPickerView: View {
                         } label: {
                             Image(systemName: "magnifyingglass")
                         }
-                        .accessibilityLabel("登録済み商品を検索")
+                        .accessibilityLabel(L10n.string("health_meals_body_ai.6bfd0c245861", fallback: "登録済み商品を検索"))
                     }
 
                     if DataScannerViewController.isSupported,
@@ -113,14 +117,14 @@ struct BarcodeFoodPickerView: View {
                         Button {
                             isShowingScanner = true
                         } label: {
-                            Label("カメラで読み取る", systemImage: "barcode.viewfinder")
+                            Label(L10n.string("health_meals_body_ai.db59ae95c8ef", fallback: "カメラで読み取る"), systemImage: "barcode.viewfinder")
                         }
                         .accessibilityIdentifier("scanBarcodeButton")
                     }
 
                     PhotosPicker(selection: $nutritionLabelPhoto, matching: .images) {
                         Label(
-                            isReadingNutritionLabel ? "栄養表示を読取中" : "栄養表示の写真から入力",
+                            nutritionLabelButtonTitle,
                             systemImage: "text.viewfinder"
                         )
                     }
@@ -134,12 +138,12 @@ struct BarcodeFoodPickerView: View {
                     }
                 }
 
-                Section("商品") {
-                    TextField("商品名", text: $name)
+                Section(L10n.string("health_meals_body_ai.6622f6b6d24f", fallback: "商品")) {
+                    TextField(L10n.string("health_meals_body_ai.2a6a23ccdb93", fallback: "商品名"), text: $name)
                         .accessibilityIdentifier("barcodeProductNameField")
                     NumericTextInputControl(
                         text: $basisAmount,
-                        title: "ラベルの基準量",
+                        title: L10n.string("health_meals_body_ai.9bf285f4e0ce", fallback: "ラベルの基準量"),
                         unit: "g",
                         range: 0.1...2_000,
                         step: 0.1,
@@ -148,7 +152,7 @@ struct BarcodeFoodPickerView: View {
                     )
                     NumericTextInputControl(
                         text: $amount,
-                        title: "実食量",
+                        title: L10n.string("health_meals_body_ai.33cef63d33eb", fallback: "実食量"),
                         unit: "g",
                         range: 0...2_000,
                         step: 1,
@@ -157,10 +161,10 @@ struct BarcodeFoodPickerView: View {
                     )
                 }
 
-                Section("基準量当たり") {
+                Section(L10n.string("health_meals_body_ai.ea5962a2dde7", fallback: "基準量当たり")) {
                     NumericTextInputControl(
                         text: $calories,
-                        title: "カロリー",
+                        title: L10n.string("health_meals_body_ai.a412f109a6d5", fallback: "カロリー"),
                         unit: "kcal",
                         range: 0...1_000,
                         step: 1,
@@ -169,7 +173,7 @@ struct BarcodeFoodPickerView: View {
                     )
                     NumericTextInputControl(
                         text: $protein,
-                        title: "たんぱく質",
+                        title: L10n.string("health_meals_body_ai.140a2c34da87", fallback: "たんぱく質"),
                         unit: "g",
                         range: 0...100,
                         step: 0.1,
@@ -178,7 +182,7 @@ struct BarcodeFoodPickerView: View {
                     )
                     NumericTextInputControl(
                         text: $fat,
-                        title: "脂質",
+                        title: L10n.string("health_meals_body_ai.c20a7b4dbb8b", fallback: "脂質"),
                         unit: "g",
                         range: 0...100,
                         step: 0.1,
@@ -187,34 +191,34 @@ struct BarcodeFoodPickerView: View {
                     )
                     NumericTextInputControl(
                         text: $carbs,
-                        title: "炭水化物",
+                        title: L10n.string("health_meals_body_ai.09beaa3b972f", fallback: "炭水化物"),
                         unit: "g",
                         range: 0...100,
                         step: 0.1,
                         defaultValue: 0,
                         accessibilityIdentifier: "barcodeCarbsField"
                     )
-                    Text("未登録商品は入力後に端末へ保存し、次回の読取で再利用します。")
+                    Text(L10n.string("health_meals_body_ai.1b0c2ec5452e", fallback: "未登録商品は入力後に端末へ保存し、次回の読取で再利用します。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                     if let nutritionSourceDescription {
                         Text(
-                            "情報源：\(nutritionSourceDescription)"
-                            + (nutritionSourceUpdatedAt.map { "・\($0.formatted(date: .abbreviated, time: .omitted))" } ?? "")
+                            L10n.string("health_meals_body_ai.048097c4c2a5", fallback: "情報源：{{value1}}", values: [String(describing: nutritionSourceDescription)])
+                            + (nutritionSourceUpdatedAt.map { L10n.string("health_meals_body_ai.ac2ad0f51452", fallback: "・{{value1}}", values: [String(describing: $0.formatted(date: .abbreviated, time: .omitted))]) } ?? "")
                         )
                         .font(.caption)
                         .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
             }
-            .navigationTitle("バーコード")
+            .navigationTitle(L10n.string("health_meals_body_ai.f15118749eab", fallback: "バーコード"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル") { dismiss() }
+                    Button(L10n.string("health_meals_body_ai.dd84abcb6681", fallback: "キャンセル")) { dismiss() }
                 }
                 ToolbarItem(placement: .primaryAction) {
-                    Button("追加") { addProduct() }
+                    Button(L10n.string("health_meals_body_ai.76b8d9691185", fallback: "追加")) { addProduct() }
                         .disabled(normalizedCode.isEmpty || name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                         .accessibilityIdentifier("addBarcodeFoodButton")
                 }
@@ -242,11 +246,11 @@ struct BarcodeFoodPickerView: View {
     private func lookup() {
         code = normalizedCode
         guard !code.isEmpty else {
-            notice = "商品コードを入力してください。"
+            notice = L10n.string("health_meals_body_ai.43dc3b27e76e", fallback: "商品コードを入力してください。")
             return
         }
         guard let product = BarcodeFoodProductStore().product(for: code) else {
-            notice = "未登録です。ラベルの100g当たりの数値を入力してください。"
+            notice = L10n.string("health_meals_body_ai.406225b8c87e", fallback: "未登録です。ラベルの100g当たりの数値を入力してください。")
             return
         }
         name = product.name
@@ -257,7 +261,7 @@ struct BarcodeFoodPickerView: View {
         carbs = formatted(product.nutritionPerBasis.carbs)
         nutritionSourceDescription = product.sourceDescription
         nutritionSourceUpdatedAt = product.sourceUpdatedAt
-        notice = "端末に保存した商品を読み込みました。"
+        notice = L10n.string("health_meals_body_ai.4fd6f0c4f98f", fallback: "端末に保存した商品を読み込みました。")
     }
 
     private func readNutritionLabel(from item: PhotosPickerItem?) {
@@ -276,14 +280,14 @@ struct BarcodeFoodPickerView: View {
                     if let value = draft.protein { protein = formatted(value) }
                     if let value = draft.fat { fat = formatted(value) }
                     if let value = draft.carbs { carbs = formatted(value) }
-                    nutritionSourceDescription = "栄養成分表示OCR（要確認）"
+                    nutritionSourceDescription = L10n.string("health_meals_body_ai.31969faf266a", fallback: "栄養成分表示OCR（要確認）")
                     nutritionSourceUpdatedAt = Date()
-                    notice = "栄養表示から数値を入力しました。基準量と各数値を確認してください。"
+                    notice = L10n.string("health_meals_body_ai.0eea7055641a", fallback: "栄養表示から数値を入力しました。基準量と各数値を確認してください。")
                     isReadingNutritionLabel = false
                 }
             } catch {
                 await MainActor.run {
-                    notice = "栄養表示を読み取れませんでした。明るい場所で正面から撮り直すか、手入力してください。"
+                    notice = L10n.string("health_meals_body_ai.d4de549ad1bc", fallback: "栄養表示を読み取れませんでした。明るい場所で正面から撮り直すか、手入力してください。")
                     isReadingNutritionLabel = false
                 }
             }
@@ -301,8 +305,8 @@ struct BarcodeFoodPickerView: View {
                 fat: parsed(fat),
                 carbs: parsed(carbs)
             ),
-            sourceDescription: nutritionSourceDescription == "栄養成分表示OCR（要確認）"
-                ? "栄養成分表示OCR（ユーザー確認）"
+            sourceDescription: nutritionSourceDescription == L10n.string("health_meals_body_ai.31969faf266a", fallback: "栄養成分表示OCR（要確認）")
+                ? L10n.string("health_meals_body_ai.8fa1b3c8eff2", fallback: "栄養成分表示OCR（ユーザー確認）")
                 : nutritionSourceDescription,
             sourceUpdatedAt: nutritionSourceUpdatedAt
         )
@@ -311,7 +315,7 @@ struct BarcodeFoodPickerView: View {
             onSelect(product.mealItem(amountGrams: parsed(amount)))
             dismiss()
         } catch {
-            notice = "商品を保存できませんでした。"
+            notice = L10n.string("health_meals_body_ai.6a08e330f48e", fallback: "商品を保存できませんでした。")
             AppDiagnostics.shared.record(error: error, category: "food.barcode", message: "Failed to save barcode food")
         }
     }
@@ -321,7 +325,7 @@ struct BarcodeFoodPickerView: View {
     }
 
     private func formatted(_ value: Double) -> String {
-        value.formatted(.number.precision(.fractionLength(0...1)))
+        value.formatted(.number.precision(.fractionLength(0)))
     }
 }
 
@@ -428,9 +432,9 @@ private struct BarcodeScannerView: UIViewControllerRepresentable {
               DataScannerViewController.isAvailable else {
             return UIHostingController(
                 rootView: ContentUnavailableView(
-                    "カメラ読取を利用できません",
+                    L10n.string("health_meals_body_ai.0b497fb0939d", fallback: "カメラ読取を利用できません"),
                     systemImage: "barcode.viewfinder",
-                    description: Text("商品コードを手入力してください。")
+                    description: Text(L10n.string("health_meals_body_ai.e9d4a9038ed6", fallback: "商品コードを手入力してください。"))
                 )
             )
         }

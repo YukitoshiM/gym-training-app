@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "ar-SA", "translation": "حساب الذكاء الاصطناعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "ar-SA", "translation": "{{value1}} رصيد حالي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "ar-SA", "translation": "إضافة رصيد", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "ar-SA", "translation": "تعديل الرصيد", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "ar-SA", "translation": "استخدام رصيد الذكاء الاصطناعي لتحليل تلقائي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "ar-SA", "translation": "لا يتم استهلاك الرصيد، بل يتم تلخيص البيانات المخزنة على الجهاز فقط.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "ar-SA", "translation": "يتم استهلاك رصيد التقارير الأسبوعية أو الشهرية عند التنفيذ المجدول.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "ar-SA", "translation": "رصيد الذكاء الاصطناعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "ar-SA", "translation": "جاري التحقق من الرصيد", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "ar-SA", "translation": "رصيد {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "ar-SA", "translation": "{{value1}} رصيد تم استلامه.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "ar-SA", "translation": "شراء رصيد", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "ar-SA", "translation": "الاستمرار في التسجيل اليدوي بدون الذكاء الاصطناعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "ar-SA", "translation": "سيؤدي هذا إلى حذف جميع السجلات المخزنة على الجهاز وحساب BodyMode. سيتم فقد جميع الرصيد المتبقي ولا يمكن استعادته.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "ar-SA", "translation": "سجل الرصيد", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "ar-SA", "translation": "يمكنك الحصول على رصيد عن طريق الفيديو أو شرائه حسب الحاجة. التسجيل اليدوي لا يزال مجانيًا.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "ar-SA", "translation": "احصل عليه من خلال الإعلانات أو اشترِ رصيد. التسجيل اليدوي لا يزال متاحًا.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "ar-SA", "translation": "رصيد الذكاء الاصطناعي غير كافٍ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "ar-SA", "translation": "تقرير شهري", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "ar-SA", "translation": "لا يوجد تاريخ انتهاء صلاحية", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "ar-SA", "translation": "عدد {{value1}} نقاط الذكاء الاصطناعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "ar-SA", "translation": "جارٍ تجهيز المنتجات", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "ar-SA", "translation": "تم تعديل المبلغ المرجع، وتم إضافة {{value1}} نقاط.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "ar-SA", "translation": "تمت إضافة نقاط.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "ar-SA", "translation": "طلب الشراء قيد الانتظار. سيتم إضافته تلقائيًا بعد الإتمام.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "ar-SA", "translation": "نقاط الشراء لا تنتهي صلاحيتها. لا يمكن نقلها أو بيعها. عند الشراء، لن تظهر الإعلانات.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "ar-SA", "translation": "لا يمكن التحقق من حالة الشراء.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "ar-SA", "translation": "لا يمكن التحقق من عملية الشراء في App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "ar-SA", "translation": "تعديل المبلغ المرجع", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "ar-SA", "translation": "لقد تلقيت مكافأة اليوم.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "ar-SA", "translation": "تستغرق عملية التحقق وقتًا. سيتم إضافة النقاط بعد التحقق.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "ar-SA", "translation": "للحصول على أحدث الرصيد، افتح شاشة الذكاء الاصطناعي مرة أخرى. لا تحتاج إلى مشاهدة الفيديو مرة أخرى.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "ar-SA", "translation": "تلقيت 5 نقاط.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "ar-SA", "translation": "انتهت صلاحية الجلسة. يرجى تسجيل الدخول مرة أخرى.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "ar-SA", "translation": "تم تسجيل الدخول باستخدام حساب Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "ar-SA", "translation": "يمكنك الحصول على نقاط أولية عند التسجيل في Apple. يمكن استخدام السجل اليدوي بدون تسجيل.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "ar-SA", "translation": "لتفعيل ميزات الذكاء الاصطناعي، سجل في Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "ar-SA", "translation": "قيد التسجيل", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "ar-SA", "translation": "احصل على 20 نقطة أولية عند التسجيل في Apple. يمكن استخدام السجل اليدوي بدون تسجيل.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "ar-SA", "translation": "احصل على 20 نقطة أولية عند التسجيل في Apple. لا توجد رسوم أو تحديثات تلقائية.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "ar-SA", "translation": "احصل على 20 نقطة عند التسجيل", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "ar-SA", "translation": "إعلانات الفيديو", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "ar-SA", "translation": "من قبل المنظم", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "ar-SA", "translation": "الشراء", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "ar-SA", "translation": "مكافأة التسجيل", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "ar-SA", "translation": "ابدأ مع مدرب الذكاء الاصطناعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "ar-SA", "translation": "نقاط الذكاء الاصطناعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "ar-SA", "translation": "جرب لاحقًا.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "ar-SA", "translation": "استخدام غير محدود", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "ar-SA", "translation": "شاهد الإعلان واحصل على 5 نقاط", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "ar-SA", "translation": "تقرير أسبوعي", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

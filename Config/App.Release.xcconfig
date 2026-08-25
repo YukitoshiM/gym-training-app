@@ -1,7 +1,9 @@
 #include "AIService.xcconfig"
+#include "Legal.xcconfig"
 
 BODYMODE_ADMOB_APP_ID =
 BODYMODE_ADMOB_BANNER_AD_UNIT_ID =
+BODYMODE_ADMOB_REWARDED_AD_UNIT_ID =
 
 // Release IDs are local deployment configuration, not source code.
 #include? "Ads.local.xcconfig"

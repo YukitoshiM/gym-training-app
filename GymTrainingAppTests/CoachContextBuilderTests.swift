@@ -195,6 +195,64 @@ final class CoachContextBuilderTests: XCTestCase {
         XCTAssertTrue(context.preferences.contains("希望ペース: 週4日・1回75分"))
     }
 
+    func testHealthIntakeIsIncludedOnlyWithExplicitSharing() {
+        let now = Date(timeIntervalSince1970: 2_000_000_000)
+        var profile = UserProfile.default
+        profile.healthIntake = HealthIntakeProfile(
+            activityLevel: .regular,
+            plannedIntensity: .vigorous,
+            safetyStatus: .hasConsiderations,
+            considerations: [.jointOrMuscleDiscomfort],
+            typicalSleep: .sixToSeven,
+            goalFocus: .physiqueChange,
+            nutritionGuidanceMode: .avoidCalorieFocus,
+            otherTrainingDays: nil,
+            sportOrActivity: "",
+            note: "深い屈伸は避ける"
+        )
+        var shared = AIDataSharingSettings.default
+        shared.trainingConsiderations = true
+        let builder = makeBuilder(now: now)
+
+        let included = builder.build(
+            profile: profile,
+            sharing: shared,
+            bodyMetrics: [],
+            bodyMetricGoals: [],
+            meals: [],
+            bodyPhotos: [],
+            workouts: [],
+            gymVisits: [],
+            subjectiveRecovery: [],
+            healthSnapshot: .empty,
+            recoveryHistory: [],
+            memories: [],
+            insights: []
+        )
+        var hiddenSharing = shared
+        hiddenSharing.trainingConsiderations = false
+        let hidden = builder.build(
+            profile: profile,
+            sharing: hiddenSharing,
+            bodyMetrics: [],
+            bodyMetricGoals: [],
+            meals: [],
+            bodyPhotos: [],
+            workouts: [],
+            gymVisits: [],
+            subjectiveRecovery: [],
+            healthSnapshot: .empty,
+            recoveryHistory: [],
+            memories: [],
+            insights: []
+        )
+
+        XCTAssertTrue(included.preferences.contains(where: { $0.contains("関節・筋肉") }))
+        XCTAssertTrue(included.preferences.contains(where: { $0.contains("深い屈伸") }))
+        XCTAssertFalse(hidden.preferences.contains(where: { $0.contains("関節・筋肉") }))
+        XCTAssertFalse(hidden.preferences.contains(where: { $0.contains("深い屈伸") }))
+    }
+
     func testBodyPhotoContextUsesThirtyDayLookback() {
         let now = Date(timeIntervalSince1970: 2_000_000_000)
         let included = now.addingTimeInterval(-8 * 86_400)
@@ -310,6 +368,63 @@ final class CoachContextBuilderTests: XCTestCase {
         XCTAssertEqual(context.suggestionResult["completion"], "0/1")
         XCTAssertEqual(context.suggestionResult["skipped_actions"], "共有する食事")
         XCTAssertNil(context.suggestionResult["review"])
+    }
+
+    func testContextBuilderIncludesLatestPlanRevisionOutcomeOnlyWhenWorkoutSharingIsEnabled() {
+        let now = Date(timeIntervalSince1970: 2_000_000_000)
+        let plan = TrainingPlan(name: "背中の日")
+        let revision = PlanRevisionProposal(
+            createdAt: now,
+            triggerSessionID: UUID(),
+            originalPlan: plan,
+            revisedPlan: TrainingPlan(name: "背中の日 改訂版"),
+            summary: "達成率に合わせて重量を調整",
+            decision: .acceptedAsUpdate,
+            baselineAchievementRate: 0.8,
+            effectiveness: .improved
+        )
+        let builder = makeBuilder(now: now)
+
+        let shared = builder.build(
+            profile: .default,
+            sharing: .default,
+            bodyMetrics: [],
+            bodyMetricGoals: [],
+            meals: [],
+            bodyPhotos: [],
+            workouts: [],
+            gymVisits: [],
+            subjectiveRecovery: [],
+            healthSnapshot: .empty,
+            recoveryHistory: [],
+            memories: [],
+            insights: [],
+            planRevisions: [revision]
+        )
+        XCTAssertEqual(shared.previousSuggestion["plan_revision"], "達成率に合わせて重量を調整")
+        XCTAssertEqual(shared.previousSuggestion["revised_plan"], "背中の日 改訂版")
+        XCTAssertEqual(shared.suggestionResult["plan_revision_effectiveness"], "improved")
+
+        var privateSharing = AIDataSharingSettings.default
+        privateSharing.workouts = false
+        let hidden = builder.build(
+            profile: .default,
+            sharing: privateSharing,
+            bodyMetrics: [],
+            bodyMetricGoals: [],
+            meals: [],
+            bodyPhotos: [],
+            workouts: [],
+            gymVisits: [],
+            subjectiveRecovery: [],
+            healthSnapshot: .empty,
+            recoveryHistory: [],
+            memories: [],
+            insights: [],
+            planRevisions: [revision]
+        )
+        XCTAssertNil(hidden.previousSuggestion["plan_revision"])
+        XCTAssertNil(hidden.suggestionResult["plan_revision_effectiveness"])
     }
 
     private func makeBuilder(

@@ -65,12 +65,12 @@ struct PlanEditorView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(
                                     draft.exercises.isEmpty
-                                        ? "\(appStore.userProfile.coachPersona.displayName)に作ってもらう"
-                                        : "\(appStore.userProfile.coachPersona.displayName)に修正を相談"
+                                        ? L10n.string("training.c5ce2388abe7", fallback: "{{value1}}に作ってもらう", values: [String(describing: appStore.userProfile.coachPersona.displayName)])
+                                        : L10n.string("training.380f3b3f31f1", fallback: "{{value1}}に修正を相談", values: [String(describing: appStore.userProfile.coachPersona.displayName)])
                                 )
                                     .font(.headline)
                                     .foregroundStyle(AppTheme.ink)
-                                Text("目標・実績・使える器具を反映")
+                                Text(L10n.string("training.53da0cff7831", fallback: "目標・実績・使える器具を反映"))
                                     .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
@@ -84,8 +84,8 @@ struct PlanEditorView: View {
                     .accessibilityIdentifier("consultAIFromPlanEditorButton")
                 }
 
-                Section("計画名") {
-                    TextField("例: 胸の日", text: $draft.name)
+                Section(L10n.string("training.29ef9e964c43", fallback: "計画名")) {
+                    TextField(L10n.string("training.9ec38ed0596c", fallback: "例: 胸の日"), text: $draft.name)
                         .accessibilityIdentifier("planNameField")
                         .focused($isPlanNameFocused)
                 }
@@ -107,12 +107,12 @@ struct PlanEditorView: View {
                             .padding(.vertical, 2)
                         }
                     } header: {
-                        Text("クイック作成")
+                        Text(L10n.string("training.880aa82c0af0", fallback: "クイック作成"))
                     }
 
                     Section {
                         if draft.exercises.isEmpty {
-                            Text("種目を追加すると一括設定できます。")
+                            Text(L10n.string("training.50730e3c9ce5", fallback: "種目を追加すると一括設定できます。"))
                                 .font(.subheadline)
                                 .foregroundStyle(AppTheme.mutedInk)
                         } else {
@@ -129,16 +129,16 @@ struct PlanEditorView: View {
                             }
                         }
                     } header: {
-                        Text("セット一括設定")
+                        Text(L10n.string("training.fca5e185e9e2", fallback: "セット一括設定"))
                     }
                 }
 
                 Section {
                     if draft.exercises.isEmpty {
                         ContentUnavailableView {
-                            Label("種目がありません", systemImage: "dumbbell")
+                            Label(L10n.string("training.f91b5b160025", fallback: "種目がありません"), systemImage: "dumbbell")
                         } description: {
-                            Text("種目を追加して、セットごとの目標を入力します。")
+                            Text(L10n.string("training.5e2876f45479", fallback: "種目を追加して、セットごとの目標を入力します。"))
                         }
                     } else {
                         ForEach($draft.exercises) { $planExercise in
@@ -152,13 +152,13 @@ struct PlanEditorView: View {
                     Button {
                         isSelectingExercise = true
                     } label: {
-                        Label("種目を追加", systemImage: "plus.circle")
+                        Label(L10n.string("training.131342b755f7", fallback: "種目を追加"), systemImage: "plus.circle")
                     }
                     .accessibilityIdentifier("addExerciseToPlanButton")
                 } header: {
-                    Text("種目")
+                    Text(L10n.string("training.460379a71a7f", fallback: "種目"))
                 } footer: {
-                    Text("セット目標はワークアウト開始時にコピーされ、履歴に残ります。")
+                    Text(L10n.string("training.ecbede3ec48a", fallback: "セット目標はワークアウト開始時にコピーされ、履歴に残ります。"))
                 }
 
             }
@@ -177,17 +177,17 @@ struct PlanEditorView: View {
                 .background(AppTheme.elevatedBackground)
                 .accessibilityIdentifier("savePlanPinnedButton")
             }
-            .navigationTitle(draft.name.isEmpty ? "計画作成" : draft.name)
+            .navigationTitle(draft.name.isEmpty ? L10n.string("training.9e5c5d0f4baf", fallback: "計画作成") : draft.name)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル") {
+                    Button(L10n.string("training.76c1a8f001dd", fallback: "キャンセル")) {
                         dismiss()
                     }
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button("保存") {
+                    Button(L10n.string("training.0fcb170ec7cf", fallback: "保存")) {
                         save()
                     }
                     .accessibilityIdentifier("savePlanButton")
@@ -200,7 +200,7 @@ struct PlanEditorView: View {
 
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
-                    Button("入力完了") {
+                    Button(L10n.string("training.fbf5f35e5109", fallback: "入力完了")) {
                         isPlanNameFocused = false
                     }
                     .accessibilityIdentifier("dismissKeyboardButton")
@@ -217,10 +217,10 @@ struct PlanEditorView: View {
                     draft = revisedPlan
                 }
             }
-            .alert("保存できません", isPresented: $isShowingValidation) {
+            .alert(L10n.string("training.6689025e44d0", fallback: "保存できません"), isPresented: $isShowingValidation) {
                 Button("OK", role: .cancel) {}
             } message: {
-                Text("計画名と1つ以上の種目を入力してください。")
+                Text(L10n.string("training.6558f1d0f210", fallback: "計画名と1つ以上の種目を入力してください。"))
             }
         }
     }
@@ -341,13 +341,13 @@ struct PlanEditorView: View {
     private var saveButtonTitle: String {
         switch mode {
         case .beginnerStarter:
-            "このメニューで始める"
+            L10n.string("training.65d75c9e2044", fallback: "このメニューで始める")
         case .beginnerProgression:
-            "このメニューを保存"
+            L10n.string("training.65f350d032fe", fallback: "このメニューを保存")
         case .aiCoach:
-            "確認して計画を保存"
+            L10n.string("training.9920db8c0ebb", fallback: "確認して計画を保存")
         case .standard:
-            "計画を保存"
+            L10n.string("training.241d46d2cd02", fallback: "計画を保存")
         }
     }
 }
@@ -364,14 +364,14 @@ private struct BeginnerStarterGuide: View {
                 .background(AppTheme.accent.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
 
             VStack(alignment: .leading, spacing: 5) {
-                Text(isProgression ? "目的・器具に合わせた次のレベル" : "LEVEL 1・全身スターター")
+                Text(isProgression ? L10n.string("training.c9046d518292", fallback: "目的・器具に合わせた次のレベル") : L10n.string("training.90dd341bcfdd", fallback: "LEVEL 1・全身スターター"))
                     .font(.headline)
                     .foregroundStyle(AppTheme.ink)
 
                 Text(
                     isProgression
-                        ? "過去の達成状況から重量・回数を調整しています。確認して保存します。"
-                        : "3種目を2セットずつ。無理のない重量に調整して保存します。"
+                        ? L10n.string("training.16261933d5eb", fallback: "過去の達成状況から重量・回数を調整しています。確認して保存します。")
+                        : L10n.string("training.8011c7f226da", fallback: "3種目を2セットずつ。無理のない重量に調整して保存します。")
                 )
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.mutedInk)
@@ -397,11 +397,11 @@ private struct PlanTemplate: Identifiable {
     static let defaults: [PlanTemplate] = [
         PlanTemplate(
             id: "chest",
-            name: "胸の日",
-            subtitle: "押す / 胸上部",
+            name: L10n.string("training.d30ca9b91ccb", fallback: "胸の日"),
+            subtitle: L10n.string("training.705d0af3ec6e", fallback: "押す / 胸上部"),
             systemImage: "figure.strengthtraining.traditional",
             tint: AppTheme.accent,
-            exerciseNames: ["ベンチプレス", "インクラインダンベルプレス", "ケーブルクロスオーバー", "トライセプスプレスダウン"],
+            exerciseNames: [L10n.string("training.e2b5cf1b1f39", fallback: "ベンチプレス"), L10n.string("training.39029011b26a", fallback: "インクラインダンベルプレス"), L10n.string("training.e696e3ae3665", fallback: "ケーブルクロスオーバー"), L10n.string("training.2f0138ac5e92", fallback: "トライセプスプレスダウン")],
             setCount: 3,
             targetWeight: 50,
             targetReps: 10,
@@ -409,11 +409,11 @@ private struct PlanTemplate: Identifiable {
         ),
         PlanTemplate(
             id: "back",
-            name: "背中の日",
-            subtitle: "引く / 厚み",
+            name: L10n.string("training.6ffb7a731dd0", fallback: "背中の日"),
+            subtitle: L10n.string("training.461619512206", fallback: "引く / 厚み"),
             systemImage: "figure.pull",
             tint: AppTheme.blue,
-            exerciseNames: ["ラットプルダウン", "シーテッドロー", "ワンハンドダンベルロー", "フェイスプル"],
+            exerciseNames: [L10n.string("training.350f04ad1646", fallback: "ラットプルダウン"), L10n.string("training.861902f328fe", fallback: "シーテッドロー"), L10n.string("training.37679aa5c82b", fallback: "ワンハンドダンベルロー"), L10n.string("training.555c9f45a820", fallback: "フェイスプル")],
             setCount: 3,
             targetWeight: 50,
             targetReps: 10,
@@ -421,11 +421,11 @@ private struct PlanTemplate: Identifiable {
         ),
         PlanTemplate(
             id: "legs",
-            name: "脚の日",
-            subtitle: "脚 / 臀部",
+            name: L10n.string("training.f9b578ec8c80", fallback: "脚の日"),
+            subtitle: L10n.string("training.59a002a36b66", fallback: "脚 / 臀部"),
             systemImage: "figure.walk",
             tint: AppTheme.orange,
-            exerciseNames: ["レッグプレス", "レッグカール", "ヒップスラスト", "スタンディングカーフレイズ"],
+            exerciseNames: [L10n.string("training.f0fcaf87273a", fallback: "レッグプレス"), L10n.string("training.c47e9693a5f3", fallback: "レッグカール"), L10n.string("training.bc25e5938e41", fallback: "ヒップスラスト"), L10n.string("training.d92fd6ec348c", fallback: "スタンディングカーフレイズ")],
             setCount: 3,
             targetWeight: 50,
             targetReps: 10,
@@ -433,11 +433,11 @@ private struct PlanTemplate: Identifiable {
         ),
         PlanTemplate(
             id: "shouldersArms",
-            name: "肩・腕",
-            subtitle: "肩 / 二頭 / 三頭",
+            name: L10n.string("training.14f202634605", fallback: "肩・腕"),
+            subtitle: L10n.string("training.0ee4231d91b6", fallback: "肩 / 二頭 / 三頭"),
             systemImage: "figure.arms.open",
             tint: AppTheme.purple,
-            exerciseNames: ["ショルダープレス", "サイドレイズ", "ダンベルカール", "トライセプスプレスダウン"],
+            exerciseNames: [L10n.string("training.7a44ac818519", fallback: "ショルダープレス"), L10n.string("training.8eac181b85a5", fallback: "サイドレイズ"), L10n.string("training.c878919a9bf6", fallback: "ダンベルカール"), L10n.string("training.2f0138ac5e92", fallback: "トライセプスプレスダウン")],
             setCount: 3,
             targetWeight: 50,
             targetReps: 12,
@@ -445,11 +445,11 @@ private struct PlanTemplate: Identifiable {
         ),
         PlanTemplate(
             id: "fullBodyLight",
-            name: "全身軽め",
-            subtitle: "全身 / 維持",
+            name: L10n.string("training.eb204e77e96f", fallback: "全身軽め"),
+            subtitle: L10n.string("training.de776f6a7f2c", fallback: "全身 / 維持"),
             systemImage: "figure.mixed.cardio",
             tint: AppTheme.accent,
-            exerciseNames: ["スクワット", "ベンチプレス", "ラットプルダウン", "ショルダープレス"],
+            exerciseNames: [L10n.string("training.ce9fc6f5909f", fallback: "スクワット"), L10n.string("training.e2b5cf1b1f39", fallback: "ベンチプレス"), L10n.string("training.350f04ad1646", fallback: "ラットプルダウン"), L10n.string("training.7a44ac818519", fallback: "ショルダープレス")],
             setCount: 2,
             targetWeight: 50,
             targetReps: 10,
@@ -468,10 +468,10 @@ private struct PlanSetPreset: Identifiable {
     let tint: Color
 
     static let defaults: [PlanSetPreset] = [
-        PlanSetPreset(id: "standard", title: "3x10", detail: "標準", setCount: 3, targetWeight: 50, targetReps: 10, tint: AppTheme.accent),
-        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: "筋肥大", setCount: 4, targetWeight: 50, targetReps: 8, tint: AppTheme.blue),
-        PlanSetPreset(id: "strength", title: "5x5", detail: "高重量", setCount: 5, targetWeight: 50, targetReps: 5, tint: AppTheme.orange),
-        PlanSetPreset(id: "pump", title: "2x15", detail: "軽め", setCount: 2, targetWeight: 50, targetReps: 15, tint: AppTheme.purple)
+        PlanSetPreset(id: "standard", title: "3x10", detail: L10n.string("training.3d3e4ad500a9", fallback: "標準"), setCount: 3, targetWeight: 50, targetReps: 10, tint: AppTheme.accent),
+        PlanSetPreset(id: "hypertrophy", title: "4x8", detail: L10n.string("training.ff094202dcaa", fallback: "筋肥大"), setCount: 4, targetWeight: 50, targetReps: 8, tint: AppTheme.blue),
+        PlanSetPreset(id: "strength", title: "5x5", detail: L10n.string("training.7aa2531ffa78", fallback: "高重量"), setCount: 5, targetWeight: 50, targetReps: 5, tint: AppTheme.orange),
+        PlanSetPreset(id: "pump", title: "2x15", detail: L10n.string("training.56009c5efa29", fallback: "軽め"), setCount: 2, targetWeight: 50, targetReps: 15, tint: AppTheme.purple)
     ]
 }
 
@@ -483,7 +483,7 @@ private struct PlanTemplateChip: View {
             HStack {
                 IconBadge(systemImage: template.systemImage, tint: template.tint)
                 Spacer()
-                Text("\(template.exerciseNames.count)種目")
+                Text(L10n.string("training.70d17961dda6", fallback: "{{value1}}種目", values: [String(describing: template.exerciseNames.count)]))
                     .font(.footnote.bold())
                     .foregroundStyle(template.tint)
             }
@@ -547,7 +547,7 @@ private struct PlanExerciseEditorCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(planExercise.exercise.name)
                         .font(.headline)
-                    Text("\(planExercise.exercise.primaryMuscle.displayName)・\(planExercise.exercise.equipment.displayName)")
+                    Text(L10n.string("training.82f49e5f2763", fallback: "{{value1}}・{{value2}}", values: [String(describing: planExercise.exercise.primaryMuscle.displayName), String(describing: planExercise.exercise.equipment.displayName)]))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -572,7 +572,7 @@ private struct PlanExerciseEditorCard: View {
                     }
                 }
             } label: {
-                Label("セット構成", systemImage: "slider.horizontal.3")
+                Label(L10n.string("training.fa6a2ef643a8", fallback: "セット構成"), systemImage: "slider.horizontal.3")
             }
             .buttonStyle(.borderless)
             .accessibilityIdentifier("planExerciseSetMenu-\(planExercise.exercise.name)")
@@ -590,7 +590,7 @@ private struct PlanExerciseEditorCard: View {
             }
 
             if planExercise.exercise.supportsAssistedLoad {
-                Label("加算重量を入力。アシスト重量はマイナスで記録できます。", systemImage: "plus.forwardslash.minus")
+                Label(L10n.string("training.a9ba22011245", fallback: "加算重量を入力。アシスト重量はマイナスで記録できます。"), systemImage: "plus.forwardslash.minus")
                     .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
@@ -598,7 +598,7 @@ private struct PlanExerciseEditorCard: View {
             Button {
                 addSet()
             } label: {
-                Label("セットを追加", systemImage: "plus")
+                Label(L10n.string("training.0a9240ad4b7e", fallback: "セットを追加"), systemImage: "plus")
             }
             .buttonStyle(.borderless)
             .accessibilityIdentifier("addPlanSetButton")
@@ -613,6 +613,7 @@ private struct PlanExerciseEditorCard: View {
                 setOrder: planExercise.sets.count + 1,
                 targetWeight: previous?.targetWeight ?? 50,
                 targetReps: previous?.targetReps ?? 10,
+                targetRPE: previous?.targetRPE,
                 plannedConcentricSeconds: previous?.plannedConcentricSeconds,
                 plannedEccentricSeconds: previous?.plannedEccentricSeconds,
                 plannedTempoBeatSpeed: previous?.plannedTempoBeatSpeed
@@ -695,10 +696,10 @@ private struct PlanSetTargetRow: View {
     private var tempoTitle: String {
         guard let up = set.plannedConcentricSeconds,
               let down = set.plannedEccentricSeconds else {
-            return "テンポを設定"
+            return L10n.string("training.8f6540106bbd", fallback: "テンポを設定")
         }
         let speed = min(3, max(1, set.plannedTempoBeatSpeed ?? 1))
-        return "上げ \(up)秒・下げ \(down)秒・\(speed)回/秒"
+        return L10n.string("training.46bd062fc9c7", fallback: "上げ {{value1}}秒・下げ {{value2}}秒・{{value3}}回/秒", values: [String(describing: up), String(describing: down), String(describing: speed)])
     }
 }
 
@@ -723,34 +724,34 @@ private struct PlanSetTempoEditor: View {
         NavigationStack {
             Form {
                 Section {
-                    Toggle("触覚でテンポを案内", isOn: $isEnabled)
+                    Toggle(L10n.string("training.36467fec4916", fallback: "触覚でテンポを案内"), isOn: $isEnabled)
                         .accessibilityIdentifier("planTempoEnabled")
                 } footer: {
-                    Text("Apple Watchが設定した上げ・下げ時間を、1秒あたり1〜3回の触覚で案内します。")
+                    Text(L10n.string("training.4343c0de2bfd", fallback: "Apple Watchが設定した上げ・下げ時間を、1秒あたり1〜3回の触覚で案内します。"))
                 }
 
                 if isEnabled {
-                    Section("1回の動作") {
+                    Section(L10n.string("training.965f9a854c19", fallback: "1回の動作")) {
                         NumericTextInputControl(
                             text: $concentricText,
-                            title: "上げ",
-                            unit: "秒",
+                            title: L10n.string("training.3c0d51bbe730", fallback: "上げ"),
+                            unit: L10n.string("training.b1d936d15858", fallback: "秒"),
                             range: 1...10,
                             step: 1,
                             defaultValue: 2,
                             accessibilityIdentifier: "planConcentricSeconds"
                         )
-                        Picker("振動速度", selection: $beatSpeed) {
+                        Picker(L10n.string("training.6532391678cf", fallback: "振動速度"), selection: $beatSpeed) {
                             ForEach(1...3, id: \.self) { value in
-                                Text("\(value)回/秒").tag(value)
+                                Text(L10n.string("training.4d980bac73d4", fallback: "{{value1}}回/秒", values: [String(describing: value)])).tag(value)
                             }
                         }
                         .pickerStyle(.segmented)
                         .accessibilityIdentifier("planTempoBeatSpeed")
                         NumericTextInputControl(
                             text: $eccentricText,
-                            title: "下げ",
-                            unit: "秒",
+                            title: L10n.string("training.4befe1f9a87c", fallback: "下げ"),
+                            unit: L10n.string("training.b1d936d15858", fallback: "秒"),
                             range: 1...10,
                             step: 1,
                             defaultValue: 3,
@@ -759,14 +760,14 @@ private struct PlanSetTempoEditor: View {
                     }
                 }
             }
-            .navigationTitle("動作テンポ")
+            .navigationTitle(L10n.string("training.84c7d164b06b", fallback: "動作テンポ"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル") { dismiss() }
+                    Button(L10n.string("training.76c1a8f001dd", fallback: "キャンセル")) { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("保存") {
+                    Button(L10n.string("training.0fcb170ec7cf", fallback: "保存")) {
                         if isEnabled {
                             set.plannedConcentricSeconds = parsed(concentricText, fallback: 2)
                             set.plannedEccentricSeconds = parsed(eccentricText, fallback: 3)

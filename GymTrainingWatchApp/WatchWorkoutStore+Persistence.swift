@@ -16,24 +16,24 @@ extension WatchWorkoutStore {
             selectedPlan = library.preferredPlanID.flatMap { preferredID in
                 plans.first { $0.id == preferredID }
             }
-            statusMessage = selectedPlan.map { "今日のメニュー: \($0.name)" } ?? "同期済みメニューから選べます"
+            statusMessage = selectedPlan.map { L10n.string("watch_widget.7a379d574423", fallback: "今日のメニュー: {{value1}}", values: [$0.name]) } ?? L10n.string("watch_widget.184f5906186f", fallback: "同期済みメニューから選べます")
         } else if let data = UserDefaults.standard.data(forKey: planStorageKey),
                   let savedPlan = try? decoder.decode(WatchWorkoutPlanSnapshot.self, from: data) {
             plans = [savedPlan]
             savePlanLibrary()
-            statusMessage = "同期済みメニューから選べます"
+            statusMessage = L10n.string("watch_widget.184f5906186f", fallback: "同期済みメニューから選べます")
         }
 
         if let data = UserDefaults.standard.data(forKey: activeSessionStorageKey),
            let savedSession = try? decoder.decode(WatchWorkoutSessionSnapshot.self, from: data) {
             activeSession = savedSession
-            statusMessage = "\(savedSession.title) を再開できます"
+            statusMessage = L10n.string("watch_widget.7f66dfd79322", fallback: "{{value1}} を再開できます", values: [String(describing: savedSession.title)])
         }
 
         if let data = UserDefaults.standard.data(forKey: pendingSessionStorageKey),
            let pendingSession = try? decoder.decode(WatchWorkoutSessionSnapshot.self, from: data) {
             pendingFinishedSession = pendingSession
-            statusMessage = "\(pendingSession.title) はiPhoneへ再送できます"
+            statusMessage = L10n.string("watch_widget.3f81f9df08a8", fallback: "{{value1}} はiPhoneへ再送できます", values: [String(describing: pendingSession.title)])
         }
 
         if let data = UserDefaults.standard.data(forKey: lastCompletedSessionStorageKey),
@@ -104,14 +104,14 @@ extension WatchWorkoutStore {
         return [
             WatchWorkoutPlanSnapshot(
                 id: UUID(uuidString: "00000000-0000-0000-0000-000000000100")!,
-                name: "胸の日",
+                name: L10n.string("watch_widget.349df198921f", fallback: "胸の日"),
                 weightUnit: .kg,
                 exercises: [
                     WatchPlanExerciseSnapshot(
                         id: UUID(uuidString: "00000000-0000-0000-0000-000000000102")!,
                         exerciseID: exerciseID,
-                        name: "ベンチプレス",
-                        primaryMuscleName: "胸",
+                        name: L10n.string("watch_widget.40e95ebae744", fallback: "ベンチプレス"),
+                        primaryMuscleName: L10n.string("watch_widget.f4f93e827213", fallback: "胸"),
                         primaryMuscleRawValue: "chest",
                         equipmentRawValue: "barbell",
                         restSeconds: 60,
@@ -131,14 +131,14 @@ extension WatchWorkoutStore {
             ),
             WatchWorkoutPlanSnapshot(
                 id: UUID(uuidString: "00000000-0000-0000-0000-000000000300")!,
-                name: "背中の日",
+                name: L10n.string("watch_widget.52e036cf79ae", fallback: "背中の日"),
                 weightUnit: .kg,
                 exercises: [
                     WatchPlanExerciseSnapshot(
                         id: UUID(uuidString: "00000000-0000-0000-0000-000000000302")!,
                         exerciseID: UUID(uuidString: "00000000-0000-0000-0000-000000000301")!,
-                        name: "ラットプルダウン",
-                        primaryMuscleName: "背中",
+                        name: L10n.string("watch_widget.e031879b0b11", fallback: "ラットプルダウン"),
+                        primaryMuscleName: L10n.string("watch_widget.8361420226c3", fallback: "背中"),
                         primaryMuscleRawValue: "back",
                         equipmentRawValue: "machine",
                         restSeconds: 75,
@@ -167,8 +167,8 @@ extension WatchWorkoutStore {
         selectedPlan = library.preferredPlanID.flatMap { preferredID in
             plans.first { $0.id == preferredID }
         }
-        statusMessage = selectedPlan.map { "今日のメニュー: \($0.name)" }
-            ?? "\(library.plans.count)件のメニューを同期しました"
+        statusMessage = selectedPlan.map { L10n.string("watch_widget.7a379d574423", fallback: "今日のメニュー: {{value1}}", values: [$0.name]) }
+            ?? L10n.string("watch_widget.e28d7cc26f9a", fallback: "{{value1}}件のメニューを同期しました", values: [String(describing: library.plans.count)])
 
         if let data {
             UserDefaults.standard.set(data, forKey: planLibraryStorageKey)
@@ -187,10 +187,10 @@ extension WatchWorkoutStore {
         }
         if !motionAnalyzer.isMotionAvailable {
             sensorPreferences.motionRepDetectionEnabled = false
-            unavailable.append("モーション")
+            unavailable.append(L10n.string("watch_widget.8dffc87acbb9", fallback: "モーション"))
         }
         if !unavailable.isEmpty {
-            healthStatusMessage = "非対応: \(unavailable.joined(separator: "・"))。手入力は利用できます"
+            healthStatusMessage = L10n.string("watch_widget.2501cba5bc6d", fallback: "非対応: {{value1}}。手入力は利用できます", values: [String(describing: unavailable.joined(separator: "・"))])
         }
     }
 
@@ -308,8 +308,8 @@ extension WatchWorkoutStore {
         }
 
         let content = UNMutableNotificationContent()
-        content.title = "休憩終了"
-        content.body = "次のセットを始められます"
+        content.title = L10n.string("watch_widget.8ada25b32266", fallback: "休憩終了")
+        content.body = L10n.string("watch_widget.45268b5fcf2c", fallback: "次のセットを始められます")
         content.sound = .default
 
         let trigger = UNTimeIntervalNotificationTrigger(

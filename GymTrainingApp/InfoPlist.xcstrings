@@ -1,0 +1,2166 @@
+{
+  "sourceLanguage": "ja",
+  "strings": {
+    "NSCameraUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSCameraUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيتم التقاط صور لوجباتك وشكل جسمك واستخدامها للتسجيل والتحليل المرجعي بواسطة الذكاء الاصطناعي."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les fotos dels vostres àpats i la forma del vostre cos es prendran i s'utilitzaran per a l'enregistrament i l'anàlisi de referència per part de l'IA."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pořiďte fotografie jídla a svého těla a použijte je pro záznam a analýzu pomocí AI."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tag billeder af dine måltider og din krop, og brug dem til registrering og AI-baseret analyse."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich mache Fotos von Mahlzeiten und meinem Körper und verwende diese für Aufzeichnungen und zur Analyse durch KI."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Τηλεφορτώστε φωτογραφίες των γευμάτων και του σώματός σας και χρησιμοποιήστε τις για καταγραφή και ανάλυση με τη βοήθεια της τεχνητής νοημοσύνης."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take photos of your meals and body measurements, and use them for recording and AI-powered analysis."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take photos of your meals and body measurements, and use them for recording and AI-powered analysis."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take photos of your meals and body measurements, and use them for recording and AI-powered analysis."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take photos of your meals and body measurements, and use them for recording and AI-powered analysis."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toma fotos de comida y de tu cuerpo, y úsalas para el registro y análisis de referencia con IA."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toma fotos de comida y de tu cuerpo, y úsalas para el registro y análisis de referencia con IA."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ota kuvia ruoasta ja kehon muodosta, joita käytetään tallentamiseen ja AI:n analysointiin."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenez des photos de vos repas et de votre silhouette, et utilisez-les pour l'enregistrement et l'analyse par IA."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenez des photos de vos repas et de votre silhouette, et utilisez-les pour l'enregistrement et l'analyse par IA."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે ભોજન અને શરીરના ચિત્રો લઈ શકો છો, જેનો ઉપયોગ રેકોર્ડિંગ અને AI દ્વારા કરવામાં આવે છે."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "צלם תמונות של הארוחות והגוף, ומשתמש בהן לרישום ולניתוח AI."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "भोजन और शरीर की तस्वीरें लें, और उन्हें रिकॉर्ड करने और AI द्वारा विश्लेषण के लिए उपयोग करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotografirajte i snimite svoje obroke i izgled tijela, a podatke koristite za analizu i pomoć AI."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotózd le az étkezéseket és a testet, és használd a rögzítést és az AI által végzett elemzést."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ambil foto makanan dan bentuk tubuh, lalu gunakan untuk pencatatan dan analisis referensi oleh AI."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scatta foto dei pasti e del tuo corpo, utilizzandole per la registrazione e l'analisi di riferimento basata sull'AI."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "食事や体型の写真を撮影し、記録とAIによる参考分析に使用します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "음식과 체형 사진을 촬영하여 기록하고, AI 기반 분석에 활용합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जेवण आणि शरीराचे फोटो काढा, तसेच नोंदीसाठी आणि एआय (AI) द्वारे विश्लेषण करण्यासाठी वापरा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ambil gambar makanan dan bentuk badan, serta gunakan untuk rekod dan analisis oleh AI."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maak foto's van uw maaltijden en lichaamsvorm, en gebruik deze voor het opslaan en analyseren door AI."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta bilder av mat og kropp, og bruk dem til registrering og AI-basert analyse."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rób zdjęcia posiłków i sylwetki, aby je zapisać i wykorzystać do analizy przez AI."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tire fotos da sua alimentação e formato corporal, utilizando-as para registro e análise de referência por IA."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tire fotos da sua alimentação e formato corporal, utilizando-as para registro e análise de referência por IA."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fă fotografii cu mesele și cu corpul, pentru a le înregistra și pentru a utiliza analiza AI ca referință."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фотографируйте и сохраняйте фотографии еды и своего тела, чтобы использовать их для анализа и рекомендаций на основе ИИ."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotografujte a zaznamenávajte jedlá a svoj vzhľad, ktoré sa používajú pre záznam a analýzu pomocou AI."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotografirate hrano in telo ter uporabite slike za zabeleževanje ter za analizo s pomočjo AI."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta bilder av mat och kropp, och använd dem för registrering och AI-baserad analys."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "உணவு மற்றும் உடல் புகைப்படங்களை எடுத்து, பதிவு செய்து, AI மூலம் பகுப்பாய்வு செய்யவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ఆహారం మరియు శరీర ఆకృతి యొక్క ఫోటోలను తీసి, రికార్డ్ చేయడానికి మరియు AI ద్వారా విశ్లేషణ చేయడానికి ఉపయోగించండి."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถ่ายภาพอาหารและรูปร่าง และใช้สำหรับการบันทึกและการวิเคราะห์โดย AI"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beslenme ve vücut fotoğraflarını çekin, bunları kaydetmek ve yapay zeka tarafından analiz etmek için kullanın."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фотографувати їжу та зображення тіла, а також використовувати їх для запису та аналізу за допомогою штучного інтелекту."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chụp ảnh bữa ăn và hình dáng cơ thể, sử dụng cho mục đích ghi chép và phân tích tham khảo của AI."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拍摄食物和身体的照片，用于记录和AI辅助的分析。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拍攝飲食和身體的照片，用於記錄以及由 AI 進行的參考分析。"
+          }
+        }
+      }
+    },
+    "NSUserTrackingUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSUserTrackingUsageDescription\nPrivacy-sensitive permission copy. Human review is recommended for release locales.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يسمح إذنك لمزوّد الإعلانات باستخدام معرّف الإعلانات في جهازك للحد من تكرار الإعلانات وقياس أدائها. يمكنك الاستمرار في استخدام BodyMode والإعلانات غير المخصّصة إذا رفضت."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El vostre permís permet al nostre proveïdor d’anuncis utilitzar l’identificador publicitari del dispositiu per limitar els anuncis repetits i mesurar-ne el rendiment. Si no hi doneu permís, podeu continuar utilitzant BodyMode i anuncis no personalitzats."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaše svolení umožní našemu poskytovateli reklam použít reklamní identifikátor zařízení k omezení opakovaných reklam a měření jejich výkonu. Pokud svolení odmítnete, můžete dál používat BodyMode a nepersonalizované reklamy."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din tilladelse gør det muligt for vores annonceudbyder at bruge enhedens annonce-id til at begrænse gentagne annoncer og måle annonceeffektivitet. Du kan stadig bruge BodyMode og ikke-personligt tilpassede annoncer, hvis du afviser."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mit deiner Erlaubnis darf unser Werbeanbieter die Werbe-ID deines Geräts verwenden, um wiederholte Anzeigen zu begrenzen und die Anzeigenleistung zu messen. Wenn du ablehnst, kannst du BodyMode und nicht personalisierte Werbung weiterhin nutzen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η άδειά σας επιτρέπει στον πάροχο διαφημίσεων να χρησιμοποιεί το αναγνωριστικό διαφήμισης της συσκευής σας για τον περιορισμό επαναλαμβανόμενων διαφημίσεων και τη μέτρηση της απόδοσής τους. Αν αρνηθείτε, μπορείτε να συνεχίσετε να χρησιμοποιείτε το BodyMode και μη εξατομικευμένες διαφημίσεις."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your permission lets our ad provider use your device's advertising identifier to limit repeated ads and measure ad performance. You can still use BodyMode and non-personalised ads if you decline."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your permission lets our ad provider use your device's advertising identifier to limit repeated ads and measure ad performance. You can still use BodyMode and non-personalized ads if you decline."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your permission lets our ad provider use your device's advertising identifier to limit repeated ads and measure ad performance. You can still use BodyMode and non-personalised ads if you decline."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your permission lets our ad provider use your device's advertising identifier to limit repeated ads and measure ad performance. You can still use BodyMode and non-personalized ads if you decline."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu permiso permite a nuestro proveedor de anuncios usar el identificador publicitario del dispositivo para limitar los anuncios repetidos y medir su rendimiento. Si no lo permites, podrás seguir usando BodyMode y anuncios no personalizados."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu permiso permite que nuestro proveedor de anuncios use el identificador de publicidad de tu dispositivo para limitar anuncios repetidos y medir su rendimiento. Si no aceptas, podrás seguir usando BodyMode y anuncios no personalizados."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lupasi ansiosta mainospalvelumme voi käyttää laitteesi mainostunnistetta toistuvien mainosten rajoittamiseen ja mainonnan tehokkuuden mittaamiseen. Voit käyttää BodyModea ja personoimattomia mainoksia myös ilman lupaa."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre autorisation permet à notre fournisseur publicitaire d’utiliser l’identifiant publicitaire de votre appareil pour limiter les annonces répétées et mesurer leur rendement. Si vous refusez, vous pouvez tout de même utiliser BodyMode et des annonces non personnalisées."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre autorisation permet à notre fournisseur publicitaire d’utiliser l’identifiant publicitaire de votre appareil pour limiter les annonces répétées et mesurer leurs performances. Si vous refusez, vous pouvez toujours utiliser BodyMode et des annonces non personnalisées."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમારી પરવાનગીથી અમારા જાહેરાત પ્રદાતા વારંવાર આવતી જાહેરાતો મર્યાદિત કરવા અને જાહેરાતનું પ્રદર્શન માપવા માટે તમારા ડિવાઇસના જાહેરાત ઓળખકનો ઉપયોગ કરી શકે છે. તમે પરવાનગી ન આપો તો પણ BodyMode અને વ્યક્તિગત ન કરેલી જાહેરાતોનો ઉપયોગ કરી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "האישור שלך מאפשר לספק הפרסום שלנו להשתמש במזהה הפרסום של המכשיר כדי להגביל מודעות חוזרות ולמדוד את ביצועי המודעות. גם אם תסרב, עדיין אפשר להשתמש ב-BodyMode ובמודעות שאינן מותאמות אישית."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपकी अनुमति से हमारा विज्ञापन प्रदाता बार-बार दिखने वाले विज्ञापनों को सीमित करने और विज्ञापन प्रदर्शन मापने के लिए आपके डिवाइस के विज्ञापन पहचानकर्ता का उपयोग कर सकता है। अनुमति न देने पर भी आप BodyMode और गैर-वैयक्तिकृत विज्ञापनों का उपयोग कर सकते हैं।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaše dopuštenje omogućuje našem pružatelju oglasa upotrebu oglasnog identifikatora uređaja radi ograničavanja ponovljenih oglasa i mjerenja njihove učinkovitosti. Ako odbijete, i dalje možete koristiti BodyMode i neprilagođene oglase."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az engedélyével hirdetési szolgáltatónk használhatja az eszköz hirdetési azonosítóját az ismétlődő hirdetések korlátozására és a hirdetések teljesítményének mérésére. Elutasítás esetén is használhatja a BodyMode-ot és a nem személyre szabott hirdetéseket."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izin Anda memungkinkan penyedia iklan kami menggunakan pengenal iklan perangkat untuk membatasi iklan berulang dan mengukur performa iklan. Jika menolak, Anda tetap dapat menggunakan BodyMode dan iklan yang tidak dipersonalisasi."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La tua autorizzazione consente al nostro fornitore di annunci di usare l’identificatore pubblicitario del dispositivo per limitare gli annunci ripetuti e misurarne le prestazioni. Se rifiuti, puoi comunque usare BodyMode e annunci non personalizzati."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "広告の重複表示を抑え、広告効果を測定するため、広告事業者による端末の広告識別子の利用許可を求めます。許可しなくても、BodyModeと非パーソナライズ広告は利用できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "허용하면 광고 제공업체가 기기의 광고 식별자를 사용하여 반복 광고를 줄이고 광고 성과를 측정할 수 있습니다. 허용하지 않아도 BodyMode와 개인 맞춤이 아닌 광고를 계속 이용할 수 있습니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "तुमच्या परवानगीने आमचा जाहिरात प्रदाता वारंवार दिसणाऱ्या जाहिराती मर्यादित करण्यासाठी आणि जाहिरातींची कामगिरी मोजण्यासाठी तुमच्या डिव्हाइसचा जाहिरात ओळखकर्ता वापरू शकतो. परवानगी नाकारली तरी तुम्ही BodyMode आणि वैयक्तिकृत नसलेल्या जाहिराती वापरू शकता."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kebenaran anda membolehkan penyedia iklan kami menggunakan pengecam pengiklanan peranti untuk mengehadkan iklan berulang dan mengukur prestasi iklan. Jika anda menolak, anda masih boleh menggunakan BodyMode dan iklan yang tidak diperibadikan."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Met je toestemming kan onze advertentieprovider de advertentie-ID van je apparaat gebruiken om herhaalde advertenties te beperken en advertentieprestaties te meten. Als je weigert, kun je BodyMode en niet-gepersonaliseerde advertenties blijven gebruiken."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tillatelsen din gjør at annonseleverandøren vår kan bruke enhetens annonse-ID til å begrense gjentatte annonser og måle annonseresultater. Du kan fortsatt bruke BodyMode og ikke-personaliserte annonser hvis du avslår."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Twoja zgoda pozwala naszemu dostawcy reklam używać identyfikatora reklamowego urządzenia do ograniczania powtarzających się reklam i mierzenia ich skuteczności. Jeśli odmówisz, nadal możesz korzystać z BodyMode i reklam niespersonalizowanych."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua permissão permite que nosso provedor de anúncios use o identificador de publicidade do dispositivo para limitar anúncios repetidos e medir o desempenho deles. Se você recusar, ainda poderá usar o BodyMode e anúncios não personalizados."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A sua permissão permite que o nosso fornecedor de anúncios utilize o identificador de publicidade do dispositivo para limitar anúncios repetidos e medir o respetivo desempenho. Se recusar, poderá continuar a utilizar o BodyMode e anúncios não personalizados."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permisiunea dvs. îi permite furnizorului nostru de reclame să utilizeze identificatorul publicitar al dispozitivului pentru a limita reclamele repetate și a măsura performanța acestora. Dacă refuzați, puteți utiliza în continuare BodyMode și reclame nepersonalizate."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваше разрешение позволит нашему рекламному партнёру использовать рекламный идентификатор устройства, чтобы ограничивать повторные объявления и измерять их эффективность. Если вы откажетесь, BodyMode и неперсонализированная реклама останутся доступны."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaše povolenie umožní nášmu poskytovateľovi reklám použiť reklamný identifikátor zariadenia na obmedzenie opakovaných reklám a meranie ich výkonnosti. Ak povolenie odmietnete, naďalej môžete používať BodyMode a nepersonalizované reklamy."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaše dovoljenje ponudniku oglasov omogoča uporabo oglaševalskega identifikatorja naprave za omejevanje ponavljajočih se oglasov in merjenje njihove uspešnosti. Če dovoljenje zavrnete, lahko še vedno uporabljate BodyMode in neosebne oglase."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ditt tillstånd gör att vår annonsleverantör kan använda enhetens annonsidentifierare för att begränsa upprepade annonser och mäta annonsernas resultat. Om du nekar kan du fortfarande använda BodyMode och icke-personanpassade annonser."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "உங்கள் அனுமதி, மீண்டும் மீண்டும் வரும் விளம்பரங்களைக் கட்டுப்படுத்தவும் விளம்பர செயல்திறனை அளவிடவும் உங்கள் சாதனத்தின் விளம்பர அடையாளங்காட்டியை எங்கள் விளம்பர வழங்குநர் பயன்படுத்த அனுமதிக்கிறது. நீங்கள் மறுத்தாலும் BodyMode மற்றும் தனிப்பயனாக்கப்படாத விளம்பரங்களைப் பயன்படுத்தலாம்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "మీ అనుమతితో పునరావృత ప్రకటనలను పరిమితం చేయడానికి మరియు ప్రకటన పనితీరును కొలవడానికి మా ప్రకటన ప్రదాత మీ పరికర ప్రకటన గుర్తింపును ఉపయోగించవచ్చు. మీరు అనుమతించకపోయినా BodyMode మరియు వ్యక్తిగతీకరించని ప్రకటనలను ఉపయోగించవచ్చు."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การอนุญาตของคุณช่วยให้ผู้ให้บริการโฆษณาของเราใช้ตัวระบุโฆษณาของอุปกรณ์เพื่อจำกัดโฆษณาที่แสดงซ้ำและวัดประสิทธิภาพโฆษณา หากคุณไม่อนุญาต คุณยังคงใช้ BodyMode และโฆษณาที่ไม่ได้ปรับให้เหมาะกับแต่ละบุคคลได้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İzniniz, reklam sağlayıcımızın tekrarlanan reklamları sınırlamak ve reklam performansını ölçmek için cihazınızın reklam tanımlayıcısını kullanmasına olanak tanır. Reddetseniz de BodyMode'u ve kişiselleştirilmemiş reklamları kullanabilirsiniz."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш дозвіл дає нашому постачальнику реклами змогу використовувати рекламний ідентифікатор пристрою, щоб обмежувати повторні оголошення та вимірювати їх ефективність. Якщо ви відмовитеся, BodyMode і неперсоналізована реклама залишаться доступними."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quyền cho phép của bạn giúp nhà cung cấp quảng cáo sử dụng mã nhận dạng quảng cáo của thiết bị để hạn chế quảng cáo lặp lại và đo lường hiệu quả quảng cáo. Nếu từ chối, bạn vẫn có thể dùng BodyMode và quảng cáo không cá nhân hóa."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "获得你的许可后，广告服务提供商可使用设备的广告标识符来减少重复广告并衡量广告效果。即使拒绝，你仍可使用 BodyMode 和非个性化广告。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取得你的許可後，廣告服務供應商可使用裝置的廣告識別碼來減少重複廣告並衡量廣告成效。即使拒絕，你仍可使用 BodyMode 和非個人化廣告。"
+          }
+        }
+      }
+    },
+    "NSHealthShareUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSHealthShareUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يعرض حالتك واتجاهات التدريب الخاصة بك عن طريق تلخيص عدد خطواتك ومستوى النشاط والنوم ومعدل ضربات القلب وما إلى ذلك."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra la vostra condició i tendències d'entrenament resumint el vostre recompte de passos, nivell d'activitat, son, freqüència cardíaca, etc."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shromažďuje údaje o chůzi, aktivitě, spánku, srdečním tepu a zobrazuje je spolu s přehledem vašeho stavu a trendů tréninku."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saml data om skridt, aktivitet, søvn og puls for at vise din generelle tilstand og træningsmønster."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schritte, Aktivität, Schlaf, Herzfrequenz usw. werden zusammengefasst und zur Anzeige von Zustand und Trainingsmustern verwendet."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Συγκεντρώστε και εμφανίστε πληροφορίες σχετικά με την κατάσταση και τις τάσεις προπόνησης, όπως οι βήματα, η δραστηριότητα, ο ύπνος και ο καρδιακός ρυθμός."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consolidate steps, activity levels, sleep, heart rate, and other data to display your overall condition and training trends."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consolidate steps, activity levels, sleep, heart rate, and other data to display your overall condition and training trends."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consolidate steps, activity levels, sleep, heart rate, and other data to display your overall condition and training trends."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consolidate steps, activity levels, sleep, heart rate, and other data to display your overall condition and training trends."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Combina pasos, actividad, sueño, frecuencia cardíaca y otros datos para mostrar tu estado y tendencias de entrenamiento."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Combina pasos, actividad, sueño, frecuencia cardíaca y otros datos para mostrar tu estado y tendencias de entrenamiento."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yhdistä kävelyn, aktiivisuuden, unen ja sykkeen tiedot ja esitä kokonaistila ja harjoittelutrendit."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regroupez les données sur les pas, l'activité physique, le sommeil et la fréquence cardiaque pour afficher l'état et les tendances d'entraînement."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regroupez les données sur les pas, l'activité physique, le sommeil et la fréquence cardiaque pour afficher l'état et les tendances d'entraînement."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે પગલાં, પ્રવૃત્તિ, ઊંઘ અને હૃદયના ધબકારા વગેરેને એકસાથે ભેગા કરીને તમારી સ્થિતિ અને તાલીમની પેટર્ન દર્શાવો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מאגד את השלבים, הפעילות, השינה וקצב הלב כדי להציג מצב ותרחישי אימון."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पैरों की गिनती, गतिविधि स्तर, नींद, हृदय गति आदि को मिलाकर अपने स्वास्थ्य और प्रशिक्षण के रुझान दिखाएं।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sastavite podatke o koracima, aktivnosti, spavanju i otkucajima srca kako biste prikazali stanje i trendove treninga."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Összeszorja a lépésszámot, az aktivitást, a pihenést és a pulzust, hogy megjelenítsük az állapotot és az edzési tendenciákat."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menggabungkan langkah, aktivitas, tidur, detak jantung, dll., untuk menampilkan kondisi dan tren latihan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raggruppo dati come passi, attività fisica, sonno e frequenza cardiaca per visualizzare lo stato e le tendenze dell'allenamento."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "歩数、活動量、睡眠、心拍などをまとめてコンディションとトレーニング傾向を表示します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "걸음 수, 활동량, 수면, 심박수 등을 종합하여 컨디션과 운동 경향을 표시합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "चालण्याची संख्या, ॲक्टिव्हिटी (गति), झोप, हृदयगती इत्यादी माहिती एकत्रित करून शारीरिक स्थिती आणि व्यायामाच्या पद्धती दर्शवा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kumpul dan tampilkan maklumat tentang aktiviti, tidur, kadar jantung, dan lain-lain untuk menunjukkan keadaan dan kecenderungan senaman."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het combineert stappen, activiteit, slaap en hartslag om een overzicht te geven van uw conditie en trainingspatronen."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Samler inn og viser informasjon om skritt, aktivitet, søvn og hjertefrekvens, samt gir en oversikt over din tilstand og treningsmønster."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podsumowuję kroki, aktywność, sen i tętno, aby wyświetlić ogólny stan i tendencje treningowe."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega passos, atividade física, sono e frequência cardíaca para exibir sua condição e tendências de treinamento."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega passos, atividade física, sono e frequência cardíaca para exibir sua condição e tendências de treinamento."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează, într-un singur loc, pași, activitate, somn, frecvență cardiacă și alte date relevante pentru a afișa starea și tendințele antrenamentului."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Собираем данные о шагах, активности, сне и частоте сердечных сокращений, чтобы отобразить общую оценку состояния и тенденции тренировок."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skompilujte údaje o chôdzi, aktívnosti, spánku a pulse a zobrazte ich spolu s trendmi tréningu."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spletno zberete podatke o korakih, aktivnosti, spanju in srčnem utripu ter prikazate stanje in trende treninga."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sammanställ steg, aktivitet, sömn och puls för att visa din kondition och träningsmönster."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "படி, செயல்பாடு, தூக்கம், இதயத் துடிப்பு போன்றவற்றை ஒருங்கிணைத்து, உடல் நிலை மற்றும் உடற்பயிற்சி போக்குகளைக் காட்டவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "దూరం, కార్యాచరణ, నిద్ర, హృదయ స్పందన మొదలైన వాటిని కలిపి, పరిస్థితి మరియు వ్యాయామ ధోరణిని ప్రదర్శిస్తుంది."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รวบรวมข้อมูลเกี่ยวกับก้าว, กิจกรรม, การนอนหลับ, อัตราการเต้นของหัวใจ และแสดงสภาพและแนวโน้มการออกกำลังกาย"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adım sayısı, aktivite seviyesi, uyku, kalp atış hızı gibi bilgileri birleştirerek genel durumunuzu ve egzersiz trendinizi gösterir."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Об'єднати дані про кроки, активність, сон та частоту серцевих скорочень для відображення загального стану та тенденцій тренувань."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tổng hợp các chỉ số như bước chân, hoạt động, giấc ngủ, nhịp tim để hiển thị tình trạng và xu hướng tập luyện."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "汇总步数、活动量、睡眠、心率等信息，并显示身体状况和训练趋势。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整合步數、活動量、睡眠、心率等資訊，以顯示身體狀況和訓練趨勢。"
+          }
+        }
+      }
+    },
+    "NSHealthUpdateUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSHealthUpdateUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احفظ تدريبات القوة والقياسات البدنية المسجلة باستخدام Apple Watch إلى Apple Health."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deseu l'entrenament de força i les mesures físiques registrades amb Apple Watch a Apple Health."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaznamenané cvičení a měření těla na Apple Watch uložíte do aplikace Apple Health."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem styrketræning og kropsmålinger fra Apple Watch i Apple Health."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krafttraining und Körpermessungen, die mit dem Apple Watch aufgezeichnet wurden, werden in der Apple Health gespeichert."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εξάγετε τις προπονήσεις με βάρη και τις μετρήσεις του σώματος που καταγράψατε στο Apple Watch στην εφαρμογή Apple Health."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training and body measurements recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training and body measurements recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training and body measurements recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training and body measurements recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardo los entrenamientos de fuerza y las mediciones corporales registrados en el Apple Watch en la aplicación Salud de Apple."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardo los entrenamientos de fuerza y las mediciones corporales registrados en el Apple Watch en la aplicación Salud de Apple."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallenna Apple Watchilla tehdyt voimaharjoittelut ja kehon mittaukset Apple Healthiin."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrez les entraînements et les mesures corporelles effectués avec votre Apple Watch dans Apple Health."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrez les entraînements et les mesures corporelles effectués avec votre Apple Watch dans Apple Health."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે Apple Watch પર કરેલા વર્કઆઉટ અને શારીરિક માપનને Apple Health માં સાચવી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "שומר את אימוני הכוח והמדידות שרשמת ב-Apple Watch ב-Apple Health."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch पर रिकॉर्ड किए गए \"वजन प्रशिक्षण\" और \"शारीरिक माप\" को Apple Health में सेव करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spremićete snage i mjerenja tijela koje ste zabilježili na Apple Watch u aplikaciji Apple Health."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az Apple Watchon rögzített erőnléti edzéseket és fizikai méréseket mentjük az Apple Healthbe."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menyimpan latihan kekuatan dan pengukuran tubuh yang dicatat di Apple Watch ke dalam Apple Health."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvo gli allenamenti di forza e le misurazioni fisiche registrati sull'Apple Watch in Apple Health."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watchで記録した筋力トレーニングと身体測定をApple Healthに保存します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch에서 기록한 근력 운동과 신체 측정을 Apple Health에 저장합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ॲपल वॉचवर रेकॉर्ड केलेले स्नायू प्रशिक्षण आणि शारीरिक मापन ॲपल हेल्थमध्ये सेव्ह करा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simpan senaman kekuatan dan pengukuran badan yang dicatat pada Apple Watch dalam Apple Health."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De krachttraining en lichaamsmetingen die met uw Apple Watch zijn vastgelegd, worden opgeslagen in Apple Health."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagrer styrketrening og kroppsmålinger fra Apple Watch i Apple Health."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisuję treningi siłowe i pomiary ciała z Apple Watch w aplikacji Health."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva os treinos de força e as medições corporais registrados no Apple Watch na Apple Health."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva os treinos de força e as medições corporais registrados no Apple Watch na Apple Health."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvez antrenamentele și măsurătorile corporale înregistrate cu Apple Watch în Apple Health."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохраняем данные о силовых тренировках и измерениях физической формы, записанные на Apple Watch, в приложении Apple Health."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaznamenané silové tréningy a meranie tela na Apple Watch uložíte do Apple Health."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisane vtiče za trening in merjenje teles ter Apple Health."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spara styrketränings- och kroppsmätningar som tagits med Apple Watch i Apple Health."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch-ல் பதிவு செய்யப்பட்ட உடற்பயிற்சி மற்றும் உடல் அளவீடுகளை Apple Health-ல் சேமிக்கவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watchలో రికార్డ్ చేసిన కండరాల వ్యాయామం మరియు శరీర కొలతలను Apple Healthలో సేవ్ చేయండి."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึกการฝึกความแข็งแรงและวัดร่างกายที่ Apple Watch และบันทึกลงใน Apple Health"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch'ta kaydedilen kas gücü antrenmanlarını ve vücut ölçümlerini Apple Health'e kaydeder."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зберегти тренування зі зміцнення м'язів та вимірювання фізичного стану, зафіксовані на Apple Watch, у Apple Health."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lưu các bài tập sức mạnh và đo thể chất đã ghi trên Apple Watch vào Apple Health."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将通过Apple Watch记录的力量训练和身体测量数据保存到Apple Health。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將在 Apple Watch 上記錄的肌力訓練和身體測量儲存到 Apple Health。"
+          }
+        }
+      }
+    },
+    "NSLocalNetworkUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSLocalNetworkUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم الشبكة المحلية للاتصال بخادم AI محلي محدد من قبل المستخدم، مثل Mac mini."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilitza la xarxa local per connectar-se a un servidor d'IA local especificat per l'usuari, com ara un Mac mini."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro připojení k lokálnímu serveru AI, který si uživatel vybere (např. Mac mini), použijete lokální síť."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brug et lokalt netværk til at oprette forbindelse til en lokal AI-server, som brugeren har angivet (f.eks. Mac mini)."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für die Verbindung zu einem lokalen KI-Server, den der Benutzer angibt (z. B. Mac mini), wird ein lokales Netzwerk verwendet."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Χρησιμοποιήστε το τοπικό δίκτυο για να συνδεθείτε σε έναν τοπικό διακομιστή AI που καθορίζετε, όπως το Mac mini."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use a local network to connect to a locally hosted AI server specified by the user (e.g., Mac mini)."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use a local network to connect to a locally hosted AI server specified by the user (e.g., Mac mini)."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use a local network to connect to a locally hosted AI server specified by the user (e.g., Mac mini)."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use a local network to connect to a locally hosted AI server specified by the user (e.g., Mac mini)."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizo una red local para conectarme al servidor de IA local especificado por el usuario, como un Mac mini."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizo una red local para conectarme al servidor de IA local especificado por el usuario, como un Mac mini."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käytä paikallista verkkoa yhteyden muodostamiseen käyttäjän valitsemaan paikalliseen AI-palvelimeen (esim. Mac mini)."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez un réseau local pour vous connecter à un serveur d'IA local spécifié par l'utilisateur, tel qu'un Mac mini."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez un réseau local pour vous connecter à un serveur d'IA local spécifié par l'utilisateur, tel qu'un Mac mini."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે Mac mini જેવા, વપરાશકર્તા દ્વારા નિર્દિષ્ટ સ્થાનિક AI સર્વર સાથે કનેક્ટ કરવા માટે સ્થાનિક નેટવર્કનો ઉપયોગ કરી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "משתמש ברשת מקומית כדי להתחבר לשרת AI מקומי, כפי שהמשתמש מציין (למשל, Mac mini)."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac mini आदि, उपयोगकर्ता द्वारा निर्दिष्ट लोकल AI सर्वर से कनेक्ट करने के लिए लोकल नेटवर्क का उपयोग करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koristite lokalnu mrežu kako biste se povezali s lokalnim AI serverom koji je korisnik odabrao (npr. Mac mini)."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A felhasználó által kiválasztott helyi AI szerverhez való csatláshoz használjuk a helyi hálózatot (pl. Mac mini)."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menggunakan jaringan lokal untuk terhubung ke server AI lokal yang ditentukan oleh pengguna, seperti Mac mini."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizzo la rete locale per connettermi a un server AI locale specificato dall'utente (ad esempio, Mac mini)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac miniなど、ユーザーが指定したローカルAIサーバーへ接続するためにローカルネットワークを使用します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac mini 등, 사용자가 지정한 로컬 AI 서버에 연결하기 위해 로컬 네트워크를 사용합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मॅक मिनी (Mac mini) किंवा वापरकर्त्याने निवडलेल्या लोकल एआय सर्व्हरशी कनेक्ट होण्यासाठी लोकल नेटवर्कचा वापर करा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gunakan rangkaian tempatan untuk menyambung ke pelayan AI tempatan yang ditentukan oleh pengguna, seperti Mac mini."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het gebruikt een lokaal netwerk om verbinding te maken met een door u gekozen lokale AI-server, zoals een Mac mini."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bruker lokal nettverk for å koble til en lokal AI-server som brukeren har spesifisert, f.eks. Mac mini."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Używam lokalnej sieci, aby połączyć się z lokalnym serwerem AI, który użytkownik określił (np. Mac mini)."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliza a rede local para se conectar a um servidor de IA local especificado pelo usuário, como o Mac mini."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliza a rede local para se conectar a um servidor de IA local especificado pelo usuário, como o Mac mini."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizează rețeaua locală pentru a te conecta la un server AI local, specificat de utilizator (de exemplu, Mac mini)."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Используем локальную сеть для подключения к локальному серверу ИИ, указанному пользователем (например, Mac mini)."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Používate lokálnu sieť, aby ste sa pripoili k miestnemu AI serveru, ktorý si užívateľ určí (napr. Mac mini)."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Za povezavo z lokalnim AI stremlom, ki ga uporabnik izbere (npr. Mac mini), se uporablja lokalna mreža."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Använd ett lokalt nätverk för att ansluta till en lokal AI-server som användaren har angivit, t.ex. en Mac mini."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac mini போன்ற, பயனரால் குறிப்பிடப்பட்ட உள்ளூர் AI சர்வரில் இணைவதற்கு உள்ளூர் நெட்வொட்டை பயன்படுத்தவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac mini వంటి, వినియోగదారు పేర్కొన్న స్థానిక AI సర్వర్‌కు కనెక్ట్ చేయడానికి స్థానిక నెట్‌వర్క్‌ను ఉపయోగించండి."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใช้เครือข่ายภายในเพื่อเชื่อมต่อกับเซิร์ฟเวอร์ AI ที่ผู้ใช้ระบุ เช่น Mac mini"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac mini gibi, kullanıcı tarafından belirtilen yerel AI sunucularına bağlanmak için yerel ağ kullanılır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Використовувати локальну мережу для підключення до локального сервера штучного інтелекту, який вказав користувач (наприклад, Mac mini)."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sử dụng mạng cục bộ để kết nối với máy chủ AI cục bộ mà người dùng chỉ định (ví dụ: Mac mini)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用本地网络连接到用户指定的本地AI服务器，例如Mac mini。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用本地網路連接到用戶指定的本地 AI 伺服器，例如 Mac mini。"
+          }
+        }
+      }
+    },
+    "NSLocationAlwaysAndWhenInUseUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSLocationAlwaysAndWhenInUseUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نحن نستخدم معلومات الموقع لتسجيل وصولك ومغادرتك صالة الألعاب الرياضية التي قمت بالتسجيل فيها."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilitzem la informació d'ubicació per registrar la vostra arribada i sortida del gimnàs al qual us heu registrat."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Použijte polohu pro zaznamenávání příjezdu a odjezdu z registrované posilovny."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brug placering til at registrere ankomst og afgang fra det registrerede fitnesscenter."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um An- und Abreise in einem registrierten Fitnessraum aufzuzeichnen, wird die Ortung verwendet."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Χρησιμοποιήστε την τοποθεσία για να καταγράψετε την άφιξη και την αποχώρηση από το καταχωρημένο γυμναστήριο."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use location services to record arrival and departure from registered gyms."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use location services to record arrival and departure from registered gyms."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use location services to record arrival and departure from registered gyms."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use location services to record arrival and departure from registered gyms."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliza la información de ubicación para registrar tu llegada y salida del gimnasio registrado."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliza la información de ubicación para registrar tu llegada y salida del gimnasio registrado."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käytä sijaintitietoja, kun tallennat saapumisen ja lähtemisen rekisteröidylle kuntosalille."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez la localisation pour enregistrer votre arrivée et votre départ à la salle de sport que vous avez enregistrée."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez la localisation pour enregistrer votre arrivée et votre départ à la salle de sport que vous avez enregistrée."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે નોંધાયેલ જિમ પરના આગમન અને વિદાયને રેકોર્ડ કરવા માટે સ્થાનનો ઉપયોગ કરી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "משתמש במידע מיקום כדי לתעד הגעה ויציאה מחדר הכושר שהורשה."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पंजीकृत जिम पर आने और बाहर जाने की जानकारी रिकॉर्ड करने के लिए लोकेशन का उपयोग करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koristite lokaciju za bilježenje dolaska i odlaska u registriranu dvoranu."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Használhatod a helyzet követést, hogy rögzítsd az érkezést és kilépést a regisztrált edzőterembe."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menggunakan informasi lokasi saat mencatat kedatangan dan keberangkatan dari pusat kebugaran yang terdaftar."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizza la posizione per registrare l'arrivo e la partenza dalla palestra registrata."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登録したジムへの到着と退出を記録する場合に位置情報を使用します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "등록한 헬스장 도착 및 퇴장을 기록할 때 위치 정보를 사용합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नोंद केलेल्या जिममध्ये येणे आणि बाहेर जाण्याची नोंद ठेवताना लोकेशनचा वापर करा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gunakan maklumat lokasi apabila mencatat ketibaan dan keluar dari gim yang telah didaftar."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gebruik locatie-informatie om aankomst- en vertrektijden bij de geregistreerde sportschool op te nemen."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bruker posisjonsinformasjon for å registrere ankomst og avreise til det registrerte treningsstedet."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Używaj lokalizacji do rejestrowania przyjazdu i wyjazdu z zarejestrowanej siłowni."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliza a localização para registrar a chegada e saída do ginásio registrado."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliza a localização para registrar a chegada e saída do ginásio registrado."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizează informațiile despre locație atunci când înregistrezi sosirea și plecarea de la sala de sport."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Используйте данные о местоположении для записи прибытия и отъезда из зарегистрированного фитнес-зала."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Použite polohu pri zaznamenávaní príchodu a odchodu z zaregistrovaného fitness centra."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Za zabeležitev prihoda in odhoda iz registrirane telnice uporabite lokacijo."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Använd platsinformation för att registrera ankomst och avgång till det registrerade gymmet."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "பதிவு செய்யப்பட்ட உடற்பயிற்சி மையத்திற்கு வந்ததும், வெளியேறியதும் இருப்பிடத் தகவலைப் பயன்படுத்திப் பதிவு செய்யவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "రికార్డ్ చేసిన జిమ్‌కు రావడం మరియు నిష్క్రమించడం కోసం స్థాన సమాచారాన్ని ఉపయోగించండి."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใช้ตำแหน่งที่ตั้งเมื่อต้องการบันทึกการมาถึงและออกจากยิมที่ลงทะเบียน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydettiğiniz spor salonuna giriş ve çıkışlarınızı kaydetmek için konum bilgisini kullanın."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Використовувати дані про місцезнаходження для запису прибуття та виходу з зареєстрованого спортзалу."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sử dụng vị trí để ghi lại thời gian đến và rời khỏi phòng gym đã đăng ký."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在记录到达和离开指定健身房时，使用位置信息。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在記錄到已註冊的健身房的抵達和離開時，使用位置資訊。"
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSLocationWhenInUseUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نحن نستخدم معلومات موقعك لتسجيل موقعك الحالي كصالة ألعاب رياضية وتسجيل زياراتك إلى صالة الألعاب الرياضية."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilitzem la informació de la vostra ubicació per registrar la vostra ubicació actual com a gimnàs i registrar les vostres visites al gimnàs."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaregistrujte aktuální lokalitu jako posilovnu a používejte polohu pro zaznamenávání návštěv posiloven."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrer dit lokale fitnesscenter som et sted og brug placering for at registrere besøg."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich habe einen Fitnessraum als Standort registriert und verwende die Ortung, um Besuche dort aufzuzeichnen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Καταγράψτε το σημείο ως γυμναστήριο και χρησιμοποιήστε την τοποθεσία για να καταγράψετε τις επισκέψεις σας στο γυμναστήριο."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Register your local gym and use location services to record visits."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Register your local gym and use location services to record visits."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Register your local gym and use location services to record visits."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Register your local gym and use location services to record visits."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra tu gimnasio actual como ubicación y utiliza la información de ubicación para registrar tus visitas al gimnasio."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra tu gimnasio actual como ubicación y utiliza la información de ubicación para registrar tus visitas al gimnasio."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rekisteröi nykyinen sijainti kuntosaliksi ja käytä sijaintitietoja harjoitteluista kertomiseen."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrez votre salle de sport actuelle et utilisez la localisation pour enregistrer vos visites."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrez votre salle de sport actuelle et utilisez la localisation pour enregistrer vos visites."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે વર્કઆઉટ માટે \"જિમ\" તરીકે સ્થાનને રજીસ્ટર કરી શકો છો અને જિમની મુલાકાતોને રેકોર્ડ કરવા માટે સ્થાનનો ઉપયોગ કરી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מתעד את המיקום כחדר כושר ומשתמש במידע מיקום כדי לתעד ביקורים בחדר הכושר."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वर्तमान स्थान को जिम के रूप में पंजीकृत करें और जिम जाने की जानकारी रिकॉर्ड करने के लिए लोकेशन का उपयोग करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrirajte svoju fizičku lokaciju kao dvoranu i koristite je za bilježenje posjeta dvorani."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regisztrálhatod a jelenlegi helyszínt edzőteremként, és használhatod a helyzet követést az edzőterembe való látogatás rögzítéséhez."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mendaftarkan lokasi Anda sebagai pusat kebugaran dan menggunakan informasi lokasi untuk mencatat kunjungan ke pusat kebugaran."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra la tua palestra preferita e utilizza la posizione per registrare le visite."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 위치를 헬스로 등록하고, 헬스 방문 기록을 위해 위치 정보를 사용합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सध्याचे ठिकाण जिम म्हणून नोंदवा आणि जिमला भेट देण्याची नोंद ठेवण्यासाठी लोकेशनचा वापर करा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daftarkan lokasi semasa sebagai gim dan gunakan maklumat lokasi untuk mencatat lawatan ke gim."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registreer uw lokale sportschool als locatie en gebruik locatie-informatie om bezoeken op te nemen."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrerer et treningssted (f.eks. et treningsstudio) ved hjelp av posisjonsinformasjon, og registrerer besøk."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Możesz zarejestrować lokalizację jako siłownię i używać jej do rejestrowania wizyt w siłowni."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registre seu local como um ginásio e utilize a localização para registrar as visitas ao ginásio."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registre seu local como um ginásio e utilize a localização para registrar as visitas ao ginásio."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Înregistrează locația curentă ca sală de sport și utilizează informațiile despre locație pentru a înregistra vizitele la sală."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зарегистрируйте текущее местоположение как фитнес-зал и используйте его для записи посещений зала."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaregistrujte aktučné miesto ako fitness centrum a použite polohu na zaznamenávanie návštev."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrirate lokacijo posamezne telnice in uporabite lokacijo za zabavo ob obisku."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrera en lokal plats som ett gym och använd platsinformation för att registrera besök i gymmet."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "தற்போதைய இடத்தை உடற்பயிற்சி மையமாக பதிவு செய்து, உடற்பயிற்சி மையத்திற்குச் செல்வதைக் கண்காணிக்க இருப்பிட தகவலைப் பயன்படுத்தவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ప్రస్తుత స్థానాన్ని జిమ్‌గా నమోదు చేయడానికి మరియు జిమ్ సందర్శనలను రికార్డ్ చేయడానికి స్థాన సమాచారాన్ని ఉపయోగించండి."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึกสถานที่เป็นยิม และใช้ตำแหน่งที่ตั้งเพื่อบันทึกการเข้า-ออกจากยิม"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mevcut konumu spor salonu olarak kaydedin ve spor salonuna gidişlerinizi kaydetmek için konum bilgisini kullanın."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зареєструвати місцезнаходження як спортзал і використовувати його для запису відвідування спортзалу."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đăng ký địa điểm hiện tại làm phòng gym và sử dụng vị trí để ghi lại việc đến và rời khỏi phòng gym."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将当前位置注册为健身房，并使用位置信息记录健身房访问情况。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將目前位置作為健身房註冊，並使用位置資訊來記錄健身房拜訪。"
+          }
+        }
+      }
+    },
+    "NSMotionUsageDescription": {
+      "comment": "GymTrainingApp/Info.plist:NSMotionUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قم بتقدير عدد التكرارات والإيقاع خلال مجموعة من حركة Apple Watch."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimar el nombre de repeticions i el tempo durant una sèrie a partir del moviment de Apple Watch."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na základě pohybu na Apple Watch odhadnete počet opakování a tempo v dané sérii."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimer antal gentagelser og tempo under træningen baseret på bevægelsen på Apple Watch."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Anzahl und das Tempo während des Trainings werden anhand der Bewegungen des Apple Watch geschätzt."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Υπολογίστε τον αριθμό και το ρυθμό των επαναλήψεων κατά τη διάρκεια της προπόνησης, χρησιμοποιώντας τα δεδομένα από το Apple Watch."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on Apple Watch movement data."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on Apple Watch movement data."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on Apple Watch movement data."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on Apple Watch movement data."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimo el número y el ritmo del entrenamiento actual a partir de los movimientos del Apple Watch."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimo el número y el ritmo del entrenamiento actual a partir de los movimientos del Apple Watch."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arvioi sarjan toistojen ja tahdin Apple Watchin liikkeiden perusteella."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimez le nombre et le rythme des séries en fonction du mouvement de votre Apple Watch."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimez le nombre et le rythme des séries en fonction du mouvement de votre Apple Watch."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે Apple Watch ના ડેટામાંથી સેટની સંખ્યા અને ગતિનો અંદાજ લગાવી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מעריך את מספר וחזרות בסדרה בהתבסס על תנועות ה-Apple Watch."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch की गतिविधियों से सेट के दौरान की संख्या और गति का अनुमान लगाएं।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na temelju pokreta na Apple Watchu, procijenit ćete broj i tempo za trenutni set."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az Apple Watch mozgásából becsülhetjük a beállított számokat és tempót."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memperkirakan jumlah dan tempo dari set saat ini berdasarkan gerakan Apple Watch."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stimo il numero e il ritmo degli allenamenti in corso, basandomi sui movimenti dell'Apple Watch."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watchの動きからセット中の回数とテンポを推定します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch의 움직임을 기반으로 세트당 횟수와 속도를 추정합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ॲपल वॉचच्या हालचालीवरून सेटमधील संख्या आणि गतीचा अंदाज घ्या."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimas jumlah dan kelajuan semasa berdasarkan pergerakan Apple Watch."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Op basis van de bewegingen van uw Apple Watch schat het programma het aantal en de snelheid van de huidige set."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimerer antall repetisjoner og tempo basert på bevegelsene fra Apple Watch."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na podstawie ruchu na Apple Watch szacuję liczbę powtórzeń i tempo dla bieżącego zestawu."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estima o número e o ritmo dos exercícios em andamento com base nos movimentos do Apple Watch."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estima o número e o ritmo dos exercícios em andamento com base nos movimentos do Apple Watch."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimează numărul și ritmul de execuție al seturilor pe baza mișcărilor de pe Apple Watch."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оцениваем количество повторений и темп во время тренировки на основе данных с Apple Watch."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na základe pohybu na Apple Watch odhadnete počet a tempo série."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iz zaznavanja gibov na Apple Watch ocenite število in tempo vtičev."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uppskatta antalet repetitioner och tempot för det aktuella setet baserat på Apple Watch-rörelser."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch-ன் இயக்கத்திலிருந்து, தற்போதுள்ள எண்ணிக்கையையும் வேகத்தையும் மதிப்பிடலாம்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watchలోని కదలికల నుండి సెట్ యొక్క సంఖ్య మరియు వేగాన్ని అంచనా వేయవచ్చు."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ประมาณจำนวนรอบและจังหวะจากการเคลื่อนไหวของ Apple Watch"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch hareketlerinden, antrenman sırasında yapılan tekrar sayısını ve tempoyu tahmin eder."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оцінити кількість і темп під час тренування на основі даних з Apple Watch."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ước tính số lần và nhịp độ trong buổi tập dựa trên chuyển động của Apple Watch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "根据Apple Watch的运动数据，估算出当前组数和节奏。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "根據 Apple Watch 的活動，估算出當次和節奏。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

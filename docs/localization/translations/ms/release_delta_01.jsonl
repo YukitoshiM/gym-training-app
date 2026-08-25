@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "ms", "translation": "Anggaran anggaran. Ini bukan pengukuran sebenar. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "ms", "translation": " kerana tempoh antara pengukuran terakhir, perubahan tidak dapat ditentukan dan mempunyai julat. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "ms", "translation": "Berdasarkan anggaran berdasarkan tinggi, berat badan, umur dan jantina. Ini bukan anggaran kadar lemak badan individu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "ms", "translation": "Anggaran", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "ms", "translation": "Anggaran rujukan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "ms", "translation": "Ini adalah anggaran, bukan pengukuran. Simpan hanya jika anda menyentuh untuk melihat butiran.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "ms", "translation": "Simpan anggaran?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "ms", "translation": "Simpan sebagai anggaran", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "ms", "translation": "{{value1}} {{value2}}. Pengukuran sebenar tidak akan ditimpa.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "ms", "translation": "Laporan yang dijadualkan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "ms", "translation": "Laporan mingguan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "ms", "translation": "Hari", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "ms", "translation": "Laporan bulanan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "ms", "translation": "Tarikh", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "ms", "translation": "{{value1}} hari", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "ms", "translation": "Waktu notifikasi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "ms", "translation": "Laporan akan dihasilkan secara automatik apabila aplikasi dibuka untuk pertama kalinya selepas masa yang ditetapkan. Jika tidak dapat berhubung dengan AI, ringkasan dalam peranti akan disimpan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "ms", "translation": "Perlu semak tetapan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "ms", "translation": "Anda boleh cuba semula", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "ms", "translation": "Kuota telah digunakan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "ms", "translation": "Kuota belum digunakan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "ms", "translation": "Bukti saintifik {{value1}} perkara", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "ms", "translation": "Tidak ada bukti langsung yang mencukupi, jadi ia adalah anggaran berdasarkan tren.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "ms", "translation": "Tiada bukti langsung yang boleh digunakan untuk cadangan ini.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "ms", "translation": "Tidak dapat mengesahkan bukti saintifik, jadi ia adalah cadangan berdasarkan catatan dan prinsip umum.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "ms", "translation": "Unit ukuran badan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

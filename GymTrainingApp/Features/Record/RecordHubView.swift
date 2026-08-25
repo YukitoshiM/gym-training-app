@@ -40,15 +40,15 @@ struct RecordHubView: View {
                     }
 
                     VStack(alignment: .leading, spacing: 10) {
-                        SectionHeader(title: "今日の入力", subtitle: "先に短い記録を済ませて、あとでまとめて振り返れます。")
+                        SectionHeader(title: L10n.string("core_ui.e75bf42e2b4a", fallback: "今日の入力"), subtitle: L10n.string("core_ui.5741ec6a7cf6", fallback: "先に短い記録を済ませて、あとでまとめて振り返れます。"))
 
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                             NavigationLink {
                                 BodyMetricDetailView(kind: .bodyWeight)
                             } label: {
                                 RecordQuickActionCard(
-                                    title: "体重",
-                                    detail: appStore.hasBodyMetricEntry(for: .bodyWeight) ? "記録済み" : "追加する",
+                                    title: L10n.string("core_ui.d05d75dc142b", fallback: "体重"),
+                                    detail: appStore.hasBodyMetricEntry(for: .bodyWeight) ? L10n.string("core_ui.da6af7f58be0", fallback: "記録済み") : L10n.string("core_ui.27259dff554d", fallback: "追加する"),
                                     systemImage: "scalemass",
                                     tint: AppTheme.blue,
                                     isCompleted: appStore.hasBodyMetricEntry(for: .bodyWeight)
@@ -61,8 +61,8 @@ struct RecordHubView: View {
                                 BodyMetricDetailView(kind: .waist)
                             } label: {
                                 RecordQuickActionCard(
-                                    title: "腹囲",
-                                    detail: appStore.hasBodyMetricEntry(for: .waist) ? "記録済み" : "追加する",
+                                    title: L10n.string("core_ui.424306f5227a", fallback: "腹囲"),
+                                    detail: appStore.hasBodyMetricEntry(for: .waist) ? L10n.string("core_ui.da6af7f58be0", fallback: "記録済み") : L10n.string("core_ui.27259dff554d", fallback: "追加する"),
                                     systemImage: "figure.core.training",
                                     tint: AppTheme.orange,
                                     isCompleted: appStore.hasBodyMetricEntry(for: .waist)
@@ -75,8 +75,8 @@ struct RecordHubView: View {
                                 MealListView()
                             } label: {
                                 RecordQuickActionCard(
-                                    title: "食事",
-                                    detail: "\(mealCount)/\(nutritionProgress.goals.mealCount)回",
+                                    title: L10n.string("core_ui.e8a52146d9dc", fallback: "食事"),
+                                    detail: L10n.string("core_ui.5e0934899b21", fallback: "{{value1}}/{{value2}}回", values: [String(describing: mealCount), String(describing: nutritionProgress.goals.mealCount)]),
                                     systemImage: "fork.knife",
                                     tint: AppTheme.orange,
                                     isCompleted: nutritionProgress.isMealCountAchieved
@@ -89,8 +89,8 @@ struct RecordHubView: View {
                                 BodyPhotoListView()
                             } label: {
                                 RecordQuickActionCard(
-                                    title: "体型写真",
-                                    detail: bodyPhotoCount > 0 ? "\(bodyPhotoCount)件" : "追加する",
+                                    title: L10n.string("core_ui.910d79f7cbf5", fallback: "体型写真"),
+                                    detail: bodyPhotoCount > 0 ? L10n.string("core_ui.f913cce82a70", fallback: "{{value1}}件", values: [String(describing: bodyPhotoCount)]) : L10n.string("core_ui.27259dff554d", fallback: "追加する"),
                                     systemImage: "camera",
                                     tint: AppTheme.purple,
                                     isCompleted: bodyPhotoCount > 0
@@ -111,7 +111,7 @@ struct RecordHubView: View {
                     )
 
                     VStack(alignment: .leading, spacing: 10) {
-                        SectionHeader(title: "トレーニング", subtitle: "計画から開始するか、その場で種目を追加して記録します。")
+                        SectionHeader(title: L10n.string("core_ui.36b391f81e59", fallback: "トレーニング"), subtitle: L10n.string("core_ui.0bb8af30fad6", fallback: "計画から開始するか、その場で種目を追加して記録します。"))
 
                         if !appStore.plans.isEmpty {
                             WatchPlanSyncCard(
@@ -134,17 +134,17 @@ struct RecordHubView: View {
 
                         Button {
                             activeSession = WorkoutSession(
-                                title: "フリートレーニング",
+                                title: L10n.string("core_ui.e517c836f842", fallback: "フリートレーニング"),
                                 sourcePlanID: nil,
                                 exercises: []
                             )
                         } label: {
                             WorkoutStartCard(
-                                title: "フリートレーニング",
-                                detail: "計画なしで種目を追加",
+                                title: L10n.string("core_ui.e517c836f842", fallback: "フリートレーニング"),
+                                detail: L10n.string("core_ui.172cd4e16deb", fallback: "計画なしで種目を追加"),
                                 systemImage: "plus.circle.fill",
                                 tint: AppTheme.orange,
-                                trailingText: "開始"
+                                trailingText: L10n.string("core_ui.f5f5c6e6cc80", fallback: "開始")
                             )
                         }
                         .buttonStyle(.plain)
@@ -155,11 +155,11 @@ struct RecordHubView: View {
                                 PlanListView()
                             } label: {
                                 WorkoutStartCard(
-                                    title: "計画を作成",
-                                    detail: "よく使うメニューを登録",
+                                    title: L10n.string("core_ui.636a7ce9c4c4", fallback: "計画を作成"),
+                                    detail: L10n.string("core_ui.8f6c619d1202", fallback: "よく使うメニューを登録"),
                                     systemImage: "list.bullet.rectangle",
                                     tint: AppTheme.blue,
-                                    trailingText: "作成"
+                                    trailingText: L10n.string("core_ui.f37338c0fef4", fallback: "作成")
                                 )
                             }
                             .buttonStyle(.plain)
@@ -170,10 +170,10 @@ struct RecordHubView: View {
                                 } label: {
                                     WorkoutStartCard(
                                         title: plan.name,
-                                        detail: "\(plan.exercises.count)種目 / \(plan.totalSetCount)セット",
+                                        detail: L10n.string("core_ui.cd89a1bc8f6a", fallback: "{{value1}}種目 / {{value2}}セット", values: [String(describing: plan.exercises.count), String(describing: plan.totalSetCount)]),
                                         systemImage: "play.fill",
                                         tint: AppTheme.accent,
-                                        trailingText: "開始"
+                                        trailingText: L10n.string("core_ui.f5f5c6e6cc80", fallback: "開始")
                                     )
                                 }
                                 .buttonStyle(.plain)
@@ -186,7 +186,7 @@ struct RecordHubView: View {
                 .padding(.bottom, 96)
             }
             .background(TrainingBackground())
-            .navigationTitle("記録")
+            .navigationTitle(L10n.string("core_ui.725fe331d7f6", fallback: "記録"))
             .navigationBarTitleDisplayMode(.inline)
             .fullScreenCover(item: $activeSession) { session in
                 WorkoutSessionView(session: session)
@@ -204,9 +204,9 @@ private struct GymArrivalPlanCard: View {
             HStack(spacing: 12) {
                 IconBadge(systemImage: "mappin.and.ellipse", tint: AppTheme.positive)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("ジムに到着しました")
+                    Text(L10n.string("core_ui.ae6db79774b7", fallback: "ジムに到着しました"))
                         .font(.headline)
-                    Text("今日: \(plan.name)・\(plan.totalSetCount)セット")
+                    Text(L10n.string("core_ui.fc9d4f61d361", fallback: "今日: {{value1}}・{{value2}}セット", values: [String(describing: plan.name), String(describing: plan.totalSetCount)]))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -216,7 +216,7 @@ private struct GymArrivalPlanCard: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(AppTheme.positive)
-                .accessibilityLabel("今日のメニューを開始")
+                .accessibilityLabel(L10n.string("core_ui.a13dde79fbc2", fallback: "今日のメニューを開始"))
                 .accessibilityIdentifier("startArrivedGymPlanButton")
             }
         }
@@ -241,7 +241,7 @@ private struct WatchPlanSyncCard: View {
                         Text("Apple Watch")
                             .font(.headline)
                             .foregroundStyle(AppTheme.ink)
-                        Text("登録済みメニュー \(plans.count)件")
+                        Text(L10n.string("core_ui.29ac6f9dcd7c", fallback: "登録済みメニュー {{value1}}件", values: [String(describing: plans.count)]))
                             .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                             .lineLimit(1)
@@ -252,12 +252,12 @@ private struct WatchPlanSyncCard: View {
                     Button {
                         onSend()
                     } label: {
-                        Label("送信", systemImage: "arrow.up.forward.app")
+                        Label(L10n.string("core_ui.9bf8130ba8a1", fallback: "送信"), systemImage: "arrow.up.forward.app")
                             .labelStyle(.iconOnly)
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(tint)
-                    .accessibilityLabel("Apple Watchへメニューを同期")
+                    .accessibilityLabel(L10n.string("core_ui.a6e1ba4bb69f", fallback: "Apple Watchへメニューを同期"))
                     .accessibilityIdentifier("sendPlanToWatchButton")
                 }
 
@@ -280,7 +280,7 @@ private struct WatchPlanSyncCard: View {
                     }
                 } label: {
                     HStack {
-                        Label("今日のメニュー", systemImage: "calendar.badge.checkmark")
+                        Label(L10n.string("core_ui.b82b1b7a064a", fallback: "今日のメニュー"), systemImage: "calendar.badge.checkmark")
                             .font(.footnote.bold())
                         Spacer()
                         Text(selectedPlanName)
@@ -294,7 +294,7 @@ private struct WatchPlanSyncCard: View {
                     .frame(height: 44)
                     .background(AppTheme.pageBackground, in: RoundedRectangle(cornerRadius: 8))
                 }
-                .accessibilityLabel("今日のメニュー")
+                .accessibilityLabel(L10n.string("core_ui.b82b1b7a064a", fallback: "今日のメニュー"))
                 .accessibilityValue(selectedPlanName)
                 .accessibilityIdentifier("watchTodayPlanMenu")
             }
@@ -302,7 +302,7 @@ private struct WatchPlanSyncCard: View {
     }
 
     private var selectedPlanName: String {
-        plans.first(where: { $0.id == selectedPlanID })?.name ?? plans.first?.name ?? "未選択"
+        plans.first(where: { $0.id == selectedPlanID })?.name ?? plans.first?.name ?? L10n.string("core_ui.b5bf4c52186f", fallback: "未選択")
     }
 
     private var tint: Color {

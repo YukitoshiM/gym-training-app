@@ -23,7 +23,9 @@
 	<key>NSHealthShareUsageDescription</key>
 	<string>ワークアウト中の心拍と消費エネルギーを表示し、セットごとの負荷を記録します。</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Apple Watchで記録した筋力トレーニングをApple Healthに保存します。</string>
+	<string>Apple Watchで記録した筋力トレーニングと屋外有酸素運動をApple Healthに保存します。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>屋外運動中のルートをApple Healthに保存するために位置情報を使用します。ルートはAIや広告へ送信しません。</string>
 	<key>NSMotionUsageDescription</key>
 	<string>手首の動きからセット中の回数とテンポを推定します。</string>
 	<key>WKApplication</key>

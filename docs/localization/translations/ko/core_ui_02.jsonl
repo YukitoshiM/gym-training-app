@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"ko","translation":"가장 가까운 항목을 하나 선택","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"ko","translation":"목표를 설정한 후에는 매일 할 일은 3가지뿐","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"ko","translation":"첫 번째 운동 완료","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"ko","translation":"첫 번째 값을 기록하세요","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"ko","translation":"최대 3개","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"ko","translation":"빈 항목은 기록 화면에서 나중에 추가할 수 있습니다.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"ko","translation":"미완료","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"ko","translation":"미실행","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"ko","translation":"미기록","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"ko","translation":"미설정","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"ko","translation":"미선택","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"ko","translation":"다음은 목적별 메뉴","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"ko","translation":"다음","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"ko","translation":"걸음 수 확인","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"ko","translation":"체중 감량","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"ko","translation":"탄수화물","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"ko","translation":"유효하지 않음","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"ko","translation":"무리 없는 횟수와 시간을 설정","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"ko","translation":"특히 중요","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"ko","translation":"상태 및 다음 단계 확인","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"ko","translation":"상태 확인","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"ko","translation":"현재","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"ko","translation":"현재 신체 정보","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"ko","translation":"현재 사용 불가","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"ko","translation":"현재 수집된 기록 및 설정을 사용했습니다.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"ko","translation":"현재 선택: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"ko","translation":"목표 몸매를 향해, 망설이지 않고 나아가세요.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"ko","translation":"이유","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"ko","translation":"이유: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"ko","translation":"생년","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"ko","translation":"화면 투어를 시작","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"ko","translation":"등록된 메뉴 {{value1}}개","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"ko","translation":"목표 상태","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"ko","translation":"목표 스타일","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"ko","translation":"목표","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"ko","translation":"목표 {{value1}} / 차이 {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"ko","translation":"목표 및 페이스","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"ko","translation":"목표 및 성과","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"ko","translation":"목표 조정 후보","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"ko","translation":"목표 미 설정","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"ko","translation":"목표 달성","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"ko","translation":"목적","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"ko","translation":"각 목표에 대해 2명의 인물을 설정했습니다. 인물을 변경하면, 이상적인 체형과 대화 방식이 바뀝니다.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"ko","translation":"목적에 맞는 담당자","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"ko","translation":"목적에 맞춰 홈 화면의 확인 지점과 다음 단계를 전환합니다.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"ko","translation":"목표 변경","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"ko","translation":"목표 선택","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"ko","translation":"목표 모드","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"ko","translation":"목표 및 목표","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"ko","translation":"목표별 메뉴가 활성화됨","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"ko","translation":"목표별 메뉴 보기","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"ko","translation":"최근","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"ko","translation":"상담하면서 수정","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"ko","translation":"저전력 샘플링","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"ko","translation":"시작 {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"ko","translation":"수면 및 회복","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"ko","translation":"확인 중","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"ko","translation":"초","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"ko","translation":"초 수","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"ko","translation":"운동 종류 찾기 또는 추가","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"ko","translation":"개별 기기에서 단기간 인증 사용","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"ko","translation":"내부","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"ko","translation":"경쟁력","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"ko","translation":"근력 운동","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"ko","translation":"근력, 체력, 회복을 경쟁에 연결","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"ko","translation":"근육량과 운동 실적 향상","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"ko","translation":"근육 성장","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"ko","translation":"경험","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"ko","translation":"경험 수준","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"ko","translation":"지속 가능한 속도","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"ko","translation":"능력이나 자격 평가가 아닙니다. 답변에서 우선순위를 나타냅니다.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"ko","translation":"지방","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"ko","translation":"허리 둘레","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"ko","translation":"허리 둘레 (선택 사항)","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"ko","translation":"행동 패턴 학습","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"ko","translation":"행동 알림","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"ko","translation":"표시","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"ko","translation":"표시 모드","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"ko","translation":"표시 방식","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"ko","translation":"표시 정책","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"ko","translation":"지원 모델 연결되지 않음","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"ko","translation":"참고","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"ko","translation":"참고: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"ko","translation":"계획","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"ko","translation":"계획, 기록, 신체 KPI, 식단, 사진, AI 대화 및 기억, 사용자 정의 항목 삭제.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"ko","translation":"계획에서 시작하거나, 즉시 항목을 추가하여 기록합니다.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"ko","translation":"계획 없이 항목 추가","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"ko","translation":"계획에 반영","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"ko","translation":"계획 생성","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"ko","translation":"계획을 만들어 보세요","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"ko","translation":"계획 및 워치","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"ko","translation":"계획 중량을 업데이트하시겠습니까?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"ko","translation":"기록","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"ko","translation":"기록하기","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"ko","translation":"기록합니다. AI에게 질문하고 실행합니다. 매일 하는 것은 3가지입니다.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"ko","translation":"기록 항목을 탭","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"ko","translation":"기록 및 실행 결과는 다음 AI 분석으로 이어집니다. 첫 번째 작업은 홈의 미션을 안내합니다.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"ko","translation":"기록은 여기에 저장됩니다","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"ko","translation":"기록 확인 중입니다. 화면을 닫아도 계속 진행됩니다.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"ko","translation":"기록을 보고 다음 행동을 제안","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"ko","translation":"녹음 중","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"ko","translation":"전체 기록을 바탕으로, 긍정적인 변화, 정체, 부족한 정보와 다음 단계를 제안합니다.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"ko","translation":"기록 완료","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"ko","translation":"설정","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"ko","translation":"설정이 완료됨","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"ko","translation":"진단 로그에는 iPhone 및 Apple Watch의 작동, 통신, 운동 기록이 포함됩니다. 외부로 자동 전송되지 않습니다.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"ko","translation":"진단 로그 삭제","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"ko","translation":"진단 로그 내보내기","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"ko","translation":"진단 로그 보내기","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"ko","translation":"대화 방식","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"ko","translation":"자세히 보기","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"ko","translation":"혼란을 야기하는 내용","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"ko","translation":"신체 KPI","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"ko","translation":"키","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"ko","translation":"키 - 선택 가능","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"ko","translation":"모호할 경우 여기로","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"ko","translation":"추가","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"ko","translation":"추가하기","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"ko","translation":"추가 시작","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"ko","translation":"전송","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"ko","translation":"데이터 전송 대기 중","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"ko","translation":"운동하는 헬스장 또는 집에서 사용하는 운동 기구를 선택","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"ko","translation":"통신이 가능하면 기록을 확인합니다.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"ko","translation":"주별 운동 횟수","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"ko","translation":"이번 주에 몇 번 운동할 수 있나요?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"ko","translation":"진행 방법","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"ko","translation":"진행 중","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"ko","translation":"운동, 수면, 식습관 유지","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"ko","translation":"선택 시: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"ko","translation":"선택 중","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"ko","translation":"배포","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"ko","translation":"배포 시 AI 설정 불러오기","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"ko","translation":"주요 부위","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"ko","translation":"무게","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"ko","translation":"무게를 릴로 설정","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"ko","translation":"무게 단위","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"ko","translation":"닫고 있습니다","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"ko","translation":"닫기","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"ko","translation":"시작","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"ko","translation":"관련 정보","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"ko","translation":"식사","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"ko","translation":"식사와 체형","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"ko","translation":"식사와 체형은 사진으로 기록합니다. 몸무게, 허리둘레, 세트는 숫자로 기록합니다.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"ko","translation":"식사 기록","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"ko","translation":"식사 횟수","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"ko","translation":"식사 횟수의 달성 및 칼로리, PFC의 달성을 별도로 표시합니다.","review_note":""}

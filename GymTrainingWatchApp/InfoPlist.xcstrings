@@ -1,0 +1,816 @@
+{
+  "sourceLanguage": "ja",
+  "strings": {
+    "NSHealthShareUsageDescription": {
+      "comment": "GymTrainingWatchApp/Info.plist:NSHealthShareUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يعرض معدل ضربات القلب ونفقات الطاقة أثناء التمرين، ويسجل المقاومة لكل مجموعة."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra la freqüència cardíaca i la despesa energètica durant l'entrenament i registra la resistència per a cada conjunt."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobrazuje vaše srdeční tep a spotřebované energie během tréninku a zaznamenává zátěž pro každou sérii."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis puls og energiforbrug under træning og registrer belastningen for hver sæt."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Herzfrequenz und die verbrauchte Energie während des Trainings werden angezeigt und pro Trainingseinheit aufgezeichnet."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εμφανίστε τον καρδιακό ρυθμό και την κατανάλωση ενέργειας κατά τη διάρκεια της προπόνησης και καταγράψτε το φορτίο ανά σειρά."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display heart rate and energy consumption during workouts, and record the load for each set."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display heart rate and energy consumption during workouts, and record the load for each set."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display heart rate and energy consumption during workouts, and record the load for each set."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display heart rate and energy consumption during workouts, and record the load for each set."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muestra tu frecuencia cardíaca y energía consumida durante el ejercicio, e incluye el registro de la carga por serie."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muestra tu frecuencia cardíaca y energía consumida durante el ejercicio, e incluye el registro de la carga por serie."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Näytä sykkeet ja kulutetut kalorit harjoittelun aikana sekä tallenna sarjakohtaiset kuormat."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affichez la fréquence cardiaque et l'énergie dépensée pendant l'entraînement, ainsi que les charges enregistrées pour chaque série."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affichez la fréquence cardiaque et l'énergie dépensée pendant l'entraînement, ainsi que les charges enregistrées pour chaque série."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે વર્કઆઉટ દરમિયાન હૃદયના ધબકારા અને વપરાયેલી ઊર્જા દર્શાવી શકો છો, તેમજ દરેક સેટ માટે ભારને રેકોર્ડ કરી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מציג את קצב הלב ואת צריכת האנרגיה במהלך האימון ומאחסן את העומס עבור כל סדרה."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वर्कआउट के दौरान हृदय गति और ऊर्जा खपत प्रदर्शित करें, और प्रत्येक सेट के लिए लोड रिकॉर्ड करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prikazat će se broj otkucaja srca i potrošene energije tijekom treninga, kao i snaga za svaki set."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Megjeleníti az edzés közbeni pulzust és a fogyasztott energiát, valamint rögzíti az egyes beállítások terhelését."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menampilkan detak jantung dan energi yang terbakar selama latihan, serta mencatat beban per set."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visualizzo frequenza cardiaca e consumo di energia durante l'allenamento e registro il carico per ogni serie."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワークアウト中の心拍と消費エネルギーを表示し、セットごとの負荷を記録します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "운동 중 심박수와 소비 에너지를 표시하고, 세트별 부하를 기록합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वर्कआउट दरम्यान हृदयगती आणि ऊर्जा वापराचे प्रदर्शन करा, तसेच प्रत्येक सेटमधील तीव्रतेची नोंद ठेवा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tunjukkan kadar jantung dan tenaga yang dibakar semasa senaman, serta catat beban setiap set."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De hartslag en calorieverbruik tijdens de training worden weergegeven, evenals het aantal en de intensiteit per set."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Viser hjertefrekvens og forbrent energi under trening, samt registrerer belastningen per økt."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyświetlam tętno i zużycie energii podczas treningu oraz zapisuję obciążenie dla każdego zestawu."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exibe a frequência cardíaca e a energia consumida durante o treino, registrando a carga por série."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exibe a frequência cardíaca e a energia consumida durante o treino, registrando a carga por série."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează frecvența cardiacă și energia consumată în timpul antrenamentului și înregistrează sarcina pentru fiecare set."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отображаем частоту сердечных сокращений и потребление энергии во время тренировки, а также записываем нагрузку для каждого сета."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobrazuje vaše pulz a spotené energie počas tréningu a zaznamenáva zaťaženie pre každú sériu."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prikazate srčni utrip in porabljene energije med treningom ter zapisaite obremenitev za vsak vtič."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visa puls och energiförbrukning under träningen samt registrera belastningen per set."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "உடற்பயிற்சியின்போது இதயத் துடிப்பு மற்றும் எரிதழையை காண்பிப்பதோடு, ஒவ்வொரு பயிற்சிக்கும் ஏற்ற சுமையை பதிவு செய்யவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "వ్యాయామ సమయంలో హృదయ స్పందన మరియు వినియోగించిన శక్తిని ప్రదర్శిస్తుంది, అలాగే సెట్ వారీగా లోడ్‌ను రికార్డ్ చేస్తుంది."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แสดงอัตราการเต้นของหัวใจและพลังงานที่ใช้ระหว่างการออกกำลังกาย และบันทึกภาระตามชุด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antrenman sırasında kalp atış hızını ve harcanan enerjiyi gösterir, ayrıca her antrenmanın zorluğunu kaydeder."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Відображати частоту серцевих скорочень та споживану енергію під час тренування, а також записувати навантаження для кожного циклу."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiển thị nhịp tim và năng lượng tiêu hao trong quá trình tập luyện, đồng thời ghi lại mức độ cho mỗi buổi tập."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示锻炼期间的心率和消耗能量，并记录每组的强度。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "顯示運動中的心率和消耗能量，並記錄每組的負荷。"
+          }
+        }
+      }
+    },
+    "NSHealthUpdateUsageDescription": {
+      "comment": "GymTrainingWatchApp/Info.plist:NSHealthUpdateUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احفظ تدريبات القوة المسجلة باستخدام Apple Watch إلى Apple Health."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deseu l'entrenament de força gravat amb Apple Watch a Apple Health."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložíte zaznamenané cvičení z Apple Watch do aplikace Apple Health."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem styrketræning fra Apple Watch i Apple Health."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krafttraining, das mit dem Apple Watch aufgezeichnet wurde, wird in der Apple Health gespeichert."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εξάγετε τις προπονήσεις με βάρη που καταγράψατε στο Apple Watch στην εφαρμογή Apple Health."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save strength training recorded on your Apple Watch to Apple Health."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardo los entrenamientos de fuerza registrados en el Apple Watch en la aplicación Salud de Apple."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardo los entrenamientos de fuerza registrados en el Apple Watch en la aplicación Salud de Apple."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallenna Apple Watchilla tehdyt voimaharjoittelut Apple Healthiin."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrez les entraînements effectués avec votre Apple Watch dans Apple Health."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrez les entraînements effectués avec votre Apple Watch dans Apple Health."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે Apple Watch પર કરેલા વર્કઆઉટને Apple Health માં સાચવી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "שומר את אימוני הכוח שרשמת ב-Apple Watch ב-Apple Health."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch पर रिकॉर्ड किए गए \"वजन प्रशिक्षण\" को Apple Health में सेव करें।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spremićete snage koje ste zabilježili na Apple Watch u aplikaciji Apple Health."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az Apple Watchon rögzített erőnléti edzéseket mentjük az Apple Healthbe."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menyimpan latihan kekuatan yang dicatat di Apple Watch ke dalam Apple Health."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvo gli allenamenti di forza registrati sull'Apple Watch in Apple Health."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watchで記録した筋力トレーニングをApple Healthに保存します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch에서 기록한 근력 운동을 Apple Health에 저장합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ॲपल वॉचवर रेकॉर्ड केलेले स्नायू प्रशिक्षण ॲपल हेल्थमध्ये सेव्ह करा."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simpan senaman kekuatan yang dicatat pada Apple Watch dalam Apple Health."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De krachttraining die met uw Apple Watch is vastgelegd, wordt opgeslagen in Apple Health."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagrer styrketrening fra Apple Watch i Apple Health."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisuję treningi siłowe z Apple Watch w aplikacji Health."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva os treinos de força registrados no Apple Watch na Apple Health."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva os treinos de força registrados no Apple Watch na Apple Health."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvez antrenamentele din Apple Watch în Apple Health."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохраняем данные о силовых тренировках, записанные на Apple Watch, в приложении Apple Health."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložíte zaznamenané silové tréningy z Apple Watch do Apple Health."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisane vtiče za trening v Apple Health."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spara styrketräningsdata från Apple Watch i Apple Health."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch-ல் பதிவு செய்யப்பட்ட உடற்பயிற்சியை Apple Health-ல் சேமிக்கவும்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watchలో రికార్డ్ చేసిన కండరాల వ్యాయామంను Apple Healthలో సేవ్ చేయండి."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึกการฝึกความแข็งแรงที่ Apple Watch และบันทึกลงใน Apple Health"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch'ta kaydedilen kas gücü antrenmanlarını Apple Health'e kaydeder."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зберегти тренування зі зміцнення м'язів, зафіксовані на Apple Watch, у Apple Health."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lưu các bài tập sức mạnh đã ghi trên Apple Watch vào Apple Health."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将通过Apple Watch记录的力量训练数据保存到Apple Health。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將在 Apple Watch 上記錄的肌力訓練儲存到 Apple Health。"
+          }
+        }
+      }
+    },
+    "NSMotionUsageDescription": {
+      "comment": "GymTrainingWatchApp/Info.plist:NSMotionUsageDescription\nen-CA: Neutral English draft based on en-AU; regional review required.\nen-GB: Neutral English draft based on en-AU; regional review required.\nen-US: Neutral English draft based on en-AU; regional review required.\nfr-CA: Regional draft based on fr-FR; regional review required.\npt-PT: Regional draft based on pt-BR; regional review required.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar-SA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تقدير عدد التكرارات والإيقاع خلال المجموعة بناءً على حركات المعصم."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estima el nombre de repeticions i el tempo durant una sèrie en funció dels moviments del canell."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na základě pohybu na zápěstí odhadnete počet opakování a tempo v dané sérii."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimer antal gentagelser og tempo baseret på bevægelsen på håndleddet."
+          }
+        },
+        "de-DE": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Anzahl und das Tempo während des Trainings werden anhand der Armbewegungen geschätzt."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Υπολογίστε τον αριθμό και το ρυθμό των επαναλήψεων, χρησιμοποιώντας τα δεδομένα από τις κινήσεις του καρπού."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on wrist movement data."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on wrist movement data."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on wrist movement data."
+          }
+        },
+        "en-US": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimate the number of sets and tempo during a workout based on wrist movement data."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimo el número y el ritmo del entrenamiento actual a partir de los movimientos del muñón."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimo el número y el ritmo del entrenamiento actual a partir de los movimientos del muñón."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arvioi sarjan toistojen ja tahdin ranteen liikkeiden perusteella."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimez le nombre et le rythme des séries en fonction du mouvement de votre poignet."
+          }
+        },
+        "fr-FR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimez le nombre et le rythme des séries en fonction du mouvement de votre poignet."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "તમે ઘડિયાળની હલનચલનમાંથી સેટની સંખ્યા અને ગતિનો અંદાજ લગાવી શકો છો."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מעריך את מספר וחזרות בסדרה בהתבסס על תנועות המרפק."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कलाई की गतिविधियों से सेट के दौरान की संख्या और गति का अनुमान लगाएं।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na temelju pokreta na zapešću, procijenit ćete broj i tempo za trenutni set."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az ujjbegy mozgásából becsülhetjük a beállított számokat és tempót."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memperkirakan jumlah dan tempo dari set saat ini berdasarkan gerakan pergelangan tangan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stimo il numero e il ritmo degli allenamenti in corso, basandomi sui movimenti del polso."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手首の動きからセット中の回数とテンポを推定します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손목 움직임을 기반으로 세트당 횟수와 속도를 추정합니다."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हाताच्या हालचालीवरून सेटमधील संख्या आणि गतीचा अंदाज घ्या."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimas jumlah dan kelajuan semasa berdasarkan pergerakan di pergelangan tangan."
+          }
+        },
+        "nl-NL": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Op basis van de bewegingen van uw pols schat het programma het aantal en de snelheid van de huidige set."
+          }
+        },
+        "no": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimerer antall repetisjoner og tempo basert på bevegelsene i håndleddet."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na podstawie ruchu na nadgarstku szacuję liczbę powtórzeń i tempo dla bieżącego zestawu."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estima o número e o ritmo dos exercícios em andamento com base nos movimentos do pulso."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estima o número e o ritmo dos exercícios em andamento com base nos movimentos do pulso."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimează numărul și ritmul de execuție al seturilor pe baza mișcărilor de la încheietură."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оцениваем количество повторений и темп на основе движений запястья."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na základe pohybu na zápästí odhadnete počet a tempo série."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iz zaznavanja gibov na zapestju ocenite število in tempo vtičev."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uppskatta antalet repetitioner och tempot baserat på armrörelser."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "கையின் இயக்கத்திலிருந்து, தற்போதுள்ள எண்ணிக்கையையும் வேகத்தையும் மதிப்பிடலாம்."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "చేతిలోని కదలికల నుండి సెట్ యొక్క సంఖ్య మరియు వేగాన్ని అంచనా వేయవచ్చు."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ประมาณจำนวนรอบและจังหวะจากการเคลื่อนไหวของข้อมือ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bilek hareketlerinden, antrenman sırasında yapılan tekrar sayısını ve tempoyu tahmin eder."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оцінити кількість і темп під час тренування на основі рухів зап'ястя."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ước tính số lần và nhịp độ dựa trên chuyển động của cổ tay."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "根据手腕运动估算出当前组数和节奏。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "根據手腕活動估算出當次和節奏。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

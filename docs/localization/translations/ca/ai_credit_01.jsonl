@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "ca", "translation": "Pàgina d'AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "ca", "translation": "{{value1}} crèdits per aquesta acció", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "ca", "translation": "Afegir crèdits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "ca", "translation": "Ajustar saldo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "ca", "translation": "Utilitzar crèdits per a l'anàlisi automàtica", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "ca", "translation": "No consumeix crèdits, utilitza només els registres locals.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "ca", "translation": "Consumeix crèdits per a informes setmanals o mensuals.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "ca", "translation": "Crèdits AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "ca", "translation": "Verificant saldo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "ca", "translation": "Saldo: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "ca", "translation": "{{value1}} crèdits rebuts.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "ca", "translation": "Comprar crèdits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "ca", "translation": "Continuar sense AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "ca", "translation": "Eliminarà tots els registres i el compte de BodyMode. Perdreu tots els crèdits comprats i no podríeu recuperar-los.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "ca", "translation": "Històric de crèdits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "ca", "translation": "Podeu rebre crèdits mitjançant vídeo o comprar la quantitat necessària. Els registres manuals són gratuïts.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "ca", "translation": "Obtingueu-los veient anuncis o comprant crèdits. Els registres manuals continuen funcionant.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "ca", "translation": "No n'hi ha prou de crèdits AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "ca", "translation": "Informe mensual", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "ca", "translation": "Sense data d'expiració", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "ca", "translation": "{{value1}} AI crèdits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "ca", "translation": "Estem preparant els productes per a la compra.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "ca", "translation": "S'ha ajustat el reemborsament i s'han afegit {{value1}} crèdits.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "ca", "translation": "S'han afegit crèdits.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "ca", "translation": "La compra està en tramitat. Es reflectiran automàticament després de la confirmació.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "ca", "translation": "Els crèdits de compra no caduquen. No es poden transferir ni canviar. Fins i tot després de comprar, l'anunci no s'eliminarà.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "ca", "translation": "No s'ha pogut verificar l'estat de la compra.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "ca", "translation": "No s'ha pogut verificar la compra a App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "ca", "translation": "Ajust de reemborsament", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "ca", "translation": "Ja heu rebut l'oferta publicitària d'avui.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "ca", "translation": "Està prenent temps per verificar el vídeo. Es reflectiran crèdits després de la verificació.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "ca", "translation": "Obreu la pantalla d'AI per veure l'últim saldo. No heu de veure el vídeo de nou.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "ca", "translation": "He rebut 5 crèdits.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "ca", "translation": "La sessió ha expirat. Torneu a iniciar sessió.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "ca", "translation": "He iniciat sessió amb el compte d'Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "ca", "translation": "Si us registreu a Apple, rebreu els primers 20 crèdits. Podeu utilitzar la registre manual sense registrar-vos.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "ca", "translation": "Per utilitzar les funcions d'AI, registreu-vos a Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "ca", "translation": "Estic registrant...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "ca", "translation": "Si us registreu a Apple, rebreu els primers 20 crèdits. Podeu utilitzar la registre manual sense registrar-vos.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "ca", "translation": "Si us registreu a Apple, rebreu els primers 20 crèdits. No hi haurà cap càrrec ni actualització automàtica.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "ca", "translation": "20 crèdits amb la inscripció", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "ca", "translation": "Anunci en vídeo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "ca", "translation": "Crèdits de l'administrador", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "ca", "translation": "Compra", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "ca", "translation": "Crèdits per la inscripció", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "ca", "translation": "Comença amb el teu entrenador IA", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "ca", "translation": "Crèdits IA", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "ca", "translation": "Prova de nou més tard.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "ca", "translation": "Sense límits", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "ca", "translation": "Guarda 5 crèdits veient un anunci en vídeo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "ca", "translation": "Informe setmanal", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

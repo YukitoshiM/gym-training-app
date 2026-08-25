@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "th", "translation": "ค่าประมาณ โปรดทราบ: ไม่ใช่ค่าที่วัดจริง {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "th", "translation": "เนื่องจากช่วงเวลาที่ผ่านไปตั้งแต่การวัดครั้งล่าสุด จึงไม่สามารถยืนยันการเปลี่ยนแปลงได้ โดยจะให้ช่วงกว้าง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "th", "translation": "อ้างอิงจากช่วงค่าโดยประมาณตามข้อมูลส่วนสูง น้ำหนัก อายุ และเพศ ไม่ใช่ค่าที่วัดจริงสำหรับอัตราไขมันในร่างกาย", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "th", "translation": "ประมาณการ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "th", "translation": "ค่าประมาณอ้างอิง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "th", "translation": "เป็นเพียงช่วงค่า ไม่ใช่ค่าที่วัดได้ เมื่อคุณแตะเพื่อดูเนื้อหา จะมีการบันทึกเฉพาะเมื่อนั้น", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "th", "translation": "บันทึกค่าประมาณหรือไม่?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "th", "translation": "บันทึกเป็นค่าประมาณ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "th", "translation": "{{value1}} {{value2}} ไม่มีการเขียนทับค่าที่วัดจริง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "th", "translation": "รายงานตามกำหนด", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "th", "translation": "รายงานรายสัปดาห์", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "th", "translation": "วัน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "th", "translation": "รายงานรายเดือน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "th", "translation": "วันที่", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "th", "translation": "{{value1}} วัน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "th", "translation": "เวลาแจ้งเตือน", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "th", "translation": "จะสร้างโดยอัตโนมัติเมื่อเปิดแอปครั้งแรกหลังจากเวลาที่กำหนด AI ไม่สามารถเชื่อมต่อได้ จะเก็บข้อมูลสรุปไว้ในเครื่อง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "th", "translation": "ต้องตรวจสอบการตั้งค่า", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "th", "translation": "สามารถลองใหม่ได้", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "th", "translation": "ใช้หน่วยที่กำหนดแล้ว", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "th", "translation": "ยังไม่มีการใช้หน่วยที่กำหนด", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "th", "translation": "หลักฐานทางวิทยาศาสตร์ {{value1}} ราย", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "th", "translation": "เนื่องจากหลักฐานโดยตรงไม่เพียงพอ จึงเป็นเพียงแนวทาง โดยพิจารณาจากการบันทึก", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "th", "translation": "ไม่พบหลักฐานที่สามารถนำไปใช้ได้โดยตรง", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "th", "translation": "เนื่องจากไม่สามารถตรวจสอบหลักฐานทางวิทยาศาสตร์ได้ จึงแนะนำโดยอิงจากข้อมูลและหลักการทั่วไป", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "th", "translation": "หน่วยวัดขนาดร่างกาย", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

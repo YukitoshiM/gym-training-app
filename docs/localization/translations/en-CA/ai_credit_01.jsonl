@@ -1,0 +1,51 @@
+{"id":"ai_credit.account_notice","target_locale":"en-CA","translation":"AI Account","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.action_cost","target_locale":"en-CA","translation":"{{value1}} credits used this time","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.add","target_locale":"en-CA","translation":"Add Credits","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.adjustment","target_locale":"en-CA","translation":"Adjust Balance","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.automatic_report_credit_use","target_locale":"en-CA","translation":"Use AI credits for automatic analysis","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.automatic_report_credit_use_off","target_locale":"en-CA","translation":"No credits will be consumed. Summarize using only records stored on your device.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.automatic_report_credit_use_on","target_locale":"en-CA","translation":"Uses credits when a scheduled weekly or monthly report runs.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.balance","target_locale":"en-CA","translation":"AI Credits","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.balance_checking","target_locale":"en-CA","translation":"Checking Balance","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.balance_short","target_locale":"en-CA","translation":"残高 {{value1}}","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.bonus_received","target_locale":"en-CA","translation":"{{value1}} credits received.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.buy","target_locale":"en-CA","translation":"Buy Credits","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.continue_manual","target_locale":"en-CA","translation":"Continue without AI","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.delete_warning","target_locale":"en-CA","translation":"Delete all records and your BodyMode account. All remaining purchased and bonus credits will be lost and cannot be recovered.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.history","target_locale":"en-CA","translation":"Credit History","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.insufficient_choices","target_locale":"en-CA","translation":"Receive credits via video or purchase the amount you need. Manual recording remains free.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.insufficient_recovery","target_locale":"en-CA","translation":"Earn by watching ads or purchase credits. Manual recording remains free.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.insufficient_title","target_locale":"en-CA","translation":"Not enough AI credits","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.monthly","target_locale":"en-CA","translation":"Monthly report","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.never_expires","target_locale":"en-CA","translation":"No expiration date","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.product_amount","target_locale":"en-CA","translation":"{{value1}} AI Credits","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_credit.products_unavailable","target_locale":"en-CA","translation":"Preparing to purchase items.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.purchase_adjusted","target_locale":"en-CA","translation":"Refund adjusted. {{value1}} credits added.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.purchase_complete","target_locale":"en-CA","translation":"Credits have been added.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.purchase_pending","target_locale":"en-CA","translation":"Purchase is pending approval. Will be reflected automatically upon completion.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.purchase_terms","target_locale":"en-CA","translation":"Purchase credits do not expire. Cannot be transferred or redeemed. Banners will still appear after purchase.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.purchase_unknown","target_locale":"en-CA","translation":"Could not verify purchase status.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.purchase_verification_failed","target_locale":"en-CA","translation":"Could not verify the App Store purchase.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.refund_adjustment","target_locale":"en-CA","translation":"Refund adjustment","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.reward_limit","target_locale":"en-CA","translation":"Today's ad reward has been claimed.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.reward_pending","target_locale":"en-CA","translation":"Processing video confirmation. Credits will be added after verification.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.reward_pending_recovery","target_locale":"en-CA","translation":"Refresh the AI screen to view your latest balance. You do not need to watch the video again.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.reward_received","target_locale":"en-CA","translation":"Received 5 credits.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.sign_in_again","target_locale":"en-CA","translation":"Session has expired. Please sign in again.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.sign_in_complete","target_locale":"en-CA","translation":"Signed in with Apple.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.sign_in_recovery","target_locale":"en-CA","translation":"Sign in with Apple from the AI screen to receive your initial credits. Manual logging works without an account.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.sign_in_required","target_locale":"en-CA","translation":"Sign in with Apple to use AI features.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.signing_in","target_locale":"en-CA","translation":"Signing in...","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.signup_bonus","target_locale":"en-CA","translation":"Sign in with Apple to receive 20 initial credits. Manual logging works without an account.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.signup_bonus_no_subscription","target_locale":"en-CA","translation":"Sign in with Apple to receive 20 initial credits. This does not start a purchase or auto-renewing subscription.","review_note":"英語の課金表現を人手確認済み。"}
+{"id":"ai_credit.signup_short","target_locale":"en-CA","translation":"Get 20 credits by signing up.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.source_ad","target_locale":"en-CA","translation":"Video ad","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.source_admin","target_locale":"en-CA","translation":"Provided by the administrator","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.source_purchase","target_locale":"en-CA","translation":"Purchase","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.source_signup","target_locale":"en-CA","translation":"Sign-up bonus","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.start_title","target_locale":"en-CA","translation":"Start your AI trainer","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.title","target_locale":"en-CA","translation":"AI credits","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.try_later","target_locale":"en-CA","translation":"Please try again later.","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.unlimited","target_locale":"en-CA","translation":"Unlimited use","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.watch_ad","target_locale":"en-CA","translation":"Watch a video and get 5 credits","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_credit.weekly","target_locale":"en-CA","translation":"Weekly report","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

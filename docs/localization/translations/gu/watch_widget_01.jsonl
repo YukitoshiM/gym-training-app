@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"gu","translation":"{{value1}} રેકોર્ડ કરવામાં આવી રહ્યું છે","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"gu","translation":"આપત્તિ: {{value1}}. તમે મેન્યુઅલી દાખલ કરી શકો છો","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"gu","translation":"એક સેકન્ડમાં વાઇબ્રેશનની સંખ્યા","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"gu","translation":"Apple Health માં સાચવ્યું","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"gu","translation":"Apple Watch નો ઉપયોગ કેવી રીતે કરવો","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"gu","translation":"ગિમ: આગામી સત્ર માટે","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"gu","translation":"Health ની પરવાનગી વગર અથવા મેન્યુઅલી રેકોર્ડ","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"gu","translation":"હેલ્થનો ઉપયોગ કરી શકી નથી, તેથી મેન્યુઅલી રેકોર્ડ કરી રહ્યો છું.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"gu","translation":"હેલ્થ શરૂ કરી શકી નથી, તેથી મેન્યુઅલી રેકોર્ડ કરી રહ્યો છું.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"gu","translation":"હેલ્થ વર્કઆઉટ અસ્થાયી રૂપે થોભાવેલું છે.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"gu","translation":"હેલ્થ સેવિંગની પ્રક્રિયા ચાલી રહી છે.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"gu","translation":"હેલ્થ સેવિંગ નિષ્ફળ, વોચ રેકોર્ડ સાચવેલ છે.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"gu","translation":"હેલ્થ અસંપૂર્ણ, વોચ રેકોર્ડ સાચવેલ છે.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"gu","translation":"હેલ્થનું માપન પુનઃસ્થાપિત કરી શકાતું નથી. તમે મેન્યુઅલી રેકોર્ડ કરવાનું ચાલુ રાખી શકો છો.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"gu","translation":"હેલ્થનું માપન પુનઃસ્થાપિત કરવામાં આવ્યું.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"gu","translation":"હેલ્થનું માપન થોભાવેલું, અને મેન્યુઅલી રેકોર્ડિંગ ચાલુ છે.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"gu","translation":"હેલ્થ કનેક્શન બંધ, મેન્યુઅલી રેકોર્ડ કરી રહ્યો છું.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"gu","translation":"RPE ઉપલબ્ધ નથી.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"gu","translation":"વોચ પરની વર્તમાન રેકોર્ડ્સ દૂર કરવામાં આવશે.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"gu","translation":"વોચ રેકોર્ડ સાચવવામાં આવ્યો છે.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"gu","translation":"iPhone માંથી મેનુને સિંક કરો.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"gu","translation":"આજેના મેનુ iPhone માંથી પસંદ કરો અને શરૂ કરો.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"gu","translation":"આજેના મેનુ iPhone પર તપાસો.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"gu","translation":"iPhone સાથે કનેક્શન થઈ ગયું છે.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"gu","translation":"iPhone ના હોમ સ્ક્રીન પરથી આજના ડેટાને સિંક કરો.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"gu","translation":"મેં iPhone પર મોકલવા માટે રેકોર્ડ ડેટા બનાવી શક્યો નથી.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"gu","translation":"આઈફોન પર મોકલવામાં આવતું નથી. રેકોર્ડ સાચવો અને ફરીથી મોકલો.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"gu","translation":"આયફોન પર સાચવવામાં આવ્યું નથી. પછીથી ફરીથી મોકલી શકાય છે.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"gu","translation":"આયફોન સાથે જોડાણની તૈયારી કરવામાં આવી રહી છે. પછીથી ફરીથી મોકલી શકાય છે.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"gu","translation":"{{value1}} × {{value2}} વખત × {{value3}} સેટ","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"gu","translation":"તમે {{value1}} ને આયફોન પર ફરીથી મોકલી શકો છો","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"gu","translation":"તમે {{value1}} ને આયફોન પર મોકલવાની સમયપત્રક સેટ કરી છે","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"gu","translation":"તમે {{value1}} ને આયફોન પર મોકલ્યું છે","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"gu","translation":"તમે {{value1}} ને આયફોન પર મોકલવાની પ્રક્રિયામાં છો","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"gu","translation":"તમે {{value1}} ને આયફોન હિસ્ટ્રીમાં સાચવ્યું છે","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"gu","translation":"તમે {{value1}} ને ફરીથી મોકલી શકો છો","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"gu","translation":"તમે {{value1}} ને ફરી શરૂ કરી શકો છો","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"gu","translation":"તમે {{value1}} પસંદ કર્યું છે","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"gu","translation":"તમે {{value1}} શરૂ કર્યું છે","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"gu","translation":"{{value1}}/{{value2}} સેટ • {{value3}} વખત રેકોર્ડ","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"gu","translation":"{{value1}} સેટ •","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"gu","translation":"{{value1}} સેટ • ધ્યેય, કુલ {{value2}} વખત","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"gu","translation":"{{value1}} • {{value2}} સેટ • કુલ {{value3}} વખત","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"gu","translation":"{{value1}} • {{value2}} સેટ","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"gu","translation":"તમે {{value1}} માંથી પસંદ કરી શકો છો","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"gu","translation":"તમે {{value1}} ના મેનુને સિંક કર્યું છે","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"gu","translation":"{{value1}} વખત","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"gu","translation":"{{value1}} વાર/સેકન્ડ","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"gu","translation":"{{value1}} વાર·","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"gu","translation":"{{value1}} સેકન્ડ","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"gu","translation":"{{value1}} પ્રકાર·{{value2}} સેટ· કુલ {{value3}} વાર","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"gu","translation":"આ વોચ સાથે iPhone નું જોડાણ શક્ય નથી. રેકોર્ડ વોચ પર જ રહેશે.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"gu","translation":"આ વોચ સાથે જોડાણ શક્ય નથી.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"gu","translation":"જમ્પ કરો","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"gu","translation":"સેટ","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"gu","translation":"સેટ {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"gu","translation":"સેટ પૂર્ણ કરો","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"gu","translation":"સેટ શરૂ કરો","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"gu","translation":"સેટની સરેરાશ {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"gu","translation":"સેટ સેટ કરેલ નથી","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"gu","translation":"સેટ શરૂ કરો","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"gu","translation":"સેટ શરૂ કરવાની ક્રિયા રદ કરો","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"gu","translation":"સંવેદક દ્વારા માપન થઈ રહ્યું છે","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"gu","translation":"સંવેદકના ડેટાને તૈયાર કરી શકાય તેમ હોવાથી, મેન્યુઅલી રેકોર્ડ કરવામાં આવી રહ્યો છે.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"gu","translation":"ટ્યુટોરિયમને અવગણો","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"gu","translation":"ઝડપ","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"gu","translation":"ઝડપ સેટ કરો","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"gu","translation":"ટempo સેટ કરો","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"gu","translation":"સમય સૂચકાંકો બંધ કરો.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"gu","translation":"ટempoની સૂચના ફરી શરૂ કરો","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"gu","translation":"બેન્ચ પ્રેસ","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"gu","translation":"મેનુ","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"gu","translation":"મેનુ પસંદ કરો","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"gu","translation":"મેનુ ડેટા લોડ કરી શકાયો નથી","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"gu","translation":"મેનુ બદલો","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"gu","translation":"મેનુની રાહ જુઓ","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"gu","translation":"નોંધ","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"gu","translation":"નોંધ સંપાદિત કરો","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"gu","translation":"હલનચલન","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"gu","translation":"રાટ પુલડાઉન","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"gu","translation":"વર્કઆઉટ","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"gu","translation":"શું તમે વર્કઆઉટ પૂર્ણ કરવા માંગો છો?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"gu","translation":"વર્કઆઉટ રદ કર્યું","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"gu","translation":"થોડો સમય માટે રોકો","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"gu","translation":"{{value1}} સેકન્ડ માટે થોડો, {{value2}} સેકન્ડ માટે ઉંચો","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"gu","translation":"થોડા સમય માટે રોકવામાં આવી છે","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"gu","translation":"ઉપર","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"gu","translation":"ઉપર{{value1}}s · નીચે{{value2}}s · {{value3}} વાર/સેકન્ડ","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"gu","translation":"ઉપર","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"gu","translation":"ઉપર {{value1}} સેકન્ડ · નીચે {{value2}} સેકન્ડ","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"gu","translation":"ઉપર{{value1}} સેકન્ડ / નીચે{{value2}} સેકન્ડ","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"gu","translation":"ઉપર અને નીચેના સમયને દરેક સેટ માટે સેટ કરો. એપલ વોચ 1 સેકન્ડમાં 1 થી 3 વાર સ્પર્શ દ્વારા માર્ગદર્શન આપશે.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"gu","translation":"ઉપરનો સમય","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"gu","translation":"ઉપરનો સમય સીધો દાખલ કરો","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"gu","translation":"નીચે","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"gu","translation":"નીચે","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"gu","translation":"નીચેનો સમય","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"gu","translation":"નીચેનો સમય સીધો દાખલ કરો","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"gu","translation":"આજે","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"gu","translation":"આજના મેનુ","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"gu","translation":"આજના મેનુ: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"gu","translation":"આજના મેનુ પસંદ કરો","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"gu","translation":"વિરામ {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"gu","translation":"વિરામ {{value1}} સેકન્ડ","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"gu","translation":"વિરામ લો","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"gu","translation":"વિરામને અવગણો","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"gu","translation":"વિરામનો સમય","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"gu","translation":"આરામ સમાપ્ત","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"gu","translation":"તમારી ક્ષમતા અને ગતિના આધારે 2.5% વધારે વજન સૂચવવામાં આવ્યું છે","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"gu","translation":"હમણાં જ શરૂ કરો","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"gu","translation":"ઉપયોગ કેવી રીતે કરવો {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"gu","translation":"સંચય કરો","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"gu","translation":"વિશ્વસનીયતા {{value1}}%•{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"gu","translation":"સુધારો","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"gu","translation":"ફરીથી શરૂ કરો","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"gu","translation":"મિનિટ:સેકંડ","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"gu","translation":"છેલ્લું રેકોર્ડિંગ","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"gu","translation":"ગતિની સ્થિરતા {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"gu","translation":"ગતિ માટેના વિકલ્પો: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"gu","translation":"ગતિ અટકી ગઈ છે","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"gu","translation":"ગતિનો અંદાજ {{value1}} વખત","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"gu","translation":"ગતિનો અંદાજ {{value1}} વખત•વિશ્વસનીયતા {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"gu","translation":"ગતિમાં ફેરફાર {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"gu","translation":"અપડેટ કરો","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"gu","translation":"કાન્સલ કરો","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"gu","translation":"આ જ સમયે અન્ય ફિટનેસ રેકોર્ડ હોવાથી, હેલ્થમાં ડુપ્લિકેટ સાચવવાનું ટાળવામાં આવ્યું છે","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"gu","translation":"સિંક કરેલા મેનુમાંથી પસંદ કરી શકાય છે","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"gu","translation":"રાઉન્ડ","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"gu","translation":"રાઉન્ડની સંખ્યા","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"gu","translation":"રાઉન્ડની સંખ્યાને રીલ પર સેટ કરો","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"gu","translation":"પૂર્ણ","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"gu","translation":"પૂર્ણ થયા પછી iPhone પર મોકલો","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"gu","translation":"પૂર્ણ થયા પછી મોકલો","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"gu","translation":"પૂર્ણ કરવાથી આરામ ટાઈમર શરૂ થશે. તમે આગામી રાઉન્ડને ક્રમ બદલીને પસંદ કરી શકો છો.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"gu","translation":"કોઈ વર્કઆઉટ પૂર્ણ થયું નથી","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"gu","translation":"પૂર્ણ સેટ","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"gu","translation":"પૂર્ણ સેટ {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"gu","translation":"પ્રગતિ {{value1}} × {{value2}} વાર","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"gu","translation":"પ્રગતિને સરખાવો","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"gu","translation":"પ્રગતિ દાખલ કરો","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"gu","translation":"ચાલુ સેટનું RPE બદલો","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"gu","translation":"ચાલુ સેટની ગતિ બદલો","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"gu","translation":"ચાલુ સેટની સંખ્યા બદલો","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"gu","translation":"ચાલુ સેટનું વજન બદલો","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"gu","translation":"સરેરાશ -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"gu","translation":"સરેરાશ {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"gu","translation":"હૃદયના ધબકારા સામાન્ય થઈ રહ્યા છે. જ્યારે તમને સારું લાગે, ત્યારે તમે આગામી સેટમાં જઈ શકો છો","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"gu","translation":"હૃદયના ધબકારાને જોતા, આરામ કરવાનું ચાલુ રાખો.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"gu","translation":"હૃદય દર અને વપરાયેલ ઊર્જાની ગણતરી કરી રહ્યા છીએ.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"gu","translation":"હાથથી દાખલ કરો","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"gu","translation":"તમે હાથથી રેકોર્ડ કરી શકો છો.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"gu","translation":"હાલમાં હાથથી રેકોર્ડ કરી રહ્યા છીએ.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"gu","translation":"ઘડિયાળના હલનચલન અને અપૂર્ણ સેટ્સના ક્રમ પરથી અનુમાનિત","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"gu","translation":"વિભ્રમની સંખ્યા (1-3 વાર/સેકન્ડ)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"gu","translation":"વિભ્રમની ઝડપ","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"gu","translation":"જોડાણ નિષ્ફળ: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"gu","translation":"અંદાજિત {{value1}} વારને પ્રતિબિંબિત કરો","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"gu","translation":"સૂચનોને પ્રતિબિંબિત કરો","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"gu","translation":"સમય બદલો","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"gu","translation":"મહત્તમ -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"gu","translation":"મહત્તમ {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"gu","translation":"છેલ્લે સમાપ્ત થવા પર iPhone પર મોકલવામાં આવશે. અસમાવિષ્ઠ રેકોર્ડ્સ પછીથી ફરીથી મોકલી શકાય છે.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"gu","translation":"અપૂર્ણ સેટ સહિત વર્તમાન સામગ્રીને સાચવો.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"gu","translation":"અસમાવિષ્ઠ","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"gu","translation":"ઘડિયાળમાં કોઈ અસમાવિષ્ઠ રેકોર્ડ નથી","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"gu","translation":"અન્ય","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"gu","translation":"આગળ: {{value1}} {{value2}} × {{value3}} વાર","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"gu","translation":"આ સેટ શરૂ કરો","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"gu","translation":"તમે તરત જ આગામી તાલીમને શરૂ કરી શકો છો.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"gu","translation":"આગામી કસરત","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"gu","translation":"આગળ","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"gu","translation":"હાલની પ્રવૃત્તિને અવગણો","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"gu","translation":"ધ્યેય {{value1}} × {{value2}} વાર","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"gu","translation":"ધ્યેય પૂર્ણ","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"gu","translation":"જો તમે ધ્યેય સુધી પહોંચો નથી, તો RPE અને ધીમી ગતિના સૂચનોમાંથી 5% ઘટાડો કરો.","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"gu","translation":"સંબંધિત રેન્જ {{value1}}%, સુસંગતતા {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"gu","translation":"ઓછી ઊર્જા વપરાશ માટે સેમ્પલિંગ (બેટરી બાકી)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"gu","translation":"ઓછી ઊર્જા વપરાશ માટે સેમ્પલિંગ (લો-પાવર મોડ)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"gu","translation":"ઓછી ઊર્જા વપરાશ માટે સેમ્પલિંગ (સેટિંગ્સ)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"gu","translation":"નથી","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"gu","translation":"સેકન્ડ","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"gu","translation":"કસરત અને સેટ પસંદ કરો અને શરૂ કરો. જો તમે ભૂલ કરો, તો \"કાન્સલ\" પર ક્લિક કરીને તેને રદ કરી શકો છો.","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"gu","translation":"કસરત વિકલ્પો {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"gu","translation":"અંત કરો અને સિંક કરો","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"gu","translation":"ચાલુ રાખો","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"gu","translation":"પળ","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"gu","translation":"પાછળનો દિવસ","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"gu","translation":"છાતી","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"gu","translation":"છાતીનો દિવસ","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"gu","translation":"શું તમે રેકોર્ડ કાઢી નાખવા માંગો છો?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"gu","translation":"રેકોર્ડમાં છે","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"gu","translation":"રેકોર્ડમાં વર્કઆઉટ નથી","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"gu","translation":"સામાન્ય નમૂના","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"gu","translation":"ઝડપી","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"gu","translation":"પ્રગતિ, RPE અને પ્રવૃત્તિની ઝડપ પર આધારિત સમાન વજન સૂચવો","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"gu","translation":"અલટું","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"gu","translation":"સેટ બદલો","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"gu","translation":"વજન","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"gu","translation":"વજનને રીલમાં સેટ કરો","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"gu","translation":"વજન, સંખ્યા, RPE અને વિરામ રીલમાં શરૂઆત પહેલાં અને પછી બદલી શકાય છે.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"gu","translation":"શરૂ કરો","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"gu","translation":"શરૂ કરતા પહેલાં ગતિ સેટ કરો","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"gu","translation":"આપનીય નથી: {{value1}}. મેન્યુઅલ ઇનપુટ ઉપલબ્ધ છે","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"gu","translation":"વાણી અને ટેક્સ્ટ નોંધો","review_note":""}

@@ -119,7 +119,7 @@ struct CoachMessageFormatter {
     }
 
     private func bulletText(in line: String) -> String? {
-        for prefix in ["- ", "* ", "• ", "・"] where line.hasPrefix(prefix) {
+        for prefix in ["- ", "* ", "• ", L10n.string("core_ui.3b67eb100838", fallback: "・")] where line.hasPrefix(prefix) {
             let text = line.dropFirst(prefix.count).trimmingCharacters(in: .whitespaces)
             return text.isEmpty ? nil : text
         }

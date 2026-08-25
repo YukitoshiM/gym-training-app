@@ -4,6 +4,7 @@ struct RootTabView: View {
     @EnvironmentObject private var appStore: AppStore
     @EnvironmentObject private var watchPlanSyncService: WatchPlanSyncService
     @EnvironmentObject private var gymLocationManager: GymLocationManager
+    @EnvironmentObject private var healthDataManager: HealthDataManager
     @State private var selectedTab: RootTab = .home
     @State private var planCreationRequest: PlanCreationRequest?
     @State private var isShowingAppTour = false
@@ -22,6 +23,13 @@ struct RootTabView: View {
                 if AppTourStateStore.shouldPresent() {
                     startAppTour()
                 }
+            }
+            .task {
+                await ScheduledReportService.processDueReports(
+                    appStore: appStore,
+                    healthSnapshot: healthDataManager.snapshot
+                )
+                await UsageAnalytics.shared.synchronize(settings: appStore.aiSettings)
             }
             .onChange(of: selectedTab) { _, tab in
                 UsageAnalytics.shared.record(.tabSelected, dimension: tab.rawValue)
@@ -44,23 +52,23 @@ struct RootTabView: View {
                 }
             }
             .alert(
-                "予定したトレーニング記録がありません",
+                L10n.string("core_ui.4c5dd856653e", fallback: "予定したトレーニング記録がありません"),
                 isPresented: Binding(
                     get: { appStore.pendingMissedGymPlan != nil },
                     set: { if !$0 { appStore.resolveMissedGymPlan(rescheduleForToday: false) } }
                 )
             ) {
-                Button("今日へ変更") {
+                Button(L10n.string("core_ui.34307b75b184", fallback: "今日へ変更")) {
                     appStore.resolveMissedGymPlan(rescheduleForToday: true)
                 }
-                Button("実施しなかった", role: .cancel) {
+                Button(L10n.string("core_ui.e86654c1dabb", fallback: "実施しなかった"), role: .cancel) {
                     appStore.resolveMissedGymPlan(rescheduleForToday: false)
                 }
             } message: {
-                Text("\(appStore.pendingMissedGymPlanName ?? "選択したメニュー")の予定日に、ジム訪問またはトレーニング実績が見つかりませんでした。")
+                Text(L10n.string("core_ui.f369d217b16c", fallback: "{{value1}}の予定日に、ジム訪問またはトレーニング実績が見つかりませんでした。", values: [String(describing: appStore.pendingMissedGymPlanName ?? "選択したメニュー")]))
             }
             .alert(
-                "計画重量を更新しますか？",
+                L10n.string("core_ui.dd7a93b061c4", fallback: "計画重量を更新しますか？"),
                 isPresented: Binding(
                     get: { watchPlanSyncService.pendingPlanWeightUpdateSuggestion != nil },
                     set: {
@@ -70,10 +78,10 @@ struct RootTabView: View {
                     }
                 )
             ) {
-                Button("計画に反映") {
+                Button(L10n.string("core_ui.a3d0303c7fcb", fallback: "計画に反映")) {
                     watchPlanSyncService.acceptPlanWeightUpdateSuggestion()
                 }
-                Button("今回は変更しない", role: .cancel) {
+                Button(L10n.string("core_ui.a73cbe33e52d", fallback: "今回は変更しない"), role: .cancel) {
                     watchPlanSyncService.declinePlanWeightUpdateSuggestion()
                 }
             } message: {
@@ -84,7 +92,9 @@ struct RootTabView: View {
     @ViewBuilder
     private var rootContent: some View {
         VStack(spacing: 0) {
-            persistentBanner
+            if watchPlanSyncService.liveWatchWorkout == nil {
+                persistentBanner
+            }
 
             if #available(iOS 26.0, *) {
                 selectedTabContent
@@ -126,6 +136,9 @@ struct RootTabView: View {
                                 .font(.title2.weight(.semibold))
                             Text(tab.title)
                                 .font(.footnote.weight(.semibold))
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.72)
+                                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                         }
                         .frame(maxWidth: .infinity, minHeight: 62)
                         .foregroundStyle(selectedTab == tab ? AppTheme.accent : AppTheme.mutedInk)
@@ -154,7 +167,7 @@ struct RootTabView: View {
         TabView(selection: $selectedTab) {
             homeView
                 .tabItem {
-                    Label("ホーム", systemImage: "house")
+                    Label(L10n.string("core_ui.ef6a6560996f", fallback: "ホーム"), systemImage: "house")
                 }
                 .tag(RootTab.home)
 
@@ -169,19 +182,19 @@ struct RootTabView: View {
                 onCreationRequestHandled: clearPlanCreationRequest
             )
                 .tabItem {
-                    Label("計画", systemImage: "list.bullet.rectangle")
+                    Label(L10n.string("core_ui.4d75244133b3", fallback: "計画"), systemImage: "list.bullet.rectangle")
                 }
                 .tag(RootTab.plans)
 
             RecordHubView()
                 .tabItem {
-                    Label("記録", systemImage: "figure.strengthtraining.traditional")
+                    Label(L10n.string("core_ui.725fe331d7f6", fallback: "記録"), systemImage: "figure.strengthtraining.traditional")
                 }
                 .tag(RootTab.record)
 
             HistoryListView()
                 .tabItem {
-                    Label("履歴", systemImage: "clock.arrow.circlepath")
+                    Label(L10n.string("core_ui.b711e4d9455e", fallback: "履歴"), systemImage: "clock.arrow.circlepath")
                 }
                 .tag(RootTab.history)
 
@@ -291,11 +304,11 @@ private enum RootTab: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .home: "ホーム"
+        case .home: L10n.string("core_ui.ef6a6560996f", fallback: "ホーム")
         case .ai: "AI"
-        case .plans: "計画"
-        case .record: "記録"
-        case .history: "履歴"
+        case .plans: L10n.string("core_ui.4d75244133b3", fallback: "計画")
+        case .record: L10n.string("core_ui.725fe331d7f6", fallback: "記録")
+        case .history: L10n.string("core_ui.b711e4d9455e", fallback: "履歴")
         }
     }
 
@@ -332,85 +345,85 @@ private struct AppTourStep: Identifiable {
             id: "home-tab",
             tab: .home,
             target: nil,
-            title: "今日やることはここ",
-            detail: "ホーム"
+            title: L10n.string("core_ui.4c047b751f90", fallback: "今日やることはここ"),
+            detail: L10n.string("core_ui.ef6a6560996f", fallback: "ホーム")
         ),
         AppTourStep(
             id: "home-today",
             tab: .home,
             target: .homeTodayTraining,
-            title: "ここから今日を開始",
-            detail: "メニューを選ぶ・始める"
+            title: L10n.string("core_ui.770eb9a63b98", fallback: "ここから今日を開始"),
+            detail: L10n.string("core_ui.3ce631b16b2d", fallback: "メニューを選ぶ・始める")
         ),
         AppTourStep(
             id: "record-tab",
             tab: .record,
             target: nil,
-            title: "写真と数値はここ",
-            detail: "記録"
+            title: L10n.string("core_ui.0f966c64084a", fallback: "写真と数値はここ"),
+            detail: L10n.string("core_ui.725fe331d7f6", fallback: "記録")
         ),
         AppTourStep(
             id: "record-quick-actions",
             tab: .record,
             target: .recordQuickActions,
-            title: "記録する項目をタップ",
-            detail: "体重・腹囲・食事・体型写真"
+            title: L10n.string("core_ui.d84fb59f0560", fallback: "記録する項目をタップ"),
+            detail: L10n.string("core_ui.d344d7db4a1d", fallback: "体重・腹囲・食事・体型写真")
         ),
         AppTourStep(
             id: "ai-tab",
             tab: .ai,
             target: nil,
-            title: "迷ったらここ",
+            title: L10n.string("core_ui.efa3e8bf82a8", fallback: "迷ったらここ"),
             detail: "AI"
         ),
         AppTourStep(
             id: "ai-trainer",
             tab: .ai,
             target: .aiTrainer,
-            title: "担当コーチに相談",
-            detail: "記録を見て次の行動を提案"
+            title: L10n.string("core_ui.3b9c8e4a9579", fallback: "担当コーチに相談"),
+            detail: L10n.string("core_ui.5479236de8a3", fallback: "記録を見て次の行動を提案")
         ),
         AppTourStep(
             id: "ai-photo-tools",
             tab: .ai,
             target: .aiPhotoTools,
-            title: "写真からすぐ分析",
-            detail: "食事と体型"
+            title: L10n.string("core_ui.fa85c3a6e4ce", fallback: "写真からすぐ分析"),
+            detail: L10n.string("core_ui.9c2fd6984d3e", fallback: "食事と体型")
         ),
         AppTourStep(
             id: "plans-tab",
             tab: .plans,
             target: nil,
-            title: "メニューはここ",
-            detail: "計画"
+            title: L10n.string("core_ui.2ea4965834a2", fallback: "メニューはここ"),
+            detail: L10n.string("core_ui.4d75244133b3", fallback: "計画")
         ),
         AppTourStep(
             id: "plans-coach",
             tab: .plans,
             target: .planCoach,
-            title: "AIとメニューを作る",
-            detail: "相談しながら修正"
+            title: L10n.string("core_ui.1d7e9fda7bdb", fallback: "AIとメニューを作る"),
+            detail: L10n.string("core_ui.43d3051bc08b", fallback: "相談しながら修正")
         ),
         AppTourStep(
             id: "plans-exercises",
             tab: .plans,
             target: .exerciseLibrary,
-            title: "種目を探す・追加する",
-            detail: "器具や部位から選択"
+            title: L10n.string("core_ui.92720ac0b07b", fallback: "種目を探す・追加する"),
+            detail: L10n.string("core_ui.39b4189364d7", fallback: "器具や部位から選択")
         ),
         AppTourStep(
             id: "history-tab",
             tab: .history,
             target: nil,
-            title: "変化はここ",
-            detail: "履歴"
+            title: L10n.string("core_ui.996089f9d53a", fallback: "変化はここ"),
+            detail: L10n.string("core_ui.b711e4d9455e", fallback: "履歴")
         ),
         AppTourStep(
             id: "history-timeline",
             tab: .history,
             target: .historyTimeline,
-            title: "記録はここにたまる",
-            detail: "日付ごとに振り返る"
+            title: L10n.string("core_ui.44b61d42de8d", fallback: "記録はここにたまる"),
+            detail: L10n.string("core_ui.df908fa3f54c", fallback: "日付ごとに振り返る")
         ),
     ]
 }
@@ -473,7 +486,7 @@ private struct AppTourOverlay: View {
                             .font(.headline)
                             .foregroundStyle(AppTheme.accent)
                         Spacer()
-                        Button("スキップ", action: onSkip)
+                        Button(L10n.string("core_ui.a4a3b16ba214", fallback: "スキップ"), action: onSkip)
                             .font(.headline)
                             .foregroundStyle(AppTheme.mutedInk)
                             .accessibilityIdentifier("appTourSkipButton")
@@ -535,7 +548,7 @@ private struct AppTourOverlay: View {
     }
 
     private var nextButtonTitle: String {
-        currentIndex == total - 1 ? "始める" : "次へ"
+        currentIndex == total - 1 ? L10n.string("core_ui.8e1c3ab5aef1", fallback: "始める") : L10n.string("core_ui.d4d1fe3054d4", fallback: "次へ")
     }
 }
 

@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"pt-BR","translation":"{{value1}} itens","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"pt-BR","translation":"{{value1}}: Nenhuma visita à academia ou treino foi encontrado na data programada.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"pt-BR","translation":"Duração por sessão","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"pt-BR","translation":"Metas diárias de alimentação","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"pt-BR","translation":"Aprenda os movimentos em 3 treinos","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"pt-BR","translation":"Criar treino com IA","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"pt-BR","translation":"As recomendações de hoje continuam disponíveis sem IA.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"pt-BR","translation":"Perguntar à IA sobre seu estado atual","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"pt-BR","translation":"Perguntar à IA","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"pt-BR","translation":"Dados enviados à IA","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"pt-BR","translation":"O treinador de IA cria planos usando apenas os equipamentos selecionados. Pelo menos um item sempre ficará selecionado.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"pt-BR","translation":"Gerar comentários semanais pelo servidor de IA","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"pt-BR","translation":"Servidor de IA conectado","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"pt-BR","translation":"Preparando modelo de IA","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"pt-BR","translation":"Rascunhos de IA e comentários semanais estão indisponíveis, mas você ainda pode salvar registros manuais.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"pt-BR","translation":"Para usar rascunhos de IA e comentários semanais, ative os recursos de IA e depois teste a conexão.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"pt-BR","translation":"Alteração da IA {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"pt-BR","translation":"Conexão da IA","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"pt-BR","translation":"Os recursos de IA estão desativados","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"pt-BR","translation":"Usar recursos de IA","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"pt-BR","translation":"Revisão da IA em andamento","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"pt-BR","translation":"Revisado pela IA","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"pt-BR","translation":"Restaurar configurações padrão da IA","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"pt-BR","translation":"Chave de API","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"pt-BR","translation":"A chave de API é usada apenas para obter tokens temporários e não é enviada em solicitações normais de IA.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"pt-BR","translation":"O servidor de API está respondendo, mas o modelo necessário não está disponível.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"pt-BR","translation":"O servidor de API está respondendo, mas o modelo auxiliar para refeições e relatórios não está disponível.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"pt-BR","translation":"O servidor de API está respondendo, mas a estimativa de calorias por imagem não está disponível.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"pt-BR","translation":"Treinos do Apple Health","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"pt-BR","translation":"Sincronizar treino com o Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"pt-BR","translation":"Registros do Apple Watch","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"pt-BR","translation":"Apple Watch e sensores","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"pt-BR","translation":"Relatório de anúncio do BodyMode","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"pt-BR","translation":"Começar a usar o BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"pt-BR","translation":"IA de gerenciamento do BodyMode","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"pt-BR","translation":"Uso de dados de anúncios pelo Google","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"pt-BR","translation":"Política de Privacidade do Google","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"pt-BR","translation":"Revisar compartilhamento do app Saúde","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"pt-BR","translation":"Estimar repetições com o Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"pt-BR","translation":"Alertas táteis do Apple Watch","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"pt-BR","translation":"{{value1}} / {{value2}} concluídos","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"pt-BR","translation":"{{value1}} / {{value2}} atingidos","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"pt-BR","translation":"{{value1}}/6 concluídos","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"pt-BR","translation":"{{value1}}/{{value2}} repetições","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"pt-BR","translation":"{{value1}}{{value2}} repetições","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"pt-BR","translation":"Recomendação de {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"pt-BR","translation":"{{value1}} está revisando · Recomendação disponível","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"pt-BR","translation":"Revisado por {{value1}}","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"pt-BR","translation":"Para {{value1}}, explique por que isso foi recomendado hoje e sugira ajustes.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"pt-BR","translation":"Perguntar a {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"pt-BR","translation":"Recomendação de {{value1}}","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"pt-BR","translation":"Avaliação de {{value1}}","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"pt-BR","translation":"Recomendação básica de {{value1}}","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"pt-BR","translation":"Aguardando revisão de {{value1}} · Recomendação disponível","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"pt-BR","translation":"Relatório semanal de {{value1}}","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"pt-BR","translation":"Definir {{value1}} com o seletor","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"pt-BR","translation":"Substituir {{value1}} por outra ação","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"pt-BR","translation":"{{value1}} está disponível. {{value2}} tipos de treinador foram verificados.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"pt-BR","translation":"Por que {{value1}} foi recomendado","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"pt-BR","translation":"Abrir {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"pt-BR","translation":"{{value1}} séries","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"pt-BR","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"pt-BR","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"pt-BR","translation":"{{value1}} · {{value2}} atualizado","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"pt-BR","translation":"{{value1}} · {{value2}} tipos de equipamento","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"pt-BR","translation":"{{value1}} · {{value2}} dias/semana","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"pt-BR","translation":"{{value1}} itens","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"pt-BR","translation":"{{value1}} vezes","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"pt-BR","translation":"{{value1}} concluídos","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"pt-BR","translation":"{{value1}} exercícios","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"pt-BR","translation":"{{value1}} exercícios / {{value2}} séries","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"pt-BR","translation":"Deixe o restante com o BodyMode. Todos os dias, ele sugere até três ações.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"pt-BR","translation":"Dados que tornam a avaliação mais confiável","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"pt-BR","translation":"Aplicar treinador recomendado","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"pt-BR","translation":"Comece seu dia aqui","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"pt-BR","translation":"Iniciar este treino","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"pt-BR","translation":"Usar esta meta","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"pt-BR","translation":"Treinador para esta meta","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"pt-BR","translation":"Por que esta ação foi escolhida","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"pt-BR","translation":"Todos os treinadores","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"pt-BR","translation":"Outro","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"pt-BR","translation":"Proteína","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"pt-BR","translation":"O que ele não pode fazer","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"pt-BR","translation":"Criado primeiro com os registros do dispositivo, com ajustes da IA apenas quando necessário.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"pt-BR","translation":"Salvar um treino usado com frequência","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"pt-BR","translation":"Calorias","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"pt-BR","translation":"Calorias / Macros","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"pt-BR","translation":"Preparando modelo de estimativa de calorias","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"pt-BR","translation":"Cancelar","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"pt-BR","translation":"Registro rápido","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"pt-BR","translation":"URL do servidor","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"pt-BR","translation":"Cheguei à academia","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"pt-BR","translation":"Visitas à academia","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"pt-BR","translation":"Registrar visitas à academia automaticamente","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"pt-BR","translation":"Pular","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"pt-BR","translation":"Se os sensores não estiverem disponíveis, você ainda poderá inserir peso, repetições e RPE manualmente. A amostragem de baixo consumo reduz a frequência de atualização das estimativas de movimento.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"pt-BR","translation":"Anúncio de teste","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"pt-BR","translation":"Dados","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"pt-BR","translation":"Completude dos dados {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"pt-BR","translation":"Treinadores: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"pt-BR","translation":"Treino","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"pt-BR","translation":"Concluir 3 treinos","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"pt-BR","translation":"Abrir treinos","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"pt-BR","translation":"Iniciar treino","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"pt-BR","translation":"Versão: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"pt-BR","translation":"Não personalizado","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"pt-BR","translation":"Personalização desativada","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"pt-BR","translation":"Treino livre","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"pt-BR","translation":"Privacidade","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"pt-BR","translation":"Perfil","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"pt-BR","translation":"Ajuda","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"pt-BR","translation":"Início","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"pt-BR","translation":"Seus treinos estão aqui","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"pt-BR","translation":"Escolher ou iniciar um treino","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"pt-BR","translation":"Escolha um destino, como o Mail, e envie o relatório ao Suporte do BodyMode. O relatório não inclui registros corporais ou de saúde.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"pt-BR","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"pt-BR","translation":"Conteúdo ofensivo","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"pt-BR","translation":"Erro desconhecido","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"pt-BR","translation":"Conteúdo impróprio","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"pt-BR","translation":"Denunciar anúncio impróprio","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"pt-BR","translation":"Nenhum treino programado encontrado","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"pt-BR","translation":"Não alterar desta vez","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"pt-BR","translation":"Sem alteração desta vez","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"pt-BR","translation":"Hoje: {{value1}} · {{value2}} séries","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"pt-BR","translation":"Recomeçar o aprendizado hoje","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"pt-BR","translation":"Os 3 de hoje","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"pt-BR","translation":"Preparando os 3 de hoje","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"pt-BR","translation":"Treino de hoje","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"pt-BR","translation":"Concluir o treino de hoje","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"pt-BR","translation":"Fazer o treino de hoje","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"pt-BR","translation":"Iniciar o treino de hoje","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"pt-BR","translation":"Registros de hoje","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"pt-BR","translation":"Recomendação de hoje","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"pt-BR","translation":"Estado de hoje","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"pt-BR","translation":"Registro de hoje","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"pt-BR","translation":"Prontidão de hoje","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"pt-BR","translation":"Progresso de hoje","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"pt-BR","translation":"Ir para hoje","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"pt-BR","translation":"Suas ações de hoje estão aqui","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"pt-BR","translation":" itens","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"pt-BR","translation":"Descanso","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"pt-BR","translation":"Tempo de descanso","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"pt-BR","translation":"Definir tempo de descanso com o seletor","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"pt-BR","translation":"Fotos de progresso","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"pt-BR","translation":"Composição corporal","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"pt-BR","translation":"Peso","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"pt-BR","translation":"Peso corporal {{value1}} + peso adicional {{value2}} = carga de referência {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"pt-BR","translation":"Peso corporal {{value1}} - assistência {{value2}} = carga de referência {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"pt-BR","translation":"Peso · Opcional","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"pt-BR","translation":"Melhore o peso e a cintura em um ritmo sustentável","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"pt-BR","translation":"Peso · Cintura · Refeições · Fotos de progresso","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"pt-BR","translation":"Qual é sua meta?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"pt-BR","translation":"Criar","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"pt-BR","translation":"Guia de uso","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"pt-BR","translation":"Criaremos treinos com os equipamentos disponíveis","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"pt-BR","translation":"Equipamentos disponíveis","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"pt-BR","translation":"Apenas os tipos de recursos usados são armazenados no dispositivo. Peso, fotos, detalhes das refeições, frequência cardíaca, localização e notas não são registrados nem enviados automaticamente.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"pt-BR","translation":"Salvar","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"pt-BR","translation":"Revisado com base nos registros salvos.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"pt-BR","translation":"Manter registros de saúde separados dos dados de anúncios","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"pt-BR","translation":"Registre algumas coisas agora e revise tudo depois.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"pt-BR","translation":"Concluído","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"pt-BR","translation":"Excluir todos os dados?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"pt-BR","translation":"Excluir todos os dados","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"pt-BR","translation":"Exportar todos os registros como JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"pt-BR","translation":"Começar com um treino de corpo inteiro","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"pt-BR","translation":"Foto","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"pt-BR","translation":"Analisar uma foto na hora","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"pt-BR","translation":"Acompanhe seu progresso com fotos e medidas","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"pt-BR","translation":"Suas fotos e medidas estão aqui","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"pt-BR","translation":"Registrar fotos e medidas","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"pt-BR","translation":"Tirar foto","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"pt-BR","translation":"Melhore sua forma, cintura e equilíbrio muscular","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"pt-BR","translation":" min","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"pt-BR","translation":"min:s","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"pt-BR","translation":"Criar um treino para iniciantes","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"pt-BR","translation":"Ver detalhes da avaliação","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"pt-BR","translation":"Escolher outra ação","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"pt-BR","translation":"Quais equipamentos estão disponíveis?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"pt-BR","translation":"Compartilhar análise de uso","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"pt-BR","translation":"Excluir dados de uso","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"pt-BR","translation":"Exportar dados de uso","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"pt-BR","translation":"Equilíbrio das prioridades dos conselhos","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"pt-BR","translation":"Movimento","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"pt-BR","translation":"Informações usadas","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"pt-BR","translation":"Verificando o status do consentimento","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"pt-BR","translation":"Para quem é indicado","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"pt-BR","translation":"Escolher por equipamento ou grupo muscular","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"pt-BR","translation":" repetições","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"pt-BR","translation":"Recuperação","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"pt-BR","translation":"Repetições","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"pt-BR","translation":"Definir repetições com o seletor","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"pt-BR","translation":"Anúncio de teste fixo","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"pt-BR","translation":"Primeiros passos","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"pt-BR","translation":"Informações básicas · Opcional","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"pt-BR","translation":"Enviar relatório","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"pt-BR","translation":"Motivo da denúncia","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"pt-BR","translation":"Acompanhe as mudanças aqui","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"pt-BR","translation":"Escolha as métricas para acompanhar","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"pt-BR","translation":"Alterar","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"pt-BR","translation":"Histórico de alterações","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"pt-BR","translation":"Começar","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"pt-BR","translation":"O aprendizado está pausado. Seus registros anteriores não foram excluídos.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"pt-BR","translation":"Concluído","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"pt-BR","translation":"{{value1}} concluído","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"pt-BR","translation":"Concluído","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"pt-BR","translation":"Marcar como concluído","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"pt-BR","translation":"Concluído","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"pt-BR","translation":"Não realizado","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"pt-BR","translation":"Realizar","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"pt-BR","translation":"Quanto mais você faz, mais claro fica o próximo passo","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"pt-BR","translation":"Seus resultados melhoram a próxima recomendação da IA","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"pt-BR","translation":"Expandido","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"pt-BR","translation":"Histórico","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"pt-BR","translation":" anos","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"pt-BR","translation":"Inadequado para a idade","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"pt-BR","translation":"ID do anúncio não configurado","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"pt-BR","translation":"Anúncios e uso de dados","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"pt-BR","translation":"Configurações de privacidade de anúncios","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"pt-BR","translation":"O consentimento para anúncios não foi concedido.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"pt-BR","translation":"Nome do produto ou problema percebido no anúncio","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"pt-BR","translation":"Os anúncios aparecem apenas no iPhone. Registros de saúde, refeições, fotos e localização do BodyMode não são usados para selecionar anúncios.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"pt-BR","translation":"Denunciar anúncio","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"pt-BR","translation":"Carregando anúncio","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"pt-BR","translation":"Anúncios e privacidade","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"pt-BR","translation":"Provedor de anúncios","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"pt-BR","translation":"Para exibir anúncios, o Google recebe seu endereço IP, informações básicas do dispositivo e do app, dados de diagnóstico e desempenho do SDK e dados de exibição e interação com anúncios. Sua localização aproximada pode ser inferida pelo endereço IP. Peso, frequência cardíaca, sono, refeições, fotos, treinos, metas, dados de GPS e locais de academias registrados no BodyMode não são incluídos nas solicitações de anúncios.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"pt-BR","translation":"Ajustar o descanso usando frequência cardíaca e RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"pt-BR","translation":"Frequência cardíaca e movimento","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"pt-BR","translation":"Sexo","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"pt-BR","translation":"Sexo · Opcional","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"pt-BR","translation":"Voltar","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"pt-BR","translation":"O registro manual continua disponível.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"pt-BR","translation":"Treinador: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"pt-BR","translation":"Treinador responsável","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"pt-BR","translation":"Perguntar ao seu treinador","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"pt-BR","translation":"Abordagem do treinador","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"pt-BR","translation":"Alterar o tipo de treinador muda quais registros a IA prioriza e as recomendações que ela oferece.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"pt-BR","translation":"Treinador responsável: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"pt-BR","translation":"Não especificado","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"pt-BR","translation":"Testar conexão","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"pt-BR","translation":"Siga o treino recomendado no iPhone ou Apple Watch.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"pt-BR","translation":"Redefinir apenas o aprendizado de recomendações","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"pt-BR","translation":"Apenas banners sem interrupções","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"pt-BR","translation":"Registrar medidas","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"pt-BR","translation":" dias","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"pt-BR","translation":"Revisar por data","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"pt-BR","translation":"Atividade diária","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"pt-BR","translation":"Revisão da recomendação diária","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"pt-BR","translation":"Não foi possível exportar","review_note":""}

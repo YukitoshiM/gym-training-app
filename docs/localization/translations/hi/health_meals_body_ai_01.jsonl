@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"hi","translation":"{{value1}} पर रीसेट हो जाएगा। मैन्युअल रिकॉर्डिंग का उपयोग जारी रखा जा सकता है।","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"hi","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"hi","translation":"0 से बड़ी संख्या दर्ज करें।","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"hi","translation":"1. सप्ताह में 3 बार व्यायाम करें\n2. प्रोटीन के लक्ष्य को रिकॉर्ड करें\n3. महीने के अंत में अपने शरीर की तस्वीरें तुलना करें","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"hi","translation":"कुछ देर (लगभग 1 मिनट) प्रतीक्षा करें और फिर पुनः प्रयास करें।","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"hi","translation":"1 कप","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"hi","translation":"ऐसे अभ्यासों में स्पष्ट रूप से कोई रुकावट नहीं है जिन्हें 3 या अधिक बार दर्ज किया गया है।","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"hi","translation":"४८ घंटों में कई बार प्रशिक्षण","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"hi","translation":"एआई संपूर्ण संतुलन","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"hi","translation":"एआई द्वारा देखे गए रिकॉर्ड","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"hi","translation":"एआई का उपयोग अस्थायी रूप से अधिक हो रहा है।","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"hi","translation":"एआई की प्रमाणीकरण जानकारी गलत या समाप्त हो गई है।","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"hi","translation":"एआई त्रुटि","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"hi","translation":"एआई कोच","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"hi","translation":"एआई सर्वर URL गलत है।","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"hi","translation":"एआई सर्वर ने त्रुटि वापस भेजी: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"hi","translation":"एआई सर्वर के लिए आवश्यक एपीआई नहीं मिला।","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"hi","translation":"एआई सर्वर से कनेक्ट नहीं हो पा रहा हूँ। कृपया कुछ समय बाद फिर से प्रयास करें।","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"hi","translation":"एआई सर्वर का JSON प्रारूप ऐप की अपेक्षाओं के अनुरूप नहीं है।","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"hi","translation":"एआई सर्वर का जवाब पढ़ने में असमर्थ।","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"hi","translation":"एआई सर्वर पर त्रुटि हुई: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"hi","translation":"एआई सर्वर कनेक्शन की जाँच करें","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"hi","translation":"एआई प्रशिक्षक","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"hi","translation":"क्या आप एआई प्रशिक्षक के साथ बातचीत को हटाना चाहते हैं?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"hi","translation":"एआई मॉडल उपलब्ध नहीं है या छवि विश्लेषण विफल रहा।","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"hi","translation":"एआई मॉडल तैयार हो रहा है","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"hi","translation":"एआई विश्लेषण","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"hi","translation":"AI उपयोग के लिए पर्याप्त स्थान उपलब्ध है।","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"hi","translation":"AI उपयोग के लिए उपलब्ध स्थान की जाँच करें।","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"hi","translation":"AI उपयोग सुविधा बंद है।","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"hi","translation":"AI द्वारा सुझाए गए मानों की समीक्षा करें।","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"hi","translation":"AI कनेक्शन सक्रिय है।","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"hi","translation":"AI कनेक्शन सुरक्षित रूप से नहीं बचाया जा सका।","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"hi","translation":"AI सुविधाएँ","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"hi","translation":"AI सुविधाएँ सेटिंग्स में बंद हैं।","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"hi","translation":"AI सुविधाएँ सेटिंग्स में बंद हैं। आप इस सेट को बिना किसी बदलाव के सहेज सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"hi","translation":"AI सुविधाएँ सेटिंग्स में बंद हैं। आप मैन्युअल रूप से दर्ज किए गए डेटा को भी बिना किसी बदलाव के सहेज सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"hi","translation":"AI द्वारा भेजे गए इतिहास","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"hi","translation":"API कुंजी सेट नहीं की गई है।","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"hi","translation":"कृपया API सर्वर का संस्करण जाँचें। अधिक जानकारी: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"hi","translation":"API सर्वर प्रतिक्रिया दे रहा है, लेकिन आवश्यक मॉडल उपलब्ध नहीं हैं।","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"hi","translation":"API सर्वर प्रतिक्रिया दे रहा है, लेकिन खाना पकाने और रिपोर्टिंग के लिए सहायक मॉडल उपलब्ध नहीं हैं।","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"hi","translation":"Apple Health के साथ कनेक्ट करें","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"hi","translation":"Apple Health में संग्रहीत नवीनतम रनिंग रूट प्रदर्शित किया जा रहा है।","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"hi","translation":"Apple Health को कनेक्ट करें","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"hi","translation":"Apple Watch को उचित रूप से फिट करके पहनें और सोते समय भी पहनने से रिकवरी के संकेत मिल सकते हैं। यदि कोई मान नहीं है, तो हम अनुमान लगाकर उसे पूरा नहीं करेंगे।","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"hi","translation":"Base URL और API सर्वर का संस्करण जाँच लें।","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"hi","translation":"HRV, 14 दिनों के औसत से कम है।","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"hi","translation":"HRV का कोई निरंतर डेटा उपलब्ध नहीं है।","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"hi","translation":"HRV, औसत से अधिक है।","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"hi","translation":"HRV, सामान्य सीमा में है।","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"hi","translation":"HRV अनुपात का औसत {{value1}}% (व्यक्तिगत आधार पर)।","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"hi","translation":"HTTP केवल localhost, LAN और Tailscale के भीतर उपयोग किया जा सकता है। बाहरी सर्वर के लिए HTTPS का उपयोग करें।","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"hi","translation":"स्वास्थ्य की खपत ऊर्जा अभी तक प्राप्त नहीं हुई है। केवल भोजन का रिकॉर्ड संग्रहीत है।","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"hi","translation":"स्वास्थ्य डेटा को अपडेट करें।","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"hi","translation":"JPEG या PNG इमेज चुनें।","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"hi","translation":"KPI रिकॉर्ड करें।","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"hi","translation":"शोर ऐप आदि द्वारा दर्ज की गई नवीनतम वैल्यू। यदि उपलब्ध नहीं है, तो इसे 0 पर सेट न करें।","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"hi","translation":"PFC से कैलोरी की स्वचालित गणना।","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"hi","translation":"PFC प्राप्त करें।","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"hi","translation":"RPE को 1 स्तर कम करें।","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"hi","translation":"URL https:// से शुरू होना चाहिए। स्थानीय विकास के लिए localhost, LAN IP और Tailscale नाम के HTTP का भी उपयोग किया जा सकता है।","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"hi","translation":"URL https:// से शुरू होना चाहिए। केवल स्थानीय विकास के दौरान http:// का उपयोग किया जा सकता है।","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"hi","translation":"वॉच सेंसर के साथ।","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"hi","translation":"bpm / 30 सेकंड","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"hi","translation":"kcal और PFC प्राप्त करें।","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"hi","translation":"kcal प्राप्त करें।","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"hi","translation":"किलो / मिनट","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"hi","translation":"{\"id\":\"{{value1}}\",\"category\":\"{{value2}}\",\"title\":\"{{value3}}\",\"target\":0,\"rationale\":\"रिकॉर्ड और लक्ष्य की पुष्टि की गई\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"hi","translation":"{\"keep_existing\":true,\"readiness_level\":\"सामान्य\",\"summary\":\"आज के सुझाव को इसी तरह आगे बढ़ाएं।\",\"change_reason\":\"\",\"actions\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"hi","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"hi","translation":"{{value1}} / {{value2}} घंटे","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"hi","translation":"{{value1}} / {{value2}} कदम","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"hi","translation":"{{value1}} / {{value2}} भोजन","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"hi","translation":"{{value1}} {{value2}} ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"hi","translation":"आप {{value1}} और सहायक मॉडल के साथ साप्ताहिक टिप्पणियां उत्पन्न कर सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"hi","translation":"{{value1}}/{{value2}} बार","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"hi","translation":"{{value1}}: {{value2}} पूर्णता दर {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"hi","translation":"{{value1}} पूरे सेट की समीक्षा करें","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"hi","translation":"{{value1}} उत्तर के बारे में सोच रहा है","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"hi","translation":"{{value1}} भोजन और PFC की जांच कर रहा है","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"hi","translation":"{{value1}} कई दिशाओं पर ध्यान दे रहा है","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"hi","translation":"{{value1}} द्वारा याद किए गए बातें","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"hi","translation":"{{value1}} के साथ मिलकर, जानकारी को बनाएं और सलाह लें","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"hi","translation":"{{value1}} से सलाह लें","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"hi","translation":"{{value1}} की रिपोर्ट","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"hi","translation":"{{value1}} की रिपोर्ट अभी तक उपलब्ध नहीं है","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"hi","translation":"{{value1}} का ड्राफ्ट","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"hi","translation":"{{value1}} का ड्राफ्ट और {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"hi","translation":"{{value1}} का विश्लेषण","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"hi","translation":"{{value1}} के विश्लेषण के परिणाम","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"hi","translation":"{{value1}} से संबंधित जानकारी","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"hi","translation":"{{value1}} पर विचार","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"hi","translation":"{{value1}} के सुझाव के बाद, केवल स्वीकृत सामग्री प्रदर्शित की जाएगी।","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"hi","translation":"{{value1}} का मासिक समीक्षा","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"hi","translation":"{{value1}} की यादें","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"hi","translation":"{{value1}} को लाइब्रेरी से चुनें","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"hi","translation":"{{value1}} को हटाएं","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"hi","translation":"{{value1}} को कैप्चर करें","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"hi","translation":"{{value1}} को संपादित करें","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"hi","translation":"{{value1}} दर्ज करें","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"hi","translation":"{{value1}} को थोड़ा कम रखें।","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"hi","translation":"{{value1}} सेट का औसत स्थिरता {{value2}}% है।","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"hi","translation":"{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"hi","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"hi","translation":"{{value1}}・चैट","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"hi","translation":"{{value1}}・मासिक समीक्षा प्रस्ताव","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"hi","translation":"{{value1}}・संशोधन {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"hi","translation":"{{value1}}・साप्ताहिक रिपोर्ट","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"hi","translation":"{{value1}} एंट्री · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"hi","translation":"कृपया {{value1}} बार फिर प्रयास करें। आप अभी भी मैन्युअल रिकॉर्डिंग का उपयोग कर सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"hi","translation":"कृपया {{value1}} बार फिर प्रयास करें। यदि ऐसा होता है, तो AI सर्वर की स्थिति जांच लें।","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"hi","translation":"{{value1}} की तस्वीर हटाएं","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"hi","translation":"{{value1}} मिनट","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"hi","translation":"{{value1}} बार","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"hi","translation":"{{value1}} बार · औसत सफलता दर {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"hi","translation":"कृपया {{value1}} दिशा में मौजूद तस्वीरों का एक साथ विश्लेषण करें। शरीर वसा प्रतिशत आदि जैसे नंबरों को निश्चित रूप से नहीं बताते हैं।","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"hi","translation":"{{value1}} फोटो","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"hi","translation":"{{value1}} फोटो की सेट","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"hi","translation":"{{value1}} कदम","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"hi","translation":"\"-\" को मापा न होने के कारण कुल से घटाया जाएगा, और \"Tr\" को कम मात्रा के रूप में 0 मानकर अनुमान लगाया जाएगा।","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"hi","translation":"और {{value1}} ग्राम","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"hi","translation":"आपकी जानकारी को देखकर हम साथ मिलकर विचार करेंगे।","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"hi","translation":"बहुत अच्छा महसूस हो रहा है","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"hi","translation":"बहुत थका हुआ महसूस हो रहा है","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"hi","translation":"हम इस डेटा का विश्लेषण कर सकते हैं। यदि आप साइड और बैक भी जोड़ते हैं, तो आप अलग-अलग दिशाओं से भी जांच कर सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"hi","translation":"इस सेट का विश्लेषण करें","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"hi","translation":"इस जानकारी के आधार पर हम सुझाव देंगे।","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"hi","translation":"सब कुछ हटाएं","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"hi","translation":"प्रोटीन","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"hi","translation":"आज की जानकारी को कल के सुझाव में शामिल किया जाएगा।","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"hi","translation":"अन्य {{value1}} आइटम","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"hi","translation":"अभी तक कोई प्रशिक्षण डेटा उपलब्ध नहीं है।","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"hi","translation":"अभी तक कोई रिकॉर्ड नहीं है।","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"hi","translation":"फिर से अनुमान लगाएं","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"hi","translation":"वजन","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"hi","translation":"कैमरे से पढ़ें","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"hi","translation":"कैमरा उपयोग करने योग्य नहीं है","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"hi","translation":"कैमरा रीडिंग का उपयोग नहीं किया जा सकता","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"hi","translation":"कैलोरी","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"hi","translation":"कैलोरी का अनुमान लगाया जा रहा है","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"hi","translation":"रद्द करें","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"hi","translation":"स्थिति","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"hi","translation":"कृपया सर्वर URL, API कुंजी और API सर्वर की स्थिति जांच लें।","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"hi","translation":"जिम में जाएँ","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"hi","translation":"स्टैंड","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"hi","translation":"सेट","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"hi","translation":"सेट का विश्लेषण किया जा रहा है","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"hi","translation":"सेट की गुणवत्ता","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"hi","translation":"सेट की गुणवत्ता का विवरण","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"hi","translation":"प्रोटीन {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"hi","translation":"चेस्ट प्रेस","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"hi","translation":"यह परीक्षण के लिए अनुमानित मान है।","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"hi","translation":"गति","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"hi","translation":"जब डेटा उपलब्ध होगा, तो आप नींद, पुनर्प्राप्ति और व्यायाम की मात्रा को एक साथ देख सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"hi","translation":"डेटा की गुणवत्ता","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"hi","translation":"प्रशिक्षक से सलाह लें","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"hi","translation":"प्रशिक्षण","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"hi","translation":"प्रशिक्षण विश्लेषण","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"hi","translation":"ट्रेनिंग इतिहास","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"hi","translation":"ट्रेनिंग योजना","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"hi","translation":"ट्रेनिंग लोड","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"hi","translation":"कृपया नेटवर्क और AI सर्वर की स्थिति जांच लें। AI प्रोसेसिंग में अधिकतम 240 सेकंड लग सकते हैं।","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"hi","translation":"नेटवर्क स्थिति और सर्वर URL की जांच करने के बाद फिर से प्रयास करें।","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"hi","translation":"कृपया नेटवर्क स्थिति और सर्वर URL की जांच करें।","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"hi","translation":"बारकोड","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"hi","translation":"मात्रा","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"hi","translation":"मात्रा = पूर्ण सेट का वजन × संख्या। यदि व्यायाम में काफी बदलाव है, तो सरल तुलना न करें।","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"hi","translation":"मूव","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"hi","translation":"संदेश","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"hi","translation":"मेनू","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"hi","translation":"मेनू बनाकर शुरू करें","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"hi","translation":"नोट्स","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"hi","translation":"लाइब्रेरी","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"hi","translation":"रैट पुल डाउन","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"hi","translation":"लेबल के अनुसार मात्रा","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"hi","translation":"सूची से कैलोरी का अनुमान लगाएं","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"hi","translation":"रिसेट करने के बाद फिर से प्रयास करें। मैन्युअल रिकॉर्डिंग का उपयोग जारी रखें।","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"hi","translation":"यदि आपको रूट वाली बाहरी दौड़ मिलती है, तो दूरी, गति और ऊंचाई में अंतर प्रदर्शित करता है।","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"hi","translation":"लेग प्रेस","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"hi","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"hi","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"hi","translation":"ऊपर गए मंजिल की संख्या","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"hi","translation":"अचानक जागना","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"hi","translation":"मुख्य KPI","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"hi","translation":"व्यक्तिगत थकान अधिक है","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"hi","translation":"व्यक्तिगत थकान कम है","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"hi","translation":"व्यक्तिगत थकान सामान्य सीमा में है","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"hi","translation":"भविष्य के सुझावों में उपयोग करने के लिए, केवल उपयुक्त सामग्री का चयन करें।","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"hi","translation":"भविष्य के वजन सुझावों में मदद के लिए","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"hi","translation":"आज के 3 सबसे महत्वपूर्ण","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"hi","translation":"आज की गतिविधि","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"hi","translation":"आज की ऊर्जा संतुलन","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"hi","translation":"आज के सेट","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"hi","translation":"आज की व्यक्तिगत थकान","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"hi","translation":"आज का सुझाव","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"hi","translation":"आज की शूटिंग सेट को संपादित करें","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"hi","translation":"आज की शूटिंग सेट जोड़ें","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"hi","translation":"आज की गतिविधि अधिक है","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"hi","translation":"आज की गतिविधि को दर्शाएं","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"hi","translation":"आज की तैयारी","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"hi","translation":"आज की गतिविधि","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"hi","translation":"आज की प्रगति की जांच करें","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"hi","translation":"आज का भोजन","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"hi","translation":"आज के भोजन के विकल्प","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"hi","translation":"आज के भोजन का लक्ष्य","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"hi","translation":"आज आराम को प्राथमिकता दें","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"hi","translation":"आज, व्यायाम के बीच उचित अंतर रखें और कम प्रयास वाली गतिविधियों को प्राथमिकता दें।","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"hi","translation":"आज, वजन और सेटों की संख्या कम रखें।","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"hi","translation":"आज, आराम को प्राथमिकता देने वाले विकल्पों में से चुनें।","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"hi","translation":"आज क्या करना है, इसकी पुष्टि करें।","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"hi","translation":"इस सप्ताह","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"hi","translation":"इस सप्ताह {{value1}} बार・वर्तमान में {{value2}} मीटर","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"hi","translation":"इस सप्ताह {{value1}} बार・कुल {{value2}} बार","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"hi","translation":"इस सप्ताह का निष्कर्ष","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"hi","translation":"वैकल्पिक","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"hi","translation":"बातचीत","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"hi","translation":"बातचीत को हटाएं","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"hi","translation":"बातचीत इतिहास हटाया नहीं जाएगा।","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"hi","translation":"ये एक कम विश्वसनीय रेफरेंस वैल्यू है। इसे वास्तविक माप या ग्राफ में सेव न करें।","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"hi","translation":"बॉडी शेप फोटो","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"hi","translation":"बॉडी शेप फोटो AI","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"hi","translation":"बॉडी शेप फोटो का AI शेयरिंग सेटिंग में बंद है।","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"hi","translation":"अभी बॉडी शेप फोटो उपलब्ध नहीं है","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"hi","translation":"बॉडी शेप फोटो लें","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"hi","translation":"बॉडी शेप फोटो सेट का विश्लेषण","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"hi","translation":"बॉडी शेप फोटो चेक","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"hi","translation":"यदि आपको कोई स्वास्थ्य समस्या या दर्द है, तो कृपया संख्या के बजाय अपनी व्यक्तिगत भावना को प्राथमिकता दें।","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"hi","translation":"अपने स्वास्थ्य की स्थिति को ध्यान में रखते हुए, योजना के अनुसार आगे बढ़ें।","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"hi","translation":"वजन","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"hi","translation":"वजन और पेट का घेरा जैसे दैनिक रूप से बदलते नंबरों को देखने के लिए, ट्रांज़िशन देखें।","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"hi","translation":"वजन रिकॉर्ड करें","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"hi","translation":"उपलब्ध उपकरणों से सुझाव","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"hi","translation":"उदाहरण: सफेद चावल 150 ग्राम","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"hi","translation":"सेव करें","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"hi","translation":"सेव किए गए मासिक समीक्षा","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"hi","translation":"सेव की गई यादें","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"hi","translation":"सेव की गई कोई भी याद नहीं है","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"hi","translation":"सेव की गई यादों को हटाया नहीं जा सकता।","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"hi","translation":"क्या आप सभी सहेजे गए डेटा को हटाना चाहते हैं?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"hi","translation":"नहीं, सहेजें नहीं","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"hi","translation":"सहेजने में असमर्थ","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"hi","translation":"विश्वसनीयता","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"hi","translation":"मान","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"hi","translation":"जब आप मान जोड़ते हैं, तो यहां परिणाम दिखाई देंगे।","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"hi","translation":"स्थगन जाँच","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"hi","translation":"स्थगन के लिए, वजन को एक बार कम करके लक्ष्य संख्या प्राप्त करें या 15-30 सेकंड तक आराम लें और तुलना करें।","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"hi","translation":"स्थगन के कारण","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"hi","translation":"ऊर्जा","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"hi","translation":"इनपुट डेटा","review_note":""}

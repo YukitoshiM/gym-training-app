@@ -26,6 +26,10 @@ protocol WorkoutRepository {
     func saveCustomExercises(_ exercises: [Exercise])
     func loadDailyWorkoutSelection() -> DailyWorkoutSelection?
     func saveDailyWorkoutSelection(_ selection: DailyWorkoutSelection?)
+    func loadPlanRevisionProposals() -> [PlanRevisionProposal]
+    func savePlanRevisionProposals(_ proposals: [PlanRevisionProposal])
+    func loadActiveWorkoutSession() -> ActiveWorkoutSession?
+    func saveActiveWorkoutSession(_ session: ActiveWorkoutSession?)
 }
 
 protocol BodyAndNutritionRepository {
@@ -65,5 +69,11 @@ protocol AppDataRepository:
     BodyAndNutritionRepository,
     RecoveryRepository,
     DailyRecommendationRepository {
+    func loadDataImportReceipts() -> [DataImportReceipt]
+    func saveDataImportReceipts(_ receipts: [DataImportReceipt])
+    func loadDataImportUndoSnapshot() -> DataImportUndoSnapshot?
+    func saveDataImportUndoSnapshot(_ snapshot: DataImportUndoSnapshot?)
+    func loadDeletedRecords() -> [DeletedRecord]
+    func saveDeletedRecords(_ records: [DeletedRecord])
     func reset()
 }

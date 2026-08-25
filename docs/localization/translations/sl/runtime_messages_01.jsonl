@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"sl","translation":"Odgovor ste prejemali od AI trenerja","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"sl","translation":"Niste uspešni pri pošiljanju na AI trenerja","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"sl","translation":"To je aktivacija, sinhronizirana iz Apple Watcha.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"sl","translation":"Za preverjanje odgovorov uporabite BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"sl","translation":"{{value1}} / {{value2}} doseženo. Zaostanek je najbolje obvladati z umirjeno noto.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"sl","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}}krat","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"sl","translation":"{{value1}} ne preuredujte, temveč ga sprejemajte kot lastno izbiro","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"sl","translation":"{{value1}} ur","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"sl","translation":"{{value1}} korak","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"sl","translation":"{{value1}} obrok","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"sl","translation":"Na tem napravi ni mogoče uporabiti funkcije zaznavanja okolja.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"sl","translation":"Ta aktivnost je danes izklopljena.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"sl","translation":"Dostojno je, če opravite samo eno stvar.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"sl","translation":"Zakaj to počnete?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"sl","translation":"Vrste pomoči","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"sl","translation":"Prosim, aplikacijo ponovno odprite.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"sl","translation":"Izbrisali ste lokacijo telovadnice.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"sl","translation":"Zapisali ste prihod v telovadnico.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"sl","translation":"Sistem zaznava prihoda v okolico telovadnice.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"sl","translation":"Funkcija samodejnega zaznavanja obiska telovadnice je izklopljena.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"sl","translation":"Zapisali ste odhod iz telovadnice.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"sl","translation":"Dvig s utežjo na steni","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"sl","translation":"Temno","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"sl","translation":"Štanj","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"sl","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"sl","translation":"Dips","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"sl","translation":"Uporabljam trening. Dodajanje podatkov o regeneraciji bo izboljšalo natančnost pri naslednji prilagoditvi.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"sl","translation":"Črno šampanjce.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"runtime_messages.ec6df6460320","target_locale":"sl","translation":"-Majim.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"sl","translation":"Uporabnik je spremenil svoje dejanja za dan.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"sl","translation":"S pomočjo uporabnika sem ustvaril nove predloge za dan.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"sl","translation":"Light","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"sl","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"sl","translation":"Povečaj","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"sl","translation":"Zmanjšaj","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"sl","translation":"Enkrat danes","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"sl","translation":"Uporabnik je dosegel vse tri cilje za dan. Upoštevajo se pri naslednji predlogi.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"sl","translation":"Danes","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"sl","translation":"Predloge so bile posodobljene","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"sl","translation":"Lokacija niso nastavljene","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"sl","translation":"Lokacija ni dovoljena. Lahko uporabite ročni check-in","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"sl","translation":"Prosim, preverite ponovno po stabilni lokaciji","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"sl","translation":"Najprej se registrirajte kot svoj žurnal","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"sl","translation":"Za začetnike: Celoten trening","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"sl","translation":"Žal se ni izvedelo ponovno pošljati podatke AI trenerja.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"sl","translation":"Prosim, posredujte isto vsebino še enkrat.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"sl","translation":"Prioriteta je vrnitev","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"sl","translation":"Če ne želite spreminjati, vnesite prazno vrednost","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"sl","translation":"Stojne vzgibe","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"sl","translation":"Uporabljeni so novi podatki o vrnitvi in se je prilagodil danes predlagan položaj.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"sl","translation":"Uporabljeni so novi zapisi.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"sl","translation":"Obstojši ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"sl","translation":"Obstojši ali potrebna kategorija","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"sl","translation":"Trenutno lokacijo sem nastavil kot svoj \"dom\".","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"sl","translation":"Nismo ugotovili trenutne lokacije.","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"sl","translation":"Preverjam, kje ste.","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"sl","translation":"Pregledam zadnjih 7 dni: 3 vadbe in 8 zapisov o prehrani.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"sl","translation":"Manjka podatkov o spanju.","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"sl","translation":"Prosim, zabeležite spanje 3 dne in nadaljujte z vadbo 3krat na teden.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"sl","translation":"Zabeležite spanje 3 dni","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"sl","translation":"Inteligenten, eleganten, napreden","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"sl","translation":"Kratek splošen komentar","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"sl","translation":"Kratek ukrep","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"sl","translation":"Trening za prsi","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"sl","translation":"Samodejno","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"sl","translation":"S aktiviranjem lokacije v aplikaciji lahko ustvarite račun.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"sl","translation":"Ste preverili 3 telesne KPI, 8 obrok in 3 treninge.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"sl","translation":"Enkrat na teden","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"sl","translation":"Ste končali 3 treninga na teden","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"sl","translation":"Nastavite se na 3 treninga na teden","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"sl","translation":"Težko, luksuzno, stimulativno","review_note":""}

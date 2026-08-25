@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"el","translation":"Καταγράφεται το {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"el","translation":"Μη υποστηριζόμενο: {{value1}}. Μπορείτε να εισάγετε χειροκίνητα.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"el","translation":"Αριθμός δονήσεων ανά δευτερόλεπτο","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"el","translation":"Αποθηκεύτηκε στο Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"el","translation":"Οδηγίες χρήσης του Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"el","translation":"Γυμναστήριο: Επόμενη συνεδρία","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"el","translation":"Καταγραφή χωρίς άδεια και χειροκίνητα","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"el","translation":"Δεν μπορείτε να χρησιμοποιήσετε το Health, επομένως καταγράφετε χειροκίνητα.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"el","translation":"Δεν μπορείτε να ξεκινήσετε το Health, επομένως καταγράφετε χειροκίνητα.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"el","translation":"Το Health είναι σε αναστολή προπόνησης.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"el","translation":"Επεξεργασία αποθήκευσης στο Health.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"el","translation":"Αποτυχία αποθήκευσης στο Health, η καταγραφή στο Watch έχει αποθηκεστεί.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"el","translation":"Η καταγραφή στο Watch έχει αποθηκεστεί, αλλά το Health δεν έχει αποθηκευτεί.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"el","translation":"Δεν μπορείτε να επαναφέρετε τις μετρήσεις στο Health. Μπορείτε να συνεχίσετε την χειροκίνητη καταγραφή.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"el","translation":"Επαναφέρθηκαν οι μετρήσεις στο Health.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"el","translation":"Η προπόνηση στο Health έχει σταματήσει, η χειροκίνητη καταγραφή συνεχίζεται.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"el","translation":"Απενεργοποιήθηκε η σύνδεση με το Health, καταγράφετε χειροκίνητα.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"el","translation":"Δεν υπάρχει βαθμολογία RPE.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"el","translation":"Οι τρέχουσες καταγραφές στο Watch θα διαγραφούν.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"el","translation":"Καταγράψτε τις καταγραφές στο Watch.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"el","translation":"Συγχρονίστε το μενού από το iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"el","translation":"Επιλέξτε και ξεκινήστε το μενού της ημέρας που έλαβε το iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"el","translation":"Ελέγξτε το μενού της ημέρας στο iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"el","translation":"Έχετε συνδεθεί με το iPhone.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"el","translation":"Συγχρονίστε τις πληροφορίες της ημέρας από το iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"el","translation":"Δεν μπόρεσα να δημιουργήσω τα δεδομένα καταγραφής για αποστολή στο iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"el","translation":"Δεν μπόρεσα να στείλω τα δεδομένα καταγραφής. Παρακαλώ, στείλτε ξανά, διατηρώντας τις υπάρχουσες καταγραφές.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"el","translation":"Δεν ήταν δυνατή η αποθήκευση στο iPhone. Μπορείτε να το στείλετε ξανά αργότερα.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"el","translation":"Ετοιμάζουμε τη σύνδεση με το iPhone. Μπορείτε να το στείλετε ξανά αργότερα.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"el","translation":"{{value1}} × {{value2}} φορές × {{value3}} σετ","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"el","translation":"Μπορείτε να στείλετε ξανά το {{value1}} στο iPhone.","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"el","translation":"Έχετε προγραμματίσει την αποστολή του {{value1}} στο iPhone.","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"el","translation":"Απέστειλα το {{value1}} στο iPhone.","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"el","translation":"Στέλνω το {{value1}} στο iPhone.","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"el","translation":"Έχετε αποθηκεύσει το {{value1}} στην ιστορία του iPhone.","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"el","translation":"Αποστολή ξανά του {{value1}}.","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"el","translation":"Μπορείτε να συνεχίσετε με το {{value1}}.","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"el","translation":"Επέλεξα το {{value1}}.","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"el","translation":"Έκανα την έναρξη του {{value1}}.","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"el","translation":"{{value1}}/{{value2}} σετ・{{value3}} φορές καταγεγραμμένο","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"el","translation":"{{value1}} σετ・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"el","translation":"{{value1}} σετ・ Στόχος: {{value2}} φορές","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"el","translation":"{{value1}}・{{value2}} σετ・ Συνολικά: {{value3}} φορές","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"el","translation":"{{value1}}・ {{value2}} σετ","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"el","translation":"Επιλογή από {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"el","translation":"Συγχρονίστηκαν οι {{value1}} επιλογές.","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"el","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"el","translation":"{{value1}} φορές/δευτερόλεπτο","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"el","translation":"{{value1}} φορές·","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"el","translation":"{{value1}} δευτερόλεπτα","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"el","translation":"{{value1}} ασκήσεις・{{value2}} σετ・Σύνολο {{value3}} φορές","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"el","translation":"Δεν μπορεί να χρησιμοποιηθεί η σύνδεση με το iPhone σε αυτό το ρολόι. Οι εγγραφές αποθηκεύονται στο ρολόι.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"el","translation":"Δεν μπορεί να χρησιμοποιηθεί η σύνδεση σε αυτό το ρολόι.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"el","translation":"Περαιτέρω","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"el","translation":"Σετ","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"el","translation":"Σετ {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"el","translation":"Ολοκληρώστε το σετ","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"el","translation":"Ξεκινήστε το σετ","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"el","translation":"Μέση συχνότητα {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"el","translation":"Δεν έχει οριστεί σετ","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"el","translation":"Ξεκινήστε σετ","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"el","translation":"Ακύρωση έναρξης σετ","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"el","translation":"Ενεργοποίηση αισθητήρα","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"el","translation":"Δεν μπορώ να προετοιμάσω το στοιχείο του αισθητήρα, επομένως καταγράφω χειροκίνητα.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"el","translation":"Περαιτέρω","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"el","translation":"Ρυθμός","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"el","translation":"Συντονίστε τον ρυθμό","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"el","translation":"Ορίστε τον ρυθμό","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"el","translation":"Παύση της καθοδήγησης ρυθμού","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"el","translation":"Επανεκκίνηση της καθοδήγησης ρυθμού","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"el","translation":"Πάλη","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"el","translation":"Μενού","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"el","translation":"Επιλογή μενού","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"el","translation":"Δεν μπόρεσα να φορτώσω τα δεδομένα του μενού","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"el","translation":"Αλλαγή μενού","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"el","translation":"Περιμένετε το μενού","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"el","translation":"Σημειώσεις","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"el","translation":"Επεξεργασία σημειώσεων","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"el","translation":"Κίνηση","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"el","translation":"Τράβηγμα στο στήθος","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"el","translation":"Άσκηση","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"el","translation":"Θέλετε να ολοκληρώσετε την άσκηση;","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"el","translation":"Ακύρωσα την άσκηση","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"el","translation":"Παύση","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"el","translation":"Παύση για {{value1}} δευτερόλεπτα / Συνέχεια για {{value2}} δευτερόλεπτα","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"el","translation":"Σε αναμονή","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"el","translation":"Ένα","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"el","translation":"Άνω{{value1}}s・Κάτω{{value2}}s・{{value3}} φορές/δευτερόλεπτο","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"el","translation":"Άνοδος","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"el","translation":"Άνοδος {{value1}} δευτερόλεπτα・Κατάβαση {{value2}} δευτερόλεπτα","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"el","translation":"Άνοδος{{value1}} δευτερόλεπτα／Κατάβαση{{value2}} δευτερόλεπτα","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"el","translation":"Ορίστε το χρόνο άνοδου και κατω στο σύνολο. Το Apple Watch σας παρέχει οδηγίες με 1-3 αισθήσεις ανά δευτερόλεπτο.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"el","translation":"Χρόνος Άνοδος","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"el","translation":"Εισάγετε απευθείας τον χρόνο άνοδος","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"el","translation":"Κατάβαση","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"el","translation":"Κατάβαση","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"el","translation":"Χρόνος Κατάβασης","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"el","translation":"Εισάγετε απευθείας τον χρόνο κατάβασης","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"el","translation":"Σήμερα","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"el","translation":"Το μενού για σήμερα","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"el","translation":"Το μενού για σήμερα: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"el","translation":"Επιλέξτε το μενού για σήμερα","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"el","translation":"Ξεκούραση {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"el","translation":"Ξεκούραση {{value1}} δευτερόλεπτα","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"el","translation":"Ξεκουράστε","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"el","translation":"Παράλειψη Ξεκούρασης","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"el","translation":"Χρόνος Ξεκούρασης","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"el","translation":"Τέλος ανάπαυσης","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"el","translation":"Προτείνουμε αύξηση κατά 2,5% με βάση την ενέργεια και τον ρυθμό δραστηριότητας.","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"el","translation":"Ξεκινήστε τη χρήση","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"el","translation":"Οδηγίες: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"el","translation":"Αποθήκευση","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"el","translation":"Εμπιστοσύνη: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"el","translation":"Διόρθωση","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"el","translation":"Συνέχιση","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"el","translation":"Μίν/Δευ","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"el","translation":"Προηγούμενο ρεκόρ","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"el","translation":"Σταθερότητα λειτουργίας: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"el","translation":"Επιλεγμένες λειτουργίες: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"el","translation":"Αναγνώρισε σφάλμα λειτουργίας","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"el","translation":"Εκτίμηση λειτουργίας: {{value1}} φορές","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"el","translation":"Εκτίμηση λειτουργίας: {{value1}} φορές・Εμπιστοσύνη: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"el","translation":"Αλλαγή ρυθμού λειτουργίας: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"el","translation":"Εφαρμογή","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"el","translation":"Ακύρωση","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"el","translation":"Λόγω ύπαρξης εγγράφων Fitness για την ίδια ώρα, αποφασίσαμε να μην δημιουργήσουμε διπλή αποθήκευση στην κατηγορία \"Υγεία\".","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"el","translation":"Μπορείτε να επιλέξετε από τις συγχρονισμένες επιλογές.","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"el","translation":"Επαναλήψεις","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"el","translation":"Αριθμός επαναλήψεων","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"el","translation":"Ορίστε τον αριθμό των επαναλήψεων με το scroll","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"el","translation":"Ολοκληρώθηκε","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"el","translation":"Αποστολή στην iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"el","translation":"Αποστολή","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"el","translation":"Όταν ολοκληρωθεί, ξεκινάει ο χρονομετρητής. Μπορείτε να επιλέξετε την επόμενη άσκηση με διαφορετική σειρά.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"el","translation":"Δεν υπάρχουν ολοκληρωμένες προπονήσεις","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"el","translation":"Ολοκληρωμένο σετ","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"el","translation":"Ολοκληρωμένα σετ {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"el","translation":"Επιτεύγματα {{value1}} × {{value2}}","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"el","translation":"Συγχρονισμός επιτευγμάτων","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"el","translation":"Εισαγωγή επιτευγμάτων","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"el","translation":"Αλλαγή του RPE στο τρέχον σετ","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"el","translation":"Αλλαγή του ρυθμού στο τρέχον σετ","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"el","translation":"Αλλαγή του αριθμού επαναλήψεων στο τρέχον σετ","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"el","translation":"Αλλαγή του βάρους στο τρέχον σετ","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"el","translation":"Μέσος όρος -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"el","translation":"Μέσος όρος {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"el","translation":"Η συχνότητα καρδιακών παλμών είναι σταθερή. Όταν νιώσετε άνετα, προχωρήστε στην επόμενη επανάληψη","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"el","translation":"Συνεχίστε να κάνετε διαλείμματα παρακολουθώντας τον καρδιακό σας ρυθμό.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"el","translation":"Παρακολουθείται ο καρδιακός ρυθμός και η κατανάλωση ενέργειας.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"el","translation":"Χειροκίνητη εισαγωγή δεδομένων","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"el","translation":"Μπορείτε να καταγράψετε χειροκίνητα.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"el","translation":"Καταγράφονται χειροκίνητα.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"el","translation":"Εκτιμάται με βάση την κίνηση του καρπού και τη σειρά των μη ολοκληρωμένων σετ.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"el","translation":"Αριθμός κραδασμών (1-3 φορές/δευτερόλεπτο)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"el","translation":"Ταχύτητα κραδασμού","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"el","translation":"Αποτυχία σύνδεσης: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"el","translation":"Εμφάνιση εκτιμώμενων {{value1}} φορών.","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"el","translation":"Εφαρμογή προτάσεων.","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"el","translation":"Αλλαγή χρόνου","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"el","translation":"Μέγιστο -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"el","translation":"Μέγιστο {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"el","translation":"Όταν ολοκληρωθεί, θα αποσταλεί στο iPhone. Μπορείτε να στείλετε ξανά τις μη αποθηκευμένες καταγραφές αργότερα.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"el","translation":"Αποθηκεύονται οι τρέχουσες πληροφορίες, συμπεριλαμβανομένων των μη ολοκληρωμένων σετ.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"el","translation":"Μη αποθηκευμένο","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"el","translation":"Δεν υπάρχουν καταγραφές στο ρολόι που δεν έχουν αποθηκευτεί.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"el","translation":"Μη ξεκινήσει","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"el","translation":"Επόμενο: {{value1}} {{value2}} × {{value3}} φορές","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"el","translation":"Μπορείτε να ξεκινήσετε το επόμενο σετ.","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"el","translation":"Επιστρέφετε αμέσως στο επόμενο πρόγραμμα άσκησης.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"el","translation":"Επόμενη άσκηση","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"el","translation":"Επόμενο","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"el","translation":"Παράλειψη της τρέχουσας δραστηριότητας","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"el","translation":"Στόχος: {{value1}} × {{value2}} επαναλήψεις","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"el","translation":"Ολοκλήρωση του στόχου με συγκεκριμένο ρυθμό","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"el","translation":"Προτείνετε μείωση κατά 5% από έναν από τους στόχους: μη επίτευξη, RPE, μειωμένη ταχύτητα","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"el","translation":"Σχετική ελευθερία κίνησης: {{value1}}%, Συνέπεια: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"el","translation":"Εξοικονόμηση ενέργειας (υπόλοιπο μπαταρίας)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"el","translation":"Εξοικονόμηση ενέργειας (λειτουργία χαμηλής κατανάλωσης)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"el","translation":"Ρύθμιση εξοικονόμησης ενέργειας","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"el","translation":"Ακύρωση","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"el","translation":"Δευτερόλεπτο","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"el","translation":"Επιλέξτε άσκηση και σετ για να ξεκινήσετε. Εάν κάνετε λάθος, μπορείτε να επιστρέψετε στην προηγούμενη κατάσταση με το \"Ακύρωση\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"el","translation":"Προτεινόμενες ασκήσεις: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"el","translation":"Τερματισμός και συγχρονισμός","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"el","translation":"Συνέχεια","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"el","translation":"Πλάτη","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"el","translation":"Ημέρα για την πλάτη","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"el","translation":"Γραμμικό κορμού","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"el","translation":"Ημέρα για τους γλουτούς","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"el","translation":"Θέλετε να διαγράψετε τις καταγραφές;","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"el","translation":"Καταγραφή σε εξέλιξη","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"el","translation":"Δεν υπάρχουν προπονήσεις στην κατάσταση \"Καταγραφή\"","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"el","translation":"Τυπική δειγματοληψία","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"el","translation":"Γρήγορο","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"el","translation":"Προτείνουμε το ίδιο βάρος με βάση την επίτευξη, το RPE και την ταχύτητα κίνησης","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"el","translation":"Όχι","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"el","translation":"Μετάβαση σε άλλο σύνολο","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"el","translation":"Βάρος","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"el","translation":"Ορίστε το βάρος με τη χρήση του ρυθμιστή","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"el","translation":"Το βάρος, ο αριθμός επαναλήψεων και η ένταση (RPE) μπορούν να τροποποιηθούν πριν και μετά την έναρξη.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"el","translation":"Έναρξη","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"el","translation":"Ορίστε τον ρυθμό πριν την έναρξη","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"el","translation":"Δεν υποστηρίζεται: {{value1}}. Μπορείτε να εισάγετε χειροκίνητα.","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"el","translation":"Ήχος & σημειώσεις","review_note":""}

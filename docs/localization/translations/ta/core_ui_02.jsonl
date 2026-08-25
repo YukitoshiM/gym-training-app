@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"ta","translation":"மிக அருகில் உள்ள ஒன்றை தேர்ந்தெடுக்கவும்","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"ta","translation":"முதலில் இலக்கை நிர்ணயித்து, தினமும் செய்ய வேண்டியவை 3 மட்டும்","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"ta","translation":"முதல் பயிற்சியை முடித்த பிறகு","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"ta","translation":"முதல் மதிப்பை பதிவு செய்யவும்","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"ta","translation":"அதிகபட்சம் 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"ta","translation":"உள்ளிடாத பொருட்களை, பதிவு செய்யும் திரையில் பின்னர் சேர்க்கலாம்.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"ta","translation":"முடிக்கப்படாதது","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"ta","translation":"செய்யாதது","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"ta","translation":"பதிவு செய்யாதது","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"ta","translation":"அமைக்கப்படாதது","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"ta","translation":"தேர்ந்தெடுக்காதது","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"ta","translation":"இப்போது இலக்கு சார்ந்த மெனுவை பார்க்கவும்","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"ta","translation":"தொடர","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"ta","translation":"படி எண்ணிக்கையை பார்க்கவும்","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"ta","translation":"எடை குறைத்தல்","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"ta","translation":"கார்போஹைட்ரேட்","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"ta","translation":"செயல்படாதது","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"ta","translation":"உங்களால் செய்யக்கூடிய எண்ணிக்கையையும் நேரத்தையும் அமைக்கவும்","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"ta","translation":"குறிப்பாக முக்கியமானது","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"ta","translation":"உங்கள் நிலையைப் பற்றியும், அடுத்த கட்டத்தைப் பற்றியும் தெரிந்து கொள்ளுங்கள்","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"ta","translation":"நிலை சரிபார்க்கவும்","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"ta","translation":"தற்போதைய","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"ta","translation":"தற்போதைய உடல் தகவல்கள்","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"ta","translation":"தற்போது கிடைக்கவில்லை","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"ta","translation":"தற்போது சேகரிக்கப்பட்ட பதிவுகள் மற்றும் அமைப்புகளைப் பயன்படுத்தப்பட்டது.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"ta","translation":"தற்போது தேர்ந்தெடுக்கப்பட்டது: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"ta","translation":"உங்கள் இலக்கை நோக்கி, தயக்கமின்றி முன்னேறுங்கள்.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"ta","translation":"காரணம்","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"ta","translation":"காரணம்: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"ta","translation":"பிறப்பு ஆண்டு","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"ta","translation":"திரை வழிகாட்டலைத் தொடங்கவும்","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"ta","translation":"பதிவு செய்யப்பட்ட மெனுக்கள் {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"ta","translation":"நீங்கள் விரும்பும் நிலை","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"ta","translation":"நீங்கள் விரும்பும் பாணி","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"ta","translation":"இலக்கு","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"ta","translation":"இலக்கு {{value1}} / வித்தியாசம் {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"ta","translation":"இலக்கு மற்றும் வேகம்","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"ta","translation":"இலக்கு மற்றும் சாதனை","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"ta","translation":"இலக்கை மாற்றியமைப்பதற்கான விருப்பங்கள்","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"ta","translation":"இலக்கு இன்னும் அமைக்கப்படவில்லை","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"ta","translation":"இலக்கை அடைதல்","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"ta","translation":"நோக்கம்","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"ta","translation":"ஒவ்வொரு நோக்கத்திற்கும், இரண்டு நபர்களைத் தயார் செய்துள்ளோம். நபர்களை மாற்றும்போது, ​​உங்களுக்கு விருப்பமான உடல் அமைப்பையும், உரையாடலையும் பெறலாம்.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"ta","translation":"சரியான நபரைத் தேர்ந்தெடுங்கள்","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"ta","translation":"உங்கள் இலக்கிற்கு ஏற்றவாறு, முகப்புப் பக்கத்தில் உள்ள குறிப்புகளை மாற்றி, அடுத்து என்ன செய்ய வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"ta","translation":"நோக்கத்தை மாற்றுக","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"ta","translation":"நோக்கைத் தேர்ந்தெடுக்கவும்","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"ta","translation":"நோக்கு முறை","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"ta","translation":"நோக்கம் மற்றும் இலக்கு","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"ta","translation":"குறிப்பிட்ட நோக்கத்திற்கான மெனுக்கள் திறக்கப்பட்டுள்ளன","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"ta","translation":"குறிப்பிட்ட நோக்கத்திற்கான மெனுவைப் பார்க்கவும்","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"ta","translation":"சமீபத்திய","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"ta","translation":"ஆலோசனை மூலம் மாற்றங்களைச் செய்யுங்கள்","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"ta","translation":"குறைந்த மின்சார பயன்பாடு","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"ta","translation":"தொடங்கு {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"ta","translation":"தூக்கம் மற்றும் மீட்பு","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"ta","translation":"சரிபார்க்கப்படுகிறது","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"ta","translation":"வினாடி","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"ta","translation":"வினாடிகளின் எண்ணிக்கை","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"ta","translation":"பயிற்சி முறைகளைத் தேடி, சேர்க்கவும்","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"ta","translation":"தனிப்பட்ட சாதனத்தில் குறுகிய கால அங்கீகாரத்தைப் பயன்படுத்தவும்.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"ta","translation":"சாதனத்திற்குள்","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"ta","translation":"போட்டி திறன்","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"ta","translation":"உடற்பயிற்சி","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"ta","translation":"உடற்பயிற்சியை போட்டியாக மாற்றுதல்","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"ta","translation":"தசை அளவையும், பயிற்சி அனுபவத்தையும் அதிகரித்தல்","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"ta","translation":"தசை வளர்ச்சி","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"ta","translation":"அனுபவம்","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"ta","translation":"அனுபவ நிலை","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"ta","translation":"தொடர்ந்து செய்யக்கூடிய வேகம்","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"ta","translation":"இது உங்கள் திறன்கள் மற்றும் தகுதிகளை மதிப்பிடுவதற்கான கருவி அல்ல. பதிலில் நீங்கள் முக்கியமாகக் கருதுவது என்ன என்பதை இங்கே குறிப்பிடவும்.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"ta","translation":"கொழுப்பு","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"ta","translation":"வயிறு சுற்றளவு","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"ta","translation":"வயிறு சுற்றளவு - விருப்பமானது","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"ta","translation":"நடத்தை முறைகளை கற்றுக்கொள்ள","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"ta","translation":"செயல் அறிவிப்புகள்","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"ta","translation":"காட்சிக்கு காட்டு","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"ta","translation":"காட்சி முறை","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"ta","translation":"காட்சி முறை","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"ta","translation":"காட்சி பாணி","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"ta","translation":"உதவி மாதிரி இணைக்கப்படவில்லை","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"ta","translation":"குறிப்பு","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"ta","translation":"குறிப்பு: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"ta","translation":"திட்டம்","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"ta","translation":"திட்டம், வரலாறு, உடல் KPI, உணவு, புகைப்படங்கள், AI உரையாடல் மற்றும் நினைவகம், தனிப்பயன் செயல்பாடுகளை நீக்கவும்.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"ta","translation":"திட்டத்தில் இருந்து தொடங்கலாம் அல்லது உடனடியாக செயல்பாடுகளைச் சேர்த்து பதிவு செய்யலாம்.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"ta","translation":"திட்டமில்லாமல் செயல்பாடுகளைச் சேர்","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"ta","translation":"திட்டத்தில் சேர்க்கவும்","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"ta","translation":"திட்டம் உருவாக்கவும்","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"ta","translation":"திட்டம் உருவாக்கவும்","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"ta","translation":"திட்டம் மற்றும் கண்காணிப்பு","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"ta","translation":"திட்டத்தின் எடையை புதுப்பிக்க வேண்டுமா?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"ta","translation":"பதிவு செய்தல்","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"ta","translation":"பதிவு செய்யவும்","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"ta","translation":"பதிவு செய்யவும். AI-யிடம் கேட்கவும், செயல்படுத்தவும். தினமும் செய்ய வேண்டியவை மூன்று மட்டுமே.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"ta","translation":"பதிவு செய்ய வேண்டியதைத் தட்டவும்","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"ta","translation":"பதிவு மற்றும் செயல்பாட்டின் முடிவுகள் அடுத்த AI பகுப்பாய்வுக்கு அனுப்பப்படும். முதல் செயல்பாடு, முகப்புப் பக்கத்தில் உள்ள பணி உங்களுக்கு வழிகாட்டும்.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"ta","translation":"பதிவுகள் இங்கே சேமிக்கப்படும்","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"ta","translation":"பதிவுகளை சரிபார்க்கப்படுகிறது. திரையை மூடினாலும் தொடரும்.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"ta","translation":"பதிவுகளை பார்த்து அடுத்த நடவடிக்கையை பரிந்துரைக்கவும்","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"ta","translation":"பதிவு செய்யப்படுகிறது","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"ta","translation":"பதிவில் இருந்து, நல்ல மாற்றங்கள், ஸ்திரத்தன்மை மற்றும் குறைபாடுகள் பற்றிய தகவல்களையும், அடுத்த கட்டத்திற்கான பரிந்துரைகளையும் காணலாம்.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"ta","translation":"பதிவு செய்யப்பட்டது","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"ta","translation":"அமைப்புகள்","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"ta","translation":"அமைப்புகள் முடிந்தது","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"ta","translation":"இந்த பதிவில், ஐபோன் மற்றும் ஆப்பிள் வாட்ச் ஆகியவற்றின் செயல்பாடுகள், தகவல் தொடர்பு மற்றும் உடற்பயிற்சி தொடர்பான தரவுகள் அடங்கும். இது தானாகவே வெளி அனுப்பப்படாது.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"ta","translation":"சிகிச்சை பதிவை நீக்கவும்","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"ta","translation":"சிகிச்சை பதிவை சேமிக்கவும்","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"ta","translation":"சிகிச்சை பதிவை அனுப்பவும்","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"ta","translation":"பேசுதல்","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"ta","translation":"மேலும் பார்க்க","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"ta","translation":"தவறான புரிதலை ஏற்படுத்தும் உள்ளடக்கம்","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"ta","translation":"உடல் சார்ந்த குறிகாட்டிகள் (KPI)","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"ta","translation":"உயரம்","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"ta","translation":"உயரம் - விருப்பப்படி","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"ta","translation":"தெரியவில்லை என்றால் இங்கே","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"ta","translation":"சேர்க்கவும்","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"ta","translation":"சேர்த்தல்","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"ta","translation":"மேலும் தொடங்கவும்","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"ta","translation":"அனுப்பு","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"ta","translation":"காத்திருப்பு","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"ta","translation":"உங்களுடைய உடற்பயிற்சி செய்யும் ஜிம் அல்லது வீட்டில் உள்ள உபகரணங்களைத் தேர்ந்தெடுக்கவும்","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"ta","translation":"இணைய இணைப்பு கிடைத்தவுடன், பதிவுகளைச் சரிபார்க்கலாம்.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"ta","translation":"வாரத்திற்கு எத்தனை முறை?","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"ta","translation":"ஒரு வாரத்தில் எவ்வளவு முறை உடற்பயிற்சி செய்ய முடியும்?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"ta","translation":"வழிமுறைகள்","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"ta","translation":"தொடர் நடைபெற்று வருகிறது","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"ta","translation":"உடற்பயிற்சி, தூக்கம் மற்றும் உணவு பழக்கத்தை பராமரிக்கவும்","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"ta","translation":"தேர்ந்தெடுக்கும்போது: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"ta","translation":"தேர்வு செய்துள்ளேன்","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"ta","translation":"அறிவிப்பு","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"ta","translation":"பகிர்வு செய்யும் போது AI அமைப்புகளை ஏற்றவும்","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"ta","translation":"முக்கியப் பகுதிகள்","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"ta","translation":"எடை","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"ta","translation":"எடையை அளக்க, ரிள் பயன்படுத்தவும்","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"ta","translation":"எடை அலகு","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"ta","translation":"மூடும்","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"ta","translation":"மூடு","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"ta","translation":"தொடங்கு","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"ta","translation":"தொடர்புடைய தகவல்கள்","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"ta","translation":"உணவு","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"ta","translation":"உணவு மற்றும் உடல் அமைப்பு","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"ta","translation":"உணவு மற்றும் உடல் அமைப்பை புகைப்படத்தில் பதிவு செய்யவும். எடை, இடுப்பு சுற்றளவு மற்றும் செட் ஆகியவற்றை எண்களில் குறிப்பிடவும்.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"ta","translation":"உணவை பதிவு செய்தல்","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"ta","translation":"உணவு எண்ணிக்கைகள்","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"ta","translation":"உணவு எண்ணிக்கையை அடைவதையும், கலோரி மற்றும் PFC அளவை அடைவதையும் தனித்தனியாகக் காட்டவும்.","review_note":""}

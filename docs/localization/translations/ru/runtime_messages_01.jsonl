@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"ru","translation":"Получил ответ от AI-тренера","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"ru","translation":"Не удалось отправить запрос в AI-тренер.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"ru","translation":"Данные синхронизированы с Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"ru","translation":"Вы можете проверить ответы в приложении BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"ru","translation":"{{value1}} / {{value2}} достигнуто. Осталось двигаться в разумных пределах.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"ru","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} раз","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"ru","translation":"{{value1}} не переставлять, рассматривать как выбор пользователя","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"ru","translation":"{{value1}} минут","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"ru","translation":"{{value1}} шагов","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"ru","translation":"{{value1}} приемов пищи","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"ru","translation":"На этом устройстве невозможно использовать обнаружение окружения.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"ru","translation":"Этот пункт сегодня не выполняется.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"ru","translation":"Достаточно сделать только одно из возможных действий.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"ru","translation":"Почему это действие?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"ru","translation":"Виды упражнений","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"ru","translation":"Пожалуйста, откройте приложение и попробуйте снова.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"ru","translation":"Удалено местоположение спортзала.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"ru","translation":"Записано прибытие в спортзал.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"ru","translation":"Обнаружение прибытия в спортзал.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"ru","translation":"Автоматическое обнаружение посещения спортзала отключено.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"ru","translation":"Записано уход из спортзала.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"ru","translation":"Жим штанги лежа на скамье","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"ru","translation":"Темный режим","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"ru","translation":"Подтягивания","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"ru","translation":"Движения","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"ru","translation":"Упражнения","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"ru","translation":"Продолжаете тренироваться. Увеличение количества записей о восстановлении улучшит точность настроек на следующей неделе.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"ru","translation":"Черный шампанское","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"ru","translation":"Мой фитнес-центр","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"ru","translation":"Пользователь изменил свои сегодняшние действия.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"ru","translation":"Сегодняшние рекомендации были перестроены пользователем.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"ru","translation":"Светлый","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"ru","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"ru","translation":"Увеличение","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"ru","translation":"Уменьшение","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"ru","translation":"1 раз сегодня","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"ru","translation":"Вы выполнили 3 задачи сегодня. Будут учтены в завтрашних рекомендациях.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"ru","translation":"Меню на сегодня","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"ru","translation":"Сегодняшние рекомендации обновлены","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"ru","translation":"Местоположение не установлено","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"ru","translation":"Доступ к местоположению запрещен. Можно использовать ручной вход.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"ru","translation":"Пожалуйста, попробуйте еще раз после стабилизации точности определения местоположения.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"ru","translation":"Сначала зарегистрируйте свое текущее местоположение как фитнес-центр.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"ru","translation":"Для начинающих: Комплексная тренировка","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"ru","translation":"Не удалось повторно отправить предыдущий запрос AI-тренера.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"ru","translation":"Пожалуйста, отправьте тот же запрос еще раз.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"ru","translation":"Приоритет - восстановление","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"ru","translation":"Если не требуется изменение, оставьте поле пустым","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"ru","translation":"Подтягивания","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"ru","translation":"Обновлены данные о восстановлении и скорректированы сегодняшние рекомендации в безопасном режиме.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"ru","translation":"Записаны новые данные.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"ru","translation":"Существующий ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"ru","translation":"Необходимая категория или существующая","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"ru","translation":"Местоположение зарегистрировано как \"мой спортзал\"","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"ru","translation":"Не удалось определить местоположение","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"ru","translation":"Проверяю текущее местоположение","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"ru","translation":"Просмотрено 3 записи о тренировках и 8 записей о питании за последние 7 дней","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"ru","translation":"Отсутствуют данные о сне","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"ru","translation":"Запишите сон в течение 3 дней и продолжайте заниматься 3 раза в неделю.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"ru","translation":"Записать сон в течение 3 дней","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"ru","translation":"Интеллектуальный, благородный, передовой","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"ru","translation":"Краткий общий комментарий","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"ru","translation":"Краткое действие","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"ru","translation":"Отжимания от груди","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"ru","translation":"Автоматически","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"ru","translation":"При согласии с запросом на доступ к местоположению, вы сможете зарегистрироваться.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"ru","translation":"Вы просмотрели 3 показателя физической формы, 8 записей о питании и 3 тренировки по силовому тренингу.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"ru","translation":"1 раз в неделю","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"ru","translation":"Вы завершили 3 тренировки в неделю.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"ru","translation":"Продолжайте заниматься 3 раза в неделю.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"ru","translation":"Интенсивные, премиальные, стимулирующие","review_note":""}

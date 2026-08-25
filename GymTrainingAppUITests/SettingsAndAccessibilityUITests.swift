@@ -2,34 +2,107 @@ import XCTest
 
 @MainActor
 final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
+    func testAutomaticDailyAICreditUseIsVisibleAndDefaultsOff() throws {
+        openSettings()
+
+        let toggle = scrollToHittable(
+            app.switches["automaticDailyAICreditUseToggle"],
+            maxSwipes: 12
+        )
+        XCTAssertTrue(toggle.exists)
+        XCTAssertEqual(toggle.value as? String, "0")
+    }
+
+    func testInAppFeedbackKeepsAlternativeSendPath() throws {
+        openSettings()
+        let feedbackLink = scrollToHittable(app.buttons["inAppFeedbackLink"], maxSwipes: 15)
+        XCTAssertTrue(feedbackLink.isHittable)
+        feedbackLink.tap()
+
+        let editor = app.textViews["feedbackMessageEditor"]
+        XCTAssertTrue(editor.waitForExistence(timeout: 5))
+        editor.tap()
+        editor.typeText("画面遷移を確認")
+
+        XCTAssertTrue(app.buttons["sendInAppFeedbackButton"].isEnabled)
+        XCTAssertTrue(scrollToHittable(app.buttons["copyInAppFeedbackButton"]).isEnabled)
+    }
+
     func testTrainerAvatarSelectionPersistsAndAppearsOnHome() throws {
         openSettings()
 
-        let maya = scrollToHittable(app.buttons["coachPersona-maya"], maxSwipes: 4)
-        XCTAssertTrue(maya.isHittable)
-        maya.tap()
+        let mateo = scrollToHittable(app.buttons["coachPersona-mateo"], maxSwipes: 4)
+        XCTAssertTrue(mateo.isHittable)
+        let pickerScreenshot = XCTAttachment(screenshot: app.screenshot())
+        pickerScreenshot.name = "Coach persona cards"
+        pickerScreenshot.lifetime = .keepAlways
+        add(pickerScreenshot)
+        mateo.tap()
         app.buttons["saveProfileSettingsButton"].tap()
 
-        XCTAssertTrue(app.staticTexts["Mayaからの提案"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Mateoからの提案"].waitForExistence(timeout: 5))
 
         tapTab("AI")
-        XCTAssertTrue(app.staticTexts["担当 Maya"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["担当 Mateo"].waitForExistence(timeout: 5))
+        let hubScreenshot = XCTAttachment(screenshot: app.screenshot())
+        hubScreenshot.name = "Selected coach in AI hub"
+        hubScreenshot.lifetime = .keepAlways
+        add(hubScreenshot)
         app.buttons["aiHubTrainerLink"].tap()
-        XCTAssertTrue(app.navigationBars["Maya"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["Mateo"].waitForExistence(timeout: 5))
         XCTAssertTrue(
             app.staticTexts["aiChatCoachHeader"].waitForExistence(timeout: 3)
         )
-        let mayaChatScreenshot = XCTAttachment(screenshot: app.screenshot())
-        mayaChatScreenshot.name = "Selected Maya coach in AI chat"
-        mayaChatScreenshot.lifetime = .keepAlways
-        add(mayaChatScreenshot)
+        let mateoChatScreenshot = XCTAttachment(screenshot: app.screenshot())
+        mateoChatScreenshot.name = "Selected Mateo coach in AI chat"
+        mateoChatScreenshot.lifetime = .keepAlways
+        add(mateoChatScreenshot)
+
+        app.navigationBars["Mateo"].buttons.firstMatch.tap()
+        XCTAssertTrue(app.navigationBars["AI"].waitForExistence(timeout: 3))
+
+        app.buttons["aiHubPlanCoachButton"].tap()
+        let planCoach = app.descendants(matching: .any)["aiPlanCoachIdentity"]
+        XCTAssertTrue(planCoach.waitForExistence(timeout: 5))
+        XCTAssertTrue(planCoach.label.contains("Mateo"))
+        app.buttons["閉じる"].tap()
+
+        app.buttons["aiHubMealPhotoLink"].tap()
+        let mealCoach = app.descendants(matching: .any)["mealAICoachIdentity"]
+        XCTAssertTrue(mealCoach.waitForExistence(timeout: 5))
+        XCTAssertTrue(mealCoach.label.contains("Mateo"))
+        app.navigationBars["食事を記録"].buttons["キャンセル"].tap()
+        app.navigationBars["食事"].buttons.firstMatch.tap()
+
+        app.buttons["aiHubBodyPhotoLink"].tap()
+        XCTAssertTrue(app.navigationBars["撮影セットを追加"].waitForExistence(timeout: 5))
+        let bodyPhotoCoach = scrollToHittable(
+            app.descendants(matching: .any)["bodyPhotoAICoachIdentity"],
+            maxSwipes: 5
+        )
+        XCTAssertTrue(bodyPhotoCoach.exists)
+        XCTAssertTrue(bodyPhotoCoach.label.contains("Mateo"))
+        app.navigationBars["撮影セットを追加"].buttons["キャンセル"].tap()
+        app.navigationBars["体型写真"].buttons.firstMatch.tap()
+
+        let reportLink = scrollToHittable(app.buttons["aiHubReportLink"])
+        XCTAssertTrue(reportLink.isHittable)
+        reportLink.tap()
+        let reportCoach = app.descendants(matching: .any)["activeCoachCard"]
+        XCTAssertTrue(reportCoach.waitForExistence(timeout: 5))
+        XCTAssertTrue(reportCoach.label.contains("Mateo"))
+        app.buttons["coachMemoryListLink"].tap()
+        XCTAssertTrue(app.navigationBars["Mateoの記憶"].waitForExistence(timeout: 5))
+        let memoryCoach = app.descendants(matching: .any)["activeCoachIdentity"]
+        XCTAssertTrue(memoryCoach.waitForExistence(timeout: 3))
+        XCTAssertTrue(memoryCoach.label.contains("Mateo"))
 
         openSettings()
-        let persistedMaya = scrollToHittable(app.buttons["coachPersona-maya"], maxSwipes: 4)
-        XCTAssertTrue(persistedMaya.isSelected)
+        let persistedMateo = scrollToHittable(app.buttons["coachPersona-mateo"], maxSwipes: 4)
+        XCTAssertTrue(persistedMateo.isSelected)
     }
 
-    func testRetiredBundledAIURLMigratesOnLaunch() throws {
+    func testRetiredBundledAISettingsMigrateWithoutExposingEndpoint() throws {
         app.terminate()
         app.launchArguments = [
             "--reset-ui-test-data",
@@ -39,12 +112,9 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         app.launch()
 
         openSettings()
-        let baseURLField = scrollToHittable(app.textFields["aiBaseURLField"], maxSwipes: 12)
-        XCTAssertTrue(baseURLField.isHittable)
-        XCTAssertEqual(
-            baseURLField.value as? String,
-            "https://yukitoshinomac-mini.taild6630a.ts.net"
-        )
+        let status = scrollToHittable(app.descendants(matching: .any)["aiManagedConnectionStatus"], maxSwipes: 12)
+        XCTAssertTrue(status.isHittable)
+        XCTAssertFalse(app.textFields["aiBaseURLField"].exists)
         XCTAssertTrue(scrollToHittable(app.buttons["shareDiagnosticsButton"], maxSwipes: 15).isHittable)
     }
 
@@ -53,11 +123,11 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         app.buttons["settingsButton"].tap()
         XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
 
-        let disclosure = app.buttons["AIへ送るデータ"]
-        for _ in 0..<5 where !disclosure.isHittable {
-            app.swipeUp()
-        }
-        XCTAssertTrue(disclosure.waitForExistence(timeout: 3))
+        let disclosure = scrollToHittable(
+            app.buttons["aiDataSharingDisclosure"],
+            maxSwipes: 15
+        )
+        XCTAssertTrue(disclosure.isHittable)
         disclosure.tap()
 
         XCTAssertTrue(scrollToHittable(app.switches["身体KPI"]).isHittable)
@@ -153,8 +223,30 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(app.buttons["settingsButton"].waitForExistence(timeout: 5))
     }
 
+    func testLegalConsentUsesEnglishOutsideJapanese() throws {
+        app.terminate()
+        app.launchArguments = [
+            "--reset-ui-test-data",
+            "--force-legal-consent-ui-test",
+            "-AppleLanguages", "(is)",
+            "-AppleLocale", "is_IS"
+        ]
+        app.launch()
+
+        XCTAssertTrue(app.descendants(matching: .any)["legalConsentView"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Get started with BodyMode"].exists)
+        XCTAssertTrue(app.staticTexts["Please review these important points."].exists)
+
+        app.buttons["consentTermsLink"].tap()
+        XCTAssertTrue(app.navigationBars["Terms of Use"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["1. Scope"].exists)
+    }
+
     func testAdvertisingDisclosureAndReportAreAccessible() throws {
         openSettings()
+
+        let rewardedPreview = scrollToHittable(app.buttons["rewardedAdPreviewButton"])
+        XCTAssertTrue(rewardedPreview.isHittable)
 
         let informationLink = scrollToHittable(app.buttons["advertisingInformationLink"])
         XCTAssertTrue(informationLink.isHittable)
@@ -282,13 +374,13 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         ]
 
         tapTab("ホーム")
-        try app.performAccessibilityAudit(for: auditTypes)
+        try performAccessibilityAudit(for: auditTypes)
 
         tapTab("記録")
-        try app.performAccessibilityAudit(for: auditTypes)
+        try performAccessibilityAudit(for: auditTypes)
 
         tapTab("履歴")
-        try app.performAccessibilityAudit(for: auditTypes)
+        try performAccessibilityAudit(for: auditTypes)
 
         app.terminate()
         app.launchArguments = [
@@ -299,6 +391,10 @@ final class SettingsAndAccessibilityUITests: GymTrainingAppUITestCase {
         ]
         app.launch()
         XCTAssertTrue(app.buttons["settingsButton"].waitForExistence(timeout: 5))
+        try performAccessibilityAudit(for: auditTypes)
+    }
+
+    private func performAccessibilityAudit(for auditTypes: XCUIAccessibilityAuditType) throws {
         try app.performAccessibilityAudit(for: auditTypes)
     }
 

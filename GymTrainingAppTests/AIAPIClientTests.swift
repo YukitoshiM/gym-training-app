@@ -36,20 +36,18 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(MockAIURLProtocol.lastRequest?.url?.path, "/v1/health")
         XCTAssertEqual(MockAIURLProtocol.lastRequest?.value(forHTTPHeaderField: "Authorization"), "Bearer test-api-key")
         XCTAssertEqual(MockAIURLProtocol.lastRequest?.value(forHTTPHeaderField: "Content-Type"), "application/json")
+        XCTAssertEqual(
+            MockAIURLProtocol.lastRequest?.value(forHTTPHeaderField: "X-BodyMode-Distribution-Channel"),
+            UsageDistributionChannel.current().rawValue
+        )
+        XCTAssertEqual(
+            MockAIURLProtocol.lastRequest?.value(forHTTPHeaderField: "X-App-Distribution-Channel"),
+            UsageDistributionChannel.current().rawValue
+        )
     }
 
-    func testSessionAuthenticationExchangesEnrollmentKeyAndReusesAccessToken() async throws {
+    func testSessionAuthenticationReusesAppleAccountAccessToken() async throws {
         MockAIURLProtocol.requestHandler = { request in
-            if request.url?.path == "/v1/auth/token" {
-                XCTAssertEqual(
-                    request.value(forHTTPHeaderField: "Authorization"),
-                    "Bearer enrollment-key"
-                )
-                return (
-                    Self.response(for: request, statusCode: 200),
-                    Data(#"{"access_token":"short-lived-token","token_type":"Bearer","expires_in":3600}"#.utf8)
-                )
-            }
             XCTAssertEqual(
                 request.value(forHTTPHeaderField: "Authorization"),
                 "Bearer short-lived-token"
@@ -60,11 +58,29 @@ final class AIAPIClientTests: XCTestCase {
             )
         }
 
+        AIAuthenticationStore.shared.save(AICachedAccessToken(
+            value: "short-lived-token",
+            baseURLString: "https://example.com",
+            expiresAt: Date().addingTimeInterval(3_600)
+        ))
         let client = makeClient(apiKey: "enrollment-key", usesSessionTokens: true)
         _ = try await client.health()
         _ = try await client.health()
 
-        XCTAssertEqual(MockAIURLProtocol.requests.map(\.url?.path), ["/v1/auth/token", "/v1/health", "/v1/health"])
+        XCTAssertEqual(MockAIURLProtocol.requests.map(\.url?.path), ["/v1/health", "/v1/health"])
+    }
+
+    func testAccountPolicyDoesNotExchangeLegacyEnrollmentKey() async {
+        let client = makeClient(apiKey: "enrollment-key", usesSessionTokens: true)
+
+        do {
+            _ = try await client.health()
+            XCTFail("Expected account sign-in requirement")
+        } catch AIClientError.accountSignInRequired {
+            XCTAssertTrue(MockAIURLProtocol.requests.isEmpty)
+        } catch {
+            XCTFail("Unexpected error: \(error)")
+        }
     }
 
     func testTransportDiagnosticsIncludeRequestContextWithoutSecrets() async throws {
@@ -89,11 +105,40 @@ final class AIAPIClientTests: XCTestCase {
         }
         let transportEvent = try XCTUnwrap(events.first { $0["category"] as? String == "ai.transport" })
         let metadata = try XCTUnwrap(transportEvent["metadata"] as? [String: String])
-        XCTAssertEqual(metadata["host"], "example.com")
+        XCTAssertNil(metadata["host"])
         XCTAssertEqual(metadata["path"], "/v1/health")
         XCTAssertEqual(metadata["url_error_code"], "-1003")
         XCTAssertEqual(metadata["url_error_name"], "cannotFindHost")
         XCTAssertFalse(String(decoding: exportedData, as: UTF8.self).contains("test-api-key"))
+        XCTAssertFalse(String(decoding: exportedData, as: UTF8.self).contains("example.com"))
+    }
+
+    func testDiagnosticMetadataRedactsConnectionSecrets() {
+        AppDiagnostics.shared.deleteData()
+        AppDiagnostics.shared.record(
+            category: "privacy.test",
+            message: "Connection metadata",
+            metadata: [
+                "host": "private-ai.example.com",
+                "base_url": "https://private-ai.example.com",
+                "api_key": "secret-key",
+                "path": "/v1/health"
+            ]
+        )
+
+        let exportedData = AppDiagnostics.shared.exportData()
+        let exported = String(decoding: exportedData, as: UTF8.self)
+        XCTAssertFalse(exported.contains("private-ai.example.com"))
+        XCTAssertFalse(exported.contains("secret-key"))
+        let events = exportedData.split(separator: 0x0A).compactMap {
+            try? JSONSerialization.jsonObject(with: Data($0)) as? [String: Any]
+        }
+        let event = events.first { $0["category"] as? String == "privacy.test" }
+        let metadata = event?["metadata"] as? [String: String]
+        XCTAssertEqual(metadata?["host"], "[redacted]")
+        XCTAssertEqual(metadata?["base_url"], "[redacted]")
+        XCTAssertEqual(metadata?["api_key"], "[redacted]")
+        XCTAssertEqual(metadata?["path"], "/v1/health")
     }
 
     func testCoachesDecodesAllServerFields() async throws {
@@ -154,9 +199,13 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(uploadedImage.size.width, 1_600, accuracy: 1)
         XCTAssertEqual(uploadedImage.size.height, 600, accuracy: 1)
         XCTAssertEqual(json["meal_type"] as? String, "lunch")
+        XCTAssertEqual(json["locale"] as? String, AppLanguagePreference.aiLocaleIdentifier)
         let coach = try XCTUnwrap(json["coach"] as? [String: Any])
-        XCTAssertEqual(coach["coach_name"] as? String, "Maya")
+        XCTAssertEqual(coach["coach_name"] as? String, "Camila")
         XCTAssertEqual(coach["coach_id"] as? String, "hypertrophy")
+        XCTAssertEqual(coach["persona_id"] as? String, "camila")
+        XCTAssertEqual(coach["coaching_style_id"] as? String, "encouraging")
+        XCTAssertFalse((coach["persona_summary"] as? String)?.isEmpty ?? true)
         XCTAssertEqual(coach["coaching_style"] as? String, CoachingStyle.encouraging.promptDescription)
         XCTAssertEqual(coach["focus_areas"] as? [String], ["筋肥大", "回復", "食事・栄養"])
     }
@@ -201,7 +250,8 @@ final class AIAPIClientTests: XCTestCase {
         )
         XCTAssertEqual(json["meal_type"] as? String, "dinner")
         XCTAssertEqual(json["memo"] as? String, "夕食")
-        XCTAssertEqual((json["coach"] as? [String: Any])?["coach_name"] as? String, "Maya")
+        XCTAssertEqual(json["locale"] as? String, AppLanguagePreference.aiLocaleIdentifier)
+        XCTAssertEqual((json["coach"] as? [String: Any])?["coach_name"] as? String, "Camila")
     }
 
     func testMealItemTotalsReplaceMateriallyInconsistentServerTotals() async throws {
@@ -297,7 +347,7 @@ final class AIAPIClientTests: XCTestCase {
         }
     }
 
-    func testBodyPhotoSetAnalysisUploadsContactSheetsWith240SecondTimeout() async throws {
+    func testBodyPhotoSetAnalysisUploadsEachAngleWith240SecondTimeout() async throws {
         MockAIURLProtocol.requestHandler = { request in
             let data = Data(#"""
             {
@@ -350,8 +400,9 @@ final class AIAPIClientTests: XCTestCase {
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         let photos = try XCTUnwrap(json["photos"] as? [[String: Any]])
-        XCTAssertEqual(photos.compactMap { $0["angle"] as? String }, ["capture_set_2"])
+        XCTAssertEqual(photos.compactMap { $0["angle"] as? String }, ["front", "side"])
         XCTAssertEqual(json["memo"] as? String, "自然光")
+        XCTAssertEqual(json["response_locale"] as? String, AppLanguagePreference.aiLocaleIdentifier)
         let context = try XCTUnwrap(json["context"] as? [String: Any])
         XCTAssertEqual(context["profile_goal"] as? String, "体型改善")
         XCTAssertEqual(context["outcome_style"] as? String, "Vシェイプ")
@@ -364,9 +415,14 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(metricDeltas["weight_kg"] as? Double, -0.4)
         XCTAssertEqual(metricDeltas["waist_cm"] as? Double, -1.1)
         XCTAssertEqual(metricDeltas["body_fat_percent"] as? Double, -0.8)
-        XCTAssertEqual((context["coach"] as? [String: Any])?["coach_name"] as? String, "Maya")
+        let coach = try XCTUnwrap(context["coach"] as? [String: Any])
+        XCTAssertEqual(coach["coach_name"] as? String, "Camila")
+        XCTAssertEqual(coach["persona_id"] as? String, "camila")
+        XCTAssertEqual(coach["coaching_style_id"] as? String, "encouraging")
         let comparisonPhotos = try XCTUnwrap(json["comparison_photos"] as? [[String: Any]])
-        XCTAssertEqual(comparisonPhotos.compactMap { $0["angle"] as? String }, ["capture_set_1"])
+        XCTAssertEqual(comparisonPhotos.compactMap { $0["angle"] as? String }, ["front"])
+        XCTAssertEqual(photos.count, 2)
+        XCTAssertEqual(comparisonPhotos.count, 1)
         XCTAssertTrue(photos.allSatisfy { photo in
             guard let encoded = photo["image_base64"] as? String else { return false }
             return !encoded.hasPrefix("data:image") && Data(base64Encoded: encoded) != nil
@@ -410,7 +466,9 @@ final class AIAPIClientTests: XCTestCase {
         let coach = try XCTUnwrap(json["coach"] as? [String: Any])
 
         XCTAssertEqual(json["coach_id"] as? String, "hypertrophy")
-        XCTAssertEqual(coach["coach_name"] as? String, "Maya")
+        XCTAssertEqual(coach["coach_name"] as? String, "Camila")
+        XCTAssertEqual(coach["persona_id"] as? String, "camila")
+        XCTAssertEqual(coach["coaching_style_id"] as? String, "encouraging")
         XCTAssertTrue((coach["boundaries"] as? [String])?.contains("見た目だけで体脂肪率を断定しない") == true)
     }
 
@@ -491,6 +549,7 @@ final class AIAPIClientTests: XCTestCase {
         }
         let request = CoachChatRequest(
             coachID: "hypertrophy",
+            coach: AIRequestCoachContext(profile: coachTestProfile),
             message: "次回は重量を上げてもいい？",
             context: Self.emptyCoachContext(memories: ["重量は小刻みに上げたい"]),
             recentMessages: history
@@ -509,6 +568,11 @@ final class AIAPIClientTests: XCTestCase {
         let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
         XCTAssertEqual(json["coach_id"] as? String, "hypertrophy")
+        XCTAssertEqual(json["purpose"] as? String, "chat")
+        XCTAssertEqual(json["response_locale"] as? String, AppLanguagePreference.aiLocaleIdentifier)
+        let coach = try XCTUnwrap(json["coach"] as? [String: Any])
+        XCTAssertEqual(coach["persona_id"] as? String, "camila")
+        XCTAssertEqual(coach["coaching_style_id"] as? String, "encouraging")
         let sentMessages = try XCTUnwrap(json["recent_messages"] as? [[String: Any]])
         XCTAssertEqual(sentMessages.count, CoachChatRequest.maximumSentRecentMessages)
         XCTAssertTrue(sentMessages.allSatisfy { Set($0.keys) == ["role", "content"] })
@@ -533,6 +597,14 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertEqual(
             upload.request.value(forHTTPHeaderField: "Authorization"),
             "Bearer test-api-key"
+        )
+        XCTAssertEqual(
+            upload.request.value(forHTTPHeaderField: "X-BodyMode-Distribution-Channel"),
+            UsageDistributionChannel.current().rawValue
+        )
+        XCTAssertEqual(
+            upload.request.value(forHTTPHeaderField: "X-App-Distribution-Channel"),
+            UsageDistributionChannel.current().rawValue
         )
         XCTAssertNil(upload.request.httpBody)
 
@@ -629,6 +701,34 @@ final class AIAPIClientTests: XCTestCase {
         XCTAssertTrue(retryRecentValues.allSatisfy { $0.count <= 120 })
     }
 
+    func testTrainerChatRetriesTransientServerFailureWithSameRequestID() async throws {
+        MockAIURLProtocol.requestHandler = { request in
+            if MockAIURLProtocol.requests.count == 1 {
+                return (Self.response(for: request, statusCode: 503), Data())
+            }
+            return (
+                Self.response(for: request, statusCode: 200),
+                Data(#"{"reply":"復旧しました","memory_candidates":[]}"#.utf8)
+            )
+        }
+
+        let response = try await makeClient().chat(
+            payload: CoachChatRequest(
+                coachID: "wellness",
+                message: "相談",
+                context: Self.emptyCoachContext(),
+                recentMessages: []
+            )
+        )
+
+        XCTAssertEqual(response.reply, "復旧しました")
+        XCTAssertEqual(MockAIURLProtocol.requests.count, 2)
+        XCTAssertEqual(
+            MockAIURLProtocol.requests[0].value(forHTTPHeaderField: "X-Request-ID"),
+            MockAIURLProtocol.requests[1].value(forHTTPHeaderField: "X-Request-ID")
+        )
+    }
+
     func testTrainerChatMaps422ToInvalidRequest() async {
         MockAIURLProtocol.requestHandler = { request in
             (Self.response(for: request, statusCode: 422), Data())
@@ -649,6 +749,147 @@ final class AIAPIClientTests: XCTestCase {
                 AIClientError.presentation(for: error).message,
                 "AIトレーナーへ送る内容の形式が正しくありません。"
             )
+        }
+    }
+
+    func testUsageDecodesFeatureLimits() async throws {
+        MockAIURLProtocol.requestHandler = { request in
+            let data = Data(#"""
+            {
+                "generated_at":"2026-08-15T00:00:00Z",
+                "features":[{
+                    "feature":"chat",
+                    "used":4,
+                    "limit":20,
+                    "remaining":16,
+                    "reset_at":"2026-08-16T00:00:00Z",
+                    "window_seconds":86400
+                }]
+            }
+            """#.utf8)
+            return (Self.response(for: request, statusCode: 200), data)
+        }
+
+        let usage = try await makeClient().usage()
+
+        XCTAssertEqual(MockAIURLProtocol.lastRequest?.url?.path, "/v1/usage")
+        XCTAssertEqual(usage.features.first?.displayName, "トレーナー相談")
+        XCTAssertEqual(usage.features.first?.remaining, 16)
+    }
+
+    func testUsageDecodesOwnerUnlimitedMode() async throws {
+        MockAIURLProtocol.requestHandler = { request in
+            let data = Data(#"""
+            {
+                "generated_at":"2026-08-15T00:00:00Z",
+                "enforced":false,
+                "features":[{
+                    "feature":"chat",
+                    "used":12,
+                    "limit":5,
+                    "remaining":0,
+                    "reset_at":"2026-08-16T00:00:00Z",
+                    "window_seconds":86400
+                }]
+            }
+            """#.utf8)
+            return (Self.response(for: request, statusCode: 200), data)
+        }
+
+        let usage = try await makeClient().usage()
+
+        XCTAssertFalse(usage.isEnforced)
+        XCTAssertEqual(usage.features.first?.used, 12)
+    }
+
+    func testUsageAnalyticsUploadSendsOnlyCoarseFields() async throws {
+        MockAIURLProtocol.requestHandler = { request in
+            (Self.response(for: request, statusCode: 200), Data(#"{"accepted":1}"#.utf8))
+        }
+        let event = UsageEvent(
+            timestamp: Date(timeIntervalSince1970: 1_800_000_000),
+            name: .dailyActionCompleted,
+            dimension: "workout",
+            appVersion: "1.0",
+            locale: "ja_JP",
+            channel: .appStore
+        )
+
+        try await makeClient().uploadUsageEvents([event])
+
+        let request = try XCTUnwrap(MockAIURLProtocol.lastRequest)
+        XCTAssertEqual(request.url?.path, "/v1/analytics/events")
+        XCTAssertEqual(request.httpMethod, "POST")
+        let body = try XCTUnwrap(MockAIURLProtocol.lastRequestBody)
+        let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
+        let sent = try XCTUnwrap((json["events"] as? [[String: Any]])?.first)
+        XCTAssertEqual(Set(sent.keys), ["id", "occurred_at", "name", "dimension", "app_version", "locale", "channel"])
+        XCTAssertEqual(sent["name"] as? String, "daily_action_completed")
+        XCTAssertFalse(String(decoding: body, as: UTF8.self).contains("weight"))
+        XCTAssertEqual(sent["channel"] as? String, UsageDistributionChannel.appStore.rawValue)
+    }
+
+    func testUsageAnalyticsDeleteUsesAuthenticatedDelete() async throws {
+        MockAIURLProtocol.requestHandler = { request in
+            (Self.response(for: request, statusCode: 200), Data(#"{"deleted":3}"#.utf8))
+        }
+
+        try await makeClient().deleteUsageEvents()
+
+        XCTAssertEqual(MockAIURLProtocol.lastRequest?.url?.path, "/v1/analytics/events")
+        XCTAssertEqual(MockAIURLProtocol.lastRequest?.httpMethod, "DELETE")
+    }
+
+    func testStructuredQuotaErrorShowsResetAndKeepsManualFeaturesAvailable() async {
+        MockAIURLProtocol.requestHandler = { request in
+            let data = Data(#"""
+            {
+                "detail":{
+                    "code":"daily_quota_exceeded",
+                    "reason":"fair_use_limit",
+                    "message":"本日のAI利用上限に達しました。",
+                    "feature":"chat",
+                    "limit":20,
+                    "remaining":0,
+                    "reset_at":"2026-08-16T00:00:00Z",
+                    "window_seconds":86400
+                }
+            }
+            """#.utf8)
+            return (Self.response(for: request, statusCode: 429), data)
+        }
+
+        do {
+            _ = try await makeClient().usage()
+            XCTFail("Expected quota error")
+        } catch {
+            let presentation = AIClientError.presentation(for: error)
+            XCTAssertEqual(presentation.message, "本日のAI利用上限に達しました。")
+            XCTAssertTrue(presentation.recovery?.contains("手動記録は引き続き利用できます") == true)
+        }
+    }
+
+    func testStructuredBusyErrorIsNotDescribedAsQuotaExhaustion() async {
+        MockAIURLProtocol.requestHandler = { request in
+            let data = Data(#"""
+            {
+                "detail":{
+                    "code":"server_busy",
+                    "message":"AIサーバーが混み合っています。",
+                    "retry_after":8
+                }
+            }
+            """#.utf8)
+            return (Self.response(for: request, statusCode: 503), data)
+        }
+
+        do {
+            _ = try await makeClient().usage()
+            XCTFail("Expected busy error")
+        } catch {
+            let presentation = AIClientError.presentation(for: error)
+            XCTAssertEqual(presentation.message, "AIサーバーが混み合っています。")
+            XCTAssertTrue(presentation.recovery?.contains("利用枠ではなくサーバー混雑") == true)
         }
     }
 
@@ -702,6 +943,15 @@ final class AIAPIClientTests: XCTestCase {
             suggestionResult: [:]
         )
     }
+    func testAccountRequiredPolicyResponseMapsToSignInRecovery() {
+        let data = Data(#"{"detail":{"code":"account_sign_in_required","message":"Sign in required"}}"#.utf8)
+
+        let error = AIClientError.responseError(statusCode: 403, data: data)
+
+        guard case .accountSignInRequired = error else {
+            return XCTFail("Expected accountSignInRequired, got \(error)")
+        }
+    }
 }
 
 private extension AIAPIClientTests {
@@ -709,7 +959,7 @@ private extension AIAPIClientTests {
         var profile = UserProfile.default
         profile.goalType = .muscleGain
         profile.coachType = .hypertrophy
-        profile.coachPersona = .maya
+        profile.coachPersona = .camila
         profile.coachingStyle = .encouraging
         return profile
     }

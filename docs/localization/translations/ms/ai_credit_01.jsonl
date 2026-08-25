@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "ms", "translation": "Akun AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "ms", "translation": "{{value1}} kredit untuk penggunaan ini", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "ms", "translation": "Tambah kredit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "ms", "translation": "Sesuaikan balanc", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "ms", "translation": "Gunakan kredit AI untuk analisis automatik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "ms", "translation": "Jangan gunakan kredit, hanya gunakan rekod dalam peranti.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "ms", "translation": "Kredit akan digunakan untuk laporan mingguan atau bulanan apabila dijalankan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "ms", "translation": "Kredit AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "ms", "translation": "Menyemak balanc", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "ms", "translation": "Balanc {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "ms", "translation": "{{value1}} kredit diterima.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "ms", "translation": "Beli kredit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "ms", "translation": "Teruskan tanpa AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "ms", "translation": "Padamkan semua rekod dan akaun BodyMode. Kredit yang tinggal juga akan hilang dan tidak boleh dipulihkan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "ms", "translation": "Sejarah kredit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "ms", "translation": "Anda boleh menerima kredit melalui video atau membeli jumlah yang diperlukan. Rekod manual masih percuma.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "ms", "translation": "Dapatkan melalui iklan atau beli kredit. Rekod manual masih boleh digunakan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "ms", "translation": "Kredit AI tidak mencukupi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "ms", "translation": "Laporan bulanan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "ms", "translation": "Tidak ada tempoh tamat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "ms", "translation": "{{value1}} kredit AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "ms", "translation": "Produk sedang dipersiapkan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "ms", "translation": "Jumlah refund disesuaikan, {{value1}} kredit ditambah.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "ms", "translation": "Kredit telah ditambah.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "ms", "translation": "Pembelian masih dalam proses. Akan diproses secara automatik selepas selesai.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "ms", "translation": "Kredit pembelian tidak akan tamat. Tidak boleh ditukar atau dijual. Banner iklan akan tetap diseragam walaupun anda membeli.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "ms", "translation": "Keadaan pembelian tidak dapat ditentukan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "ms", "translation": "Tidak dapat mengesahkan pembelian daripada App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "ms", "translation": "Penyesuaian refund", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "ms", "translation": "Anda telah menerima bonus iklan hari ini.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "ms", "translation": "Tempoh untuk memproses video masih berjalan. Kredit akan ditambah selepas anda menyemak.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "ms", "translation": "Buka semula skrin AI untuk melihat baki terkini. Anda tidak perlu menonton video sekali lagi.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "ms", "translation": "Anda telah menerima 5 kredit.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "ms", "translation": "Sesi anda tamat. Sila masuk semula.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "ms", "translation": "Anda telah masuk dengan akaun Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "ms", "translation": "Daftar melalui Apple untuk menerima kredit pertama. Rekod manual boleh digunakan tanpa pendaftaran.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "ms", "translation": "Untuk menggunakan ciri AI, sila daftar di Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "ms", "translation": "Sedang mendaftar...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "ms", "translation": "Daftar melalui Apple untuk menerima 20 kredit pertama. Rekod manual boleh digunakan tanpa pendaftaran.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "ms", "translation": "Daftar melalui Apple untuk menerima 20 kredit pertama. Tiada langganan atau pembaruan automatik.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "ms", "translation": "Dapatkan 20 kredit dengan mendaftar.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "ms", "translation": "Iklan video", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "ms", "translation": "Diberikan oleh pentadiran", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "ms", "translation": "Beli", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "ms", "translation": "Bonus untuk pendaftaran", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "ms", "translation": "Mulai dengan jurulatih AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "ms", "translation": "Kredit AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "ms", "translation": "Cuba lagi kemudian.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "ms", "translation": "Penggunaan tidak terhad", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "ms", "translation": "Tonton iklan dan dapatkan 5 kredit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "ms", "translation": "Laporan mingguan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

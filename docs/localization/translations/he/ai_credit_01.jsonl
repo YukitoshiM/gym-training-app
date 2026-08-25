@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "he", "translation": "חשבון AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "he", "translation": "העלות עכשיו: {{value1}} נקודות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "he", "translation": "להוסיף נקודות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "he", "translation": "לעדכן את היתרה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "he", "translation": "להשתמש בנקודות AI לניתוח אוטומטי", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "he", "translation": "לא להוציא נקודות, רק להשתמש בהקלטות המקומיות.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "he", "translation": "להוציא נקודות לדיווח שבועי או חודשי בעת ביצוע הזמנה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "he", "translation": "נקודות AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "he", "translation": "בדיקת היתרה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "he", "translation": "היתרה: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "he", "translation": "{{value1}} נקודות קיבלתם.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "he", "translation": "לקנות נקודות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "he", "translation": "להמשיך להשתמש ידנית", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "he", "translation": "לאסיר את כל ההקלטות והחשבון ב-BodyMode. כל נקודות הקנייה והבונוסים יאבדו ואינן ניתנות לשחזור.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "he", "translation": "היסטוריית נקודות", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "he", "translation": "ניתן לקבל נקודות באמצעות וידאו או לרכוש את הכמות הרצויה. הקלטות ידניות זמינות בחינם.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "he", "translation": "קבלו נקודות על ידי צפייה בפרסומת או רכישת נקודות. הקלטות ידניות עדיין זמינות.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "he", "translation": "אין מספיק נקודות AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "he", "translation": "דוח חודשי", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "he", "translation": "ללא תאריך תפוגה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "he", "translation": "{{value1}} נקודות AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "he", "translation": "מכינים את המוצרים שרכשתם.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "he", "translation": "התאמת החזר כספי, הוספתי {{value1}} נקודות.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "he", "translation": "הוספתי נקודות.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "he", "translation": "הרכישה עדיין בתהליך אישור. יופיעו אוטומטית לאחר ההשלמה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "he", "translation": "נקודות הרכישה לא עוברות לבעלים אחר. אין אפשרות למכירה. פרסום ממומן עדיין יופיע לאחר הרכישה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "he", "translation": "לא ניתן לבדוק את מצב הרכישה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "he", "translation": "לא ניתן לאמת את הרכישה דרך App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "he", "translation": "התאמת החזר כספי", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "he", "translation": "קיבלתם את בונוס הפרס של היום.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "he", "translation": "זמן אישור לצפייה בסרטון. נקודות יופיעו לאחר האישור.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "he", "translation": "כדי לראות את היתרה העדכנית, פתחו מחדש את המסך של ה-AI. אין צורך לצפות בסרטון שוב.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "he", "translation": "קיבלתי 5 נקודות.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "he", "translation": "סשן הסתיים. אנא התחברו שוב.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "he", "translation": "התחברתי באמצעות חשבון Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "he", "translation": "ניתן להשתמש ב-Apple כדי להירשם, ולקבל את נקודות ההתחלה הראשוניות. רישום ידני ניתן לשימוש ללא הרשמה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "he", "translation": "כדי להשתמש בתכונות ה-AI, אנא רשמו דרך Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "he", "translation": "מתחברים...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "he", "translation": "ניתן לקבל 20 נקודות בהרשמה דרך Apple. רישום ידני ניתן לשימוש ללא הרשמה.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "he", "translation": "ניתן לקבל 20 נקודות בהרשמה דרך Apple. אין דרישה לשירות או עדכונים אוטומטיים.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "he", "translation": "20 נקודות עם הרשמה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "he", "translation": "פרס וידאו", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "he", "translation": "מתנה מהמערכת", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "he", "translation": "רכישה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "he", "translation": "בונוס למי שמשתף פעולה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "he", "translation": "התחילו עם המאמן ה-AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "he", "translation": "קרדיטים ל-AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "he", "translation": "נא לחזור מאוחר יותר.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "he", "translation": "שימוש ללא הגבלה", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "he", "translation": "צפו בפרס וקבלו 5 קרדיטים", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "he", "translation": "דוח שבועי", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

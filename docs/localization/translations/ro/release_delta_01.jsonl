@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "ro", "translation": "Valoare estimată. Nu este o măsurătoare reală. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "ro", "translation": "Datorită lipsei de date recente, variația este estimată și poate avea o marjă.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "ro", "translation": "Bazat pe intervale generale pentru grupuri, în funcție de înălțime, greutate, vârstă și sex. Nu este o măsurătoare a procentului de grăsime corporală.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "ro", "translation": "Estimare", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "ro", "translation": "Valoare estimată ca referință", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "ro", "translation": "Valoare estimată, nu o măsurătoare reală. Se salvează doar dacă selectați această opțiune.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "ro", "translation": "Salvați valoarea estimată?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "ro", "translation": "Salvați ca estimare", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "ro", "translation": "{{value1}} {{value2}}. Nu suprascrie măsurătorile reale.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "ro", "translation": "Raporturi programate", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "ro", "translation": "Raport săptămânal", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "ro", "translation": "Ziua săptămânii", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "ro", "translation": "Raport lunar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "ro", "translation": "Data", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "ro", "translation": "{{value1}} zi(uri)", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "ro", "translation": "Ora notificării", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "ro", "translation": "Se generează automat la prima deschidere a aplicației după ora programată. Dacă nu se poate conecta la AI, se păstrează un rezumat local.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "ro", "translation": "Verificare setări necesară", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "ro", "translation": "Puteți încerca din nou", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "ro", "translation": "Utilizarea limitei", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "ro", "translation": "Limita nu a fost utilizată", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "ro", "translation": "Dovezi științifice {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "ro", "translation": "Din cauza lipsei de dovezi directe, se folosește ca ghid, bazat pe tendințele înregistrate.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "ro", "translation": "Nu s-au găsit dovezi directe pentru această sugestie.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "ro", "translation": "Din cauza imposibilității de a verifica, se recomandă pe baza înregistrărilor și a principiilor generale.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "ro", "translation": "Unitate de măsură pentru dimensiunea corpului", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

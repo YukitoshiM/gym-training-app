@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"vi","translation":"Bạn đã nhận được phản hồi từ huấn luyện viên AI.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"vi","translation":"Không thể gửi cho huấn luyện viên AI.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"vi","translation":"Đây là bài tập được đồng bộ từ Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"vi","translation":"Bạn có thể xem câu trả lời trong BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"vi","translation":"{{value1}} / {{value2}} đã đạt được. Hãy tiếp tục với tốc độ phù hợp và thoải mái.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"vi","translation":"{{value1}} {{value2}}/ {{value3}} · {{value4}}/ {{value5}} Lần","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"vi","translation":"{{value1}} không cần thay đổi, đây là lựa chọn của bạn.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"vi","translation":"{{value1}} Thời gian","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"vi","translation":"{{value1}} Bước","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"vi","translation":"{{value1}} Thực phẩm","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"vi","translation":"Thiết bị này không hỗ trợ phát hiện xung quanh.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"vi","translation":"Tôi đã đặt mục này thành \"không thực hiện hôm nay\".","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"vi","translation":"Chỉ cần một việc duy nhất là đủ.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"vi","translation":"Tại sao lại làm điều này?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"vi","translation":"Loại bài tập","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"vi","translation":"Vui lòng mở ứng dụng và thử lại.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"vi","translation":"Đã xóa địa điểm phòng tập.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"vi","translation":"Đã ghi nhận thời gian đến phòng tập.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"vi","translation":"Phát hiện khi đến khu vực phòng tập.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"vi","translation":"Chức năng tự động phát hiện phòng tập đã tắt.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"vi","translation":"Đã ghi nhận thời gian rời khỏi phòng tập.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"vi","translation":"Ép tạ","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"vi","translation":"Màu tối","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"vi","translation":"Ép","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"vi","translation":"Đánh dấu","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"vi","translation":"Đánh dấu","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"vi","translation":"Tôi đang tiếp tục tập luyện. Việc ghi lại quá trình phục hồi sẽ giúp cải thiện độ chính xác của việc điều chỉnh trong tuần tới.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"vi","translation":"Champagne đen","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"vi","translation":"Câu lạc bộ của tôi","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"vi","translation":"Người dùng đã thay đổi hoạt động hôm nay.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"vi","translation":"Tôi đã tạo lại đề xuất cho hôm nay dựa trên thao tác của người dùng.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"vi","translation":"Ánh sáng","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"vi","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"vi","translation":"Tăng","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"vi","translation":"Giảm","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"vi","translation":"1 lần hôm nay","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"vi","translation":"Đã hoàn thành 3 mục tiêu hôm nay. Sẽ đưa vào đề xuất cho ngày mai.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"vi","translation":"Lịch trình hôm nay","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"vi","translation":"Đã cập nhật đề xuất hôm nay","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"vi","translation":"Vị trí chưa được thiết lập","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"vi","translation":"Vị trí chưa được cấp quyền. Bạn có thể sử dụng chức năng check-in thủ công","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"vi","translation":"Vui lòng thử lại sau khi vị trí đã ổn định","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"vi","translation":"Trước tiên, hãy đăng ký địa điểm hiện tại là phòng tập","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"vi","translation":"Người mới bắt đầu: Bắt đầu từ toàn thân","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"vi","translation":"Không thể khôi phục lại dữ liệu huấn luyện AI trước đó.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"vi","translation":"Vui lòng gửi lại nội dung tương tự.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"vi","translation":"Ưu tiên khôi phục","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"vi","translation":"Nếu không thay đổi, hãy nhập khoảng trắng","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"vi","translation":"Đẩy tạ","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"vi","translation":"Đã cập nhật dữ liệu khôi phục mới và điều chỉnh đề xuất cho hôm nay theo hướng an toàn hơn.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"vi","translation":"Đã ghi lại hoạt động mới.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"vi","translation":"ID hiện tại","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"vi","translation":"Danh mục hiện có hoặc cần thiết","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"vi","translation":"Đã đăng ký vị trí hiện tại làm phòng tập của bạn","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"vi","translation":"Không thể lấy vị trí hiện tại","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"vi","translation":"Đang kiểm tra vị trí hiện tại","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"vi","translation":"Đã xem xét 3 hoạt động và 8 ghi chú ăn uống trong 7 ngày gần nhất.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"vi","translation":"Ghi chú về giấc ngủ còn thiếu","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"vi","translation":"Hãy ghi lại giấc ngủ trong 3 ngày và tiếp tục tập luyện 3 lần mỗi tuần.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"vi","translation":"Ghi lại giấc ngủ trong 3 ngày","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"vi","translation":"Thông minh, cao thượng, tiên tiến","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"vi","translation":"Nhận xét tổng quan ngắn gọn","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"vi","translation":"Hành động ngắn","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"vi","translation":"Ngực","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"vi","translation":"Tự động","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"vi","translation":"Bạn có thể đăng ký bằng cách cho phép ứng dụng truy cập vị trí trong cài đặt.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"vi","translation":"Tôi đã xem xét 3 chỉ số thể chất, 8 bữa ăn và 3 buổi tập luyện.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"vi","translation":"1 lần/tuần","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"vi","translation":"Hoàn thành 3 buổi tập mỗi tuần","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"vi","translation":"Tiếp tục tập luyện 3 buổi mỗi tuần","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"vi","translation":"Thoải mái, sang trọng, kích thích","review_note":""}

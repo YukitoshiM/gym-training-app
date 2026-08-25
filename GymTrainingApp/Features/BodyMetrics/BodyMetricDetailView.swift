@@ -6,6 +6,7 @@ struct BodyMetricDetailView: View {
     let kind: BodyMetricKind
 
     @State private var isShowingEntryEditor = false
+    @State private var editingEntry: BodyMetricEntry?
     @State private var isShowingGoalEditor = false
     @State private var chartMode: BodyMetricChartMode = .records
 
@@ -39,14 +40,14 @@ struct BodyMetricDetailView: View {
         switch chartMode {
         case .records:
             chartEntries.map {
-                BodyMetricChartPoint(date: $0.recordedAt, value: $0.value)
+                BodyMetricChartPoint(date: $0.recordedAt, value: kind.displayedValue(fromStored: $0.value))
             }
         case .weeklyAverage:
             weeklyAverages
                 .filter { $0.value.isFinite }
                 .sorted { $0.weekStart < $1.weekStart }
                 .map {
-                    BodyMetricChartPoint(date: $0.weekStart, value: $0.value)
+                    BodyMetricChartPoint(date: $0.weekStart, value: kind.displayedValue(fromStored: $0.value))
                 }
         }
     }
@@ -77,8 +78,8 @@ struct BodyMetricDetailView: View {
             .listRowSeparator(.hidden)
             .listRowBackground(Color.clear)
 
-            Section("推移") {
-                Picker("表示単位", selection: $chartMode) {
+            Section(L10n.string("health_meals_body_ai.ff23aa7afe29", fallback: "推移")) {
+                Picker(L10n.string("health_meals_body_ai.9cbe36a4ce6d", fallback: "表示単位"), selection: $chartMode) {
                     ForEach(BodyMetricChartMode.allCases) { mode in
                         Text(mode.displayName).tag(mode)
                     }
@@ -88,21 +89,21 @@ struct BodyMetricDetailView: View {
 
                 if chartPoints.isEmpty {
                     ContentUnavailableView {
-                        Label("記録がありません", systemImage: "chart.line.uptrend.xyaxis")
+                        Label(L10n.string("health_meals_body_ai.f82081bc2f90", fallback: "記録がありません"), systemImage: "chart.line.uptrend.xyaxis")
                     } description: {
-                        Text("値を追加すると、ここに推移が表示されます。")
+                        Text(L10n.string("health_meals_body_ai.23f03e95c0a1", fallback: "値を追加すると、ここに推移が表示されます。"))
                     }
                     .frame(minHeight: 180)
                 } else {
                     Chart(chartPoints) { point in
                         LineMark(
-                            x: .value("日付", point.date),
+                            x: .value(L10n.string("health_meals_body_ai.a339f925e565", fallback: "日付"), point.date),
                             y: .value(kind.displayName, point.value)
                         )
                         .interpolationMethod(.catmullRom)
 
                         PointMark(
-                            x: .value("日付", point.date),
+                            x: .value(L10n.string("health_meals_body_ai.a339f925e565", fallback: "日付"), point.date),
                             y: .value(kind.displayName, point.value)
                         )
                     }
@@ -114,28 +115,31 @@ struct BodyMetricDetailView: View {
             }
             .listRowBackground(AppTheme.cardBackground)
 
-            Section("週次平均") {
+            Section(L10n.string("health_meals_body_ai.d7b486554fb6", fallback: "週次平均")) {
                 if weeklyAverages.isEmpty {
-                    Text("週次平均はまだありません。")
+                    Text(L10n.string("health_meals_body_ai.eb495142430b", fallback: "週次平均はまだありません。"))
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     ForEach(weeklyAverages) { average in
                         LabeledContent(
                             AppFormatters.shortDate.string(from: average.weekStart),
-                            value: "\(AppFormatters.metricValue(average.value, unit: kind.unit)) / \(average.count)件"
+                            value: L10n.string("health_meals_body_ai.1edd54ba3719", fallback: "{{value1}} / {{value2}}件", values: [String(describing: AppFormatters.metricValue(average.value, unit: kind.unit)), String(describing: average.count)])
                         )
                     }
                 }
             }
             .listRowBackground(AppTheme.cardBackground)
 
-            Section("記録") {
+            Section(L10n.string("health_meals_body_ai.88346340fae8", fallback: "記録")) {
                 if entries.isEmpty {
-                    Text("まだ記録がありません。")
+                    Text(L10n.string("health_meals_body_ai.33b6f5aef21f", fallback: "まだ記録がありません。"))
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
                     ForEach(entries) { entry in
-                        VStack(alignment: .leading, spacing: 4) {
+                        Button {
+                            editingEntry = entry
+                        } label: {
+                            VStack(alignment: .leading, spacing: 4) {
                             HStack {
                                 Text(AppFormatters.metricValue(entry.value, unit: kind.unit))
                                     .font(.headline)
@@ -149,7 +153,9 @@ struct BodyMetricDetailView: View {
                                     .font(.footnote)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
+                            }
                         }
+                        .buttonStyle(.plain)
                         .padding(.vertical, 4)
                     }
                     .onDelete { offsets in
@@ -169,19 +175,22 @@ struct BodyMetricDetailView: View {
                 } label: {
                     Image(systemName: "target")
                 }
-                .accessibilityLabel("目標設定")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.7b0fb61cbb59", fallback: "目標設定"))
 
                 Button {
                     isShowingEntryEditor = true
                 } label: {
                     Image(systemName: "plus")
                 }
-                .accessibilityLabel("KPIを記録")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.d957869454ea", fallback: "KPIを記録"))
                 .accessibilityIdentifier("addBodyMetricEntryButton")
             }
         }
         .sheet(isPresented: $isShowingEntryEditor) {
             BodyMetricEntryEditorView(kind: kind)
+        }
+        .sheet(item: $editingEntry) { entry in
+            BodyMetricEntryEditorView(kind: kind, entry: entry)
         }
         .sheet(isPresented: $isShowingGoalEditor) {
             BodyMetricGoalEditorView(kind: kind)
@@ -197,8 +206,8 @@ private enum BodyMetricChartMode: String, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .records: "記録"
-        case .weeklyAverage: "週平均"
+        case .records: L10n.string("health_meals_body_ai.88346340fae8", fallback: "記録")
+        case .weeklyAverage: L10n.string("health_meals_body_ai.debfca7f8b6f", fallback: "週平均")
         }
     }
 }
@@ -252,26 +261,26 @@ private struct CurrentBodyMetricSummary: View {
 
                     if let targetValue = goal.targetValue {
                         VStack(spacing: 8) {
-                            LabeledContent("目標", value: AppFormatters.metricValue(targetValue, unit: kind.unit))
+                            LabeledContent(L10n.string("health_meals_body_ai.f8497f20e519", fallback: "目標"), value: AppFormatters.metricValue(targetValue, unit: kind.unit))
 
                             if let delta = goal.delta(from: latestEntry.value) {
-                                LabeledContent("目標差", value: deltaText(delta))
+                                LabeledContent(L10n.string("health_meals_body_ai.892855ade115", fallback: "目標差"), value: deltaText(delta))
                             }
 
                             if let rate = goal.achievementRate(from: latestEntry.value) {
-                                LabeledContent("達成率", value: AppFormatters.percent(rate))
+                                LabeledContent(L10n.string("health_meals_body_ai.dad988a8437f", fallback: "達成率"), value: AppFormatters.percent(rate))
                             }
                         }
                         .font(.subheadline)
                     } else {
-                        Text("目標値を設定すると、差分と達成率を表示します。")
+                        Text(L10n.string("health_meals_body_ai.f9c18792e243", fallback: "目標値を設定すると、差分と達成率を表示します。"))
                             .font(.subheadline)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 } else {
-                    Text("未記録")
+                    Text(L10n.string("health_meals_body_ai.220b27fdd9bd", fallback: "未記録"))
                         .font(.title2.bold())
-                    Text("最初の値を記録すると、推移と目標差分を確認できます。")
+                    Text(L10n.string("health_meals_body_ai.6c466f96ae9a", fallback: "最初の値を記録すると、推移と目標差分を確認できます。"))
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
                 }

@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"da","translation":"Vælg det nærmeste","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"da","translation":"Når du har fastsat dit mål, skal du kun udføre 3 ting hver dag","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"da","translation":"Afslut første træning","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"da","translation":"Registrer den første værdi","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"da","translation":"Op til 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"da","translation":"Ufyldte felter kan tilføjes senere fra registreringsskærmen.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"da","translation":"Ikke fuldført","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"da","translation":"Ikke udført","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"da","translation":"Ikke registreret","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"da","translation":"Ikke konfigureret","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"da","translation":"Ikke valgt","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"da","translation":"Gå videre til menuer efter formål","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"da","translation":"Næste","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"da","translation":"Se antal skridt","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"da","translation":"Vægttab","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"da","translation":"Kulhydrater","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"da","translation":"Ugyldigt","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"da","translation":"Indstil et passende antal og tid","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"da","translation":"Især vigtigt","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"da","translation":"Find ud af din nuværende tilstand og næste trin","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"da","translation":"Tjek status","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"da","translation":"Nu","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"da","translation":"Aktuelt kropsinformation","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"da","translation":"Ikke tilgængeligt i øjeblikket","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"da","translation":"Brugte de data, der er indsamlet nu.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"da","translation":"Valgt: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"da","translation":"Kom videre mod din ideelle krop, uden at tøve.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"da","translation":"Årsag","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"da","translation":"Årsag: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"da","translation":"Fødselsår","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"da","translation":"Start guide","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"da","translation":"Registrerede opsætninger {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"da","translation":"Ønsket tilstand","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"da","translation":"Ønsket stil","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"da","translation":"Mål","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"da","translation":"Mål {{value1}} / Forskydning {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"da","translation":"Mål og tempo","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"da","translation":"Mål og resultater","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"da","translation":"Mulige justeringer af mål","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"da","translation":"Ingen mål sat","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"da","translation":"Målopnåelse","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"da","translation":"Formål","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"da","translation":"Vi har to personer til hvert formål. Ved at ændre personen, ændres også den ønskede kropsform og måden, man taler på.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"da","translation":"Den rette person til formålet","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"da","translation":"Vi skifter hjemmeside-punkter og næste handling i henhold til formålet.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"da","translation":"Ændr formål","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"da","translation":"Vælg formål","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"da","translation":"Formålstilstand","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"da","translation":"Formål og mål","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"da","translation":"Formålsspecifik menu er blevet låst op","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"da","translation":"Se formålsspecifik menu","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"da","translation":"Seneste","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"da","translation":"Rediger med rådgivning","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"da","translation":"Energibesparende prøvetagning","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"da","translation":"Start {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"da","translation":"Søvn og restitution","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"da","translation":"Under gennemgang","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"da","translation":"Sekund","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"da","translation":"Antal sekunder","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"da","translation":"Find eller tilføj øvelse","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"da","translation":"Brug kortvarig autentificering, der er specifik for enheden.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"da","translation":"Indenfor enheden","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"da","translation":"Konkurrenceevne","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"da","translation":"Styrketræning","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"da","translation":"Forbind styrke, udholdenhed og restitution med konkurrencen","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"da","translation":"Øg muskelmasse og træningsresultater","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"da","translation":"Muskeltilvækst","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"da","translation":"Erfaring","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"da","translation":"Erfaringsniveau","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"da","translation":"Et tempo, du kan opretholde","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"da","translation":"Dette er ikke en vurdering af evner eller kvalifikationer. Det angiver de aspekter, der prioriteres i svaret.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"da","translation":"Fedt","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"da","translation":"Taljelængde","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"da","translation":"Taljelængde - valgfrit","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"da","translation":"Lær opførSELSmønstre","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"da","translation":"Opførselsnotifikationer","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"da","translation":"Visning","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"da","translation":"Visningsmode","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"da","translation":"Visningsmetode","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"da","translation":"Visningsstrategi","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"da","translation":"Model ikke forbundet","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"da","translation":"Bemærkninger","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"da","translation":"Bemærk: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"da","translation":"Planlægning","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"da","translation":"Slet plan, historik, kropsmålinger, kost, billeder, AI-samtale og hukommelse, samt brugerdefinerede indstillinger.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"da","translation":"Start med en plan, eller tilføj øvelser på stedet og noter dem.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"da","translation":"Tilføj øvelser uden en plan","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"da","translation":"Inkluder i planen","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"da","translation":"Opret en plan","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"da","translation":"Lad os oprette en plan","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"da","translation":"Planlægning/Overvågning","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"da","translation":"Vil du opdatere det planlagte vægt?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"da","translation":"Registrering","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"da","translation":"Registrer","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"da","translation":"Registrer. Spørg AI'en. Udfør. Du kan kun gøre 3 ting hver dag.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"da","translation":"Tryk på den post, du vil registrere","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"da","translation":"Resultaterne af registreringen og udførelsen overføres til næste AI-analyse. Den første handling guider dig gennem missionerne i hovedmenuen.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"da","translation":"Registreringer gemmes her","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"da","translation":"Jeg undersøger dine registreringer. Du kan fortsætte, selvom du lukker skærmen.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"da","translation":"Se dine registreringer og få forslag til næste handling","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"da","translation":"Registreret","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"da","translation":"Baseret på dine registreringer, vil jeg foreslå positive ændringer, stagnation eller manglende information samt næste skridt.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"da","translation":"Registreret","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"da","translation":"Indstillinger","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"da","translation":"Indstillet","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"da","translation":"Diagnoseloggen indeholder oplysninger om iPhone og Apple Watch's funktion, kommunikation og træningsaktiviteter. Den sendes ikke automatisk til eksterne enheder.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"da","translation":"Slet diagnoselog","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"da","translation":"Eksportér diagnoselog","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"da","translation":"Send diagnoselog","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"da","translation":"Tal med en ekspert","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"da","translation":"Se mere","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"da","translation":"Misforståelser","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"da","translation":"Kropsmålinger","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"da","translation":"Højde","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"da","translation":"Højde - valgfri","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"da","translation":"Hvis du er i tvivl, så se her","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"da","translation":"Tilføj","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"da","translation":"Tilføj","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"da","translation":"Start med dette","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"da","translation":"Send","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"da","translation":"Afventer sending","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"da","translation":"Vælg det fitnesscenter eller udstyr, du bruger.","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"da","translation":"Jeg vil kontrollere dine data, når forbindelsen er etableret.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"da","translation":"Antal gange om ugen","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"da","translation":"Hvor mange gange om ugen kan du træne?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"da","translation":"Fremgangsmåde","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"da","translation":"I gang","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"da","translation":"Oprethold vanen med motion, søvn og kost.","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"da","translation":"Vælg: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"da","translation":"Valg i gang","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"da","translation":"Distribution","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"da","translation":"Indlæs AI-indstillinger ved distribution.","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"da","translation":"Fokusområde","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"da","translation":"Vægt","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"da","translation":"Angiv vægt med en slider","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"da","translation":"Enhed for vægt","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"da","translation":"Lukker","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"da","translation":"Luk","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"da","translation":"Start","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"da","translation":"Relateret information","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"da","translation":"Kost","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"da","translation":"Kost og kropsform","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"da","translation":"Kost og kropsform vises på billeder. Vægt, taljeomfang og antallet registreres som tal.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"da","translation":"Registrer kost","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"da","translation":"Antal måltider","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"da","translation":"Opnåede antal måltider og kalorie- og PFC-målinger vises separat.","review_note":""}

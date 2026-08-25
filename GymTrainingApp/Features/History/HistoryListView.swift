@@ -51,10 +51,10 @@ struct HistoryListView: View {
                                 .font(.system(size: 48, weight: .semibold))
                                 .foregroundStyle(AppTheme.mutedInk)
                                 .accessibilityHidden(true)
-                            Text("履歴はまだありません")
+                            Text(L10n.string("training.2d6bc7bc380f", fallback: "履歴はまだありません"))
                                 .font(.title2.bold())
                                 .foregroundStyle(AppTheme.ink)
-                            Text("記録した内容を日別に見返せます。")
+                            Text(L10n.string("training.bbb6e51d140e", fallback: "記録した内容を日別に見返せます。"))
                                 .font(.body)
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
@@ -75,7 +75,7 @@ struct HistoryListView: View {
 
                             if let selectedDate {
                                 VStack(alignment: .leading, spacing: 8) {
-                                    Text("選択日のまとめ")
+                                    Text(L10n.string("training.43ab6b5ca1ab", fallback: "選択日のまとめ"))
                                         .font(.footnote.bold())
                                         .foregroundStyle(AppTheme.mutedInk)
 
@@ -95,7 +95,7 @@ struct HistoryListView: View {
                                     Spacer()
 
                                     if selectedDate != nil {
-                                        Button("すべて") {
+                                        Button(L10n.string("training.c7fe2b510de0", fallback: "すべて")) {
                                             selectedDate = nil
                                         }
                                         .font(.footnote.bold())
@@ -103,7 +103,7 @@ struct HistoryListView: View {
                                 }
 
                                 if visibleSessions.isEmpty {
-                                    Text(selectedDate == nil ? "トレーニング履歴はありません" : "この日のトレーニングはありません")
+                                    Text(selectedDate == nil ? L10n.string("training.7e246c7e390c", fallback: "トレーニング履歴はありません") : L10n.string("training.8a729334a0cc", fallback: "この日のトレーニングはありません"))
                                         .font(.subheadline)
                                         .foregroundStyle(AppTheme.mutedInk)
                                         .frame(maxWidth: .infinity, alignment: .center)
@@ -117,7 +117,7 @@ struct HistoryListView: View {
                                     .buttonStyle(.plain)
                                     .accessibilityIdentifier("historyRow-\(session.title)")
                                     .contextMenu {
-                                        Button("削除", role: .destructive) {
+                                        Button(L10n.string("training.ac806fcfe196", fallback: "削除"), role: .destructive) {
                                             pendingDeleteSession = session
                                         }
                                     }
@@ -127,20 +127,33 @@ struct HistoryListView: View {
                             if !appStore.workoutHistory.isEmpty {
                                 VStack(alignment: .leading, spacing: 10) {
                                     VStack(alignment: .leading, spacing: 3) {
-                                        Text("分析")
+                                        Text(L10n.string("training.172f4e4cd7d1", fallback: "分析"))
                                             .font(.headline)
                                             .foregroundStyle(AppTheme.ink)
-                                        Text("蓄積した記録を期間・種目・センサー別に確認")
+                                        Text(L10n.string("training.cb5d23c702e0", fallback: "蓄積した記録を期間・種目・センサー別に確認"))
                                             .font(.footnote)
                                             .foregroundStyle(AppTheme.mutedInk)
                                     }
 
                                     VStack(spacing: 0) {
                                         NavigationLink {
+                                            HistoryPeriodComparisonView()
+                                        } label: {
+                                            HistoryAnalyticsLink(
+                                                title: L10n.string("training.history_period_comparison", fallback: "期間比較"),
+                                                systemImage: "calendar.badge.clock"
+                                            )
+                                        }
+                                        .accessibilityIdentifier("historyPeriodComparisonLink")
+
+                                        Divider()
+                                            .padding(.leading, 44)
+
+                                        NavigationLink {
                                             WeeklyVolumeView()
                                         } label: {
                                             HistoryAnalyticsLink(
-                                                title: "週次ボリューム分析",
+                                                title: L10n.string("training.79469f04a73c", fallback: "週次ボリューム分析"),
                                                 systemImage: "chart.bar.xaxis"
                                             )
                                         }
@@ -153,7 +166,7 @@ struct HistoryListView: View {
                                             ExerciseHistoryListView()
                                         } label: {
                                             HistoryAnalyticsLink(
-                                                title: "種目別履歴",
+                                                title: L10n.string("training.f3db21504894", fallback: "種目別履歴"),
                                                 systemImage: "dumbbell"
                                             )
                                         }
@@ -166,7 +179,7 @@ struct HistoryListView: View {
                                             SensorTrainingAnalysisView()
                                         } label: {
                                             HistoryAnalyticsLink(
-                                                title: "Watchセンサー分析",
+                                                title: L10n.string("training.71d42af1e263", fallback: "Watchセンサー分析"),
                                                 systemImage: "heart.text.square"
                                             )
                                         }
@@ -190,26 +203,26 @@ struct HistoryListView: View {
                     .background(TrainingBackground())
                 }
             }
-            .navigationTitle("履歴")
+            .navigationTitle(L10n.string("training.6157f8cd2251", fallback: "履歴"))
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: WorkoutSession.self) { session in
                 HistoryDetailView(session: session)
             }
             .confirmationDialog(
-                "この履歴を削除しますか？",
+                L10n.string("training.5a03b277c63d", fallback: "この履歴を削除しますか？"),
                 isPresented: Binding(
                     get: { pendingDeleteSession != nil },
                     set: { if !$0 { pendingDeleteSession = nil } }
                 ),
                 titleVisibility: .visible
             ) {
-                Button("削除", role: .destructive) {
+                Button(L10n.string("training.ac806fcfe196", fallback: "削除"), role: .destructive) {
                     if let pendingDeleteSession {
                         appStore.deleteWorkout(pendingDeleteSession)
                     }
                     pendingDeleteSession = nil
                 }
-                Button("キャンセル", role: .cancel) {
+                Button(L10n.string("training.76c1a8f001dd", fallback: "キャンセル"), role: .cancel) {
                     pendingDeleteSession = nil
                 }
             }
@@ -218,7 +231,7 @@ struct HistoryListView: View {
 
     private var selectedDateTitle: String {
         guard let selectedDate else {
-            return "すべての記録"
+            return L10n.string("training.1c72d399dbcb", fallback: "すべての記録")
         }
 
         return AppFormatters.shortDate.string(from: selectedDate)
@@ -319,7 +332,7 @@ private struct WorkoutCalendarView: View {
     let summaries: [DailyLogSummary]
 
     private let calendar = Calendar.current
-    private let weekdays = ["日", "月", "火", "水", "木", "金", "土"]
+    private let weekdays = [L10n.string("training.3064c4117490", fallback: "日"), L10n.string("training.f29b58714fe0", fallback: "月"), L10n.string("training.29166d008ccd", fallback: "火"), L10n.string("training.d34df1b5c392", fallback: "水"), L10n.string("training.0ec9a1b0cd59", fallback: "木"), L10n.string("training.78d7f266fb1e", fallback: "金"), L10n.string("training.bb83fd66413b", fallback: "土")]
 
     var body: some View {
         let days = calendarDays
@@ -346,7 +359,7 @@ private struct WorkoutCalendarView: View {
                         Image(systemName: "chevron.left")
                             .frame(width: 44, height: 44)
                     }
-                    .accessibilityLabel("前の月")
+                    .accessibilityLabel(L10n.string("training.0d59a64e0167", fallback: "前の月"))
 
                     Button {
                         moveMonth(by: 1)
@@ -354,7 +367,7 @@ private struct WorkoutCalendarView: View {
                         Image(systemName: "chevron.right")
                             .frame(width: 44, height: 44)
                     }
-                    .accessibilityLabel("次の月")
+                    .accessibilityLabel(L10n.string("training.e7954b54321d", fallback: "次の月"))
                 }
                 .buttonStyle(.borderless)
                 .foregroundStyle(AppTheme.ink)
@@ -411,7 +424,7 @@ private struct WorkoutCalendarView: View {
                 }
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel("記録種別、筋トレ、身体、食事、写真、ジム")
+            .accessibilityLabel(L10n.string("training.f71407d1df3f", fallback: "記録種別、筋トレ、身体、食事、写真、ジム"))
         }
         .padding(16)
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: AppTheme.cardRadius))
@@ -423,7 +436,7 @@ private struct WorkoutCalendarView: View {
     }
 
     private var monthTitle: String {
-        displayedMonth.formatted(.dateTime.year().month(.wide).locale(Locale(identifier: "ja_JP")))
+        displayedMonth.formatted(.dateTime.year().month(.wide).locale(.autoupdatingCurrent))
     }
 
     private var calendarDays: [CalendarDay] {
@@ -480,11 +493,11 @@ private enum CalendarRecordKind: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .workout: "筋トレ"
-        case .bodyMetric: "身体"
-        case .meal: "食事"
-        case .bodyPhoto: "写真"
-        case .gymVisit: "ジム"
+        case .workout: L10n.string("training.0902af066756", fallback: "筋トレ")
+        case .bodyMetric: L10n.string("training.f7f7fa19af19", fallback: "身体")
+        case .meal: L10n.string("training.98bedebd5bd9", fallback: "食事")
+        case .bodyPhoto: L10n.string("training.7cbb717aa7f1", fallback: "写真")
+        case .gymVisit: L10n.string("training.1f24d20a2866", fallback: "ジム")
         }
     }
 
@@ -571,14 +584,14 @@ private struct CalendarDayButton: View {
     }
     private var accessibilityLabel: String {
         let date = day.date.formatted(
-            .dateTime.month().day().weekday(.wide).locale(Locale(identifier: "ja_JP"))
+            .dateTime.month().day().weekday(.wide).locale(.autoupdatingCurrent)
         )
         if totalLogCount == 0 {
-            return "\(date)、記録なし"
+            return L10n.string("training.4547089161d9", fallback: "{{value1}}、記録なし", values: [String(describing: date)])
         }
 
         let details = recordKinds
-            .map { "\($0.title)\($0.count(in: summary))件" }
+            .map { L10n.string("training.4fbc27d5b179", fallback: "{{value1}}{{value2}}件", values: [String(describing: $0.title), String(describing: $0.count(in: summary))]) }
             .joined(separator: "、")
         return "\(date)、\(details)"
     }
@@ -629,7 +642,7 @@ private struct DailyJournalSummaryCard: View {
 
                     Spacer()
 
-                    Text("\(summary.totalLogCount)件")
+                    Text(L10n.string("training.c3bdfc0865be", fallback: "{{value1}}件", values: [summary.totalLogCount.formatted()]))
                         .font(.footnote.bold())
                         .foregroundStyle(summary.totalLogCount > 0 ? AppTheme.ink : AppTheme.mutedInk)
                         .padding(.horizontal, 10)
@@ -643,15 +656,15 @@ private struct DailyJournalSummaryCard: View {
                 Grid(horizontalSpacing: 8, verticalSpacing: 8) {
                     GridRow {
                         DailyJournalStat(
-                            title: "身体",
-                            value: "\(summary.bodyMetricEntries.count)件",
+                            title: L10n.string("training.f7f7fa19af19", fallback: "身体"),
+                            value: L10n.string("training.c3bdfc0865be", fallback: "{{value1}}件", values: [summary.bodyMetricEntries.count.formatted()]),
                             systemImage: "scalemass",
                             tint: AppTheme.blue
                         )
 
                         DailyJournalStat(
-                            title: "食事",
-                            value: summary.meals.isEmpty ? "0件" : AppFormatters.calories(summary.totalCalories),
+                            title: L10n.string("training.98bedebd5bd9", fallback: "食事"),
+                            value: summary.meals.isEmpty ? L10n.string("training.593a06e5b8ca", fallback: "0件") : AppFormatters.calories(summary.totalCalories),
                             systemImage: "fork.knife",
                             tint: AppTheme.orange
                         )
@@ -659,15 +672,15 @@ private struct DailyJournalSummaryCard: View {
 
                     GridRow {
                         DailyJournalStat(
-                            title: "写真",
-                            value: "\(summary.bodyPhotoSets.count)セット",
+                            title: L10n.string("training.7cbb717aa7f1", fallback: "写真"),
+                            value: L10n.string("training.a6a1cc3a4bfc", fallback: "{{value1}}セット", values: [String(describing: summary.bodyPhotoSets.count)]),
                             systemImage: "camera",
                             tint: AppTheme.purple
                         )
 
                         DailyJournalStat(
-                            title: "トレーニング",
-                            value: summary.workouts.isEmpty ? "0件" : AppFormatters.volume(summary.totalVolume, unit: weightUnit),
+                            title: L10n.string("training.d76c7025a2c6", fallback: "トレーニング"),
+                            value: summary.workouts.isEmpty ? L10n.string("training.593a06e5b8ca", fallback: "0件") : AppFormatters.volume(summary.totalVolume, unit: weightUnit),
                             systemImage: "dumbbell",
                             tint: AppTheme.accent
                         )
@@ -675,8 +688,8 @@ private struct DailyJournalSummaryCard: View {
 
                     GridRow {
                         DailyJournalStat(
-                            title: "ジム訪問",
-                            value: "\(summary.gymVisits.count)回",
+                            title: L10n.string("training.17ca9a7a2745", fallback: "ジム訪問"),
+                            value: L10n.string("training.b76f27bcd552", fallback: "{{value1}}回", values: [String(describing: summary.gymVisits.count)]),
                             systemImage: "mappin.and.ellipse",
                             tint: AppTheme.tertiaryAccent
                         )
@@ -689,9 +702,9 @@ private struct DailyJournalSummaryCard: View {
                 Divider()
 
                 VStack(alignment: .leading, spacing: 12) {
-                    journalSectionHeader("身体測定", systemImage: "scalemass", tint: AppTheme.blue)
+                    journalSectionHeader(L10n.string("training.b4ec903162bc", fallback: "身体測定"), systemImage: "scalemass", tint: AppTheme.blue)
                     if summary.bodyMetricEntries.isEmpty {
-                        DailyJournalEmptyLine(text: "身体測定は未記録")
+                        DailyJournalEmptyLine(text: L10n.string("training.04d1487f6347", fallback: "身体測定は未記録"))
                     } else {
                         ForEach(summary.bodyMetricEntries) { entry in
                             DailyJournalLine(
@@ -702,11 +715,11 @@ private struct DailyJournalSummaryCard: View {
                         }
                     }
 
-                    journalSectionHeader("食事", systemImage: "fork.knife", tint: AppTheme.orange)
+                    journalSectionHeader(L10n.string("training.98bedebd5bd9", fallback: "食事"), systemImage: "fork.knife", tint: AppTheme.orange)
                     if summary.meals.isEmpty {
-                        DailyJournalEmptyLine(text: "食事は未記録")
+                        DailyJournalEmptyLine(text: L10n.string("training.2f46f8d9486a", fallback: "食事は未記録"))
                     } else {
-                        Text("合計 \(AppFormatters.calories(summary.totalCalories)) / P \(AppFormatters.grams(summary.totalProtein)) F \(AppFormatters.grams(summary.totalFat)) C \(AppFormatters.grams(summary.totalCarbs))")
+                        Text(L10n.string("training.ed9a0cee2df7", fallback: "合計 {{value1}} / P {{value2}} F {{value3}} C {{value4}}", values: [String(describing: AppFormatters.calories(summary.totalCalories)), String(describing: AppFormatters.grams(summary.totalProtein)), String(describing: AppFormatters.grams(summary.totalFat)), String(describing: AppFormatters.grams(summary.totalCarbs))]))
                             .font(.footnote.bold())
                             .foregroundStyle(AppTheme.ink)
 
@@ -719,42 +732,42 @@ private struct DailyJournalSummaryCard: View {
                         }
                     }
 
-                    journalSectionHeader("体型写真", systemImage: "camera", tint: AppTheme.purple)
+                    journalSectionHeader(L10n.string("training.d7d8f0d93063", fallback: "体型写真"), systemImage: "camera", tint: AppTheme.purple)
                     if summary.bodyPhotoSets.isEmpty {
-                        DailyJournalEmptyLine(text: "体型写真は未記録")
+                        DailyJournalEmptyLine(text: L10n.string("training.82865627f395", fallback: "体型写真は未記録"))
                     } else {
                         ForEach(summary.bodyPhotoSets) { set in
-                            let angles = set.angleEntries.map(\.angle.displayName).joined(separator: "・")
-                            let angleSummary = angles.isEmpty ? "写真なし" : angles
+                            let angles = set.angleEntries.map(\.angle.displayName).joined(separator: L10n.string("training.a2333d5b2d78", fallback: "・"))
+                            let angleSummary = angles.isEmpty ? L10n.string("training.9fc01e5510fb", fallback: "写真なし") : angles
                             DailyJournalLine(
-                                title: "\(set.photoEntries.count)枚（\(angleSummary)）",
-                                detail: set.memo.isEmpty ? "撮影セット" : set.memo,
+                                title: L10n.string("training.ccf4abb42a0e", fallback: "{{value1}}枚（{{value2}}）", values: [String(describing: set.photoEntries.count), String(describing: angleSummary)]),
+                                detail: set.memo.isEmpty ? L10n.string("training.ecbfec695cfb", fallback: "撮影セット") : set.memo,
                                 footnote: set.analysis?.summary ?? AppFormatters.shortDateTime.string(from: set.recordedAt)
                             )
                         }
                     }
 
-                    journalSectionHeader("トレーニング", systemImage: "dumbbell", tint: AppTheme.accent)
+                    journalSectionHeader(L10n.string("training.d76c7025a2c6", fallback: "トレーニング"), systemImage: "dumbbell", tint: AppTheme.accent)
                     if summary.workouts.isEmpty {
-                        DailyJournalEmptyLine(text: "トレーニングは未記録")
+                        DailyJournalEmptyLine(text: L10n.string("training.e7426ea8f8c7", fallback: "トレーニングは未記録"))
                     } else {
                         ForEach(summary.workouts) { workout in
                             DailyJournalLine(
                                 title: workout.title,
                                 detail: AppFormatters.volume(workout.totalVolume, unit: weightUnit),
-                                footnote: "達成率 \(AppFormatters.percent(workout.achievementRate))"
+                                footnote: L10n.string("training.f3374f25ffb6", fallback: "達成率 {{value1}}", values: [String(describing: AppFormatters.percent(workout.achievementRate))])
                             )
                         }
                     }
 
-                    journalSectionHeader("ジム訪問", systemImage: "mappin.and.ellipse", tint: AppTheme.tertiaryAccent)
+                    journalSectionHeader(L10n.string("training.17ca9a7a2745", fallback: "ジム訪問"), systemImage: "mappin.and.ellipse", tint: AppTheme.tertiaryAccent)
                     if summary.gymVisits.isEmpty {
-                        DailyJournalEmptyLine(text: "ジム訪問は未記録")
+                        DailyJournalEmptyLine(text: L10n.string("training.be1f44fd2a48", fallback: "ジム訪問は未記録"))
                     } else {
                         ForEach(summary.gymVisits) { visit in
                             DailyJournalLine(
-                                title: "ジム到着",
-                                detail: visit.departedAt.map { formatVisitDuration(from: visit.arrivedAt, to: $0) } ?? "滞在中",
+                                title: L10n.string("training.89e769e459b9", fallback: "ジム到着"),
+                                detail: visit.departedAt.map { formatVisitDuration(from: visit.arrivedAt, to: $0) } ?? L10n.string("training.57ea66302bcf", fallback: "滞在中"),
                                 footnote: AppFormatters.shortDateTime.string(from: visit.arrivedAt)
                             )
                         }
@@ -781,9 +794,9 @@ private struct DailyJournalSummaryCard: View {
 private func formatVisitDuration(from start: Date, to end: Date) -> String {
     let minutes = max(0, Int(end.timeIntervalSince(start) / 60))
     if minutes < 60 {
-        return "\(minutes)分"
+        return L10n.string("training.2c02454ec433", fallback: "{{value1}}分", values: [String(describing: minutes)])
     }
-    return "\(minutes / 60)時間\(minutes % 60)分"
+    return L10n.string("training.bb1a78b0b78c", fallback: "{{value1}}時間{{value2}}分", values: [String(describing: minutes / 60), String(describing: minutes % 60)])
 }
 
 private struct DailyJournalStat: View {
@@ -879,22 +892,33 @@ private struct HistoryRow: View {
 
                     Spacer()
 
-                    Text(AppFormatters.percent(session.achievementRate))
+                    Text(session.outdoorCardio == nil ? AppFormatters.percent(session.achievementRate) : cardioGoalProgress)
                         .font(.headline.bold())
                         .foregroundStyle(AppTheme.accent)
                 }
 
-                HStack(spacing: 10) {
-                    Label(AppFormatters.volume(session.totalVolume, unit: appStore.userProfile.weightUnit), systemImage: "scalemass")
-                    Label("\(session.exercises.count)種目", systemImage: "dumbbell")
-                    Label("\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist")
-                }
-                .font(.footnote)
-                .foregroundStyle(AppTheme.mutedInk)
+                if let cardio = session.outdoorCardio {
+                    HStack(spacing: 10) {
+                        Label(AppFormatters.distance(kilometers: cardio.distanceKilometers), systemImage: "point.topleft.down.to.point.bottomright.curvepath")
+                        if let pace = cardio.averagePaceSecondsPerKilometer {
+                            Label(AppFormatters.pace(secondsPerKilometer: pace), systemImage: "speedometer")
+                        }
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.mutedInk)
+                } else {
+                    HStack(spacing: 10) {
+                        Label(AppFormatters.volume(session.totalVolume, unit: appStore.userProfile.weightUnit), systemImage: "scalemass")
+                        Label(L10n.string("training.70d17961dda6", fallback: "{{value1}}種目", values: [String(describing: session.exercises.count)]), systemImage: "dumbbell")
+                        Label("\(session.completedPlannedSetCount)/\(session.plannedSetCount)", systemImage: "checklist")
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.mutedInk)
 
-                Text("目標差 \(AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit))")
-                    .font(.footnote.bold())
-                    .foregroundStyle(session.volumeDelta >= 0 ? AppTheme.positive : AppTheme.orange)
+                    Text(L10n.string("training.7f60357273d2", fallback: "目標差 {{value1}}", values: [String(describing: AppFormatters.signedVolume(session.volumeDelta, unit: appStore.userProfile.weightUnit))]))
+                        .font(.footnote.bold())
+                        .foregroundStyle(session.volumeDelta >= 0 ? AppTheme.positive : AppTheme.orange)
+                }
 
                 VStack(spacing: 5) {
                     ForEach(session.exercises) { exercise in
@@ -904,7 +928,7 @@ private struct HistoryRow: View {
 
                             Spacer(minLength: 8)
 
-                            Text(exercise.isSkipped ? "スキップ" : "\(exercise.completedSetCount)セット・\(exercise.completedRepCount)回")
+                            Text(exercise.isSkipped ? L10n.string("training.17135f0f1ac6", fallback: "スキップ") : L10n.string("training.7ccbd585d5ee", fallback: "{{value1}}セット・{{value2}}回", values: [String(describing: exercise.completedSetCount), String(describing: exercise.completedRepCount)]))
                                 .foregroundStyle(exercise.isSkipped ? AppTheme.mutedInk : AppTheme.ink)
                         }
                         .accessibilityIdentifier("historyExerciseResult-\(exercise.sortOrder)")
@@ -915,6 +939,13 @@ private struct HistoryRow: View {
             }
         }
         .padding(.vertical, 3)
+    }
+
+    private var cardioGoalProgress: String {
+        guard let cardio = session.outdoorCardio else { return "-" }
+        let duration = session.sensorSummary?.durationSeconds
+            ?? max(0, (session.endedAt ?? Date()).timeIntervalSince(session.startedAt))
+        return cardio.progress(elapsedSeconds: duration).map(AppFormatters.percent) ?? "-"
     }
 }
 

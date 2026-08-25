@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"es-MX","translation":"Esta es una sugerencia basada en los datos introducidos, y no constituye un diagnóstico médico. Si tiene dudas sobre su estado de salud o dolor, consulte a un profesional.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"es-MX","translation":"Resumen de datos introducidos","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"es-MX","translation":"Método de introducción","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"es-MX","translation":"No hay elementos para compartir","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"es-MX","translation":"Revise el contenido y, si es necesario, modifíquelo antes de guardar. El objetivo no se determinará automáticamente.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"es-MX","translation":"Se requiere una nueva análisis","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"es-MX","translation":"Reintentar","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"es-MX","translation":"Foto","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"es-MX","translation":"Rango de referencia de la foto","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"es-MX","translation":"Estimar calorías a partir de una foto","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"es-MX","translation":"Crea un borrador a partir de una foto y reduce el esfuerzo de entrada.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"es-MX","translation":"Analizar con la foto","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"es-MX","translation":"Sin foto","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"es-MX","translation":"La foto es para observar los cambios, las cifras se confirman mediante mediciones.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"es-MX","translation":"Crea un borrador de nutrientes a partir de fotos o de lo que has comido.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"es-MX","translation":"Puedes analizar si seleccionas una o más fotos. Cuantas más opciones tengas, será más fácil verificar.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"es-MX","translation":"Reanalizar fotos en conjunto","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"es-MX","translation":"Analizar fotos en conjunto","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"es-MX","translation":"Añadir foto","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"es-MX","translation":"Añadir y editar foto","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"es-MX","translation":"Al seleccionar una foto, se ingresan automáticamente calorías u otros datos.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"es-MX","translation":"Puedes guardar un conjunto de fotos. Después de conectarte, puedes volver a analizarlo desde los detalles del conjunto.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"es-MX","translation":"Minutos","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"es-MX","translation":"Si indicas la cantidad en la medida que puedas, aumentará la precisión de la estimación.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"es-MX","translation":"Analizando...","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"es-MX","translation":"Analizado","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"es-MX","translation":"Justificación","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"es-MX","translation":"Llegada","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"es-MX","translation":"Eliminar","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"es-MX","translation":"Ha pasado {{value1}} días desde el último entrenamiento, por lo que tienes margen para completar la cantidad de entrenamientos programada para esta semana.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"es-MX","translation":"La última medición del perímetro abdominal tiene más de 7 días.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"es-MX","translation":"Introducir valor anterior","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"es-MX","translation":"Comparación con el valor anterior: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"es-MX","translation":"Semana pasada","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"es-MX","translation":"Faltan datos comparativos con la semana pasada","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"es-MX","translation":"El volumen ha aumentado en más del 30% desde la semana pasada. La próxima vez, intenta mantener este nivel y revisa tu escala de esfuerzo percibido (RPE) e indicadores de recuperación.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"es-MX","translation":"Comparación con la semana pasada: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"es-MX","translation":"Comparación con la semana pasada: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"es-MX","translation":"Aún no hay datos disponibles. Se estima que al iniciar desde el reloj, se obtendrán los datos.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"es-MX","translation":"Estimación de actividad","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"es-MX","translation":"Este es un valor de referencia basado en las tendencias de los datos obtenidos, y no constituye una evaluación médica.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"es-MX","translation":"En progreso","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"es-MX","translation":"{{value1}} elementos disponibles, {{value2}} faltantes","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"es-MX","translation":"Datos principales obtenidos (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"es-MX","translation":"Calcula el volumen, la cantidad, el ritmo y el rango de movimiento relativo utilizando solo los datos disponibles, y no asigna valores cero a los datos faltantes.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"es-MX","translation":"Arriba a la derecha: Horizontal, cuerpo completo","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"es-MX","translation":"Abajo a la derecha: Hombros hasta la cintura","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"es-MX","translation":"Total","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"es-MX","translation":"Utiliza la misma ropa, distancia y condiciones de luz para tomar la foto relajado","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"es-MX","translation":"Cuanto más registros tengas de ejercicios, comidas y horarios similares, podrás compararlos.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"es-MX","translation":"KPI medidos en el mismo día","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"es-MX","translation":"Muestra los elementos que han cambiado simultáneamente como posibles causas, pero no establece diagnósticos ni condiciones médicas.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"es-MX","translation":"Sopa de miso","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"es-MX","translation":"Frecuencia respiratoria","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"es-MX","translation":"La frecuencia respiratoria es superior al promedio de 14 días","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"es-MX","translation":"La frecuencia respiratoria es {{value1}} veces/minuto, en comparación con las {{value2}} veces/minuto del promedio de 14 días.","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"es-MX","translation":"La frecuencia respiratoria es inferior al promedio de 14 días","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"es-MX","translation":"Frecuencia respiratoria dentro del rango normal","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"es-MX","translation":"Calidad -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"es-MX","translation":"Calidad: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"es-MX","translation":"Producto","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"es-MX","translation":"No se pudo guardar el producto.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"es-MX","translation":"Código del producto","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"es-MX","translation":"Ingrese el código del producto.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"es-MX","translation":"Escriba manualmente el código del producto.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"es-MX","translation":"Nombre del producto","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"es-MX","translation":"Por unidad/minuto","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"es-MX","translation":"Recuperación","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"es-MX","translation":"Elija un día para priorizar la recuperación.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"es-MX","translation":"Debido a que los datos de recuperación son bajos, es recomendable mantener el peso o el número de repeticiones en {{value1}}>.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"es-MX","translation":"Recuperación completada","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"es-MX","translation":"Número de repeticiones","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"es-MX","translation":"Evalúa las repeticiones y la nutrición por separado","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"es-MX","translation":"Por cada cantidad estándar","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"es-MX","translation":"No se permite la conexión HTTP a servidores externos.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"es-MX","translation":"Noche","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"es-MX","translation":"Completado automáticamente en la noche","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"es-MX","translation":"No hay aumentos bruscos ni períodos de estancamiento. Aumenta tus registros para poder comparar el número objetivo y la escala RPE en la próxima sesión.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"es-MX","translation":"Error","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"es-MX","translation":"Postura","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"es-MX","translation":"Frecuencia cardíaca en reposo","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"es-MX","translation":"Frecuencia cardíaca en reposo: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"es-MX","translation":"La frecuencia cardíaca en reposo es superior al promedio de 14 días","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"es-MX","translation":"La frecuencia cardíaca en reposo es inferior al promedio","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"es-MX","translation":"La frecuencia cardíaca en reposo es normal","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"es-MX","translation":"Completado","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"es-MX","translation":"Elementos fáciles de completar: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"es-MX","translation":"Estamos revisando tus tendencias de \"completar/saltar\" dentro de la aplicación.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"es-MX","translation":"Consumo real","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"es-MX","translation":"Densidad","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"es-MX","translation":"Historial","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"es-MX","translation":"Arriba a la izquierda: Frente y cuerpo completo","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"es-MX","translation":"Abajo a la izquierda: Parte trasera y cuerpo completo","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"es-MX","translation":"Diferencia","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"es-MX","translation":"Frecuencia cardíaca promedio: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"es-MX","translation":"Velocidad promedio","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"es-MX","translation":"Útil","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"es-MX","translation":"Elementos que facilitan el posponer: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"es-MX","translation":"Recuperación de frecuencia cardíaca","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"es-MX","translation":"Frecuencia cardíaca no obtenida","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"es-MX","translation":"Fuente de información: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"es-MX","translation":"Conjuntos con diferencia respecto a la entrada manual: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"es-MX","translation":"El movimiento del muñón por sí solo no permite determinar el ejercicio o la forma. Confirme el número estimado antes de reflejarlo.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"es-MX","translation":"Temperatura de la piel en el muñón","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"es-MX","translation":"Tendencia a que la temperatura de la piel en el muñón sea diferente a lo habitual","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"es-MX","translation":"Temperatura de la piel en el muñón dentro del rango normal","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"es-MX","translation":"Utilizar solo el contenido aprobado para la siguiente sugerencia.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"es-MX","translation":"Memoria aprobada","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"es-MX","translation":"Responsable: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"es-MX","translation":"Entrenador asignado","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"es-MX","translation":"Revisión","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"es-MX","translation":"Conexión OK","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"es-MX","translation":"Incluso si no se puede conectar, los datos registrados no se eliminarán. Puede continuar registrando manualmente y luego generar solo comentarios de IA.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"es-MX","translation":"Verificando conexión","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"es-MX","translation":"Las estimaciones son valores orientativos. Puede modificarlos libremente en el campo de entrada inferior.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"es-MX","translation":"Estimación de gasto calórico","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"es-MX","translation":"Transición","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"es-MX","translation":"Kcal consumidos","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"es-MX","translation":"Captura","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"es-MX","translation":"Conjunto de captura","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"es-MX","translation":"Editar conjunto de captura","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"es-MX","translation":"Añadir conjunto de captura","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"es-MX","translation":"Orientación de la captura","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"es-MX","translation":"Días de captura","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"es-MX","translation":"Notas sobre las condiciones y apariencia de la captura","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"es-MX","translation":"Captura completada","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"es-MX","translation":"Ejemplo de captura. La parte superior izquierda es el cuerpo completo de frente, la superior derecha es el cuerpo completo de lado, la inferior izquierda es el torso completo desde la espalda y la inferior derecha es un primer plano del abdomen desde los hombros hasta la cintura. Capturar con la misma ropa, distancia y luz.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"es-MX","translation":"Necesita mejoras","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"es-MX","translation":"Dirección","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"es-MX","translation":"Verifiqué las diferencias en la postura según la dirección.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"es-MX","translation":"Utilizaré esto como base para evaluar las tendencias semanales, no los cambios diarios.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"es-MX","translation":"Fecha","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"es-MX","translation":"Duración del sueño de anoche","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"es-MX","translation":"Almuerzo","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"es-MX","translation":"Hora","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"es-MX","translation":"Esta es una puntuación de referencia calculada por el dispositivo a partir de la hora, la duración del sueño profundo, el sueño REM y las interrupciones.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"es-MX","translation":"Espera un momento","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"es-MX","translation":"Si continúa, compruebe el estado del modelo en el servidor de IA.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"es-MX","translation":"Si continúa, revise los registros del servidor de IA.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"es-MX","translation":"Rango de actividad","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"es-MX","translation":"Ajuste según sea necesario, utilizando la escala RPE (escala de percepción del esfuerzo).","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"es-MX","translation":"Normal","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"es-MX","translation":"Si la exposición es alta, utilice esto como guía para reducir el tiempo y la duración.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"es-MX","translation":"Crearé un menú adaptado a los equipos disponibles para que pueda comenzar su primer entrenamiento sin dudarlo.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"es-MX","translation":"Al registrar el valor inicial, podrá ver la evolución y la diferencia con respecto al objetivo.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"es-MX","translation":"Última carrera al aire libre","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"es-MX","translation":"Informe más reciente","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"es-MX","translation":"Revisión mensual","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"es-MX","translation":"Ver revisión mensual","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"es-MX","translation":"Crear propuesta de revisión mensual","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"es-MX","translation":"Generando revisión mensual","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"es-MX","translation":"Informe mensual","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"es-MX","translation":"Mañana","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"es-MX","translation":"Estoy probando a reducir las notificaciones matutinas y nocturnas.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"es-MX","translation":"Sin analizar","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"es-MX","translation":"No obtenido","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"es-MX","translation":"No se consideran los elementos sin obtener como 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"es-MX","translation":"No realizado","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"es-MX","translation":"No fotografiado","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"es-MX","translation":"No registrado. Introduzca el número de etiquetas por 100g.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"es-MX","translation":"Los productos no registrados se guardan en el dispositivo y se reutilizan en la próxima lectura.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"es-MX","translation":"No registrado","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"es-MX","translation":"No registrado. Se incluyen también la percepción y la preparación.","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"es-MX","translation":"Comparación según condiciones","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"es-MX","translation":"OCR de información nutricional (verificación del usuario)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"es-MX","translation":"OCR de información nutricional (requiere verificación)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"es-MX","translation":"He introducido los valores desde la información nutricional. Verifique las cantidades con la cantidad base y cada valor.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"es-MX","translation":"Introducción desde la imagen de información nutricional","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"es-MX","translation":"No se pudo leer la información nutricional. Tómela nuevamente en un lugar bien iluminado, frente a la cámara, o introdúcela manualmente.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"es-MX","translation":"Lectura de información nutricional","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"es-MX","translation":"Información nutricional en progreso","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"es-MX","translation":"Siguiente paso","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"es-MX","translation":"Próxima acción","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"es-MX","translation":"Ajuste siguiente","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"es-MX","translation":"He comprobado el estado del abdomen desde la vista frontal y lateral.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"es-MX","translation":"He comprobado la circunferencia de la cintura combinando las vistas frontal y trasera.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"es-MX","translation":"Registra datos diarios, como vistas frontal, lateral y trasera.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"es-MX","translation":"Combina datos diarios, como vistas frontal, lateral y trasera. Puedes guardarlos individualmente y añadirlos más tarde.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"es-MX","translation":"Pasos","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"es-MX","translation":"Pasos: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"es-MX","translation":"Puedes permitir los siguientes elementos: pasos, actividad, sueño, frecuencia cardíaca en reposo, HRV, respiración, temperatura de la piel en la muñeca. Los elementos no permitidos se tratarán como \"no obtenidos\" y puedes utilizarlos manualmente.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"es-MX","translation":"Quedan {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"es-MX","translation":"No hay datos diarios comparables","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"es-MX","translation":"Consumo: {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"es-MX","translation":"Consumo no registrado","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"es-MX","translation":"Profundo","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"es-MX","translation":"Durante","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"es-MX","translation":"Carbohidratos","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"es-MX","translation":"No te esfuerces","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"es-MX","translation":"Actualmente {{value1}}/4 unidades","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"es-MX","translation":"Actualización automática desde el número de pasos actual","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"es-MX","translation":"Actualmente, el problema no es la cantidad de usos disponibles, sino la congestión del servidor. {{value1}} Inténtelo de nuevo.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"es-MX","translation":"Registrar la ubicación actual en mi gimnasio","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"es-MX","translation":"Verificando ubicación","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"es-MX","translation":"Exposición al ruido ambiental","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"es-MX","translation":"Estoy cansado/a","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"es-MX","translation":"Hemos sugerido días con menor carga, basándonos en tus datos de fatiga y recuperación.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"es-MX","translation":"Sensación de fatiga","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"es-MX","translation":"Eliminar ubicación registrada","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"es-MX","translation":"Buscar productos registrados","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"es-MX","translation":"Arroz blanco","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"es-MX","translation":"Arroz blanco, pechuga de pollo, sopa de miso","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"es-MX","translation":"Objetivo","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"es-MX","translation":"Puedes verificar las diferencias y el porcentaje de cumplimiento para cada KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"es-MX","translation":"Muestra la cantidad restante de proteínas según tu objetivo y registro de comidas del día.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"es-MX","translation":"Plan personalizado según tu objetivo y los equipos disponibles.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"es-MX","translation":"Significado del objetivo","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"es-MX","translation":"Valor objetivo","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"es-MX","translation":"Al establecer un valor objetivo, se muestra la diferencia y el porcentaje de cumplimiento.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"es-MX","translation":"Diferencia objetivo","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"es-MX","translation":"Diferencia objetivo {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"es-MX","translation":"Objetivo no establecido","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"es-MX","translation":"Establecer objetivo","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"es-MX","translation":"Logro del objetivo y estabilidad del movimiento","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"es-MX","translation":"He revisado tus registros recientes de actividad física, alimentación y entrenamiento (últimos 30 días).","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"es-MX","translation":"Parece que tu mayor peso máximo ha aumentado en las últimas 3 sesiones. Considera también la forma, el número de repeticiones y la escala de percepción del esfuerzo (RPE).","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"es-MX","translation":"Últimos 7 días","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"es-MX","translation":"Últimos 7 días {{value1}} veces","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"es-MX","translation":"Visitas al gimnasio en los últimos 7 días: {{value1}} veces","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"es-MX","translation":"Cantidad de entrenamiento dentro del rango normal","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"es-MX","translation":"Tu peso promedio semanal ha disminuido. Considera aumentar ligeramente la ingesta para favorecer el crecimiento muscular.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"es-MX","translation":"Tu peso promedio semanal está fluctuando en dirección opuesta a tu objetivo. Considera ajustar ligeramente la ingesta.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"es-MX","translation":"Tu peso promedio semanal está disminuyendo rápidamente. Para un progreso más gradual, considera aumentar ligeramente la ingesta.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"es-MX","translation":"Tu peso promedio semanal está aumentando rápidamente. Para controlar el ritmo de aumento, considera reducir ligeramente la ingesta.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"es-MX","translation":"El valor es inferior a 85 dBA. Verifica también la duración.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"es-MX","translation":"Promedio del registro reciente {{value1}} horas","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"es-MX","translation":"Rango de movimiento relativo","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"es-MX","translation":"Consultar","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"es-MX","translation":"Sueño","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"es-MX","translation":"Asegurar {{value1}} horas de sueño","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"es-MX","translation":"Sueño: {{value1}} horas","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"es-MX","translation":"Sueño corto","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"es-MX","translation":"Sueño ligeramente corto","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"es-MX","translation":"Dado que no se han registrado las etapas del sueño, esta es una puntuación de referencia basada en el tiempo total.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"es-MX","translation":"No se dispone de datos de sueño. No se evaluarán los valores faltantes.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"es-MX","translation":"Puede consultar su sueño, recuperación y actividad de forma conjunta.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"es-MX","translation":"Eliminar","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"es-MX","translation":"Precisión {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"es-MX","translation":"Por favor, confirme antes de guardar.","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"es-MX","translation":"Cambios confirmados","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"es-MX","translation":"Esperando confirmación","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"es-MX","translation":"{{value1}} recuerdos confirmados","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"es-MX","translation":"Evidencia científica {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"es-MX","translation":"Evidencia científica, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"es-MX","translation":"Ejercicio","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"es-MX","translation":"Tipo","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"es-MX","translation":"Se han cargado los productos guardados en el dispositivo.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"es-MX","translation":"Intente de nuevo después de reiniciar el dispositivo.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"es-MX","translation":"Si su objetivo es aumentar la masa muscular, puede considerar realizar una sesión adicional de entrenamiento esta semana, dentro de lo razonable.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"es-MX","translation":"Aproximadamente {{value1}} minutos","review_note":""}

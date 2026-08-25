@@ -1,17 +1,18 @@
 # BodyMode TestFlight公開計画
 
-更新日: 2026-08-14
+更新日: 2026-08-20
 
 ## 1. 到達点
 
-最初の到達点は、開発者本人だけでなく友人5〜10人が招待からインストールできる「外部TestFlight」とする。
+友人向け外部TestFlightは完了した。次の到達点は、App Store安定版とTestFlight先行版を並行運用しながら、Redditで英語圏の外部テスターを20〜50人募集し、4週間で継続率、離脱点、AI負荷、課金意向、正式版移行率を検証する公開ベータとする。日程、募集波、利用枠、停止条件、正式公開判定は[Reddit公開ベータ計画](reddit_beta_test_plan.md)を正本とする。
 
 公開手順は次の順番で進める。
 
 1. App Store Connectへビルドをアップロードする
 2. 内部テスターとしてiPhone・Apple Watchで最終確認する
 3. 外部テストグループを作り、最初のTestFlight App Reviewへ提出する
-4. 承認後、5〜10人へ招待を送る
+4. 承認後、友人向け受入を行う
+5. Redditで15人、30人、50人の順に段階募集する
 
 ## 2. 初回ビルドの範囲
 
@@ -42,27 +43,41 @@
 |---|---|---|---|---|
 | TF-01 | P0 | 完了 | Apple Developer Programを有効化 | App Store Connectへアクセスでき、配布用署名を作成できる |
 | TF-02 | P0 | 完了 | 初回TestFlight範囲を固定 | 本書の「入れる・出さない」が合意済み |
-| TF-03 | P0 | 進行中 | 利用規約とプライバシーポリシーを作成 | アプリ内表示と公開用原稿は完成。公開URLが残る |
-| TF-04 | P0 | 進行中 | サポート窓口を用意 | アプリ内導線と原稿は完成。公開URLとメールアドレスが残る |
+| TF-03 | P0 | 完了 | 利用規約とプライバシーポリシーを作成 | 日本語・英語のアプリ内表示と公開URLが稼働している |
+| TF-04 | P0 | 公開URL完了・メール待ち | サポート窓口を用意 | 日本語・英語の公開サポートページとIssue導線は完成。公開サポートメールを確定する |
 | TF-05 | P0 | 完了 | Privacy Manifestを追加 | iPhone・Watchの`UserDefaults`利用理由がRelease製品へ組み込み済み |
 | TF-06 | P0 | 完了 | Release通信設定を安全化 | 全通信許可を削除し、HTTPをローカル接続先へ制限済み |
-| TF-07 | P0 | 完了 | Release用AI設定を整理 | 接続初期値はGit管理外のxcconfigから注入。アプリ内で変更でき、APIキーは変更後Keychainへ保存される |
+| TF-07 | P0 | 完了 | Release用AI設定を整理 | 接続初期値はGit管理外のxcconfigから注入。Release/TestFlightでは接続先とキーを非表示にし、APIキーをKeychainへ保存する |
 | TF-08 | P0 | 完了 | 既知クラッシュを回帰確認 | 履歴、コンディション、記録詳細の反復遷移にSimulatorで合格。実機確認はTF-16で行う |
-| TF-09 | P0 | 完了 | iPhone UIテスト | 現行27シナリオとアクセシビリティ監査に合格 |
+| TF-09 | P0 | 完了 | iPhone UIテスト | Build 23の正式候補L3で単体・iPhone UI・Watch UI 280件成功、失敗0。英語表示修正は対象撮影テスト1件成功、`1.0 (25)`のRelease preflightも合格 |
 | TF-10 | P0 | 完了 | Watch UI・連携テスト | Watch主要3本とiPhoneからの送信にSimulatorで合格。実機確認はTF-16で行う |
-| TF-11 | P0 | 完了 | バージョンとビルド番号を更新 | `0.1.0 (16)`へ更新済み |
+| TF-11 | P0 | 完了 | バージョンとビルド番号を更新 | 言語宣言と英語フォールバックを含む次候補`1.0 (25)`へ更新済み |
 | TF-12 | P0 | 完了 | App Store Connectアプリを作成 | Bundle ID、SKU、カテゴリが登録済み |
 | TF-13 | P0 | 完了 | TestFlight情報を入力 | 外部テストに必要な情報と審査メモを登録済み |
 | TF-14 | P0 | 完了 | 輸出コンプライアンスを回答 | 非免除暗号なしをInfo.plistとConnectへ設定済み |
-| TF-15 | P0 | 完了 | 配布用アーカイブをアップロード | Build 16がApp Store Connectで`VALID`になっている |
-| TF-16 | P0 | 進行中 | TestFlightで受入確認 | iPhoneとWatchへインストールし、Build 16の主要フローを一周できる |
-| TF-17 | P0 | 完了 | 外部TestFlight審査へ提出 | Build 16が外部グループで`IN_BETA_TESTING`になっている |
-| TF-18 | P0 | 進行中 | 初期テスターを招待 | 公開リンクで配布中。5〜10人が参加し、フィードバック手段を理解している状態まで広げる |
-| TF-19 | P1 | 進行中 | クラッシュ収集を決定・導入 | MetricKit・保護された端末内ログ・保持上限・削除・書き出しは実装済み。TestFlight側の受信確認が残る |
+| TF-15 | P0 | 完了 | 配布用アーカイブをアップロード | Build 23をApp Store Connectへアップロードし、配布済み |
+| TF-16 | P0 | 進行中 | TestFlightで受入確認 | iPhoneとWatchへインストールし、Build 24の主要フロー、言語選択、AIゲートウェイ接続を確認する |
+| TF-17 | P0 | 完了 | 外部TestFlight審査へ提出 | Build 24を外部グループへ割り当て、Beta App Review待ち |
+
+### Build 24 正式公開候補
+
+- `1.0.0 (24)`のArchive、App Store署名IPA、本番preflight、Privacy Manifest監査に成功。
+- App Store Connectへのアップロードと処理が完了し、Build状態は`VALID`。
+- `Friends & Family`と公開リンク用`Reddit Beta`へ追加し、外部Beta App Reviewは`WAITING_FOR_BETA_REVIEW`。
+- 公開TestFlightリンク: `https://testflight.apple.com/join/ApPJPygJ`
+
+### Build 25 次候補
+
+- 英語主要表示とWatch向け短縮表現を修正し、英語iPhone 8枚・Watch 3枚の対象撮影に成功。
+- 最新ソースから`1.0 (25)`のArchive、App Store署名IPA、本番preflight、Privacy Manifest監査に成功。
+- App Store Connectへアップロード後`VALID`となり、正式版Version 1.0へ選択済み。Build 24の外部Beta App Reviewは`WAITING_FOR_BETA_REVIEW`のまま維持。
+| TF-18 | P0 | 完了 | 初期テスターを招待 | 公開リンクで友人向け配布と初期フィードバック受信を確認済み |
+| TF-19 | P1 | 完了 | クラッシュ収集を決定・導入 | MetricKit・保護された端末内ログ・保持上限・削除・書き出しを実装し、App Store Connect APIでフィードバック47件とクラッシュ提出2件を取得できる |
 | TF-20 | P0 | 完了 | 広告を安全に実装 | iPhone主要画面で継続する固定バナー1枠、60秒再試行、非パーソナライズ、UMP、健康データ分離、報告導線がある |
 | TF-21 | P0 | 完了 | ローカル記録を保護 | 保護ファイルへ移行し、バックアップ対象外、書き出し可能にする |
-| TF-22 | P0 | 完了 | 提出画像を作成 | iPhone 1320×2868を6枚、Watch 416×496を3枚、アルファなしで生成する |
-| TF-23 | P0 | ブロック | AdMobを本番設定 | アプリID、バナーID、Privacy & messaging、年齢相当の広告ブロックをAdMobで設定する |
+| TF-22 | P0 | 完了 | 提出画像を更新 | 日本語・英語iPhoneを各8枚、日本語・英語Watchを各3枚、規定寸法・アルファなしで`1.0 (25)`相当の実画面から生成 |
+| TF-23 | P0 | 完了 | AdMobを本番設定 | 本番アプリID・バナーID、UMP、広告レーティング、センシティブカテゴリ、健康データ分離を設定済み。Store公開後にAdMob審査を完了する |
+| TF-24 | P0 | 進行中 | Reddit公開ベータを実施 | 4週間で20〜50人を段階募集し、KPI、AI負荷、フィードバック、課金意向を評価する |
 
 ## 4. 実施順
 
@@ -86,7 +101,8 @@
 
 - TF-16の内部確認後にTF-17を提出する
 - 承認後にTF-18を実施する
-- 1週間の利用結果を見て、TF-19とTF-20を次ビルドへ入れる
+- TF-24は15人、30人、50人の募集波に分け、各波でクラッシュとAI負荷を確認する
+- 4週間の結果を見て正式公開のGo / Conditional Go / No-Goを決める
 
 ## 5. 初回テスト項目
 
@@ -151,8 +167,8 @@ scripts/configure_app_store_connect_api_key.sh <KEY_ID> <ISSUER_ID> <AuthKey_XXX
 - 利用規約、プライバシー、健康・AI注意、サポート画面の遷移テスト合格
 - 端末ロック連動の記録ファイル保護、バックアップ除外、旧保存値の移行を実装
 - 診断ログを14日・1,000件・2MiBへ制限し、設定から削除可能にした
-- 6.9インチiPhone画像6枚とSeries 11 Watch画像3枚をApple指定サイズで生成
-- Apple Development署名Archiveを作成し、iPhone・Watch・Widgetの署名と埋め込みを検証
+- 6.9インチiPhone画像8枚とSeries 11 Watch画像3枚をApple指定サイズで生成
+- Archiveを書き出したApp Store用IPAで、iPhone・Watch・WidgetのDistribution署名と埋め込みを検証
 - App Store Connectエクスポートは`No Accounts`と配布プロファイル不足で停止することを確認
 
 再検証は`scripts/testflight_preflight.sh`でRelease製品を確認した後、iPhone・WatchのUIテストを実行する。

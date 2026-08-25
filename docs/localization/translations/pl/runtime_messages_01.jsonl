@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"pl","translation":"Otrzymałem odpowiedź od trenera AI.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"pl","translation":"Nie udało się wysłać pytania do trenera AI.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"pl","translation":"To ćwiczenie zsynchronizowane z Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"pl","translation":"Możesz sprawdzić odpowiedzi w aplikacji BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"pl","translation":"{{value1}} / {{value2}} osiągnięte. Pozostałe postarajmy się wykonywać w bezpieczny sposób.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"pl","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} razy","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"pl","translation":"Nie należy zmieniać ustawień dla {{value1}}, traktuj to jako wybór użytkownika.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"pl","translation":"{{value1}} czasu","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"pl","translation":"{{value1}} kroków","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"pl","translation":"{{value1}} posiłków","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"pl","translation":"Na tym urządzeniu nie można korzystać z wykrywania otoczenia.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"pl","translation":"Dziś nie wykonujemy tego ćwiczenia.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"pl","translation":"Wystarczy jedno ćwiczenie, które jest dla Ciebie możliwe.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"pl","translation":"Dlaczego to robisz?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"pl","translation":"Rodzaj ćwiczeń","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"pl","translation":"Spróbuj ponownie po otwarciu aplikacji.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"pl","translation":"Usunięto lokalizację siłowni.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"pl","translation":"Zapisano przyjazd na siłownię.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"pl","translation":"System wykrywa przyjazd do siłowni.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"pl","translation":"Automatyczne wykrywanie wizyty w siłowni jest wyłączone.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"pl","translation":"Zapisano opuszczenie siłowni.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"pl","translation":"Wyciskanie sztangą na ławce","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"pl","translation":"Ciemny","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"pl","translation":"Podciąganie","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"pl","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"pl","translation":"Ćwiczenia","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"pl","translation":"Dzięki kontynuowaniu treningu, poprawia się dokładność planowania na kolejny tydzień.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"pl","translation":"Czarny szampan","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"pl","translation":"Moje siłownia","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"pl","translation":"Użytkownik zmienił dzisiejsze działania.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"pl","translation":"Dzisiejsze propozycje zostały zaktualizowane przez użytkownika.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"pl","translation":"Jasne","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"pl","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"pl","translation":"W górę","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"pl","translation":"W dół","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"pl","translation":"Raz dzisiaj","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"pl","translation":"Zostały zrealizowane trzy cele na dziś. Będą uwzględnione w przyszłych propozycjach.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"pl","translation":"Dzisiejszy jadłospis","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"pl","translation":"Propozycje zostały zaktualizowane","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"pl","translation":"Lokalizacja nie jest ustawiona","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"pl","translation":"Lokalizacja nie została udostępniona. Możesz ręcznie sprawdzić lokalizację.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"pl","translation":"Spróbuj ponownie, gdy lokalizacja będzie stabilna.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"pl","translation":"Najpierw zarejestruj swoją siłownię jako lokalizację.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"pl","translation":"Dla początkujących: Trening całego ciała","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"pl","translation":"Nie udało się ponownie wysłać poprzedniego treningu AI.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"pl","translation":"Prosimy o ponowne przesłanie tej samej treści.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"pl","translation":"Priorytetem jest powrót","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"pl","translation":"Jeśli nie chcesz wprowadzać zmian, pozostaw puste pole","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"pl","translation":"Podciąganie","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"pl","translation":"Zaktualizowano dane dotyczące powrotu i dostosowano dzisiejsze rekomendacje do bezpieczniejszego poziomu.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"pl","translation":"Zapisano nowe dane.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"pl","translation":"Istniejący ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"pl","translation":"Istniejąca lub wymagana kategoria","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"pl","translation":"Zarejestrowałem obecną lokalizację jako mój domowy ośrodek fitness.","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"pl","translation":"Nie udało się pobrać aktualnej lokalizacji.","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"pl","translation":"Sprawdzam aktualną lokalizację.","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"pl","translation":"Przejrzałem ostatnie 7 dni aktywności (3 treningi) i zapisy żywieniowe (8).","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"pl","translation":"Brakuje danych dotyczących snu.","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"pl","translation":"Prosimy o zarejestrowanie snu przez 3 dni i kontynuowanie ćwiczeń 3 razy w tygodniu.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"pl","translation":"Zarejestruj sen przez 3 dni","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"pl","translation":"Inteligentny, wyrafinowany, nowoczesny","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"pl","translation":"Krótki ogólny komentarz","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"pl","translation":"Krótkie działanie","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"pl","translation":"Ćwiczenia na klatkę","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"pl","translation":"Automatyczne","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"pl","translation":"Możesz się zarejestrować, jeśli w aplikacji \"Ustawienia\" zezwolisz na dostęp do lokalizacji.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"pl","translation":"Sprawdziłem 3 wskaźniki fizyczne, 8 posiłków i 3 treningi siłowe.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"pl","translation":"Raz w tygodniu","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"pl","translation":"Zakończyłem 3 treningi w tygodniu.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"pl","translation":"Kontynuuj 3 treningi w tygodniu.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"pl","translation":"Intensywny, luksusowy, stymulujący","review_note":""}

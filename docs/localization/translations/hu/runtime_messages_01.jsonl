@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"hu","translation":"Az AI edzőtől kapott választ.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"hu","translation":"Nem sikerült a válasz elküldése az AI edzőnek.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"hu","translation":"Ez az Apple Watch-ról szinkronizált tevékenység.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"hu","translation":"A BodyMode alkalmazásban megtekintheti a választ.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"hu","translation":"{{value1}} / {{value2}}.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"hu","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} alkalom","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"hu","translation":"{{value1}}-t ne változtassa meg, hanem tekintse az egyéni választként","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"hu","translation":"{{value1}} perc","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"hu","translation":"{{value1}} lépés","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"hu","translation":"{{value1}} étkezés","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"hu","translation":"Ez a készülék nem támogatja a környezeti érzékelést.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"hu","translation":"Ezt az tevékenységet ma nem fogjuk végezni.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"hu","translation":"Egyetlen, elérhető tevékenység is elegendő.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"hu","translation":"Miért csinálom ezt?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"hu","translation":"Segítő funkciók","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"hu","translation":"Kérjük, nyissa meg az alkalmazást és próbálja újra.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"hu","translation":"A fitneszterm helyét eltávolítottam.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"hu","translation":"A fitnesztermbe érkezést rögzítettem.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"hu","translation":"Érzékelni fogom a fitnesztermhez való érkezést.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"hu","translation":"A fitneszterm automatikus érzékelése kikapcsolva van.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"hu","translation":"A fitnesztermből való kilépést rögzítettem.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"hu","translation":"Ellamozás a súlyokkal","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"hu","translation":"Sötét mód","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"hu","translation":"Becsukulás","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"hu","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"hu","translation":"Dip-ek","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"hu","translation":"Folyamatosan edzek. Ha növeljük a regenerációs időt, az jövőbeli beállítások pontossága javul.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"hu","translation":"Black Champagne","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"hu","translation":"A saját fitnesz alkalmazatom","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"hu","translation":"A felhasználó megváltoztatta a mai tevékenységeit.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"hu","translation":"A felhasználói beállítások alapján új javaslatot hoztam létre.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"hu","translation":"Light","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"hu","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"hu","translation":"Felfelé","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"hu","translation":"Lefelé","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"hu","translation":"Ma 1 alkalom","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"hu","translation":"Elértem a mai célokat. A következő nap ajánlataiban megjelennek.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"hu","translation":"A mai menü","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"hu","translation":"Frissítettem a mai javaslatokat","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"hu","translation":"A helyzet nem beállítva","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"hu","translation":"A helyzetet nem engedélyezte. A manuális ellenőrzés használható","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"hu","translation":"Kérjük, próbálja újra, miután stabil lett a helyzetpontosság","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"hu","translation":"Először regisztrálja a jelenlegi helyszínt fitnesz célként","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"hu","translation":"Első lépések: teljes test edzés","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"hu","translation":"Nem sikerült újból elindítani az AI edzőt.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"hu","translation":"Kérjük, küldje el ugyanazt a tartalmat újra.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"hu","translation":"Prioritás: Gyógyulás","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"hu","translation":"Ha nem szeretne változtatni, hagyja üresen.","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"hu","translation":"Felemászás","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"hu","translation":"Az új gyógyulási adatokat figyelembe véve, az ajánlott aktivitást biztonságosabbnak állítottam be.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"hu","translation":"Az új rekordot rögzítettem.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"hu","translation":"Meglevő ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"hu","translation":"Meglevő vagy szükséges kategória","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"hu","translation":"A jelenlegi helyszínt a saját edzőtermemként regisztráltam.","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"hu","translation":"Nem sikerült megkapni a jelenlegi helyszínt.","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"hu","translation":"Ellenőrzöm a jelenlegi helyszínt.","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"hu","translation":"Az utóbbi 7 napban 3 mozgás és 8 étkezési rekordot rögzítettem.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"hu","translation":"Hiányoznak az alvási adatok.","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"hu","translation":"Rögzítse az alvást 3 napig, és folytassa a heti 3 alkalommal történő edzést.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"hu","translation":"Rögzítsem az alvást 3 napig.","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"hu","translation":"Intelligens, kifinomult, modern","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"hu","translation":"Rövid összefoglaló","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"hu","translation":"Rövid tevékenység","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"hu","translation":"A mellkas","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"hu","translation":"Automatikus","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"hu","translation":"Ha az \"Állapot\" alkalmazásban engedélyezed a helyzet követést, akkor regisztrálhatsz.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"hu","translation":"Az alábbi 3 fizikai mutatót, 8 étkezést és 3 edzést ellenőrizte.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"hu","translation":"Havi egyszer","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"hu","translation":"A heti 3 edzés befejezve","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"hu","translation":"Folytasd a heti 3 edzést","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"hu","translation":"Komoly, prémium, izgalmas","review_note":""}

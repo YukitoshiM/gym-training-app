@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"en-AU","translation":"{{value1}} items","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"en-AU","translation":"{{value1}}: No gym visit or workout was found on the scheduled date.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"en-AU","translation":"Session duration","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"en-AU","translation":"Daily nutrition goals","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"en-AU","translation":"Learn the movements over 3 workouts","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"en-AU","translation":"Build a workout with AI","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"en-AU","translation":"Today's recommendations remain available without AI.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"en-AU","translation":"Ask AI about your current status","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"en-AU","translation":"Ask AI","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"en-AU","translation":"Data sent to AI","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"en-AU","translation":"The AI coach creates workout plans using only your selected equipment. At least one item will always be selected.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"en-AU","translation":"Generate weekly feedback using the AI server","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"en-AU","translation":"AI server connected","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"en-AU","translation":"Preparing AI model","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"en-AU","translation":"AI drafts and weekly feedback are unavailable, but you can still save manual entries.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"en-AU","translation":"To use AI drafts and weekly feedback, turn on AI features, then test the connection.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"en-AU","translation":"AI update {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"en-AU","translation":"AI connection","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"en-AU","translation":"AI features are off","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"en-AU","translation":"Use AI features","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"en-AU","translation":"AI review in progress","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"en-AU","translation":"AI reviewed","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"en-AU","translation":"Reset AI settings to defaults","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"en-AU","translation":"API key","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"en-AU","translation":"The API key is used only to obtain short-lived tokens and is not sent with normal AI requests.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"en-AU","translation":"The API server is responding, but the required model is unavailable.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"en-AU","translation":"The API server is responding, but the supporting model for meals and reports is unavailable.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"en-AU","translation":"The API server is responding, but image-based calorie estimation is unavailable.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"en-AU","translation":"Apple Health workouts","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"en-AU","translation":"Sync workout to Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"en-AU","translation":"Apple Watch logs","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"en-AU","translation":"Apple Watch & sensors","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"en-AU","translation":"BodyMode ad report","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"en-AU","translation":"Get started with BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"en-AU","translation":"BodyMode management AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"en-AU","translation":"Google's use of ad data","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"en-AU","translation":"Google Privacy Policy","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"en-AU","translation":"Review Health sharing","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"en-AU","translation":"Estimate reps with Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"en-AU","translation":"Apple Watch haptics","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"en-AU","translation":"{{value1}} / {{value2}} complete","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"en-AU","translation":"{{value1}} / {{value2}} achieved","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"en-AU","translation":"{{value1}}/6 complete","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"en-AU","translation":"{{value1}}/{{value2}} reps","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"en-AU","translation":"{{value1}}{{value2}} reps","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"en-AU","translation":"Recommendation from {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"en-AU","translation":"{{value1}} is reviewing · Recommendation available","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"en-AU","translation":"Reviewed by {{value1}}","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"en-AU","translation":"For {{value1}}, explain why this was recommended today and suggest adjustments.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"en-AU","translation":"Ask {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"en-AU","translation":"{{value1}}'s recommendation","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"en-AU","translation":"{{value1}}'s assessment","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"en-AU","translation":"{{value1}}'s base recommendation","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"en-AU","translation":"Awaiting {{value1}} review · Recommendation available","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"en-AU","translation":"{{value1}}'s weekly report","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"en-AU","translation":"Set {{value1}} with the picker","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"en-AU","translation":"Replace {{value1}} with another action","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"en-AU","translation":"{{value1}} is available. Verified {{value2}} coach types.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"en-AU","translation":"Why {{value1}} was recommended","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"en-AU","translation":"Open {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"en-AU","translation":"{{value1}} sets","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"en-AU","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"en-AU","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"en-AU","translation":"{{value1}} · Updated {{value2}}","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"en-AU","translation":"{{value1}} · {{value2}} equipment types","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"en-AU","translation":"{{value1}} · {{value2}} days/week","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"en-AU","translation":"{{value1}} items","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"en-AU","translation":"{{value1}} times","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"en-AU","translation":"{{value1}} completed","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"en-AU","translation":"{{value1}} exercises","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"en-AU","translation":"{{value1}} exercises / {{value2}} sets","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"en-AU","translation":"Let BodyMode take it from here. Each day, it suggests up to three actions.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"en-AU","translation":"Data that improves assessment reliability","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"en-AU","translation":"Apply recommended coach","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"en-AU","translation":"Start your day here","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"en-AU","translation":"Start this workout","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"en-AU","translation":"Use this target","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"en-AU","translation":"Trainer for this goal","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"en-AU","translation":"Why this action was chosen","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"en-AU","translation":"All coaches","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"en-AU","translation":"Other","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"en-AU","translation":"Protein","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"en-AU","translation":"What it can't do","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"en-AU","translation":"Built first from on-device records, with AI adjustments only when needed.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"en-AU","translation":"Save a frequently used workout","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"en-AU","translation":"Calories","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"en-AU","translation":"Calories / Macros","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"en-AU","translation":"Preparing calorie estimation model","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"en-AU","translation":"Cancel","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"en-AU","translation":"Quick log","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"en-AU","translation":"Server URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"en-AU","translation":"I've arrived at the gym","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"en-AU","translation":"Gym visits","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"en-AU","translation":"Automatically log gym visits","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"en-AU","translation":"Skip","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"en-AU","translation":"If sensors are unavailable, you can still enter weight, reps, and RPE manually. Low-power sampling reduces how often motion estimates update.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"en-AU","translation":"Test ad","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"en-AU","translation":"Data","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"en-AU","translation":"Data completeness {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"en-AU","translation":"Trainers: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"en-AU","translation":"Workout","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"en-AU","translation":"Complete 3 workouts","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"en-AU","translation":"Open workouts","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"en-AU","translation":"Start workout","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"en-AU","translation":"Version: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"en-AU","translation":"Non-personalized","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"en-AU","translation":"Personalization off","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"en-AU","translation":"Free workout","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"en-AU","translation":"Privacy","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"en-AU","translation":"Profile","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"en-AU","translation":"Help","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"en-AU","translation":"Home","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"en-AU","translation":"Your workouts are here","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"en-AU","translation":"Choose or start a workout","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"en-AU","translation":"Choose a destination such as Mail and send the report to BodyMode Support. The report does not include body or health records.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"en-AU","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"en-AU","translation":"Offensive content","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"en-AU","translation":"Unknown error","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"en-AU","translation":"Inappropriate content","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"en-AU","translation":"Report an inappropriate ad","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"en-AU","translation":"No scheduled workout found","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"en-AU","translation":"Don't change this time","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"en-AU","translation":"No change this time","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"en-AU","translation":"Today: {{value1}} · {{value2}} sets","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"en-AU","translation":"Start learning again today","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"en-AU","translation":"Today's 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"en-AU","translation":"Preparing today's 3","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"en-AU","translation":"Today's workout","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"en-AU","translation":"Complete today's workout","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"en-AU","translation":"Do today's workout","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"en-AU","translation":"Start today's workout","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"en-AU","translation":"Today's entries","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"en-AU","translation":"Today's recommendation","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"en-AU","translation":"Today's status","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"en-AU","translation":"Today's log","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"en-AU","translation":"Today's readiness","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"en-AU","translation":"Today's progress","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"en-AU","translation":"Move to today","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"en-AU","translation":"Today's actions are here","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"en-AU","translation":" items","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"en-AU","translation":"Rest","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"en-AU","translation":"Rest time","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"en-AU","translation":"Set rest time with the picker","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"en-AU","translation":"Progress photos","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"en-AU","translation":"Body composition","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"en-AU","translation":"Weight","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"en-AU","translation":"Body weight {{value1}} + added weight {{value2}} = reference load {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"en-AU","translation":"Body weight {{value1}} - assistance {{value2}} = reference load {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"en-AU","translation":"Weight · Optional","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"en-AU","translation":"Improve weight and waist at a sustainable pace","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"en-AU","translation":"Weight · Waist · Meals · Progress photos","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"en-AU","translation":"What's your goal?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"en-AU","translation":"Create","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"en-AU","translation":"User guide","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"en-AU","translation":"We'll build workouts using available equipment","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"en-AU","translation":"Available equipment","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"en-AU","translation":"Only the types of features you use are stored on your device. Weight, photos, meal details, heart rate, location, and notes are not recorded or sent automatically.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"en-AU","translation":"Save","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"en-AU","translation":"Reviewed using your saved records.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"en-AU","translation":"Keep health records separate from ad data","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"en-AU","translation":"Log a few things now and review everything later.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"en-AU","translation":"Done","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"en-AU","translation":"Delete all data?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"en-AU","translation":"Delete all data","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"en-AU","translation":"Export all records as JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"en-AU","translation":"Start with a full-body workout","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"en-AU","translation":"Photo","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"en-AU","translation":"Analyze a photo instantly","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"en-AU","translation":"Track your progress with photos and measurements","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"en-AU","translation":"Photos and measurements are here","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"en-AU","translation":"Log photos and measurements","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"en-AU","translation":"Take photo","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"en-AU","translation":"Improve your look, waist, and muscle balance","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"en-AU","translation":" min","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"en-AU","translation":"min:sec","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"en-AU","translation":"Create a beginner workout","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"en-AU","translation":"View assessment details","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"en-AU","translation":"Choose a different action","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"en-AU","translation":"What equipment is available?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"en-AU","translation":"Share usage analytics","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"en-AU","translation":"Delete usage data","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"en-AU","translation":"Export usage data","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"en-AU","translation":"Advice priority balance","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"en-AU","translation":"Movement","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"en-AU","translation":"Information used","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"en-AU","translation":"Checking consent status","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"en-AU","translation":"Who it's for","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"en-AU","translation":"Choose by equipment or muscle group","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"en-AU","translation":" reps","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"en-AU","translation":"Recovery","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"en-AU","translation":"Reps","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"en-AU","translation":"Set reps with the picker","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"en-AU","translation":"Static test ad","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"en-AU","translation":"Getting started","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"en-AU","translation":"Basic information · Optional","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"en-AU","translation":"Send report","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"en-AU","translation":"Reason for reporting","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"en-AU","translation":"Track changes here","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"en-AU","translation":"Choose metrics to track","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"en-AU","translation":"Change","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"en-AU","translation":"Change history","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"en-AU","translation":"Get started","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"en-AU","translation":"Learning is paused. Your past records have not been deleted.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"en-AU","translation":"Done","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"en-AU","translation":"Completed {{value1}}","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"en-AU","translation":"Completed","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"en-AU","translation":"Mark complete","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"en-AU","translation":"Completed","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"en-AU","translation":"Didn't do it","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"en-AU","translation":"Do it","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"en-AU","translation":"The more you do, the clearer the next step becomes","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"en-AU","translation":"Your results improve the next AI recommendation","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"en-AU","translation":"Expanded","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"en-AU","translation":"History","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"en-AU","translation":" years","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"en-AU","translation":"Not age-appropriate","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"en-AU","translation":"Ad ID not configured","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"en-AU","translation":"Ads & data use","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"en-AU","translation":"Ad privacy settings","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"en-AU","translation":"Ad consent has not been provided.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"en-AU","translation":"Product name or issue noticed in the ad","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"en-AU","translation":"Ads appear only on iPhone. Health, meal, photo, and BodyMode location records are not used to select ads.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"en-AU","translation":"Report ad","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"en-AU","translation":"Loading ad","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"en-AU","translation":"Ads & privacy","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"en-AU","translation":"Ad provider","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"en-AU","translation":"For ad delivery, Google receives your IP address, basic device and app information, SDK diagnostic and performance data, and ad impression and interaction data. Your approximate location may be inferred from your IP address. Weight, heart rate, sleep, meals, photos, workouts, goals, GPS data, and gym locations recorded in BodyMode are not included in ad requests.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"en-AU","translation":"Adjust rest using heart rate and RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"en-AU","translation":"Heart rate & motion","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"en-AU","translation":"Sex","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"en-AU","translation":"Sex · Optional","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"en-AU","translation":"Back","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"en-AU","translation":"Manual logging is still available.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"en-AU","translation":"Coach: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"en-AU","translation":"Assigned coach","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"en-AU","translation":"Ask your coach","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"en-AU","translation":"Coach approach","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"en-AU","translation":"Changing the coach type changes which records AI prioritizes and the recommendations it gives.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"en-AU","translation":"Assigned trainer: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"en-AU","translation":"Not specified","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"en-AU","translation":"Test connection","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"en-AU","translation":"Follow the recommended workout on iPhone or Apple Watch.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"en-AU","translation":"Reset recommendation learning only","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"en-AU","translation":"Banner ads only, without interruptions","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"en-AU","translation":"Log measurements","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"en-AU","translation":" days","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"en-AU","translation":"Review by date","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"en-AU","translation":"Daily activity","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"en-AU","translation":"Daily recommendation review","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"en-AU","translation":"Couldn't export","review_note":""}

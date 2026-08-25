@@ -1,18 +1,29 @@
+import AppTrackingTransparency
 import GoogleMobileAds
 import SwiftUI
+import UIKit
 import UserMessagingPlatform
 
 struct AdvertisingConfiguration: Equatable {
     static let demoAppID = "ca-app-pub-3940256099942544~1458002511"
     static let demoBannerUnitID = "ca-app-pub-3940256099942544/2435281174"
+    static let demoRewardedUnitID = "ca-app-pub-3940256099942544/1712485313"
 
     let appID: String
     let bannerUnitID: String
+    let rewardedUnitID: String
+
+    init(appID: String, bannerUnitID: String, rewardedUnitID: String = "") {
+        self.appID = appID
+        self.bannerUnitID = bannerUnitID
+        self.rewardedUnitID = rewardedUnitID
+    }
 
     static var bundled: AdvertisingConfiguration {
         AdvertisingConfiguration(
             appID: configuredString(for: "GADApplicationIdentifier") ?? "",
-            bannerUnitID: configuredString(for: "BodyModeAdBannerUnitID") ?? ""
+            bannerUnitID: configuredString(for: "BodyModeAdBannerUnitID") ?? "",
+            rewardedUnitID: configuredString(for: "BodyModeAdRewardedUnitID") ?? ""
         )
     }
 
@@ -25,6 +36,14 @@ struct AdvertisingConfiguration: Equatable {
 
     var isUsingDemoIDs: Bool {
         appID == Self.demoAppID && bannerUnitID == Self.demoBannerUnitID
+    }
+
+    func resolvedBannerUnitID(isTestFlight: Bool) -> String {
+        isTestFlight ? Self.demoBannerUnitID : bannerUnitID
+    }
+
+    func resolvedRewardedUnitID(usesTestAds: Bool) -> String {
+        usesTestAds ? Self.demoRewardedUnitID : rewardedUnitID
     }
 
     private static func configuredString(for key: String) -> String? {
@@ -50,6 +69,7 @@ final class AdvertisingManager: ObservableObject {
 
     @Published private(set) var state: State = .disabled
     @Published private(set) var isPrivacyOptionsRequired = false
+    @Published private(set) var trackingAuthorizationStatus = ATTrackingManager.trackingAuthorizationStatus
 
     let configuration: AdvertisingConfiguration
 
@@ -64,6 +84,26 @@ final class AdvertisingManager: ObservableObject {
         state == .ready && configuration.isConfigured
     }
 
+    var activeBannerUnitID: String {
+        configuration.resolvedBannerUnitID(
+            isTestFlight: UsageDistributionChannel.current() == .testFlight
+        )
+    }
+
+    var activeRewardedUnitID: String {
+        configuration.resolvedRewardedUnitID(
+            usesTestAds: UsageDistributionChannel.current() != .appStore
+        )
+    }
+
+    var canPreviewRewardedAd: Bool {
+        UsageDistributionChannel.current() != .appStore
+    }
+
+    var isUsingTestBanner: Bool {
+        activeBannerUnitID == AdvertisingConfiguration.demoBannerUnitID
+    }
+
     var isUITestPlaceholderEnabled: Bool {
 #if DEBUG
         ProcessInfo.processInfo.arguments.contains("--show-banner-placeholder-ui-test")
@@ -75,13 +115,13 @@ final class AdvertisingManager: ObservableObject {
     var statusText: String {
         switch state {
         case .disabled:
-            configuration.isConfigured ? "無効" : "広告ID未設定"
+            configuration.isConfigured ? L10n.string("core_ui.14dfa1fb3cf1", fallback: "無効") : L10n.string("core_ui.952d521268fa", fallback: "広告ID未設定")
         case .preparing:
-            "同意状態を確認中"
+            L10n.string("core_ui.744f3f778eba", fallback: "同意状態を確認中")
         case .ready:
-            configuration.isUsingDemoIDs ? "テスト広告" : "パーソナライズなし"
+            isUsingTestBanner ? L10n.string("core_ui.42da49eab006", fallback: "テスト広告") : L10n.string("core_ui.d30f54815002", fallback: "パーソナライズなし")
         case .unavailable:
-            "現在利用できません"
+            L10n.string("core_ui.6951e0c608be", fallback: "現在利用できません")
         }
     }
 
@@ -101,6 +141,14 @@ final class AdvertisingManager: ObservableObject {
 
         state = .preparing
         configurePrivacyDefaults()
+
+        requestTrackingAuthorizationIfNeeded { [weak self] in
+            self?.requestAdvertisingConsent()
+        }
+    }
+
+    private func requestAdvertisingConsent() {
+        trackingAuthorizationStatus = ATTrackingManager.trackingAuthorizationStatus
 
         let parameters = RequestParameters()
         ConsentInformation.shared.requestConsentInfoUpdate(with: parameters) { [weak self] requestError in
@@ -131,6 +179,45 @@ final class AdvertisingManager: ObservableObject {
         }
     }
 
+    private func requestTrackingAuthorizationIfNeeded(
+        completion: @escaping @MainActor () -> Void
+    ) {
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+
+            while UIApplication.shared.applicationState != .active {
+                try? await Task.sleep(for: .milliseconds(100))
+            }
+
+            // A newly displayed root view can report active just before it is ready
+            // to present a system permission sheet.
+            try? await Task.sleep(for: .milliseconds(350))
+
+            var status = ATTrackingManager.trackingAuthorizationStatus
+            if status == .notDetermined {
+                status = await requestSystemTrackingAuthorization()
+            }
+
+            if status == .notDetermined {
+                try? await Task.sleep(for: .milliseconds(750))
+                status = await requestSystemTrackingAuthorization()
+            }
+
+            trackingAuthorizationStatus = status
+            if status != .notDetermined {
+                completion()
+            }
+        }
+    }
+
+    private func requestSystemTrackingAuthorization() async -> ATTrackingManager.AuthorizationStatus {
+        await withCheckedContinuation { continuation in
+            ATTrackingManager.requestTrackingAuthorization { status in
+                continuation.resume(returning: status)
+            }
+        }
+    }
+
     func presentPrivacyOptions() async throws {
         try await ConsentForm.presentPrivacyOptionsForm(from: nil)
         refreshConsentState()
@@ -149,6 +236,7 @@ final class AdvertisingManager: ObservableObject {
         let requestConfiguration = MobileAds.shared.requestConfiguration
         requestConfiguration.publisherPrivacyPersonalizationState = .disabled
         requestConfiguration.setPublisherFirstPartyIDEnabled(false)
+        requestConfiguration.maxAdContentRating = .teen
     }
 
     private func refreshConsentState() {

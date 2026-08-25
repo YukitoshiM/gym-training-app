@@ -8,18 +8,22 @@
 	<string>$(BODYMODE_AI_BASE_URL)</string>
 	<key>BodyModeAIConfigurationVersion</key>
 	<string>$(BODYMODE_AI_CONFIGURATION_VERSION)</string>
+	<key>BodyModeAIRequiresAccount</key>
+	<true/>
 	<key>BodyModeAIUsesSessionTokens</key>
 	<string>$(BODYMODE_AI_USES_SESSION_TOKENS)</string>
 	<key>BodyModeAdBannerUnitID</key>
 	<string>$(BODYMODE_ADMOB_BANNER_AD_UNIT_ID)</string>
+	<key>BodyModeAdRewardedUnitID</key>
+	<string>$(BODYMODE_ADMOB_REWARDED_AD_UNIT_ID)</string>
 	<key>BodyModePrivacyPolicyURL</key>
-	<string></string>
+	<string>$(BODYMODE_PRIVACY_POLICY_URL)</string>
 	<key>BodyModeSupportEmail</key>
-	<string></string>
+	<string>$(BODYMODE_SUPPORT_EMAIL)</string>
 	<key>BodyModeSupportURL</key>
-	<string></string>
+	<string>$(BODYMODE_SUPPORT_URL)</string>
 	<key>BodyModeTermsURL</key>
-	<string></string>
+	<string>$(BODYMODE_TERMS_URL)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -30,6 +34,53 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>ar-SA</string>
+		<string>ca</string>
+		<string>cs</string>
+		<string>da</string>
+		<string>de-DE</string>
+		<string>el</string>
+		<string>en-AU</string>
+		<string>en-CA</string>
+		<string>en-GB</string>
+		<string>en-US</string>
+		<string>es-ES</string>
+		<string>es-MX</string>
+		<string>fi</string>
+		<string>fr-CA</string>
+		<string>fr-FR</string>
+		<string>gu</string>
+		<string>he</string>
+		<string>hi</string>
+		<string>hr</string>
+		<string>hu</string>
+		<string>id</string>
+		<string>it</string>
+		<string>ja</string>
+		<string>ko</string>
+		<string>mr</string>
+		<string>ms</string>
+		<string>nb</string>
+		<string>nl-NL</string>
+		<string>pl</string>
+		<string>pt-BR</string>
+		<string>pt-PT</string>
+		<string>ro</string>
+		<string>ru</string>
+		<string>sk</string>
+		<string>sl</string>
+		<string>sv</string>
+		<string>ta</string>
+		<string>te</string>
+		<string>th</string>
+		<string>tr</string>
+		<string>uk</string>
+		<string>vi</string>
+		<string>zh-Hans</string>
+		<string>zh-Hant</string>
+	</array>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
@@ -63,6 +114,8 @@
 	<string>現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。</string>
 	<key>NSMotionUsageDescription</key>
 	<string>Apple Watchの動きからセット中の回数とテンポを推定します。</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Your permission lets our ad provider use your device's advertising identifier to limit repeated ads and measure ad performance. You can still use BodyMode and non-personalized ads if you decline.</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

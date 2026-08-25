@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"ro","translation":"Selectați una dintre opțiuni.","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"ro","translation":"După ce ați stabilit obiective, aveți nevoie să faceți doar 3 lucruri în fiecare zi.","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"ro","translation":"Finalizați prima sesiune de antrenament.","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"ro","translation":"Înregistrați valoarea inițială.","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"ro","translation":"Până la 3.","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"ro","translation":"Puteți adăuga mai târziu elemente necompletate din ecranul de înregistrare.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"ro","translation":"Necompletat","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"ro","translation":"Nu a fost realizat","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"ro","translation":"Nu a fost înregistrat","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"ro","translation":"Nu a fost configurat","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"ro","translation":"Nu a fost selectat","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"ro","translation":"Acum, alegeți meniul în funcție de scop.","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"ro","translation":"Următorul","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"ro","translation":"Vezi numărul de pași","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"ro","translation":"Pierdere în greutate","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"ro","translation":"Carbohidrați","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"ro","translation":"Invalid","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"ro","translation":"Stabiliți un număr și o durată rezonabile.","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"ro","translation":"În special, acordă atenție...","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"ro","translation":"Obțineți informații despre starea actuală și următoarea etapă","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"ro","translation":"Verificați starea","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"ro","translation":"În prezent","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"ro","translation":"Informațiile actuale despre corp","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"ro","translation":"Nu este disponibil în prezent","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"ro","translation":"Utilizați înregistrările și setările disponibile în prezent.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"ro","translation":"Selectat în prezent: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"ro","translation":"Mergeți cu încredere spre corpul ideal.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"ro","translation":"Motiv","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"ro","translation":"Motiv: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"ro","translation":"Anul de naștere","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"ro","translation":"Începeți turul ecranului","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"ro","translation":"Meniu salvate: {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"ro","translation":"Starea dorită","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"ro","translation":"Stilul dorit","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"ro","translation":"Obiectiv","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"ro","translation":"Obiectiv: {{value1}} / Diferență: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"ro","translation":"Obiectiv și ritm","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"ro","translation":"Obiectiv și progres","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"ro","translation":"Opțiuni de ajustare a obiectivului","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"ro","translation":"Obiectiv nefixat","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"ro","translation":"Obținerea obiectivelor","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"ro","translation":"Scop","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"ro","translation":"Pentru fiecare scop, avem pregătiți doi utilizatori. Schimbând persoanele, veți obține un stil de comunicare și o imagine ideală diferite.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"ro","translation":"Persoana potrivită pentru scopul respectiv","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"ro","translation":"Vom schimba punctele de verificare de pe pagina principală și următoarea acțiune în funcție de scop.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"ro","translation":"Schimbarea scopului","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"ro","translation":"Selectați un scop","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"ro","translation":"Modul scop","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"ro","translation":"Scop și obiective","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"ro","translation":"Meniul specific scopului este disponibil","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"ro","translation":"Vizualizați meniul specific scopului","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"ro","translation":"Ultima activitate","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"ro","translation":"Modificați în timp real","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"ro","translation":"Eșantionare eficientă din punct de vedere energetic","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"ro","translation":"Începeți {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"ro","translation":"Somn și recuperare","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"ro","translation":"În curs de verificare","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"ro","translation":"Secunde","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"ro","translation":"Număr de secunde","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"ro","translation":"Găsiți și adăugați exerciții","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"ro","translation":"Folosiți autentificarea pe dispozitive pentru acces temporar","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"ro","translation":"În interiorul dispozitivului","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"ro","translation":"Performanță sportivă","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"ro","translation":"Antrenament de forță","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"ro","translation":"Conectați performanța, forța și recuperarea cu activitatea sportivă","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"ro","translation":"Creșteți masa musculară și rezultatele antrenamentelor","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"ro","translation":"Hipertrofie musculară","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"ro","translation":"Experiență","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"ro","translation":"Nivelul de experiență","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"ro","translation":"Ritmul în care puteți continua","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"ro","translation":"Nu este o evaluare a abilităților sau calificărilor. Indicați punctele pe care le considerați importante în răspuns.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"ro","translation":"Grăsimi","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"ro","translation":"Circumferința taliei","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"ro","translation":"Circumferința taliei - opțional","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"ro","translation":"Învațăți tiparele de comportament","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"ro","translation":"Notificări privind activitatea","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"ro","translation":"Afișare","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"ro","translation":"Modul de afișare","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"ro","translation":"Metoda de afișare","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"ro","translation":"Politica de afișare","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"ro","translation":"Model de asistență deconectat","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"ro","translation":"Notă","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"ro","translation":"Notă: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"ro","translation":"Plan","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"ro","translation":"Șterge planul, istoricul, indicatorii fizici, alimentația, fotografiile, conversațiile și memoria AI, precum și categoriile personalizate.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"ro","translation":"Începeți de la plan sau adăugați exerciții direct și înregistrați-le.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"ro","translation":"Adăugați exerciții fără a crea un plan","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"ro","translation":"Integrați în plan","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"ro","translation":"Creați un plan","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"ro","translation":"Creăm un plan","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"ro","translation":"Planificare & Urmărire","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"ro","translation":"Doriți să actualizați greutatea țintă?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"ro","translation":"Înregistrare","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"ro","translation":"Înregistrați","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"ro","translation":"Înregistrați. Puneți întrebări AI-ului. Executați. Trebuie să faceți doar 3 lucruri în fiecare zi.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"ro","translation":"Atingeți elementul de înregistrat","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"ro","translation":"Rezultatele înregistrării și ale execuției vor fi transferate către următoarea analiză a AI-ului. Prima acțiune vă va ghida prin misiunea de pe ecranul principal.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"ro","translation":"Înregistrările sunt stocate aici","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"ro","translation":"Verificarea înregistrărilor este în curs. Rămâne activ chiar și după ce închideți ecranul.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"ro","translation":"Vezi înregistrările și primește sugestii pentru următoarea acțiune","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"ro","translation":"Înregistrat","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"ro","translation":"Pe baza înregistrărilor, vă propunem îmbunătățiri, stagnare sau lipsă de informații și următoarea acțiune.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"ro","translation":"Înregistrat","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"ro","translation":"Setări","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"ro","translation":"Setări salvate","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"ro","translation":"Jurnalul de diagnostic include înregistrări ale funcționării, comunicării și activităților fizice pe iPhone și Apple Watch. Nu sunt trimise automat către exterior.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"ro","translation":"Șterge jurnalul de diagnostic","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"ro","translation":"Exportă jurnalul de diagnostic","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"ro","translation":"Trimite jurnalul de diagnostic","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"ro","translation":"Mod de conversație","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"ro","translation":"Vezi mai multe","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"ro","translation":"Informații care pot induce în eroare","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"ro","translation":"Indicatori cheie pentru sănătate","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"ro","translation":"Înălțime","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"ro","translation":"Înălțime - opțional","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"ro","translation":"Dacă nu sunteți sigur, accesați aici","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"ro","translation":"Adaugă","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"ro","translation":"Adaugă","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"ro","translation":"Începe nou","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"ro","translation":"Trimite","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"ro","translation":"Așteptare trimitere","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"ro","translation":"Selectați sala de sport sau echipamentul din casă","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"ro","translation":"Voi verifica înregistrarea odată ce conexiunea este stabilită.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"ro","translation":"Numărul de sesiuni pe săptămână","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"ro","translation":"Câte zile pe săptămână vă puteți antrena?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"ro","translation":"Instrucțiuni","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"ro","translation":"În curs de desfășurare","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"ro","translation":"Mențineți obiceiurile de exerciții, somn și alimentație","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"ro","translation":"Selectați: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"ro","translation":"Se selectează","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"ro","translation":"Distribuire","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"ro","translation":"Încărcarea setărilor AI la distribuire","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"ro","translation":"Zonele țintă","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"ro","translation":"Greutate","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"ro","translation":"Setare greutate cu bara de progres","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"ro","translation":"Unități de măsură","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"ro","translation":"Închis","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"ro","translation":"Închide","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"ro","translation":"Începe","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"ro","translation":"Informații suplimentare","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"ro","translation":"Alimentație","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"ro","translation":"Alimentație și siluetă","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"ro","translation":"Înregistrați-vă alimentația și silueta cu ajutorul fotografiilor. Puteți înregistra greutatea, circumferința taliei și numărul de seturi folosind cifre.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"ro","translation":"Înregistrarea alimentelor","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"ro","translation":"Număr de mese","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"ro","translation":"Vă afișăm separat progresul în atingerea numărului de mese și a caloriilor/PFC.","review_note":""}

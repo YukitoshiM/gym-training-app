@@ -45,7 +45,7 @@ struct WatchWeightEntryView: View {
         ScrollView {
             VStack(spacing: 8) {
                 HStack(spacing: 4) {
-                    Picker("重量", selection: stepIndex) {
+                    Picker(L10n.string("watch_widget.74211dc96bd5", fallback: "重量"), selection: stepIndex) {
                         ForEach(availableStepRange, id: \.self) { value in
                             Text(Self.formatted(Double(value) / 10))
                                 .monospacedDigit()
@@ -56,7 +56,7 @@ struct WatchWeightEntryView: View {
                     .pickerStyle(.wheel)
                     .frame(width: 118, height: 76)
                     .clipped()
-                    .accessibilityLabel("重量")
+                    .accessibilityLabel(L10n.string("watch_widget.74211dc96bd5", fallback: "重量"))
                     .accessibilityIdentifier("watchWeightPicker")
 
                     Text(unit.displayName)
@@ -66,7 +66,7 @@ struct WatchWeightEntryView: View {
                 }
 
                 HStack(spacing: 6) {
-                    TextField("手入力", text: $editText)
+                    TextField(L10n.string("watch_widget.31d0f75e46f9", fallback: "手入力"), text: $editText)
                     .multilineTextAlignment(.center)
                     .focused($isTextFieldFocused)
                     .accessibilityIdentifier("watchWeightField")
@@ -76,7 +76,7 @@ struct WatchWeightEntryView: View {
                         .foregroundStyle(WatchAppTheme.mutedInk)
                 }
 
-                Button("反映") {
+                Button(L10n.string("watch_widget.e9b84e3ea7ac", fallback: "反映")) {
                     commitManualEntry()
                     let kilograms = unit == .kg ? displayedWeight : displayedWeight / 2.2046226218
                     workoutStore.setWeight(exerciseID: exerciseID, setID: setID, weight: kilograms)
@@ -87,7 +87,7 @@ struct WatchWeightEntryView: View {
                 .accessibilityIdentifier("saveWatchWeightButton")
             }
         }
-        .navigationTitle("重量")
+        .navigationTitle(L10n.string("watch_widget.74211dc96bd5", fallback: "重量"))
         .onChange(of: displayedWeight) { _, value in
             guard !isTextFieldFocused else { return }
             editText = Self.formatted(value)
@@ -188,9 +188,9 @@ struct WatchTempoEntryView: View {
                 concentricTempoInput
 
                 HStack(spacing: 0) {
-                    Picker("下げ", selection: $eccentricSeconds) {
+                    Picker(L10n.string("watch_widget.065c7d0ae56f", fallback: "下げ"), selection: $eccentricSeconds) {
                         ForEach(1...10, id: \.self) { value in
-                            Text("\(value)秒")
+                            Text(L10n.string("watch_widget.e90e08ac6f9b", fallback: "{{value1}}秒", values: [value.formatted()]))
                                 .monospacedDigit()
                                 .tag(value)
                         }
@@ -199,24 +199,24 @@ struct WatchTempoEntryView: View {
                     .pickerStyle(.wheel)
                     .frame(width: 116, height: 76)
                     .clipped()
-                    .accessibilityLabel("下げ時間")
+                    .accessibilityLabel(L10n.string("watch_widget.af7f47ccca87", fallback: "下げ時間"))
                     .accessibilityIdentifier("watchTempoEccentricPicker")
 
-                    Text("下")
+                    Text(L10n.string("watch_widget.1bee52246397", fallback: "下"))
                         .font(.caption)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 32, alignment: .leading)
                 }
 
-                TextField("下げ時間を直接入力", text: $eccentricText)
+                TextField(L10n.string("watch_widget.75d55853c35e", fallback: "下げ時間を直接入力"), text: $eccentricText)
                     .multilineTextAlignment(.center)
                     .focused($focusedField, equals: .eccentric)
                     .accessibilityIdentifier("watchTempoEccentricField")
 
                 HStack(spacing: 0) {
-                    Picker("振動速度", selection: $beatSpeed) {
+                    Picker(L10n.string("watch_widget.a102da2a71e9", fallback: "振動速度"), selection: $beatSpeed) {
                         ForEach(1...3, id: \.self) { value in
-                            Text("\(value)回/秒")
+                            Text(L10n.string("watch_widget.8cfae2e66c26", fallback: "{{value1}}回/秒", values: [String(describing: value)]))
                                 .monospacedDigit()
                                 .tag(value)
                         }
@@ -225,21 +225,21 @@ struct WatchTempoEntryView: View {
                     .pickerStyle(.wheel)
                     .frame(width: 106, height: 76)
                     .clipped()
-                    .accessibilityLabel("1秒あたりの振動回数")
+                    .accessibilityLabel(L10n.string("watch_widget.040f06159cfe", fallback: "1秒あたりの振動回数"))
                     .accessibilityIdentifier("watchTempoSpeedPicker")
 
-                    Text("速")
+                    Text(L10n.string("watch_widget.a0b5240a769f", fallback: "速"))
                         .font(.caption)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 30, alignment: .leading)
                 }
 
-                TextField("振動回数(1〜3回/秒)", text: $beatSpeedText)
+                TextField(L10n.string("watch_widget.fe02518c224f", fallback: "振動回数(1〜3回/秒)"), text: $beatSpeedText)
                     .multilineTextAlignment(.center)
                     .focused($focusedField, equals: .beatSpeed)
                     .accessibilityIdentifier("watchTempoSpeedField")
 
-                Button("反映") {
+                Button(L10n.string("watch_widget.e9b84e3ea7ac", fallback: "反映")) {
                     commitManualEntries()
                     workoutStore.setPlannedTempo(
                         exerciseID: exerciseID,
@@ -255,7 +255,7 @@ struct WatchTempoEntryView: View {
                 .accessibilityIdentifier("saveWatchTempoButton")
             }
         }
-        .navigationTitle("テンポ")
+        .navigationTitle(L10n.string("watch_widget.d7e6f512c71c", fallback: "テンポ"))
         .onChange(of: concentricSeconds) { _, value in
             guard focusedField != .concentric else { return }
             concentricText = String(value)
@@ -288,9 +288,9 @@ struct WatchTempoEntryView: View {
     private var concentricTempoInput: some View {
         VStack(spacing: 4) {
             HStack(spacing: 0) {
-                Picker("上げ", selection: $concentricSeconds) {
+                Picker(L10n.string("watch_widget.434b69b48377", fallback: "上げ"), selection: $concentricSeconds) {
                     ForEach(1...10, id: \.self) { value in
-                        Text("\(value)秒")
+                        Text(L10n.string("watch_widget.e90e08ac6f9b", fallback: "{{value1}}秒", values: [value.formatted()]))
                             .monospacedDigit()
                             .tag(value)
                     }
@@ -299,16 +299,16 @@ struct WatchTempoEntryView: View {
                 .pickerStyle(.wheel)
                 .frame(width: 116, height: 76)
                 .clipped()
-                .accessibilityLabel("上げ時間")
+                .accessibilityLabel(L10n.string("watch_widget.6a959494f4ff", fallback: "上げ時間"))
                 .accessibilityIdentifier("watchTempoConcentricPicker")
 
-                Text("上")
+                Text(L10n.string("watch_widget.49b442f82f9b", fallback: "上"))
                     .font(.caption)
                     .foregroundStyle(WatchAppTheme.mutedInk)
                     .frame(width: 32, alignment: .leading)
             }
 
-            TextField("上げ時間を直接入力", text: $concentricText)
+            TextField(L10n.string("watch_widget.0caface262a2", fallback: "上げ時間を直接入力"), text: $concentricText)
                 .multilineTextAlignment(.center)
                 .focused($focusedField, equals: .concentric)
                 .accessibilityIdentifier("watchTempoConcentricField")
@@ -368,7 +368,7 @@ struct WatchRepsEntryView: View {
         ScrollView {
             VStack(spacing: 8) {
                 HStack(spacing: 0) {
-                    Picker("回数", selection: $reps) {
+                    Picker(L10n.string("watch_widget.83fdf5d78dd0", fallback: "回数"), selection: $reps) {
                         ForEach(0...999, id: \.self) { value in
                             Text("\(value)")
                                 .monospacedDigit()
@@ -379,21 +379,21 @@ struct WatchRepsEntryView: View {
                     .pickerStyle(.wheel)
                     .frame(width: 104, height: 80)
                     .clipped()
-                    .accessibilityLabel("回数")
+                    .accessibilityLabel(L10n.string("watch_widget.83fdf5d78dd0", fallback: "回数"))
                     .accessibilityIdentifier("watchRepsPicker")
 
-                    Text("回")
+                    Text(L10n.string("watch_widget.a62be7ac164d", fallback: "回"))
                         .font(.caption)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 28, alignment: .leading)
                 }
 
-                TextField("手入力", text: $editText)
+                TextField(L10n.string("watch_widget.31d0f75e46f9", fallback: "手入力"), text: $editText)
                     .multilineTextAlignment(.center)
                     .focused($isTextFieldFocused)
                     .accessibilityIdentifier("watchRepsField")
 
-                Button("反映") {
+                Button(L10n.string("watch_widget.e9b84e3ea7ac", fallback: "反映")) {
                     commitManualEntry()
                     workoutStore.setReps(exerciseID: exerciseID, setID: setID, reps: reps)
                     dismiss()
@@ -403,7 +403,7 @@ struct WatchRepsEntryView: View {
                 .accessibilityIdentifier("saveWatchRepsButton")
             }
         }
-        .navigationTitle("回数")
+        .navigationTitle(L10n.string("watch_widget.83fdf5d78dd0", fallback: "回数"))
         .onChange(of: reps) { _, value in
             guard !isTextFieldFocused else { return }
             editText = String(value)
@@ -449,7 +449,7 @@ struct WatchRestTimerEntryView: View {
         ScrollView {
             VStack(spacing: 8) {
                 HStack(spacing: 0) {
-                    Picker("休憩時間", selection: $seconds) {
+                    Picker(L10n.string("watch_widget.4d0773120c03", fallback: "休憩時間"), selection: $seconds) {
                         ForEach(Array(stride(from: 5, through: 600, by: 5)), id: \.self) { value in
                             Text(formatDuration(value))
                                 .monospacedDigit()
@@ -460,27 +460,27 @@ struct WatchRestTimerEntryView: View {
                     .pickerStyle(.wheel)
                     .frame(width: 112, height: 76)
                     .clipped()
-                    .accessibilityLabel("休憩時間")
+                    .accessibilityLabel(L10n.string("watch_widget.4d0773120c03", fallback: "休憩時間"))
                     .accessibilityIdentifier("watchRestSecondsPicker")
 
-                    Text("分:秒")
+                    Text(L10n.string("watch_widget.c6128f953672", fallback: "分:秒"))
                         .font(.caption2)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                         .frame(width: 36, alignment: .leading)
                 }
 
                 HStack(spacing: 6) {
-                    TextField("手入力", text: $editText)
+                    TextField(L10n.string("watch_widget.31d0f75e46f9", fallback: "手入力"), text: $editText)
                         .multilineTextAlignment(.center)
                         .focused($isTextFieldFocused)
                         .accessibilityIdentifier("watchRestSecondsField")
 
-                    Text("秒")
+                    Text(L10n.string("watch_widget.586175148774", fallback: "秒"))
                         .font(.caption)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                 }
 
-                Button("反映") {
+                Button(L10n.string("watch_widget.e9b84e3ea7ac", fallback: "反映")) {
                     commitManualEntry()
                     workoutStore.setRestTimer(seconds: seconds)
                     dismiss()
@@ -490,7 +490,7 @@ struct WatchRestTimerEntryView: View {
                 .accessibilityIdentifier("saveWatchRestSecondsButton")
             }
         }
-        .navigationTitle("休憩時間")
+        .navigationTitle(L10n.string("watch_widget.4d0773120c03", fallback: "休憩時間"))
         .onChange(of: seconds) { _, value in
             guard !isTextFieldFocused else { return }
             editText = String(value)
@@ -562,12 +562,12 @@ struct WatchRPESelectionView: View {
                         .frame(width: 34, alignment: .leading)
                 }
 
-                TextField("手入力", text: $editText)
+                TextField(L10n.string("watch_widget.31d0f75e46f9", fallback: "手入力"), text: $editText)
                     .multilineTextAlignment(.center)
                     .focused($isTextFieldFocused)
                     .accessibilityIdentifier("watchRPEField")
 
-                Button("反映") {
+                Button(L10n.string("watch_widget.e9b84e3ea7ac", fallback: "反映")) {
                     commitManualEntry()
                     workoutStore.updateRPE(exerciseID: exerciseID, setID: setID, rpe: rpe)
                     dismiss()
@@ -576,7 +576,7 @@ struct WatchRPESelectionView: View {
                 .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("saveWatchRPEButton")
 
-                Button("RPEなし") {
+                Button(L10n.string("watch_widget.3e36ab9a7f63", fallback: "RPEなし")) {
                     workoutStore.updateRPE(exerciseID: exerciseID, setID: setID, rpe: nil)
                     dismiss()
                 }

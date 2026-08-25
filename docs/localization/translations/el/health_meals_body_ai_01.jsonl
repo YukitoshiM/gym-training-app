@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"el","translation":"Θα επαναφέρεται σε {{value1}}. Μπορείτε να συνεχίσετε να καταγράφετε χειροκίνητα.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"el","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"el","translation":"Παρακαλούμε εισάγετε έναν αριθμό μεγαλύτερο του 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"el","translation":"1. Διατήρηση 3 προπονήσεων την εβδομάδα\n2. Καταγραφή στόχου για πρωτεΐνες\n3. Σύγκριση φωτογραφιών σώματος στο τέλος του μήνα","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"el","translation":"Παρακαλούμε περιμένετε για λίγο και δοκιμάστε ξανά.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"el","translation":"1 φλιτζάνι","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"el","translation":"Δεν υπάρχουν σαφείς προτάσεις παύσης για τα είδη που έχουν καταγραφεί 3 φορές ή περισσότερες.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"el","translation":"Πολλές προπονήσεις σε διάστημα 48 ωρών","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"el","translation":"Ολοκληρωμένη ανάλυση με τεχνητή νοημοσύνη","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"el","translation":"Καταγεγραμμένα δεδομένα που χρησιμοποιεί η τεχνητή νοημοσύνη","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"el","translation":"Η χρήση της τεχνητής νοημοσύνης είναι προσωρινά υψηλή.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"el","translation":"Τα στοιχεία ελέγχου της τεχνητής νοημοσύνης είναι λανθασμένα ή έχουν λήξει.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"el","translation":"Σφάλμα στην τεχνητή νοημοσύνη","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"el","translation":"Επαγγελματίας καθοδηγός με τεχνητή νοημοσύνη","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"el","translation":"Λάθος διεύθυνση URL του διακομιστή της τεχνητής νοημοσύνης.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"el","translation":"Ο διακομιστής της τεχνητής νοημοσύνης επιστρέφει σφάλμα: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"el","translation":"Δεν βρέθηκε το απαραίτητο API στον διακομιστή της τεχνητής νοημοσύνης.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"el","translation":"Δεν μπορεί να συνδεθεί με τον διακομιστή της τεχνητής νοημοσύνης. Παρακαλούμε προσπαθήστε ξανά αργότερα.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"el","translation":"Η μορφή JSON του διακομιστή της τεχνητής νοημοσύνης δεν ταιριάζει με αυτό που αναμένει η εφαρμογή.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"el","translation":"Δεν μπόρεσα να διαβάσω την απάντηση από τον διακομιστή της τεχνητής νοημοσύνης.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"el","translation":"Πραγματοποιήθηκε σφάλμα στον διακομιστή της τεχνητής νοημοσύνης: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"el","translation":"Ελέγξτε τη σύνδεση με τον διακομιστή της τεχνητής νοημοσύνης","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"el","translation":"Επαγγελματίας προπονητής με τεχνητή νοημοσύνη","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"el","translation":"Θέλετε να διαγράψετε τη συνομιλία με τον επαγγελματία προπονητή με τεχνητή νοημοσύνη;","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"el","translation":"Το μοντέλο της τεχνητής νοημοσύνης δεν είναι διαθέσιμο ή η ανάλυση εικόνας απέτυχε.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"el","translation":"Προετοιμασία μοντέλου τεχνητής νοημοσύνης","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"el","translation":"Ανάλυση με τεχνητή νοημοσύνη","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"el","translation":"Υπάρχει διαθέσιμος αριθμός μονάδων για τη χρήση της τεχνητής νοημοσύνης.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"el","translation":"Ελέγξτε τον αριθμό μονάδων για τη χρήση της τεχνητής νοημοσύνης.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"el","translation":"Η ρύθμιση για τη χρήση της τεχνητής νοημοσύνης είναι απενεργοποιημένη.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"el","translation":"Απαιτείται έλεγχος των τιμών που παρέχει η τεχνητή νοημοσύνη.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"el","translation":"Η σύνδεση με την τεχνητή νοημοσύνη είναι ενεργοποιημένη.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"el","translation":"Δεν ήταν δυνατή η ασφαλής αποθήκευση των πληροφοριών σύνδεσης με την τεχνητή νοημοσύνη.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"el","translation":"Λειτουργίες τεχνητής νοημοσύνης","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"el","translation":"Οι λειτουργίες τεχνητής νοημοσύνης είναι απενεργοποιημένες στις ρυθμίσεις.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"el","translation":"Οι λειτουργίες τεχνητής νοημοσύνης είναι απενεργοποιημένες στις ρυθμίσεις. Μπορείτε να αποθηκεύσετε τις φωτογραφίες όπως είναι.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"el","translation":"Οι λειτουργίες τεχνητής νοημοσύνης είναι απενεργοποιημένες στις ρυθμίσεις. Μπορείτε να αποθηκεύσετε χειροκίνητα δεδομένα όπως είναι.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"el","translation":"Ιστορικό αποστολής μέσω API","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"el","translation":"Δεν έχει οριστεί το κλειδί API.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"el","translation":"Ελέγξτε την έκδοση του διακομιστή API. Λεπτομέρειες: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"el","translation":"Ο διακομιστής API απαντά, αλλά δεν μπορεί να χρησιμοποιήσει το απαιτούμενο μοντέλο.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"el","translation":"Ο διακομισός API απαντά, αλλά δεν μπορεί να χρησιμοποιήσει τα μοντέλα για βοήθεια στην προετοιμασία φαγητού και τη δημιουργία αναφορών.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"el","translation":"Σύνδεση με το Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"el","translation":"Εμφανίζει την τελευταία διαδρομή τρεξίματος που έχει αποθηκευτεί στο Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"el","translation":"Συνδέστε το Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"el","translation":"Φορέστε το Apple Watch κατάλληλα και κατά τη διάρκεια του ύπνου για να έχετε πιο ακριβείς μετρήσεις. Δεν συμπληρώνουμε τις τιμές που λείπουν με υποθέσεις.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"el","translation":"Ελέγξτε την Base URL και την έκδοση του διακομιστή API.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"el","translation":"Η καρδιακή συχνότητα (HRV) είναι χαμηλότερη από τον μέσο όρο των 14 ημερών.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"el","translation":"Δεν υπάρχουν διαδοχικά δεδομένα HRV.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"el","translation":"Το HRV είναι υψηλότερο από τον μέσο όρο.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"el","translation":"Το HRV βρίσκεται εντός του κανονικού εύρους.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"el","translation":"Ο μέσος όρος του HRV είναι {{value1}}% (σε σύγκριση με το προσωπικό σας επίπεδο).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"el","translation":"Η HTTP λειτουργεί μόνο για localhost, LAN και Tailscale. Για εξωτερικούς διακομιστές, χρησιμοποιήστε HTTPS.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"el","translation":"Δεν έχουν ληφθεί δεδομένα κατανάλωσης ενέργειας στην κατηγορία \"Health\". Ωστόσο, τα δεδομένα γευμάτων είναι αποθηκευμένα.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"el","translation":"Ενημερώστε τα δεδομένα Health.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"el","translation":"Παρακαλούμε επιλέξτε ξανά μια εικόνα JPEG ή PNG.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"el","translation":"Καταγράψτε τους δείκτες απόδοσης (KPI).","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"el","translation":"Τελευταίες τιμές που καταγράφηκαν από εφαρμογές όπως η \"Noise\". Δεν θα οριστούν σε 0 αν δεν υπάρχουν δεδομένα.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"el","translation":"Υπολογίστε αυτόματα τις θερμίδες από το PFC.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"el","translation":"Έχετε επιτύχει τον στόχο του PFC.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"el","translation":"Μειώστε την ένταση κατά ένα επίπεδο (RPE).","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"el","translation":"Η διεύθυνση URL πρέπει να ξεκινά με \"https://\". Για τοπική ανάπτυξη, μπορείτε επίσης να χρησιμοποιήσετε HTTP για localhost, IP LAN και ονόματα Tailscale.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"el","translation":"Η διεύθυνση URL πρέπει να ξεκινά με \"https://\". Μπορείτε επίσης να χρησιμοποιήσετε HTTP μόνο κατά τη διάρκεια της τοπικής ανάπτυξης.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"el","translation":"Ενσωματωμένος αισθητήρας ρολογιού.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"el","translation":"bpm / 30 δευτερόλεπτα.","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"el","translation":"Έχετε επιτύχει τις θερμίδες και τον στόχο του PFC.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"el","translation":"Έχετε επιτύχει τις θερμίδες.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"el","translation":"κιλά / λεπτό","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"el","translation":"{\"id\":\"{{value1}}\",\"κατηγορία\":\"{{value2}}\",\"τίτλος\":\"{{value3}}\",\"στόχος\":0,\"λόγος\":\"Έλεγξα τα αρχεία και τους στόχους\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"el","translation":"{\"διατήρησε_υπάρχοντα\":true,\"επίπεδο προετοιμασίας\":\"κανονικό\",\"περιλήψου\":\"Ας συνεχίσουμε με την πρόταση για σήμερα.\",\"λόγος αλλαγής\":\"\",\"ενέργειες\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"el","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"el","translation":"{{value1}} / {{value2}} ώρες","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"el","translation":"{{value1}} / {{value2}} βήματα","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"el","translation":"{{value1}} / {{value2}} γεύματα","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"el","translation":"{{value1}} {{value2}} ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"el","translation":"Μπορείτε να δημιουργήσετε εβδομαδιαίες αναφορές με το {{value1}} και το βοηθητικό μοντέλο.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"el","translation":"{{value1}}/{{value2}} φορές","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"el","translation":"{{value1}}: {{value2}} Ποσοστό επίτευξης {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"el","translation":"Μπορείτε να ελέγξετε ολόκληρο το σύνολο με το {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"el","translation":"Το {{value1}} σκέφτεται την απάντηση","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"el","translation":"Το {{value1}} ελέγχει τη διατροφή και τις θερμίδες","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"el","translation":"Το {{value1}} ελέγχει σε πολλές κατευθύνσεις","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"el","translation":"Τι θυμάται το {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"el","translation":"Συνεργασία με το {{value1}} για δημιουργία και συζήτηση","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"el","translation":"Συμβουλευτείτε το {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"el","translation":"Αναφορά του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"el","translation":"Δεν υπάρχει ακόμα αναφορά του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"el","translation":"Προτάσεις του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"el","translation":"Προτάσεις του {{value1}} και {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"el","translation":"Ανάλυση του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"el","translation":"Αποτελέσματα ανάλυσης του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"el","translation":"Πληροφορίες αναφοράς για το {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"el","translation":"Ανασκόπηση του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"el","translation":"Εμφανίζονται μόνο οι περιεχόμενοι που έχουν εγκριθεί μετά την πρόταση του {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"el","translation":"Μηνιαία αξιολόγηση του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"el","translation":"Η μνήμη του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"el","translation":"Επιλογή του {{value1}} από τη βιβλιοθήκη","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"el","translation":"Διαγραφή του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"el","translation":"Λήψη φωτογραφίας του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"el","translation":"Επεξεργασία του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"el","translation":"Καταγραφή του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"el","translation":"Ελαφριά καταγραφή του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"el","translation":"Η μέση σταθερότητα για το σύνολο {{value1}} είναι {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"el","translation":"{{value1}}·","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"el","translation":"{{value1}}·{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"el","translation":"{{value1}}· Συνομιλία","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"el","translation":"Προτάσεις μηνιαίας ανασκόπησης του {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"el","translation":"Επεξεργασία του {{value1}}·{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"el","translation":"{{value1}}· Εβδομαδιαίο αναφορά","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"el","translation":"{{value1}}·{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"el","translation":"{{value1}}Παρακαλούμε να προσπαθήσετε ξανά. Μπορείτε ακόμα να καταγράψετε χειροκίνητα.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"el","translation":"{{value1}}Παρακαλούμε να προσπαθήσετε ξανά. Εάν συνεχίσετε, ελέγξτε την κατάσταση λειτουργίας του διακομιστή AI.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"el","translation":"Διαγραφή της φωτογραφίας {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"el","translation":"{{value1}} λεπτά","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"el","translation":"{{value1}} φορές","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"el","translation":"{{value1}} φορές· Μέση επίτευξη {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"el","translation":"Αναλύουμε όλες τις φωτογραφίες στην κατεύθυνση {{value1}}. Δεν παρέχουμε οριστικές πληροφορίες σχετικά με τον αριθμό, όπως το ποσοστό λίπους.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"el","translation":"{{value1}} φωτογραφίες","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"el","translation":"Σύνολο από {{value1}} φωτογραφίες","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"el","translation":"{{value1}} βήματα","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"el","translation":"Το \"-\" υποδηλώνει ότι δεν έχει μετρηθεί και αφαιρείται από το σύνολο, ενώ το \"Tr\" υποδηλώνει μια μικρή ποσότητα και εκτιμάται ως 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"el","translation":"Επιπλέον {{value1}} γρ.","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"el","translation":"Θα εξετάσουμε μαζί τα δεδομένα σας.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"el","translation":"Αισθάνομαι αρκετά καλά","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"el","translation":"Αισθάνομαι αρκετά κουρασμένος/η","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"el","translation":"Μπορούμε να αναλύσουμε αυτό. Επίσης, προσθέτοντας τις πλευρές και την πίσω όψη, μπορούμε να το εξετάσουμε από διαφορετικές οπτικές γωνίες.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"el","translation":"Ανάλυση αυτού του συνόλου","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"el","translation":"Θα σας προτείνω με βάση αυτές τις πληροφορίες.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"el","translation":"Διαγραφή όλων","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"el","translation":"Πρωτεΐνη","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"el","translation":"Θα αναδείξουμε τα αποτελέσματα στην πρότασή μας για την επόμενη ημέρα.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"el","translation":"Επιπλέον {{value1}} προϊόντα","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"el","translation":"Δεν υπάρχουν ακόμα δεδομένα εκμάθησης.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"el","translation":"Δεν υπάρχουν ακόμα καταγεγραμμένα δεδομένα.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"el","translation":"Επαναληπτική εκτίμηση","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"el","translation":"Μέση μέτρο","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"el","translation":"Ανάγνωση μέσω κάμερας","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"el","translation":"Η χρήση της κάμερας δεν είναι δυνατή.","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"el","translation":"Δεν μπορεί να χρησιμοποιηθεί η ανάγνωση μέσω κάμερας.","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"el","translation":"Θερμίδες","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"el","translation":"Υπολογίζονται οι θερμίδες","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"el","translation":"Ακύρωση","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"el","translation":"Κατάσταση","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"el","translation":"Ελέγξτε τη διεύθυνση του διακομιστή, το κλειδί API και την κατάσταση λειτουργίας του διακομιστή API.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"el","translation":"Επίσκεψη στο γυμναστήριο","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"el","translation":"Σταθερή βάση","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"el","translation":"Σετ","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"el","translation":"Υπολογίζεται η αποτελεσματικότητα των σετ","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"el","translation":"Αποτελεσματικότητα σετ","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"el","translation":"Λεπτομέρειες για την αποτελεσματικότητα σετ","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"el","translation":"Πρωτεΐνη {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"el","translation":"Πίεση στήθους","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"el","translation":"Είναι μια εκτίμηση για δοκιμή.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"el","translation":"Ρυθμός","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"el","translation":"Μόλις συλλεχθούν τα δεδομένα, μπορείτε να δείτε τις συνολικές πληροφορίες σχετικά με τον ύπνο, την αποκατάσταση και την άσκηση.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"el","translation":"Ποιότητα δεδομένων","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"el","translation":"Συμβουλή από προπονητή","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"el","translation":"Άσκηση","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"el","translation":"Ανάλυση άσκησης","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"el","translation":"Ιστορικό προπονήσεων","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"el","translation":"Σχέδιο προπόνησης","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"el","translation":"Επίπεδο προπόνησης","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"el","translation":"Βεβαιωθείτε ότι οι υπηρεσίες δικτύου και του AI λειτουργούν. Η επεξεργασία από το AI μπορεί να διαρκέσει έως 240 δευτερόλεπτα.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"el","translation":"Ελέγξτε την κατάσταση του δικτύου και τη διεύθυνση URL του server και προσπαθήστε ξανά.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"el","translation":"Ελέγξτε την κατάσταση του δικτύου και τη διεύθυνση URL του server.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"el","translation":"Barcode","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"el","translation":"Όγκος","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"el","translation":"Ο όγκος είναι το βάρος του πλήρους σετ × αριθμός επαναλήψεων. Όταν οι ασκήσεις διαφέρουν σημαντικά, μην κάνετε απλές συγκρίσεις.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"el","translation":"Κίνηση","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"el","translation":"Μήνυμα","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"el","translation":"Μενού","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"el","translation":"Δημιουργία και έναρξη ενός προγράμματος","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"el","translation":"Σημειώσεις","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"el","translation":"Βιβλιοθήκη","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"el","translation":"Άντληση με τα πόδια","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"el","translation":"Καθορισμός ποσότητας ανά ετικέτα","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"el","translation":"Υπολογισμός θερμίδων από τη λίστα","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"el","translation":"Παρακαλούμε δοκιμάστε ξανά μετά την επαναφορά. Η χειροκίνητη καταγραφή παραμένει διαθέσιμη.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"el","translation":"Όταν βρεθεί μια διαδρομή με δυνατότητα τρένου σε εξωτερικό χώρο, εμφανίζονται η απόσταση, η ταχύτητα και η διαφορά υψομέτρου.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"el","translation":"Πίεση ποδιών","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"el","translation":"·","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"el","translation":"·{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"el","translation":"Αριθμός ορόφων που ανέβηκαν","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"el","translation":"Ξύπνημα στη μέση της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"el","translation":"Βασικοί δείκτες απόδοσης","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"el","translation":"Υψηλή υποκειμενική κόπωση","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"el","translation":"Χαμηλή υποκειμενική κόπωση","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"el","translation":"Κανονική υποκειμενική κόπωση","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"el","translation":"Επιλέξτε μόνο τις κατάλληλες πληροφορίες για τις μελλοντικές προτάσεις.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"el","translation":"Για να βοηθήσουν στις μελλοντικές προτάσεις σχετικά με το βάρος","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"el","translation":"Οι 3 σημεία είναι καθορισμένα για σήμερα","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"el","translation":"Η δραστηριότητα της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"el","translation":"Το ενεργειακό ισοζύγιο της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"el","translation":"Τα σύνολα της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"el","translation":"Η υποκειμενική κόπωση της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"el","translation":"Οι προτάσεις για σήμερα","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"el","translation":"Επεξεργασία του συνόλου λήψης φωτογραφιών της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"el","translation":"Προσθήκη νέου συνόλου λήψης φωτογραφιών της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"el","translation":"Υψηλή η δραστηριότητα της ημέρας","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"el","translation":"Αναδείξτε την σημερινή σας δραστηριότητα","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"el","translation":"Το επίπεδο προετοιμασίας σας σήμερα","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"el","translation":"Οι σημερινές σας ενέργειες","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"el","translation":"Ελέγξτε την πρόοδό σας σήμερα","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"el","translation":"Η διατροφή σας σήμερα","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"el","translation":"Προτάσεις για τη διατροφή σας σήμερα","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"el","translation":"Στόχοι διατροφής σας σήμερα","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"el","translation":"Εστιάστε στην αποκατάσταση σήμερα","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"el","translation":"Αυτοί είναι οι στόχοι σας: να κάνετε ασκήσεις με μικρότερη ένταση και να δώσετε προτεραιότητα σε μια πιο ήπια δραστηριότητα.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"el","translation":"Μειώστε την ένταση λίγο σήμερα.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"el","translation":"Έχετε τη δυνατότητα να μειώσετε το βάρος και τον αριθμό των επαναλήψεων, δίνοντας προτεραιότητα στην αποκατάσταση.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"el","translation":"Ελέγξτε τι θέλετε να κάνετε σήμερα.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"el","translation":"Αυτή την εβδομάδα","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"el","translation":"Αυτή την εβδομάδα {{value1}} φορές・Τρέχον ύψος {{value2}} μέτρα","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"el","translation":"Αυτή την εβδομάδα {{value1}} φορές・Συνολικός αριθμός {{value2}} φορών","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"el","translation":"Συμπεράσματα αυτής της εβδομάδας","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"el","translation":"Προαιρετικό","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"el","translation":"Συνάντηση","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"el","translation":"Διαγραφή συνάντησης","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"el","translation":"Οι συζητήσεις δεν διαγράφονται.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"el","translation":"Αυτές είναι απλώς ενδεικτικές τιμές. Μην τις αποθηκεύετε στα αρχεία σας ή στα γραφήματα.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"el","translation":"Φωτογραφίες σωματικού τύπου","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"el","translation":"AI για φωτογραφίες σωματικού τύπου","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"el","translation":"Η κοινή χρήση φωτογραφιών σωματικού τύπου μέσω AI είναι απενεργοποιημένη στις ρυθμίσεις.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"el","translation":"Δεν έχετε ακόμα φωτογραφίες σωματικού τύπου","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"el","translation":"Τραβήξτε μια φωτογραφία του σωματικού σας τύπου","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"el","translation":"Ανάλυση σετ φωτογραφιών σωματικού τύπου","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"el","translation":"Έλεγχος φωτογραφίας σωματικού τύπου","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"el","translation":"Εάν αισθάνεστε άσχημα ή έχετε πόνο, δώστε προτεραιότητα στην προσωπική σας αντίληψη παρά στις τιμές.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"el","translation":"Προχωρήστε σύμφωνα με το πρόγραμμά σας, παρακολουθώντας την κατάστασή σας.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"el","translation":"Βάρος","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"el","translation":"Οι τιμές που αλλάζουν καθημερινά, όπως το βάρος και η περιφέρεια της κοιλιάς, πρέπει να εξετάζονται μέσω των τάσεων.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"el","translation":"Καταγράψτε το βάρος σας","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"el","translation":"Προτάσεις με βάση τα διαθέσιμα εργαλεία","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"el","translation":"Παράδειγμα: Ρύζι 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"el","translation":"Αποθήκευση","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"el","translation":"Μηνιαίες αναλύσεις που έχετε αποθηκεύσει","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"el","translation":"Αποθηκευμένες μνήμες","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"el","translation":"Δεν έχετε αποθηκεύσει καμία μνήμη.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"el","translation":"Οι αποθηκευμένες μνήμες δεν διαγράφονται.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"el","translation":"Θέλετε να διαγράψετε όλες τις αποθηκευμένες αναμνήσεις;","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"el","translation":"Μη αποθήκευση","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"el","translation":"Δεν μπορεί να αποθηκευτεί","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"el","translation":"Εμπιστοσύνη","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"el","translation":"Τιμή","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"el","translation":"Όταν προσθέσετε μια τιμή, εδώ θα εμφανιστούν οι μεταβατικοί δείκτες.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"el","translation":"Έλεγχος στατικής κατάστασης","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"el","translation":"Για τον έλεγχο στατικής κατάστασης, συγκρίνετε είτε μειώνοντας το βάρος και επαναλαμβάνοντας τον στόχο, είτε αυξάνοντας την ανάπαυση κατά 15-30 δευτερόλεπτα.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"el","translation":"Υλικά για τον έλεγχο στατικής κατάστασης","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"el","translation":"Ενέργεια","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"el","translation":"Δεδομένα εισόδου","review_note":""}

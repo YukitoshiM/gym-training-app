@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"ml","translation":"0 പ്രവൃത്തികൾ","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"ml","translation":"1 പ്രവൃത്തി","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"ml","translation":"3 കാര്യങ്ങൾ ഓരോന്നിനും രണ്ട് സെറ്റ്. നിങ്ങളുടെ ശേഷിക്കനുസരിച്ച് ഭാരം ക്രമീകരിക്കാവുന്നതാണ്.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"ml","translation":"AI-യുടെ പദ്ധതി വായിക്കാൻ സാധിച്ചില്ല. ദയവായി വീണ്ടും സൃഷ്ടിക്കുക.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"ml","translation":"AI കോച്ച് പ്ലാൻ","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"ml","translation":"ആപ്പിൾ ഹെൽത്തിൽ സംരക്ഷിച്ചു","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"ml","translation":"ആപ്പിൾ വാച്ചിൽ നിന്ന് സമീകരിക്കാം","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"ml","translation":"ആപ്പിൾ വാച്ച് ഉപയോഗിച്ച് നിശ്ചയിച്ച ഉയർത്താനും ഇറക്കാനും സമയങ്ങൾ, ഓരോ സെക്കന്റിലും 1-3 തവണ സ്പർശനത്തിലൂടെ അറിയിക്കുന്നു.","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"ml","translation":"Apple Watch വളരെ അടുത്തില്ല, അതിനാൽ അടുത്ത പ്രക്ഷേപണം ചെയ്യുമ്പോൾ എത്തിച്ചേരാൻ ഞങ്ങൾ ഒരു ബുക്ക് ചെയ്തിട്ടുണ്ട്.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"training.6fb962f9cfaa","target_locale":"ml","translation":"ആപ്പിൾ വാച്ചിൽ പ്രവർത്തനം ചെയ്യാൻ സാധിച്ചില്ല.","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"ml","translation":"ആപ്പിൾ വാച്ചിലെ രേഖകൾ ഐഫോണിൽ സംരക്ഷിക്കാൻ സാധിച്ചില്ല.","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"ml","translation":"ആപ്പിൾ വാച്ചിലെ രേഖകൾ സംരക്ഷിക്കാൻ തയ്യാറായിട്ടില്ല.","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"ml","translation":"ആപ്പിൾ വാച്ചിലെ രേഖകൾ വായിക്കാൻ സാധിച്ചില്ല.","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"ml","translation":"ആപ്പിൾ വാച്ചിന് മെനു സമീകരിക്കാം","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"ml","translation":"애플 വാച്ചിലേക്ക് സമർപ്പിക്കുന്ന ഇന്നത്തെ വിവരങ്ങൾ ലഭ്യമല്ല","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"ml","translation":"Apple Watch ലേക്ക് കൈമാറ്റം ചെയ്യാൻ കഴിഞ്ഞില്ല.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"training.63cb88f01990","target_locale":"ml","translation":"애പ്ല വാച്ച്‌യിലേക്ക് അയയ്ക്കുന്ന ഡാറ്റ ഉണ്ടാക്കാൻ സാധിച്ചില്ല","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"ml","translation":"애പ്ല വാച്ച് തുറന്ന്, വീണ്ടും ശ്രമിക്കുക","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"ml","translation":"애പ്ല വാച്ചിൽ BodyMode-യെ ഇൻസ്റ്റാൾ ചെയ്യുക","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"ml","translation":"애പ്ല വാച്ച് കണക്ഷൻ താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"ml","translation":"애പ്ല വാച്ച് കണക്ഷൻ തയ്യാറാകാൻ കാത്തിരിക്കുക","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"ml","translation":"애പ്ല വാച്ച് കണക്ഷനിൽ പരാജയപ്പെട്ടു: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"ml","translation":"애പ്ല വാച്ച് കണക്ഷൻ തയ്യാറാക്കുന്നു. കുറച്ച് സമയം കാത്തി ശേഷം വീണ്ടും അയയ്ക്കുക","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"ml","translation":"애പ്ല വാച്ച് കണക്ഷൻ സ്ഥിതി അറിയാൻ സാധിക്കുന്നില്ല","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"ml","translation":"애പ്ല വാച്ചിനായുള്ള മെനു ഡാറ്റ ഉണ്ടാക്കാൻ സാധിച്ചില്ല","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"ml","translation":"애പ്ല വാച്ച് ഉപയോഗിച്ച് അളവ് രേഖപ്പെടുത്തുക","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"ml","translation":"ആരോഗ്യ വിവരങ്ങൾ സംരക്ഷിക്കാൻ പരാജയപ്പെട്ടു, അപ്ലിക്കേഷൻ ചരിത്രം സംരക്ഷിച്ചു","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"ml","translation":"ആരോഗ്യ വിവരങ്ങൾ ലഭ്യമല്ല","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"ml","translation":"ആരോഗ്യ വിവരങ്ങൾ സ്ഥിതി അറിയുന്നു","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"ml","translation":"ആരോഗ്യ വിവരങ്ങൾ അനുവദനീയമല്ല, അപ്ലിക്കേഷൻ ചരിത്രമാണ് സംരക്ഷിച്ചത്","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"ml","translation":"LEVEL 1 - പൂർണ്ണ ശരീര വ്യായാമം","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"ml","translation":"TRX","review_note":""}
+{"id":"training.148b91e44188","target_locale":"ml","translation":"വാച്ച് ഉപയോഗിച്ച് രേഖപ്പെടുത്തുക","review_note":""}
+{"id":"training.3e098891145f","target_locale":"ml","translation":"വാച്ച് ഉപയോഗിച്ചുള്ള പരിശീലനം പൂർത്തിയാക്കുന്നുണ്ടോ?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"ml","translation":"വാച്ച് രേഖകൾ പൂർത്തിയായി.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"ml","translation":"വാച്ച് രേഖകൾ നീക്കം ചെയ്യണോ?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"ml","translation":"വാച്ച് സെൻസർ വിശകലനം","review_note":""}
+{"id":"training.e9af98302821","target_locale":"ml","translation":"വാച്ച് ലൈവ്","review_note":""}
+{"id":"training.22db347214b9","target_locale":"ml","translation":"{{value1}} / {{value2}} തവണ","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"ml","translation":"{{value1}} {{value2}} × {{value3}} തവണ","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"ml","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} സെറ്റ്)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"ml","translation":"{{value1}} iPhone ചരിത്രത്തിൽ സംരക്ഷിച്ചിട്ടുണ്ട്.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"ml","translation":"{{value1}} Apple വാച്ച്-ൽ നിന്ന് ചരിത്രത്തിലേക്ക് സംരക്ഷിച്ചു.","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"ml","translation":"{{value1}} വർദ്ധിപ്പിക്കുക{{value2}} സെക്കൻഡ് / കുറയ്ക്കുക{{value3}} സെക്കൻഡ്・{{value4}} തവണ/സെക്കൻഡ്{{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"ml","translation":"{{value1}}/{{value2}} സെറ്റ് {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"ml","translation":"{{value1}}/{{value2}} സെറ്റ് പൂർത്തിയായി","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"ml","translation":"{{value1}}: {{value2}} സെറ്റ്, {{value3}} kg, {{value4}} തവണ, {{value5}} സെക്കൻഡ് 휴식","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"ml","translation":"{{value1}}{{value2}} എണ്ണം","review_note":""}
+{"id":"training.4547089161d9","target_locale":"ml","translation":"{{value1}}, രേഖപ്പെടുത്തിയിട്ടില്ല","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"ml","translation":"{{value1}} എന്നിവയുടെ പ്രణాళിക രൂപീകരിക്കുക","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"ml","translation":"{{value1}} എന്നിവയുടെ പ്രణాళിക രൂപീകരിക്കുക","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"ml","translation":"{{value1}} ഉപയോഗിച്ച് രൂപീകരിക്കുക","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"ml","translation":"{{value1}}-ൽ അഭിപ്രായങ്ങൾ ചോദിക്കുക","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"ml","translation":"{{value1}}-ൽ സംസാരിക്കുക","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"ml","translation":"{{value1}}-ലെ രൂപകൽപ്പനയുടെ ഉദാഹരണം. പ്രധാന ഭാഗങ്ങൾ {{value2}}, {{value3}} ഉപയോഗിച്ച് {{value4}} എണ്ണം","review_note":""}
+{"id":"training.859660768503","target_locale":"ml","translation":"{{value1}}-ന്റെ ആദ്യ രൂപം","review_note":""}
+{"id":"training.7544024a8347","target_locale":"ml","translation":"{{value1}}-ന്റെ ലക്ഷ്യ ഭാരം പുതുക്കി","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"ml","translation":"{{value1}}-ന്റെ ലക്ഷ്യ ഭാരം പുതുക്കുന്നു.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"ml","translation":"{{value1}}-ലെ സെറ്റ്","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"ml","translation":"{{value1}}-ലെ സെറ്റ് × {{value2}} തവണ・{{value3}} kg・휴식 {{value4}} സെക്കൻഡ്","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"ml","translation":"{{value1}}-ലെ സെറ്റ്・{{value2}} തവണ","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"ml","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"ml","translation":"{{value1}}・திட்டம் {{value2}}/{{value3}} സെറ്റ്・പ്രവചിക്കുന്ന തോത് {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"ml","translation":"{{value1}}-ൽ ഒരു പദ്ധതി രൂപീകരിക്കുക","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"ml","translation":"{{value1}} എണ്ണം","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"ml","translation":"{{value1}} എണ്ണത്തെ Apple Watch-ലേക്ക് സമർപ്പിച്ചിരിക്കുന്നു","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"ml","translation":"{{value1}} മിനിറ്റ്","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"ml","translation":"{{value1}} മിനിറ്റ് {{value2}} സെക്കൻഡ്","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"ml","translation":"{{value1}} തവണ","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"ml","translation":"{{value1}} തവണ/സെക്കൻഡ്","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"ml","translation":"{{value1}} മണിക്കൂർ {{value2}} മിനിറ്റ്","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"ml","translation":"{{value1}} ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"ml","translation":"{{value1}} സെക്കൻഡ്","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"ml","translation":"{{value1}} എണ്ണം","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"ml","translation":"{{value1}} എണ്ണം・{{value2}} സെറ്റ്・{{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"ml","translation":"{{value1}} തരങ്ങൾ","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"ml","translation":"ഈ മെനുവിൽ ആരംഭിക്കുക","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"ml","translation":"ഈ മെനുവെയ salvare ചെയ്യുക","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"ml","translation":"ഈ രേഖയോടു മായ്ക്കുക?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"ml","translation":"ഇന്ന് உடற்பயிற்സി ഇല്ല","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"ml","translation":"ഈ എണ്ണം ഒഴിവാക്കുക","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"ml","translation":"ഈ ഉപകരണത്തിൽ Apple Watch ഉപയോഗിക്കാൻ സാധിക്കുന്നില്ല","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"ml","translation":"ഈ പദ്ധതിയെ എങ്ങനെ മാറ്റണം?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"ml","translation":"ഈ പദ്ധതിയോടു മായ്ക്കുക?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"ml","translation":"എല്ലാം","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"ml","translation":"എല്ലാ രേഖകളും","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"ml","translation":"ഇല്ല","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"ml","translation":"ചെയ്യേണ്ട രീതി","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"ml","translation":"അpenas അപ്ലിക്കേഷൻ രേഖകൾ മാത്രം salvare ചെയ്യുക","review_note":""}
+{"id":"training.39029011b26a","target_locale":"ml","translation":"ഇൻക്ലൈൻ ഡാംബെൽ പ്രസ്","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"ml","translation":"Error","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"ml","translation":"Custom എണ്ണം","review_note":""}
+{"id":"training.42254297b975","target_locale":"ml","translation":"ഇഷ്ടാനുസരിച്ച് വ്യായാമങ്ങൾ ചേർക്കുക","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"ml","translation":"രദ്ദാക്കുക","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"ml","translation":"വേഗത്തിൽ സൃഷ്ടിക്കുക","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"ml","translation":"ക്രഞ്ച്","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"ml","translation":"ഗ്രൂട്ട് ബ്രിഡ്ജ്","review_note":""}
+{"id":"training.1792e5824127","target_locale":"ml","translation":"കാബിൾ കാര്‍ള്‍","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"ml","translation":"കാബിൾ കിക്ക്ബാക്ക്","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"ml","translation":"കാബിൾ ക്രോസ്ഓവര്‍","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"ml","translation":"എന്തെങ്കിലും","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"ml","translation":"പരിചയക്കാരുമായി ആവശ്യങ്ങൾ / ഇഷ്ടങ്ങൾ","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"ml","translation":"ഗോബ്ലെറ്റ് സ്ക്വാത്ത്","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"ml","translation":"സൈഡ് പ്ലങ്ക്","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"ml","translation":"സൈഡ് റേസ്","review_note":""}
+{"id":"training.5722403a802d","target_locale":"ml","translation":"സബ്","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"ml","translation":"ഷോള്‍ഡര്‍ പ്രസ്","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"ml","translation":"സീറ്റഡ് കാഫ്‌്‌ലെസ് റൈസ്","review_note":""}
+{"id":"training.861902f328fe","target_locale":"ml","translation":"സീറ്റഡ് റോ","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"ml","translation":"ജിം","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"ml","translation":"ജിമ്മിൽ എത്തുക","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"ml","translation":"ജിം സന്ദർശിക്കുക","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"ml","translation":"ജിമ്മിൽ പോയത് രേഖപ്പെടുത്തിയിട്ടില്ല","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"ml","translation":"ഒഴിവാക്കുക","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"ml","translation":"സ്‌ക്വാറ്റ്","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"ml","translation":"സ്റ്റാൻഡിംഗ് കാൽ ഫൈസുകൾ","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"ml","translation":"സ്മിത്ത് മെഷീൻ സ്‌ക്വാറ്റ്","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"ml","translation":"ക്രമം","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"ml","translation":"ക്രമം {{value1}} പൂർത്തിയായി","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"ml","translation":"ക്രമം ചേർക്കുക","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"ml","translation":"ക്രമങ്ങൾ ഒറ്റത്തിൽ ക്രമീകരിക്കുക","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"ml","translation":"ക്രമങ്ങളുടെ സ്ഥിരത","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"ml","translation":"ക്രമ സമയം {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"ml","translation":"ക്രമ ഘടന","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"ml","translation":"ക്രമ ലക്ഷ്യങ്ങൾ വർക്ക്ഔട്ട് ആരംഭിക്കുമ്പോൾ പകർത്തുകയും, ചരിത്രത്തിൽ രേഖപ്പെടുത്തുകയും ചെയ്യുന്നു.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"ml","translation":"തലക്കെട്ട്","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"ml","translation":"ഡാംബെൽ കാർൾ","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"ml","translation":"ഡാംബെൽ ബെഞ്ച് പ്രസ്","review_note":""}
+{"id":"training.0d799718504b","target_locale":"ml","translation":"ഡാംബെൽ റൂമനൈൻ ഡഡ് ലിഫ്റ്റ്","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"ml","translation":"ചെസ്റ്റ് പ്രസ്","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"ml","translation":"ചിന്നിംഗ്","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"ml","translation":"വേഗത ക്രമീകരിക്കുക","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"ml","translation":"സമയ ക്രമീകരണം: {{value1}} സെക്കൻഡ് വർദ്ധിപ്പിക്കുക, {{value2}} സെക്കൻഡ് കുറയ്ക്കുക, {{value3}} തവണ/സെക്കൻഡ്.","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"ml","translation":"ഡേഡ് ബാഗ്","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"ml","translation":"ട്രിസൈപ്സ് പ്രഷ് ഡൗൺ","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"ml","translation":"പരിശീലനം","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"ml","translation":"പരിശീലനം രേഖപ്പെടുത്തിയിട്ടില്ല","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"ml","translation":"പരിശീലനം പൂർത്തിയാക്കുക","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"ml","translation":"പരിശീലന ചരിത്രം ഇല്ല","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"ml","translation":"പരിശീലന പദ്ധതി","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"ml","translation":"ഹാംമർ കാൾ","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"ml","translation":"ഹൈപ്പ് അബ്ഡക്ഷൻ","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"ml","translation":"ഹൈപ് സ്ലസ്റ്റ്","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"ml","translation":"ഫേസ് пуல்","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"ml","translation":"ശൈലി, ശ്രദ്ധിക്കേണ്ട കാര്യങ്ങൾ","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"ml","translation":"ശൈലി ഉദാഹരണം","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"ml","translation":"ഫ്ലിറ്റ് പരിശീലനം.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"training.2ef07d4e1418","target_locale":"ml","translation":"പുഷ്-അപ്പ്","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"ml","translation":"പ്ലാങ്ക്","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"ml","translation":"ബെഞ്ച് പ്രഷ്","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"ml","translation":"ആപ്പിൾ വാച്ച് ജോഡി ചെയ്യാൻ സാധിക്കുന്നില്ല","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"ml","translation":"ശ്രാവം","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"ml","translation":"മെഷീൻ ഷോൾഡർ പ്രസ്","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"ml","translation":"പ്രധാനമന്ത്രി","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"ml","translation":"မှတ်ക്കു","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"ml","translation":"ഉപയോക്താവ് ചേർക്കുന്ന വ്യായാമങ്ങൾ","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"ml","translation":"റാറ്റ് ഡ്രോ","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"ml","translation":"ലഞ്ച്","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"ml","translation":"റൂമാനിയൻ ഡെഡ് ലിഫ്റ്റ്","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"ml","translation":"ലെഗ് കാൾ","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"ml","translation":"ലെഗ് പ്രസ്","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"ml","translation":"ഒന്ന് കൈയിൽ ഡാംബൽ റോ","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"ml","translation":"വ്യായാമം","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"ml","translation":"വ്യായാമം പൂർത്തിയാക്കുകയാണോ?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"ml","translation":"വ്യായാമത്തെ അവസാനിപ്പിക്കണോ?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"ml","translation":"•","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"ml","translation":"• ശരിയായി","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"ml","translation":"ഉയർത്തുക","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"ml","translation":"{{value1}} സെക്കൻഡ് ഉയർത്തുക, {{value2}} സെക്കൻഡ് താഴേക്ക്, {{value3}} തവണ/സെക്കൻഡ്","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"ml","translation":"{{value1}} സെക്കൻഡ് ഉയർത്തുക, {{value2}} സെക്കൻഡ് താഴേക്ക്, {{value3}} തവണ/സെക്കൻഡ്","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"ml","translation":"ഉയർത്തുന്ന സമയം","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"ml","translation":"ഉയര്‍ത്തലും താഴെ ഇറക്കുന്നതും വേർതിരിക്കാം","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"ml","translation":"ശരീരത്തിന്റെ മുകൾ ഭാഗം","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"ml","translation":"താക്കുക","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"ml","translation":"താക്കുക (സെക്കൻഡ്)","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"ml","translation":"ശരീരത്തിന്റെ താഴേ ഭാഗം","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"ml","translation":"പ്രധാന ഭാഗങ്ങൾ","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"ml","translation":"ഇപ്പോൾ ഉപയോഗിക്കാവുന്ന ഉപകരണങ്ങൾ","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"ml","translation":"ഇന്നത്തെ വിവരങ്ങൾ Apple Watch-ലേക്ക് സമർത്ഥിച്ചു","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"ml","translation":"ഇന്നത്തെ വിവരങ്ങൾ Apple Watch-ലേക്ക് സമർത്ഥിക്കുന്നതിന്","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"ml","translation":"വിശ്രമം {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"ml","translation":"ശരീര രൂപയുടെ ചിത്രം","review_note":""}
+{"id":"training.82865627f395","target_locale":"ml","translation":"ശരീര രൂപയുടെ ചിത്രം രേഖപ്പെടുത്തിയിട്ടില്ല","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"ml","translation":"ഉദാഹരണം: ഒരു വ്യായാമത്തെ കുറച്ച് ഒഴിവാക്കി വിശ്രമ സമയം വർദ്ധിപ്പിക്കുക","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"ml","translation":"ഉദാഹരണം: നെഞ്ചിലെ വ്യായാമം","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"ml","translation":"ഉദാഹരണം: കാലുകൾ കുറഞ്ഞ ഭാരത്തോടെ, നെഞ്ച് കൂടുതൽ ശ്രദ്ധിച്ച്","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"ml","translation":"സേവ് ചെയ്യുക","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"ml","translation":"സേവ് ചെയ്യാൻ സാധ്യമായില്ല","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"ml","translation":"പട്ടികയിലെ വ്യായാമങ്ങളുടെ പേര്","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"ml","translation":"തുടയ്ക്കുക","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"ml","translation":"പ്രവേശനം പൂർത്തിയായി","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"ml","translation":"വി()}>","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"ml","translation":"ശരീരത്തിൻ്റെ എല്ലാ ഭാഗവും","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"ml","translation":"ശരീരത്തിൻ്റെ എല്ലാ ഭാഗവും / നിലനിർത്തൽ","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"ml","translation":"ശരീരത്തിൻ്റെ ഭാഗം A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"ml","translation":"ശരീരത്തിൻ്റെ ഭാഗം B","review_note":""}
+{"id":"training.f74271660465","target_locale":"ml","translation":"ശരീരത്തിൻ്റെ ഭാഗം C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"ml","translation":"ശരീരത്തിൻ്റെ ഭാഗം കുറഞ്ഞത്","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"ml","translation":"ചിത്രം","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"ml","translation":"ചിത്രമില്ല","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"ml","translation":"വി analisaൽ","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"ml","translation":"വി analisaൽ ഡാറ്റ ലഭ്യമല്ല","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"ml","translation":"തുടക്കക്കാർ - മുഴുവൻ ശാരീരിക വ്യായാമം","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"ml","translation":"ഉപയോഗ 가능한 വ്യായാമങ്ങൾ പ്രణాളത്തിൽ ഉൾപ്പെടുത്തിയിരുന്നില്ല. ഉപകരണങ്ങൾ പരിശോധിച്ചു, വീണ്ടും ക്രമീകരിക്കുക.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"ml","translation":"ഉപയോഗിക്കാവുന്ന ഉപകരണങ്ങൾ","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"training.ac806fcfe196","target_locale":"ml","translation":"ചെ}])","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"ml","translation":"മുമ്പത്തെ മാസം","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"ml","translation":"മുമ്പത്തെ {{value1}} × {{value2}} തവണ","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"ml","translation":"എണ്ണം ചേർക്കുക. സഹായം നൽകുന്ന ഭാരം രേഖപ്പെടുത്താൻ, അത് നെഗറ്റീവ് ആയി ഉപയോഗിക്കാം.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"ml","translation":"പ്രവർത്തന വേഗത","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"ml","translation":"പ്രവർത്തനത്തിന്റെ అంచന - மொத்தம் {{value1}} തവണ","review_note":""}
+{"id":"training.e1472f598358","target_locale":"ml","translation":"അപ്ലിക്കേഷനിൽ പ്രതിഫലിപ്പിക്കുക","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"ml","translation":"வலതുവശത്തെ \"കൂട്ടി\" ബട്ടനിൽ നിന്ന് ഇഷ്ടാനുസരണം ഇനങ്ങൾ ചേർക്കാൻ കഴിയും.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"ml","translation":"മൊത്തം: {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"ml","translation":"ഉപകരണങ്ങൾ","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"ml","translation":"ക്രമം","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"ml","translation":"ചെമ്പ്","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"ml","translation":"പ്രധാനമായത്","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"ml","translation":"സ്ഥിരത{{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"ml","translation":"തീർപ്പാക്കുക","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"ml","translation":"തീർപ്പാക്കിയ രേഖകൾ \"역\" എന്നതിൽ നിന്ന് കാണാൻ കഴിയും.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"ml","translation":"തീർപ്പാക്കാത്ത രേഖകൾ സംരക്ഷിക്കുന്നില്ല.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"ml","translation":"തീർപ്പാക്കി, \"역\"യിൽ സംരക്ഷിക്കുക","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"ml","translation":"തീർപ്പാക്കി, \"역\"യിൽ സംരക്ഷിക്കുക","review_note":""}
+{"id":"training.1784283f2316","target_locale":"ml","translation":"നടത്തുന്നതിന്","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"ml","translation":"നടത്തിയ എണ്ണം","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"ml","translation":"പ്ര thực tế വേഗത: {{value1}} സെക്കൻഡ് ഉയർത്തൽ / {{value2}} സെക്കൻഡ് കുറയ്ക്കുക","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"ml","translation":"നേട്ടം: {{value1}} × {{value2}} തവണ","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"ml","translation":"നേട്ടത്തിന്റെ മൂല്യങ്ങൾ редактировать ചെയ്യുക","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"ml","translation":"ലക്ഷ്യം","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"ml","translation":"역","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"ml","translation":"\"역\"യിൽ രേഖയില്ല","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"ml","translation":"ഇventory ഇനിയും ഇല്ല","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"ml","translation":"ഇventory നീക്കം ചെയ്യുക","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"ml","translation":"ഇventory എഡിറ്റ് ചെയ്യുക","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"ml","translation":"ഇventory എഡിറ്റ്","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"ml","translation":"ഇventory വിശദാംശങ്ങൾ","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"ml","translation":"ശരാसरी ഹൃദയ താളം","review_note":""}
+{"id":"training.461619512206","target_locale":"ml","translation":"ചെറുക / കനം","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"ml","translation":"തുടക്കുക","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"ml","translation":"ഹൃദയ താളം","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"ml","translation":"ആവശ്യമായ വ്യായാമങ്ങൾ, ഇഷ്ടാനുസരണം ചേർക്കാം.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"ml","translation":"നടപടി","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"ml","translation":"പ്രസ്സ് ചെയ്യുക / നെഞ്ചിൽ","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"ml","translation":"പരിശീലകൻ","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"ml","translation":"വ്യത്യസ്ത","review_note":""}
+{"id":"training.6532391678cf","target_locale":"ml","translation":"വൈബ്രേഷൻ വേഗത","review_note":""}
+{"id":"training.f57690abba57","target_locale":"ml","translation":"അവicii 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"ml","translation":"അവicii {{value1}} തവണ","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"ml","translation":"ഉപദേശിക്കാനുള്ള കാരണം ചുരുക്കത്തിൽ","review_note":""}

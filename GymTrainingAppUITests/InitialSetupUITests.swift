@@ -23,6 +23,20 @@ final class InitialSetupUITests: XCTestCase {
         XCTAssertTrue(app.descendants(matching: .any)["initialSetupStep-pace"].waitForExistence(timeout: 3))
         app.buttons["setupContinueButton"].tap()
 
+        XCTAssertTrue(app.descendants(matching: .any)["initialSetupStep-health"].firstMatch.waitForExistence(timeout: 3))
+        app.buttons["定期的にはしていない"].tap()
+        app.buttons["軽め〜中程度"].tap()
+        reveal(app.buttons["setupSafetyStatusPicker"], in: app)
+        app.buttons["setupSafetyStatusPicker"].tap()
+        app.buttons["現在、特にない"].tap()
+        reveal(app.buttons["7〜9時間"], in: app)
+        app.buttons["7〜9時間"].tap()
+        reveal(app.buttons["筋肉量"], in: app)
+        app.buttons["筋肉量"].tap()
+        XCTAssertTrue(app.buttons["setupContinueButton"].isEnabled)
+        addScreenshot(named: "Initial setup health intake")
+        app.buttons["setupContinueButton"].tap()
+
         XCTAssertTrue(app.otherElements["initialSetupStep-equipment"].waitForExistence(timeout: 3))
         app.buttons["setupContinueButton"].tap()
 
@@ -127,5 +141,16 @@ final class InitialSetupUITests: XCTestCase {
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
+    }
+
+    @MainActor
+    private func reveal(_ element: XCUIElement, in app: XCUIApplication, maxSwipes: Int = 5) {
+        for _ in 0..<maxSwipes {
+            if element.exists, element.isHittable {
+                return
+            }
+            app.swipeUp()
+        }
+        XCTAssertTrue(element.exists && element.isHittable)
     }
 }

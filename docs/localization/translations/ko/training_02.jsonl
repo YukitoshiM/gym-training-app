@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"ko","translation":"촬영 세트","review_note":""}
+{"id":"training.3064c4117490","target_locale":"ko","translation":"일","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"ko","translation":"날짜","review_note":""}
+{"id":"training.137012e67a97","target_locale":"ko","translation":"시간","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"ko","translation":"최대 심박수","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"ko","translation":"최대 무게","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"ko","translation":"월","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"ko","translation":"목표 달성","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"ko","translation":"미달성","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"ko","translation":"미완료","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"ko","translation":"등록되지 않았으므로 제외: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"ko","translation":"달성하지 못함","review_note":""}
+{"id":"training.379774690c05","target_locale":"ko","translation":"검색 및 상세 정보 확인, 사용자 정의 운동 추가","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"ko","translation":"표준","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"ko","translation":"다음 달","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"ko","translation":"다음 화면에서 무게, 횟수, 운동 종류를 확인한 후 저장합니다.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"ko","translation":"물","review_note":""}
+{"id":"training.586036cfde65","target_locale":"ko","translation":"소비 칼로리","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"ko","translation":"운동 중","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"ko","translation":"화요일","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"ko","translation":"등록된 운동","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"ko","translation":"예상","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"ko","translation":"목표","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"ko","translation":"목표 {{value1}} × {{value2}}회","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"ko","translation":"목표, 성과, 사용 가능한 장비를 반영","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"ko","translation":"목표 값 복사","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"ko","translation":"목표 차이","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"ko","translation":"목표 차이 {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"ko","translation":"목적 및 장비에 맞는 다음 레벨","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"ko","translation":"목적, 주요 부위, 사용 가능한 장비, 과거 성과를 기반으로 생성합니다. 저장하기 전에 운동 종류와 숫자를 변경할 수 있습니다.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"ko","translation":"상담 후 수정","review_note":""}
+{"id":"training.804773e6316f","target_locale":"ko","translation":"삭제","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"ko","translation":"확인하고 계획을 저장","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"ko","translation":"초","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"ko","translation":"운동 종류","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"ko","translation":"운동 종류가 없습니다","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"ko","translation":"운동 종류와 함께 목표를 등록하여 다음 훈련을 망설이지 마세요.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"ko","translation":"운동 종류 추가","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"ko","translation":"운동 종류를 추가하고, 각 운동에 대한 목표를 입력합니다.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"ko","translation":"운동 종류를 추가하면 한 번에 설정할 수 있습니다.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"ko","translation":"운동 종류 선택","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"ko","translation":"운동 종류 라이브러리","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"ko","translation":"운동 종류별","review_note":""}
+{"id":"training.f3db21504894","target_locale":"ko","translation":"운동 종류별 기록","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"ko","translation":"운동 종류","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"ko","translation":"운동 종류 및 부위, 방법","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"ko","translation":"운동 상세 정보","review_note":""}
+{"id":"training.0902af066756","target_locale":"ko","translation":"근력 운동","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"ko","translation":"근력 A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"ko","translation":"근력 B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"ko","translation":"근육 증가","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"ko","translation":"종료","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"ko","translation":"진행 상황","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"ko","translation":"계속","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"ko","translation":"총 볼륨","review_note":""}
+{"id":"training.299456e922c2","target_locale":"ko","translation":"편집","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"ko","translation":"어깨 / 이두 / 삼두","review_note":""}
+{"id":"training.14f202634605","target_locale":"ko","translation":"어깨 및 팔","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"ko","translation":"등 운동일","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"ko","translation":"가슴 운동일","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"ko","translation":"다리 / 엉덩이","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"ko","translation":"다리 운동일","review_note":""}
+{"id":"training.ed189402693b","target_locale":"ko","translation":"자신의 최고 기록","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"ko","translation":"기간, 종목, 센서별로 축적된 기록 확인","review_note":""}
+{"id":"training.36467fec4916","target_locale":"ko","translation":"촉각으로 페이스를 안내","review_note":""}
+{"id":"training.84447148c208","target_locale":"ko","translation":"계획","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"ko","translation":"{{value1}}/{{value2}} 세트 완료 / 달성 {{value3}}/{{value4}}","review_note":""}
+{"id":"training.170899739631","target_locale":"ko","translation":"계획에서 시작","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"ko","translation":"계획대로","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"ko","translation":"계획 없이 종목을 추가하여 기록","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"ko","translation":"아직 계획이 없습니다","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"ko","translation":"계획보다 느리게","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"ko","translation":"계획보다 빠르게","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"ko","translation":"계획 만들기","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"ko","translation":"계획 생성","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"ko","translation":"계획 저장","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"ko","translation":"세트 계획","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"ko","translation":"계획 생성","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"ko","translation":"계획 이름","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"ko","translation":"계획 이름을 그리고 하나 이상의 종목을 입력해주세요.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"ko","translation":"기록","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"ko","translation":"일별로 기록 내용을 확인할 수 있습니다.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"ko","translation":"기록 없이 종료","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"ko","translation":"기록 및 목표를 바탕으로 적절하게 판단","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"ko","translation":"기록 삭제","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"ko","translation":"기록 유형: 근력 운동, 신체, 식단, 사진, 헬스장","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"ko","translation":"해당하는 유형이 없습니다","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"ko","translation":"신체","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"ko","translation":"신체 측정","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"ko","translation":"신체 측정이 기록되지 않았습니다","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"ko","translation":"가볍게","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"ko","translation":"추가","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"ko","translation":"주","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"ko","translation":"{{value1}}일・{{value2}}분","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"ko","translation":"주별","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"ko","translation":"주간 볼륨","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"ko","translation":"주간 볼륨 분석","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"ko","translation":"과거 달성 상황을 바탕으로 무게 및 횟수를 조정합니다. 확인하고 저장합니다.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"ko","translation":"달성","review_note":""}
+{"id":"training.90687409925b","target_locale":"ko","translation":"달성 세트","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"ko","translation":"달성률","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"ko","translation":"달성률 {{value1}}","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"ko","translation":"선택한 장비에 해당하는 등록된 운동만 AI에게 후보로 전달합니다.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"ko","translation":"선택일 요약","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"ko","translation":"부위","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"ko","translation":"무게 차이","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"ko","translation":"무게 차이 {{value1}} / 횟수 차이 {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"ko","translation":"무게 변화","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"ko","translation":"금","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"ko","translation":"닫기","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"ko","translation":"시작","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"ko","translation":"시작 취소","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"ko","translation":"식사","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"ko","translation":"식사는 기록되지 않았습니다.","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"ko","translation":"고중량","review_note":""}

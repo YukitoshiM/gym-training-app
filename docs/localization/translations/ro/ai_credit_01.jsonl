@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "ro", "translation": "Cont AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "ro", "translation": "{{value1}} credite pentru această acțiune", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "ro", "translation": "Adaugă credite", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "ro", "translation": "Ajustează soldul", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "ro", "translation": "Folosește credite AI pentru analiza automată", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "ro", "translation": "Nu consumă credite și folosește doar înregistrările de pe dispozitiv.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "ro", "translation": "Consumă creditele pentru rapoartele săptămânale sau lunare la execuție.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "ro", "translation": "Credite AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "ro", "translation": "Verificarea soldului", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "ro", "translation": "Sold {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "ro", "translation": "{{value1}} credite primite.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "ro", "translation": "Cumpără credite", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "ro", "translation": "Continuă fără AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "ro", "translation": "Șterge toate înregistrările și contul BodyMode. Pierzi toate creditele rămas, iar recuperarea nu este posibilă.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "ro", "translation": "Istoric credite", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "ro", "translation": "Poți primi credite prin video sau cumpăra doar ce ai nevoie. Înregistrările manuale sunt gratuite.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "ro", "translation": "Obține-le din reclame sau cumpără credite. Înregistrările manuale funcționează normal.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "ro", "translation": "Nu ai suficiente credite AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "ro", "translation": "Raport lunar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "ro", "translation": "Fără dată de expirare", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "ro", "translation": "{{value1}} credite AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "ro", "translation": "Pregătim produsele achiziționate.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "ro", "translation": "Am ajustat rambursarea și am adăugat {{value1}} credite.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "ro", "translation": "Creditele au fost adăugate.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "ro", "translation": "Achiziția este în așteptare. Va fi reflectată automat după finalizare.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "ro", "translation": "Creditele de achiziție nu expiră. Nu pot fi transferate sau vândute. Anunțurile publicitare nu vor mai apărea, chiar dacă ați cumpărat.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "ro", "translation": "Nu am putut verifica starea achiziției.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "ro", "translation": "Nu am putut verifica achiziția din App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "ro", "translation": "Ajustarea rambursării", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "ro", "translation": "Beneficiul publicitar pentru ziua de azi a fost deja primit.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "ro", "translation": "Verificarea videoclipului durează ceva timp. Creditele vor fi reflectate după verificare.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "ro", "translation": "Redeschideți ecranul AI pentru a verifica soldul actual. Nu mai este necesar să vizualizați videoclipul.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "ro", "translation": "Ați primit 5 credite.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "ro", "translation": "Sesiunea a expirat. Vă rugăm să vă autentificați din nou.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "ro", "translation": "V-ați autentificat cu contul Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "ro", "translation": "Înregistrarea în ecranul AI vă permite să primiți primele credite. Funcția de înregistrare manuală funcționează fără înregistrare.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "ro", "translation": "Pentru a utiliza funcțiile AI, vă rugăm să vă înregistrați pe Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "ro", "translation": "Mă înregistrez...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "ro", "translation": "Vă puteți înregistra pe Apple și primi 20 de credite inițiale. Funcția de înregistrare manuală funcționează fără înregistrare.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "ro", "translation": "Vă puteți înregistra pe Apple și primi 20 de credite inițiale. Nu vor începe abonamente sau actualizări automate.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "ro", "translation": "20 de credite prin înregistrare", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "ro", "translation": "Anunț video", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "ro", "translation": "Oferit de administrator", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "ro", "translation": "Cumpără", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "ro", "translation": "Bonus la înregistrare", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "ro", "translation": "Începe cu AI Trainer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "ro", "translation": "Credite AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "ro", "translation": "Încearcă din nou mai târziu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "ro", "translation": "Utilizare nelimitată", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "ro", "translation": "Vezi un anunț și obține 5 credite", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "ro", "translation": "Raport săptămânal", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

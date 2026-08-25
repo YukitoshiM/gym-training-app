@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "tr", "translation": "Son önceki performans, başarı oranı, RPE ve iyileşme durumunu kontrol edin ve bir sonraki antrenman için uygun olacak şekilde planı detaylı olarak ayarlayın. Değişiklik yapmanız gerekmiyorsa mevcut değerleri koruyun.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "tr", "translation": "Değişiklikler", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "tr", "translation": "{{value1}}'i ekle", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "tr", "translation": "{{value1}}'i çıkar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "tr", "translation": "{{value1}}: {{value2}} → {{value3}} tekrar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "tr", "translation": "{{value1}}: {{value2}} dakika dinlenme → {{value3}} saniye", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "tr", "translation": "{{value1}}: {{value2}} → {{value3}} set", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "tr", "translation": "Bu kez değişiklik yok", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "tr", "translation": "Kaydet ve Başlat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "tr", "translation": "Yeni plan olarak kaydet", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "tr", "translation": "Sadece bu sefer çalıştır", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "tr", "translation": "Bu haliyle bir kez deneyebilir veya planı kaydedebilirsiniz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "tr", "translation": "Mevcut planı güncelleyin", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "tr", "translation": "Sadece onay verirseniz, uygulama kullanım durumu ve amacınızı, deneyiminizi ve sağlığınızla ilgili bilgilerinizi (örneğin, isim), aynı düzeyde anonim olarak göndeririz. Vücut ölçülerinizi, yeme alışkanlıklarınızı, fotoğraflarınızı, kalp atış hızınızı, uyku sürenizi, konumunuzu, notlarınızı ve reklam kimliklerinizi iletmez.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "tr", "translation": "Yüksek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "tr", "translation": "Düşük", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "tr", "translation": "Orta", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "tr", "translation": "İpuçları", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "tr", "translation": "Arama konusu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "tr", "translation": "Araştırma sonuçları genel eğilimlerdir. Sizin için geçerli olup olmadığını belirleyemezler.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "tr", "translation": "Literatür verilerine erişilemediği için, mevcut durumda kayıt ve genel prensiplere dayanarak karar veriyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "tr", "translation": "Bu öneriye doğrudan uygulanabilecek bir literatür bulamadık. Kayıt ve genel egzersiz prensiplerine dayanarak karar veriyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "tr", "translation": "Genel güvenilirlik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "tr", "translation": "Koşulları benzer hedef kitlelere yönelik literatür bulamadığımız için, mevcut durumda kayıt ve genel prensiplere dayanarak karar veriyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "tr", "translation": "Önerinin dayanağı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "tr", "translation": "İlişkilendirilmiş araştırma", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "tr", "translation": "Arama bilgileri", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "tr", "translation": "Literatür arama özelliğini kullanamıyoruz. Temel bilgilere dayanarak karar veremiyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "tr", "translation": "Bilimsel kanıtları görüntüle", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "tr", "translation": "Özet", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "tr", "translation": "Mevcut öneriye uygunluk", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "tr", "translation": "Hedef kitleye benzerlik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "tr", "translation": "Tam metin", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "tr", "translation": "Müdahale", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "tr", "translation": "Metin lisansı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "tr", "translation": "Sınırlamalar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "tr", "translation": "Hedef kitle koşulları farklı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "tr", "translation": "Yeni araştırma", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "tr", "translation": "Makaleyi aç", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "tr", "translation": "Kısmi koşullara benzerlik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "tr", "translation": "Hedef kitle", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "tr", "translation": "Araştırmanın sonucu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "tr", "translation": "Özet ve uygulama alanı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "tr", "translation": "Yeterli bilgi yok, belirsiz", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "tr", "translation": "Anonim tanı verilerini ekleyin", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "tr", "translation": "İptal et", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "tr", "translation": "Hata", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "tr", "translation": "Diğer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "tr", "translation": "Geri bildirim türü", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "tr", "translation": "İstek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "tr", "translation": "Kategori", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "tr", "translation": "Kullanılabilirlik", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "tr", "translation": "Metni kopyala", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "tr", "translation": "Ayrıntılar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "tr", "translation": "Uygulamanın ve Apple Watch'unuzun çalışma ve iletişim bilgilerini ekleyin. Vücut, sağlık ve egzersiz verilerinizi veya fotoğraflarınızı, yapay zeka sohbetlerinizi dahil etmeyin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "tr", "translation": "Tanı verilerini ekleyemedi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "tr", "translation": "Başka bir yöntemle gönder", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "tr", "translation": "BodyMode geri bildirimi\n\nTür: {{value1}}\nAçıklama:\n{{value2}}\nUygulama: {{value3}}\nİşletim sistemi: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "tr", "translation": "Tekrar Deneme", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "tr", "translation": "Geri bildirim gönder", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "tr", "translation": "E-posta ile gönder", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "tr", "translation": "Tanı verilerini göndermeden gönder", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "tr", "translation": "Vücut ölçülerinizi, yeme alışkanlıklarınızı, fotoğraflarınızı, yapay zeka ile olan sohbetlerinizi ve kimlik bilgilerinizi eklemeyin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "tr", "translation": "Geri bildirim", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "tr", "translation": "Bilinmeyen hata", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "tr", "translation": "Değerlendirme bekleyin", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "tr", "translation": "{{value1}} - Yenilenmiş", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "tr", "translation": "{{value1}}'den planı yeniden düzenle", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "tr", "translation": "AI ile yapılan değişikliklerin geçmişi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "tr", "translation": "Son performans iyileşti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "tr", "translation": "Bekleme durumu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "tr", "translation": "İptal edildi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "tr", "translation": "Bir sonraki antrenmanda tekrar gözden geçirin", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "tr", "translation": "olarak yeni planı kaydettiniz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "tr", "translation": "Yeniden düzenleme yapmadı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "tr", "translation": "Bir sonraki antrenman için aynı yükte kalacaksınız.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "tr", "translation": "Güncellendi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "tr", "translation": "AI ile bir sonraki planı ayarlayın", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "tr", "translation": "Mevcut planı kullanmaya devam edin.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "tr", "translation": "{{value1}} olarak yeni bir plan oluşturuldu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "tr", "translation": "Bir sonraki plan güncellendi.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "tr", "translation": "Sonraki antrenman", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "tr", "translation": "Değişiklikler onaylanana kadar mevcut plan kullanılmayacaktır.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "tr", "translation": "Hedefe ulaştınız, bir sonraki hedefinize ulaşın.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "tr", "translation": "Hedefe ulaşamadınız, bir sonraki antrenmanda ayarlayabilirsiniz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "tr", "translation": "Bugünkü performansı bir sonraki antrenmana aktarabilirsiniz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "tr", "translation": "Değişiklikleri geri aldınız.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "tr", "translation": "Değişikliği iptal et", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "fr-FR", "translation": "Estimation indicative. Ce n'est pas une mesure réelle. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "fr-FR", "translation": "En raison d'un intervalle de temps entre la dernière mesure, le changement est estimé et non confirmé. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "fr-FR", "translation": "Basé sur une fourchette indicative par sexe, âge et poids, ce n'est pas une mesure précise de la masse grasse.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "fr-FR", "translation": "Estimé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "fr-FR", "translation": "Estimation indicative", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "fr-FR", "translation": "Fourchette indicative, pas une mesure réelle. Seule la sauvegarde est effectuée après avoir cliqué pour consulter le contenu.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "fr-FR", "translation": "Sauvegarder l'estimation ?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "fr-FR", "translation": "Sauvegarder comme estimation", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "fr-FR", "translation": "{{value1}} {{value2}}. Ne remplace pas les mesures réelles.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "fr-FR", "translation": "Rapports programmés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "fr-FR", "translation": "Rapport hebdomadaire", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "fr-FR", "translation": "Jour de la semaine", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "fr-FR", "translation": "Rapport mensuel", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "fr-FR", "translation": "Date", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "fr-FR", "translation": "{{value1}} jour(s)", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "fr-FR", "translation": "Heure de notification", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "fr-FR", "translation": "Généré automatiquement lors de la première ouverture de l'application après l'heure prévue. En cas d'impossibilité de connexion à l'IA, le résumé local est conservé.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "fr-FR", "translation": "Vérification des paramètres nécessaire", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "fr-FR", "translation": "Possibilité de réessayer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "fr-FR", "translation": "Quota consommé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "fr-FR", "translation": "Quota non consommé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "fr-FR", "translation": "Preuves scientifiques {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "fr-FR", "translation": "En raison d'un manque de preuves directes, il s'agit d'une indication basée sur les tendances enregistrées.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "fr-FR", "translation": "Aucune preuve directe n'a été trouvée pour cette suggestion.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "fr-FR", "translation": "En raison de l'impossibilité de vérifier les preuves scientifiques, la proposition est basée sur les enregistrements et les principes généraux.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "fr-FR", "translation": "Unité de taille corporelle", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

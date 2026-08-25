@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "uk", "translation": "AI обліковий запис", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "uk", "translation": "Використано {{value1}} кредитів", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "uk", "translation": "Додати кредити", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "uk", "translation": "Відрегулювати баланс", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "uk", "translation": "Використовувати кредити для автоматичного звіту", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "uk", "translation": "Не витрачати кредити, використовувати лише записи в пристрої.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "uk", "translation": "Витратити кредити на щотижневий або щомісячний звіт.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "uk", "translation": "Кредити AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "uk", "translation": "Перевірка балансу", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "uk", "translation": "Баланс: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "uk", "translation": "{{value1}} кредитів отримано.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "uk", "translation": "Купити кредити", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "uk", "translation": "Продовжувати ручний запис", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "uk", "translation": "Видалить усі записи та обліковий запис BodyMode. Всі залишки кредитів будуть втрачені і неможливо відновити.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "uk", "translation": "Історія використання", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "uk", "translation": "Ви можете отримати кредити у відео або придбати потрібну кількість. Ручний запис можна використовувати безкоштовно.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "uk", "translation": "Отримайте їх, дивлячись рекламу, або придбайте кредити. Ручний запис можна використовувати як завжди.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "uk", "translation": "Недостатньо AI-кредитів", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "uk", "translation": "Щомісячний звіт", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "uk", "translation": "Немає терміну дії", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "uk", "translation": "{{value1}} AI кредитів", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "uk", "translation": "Підготовка придбаних товарів", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "uk", "translation": "Оновлено повернення, додано {{value1}} кредитів.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "uk", "translation": "Додано кредити.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "uk", "translation": "Замовлення на розгляді. Автоматично відобразиться після завершення.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "uk", "translation": "Кредити не спливають. Не можна передавати або обмінювати. Баннерні оголошення залишаються, навіть якщо придбано.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "uk", "translation": "Не вдалося перевірити статус замовлення.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "uk", "translation": "Не вдалося перевірити покупку в App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "uk", "translation": "Коригування повернення", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "uk", "translation": "Ви вже отримали сьогоднішню рекламну винагороду.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "uk", "translation": "Займає час на перегляд відео. Кредити будуть додані після перегляду.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "uk", "translation": "Відкрийте розділ AI, щоб побачити актуальний баланс. Не потрібно дивитися відео повторно.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "uk", "translation": "Отримано 5 кредитів.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "uk", "translation": "Сесія закінчилася. Будь ласка, увійдіть знову.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "uk", "translation": "Увійшли за допомогою облікового запису Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "uk", "translation": "Зареєструйтеся в Apple, щоб отримати початкові 20 кредитів. Ручне введення даних можна використовувати без реєстрації.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "uk", "translation": "Для використання AI функцій зареєструйтеся в Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "uk", "translation": "Реєстрація...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "uk", "translation": "Зареєструйтеся в Apple, щоб отримати 20 початкових кредитів. Ручне введення даних можна використовувати без реєстрації.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "uk", "translation": "Зареєструйтеся в Apple, щоб отримати 20 початкових кредитів. Підписка та автоматичне оновлення не потрібні.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "uk", "translation": "20 кредитів при реєстрації", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "uk", "translation": "Відеореклама", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "uk", "translation": "Надано адміністратором", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "uk", "translation": "При покупці", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "uk", "translation": "Бонус при першій реєстрації", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "uk", "translation": "Почніть використовувати AI-тренера", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "uk", "translation": "AI кредити", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "uk", "translation": "Спробуйте пізніше.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "uk", "translation": "Немає обмежень у використанні", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "uk", "translation": "Дивіться відео та отримайте 5 кредитів", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "uk", "translation": "Щотижневий звіт", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

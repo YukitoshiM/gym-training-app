@@ -1,0 +1,5 @@
+// `/$()` prevents xcconfig from treating the second slash as a comment.
+BODYMODE_PRIVACY_POLICY_URL = https:/$()/example.com/bodymode/privacy
+BODYMODE_TERMS_URL = https:/$()/example.com/bodymode/terms
+BODYMODE_SUPPORT_URL = https:/$()/example.com/bodymode/support
+BODYMODE_SUPPORT_EMAIL = support@example.com

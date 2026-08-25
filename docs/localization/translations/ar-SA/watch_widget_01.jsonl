@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"ar-SA","translation":"تسجيل {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"ar-SA","translation":"غير متوافق: {{value1}}. الإدخال اليدوي متاح","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"ar-SA","translation":"عدد الاهتزازات في الثانية","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"ar-SA","translation":"تم الحفظ في Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"ar-SA","translation":"كيفية استخدام Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"ar-SA","translation":"الصالة الرياضية: الجلسة القادمة","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"ar-SA","translation":"لا يوجد إذن صحي/التسجيل يدويًا","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"ar-SA","translation":"نظرًا لعدم توفر الصحة، يتم تسجيلها يدويًا.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"ar-SA","translation":"نظرًا لأنه لا يمكن بدء تشغيل \"الصحية\"، يتم تسجيلها يدويًا.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"ar-SA","translation":"تم إيقاف التمرين الصحي مؤقتًا","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"ar-SA","translation":"معالجة حفظ الصحة","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"ar-SA","translation":"فشل حفظ الصحة/تم حفظ سجل المشاهدة","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"ar-SA","translation":"لم يتم حفظ الصحة/تم حفظ سجلات المشاهدة","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"ar-SA","translation":"لا يمكن استعادة القياسات الصحية. يمكن أن يستمر الإدخال اليدوي","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"ar-SA","translation":"تمت استعادة قياس الصحة","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"ar-SA","translation":"توقف قياس الصحة/يستمر الإدخال اليدوي","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"ar-SA","translation":"إيقاف/تسجيل الارتباط الصحي يدويًا","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"ar-SA","translation":"RPE لا شيء","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"ar-SA","translation":"سيتم حذف السجلات قيد التشغيل على Watch.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"ar-SA","translation":"شاهد السجل المحفوظ","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"ar-SA","translation":"مزامنة القائمة من جهاز iPhone الخاص بك","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"ar-SA","translation":"حدد قائمة اليوم المرسلة من جهاز iPhone الخاص بك وابدأ.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"ar-SA","translation":"تحقق من قائمة اليوم على جهاز iPhone الخاص بك","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"ar-SA","translation":"متصل بجهاز ايفون","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"ar-SA","translation":"مزامنة محتوى اليوم من هاتف iPhone المنزلي الخاص بك.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"ar-SA","translation":"غير قادر على إنشاء بيانات مسجلة لإرسالها إلى iPhone","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"ar-SA","translation":"غير قادر على الإرسال إلى iPhone. سأحتفظ بسجل وأعيد إرساله.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"ar-SA","translation":"غير قادر على الحفظ على iPhone. ويمكنك إعادة إرساله لاحقًا","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"ar-SA","translation":"نحن نستعد حاليًا لتكامل iPhone. ويمكنك إعادة إرساله لاحقًا","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"ar-SA","translation":"مجموعة {{value1}} × {{value2}} مرات × مجموعة {{value3}}","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"ar-SA","translation":"يمكن إعادة إرسال {{value1}} إلى iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"ar-SA","translation":"تم حجز {{value1}} للإرسال إلى iPhone","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"ar-SA","translation":"تم إرسال {{value1}} إلى iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"ar-SA","translation":"إرسال {{value1}} إلى iPhone","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"ar-SA","translation":"تم حفظ {{value1}} في سجل iPhone","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"ar-SA","translation":"إعادة إرسال {{value1}}","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"ar-SA","translation":"يمكن استئناف {{value1}}","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"ar-SA","translation":"تم التحديد {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"ar-SA","translation":"بدأ {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"ar-SA","translation":"تم تسجيل مرات {{value1}}/{{value2}}/{{value3}}","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"ar-SA","translation":"مجموعة {{value1}}・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"ar-SA","translation":"مجموعة/هدف {{value1}} إجمالي مرات {{value2}}","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"ar-SA","translation":"مجموعة {{value1}}・مجموعة {{value2}}・إجمالي مرات {{value3}}","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"ar-SA","translation":"{{value1}}・تعيين {{value2}}","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"ar-SA","translation":"اختر من {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"ar-SA","translation":"تمت مزامنة قوائم {{value1}}","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"ar-SA","translation":"مرات {{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"ar-SA","translation":"{{value1}} مرات/ثانية","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"ar-SA","translation":"{{value1}} مرات ・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"ar-SA","translation":"{{value1}} ثانية","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"ar-SA","translation":"حدث {{value1}}/مجموعة {{value2}}/إجمالي مرات {{value3}}","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"ar-SA","translation":"لا يمكن استخدام رابط iPhone مع هذه الساعة. يتم الاحتفاظ بالسجلات على المراقبة","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"ar-SA","translation":"التكامل غير متاح لهذه الساعة","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"ar-SA","translation":"تخطي","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"ar-SA","translation":"مجموعة","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"ar-SA","translation":"قم بتعيين {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"ar-SA","translation":"مجموعة كاملة","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"ar-SA","translation":"مجموعة البداية","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"ar-SA","translation":"تعيين المتوسط {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"ar-SA","translation":"تعيين غير محدد","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"ar-SA","translation":"بداية المجموعة","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"ar-SA","translation":"إلغاء بداية المجموعة","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"ar-SA","translation":"جارٍ قياس المستشعر","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"ar-SA","translation":"يتم إجراء التسجيل يدويًا لأنه لا يمكن تحضير عناصر المستشعر.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"ar-SA","translation":"تخطي البرنامج التعليمي","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"ar-SA","translation":"وتيرة","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"ar-SA","translation":"تطابق الإيقاع","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"ar-SA","translation":"ضبط الإيقاع","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"ar-SA","translation":"وقفة توجيه الإيقاع","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"ar-SA","translation":"استئناف توجيه الإيقاع","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"ar-SA","translation":"اضغط على مقاعد البدلاء","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"ar-SA","translation":"القائمة","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"ar-SA","translation":"اختر القائمة","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"ar-SA","translation":"فشل تحميل بيانات القائمة","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"ar-SA","translation":"تغيير القائمة","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"ar-SA","translation":"في انتظار القائمة","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"ar-SA","translation":"مذكرة","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"ar-SA","translation":"تحرير الملاحظة","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"ar-SA","translation":"حركة","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"ar-SA","translation":"المنسدلة اللات","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"ar-SA","translation":"تجريب","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"ar-SA","translation":"هل ترغب في إكمال تمرينك؟","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"ar-SA","translation":"تجريب المهجورة","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"ar-SA","translation":"وقفة","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"ar-SA","translation":"إيقاف مؤقت/لأعلى {{value1}} ثانية/لأسفل {{value2}} ثانية","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"ar-SA","translation":"متوقف مؤقتًا","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"ar-SA","translation":"أعلى","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"ar-SA","translation":"{{value1}}s العلوي・{{value2}}s السفلي・{{value3}} مرات/ثانية","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"ar-SA","translation":"رفع","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"ar-SA","translation":"لأعلى {{value1}} ثانية/لأسفل {{value2}} ثانية","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"ar-SA","translation":"لأعلى {{value1}} ثانية / لأسفل {{value2}} ثانية","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"ar-SA","translation":"اضبط وقت الرفع والخفض لكل مجموعة. سوف يرشدك Apple Watch بـ 1-3 أحاسيس لمسية في الثانية.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"ar-SA","translation":"رفع الوقت","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"ar-SA","translation":"أدخل وقت الارتفاع مباشرة","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"ar-SA","translation":"أسفل","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"ar-SA","translation":"أقل","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"ar-SA","translation":"خفض الوقت","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"ar-SA","translation":"أدخل مباشرة وقت التخفيض","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"ar-SA","translation":"اليوم","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"ar-SA","translation":"القائمة اليوم","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"ar-SA","translation":"قائمة اليوم: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"ar-SA","translation":"الرجاء تحديد قائمة اليوم","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"ar-SA","translation":"كسر {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"ar-SA","translation":"كسر {{value1}} ثانية","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"ar-SA","translation":"خذ قسطا من الراحة","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"ar-SA","translation":"تخطي الاستراحة","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"ar-SA","translation":"وقت الاستراحة","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"ar-SA","translation":"نهايات الاستراحة","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"ar-SA","translation":"يُقترح أن يكون أثقل بنسبة 2.5% بناءً على الطاقة المتبقية وسرعة التشغيل","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"ar-SA","translation":"البدء في استخدام","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"ar-SA","translation":"كيفية استخدام {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"ar-SA","translation":"حفظ","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"ar-SA","translation":"الموثوقية {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"ar-SA","translation":"تصحيح","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"ar-SA","translation":"استئناف","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"ar-SA","translation":"دقائق: ثواني","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"ar-SA","translation":"السجل السابق","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"ar-SA","translation":"عملية مستقرة {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"ar-SA","translation":"مرشح العملية: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"ar-SA","translation":"تم اكتشاف توقف العملية","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"ar-SA","translation":"تقدير العملية مرات {{value1}}","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"ar-SA","translation":"تقدير العملية مرات {{value1}}/الموثوقية {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"ar-SA","translation":"تغيير سرعة التشغيل {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"ar-SA","translation":"انعكاس","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"ar-SA","translation":"الإلغاء","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"ar-SA","translation":"تم تجنب الحفظ المزدوج في الصحة نظرًا لوجود سجلات لياقة من نفس الفترة الزمنية","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"ar-SA","translation":"يمكنك الاختيار من القائمة المتزامنة","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"ar-SA","translation":"مرات","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"ar-SA","translation":"عدد المرات","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"ar-SA","translation":"اضبط عدد المرات على البكرات","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"ar-SA","translation":"مكتمل","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"ar-SA","translation":"أكمل وأرسل إلى iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"ar-SA","translation":"أكمل وأرسل","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"ar-SA","translation":"بمجرد الانتهاء، سيبدأ مؤقت الاستراحة. يمكنك تحديد العناصر التالية بترتيب مختلف.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"ar-SA","translation":"لا توجد التدريبات لإكمال","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"ar-SA","translation":"مجموعة كاملة","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"ar-SA","translation":"تم إكمال مجموعة عناصر {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"ar-SA","translation":"الفعلي {{value1}} × {{value2}} مرات","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"ar-SA","translation":"نتائج المباراة","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"ar-SA","translation":"إدخال النتائج","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"ar-SA","translation":"قم بتغيير RPE في مجموعة التشغيل","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"ar-SA","translation":"تغيير وتيرة مجموعة التشغيل","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"ar-SA","translation":"تغيير عدد مجموعات التشغيل","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"ar-SA","translation":"تغيير وزن مجموعة الجري","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"ar-SA","translation":"متوسط-","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"ar-SA","translation":"متوسط{{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"ar-SA","translation":"معدل ضربات القلب يتعافى. بمجرد أن تشعر بالراحة، انتقل إلى المجموعة التالية.","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"ar-SA","translation":"استمر في الراحة أثناء مشاهدة نبضات قلبك","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"ar-SA","translation":"قياس معدل ضربات القلب واستهلاك الطاقة","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"ar-SA","translation":"الإدخال اليدوي","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"ar-SA","translation":"يمكن تسجيلها يدويا","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"ar-SA","translation":"التسجيل يدويا","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"ar-SA","translation":"يقدر من حركات المعصم وترتيب المجموعات غير المكتملة","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"ar-SA","translation":"عدد الاهتزازات (من 1 إلى 3 مرات/الثانية)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"ar-SA","translation":"سرعة الاهتزاز","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"ar-SA","translation":"فشل الاتصال: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"ar-SA","translation":"يعكس الأوقات المقدرة {{value1}}","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"ar-SA","translation":"تعكس الاقتراحات","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"ar-SA","translation":"تغيير الوقت","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"ar-SA","translation":"ماكس-","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"ar-SA","translation":"ماكس {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"ar-SA","translation":"عند الانتهاء منه أخيرًا، سيتم إرساله إلى جهاز iPhone الخاص بك. يمكن إعادة إرسال السجلات غير المرسلة لاحقًا.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"ar-SA","translation":"يحفظ المحتويات الحالية بما في ذلك المجموعات غير المكتملة.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"ar-SA","translation":"لم يتم إرسالها","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"ar-SA","translation":"لا توجد سجلات مراقبة غير مرسلة","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"ar-SA","translation":"لم يبدأ","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"ar-SA","translation":"التالي: {{value1}} {{value2}} × {{value3}} مرات","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"ar-SA","translation":"يمكنك أن تبدأ المجموعة التالية","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"ar-SA","translation":"يمكنك العودة بسرعة إلى جلسة التدريب التالية.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"ar-SA","translation":"الحدث القادم","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"ar-SA","translation":"التالي","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"ar-SA","translation":"تخطي الإجراء الحالي","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"ar-SA","translation":"الهدف {{value1}} × {{value2}} مرات","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"ar-SA","translation":"اكتملت وتيرة الهدف","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"ar-SA","translation":"اقتراح أخف بنسبة 5% بناءً على عدم تحقيق الهدف، أو RPE، أو انخفاض سرعة التشغيل.","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"ar-SA","translation":"النطاق النسبي للحركة {{value1}}%・التناسق {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"ar-SA","translation":"أخذ عينات توفير الطاقة (مستوى البطارية المتبقي)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"ar-SA","translation":"أخذ عينات توفير الطاقة (وضع الطاقة المنخفضة)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"ar-SA","translation":"أخذ عينات توفير الطاقة (الإعداد)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"ar-SA","translation":"تجاهل","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"ar-SA","translation":"ثواني","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"ar-SA","translation":"ابدأ باختيار حدث وضبطه. إذا قمت بخطأ ما، يمكنك التراجع عن ذلك عن طريق النقر على \"إلغاء\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"ar-SA","translation":"الحدث المرشح {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"ar-SA","translation":"الخروج والمزامنة","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"ar-SA","translation":"استمر","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"ar-SA","translation":"العودة","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"ar-SA","translation":"يوم العودة","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"ar-SA","translation":"الصدر","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"ar-SA","translation":"يوم الصدر","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"ar-SA","translation":"هل تريد تدمير السجلات؟","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"ar-SA","translation":"التسجيل","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"ar-SA","translation":"لا توجد التدريبات التي يتم تسجيلها","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"ar-SA","translation":"أخذ العينات العادية","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"ar-SA","translation":"السرعة","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"ar-SA","translation":"اقترح نفس الوزن بناءً على مستوى الإنجاز، RPE، وسرعة التشغيل","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"ar-SA","translation":"لا","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"ar-SA","translation":"التبديل إلى المجموعة المحددة","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"ar-SA","translation":"الوزن","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"ar-SA","translation":"ضبط الوزن على البكرة","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"ar-SA","translation":"يمكن تغيير الوزن وعدد المرات وRPE والباقي على البكرات قبل وبعد البدء.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"ar-SA","translation":"ابدأ","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"ar-SA","translation":"ضبط الإيقاع قبل البدء","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"ar-SA","translation":"غير متوفر: {{value1}}. يمكن إدخال البيانات يدويًا","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"ar-SA","translation":"مذكرة صوتية/نصية","review_note":""}

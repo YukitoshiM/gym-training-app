@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"th","translation":"คำแนะนำตามแนวโน้มของข้อมูลที่ป้อน ซึ่งไม่ใช่การวินิจฉัยทางการแพทย์ หากมีข้อกังวลเกี่ยวกับสุขภาพหรืออาการ ควรปรึกษาผู้เชี่ยวชาญ","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"th","translation":"สรุปข้อมูลที่ป้อน","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"th","translation":"วิธีการป้อนข้อมูล","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"th","translation":"ไม่มีรายการที่จะแชร์","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"th","translation":"ตรวจสอบเนื้อหา และแก้ไขตามต้องการก่อนบันทึก เป้าหมายจะไม่ได้รับการกำหนดโดยอัตโนมัติ","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"th","translation":"จำเป็นต้องวิเคราะห์ซ้ำ","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"th","translation":"ลองใหม่","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"th","translation":"รูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"th","translation":"ช่วงอ้างอิงจากรูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"th","translation":"ประมาณค่าแคลอรี่จากรูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"th","translation":"สร้างร่างจากรูปภาพ เพื่อลดขั้นตอนการป้อนข้อมูล","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"th","translation":"วิเคราะห์จากรูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"th","translation":"ไม่มีรูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"th","translation":"ใช้รูปภาพเพื่อดูผลลัพธ์, ตัวเลขจะได้รับการตรวจสอบด้วยการวัดจริง","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"th","translation":"สร้างร่างจากรูปภาพและอาหารที่ทาน","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"th","translation":"เมื่อเลือกรูปภาพอย่างน้อย 1 รูป สามารถวิเคราะห์ได้ การเลือกหลายรูปช่วยให้ตรวจสอบได้ง่ายขึ้น","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"th","translation":"วิเคราะห์รูปภาพแบบรวม","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"th","translation":"วิเคราะห์รูปภาพทั้งหมด","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"th","translation":"เพิ่มรูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"th","translation":"เพิ่มและแก้ไขรูปภาพ","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"th","translation":"เมื่อเลือกรูปภาพ ระบบจะทำการป้อนค่าแคลอรี่โดยอัตโนมัติ","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"th","translation":"สามารถบันทึกชุดรูปภาพได้ หลังจากเชื่อมต่อ สามารถวิเคราะห์ซ้ำจากรายละเอียดชุดได้","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"th","translation":"นาที","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"th","translation":"ระบุปริมาณเท่าที่ทราบ เพื่อเพิ่มความแม่นยำในการประมาณ","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"th","translation":"กำลังวิเคราะห์","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"th","translation":"วิเคราะห์แล้ว","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"th","translation":"เหตุผลในการตัดสินใจ","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"th","translation":"ถึงเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"th","translation":"ลบ","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"th","translation":"จากการออกกำลังกายครั้งล่าสุด มีเวลาว่าง {{value1}} วัน และมีจำนวนครั้งที่วางแผนไว้ในสัปดาห์นี้เหลืออยู่","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"th","translation":"มีการบันทึกขนาดหน้าท้องครั้งล่าสุดเมื่อ 7 วันก่อน","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"th","translation":"ป้อนค่าเดิม","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"th","translation":"เปรียบเทียบกับค่าครั้งล่าสุด {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"th","translation":"สัปดาห์ที่แล้ว","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"th","translation":"ยังไม่มีข้อมูลการเปรียบเทียบกับสัปดาห์ที่แล้ว","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"th","translation":"ปริมาณการออกกำลังกายเพิ่มขึ้นมากกว่า 30% เมื่อเทียบกับสัปดาห์ที่แล้ว ครั้งต่อไป ให้พยายามรักษาระดับไว้ และตรวจสอบค่า RPE และตัวชี้วัดการฟื้นตัว","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"th","translation":"เปรียบเทียบกับสัปดาห์ที่แล้ว {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"th","translation":"เปรียบเทียบกับสัปดาห์ที่แล้ว {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"th","translation":"ยังไม่มีข้อมูลการออกกำลังกาย ปรับตั้งค่าบนอุปกรณ์ Wearable เพื่อประมาณการ","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"th","translation":"ประมาณการการเคลื่อนไหว","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"th","translation":"ไม่ใช่การวินิจฉัยทางการแพทย์ แต่เป็นค่าอ้างอิงที่รวบรวมจากข้อมูลที่ได้มา","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"th","translation":"กำลังดู","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"th","translation":"สามารถดูได้{{value1}}รายการ, ขาด{{value2}}รายการ","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"th","translation":"ข้อมูลหลักที่ได้ (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"th","translation":"คำนวณจากน้ำหนัก, จำนวนครั้ง, ความเร็ว, ช่วงการเคลื่อนไหว และ RPE เท่านั้น ไม่ให้ค่าที่ขาดเป็น 0","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"th","translation":"ด้านบนขวา: การเคลื่อนไหวแบบตรง, ทั่วทั้งตัว","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"th","translation":"ด้านล่างขวา: จากไหล่ถึงเอว","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"th","translation":"รวม","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"th","translation":"ถ่ายภาพด้วยเสื้อผ้า, ระยะทาง, และแสงเดียวกัน โดยผ่อนคลาย","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"th","translation":"เมื่อบันทึกข้อมูลสำหรับกิจกรรม, เมนู และช่วงเวลาเดียวกัน จะสามารถเปรียบเทียบได้","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"th","translation":"ตัวชี้วัด (KPI) ในวันเดียวกัน","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"th","translation":"แสดงรายการที่เปลี่ยนแปลงไปในขณะเดียวกัน โดยไม่เป็นการระบุสาเหตุหรือภาวะทางการแพทย์","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"th","translation":"ซุปมิโซะ","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"th","translation":"อัตราการหายใจ","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"th","translation":"อัตราการหายใจสูงกว่าค่าเฉลี่ย 14 วัน","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"th","translation":"อัตราการหายใจ {{value1}} ครั้ง/นาที เทียบกับ {{value2}} ครั้ง/นาที (ค่าเฉลี่ย 14 วัน)","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"th","translation":"อัตราการหายใจต่ำกว่าค่าเฉลี่ย 14 วัน","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"th","translation":"อัตราการหายใจอยู่ในช่วงปกติ","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"th","translation":"คุณภาพ -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"th","translation":"คุณภาพ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"th","translation":"สินค้า","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"th","translation":"ไม่สามารถบันทึกสินค้าได้","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"th","translation":"รหัสสินค้า","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"th","translation":"กรุณากรอกรหัสสินค้า","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"th","translation":"กรุณาป้อนรหัสสินค้าด้วยตนเอง","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"th","translation":"ชื่อสินค้า","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"th","translation":"ครั้ง/นาที","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"th","translation":"ฟื้นตัว","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"th","translation":"เลือกวันที่ให้เน้นการฟื้นตัว","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"th","translation":"เนื่องจากข้อมูลการฟื้นตัวค่อนข้างต่ำ จึงควรจำกัดน้ำหนักหรือจำนวนเซ็ตของ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"th","translation":"บันทึกวันที่เสร็จสิ้น","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"th","translation":"จำนวนครั้ง","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"th","translation":"แยกการประเมินตามจำนวนครั้งและสารอาหาร","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"th","translation":"ต่อปริมาณมาตรฐาน","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"th","translation":"ไม่สามารถเชื่อมต่อ HTTP กับเซิร์ฟเวอร์ภายนอกได้","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"th","translation":"ตอนกลางคืน","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"th","translation":"บันทึกโดยอัตโนมัติตอนกลางคืน","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"th","translation":"ไม่มีแนวโน้มของการเพิ่มขึ้นหรือหยุดชะงักอย่างรวดเร็ว ควรบันทึกข้อมูลเป้าหมายจำนวนครั้งและ RPE ให้สอดคล้องกัน เพื่อเปรียบเทียบในอนาคต","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"th","translation":"ไม่สำเร็จ","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"th","translation":"ท่าทาง","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"th","translation":"อัตราการเต้นของหัวใจขณะพัก","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"th","translation":"อัตราการเต้นของหัวใจขณะพัก: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"th","translation":"อัตราการเต้นของหัวใจขณะพักสูงกว่าค่าเฉลี่ย 14 วัน","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"th","translation":"อัตราการเต้นของหัวใจขณะพักต่ำกว่าค่าเฉลี่ย","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"th","translation":"อัตราการเต้นของหัวใจขณะพักเป็นปกติ","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"th","translation":"เสร็จสิ้น","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"th","translation":"รายการที่ทำได้ง่าย: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"th","translation":"กำลังตรวจสอบแนวโน้มของการทำและข้ามในอุปกรณ์","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"th","translation":"ปริมาณอาหาร","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"th","translation":"ความหนาแน่น","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"th","translation":"ประวัติ","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"th","translation":"มุมซ้ายบน: หน้า/เต็มตัว","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"th","translation":"มุมล่าง: หลัง/เต็มตัว","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"th","translation":"ความแตกต่าง","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"th","translation":"อัตราการเต้นของหัวใจเฉลี่ย {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"th","translation":"อัตราเฉลี่ย","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"th","translation":"ช่วยแล้ว","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"th","translation":"สามารถเลื่อนไปได้: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"th","translation":"การฟื้นตัวของอัตราการเต้นของหัวใจ","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"th","translation":"ไม่บันทึกอัตราการเต้นของหัวใจ","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"th","translation":"แหล่งข้อมูล: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"th","translation":"ชุดที่มีความแตกต่างจากข้อมูลที่ป้อนด้วยมือ {{value1}} ชุด","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"th","translation":"การเคลื่อนไหวของข้อมือเพียงอย่างเดียว ไม่สามารถระบุชนิดและรูปแบบได้ ควรตรวจสอบจำนวนครั้งก่อนบันทึก","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"th","translation":"อุณหภูมิผิวหนังที่ข้อมือ","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"th","translation":"แนวโน้มที่อุณหภูมิผิวหนังที่ข้อมือแตกต่างจากปกติ","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"th","translation":"อุณหภูมิผิวหนังที่ข้อมืออยู่ในช่วงปกติ","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"th","translation":"ใช้เฉพาะเนื้อหาที่ได้รับการอนุมัติในข้อเสนอถัดไป","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"th","translation":"ความทรงจำที่ได้รับการอนุมัติ","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"th","translation":"ผู้รับผิดชอบ: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"th","translation":"โค้ชประจำ","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"th","translation":"ทบทวน","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"th","translation":"เชื่อมต่อสำเร็จ","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"th","translation":"แม้ว่าการเชื่อมต่อจะไม่สำเร็จ ข้อมูลที่บันทึกไว้จะไม่ถูกลบ คุณสามารถดำเนินการบันทึกด้วยตนเองต่อไป และสร้างคำแนะนำจาก AI ในภายหลัง","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"th","translation":"กำลังตรวจสอบการเชื่อมต่อ","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"th","translation":"ค่าประมาณเป็นเพียงค่าอ้างอิง คุณสามารถแก้ไขได้ตามต้องการในช่องด้านล่าง","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"th","translation":"ประมาณการปริมาณแคลอรี่ที่ใช้ไป","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"th","translation":"เปลี่ยนแปลง","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"th","translation":"ปริมาณแคลอรี่ที่ได้รับ","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"th","translation":"ถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"th","translation":"ชุดการถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"th","translation":"แก้ไขชุดการถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"th","translation":"เพิ่มชุดการถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"th","translation":"ทิศทางการถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"th","translation":"จำนวนวันที่ถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"th","translation":"บันทึกรายละเอียดเกี่ยวกับสภาพร่างกายและลักษณะภายนอก","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"th","translation":"ถ่ายภาพเสร็จแล้ว","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"th","translation":"ตัวอย่างภาพถ่าย มุมซ้ายบนเป็นภาพเต็มตัวด้านหน้า, มุมขวาบนเป็นภาพเต็มตัวด้านข้าง, มุมซ้ายล่างเป็นภาพเต็มตัวด้านหลัง และมุมขวาล่างเป็นภาพครอปส่วนท้องจากช่วงไหล่ถึงเอว ถ่ายด้วยเสื้อผ้า, ระยะห่าง และแสงเดียวกัน","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"th","translation":"จำเป็นต้องปรับปรุง","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"th","translation":"ทิศทาง","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"th","translation":"ตรวจสอบความแตกต่างของท่าทางตามทิศทางแล้ว","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"th","translation":"ใช้เป็นข้อมูลในการตัดสินแนวโน้มรายสัปดาห์ ไม่ใช่การเปลี่ยนแปลงในแต่ละวัน","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"th","translation":"วันที่","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"th","translation":"การนอนเมื่อคืนก่อน","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"th","translation":"กลางวัน","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"th","translation":"เวลา","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"th","translation":"คะแนนอ้างอิงที่คำนวณจากแอป: เวลา, การนอนหลับลึก, REM, และการตื่นขึ้นอย่างกะทันหัน","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"th","translation":"รอสักครู่","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"th","translation":"หากยังคงทำซ้ำ โปรดตรวจสอบสถานะของโมเดลบนเซิร์ฟเวอร์ AI","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"th","translation":"หากยังคงทำซ้ำ โปรดตรวจสอบบันทึกของเซิร์ฟเวอร์ AI","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"th","translation":"ช่วงเวลา","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"th","translation":"ปรับตามปกติ โดยใช้ RPE เป็นแนวทาง","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"th","translation":"ปกติ","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"th","translation":"หากยาวนาน ควรพิจารณาจากระยะเวลาและปริมาณเสียง","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"th","translation":"สร้างเมนูให้เหมาะสมกับอุปกรณ์ที่ใช้งาน เพื่อให้คุณเริ่มต้นการออกกำลังกายได้ง่าย","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"th","translation":"เมื่อบันทึกค่าเริ่มต้น คุณสามารถตรวจสอบความเปลี่ยนแปลงและเปรียบเทียบกับเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"th","translation":"วิ่งกลางแจ้งล่าสุด","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"th","translation":"รายงานล่าสุด","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"th","translation":"สรุปรายเดือน","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"th","translation":"ตรวจสอบสรุปรายเดือน","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"th","translation":"สร้างแผนการทบทวนรายเดือน","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"th","translation":"กำลังสร้างรายงานรายเดือน","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"th","translation":"รายงานรายเดือน","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"th","translation":"เช้า","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"th","translation":"กำลังทดลองลดการแจ้งเตือนในตอนเช้าและเย็น","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"th","translation":"ยังไม่ได้วิเคราะห์","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"th","translation":"ยังไม่ได้บันทึก","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"th","translation":"ไม่นับรายการที่ยังไม่ได้บันทึกเป็น 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"th","translation":"ยังไม่ได้ดำเนินการ","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"th","translation":"ยังไม่ได้ถ่ายภาพ","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"th","translation":"ยังไม่ได้ลงทะเบียน กรุณาป้อนจำนวนของผลิตภัณฑ์แต่ละชนิด (100 กรัม)","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"th","translation":"สินค้าที่ไม่ลงทะเบียนจะถูกบันทึกลงในอุปกรณ์ และสามารถนำกลับมาใช้ใหม่ได้ในการอ่านครั้งต่อไป","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"th","translation":"ยังไม่ได้บันทึก","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"th","translation":"ยังไม่ได้บันทึก สามารถเพิ่มข้อมูลเกี่ยวกับความรู้สึกและระดับความพร้อมได้","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"th","translation":"เปรียบเทียบตามเงื่อนไข","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"th","translation":"การสแกน OCR ของสารอาหาร (ตรวจสอบโดยผู้ใช้)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"th","translation":"การสแกน OCR ของสารอาหาร (ต้องตรวจสอบ)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"th","translation":"ป้อนค่าจากรายการอาหาร กรุณาตรวจสอบกับปริมาณมาตรฐานและตัวเลขต่างๆ","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"th","translation":"ป้อนจากภาพรายการอาหาร","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"th","translation":"ไม่สามารถอ่านรายการอาหารได้ โปรดถ่ายภาพในที่ที่มีแสงสว่างเพียงพอ โดยหันกล้องไปด้านหน้า หรือป้อนข้อมูลด้วยตนเอง","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"th","translation":"กำลังอ่านค่าสารอาหาร","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"th","translation":"ค่าสารอาหารระหว่างวัน","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"th","translation":"ดำเนินการครั้งต่อไป","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"th","translation":"การกระทำถัดไป","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"th","translation":"ปรับเปลี่ยน","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"th","translation":"ตรวจสอบสภาพหน้าท้องจากด้านหน้าและด้านข้าง","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"th","translation":"ตรวจสอบรอบเอวโดยรวมจากด้านหน้าและด้านหลัง","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"th","translation":"บันทึกข้อมูล เช่น ด้านหน้า, ด้านข้าง, ด้านหลัง เป็นชุดประจำวัน สามารถบันทึกลงได้แม้เพียง 1 ครั้ง และสามารถเพิ่มภายหลังได้","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"th","translation":"รวบรวมข้อมูล เช่น ด้านหน้า, ด้านข้าง, ด้านหลัง ในวันเดียวกัน สามารถบันทึกลงได้ แม้เพียง 1 ครั้ง และสามารถเพิ่มภายหลังได้","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"th","translation":"จำนวนก้าว","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"th","translation":"จำนวนก้าว: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"th","translation":"สามารถอนุญาตให้เข้าถึงรายการที่ต้องการได้ เช่น จำนวนก้าว, กิจกรรม, การนอนหลับ, อัตราการเต้นของหัวใจขณะพัก, HRV, จำนวนการหายใจ, อุณหภูมิผิวบริเวณข้อมือ หากไม่อนุญาต ให้ถือว่าเป็นข้อมูลที่ยังไม่ได้บันทึก สามารถใช้การป้อนข้อมูลด้วยตนเองได้","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"th","translation":"เหลือ {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"th","translation":"ไม่มีข้อมูลประจำวันที่สามารถเปรียบเทียบได้","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"th","translation":"ค่าที่ใช้ไป: {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"th","translation":"ค่าที่ใช้ไป ยังไม่ได้รับการบันทึก","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"th","translation":"ลึก","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"th","translation":"ขณะทำกิจกรรม","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"th","translation":"คาร์โบไฮเดรต","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"th","translation":"อย่าฝืน","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"th","translation":"ปัจจุบัน {{value1}}/4 ครั้ง","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"th","translation":"อัปเดตอัตโนมัติจากจำนวนก้าวเดินในปัจจุบัน","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"th","translation":"ขณะนี้เป็นเพราะมีผู้ใช้งานจำนวนมาก ทำให้เกิดปัญหาการใช้งาน {{value1}} ลองอีกครั้ง","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"th","translation":"บันทึกตำแหน่งปัจจุบันของคุณใน \"ยิมส่วนตัว\" ของคุณ","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"th","translation":"กำลังตรวจสอบตำแหน่งปัจจุบัน","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"th","translation":"การสัมผัสกับเสียงแวดล้อม","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"th","translation":"รู้สึกเหนื่อย","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"th","translation":"เราได้แนะนำวันที่ที่คุณไม่ควรออกกำลังกาย เพื่อให้สอดคล้องกับข้อมูลความเหนื่อยและฟื้นตัว","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"th","translation":"รู้สึกเหนื่อย","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"th","translation":"ลบตำแหน่งที่บันทึกไว้","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"th","translation":"ค้นหาสินค้าที่บันทึกไว้","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"th","translation":"ข้าวขาว","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"th","translation":"ข้าวขาว, อกไก่, ซุปมิโซะ","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"th","translation":"เป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"th","translation":"คุณสามารถตรวจสอบ KPI แต่ละรายการ เช่น ความแตกต่างและอัตราความสำเร็จ","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"th","translation":"แสดงปริมาณโปรตีนที่เหลือ โดยอิงจากเป้าหมายและบันทึกอาหารของคุณในวันนี้","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"th","translation":"เป็นแผนสำหรับการตรวจสอบที่เหมาะสมกับเป้าหมายและอุปกรณ์ที่คุณมี","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"th","translation":"ความหมายของเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"th","translation":"ค่าเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"th","translation":"เมื่อคุณตั้งค่าเป้าหมาย คุณจะสามารถดูความแตกต่างและอัตราความสำเร็จ","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"th","translation":"ความแตกต่างจากเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"th","translation":"ความแตกต่างจากเป้าหมาย {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"th","translation":"ยังไม่ได้ตั้งเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"th","translation":"ตั้งเป้าหมาย","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"th","translation":"การบรรลุเป้าหมายและการทำงานที่มั่นคง","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"th","translation":"คุณได้ตรวจสอบบันทึกกิจกรรม, อาหาร และการออกกำลังกายในช่วง 30 วันล่าสุดแล้ว","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"th","translation":"ดูเหมือนว่าน้ำหนักสูงสุดที่คุณยกใน 3 ครั้งล่าสุดไม่ได้เพิ่มขึ้น โปรดพิจารณาจากรูปแบบ, จำนวนครั้ง และระดับความรู้สึกเมื่อออกกำลังกาย (RPE) ด้วย","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"th","translation":"7 วันล่าสุด","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"th","translation":"7 วันล่าสุด {{value1}} ครั้ง","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"th","translation":"จำนวนครั้งที่ไปยิมในช่วง 7 วันล่าสุด: {{value1}} ครั้ง","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"th","translation":"ปริมาณการออกกำลังกายในช่วงปัจจุบันอยู่ในช่วงปกติ","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"th","translation":"น้ำหนักเฉลี่ยรายสัปดาห์ของคุณลดลง ซึ่งเป็นไปตามความต้องการสำหรับการสร้างกล้ามเนื้อ ดังนั้นจึงเป็นตัวเลือกในการเพิ่มปริมาณที่แนะนำ","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"th","translation":"น้ำหนักเฉลี่ยรายสัปดาห์ของคุณเคลื่อนที่ในทิศทางตรงกันข้ามกับเป้าหมาย ดังนั้นจึงเป็นตัวเลือกในการปรับปริมาณที่แนะนำก่อน","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"th","translation":"น้ำหนักเฉลี่ยรายสัปดาห์ของคุณลดลงอย่างรวดเร็ว ซึ่งเป็นไปเพื่อการพัฒนาที่เหมาะสม ดังนั้นจึงเป็นตัวเลือกในการเพิ่มปริมาณที่แนะนำ","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"th","translation":"น้ำหนักเฉลี่ยรายสัปดาห์ของคุณเพิ่มขึ้นอย่างรวดเร็ว ดังนั้นจึงเป็นตัวเลือกในการลดปริมาณที่แนะนำเพื่อให้การเพิ่มมีจังหวะที่เหมาะสม","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"th","translation":"ค่าในช่วงล่าสุดคือ 85 dBA ต่ำกว่า โปรดตรวจสอบระยะเวลาด้วย","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"th","translation":"ค่าเฉลี่ยของบันทึกในช่วงล่าสุด {{value1}} ชั่วโมง","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"th","translation":"ช่วงการเคลื่อนไหวสัมพัทธ์","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"th","translation":"ปรึกษา","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"th","translation":"การนอนหลับ","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"th","translation":"จัดเวลาพักผ่อน {{value1}} ชั่วโมง","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"th","translation":"เวลาพักผ่อน: {{value1}} ชั่วโมง","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"th","translation":"ระยะเวลาพักผ่อนสั้น","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"th","translation":"ระยะเวลาพักผ่อนค่อนข้างสั้น","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"th","translation":"เนื่องจากยังไม่มีข้อมูลการนอนหลับ จึงเป็นคะแนนอ้างอิงโดยเน้นที่ระยะเวลาทั้งหมด","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"th","translation":"ยังไม่มีข้อมูลการนอนหลับ ไม่มีการประเมินค่าเมื่อไม่ระบุ","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"th","translation":"สามารถตรวจสอบการนอน, การฟื้นตัว และกิจกรรมต่างๆ ได้อย่างครบถ้วน","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"th","translation":"ลบ","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"th","translation":"ความแม่นยำ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"th","translation":"โปรดตรวจสอบก่อนบันทึก","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"th","translation":"ข้อมูลที่เปลี่ยนแปลงไป","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"th","translation":"กำลังรอการยืนยัน","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"th","translation":"ข้อมูลที่ได้รับการยืนยัน {{value1}} ราย","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"th","translation":"หลักฐานทางวิทยาศาสตร์ {{value1}} ราย","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"th","translation":"หลักฐานทางวิทยาศาสตร์, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"th","translation":"ประเภท","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"th","translation":"ชนิด","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"th","translation":"โหลดสินค้าที่บันทึกไว้ในอุปกรณ์","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"th","translation":"โปรดลองอีกครั้งหลังจากรีสตาร์ทอุปกรณ์","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"th","translation":"หากเป้าหมายคือการเพิ่มกล้ามเนื้อ ควรพิจารณาการออกกำลังกายเพิ่มเติม 1 ครั้งต่อสัปดาห์ ในระดับที่เหมาะสม","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"th","translation":"ประมาณ {{value1}} นาที","review_note":""}

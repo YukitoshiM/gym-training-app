@@ -37,7 +37,7 @@ private struct GymTrainingWatchWidgetView: View {
                         .font(.system(size: 8, weight: .bold))
                 }
             case .accessoryInline:
-                Label("Gym: 次のセッションへ", systemImage: "dumbbell.fill")
+                Label(L10n.string("watch_widget.47f7d3a16f1c", fallback: "Gym: 次のセッションへ"), systemImage: "dumbbell.fill")
             default:
                 HStack(spacing: 8) {
                     Image(systemName: "dumbbell.fill")
@@ -67,7 +67,7 @@ struct GymTrainingWatchWidget: Widget {
             GymTrainingWatchWidgetView(entry: entry)
         }
         .configurationDisplayName("BodyMode Session")
-        .description("次のトレーニングへすぐ戻れます。")
+        .description(L10n.string("watch_widget.cf20cadc0998", fallback: "次のトレーニングへすぐ戻れます。"))
         .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline])
     }
 }

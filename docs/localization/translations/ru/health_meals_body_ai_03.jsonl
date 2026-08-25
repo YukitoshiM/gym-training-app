@@ -1,0 +1,112 @@
+{"id":"health_meals_body_ai.b9d2ae097ed2","target_locale":"ru","translation":"Ждите примерно {{value1}} секунд, затем","review_note":""}
+{"id":"health_meals_body_ai.b869cf466465","target_locale":"ru","translation":"Основываясь на тренировках, которые удалось продолжить, мы смогли оценить баланс между нагрузкой и восстановлением.","review_note":""}
+{"id":"health_meals_body_ai.08a296b53ccb","target_locale":"ru","translation":"Предлагаемый план на следующий месяц","review_note":""}
+{"id":"health_meals_body_ai.c20a7b4dbb8b","target_locale":"ru","translation":"Жиры","review_note":""}
+{"id":"health_meals_body_ai.0021a0220d44","target_locale":"ru","translation":"Обхват талии","review_note":""}
+{"id":"health_meals_body_ai.b0709fea6b90","target_locale":"ru","translation":"Запись обхвата талии","review_note":""}
+{"id":"health_meals_body_ai.a038994e000b","target_locale":"ru","translation":"Живот","review_note":""}
+{"id":"health_meals_body_ai.1bb8b3868e2e","target_locale":"ru","translation":"Автоматическое определение","review_note":""}
+{"id":"health_meals_body_ai.7645e396f538","target_locale":"ru","translation":"Плюсы","review_note":""}
+{"id":"health_meals_body_ai.02d8de91c3f5","target_locale":"ru","translation":"Что было хорошо","review_note":""}
+{"id":"health_meals_body_ai.9cbe36a4ce6d","target_locale":"ru","translation":"Единицы измерения","review_note":""}
+{"id":"health_meals_body_ai.b3ec9a0c94cd","target_locale":"ru","translation":"Модель не подключена","review_note":""}
+{"id":"health_meals_body_ai.f2d1aefd4747","target_locale":"ru","translation":"Мы просмотрели несколько фотографий с разных ракурсов. Для удобства сравнения рекомендуется сохранять одинаковые условия съемки.","review_note":""}
+{"id":"health_meals_body_ai.4d8687bed4f2","target_locale":"ru","translation":"Просмотр нескольких фотографий с разных ракурсов.","review_note":""}
+{"id":"health_meals_body_ai.08aa1158cdcc","target_locale":"ru","translation":"Отправка нескольких фотографий с разных ракурсов позволяет получить более полную информацию о позе и фигуре, которые не видны только на фронтальной фотографии.","review_note":""}
+{"id":"health_meals_body_ai.625a53e73e40","target_locale":"ru","translation":"Факторы","review_note":""}
+{"id":"health_meals_body_ai.d82ca70d9996","target_locale":"ru","translation":"Используйте изменения внешнего вида в качестве ориентира","review_note":""}
+{"id":"health_meals_body_ai.505ff00fae7c","target_locale":"ru","translation":"Для удобства сравнения, сделайте снимки в условиях, максимально похожих на предыдущие.","review_note":""}
+{"id":"health_meals_body_ai.1a77000ba493","target_locale":"ru","translation":"Процент измерения","review_note":""}
+{"id":"health_meals_body_ai.1c1f8aa404fd","target_locale":"ru","translation":"Создание плана","review_note":""}
+{"id":"health_meals_body_ai.a6cf924ebc76","target_locale":"ru","translation":"Предложенные варианты","review_note":""}
+{"id":"health_meals_body_ai.1b92bb1ce7f3","target_locale":"ru","translation":"Удалить все записи","review_note":""}
+{"id":"health_meals_body_ai.237f4919c9d9","target_locale":"ru","translation":"Проверить записи","review_note":""}
+{"id":"health_meals_body_ai.88346340fae8","target_locale":"ru","translation":"Запись","review_note":""}
+{"id":"health_meals_body_ai.f66aeeafd500","target_locale":"ru","translation":"Запись: {{value1}} дней / среднее количество белка {{value2}} г/день","review_note":""}
+{"id":"health_meals_body_ai.f82081bc2f90","target_locale":"ru","translation":"Нет записей","review_note":""}
+{"id":"health_meals_body_ai.4c3dac603b36","target_locale":"ru","translation":"Добавить запись","review_note":""}
+{"id":"health_meals_body_ai.9b10a7bc0507","target_locale":"ru","translation":"Как просматривать записи","review_note":""}
+{"id":"health_meals_body_ai.c656bd9e9244","target_locale":"ru","translation":"Записи сохранены. Вы можете повторно сгенерировать их, когда подключитесь к сети.","review_note":""}
+{"id":"health_meals_body_ai.cafd0ed89a65","target_locale":"ru","translation":"Предложить следующие действия и цели на следующий месяц, основываясь на сохраненных данных","review_note":""}
+{"id":"health_meals_body_ai.c5deaf60f00d","target_locale":"ru","translation":"День записи","review_note":""}
+{"id":"health_meals_body_ai.212c4e7d1abf","target_locale":"ru","translation":"Записано","review_note":""}
+{"id":"health_meals_body_ai.cbf6c6a18f68","target_locale":"ru","translation":"Убедитесь, что указанный URL сервера верен.","review_note":""}
+{"id":"health_meals_body_ai.a6282305f882","target_locale":"ru","translation":"Вы выбрали цель, доступное оборудование и количество тренировок в неделю.","review_note":""}
+{"id":"health_meals_body_ai.7aefc85ff14d","target_locale":"ru","translation":"Функция ИИ отключена в настройках.","review_note":""}
+{"id":"health_meals_body_ai.576015450b34","target_locale":"ru","translation":"Разрешите использование камеры BodyMode в настройках.","review_note":""}
+{"id":"health_meals_body_ai.bff7fb34d198","target_locale":"ru","translation":"Включите функцию \"Использовать ИИ\" в настройках. Ручные записи можно сохранить таким образом.","review_note":""}
+{"id":"health_meals_body_ai.1ed3ceaf4396","target_locale":"ru","translation":"Открыть настройки","review_note":""}
+{"id":"health_meals_body_ai.c1902956ff42","target_locale":"ru","translation":"Введите API-ключ для сервера ИИ на экране настроек.","review_note":""}
+{"id":"health_meals_body_ai.b5035ba9b9f0","target_locale":"ru","translation":"Проверьте информацию о подключении в настройках и попробуйте снова. Кратковременная аутентификация автоматически обновляется.","review_note":""}
+{"id":"health_meals_body_ai.419ad2a6aa29","target_locale":"ru","translation":"Подробный анализ","review_note":""}
+{"id":"health_meals_body_ai.234f23b52f12","target_locale":"ru","translation":"Задачи","review_note":""}
+{"id":"health_meals_body_ai.b9428ba987dc","target_locale":"ru","translation":"Уровень нагрузки, качество тренировки, восстановление пульса, варианты для продолжения","review_note":""}
+{"id":"health_meals_body_ai.ea2c7c407ab9","target_locale":"ru","translation":"Расстояние","review_note":""}
+{"id":"health_meals_body_ai.639d445a88af","target_locale":"ru","translation":"Ключевые показатели здоровья","review_note":""}
+{"id":"health_meals_body_ai.bc649c604570","target_locale":"ru","translation":"Создавайте еженедельные комментарии на основе ваших ключевых показателей здоровья, информации о питании и фотографий вашего тела, а также истории тренировок.","review_note":""}
+{"id":"health_meals_body_ai.6cc0928ab83d","target_locale":"ru","translation":"Легкая активность","review_note":""}
+{"id":"health_meals_body_ai.d63a0e48148e","target_locale":"ru","translation":"Просто двигайте своим телом","review_note":""}
+{"id":"health_meals_body_ai.76b8d9691185","target_locale":"ru","translation":"Дополнительно","review_note":""}
+{"id":"health_meals_body_ai.855dc416beda","target_locale":"ru","translation":"Добавление информации помогает стабилизировать рекомендации.","review_note":""}
+{"id":"health_meals_body_ai.fe32e34696b6","target_locale":"ru","translation":"Выход","review_note":""}
+{"id":"health_meals_body_ai.28d11eaa4971","target_locale":"ru","translation":"Отправить","review_note":""}
+{"id":"health_meals_body_ai.a25f576fd5c5","target_locale":"ru","translation":"Не удалось отправить","review_note":""}
+{"id":"health_meals_body_ai.e228355c530a","target_locale":"ru","translation":"Отправка...","review_note":""}
+{"id":"health_meals_body_ai.fbfadfb06d6e","target_locale":"ru","translation":"История отправки отсутствует","review_note":""}
+{"id":"health_meals_body_ai.dc2cd2929fe4","target_locale":"ru","translation":"Кажется, можно продолжать тренировку как обычно. Также обратите внимание на ощущения во время разминки.","review_note":""}
+{"id":"health_meals_body_ai.c8701eaa65da","target_locale":"ru","translation":"Можно продолжить тренировку как обычно.","review_note":""}
+{"id":"health_meals_body_ai.a65c82a761d0","target_locale":"ru","translation":"Из-за низкой активности в уведомлениях, ночные уведомления автоматически отключаются.","review_note":""}
+{"id":"health_meals_body_ai.499175873569","target_locale":"ru","translation":"Уведомления отправляются утром и вечером в зависимости от вашей активности.","review_note":""}
+{"id":"health_meals_body_ai.8601f9d25351","target_locale":"ru","translation":"Выбрать параметры для синхронизации","review_note":""}
+{"id":"health_meals_body_ai.e93d5d757551","target_locale":"ru","translation":"Проверка раз в неделю","review_note":""}
+{"id":"health_meals_body_ai.ef1563011431","target_locale":"ru","translation":"Раз в неделю, при тех же условиях","review_note":""}
+{"id":"health_meals_body_ai.debfca7f8b6f","target_locale":"ru","translation":"Среднее значение за неделю","review_note":""}
+{"id":"health_meals_body_ai.406d8b52c4f0","target_locale":"ru","translation":"Генерация еженедельных комментариев от ИИ","review_note":""}
+{"id":"health_meals_body_ai.d9a3c67cccb6","target_locale":"ru","translation":"Еженедельный отчет","review_note":""}
+{"id":"health_meals_body_ai.07a4aa136201","target_locale":"ru","translation":"Генерация еженедельного отчета","review_note":""}
+{"id":"health_meals_body_ai.fafa909be0a5","target_locale":"ru","translation":"Еженедельный и ежемесячный отчет","review_note":""}
+{"id":"health_meals_body_ai.d7b486554fb6","target_locale":"ru","translation":"Среднее значение за неделю","review_note":""}
+{"id":"health_meals_body_ai.eb495142430b","target_locale":"ru","translation":"Среднее значение за неделю пока не рассчитано.","review_note":""}
+{"id":"health_meals_body_ai.f56ee73fb4dd","target_locale":"ru","translation":"Сравнение по неделям","review_note":""}
+{"id":"health_meals_body_ai.76a8b51a97f4","target_locale":"ru","translation":"Физическая активность","review_note":""}
+{"id":"health_meals_body_ai.7f76c343c17b","target_locale":"ru","translation":"Есть записи о физической активности","review_note":""}
+{"id":"health_meals_body_ai.dad988a8437f","target_locale":"ru","translation":"Уровень достижения цели","review_note":""}
+{"id":"health_meals_body_ai.f2264d502bc8","target_locale":"ru","translation":"Не удалось преобразовать выбранное изображение для анализа.","review_note":""}
+{"id":"health_meals_body_ai.8bfd55a4ed1d","target_locale":"ru","translation":"Вес","review_note":""}
+{"id":"health_meals_body_ai.513dcf9887ac","target_locale":"ru","translation":"Хочу немного увеличить вес","review_note":""}
+{"id":"health_meals_body_ai.ffadd0622088","target_locale":"ru","translation":"Закрыть","review_note":""}
+{"id":"health_meals_body_ai.e216609daeb6","target_locale":"ru","translation":"Частота","review_note":""}
+{"id":"health_meals_body_ai.4023d26ef616","target_locale":"ru","translation":"Что было съедено","review_note":""}
+{"id":"health_meals_body_ai.f60350613f0c","target_locale":"ru","translation":"Введите хотя бы один пункт о съеденном.","review_note":""}
+{"id":"health_meals_body_ai.9e38754cb6e4","target_locale":"ru","translation":"Добавить пункт о еде","review_note":""}
+{"id":"health_meals_body_ai.738844ab541c","target_locale":"ru","translation":"Питание","review_note":""}
+{"id":"health_meals_body_ai.166aed922fa0","target_locale":"ru","translation":"Функция \"умного\" анализа питания отключена в настройках.","review_note":""}
+{"id":"health_meals_body_ai.2e73d1d00afb","target_locale":"ru","translation":"Записывайте и сохраняйте информацию о еде","review_note":""}
+{"id":"health_meals_body_ai.f31f45373056","target_locale":"ru","translation":"Редактировать записи о еде","review_note":""}
+{"id":"health_meals_body_ai.2fab54303f04","target_locale":"ru","translation":"Сохранить записи о еде","review_note":""}
+{"id":"health_meals_body_ai.14d3b7bdf022","target_locale":"ru","translation":"При сохранении записей о еде вы сможете сравнить потребление энергии во время отдыха и активности с данными из Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.e1790b48822b","target_locale":"ru","translation":"Добавить пункт о еде","review_note":""}
+{"id":"health_meals_body_ai.d15616c39ec5","target_locale":"ru","translation":"Проверка питания","review_note":""}
+{"id":"health_meals_body_ai.037d690fd891","target_locale":"ru","translation":"Анализ питания","review_note":""}
+{"id":"health_meals_body_ai.909d632d0101","target_locale":"ru","translation":"Фотографии еды","review_note":""}
+{"id":"health_meals_body_ai.3d31c5bc2270","target_locale":"ru","translation":"Искусственный интеллект для анализа фотографий еды","review_note":""}
+{"id":"health_meals_body_ai.aa2ce729eb99","target_locale":"ru","translation":"Оценка количества и расхода энергии при питании – это ориентировочные значения. Проверяйте их не только в течение дня, но и в среднем за неделю.","review_note":""}
+{"id":"health_meals_body_ai.c5b5539d921c","target_locale":"ru","translation":"Название блюда","review_note":""}
+{"id":"health_meals_body_ai.a9e371b42094","target_locale":"ru","translation":"Введите название блюда и его пищевую ценность вручную, чтобы сохранить данные.","review_note":""}
+{"id":"health_meals_body_ai.3384dbefe259","target_locale":"ru","translation":"Название блюда и количество","review_note":""}
+{"id":"health_meals_body_ai.6301c7ac2181","target_locale":"ru","translation":"Анализ изображений еды","review_note":""}
+{"id":"health_meals_body_ai.3c90f2799f7f","target_locale":"ru","translation":"Анализ питания","review_note":""}
+{"id":"health_meals_body_ai.131d65f0becd","target_locale":"ru","translation":"Запись о питании","review_note":""}
+{"id":"health_meals_body_ai.b3ac75dc7510","target_locale":"ru","translation":"Отсутствуют записи о питании","review_note":""}
+{"id":"health_meals_body_ai.b18007a5bc56","target_locale":"ru","translation":"Записи о питании еще нет","review_note":""}
+{"id":"health_meals_body_ai.51b278066b12","target_locale":"ru","translation":"Продукты питания","review_note":""}
+{"id":"health_meals_body_ai.3d6e7d3996d5","target_locale":"ru","translation":"База данных продуктов","review_note":""}
+{"id":"health_meals_body_ai.61184419aea8","target_locale":"ru","translation":"Автоматически объединяйте данные из базы данных продуктов и информацию о количестве съеденного. Продукты, введенные вручную, будут объединены после оценки ИИ.","review_note":""}
+{"id":"health_meals_body_ai.4563c325c141","target_locale":"ru","translation":"Автоматический подсчет по продуктам","review_note":""}
+{"id":"health_meals_body_ai.39d757a8749c","target_locale":"ru","translation":"Введите название продукта и, если возможно, количество.","review_note":""}
+{"id":"health_meals_body_ai.4d24a28d4ef0","target_locale":"ru","translation":"Поиск продуктов","review_note":""}
+{"id":"health_meals_body_ai.00ae7a9a5808","target_locale":"ru","translation":"Пересчитать на основе таблицы пищевой ценности","review_note":""}
+{"id":"health_meals_body_ai.1d91da8d5c82","target_locale":"ru","translation":"Это запись о высоком уровне воздействия. Используйте эту информацию для принятия решения: отойти от источника звука, уменьшить громкость или использовать средства защиты слуха.","review_note":""}
+{"id":"health_meals_body_ai.6e0a448de044","target_locale":"ru","translation":"Разница в высоте","review_note":""}
+{"id":"health_meals_body_ai.91d223d5b73b","target_locale":"ru","translation":"Говядина (порция)","review_note":""}
+{"id":"health_meals_body_ai.8690f6def93b","target_locale":"ru","translation":"Говядина (без кожи)","review_note":""}

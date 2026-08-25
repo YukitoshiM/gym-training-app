@@ -31,11 +31,11 @@ struct ExercisePickerView: View {
                 if filteredExercises.isEmpty {
                     Section {
                         ContentUnavailableView {
-                            Label("該当する種目がありません", systemImage: "magnifyingglass")
+                            Label(L10n.string("training.725a4adfc01a", fallback: "該当する種目がありません"), systemImage: "magnifyingglass")
                         } description: {
-                            Text("必要な種目はカスタム種目として追加できます。")
+                            Text(L10n.string("training.827de2f8b16f", fallback: "必要な種目はカスタム種目として追加できます。"))
                         } actions: {
-                            Button("カスタム種目を追加") {
+                            Button(L10n.string("training.42254297b975", fallback: "カスタム種目を追加")) {
                                 isShowingCustomEditor = true
                             }
                             .buttonStyle(.borderedProminent)
@@ -59,12 +59,12 @@ struct ExercisePickerView: View {
             }
             .scrollContentBackground(.hidden)
             .background(AppTheme.pageBackground)
-            .navigationTitle("種目を選択")
+            .navigationTitle(L10n.string("training.66f7a1943f08", fallback: "種目を選択"))
             .navigationBarTitleDisplayMode(.inline)
-            .searchable(text: $searchText, prompt: "種目名・部位・手法")
+            .searchable(text: $searchText, prompt: L10n.string("training.e82a5f19c417", fallback: "種目名・部位・手法"))
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("閉じる") {
+                    Button(L10n.string("training.2ea27dba9b9a", fallback: "閉じる")) {
                         dismiss()
                     }
                 }
@@ -75,7 +75,7 @@ struct ExercisePickerView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
-                    .accessibilityLabel("カスタム種目を追加")
+                    .accessibilityLabel(L10n.string("training.42254297b975", fallback: "カスタム種目を追加"))
                 }
             }
             .sheet(isPresented: $isShowingCustomEditor) {

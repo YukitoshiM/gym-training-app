@@ -23,30 +23,30 @@ struct ExerciseDetailView: View {
                 .padding(.vertical, 8)
             }
 
-            Section("対象部位") {
+            Section(L10n.string("training.556ff4c055f1", fallback: "対象部位")) {
                 LabeledContent {
                     Text(exercise.primaryMuscle.displayName)
                 } label: {
-                    Label("メイン", systemImage: exercise.primaryMuscle.systemImage)
+                    Label(L10n.string("training.68947abe5cb8", fallback: "メイン"), systemImage: exercise.primaryMuscle.systemImage)
                 }
 
                 if !exercise.secondaryMuscles.isEmpty {
                     LabeledContent {
                         Text(exercise.secondaryMuscles.map(\.displayName).joined(separator: "、"))
                     } label: {
-                        Label("サブ", systemImage: "figure.mixed.cardio")
+                        Label(L10n.string("training.5722403a802d", fallback: "サブ"), systemImage: "figure.mixed.cardio")
                     }
                 }
             }
 
-            Section("器具") {
+            Section(L10n.string("training.9c2c951fe4e9", fallback: "器具")) {
                 Label(exercise.equipmentSetupName, systemImage: exercise.equipment.systemImage)
                 Text(exercise.equipment.usageDescription)
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.mutedInk)
             }
 
-            Section("やり方") {
+            Section(L10n.string("training.d93774e1de71", fallback: "やり方")) {
                 Label(exercise.movementName, systemImage: exercise.movementSystemImage)
                     .font(.headline)
                 Text(exercise.instruction)
@@ -55,7 +55,7 @@ struct ExerciseDetailView: View {
         }
         .scrollContentBackground(.hidden)
         .background(AppTheme.pageBackground)
-        .navigationTitle("種目詳細")
+        .navigationTitle(L10n.string("training.44734e637a7d", fallback: "種目詳細"))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

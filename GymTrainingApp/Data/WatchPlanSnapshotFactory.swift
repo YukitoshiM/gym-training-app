@@ -82,6 +82,7 @@ private extension WatchPlanSetTargetSnapshot {
             setOrder: planSet.setOrder,
             targetWeight: planSet.targetWeight,
             targetReps: planSet.targetReps,
+            targetRPE: planSet.targetRPE,
             plannedConcentricSeconds: planSet.plannedConcentricSeconds,
             plannedEccentricSeconds: planSet.plannedEccentricSeconds,
             plannedTempoBeatSpeed: planSet.plannedTempoBeatSpeed,
@@ -118,7 +119,8 @@ extension WorkoutSession {
             watchSyncState: .received,
             sensorSummary: watchSession.sensorSummary.map(WorkoutSensorSummary.init),
             healthWorkoutSaveState: watchSession.healthKitSaveStatus.map(HealthWorkoutSaveState.init),
-            note: watchSession.note
+            note: watchSession.note,
+            outdoorCardio: watchSession.outdoorCardio
         )
     }
 }
@@ -144,6 +146,7 @@ private extension WorkoutSet {
             setOrder: watchSet.setOrder,
             targetWeight: watchSet.targetWeight,
             targetReps: watchSet.targetReps,
+            targetRPE: watchSet.targetRPE,
             plannedConcentricSeconds: watchSet.plannedConcentricSeconds,
             plannedEccentricSeconds: watchSet.plannedEccentricSeconds,
             plannedTempoBeatSpeed: watchSet.plannedTempoBeatSpeed,
@@ -210,6 +213,86 @@ private extension HealthWorkoutSaveState {
     }
 }
 
+struct WorkoutSessionMergeResult: Equatable {
+    enum Disposition: Equatable {
+        case merged
+        case separateSession
+        case conflict
+    }
+
+    var session: WorkoutSession
+    var disposition: Disposition
+    var conflictingSetIDs: [UUID]
+}
+
+enum WorkoutSessionConflictResolver {
+    static func merge(
+        local: ActiveWorkoutSession,
+        incoming: WorkoutSession,
+        incomingUpdatedAt: Date
+    ) -> WorkoutSessionMergeResult {
+        guard local.session.id == incoming.id else {
+            return WorkoutSessionMergeResult(
+                session: incoming,
+                disposition: .separateSession,
+                conflictingSetIDs: []
+            )
+        }
+
+        var merged = local.session
+        var conflicts: [UUID] = []
+        for incomingExercise in incoming.exercises {
+            guard let exerciseIndex = merged.exercises.firstIndex(where: { $0.id == incomingExercise.id }) else {
+                merged.exercises.append(incomingExercise)
+                continue
+            }
+            merged.exercises[exerciseIndex].isSkipped = merged.exercises[exerciseIndex].isSkipped || incomingExercise.isSkipped
+            for incomingSet in incomingExercise.sets {
+                guard let setIndex = merged.exercises[exerciseIndex].sets.firstIndex(where: { $0.id == incomingSet.id }) else {
+                    merged.exercises[exerciseIndex].sets.append(incomingSet)
+                    continue
+                }
+                let localSet = merged.exercises[exerciseIndex].sets[setIndex]
+                guard localSet != incomingSet else { continue }
+                let localChanged = hasExecutionData(localSet)
+                let incomingChanged = hasExecutionData(incomingSet)
+                if localChanged && incomingChanged && executionValuesDiffer(localSet, incomingSet) {
+                    conflicts.append(localSet.id)
+                    continue
+                }
+                if incomingChanged && (!localChanged || incomingUpdatedAt >= local.updatedAt) {
+                    merged.exercises[exerciseIndex].sets[setIndex] = incomingSet
+                }
+            }
+            merged.exercises[exerciseIndex].sets.sort { $0.setOrder < $1.setOrder }
+        }
+        merged.exercises.sort { $0.sortOrder < $1.sortOrder }
+        return WorkoutSessionMergeResult(
+            session: merged,
+            disposition: conflicts.isEmpty ? .merged : .conflict,
+            conflictingSetIDs: conflicts
+        )
+    }
+
+    private static func hasExecutionData(_ set: WorkoutSet) -> Bool {
+        set.isCompleted
+            || set.startedAt != nil
+            || set.completedAt != nil
+            || set.actualWeight != set.targetWeight
+            || set.actualReps != set.targetReps
+            || set.rpe != nil
+            || !(set.note ?? "").isEmpty
+    }
+
+    private static func executionValuesDiffer(_ lhs: WorkoutSet, _ rhs: WorkoutSet) -> Bool {
+        lhs.actualWeight != rhs.actualWeight
+            || lhs.actualReps != rhs.actualReps
+            || lhs.isCompleted != rhs.isCompleted
+            || lhs.rpe != rhs.rpe
+            || lhs.note != rhs.note
+    }
+}
+
 private extension Exercise {
     init(watchExercise: WatchWorkoutExerciseSnapshot) {
         self.init(
@@ -217,7 +300,7 @@ private extension Exercise {
             name: watchExercise.name,
             primaryMuscle: MuscleGroup(rawValue: watchExercise.primaryMuscleRawValue ?? "") ?? .fullBody,
             equipment: Equipment(rawValue: watchExercise.equipmentRawValue ?? "") ?? .other,
-            instruction: "Apple Watchから同期した種目です。"
+            instruction: L10n.string("runtime_messages.bee8e1a579e0", fallback: "Apple Watchから同期した種目です。")
         )
     }
 }

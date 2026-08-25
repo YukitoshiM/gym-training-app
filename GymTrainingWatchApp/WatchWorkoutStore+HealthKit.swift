@@ -5,7 +5,7 @@ import WatchKit
 extension WatchWorkoutStore {
     func beginSensorWorkout() {
         guard sensorPreferences.healthWorkoutEnabled else {
-            healthStatusMessage = "Health連携オフ・手入力で記録中"
+            healthStatusMessage = L10n.string("watch_widget.c7c0bd2400ae", fallback: "Health連携オフ・手入力で記録中")
             isHealthWorkoutActive = false
             WatchDiagnostics.shared.record(
                 category: "health.disabled",
@@ -25,7 +25,7 @@ extension WatchWorkoutStore {
                 heartRateZone: 2,
                 heartRateZoneDurations: [1: 80, 2: 180]
             )
-            healthStatusMessage = "センサー計測中"
+            healthStatusMessage = L10n.string("watch_widget.2e0ad9fc3b1a", fallback: "センサー計測中")
             isHealthWorkoutActive = true
             return
         }
@@ -45,7 +45,7 @@ extension WatchWorkoutStore {
             Task { @MainActor [weak self] in
                 guard let self else { return }
                 guard let session else {
-                    setHealthFallback(status: .failed, message: "Health計測は復元できません。手入力は継続できます")
+                    setHealthFallback(status: .failed, message: L10n.string("watch_widget.875a5d223149", fallback: "Health計測は復元できません。手入力は継続できます"))
                     if let error {
                         WatchDiagnostics.shared.record(
                             level: "error",
@@ -65,7 +65,7 @@ extension WatchWorkoutStore {
                 healthCollectionStartedAt = activeSession?.startedAt
                 isHealthWorkoutActive = session.state == .running
                 isWorkoutPaused = session.state == .paused
-                healthStatusMessage = isWorkoutPaused ? "一時停止中" : "Health計測を復元しました"
+                healthStatusMessage = isWorkoutPaused ? L10n.string("watch_widget.114f06b70d1a", fallback: "一時停止中") : L10n.string("watch_widget.b1bb5fa8c916", fallback: "Health計測を復元しました")
                 WatchDiagnostics.shared.record(
                     category: "health.recovery",
                     message: "Health workout recovered",
@@ -77,40 +77,48 @@ extension WatchWorkoutStore {
 
     func startHealthWorkout() async {
         guard HKHealthStore.isHealthDataAvailable() else {
-            setHealthFallback(status: .unavailable, message: "Healthを利用できないため手入力で記録中")
+            setHealthFallback(status: .unavailable, message: L10n.string("watch_widget.6c39297531fa", fallback: "Healthを利用できないため手入力で記録中"))
             return
         }
 
         guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate),
               let activeEnergyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned) else {
-            setHealthFallback(status: .unavailable, message: "センサー項目を準備できないため手入力で記録中")
+            setHealthFallback(status: .unavailable, message: L10n.string("watch_widget.2315bef407c9", fallback: "センサー項目を準備できないため手入力で記録中"))
             return
         }
 
         do {
             var shareTypes: Set<HKSampleType> = [HKObjectType.workoutType()]
+            var readTypes: Set<HKObjectType> = [heartRateType, activeEnergyType]
+            if let distanceType = activeDistanceType {
+                readTypes.insert(distanceType)
+            }
+            if activeSession?.isOutdoorCardio == true {
+                shareTypes.insert(HKSeriesType.workoutRoute())
+            }
             if #available(watchOS 11.0, *),
                let effortType = HKQuantityType.quantityType(forIdentifier: .workoutEffortScore) {
                 shareTypes.insert(effortType)
             }
             try await healthStore.requestAuthorization(
                 toShare: shareTypes,
-                read: [heartRateType, activeEnergyType]
+                read: readTypes
             )
 
             guard healthStore.authorizationStatus(for: HKObjectType.workoutType()) != .sharingDenied else {
-                setHealthFallback(status: .permissionDenied, message: "Healthの許可なし・手入力で記録中")
+                setHealthFallback(status: .permissionDenied, message: L10n.string("watch_widget.919f5d735c32", fallback: "Healthの許可なし・手入力で記録中"))
                 return
             }
 
             let startDate = activeSession?.startedAt ?? Date()
             if await hasOverlappingHealthWorkout(
                 startDate: startDate,
-                externalID: activeSession?.id.uuidString
+                externalID: activeSession?.id.uuidString,
+                activityType: activeHealthActivityType
             ) {
                 setHealthFallback(
                     status: .unavailable,
-                    message: "同時間帯のFitness記録があるためHealthへの二重保存を避けました"
+                    message: L10n.string("watch_widget.56dc053a7297", fallback: "同時間帯のFitness記録があるためHealthへの二重保存を避けました")
                 )
                 WatchDiagnostics.shared.record(
                     category: "health.duplicate_prevented",
@@ -120,8 +128,8 @@ extension WatchWorkoutStore {
             }
 
             let configuration = HKWorkoutConfiguration()
-            configuration.activityType = .traditionalStrengthTraining
-            configuration.locationType = .indoor
+            configuration.activityType = activeHealthActivityType
+            configuration.locationType = activeSession?.isOutdoorCardio == true ? .outdoor : .indoor
 
             let session = try HKWorkoutSession(healthStore: healthStore, configuration: configuration)
             let builder = session.associatedWorkoutBuilder()
@@ -141,8 +149,11 @@ extension WatchWorkoutStore {
             }
             session.startActivity(with: startDate)
             try await builder.beginCollection(at: startDate)
+            if activeSession?.isOutdoorCardio == true {
+                startOutdoorRouteCollection()
+            }
             isHealthWorkoutActive = true
-            healthStatusMessage = "心拍・消費エネルギーを計測中"
+            healthStatusMessage = L10n.string("watch_widget.fdc98ee0d134", fallback: "心拍・消費エネルギーを計測中")
             activeSession?.healthKitSaveStatus = .collecting
             saveActiveSession()
             WatchDiagnostics.shared.record(
@@ -151,7 +162,7 @@ extension WatchWorkoutStore {
                 metadata: ["session_id": activeSession?.id.uuidString ?? "unknown"]
             )
         } catch {
-            setHealthFallback(status: .permissionDenied, message: "Healthを開始できないため手入力で記録中")
+            setHealthFallback(status: .permissionDenied, message: L10n.string("watch_widget.41e43dbbf218", fallback: "Healthを開始できないため手入力で記録中"))
             WatchDiagnostics.shared.record(
                 level: "error",
                 category: "health.start",
@@ -161,11 +172,15 @@ extension WatchWorkoutStore {
         }
     }
 
-    func hasOverlappingHealthWorkout(startDate: Date, externalID: String?) async -> Bool {
+    func hasOverlappingHealthWorkout(
+        startDate: Date,
+        externalID: String?,
+        activityType: HKWorkoutActivityType
+    ) async -> Bool {
         let type = HKObjectType.workoutType()
         let recentStart = Calendar.current.date(byAdding: .hour, value: -12, to: startDate) ?? startDate
         let datePredicate = HKQuery.predicateForSamples(withStart: recentStart, end: Date())
-        let activityPredicate = HKQuery.predicateForWorkouts(with: .traditionalStrengthTraining)
+        let activityPredicate = HKQuery.predicateForWorkouts(with: activityType)
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [datePredicate, activityPredicate])
 
         return await withCheckedContinuation { continuation in
@@ -260,7 +275,12 @@ extension WatchWorkoutStore {
 
                     saveEffortScoreIfAvailable(for: workout, session: finished) { [weak self] in
                         Task { @MainActor [weak self] in
-                            self?.completeFinishedSession(finished, healthStatus: .saved)
+                            guard let self else { return }
+                            finishOutdoorRoute(with: workout, session: finished) { [weak self] routedSession in
+                                Task { @MainActor [weak self] in
+                                    self?.completeFinishedSession(routedSession, healthStatus: .saved)
+                                }
+                            }
                         }
                     }
                 }
@@ -280,15 +300,15 @@ extension WatchWorkoutStore {
 
         switch healthStatus {
         case .saved:
-            healthStatusMessage = "Apple Healthへ保存しました"
+            healthStatusMessage = L10n.string("watch_widget.a0272546c24a", fallback: "Apple Healthへ保存しました")
         case .permissionDenied:
-            healthStatusMessage = "Health未保存・Watch記録は保存済み"
+            healthStatusMessage = L10n.string("watch_widget.775a658d59cf", fallback: "Health未保存・Watch記録は保存済み")
         case .failed:
-            healthStatusMessage = "Health保存失敗・Watch記録は保存済み"
+            healthStatusMessage = L10n.string("watch_widget.e29bbf1b3ab8", fallback: "Health保存失敗・Watch記録は保存済み")
         case .unavailable:
-            healthStatusMessage = "Watch記録を保存しました"
+            healthStatusMessage = L10n.string("watch_widget.2e494aa6c8a6", fallback: "Watch記録を保存しました")
         case .collecting:
-            healthStatusMessage = "Health保存を処理中"
+            healthStatusMessage = L10n.string("watch_widget.b9b1cb7b9197", fallback: "Health保存を処理中")
         }
 
         WatchDiagnostics.shared.record(
@@ -366,6 +386,7 @@ extension WatchWorkoutStore {
         if discard {
             workoutSession?.end()
             workoutBuilder?.discardWorkout()
+            stopOutdoorRouteCollection(discard: true)
         }
         resetHealthObjects()
     }
@@ -388,12 +409,34 @@ extension WatchWorkoutStore {
         confirmedExerciseCandidate = nil
         lastHeartRateZone = nil
         lastHeartRateZoneUpdatedAt = nil
+        outdoorGoalHapticSent = false
     }
 
     func resetHealthObjects() {
+        workoutLocationManager.stopUpdatingLocation()
         workoutSession = nil
         workoutBuilder = nil
         isHealthWorkoutActive = false
+    }
+
+    var activeHealthActivityType: HKWorkoutActivityType {
+        switch activeSession?.outdoorCardio?.activity {
+        case .running: .running
+        case .walking: .walking
+        case .cycling: .cycling
+        case nil: .traditionalStrengthTraining
+        }
+    }
+
+    var activeDistanceType: HKQuantityType? {
+        switch activeSession?.outdoorCardio?.activity {
+        case .running, .walking:
+            HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)
+        case .cycling:
+            HKQuantityType.quantityType(forIdentifier: .distanceCycling)
+        case nil:
+            nil
+        }
     }
 
 }

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct OmakaseHomeDashboard: View {
     let recommendation: DailyRecommendation
+    let profile: UserProfile
     let progress: (DailyAction) -> DailyActionProgress
     let isAIRefreshing: Bool
     let isAIEnabled: Bool
@@ -29,60 +30,45 @@ struct OmakaseHomeDashboard: View {
             ?? activeActions.first
     }
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            readinessHeader
-            aiCoachCard
+    private var remainingActions: [DailyAction] {
+        guard let primaryAction else { return activeActions }
+        return activeActions.filter { $0.id != primaryAction.id }
+    }
 
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Text("今日やること")
-                        .font(.title2.bold())
-                        .foregroundStyle(AppTheme.ink)
-                        .accessibilityIdentifier("omakaseDashboard")
-                    Spacer()
-                    Text("\(completedCount) / \(activeActions.count)")
-                        .font(.headline.monospacedDigit())
-                        .foregroundStyle(AppTheme.accent)
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            readinessHeader
+
+            VStack(alignment: .leading, spacing: 12) {
+                todayActionsHeader
+
+                if let primaryAction {
+                    PrimaryDailyActionCard(
+                        action: primaryAction,
+                        progress: progress(primaryAction),
+                        primaryButtonTitle: primaryButtonTitle(primaryAction),
+                        coachName: coachName,
+                        coachAvatarName: coachAvatarName,
+                        onOpen: { startPrimaryAction(primaryAction) },
+                        onWhy: { openReason(primaryAction) },
+                        onReplace: { replace(primaryAction) }
+                    )
                 }
 
-                ForEach(activeActions) { action in
+                ForEach(remainingActions) { action in
                     DailyActionRow(
                         action: action,
                         progress: progress(action),
                         onOpen: { onOpen(action) },
                         onToggleManual: { onToggleManual(action) },
-                        onWhy: { onWhy(action) },
-                        onReplace: { onReplace(action) }
+                        onWhy: { openReason(action) },
+                        onReplace: { replace(action) }
                     )
                 }
             }
 
-            if let primaryAction {
-                Button {
-                    if case .manuallyConfirmed = primaryAction.completionRule {
-                        onToggleManual(primaryAction)
-                    } else {
-                        onOpen(primaryAction)
-                    }
-                } label: {
-                    HStack(spacing: 10) {
-                        Image(systemName: primaryAction.status == .completed ? "checkmark" : primaryAction.category.systemImage)
-                        Text(primaryAction.status == .completed ? "今日の詳細を見る" : primaryButtonTitle(primaryAction))
-                            .font(.headline)
-                        Spacer()
-                        Image(systemName: "arrow.right")
-                    }
-                    .frame(maxWidth: .infinity, minHeight: 54)
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(AppTheme.accent)
-                .foregroundStyle(AppTheme.onAccent)
-                .accessibilityIdentifier("omakasePrimaryActionButton")
-                .appTourTarget(.homeTodayTraining)
-            }
-
             quickRecordActions
+            aiCoachCard
 
             if let review {
                 DailyReviewSummary(review: review, totalCount: activeActions.count)
@@ -104,31 +90,73 @@ struct OmakaseHomeDashboard: View {
                     .accessibilityIdentifier("omakaseRevisionReason")
             }
         }
+        .onAppear {
+            UsageAnalytics.shared.record(
+                .recommendationSourceShown,
+                dimension: recommendation.source.rawValue,
+                properties: .dailyRecommendation(profile: profile, recommendation: recommendation)
+            )
+            for action in activeActions {
+                UsageAnalytics.shared.record(
+                    .dailyActionImpression,
+                    dimension: action.category.rawValue,
+                    properties: .dailyAction(
+                        profile: profile,
+                        recommendation: recommendation,
+                        action: action
+                    )
+                )
+            }
+        }
+    }
+
+    private var todayActionsHeader: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(L10n.string("core_ui.4df982e6c906", fallback: "今日の3つ"))
+                .font(.title2.bold())
+                .foregroundStyle(AppTheme.ink)
+                .accessibilityIdentifier("omakaseDashboard")
+            Spacer()
+            HStack(spacing: 5) {
+                Text(verbatim: "\(completedCount) / \(activeActions.count)")
+                    .monospacedDigit()
+                Text(L10n.string("core_ui.9eeac2fd3ceb", fallback: "完了"))
+            }
+            .environment(\.layoutDirection, .leftToRight)
+            .font(.headline)
+            .foregroundStyle(AppTheme.accent)
+        }
     }
 
     private var readinessHeader: some View {
-        HStack(spacing: 14) {
-            Image(systemName: readinessSymbol)
-                .font(.title2.bold())
-                .foregroundStyle(AppTheme.onAccent)
-                .frame(width: 50, height: 50)
-                .background(readinessColor, in: RoundedRectangle(cornerRadius: 8))
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                Image(systemName: readinessSymbol)
+                    .font(.title2.bold())
+                    .foregroundStyle(AppTheme.onAccent)
+                    .frame(width: 48, height: 48)
+                    .background(readinessColor, in: RoundedRectangle(cornerRadius: 8))
+                    .accessibilityHidden(true)
 
-            VStack(alignment: .leading, spacing: 3) {
-                Text("今日の調子")
-                    .font(.footnote.bold())
-                    .foregroundStyle(AppTheme.mutedInk)
-                Text(recommendation.readiness.level.displayName)
-                    .font(.largeTitle.bold())
-                    .foregroundStyle(AppTheme.ink)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(L10n.string("core_ui.3e4b49a95d93", fallback: "今日の調子"))
+                        .font(.footnote.bold())
+                        .foregroundStyle(AppTheme.mutedInk)
+                    Text(recommendation.readiness.level.displayName)
+                        .font(.title.bold())
+                        .foregroundStyle(AppTheme.ink)
+                }
+
+                Spacer(minLength: 4)
             }
+            .accessibilityIdentifier("omakaseReadiness")
 
-            Spacer(minLength: 4)
-
+            Label(recommendationStatusText, systemImage: recommendationStatusSymbol)
+                .font(.footnote.bold())
+                .foregroundStyle(recommendationStatusColor)
+                .accessibilityIdentifier("omakaseRecommendationStatus")
         }
         .padding(.vertical, 4)
-        .accessibilityElement(children: .combine)
-        .accessibilityIdentifier("omakaseReadiness")
     }
 
     private var aiCoachCard: some View {
@@ -146,7 +174,7 @@ struct OmakaseHomeDashboard: View {
 
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(spacing: 8) {
-                        Text("\(coachName)からの提案")
+                        Text(L10n.string("core_ui.0e9e7fa3d87c", fallback: "{{value1}}からの提案", values: [String(describing: coachName)]))
                             .font(.headline)
                             .foregroundStyle(AppTheme.ink)
                             .fixedSize(horizontal: false, vertical: true)
@@ -169,7 +197,13 @@ struct OmakaseHomeDashboard: View {
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
 
-                    Label("提案の理由を見る", systemImage: "arrow.right")
+                    Text(aiStatusDetail)
+                        .font(.footnote)
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Label(L10n.string("core_ui.1c56ad058cb9", fallback: "判断の詳細を見る"), systemImage: "arrow.right")
                         .font(.footnote.bold())
                         .foregroundStyle(AppTheme.accent)
                         .fixedSize(horizontal: false, vertical: true)
@@ -189,11 +223,11 @@ struct OmakaseHomeDashboard: View {
     }
 
     private var aiStatusText: String {
-        if !isAIEnabled { return "基本提案" }
-        if isAIRefreshing { return "記録を確認中" }
-        if recommendation.aiEvaluatedAt != nil { return "確認済み" }
-        if recommendation.aiRequestedAt != nil { return "確認待ち" }
-        return "すぐ使えます"
+        if !isAIEnabled { return L10n.string("core_ui.4d7d6a61c333", fallback: "端末内") }
+        if isAIRefreshing { return L10n.string("core_ui.a09a04648e2c", fallback: "AI確認中") }
+        if recommendation.aiEvaluatedAt != nil { return L10n.string("core_ui.386d8d6ae3c9", fallback: "AI確認済み") }
+        if recommendation.aiRequestedAt != nil { return L10n.string("core_ui.88c138af4a1e", fallback: "送信待ち") }
+        return L10n.string("core_ui.4d7d6a61c333", fallback: "端末内")
     }
 
     private var aiStatusSymbol: String {
@@ -205,22 +239,65 @@ struct OmakaseHomeDashboard: View {
     }
 
     private var aiStatusColor: Color {
-        if !isAIEnabled { return AppTheme.critical }
         if recommendation.aiEvaluatedAt != nil { return AppTheme.positive }
-        return AppTheme.accent
+        return isAIRefreshing ? AppTheme.accent : AppTheme.mutedInk
+    }
+
+    private var aiStatusDetail: String {
+        if !isAIEnabled { return L10n.string("core_ui.79fac498bcc6", fallback: "AIなしでも、今日の提案はそのまま使えます。") }
+        if isAIRefreshing { return L10n.string("core_ui.ddbfa4c66ff8", fallback: "記録を確認中です。画面を閉じても続きます。") }
+        if recommendation.aiEvaluatedAt != nil { return L10n.string("core_ui.716b63d8113c", fallback: "保存済みの記録をもとに確認しました。") }
+        if recommendation.aiRequestedAt != nil { return L10n.string("core_ui.d624960db5e8", fallback: "通信でき次第、記録を確認します。") }
+        return L10n.string("core_ui.b5a54050d994", fallback: "まず端末内の記録から作成し、必要な場合だけAIが補正します。")
+    }
+
+    private var recommendationStatusText: String {
+        let date = recommendation.aiEvaluatedAt ?? recommendation.generatedAt
+        let source: String
+        if recommendation.aiEvaluatedAt != nil {
+            source = L10n.string("core_ui.e7a6c6422c09", fallback: "{{value1}}が確認済み", values: [String(describing: coachName)])
+        } else if isAIRefreshing {
+            source = L10n.string("core_ui.34effd785dea", fallback: "{{value1}}が確認中・提案は利用可能", values: [String(describing: coachName)])
+        } else if isAIEnabled, recommendation.aiRequestedAt != nil {
+            source = L10n.string("core_ui.6ef5a3bdd141", fallback: "{{value1}}の確認待ち・提案は利用可能", values: [String(describing: coachName)])
+        } else {
+            source = L10n.string("core_ui.246b9f2d306d", fallback: "{{value1}}の基本提案", values: [String(describing: coachName)])
+        }
+        return L10n.string("core_ui.305942690f5d", fallback: "{{value1}}・{{value2}}更新", values: [String(describing: source), String(describing: date.formatted(date: .omitted, time: .shortened))])
+    }
+
+    private var recommendationStatusSymbol: String {
+        if recommendation.aiEvaluatedAt != nil { return "checkmark.circle.fill" }
+        if isAIRefreshing { return "arrow.triangle.2.circlepath" }
+        if isAIEnabled, recommendation.aiRequestedAt != nil { return "clock" }
+        return "iphone"
+    }
+
+    private var recommendationStatusColor: Color {
+        recommendation.aiEvaluatedAt != nil || isAIRefreshing ? AppTheme.accent : AppTheme.mutedInk
     }
 
     private var quickRecordActions: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("クイック記録")
+            Text(L10n.string("core_ui.a5067c621aca", fallback: "クイック記録"))
                 .font(.headline)
                 .foregroundStyle(AppTheme.mutedInk)
 
             HStack(spacing: 10) {
-                QuickRecordButton(title: "食事", systemImage: "camera.fill", action: onQuickMeal)
-                QuickRecordButton(title: "体重", systemImage: "scalemass", action: onQuickWeight)
-                QuickRecordButton(title: "写真", systemImage: "person.crop.rectangle.stack", action: onQuickPhoto)
+                QuickRecordButton(title: L10n.string("core_ui.e8a52146d9dc", fallback: "食事"), systemImage: "camera.fill") {
+                    UsageAnalytics.shared.record(.quickRecordOpened, dimension: "meal")
+                    onQuickMeal()
+                }
+                QuickRecordButton(title: L10n.string("core_ui.d05d75dc142b", fallback: "体重"), systemImage: "scalemass") {
+                    UsageAnalytics.shared.record(.quickRecordOpened, dimension: "weight")
+                    onQuickWeight()
+                }
+                QuickRecordButton(title: L10n.string("core_ui.a1ed281773ea", fallback: "写真"), systemImage: "person.crop.rectangle.stack") {
+                    UsageAnalytics.shared.record(.quickRecordOpened, dimension: "photo")
+                    onQuickPhoto()
+                }
             }
+
         }
     }
 
@@ -247,18 +324,48 @@ struct OmakaseHomeDashboard: View {
 
     private func primaryButtonTitle(_ action: DailyAction) -> String {
         switch action.destination {
-        case .workout: "このメニューを開始"
-        case .steps: "歩数を見る"
-        case .meal: "食事を記録"
-        case .bodyMetric: "数値を記録"
-        case .bodyPhoto: "写真を撮る"
-        case .condition: "状態を確認"
-        case .none: "完了にする"
+        case .workout: L10n.string("core_ui.bb8ea3c17233", fallback: "このメニューを開始")
+        case .steps: L10n.string("core_ui.13c8c880dac8", fallback: "歩数を見る")
+        case .meal: L10n.string("core_ui.dd8dea3af7bd", fallback: "食事を記録")
+        case .bodyMetric: L10n.string("core_ui.bbc2f5175dc6", fallback: "数値を記録")
+        case .bodyPhoto: L10n.string("core_ui.451d1e265682", fallback: "写真を撮る")
+        case .condition: L10n.string("core_ui.e30570ba3b2d", fallback: "状態を確認")
+        case .none: L10n.string("core_ui.66bbc01c25cd", fallback: "完了にする")
         }
     }
 
     private func revisionSymbol(_ source: DailyRecommendationSource) -> String {
         source == .ai ? "sparkles" : "arrow.triangle.2.circlepath"
+    }
+
+    private func trigger(_ action: DailyAction) {
+        if case .manuallyConfirmed = action.completionRule {
+            onToggleManual(action)
+        } else {
+            onOpen(action)
+        }
+    }
+
+    private func startPrimaryAction(_ action: DailyAction) {
+        UsageAnalytics.shared.record(
+            .homePrimaryActionStarted,
+            dimension: action.category.rawValue,
+            properties: .dailyAction(profile: profile, recommendation: recommendation, action: action)
+        )
+        trigger(action)
+    }
+
+    private func openReason(_ action: DailyAction) {
+        UsageAnalytics.shared.record(
+            .dailyActionReasonOpened,
+            dimension: action.category.rawValue,
+            properties: .dailyAction(profile: profile, recommendation: recommendation, action: action)
+        )
+        onWhy(action)
+    }
+
+    private func replace(_ action: DailyAction) {
+        onReplace(action)
     }
 }
 
@@ -269,7 +376,7 @@ private struct TargetAdjustmentProposalView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Label("目標の調整候補", systemImage: "slider.horizontal.3")
+            Label(L10n.string("core_ui.9ce2ddc2666c", fallback: "目標の調整候補"), systemImage: "slider.horizontal.3")
                 .font(.headline)
                 .foregroundStyle(AppTheme.ink)
 
@@ -287,10 +394,23 @@ private struct TargetAdjustmentProposalView: View {
             .font(.headline.monospacedDigit())
 
             HStack(spacing: 10) {
-                Button("今回は変えない", action: onDecline)
+                Button(L10n.string("core_ui.01f9df15aee7", fallback: "今回は変えない"), action: onDecline)
                     .buttonStyle(.bordered)
-                Button("この目安に変更", action: onAccept)
+                Button(L10n.string("core_ui.d9bbe4698b75", fallback: "この目安に変更"), action: onAccept)
                     .buttonStyle(.borderedProminent)
+            }
+
+            if let evidence = proposal.evidence, !evidence.isEmpty {
+                DisclosureGroup(L10n.string("release_delta.evidence_count", fallback: "科学的根拠 {{value1}}件", values: [evidence.count.formatted()])) {
+                    ForEach(evidence) { citation in
+                        CoachEvidenceCitationRow(citation: citation)
+                            .padding(.vertical, 4)
+                    }
+                }
+            } else if proposal.evidenceStatus != nil {
+                Label(L10n.string("release_delta.insufficient_direct_evidence", fallback: "直接使える根拠が不足しているため、記録傾向を優先した目安です"), systemImage: "exclamationmark.triangle")
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.warning)
             }
         }
         .padding(14)
@@ -303,6 +423,104 @@ private struct TargetAdjustmentProposalView: View {
     }
 }
 
+private struct PrimaryDailyActionCard: View {
+    let action: DailyAction
+    let progress: DailyActionProgress
+    let primaryButtonTitle: String
+    let coachName: String
+    let coachAvatarName: String
+    let onOpen: () -> Void
+    let onWhy: () -> Void
+    let onReplace: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 8) {
+                    Image(coachAvatarName)
+                        .resizable()
+                        .interpolation(.high)
+                        .scaledToFill()
+                        .frame(width: 32, height: 32)
+                        .clipShape(RoundedRectangle(cornerRadius: 7))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 7)
+                                .stroke(AppTheme.accent.opacity(0.55), lineWidth: 1)
+                        }
+                        .accessibilityHidden(true)
+                    Text(L10n.string("core_ui.7f624f77db97", fallback: "{{value1}}のおすすめ", values: [String(describing: coachName)]))
+                        .font(.footnote.bold())
+                        .foregroundStyle(AppTheme.accent)
+                        .lineLimit(2)
+                }
+                ActionControlBar(
+                    action: action,
+                    onWhy: onWhy,
+                    onReplace: onReplace
+                )
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+
+            HStack(alignment: .top, spacing: 12) {
+                Image(systemName: action.category.systemImage)
+                    .font(.title2.bold())
+                    .foregroundStyle(AppTheme.onAccent)
+                    .frame(width: 48, height: 48)
+                    .background(AppTheme.accent, in: RoundedRectangle(cornerRadius: 8))
+                    .accessibilityHidden(true)
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(action.title)
+                        .font(.title3.bold())
+                        .foregroundStyle(AppTheme.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("dailyAction-\(action.category.rawValue)")
+                    Text(action.rationale)
+                        .font(.subheadline)
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(progress.detail)
+                        .font(.body.monospacedDigit())
+                        .foregroundStyle(AppTheme.mutedInk)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            ProgressView(value: progress.fraction)
+                .tint(action.status == .completed ? AppTheme.positive : AppTheme.accent)
+                .accessibilityHidden(true)
+
+            if action.status == .completed {
+                Label(L10n.string("core_ui.a16ead46fb2d", fallback: "完了しました"), systemImage: "checkmark.circle.fill")
+                    .font(.headline)
+                    .foregroundStyle(AppTheme.positive)
+                    .frame(maxWidth: .infinity, minHeight: 48)
+            } else {
+                Button(action: onOpen) {
+                    HStack(spacing: 10) {
+                        Text(primaryButtonTitle)
+                            .font(.headline)
+                        Spacer()
+                        Image(systemName: "arrow.right")
+                    }
+                    .frame(maxWidth: .infinity, minHeight: 54)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(AppTheme.accent)
+                .foregroundStyle(AppTheme.onAccent)
+                .accessibilityIdentifier("omakasePrimaryActionButton")
+                .appTourTarget(.homeTodayTraining)
+            }
+        }
+        .padding(14)
+        .background(AppTheme.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: 8))
+        .overlay {
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(AppTheme.accent.opacity(0.6), lineWidth: 1)
+        }
+    }
+}
+
 private struct DailyActionRow: View {
     let action: DailyAction
     let progress: DailyActionProgress
@@ -312,52 +530,49 @@ private struct DailyActionRow: View {
     let onReplace: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
-            Button(action: completionAction) {
-                Image(systemName: action.status == .completed ? "checkmark.circle.fill" : "circle")
-                    .font(.title2)
-                    .foregroundStyle(action.status == .completed ? AppTheme.positive : AppTheme.accent)
-                    .frame(width: 44, height: 44)
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(action.status == .completed ? "完了済み" : "\(action.title)を開く")
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                Button(action: completionAction) {
+                    Image(systemName: action.status == .completed ? "checkmark.circle.fill" : "circle")
+                        .font(.title2)
+                        .foregroundStyle(action.status == .completed ? AppTheme.positive : AppTheme.accent)
+                        .padding(13)
+                }
+                .buttonStyle(.plain)
+                .frame(width: 48, height: 48)
+                .contentShape(Rectangle())
+                .accessibilityLabel(action.status == .completed ? L10n.string("core_ui.3362a5982780", fallback: "完了済み") : L10n.string("core_ui.9c32e5e1faac", fallback: "{{value1}}を開く", values: [String(describing: action.title)]))
 
-            Button(action: onOpen) {
-                VStack(alignment: .leading, spacing: 5) {
-                    HStack(spacing: 7) {
-                        Image(systemName: action.category.systemImage)
-                            .foregroundStyle(AppTheme.accent)
-                        Text(action.title)
-                            .font(.headline)
-                            .foregroundStyle(AppTheme.ink)
-                            .fixedSize(horizontal: false, vertical: true)
+                Button(action: onOpen) {
+                    VStack(alignment: .leading, spacing: 5) {
+                        HStack(spacing: 7) {
+                            Image(systemName: action.category.systemImage)
+                                .foregroundStyle(AppTheme.accent)
+                                .accessibilityHidden(true)
+                            Text(action.title)
+                                .font(.headline)
+                                .foregroundStyle(AppTheme.ink)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .accessibilityIdentifier("dailyAction-\(action.category.rawValue)")
+                        }
+                        Text(progress.detail)
+                            .font(.subheadline.monospacedDigit())
+                            .foregroundStyle(AppTheme.mutedInk)
+                        ProgressView(value: progress.fraction)
+                            .tint(action.status == .completed ? AppTheme.positive : AppTheme.accent)
+                            .accessibilityHidden(true)
                     }
-                    Text(progress.detail)
-                        .font(.subheadline.monospacedDigit())
-                        .foregroundStyle(AppTheme.mutedInk)
-                    ProgressView(value: progress.fraction)
-                        .tint(action.status == .completed ? AppTheme.positive : AppTheme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .buttonStyle(.plain)
             }
-            .buttonStyle(.plain)
 
-            Menu {
-                Button(action: onWhy) {
-                    Label("トレーナーの理由", systemImage: "person.crop.circle")
-                }
-                if action.status != .completed {
-                    Button(action: onReplace) {
-                        Label("別の行動に替える", systemImage: "arrow.triangle.2.circlepath")
-                    }
-                }
-            } label: {
-                Image(systemName: "person.crop.circle")
-                    .font(.headline)
-                    .frame(width: 44, height: 44)
-                    .contentShape(Rectangle())
-            }
-            .accessibilityLabel("\(action.title)を提案した理由")
+            ActionControlBar(
+                action: action,
+                onWhy: onWhy,
+                onReplace: onReplace
+            )
+            .frame(maxWidth: .infinity, alignment: .trailing)
         }
         .padding(12)
         .background(AppTheme.elevatedBackground, in: RoundedRectangle(cornerRadius: 8))
@@ -365,7 +580,6 @@ private struct DailyActionRow: View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(AppTheme.cardBorder, lineWidth: 1)
         }
-        .accessibilityIdentifier("dailyAction-\(action.category.rawValue)")
     }
 
     private func completionAction() {
@@ -373,6 +587,57 @@ private struct DailyActionRow: View {
             onToggleManual()
         } else {
             onOpen()
+        }
+    }
+}
+
+private struct ActionControlBar: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    let action: DailyAction
+    let onWhy: () -> Void
+    let onReplace: () -> Void
+
+    var body: some View {
+        HStack(spacing: 14) {
+            Button(action: onWhy) {
+                if dynamicTypeSize.isAccessibilitySize {
+                    Image(systemName: "info.circle")
+                        .font(.title2)
+                        .frame(width: 48, height: 48)
+                } else {
+                    Label(L10n.string("health_meals_body_ai.bde5657225e5", fallback: "判断の根拠"), systemImage: "info.circle")
+                        .font(.footnote.bold())
+                        .padding(.horizontal, 13)
+                        .padding(.vertical, 17)
+                }
+            }
+            .buttonStyle(.plain)
+            .frame(minWidth: 72, minHeight: 48)
+            .contentShape(Rectangle())
+            .foregroundStyle(AppTheme.accent)
+            .accessibilityLabel(L10n.string("core_ui.81040e1e98f5", fallback: "{{value1}}を提案した理由", values: [String(describing: action.title)]))
+            .accessibilityIdentifier("omakaseReason-\(action.category.rawValue)")
+
+            if action.status != .completed {
+                Menu {
+                    Button(action: onReplace) {
+                        Label(L10n.string("core_ui.4e4c49222b4d", fallback: "別の行動に替える"), systemImage: "arrow.triangle.2.circlepath")
+                    }
+                } label: {
+                    if dynamicTypeSize.isAccessibilitySize {
+                        Image(systemName: "ellipsis.circle")
+                            .font(.title2)
+                            .frame(width: 48, height: 48)
+                    } else {
+                        Label(L10n.string("core_ui.f04176da6625", fallback: "変更"), systemImage: "ellipsis.circle")
+                            .font(.footnote.bold())
+                            .frame(minWidth: 72, minHeight: 48)
+                    }
+                }
+                .foregroundStyle(AppTheme.mutedInk)
+                .accessibilityLabel(L10n.string("core_ui.b3e3454f449d", fallback: "{{value1}}を別の行動に変更", values: [String(describing: action.title)]))
+                .accessibilityIdentifier("omakaseReplace-\(action.category.rawValue)")
+            }
         }
     }
 }
@@ -413,12 +678,17 @@ private struct DailyReviewSummary: View {
                 .font(.title2)
                 .foregroundStyle(AppTheme.accent)
             VStack(alignment: .leading, spacing: 4) {
-                Text("今日の達成")
+                Text(L10n.string("core_ui.98bcbb87d970", fallback: "今日の達成"))
                     .font(.headline)
                     .foregroundStyle(AppTheme.ink)
-                Text("\(review.completedActionIDs.count) / \(totalCount)達成")
-                    .font(.title3.bold().monospacedDigit())
-                    .foregroundStyle(AppTheme.accent)
+                HStack(spacing: 5) {
+                    Text(verbatim: "\(review.completedActionIDs.count) / \(totalCount)")
+                        .monospacedDigit()
+                    Text(L10n.string("training.6f68dd807f5f", fallback: "達成"))
+                }
+                .environment(\.layoutDirection, .leftToRight)
+                .font(.title3.bold())
+                .foregroundStyle(AppTheme.accent)
                 Text(review.summary)
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.mutedInk)
@@ -443,13 +713,13 @@ struct DailyActionWhyView: View {
                 Section {
                     CoachIdentityView(
                         persona: coachPersona,
-                        role: "今日の提案",
+                        role: L10n.string("core_ui.0221665d470d", fallback: "今日の提案"),
                         detail: action.title,
                         avatarSize: 56
                     )
                 }
 
-                Section("この行動を選んだ理由") {
+                Section(L10n.string("core_ui.cf7bb911516d", fallback: "この行動を選んだ理由")) {
                     Label(action.title, systemImage: action.category.systemImage)
                         .font(.headline)
                     Text(action.rationale)
@@ -457,47 +727,147 @@ struct DailyActionWhyView: View {
                         .lineSpacing(4)
                 }
 
-                Section("参考にした情報") {
+                Section(L10n.string("core_ui.3bd14a48af52", fallback: "参考にした情報")) {
                     ForEach(recommendation.readiness.contributingFactors, id: \.self) { factor in
                         Label(factor, systemImage: "checkmark.circle")
                     }
                     if recommendation.readiness.contributingFactors.isEmpty {
-                        Text("現在取得できる記録と設定を使用しました。")
+                        Text(L10n.string("core_ui.8f44663f425e", fallback: "現在取得できる記録と設定を使用しました。"))
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
 
                 if !recommendation.readiness.missingData.isEmpty {
-                    Section("あると判断が安定する情報") {
-                        Text(recommendation.readiness.missingData.joined(separator: "・"))
-                        Text("データ充足度 \(Int((recommendation.readiness.confidence * 5).rounded())) / 5")
+                    Section(L10n.string("core_ui.af3103318eb4", fallback: "あると判断が安定する情報")) {
+                        Text(recommendation.readiness.missingData.joined(separator: L10n.string("core_ui.3b67eb100838", fallback: "・")))
+                        Text(L10n.string("core_ui.dcd096e9f343", fallback: "データ充足度 {{value1}} / 5", values: [String(describing: Int((recommendation.readiness.confidence * 5).rounded()))]))
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
 
                 if let latestRevision {
-                    Section("変更履歴") {
+                    Section(L10n.string("core_ui.3bcfc8fdb197", fallback: "変更履歴")) {
                         Text(latestRevision.reason)
                         Text(latestRevision.timestamp.formatted(date: .omitted, time: .shortened))
                             .foregroundStyle(AppTheme.mutedInk)
                     }
                 }
 
+                if recommendation.evidenceStatus != nil || !(recommendation.evidence ?? []).isEmpty {
+                    Section {
+                        NavigationLink {
+                            DailyActionEvidenceView(
+                                action: action,
+                                evidence: recommendation.evidence ?? [],
+                                status: recommendation.evidenceStatus
+                            )
+                        } label: {
+                            Label(
+                                L10n.string("evidence.view_scientific", fallback: "科学的根拠を見る"),
+                                systemImage: "doc.text.magnifyingglass"
+                            )
+                        }
+                        .accessibilityIdentifier("dailyActionEvidenceLink")
+                    }
+                }
+
                 Section {
                     NavigationLink {
-                        AITrainerChatView(initialDraft: "\(action.title)について、今日この提案になった理由と調整案を教えてください。")
+                        AITrainerChatView(initialDraft: L10n.string("core_ui.eafad186b3bf", fallback: "{{value1}}について、今日この提案になった理由と調整案を教えてください。", values: [String(describing: action.title)]))
                     } label: {
-                        Label("\(coachPersona.displayName)に相談", systemImage: "message.fill")
+                        Label(L10n.string("core_ui.1d7aec6451c6", fallback: "{{value1}}に相談", values: [String(describing: coachPersona.displayName)]), systemImage: "message.fill")
                     }
                 }
             }
-            .navigationTitle("\(coachPersona.displayName)の判断")
+            .navigationTitle(L10n.string("core_ui.0e0996974372", fallback: "{{value1}}の判断", values: [String(describing: coachPersona.displayName)]))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("完了") { dismiss() }
+                    Button(L10n.string("core_ui.9eeac2fd3ceb", fallback: "完了")) { dismiss() }
                 }
             }
+        }
+    }
+
+}
+
+private struct DailyActionEvidenceView: View {
+    let action: DailyAction
+    let evidence: [CoachEvidenceCitation]
+    let status: CoachEvidenceStatus?
+
+    var body: some View {
+        List {
+            Section {
+                Label(action.title, systemImage: action.category.systemImage)
+                    .font(.headline)
+                Text(action.rationale)
+                    .foregroundStyle(AppTheme.mutedInk)
+            }
+
+            if evidence.isEmpty {
+                Section {
+                    Label(
+                        emptyEvidenceMessage,
+                        systemImage: "exclamationmark.triangle"
+                    )
+                    .foregroundStyle(AppTheme.warning)
+                }
+            } else {
+                Section(L10n.string("evidence.referenced_research", fallback: "参照した文献")) {
+                    ForEach(evidence) { citation in
+                        CoachEvidenceCitationRow(citation: citation)
+                            .padding(.vertical, 4)
+                    }
+                }
+            }
+
+            if let status {
+                Section(L10n.string("evidence.search_information", fallback: "検索情報")) {
+                    LabeledContent(
+                        L10n.string("evidence.overall_confidence", fallback: "全体の確度"),
+                        value: confidenceLabel(status.confidence)
+                    )
+                    if status.searchedDocuments > 0 {
+                        LabeledContent(
+                            L10n.string("evidence.documents_searched", fallback: "検索対象"),
+                            value: status.searchedDocuments.formatted()
+                        )
+                    }
+                }
+            }
+
+            Section {
+                Text(
+                    L10n.string("evidence.general_trends_disclaimer", fallback: "研究結果は一般的な傾向です。あなた自身への効果を断定するものではありません。")
+                )
+                .font(.footnote)
+                .foregroundStyle(AppTheme.mutedInk)
+            }
+        }
+        .navigationTitle(L10n.string("evidence.recommendation_evidence", fallback: "提案の根拠"))
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func confidenceLabel(_ confidence: String) -> String {
+        switch confidence {
+        case "high": L10n.string("evidence.confidence_high", fallback: "高")
+        case "moderate": L10n.string("evidence.confidence_moderate", fallback: "中")
+        case "low": L10n.string("evidence.confidence_low", fallback: "低")
+        default: L10n.string("evidence.confidence_reference", fallback: "参考")
+        }
+    }
+
+    private var emptyEvidenceMessage: String {
+        switch status?.state {
+        case "population_mismatch":
+            L10n.string("evidence.population_mismatch", fallback: "条件の近い対象者を扱った文献が見つからなかったため、今回は記録と一般原則を中心に判断しています。")
+        case "unavailable":
+            L10n.string("evidence.search_unavailable", fallback: "文献検索を利用できませんでした。根拠を確認できていないため、今回は記録を中心に判断しています。")
+        case "empty", "disabled":
+            L10n.string("evidence.library_unavailable", fallback: "文献データを利用できないため、今回は記録と一般原則を中心に判断しています。")
+        default:
+            L10n.string("evidence.no_direct_paper", fallback: "この提案に直接使える文献は確認できませんでした。記録と一般的な運動原則を中心に判断しています。")
         }
     }
 }

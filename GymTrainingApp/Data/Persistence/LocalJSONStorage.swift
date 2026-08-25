@@ -24,6 +24,11 @@ struct LocalJSONStorage: AppDataRepository {
     private let recommendationRevisionsKey = "gym.training.omakase.recommendationRevisions"
     private let dailyReviewsKey = "gym.training.omakase.dailyReviews"
     private let targetAdjustmentProposalsKey = "gym.training.omakase.targetAdjustmentProposals"
+    private let planRevisionProposalsKey = "gym.training.plans.revisionProposals"
+    private let activeWorkoutSessionKey = "gym.training.workout.activeSession"
+    private let dataImportReceiptsKey = "gym.training.import.receipts"
+    private let dataImportUndoSnapshotKey = "gym.training.import.undoSnapshot"
+    private let deletedRecordsKey = "gym.training.deletedRecords"
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
     private let protectedStore = ProtectedDataStore.shared
@@ -53,6 +58,11 @@ struct LocalJSONStorage: AppDataRepository {
             recommendationRevisionsKey,
             dailyReviewsKey,
             targetAdjustmentProposalsKey,
+            planRevisionProposalsKey,
+            activeWorkoutSessionKey,
+            dataImportReceiptsKey,
+            dataImportUndoSnapshotKey,
+            deletedRecordsKey,
             BarcodeFoodProductStore.storageKey
         ]
     }
@@ -170,6 +180,46 @@ struct LocalJSONStorage: AppDataRepository {
 
     func saveDailyWorkoutSelection(_ selection: DailyWorkoutSelection?) {
         saveOptional(selection, key: dailyWorkoutSelectionKey)
+    }
+
+    func loadPlanRevisionProposals() -> [PlanRevisionProposal] {
+        load([PlanRevisionProposal].self, key: planRevisionProposalsKey)
+    }
+
+    func savePlanRevisionProposals(_ proposals: [PlanRevisionProposal]) {
+        save(proposals, key: planRevisionProposalsKey)
+    }
+
+    func loadActiveWorkoutSession() -> ActiveWorkoutSession? {
+        load(ActiveWorkoutSession.self, key: activeWorkoutSessionKey)
+    }
+
+    func saveActiveWorkoutSession(_ session: ActiveWorkoutSession?) {
+        saveOptional(session, key: activeWorkoutSessionKey)
+    }
+
+    func loadDataImportReceipts() -> [DataImportReceipt] {
+        load([DataImportReceipt].self, key: dataImportReceiptsKey)
+    }
+
+    func saveDataImportReceipts(_ receipts: [DataImportReceipt]) {
+        save(receipts, key: dataImportReceiptsKey)
+    }
+
+    func loadDataImportUndoSnapshot() -> DataImportUndoSnapshot? {
+        load(DataImportUndoSnapshot.self, key: dataImportUndoSnapshotKey)
+    }
+
+    func saveDataImportUndoSnapshot(_ snapshot: DataImportUndoSnapshot?) {
+        saveOptional(snapshot, key: dataImportUndoSnapshotKey)
+    }
+
+    func loadDeletedRecords() -> [DeletedRecord] {
+        load([DeletedRecord].self, key: deletedRecordsKey)
+    }
+
+    func saveDeletedRecords(_ records: [DeletedRecord]) {
+        save(records, key: deletedRecordsKey)
     }
 
     func loadGymLocation() -> GymLocation? {

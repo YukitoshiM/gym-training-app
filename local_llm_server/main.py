@@ -12,16 +12,36 @@ import asyncio
 import uuid
 from contextvars import ContextVar
 from collections import defaultdict, deque
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Optional, Union
 
 import httpx
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field, model_validator
 from calorie_clip_runtime import calorie_clip_runtime
 from coach_profiles import COMMON_SAFETY_RULES, COACH_PROFILES, get_coach_profile
-from evidence_rag import EvidenceStore, citation_dict
+from apple_identity import (
+    AppleIdentityVerificationError,
+    AppleIdentityVerifier,
+    AppleRefreshTokenStore,
+    AppleTokenClient,
+    AppleTokenExchangeError,
+    AppleTokenStorageError,
+    VerifiedAppleIdentity,
+)
+from evidence_rag import EvidenceStore, citation_dict, user_profile_from_context
+from evidence_monitoring import EvidenceMonitor, EvidenceObservation
+from credit_ledger import AICreditLedger, CreditRequestConflict, InsufficientCredits
+from purchase_verifier import AppStoreCreditPurchaseVerifier, PurchaseVerificationError
+from rewarded_ad_ssv import (
+    GoogleRewardedAdVerifier,
+    RewardedAdChallengeStore,
+    RewardedAdVerificationError,
+)
+from usage_quota import AIUsageLedger, QuotaExceeded
+from usage_analytics import UsageAnalyticsLedger
 
 
 APP_NAME = "Gym Training Local LLM"
@@ -42,8 +62,17 @@ OLLAMA_MAX_IMAGE_PROMPT_CHARACTERS = max(
     1_500,
     min(int(os.getenv("OLLAMA_MAX_IMAGE_PROMPT_CHARACTERS", "2600")), 12_000),
 )
-AUTH_MODE = os.getenv("AI_AUTH_MODE", "compat").strip().lower()
+AGENT_USER_MESSAGE_MAX_CHARACTERS = 300
+AGENT_GENERATED_MESSAGE_MAX_CHARACTERS = 4_000
+AGENT_RECENT_MESSAGE_MAX_CHARACTERS = 1_000
+AGENT_CONTEXT_MAX_CHARACTERS = 24_000
+RUNTIME_ENVIRONMENT = os.getenv("AI_RUNTIME_ENVIRONMENT", "production").strip().lower()
+AUTH_MODE = os.getenv("AI_AUTH_MODE", "token_required").strip().lower()
 TOKEN_TTL_SECONDS = max(300, min(int(os.getenv("AI_TOKEN_TTL_SECONDS", "86400")), 604800))
+APPLE_ACCOUNT_TOKEN_TTL_SECONDS = max(
+    3600,
+    min(int(os.getenv("AI_APPLE_ACCOUNT_TOKEN_TTL_SECONDS", "2592000")), 2592000),
+)
 RATE_LIMIT_PER_MINUTE = max(1, int(os.getenv("AI_RATE_LIMIT_PER_MINUTE", "30")))
 TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE = max(
     1,
@@ -82,17 +111,112 @@ EVIDENCE_RAG_DB_PATH = Path(
     )
 ).expanduser()
 EVIDENCE_EMBEDDING_MODEL = os.getenv("EVIDENCE_EMBEDDING_MODEL", "bge-m3")
+EVIDENCE_MONITOR_DB_PATH = Path(
+    os.getenv(
+        "EVIDENCE_MONITOR_DB_PATH",
+        str(Path.home() / "Library/Application Support/BodyMode/evidence-monitor.sqlite3"),
+    )
+).expanduser()
+EVIDENCE_COST_PER_MILLION_CHARACTERS = max(
+    0.0, float(os.getenv("EVIDENCE_COST_PER_MILLION_CHARACTERS", "0"))
+)
+AI_USAGE_DB_PATH = Path(
+    os.getenv(
+        "AI_USAGE_DB_PATH",
+        str(Path.home() / "Library/Application Support/BodyMode/ai-usage.sqlite3"),
+    )
+).expanduser()
+AI_CREDIT_DB_PATH = Path(
+    os.getenv(
+        "AI_CREDIT_DB_PATH",
+        str(Path.home() / "Library/Application Support/BodyMode/ai-credits.sqlite3"),
+    )
+).expanduser()
+AI_CREDIT_ENFORCEMENT = os.getenv("AI_CREDIT_ENFORCEMENT", "1").strip().lower() not in {
+    "0",
+    "false",
+    "no",
+}
+AI_CREDIT_ACCOUNT_SUBJECT_PREFIXES = tuple(
+    prefix.strip()
+    for prefix in os.getenv("AI_CREDIT_ACCOUNT_SUBJECT_PREFIXES", "apple:").split(",")
+    if prefix.strip()
+)
+USAGE_ANALYTICS_DB_PATH = Path(
+    os.getenv(
+        "USAGE_ANALYTICS_DB_PATH",
+        str(Path.home() / "Library/Application Support/BodyMode/usage-analytics.sqlite3"),
+    )
+).expanduser()
+AI_QUOTA_ENFORCEMENT = os.getenv("AI_QUOTA_ENFORCEMENT", "1").strip().lower() not in {
+    "0",
+    "false",
+    "no",
+}
+AI_QUOTA_EXEMPT_SUBJECTS = frozenset(
+    subject.strip()
+    for subject in os.getenv("AI_QUOTA_EXEMPT_SUBJECTS", "").split(",")
+    if subject.strip()
+)
+GATEWAY_SHARED_SECRET = os.getenv("AI_GATEWAY_SHARED_SECRET", "").strip()
+APPLE_SIGN_IN_AUDIENCE = os.getenv(
+    "APPLE_SIGN_IN_AUDIENCE",
+    "com.yukitoshim.gymtrainingapp",
+).strip()
 
 if AUTH_MODE not in {"compat", "token_required"}:
     raise RuntimeError("AI_AUTH_MODE must be compat or token_required")
 if AUTH_MODE == "token_required" and not TOKEN_SIGNING_SECRET:
     raise RuntimeError("AI_TOKEN_SIGNING_SECRET is required when AI_AUTH_MODE=token_required")
+if RUNTIME_ENVIRONMENT not in {"development", "test", "production"}:
+    raise RuntimeError("AI_RUNTIME_ENVIRONMENT must be development, test, or production")
+if RUNTIME_ENVIRONMENT == "production" and AUTH_MODE != "token_required":
+    raise RuntimeError("Production AI requires short-lived access tokens")
+if RUNTIME_ENVIRONMENT == "production" and not AI_CREDIT_ENFORCEMENT:
+    raise RuntimeError("Production AI requires credit enforcement")
 
 app = FastAPI(title=APP_NAME)
 WEB_DIR = Path(__file__).resolve().parent / "web"
-_inference_semaphore = asyncio.Semaphore(MAX_CONCURRENT_INFERENCE)
+
+
+class _AsyncCompatibleSemaphore:
+    def __init__(self, value: int):
+        self._value = value
+        self._semaphore: Optional[asyncio.Semaphore] = None
+
+    async def acquire(self) -> bool:
+        if self._semaphore is None:
+            self._semaphore = asyncio.Semaphore(self._value)
+        await self._semaphore.acquire()
+        return True
+
+    def release(self) -> None:
+        if self._semaphore is None:
+            self._semaphore = asyncio.Semaphore(self._value)
+            return
+        self._semaphore.release()
+
+
+_inference_semaphore = _AsyncCompatibleSemaphore(MAX_CONCURRENT_INFERENCE)
 _request_id_context: ContextVar[str] = ContextVar("bodymode_request_id", default="unknown")
+_distribution_channel_context: ContextVar[str] = ContextVar(
+    "bodymode_distribution_channel",
+    default="app_store",
+)
 evidence_store = EvidenceStore(EVIDENCE_RAG_DB_PATH)
+usage_ledger = AIUsageLedger(AI_USAGE_DB_PATH)
+credit_ledger = AICreditLedger(AI_CREDIT_DB_PATH)
+purchase_verifier = AppStoreCreditPurchaseVerifier()
+apple_identity_verifier = AppleIdentityVerifier(APPLE_SIGN_IN_AUDIENCE)
+apple_token_client = AppleTokenClient.from_environment(APPLE_SIGN_IN_AUDIENCE)
+apple_refresh_token_store = AppleRefreshTokenStore.from_environment()
+rewarded_ad_verifier = GoogleRewardedAdVerifier.from_environment()
+rewarded_ad_challenge_store = RewardedAdChallengeStore.from_environment()
+usage_analytics_ledger = UsageAnalyticsLedger(USAGE_ANALYTICS_DB_PATH)
+evidence_monitor = EvidenceMonitor(
+    EVIDENCE_MONITOR_DB_PATH,
+    cost_per_million_characters=EVIDENCE_COST_PER_MILLION_CHARACTERS,
+)
 
 
 @app.middleware("http")
@@ -105,12 +229,33 @@ async def attach_request_id(request: Request, call_next):
     )
     request.state.request_id = request_id
     token = _request_id_context.set(request_id)
+    channel_token = _distribution_channel_context.set(
+        _normalized_distribution_channel(
+            request.headers.get("X-BodyMode-Distribution-Channel")
+            or request.headers.get("X-App-Distribution-Channel")
+        )
+    )
     try:
+        if request.url.path.startswith("/v1/") and GATEWAY_SHARED_SECRET:
+            supplied_gateway_key = request.headers.get("X-BodyMode-Gateway-Key", "")
+            if not hmac.compare_digest(supplied_gateway_key, GATEWAY_SHARED_SECRET):
+                response = JSONResponse(
+                    status_code=403,
+                    content={
+                        "detail": {
+                            "code": "gateway_required",
+                            "message": "このAI APIは管理ゲートウェイ経由でのみ利用できます。",
+                        }
+                    },
+                )
+                response.headers["X-Request-ID"] = request_id
+                return response
         response = await call_next(request)
         response.headers["X-Request-ID"] = request_id
         return response
     finally:
         _request_id_context.reset(token)
+        _distribution_channel_context.reset(channel_token)
 
 
 @app.get("/", include_in_schema=False)
@@ -321,24 +466,38 @@ class CoachSummary(BaseModel):
 
 
 class AgentMessage(BaseModel):
-    role: str
-    content: str
+    role: str = Field(pattern="^(user|assistant)$")
+    content: str = Field(min_length=1, max_length=AGENT_RECENT_MESSAGE_MAX_CHARACTERS)
 
 
 class AgentChatRequest(BaseModel):
     coach_id: str = "body_recomposition"
-    message: str = Field(min_length=1, max_length=4000)
+    purpose: str = Field(
+        default="chat",
+        pattern="^(chat|plan_generation|daily_recommendation)$",
+    )
+    message: str = Field(
+        min_length=1,
+        max_length=AGENT_GENERATED_MESSAGE_MAX_CHARACTERS,
+    )
     context: dict[str, Any] = Field(default_factory=dict)
     recent_messages: list[AgentMessage] = Field(default_factory=list, max_length=20)
 
     @model_validator(mode="after")
     def validate_context_size(self) -> "AgentChatRequest":
+        if self.purpose == "chat" and len(self.message) > AGENT_USER_MESSAGE_MAX_CHARACTERS:
+            raise ValueError(
+                f"chat message must fit within {AGENT_USER_MESSAGE_MAX_CHARACTERS} characters"
+            )
         payload_size = len(json.dumps(self.context, ensure_ascii=False))
         payload_size += len(
             json.dumps([message.model_dump() for message in self.recent_messages], ensure_ascii=False)
         )
-        if payload_size > 60_000:
-            raise ValueError("context and recent_messages must fit within 60,000 characters")
+        if payload_size > AGENT_CONTEXT_MAX_CHARACTERS:
+            raise ValueError(
+                "context and recent_messages must fit within "
+                f"{AGENT_CONTEXT_MAX_CHARACTERS:,} characters"
+            )
         return self
 
 
@@ -356,6 +515,19 @@ class EvidenceCitationResponse(BaseModel):
     url: str
     doi: str = ""
     relevance: float
+    source_scope: str = "abstract"
+    evidence_summary: str = ""
+    population: str = ""
+    intervention: str = ""
+    outcomes: list[str] = Field(default_factory=list)
+    limitations: list[str] = Field(default_factory=list)
+    applicability_score: float = 0.5
+    applicability_label: str = "unclear"
+    version_status: str = "current"
+    conclusion_consistency: str = "unknown"
+    newer_evidence_note: str = ""
+    full_text_license: str = ""
+    source_detail_url: str = ""
 
 
 class EvidenceStatusResponse(BaseModel):
@@ -363,6 +535,13 @@ class EvidenceStatusResponse(BaseModel):
     confidence: str = "insufficient"
     last_updated_at: Optional[str] = None
     searched_documents: int = 0
+    matched_documents: int = 0
+    reason: str = ""
+
+
+class EvidenceClaimResponse(BaseModel):
+    claim: str
+    citation_ids: list[str]
 
 
 class AgentChatResponse(BaseModel):
@@ -370,6 +549,7 @@ class AgentChatResponse(BaseModel):
     memory_candidates: list[MemoryCandidate]
     evidence: list[EvidenceCitationResponse] = Field(default_factory=list)
     evidence_status: EvidenceStatusResponse
+    evidence_claims: list[EvidenceClaimResponse] = Field(default_factory=list)
 
 
 class AccessTokenRequest(BaseModel):
@@ -383,11 +563,112 @@ class AccessTokenResponse(BaseModel):
     expires_in: int
 
 
+class AppleAccountSessionRequest(BaseModel):
+    identity_token: str = Field(min_length=64, max_length=16_384)
+    authorization_code: str = Field(min_length=8, max_length=8_192)
+    raw_nonce: str = Field(min_length=16, max_length=256)
+    installation_id: str = Field(min_length=16, max_length=128)
+    app_version: str = Field(default="", max_length=40)
+
+
+class RewardedAdClaimRequest(BaseModel):
+    challenge_id: str = Field(min_length=16, max_length=128)
+
+
+class CreditPurchaseVerifyRequest(BaseModel):
+    signed_transaction: str = Field(min_length=128, max_length=100_000)
+
+
+class AppStoreNotificationRequest(BaseModel):
+    signed_payload: str = Field(alias="signedPayload", min_length=128, max_length=200_000)
+
+
 class AuthenticatedClient(BaseModel):
     subject: str
     installation_id: str
     token_id: str
     expires_at: int
+
+
+ALLOWED_USAGE_EVENT_NAMES = frozenset({
+    "analytics_enabled", "initial_setup_completed", "first_workout_completed",
+    "app_opened", "tab_selected", "plan_saved", "workout_completed",
+    "body_metric_saved", "meal_saved", "body_photo_saved", "legal_accepted", "tutorial_viewed",
+    "daily_recommendation_generated", "daily_recommendation_changed", "daily_action_completed",
+    "daily_action_impression", "daily_action_dismissed",
+    "home_primary_action_started", "daily_action_reason_opened", "daily_action_replaced",
+    "quick_record_opened", "recommendation_source_shown", "notification_opened",
+    "notification_disabled", "coach_recommendation_accepted", "coach_selection_changed",
+    "coach_response_helpful", "coach_response_needs_improvement",
+    "ai_account_registered", "ai_signup_grant_received", "ai_credit_insufficient_shown",
+    "credit_store_opened", "rewarded_ad_started", "rewarded_ad_completed",
+    "rewarded_credit_granted", "rewarded_ad_failed", "credit_purchase_completed",
+    "credit_purchase_pending", "credit_purchase_cancelled", "credit_purchase_failed",
+})
+
+ALLOWED_USAGE_PROPERTY_VALUES = {
+    "goal": frozenset({"diet", "muscleGain", "health", "bodyShape", "performance"}),
+    "experience": frozenset({"beginner", "intermediate", "advanced"}),
+    "readiness": frozenset({"good", "normal", "tired", "rest"}),
+    "actionCategory": frozenset({
+        "workout", "steps", "protein", "mealGuidance", "bodyWeight", "waist",
+        "bodyPhoto", "sleep", "recovery", "lightActivity",
+    }),
+    "fromCategory": frozenset({
+        "workout", "steps", "protein", "mealGuidance", "bodyWeight", "waist",
+        "bodyPhoto", "sleep", "recovery", "lightActivity",
+    }),
+    "toCategory": frozenset({
+        "workout", "steps", "protein", "mealGuidance", "bodyWeight", "waist",
+        "bodyPhoto", "sleep", "recovery", "lightActivity",
+    }),
+    "source": frozenset({"localRule", "ai", "mixed", "user"}),
+    "reason": frozenset({
+        "time", "equipment", "fatigue", "pain", "schedule", "already_done",
+        "mismatch", "other",
+    }),
+    "completionMethod": frozenset({"manual", "automatic"}),
+}
+
+ALLOWED_USAGE_CHANNELS = frozenset({"app_store", "testflight", "simulator", "unknown"})
+
+
+class UsageAnalyticsEvent(BaseModel):
+    id: str = Field(min_length=36, max_length=36, pattern=r"^[0-9a-fA-F-]{36}$")
+    occurred_at: int
+    name: str = Field(max_length=64)
+    dimension: Optional[str] = Field(default=None, max_length=40)
+    properties: dict[str, Union[str, int]] = Field(default_factory=dict)
+    app_version: str = Field(default="", max_length=40)
+    locale: str = Field(default="", max_length=20)
+    channel: str = Field(default="app_store", max_length=20)
+
+    @property
+    def normalized_channel(self) -> str:
+        return self.channel if self.channel in ALLOWED_USAGE_CHANNELS else "app_store"
+
+    @model_validator(mode="after")
+    def validate_event(self):
+        if self.name not in ALLOWED_USAGE_EVENT_NAMES:
+            raise ValueError("Unsupported usage event")
+        for key, value in self.properties.items():
+            if key == "position":
+                if not isinstance(value, int) or isinstance(value, bool) or value not in range(3):
+                    raise ValueError("Unsupported usage event position")
+                continue
+            allowed = ALLOWED_USAGE_PROPERTY_VALUES.get(key)
+            if allowed is None or not isinstance(value, str) or value not in allowed:
+                raise ValueError("Unsupported usage event property")
+        if self.channel not in ALLOWED_USAGE_CHANNELS:
+            raise ValueError("Unsupported usage channel")
+        now = int(time.time())
+        if self.occurred_at < now - 90 * 86_400 or self.occurred_at > now + 300:
+            raise ValueError("Usage event timestamp is outside the accepted range")
+        return self
+
+
+class UsageAnalyticsBatch(BaseModel):
+    events: list[UsageAnalyticsEvent] = Field(min_length=1, max_length=100)
 
 
 _auth_lock = threading.Lock()
@@ -461,7 +742,12 @@ async def _acquire_inference_slot(kind: str) -> float:
         _inference_logger.warning(json.dumps(event, separators=(",", ":"), sort_keys=True))
         raise HTTPException(
             status_code=503,
-            detail="AIサーバーが混み合っています。少し待ってから再試行してください。",
+            detail={
+                "code": "server_busy",
+                "message": "AIサーバーが混み合っています。少し待ってから再試行してください。",
+                "retry_after": max(1, round(INFERENCE_QUEUE_TIMEOUT_SECONDS)),
+            },
+            headers={"Retry-After": str(max(1, round(INFERENCE_QUEUE_TIMEOUT_SECONDS)))},
         ) from error
     finally:
         with _inference_state_lock:
@@ -496,6 +782,21 @@ def _base64url_encode(value: bytes) -> str:
 
 def _base64url_decode(value: str) -> bytes:
     return base64.urlsafe_b64decode(value + "=" * (-len(value) % 4))
+
+
+def _normalized_distribution_channel(raw_channel: Optional[str] = None) -> str:
+    channel = (raw_channel or "").strip().lower()
+    if channel in ALLOWED_USAGE_CHANNELS:
+        return channel
+    return "app_store"
+
+
+def _distribution_channel_for_current_request() -> str:
+    return _distribution_channel_context.get()
+
+
+def _distribution_quota_multiplier(channel: Optional[str] = None) -> int:
+    return 2 if (channel or "").strip().lower() == "testflight" else 1
 
 
 def _signing_secret() -> bytes:
@@ -571,6 +872,164 @@ def _audit_fingerprint(value: str) -> str:
     return digest[:16]
 
 
+def _quota_client_key(client: AuthenticatedClient) -> str:
+    return _audit_fingerprint(f"{client.subject}:{client.installation_id}")
+
+
+def _is_quota_exempt(client: AuthenticatedClient) -> bool:
+    return client.subject in AI_QUOTA_EXEMPT_SUBJECTS
+
+
+def _has_credit_account(client: AuthenticatedClient) -> bool:
+    return any(client.subject.startswith(prefix) for prefix in AI_CREDIT_ACCOUNT_SUBJECT_PREFIXES)
+
+
+def _credit_account_key(client: AuthenticatedClient) -> str:
+    return _audit_fingerprint(f"credit:{client.subject}")
+
+
+def _app_account_token(client: AuthenticatedClient) -> str:
+    digest = bytearray(hmac.new(_signing_secret(), f"purchase:{client.subject}".encode(), hashlib.sha256).digest()[:16])
+    digest[6] = (digest[6] & 0x0F) | 0x40
+    digest[8] = (digest[8] & 0x3F) | 0x80
+    return str(uuid.UUID(bytes=bytes(digest)))
+
+
+def _is_credit_enforced(client: AuthenticatedClient) -> bool:
+    return AI_CREDIT_ENFORCEMENT and _has_credit_account(client) and not _is_quota_exempt(client)
+
+
+def _credit_summary(client: AuthenticatedClient) -> dict[str, Any]:
+    has_account = _has_credit_account(client)
+    exempt = _is_quota_exempt(client)
+    balance = credit_ledger.balance(_credit_account_key(client)) if has_account else None
+    return {
+        "account_required": not has_account and not exempt,
+        "enforced": _is_credit_enforced(client),
+        "unlimited": exempt,
+        "balance": balance.as_dict() if balance is not None else None,
+        "feature_costs": dict(sorted(credit_ledger.feature_costs.items())),
+        "signup_bonus": credit_ledger.signup_bonus,
+    }
+
+
+def _reserve_ai_usage(client: AuthenticatedClient, feature: str):
+    request_id = _request_id_context.get()
+    try:
+        return usage_ledger.reserve(
+            client_key=_quota_client_key(client),
+            feature=feature,
+            request_id=request_id,
+            enforce_limit=(
+                AI_QUOTA_ENFORCEMENT
+                and not _is_quota_exempt(client)
+                and not _is_credit_enforced(client)
+            ),
+            limit_multiplier=_distribution_quota_multiplier(_distribution_channel_for_current_request()),
+        )
+    except QuotaExceeded as error:
+        usage_ledger.record_rejection(feature, "quota_rejected")
+        snapshot = error.snapshot
+        retry_after = max(1, snapshot.reset_at - int(time.time()))
+        raise HTTPException(
+            status_code=429,
+            detail={
+                "code": "daily_quota_exceeded"
+                if snapshot.window_seconds == 86_400
+                else "period_quota_exceeded",
+                "reason": "fair_use_limit",
+                "message": "このAI機能の利用上限に達しました。リセット後に再試行してください。",
+                **snapshot.as_dict(),
+            },
+            headers={"Retry-After": str(retry_after)},
+        ) from error
+
+
+def _ai_failure_reason(error: BaseException) -> str:
+    if isinstance(error, asyncio.CancelledError):
+        return "cancelled"
+    if isinstance(error, (asyncio.TimeoutError, TimeoutError)):
+        return "timeout"
+    if isinstance(error, HTTPException):
+        if isinstance(error.detail, dict):
+            code = str(error.detail.get("code", ""))
+            if code in {"server_busy", "model_unavailable", "gateway_required"}:
+                return code
+        return f"http_{error.status_code}"
+    return "internal_error"
+
+
+async def _run_with_ai_usage(client: AuthenticatedClient, feature: str, operation):
+    if AI_CREDIT_ENFORCEMENT and not _has_credit_account(client) and not _is_quota_exempt(client):
+        usage_ledger.record_rejection(feature, "account_required")
+        raise HTTPException(
+            status_code=403,
+            detail={
+                "code": "account_sign_in_required",
+                "message": "AI機能を使うにはAppleで登録してください。手動機能は登録なしで使えます。",
+            },
+        )
+    reservation = _reserve_ai_usage(client, feature)
+    credit_reserved = False
+    if _is_credit_enforced(client):
+        try:
+            credit_ledger.reserve(
+                account_key=_credit_account_key(client),
+                feature=feature,
+                request_id=_request_id_context.get(),
+            )
+            credit_reserved = True
+        except InsufficientCredits as error:
+            if not reservation.duplicate:
+                usage_ledger.release(
+                    _request_id_context.get(),
+                    outcome="credit_rejected",
+                    reason_code="insufficient_credits",
+                )
+            raise HTTPException(
+                status_code=402,
+                detail={
+                    "code": "insufficient_ai_credits",
+                    "message": "AIクレジットが不足しています。広告視聴、購入、または手動入力を選べます。",
+                    "feature": error.feature,
+                    "cost": error.cost,
+                    "balance": error.balance.as_dict(),
+                },
+            ) from error
+        except CreditRequestConflict as error:
+            if not reservation.duplicate:
+                usage_ledger.release(
+                    _request_id_context.get(),
+                    outcome="failure",
+                    reason_code="credit_request_conflict",
+                )
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": "credit_request_conflict",
+                    "message": "同じAIリクエストを処理中または処理済みです。",
+                },
+            ) from error
+    started_at = time.monotonic()
+    try:
+        result = await operation()
+    except BaseException as error:
+        if credit_reserved:
+            credit_ledger.release(_request_id_context.get())
+        if not reservation.duplicate:
+            usage_ledger.release(
+                _request_id_context.get(),
+                reason_code=_ai_failure_reason(error),
+            )
+        raise
+    if not reservation.duplicate:
+        duration_ms = round((time.monotonic() - started_at) * 1_000)
+        usage_ledger.complete(_request_id_context.get(), duration_ms)
+    if credit_reserved:
+        credit_ledger.complete(_request_id_context.get())
+    return result
+
+
 def _audit_token_issue(
     *,
     result: str,
@@ -616,9 +1075,15 @@ def _enforce_token_issue_rate_limit(request: Request, installation_id: str) -> N
             _token_issue_events[key].append(now)
 
 
-def _issue_access_token(subject: str, installation_id: str) -> AccessTokenResponse:
+def _issue_access_token(
+    subject: str,
+    installation_id: str,
+    *,
+    ttl_seconds: int | None = None,
+) -> AccessTokenResponse:
     now = int(time.time())
-    expires_at = now + TOKEN_TTL_SECONDS
+    effective_ttl = TOKEN_TTL_SECONDS if ttl_seconds is None else ttl_seconds
+    expires_at = now + effective_ttl
     payload = {
         "sub": subject,
         "device": hashlib.sha256(installation_id.encode("utf-8")).hexdigest()[:32],
@@ -632,7 +1097,7 @@ def _issue_access_token(subject: str, installation_id: str) -> AccessTokenRespon
     signature = hmac.new(_signing_secret(), encoded_payload.encode("ascii"), hashlib.sha256).digest()
     return AccessTokenResponse(
         access_token=f"{encoded_payload}.{_base64url_encode(signature)}",
-        expires_in=TOKEN_TTL_SECONDS,
+        expires_in=effective_ttl,
     )
 
 
@@ -670,7 +1135,15 @@ def _enforce_rate_limit(client: AuthenticatedClient, path: str) -> None:
         while events and now - events[0] >= 60:
             events.popleft()
         if len(events) >= RATE_LIMIT_PER_MINUTE:
-            raise HTTPException(status_code=429, detail="Rate limit exceeded")
+            raise HTTPException(
+                status_code=429,
+                detail={
+                    "code": "burst_rate_limited",
+                    "message": "短時間にAIリクエストが集中しました。少し待ってから再試行してください。",
+                    "retry_after": 60,
+                },
+                headers={"Retry-After": "60"},
+            )
         events.append(now)
 
 
@@ -745,6 +1218,83 @@ async def create_access_token(
     return _issue_access_token(subject, payload.installation_id)
 
 
+@app.post("/v1/account/apple")
+async def create_apple_account_session(
+    payload: AppleAccountSessionRequest,
+    request: Request,
+) -> dict[str, Any]:
+    _enforce_token_issue_rate_limit(request, payload.installation_id)
+    try:
+        identity = apple_identity_verifier.verify(payload.identity_token, payload.raw_nonce)
+    except AppleIdentityVerificationError as error:
+        if not apple_identity_verifier.is_configured:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "code": "apple_sign_in_unavailable",
+                    "message": "Appleでサインインを準備中です。時間をおいて再試行してください。",
+                },
+            ) from error
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "invalid_apple_identity",
+                "message": "Appleアカウントを確認できませんでした。もう一度お試しください。",
+            },
+        ) from error
+
+    stable_subject = "apple:" + hmac.new(
+        _signing_secret(),
+        identity.subject.encode("utf-8"),
+        hashlib.sha256,
+    ).hexdigest()
+    account_key = _audit_fingerprint(f"credit:{stable_subject}")
+    if not apple_token_client.is_configured or not apple_refresh_token_store.is_configured:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "apple_token_service_unavailable",
+                "message": "Appleアカウント連携を準備中です。時間をおいて再試行してください。",
+            },
+        )
+    try:
+        exchange = await apple_token_client.exchange_authorization_code(payload.authorization_code)
+        exchanged_identity = apple_identity_verifier.verify_exchanged_identity(exchange.identity_token)
+        if not hmac.compare_digest(identity.subject, exchanged_identity.subject):
+            raise AppleIdentityVerificationError("Apple authorization code belongs to another account")
+        apple_refresh_token_store.add(account_key, exchange.refresh_token)
+    except (AppleIdentityVerificationError, AppleTokenExchangeError, AppleTokenStorageError) as error:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "apple_token_exchange_failed",
+                "message": "Appleアカウント連携を完了できませんでした。時間をおいて再試行してください。",
+            },
+        ) from error
+    access = _issue_access_token(
+        stable_subject,
+        payload.installation_id,
+        ttl_seconds=APPLE_ACCOUNT_TOKEN_TTL_SECONDS,
+    )
+    account_client = _validate_access_token(access.access_token)
+    granted, balance = credit_ledger.claim_signup_bonus(_credit_account_key(account_client))
+    _audit_token_issue(
+        result="apple_account_issued",
+        request=request,
+        installation_id=payload.installation_id,
+        app_version=payload.app_version,
+        subject=stable_subject,
+    )
+    return {
+        **access.model_dump(),
+        "signup_granted": granted,
+        "signup_granted_amount": credit_ledger.signup_bonus if granted else 0,
+        "credits": balance.as_dict(),
+        "feature_costs": dict(sorted(credit_ledger.feature_costs.items())),
+        "app_account_token": _app_account_token(account_client),
+    }
+
+
 @app.post("/v1/auth/revoke", status_code=204)
 async def revoke_access_token(client: AuthenticatedClient = Depends(require_api_key)) -> None:
     if client.token_id == "legacy-shared-key":
@@ -752,6 +1302,43 @@ async def revoke_access_token(client: AuthenticatedClient = Depends(require_api_
     with _auth_lock:
         _revoked_tokens[client.token_id] = client.expires_at
         _persist_auth_state()
+
+
+@app.delete("/v1/account")
+async def delete_account(client: AuthenticatedClient = Depends(require_api_key)) -> dict[str, Any]:
+    if not _has_credit_account(client):
+        raise HTTPException(
+            status_code=403,
+            detail={"code": "account_required", "message": "削除できるアカウントがありません。"},
+        )
+    account_key = _credit_account_key(client)
+    if not apple_token_client.is_configured or not apple_refresh_token_store.is_configured:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "apple_revocation_unavailable",
+                "message": "アカウント削除を完了できません。時間をおいて再試行してください。",
+            },
+        )
+    try:
+        stored_tokens = apple_refresh_token_store.tokens(account_key)
+        for token_id, refresh_token in stored_tokens:
+            await apple_token_client.revoke_refresh_token(refresh_token)
+            apple_refresh_token_store.delete(token_id)
+    except (AppleTokenExchangeError, AppleTokenStorageError) as error:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "apple_revocation_failed",
+                "message": "Appleとの連携解除を完了できません。時間をおいて再試行してください。",
+            },
+        ) from error
+    deleted = credit_ledger.delete_account(account_key)
+    usage_analytics_ledger.delete(_quota_client_key(client))
+    with _auth_lock:
+        _revoked_tokens[client.token_id] = client.expires_at
+        _persist_auth_state()
+    return {"deleted": True, **deleted}
 
 
 def request_coach_prompt(
@@ -823,6 +1410,19 @@ async def health(_: None = Depends(require_api_key)) -> dict[str, Any]:
         "queued_inference": inference["waiting"],
         "last_inference_error": inference["last_error_type"],
         "last_inference_duration_ms": inference["last_duration_ms"],
+        "monetization_ready": bool(
+            purchase_verifier.is_configured
+            and apple_token_client.is_configured
+            and apple_refresh_token_store.is_configured
+            and rewarded_ad_verifier.is_configured
+        ),
+        "monetization_services": {
+            "app_store_purchase_verification": purchase_verifier.is_configured,
+            "apple_account_revocation": (
+                apple_token_client.is_configured and apple_refresh_token_store.is_configured
+            ),
+            "rewarded_ad_ssv": rewarded_ad_verifier.is_configured,
+        },
         "message": message,
     }
 
@@ -850,15 +1450,260 @@ async def evidence_status(_: None = Depends(require_api_key)) -> dict[str, Any]:
         return {"state": "unavailable", "documents": 0, "usable_documents": 0}
 
 
+@app.get("/v1/evidence/metrics")
+async def evidence_metrics(
+    days: int = 7,
+    purpose: Optional[str] = None,
+    _: None = Depends(require_api_key),
+) -> dict[str, Any]:
+    return evidence_monitor.summary(days=max(1, min(days, 90)), purpose=purpose)
+
+
+@app.get("/v1/usage")
+async def ai_usage(client: AuthenticatedClient = Depends(require_api_key)) -> dict[str, Any]:
+    channel = _distribution_channel_for_current_request()
+    multiplier = _distribution_quota_multiplier(channel)
+    snapshots = usage_ledger.summary(
+        _quota_client_key(client),
+        limit_multipliers={feature: multiplier for feature in usage_ledger.policies},
+    )
+    return {
+        "generated_at": datetime.now(tz=timezone.utc).isoformat().replace("+00:00", "Z"),
+        "enforced": (
+            AI_QUOTA_ENFORCEMENT
+            and not _is_quota_exempt(client)
+            and not _is_credit_enforced(client)
+        ),
+        "features": [snapshot.as_dict() for snapshot in snapshots],
+        "distribution_channel": channel,
+        "credits": _credit_summary(client),
+    }
+
+
+@app.get("/v1/credits")
+async def ai_credits(client: AuthenticatedClient = Depends(require_api_key)) -> dict[str, Any]:
+    return _credit_summary(client)
+
+
+@app.get("/v1/credits/history")
+async def ai_credit_history(
+    limit: int = 100,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    if not _has_credit_account(client):
+        raise HTTPException(
+            status_code=403,
+            detail={
+                "code": "account_required",
+                "message": "AIクレジットを利用するにはアカウント登録が必要です。",
+            },
+        )
+    return {
+        "events": credit_ledger.history(_credit_account_key(client), limit=limit),
+        "balance": credit_ledger.balance(_credit_account_key(client)).as_dict(),
+    }
+
+
+@app.post("/v1/credits/signup-grant")
+async def claim_ai_signup_credits(
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    if not _has_credit_account(client):
+        raise HTTPException(
+            status_code=403,
+            detail={
+                "code": "account_required",
+                "message": "初回特典を受け取るにはSign in with Appleが必要です。",
+            },
+        )
+    granted, balance = credit_ledger.claim_signup_bonus(_credit_account_key(client))
+    return {
+        "granted": granted,
+        "granted_amount": credit_ledger.signup_bonus if granted else 0,
+        "balance": balance.as_dict(),
+    }
+
+
+@app.post("/v1/credits/rewarded-ad/claim")
+async def claim_rewarded_ad_credits(
+    payload: RewardedAdClaimRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    if not _has_credit_account(client):
+        raise HTTPException(status_code=403, detail="Apple account is required")
+    account_key = _credit_account_key(client)
+    try:
+        challenge = rewarded_ad_challenge_store.status(payload.challenge_id, account_key)
+    except RewardedAdVerificationError as error:
+        raise HTTPException(
+            status_code=422,
+            detail={"code": "rewarded_ad_challenge_invalid", "message": "広告特典を確認できませんでした。"},
+        ) from error
+    balance = credit_ledger.balance(account_key)
+    pending = not challenge.verified or challenge.granted is None
+    granted = challenge.granted is True
+    remaining_today = (
+        challenge.remaining_today
+        if challenge.remaining_today is not None
+        else credit_ledger.rewarded_ad_remaining(account_key)
+    )
+    return {
+        "granted": granted,
+        "granted_amount": 5 if granted else 0,
+        "remaining_today": remaining_today,
+        "balance": balance.as_dict(),
+        "pending": pending,
+    }
+
+
+@app.post("/v1/credits/rewarded-ad/challenge")
+async def create_rewarded_ad_challenge(
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    if not _has_credit_account(client):
+        raise HTTPException(status_code=403, detail="Apple account is required")
+    account_key = _credit_account_key(client)
+    remaining_today = credit_ledger.rewarded_ad_remaining(account_key)
+    if remaining_today <= 0:
+        raise HTTPException(
+            status_code=429,
+            detail={
+                "code": "rewarded_ad_daily_limit",
+                "message": "本日の動画広告特典は上限に達しました。",
+            },
+        )
+    if not rewarded_ad_verifier.is_configured:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "rewarded_ad_verification_unavailable",
+                "message": "動画広告特典を準備中です。時間をおいて再試行してください。",
+            },
+        )
+    challenge = rewarded_ad_challenge_store.create(account_key)
+    return {
+        "challenge_id": challenge.challenge_id,
+        "custom_data": challenge.challenge_id,
+        "expires_in": max(0, challenge.expires_at - int(time.time())),
+        "remaining_today": remaining_today,
+    }
+
+
+@app.get("/v1/credits/rewarded-ad/ssv", include_in_schema=False)
+async def verify_rewarded_ad_callback(request: Request) -> dict[str, bool]:
+    try:
+        event = await rewarded_ad_verifier.verify(request.scope.get("query_string", b""))
+        challenge, is_new = rewarded_ad_challenge_store.verify_event(
+            event.challenge_id,
+            event.transaction_id,
+            now=event.timestamp_ms // 1000,
+        )
+        if is_new:
+            granted, _, remaining_today = credit_ledger.claim_rewarded_ad(
+                account_key=challenge.account_key,
+                event_id=f"ssv:{event.transaction_id}",
+            )
+            rewarded_ad_challenge_store.save_result(
+                challenge.challenge_id,
+                granted,
+                remaining_today,
+            )
+    except (CreditRequestConflict, RewardedAdVerificationError) as error:
+        raise HTTPException(status_code=400, detail="Invalid rewarded ad callback") from error
+    return {"verified": True}
+
+
+@app.post("/v1/credits/purchases/verify")
+async def verify_credit_purchase(
+    payload: CreditPurchaseVerifyRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    if not _has_credit_account(client):
+        raise HTTPException(status_code=403, detail="Apple account is required")
+    try:
+        purchase = purchase_verifier.verify(
+            payload.signed_transaction,
+            _app_account_token(client),
+        )
+        granted, granted_amount = credit_ledger.grant_purchase(
+            account_key=_credit_account_key(client),
+            amount=purchase.credits,
+            transaction_key=f"app_store:{purchase.transaction_id}",
+        )
+    except PurchaseVerificationError as error:
+        status = 503 if not purchase_verifier.is_configured else 422
+        raise HTTPException(
+            status_code=status,
+            detail={"code": "purchase_verification_failed", "message": str(error)},
+        ) from error
+    except CreditRequestConflict as error:
+        raise HTTPException(status_code=409, detail="Purchase transaction conflict") from error
+    return {
+        "granted": granted,
+        "granted_amount": granted_amount if granted else 0,
+        "transaction_id": purchase.transaction_id,
+        "product_id": purchase.product_id,
+        "balance": credit_ledger.balance(_credit_account_key(client)).as_dict(),
+    }
+
+
+@app.post("/v1/app-store/notifications", include_in_schema=False)
+async def receive_app_store_notification(payload: AppStoreNotificationRequest) -> dict[str, bool]:
+    try:
+        refund = purchase_verifier.verify_refund_notification(payload.signed_payload)
+        if refund is not None:
+            credit_ledger.refund_purchase(
+                transaction_key=f"app_store:{refund.transaction_id}",
+                amount=refund.credits,
+            )
+    except (CreditRequestConflict, PurchaseVerificationError) as error:
+        raise HTTPException(status_code=400, detail="Invalid App Store notification") from error
+    return {"accepted": True}
+
+
+@app.post("/v1/analytics/events")
+async def record_usage_analytics(
+    batch: UsageAnalyticsBatch,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, int]:
+    accepted = usage_analytics_ledger.record(
+        _quota_client_key(client),
+        [event.model_dump() for event in batch.events],
+    )
+    return {"accepted": accepted}
+
+
+@app.delete("/v1/analytics/events")
+async def delete_usage_analytics(
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, int]:
+    return {"deleted": usage_analytics_ledger.delete(_quota_client_key(client))}
+
+
 @app.post("/v1/agents/chat", response_model=AgentChatResponse)
-async def agent_chat(request: AgentChatRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
+async def agent_chat(
+    request: AgentChatRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    return await _run_with_ai_usage(
+        client,
+        request.purpose,
+        lambda: _agent_chat_impl(request),
+    )
+
+
+async def _agent_chat_impl(request: AgentChatRequest) -> dict[str, Any]:
+    evidence_started = time.perf_counter()
+    embedding_latency_ms = 0.0
+    search_latency_ms = 0.0
+    evidence_failure = ""
     coach = get_coach_profile(request.coach_id)
     context_json = json.dumps(request.context, ensure_ascii=False)
     messages_json = json.dumps(
         [message.model_dump() for message in request.recent_messages],
         ensure_ascii=False,
     )
-    if len(context_json) + len(messages_json) > 60_000:
+    if len(context_json) + len(messages_json) > AGENT_CONTEXT_MAX_CHARACTERS:
         raise HTTPException(status_code=413, detail="AIコンテキストが大きすぎます。集計してから再送してください。")
 
     evidence_result = None
@@ -869,16 +1714,25 @@ async def agent_chat(request: AgentChatRequest, _: None = Depends(require_api_ke
             if int(index_status.get("usable_documents", 0)) > 0:
                 query_vector = None
                 if int(index_status.get("vector_chunks", 0)) > 0:
+                    embedding_started = time.perf_counter()
                     query_vector = await ollama_embedding(request.message)
+                    embedding_latency_ms = (time.perf_counter() - embedding_started) * 1000
+                search_started = time.perf_counter()
                 evidence_result = evidence_store.search(
                     request.message,
                     query_vector=query_vector,
                     goal=request.coach_id,
+                    user_profile=user_profile_from_context(request.context),
+                    purpose=request.purpose,
                     limit=5,
                 )
-                evidence_state = "ready" if evidence_result.citations else "insufficient"
-        except Exception:
+                search_latency_ms = (time.perf_counter() - search_started) * 1000
+                evidence_state = evidence_result.state
+            else:
+                evidence_state = "empty"
+        except Exception as error:
             evidence_state = "unavailable"
+            evidence_failure = type(error).__name__
 
     evidence_context = (
         evidence_result.prompt_context
@@ -980,17 +1834,53 @@ replyの文章ルール:
         for evidence_id in normalized.pop("evidence_ids", [])
         if evidence_id in citations_by_id
     ]
+    normalized["evidence_claims"] = claim_citation_links(
+        normalized["reply"],
+        {
+            evidence_id: citation.id
+            for evidence_id, citation in citations_by_id.items()
+        },
+    )
     normalized["evidence_status"] = {
         "state": evidence_state,
         "confidence": evidence_result.confidence if evidence_result is not None else "insufficient",
         "last_updated_at": evidence_result.last_updated_at if evidence_result is not None else None,
         "searched_documents": evidence_result.searched_documents if evidence_result is not None else 0,
+        "matched_documents": evidence_result.matched_documents if evidence_result is not None else 0,
+        "reason": evidence_result.reason if evidence_result is not None else evidence_failure,
     }
+    evidence_total_ms = (time.perf_counter() - evidence_started) * 1000
+    prompt_characters = len(evidence_context)
+    try:
+        evidence_monitor.record(
+            EvidenceObservation(
+                request_id=_request_id_context.get(),
+                purpose=request.purpose,
+                state=evidence_state,
+                embedding_latency_ms=embedding_latency_ms,
+                search_latency_ms=search_latency_ms,
+                total_latency_ms=evidence_total_ms,
+                searched_documents=evidence_result.searched_documents if evidence_result else 0,
+                matched_documents=evidence_result.matched_documents if evidence_result else 0,
+                prompt_characters=prompt_characters,
+                estimated_cost_usd=evidence_monitor.estimated_cost(prompt_characters),
+                failure_type=evidence_failure,
+            )
+        )
+    except Exception:
+        logging.exception("failed to record evidence monitoring observation")
     return normalized
 
 
 @app.post("/v1/meals/analyze-image", response_model=MealAIDraft)
-async def analyze_meal_image(request: MealAnalysisRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
+async def analyze_meal_image(
+    request: MealAnalysisRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    return await _run_with_ai_usage(client, "meal", lambda: _analyze_meal_image_impl(request))
+
+
+async def _analyze_meal_image_impl(request: MealAnalysisRequest) -> dict[str, Any]:
     coach_prompt = request_coach_prompt(request.coach)
     prompt = f"""
 あなたは食事管理アプリの画像解析AIです。
@@ -1040,8 +1930,12 @@ commentは最初に確認が必要な点を示し、目的に沿う次の行動�
 @app.post("/v1/meals/analyze-text", response_model=MealAIDraft)
 async def analyze_meal_text(
     request: MealTextAnalysisRequest,
-    _: None = Depends(require_api_key),
+    client: AuthenticatedClient = Depends(require_api_key),
 ) -> dict[str, Any]:
+    return await _run_with_ai_usage(client, "meal", lambda: _analyze_meal_text_impl(request))
+
+
+async def _analyze_meal_text_impl(request: MealTextAnalysisRequest) -> dict[str, Any]:
     items = [item.strip() for item in request.items if item.strip()]
     if not items:
         raise HTTPException(status_code=422, detail="食べたものを1件以上入力してください。")
@@ -1094,7 +1988,18 @@ async def analyze_meal_text(
 
 
 @app.post("/v1/body-photos/analyze", response_model=BodyPhotoAIComment)
-async def analyze_body_photo(request: BodyPhotoAnalysisRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
+async def analyze_body_photo(
+    request: BodyPhotoAnalysisRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    return await _run_with_ai_usage(
+        client,
+        "body_photo",
+        lambda: _analyze_body_photo_impl(request),
+    )
+
+
+async def _analyze_body_photo_impl(request: BodyPhotoAnalysisRequest) -> dict[str, Any]:
     prompt = """
 あなたはボディメイク管理アプリの写真コメントAIです。
 写真だけで体脂肪率や病気を断定しないでください。
@@ -1117,8 +2022,16 @@ async def analyze_body_photo(request: BodyPhotoAnalysisRequest, _: None = Depend
 @app.post("/v1/body-photos/analyze-set", response_model=BodyPhotoAIComment)
 async def analyze_body_photo_set(
     request: BodyPhotoSetAnalysisRequest,
-    _: None = Depends(require_api_key),
+    client: AuthenticatedClient = Depends(require_api_key),
 ) -> dict[str, Any]:
+    return await _run_with_ai_usage(
+        client,
+        "body_photo",
+        lambda: _analyze_body_photo_set_impl(request),
+    )
+
+
+async def _analyze_body_photo_set_impl(request: BodyPhotoSetAnalysisRequest) -> dict[str, Any]:
     angle_names = {
         "front": "正面",
         "side": "横",
@@ -1212,7 +2125,18 @@ async def analyze_body_photo_set(
 
 
 @app.post("/v1/reports/weekly", response_model=WeeklyReportResponse)
-async def weekly_report(request: WeeklyReportRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
+async def weekly_report(
+    request: WeeklyReportRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    return await _run_with_ai_usage(
+        client,
+        "weekly_report",
+        lambda: _weekly_report_impl(request),
+    )
+
+
+async def _weekly_report_impl(request: WeeklyReportRequest) -> dict[str, Any]:
     coach = get_coach_profile(request.coach_id)
     coach_prompt = request_coach_prompt(request.coach, request.coach_id)
     context = {
@@ -1257,7 +2181,18 @@ async def weekly_report(request: WeeklyReportRequest, _: None = Depends(require_
 
 
 @app.post("/v1/reports/monthly", response_model=WeeklyReportResponse)
-async def monthly_report(request: WeeklyReportRequest, _: None = Depends(require_api_key)) -> dict[str, Any]:
+async def monthly_report(
+    request: WeeklyReportRequest,
+    client: AuthenticatedClient = Depends(require_api_key),
+) -> dict[str, Any]:
+    return await _run_with_ai_usage(
+        client,
+        "monthly_report",
+        lambda: _monthly_report_impl(request),
+    )
+
+
+async def _monthly_report_impl(request: WeeklyReportRequest) -> dict[str, Any]:
     coach = get_coach_profile(request.coach_id)
     coach_prompt = request_coach_prompt(request.coach, request.coach_id)
     context = {
@@ -1383,7 +2318,12 @@ async def ollama_json(
         _inference_logger.error(json.dumps(event, separators=(",", ":"), sort_keys=True))
         raise HTTPException(
             status_code=503,
-            detail="AIモデルから有効な回答を取得できませんでした。時間をおいて再試行してください。",
+            detail={
+                "code": "model_unavailable",
+                "message": "AIモデルから有効な回答を取得できませんでした。時間をおいて再試行してください。",
+                "retry_after": 60,
+            },
+            headers={"Retry-After": "60"},
         ) from error
     finally:
         if started_at is not None:
@@ -1681,6 +2621,29 @@ def normalize_agent_chat(result: dict[str, Any], fallback: dict[str, Any]) -> di
         "memory_candidates": normalized_candidates,
         "evidence_ids": normalized_evidence_ids,
     }
+
+
+def claim_citation_links(reply: str, citation_ids: dict[str, str]) -> list[dict[str, Any]]:
+    links: list[dict[str, Any]] = []
+    seen: set[tuple[str, tuple[str, ...]]] = set()
+    for line in reply.splitlines():
+        references = [
+            value.upper()
+            for value in re.findall(r"\[(E[1-8])\]", line, flags=re.IGNORECASE)
+            if value.upper() in citation_ids
+        ]
+        if not references:
+            continue
+        claim = re.sub(r"\s*\[E[1-8]\]", "", line, flags=re.IGNORECASE).strip(" ・-\t")
+        if not claim:
+            continue
+        stable_ids = tuple(dict.fromkeys(citation_ids[value] for value in references))
+        key = (claim, stable_ids)
+        if key in seen:
+            continue
+        seen.add(key)
+        links.append({"claim": claim[:800], "citation_ids": list(stable_ids)})
+    return links[:12]
 
 
 def format_agent_reply(reply: str) -> str:

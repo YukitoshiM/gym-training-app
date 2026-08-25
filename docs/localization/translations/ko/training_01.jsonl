@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"ko","translation":"0회","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"ko","translation":"1회 운동","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"ko","translation":"3가지 운동을 2세트씩 진행합니다. 무리 없는 무게로 조절하여 저장합니다.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"ko","translation":"AI 계획을 읽을 수 없습니다. 다시 만들어 주세요.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"ko","translation":"AI 코치 플랜","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"ko","translation":"Apple Health에 저장됨","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"ko","translation":"Apple Watch에서 동기화","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"ko","translation":"Apple Watch가 설정한 올림/내리는 시간을 1초마다 촉각으로 안내합니다.","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"ko","translation":"Apple Watch가 가까이 있지 않아, 다음 실행 시 도착하도록 예약했습니다.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"ko","translation":"Apple Watch로 조작을 수행할 수 없습니다.","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"ko","translation":"Apple Watch의 기록을 iPhone에 저장할 수 없습니다.","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"ko","translation":"Apple Watch의 기록을 저장할 준비가 되어 있지 않습니다.","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"ko","translation":"Apple Watch의 기록을 읽을 수 없습니다.","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"ko","translation":"Apple Watch로 메뉴를 동기화할 수 있습니다","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"ko","translation":"Apple Watch에 동기화된 오늘의 내용은 없습니다.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"ko","translation":"Apple Watch로 명령을 보내는 데 실패했습니다.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"ko","translation":"Apple Watch로 전송할 명령 데이터를 생성하는 데 실패했습니다.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"ko","translation":"Apple Watch를 열고 다시 시도해 주세요.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"ko","translation":"Apple Watch에 BodyMode 앱을 설치해주세요.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"ko","translation":"Apple Watch 연결이 일시 중지되었습니다.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"ko","translation":"Apple Watch 연결이 준비되지 않았습니다.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"ko","translation":"Apple Watch 연결에 실패했습니다: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"ko","translation":"Apple Watch 연결을 준비 중입니다. 잠시 기다린 후 다시 시도해 주세요.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"ko","translation":"Apple Watch 연결 상태를 확인할 수 없습니다.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"ko","translation":"Apple Watch용 메뉴 데이터를 생성하는 데 실패했습니다.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"ko","translation":"Apple Watch 측정","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"ko","translation":"건강 정보 저장 실패, 앱 기록은 저장됨","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"ko","translation":"건강 정보 없음","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"ko","translation":"건강 정보 저장 상태 확인 중","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"ko","translation":"건강 정보 미승인, 앱 기록만 저장됨","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"ko","translation":"LEVEL 1・전신 스타터","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"ko","translation":"TRX 로우","review_note":""}
+{"id":"training.148b91e44188","target_locale":"ko","translation":"시계로 기록 중","review_note":""}
+{"id":"training.3e098891145f","target_locale":"ko","translation":"시계 운동을 완료하시겠습니까?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"ko","translation":"워치의 기록이 완료되었습니다.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"ko","translation":"워치 기록을 삭제하시겠습니까?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"ko","translation":"워치 센서 분석","review_note":""}
+{"id":"training.e9af98302821","target_locale":"ko","translation":"워치 라이브","review_note":""}
+{"id":"training.22db347214b9","target_locale":"ko","translation":"{{value1}} / {{value2}}회","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"ko","translation":"{{value1}} {{value2}} × {{value3}}회","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"ko","translation":"{{value1}} {{value2}} → {{value3}}（{{value4}}세트）","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"ko","translation":"{{value1}}는 iPhone 기록에 저장되었습니다.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"ko","translation":"{{value1}}를 Apple Watch에서 기록에 저장했습니다.","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"ko","translation":"{{value1}} 올리기 {{value2}}초 / 내리기 {{value3}}초・{{value4}}회/초{{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"ko","translation":"{{value1}}/{{value2}}세트 {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"ko","translation":"{{value1}}/{{value2}}세트 완료","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"ko","translation":"{{value1}}: {{value2}}세트, {{value3}}kg, {{value4}}회, 휴식{{value5}}초","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"ko","translation":"{{value1}}{{value2}}건","review_note":""}
+{"id":"training.4547089161d9","target_locale":"ko","translation":"{{value1}}, 기록 없음","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"ko","translation":"{{value1}}와 계획 만들기","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"ko","translation":"{{value1}}와 계획 생성","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"ko","translation":"{{value1}}로 만들어 주세요","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"ko","translation":"{{value1}}에 대한 수정 상담","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"ko","translation":"{{value1}}에 대해 문의","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"ko","translation":"{{value1}}의 폼 참고 이미지. 주요 부위는 {{value2}}, {{value3}}을 사용하여 {{value4}} 종류입니다","review_note":""}
+{"id":"training.859660768503","target_locale":"ko","translation":"{{value1}} 초안","review_note":""}
+{"id":"training.7544024a8347","target_locale":"ko","translation":"{{value1}}의 목표 체중을 업데이트했습니다","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"ko","translation":"{{value1}}의 목표 체중을 업데이트합니다.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"ko","translation":"{{value1}} 세트","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"ko","translation":"{{value1}} 세트 × {{value2}}회・{{value3}}kg・휴식 {{value4}}초","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"ko","translation":"{{value1}} 세트・{{value2}}회","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"ko","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"ko","translation":"{{value1}}・계획 {{value2}}/{{value3}} 세트・달성률 {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"ko","translation":"{{value1}}・계획 생성","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"ko","translation":"{{value1}}건","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"ko","translation":"{{value1}}건의 메뉴를 Apple Watch에 동기화했습니다","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"ko","translation":"{{value1}}분","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"ko","translation":"{{value1}}분{{value2}}초","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"ko","translation":"{{value1}}회","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"ko","translation":"{{value1}}회/초","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"ko","translation":"{{value1}}시간{{value2}}분","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"ko","translation":"{{value1}}장（{{value2}}）","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"ko","translation":"{{value1}}초","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"ko","translation":"{{value1}}개 운동","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"ko","translation":"{{value1}}개 운동 · {{value2}}세트 · {{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"ko","translation":"{{value1}}개 종류","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"ko","translation":"이 메뉴로 시작하기","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"ko","translation":"이 메뉴 저장","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"ko","translation":"이 기록을 삭제하시겠습니까?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"ko","translation":"오늘 운동은 없습니다","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"ko","translation":"이 운동은 건너뜁니다","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"ko","translation":"이 기기에서는 Apple Watch 연동이 불가능합니다","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"ko","translation":"이 계획을 어떻게 수정할까요?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"ko","translation":"이 계획을 삭제하시겠습니까?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"ko","translation":"모두","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"ko","translation":"모든 기록","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"ko","translation":"없음","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"ko","translation":"방법","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"ko","translation":"앱 기록만 저장","review_note":""}
+{"id":"training.39029011b26a","target_locale":"ko","translation":"인클라인 덤벨 프레스","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"ko","translation":"오류","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"ko","translation":"사용자 정의 운동","review_note":""}
+{"id":"training.42254297b975","target_locale":"ko","translation":"사용자 지정 운동 추가","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"ko","translation":"취소","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"ko","translation":"빠른 생성","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"ko","translation":"크런치","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"ko","translation":"글루트 브릿지","review_note":""}
+{"id":"training.1792e5824127","target_locale":"ko","translation":"케이블 컬","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"ko","translation":"케이블 킥백","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"ko","translation":"케이블 크로스오버","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"ko","translation":"복사","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"ko","translation":"코치에게 원하는 운동 (선택 사항)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"ko","translation":"고블릿 스쿼트","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"ko","translation":"사이드 플랭크","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"ko","translation":"사이드 레이즈","review_note":""}
+{"id":"training.5722403a802d","target_locale":"ko","translation":"하위","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"ko","translation":"어깨 프레스","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"ko","translation":"시티드 카프 레이즈","review_note":""}
+{"id":"training.861902f328fe","target_locale":"ko","translation":"시티드 로우","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"ko","translation":"헬스장","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"ko","translation":"헬스장에 도착","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"ko","translation":"헬스장 방문","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"ko","translation":"짐 방문 기록 없음","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"ko","translation":"건너뛰기","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"ko","translation":"스쿼트","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"ko","translation":"서서 종아리 운동","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"ko","translation":"스미스 머신 스쿼트","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"ko","translation":"세트","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"ko","translation":"{{value1}} 세트 완료","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"ko","translation":"세트 추가","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"ko","translation":"세트 일괄 설정","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"ko","translation":"세트 기록","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"ko","translation":"{{value1}} 세트 시간","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"ko","translation":"세트 구성","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"ko","translation":"세트 목표는 운동 시작 시 복사되며, 기록에 남습니다.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"ko","translation":"제목","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"ko","translation":"덤벨 컬","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"ko","translation":"덤벨 벤치 프레스","review_note":""}
+{"id":"training.0d799718504b","target_locale":"ko","translation":"덤벨 루마니안 데드리프트","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"ko","translation":"가슴 운동","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"ko","translation":"친업","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"ko","translation":"템포 설정","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"ko","translation":"템포 계획: {{value1}}초 증가, {{value2}}초 감소, {{value3}}회/초","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"ko","translation":"데드 바그","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"ko","translation":"트라이셉스 프레스 다운","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"ko","translation":"운동","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"ko","translation":"운동 기록 없음","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"ko","translation":"운동 완료","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"ko","translation":"운동 이력 없음","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"ko","translation":"운동 계획","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"ko","translation":"햄머 카일","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"ko","translation":"힙 어덕션","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"ko","translation":"힙 스러스","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"ko","translation":"페이스 풀","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"ko","translation":"폼 및 주의사항","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"ko","translation":"폼 참고","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"ko","translation":"프리 트레이닝","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"ko","translation":"푸쉬업","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"ko","translation":"플랭크","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"ko","translation":"벤치 프레스","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"ko","translation":"페어링된 Apple Watch를 찾을 수 없음","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"ko","translation":"볼륨","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"ko","translation":"머신 어깨 프레스","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"ko","translation":"메인","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"ko","translation":"메모","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"ko","translation":"사용자 추가 운동","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"ko","translation":"랫 풀 다운","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"ko","translation":"런지","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"ko","translation":"루마니아 데드리프트","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"ko","translation":"레그 컬","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"ko","translation":"레그 프레스","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"ko","translation":"원 핸드 덤벨 로우","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"ko","translation":"운동","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"ko","translation":"운동을 완료하시겠습니까?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"ko","translation":"운동을 종료하시겠습니까?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"ko","translation":"•","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"ko","translation":"• 수정됨","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"ko","translation":"상","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"ko","translation":"상 {{value1}}초, 하 {{value2}}초, {{value3}}회/초","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"ko","translation":"상{{value1}}초, 하{{value2}}초, {{value3}}회/초","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"ko","translation":"상 속도","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"ko","translation":"상과 하에 차이 있음","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"ko","translation":"상체","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"ko","translation":"다운","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"ko","translation":"다운 속도","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"ko","translation":"하체","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"ko","translation":"주요 부위","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"ko","translation":"이번에 사용 가능한 장비","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"ko","translation":"오늘의 내용을 Apple Watch로 동기화했습니다","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"ko","translation":"오늘의 내용을 Apple Watch로 동기화 중","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"ko","translation":"휴식 {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"ko","translation":"몸매 사진","review_note":""}
+{"id":"training.82865627f395","target_locale":"ko","translation":"몸매 사진은 기록되지 않았습니다","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"ko","translation":"예: 운동 종류를 하나 줄여 휴식을 길게","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"ko","translation":"예: 가슴 운동","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"ko","translation":"예: 다리는 가볍게, 가슴을 집중적으로","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"ko","translation":"저장","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"ko","translation":"저장에 실패했습니다","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"ko","translation":"선택 항목 목록","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"ko","translation":"중지","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"ko","translation":"입력 완료","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"ko","translation":"전체 달성률","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"ko","translation":"전신","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"ko","translation":"전신 / 유지","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"ko","translation":"전신 A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"ko","translation":"전신 B","review_note":""}
+{"id":"training.f74271660465","target_locale":"ko","translation":"전신 C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"ko","translation":"가벼운 전신","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"ko","translation":"사진","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"ko","translation":"사진 없음","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"ko","translation":"분석","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"ko","translation":"분석 데이터가 없습니다.","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"ko","translation":"초보자, 전신 시작","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"ko","translation":"선택된 운동 종류가 계획에 포함되지 않았습니다. 장비를 다시 확인하고 수정해주세요.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"ko","translation":"사용 가능한 장비","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"ko","translation":"삭제","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"ko","translation":"이전 달","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"ko","translation":"이전 {{value1}}회 × {{value2}}회","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"ko","translation":"추가 무게를 입력하세요. 보조 무게는 음수로 기록할 수 있습니다.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"ko","translation":"운동 속도","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"ko","translation":"예상 운동 횟수: 총 {{value1}}회","review_note":""}
+{"id":"training.e1472f598358","target_locale":"ko","translation":"반영","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"ko","translation":"오른쪽 상단의 추가 버튼을 통해 사용자 정의 항목을 등록할 수 있습니다.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"ko","translation":"총 {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"ko","translation":"장비","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"ko","translation":"횟수 차이","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"ko","translation":"흙","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"ko","translation":"기본","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"ko","translation":"안정{{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"ko","translation":"완료","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"ko","translation":"완료된 기록은 기록에서 확인할 수 있습니다.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"ko","translation":"완료되지 않은 기록은 저장되지 않습니다.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"ko","translation":"완료 후 기록 저장","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"ko","translation":"완료 후 기록 저장","review_note":""}
+{"id":"training.1784283f2316","target_locale":"ko","translation":"진행 중","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"ko","translation":"실행 횟수","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"ko","translation":"실측 템포 증가{{value1}}초 / 감소{{value2}}초","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"ko","translation":"성공 {{value1}} × {{value2}}회","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"ko","translation":"성공 값 편집","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"ko","translation":"대상 부위","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"ko","translation":"기록","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"ko","translation":"기록이 없습니다","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"ko","translation":"이력은 아직 없습니다","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"ko","translation":"이력을 삭제","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"ko","translation":"이력을 편집","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"ko","translation":"이력 편집","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"ko","translation":"이력 상세","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"ko","translation":"평균 심박수","review_note":""}
+{"id":"training.461619512206","target_locale":"ko","translation":"끌기 / 두께","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"ko","translation":"대기","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"ko","translation":"심박수","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"ko","translation":"필요한 운동은 사용자 정의 운동으로 추가할 수 있습니다.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"ko","translation":"방법","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"ko","translation":"누르기 / 가슴 상부","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"ko","translation":"담당 코치","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"ko","translation":"지정 없음","review_note":""}
+{"id":"training.6532391678cf","target_locale":"ko","translation":"진동 속도","review_note":""}
+{"id":"training.f57690abba57","target_locale":"ko","translation":"추정 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"ko","translation":"추정 {{value1}}회","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"ko","translation":"제안 이유를 간략하게 설명","review_note":""}

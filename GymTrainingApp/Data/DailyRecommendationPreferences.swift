@@ -1,5 +1,13 @@
 import Foundation
 
+enum DailyRecommendationAICreditPolicy {
+    static let automaticUseKey = "bodymode.omakase.automaticAICreditUse"
+
+    static func allowsAutomaticUse(defaults: UserDefaults = .standard) -> Bool {
+        defaults.bool(forKey: automaticUseKey)
+    }
+}
+
 enum DailyRecommendationPersonalizationStore {
     static let enabledKey = "bodymode.omakase.behaviorLearningEnabled"
     static let resetDateKey = "bodymode.omakase.behaviorLearningResetDate"
@@ -32,7 +40,7 @@ enum DailyRecommendationPersonalizationStore {
         defaults: UserDefaults = .standard
     ) -> String {
         let actions = history(from: recommendations, defaults: defaults).flatMap(\.actions)
-        guard !actions.isEmpty else { return "まだ学習データはありません。" }
+        guard !actions.isEmpty else { return L10n.string("health_meals_body_ai.a553bc46de29", fallback: "まだ学習データはありません。") }
 
         let grouped = Dictionary(grouping: actions, by: \.category)
         let favorite = grouped.max { left, right in
@@ -43,12 +51,12 @@ enum DailyRecommendationPersonalizationStore {
         }
         var parts: [String] = []
         if let favorite, favorite.value.contains(where: { $0.status == .completed }) {
-            parts.append("完了しやすい項目: \(displayName(favorite.key))")
+            parts.append(L10n.string("health_meals_body_ai.a08a51f7e427", fallback: "完了しやすい項目: {{value1}}", values: [String(describing: displayName(favorite.key))]))
         }
         if let avoided, avoided.value.contains(where: { $0.status == .skipped }) {
-            parts.append("後回しにしやすい項目: \(displayName(avoided.key))")
+            parts.append(L10n.string("health_meals_body_ai.1f60ca761ad5", fallback: "後回しにしやすい項目: {{value1}}", values: [String(describing: displayName(avoided.key))]))
         }
-        return parts.isEmpty ? "完了・スキップの傾向を端末内で確認中です。" : parts.joined(separator: " / ")
+        return parts.isEmpty ? L10n.string("health_meals_body_ai.0bf9b10cad35", fallback: "完了・スキップの傾向を端末内で確認中です。") : parts.joined(separator: " / ")
     }
 
     static func evaluation(
@@ -86,16 +94,16 @@ enum DailyRecommendationPersonalizationStore {
 
     private static func displayName(_ category: DailyActionCategory) -> String {
         switch category {
-        case .workout: "トレーニング"
-        case .steps: "歩数"
-        case .protein: "たんぱく質"
-        case .mealGuidance: "食事"
-        case .bodyWeight: "体重"
-        case .waist: "腹囲"
-        case .bodyPhoto: "体型写真"
-        case .sleep: "睡眠"
-        case .recovery: "回復"
-        case .lightActivity: "軽い運動"
+        case .workout: L10n.string("health_meals_body_ai.97bcb3ef255f", fallback: "トレーニング")
+        case .steps: L10n.string("health_meals_body_ai.a64954d4ecda", fallback: "歩数")
+        case .protein: L10n.string("health_meals_body_ai.140a2c34da87", fallback: "たんぱく質")
+        case .mealGuidance: L10n.string("health_meals_body_ai.738844ab541c", fallback: "食事")
+        case .bodyWeight: L10n.string("health_meals_body_ai.5f7020cba17f", fallback: "体重")
+        case .waist: L10n.string("health_meals_body_ai.0021a0220d44", fallback: "腹囲")
+        case .bodyPhoto: L10n.string("health_meals_body_ai.f47d6f2e6ec3", fallback: "体型写真")
+        case .sleep: L10n.string("health_meals_body_ai.8878e4c5b97f", fallback: "睡眠")
+        case .recovery: L10n.string("health_meals_body_ai.5602244ffb3a", fallback: "回復")
+        case .lightActivity: L10n.string("health_meals_body_ai.6cc0928ab83d", fallback: "軽い運動")
         }
     }
 }

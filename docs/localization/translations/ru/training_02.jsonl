@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"ru","translation":"Набор для съемки","review_note":""}
+{"id":"training.3064c4117490","target_locale":"ru","translation":"День","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"ru","translation":"Дата","review_note":""}
+{"id":"training.137012e67a97","target_locale":"ru","translation":"Время","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"ru","translation":"Максимальное ЧСС","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"ru","translation":"Максимальный вес","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"ru","translation":"Месяц","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"ru","translation":"Четверг","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"ru","translation":"Не выполнено","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"ru","translation":"Не завершено","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"ru","translation":"Исключено из списка: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"ru","translation":"Не достигнуто","review_note":""}
+{"id":"training.379774690c05","target_locale":"ru","translation":"Поиск, детали, добавление пользовательских упражнений","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"ru","translation":"Стандартный","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"ru","translation":"Следующий месяц","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"ru","translation":"Сохраните вес, количество повторений и упражнение перед переходом на следующую страницу.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"ru","translation":"Пятница","review_note":""}
+{"id":"training.586036cfde65","target_locale":"ru","translation":"Сжигаемые калории","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"ru","translation":"В процессе","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"ru","translation":"Суббота","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"ru","translation":"Зарегистрированные упражнения","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"ru","translation":"Пример","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"ru","translation":"Цель","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"ru","translation":"Цель: {{value1}} × {{value2}} раз","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"ru","translation":"Отражает цели, достижения и доступное оборудование.","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"ru","translation":"Скопировать цель","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"ru","translation":"Разница между целями","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"ru","translation":"Разница между целями: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"ru","translation":"Следующий уровень, соответствующий цели и оборудованию","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"ru","translation":"Создается на основе целей, целевых групп мышц, доступного оборудования и предыдущих результатов. Перед сохранением можно изменить упражнения и значения.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"ru","translation":"Проконсультируйтесь и внесите изменения","review_note":""}
+{"id":"training.804773e6316f","target_locale":"ru","translation":"Удалить","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"ru","translation":"Подтвердите и сохраните план","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"ru","translation":"Секунды","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"ru","translation":"Упражнение","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"ru","translation":"Нет упражнений","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"ru","translation":"Зарегистрируйте упражнение и целевую цель, чтобы легко начать следующую тренировку.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"ru","translation":"Добавить упражнение","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"ru","translation":"Добавьте упражнение и укажите целевые значения для каждой серии.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"ru","translation":"Можно настроить все сразу при добавлении упражнения.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"ru","translation":"Выбрать упражнение","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"ru","translation":"Библиотека упражнений","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"ru","translation":"По категориям","review_note":""}
+{"id":"training.f3db21504894","target_locale":"ru","translation":"История по категориям","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"ru","translation":"Название категории","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"ru","translation":"Название категории, мышцы, техника","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"ru","translation":"Подробности о категории","review_note":""}
+{"id":"training.0902af066756","target_locale":"ru","translation":"Силовые тренировки","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"ru","translation":"Сила A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"ru","translation":"Сила B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"ru","translation":"Гипертрофия","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"ru","translation":"Завершить","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"ru","translation":"Прогресс","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"ru","translation":"Продолжить","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"ru","translation":"Общий объем","review_note":""}
+{"id":"training.299456e922c2","target_locale":"ru","translation":"Редактировать","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"ru","translation":"Плечи / Бицепс / Трицепс","review_note":""}
+{"id":"training.14f202634605","target_locale":"ru","translation":"Плечи и руки","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"ru","translation":"День для спины","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"ru","translation":"День для груди","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"ru","translation":"Ноги / Область бедер","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"ru","translation":"День для ног","review_note":""}
+{"id":"training.ed189402693b","target_locale":"ru","translation":"Личный рекорд","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"ru","translation":"Просмотр накопленных записей по периодам, видам спорта и датчикам.","review_note":""}
+{"id":"training.36467fec4916","target_locale":"ru","translation":"Определение темпа на ощупь.","review_note":""}
+{"id":"training.84447148c208","target_locale":"ru","translation":"План","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"ru","translation":"Выполнено {{value1}} / {{value2}} подходов / Достигнуто {{value3}} / {{value4}}","review_note":""}
+{"id":"training.170899739631","target_locale":"ru","translation":"Начать с плана","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"ru","translation":"Следуйте плану","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"ru","translation":"Добавьте вид спорта и запишите его без плана","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"ru","translation":"У вас еще нет плана","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"ru","translation":"Медленнее, чем по плану","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"ru","translation":"Быстрее, чем по плану","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"ru","translation":"Создать план","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"ru","translation":"Создать план","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"ru","translation":"Сохранить план","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"ru","translation":"Набор планов","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"ru","translation":"Создать план","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"ru","translation":"Название плана","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"ru","translation":"Введите название и один или несколько видов спорта.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"ru","translation":"Записи","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"ru","translation":"Просматривайте записи по дням.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"ru","translation":"Закрыть без сохранения","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"ru","translation":"Определить, нужно ли сохранять данные и цели","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"ru","translation":"Удалить записи","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"ru","translation":"Типы записей: тренировки, тело, питание, фотографии, спортзал","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"ru","translation":"Не найдено подходящих типов","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"ru","translation":"Тело","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"ru","translation":"Измерение тела","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"ru","translation":"Данные измерений не сохранены","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"ru","translation":"Легкая интенсивность","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"ru","translation":"Добавить","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"ru","translation":"Неделя","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"ru","translation":"{{value1}} дней и {{value2}} минут в неделю","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"ru","translation":"По неделям","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"ru","translation":"Еженедельный объем","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"ru","translation":"Анализ еженедельного объема","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"ru","translation":"Основываясь на прошлых достижениях, корректируется вес и количество повторений. Подтвердите и сохраните.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"ru","translation":"Достижение цели","review_note":""}
+{"id":"training.90687409925b","target_locale":"ru","translation":"Серия достижений","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"ru","translation":"Процент достижения","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"ru","translation":"Процент достижения {{value1}}","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"ru","translation":"Передаем только зарегистрированные упражнения, соответствующие выбранному оборудованию, в ИИ.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"ru","translation":"Итоги за день","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"ru","translation":"Часть тела","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"ru","translation":"Разница в весе","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"ru","translation":"Разница в весе {{value1}} / Разница в количестве повторений {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"ru","translation":"Динамика веса","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"ru","translation":"Золотые монеты","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"ru","translation":"Закрыть","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"ru","translation":"Начать","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"ru","translation":"Отменить начало","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"ru","translation":"Питание","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"ru","translation":"Питание не записано","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"ru","translation":"Высокая нагрузка","review_note":""}

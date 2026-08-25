@@ -6,6 +6,8 @@
 
 BodyModeの端末内記録とユーザーが承認した記憶を会話ごとに組み立て、ステートレスなAIトレーナーへ送る。サーバーに会話状態を持たせず、継続性・確認・削除の主導権をiPhone側へ置く。
 
+人格、目的別専門性、健康管理を含む対象範囲、安全境界、機能別の振る舞いは`ai_agent_contract.md`を正本とする。会話、計画、今日の提案、食事、体型写真、週次・月次レポートは同じ共通トレーナーポリシーを使う。
+
 ## 構成
 
 ```mermaid
@@ -25,14 +27,27 @@ flowchart LR
 
 ## API
 
+### Evidence契約
+
+`POST /v1/agents/chat`の`evidence`は、タイトル等に加えて次を返す。
+
+- `source_scope`: `abstract`または再利用可能ライセンス確認済みの`full_text`
+- `evidence_summary`: 回答に使える結論要約
+- `population / intervention / outcomes / limitations`: 研究条件と制約
+- `applicability_score / applicability_label`: 端末から共有された年代・性別・経験等との適合
+- `version_status / conclusion_consistency / newer_evidence_note`: 訂正版・新旧結論差
+
+`evidence_claims`は回答中の主張とPMIDを対応付ける。`evidence_status.state`は`ready / no_match / population_mismatch / empty / disabled / unavailable`のいずれかで、`reason`、`matched_documents`を伴う。根拠が利用不能または対象者不一致でもチャット自体は継続し、文献を見たふりはしない。
+
 - `POST /v1/agents/chat`
 - `Authorization: Bearer <API key>`
 - `Content-Type: application/json`
-- タイムアウト: 120秒
+- タイムアウト: 240秒
 - ストリーミングなし。レスポンス完了後に`reply`を表示する。
 - コーチIDは`fat_loss`、`hypertrophy`、`strength`、`body_recomposition`、`wellness`、`return_to_training`。
+- `coach.persona_id`と`coach.coaching_style_id`を全AI機能で送り、選択された人物と話し方を維持する。
 
-Base URLとAPIキーは既存のAI設定を利用し、設定画面から変更できる。Quick TunnelのURLはコードへ固定しない。
+Base URLとAPIキーはGit管理外の管理設定を利用する。通常のRelease/TestFlight画面には接続先と認証情報を表示せず、Debugビルドで専用起動引数を付けた場合だけ編集できる。
 
 ## バックグラウンド実行
 
@@ -78,7 +93,7 @@ Base URLとAPIキーは既存のAI設定を利用し、設定画面から変更�
 | `422` | リクエスト形式不正を表示する |
 | タイムアウト・通信失敗 | 「AIトレーナーに接続できません。時間をおいて再試行してください」と表示する |
 
-診断ログとAI送信履歴には障害カテゴリ、送信カテゴリ、件数、成否だけを残し、会話本文、記憶、APIキー、健康値は記録しない。
+診断ログとAI送信履歴には障害カテゴリ、APIパス、送信カテゴリ、件数、成否だけを残し、ホスト名、Base URL、会話本文、記憶、APIキー、健康値は記録しない。
 
 ## AI計画の確認ルール
 

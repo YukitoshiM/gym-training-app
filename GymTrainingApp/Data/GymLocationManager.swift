@@ -6,7 +6,7 @@ final class GymLocationManager: NSObject, ObservableObject {
     @Published private(set) var authorizationStatus: CLAuthorizationStatus
     @Published private(set) var currentDistanceMeters: Double?
     @Published private(set) var isAtGym = false
-    @Published private(set) var statusMessage = "位置情報は未設定です"
+    @Published private(set) var statusMessage = L10n.string("runtime_messages.2c69e0809480", fallback: "位置情報は未設定です")
     @Published private(set) var isLocating = false
 
     private let locationManager = CLLocationManager()
@@ -32,7 +32,7 @@ final class GymLocationManager: NSObject, ObservableObject {
     func registerCurrentLocationAsGym() {
         isPendingGymRegistration = true
         isLocating = true
-        statusMessage = "現在地を確認中"
+        statusMessage = L10n.string("runtime_messages.aae5c414579e", fallback: "現在地を確認中")
 
         switch locationManager.authorizationStatus {
         case .notDetermined:
@@ -41,7 +41,7 @@ final class GymLocationManager: NSObject, ObservableObject {
             locationManager.requestLocation()
         case .denied, .restricted:
             isLocating = false
-            statusMessage = "設定アプリで位置情報を許可すると登録できます"
+            statusMessage = L10n.string("runtime_messages.7eb470b54bec", fallback: "設定アプリで位置情報を許可すると登録できます")
         @unknown default:
             isLocating = false
         }
@@ -49,7 +49,7 @@ final class GymLocationManager: NSObject, ObservableObject {
 
     func enableBackgroundVisitDetection() {
         guard let gym = appStore?.gymLocation else {
-            statusMessage = "先に現在地をジムとして登録してください"
+            statusMessage = L10n.string("runtime_messages.dd30b7ff48b4", fallback: "先に現在地をジムとして登録してください")
             return
         }
 
@@ -57,7 +57,7 @@ final class GymLocationManager: NSObject, ObservableObject {
             locationManager.requestAlwaysAuthorization()
         }
         startMonitoring(gym)
-        statusMessage = "ジム周辺への到着を検知します"
+        statusMessage = L10n.string("runtime_messages.d0f5dceef96c", fallback: "ジム周辺への到着を検知します")
     }
 
     func disableVisitDetection() {
@@ -65,7 +65,7 @@ final class GymLocationManager: NSObject, ObservableObject {
             locationManager.stopMonitoring(for: region)
         }
         locationManager.stopUpdatingLocation()
-        statusMessage = "ジム訪問の自動検知はオフです"
+        statusMessage = L10n.string("runtime_messages.2201dfcbf766", fallback: "ジム訪問の自動検知はオフです")
     }
 
     func removeGymLocation() {
@@ -73,24 +73,24 @@ final class GymLocationManager: NSObject, ObservableObject {
         appStore?.saveGymLocation(nil)
         currentDistanceMeters = nil
         isAtGym = false
-        statusMessage = "ジムの場所を削除しました"
+        statusMessage = L10n.string("runtime_messages.f68b4cd73087", fallback: "ジムの場所を削除しました")
     }
 
     func manualCheckIn() {
         appStore?.recordGymArrival(source: "manual")
         isAtGym = true
-        statusMessage = "ジム到着を記録しました"
+        statusMessage = L10n.string("runtime_messages.2c16bd45e064", fallback: "ジム到着を記録しました")
     }
 
     func manualCheckOut() {
         appStore?.recordGymDeparture()
         isAtGym = false
-        statusMessage = "ジム退出を記録しました"
+        statusMessage = L10n.string("runtime_messages.48a731fa2573", fallback: "ジム退出を記録しました")
     }
 
     private func startMonitoring(_ gym: GymLocation) {
         guard CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) else {
-            statusMessage = "この端末では周辺検知を利用できません"
+            statusMessage = L10n.string("runtime_messages.7a9bf7eecb2d", fallback: "この端末では周辺検知を利用できません")
             return
         }
 
@@ -114,14 +114,14 @@ final class GymLocationManager: NSObject, ObservableObject {
     ) {
         isLocating = false
         guard horizontalAccuracy >= 0 else {
-            statusMessage = "位置精度が安定してから再度お試しください"
+            statusMessage = L10n.string("runtime_messages.fef93188027e", fallback: "位置精度が安定してから再度お試しください")
             return
         }
 
         if isPendingGymRegistration {
             isPendingGymRegistration = false
             let gym = GymLocation(
-                name: "マイジム",
+                name: L10n.string("runtime_messages.ec6df6460320", fallback: "マイジム"),
                 latitude: latitude,
                 longitude: longitude,
                 radiusMeters: 150
@@ -132,7 +132,7 @@ final class GymLocationManager: NSObject, ObservableObject {
                 appStore?.saveSensorSettings(settings)
             }
             startMonitoring(gym)
-            statusMessage = "現在地をマイジムとして登録しました"
+            statusMessage = L10n.string("runtime_messages.0d4de13deafc", fallback: "現在地をマイジムとして登録しました")
         }
 
         guard let gym = appStore?.gymLocation else { return }
@@ -145,10 +145,10 @@ final class GymLocationManager: NSObject, ObservableObject {
         isAtGym = distance <= gym.radiusMeters
         if isAtGym, !wasAtGym {
             appStore?.recordGymArrival(source: "location")
-            statusMessage = "ジム到着を記録しました"
+            statusMessage = L10n.string("runtime_messages.2c16bd45e064", fallback: "ジム到着を記録しました")
         } else if !isAtGym, wasAtGym {
             appStore?.recordGymDeparture()
-            statusMessage = "ジム退出を記録しました"
+            statusMessage = L10n.string("runtime_messages.48a731fa2573", fallback: "ジム退出を記録しました")
         }
     }
 
@@ -168,7 +168,7 @@ extension GymLocationManager: CLLocationManagerDelegate {
             if status == .denied || status == .restricted {
                 isPendingGymRegistration = false
                 isLocating = false
-                statusMessage = "位置情報は許可されていません。手動チェックインは使えます"
+                statusMessage = L10n.string("runtime_messages.f6a2b99e1e89", fallback: "位置情報は許可されていません。手動チェックインは使えます")
             }
         }
     }
@@ -190,7 +190,7 @@ extension GymLocationManager: CLLocationManagerDelegate {
     nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         Task { @MainActor [weak self] in
             self?.isLocating = false
-            self?.statusMessage = "現在地を取得できませんでした"
+            self?.statusMessage = L10n.string("runtime_messages.fc3831a386a6", fallback: "現在地を取得できませんでした")
             NSLog("Gym location failed: \(error.localizedDescription)")
         }
     }
@@ -200,7 +200,7 @@ extension GymLocationManager: CLLocationManagerDelegate {
         Task { @MainActor [weak self] in
             self?.appStore?.recordGymArrival(source: "region")
             self?.isAtGym = true
-            self?.statusMessage = "ジム到着を記録しました"
+            self?.statusMessage = L10n.string("runtime_messages.2c16bd45e064", fallback: "ジム到着を記録しました")
         }
     }
 
@@ -209,7 +209,7 @@ extension GymLocationManager: CLLocationManagerDelegate {
         Task { @MainActor [weak self] in
             self?.appStore?.recordGymDeparture()
             self?.isAtGym = false
-            self?.statusMessage = "ジム退出を記録しました"
+            self?.statusMessage = L10n.string("runtime_messages.48a731fa2573", fallback: "ジム退出を記録しました")
         }
     }
 }

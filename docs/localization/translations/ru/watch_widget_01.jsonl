@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"ru","translation":"Записываю значение: {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"ru","translation":"Не поддерживается: {{value1}}. Возможно ручной ввод","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"ru","translation":"Количество колебаний в секунду","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"ru","translation":"Сохранено в Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"ru","translation":"Инструкции по использованию Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"ru","translation":"Тренажерный зал: Следующая тренировка","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"ru","translation":"Запись без разрешения и ручной ввод","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"ru","translation":"Невозможно использовать Health, поэтому данные вводятся вручную.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"ru","translation":"Не удалось запустить Health, поэтому данные вводятся вручную.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"ru","translation":"Временная приостановка тренировки в Health.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"ru","translation":"Обработка сохранения данных в Health.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"ru","translation":"Ошибка при сохранении данных в Health, запись с Watch уже сохранена.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"ru","translation":"Данные не сохранены, запись с Watch уже сохранена.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"ru","translation":"Невозможно восстановить данные измерений в Health. Вы можете продолжать ввод вручную.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"ru","translation":"Данные измерений восстановлены. Ввод данных продолжается.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"ru","translation":"Тренировка в Health приостановлена, ввод данных продолжается.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"ru","translation":"Отключена синхронизация с Health, данные вводятся вручную.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"ru","translation":"Уровень нагрузки отсутствует.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"ru","translation":"Записи тренировок на Watch будут удалены.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"ru","translation":"Данные тренировки сохранены на Watch.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"ru","translation":"Синхронизируйте меню из iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"ru","translation":"Выберите и начните выполнение сегодняшнего меню, которое пришло с iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"ru","translation":"Проверьте сегодняшнее меню на iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"ru","translation":"Успешно подключено к iPhone.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"ru","translation":"Синхронизируйте содержимое iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"ru","translation":"Не удалось создать данные для отправки на iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"ru","translation":"Невозможно отправить данные. Сохраните их и повторите попытку.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"ru","translation":"Не удалось сохранить на iPhone. Буду отправлять позже.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"ru","translation":"Подготовка к синхронизации с iPhone. Буду отправлять позже.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"ru","translation":"{{value1}} × {{value2}} раз × {{value3}} комплексов","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"ru","translation":"Вы можете отправить {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"ru","translation":"Забронировано отправление {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"ru","translation":"Отправлено {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"ru","translation":"Отправка {{value1}} на iPhone...","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"ru","translation":"Сохранено в истории {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"ru","translation":"Переслать {{value1}}","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"ru","translation":"Можно возобновить {{value1}}","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"ru","translation":"Выбрано: {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"ru","translation":"Начато: {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"ru","translation":"{{value1}}/{{value2}} комплексов, {{value3}} раз записано","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"ru","translation":"{{value1}} комплексов.","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"ru","translation":"{{value1}} комплексов. Цель: {{value2}} раз","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"ru","translation":"{{value1}} и {{value2}} комплексов, всего {{value3}} раз","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"ru","translation":"{{value1}} и {{value2}} комплексов","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"ru","translation":"Выбрать из {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"ru","translation":"Синхронизировано {{value1}} пунктов меню","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"ru","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"ru","translation":"{{value1}} раз/секунду","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"ru","translation":"{{value1}} раз и…","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"ru","translation":"{{value1}} секунд","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"ru","translation":"{{value1}} упражнений • {{value2}} подходов • всего {{value3}} раз","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"ru","translation":"С этим устройством невозможно использовать интеграцию с iPhone. Записи сохраняются на устройстве.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"ru","translation":"С этим устройством невозможно использовать интеграцию.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"ru","translation":"Пропустить","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"ru","translation":"Подход","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"ru","translation":"Подход {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"ru","translation":"Завершить подход","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"ru","translation":"Начать подход","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"ru","translation":"Среднее значение {{value1}} ударов в минуту","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"ru","translation":"Подход не настроен","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"ru","translation":"Начать подход","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"ru","translation":"Отменить начало подхода","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"ru","translation":"Датчик измеряет","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"ru","translation":"Невозможно подготовить параметры датчика, поэтому данные вводятся вручную.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"ru","translation":"Пропустить инструкцию","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"ru","translation":"Темп","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"ru","translation":"Установить темп","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"ru","translation":"Установить темп","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"ru","translation":"Приостановить показ темпа","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"ru","translation":"Возобновить показ темпа","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"ru","translation":"Жим лежа","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"ru","translation":"Меню","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"ru","translation":"Выбрать меню","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"ru","translation":"Не удалось загрузить данные меню","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"ru","translation":"Изменить меню","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"ru","translation":"Ожидание меню","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"ru","translation":"Заметки","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"ru","translation":"Редактировать заметки","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"ru","translation":"Движение","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"ru","translation":"Тяга вниз","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"ru","translation":"Тренировка","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"ru","translation":"Завершить тренировку?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"ru","translation":"Отмена тренировки","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"ru","translation":"Приостановить","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"ru","translation":"Приостановить на {{value1}} секунд / Продолжить на {{value2}} секунд","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"ru","translation":"В режиме ожидания","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"ru","translation":"Вверх","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"ru","translation":"{{value1}} подъемов・{{value2}} опусканий・{{value3}} раз/секунду","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"ru","translation":"Подъем","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"ru","translation":"Подъем на {{value1}} секунд, опускание на {{value2}} секунд","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"ru","translation":"Подъем {{value1}} секунд / опускание {{value2}} секунд","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"ru","translation":"Установка времени подъема и опускания для каждой серии. Apple Watch сообщает об этом 1-3 раза в секунду.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"ru","translation":"Время подъема","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"ru","translation":"Ввод времени подъема вручную","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"ru","translation":"Опускание","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"ru","translation":"Опускание","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"ru","translation":"Время опускания","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"ru","translation":"Ввод времени опускания вручную","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"ru","translation":"Сегодня","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"ru","translation":"Меню на сегодня","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"ru","translation":"Меню на сегодня: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"ru","translation":"Выберите меню на сегодня","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"ru","translation":"Отдых {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"ru","translation":"Отдых {{value1}} секунд","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"ru","translation":"Сделать перерыв","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"ru","translation":"Пропустить перерыв","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"ru","translation":"Время отдыха","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"ru","translation":"Завершено.","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"ru","translation":"На основе вашего уровня и интенсивности тренировок, предлагаем увеличить нагрузку на 2,5%.","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"ru","translation":"Начать использование","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"ru","translation":"Инструкция: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"ru","translation":"Сохранить","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"ru","translation":"Уровень доверия: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"ru","translation":"Изменить","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"ru","translation":"Продолжить","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"ru","translation":"Минуты:Секунды","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"ru","translation":"Последнее достижение","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"ru","translation":"Стабильность работы: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"ru","translation":"Варианты работы: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"ru","translation":"Обнаружена остановка работы","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"ru","translation":"Оценка работы: {{value1}} раз","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"ru","translation":"Оценка работы: {{value1}} раз, надежность: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"ru","translation":"Изменение скорости работы: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"ru","translation":"Применить","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"ru","translation":"Отмена","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"ru","translation":"Чтобы избежать дублирования данных в разделе \"Здоровье\", мы использовали записи о тренировках в определенное время.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"ru","translation":"Вы можете выбрать из синхронизированного меню","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"ru","translation":"Цикл","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"ru","translation":"Количество циклов","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"ru","translation":"Установите количество циклов с помощью слайдера","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"ru","translation":"Готово","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"ru","translation":"Отправить в iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"ru","translation":"Отправить","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"ru","translation":"При завершении цикла запускается таймер отдыха. Вы можете выбрать следующий вид активности в другом порядке.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"ru","translation":"Нет завершенных тренировок","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"ru","translation":"Завершить набор","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"ru","translation":"Завершить набор {{value1}} раз","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"ru","translation":"Достижение: {{value1}} × {{value2}} раз","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"ru","translation":"Синхронизировать достижения","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"ru","translation":"Ввод данных о достижении","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"ru","translation":"Изменить RPE для текущего набора","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"ru","translation":"Изменить темп для текущего набора","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"ru","translation":"Изменить количество повторений для текущего набора","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"ru","translation":"Изменить вес для текущего набора","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"ru","translation":"Среднее -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"ru","translation":"Среднее: {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"ru","translation":"Ваш пульс возвращается к норме. Когда вы почувствуете себя хорошо, переходите к следующему циклу","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"ru","translation":"Продолжайте отдыхать, следя за частотой сердечных сокращений.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"ru","translation":"Измеряется частота сердечных сокращений и расход энергии.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"ru","translation":"Ввод вручную","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"ru","translation":"Можно записать вручную.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"ru","translation":"Запись ведётся вручную.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"ru","translation":"Оценка на основе движения запястья и порядка незавершенных упражнений.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"ru","translation":"Количество вибрирований (1-3 раза/секунду)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"ru","translation":"Скорость вибрации","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"ru","translation":"Ошибка подключения: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"ru","translation":"Учитывается {{value1}} раз (предположительно)","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"ru","translation":"Применение предложений","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"ru","translation":"Изменить время","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"ru","translation":"Максимальное -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"ru","translation":"Максимум {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"ru","translation":"После завершения отправляется на iPhone. Неотправленные записи можно отправить позже.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"ru","translation":"Сохраняются текущие данные, включая незавершенные упражнения.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"ru","translation":"Не отправлено","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"ru","translation":"Нет записей с часов, которые еще не отправлены.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"ru","translation":"Не начато","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"ru","translation":"Следующее: {{value1}} {{value2}} × {{value3}} раз","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"ru","translation":"Начать следующий набор","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"ru","translation":"Немедленно вернуться к следующему тренировке.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"ru","translation":"Следующее упражнение","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"ru","translation":"Далее","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"ru","translation":"Пропустить текущее действие","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"ru","translation":"Цель: {{value1}} × {{value2}} раз","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"ru","translation":"Завершить цель, темп","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"ru","translation":"Предложить уменьшить на 5% (достижение цели, RPE, снижение скорости)","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"ru","translation":"Относительный диапазон движений: {{value1}}%, согласованность: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"ru","translation":"Экономичный сбор данных (остаток заряда батареи)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"ru","translation":"Экономичный сбор данных (режим низкого энергопотребления)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"ru","translation":"Настройка экономичного сбора данных","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"ru","translation":"Удалить","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"ru","translation":"Секунды","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"ru","translation":"Выберите упражнение и набор для начала. Если допустили ошибку, можно вернуться к незавершенному выполнению, нажав \"Отмена\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"ru","translation":"Варианты упражнений: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"ru","translation":"Завершить и синхронизировать","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"ru","translation":"Продолжить","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"ru","translation":"Спина","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"ru","translation":"День для спины","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"ru","translation":"Грудная клетка","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"ru","translation":"День для груди","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"ru","translation":"Удалить записи?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"ru","translation":"Запись ведется","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"ru","translation":"Нет тренировок в текущей записи","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"ru","translation":"Обычное сэмплирование","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"ru","translation":"Быстро","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"ru","translation":"Предложить одинаковый вес на основе достижения, RPE и скорости выполнения","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"ru","translation":"Другое","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"ru","translation":"Переключиться на другой набор","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"ru","translation":"Вес","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"ru","translation":"Установить вес с помощью ленты","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"ru","translation":"Вес, количество повторений, RPE и время отдыха можно изменить до начала тренировки.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"ru","translation":"Начать","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"ru","translation":"Указать темп перед началом","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"ru","translation":"Не поддерживается: {{value1}}. Возможно ручное ввод","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"ru","translation":"Голосовой/текстовый комментарий","review_note":""}

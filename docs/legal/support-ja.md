@@ -11,5 +11,4 @@ BodyModeの不具合やTestFlight版への意見は、TestFlightアプリの「�
 - BodyModeのバージョンとビルド番号
 - 設定画面から書き出した診断ログ
 
-正式公開前に、公開サポートURLと問い合わせ用メールアドレスをこのページへ追加します。
-
+正式公開版の問い合わせや不具合報告は、https://github.com/YukitoshiM/gym-training-app/issues/new から受け付けます。健康情報、写真、APIキー、氏名、住所などの個人情報は公開Issueへ記載しないでください。診断ログを共有する必要がある場合は、まずIssueへ概要だけを投稿してください。

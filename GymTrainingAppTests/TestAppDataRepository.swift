@@ -25,6 +25,11 @@ final class TestAppDataRepository: AppDataRepository {
     var recommendationRevisions: [RecommendationRevision] = []
     var dailyReviews: [DailyReview] = []
     var targetAdjustmentProposals: [TargetAdjustmentProposal] = []
+    var planRevisionProposals: [PlanRevisionProposal] = []
+    var activeWorkoutSession: ActiveWorkoutSession?
+    var deletedRecords: [DeletedRecord] = []
+    var dataImportReceipts: [DataImportReceipt] = []
+    var dataImportUndoSnapshot: DataImportUndoSnapshot?
 
     func loadUserProfile() -> UserProfile { userProfile }
     func saveUserProfile(_ profile: UserProfile) { userProfile = profile }
@@ -72,6 +77,16 @@ final class TestAppDataRepository: AppDataRepository {
     func saveDailyReviews(_ reviews: [DailyReview]) { dailyReviews = reviews }
     func loadTargetAdjustmentProposals() -> [TargetAdjustmentProposal] { targetAdjustmentProposals }
     func saveTargetAdjustmentProposals(_ proposals: [TargetAdjustmentProposal]) { targetAdjustmentProposals = proposals }
+    func loadPlanRevisionProposals() -> [PlanRevisionProposal] { planRevisionProposals }
+    func savePlanRevisionProposals(_ proposals: [PlanRevisionProposal]) { planRevisionProposals = proposals }
+    func loadActiveWorkoutSession() -> ActiveWorkoutSession? { activeWorkoutSession }
+    func saveActiveWorkoutSession(_ session: ActiveWorkoutSession?) { activeWorkoutSession = session }
+    func loadDeletedRecords() -> [DeletedRecord] { deletedRecords }
+    func saveDeletedRecords(_ records: [DeletedRecord]) { deletedRecords = records }
+    func loadDataImportReceipts() -> [DataImportReceipt] { dataImportReceipts }
+    func saveDataImportReceipts(_ receipts: [DataImportReceipt]) { dataImportReceipts = receipts }
+    func loadDataImportUndoSnapshot() -> DataImportUndoSnapshot? { dataImportUndoSnapshot }
+    func saveDataImportUndoSnapshot(_ snapshot: DataImportUndoSnapshot?) { dataImportUndoSnapshot = snapshot }
 
     func reset() {
         userProfile = .default
@@ -87,5 +102,10 @@ final class TestAppDataRepository: AppDataRepository {
         recommendationRevisions = []
         dailyReviews = []
         targetAdjustmentProposals = []
+        planRevisionProposals = []
+        activeWorkoutSession = nil
+        deletedRecords = []
+        dataImportReceipts = []
+        dataImportUndoSnapshot = nil
     }
 }

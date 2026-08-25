@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"es-ES","translation":"Se restablecerá a {{value1}}. Puede seguir utilizando el registro manual.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"es-ES","translation":"{{value1}}・{{value2}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"es-ES","translation":"Introduzca un valor mayor que 0.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"es-ES","translation":"1. Mantener 3 entrenamientos por semana\n2. Registrar la cantidad de proteína objetivo\n3. Comparar fotos del cuerpo al final del mes","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"es-ES","translation":"Por favor, espere unos minutos y vuelva a intentarlo.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"es-ES","translation":"1 taza","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"es-ES","translation":"No hay candidatos claros para detenerse en los ejercicios que se han registrado más de 3 veces.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"es-ES","translation":"Número elevado de sesiones de entrenamiento en 48 horas.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"es-ES","translation":"Equilibrio corporal basado en IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"es-ES","translation":"Registros consultados por la IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"es-ES","translation":"El uso de la IA está experimentando un pico temporal.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"es-ES","translation":"La información de autenticación de la IA es incorrecta o ha caducado.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"es-ES","translation":"Error de la IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"es-ES","translation":"Entrenador con IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"es-ES","translation":"La URL del servidor de IA es incorrecta.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"es-ES","translation":"El servidor de IA devuelve el siguiente error: {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"es-ES","translation":"No se encuentra la API necesaria para el servidor de IA.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"es-ES","translation":"No se puede conectar al servidor de IA. Por favor, inténtelo más tarde.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"es-ES","translation":"El formato JSON del servidor de IA no coincide con lo que espera la aplicación.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"es-ES","translation":"No se pudo leer la respuesta del servidor de IA.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"es-ES","translation":"Se ha producido un error en el lado del servidor de IA: {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"es-ES","translation":"Verificar conexión al servidor de IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"es-ES","translation":"Entrenador de IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"es-ES","translation":"¿Desea eliminar la conversación con el entrenador de IA?","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"es-ES","translation":"El modelo de IA no está disponible o falló el análisis de imágenes.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"es-ES","translation":"Preparando el modelo de IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"es-ES","translation":"Análisis de IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"es-ES","translation":"Hay espacio disponible en la sección de uso de IA.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"es-ES","translation":"Verificar el espacio disponible para el uso de IA.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"es-ES","translation":"La función de IA está desactivada.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"es-ES","translation":"Valores de referencia de IA: revisar.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"es-ES","translation":"La conexión con la IA está activada.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"es-ES","translation":"No se pudo guardar la información de conexión con la IA de forma segura.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"es-ES","translation":"Funciones de IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"es-ES","translation":"La función de IA está desactivada en la configuración.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"es-ES","translation":"La función de IA está desactivada en la configuración. Puedes guardar este conjunto de fotos tal cual.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"es-ES","translation":"La función de IA está desactivada en la configuración. Puedes guardar la entrada manual tal cual.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"es-ES","translation":"Historial de envío a IA","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"es-ES","translation":"La clave API no está configurada.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"es-ES","translation":"Verifica la versión del servidor de API. Detalles: {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"es-ES","translation":"El servidor de API responde, pero no puede utilizar el modelo necesario.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"es-ES","translation":"El servidor de API responde, pero no puede utilizar los modelos para recetas o informes.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"es-ES","translation":"Conectar con Apple Health","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"es-ES","translation":"Se están mostrando las últimas rutas de carrera guardadas en Apple Health.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"es-ES","translation":"Conectar con Apple Health","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"es-ES","translation":"Usar un reloj Apple y llevarlo durante el sueño ayuda a obtener más indicadores de recuperación. No se completan los campos sin valor con estimaciones.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"es-ES","translation":"Verifica la URL base y la versión del servidor de API.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"es-ES","translation":"HRV inferior a la media de los últimos 14 días","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"es-ES","translation":"No hay datos continuos de HRV.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"es-ES","translation":"HRV superior a la media.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"es-ES","translation":"HRV dentro del rango normal.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"es-ES","translation":"Promedio de HRV: {{value1}}% (comparado con el valor personal).","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"es-ES","translation":"HTTP solo disponible para localhost, red local y Tailscale. Para servidores externos, use HTTPS.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"es-ES","translation":"El consumo de energía en \"Salud\" no está registrado. Solo se ha guardado el registro de comidas.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"es-ES","translation":"Actualizar datos de \"Salud\".","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"es-ES","translation":"Seleccione una imagen JPEG o PNG diferente.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"es-ES","translation":"Registrar KPI.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"es-ES","translation":"Último valor registrado por la aplicación de ruido, etc. Si no hay valor, se establece en 0.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"es-ES","translation":"Calcular automáticamente las calorías a partir de PFC.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"es-ES","translation":"Alcanzado el objetivo de PFC.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"es-ES","translation":"Reducir el nivel de RPE en una escala.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"es-ES","translation":"La URL debe comenzar con \"https://\". Para el desarrollo local, también es posible usar HTTP para localhost, IP de red y Tailscale.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"es-ES","translation":"La URL debe comenzar con \"https://\". Solo se puede utilizar HTTP para el desarrollo local.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"es-ES","translation":"Con sensor de frecuencia cardíaca.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"es-ES","translation":"bpm / 30 segundos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"es-ES","translation":"Alcanzado el objetivo de kcal/PFC.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"es-ES","translation":"Alcanzado el objetivo de kcal.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"es-ES","translation":"kg / minuto","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"es-ES","translation":"{\"id\":\"{{value1}}\",\"categoría\":\"{{value2}}\",\"título\":\"{{value3}}\",\"objetivo\":0,\"razón\":\"He revisado tus registros y objetivos\"}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"es-ES","translation":"{\"mantener_existente\":true,\"nivel_de_preparación\":\"normal\",\"resumen\":\"Continuemos con la sugerencia de hoy.\",\"razón_del_cambio\":\"\",\"acciones\":[{\"{{value1}}}]}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"es-ES","translation":"{{value1}} / {{value2}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"es-ES","translation":"{{value1}} / {{value2}} horas","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"es-ES","translation":"{{value1}} / {{value2}} pasos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"es-ES","translation":"{{value1}} / {{value2}} comidas","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"es-ES","translation":"{{value1}} {{value2}} ({{value3}}: {{value4}})","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"es-ES","translation":"{{value1}} y con el modelo de apoyo, se pueden generar comentarios semanales.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"es-ES","translation":"{{value1}}/{{value2}} veces","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"es-ES","translation":"{{value1}}: {{value2}} Porcentaje de logro {{value3}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"es-ES","translation":"{{value1}} revisa todo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"es-ES","translation":"{{value1}} está considerando la respuesta.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"es-ES","translation":"{{value1}} revisa la comida y el PFC.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"es-ES","translation":"{{value1}} verifica múltiples opciones.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"es-ES","translation":"{{value1}}: cosas que recuerda.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"es-ES","translation":"{{value1}}: crea y consulta para modificar.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"es-ES","translation":"Consulta a {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"es-ES","translation":"Informe de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"es-ES","translation":"Aún no hay informe de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"es-ES","translation":"Borrador de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"es-ES","translation":"Borrador de {{value1}} y {{value2}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"es-ES","translation":"Análisis de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"es-ES","translation":"Resultados del análisis de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"es-ES","translation":"Información de referencia para {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"es-ES","translation":"Revisión de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"es-ES","translation":"Después de la sugerencia de {{value1}}, solo se muestran los contenidos que ha aprobado.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"es-ES","translation":"Revisión mensual de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"es-ES","translation":"Memoria de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"es-ES","translation":"Selecciona {{value1}} de la biblioteca.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"es-ES","translation":"Elimina {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"es-ES","translation":"Toma una foto de {{value1}}.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"es-ES","translation":"Editar {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"es-ES","translation":"Registrar {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"es-ES","translation":"Ajustar {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"es-ES","translation":"La estabilidad promedio del conjunto {{value1}} es del {{value2}}%.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"es-ES","translation":"{{value1}}・","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"es-ES","translation":"{{value1}}・{{value2}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"es-ES","translation":"{{value1}}・Chat","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"es-ES","translation":"{{value1}}・Propuesta de revisión mensual","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"es-ES","translation":"{{value1}}・Corregir {{value2}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"es-ES","translation":"{{value1}}・Informe semanal","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"es-ES","translation":"{{value1}} unidades・{{value2}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"es-ES","translation":"{{value1}}Intente de nuevo. Puede seguir utilizando la grabación manual.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"es-ES","translation":"{{value1}} Intente de nuevo. Si continúa, verifique que el servidor de IA esté en funcionamiento.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"es-ES","translation":"Eliminar {{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"es-ES","translation":"{{value1}} minutos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"es-ES","translation":"{{value1}} veces","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"es-ES","translation":"{{value1}} veces・Tasa promedio de logro {{value2}}%","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"es-ES","translation":"Analiza en conjunto las fotos en la dirección {{value1}}. No podemos afirmar valores como el porcentaje de grasa corporal.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"es-ES","translation":"{{value1}} fotos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"es-ES","translation":"Un conjunto de {{value1}} fotos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"es-ES","translation":"{{value1}} pasos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"es-ES","translation":"\"-\" indica que no se ha medido, por lo que se excluye del total. \"Tr\" representa una cantidad mínima y se estima en 0.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"es-ES","translation":"Además, {{value1}} g","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"es-ES","translation":"Analizaremos juntos tus registros.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"es-ES","translation":"Bastante activo/a","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"es-ES","translation":"Bastante cansado/a","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"es-ES","translation":"Podemos analizar esto. Añadiendo también vistas laterales o frontales, podemos obtener información desde diferentes ángulos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"es-ES","translation":"Analizar este conjunto de datos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"es-ES","translation":"Te propondré algo basándome en esta información.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"es-ES","translation":"Eliminar todo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"es-ES","translation":"Proteínas","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"es-ES","translation":"Reflejaré lo que has logrado en las sugerencias para mañana.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"es-ES","translation":"Otros {{value1}} elementos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"es-ES","translation":"Todavía no hay datos de entrenamiento.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"es-ES","translation":"Aún no tienes ningún registro.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"es-ES","translation":"Reestimar","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"es-ES","translation":"Cintura","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"es-ES","translation":"Leer mediante la cámara","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"es-ES","translation":"No se puede utilizar la cámara","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"es-ES","translation":"La lectura de la cámara no está disponible","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"es-ES","translation":"Calorías","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"es-ES","translation":"Estimando calorías...","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"es-ES","translation":"Cancelar","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"es-ES","translation":"Estado","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"es-ES","translation":"Verifique que la URL del servidor, la clave de API y el estado del servidor API sean correctos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"es-ES","translation":"Visita al gimnasio","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"es-ES","translation":"Soporte","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"es-ES","translation":"Serie","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"es-ES","translation":"Analizando la serie...","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"es-ES","translation":"Calidad de la serie","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"es-ES","translation":"Desglose de la calidad del conjunto","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"es-ES","translation":"Proteínas {{value1}} g","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"es-ES","translation":"Press de pecho","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"es-ES","translation":"Este es un valor estimado para pruebas.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"es-ES","translation":"Ritmo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"es-ES","translation":"Una vez que se recopile los datos, podrá ver su sueño, recuperación y actividad física de forma conjunta.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"es-ES","translation":"Calidad de los datos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"es-ES","translation":"Consulta con el entrenador","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"es-ES","translation":"Entrenamiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"es-ES","translation":"Análisis del entrenamiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"es-ES","translation":"Historial de entrenamientos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"es-ES","translation":"Plan de entrenamiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"es-ES","translation":"Intensidad del entrenamiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"es-ES","translation":"Verifique que la conexión a la red y al servidor de IA estén activas. El procesamiento de IA puede tardar hasta 240 segundos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"es-ES","translation":"Verifique el estado de la red y la URL del servidor antes de intentar nuevamente.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"es-ES","translation":"Verifique el estado de la red y la URL del servidor.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"es-ES","translation":"Código de barras","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"es-ES","translation":"Volumen","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"es-ES","translation":"El volumen se calcula como peso × número de repeticiones para cada serie. Evite comparaciones directas en semanas con diferentes combinaciones de ejercicios.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"es-ES","translation":"Movimiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"es-ES","translation":"Mensaje","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"es-ES","translation":"Menú","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"es-ES","translation":"Comience creando un menú","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"es-ES","translation":"Notas","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"es-ES","translation":"Biblioteca","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"es-ES","translation":"Remolque","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"es-ES","translation":"Cantidad objetivo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"es-ES","translation":"Estime las calorías a partir de la lista","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"es-ES","translation":"Intente nuevamente después de restablecer. La grabación manual sigue disponible.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"es-ES","translation":"Si se encuentra una carrera al aire libre con distancia, velocidad y diferencia de elevación, se mostrarán estos datos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"es-ES","translation":"Press de piernas","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"es-ES","translation":"・","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"es-ES","translation":"・{{value1}}","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"es-ES","translation":"Número de pisos ascendidos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"es-ES","translation":"Despertar repentino","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"es-ES","translation":"KPI principales","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"es-ES","translation":"Fatiga subjetiva elevada","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"es-ES","translation":"Fatiga subjetiva baja","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"es-ES","translation":"Fatiga subjetiva dentro del rango normal","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"es-ES","translation":"Por favor, seleccione solo los contenidos que puedan utilizarse en futuras sugerencias.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"es-ES","translation":"Para ayudar en las futuras sugerencias de peso","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"es-ES","translation":"Los 3 para hoy están definidos","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"es-ES","translation":"Actividad de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"es-ES","translation":"Balance energético de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"es-ES","translation":"Series de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"es-ES","translation":"Fatiga subjetiva de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"es-ES","translation":"Sugerencia de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"es-ES","translation":"Editar el conjunto de fotos de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"es-ES","translation":"Añadir un nuevo conjunto de fotos de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"es-ES","translation":"Volumen de actividad elevado","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"es-ES","translation":"Refleja tu actividad de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"es-ES","translation":"Nivel de preparación para hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"es-ES","translation":"Acciones realizadas hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"es-ES","translation":"Verifica tu progreso hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"es-ES","translation":"Comidas de hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"es-ES","translation":"Opciones de comidas para hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"es-ES","translation":"Objetivos de alimentación para hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.975710015482","target_locale":"es-ES","translation":"Prioriza la recuperación hoy","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"es-ES","translation":"Hoy, priorizamos una actividad moderada y descansos entre entrenamientos de fuerza.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"es-ES","translation":"Hoy, reducimos la intensidad.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"es-ES","translation":"Hoy, puedes elegir reducir el peso y las series para priorizar la recuperación.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"es-ES","translation":"Revisa lo que tienes planeado para hoy.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"es-ES","translation":"Esta semana","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"es-ES","translation":"{{value1}} veces esta semana / {{value2}} metros actualmente","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"es-ES","translation":"{{value1}} veces esta semana / {{value2}} veces en total","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"es-ES","translation":"Conclusión de esta semana","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"es-ES","translation":"Opcional","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"es-ES","translation":"Conversación","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"es-ES","translation":"Eliminar conversación","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"es-ES","translation":"La historia de conversaciones no se elimina.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"es-ES","translation":"Son valores de referencia estimados. No los guarde en sus registros o gráficos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"es-ES","translation":"Fotos del cuerpo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"es-ES","translation":"IA para fotos del cuerpo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"es-ES","translation":"El intercambio de fotos del cuerpo está desactivado en la configuración.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"es-ES","translation":"Aún no tiene fotos del cuerpo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"es-ES","translation":"Tomar una foto del cuerpo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"es-ES","translation":"Análisis de conjunto de fotos del cuerpo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"es-ES","translation":"Verificación de fotos del cuerpo","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"es-ES","translation":"Si tiene alguna molestia o dolor, priorice su propio criterio sobre los valores.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"es-ES","translation":"Siga avanzando según lo planeado, teniendo en cuenta su estado físico.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"es-ES","translation":"Peso","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"es-ES","translation":"Los valores que varían diariamente, como el peso y la circunferencia de la cintura, deben ser observados a través de gráficos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"es-ES","translation":"Registrar el peso","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"es-ES","translation":"Propuestas basadas en los equipos disponibles","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"es-ES","translation":"Ejemplo: Arroz blanco 150g","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"es-ES","translation":"Guardar","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"es-ES","translation":"Revisión mensual guardada","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"es-ES","translation":"Memoria guardada","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"es-ES","translation":"No tengo ninguna memoria guardada","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"es-ES","translation":"La memoria guardada no se elimina.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"es-ES","translation":"¿Desea eliminar toda la información guardada?","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"es-ES","translation":"No guardar","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"es-ES","translation":"No se pudo guardar","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"es-ES","translation":"Nivel de confianza","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"es-ES","translation":"Valor","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"es-ES","translation":"Al agregar un valor, aquí se mostrará la transición.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"es-ES","translation":"Verificación de estancamiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"es-ES","translation":"Para verificar si hay estancamiento, compare el número de repeticiones después de haber reducido ligeramente el peso o extendido el descanso en 15-30 segundos.","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"es-ES","translation":"Materiales para identificar factores de estancamiento","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"es-ES","translation":"Energía","review_note":"Regional draft based on es-MX; regional review required."}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"es-ES","translation":"Datos introducidos","review_note":"Regional draft based on es-MX; regional review required."}

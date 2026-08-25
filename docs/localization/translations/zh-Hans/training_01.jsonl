@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"zh-Hans","translation":"0次","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"zh-Hans","translation":"1次动作","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"zh-Hans","translation":"每种动作2组，请调整到合适的重量并保存。","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"zh-Hans","translation":"未能读取AI计划。请重新创建。","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"zh-Hans","translation":"AI教练计划","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"zh-Hans","translation":"已保存到Apple Health","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"zh-Hans","translation":"从Apple Watch同步","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"zh-Hans","translation":"Apple Watch将通过每秒1-3次的触觉提示您进行抬升和下降。","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"zh-Hans","translation":"由于Apple Watch离您较远，因此已为您预约下次启动时收到。","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"zh-Hans","translation":"无法使用Apple Watch操作","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"zh-Hans","translation":"无法将Apple Watch的记录保存到iPhone上","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"zh-Hans","translation":"Apple Watch尚未准备好保存记录","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"zh-Hans","translation":"未能读取Apple Watch的记录","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"zh-Hans","translation":"可以同步Apple Watch菜单","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"zh-Hans","translation":"今天已发送到Apple Watch的内容","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"zh-Hans","translation":"无法将操作发送给Apple Watch","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"zh-Hans","translation":"无法创建发送给Apple Watch的操作数据","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"zh-Hans","translation":"请先打开Apple Watch，然后再进行操作","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"zh-Hans","translation":"请在Apple Watch侧安装BodyMode","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"zh-Hans","translation":"Apple Watch连接已暂停","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"zh-Hans","translation":"Apple Watch连接未准备好","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"zh-Hans","translation":"Apple Watch连接失败: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"zh-Hans","translation":"正在准备Apple Watch连接。稍后请再次发送","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"zh-Hans","translation":"无法确认Apple Watch连接状态","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"zh-Hans","translation":"未能创建Apple Watch的菜单数据","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"zh-Hans","translation":"Apple Watch测量","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"zh-Hans","translation":"健康保存失败，应用历史已保存","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"zh-Hans","translation":"无健康保存信息","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"zh-Hans","translation":"正在检查健康保存状态","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"zh-Hans","translation":"未授权，仅保存应用历史","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"zh-Hans","translation":"LEVEL 1・全身初级","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"zh-Hans","translation":"TRX","review_note":""}
+{"id":"training.148b91e44188","target_locale":"zh-Hans","translation":"使用手表记录中","review_note":""}
+{"id":"training.3e098891145f","target_locale":"zh-Hans","translation":"完成手表的训练吗？","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"zh-Hans","translation":"已停止记录","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"zh-Hans","translation":"是否要删除 Watch 的记录？","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"zh-Hans","translation":"Watch 传感器分析","review_note":""}
+{"id":"training.e9af98302821","target_locale":"zh-Hans","translation":"Watch 实时监测","review_note":""}
+{"id":"training.22db347214b9","target_locale":"zh-Hans","translation":"{{value1}} / {{value2}}次","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"zh-Hans","translation":"{{value1}} {{value2}} × {{value3}}次","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"zh-Hans","translation":"{{value1}} {{value2}} → {{value3}}（{{value4}}个）","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"zh-Hans","translation":"{{value1}} 已保存到iPhone历史记录中","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"zh-Hans","translation":"已将{{value1}}从Apple Watch保存到历史记录中","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"zh-Hans","translation":"{{value1}} 提升{{value2}}秒 / 降低{{value3}}秒・{{value4}}次/秒{{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"zh-Hans","translation":"{{value1}}/{{value2}}组 {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"zh-Hans","translation":"完成 {{value1}} / {{value2}} 套","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"zh-Hans","translation":"{{value1}}: {{value2}}组，{{value3}}公斤，{{value4}}次，休息{{value5}}秒","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"zh-Hans","translation":"{{value1}} {{value2}} 件","review_note":""}
+{"id":"training.4547089161d9","target_locale":"zh-Hans","translation":"{{value1}}，未记录","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"zh-Hans","translation":"{{value1}}，创建计划","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"zh-Hans","translation":"{{value1}}，创建计划","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"zh-Hans","translation":"请 {{value1}} 帮我创建","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"zh-Hans","translation":"请 {{value1}} 咨询修改","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"zh-Hans","translation":"请 {{value1}} 咨询","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"zh-Hans","translation":"请参考 {{value1}} 的示例图片。主要锻炼部位为 {{value2}} 和 {{value3}}，共进行 {{value4}} 项动作。","review_note":""}
+{"id":"training.859660768503","target_locale":"zh-Hans","translation":"{{value1}} 草稿","review_note":""}
+{"id":"training.7544024a8347","target_locale":"zh-Hans","translation":"已更新 {{value1}} 的目标体重","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"zh-Hans","translation":"更新 {{value1}} 的目标体重。\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"zh-Hans","translation":"{{value1}} 组","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"zh-Hans","translation":"{{value1}}套 × {{value2}}次・{{value3}}分钟kg・休息{{value4}}秒","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"zh-Hans","translation":"{{value1}}套、{{value2}}次","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"zh-Hans","translation":"{{value1}}•{{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"zh-Hans","translation":"{{value1}}•计划 {{value2}}/{{value3}}组 • 完成率 {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"zh-Hans","translation":"{{value1}}• 创建计划","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"zh-Hans","translation":"{{value1}}个","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"zh-Hans","translation":"{{value1}}个菜谱已同步到Apple Watch","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"zh-Hans","translation":"{{value1}}分钟","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"zh-Hans","translation":"{{value1}}分钟{{value2}}秒","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"zh-Hans","translation":"{{value1}}次","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"zh-Hans","translation":"{{value1}}次/秒","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"zh-Hans","translation":"{{value1}}小时{{value2}}分钟","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"zh-Hans","translation":"{{value1}}张（{{value2}}）","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"zh-Hans","translation":"{{value1}}秒","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"zh-Hans","translation":"{{value1}}项目","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"zh-Hans","translation":"{{value1}}项目•{{value2}}组•{{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"zh-Hans","translation":"{{value1}}种","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"zh-Hans","translation":"从这个菜单开始","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"zh-Hans","translation":"保存此菜单","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"zh-Hans","translation":"您想删除此记录吗？","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"zh-Hans","translation":"今天没有安排训练。","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"zh-Hans","translation":"此项活动已取消。","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"zh-Hans","translation":"此设备不支持使用 Apple Watch 联动功能。","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"zh-Hans","translation":"如何修改这个计划？","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"zh-Hans","translation":"是否要删除这个计划？","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"zh-Hans","translation":"全部","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"zh-Hans","translation":"所有记录","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"zh-Hans","translation":"无","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"zh-Hans","translation":"操作方式","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"zh-Hans","translation":"仅保存应用历史","review_note":""}
+{"id":"training.39029011b26a","target_locale":"zh-Hans","translation":"倾斜哑铃卧推","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"zh-Hans","translation":"错误","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"zh-Hans","translation":"自定义动作","review_note":""}
+{"id":"training.42254297b975","target_locale":"zh-Hans","translation":"添加自定义动作","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"zh-Hans","translation":"取消","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"zh-Hans","translation":"快速创建","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"zh-Hans","translation":"卷腹","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"zh-Hans","translation":"臀桥","review_note":""}
+{"id":"training.1792e5824127","target_locale":"zh-Hans","translation":"绳索弯举","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"zh-Hans","translation":"绳索后拉","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"zh-Hans","translation":"绳索交叉","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"zh-Hans","translation":"复制","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"zh-Hans","translation":"向教练的建议・任意","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"zh-Hans","translation":"goblet 深蹲","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"zh-Hans","translation":"侧平板支撑","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"zh-Hans","translation":"侧抬","review_note":""}
+{"id":"training.5722403a802d","target_locale":"zh-Hans","translation":"子页面","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"zh-Hans","translation":"肩部推举","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"zh-Hans","translation":"坐姿腿后伸","review_note":""}
+{"id":"training.861902f328fe","target_locale":"zh-Hans","translation":"坐姿划船","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"zh-Hans","translation":"健身房","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"zh-Hans","translation":"到达健身房","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"zh-Hans","translation":"拜访健身房","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"zh-Hans","translation":"未记录的健身房拜访","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"zh-Hans","translation":"跳过","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"zh-Hans","translation":"深蹲","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"zh-Hans","translation":"站姿腿后伸","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"zh-Hans","translation":"杠铃深蹲","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"zh-Hans","translation":"组","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"zh-Hans","translation":"完成{{value1}}组","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"zh-Hans","translation":"添加组","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"zh-Hans","translation":"批量设置组","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"zh-Hans","translation":"组记录","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"zh-Hans","translation":"组时间 {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"zh-Hans","translation":"组构成","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"zh-Hans","translation":"组目标在开始锻炼时复制，并保存到历史记录。","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"zh-Hans","translation":"标题","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"zh-Hans","translation":"哑铃弯举","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"zh-Hans","translation":"哑铃卧推","review_note":""}
+{"id":"training.0d799718504b","target_locale":"zh-Hans","translation":"哑铃罗马尼亚硬拉","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"zh-Hans","translation":"胸部推举","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"zh-Hans","translation":"引体向上","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"zh-Hans","translation":"设置节奏","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"zh-Hans","translation":"节奏计划 上升{{value1}}秒・下落{{value2}}秒・{{value3}}次/秒","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"zh-Hans","translation":"死代码","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"zh-Hans","translation":"三头肌推举","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"zh-Hans","translation":"训练","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"zh-Hans","translation":"未记录的训练","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"zh-Hans","translation":"完成训练","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"zh-Hans","translation":"没有训练历史","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"zh-Hans","translation":"训练计划","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"zh-Hans","translation":"锤式弯举","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"zh-Hans","translation":"髋部外展","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"zh-Hans","translation":"臀部推举","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"zh-Hans","translation":"面部拉","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"zh-Hans","translation":"动作和注意事项","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"zh-Hans","translation":"动作参考","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"zh-Hans","translation":"自由训练","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"zh-Hans","translation":"俯卧撑","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"zh-Hans","translation":"平板","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"zh-Hans","translation":"卧推","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"zh-Hans","translation":"未找到配对的Apple Watch","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"zh-Hans","translation":"音量","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"zh-Hans","translation":"器械肩部推","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"zh-Hans","translation":"主","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"zh-Hans","translation":"备注","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"zh-Hans","translation":"用户自定义动作","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"zh-Hans","translation":"拉伸","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"zh-Hans","translation":"弓步","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"zh-Hans","translation":"罗马尼亚硬拉","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"zh-Hans","translation":"腿弯曲","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"zh-Hans","translation":"腿推","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"zh-Hans","translation":"单手哑铃划船","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"zh-Hans","translation":"锻炼","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"zh-Hans","translation":"是否完成锻炼？","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"zh-Hans","translation":"是否要结束锻炼？","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"zh-Hans","translation":"・","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"zh-Hans","translation":"・已更正","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"zh-Hans","translation":"提升","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"zh-Hans","translation":"提升 {{value1}} 秒，降低 {{value2}} 秒，{{value3}} 次/秒","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"zh-Hans","translation":"抬起{{value1}}秒，放下{{value2}}秒，{{value3}}次/秒","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"zh-Hans","translation":"每秒增加","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"zh-Hans","translation":"上下有差异","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"zh-Hans","translation":"上半身","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"zh-Hans","translation":"降低","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"zh-Hans","translation":"降低秒","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"zh-Hans","translation":"下半身","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"zh-Hans","translation":"主要部位","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"zh-Hans","translation":"本次可使用的器械","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"zh-Hans","translation":"已将今日的内容同步到Apple Watch","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"zh-Hans","translation":"正在将今天的记录同步到Apple Watch","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"zh-Hans","translation":"休息 {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"zh-Hans","translation":"身体照片","review_note":""}
+{"id":"training.82865627f395","target_locale":"zh-Hans","translation":"身体照片未记录","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"zh-Hans","translation":"例如：减少一项运动，延长休息时间","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"zh-Hans","translation":"例如：胸部训练","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"zh-Hans","translation":"例如：轻柔地锻炼腿部，重点锻炼胸部。","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"zh-Hans","translation":"保存","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"zh-Hans","translation":"无法保存","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"zh-Hans","translation":"选择中的项目名称","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"zh-Hans","translation":"停止","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"zh-Hans","translation":"已完成输入","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"zh-Hans","translation":"整体达成率","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"zh-Hans","translation":"全身","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"zh-Hans","translation":"全身 / 维持","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"zh-Hans","translation":"全身A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"zh-Hans","translation":"全身B","review_note":""}
+{"id":"training.f74271660465","target_locale":"zh-Hans","translation":"全身C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"zh-Hans","translation":"轻量版","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"zh-Hans","translation":"照片","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"zh-Hans","translation":"无照片","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"zh-Hans","translation":"分析","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"zh-Hans","translation":"没有分析数据","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"zh-Hans","translation":"初学者 全身开始","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"zh-Hans","translation":"计划中未包含可用的动作。请重新选择并创建新的计划。","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"zh-Hans","translation":"可用器械","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"zh-Hans","translation":"删除","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"zh-Hans","translation":"上个月","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"zh-Hans","translation":"上次 {{value1}} × {{value2}}次","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"zh-Hans","translation":"请输入增加重量。辅助重量可以设置为负数进行记录。","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"zh-Hans","translation":"运动节奏","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"zh-Hans","translation":"运动估计，总共{{value1}}次","review_note":""}
+{"id":"training.e1472f598358","target_locale":"zh-Hans","translation":"显示","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"zh-Hans","translation":"您可以通过右上角的“添加”按钮来注册自定义运动项目。","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"zh-Hans","translation":"总计 {{value1}} / 卡路里 {{value2}} 脂肪 {{value3}} 碳水化合物 {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"zh-Hans","translation":"设备","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"zh-Hans","translation":"次数差异","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"zh-Hans","translation":"土壤","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"zh-Hans","translation":"基础","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"zh-Hans","translation":"稳定 {{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"zh-Hans","translation":"完成","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"zh-Hans","translation":"已完成的记录可以在“历史”中查看。","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"zh-Hans","translation":"未完成的记录不会被保存。","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"zh-Hans","translation":"完成并保存到历史","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"zh-Hans","translation":"完成后，保存到历史","review_note":""}
+{"id":"training.1784283f2316","target_locale":"zh-Hans","translation":"正在进行中","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"zh-Hans","translation":"训练次数","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"zh-Hans","translation":"实际测量速度：提高{{value1}}秒，降低{{value2}}秒","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"zh-Hans","translation":"记录：{{value1}}次 × {{value2}}次","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"zh-Hans","translation":"编辑记录","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"zh-Hans","translation":"目标部位","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"zh-Hans","translation":"历史记录","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"zh-Hans","translation":"没有历史记录","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"zh-Hans","translation":"还未有历史记录","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"zh-Hans","translation":"删除历史记录","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"zh-Hans","translation":"编辑历史记录","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"zh-Hans","translation":"编辑历史","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"zh-Hans","translation":"查看历史详情","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"zh-Hans","translation":"平均心率","review_note":""}
+{"id":"training.461619512206","target_locale":"zh-Hans","translation":"拉伸 / 强度","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"zh-Hans","translation":"等待","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"zh-Hans","translation":"心率","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"zh-Hans","translation":"如果需要，可以将自定义项目添加到列表中。","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"zh-Hans","translation":"动作","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"zh-Hans","translation":"按压 / 胸部","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"zh-Hans","translation":"指定教练","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"zh-Hans","translation":"无指定","review_note":""}
+{"id":"training.6532391678cf","target_locale":"zh-Hans","translation":"振动速度","review_note":""}
+{"id":"training.f57690abba57","target_locale":"zh-Hans","translation":"预估1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"zh-Hans","translation":"预估{{value1}}次","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"zh-Hans","translation":"简要说明理由","review_note":""}

@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "fr-FR", "translation": "Vérifiez vos progrès récents, votre taux d'atteinte, votre niveau de perception (RPE) et votre état de récupération, puis ajustez le plan pour les prochaines séances afin qu'il soit plus facile à exécuter. Si vous ne souhaitez pas de modifications, maintenez la valeur actuelle.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "fr-FR", "translation": "Modifications", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "fr-FR", "translation": "{{value1}} à ajouter", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "fr-FR", "translation": "{{value1}} à supprimer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "fr-FR", "translation": "{{value1}} : {{value2}} → {{value3}} répétitions", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "fr-FR", "translation": "{{value1}} : Pause de {{value2}} → {{value3}} secondes", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "fr-FR", "translation": "{{value1}} : {{value2}} → {{value3}} séries", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "fr-FR", "translation": "Aucune modification cette fois", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "fr-FR", "translation": "Enregistrer et démarrer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "fr-FR", "translation": "Sauvegarder en tant que nouveau plan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "fr-FR", "translation": "Exécuter une seule fois", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "fr-FR", "translation": "Essayer une fois ou enregistrer le plan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "fr-FR", "translation": "Mettre à jour le plan existant", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "fr-FR", "translation": "Seulement lorsque vous consentez, nous envoyons des informations sur l'utilisation et le but de la fonctionnalité, ainsi que sur vos expériences, votre état et vos suggestions, en les associant à votre nom. Nous ne transmettons pas de données relatives à votre corps ou à votre alimentation, de photos, de rythme cardiaque, de temps de sommeil, de localisation, de notes ou d'identifiants publicitaires.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "fr-FR", "translation": "Élevé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "fr-FR", "translation": "Faible", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "fr-FR", "translation": "Milieu", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "fr-FR", "translation": "Références", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "fr-FR", "translation": "Documents recherchés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "fr-FR", "translation": "Les résultats de la recherche sont des tendances générales et ne constituent pas une affirmation d'efficacité pour vous.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "fr-FR", "translation": "Il n'est pas possible d'utiliser les données de la bibliothèque, nous basons donc notre jugement sur l'enregistrement et les principes généraux.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "fr-FR", "translation": "Aucun document pertinent n'a été trouvé pour utiliser directement avec cette proposition. Nous basons notre jugement sur l'enregistrement et les principes généraux d'exercice.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "fr-FR", "translation": "Niveau de confiance global", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "fr-FR", "translation": "Aucune étude n'a été trouvée traitant de sujets similaires, nous basons donc notre jugement sur l'enregistrement et les principes généraux.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "fr-FR", "translation": "Preuves pour la recommandation", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "fr-FR", "translation": "Recherches référencées", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "fr-FR", "translation": "Informations de recherche", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "fr-FR", "translation": "La recherche de documents n'est pas disponible. Nous ne pouvons pas confirmer les preuves, nous basons donc notre jugement sur l'enregistrement.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "fr-FR", "translation": "Voir les preuves scientifiques", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "fr-FR", "translation": "Vérification du résumé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "fr-FR", "translation": "Applicabilité à cette séance", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "fr-FR", "translation": "Similaire aux sujets ciblés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "fr-FR", "translation": "Vérification du texte intégral", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "fr-FR", "translation": "Intervention", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "fr-FR", "translation": "Licence du texte intégral", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "fr-FR", "translation": "Limitations", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "fr-FR", "translation": "Conditions de l'utilisateur différentes", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "fr-FR", "translation": "Nouvelles recherches", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "fr-FR", "translation": "Ouvrir le document", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "fr-FR", "translation": "Certaines conditions similaires", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "fr-FR", "translation": "Population cible", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "fr-FR", "translation": "Conclusion de l'étude", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "fr-FR", "translation": "Applicabilité du résumé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "fr-FR", "translation": "Informations insuffisantes, non claires", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "fr-FR", "translation": "Joindre un journal de diagnostic anonyme", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "fr-FR", "translation": "Annuler", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "fr-FR", "translation": "Bug", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "fr-FR", "translation": "Autre", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "fr-FR", "translation": "Type de feedback", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "fr-FR", "translation": "Demande", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "fr-FR", "translation": "Section", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "fr-FR", "translation": "Problèmes d'utilisation", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "fr-FR", "translation": "Copier le texte", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "fr-FR", "translation": "Détails", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "fr-FR", "translation": "Veuillez joindre des informations sur le fonctionnement et la communication de l'application et de votre montre Apple Watch. Ne fournissez pas d'informations relatives à votre corps, à votre alimentation, à vos photos, à vos conversations avec l'IA ou à votre authentification.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "fr-FR", "translation": "Impossible d'envoyer le journal de diagnostic", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "fr-FR", "translation": "Autres méthodes de transmission", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "fr-FR", "translation": "Feedback sur le mode BodyMode\n\nType: {{value1}}\nContenu:\n{{value2}}\n\nApplication: {{value3}}\nSystème d'exploitation: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "fr-FR", "translation": "Réessayer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "fr-FR", "translation": "Envoyer le feedback", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "fr-FR", "translation": "Envoyer par e-mail", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "fr-FR", "translation": "Envoyer sans journal de diagnostic", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "fr-FR", "translation": "Veuillez ne pas inclure d'informations relatives à votre corps, à votre alimentation ou à vos photos, ainsi que des conversations avec l'IA et des informations d'authentification.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "fr-FR", "translation": "Feedback", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "fr-FR", "translation": "Erreur inconnue", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "fr-FR", "translation": "En attente de l'évaluation", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "fr-FR", "translation": "{{value1}} - Version révisée", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "fr-FR", "translation": "Révision du plan par l'entraîneur: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "fr-FR", "translation": "Historique des révisions de l'IA", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "fr-FR", "translation": "Les résultats futurs s'améliorent", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "fr-FR", "translation": "En attente de confirmation", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "fr-FR", "translation": "Annulé", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "fr-FR", "translation": "Revoir les options de révision", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "fr-FR", "translation": "Nouveau plan enregistré", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "fr-FR", "translation": "Ignoré", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "fr-FR", "translation": "Les résultats futurs restent similaires", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "fr-FR", "translation": "Mis à jour", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "fr-FR", "translation": "Ajuster le prochain plan avec l'IA", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "fr-FR", "translation": "Continuer avec le plan actuel.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "fr-FR", "translation": "\"{{value1}}\" a été enregistré en tant que nouveau plan.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "fr-FR", "translation": "Le prochain plan a été mis à jour.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "fr-FR", "translation": "Prochaine séance", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "fr-FR", "translation": "La modification actuelle ne sera pas appliquée tant que vous n'avez pas confirmé les modifications.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "fr-FR", "translation": "Vous avez atteint votre objectif. Vérifiez vos prochaines performances.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "fr-FR", "translation": "Vous n'avez pas atteint votre objectif, vous pouvez ajuster la prochaine séance.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "fr-FR", "translation": "Vous pouvez intégrer vos résultats de cette séance à la prochaine.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "fr-FR", "translation": "Retour au plan précédent.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "fr-FR", "translation": "Annuler la modification", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

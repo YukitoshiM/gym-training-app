@@ -30,10 +30,10 @@ struct DailyRecordChecklistCard: View {
             VStack(alignment: .leading, spacing: 14) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("今日の記録")
+                        Text(L10n.string("core_ui.58c1f125a05a", fallback: "今日の記録"))
                             .font(.title3.bold())
                             .accessibilityIdentifier("dailyRecordChecklistCard")
-                        Text("\(completedCount)/6 完了")
+                        Text(L10n.string("core_ui.06eaf4650b54", fallback: "{{value1}}/6 完了", values: [String(describing: completedCount)]))
                             .font(.subheadline.bold())
                             .foregroundStyle(completedCount == 6 ? AppTheme.positive : AppTheme.mutedInk)
                     }
@@ -41,7 +41,7 @@ struct DailyRecordChecklistCard: View {
                     Spacer()
 
                     Gauge(value: Double(completedCount), in: 0...6) {
-                        Text("完了")
+                        Text(L10n.string("core_ui.9eeac2fd3ceb", fallback: "完了"))
                     }
                     .gaugeStyle(.accessoryCircularCapacity)
                     .tint(AppTheme.accent)
@@ -54,48 +54,48 @@ struct DailyRecordChecklistCard: View {
 
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
                     DailyRecordStatusChip(
-                        title: "体重",
-                        detail: bodyWeightRecorded ? "記録済み" : "未記録",
+                        title: L10n.string("core_ui.d05d75dc142b", fallback: "体重"),
+                        detail: bodyWeightRecorded ? L10n.string("core_ui.da6af7f58be0", fallback: "記録済み") : L10n.string("core_ui.de7e126d0b16", fallback: "未記録"),
                         systemImage: "scalemass",
                         isCompleted: bodyWeightRecorded,
                         tint: AppTheme.blue
                     )
 
                     DailyRecordStatusChip(
-                        title: "腹囲",
-                        detail: waistRecorded ? "記録済み" : "未記録",
+                        title: L10n.string("core_ui.424306f5227a", fallback: "腹囲"),
+                        detail: waistRecorded ? L10n.string("core_ui.da6af7f58be0", fallback: "記録済み") : L10n.string("core_ui.de7e126d0b16", fallback: "未記録"),
                         systemImage: "figure.core.training",
                         isCompleted: waistRecorded,
                         tint: AppTheme.orange
                     )
 
                     DailyRecordStatusChip(
-                        title: "食事回数",
-                        detail: "\(nutritionProgress.mealCount)/\(nutritionProgress.goals.mealCount)回",
+                        title: L10n.string("core_ui.3871f0a40fbb", fallback: "食事回数"),
+                        detail: L10n.string("core_ui.5e0934899b21", fallback: "{{value1}}/{{value2}}回", values: [String(describing: nutritionProgress.mealCount), String(describing: nutritionProgress.goals.mealCount)]),
                         systemImage: "fork.knife",
                         isCompleted: nutritionProgress.isMealCountAchieved,
                         tint: AppTheme.orange
                     )
 
                     DailyRecordStatusChip(
-                        title: "カロリー/PFC",
-                        detail: nutritionProgress.isNutritionAchieved ? "目標達成" : "記録中",
+                        title: L10n.string("core_ui.6c96c72399c0", fallback: "カロリー/PFC"),
+                        detail: nutritionProgress.isNutritionAchieved ? L10n.string("core_ui.32670ed3aace", fallback: "目標達成") : L10n.string("core_ui.a9efa7f0620d", fallback: "記録中"),
                         systemImage: "chart.bar.fill",
                         isCompleted: nutritionProgress.isNutritionAchieved,
                         tint: AppTheme.accent
                     )
 
                     DailyRecordStatusChip(
-                        title: "体型写真",
-                        detail: bodyPhotoCount > 0 ? "\(bodyPhotoCount)件" : "未記録",
+                        title: L10n.string("core_ui.910d79f7cbf5", fallback: "体型写真"),
+                        detail: bodyPhotoCount > 0 ? L10n.string("core_ui.f913cce82a70", fallback: "{{value1}}件", values: [bodyPhotoCount.formatted()]) : L10n.string("core_ui.de7e126d0b16", fallback: "未記録"),
                         systemImage: "camera",
                         isCompleted: bodyPhotoCount > 0,
                         tint: AppTheme.purple
                     )
 
                     DailyRecordStatusChip(
-                        title: "筋トレ",
-                        detail: workoutCount > 0 ? "\(workoutCount)回" : "未実施",
+                        title: L10n.string("core_ui.536e51b3f816", fallback: "筋トレ"),
+                        detail: workoutCount > 0 ? L10n.string("core_ui.91bc80596709", fallback: "{{value1}}回", values: [String(describing: workoutCount)]) : L10n.string("core_ui.b0b7d41109d6", fallback: "未実施"),
                         systemImage: "figure.strengthtraining.traditional",
                         isCompleted: workoutCount > 0,
                         tint: AppTheme.accent
@@ -110,8 +110,8 @@ struct DailyRecordChecklistCard: View {
                             MealListView()
                         } label: {
                             DailyRecordQuickAction(
-                                title: "食事",
-                                value: "\(nutritionProgress.mealCount)件",
+                                title: L10n.string("core_ui.e8a52146d9dc", fallback: "食事"),
+                                value: L10n.string("core_ui.f913cce82a70", fallback: "{{value1}}件", values: [nutritionProgress.mealCount.formatted()]),
                                 systemImage: "fork.knife",
                                 tint: AppTheme.orange
                             )
@@ -123,8 +123,8 @@ struct DailyRecordChecklistCard: View {
                             BodyPhotoListView()
                         } label: {
                             DailyRecordQuickAction(
-                                title: "体型写真",
-                                value: bodyPhotoCount > 0 ? "記録済み" : "追加",
+                                title: L10n.string("core_ui.910d79f7cbf5", fallback: "体型写真"),
+                                value: bodyPhotoCount > 0 ? L10n.string("core_ui.da6af7f58be0", fallback: "記録済み") : L10n.string("core_ui.cfb169f1651f", fallback: "追加"),
                                 systemImage: "camera",
                                 tint: AppTheme.purple
                             )
@@ -207,6 +207,6 @@ private struct DailyRecordStatusChip: View {
         )
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(title)、\(detail)")
-        .accessibilityValue(isCompleted ? "完了" : "未完了")
+        .accessibilityValue(isCompleted ? L10n.string("core_ui.9eeac2fd3ceb", fallback: "完了") : L10n.string("core_ui.3c3407bde7db", fallback: "未完了"))
     }
 }

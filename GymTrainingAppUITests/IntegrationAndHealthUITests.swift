@@ -58,16 +58,14 @@ final class IntegrationAndHealthUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(conditionCard.waitForExistence(timeout: 5))
         conditionCard.tap()
 
-        XCTAssertTrue(app.navigationBars["コンディション"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["healthKitDisclosureCard"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Apple Health (HealthKit)"].exists)
         XCTAssertTrue(app.descendants(matching: .any)["readinessCard"].exists)
         XCTAssertTrue(app.descendants(matching: .any)["activityProgressCard"].exists)
         XCTAssertTrue(app.staticTexts["7,842"].exists)
 
-        let sleepValue = app.staticTexts["7.4 時間"]
-        for _ in 0..<3 where !sleepValue.exists {
-            app.swipeUp()
-        }
-        XCTAssertTrue(sleepValue.waitForExistence(timeout: 3))
+        let sleepCard = scrollToHittable(app.descendants(matching: .any)["sleepDetailsCard"])
+        XCTAssertTrue(sleepCard.waitForExistence(timeout: 3))
     }
 
     func testConditionRecordAndHistoryNavigationRemainsStable() throws {
@@ -129,7 +127,7 @@ final class IntegrationAndHealthUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(sleepCard.waitForExistence(timeout: 3))
         XCTAssertTrue(app.staticTexts["品質 86"].exists)
 
-        let routeCard = app.descendants(matching: .any)["outdoorRunningRouteCard"]
+        let routeCard = app.descendants(matching: .any)["outdoorRouteCard"]
         for _ in 0..<8 where !routeCard.exists {
             app.swipeUp()
         }

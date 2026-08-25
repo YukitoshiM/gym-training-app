@@ -227,8 +227,18 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
         let requestID = UUID()
         let client = AIAPIClient(settings: settings, session: uploadPreparationSession)
         let preparationTask = Task {
-            let initial = try await client.makeBackgroundChatUpload(payload: payload, compacted: false)
-            let retry = try await client.makeBackgroundChatUpload(payload: payload, compacted: true)
+            var quotaPayload = payload
+            quotaPayload.purpose = kind.aiRequestPurpose
+            let initial = try await client.makeBackgroundChatUpload(
+                payload: quotaPayload,
+                compacted: false,
+                requestID: requestID
+            )
+            let retry = try await client.makeBackgroundChatUpload(
+                payload: quotaPayload,
+                compacted: true,
+                requestID: requestID
+            )
             return PreparedBackgroundUploads(initial: initial, retry: retry)
         }
         stateQueue.sync {
@@ -365,11 +375,16 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
                     pendingMemoryCandidates = appStore.newCoachMemoryCandidates(response.memoryCandidates)
                     notifyCompletionIfNeeded(success: true)
                 case .dailyRecommendation(let date):
-                    appStore.applyDailyAIResponse(response.reply, for: date)
+                    appStore.applyDailyAIResponse(response, for: date)
                     notifyDailyRecommendationCompletionIfNeeded()
                 }
             } else if let failure = outcome.failure {
-                appStore.updateAITransmission(id: outcome.transmissionID, status: .failed)
+                appStore.recordAITransmissionFailure(
+                    id: outcome.transmissionID,
+                    message: failure.message,
+                    recovery: failure.recovery,
+                    canRetry: true
+                )
                 switch outcome.kind {
                 case .chat:
                     latestFailure = AITrainerBackgroundFailure(
@@ -377,7 +392,8 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
                         presentation: AIErrorPresentation(
                             message: failure.message,
                             recovery: failure.recovery
-                        )
+                        ),
+                        creditAccessIssue: failure.creditAccessIssue
                     )
                     notifyCompletionIfNeeded(success: false)
                 case .dailyRecommendation:
@@ -404,8 +420,8 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
                     pending: pending,
                     response: nil,
                     failure: PersistedFailure(
-                        message: "前回のAIトレーナー送信を再開できませんでした。",
-                        recovery: "同じ内容をもう一度送信してください。"
+                        message: L10n.string("runtime_messages.2608fa3a1c38", fallback: "前回のAIトレーナー送信を再開できませんでした。"),
+                        recovery: L10n.string("runtime_messages.dccb743b791b", fallback: "同じ内容をもう一度送信してください。")
                     )
                 )
             }
@@ -462,7 +478,7 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
             case 422:
                 error = AITrainerError.invalidRequest
             default:
-                error = AIClientError.httpStatus(response.statusCode)
+                error = AIClientError.responseError(statusCode: response.statusCode, data: data)
             }
             finish(pending: pending, response: nil, failure: Self.failure(for: error))
             return
@@ -643,8 +659,8 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
     private func notifyCompletionIfNeeded(success: Bool) {
         guard UIApplication.shared.applicationState != .active else { return }
         let content = UNMutableNotificationContent()
-        content.title = success ? "AIトレーナーから回答が届きました" : "AIトレーナーへ送信できませんでした"
-        content.body = success ? "BodyModeを開いて回答を確認できます。" : "アプリを開いて再試行してください。"
+        content.title = success ? L10n.string("runtime_messages.1f65b4107746", fallback: "AIトレーナーから回答が届きました") : L10n.string("runtime_messages.83e511abe728", fallback: "AIトレーナーへ送信できませんでした")
+        content.body = success ? L10n.string("runtime_messages.c0e4c62759a0", fallback: "BodyModeを開いて回答を確認できます。") : L10n.string("runtime_messages.ccae93b28d43", fallback: "アプリを開いて再試行してください。")
         content.sound = .default
         UNUserNotificationCenter.current().add(
             UNNotificationRequest(identifier: "bodymode.ai-trainer.\(UUID().uuidString)", content: content, trigger: nil)
@@ -655,8 +671,8 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
     private func notifyDailyRecommendationCompletionIfNeeded() {
         guard UIApplication.shared.applicationState != .active else { return }
         let content = UNMutableNotificationContent()
-        content.title = "今日の提案を更新しました"
-        content.body = "新しい記録を反映しました。"
+        content.title = L10n.string("runtime_messages.b9096002d34b", fallback: "今日の提案を更新しました")
+        content.body = L10n.string("runtime_messages.21b0ce47a5e9", fallback: "新しい記録を反映しました。")
         content.sound = .default
         UNUserNotificationCenter.current().add(
             UNNotificationRequest(
@@ -669,7 +685,11 @@ final class AITrainerBackgroundService: NSObject, ObservableObject, AITrainerBac
 
     private static func failure(for error: Error) -> PersistedFailure {
         let presentation = AIClientError.presentation(for: error)
-        return PersistedFailure(message: presentation.message, recovery: presentation.recovery)
+        return PersistedFailure(
+            message: presentation.message,
+            recovery: presentation.recovery,
+            creditAccessIssue: AICreditAccessIssue(error: error)
+        )
     }
 
     private var stateFileURL: URL {
@@ -717,6 +737,7 @@ extension AITrainerBackgroundService: URLSessionDataDelegate, URLSessionTaskDele
 struct AITrainerBackgroundFailure: Equatable {
     var originalMessage: String
     var presentation: AIErrorPresentation
+    var creditAccessIssue: AICreditAccessIssue? = nil
 }
 
 private enum AIBackgroundRequestKind: Codable {
@@ -726,6 +747,13 @@ private enum AIBackgroundRequestKind: Codable {
     var isChat: Bool {
         if case .chat = self { return true }
         return false
+    }
+
+    var aiRequestPurpose: AIRequestPurpose {
+        switch self {
+        case .chat: .chat
+        case .dailyRecommendation: .dailyRecommendation
+        }
     }
 }
 
@@ -780,6 +808,7 @@ private struct PendingRequest: Codable {
 private struct PersistedFailure: Codable {
     var message: String
     var recovery: String?
+    var creditAccessIssue: AICreditAccessIssue? = nil
 }
 
 private struct CompletedOutcome: Codable {

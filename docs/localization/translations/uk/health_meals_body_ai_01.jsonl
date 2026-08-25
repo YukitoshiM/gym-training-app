@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"uk","translation":"Буде скинуто до {{value1}}. Можна продовжувати ручне записування.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"uk","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"uk","translation":"Введіть значення більше 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"uk","translation":"1. Підтримуйте 3 тренування на тиждень\n2. Запишіть цільову кількість білка\n3. Порівняйте фото свого тіла в кінці місяця","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"uk","translation":"Будь ласка, зачекайте кілька хвилин і спробуйте ще раз.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"uk","translation":"1 порція","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"uk","translation":"Немає чітких варіантів зупинки для вправ, які були записані 3 або більше разів.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"uk","translation":"Більша кількість тренувань протягом 48 годин.","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"uk","translation":"AI для оцінки загального балансу тіла.","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"uk","translation":"Записи, які використовує AI.","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"uk","translation":"Використання AI тимчасово обмежене.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"uk","translation":"Інформація для аутентифікації AI не дійсна або закінчилася термін дії.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"uk","translation":"Помилка AI.","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"uk","translation":"AI-тренер.","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"uk","translation":"Неправильний URL сервера AI.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"uk","translation":"Сервер AI повернув помилку: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"uk","translation":"Не вдалося знайти необхідний API для сервера AI.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"uk","translation":"Не вдається підключитися до сервера AI. Будь ласка, спробуйте пізніше.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"uk","translation":"Формат JSON на сервері AI не відповідає очікуванням програми.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"uk","translation":"Не вдалося прочитати відповідь з сервера AI.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"uk","translation":"Виникла помилка на стороні сервера AI: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"uk","translation":"Перевірити підключення до сервера AI","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"uk","translation":"AI-тренер","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"uk","translation":"Чи хочете видалити розмову з AI-тренером?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"uk","translation":"Не вдалося отримати доступ до моделі AI або не вдалося проаналізувати зображення.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"uk","translation":"Підготовка моделі AI","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"uk","translation":"Аналіз за допомогою AI","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"uk","translation":"Залишилося вільно місце для використання AI.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"uk","translation":"Перевірити доступ до AI.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"uk","translation":"Функція AI вимкнена.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"uk","translation":"Необхідно перевірити рекомендовані значення від AI.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"uk","translation":"Підключення до AI активне.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"uk","translation":"Не вдалося безпечно зберегти інформацію про підключення до AI.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"uk","translation":"Функції AI","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"uk","translation":"Функція AI вимкнена в налаштуваннях.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"uk","translation":"Функція AI вимкнена в налаштуваннях. Фотографії можна зберегти як є.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"uk","translation":"Функція AI вимкнена в налаштуваннях. Ручне введення можна зберегти як є.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"uk","translation":"Історія використання AI","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"uk","translation":"API-ключ не встановлено.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"uk","translation":"Перевірте версію API-сервера. Деталі: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"uk","translation":"API-сервер відповідає, але не може використовувати необхідні моделі.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"uk","translation":"API-сервер відповідає, але не може використовувати моделі для приготування їжі та створення звітів.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"uk","translation":"Інтеграція з Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"uk","translation":"Відображаються останні маршрути бігу, збережені в Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"uk","translation":"Підключити Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"uk","translation":"Носіння Apple Watch під час фізичної активності та сну може допомогти отримати більш повні показники відновлення. Значення відсутніх елементів не будуть додумуватися.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"uk","translation":"Перевірте Base URL та версію API-сервера.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"uk","translation":"HRV нижче середнього значення за 14 днів","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"uk","translation":"Відсутні дані HRV протягом тривалого періоду.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"uk","translation":"HRV вище середнього значення","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"uk","translation":"HRV в межах норми","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"uk","translation":"Середнє значення коефіцієнту HRV {{value1}}% (відносно індивідуальних показників)","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"uk","translation":"HTTP доступний лише для localhost, локальної мережі та Tailscale. Для зовнішніх серверів використовуйте HTTPS.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"uk","translation":"Показники споживання енергії в розділі \"Health\" не отримані. Записано лише харчування.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"uk","translation":"Оновити дані Health","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"uk","translation":"Виберіть інший формат зображення (JPEG або PNG).","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"uk","translation":"Записувати KPI","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"uk","translation":"Найновіші значення, отримані додатком Noise тощо. Якщо значення відсутні, не встановлюйте їх на 0.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"uk","translation":"Автоматичний розрахунок калорій з PFC","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"uk","translation":"Досягнуто ціль PFC","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"uk","translation":"Зменшити рівень RPE на один етап","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"uk","translation":"URL має починатися з https://. Під час локального розроблення можна використовувати HTTP для localhost, IP локальної мережі та Tailscale.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"uk","translation":"URL має починатися з https://. Під час локального розроблення також доступний http://.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"uk","translation":"З датчиком пульсу","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"uk","translation":"bpm / 30 секунд","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"uk","translation":"Досягнуто калорій та ціль PFC","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"uk","translation":"Досягнуто калорій","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"uk","translation":"кг / хвилину","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"uk","translation":"{\"id\":\"{{value1}}\",\"категорія\":\"{{value2}}\",\"назва\":\"{{value3}}\",\"ціль\":0,\"обґрунтування\":\"Перевірили записи та цілі\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"uk","translation":"{\"зберегти_існуюче\":true,\"рівень готовності\":\"нормальний\",\"підсумок\":\"Продовжуємо, як запропоновано сьогодні.\",\"причина змін\":\"\",\"дії\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"uk","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"uk","translation":"{{value1}} / {{value2}} годин","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"uk","translation":"{{value1}} / {{value2}} кроків","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"uk","translation":"{{value1}} / {{value2}} прийомів їжі","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"uk","translation":"{{value1}} {{value2}} штук ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"uk","translation":"Ви можете генерувати щотижневі коментарі з {{value1}} та допоміжною моделлю.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"uk","translation":"{{value1}}/{{value2}} разів","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"uk","translation":"{{value1}}: {{value2}} Відсоток досягнуто {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"uk","translation":"{{value1}}Перевірити весь набір","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"uk","translation":"{{value1}} обмірковує відповідь","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"uk","translation":"{{value1}} перевіряє рецепт та споживання калорій","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"uk","translation":"{{value1}} перевіряє різні напрямки","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"uk","translation":"{{value1}} запам'ятані речі","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"uk","translation":"{{value1}} створює та обговорює зміни","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"uk","translation":"Консультація з {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"uk","translation":"Звіт {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"uk","translation":"Звіт {{value1}} ще не доступний","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"uk","translation":"Черновик {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"uk","translation":"Черновик {{value1}} та {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"uk","translation":"Аналіз {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"uk","translation":"Результати аналізу {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"uk","translation":"Інформація для посилання на {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"uk","translation":"Огляд {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"uk","translation":"Після запропонованого {{value1}}, відображаються лише ті елементи, які були схвалені для збереження.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"uk","translation":"Щомісячний огляд {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"uk","translation":"Пам'ятає {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"uk","translation":"Виберіть {{value1}} з бібліотеки","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"uk","translation":"Видалити {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"uk","translation":"Зробити фото {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"uk","translation":"Редагувати значення {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"uk","translation":"Записати значення {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"uk","translation":"Легко записати значення {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"uk","translation":"Середня стабільність набору {{value1}} становить {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"uk","translation":"{{value1}}•","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"uk","translation":"{{value1}}•{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"uk","translation":"{{value1}}• Чат","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"uk","translation":"{{value1}}• Пропозиція щомісячного огляду","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"uk","translation":"{{value1}}• Виправити {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"uk","translation":"{{value1}}• Щотижневий звіт","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"uk","translation":"{{value1}}•{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"uk","translation":"{{value1}}Будь ласка, спробуйте ще раз. Ви можете продовжувати використовувати ручне введення даних.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"uk","translation":"{{value1}}Будь ласка, спробуйте ще раз. Якщо це необхідно, перевірте стан роботи AI-сервера.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"uk","translation":"{{value1}} Видалити фото","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"uk","translation":"{{value1}} хвилин","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"uk","translation":"{{value1}} разів","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"uk","translation":"{{value1}} разів• Середня досяжність {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"uk","translation":"Аналізуємо всі фото в {{value1}} напрямку. Не робимо висновків щодо таких показників, як відсоток жиру в тілі.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"uk","translation":"{{value1}} фото","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"uk","translation":"Набір з {{value1}} фото","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"uk","translation":"{{value1}} кроки","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"uk","translation":"\"-\" означає, що значення не виміряно, тому воно виключається з загальної суми. \"Tr\" означає незначну кількість і оцінюється як 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"uk","translation":"Ще {{value1}} г","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"uk","translation":"Разом подумаємо про ваші записи.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"uk","translation":"Відчуваю себе досить добре","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"uk","translation":"Відчуваю себе досить втомлено","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"uk","translation":"Можна провести аналіз далі. Додавши показники з боків або ззаду, можна отримати додаткову інформацію.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"uk","translation":"Проаналізувати цей набір даних","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"uk","translation":"Використовуючи цю інформацію, я можу запропонувати щось.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"uk","translation":"Очистити все","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"uk","translation":"Білок","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"uk","translation":"Запишіть результати в рекомендації на завтра.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"uk","translation":"Інше {{value1}} продуктів","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"uk","translation":"Поки немає даних для навчання.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"uk","translation":"Поки немає записів.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"uk","translation":"Перерахувати ще раз","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"uk","translation":"Обхват талії","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"uk","translation":"Сканування за допомогою камери","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"uk","translation":"Не вдається використовувати камеру","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"uk","translation":"Функцію сканування камери неможливо використати","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"uk","translation":"Калорії","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"uk","translation":"Розраховую калорії...","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"uk","translation":"Скасувати","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"uk","translation":"Стан","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"uk","translation":"Перевірте URL сервера, API-ключ та стан роботи API-сервера.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"uk","translation":"Відвідування тренажерного залу","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"uk","translation":"Підставка","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"uk","translation":"Сетап","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"uk","translation":"Аналізую сетап","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"uk","translation":"Якість сета","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"uk","translation":"Деталі якості сета","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"uk","translation":"Білок {{value1}} г","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"uk","translation":"Жим лежачи","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"uk","translation":"Це лише приблизна оцінка.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"uk","translation":"Темп","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"uk","translation":"Коли буде зібрано дані, ви зможете переглянути суму сну, відновлення та фізичної активності.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"uk","translation":"Якість даних","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"uk","translation":"Консультація з тренером","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"uk","translation":"Тренування","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"uk","translation":"Аналіз тренувань","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"uk","translation":"Історія тренувань","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"uk","translation":"План тренувань","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"uk","translation":"Навантаження тренування","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"uk","translation":"Перевірте стан роботи мережі та серверу AI. Обробка AI може займати до 240 секунд.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"uk","translation":"Переконайтеся у стані мережі та URL сервера, перш ніж повторити спробу.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"uk","translation":"Перевірте стан мережі та URL сервера.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"uk","translation":"Штрих-код","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"uk","translation":"Об'єм","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"uk","translation":"Об'єм – це сума ваги завершеного комплексу × кількість повторень. У тижнях з різною структурою вправ, не робіть надмірних спроб порівняння.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"uk","translation":"Рух","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"uk","translation":"Повідомлення","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"uk","translation":"Меню","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"uk","translation":"Почніть з створення меню","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"uk","translation":"Примітки","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"uk","translation":"Бібліотека","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"uk","translation":"Підтягування","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"uk","translation":"Кількість для розрахунку","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"uk","translation":"Оцініть калорії зі списку.","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"uk","translation":"Спробуйте ще раз після скидання. Ручне введення даних все ще доступне.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"uk","translation":"Якщо знайдено тренування на відкритому повітрі з маршрутом, відображаються відстань, швидкість та різниця висот.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"uk","translation":"Пресування для ніг","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"uk","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"uk","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"uk","translation":"Кількість піднятих поверхів","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"uk","translation":"Раптове пробудження","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"uk","translation":"Основні KPI","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"uk","translation":"Суб'єктивне відчуття втоми високе","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"uk","translation":"Суб'єктивне відчуття втоми низьке","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"uk","translation":"Суб'єктивне відчуття втоми в межах норми","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"uk","translation":"Будь ласка, виберіть лише ті пункти, які можна використовувати для подальших рекомендацій.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"uk","translation":"Для допомоги у формуванні майбутніх пропозицій щодо ваги","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"uk","translation":"Сьогодні визначено 3 активності","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"uk","translation":"Активність сьогодні","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"uk","translation":"Енергетичний баланс сьогодні","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"uk","translation":"Набір сьогодні","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"uk","translation":"Суб'єктивне відчуття втоми сьогодні","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"uk","translation":"Рекомендації на сьогодні","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"uk","translation":"Редагувати набір для зйомки сьогодні","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"uk","translation":"Додати набір для зйомки сьогодні","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"uk","translation":"Активності сьогодні багато","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"uk","translation":"Відбиває вашу активність сьогодні","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"uk","translation":"Ваша готовність сьогодні","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"uk","translation":"Ваші дії сьогодні","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"uk","translation":"Перевірте свій прогрес сьогодні","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"uk","translation":"Ваше харчування сьогодні","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"uk","translation":"Варіанти харчування на сьогодні","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"uk","translation":"Ваші цілі щодо харчування сьогодні","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"uk","translation":"Сьогодні пріоритет – відновлення","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"uk","translation":"Сьогодні робіть перерви у силових тренуваннях та віддавайте перевагу помірній активності.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"uk","translation":"Сьогодні зменште навантаження.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"uk","translation":"У вас є можливість обмежити вагу та кількість підходів, щоб пріоритетом було відновлення.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"uk","translation":"Перевірте, що ви плануєте зробити сьогодні.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"uk","translation":"Цього тижня","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"uk","translation":"Цього тижня {{value1}} разів・Поточна відстань {{value2}} м","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"uk","translation":"Цього тижня {{value1}} разів・Загальна відстань {{value2}} разів","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"uk","translation":"Висновок цього тижня","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"uk","translation":"Необов'язково","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"uk","translation":"Чат","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"uk","translation":"Видалити чат","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"uk","translation":"Історія чатів не видаляється.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"uk","translation":"Це лише приблизні значення. Не зберігайте їх у записах або графіках.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"uk","translation":"Фото вашого тіла","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"uk","translation":"AI для аналізу фото вашого тіла","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"uk","translation":"Функція обміну фото вашого тіла через AI вимкнена в налаштуваннях.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"uk","translation":"У вас ще немає фото вашого тіла","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"uk","translation":"Зробіть фото вашого тіла","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"uk","translation":"Аналіз набору фото вашого тіла","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"uk","translation":"Перевірка фото вашого тіла","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"uk","translation":"Якщо у вас є проблеми зі здоров'ям або біль, звертайте увагу на свої відчуття, а не лише на цифри.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"uk","translation":"Слідкуйте за своїм самопочуттям і дотримуйтесь плану.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"uk","translation":"Вага","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"uk","translation":"Вага та обхват талії – це показники, які можуть змінюватися щодня, тому їх слід розглядати в динаміці.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"uk","translation":"Записуйте свою вагу","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"uk","translation":"Рекомендації на основі доступного обладнання","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"uk","translation":"Приклад: Білий рис 150 г","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"uk","translation":"Зберегти","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"uk","translation":"Щомісячний огляд збережених даних","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"uk","translation":"Збережені спогади","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"uk","translation":"У мене немає збережених спогадів","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"uk","translation":"Збережені спогади не видаляються.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"uk","translation":"Чи потрібно видалити всі збережені дані?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"uk","translation":"Не зберігати","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"uk","translation":"Не вдалося зберегти","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"uk","translation":"Довіра","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"uk","translation":"Значення","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"uk","translation":"При додаванні значення тут відображається перехід.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"uk","translation":"Перевірка на стагнацію","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"uk","translation":"Виберіть варіант \"перевірка на стагнацію\", щоб порівняти результати після зменшення ваги до цільового рівня або збільшення відпочинку на 15-30 секунд.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"uk","translation":"Матеріали для виявлення стагнації","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"uk","translation":"Енергія","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"uk","translation":"Вхідні дані","review_note":""}

@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"pt-BR","translation":"Recebi uma resposta do seu treinador AI.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"pt-BR","translation":"Não foi possível enviar para o treinador AI.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"pt-BR","translation":"Este é um exercício sincronizado com o Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"pt-BR","translation":"Você pode verificar a resposta abrindo o BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"pt-BR","translation":"{{value1}} / {{value2}} alcançado. Vamos seguir em um ritmo que seja confortável para você.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"pt-BR","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} vezes","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"pt-BR","translation":"Não altere a configuração de {{value1}}. Trate-o como uma escolha pessoal.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"pt-BR","translation":"{{value1}} horas","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"pt-BR","translation":"{{value1}} passos","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"pt-BR","translation":"{{value1}} refeições","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"pt-BR","translation":"Este dispositivo não utiliza detecção do ambiente.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"pt-BR","translation":"Desativei esta opção para hoje.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"pt-BR","translation":"Um item por vez é suficiente.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"pt-BR","translation":"Por que você está fazendo isso?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"pt-BR","translation":"Exercícios de assistência","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"pt-BR","translation":"Tente novamente abrindo o aplicativo.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"pt-BR","translation":"Removi a localização da academia.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"pt-BR","translation":"Registrei a chegada à academia.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"pt-BR","translation":"Detecto a chegada na área da academia.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"pt-BR","translation":"A detecção automática de visitas à academia está desativada.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"pt-BR","translation":"Registrei a saída da academia.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"pt-BR","translation":"Supino com barra","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"pt-BR","translation":"Escuro","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"pt-BR","translation":"Barra","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"pt-BR","translation":"Dips","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"pt-BR","translation":"Exercícios de dips.","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"pt-BR","translation":"Continuando o treino. Aumentar o registro de recuperação melhora a precisão das próximas semanas.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"pt-BR","translation":"Champanhe preto","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"pt-BR","translation":"Meu ginásio","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"pt-BR","translation":"O usuário alterou suas atividades do dia.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"pt-BR","translation":"Criei uma nova sugestão para hoje com as ações do usuário.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"pt-BR","translation":"Leve","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"pt-BR","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"pt-BR","translation":"Aumentar","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"pt-BR","translation":"Diminuir","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"pt-BR","translation":"Uma vez hoje","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"pt-BR","translation":"Consegui completar os 3 objetivos de hoje. Será refletido na sugestão de amanhã.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"pt-BR","translation":"Meu plano alimentar","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"pt-BR","translation":"Atualizei a sugestão para hoje","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"pt-BR","translation":"Localização não definida","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"pt-BR","translation":"A localização não está permitida. O check-in manual está disponível.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"pt-BR","translation":"Tente novamente após obter uma precisão de localização estável.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"pt-BR","translation":"Primeiro, registre o ginásio como sua localização atual.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"pt-BR","translation":"Iniciante: Exercícios para iniciantes","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"pt-BR","translation":"Não foi possível retomar o envio do treinador AI anterior.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"pt-BR","translation":"Por favor, envie novamente o mesmo conteúdo.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"pt-BR","translation":"Priorizar a recuperação","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"pt-BR","translation":"Se não houver alterações, deixe em branco","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"pt-BR","translation":"Barra fixa","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"pt-BR","translation":"Refletindo os novos dados de recuperação e ajustando as sugestões diárias para o lado mais seguro.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"pt-BR","translation":"Os novos registros foram refletidos.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"pt-BR","translation":"ID existente","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"pt-BR","translation":"Categoria existente ou necessária","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"pt-BR","translation":"Registre a localização atual como \"Meu Ginásio\"","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"pt-BR","translation":"Não foi possível obter a localização atual","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"pt-BR","translation":"Verificando a localização atual","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"pt-BR","translation":"Verifiquei os últimos 3 registros de exercícios e 8 registros de alimentação.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"pt-BR","translation":"Há falta de registro de sono","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"pt-BR","translation":"Registre o sono por 3 dias e continue com exercícios 3 vezes por semana.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"pt-BR","translation":"Registrar o sono por 3 dias","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"pt-BR","translation":"Inteligente, nobre e avançado","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"pt-BR","translation":"Comentário geral curto","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"pt-BR","translation":"Ação curta","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"pt-BR","translation":"Supere","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"pt-BR","translation":"Automático","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"pt-BR","translation":"Permitir acesso à localização nas configurações permite o registro.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"pt-BR","translation":"Verifiquei 3 KPIs de condicionamento físico, 8 refeições e 3 treinos de musculação.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"pt-BR","translation":"1 vez por semana","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"pt-BR","translation":"Concluí 3 treinos por semana","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"pt-BR","translation":"Continue com 3 treinos por semana","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"pt-BR","translation":"Intenso, sofisticado e motivador","review_note":""}

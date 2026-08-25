@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "te", "translation": "సూచన ప్రకారం అంచనా. ఇది ఖచ్చితమైన కొలత కాదు. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "te", "translation": "చివరి కొలతల నుండి కొంత సమయం గడిచినందున, మార్పును నిర్ధారించలేము. కాబట్టి అంచనా విలువను ఉపయోగిస్తున్నాము.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "te", "translation": "ఎత్తు, బరువు, వయస్సు మరియు లింగ ఆధారంగా ఒక సాధారణ పరిధిని ఉపయోగించి, ఇది వ్యక్తిగత శరీర కొవ్వు శాతం యొక్క ఖచ్చితమైన కొలత కాదు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "te", "translation": "అంచనా", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "te", "translation": "సూచన ప్రకారం అంచనా", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "te", "translation": "ఇది సూచన పరిధి మాత్రమే, కొలత కాదు. దీనిని చూడటానికి నొక్కడం ద్వారా మాత్రమే సేవ్ చేయబడుతుంది.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "te", "translation": "సూచనను సేవ్ చేయాలా?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "te", "translation": "అంచనాగా సేవ్ చేయండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "te", "translation": "{{value1}} {{value2}}. ఖచ్చితమైన కొలతను భర్తీ చేయదు.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "te", "translation": "సమయానికి రిపోర్టులు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "te", "translation": "వారపు రిపోర్టు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "te", "translation": "వారం రోజు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "te", "translation": "నెలవారీ రిపోర్టు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "te", "translation": "తేదీ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "te", "translation": "{{value1}}వ రోజు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "te", "translation": "నోటిఫికేషన్ సమయం", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "te", "translation": "సమయానికి అనుగుణంగా, అప్లికేషన్‌ను మొదటిసారి తెరిచినప్పుడు, స్వయంచాలకంగా రిపోర్టు సృష్టించబడుతుంది. AI కనెక్ట్ కాకపోతే, పరికరంలో ఉన్న సమాచారాన్ని ఉపయోగిస్తాము.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "te", "translation": "సెట్టింగ్‌లను తనిఖీ చేయండి", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "te", "translation": "మళ్ళీ ప్రయత్నించవచ్చు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "te", "translation": "పరిమితిని ఉపయోగించారు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "te", "translation": "పరిమితి ఇంకా ఉపయోగించబడలేదు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "te", "translation": "శాస్త్రీయ ఆధారాలు {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "te", "translation": "ప్రత్యక్షంగా ఉపయోగించగల ఆధారాలు లేవు, కాబట్టి ట్రెండ్‌లను పరిగణనలోకి తీసుకుంటాము.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "te", "translation": "ఈ సూచనకు నేరుగా ఉపయోగించగల ఆధారాలు కనుగొనబడలేదు", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "te", "translation": "శాస్త్రీయ ఆధారాలను పొందలేము, కాబట్టి రికార్డు మరియు సాధారణ సూత్రాలపై ఆధారపడి సూచనలు ఇస్తున్నాము.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "te", "translation": "శరీర పరిమాణ కొలత", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

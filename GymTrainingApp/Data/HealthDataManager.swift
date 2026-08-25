@@ -81,7 +81,7 @@ final class HealthDataManager: ObservableObject {
         async let hrvBaseline = averageValue(.heartRateVariabilitySDNN, unit: .secondUnit(with: .milli), start: baselineStart, end: now)
         async let temperatureBaseline = averageValue(.appleSleepingWristTemperature, unit: .degreeCelsius(), start: baselineStart, end: now)
         async let respiratoryBaseline = averageValue(.respiratoryRate, unit: breathsPerMinute, start: baselineStart, end: now)
-        async let outdoorRoute = latestOutdoorRunningRoute()
+        async let outdoorRoute = latestOutdoorRoute()
 
         snapshot = await DailyHealthSnapshot(
             generatedAt: now,
@@ -122,12 +122,12 @@ final class HealthDataManager: ObservableObject {
             availableCount += 1
             if sleepHours >= 7 {
                 score += 10
-                factors.append("睡眠 \(sleepHours.formatted(.number.precision(.fractionLength(1))))時間を確保")
+                factors.append(L10n.string("health_meals_body_ai.62b4274f6ef5", fallback: "睡眠 {{value1}}時間を確保", values: [String(describing: sleepHours.formatted(.number.precision(.fractionLength(1))))]))
             } else if sleepHours < 6 {
                 score -= 15
-                factors.append("睡眠が短め")
+                factors.append(L10n.string("health_meals_body_ai.c3262e1157cc", fallback: "睡眠が短め"))
             } else {
-                factors.append("睡眠はやや短め")
+                factors.append(L10n.string("health_meals_body_ai.06bf7aa1d0bd", fallback: "睡眠はやや短め"))
             }
         }
 
@@ -138,12 +138,12 @@ final class HealthDataManager: ObservableObject {
             let delta = current - baseline
             if delta >= 7 {
                 score -= 12
-                factors.append("安静時心拍が14日平均より高め")
+                factors.append(L10n.string("health_meals_body_ai.b11d41985e01", fallback: "安静時心拍が14日平均より高め"))
             } else if delta <= -3 {
                 score += 5
-                factors.append("安静時心拍は平均より低め")
+                factors.append(L10n.string("health_meals_body_ai.1e452a939388", fallback: "安静時心拍は平均より低め"))
             } else {
-                factors.append("安静時心拍は普段どおり")
+                factors.append(L10n.string("health_meals_body_ai.8168d1a78f05", fallback: "安静時心拍は普段どおり"))
             }
         }
 
@@ -154,12 +154,12 @@ final class HealthDataManager: ObservableObject {
             let ratio = current / baseline
             if ratio < 0.75 {
                 score -= 12
-                factors.append("HRVが14日平均より低め")
+                factors.append(L10n.string("health_meals_body_ai.93df76c886d2", fallback: "HRVが14日平均より低め"))
             } else if ratio > 1.1 {
                 score += 7
-                factors.append("HRVは平均より高め")
+                factors.append(L10n.string("health_meals_body_ai.846e364a038b", fallback: "HRVは平均より高め"))
             } else {
-                factors.append("HRVは普段の範囲")
+                factors.append(L10n.string("health_meals_body_ai.a6455e49514a", fallback: "HRVは普段の範囲"))
             }
         }
 
@@ -169,9 +169,9 @@ final class HealthDataManager: ObservableObject {
             let delta = abs(current - baseline)
             if delta >= 0.7 {
                 score -= 8
-                factors.append("手首皮膚温が普段と異なる傾向")
+                factors.append(L10n.string("health_meals_body_ai.479e875e017c", fallback: "手首皮膚温が普段と異なる傾向"))
             } else {
-                factors.append("手首皮膚温は普段の範囲")
+                factors.append(L10n.string("health_meals_body_ai.41c24080d6cf", fallback: "手首皮膚温は普段の範囲"))
             }
         }
 
@@ -182,12 +182,12 @@ final class HealthDataManager: ObservableObject {
             let ratio = current / baseline
             if ratio >= 1.12 {
                 score -= 8
-                factors.append("呼吸数が14日平均より高め")
+                factors.append(L10n.string("health_meals_body_ai.e38a51092b11", fallback: "呼吸数が14日平均より高め"))
             } else if ratio <= 0.9 {
                 score += 3
-                factors.append("呼吸数は14日平均より低め")
+                factors.append(L10n.string("health_meals_body_ai.caa9aafe072d", fallback: "呼吸数は14日平均より低め"))
             } else {
-                factors.append("呼吸数は普段の範囲")
+                factors.append(L10n.string("health_meals_body_ai.14bdb2a55427", fallback: "呼吸数は普段の範囲"))
             }
         }
 
@@ -197,9 +197,9 @@ final class HealthDataManager: ObservableObject {
             availableCount += 1
             if recentCount >= 3 {
                 score -= 8
-                factors.append("48時間のトレーニング回数が多め")
+                factors.append(L10n.string("health_meals_body_ai.f053074509dd", fallback: "48時間のトレーニング回数が多め"))
             } else {
-                factors.append("直近のトレーニング量は通常範囲")
+                factors.append(L10n.string("health_meals_body_ai.1e49abe778ad", fallback: "直近のトレーニング量は通常範囲"))
             }
         }
 
@@ -208,9 +208,9 @@ final class HealthDataManager: ObservableObject {
             availableCount += 1
             if steps >= 18_000 {
                 score -= 5
-                factors.append("今日の活動量が多め")
+                factors.append(L10n.string("health_meals_body_ai.a96837b53ce2", fallback: "今日の活動量が多め"))
             } else {
-                factors.append("今日の活動量を反映")
+                factors.append(L10n.string("health_meals_body_ai.6c03b0ffd290", fallback: "今日の活動量を反映"))
             }
         }
 
@@ -220,12 +220,12 @@ final class HealthDataManager: ObservableObject {
             switch subjectiveRecovery.fatigueLevel {
             case 4...5:
                 score -= subjectiveRecovery.fatigueLevel == 5 ? 15 : 9
-                factors.append("主観疲労が高め")
+                factors.append(L10n.string("health_meals_body_ai.bcdb18a0c6bb", fallback: "主観疲労が高め"))
             case 1:
                 score += 6
-                factors.append("主観疲労は低め")
+                factors.append(L10n.string("health_meals_body_ai.7c25eddabd36", fallback: "主観疲労は低め"))
             default:
-                factors.append("主観疲労は通常範囲")
+                factors.append(L10n.string("health_meals_body_ai.4842a70e2a73", fallback: "主観疲労は通常範囲"))
             }
         }
 
@@ -233,8 +233,8 @@ final class HealthDataManager: ObservableObject {
             return ReadinessAssessment(
                 score: nil,
                 level: .moderate,
-                summary: "データがそろうと、睡眠・回復・運動量をまとめて確認できます。",
-                factors: ["未取得の項目は0として扱いません"],
+                summary: L10n.string("health_meals_body_ai.5abca7b1f34a", fallback: "データがそろうと、睡眠・回復・運動量をまとめて確認できます。"),
+                factors: [L10n.string("health_meals_body_ai.12f06f2c1cac", fallback: "未取得の項目は0として扱いません")],
                 availableFactorCount: 0
             )
         }
@@ -242,9 +242,9 @@ final class HealthDataManager: ObservableObject {
         score = min(100, max(0, score))
         let level: ReadinessAssessment.Level = score >= 80 ? .good : (score >= 55 ? .moderate : .recover)
         let summary: String = switch level {
-        case .good: "通常どおり取り組めそうです。ウォームアップ中の感覚も確認しましょう。"
-        case .moderate: "普段どおりを目安に、RPEを見ながら調整しましょう。"
-        case .recover: "今日は重量やセット数を抑え、回復を優先する選択肢があります。"
+        case .good: L10n.string("health_meals_body_ai.dc2cd2929fe4", fallback: "通常どおり取り組めそうです。ウォームアップ中の感覚も確認しましょう。")
+        case .moderate: L10n.string("health_meals_body_ai.b2e71d0a9bc5", fallback: "普段どおりを目安に、RPEを見ながら調整しましょう。")
+        case .recover: L10n.string("health_meals_body_ai.c120f8925e69", fallback: "今日は重量やセット数を抑え、回復を優先する選択肢があります。")
         }
 
         return ReadinessAssessment(
@@ -692,9 +692,20 @@ final class HealthDataManager: ObservableObject {
         }
     }
 
-    private func latestOutdoorRunningRoute() async -> OutdoorWorkoutRouteSummary? {
+    private func latestOutdoorRoute() async -> OutdoorWorkoutRouteSummary? {
+        var summaries: [OutdoorWorkoutRouteSummary] = []
+        for activity in OutdoorCardioActivity.allCases {
+            if let summary = await latestOutdoorRoute(for: activity) {
+                summaries.append(summary)
+            }
+        }
+        return summaries.max { $0.startedAt < $1.startedAt }
+    }
+
+    private func latestOutdoorRoute(for activity: OutdoorCardioActivity) async -> OutdoorWorkoutRouteSummary? {
         let workoutType = HKObjectType.workoutType()
-        let predicate = HKQuery.predicateForWorkouts(with: .running)
+        let predicate = HKQuery.predicateForWorkouts(with: healthKitActivityType(for: activity))
+        let distanceIdentifier = healthKitDistanceType(for: activity)
 
         return await withCheckedContinuation { continuation in
             let workoutQuery = HKSampleQuery(
@@ -732,7 +743,7 @@ final class HealthDataManager: ObservableObject {
                         }
 
                         let locations = accumulator.locations.sorted { $0.timestamp < $1.timestamp }
-                        let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)
+                        let distanceType = HKQuantityType.quantityType(forIdentifier: distanceIdentifier)
                         let distanceQuantity = distanceType.flatMap {
                             workout.statistics(for: $0)?.sumQuantity()
                         }
@@ -745,6 +756,7 @@ final class HealthDataManager: ObservableObject {
                         continuation.resume(
                             returning: OutdoorWorkoutRouteSummary(
                                 workoutID: workout.uuid,
+                                activity: activity,
                                 startedAt: workout.startDate,
                                 durationSeconds: workout.duration,
                                 distanceKilometers: distance,
@@ -766,6 +778,21 @@ final class HealthDataManager: ObservableObject {
                 healthStore.execute(routeQuery)
             }
             healthStore.execute(workoutQuery)
+        }
+    }
+
+    private func healthKitActivityType(for activity: OutdoorCardioActivity) -> HKWorkoutActivityType {
+        switch activity {
+        case .running: .running
+        case .walking: .walking
+        case .cycling: .cycling
+        }
+    }
+
+    private func healthKitDistanceType(for activity: OutdoorCardioActivity) -> HKQuantityTypeIdentifier {
+        switch activity {
+        case .running, .walking: .distanceWalkingRunning
+        case .cycling: .distanceCycling
         }
     }
 
@@ -811,6 +838,7 @@ final class HealthDataManager: ObservableObject {
         ),
         latestOutdoorRoute: OutdoorWorkoutRouteSummary(
             workoutID: UUID(),
+            activity: .running,
             startedAt: Date().addingTimeInterval(-86_400),
             durationSeconds: 1_920,
             distanceKilometers: 5.1,

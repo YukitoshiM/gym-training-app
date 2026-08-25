@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"ar-SA","translation":"سيتم إعادة تعيينه إلى {{value1}}. لا تزال بإمكانك استخدام السجل اليدوي.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"ar-SA","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"ar-SA","translation":"الرجاء إدخال رقم أكبر من 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"ar-SA","translation":"1. المداومة 3 مرات في الأسبوع\n2. تتبع أهداف البروتين الخاصة بك\n3. قارن بين صور الجسم في نهاية الشهر","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"ar-SA","translation":"يرجى الانتظار لمدة دقيقة وحاول مرة أخرى.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"ar-SA","translation":"1 كوب","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"ar-SA","translation":"ولا يوجد مرشح واضح للركود في الأحداث المسجلة ثلاث مرات أو أكثر.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"ar-SA","translation":"عدد كبير جدًا من الدورات التدريبية لكل 48 ساعة","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"ar-SA","translation":"الذكاء الاصطناعي توازن الجسم كله","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"ar-SA","translation":"السجلات المشار إليها بواسطة منظمة العفو الدولية","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"ar-SA","translation":"يتركز استخدام الذكاء الاصطناعي بشكل مؤقت.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"ar-SA","translation":"بيانات اعتماد الذكاء الاصطناعي غير صالحة أو منتهية الصلاحية.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"ar-SA","translation":"خطأ في الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"ar-SA","translation":"مدرب الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"ar-SA","translation":"خادم AI URL غير صالح.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"ar-SA","translation":"أرجع خادم AI الخطأ: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"ar-SA","translation":"لا يمكن العثور على API المطلوب لخادم AI.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"ar-SA","translation":"غير قادر على الاتصال بخادم AI. يرجى المحاولة مرة أخرى لاحقا.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"ar-SA","translation":"يختلف تنسيق JSON لخادم AI عما يتوقعه التطبيق.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"ar-SA","translation":"غير قادر على قراءة استجابة خادم AI.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"ar-SA","translation":"حدث خطأ من جانب خادم الذكاء الاصطناعي: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"ar-SA","translation":"تحقق من اتصال خادم AI","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"ar-SA","translation":"مدرب الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"ar-SA","translation":"هل تريد حذف المحادثة مع مدرب الذكاء الاصطناعي؟","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"ar-SA","translation":"نموذج الذكاء الاصطناعي غير متوفر أو فشل تحليل الصورة.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"ar-SA","translation":"نموذج الذكاء الاصطناعي قيد الإعداد","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"ar-SA","translation":"تحليل الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"ar-SA","translation":"هناك مساحة كبيرة لاستخدام الذكاء الاصطناعي.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"ar-SA","translation":"تحقق من حصة استخدام الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"ar-SA","translation":"إعدادات استخدام الذكاء الاصطناعي متوقفة.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"ar-SA","translation":"القيمة المرجعية للذكاء الاصطناعي/التأكيد مطلوبة","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"ar-SA","translation":"تم تمكين اتصال الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"ar-SA","translation":"لا يمكن حفظ معلومات اتصال الذكاء الاصطناعي بشكل آمن.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"ar-SA","translation":"وظيفة الذكاء الاصطناعي","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"ar-SA","translation":"تم إيقاف تشغيل وظيفة الذكاء الاصطناعي في الإعدادات","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"ar-SA","translation":"تم إيقاف تشغيل وظيفة الذكاء الاصطناعي في الإعدادات. يمكنك حفظ مجموعة الصور كما هي.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"ar-SA","translation":"تم إيقاف تشغيل وظيفة الذكاء الاصطناعي في الإعدادات. يمكن حفظ الإدخال اليدوي كما هو.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"ar-SA","translation":"منظمة العفو الدولية إرسال التاريخ","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"ar-SA","translation":"لم يتم تعيين مفتاح API.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"ar-SA","translation":"يرجى التحقق من إصدار خادم API. التفاصيل: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"ar-SA","translation":"خادم API يستجيب، لكن النموذج المطلوب غير متوفر.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"ar-SA","translation":"خادم API يستجيب، لكن النموذج المساعد للطهي/التقرير غير متوفر.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"ar-SA","translation":"يعمل مع Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"ar-SA","translation":"عرض أحدث مسارات التشغيل المحفوظة في Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"ar-SA","translation":"رابط Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"ar-SA","translation":"إن ارتداء Apple Watch بشكل مناسب وارتدائه حتى أثناء النوم سيساعد على أن تكون مؤشرات التعافي الخاصة بك متسقة. لن يتم ملء العناصر التي ليس لها قيمة عن طريق التخمين.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"ar-SA","translation":"تحقق من إصدارات الخادم Base URL وAPI.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"ar-SA","translation":"معدل ضربات القلب أقل من متوسط 14 يومًا","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"ar-SA","translation":"لا تتوفر بيانات HRV المستمرة","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"ar-SA","translation":"HRV أعلى من المتوسط","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"ar-SA","translation":"HRV في المعدل الطبيعي","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"ar-SA","translation":"متوسط نسبة HRV {{value1}}% (النسبة القياسية الفردية)","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"ar-SA","translation":"لا يمكن استخدام HTTP إلا داخل المضيف المحلي، وLAN، وTailscale. الرجاء استخدام HTTPS للخوادم الخارجية.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"ar-SA","translation":"لم يتم الحصول على استهلاك الطاقة الصحية. يتم حفظ سجلات الوجبات فقط.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"ar-SA","translation":"تحديث البيانات الصحية","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"ar-SA","translation":"الرجاء تحديد صورة JPEG أو PNG مرة أخرى.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"ar-SA","translation":"سجل مؤشرات الأداء الرئيسية","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"ar-SA","translation":"أحدث قيمة تم تسجيلها بواسطة تطبيق Noise وما إلى ذلك. لم يتم ضبطها على 0 إذا لم يتم الحصول عليها.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"ar-SA","translation":"حساب السعرات الحرارية تلقائيا من PFC","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"ar-SA","translation":"تم تحقيق PFC","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"ar-SA","translation":"قم بخفض RPE بمستوى واحد","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"ar-SA","translation":"يرجى البدء بـ https:// لـ URL. للتطوير المحلي، يمكنك أيضًا استخدام HTTP مع أسماء localhost وLAN IP وTailscale.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"ar-SA","translation":"يرجى البدء بـ https:// لـ URL. http:// يمكن استخدامه أيضًا أثناء التطوير المحلي فقط.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"ar-SA","translation":"مع مستشعر الساعة","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"ar-SA","translation":"bpm / 30 ثانية","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"ar-SA","translation":"تم تحقيق kcal・PFC","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"ar-SA","translation":"تم تحقيق kcal","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"ar-SA","translation":"kg / دقيقة","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"ar-SA","translation":"{\"id\": \"{{value1}}\"، \"category\": \"{{value2}}\"، \"title\": \"{{value3}}\"، \"target\":0، \"rationale\": \"تم تأكيد السجلات والأهداف\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"ar-SA","translation":"{\"keep_existing\":true,\"readiness_level\":\"normal\",\"summary\":\"لنواصل تنفيذ الاقتراحات اليومية.\",\"change_reason\":\"\",\"actions\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"ar-SA","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"ar-SA","translation":"الوقت {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"ar-SA","translation":"الخطوة {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"ar-SA","translation":"{{value1}} / {{value2}}الطعام","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"ar-SA","translation":"قطع {{value1}} {{value2}} ({{value3}}): {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"ar-SA","translation":"يمكن إنشاء التعليقات الأسبوعية باستخدام {{value1}} والنماذج المساعدة.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"ar-SA","translation":"مرات {{value1}}/{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"ar-SA","translation":"{{value1}}: {{value2}} معدل الإنجاز {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"ar-SA","translation":"يؤكد {{value1}} المجموعة بأكملها","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"ar-SA","translation":"يفكر {{value1}} في الإجابة","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"ar-SA","translation":"يقوم {{value1}} بالتحقق من الطهي وPFC","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"ar-SA","translation":"يؤكد {{value1}} اتجاهات متعددة","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"ar-SA","translation":"ما يتذكره {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"ar-SA","translation":"تم إنشاؤه ومراجعته بالتشاور مع {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"ar-SA","translation":"التشاور مع {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"ar-SA","translation":"تقرير {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"ar-SA","translation":"لا توجد تقارير عن {{value1}} حتى الآن","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"ar-SA","translation":"مسودة {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"ar-SA","translation":"مسودة {{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"ar-SA","translation":"تحليل {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"ar-SA","translation":"نتائج تحليل {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"ar-SA","translation":"المعلومات المرجعية لـ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"ar-SA","translation":"مراجعة {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"ar-SA","translation":"بعد اقتراح {{value1}}، سيتم عرض المحتوى الذي وافقت على حفظه فقط.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"ar-SA","translation":"المراجعة الشهرية لـ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"ar-SA","translation":"ذكريات {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"ar-SA","translation":"حدد {{value1}} من المكتبة","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"ar-SA","translation":"حذف {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"ar-SA","translation":"الصورة {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"ar-SA","translation":"تحرير {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"ar-SA","translation":"سجل {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"ar-SA","translation":"{{value1}} ولاعة","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"ar-SA","translation":"متوسط الاستقرار لمجموعة {{value1}} هو {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"ar-SA","translation":"{{value1}}・","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"ar-SA","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"ar-SA","translation":"{{value1}}・الدردشة","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"ar-SA","translation":"{{value1}}・اقتراح المراجعة الشهرية","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"ar-SA","translation":"{{value1}}・تصحيح {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"ar-SA","translation":"{{value1}}・التقرير الأسبوعي","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"ar-SA","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"ar-SA","translation":"{{value1}}يرجى المحاولة مرة أخرى. التسجيل اليدوي لا يزال متاحا.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"ar-SA","translation":"{{value1}}يرجى المحاولة مرة أخرى. إذا استمرت المشكلة، يرجى التحقق من حالة تشغيل خادم الذكاء الاصطناعي.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"ar-SA","translation":"{{value1}}حذف الصورة","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"ar-SA","translation":"دقائق {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"ar-SA","translation":"مرات {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"ar-SA","translation":"{{value1}} مرات/متوسط معدل الإنجاز {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"ar-SA","translation":"سيتم تحليل صور اتجاه {{value1}} معًا. نحن لا نحدد أرقام مثل نسبة الدهون في الجسم.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"ar-SA","translation":"قطع {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"ar-SA","translation":"مجموعة الصور {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"ar-SA","translation":"{{value1}} المشي","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"ar-SA","translation":"يشير \"-\" إلى أنه لا يتم قياسه ويتم استبعاده من الإجمالي، ويشير \"Tr\" إلى كمية تتبع ويتم تقريبها بـ 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"ar-SA","translation":"أيضا {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"ar-SA","translation":"سوف نفكر معًا أثناء النظر في سجلاتك.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"ar-SA","translation":"نشيط للغاية","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"ar-SA","translation":"أنا متعب جدا","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"ar-SA","translation":"يمكنك تحليلها كما هي. إذا قمت أيضًا بإضافة العرض الجانبي أو الخلفي، فيمكنك التحقق من ذلك من اتجاه مختلف.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"ar-SA","translation":"تحليل هذه المجموعة","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"ar-SA","translation":"استخدم هذه المعلومات لتقديم توصيات.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"ar-SA","translation":"احذف الكل","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"ar-SA","translation":"البروتين","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"ar-SA","translation":"وسوف نعكس ما تعلمناه في مقترحات الغد.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"ar-SA","translation":"منتجات أخرى من {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"ar-SA","translation":"لا توجد بيانات التدريب حتى الآن.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"ar-SA","translation":"لا توجد سجلات حتى الآن.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"ar-SA","translation":"تقدير مرة أخرى","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"ar-SA","translation":"الخصر","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"ar-SA","translation":"القراءة بالكاميرا","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"ar-SA","translation":"الكاميرا غير متوفرة","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"ar-SA","translation":"قراءة الكاميرا غير متوفرة","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"ar-SA","translation":"السعرات الحرارية","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"ar-SA","translation":"تقدير السعرات الحرارية","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"ar-SA","translation":"إلغاء","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"ar-SA","translation":"حالة","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"ar-SA","translation":"التحقق من حالة تشغيل الخوادم URL ومفاتيح API وخوادم API.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"ar-SA","translation":"زيارة صالة الألعاب الرياضية","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"ar-SA","translation":"الوقوف","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"ar-SA","translation":"مجموعة","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"ar-SA","translation":"تحليل المجموعة","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"ar-SA","translation":"ضبط الجودة","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"ar-SA","translation":"ضبط تفاصيل الجودة","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"ar-SA","translation":"البروتين {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"ar-SA","translation":"اضغط على الصدر","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"ar-SA","translation":"هذا تقدير لأغراض الاختبار.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"ar-SA","translation":"وتيرة","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"ar-SA","translation":"بمجرد حصولك على جميع البيانات، يمكنك التحقق من معدل نومك وتعافيك ومقدار التمرين في وقت واحد.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"ar-SA","translation":"جودة البيانات","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"ar-SA","translation":"استشارة المدرب","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"ar-SA","translation":"التدريب","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"ar-SA","translation":"تحليل التدريب","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"ar-SA","translation":"تاريخ التدريب","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"ar-SA","translation":"خطة التدريب","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"ar-SA","translation":"حمل التدريب","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"ar-SA","translation":"يرجى التحقق من حالة تشغيل شبكتك وخادم الذكاء الاصطناعي. قد تستغرق معالجة الذكاء الاصطناعي ما يصل إلى 240 ثانية.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"ar-SA","translation":"الرجاء التحقق من حالة الشبكة والخادم URL والمحاولة مرة أخرى.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"ar-SA","translation":"يرجى التحقق من حالة الشبكة والخادم URL.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"ar-SA","translation":"الباركود","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"ar-SA","translation":"حجم","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"ar-SA","translation":"الحجم هو وزن المجموعات المكتملة × التكرارات. لا تعقد الكثير من المقارنات البسيطة بين الأسابيع التي تحتوي على تراكيب أحداث مختلفة جدًا.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"ar-SA","translation":"تحرك","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"ar-SA","translation":"رسالة","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"ar-SA","translation":"القائمة","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"ar-SA","translation":"ابدأ بإنشاء قائمة","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"ar-SA","translation":"مذكرة","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"ar-SA","translation":"مكتبة","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"ar-SA","translation":"المنسدلة اللات","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"ar-SA","translation":"كمية قياسية من التسمية","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"ar-SA","translation":"تقدير السعرات الحرارية من القائمة","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"ar-SA","translation":"يرجى المحاولة مرة أخرى بعد إعادة الضبط. التسجيل اليدوي لا يزال متاحا.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"ar-SA","translation":"عند العثور على مسار خارجي للركض، سيتم عرض المسافة والسرعة وفرق الارتفاع.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"ar-SA","translation":"اضغط على الساق","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"ar-SA","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"ar-SA","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"ar-SA","translation":"عدد الطوابق التي تم صعودها","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"ar-SA","translation":"منتصف الصحوة","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"ar-SA","translation":"مؤشرات الأداء الرئيسية","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"ar-SA","translation":"التعب الذاتي العالي","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"ar-SA","translation":"التعب الذاتي منخفض","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"ar-SA","translation":"التعب الذاتي في المعدل الطبيعي","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"ar-SA","translation":"يرجى تحديد المحتوى الذي ترغب في استخدامه للمقترحات المستقبلية فقط.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"ar-SA","translation":"للمساعدة في مقترحات الوزن المستقبلية","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"ar-SA","translation":"تم تحديد الثلاثة اليوم.","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"ar-SA","translation":"نشاط اليوم","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"ar-SA","translation":"توازن الطاقة اليوم","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"ar-SA","translation":"مجموعة اليوم","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"ar-SA","translation":"الشعور بالتعب اليوم","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"ar-SA","translation":"اقتراح اليوم","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"ar-SA","translation":"تحرير مجموعة التصوير اليوم","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"ar-SA","translation":"تمت إضافة مجموعة التصوير اليوم","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"ar-SA","translation":"الكثير من النشاط اليوم","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"ar-SA","translation":"يعكس مستوى النشاط اليوم","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"ar-SA","translation":"مستوى التحضير اليوم","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"ar-SA","translation":"عمل اليوم","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"ar-SA","translation":"التحقق من التقدم اليوم","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"ar-SA","translation":"وجبة اليوم","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"ar-SA","translation":"اقتراحات وجبة اليوم","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"ar-SA","translation":"هدف وجبة اليوم","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"ar-SA","translation":"إعطاء الأولوية للتعافي اليوم","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"ar-SA","translation":"اليوم، سأقوم بتوزيع تدريبات القوة الخاصة بي وإعطاء الأولوية لقدر معقول من النشاط.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"ar-SA","translation":"سأخفف العبء قليلا اليوم.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"ar-SA","translation":"اليوم لديك خيار تقليل الوزن وتقليل المجموعات وإعطاء الأولوية للتعافي.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"ar-SA","translation":"دعونا نتحقق مما سنفعله اليوم.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"ar-SA","translation":"هذا الاسبوع","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"ar-SA","translation":"هذا الأسبوع مرات {{value1}}/{{value2}}m الحالي","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"ar-SA","translation":"هذا الأسبوع {{value1}} مرات/إجمالي مرات {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"ar-SA","translation":"خاتمة هذا الأسبوع","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"ar-SA","translation":"أي","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"ar-SA","translation":"محادثة","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"ar-SA","translation":"حذف المحادثة","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"ar-SA","translation":"لن يتم حذف سجل المحادثات.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"ar-SA","translation":"هذه قيمة مرجعية ذات موثوقية منخفضة. ولا يتم حفظه في سجلات القياس الفعلية أو الرسوم البيانية.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"ar-SA","translation":"صورة الجسم","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"ar-SA","translation":"صورة الجسم AI","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"ar-SA","translation":"تم إيقاف مشاركة صور الجسم باستخدام الذكاء الاصطناعي في الإعدادات.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"ar-SA","translation":"لا توجد صور الجسم بعد","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"ar-SA","translation":"التقاط صورة للجسم","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"ar-SA","translation":"تحليل مجموعة صور الجسم","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"ar-SA","translation":"فحص صورة الجسم","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"ar-SA","translation":"إذا كنت تشعر بالإعياء أو الألم، فأعط الأولوية لمشاعرك على الأرقام.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"ar-SA","translation":"يرجى مراقبة صحتك والمضي قدما كما هو مخطط له.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"ar-SA","translation":"الوزن","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"ar-SA","translation":"تعتمد القيم الرقمية التي تتقلب من يوم لآخر، مثل الوزن ومحيط الخصر، على الاتجاهات.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"ar-SA","translation":"سجل وزنك","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"ar-SA","translation":"اقتراحات مبنية على المعدات القابلة للاستخدام","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"ar-SA","translation":"مثال: 150 جرام من الأرز الأبيض","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"ar-SA","translation":"حفظ","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"ar-SA","translation":"المراجعات الشهرية المحفوظة","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"ar-SA","translation":"الذكريات المحفوظة","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"ar-SA","translation":"لا أتذكر حفظه","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"ar-SA","translation":"لن يتم حذف الذكريات المحفوظة.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"ar-SA","translation":"هل تريد حذف جميع الذكريات المحفوظة؟","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"ar-SA","translation":"لا تحفظ","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"ar-SA","translation":"لا يمكن الحفظ","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"ar-SA","translation":"الموثوقية","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"ar-SA","translation":"قيمة","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"ar-SA","translation":"أثناء قيامك بإضافة القيم، سترى مدى تقدمها هنا.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"ar-SA","translation":"فحص الركود","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"ar-SA","translation":"بالنسبة للأحداث المرشحة للركود، حاول خفض الوزن ومطابقة الممثلين المستهدفين، أو قم بتمديد فترة راحتك بمقدار 15 إلى 30 ثانية وقارن.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"ar-SA","translation":"المواد وراء الركود","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"ar-SA","translation":"نشيط","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"ar-SA","translation":"بيانات الإدخال","review_note":""}

@@ -112,6 +112,17 @@ CREATE TABLE IF NOT EXISTS evidence_documents (
     study_type TEXT NOT NULL DEFAULT 'other',
     quality_score REAL NOT NULL DEFAULT 0,
     source_updated_at TEXT,
+    full_text TEXT NOT NULL DEFAULT '',
+    full_text_license TEXT NOT NULL DEFAULT '',
+    full_text_source_url TEXT NOT NULL DEFAULT '',
+    population TEXT NOT NULL DEFAULT '',
+    interventions_json TEXT NOT NULL DEFAULT '[]',
+    outcomes_json TEXT NOT NULL DEFAULT '[]',
+    constraints_json TEXT NOT NULL DEFAULT '[]',
+    conclusion TEXT NOT NULL DEFAULT '',
+    correction_of_doi TEXT NOT NULL DEFAULT '',
+    corrected_by_doi TEXT NOT NULL DEFAULT '',
+    version_status TEXT NOT NULL DEFAULT 'current',
     indexed_at TEXT NOT NULL
 );
 
@@ -179,6 +190,26 @@ class EvidenceDocument:
     goals: tuple[str, ...] = ()
     subtopics: tuple[str, ...] = ()
     collection_queries: tuple[str, ...] = ()
+    full_text: str = ""
+    full_text_license: str = ""
+    full_text_source_url: str = ""
+    population: str = ""
+    interventions: tuple[str, ...] = ()
+    outcomes: tuple[str, ...] = ()
+    constraints: tuple[str, ...] = ()
+    conclusion: str = ""
+    correction_of_doi: str = ""
+    corrected_by_doi: str = ""
+    version_status: str = "current"
+
+
+@dataclass(frozen=True)
+class EvidenceUserProfile:
+    age: Optional[int] = None
+    sex: str = ""
+    experience_level: str = ""
+    population_tags: tuple[str, ...] = ()
+    constraints: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -191,6 +222,19 @@ class EvidenceCitation:
     url: str
     doi: str
     relevance: float
+    source_scope: str = "abstract"
+    evidence_summary: str = ""
+    population: str = ""
+    intervention: str = ""
+    outcomes: tuple[str, ...] = ()
+    limitations: tuple[str, ...] = ()
+    applicability_score: float = 0.5
+    applicability_label: str = "unclear"
+    version_status: str = "current"
+    conclusion_consistency: str = "unknown"
+    newer_evidence_note: str = ""
+    full_text_license: str = ""
+    source_detail_url: str = ""
 
 
 @dataclass(frozen=True)
@@ -200,6 +244,17 @@ class EvidenceSearchResult:
     confidence: str
     searched_documents: int
     last_updated_at: Optional[str]
+    state: str = "ready"
+    reason: str = ""
+    matched_documents: int = 0
+
+
+@dataclass(frozen=True)
+class CrossrefVersionStatus:
+    retracted: bool = False
+    corrected: bool = False
+    correction_of_doi: str = ""
+    corrected_by_doi: str = ""
 
 
 class EvidenceStore:
@@ -232,6 +287,21 @@ class EvidenceStore:
                 "ALTER TABLE evidence_documents ADD COLUMN topics_json TEXT NOT NULL DEFAULT '[]'"
             )
         for name in ("goals_json", "subtopics_json", "collection_queries_json"):
+            if name not in columns:
+                connection.execute(
+                    f"ALTER TABLE evidence_documents ADD COLUMN {name} TEXT NOT NULL DEFAULT '[]'"
+                )
+        text_columns = (
+            "full_text", "full_text_license", "full_text_source_url", "population",
+            "conclusion", "correction_of_doi", "corrected_by_doi", "version_status",
+        )
+        for name in text_columns:
+            if name not in columns:
+                default = "current" if name == "version_status" else ""
+                connection.execute(
+                    f"ALTER TABLE evidence_documents ADD COLUMN {name} TEXT NOT NULL DEFAULT '{default}'"
+                )
+        for name in ("interventions_json", "outcomes_json", "constraints_json"):
             if name not in columns:
                 connection.execute(
                     f"ALTER TABLE evidence_documents ADD COLUMN {name} TEXT NOT NULL DEFAULT '[]'"
@@ -369,8 +439,11 @@ class EvidenceStore:
                         publication_year, publication_types_json, keywords_json,
                         topics_json, goals_json, subtopics_json, collection_queries_json,
                         source_url, is_open_access, retracted, corrected, study_type,
-                        quality_score, source_updated_at, indexed_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        quality_score, source_updated_at, full_text, full_text_license,
+                        full_text_source_url, population, interventions_json, outcomes_json,
+                        constraints_json, conclusion, correction_of_doi, corrected_by_doi,
+                        version_status, indexed_at
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     ON CONFLICT(pmid) DO UPDATE SET
                         pmcid=excluded.pmcid, doi=excluded.doi, title=excluded.title,
                         abstract_text=excluded.abstract_text, authors=excluded.authors,
@@ -384,6 +457,17 @@ class EvidenceStore:
                         corrected=excluded.corrected, study_type=excluded.study_type,
                         quality_score=excluded.quality_score,
                         source_updated_at=excluded.source_updated_at,
+                        full_text=excluded.full_text,
+                        full_text_license=excluded.full_text_license,
+                        full_text_source_url=excluded.full_text_source_url,
+                        population=excluded.population,
+                        interventions_json=excluded.interventions_json,
+                        outcomes_json=excluded.outcomes_json,
+                        constraints_json=excluded.constraints_json,
+                        conclusion=excluded.conclusion,
+                        correction_of_doi=excluded.correction_of_doi,
+                        corrected_by_doi=excluded.corrected_by_doi,
+                        version_status=excluded.version_status,
                         indexed_at=excluded.indexed_at
                     """,
                     (
@@ -408,6 +492,17 @@ class EvidenceStore:
                         document.study_type,
                         document.quality_score,
                         document.source_updated_at,
+                        document.full_text,
+                        document.full_text_license,
+                        document.full_text_source_url,
+                        document.population,
+                        json.dumps(document.interventions, ensure_ascii=False),
+                        json.dumps(document.outcomes, ensure_ascii=False),
+                        json.dumps(document.constraints, ensure_ascii=False),
+                        document.conclusion,
+                        document.correction_of_doi,
+                        document.corrected_by_doi,
+                        document.version_status,
                         indexed_at,
                     ),
                 )
@@ -462,6 +557,45 @@ class EvidenceStore:
                         ),
                     ),
                 )
+                if document.full_text and document.full_text_license:
+                    connection.execute(
+                        """
+                        INSERT INTO evidence_chunks (
+                            document_id, chunk_kind, text, embedding_model, vector_json
+                        ) VALUES (?, 'full_text', ?, NULL, NULL)
+                        ON CONFLICT(document_id, chunk_kind) DO UPDATE SET text=excluded.text
+                        """,
+                        (document_id, _full_text_chunk(document)),
+                    )
+                    full_chunk = connection.execute(
+                        "SELECT id FROM evidence_chunks WHERE document_id = ? AND chunk_kind = 'full_text'",
+                        (document_id,),
+                    ).fetchone()
+                    if full_chunk:
+                        full_chunk_id = int(full_chunk["id"])
+                        connection.execute(
+                            "DELETE FROM evidence_chunks_fts WHERE chunk_id = ?", (full_chunk_id,)
+                        )
+                        connection.execute(
+                            "INSERT INTO evidence_chunks_fts(chunk_id, title, text, keywords) VALUES (?, ?, ?, ?)",
+                            (
+                                full_chunk_id,
+                                document.title,
+                                _full_text_chunk(document),
+                                " ".join((*document.keywords, *document.topics, *document.goals)),
+                            ),
+                        )
+                else:
+                    stale_full_text = connection.execute(
+                        "SELECT id FROM evidence_chunks WHERE document_id = ? AND chunk_kind = 'full_text'",
+                        (document_id,),
+                    ).fetchone()
+                    if stale_full_text:
+                        stale_id = int(stale_full_text["id"])
+                        connection.execute(
+                            "DELETE FROM evidence_chunks_fts WHERE chunk_id = ?", (stale_id,)
+                        )
+                        connection.execute("DELETE FROM evidence_chunks WHERE id = ?", (stale_id,))
                 count += 1
         return count
 
@@ -522,7 +656,11 @@ class EvidenceStore:
                 """
                 SELECT COUNT(*) AS documents,
                        SUM(CASE WHEN retracted = 0 AND topics_json != '[]' THEN 1 ELSE 0 END)
-                           AS usable_documents
+                           AS usable_documents,
+                       SUM(CASE WHEN full_text != '' AND full_text_license != '' THEN 1 ELSE 0 END)
+                           AS full_text_documents,
+                       SUM(CASE WHEN version_status = 'superseded' THEN 1 ELSE 0 END)
+                           AS superseded_documents
                 FROM evidence_documents
                 """
             ).fetchone()
@@ -553,6 +691,8 @@ class EvidenceStore:
             "state": "ready" if documents else "empty",
             "documents": documents,
             "usable_documents": int(totals["usable_documents"] or 0),
+            "full_text_documents": int(totals["full_text_documents"] or 0),
+            "superseded_documents": int(totals["superseded_documents"] or 0),
             "chunks": int(chunks["chunks"] or 0),
             "vector_chunks": vector_chunks,
             "vector_dimension": int(vector_config["dimension"]) if vector_config else None,
@@ -602,6 +742,8 @@ class EvidenceStore:
         *,
         query_vector: Optional[list[float]] = None,
         goal: Optional[str] = None,
+        user_profile: Optional[EvidenceUserProfile] = None,
+        purpose: str = "chat",
         limit: int = 5,
         candidate_limit: int = 80,
     ) -> EvidenceSearchResult:
@@ -616,12 +758,14 @@ class EvidenceStore:
                 try:
                     lexical_rows = connection.execute(
                         """
-                        SELECT d.*, c.text AS chunk_text, c.vector_json, c.embedding_model,
+                        SELECT d.*, c.text AS chunk_text, c.chunk_kind,
+                               c.vector_json, c.embedding_model,
                                bm25(evidence_chunks_fts, 0.0, 4.0, 1.0) AS lexical_rank
                         FROM evidence_chunks_fts
                         JOIN evidence_chunks c ON c.id = evidence_chunks_fts.chunk_id
                         JOIN evidence_documents d ON d.id = c.document_id
                         WHERE evidence_chunks_fts MATCH ? AND d.retracted = 0
+                              AND d.version_status != 'superseded'
                         ORDER BY lexical_rank, d.quality_score DESC
                         LIMIT ?
                         """,
@@ -641,7 +785,7 @@ class EvidenceStore:
             ):
                 vector_rows = connection.execute(
                     f"""
-                    SELECT d.*, c.text AS chunk_text, c.embedding_model,
+                    SELECT d.*, c.text AS chunk_text, c.chunk_kind, c.embedding_model,
                            NULL AS lexical_rank, neighbors.distance AS vector_distance
                     FROM (
                         SELECT rowid, distance
@@ -651,7 +795,7 @@ class EvidenceStore:
                     ) AS neighbors
                     JOIN evidence_chunks c ON c.id = neighbors.rowid
                     JOIN evidence_documents d ON d.id = c.document_id
-                    WHERE d.retracted = 0
+                    WHERE d.retracted = 0 AND d.version_status != 'superseded'
                     ORDER BY neighbors.distance
                     """,
                     (
@@ -662,11 +806,14 @@ class EvidenceStore:
 
         candidates: dict[int, dict[str, Any]] = {}
         for position, row in enumerate(lexical_rows):
-            candidates[int(row["id"])] = {
+            value = {
                 "row": row,
-                "lexical": max(0.15, 1.0 - position / max(1, len(lexical_rows))),
+                "lexical": max(0.4, 1.0 - position / max(1, len(lexical_rows) * 5)),
                 "semantic": 0.0,
             }
+            existing = candidates.get(int(row["id"]))
+            if existing is None or value["lexical"] > existing["lexical"]:
+                candidates[int(row["id"])] = value
         for row in vector_rows:
             semantic = max(0.0, 1.0 - float(row["vector_distance"] or 0.0))
             if semantic < 0.35:
@@ -694,28 +841,32 @@ class EvidenceStore:
                     for term in ("detraining", "retraining", "training cessation")
                 )
             goal_match = bool(goal and goal in document_goals)
+            applicability, applicability_label = study_applicability(row, user_profile)
             year = int(row["publication_year"] or 0)
             recency = max(0.0, 1.0 - max(0, current_year - year) / 20.0) if year else 0.0
             score = min(
                 1.0,
-                0.42 * item["lexical"]
+                0.36 * item["lexical"]
                 + 0.28 * item["semantic"]
                 + 0.18 * float(row["quality_score"] or 0)
                 + 0.04 * recency
                 + (0.08 if query_topics else 0.0)
                 + (0.08 if goal_match else 0.0)
                 + (0.12 if subtopic_match else 0.0)
+                + 0.22 * applicability
+                + purpose_score_adjustment(purpose, str(row["study_type"]), year)
             )
             if score >= 0.18:
-                ranked.append((score, row, subtopic_match))
+                ranked.append((score, row, subtopic_match, applicability, applicability_label))
         ranked.sort(key=lambda value: value[0], reverse=True)
         if query_subtopics:
             subtopic_ranked = [item for item in ranked if item[2]]
             if subtopic_ranked:
                 ranked = subtopic_ranked
-        selected = [(score, row) for score, row, _ in ranked[: max(1, min(limit, 8))]]
+        applicable_ranked = [item for item in ranked if item[4] != "mismatch"]
+        selected = applicable_ranked[: max(1, min(limit, 8))]
 
-        confidence = evidence_confidence([row for _, row in selected])
+        confidence = evidence_confidence([row for _, row, _, _, _ in selected])
         citations = tuple(
             EvidenceCitation(
                 id=f"PMID:{row['pmid']}",
@@ -726,24 +877,55 @@ class EvidenceStore:
                 url=str(row["source_url"]),
                 doi=str(row["doi"] or ""),
                 relevance=round(score, 4),
+                source_scope="full_text" if str(row["chunk_kind"] or "") == "full_text" else "abstract",
+                evidence_summary=evidence_summary(row),
+                population=str(row["population"] or ""),
+                intervention="; ".join(_json_strings(row["interventions_json"])[:2]),
+                outcomes=tuple(_json_strings(row["outcomes_json"])[:3]),
+                limitations=tuple(_json_strings(row["constraints_json"])[:3]),
+                applicability_score=round(applicability, 3),
+                applicability_label=applicability_label,
+                version_status=str(row["version_status"] or "current"),
+                conclusion_consistency=conclusion_consistency(row, selected),
+                newer_evidence_note=newer_evidence_note(row, selected),
+                full_text_license=str(row["full_text_license"] or ""),
+                source_detail_url=str(row["full_text_source_url"] or row["source_url"] or ""),
             )
-            for score, row in selected
+            for score, row, _, applicability, applicability_label in selected
         )
         context_blocks = []
-        for index, (score, row) in enumerate(selected, 1):
+        for index, (score, row, _, applicability, applicability_label) in enumerate(selected, 1):
             excerpt = str(row["chunk_text"] or "")[:1600]
             context_blocks.append(
                 f"[E{index}] PMID:{row['pmid']} | {row['title']} | "
                 f"{row['publication_year'] or 'year unknown'} | {row['study_type']} | "
-                f"quality={float(row['quality_score'] or 0):.2f} | relevance={score:.3f}\n"
-                f"{excerpt}"
+                f"scope={row['chunk_kind']} | quality={float(row['quality_score'] or 0):.2f} | "
+                f"relevance={score:.3f} | applicability={applicability_label}:{applicability:.2f}\n"
+                f"Population: {row['population'] or 'not reported'}\n"
+                f"Intervention: {'; '.join(_json_strings(row['interventions_json'])[:2]) or 'not reported'}\n"
+                f"Outcomes: {'; '.join(_json_strings(row['outcomes_json'])[:3]) or 'not reported'}\n"
+                f"Conclusion: {row['conclusion'] or 'not reported'}\n"
+                f"Constraints: {'; '.join(_json_strings(row['constraints_json'])[:3]) or 'not reported'}\n"
+                f"Excerpt: {excerpt}"
             )
+        if citations:
+            state = "ready"
+            reason = ""
+        elif ranked:
+            state = "population_mismatch"
+            reason = "Retrieved studies did not match the available user population information."
+        else:
+            state = "no_match"
+            reason = "No non-retracted, current study matched the query and purpose filters."
         return EvidenceSearchResult(
             citations=citations,
             prompt_context="\n\n".join(context_blocks),
             confidence=confidence,
             searched_documents=int(status["usable_documents"]),
             last_updated_at=status["last_updated_at"],
+            state=state,
+            reason=reason,
+            matched_documents=len(citations),
         )
 
 
@@ -811,17 +993,32 @@ class EuropePMCClient:
 
 
 class CrossrefClient:
-    def __init__(self, *, mailto: str = "", timeout_seconds: float = 15.0):
+    def __init__(
+        self,
+        *,
+        mailto: str = "",
+        timeout_seconds: float = 15.0,
+        transport: Optional[httpx.AsyncBaseTransport] = None,
+    ):
         self.mailto = mailto
         self.timeout_seconds = timeout_seconds
+        self.transport = transport
 
     async def update_flags(self, doi: str) -> tuple[bool, bool]:
+        status = await self.update_status(doi)
+        return status.retracted, status.corrected
+
+    async def update_status(self, doi: str) -> CrossrefVersionStatus:
         if not doi:
-            return False, False
+            return CrossrefVersionStatus()
         headers = {"User-Agent": "BodyMode-Evidence-RAG/0.1"}
         params = {"mailto": self.mailto} if self.mailto else None
         try:
-            async with httpx.AsyncClient(timeout=self.timeout_seconds, headers=headers) as client:
+            async with httpx.AsyncClient(
+                timeout=self.timeout_seconds,
+                headers=headers,
+                transport=self.transport,
+            ) as client:
                 response = await client.get(
                     CROSSREF_WORK_URL.format(doi=quote(doi, safe="")),
                     params=params,
@@ -829,10 +1026,28 @@ class CrossrefClient:
                 response.raise_for_status()
             message = response.json().get("message", {})
         except (httpx.HTTPError, ValueError, UnicodeError):
-            return False, False
+            return CrossrefVersionStatus()
         updates = message.get("update-to", []) or []
         update_types = {str(update.get("type", "")).lower() for update in updates}
-        return "retraction" in update_types, bool(update_types & {"correction", "update"})
+        relations = message.get("relation", {}) or {}
+        correction_of = _relation_doi(relations, "is-correction-of")
+        corrected_by = _relation_doi(relations, "is-corrected-by")
+        if not corrected_by:
+            corrected_by = next(
+                (
+                    str(update.get("DOI") or update.get("doi") or "").lower().strip()
+                    for update in updates
+                    if str(update.get("type", "")).lower() in {"correction", "update"}
+                    and str(update.get("DOI") or update.get("doi") or "").strip()
+                ),
+                "",
+            )
+        return CrossrefVersionStatus(
+            retracted="retraction" in update_types,
+            corrected=bool(update_types & {"correction", "update"}) or bool(correction_of),
+            correction_of_doi=correction_of,
+            corrected_by_doi=corrected_by,
+        )
 
 
 def parse_europe_pmc_document(item: dict[str, Any]) -> EvidenceDocument:
@@ -904,6 +1119,48 @@ def study_quality_score(study_type: str) -> float:
 def expand_query(query: str) -> str:
     additions = [alias for key, alias in QUERY_ALIASES.items() if key in query]
     return " ".join([query, *additions]).strip()
+
+
+def user_profile_from_context(context: dict[str, Any]) -> EvidenceUserProfile:
+    flattened = json.dumps(context, ensure_ascii=False).lower()
+    age_match = re.search(r"(?:年齢目安|age)\D{0,8}(\d{1,3})", flattened)
+    age = int(age_match.group(1)) if age_match else None
+    sex = ""
+    if any(term in flattened for term in ("性別: 女性", "sex: female", "gender: female")):
+        sex = "female"
+    elif any(term in flattened for term in ("性別: 男性", "sex: male", "gender: male")):
+        sex = "male"
+    experience = ""
+    experience_terms = {
+        "beginner": ("経験レベル: 初心者", "experience level: beginner", "novice"),
+        "intermediate": ("経験レベル: 中級", "experience level: intermediate"),
+        "advanced": ("経験レベル: 上級", "experience level: advanced"),
+    }
+    for value, terms in experience_terms.items():
+        if any(term in flattened for term in terms):
+            experience = value
+            break
+    tags = tuple(
+        tag
+        for tag, terms in {
+            "older adults": ("高齢", "older adult"),
+            "athlete": ("アスリート", "athlete"),
+            "postmenopausal women": ("閉経後", "postmenopausal"),
+        }.items()
+        if any(term in flattened for term in terms)
+    )
+    constraints = tuple(
+        value
+        for value in context.get("preferences", [])
+        if isinstance(value, str) and any(term in value for term in ("制約", "怪我", "痛み", "不可"))
+    )
+    return EvidenceUserProfile(
+        age=age,
+        sex=sex,
+        experience_level=experience,
+        population_tags=tags,
+        constraints=constraints,
+    )
 
 
 def detect_query_topics(query: str) -> set[str]:
@@ -994,6 +1251,124 @@ def evidence_confidence(rows: list[sqlite3.Row]) -> str:
     return "low"
 
 
+def study_applicability(
+    row: sqlite3.Row,
+    profile: Optional[EvidenceUserProfile],
+) -> tuple[float, str]:
+    if profile is None:
+        return 0.5, "unclear"
+    population = str(row["population"] or "").lower()
+    if not population:
+        return 0.45, "unclear"
+    score = 0.55
+    hard_mismatch = False
+    if profile.age is not None:
+        older_study = any(term in population for term in ("older adult", "elderly", "aged 65"))
+        youth_study = any(term in population for term in ("adolescent", "children", "youth"))
+        if profile.age >= 65 and older_study:
+            score += 0.2
+        elif profile.age < 18 and youth_study:
+            score += 0.2
+        elif (profile.age >= 65 and youth_study) or (profile.age >= 18 and youth_study):
+            hard_mismatch = True
+    sex = profile.sex.lower()
+    if sex:
+        men_only = any(term in population for term in ("men only", "male participants", "healthy men"))
+        women_only = any(term in population for term in ("women only", "female participants", "healthy women"))
+        if (sex in {"female", "woman", "women"} and men_only) or (
+            sex in {"male", "man", "men"} and women_only
+        ):
+            score -= 0.25
+        elif not men_only and not women_only:
+            score += 0.05
+    experience = profile.experience_level.lower()
+    if experience:
+        trained = any(term in population for term in ("trained", "experienced", "athlete"))
+        untrained = any(term in population for term in ("untrained", "novice", "beginner", "sedentary"))
+        if experience in {"beginner", "novice", "untrained"}:
+            score += 0.15 if untrained else (-0.1 if trained else 0)
+        elif experience in {"intermediate", "advanced", "trained"}:
+            score += 0.15 if trained else (-0.1 if untrained else 0)
+    tags = {item.lower() for item in profile.population_tags}
+    if tags and any(tag in population for tag in tags):
+        score += 0.15
+    score = max(0.0, min(1.0, score))
+    if hard_mismatch or score < 0.3:
+        return score, "mismatch"
+    if score >= 0.7:
+        return score, "direct"
+    if score >= 0.5:
+        return score, "partial"
+    return score, "unclear"
+
+
+def purpose_score_adjustment(purpose: str, study_type: str, year: int) -> float:
+    purpose = purpose.lower()
+    if purpose == "daily_recommendation":
+        return 0.04 if study_type in {"guideline", "meta_analysis", "systematic_review"} else 0.0
+    if purpose == "plan_generation":
+        return 0.04 if study_type in {"meta_analysis", "systematic_review", "randomized_controlled_trial"} else 0.0
+    if purpose == "safety":
+        return 0.06 if study_type in {"guideline", "systematic_review"} else 0.0
+    return 0.02 if year and year >= datetime.now(timezone.utc).year - 5 else 0.0
+
+
+def evidence_summary(row: sqlite3.Row) -> str:
+    conclusion = str(row["conclusion"] or "").strip()
+    if conclusion:
+        return conclusion[:600]
+    outcomes = _json_strings(row["outcomes_json"])
+    if outcomes:
+        return outcomes[0][:600]
+    return str(row["abstract_text"] or "")[:600]
+
+
+def conclusion_consistency(
+    row: sqlite3.Row,
+    selected: list[tuple[float, sqlite3.Row, bool, float, str]],
+) -> str:
+    own = _conclusion_polarity(str(row["conclusion"] or row["abstract_text"] or ""))
+    others = {
+        _conclusion_polarity(str(candidate["conclusion"] or candidate["abstract_text"] or ""))
+        for _, candidate, _, _, _ in selected
+        if candidate["pmid"] != row["pmid"]
+    }
+    others.discard("unclear")
+    if own == "unclear" or not others:
+        return "unknown"
+    return "mixed" if any(value != own for value in others) else "consistent"
+
+
+def newer_evidence_note(
+    row: sqlite3.Row,
+    selected: list[tuple[float, sqlite3.Row, bool, float, str]],
+) -> str:
+    year = int(row["publication_year"] or 0)
+    own = _conclusion_polarity(str(row["conclusion"] or row["abstract_text"] or ""))
+    newer = [
+        candidate
+        for _, candidate, _, _, _ in selected
+        if int(candidate["publication_year"] or 0) > year
+        and _conclusion_polarity(str(candidate["conclusion"] or candidate["abstract_text"] or ""))
+        not in {"unclear", own}
+    ]
+    if not newer:
+        return ""
+    latest = max(newer, key=lambda candidate: int(candidate["publication_year"] or 0))
+    return f"A newer included study ({latest['publication_year']}) reports a different conclusion."
+
+
+def _conclusion_polarity(value: str) -> str:
+    lowered = value.lower()
+    negative = ("no significant", "did not improve", "no effect", "not associated")
+    positive = ("improved", "increased", "decreased", "benefit", "effective", "associated with")
+    if any(term in lowered for term in negative):
+        return "negative"
+    if any(term in lowered for term in positive):
+        return "positive"
+    return "unclear"
+
+
 def _quality_confidence(score: float) -> str:
     if score >= 0.9:
         return "high"
@@ -1015,6 +1390,21 @@ def _chunk_text(document: EvidenceDocument) -> str:
         )
         if part
     )
+
+
+def _full_text_chunk(document: EvidenceDocument) -> str:
+    structured = "\n".join(
+        part
+        for part in (
+            f"Population: {document.population}" if document.population else "",
+            f"Interventions: {'; '.join(document.interventions)}" if document.interventions else "",
+            f"Outcomes: {'; '.join(document.outcomes)}" if document.outcomes else "",
+            f"Constraints: {'; '.join(document.constraints)}" if document.constraints else "",
+            f"Conclusion: {document.conclusion}" if document.conclusion else "",
+        )
+        if part
+    )
+    return f"{structured}\n{document.full_text}"[:120_000].strip()
 
 
 def _clean_markup(value: str) -> str:
@@ -1055,6 +1445,22 @@ def _json_strings(value: Any) -> list[str]:
         return [str(item) for item in parsed] if isinstance(parsed, list) else []
     except (TypeError, ValueError, json.JSONDecodeError):
         return []
+
+
+def _relation_doi(relations: Any, key: str) -> str:
+    if not isinstance(relations, dict):
+        return ""
+    values = relations.get(key, [])
+    if isinstance(values, dict):
+        values = [values]
+    if not isinstance(values, list):
+        return ""
+    for value in values:
+        if isinstance(value, dict):
+            identifier = str(value.get("id") or value.get("doi") or "").lower().strip()
+            if identifier:
+                return identifier
+    return ""
 
 
 def _utc_now() -> str:

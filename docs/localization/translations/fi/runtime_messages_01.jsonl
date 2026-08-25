@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"fi","translation":"AI-valmentajalta on saatu vastaus","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"fi","translation":"Vastausta ei voitu lähettää AI-valmentajalle","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"fi","translation":"Tämä on laji, joka on synkronoitu Apple Watchin kanssa.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"fi","translation":"Voit tarkistaa vastaukset avaamalla BodyMode-sovelluksen.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"fi","translation":"{{value1}} / {{value2}} saavutettu. Jatkamme kohtuullisella tahdilla.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"fi","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} kertaa","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"fi","translation":"Jätä {{value1}} muuttumattomaksi, ja käsittele se henkilön valintana.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"fi","translation":"{{value1}} tuntia","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"fi","translation":"{{value1}} askelta","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"fi","translation":"{{value1}} ateriaa","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"fi","translation":"Tällä laitteella ei voi käyttää ympäristön havaitsemista.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"fi","translation":"Tätä toimintoa ei tehdä tänään.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"fi","translation":"Riittää, jos teet yhden asian.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"fi","translation":"Miksi tämä toiminto?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"fi","translation":"Harjoitustyyppi","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"fi","translation":"Avaa sovellus ja yritä uudelleen.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"fi","translation":"Poistin kuntosalin sijainnin.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"fi","translation":"Kirjasin saapumisen kuntosalille.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"fi","translation":"Tunnistan saapumisen kuntosalin lähelle.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"fi","translation":"Automaattinen kuntosalin tunnistus on pois käytöstä.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"fi","translation":"Kirjasin lähtemisen kuntosalista.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"fi","translation":"Penkkipunnerrus käsillä","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"fi","translation":"Pimeä","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"fi","translation":"Leuanveto","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"fi","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"fi","translation":"Dips","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"fi","translation":"Olet onnistunut jatkamaan harjoittelua. Palautumisen kirjaaminen lisää tarkkuutta seuraavalla viikolla.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"fi","translation":"Musta samppanja","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"fi","translation":"Minun kuntosali","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"fi","translation":"Käyttäjä on muuttanut tämän päivän toimintoja.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"fi","translation":"Olen luonut uuden ehdotuksen tämän päivän toiminnoista käyttäjän toimien perusteella.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"fi","translation":"Valo","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"fi","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"fi","translation":"Ylös","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"fi","translation":"Alas","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"fi","translation":"Tänään kerran","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"fi","translation":"Olet saavuttanut tämän päivän kolme tavoitetta. Huomioidaan huomenna.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"fi","translation":"Tämän päivän ruokalista","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"fi","translation":"Päivän ehdotukset on päivitetty","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"fi","translation":"Paikkatietoa ei ole määritetty","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"fi","translation":"Paikkatietoa ei ole myönnetty. Voit käyttää manuaalista tarkistusta.","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"fi","translation":"Kokeile uudelleen, kun paikan tarkkuus on vakaa.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"fi","translation":"Lisää ensin kuntosali omana sijaintina.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"fi","translation":"Aloittelija, koko kehon harjoittelu","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"fi","translation":"Edellinen AI-valmentajan lähetys ei onnistunut.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"fi","translation":"Lähetä sama sisältö uudelleen.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"fi","translation":"Priorisoi palautuksen","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"fi","translation":"Jos et halua muuttaa, jätä tyhjäksi","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"fi","translation":"Leuanveto","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"fi","translation":"Päivitin uudet palautustiedot ja säädin suosituksia turvallisemmaksi.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"fi","translation":"Päivitettiin uusi merkintä.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"fi","translation":"Olemassa oleva ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"fi","translation":"Olemassa oleva tai tarvittava kategoria","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"fi","translation":"Olen rekisteröinyt nykyisen sijainnin \"omaan kuntosaliini\"","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"fi","translation":"Sijaintia ei voitu saada","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"fi","translation":"Tarkistan sijainnin","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"fi","translation":"Tarkistin viimeisten 7 päivän liikuntahistorian (3 kertaa) ja ruokapäivitykset (8 kertaa).","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"fi","translation":"Unihistoria on puutteellinen","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"fi","translation":"Kirjaa unia 3 päiväksi ja jatka treenaamista 3 kertaa viikossa.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"fi","translation":"Kirjaa unia 3 päiväksi","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"fi","translation":"Älykäs, arvokas, edistyksellinen","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"fi","translation":"Lyhyt yleinen kommentti","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"fi","translation":"Lyhyt toiminto","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"fi","translation":"Rintalihakset","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"fi","translation":"Automaattinen","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"fi","translation":"Voit rekisteröityä antamalla sijaintipalvelut asetuksissa.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"fi","translation":"Olet tarkastellut 3 kehon mittaria, 8 ateriaa ja 3 treeniä.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"fi","translation":"1 kerran viikossa","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"fi","translation":"Olet suorittanut 3 kertaa viikossa tapahtuvat harjoitukset.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"fi","translation":"Jatka 3 kertaa viikossa tapahtuvien harjoitusten tekemistä.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"fi","translation":"Vaativa, laadukas ja motivoiva","review_note":""}

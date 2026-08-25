@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"nl-NL","translation":"Foto-set","review_note":""}
+{"id":"training.3064c4117490","target_locale":"nl-NL","translation":"Dag","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"nl-NL","translation":"Datum","review_note":""}
+{"id":"training.137012e67a97","target_locale":"nl-NL","translation":"Tijd","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"nl-NL","translation":"Maximale hartslag","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"nl-NL","translation":"Maximaal gewicht","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"nl-NL","translation":"Maand","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"nl-NL","translation":"Woensdag","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"nl-NL","translation":"Niet voltooid","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"nl-NL","translation":"Niet afgerond","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"nl-NL","translation":"Uitgesloten vanwege niet geregistreerd: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"nl-NL","translation":"Niet bereikt","review_note":""}
+{"id":"training.379774690c05","target_locale":"nl-NL","translation":"Zoek, details en aangepaste oefeningen toevoegen","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"nl-NL","translation":"Standaard","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"nl-NL","translation":"Volgende maand","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"nl-NL","translation":"Sla op na het controleren van gewicht, aantal en oefening in de volgende scherm.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"nl-NL","translation":"Donderdag","review_note":""}
+{"id":"training.586036cfde65","target_locale":"nl-NL","translation":"Verbracht","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"nl-NL","translation":"In uitvoering","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"nl-NL","translation":"Vrijdag","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"nl-NL","translation":"Geregistreerde oefeningen","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"nl-NL","translation":"Indicatie","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"nl-NL","translation":"Doelstellingen","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"nl-NL","translation":"Doel: {{value1}} × {{value2}} keer","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"nl-NL","translation":"Reflecteert op doelen, prestaties en beschikbare apparatuur.","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"nl-NL","translation":"Doelwaarde kopiëren","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"nl-NL","translation":"Doelverschil","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"nl-NL","translation":"Doelverschil: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"nl-NL","translation":"Volgende niveau, afgestemd op doel en apparatuur","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"nl-NL","translation":"Wordt gemaakt op basis van je doelen, focusgebieden, beschikbare apparatuur en eerdere prestaties. Je kunt de oefeningen en waarden wijzigen voordat je opslaat.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"nl-NL","translation":"Raadpleeg en pas aan","review_note":""}
+{"id":"training.804773e6316f","target_locale":"nl-NL","translation":"Verwijderen","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"nl-NL","translation":"Bevestig en sla het plan op","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"nl-NL","translation":"Seconden","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"nl-NL","translation":"Oefening","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"nl-NL","translation":"Geen oefening gevonden","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"nl-NL","translation":"Registreer oefeningen en setdoelen, zodat je direct kunt beginnen met de volgende training.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"nl-NL","translation":"Oefening toevoegen","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"nl-NL","translation":"Voeg een oefening toe en voer het doel voor die specifieke set in.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"nl-NL","translation":"Je kunt alle instellingen tegelijk aanpassen wanneer je een oefening toevoegt.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"nl-NL","translation":"Oefening selecteren","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"nl-NL","translation":"Oefenbibliotheek","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"nl-NL","translation":"Per oefening","review_note":""}
+{"id":"training.f3db21504894","target_locale":"nl-NL","translation":"Oefenhistorie","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"nl-NL","translation":"Naam van de oefening","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"nl-NL","translation":"Naam, spiergroep en methode","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"nl-NL","translation":"Details over de oefening","review_note":""}
+{"id":"training.0902af066756","target_locale":"nl-NL","translation":"Krachtoefeningen","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"nl-NL","translation":"Kracht A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"nl-NL","translation":"Kracht B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"nl-NL","translation":"Spiergroei","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"nl-NL","translation":"Afmaken","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"nl-NL","translation":"Vooruitgang","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"nl-NL","translation":"Doorgaan","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"nl-NL","translation":"Totaalvolume","review_note":""}
+{"id":"training.299456e922c2","target_locale":"nl-NL","translation":"Bewerk","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"nl-NL","translation":"Schouders / Biceps / Triceps","review_note":""}
+{"id":"training.14f202634605","target_locale":"nl-NL","translation":"Schouders en armen","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"nl-NL","translation":"Dag voor de rug","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"nl-NL","translation":"Dag voor de borst","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"nl-NL","translation":"Benen / Billen","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"nl-NL","translation":"Dag voor de benen","review_note":""}
+{"id":"training.ed189402693b","target_locale":"nl-NL","translation":"Persoonlijke records","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"nl-NL","translation":"Bekijk opgeslagen gegevens per periode, activiteit en sensor.","review_note":""}
+{"id":"training.36467fec4916","target_locale":"nl-NL","translation":"Voel de intensiteit tijdens het sporten.","review_note":""}
+{"id":"training.84447148c208","target_locale":"nl-NL","translation":"Planning","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"nl-NL","translation":"{{value1}}/{{value2}} sets voltooid / Bereikt {{value3}}/{{value4}}","review_note":""}
+{"id":"training.170899739631","target_locale":"nl-NL","translation":"Start met de planning","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"nl-NL","translation":"Volg de planning","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"nl-NL","translation":"Voeg activiteiten toe en registreer deze zonder een planning","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"nl-NL","translation":"Er is nog geen planning","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"nl-NL","translation":"Langzamer dan de planning","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"nl-NL","translation":"Sneller dan de planning","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"nl-NL","translation":"Maak een planning","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"nl-NL","translation":"Creëer een planning","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"nl-NL","translation":"Sla de planning op","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"nl-NL","translation":"Planning set","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"nl-NL","translation":"Maak een planning","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"nl-NL","translation":"Naam van de planning","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"nl-NL","translation":"Voer de naam van de planning en minimaal één activiteit in.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"nl-NL","translation":"Registratie","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"nl-NL","translation":"Bekijk je registraties per dag.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"nl-NL","translation":"Sluit en sla opslag op","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"nl-NL","translation":"Beoordeel op basis van opslag en doelen","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"nl-NL","translation":"Verwijder opslag","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"nl-NL","translation":"Soorten: training, lichaam, voeding, foto's, sportschool","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"nl-NL","translation":"Geen passende soort gevonden","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"nl-NL","translation":"Lichaam","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"nl-NL","translation":"Lichthoop","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"nl-NL","translation":"Lichthoop is niet opgeslagen","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"nl-NL","translation":"Licht","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"nl-NL","translation":"Toevoegen","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"nl-NL","translation":"Week","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"nl-NL","translation":"{{value1}} dagen / {{value2}} minuten per week","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"nl-NL","translation":"Per week","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"nl-NL","translation":"Wekelijkse hoeveelheid","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"nl-NL","translation":"Analyse van wekelijkse hoeveelheid","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"nl-NL","translation":"Aanpassing van gewicht en aantal op basis van eerdere resultaten. Controleer en sla op.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"nl-NL","translation":"Voltooid","review_note":""}
+{"id":"training.90687409925b","target_locale":"nl-NL","translation":"Voltooide set","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"nl-NL","translation":"Percentage voltooiing","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"nl-NL","translation":"{{value1}}%","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"nl-NL","translation":"Alleen de geregistreerde oefeningen die overeenkomen met het geselecteerde apparaat worden aan de AI doorgegeven.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"nl-NL","translation":"Samenvatting van de selectie","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"nl-NL","translation":"Gedeelte","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"nl-NL","translation":"Gewichtsverschil","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"nl-NL","translation":"Gewichtsverschil {{value1}} / Verschil in aantal herhalingen {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"nl-NL","translation":"Gewichtstrend","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"nl-NL","translation":"Goud","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"nl-NL","translation":"Sluiten","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"nl-NL","translation":"Starten","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"nl-NL","translation":"Annuleren","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"nl-NL","translation":"Voeding","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"nl-NL","translation":"Voeding is nog niet geregistreerd","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"nl-NL","translation":"Hoog gewicht","review_note":""}

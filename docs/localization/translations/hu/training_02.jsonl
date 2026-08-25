@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"hu","translation":"Fotózási beállítások","review_note":""}
+{"id":"training.3064c4117490","target_locale":"hu","translation":"Nap","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"hu","translation":"Dátum","review_note":""}
+{"id":"training.137012e67a97","target_locale":"hu","translation":"Idő","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"hu","translation":"Maximális pulzus","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"hu","translation":"Maximális súly","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"hu","translation":"Hónap","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"hu","translation":"Kedd","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"hu","translation":"Nem befejezve","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"hu","translation":"Nem teljesítve","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"hu","translation":"Ki leszűrt: {{value1}} (regisztrálatlan)","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"hu","translation":"Nem elért","review_note":""}
+{"id":"training.379774690c05","target_locale":"hu","translation":"Keress, részletezd, és adsd hozzá a saját edzéseket","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"hu","translation":"Általános","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"hu","translation":"Következő hónap","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"hu","translation":"A következő oldalon ellenőrizd a súlyt, a számot és az edzést, majd mentsd el.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"hu","translation":"Szerda","review_note":""}
+{"id":"training.586036cfde65","target_locale":"hu","translation":"Fogyasztott kalóriák","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"hu","translation":"Folyamatban","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"hu","translation":"Csütörtök","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"hu","translation":"Regisztrált edzések","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"hu","translation":"Javaslat","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"hu","translation":"Cél","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"hu","translation":"Cél: {{value1}} × {{value2}} alkalom","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"hu","translation":"A cél, a teljesítmény és az elérhető eszközök figyelembevételével","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"hu","translation":"Cél érték másolása","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"hu","translation":"Cél különbség","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"hu","translation":"Cél különbség: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"hu","translation":"Az adott cél és eszköz alapján","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"hu","translation":"Ez a cél a cél, a hangsúlyos izomcsoportok, az elérhető eszközök és a korábbi teljesítmény alapján kerül meghatározásra. A mentés előtt megváltoztathatja a feladatokat és a számokat.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"hu","translation":"Kérjen segítséget és módosítsa","review_note":""}
+{"id":"training.804773e6316f","target_locale":"hu","translation":"Törölje","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"hu","translation":"Ellenőrizze, majd mentsen a tervet","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"hu","translation":"Másodpercek","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"hu","translation":"Feladat","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"hu","translation":"Nincs megadott feladat","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"hu","translation":"Adjon meg egy feladatot és egy csoportos célot, hogy bátran kezdje el a következő edzést.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"hu","translation":"Adj feladatot","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"hu","translation":"Adj feladatot, majd adja meg a csoportonkénti célokat.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"hu","translation":"A feladatok egyszerre beállíthatók.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"hu","translation":"Válasszon feladatot","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"hu","translation":"Feladat könyvtár","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"hu","translation":"Kategóriák szerint","review_note":""}
+{"id":"training.f3db21504894","target_locale":"hu","translation":"Kategóriák szerint történő előzmények","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"hu","translation":"Kategória neve","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"hu","translation":"Kategória neve, izomcsoport, technika","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"hu","translation":"Kategória részletei","review_note":""}
+{"id":"training.0902af066756","target_locale":"hu","translation":"Izomnövelés","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"hu","translation":"Izomnövelés A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"hu","translation":"Izomnövelés B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"hu","translation":"Izomzat növekedése","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"hu","translation":"Bezárás","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"hu","translation":"Folyamat","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"hu","translation":"Folytatás","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"hu","translation":"Teljes mennyiség","review_note":""}
+{"id":"training.299456e922c2","target_locale":"hu","translation":"Szerkesztés","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"hu","translation":"Axillák / Ellentest / Hátsó test","review_note":""}
+{"id":"training.14f202634605","target_locale":"hu","translation":"Axillák és karok","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"hu","translation":"Háti nap","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"hu","translation":"Elülső test napja","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"hu","translation":"Lábak / Derék","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"hu","translation":"Láb nap","review_note":""}
+{"id":"training.ed189402693b","target_locale":"hu","translation":"Önálló legjobb időeredmény","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"hu","translation":"Agyományzott adatokat idő, sporttípus és érzékelő szerint ellenőrizheti.","review_note":""}
+{"id":"training.36467fec4916","target_locale":"hu","translation":"Érzékszervi visszajelzéssel vezetheti a tempót.","review_note":""}
+{"id":"training.84447148c208","target_locale":"hu","translation":"Terv","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"hu","translation":"{{value1}} / {{value2}} edzés befejezve / {{value3}} / {{value4}} elért","review_note":""}
+{"id":"training.170899739631","target_locale":"hu","translation":"Tervből induljon el","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"hu","translation":"A terv szerint","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"hu","translation":"Új sporttípust adhat hozzá a tervhez, és rögzíti az adatokat.","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"hu","translation":"Még nincs terv","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"hu","translation":"Lassabban, mint a terv","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"hu","translation":"Gyorsabban, mint a terv","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"hu","translation":"Terv létrehozása","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"hu","translation":"Terv megtervezése","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"hu","translation":"Terv mentése","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"hu","translation":"Terv beállítása","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"hu","translation":"Terv létrehozása","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"hu","translation":"Terv neve","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"hu","translation":"Kérjük, adja meg a terv nevét és legalább egy sporttípust.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"hu","translation":"Rögzített adatok","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"hu","translation":"A rögzített adatokat naponként megtekintheti.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"hu","translation":"Elzár, nem mentve","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"hu","translation":"A rekord és a célok alapján helyes értékelés","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"hu","translation":"Rekord törlése","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"hu","translation":"Rekord típus: edzés, test, táplálkozás, fotók, fitneszterm","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"hu","translation":"Nincs megadott ilyen típus","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"hu","translation":"Test","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"hu","translation":"Teszt","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"hu","translation":"A teszt még nem rögzítve","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"hu","translation":"Könnyebb","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"hu","translation":"További","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"hu","translation":"Hét","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"hu","translation":"{{value1}} nap / {{value2}} perc","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"hu","translation":"Heti","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"hu","translation":"Heti mennyiség","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"hu","translation":"Heti mennyiség elemzése","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"hu","translation":"A korábbi eredmények alapján a súlyt és a számokat beállítom. Ellenőrizze, majd mentse el.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"hu","translation":"Elért","review_note":""}
+{"id":"training.90687409925b","target_locale":"hu","translation":"Elért edzés","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"hu","translation":"Elért százalék","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"hu","translation":"{{value1}}%","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"hu","translation":"Csak azokat a regisztrált edzéseket javasolja az AI-nak, amelyek a kiválasztott eszközhöz tartoznak.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"hu","translation":"Naponta végzett tevékenységek összefoglalója","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"hu","translation":"Tárgy","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"hu","translation":"Súlybeli különbség","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"hu","translation":"Súlybeli különbség {{value1}} / Ismétlésszámbeli különbség {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"hu","translation":"Súlybeli változás","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"hu","translation":"Arany","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"hu","translation":"Bezár","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"hu","translation":"Kezdés","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"hu","translation":"Kezdet elavítás","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"hu","translation":"Táplálkozás","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"hu","translation":"A táplálkozás még nem rögzítve","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"hu","translation":"Magas súly","review_note":""}

@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"hr","translation":"0 obroka","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"hr","translation":"1 aktivnost","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"hr","translation":"3 vrste, 2 seta. Prilagodite težinu kako bi bilo moguće.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"hr","translation":"Nisam mogao prepoznati plan AI-ja. Molimo da ga ponovno kreirate.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"hr","translation":"Plan za treniranje s AI-jem","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"hr","translation":"Spremljeno u Apple Health","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"hr","translation":"Sinkronizacija s Apple Watchom","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"hr","translation":"Apple Watch će vas obavještavati o podizanju/spuštanju, 1 do 3 puta po sekundi, putem dodira.","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"hr","translation":"Jer se Apple Watch nije nalazio u blizini, rezervirao sam ga za sljedeći put kada se uključi.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"hr","translation":"Nisam mogao izvršiti operaciju na Apple Watchu","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"hr","translation":"Nisam mogao spremiti podatke s Apple Watcha u iPhone","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"hr","translation":"Nisam spreman za spremanje podataka s Apple Watcha","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"hr","translation":"Nisam mogao pročitati podatke s Apple Watcha","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"hr","translation":"Možete sinkronizirati menije s Apple Watchom","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"hr","translation":"Nema podataka o današnjem sadržaju koji se sinkronizira s Apple Watchom.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"hr","translation":"Nisam uspio poslati operaciju na Apple Watch.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"hr","translation":"Nisam uspio kreirati podatke za slanje na Apple Watch.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"hr","translation":"Otvorite BodyMode na Apple Watchu i pokušajte ponovno.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"hr","translation":"Instalirajte BodyMode na vašem Apple Watchu.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"hr","translation":"Veza s Apple Watchom je privremeno prekinuta.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"hr","translation":"Veza s Apple Watchom nije pripremljena.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"hr","translation":"Pogreška pri povezivanju s Apple Watchom: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"hr","translation":"Pripremam se za povezivanje s Apple Watchom. Molim, čekajte i pokušajte ponovno poslati.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"hr","translation":"Nisam uspio provjeriti status veze s Apple Watchom.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"hr","translation":"Nisam uspio kreirati podatke za meniju za Apple Watch.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"hr","translation":"Mjerenje na Apple Watchu.","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"hr","translation":"Podaci o zdravlju nisu spremljeni, ali je povijest aktivnosti spremljena.","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"hr","translation":"Nema podataka o zdravlju.","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"hr","translation":"Provjeravam status spremanja podataka o zdravlju.","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"hr","translation":"Nije dopušteno spremanje, samo se sprema povijest aktivnosti.","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"hr","translation":"LEVEL 1 - Općenito treniranje","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"hr","translation":"TRX - Ro","review_note":""}
+{"id":"training.148b91e44188","target_locale":"hr","translation":"Trenirate na Apple Watchu.","review_note":""}
+{"id":"training.3e098891145f","target_locale":"hr","translation":"Završavate trening na Apple Watchu?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"hr","translation":"Zapis s uređaja Watch je završen.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"hr","translation":"Želite li izbrisati zapis s uređaja Watch?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"hr","translation":"Analiza senzora s uređaja Watch","review_note":""}
+{"id":"training.e9af98302821","target_locale":"hr","translation":"Živo snimanje s uređaja Watch","review_note":""}
+{"id":"training.22db347214b9","target_locale":"hr","translation":"{{value1}} / {{value2}} puta","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"hr","translation":"{{value1}} {{value2}} puta × {{value3}}","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"hr","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} puta)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"hr","translation":"{{value1}} je spremljeno u povijesti uređaja iPhone.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"hr","translation":"{{value1}} spremljeno u povijest s Apple Watcha","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"hr","translation":"{{value1}} povećati{{value2}} sekundi / smanjiti{{value3}} sekundi・{{value4}} puta/sekundu{{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"hr","translation":"{{value1}}/{{value2}} set {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"hr","translation":"{{value1}}/{{value2}} set dovršeno","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"hr","translation":"{{value1}}: {{value2}} set, {{value3}} kg, {{value4}} puta, pauza{{value5}} sekundi","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"hr","translation":"{{value1}}{{value2}} puta","review_note":""}
+{"id":"training.4547089161d9","target_locale":"hr","translation":"{{value1}}, nema podataka","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"hr","translation":"Kreiranje plana za {{value1}}","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"hr","translation":"Kreiranje plana za {{value1}}","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"hr","translation":"Zatražiti plan za {{value1}}","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"hr","translation":"Razgovarajte s {{value1}} o izmjenama","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"hr","translation":"Razgovarajte s {{value1}}","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"hr","translation":"Primjer obrasca za {{value1}}. Glavne dijelove koristite za {{value2}}, {{value3}} i {{value4}} aktivnosti.","review_note":""}
+{"id":"training.859660768503","target_locale":"hr","translation":"Izrada plana za {{value1}}","review_note":""}
+{"id":"training.7544024a8347","target_locale":"hr","translation":"Azurirano ciljno težine za {{value1}}","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"hr","translation":"Azuriranje ciljne težine za {{value1}}.\n{{value2}}","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"hr","translation":"Plan za {{value1}}","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"hr","translation":"{{value1}} puta × {{value2}} puta・{{value3}} kg・odmor {{value4}} sekundi","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"hr","translation":"{{value1}} puta・{{value2}} puta","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"hr","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"hr","translation":"{{value1}}・Plan: {{value2}}/{{value3}} puta・Postignuće: {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"hr","translation":"Kreiranje plana za {{value1}}","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"hr","translation":"{{value1}} aktivnosti","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"hr","translation":"Sinkronizirano {{value1}} aktivnosti s Apple Watchom","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"hr","translation":"{{value1}} minuta","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"hr","translation":"{{value1}} minuta {{value2}} sekundi","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"hr","translation":"{{value1}} puta","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"hr","translation":"{{value1}} puta/sekundu","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"hr","translation":"{{value1}} sati {{value2}} minuta","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"hr","translation":"{{value1}} ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"hr","translation":"{{value1}} sekundi","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"hr","translation":"{{value1}} vježbe","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"hr","translation":"{{value1}} vježba ⋅ {{value2}} serija ⋅ {{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"hr","translation":"{{value1}} vrsta","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"hr","translation":"Počnite s ovim menom","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"hr","translation":"Spremi ovo om","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"hr","translation":"Želite li izbrisati ovu historiju?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"hr","translation":"Nema treninga za danas","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"hr","translation":"Ova vježba je preskočena","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"hr","translation":"Ovaj uređaj ne podržava integraciju s Apple Watch-om","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"hr","translation":"Kako popraviti ovaj plan?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"hr","translation":"Želite li izbrisati ovaj plan?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"hr","translation":"Sve","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"hr","translation":"Sve zapise","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"hr","translation":"Nema","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"hr","translation":"Instrukcije","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"hr","translation":"Samo spremi historiju aplikacije","review_note":""}
+{"id":"training.39029011b26a","target_locale":"hr","translation":"Dumbbell press na nagibu","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"hr","translation":"Greška","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"hr","translation":"Prilagodljive vježbe","review_note":""}
+{"id":"training.42254297b975","target_locale":"hr","translation":"Dodajte vlastite vježbe","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"hr","translation":"Odustati","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"hr","translation":"Brzo kreiranje","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"hr","translation":"Klupice za trčanje","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"hr","translation":"Most s tijelom","review_note":""}
+{"id":"training.1792e5824127","target_locale":"hr","translation":"Vježba s kabelom","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"hr","translation":"Bacanje s kabelom","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"hr","translation":"Krozno korištenje kabela","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"hr","translation":"Kopirati","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"hr","translation":"Željene vježbe (opcionalno)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"hr","translation":"Squat s tegli","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"hr","translation":"Strani položaj tijela","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"hr","translation":"Izravni podizaji","review_note":""}
+{"id":"training.5722403a802d","target_locale":"hr","translation":"Pod","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"hr","translation":"Izravni podizaji ramena","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"hr","translation":"Izravni podizaji s sjedećem položaju","review_note":""}
+{"id":"training.861902f328fe","target_locale":"hr","translation":"Izravni podizaji s sjedećem položaju","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"hr","translation":"Fitness centar","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"hr","translation":"Dolazak u fitness centar","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"hr","translation":"Posjet fitness centru","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"hr","translation":"Posjeta teretani nije zabilježena.","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"hr","translation":"Preskoči","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"hr","translation":"Klizeći squat","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"hr","translation":"Stajajući gležnjevi","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"hr","translation":"Squat na stroju Smith","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"hr","translation":"Serije","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"hr","translation":"Serija {{value1}} dovršeno","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"hr","translation":"Dodaj seriju","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"hr","translation":"Uredi sve serije","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"hr","translation":"Pregled serija","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"hr","translation":"Vrijeme serije {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"hr","translation":"Konfiguracija serije","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"hr","translation":"Cilj serije se kopira na početku treninga i sprema se u historiji.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"hr","translation":"Naslov","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"hr","translation":"Biceps curl s utega","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"hr","translation":"Bench press s utegom","review_note":""}
+{"id":"training.0d799718504b","target_locale":"hr","translation":"Romanian deadlift s utegom","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"hr","translation":"Chest press","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"hr","translation":"Chin-up","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"hr","translation":"Postavi tempo","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"hr","translation":"Plan brzine: povećaj za {{value1}} sekundi, smanji za {{value2}} sekundi, {{value3}} puta/sekundu.","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"hr","translation":"Izvrstan!","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"hr","translation":"Dugotrajno stezanje tricepsa","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"hr","translation":"Trening","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"hr","translation":"Treniranje nije zabilježeno","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"hr","translation":"Završite trening","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"hr","translation":"Nema povijesti treninga","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"hr","translation":"Plan treninga","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"hr","translation":"\"Hammer curl\" (Vježba s utorom)","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"hr","translation":"Abdukcija bedra","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"hr","translation":"Hip Thrust","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"hr","translation":"Face Pull","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"hr","translation":"Savjeti za izvođenje i važne stvari","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"hr","translation":"Primjer izvedbe","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"hr","translation":"Svjesno treniranje","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"hr","translation":"Bodyweight press","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"hr","translation":"Plank","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"hr","translation":"Bench Press","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"hr","translation":"Nema pronađenog Apple Watcha","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"hr","translation":"Glasnost","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"hr","translation":"Gornja se vježba s teškom","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"hr","translation":"Glavna","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"hr","translation":"Napomena","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"hr","translation":"Dodavanje korisničkih vježbi","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"hr","translation":"Podizanje s latom","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"hr","translation":"Razvlačenje nogu","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"hr","translation":"Rumunjski mrtvi diz","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"hr","translation":"Zavijanje noge","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"hr","translation":"Prednji udar s teškom","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"hr","translation":"Jednoručni diz s teškom","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"hr","translation":"Vježba","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"hr","translation":"Želite li dovršiti vježbu?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"hr","translation":"Želite li završiti vježbu?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"hr","translation":"・","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"hr","translation":"・ Ispravljeno","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"hr","translation":"Podizanje","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"hr","translation":"Podizanje {{value1}} sekundi / Sklapanje {{value2}} sekundi / {{value3}} puta/sekundu","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"hr","translation":"Podizanje{{value1}} sekundi / Sklapanje{{value2}} sekundi / {{value3}} puta/sekundu","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"hr","translation":"Brzina podizanja","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"hr","translation":"Podižući i spuštajući","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"hr","translation":"Gornji dio tijela","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"hr","translation":"Smanjiti","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"hr","translation":"Smanjiti sekunde","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"hr","translation":"Donji dio tijela","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"hr","translation":"Glavne dijelove","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"hr","translation":"Oprema koju možete koristiti ovaj put","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"hr","translation":"Podatci za danas su sinkronizirani s Apple Watchom","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"hr","translation":"Sinkronizacija podataka za danas s Apple Watchom u toku","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"hr","translation":"Odmor {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"hr","translation":"Fotografija tijela","review_note":""}
+{"id":"training.82865627f395","target_locale":"hr","translation":"Fotografija tijela nije snimljena","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"hr","translation":"Na primjer: Smanjite broj vježbi i produžite odmor","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"hr","translation":"Na primjer: Vježbe za prsa","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"hr","translation":"Na primjer: Lagane vježbe za noge, fokus na prsa","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"hr","translation":"Spremi","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"hr","translation":"Nema sprema","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"hr","translation":"Ime vježbe iz liste","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"hr","translation":"Stoppiraj","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"hr","translation":"Potvrda unosa","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"hr","translation":"Postignuće","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"hr","translation":"Cijelo tijelo.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.de776f6a7f2c","target_locale":"hr","translation":"Čuvajte se.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.0b609d7ebdd0","target_locale":"hr","translation":"Cijeli A.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.23ab9984271c","target_locale":"hr","translation":"Cijela tijela B.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.f74271660465","target_locale":"hr","translation":"Cijela tijela C.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.eb204e77e96f","target_locale":"hr","translation":"U redu je.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.7cbb717aa7f1","target_locale":"hr","translation":"Fotografije.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"training.9fc01e5510fb","target_locale":"hr","translation":"Bez fotografije","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"hr","translation":"Analiza","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"hr","translation":"Nema podataka o analizi","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"hr","translation":"Za početnike, počnite s cjelokupnim treningom","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"hr","translation":"Na planu nema dostupnih programa. Provjerite i ažurirajte opremu.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"hr","translation":"Dostupna oprema","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"hr","translation":"Izbrisati","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"hr","translation":"Prethodni mjesec","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"hr","translation":"{{value1}} × {{value2}} puta","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"hr","translation":"Unesite težinu za pomoć. Težinu za asistenciju možete upisati negativno.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"hr","translation":"Tempo kretanja","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"hr","translation":"Procjena aktivnosti, ukupno {{value1}} puta","review_note":""}
+{"id":"training.e1472f598358","target_locale":"hr","translation":"Reflektirati","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"hr","translation":"Možete dodati prilagođenu kategoriju klikom na gumb \"Dodaj\" u gornjem desnom kutu.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"hr","translation":"Ukupno {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"hr","translation":"Oprema","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"hr","translation":"Razlika u broju","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"hr","translation":"Tlo","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"hr","translation":"Osnovno","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"hr","translation":"Stabilnost {{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"hr","translation":"Gotovo","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"hr","translation":"Zabilježene aktivnosti možete provjeriti u povijesti.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"hr","translation":"Aktivnosti koje nisu završene neće se čuvati.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"hr","translation":"Završeno i spremljeno u povijest","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"hr","translation":"Završeno i spremljeno u povijest","review_note":""}
+{"id":"training.1784283f2316","target_locale":"hr","translation":"U tijeku","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"hr","translation":"Broj izvedenih aktivnosti","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"hr","translation":"Mjerni tempo: povećanje {{value1}} sekundi / smanjenje {{value2}} sekundi","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"hr","translation":"Postignuti rezultati {{value1}} × {{value2}} puta","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"hr","translation":"Uredi vrijednosti postignutih rezultata","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"hr","translation":"Cilj","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"hr","translation":"Povijest","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"hr","translation":"Nema povijesti","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"hr","translation":"Nema još podataka.","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"hr","translation":"Izbrisati povijest","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"hr","translation":"Urediti povijest","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"hr","translation":"Uredi povijest","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"hr","translation":"Detalji o povijesti","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"hr","translation":"Prosječna frekvencija otkucaja srca","review_note":""}
+{"id":"training.461619512206","target_locale":"hr","translation":"Veličina / Debljina","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"hr","translation":"Pričekaj","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"hr","translation":"Frekvencija otkucaja srca","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"hr","translation":"Možete dodati vlastite vježbe.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"hr","translation":"Metoda","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"hr","translation":"Pritisnite / U području prsa","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"hr","translation":"Trener","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"hr","translation":"Nema specifikacije","review_note":""}
+{"id":"training.6532391678cf","target_locale":"hr","translation":"Brzina vibracija","review_note":""}
+{"id":"training.f57690abba57","target_locale":"hr","translation":"Procijenjena 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"hr","translation":"Procijenjeno {{value1}} puta","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"hr","translation":"Kratko objasnite razlog preporuke","review_note":""}

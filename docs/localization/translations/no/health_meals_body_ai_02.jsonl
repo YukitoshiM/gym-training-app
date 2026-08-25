@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"no","translation":"Dette er ikke en medisinsk diagnose, men et forslag basert på inndataene dine. Hvis du er bekymret for helsen din eller har smerter, bør du kontakte en fagperson.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"no","translation":"Oppsummering av inndata","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"no","translation":"Metode for å legge inn data","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"no","translation":"Ingen deler å dele","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"no","translation":"Bekreft innholdet og gjør eventuelle endringer før du lagrer. Målet vil ikke automatisk bli fastslått.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"no","translation":"Krever ny analyse","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"no","translation":"Prøv igjen","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"no","translation":"Bilder","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"no","translation":"Referanseområde fra bilder","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"no","translation":"Estimer kalorier fra bilde","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"no","translation":"Lag en skisse fra et bilde, og reduser inngangsarbeidet.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"no","translation":"Analyser med bilde","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"no","translation":"Ingen bilde","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"no","translation":"Bruk bildet for å se etter endringer, og bruk målinger for å bekrefte tallene.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"no","translation":"Lag en skisse av maten du spiser fra bilder.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"no","translation":"Du kan analysere ved å velge minst ett bilde. Jo flere bilder, desto lettere er det å verifisere.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"no","translation":"Analyser bilder i batch","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"no","translation":"Analyser bilder i batch","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"no","translation":"Legg til bilde","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"no","translation":"Legg til og rediger bilde","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"no","translation":"Når du velger et bilde, fylles kalorier osv. automatisk ut.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"no","translation":"Du kan lagre bildesett. Du kan analysere på nytt fra detaljene etter at du har koblet deg til.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"no","translation":"Minutter","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"no","translation":"Jo mer du skriver inn, desto bedre blir estimeringen.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"no","translation":"Analyserer...","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"no","translation":"Analyse fullført","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"no","translation":"Grunnlaget for vurderingen","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"no","translation":"Ankommet","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"no","translation":"Slett","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"no","translation":"Det har gått {{value1}} dager siden forrige treningsøkt, og det er fortsatt plass til flere økter denne uken.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"no","translation":"Det har gått mer enn 7 dager siden forrige mageomkreis-måling.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"no","translation":"Skriv inn tidligere verdi","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"no","translation":"Sammenlignet med forrige gang: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"no","translation":"Forrige uke","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"no","translation":"Det er ikke nok data for å sammenligne med forrige uke.","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"no","translation":"Volumet har økt med mer enn 30 % siden forrige uke. Neste gang bør du prøve å opprettholde dette nivået, og sjekk RPE (Rate of Perceived Exertion) og restitusjonsindikatoren.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"no","translation":"Sammenlignet med forrige uke: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"no","translation":"Sammenlignet med forrige uke: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"no","translation":"Det finnes ikke noen data ennå. Vi antar at du kan starte med å sette opp på klokken.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"no","translation":"Estimert aktivitet","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"no","translation":"Dette er en referanseverdi basert på de innsamlede dataene, og ikke en medisinsk vurdering.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"no","translation":"Se nåværende","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"no","translation":"{{value1}} elementer tilgjengelig, {{value2}} mangler","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"no","translation":"De viktigste målingene (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"no","translation":"Beregnes kun ved hjelp av vekt, antall, tempo, relativ bevegelsesområde og RPE (Rate of Perceived Exertion), og manglende verdier blir satt til 0.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"no","translation":"Øverst til høyre: Rett frem, hele kroppen","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"no","translation":"Nederst til høyre: Skuldre til midje","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"no","translation":"Totalt","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"no","translation":"Ta bildet med samme klær, avstand og lys, og slapp av","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"no","translation":"Jo flere målinger av samme øvelse, meny og tidspunkt du registrerer, desto bedre kan du sammenligne.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"no","translation":"Daglige målinger (KPI)","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"no","translation":"Dette viser mulige endringer, men fastslår ikke årsak eller helsetilstand.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"no","translation":"Miso-suppe","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"no","translation":"Pustefrekvens","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"no","translation":"Pustefrekvensen er høyere enn gjennomsnittet på 14 dager","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"no","translation":"Pustefrekvensen er {{value1}} pust/minutt, sammenlignet med {{value2}} pust/minutt (gjennomsnitt over 14 dager)","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"no","translation":"Pustefrekvensen er lavere enn gjennomsnittet på 14 dager","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"no","translation":"Pustefrekvensen er innenfor normalområdet","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"no","translation":"Kvalitet -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"no","translation":"Kvalitet {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"no","translation":"Produkt","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"no","translation":"Kunne ikke lagre produkt.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"no","translation":"Produktkode","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"no","translation":"Vennligst skriv inn produktkoden.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"no","translation":"Skriv inn produktkoden manuelt.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"no","translation":"Produktnavn","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"no","translation":"Pust/minutt","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"no","translation":"Restitusjon","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"no","translation":"Velg en dag for restitusjon.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"no","translation":"Siden gjennomsnittlig restverd er lavt, bør du begrense vekten eller antall repetisjoner til {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"no","translation":"Fullført som treningsdag","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"no","translation":"Antall","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"no","translation":"Vurder både antall og ernæring separat","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"no","translation":"Per standardmengde","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"no","translation":"HTTP-tilkobling til ekstern server er ikke tillatt.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"no","translation":"Kveld","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"no","translation":"Automatisk fullført om kvelden","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"no","translation":"Det er ingen store økninger eller perioder med stagnasjon. La oss legge til flere treningslogger der vi kan sammenligne mål og RPE (Rate of Perceived Exertion) for neste gang.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"no","translation":"Feil","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"no","translation":"Stilling","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"no","translation":"Hvilepuls","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"no","translation":"Hvilepuls: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"no","translation":"Hvilepulsen er høyere enn gjennomsnittet over 14 dager","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"no","translation":"Hvilepulsen er lavere enn gjennomsnittet","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"no","translation":"Hvilepulsen er normal","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"no","translation":"Fullført","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"no","translation":"Enkle elementer å fullføre: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"no","translation":"Vi undersøker nå trender for fullføring og hopping over.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"no","translation":"Faktisk inntatt mengde","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"no","translation":"Tetthet","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"no","translation":"Historikk","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"no","translation":"Øverst til venstre: Foran/hele kroppen","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"no","translation":"Nederst til venstre: Bakside/hele kroppen","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"no","translation":"Forskjell","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"no","translation":"Gjennomsnittlig hjertefrekvens {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"no","translation":"Gjennomsnittlig hastighet","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"no","translation":"Nyttig","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"no","translation":"Enkle å utsette: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"no","translation":"Hjertefrekvens tilbake til normal","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"no","translation":"Ingen hjertefrekvens registrert","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"no","translation":"Kilde: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"no","translation":"Sett med forskjeller fra manuell inntasting {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"no","translation":"Det er ikke mulig å fastslå øvelse og form kun ved bevegelse i håndleddet. Bekreft estimert antall før du oppdaterer.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"no","translation":"Hudtemperatur i håndledd","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"no","translation":"Hudtemperatur i håndledd avviker fra normalt nivå","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"no","translation":"Hudtemperatur i håndledd er innenfor normalt område","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"no","translation":"Bruk kun godkjent innhold i neste forslag.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"no","translation":"Godkjent minne","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"no","translation":"Ansvarlig: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"no","translation":"Ansvarlig trener","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"no","translation":"Oppsummering","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"no","translation":"Forbindelse OK","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"no","translation":"Selv om forbindelsen ikke fungerer, vil de lagrede dataene ikke slettes. Du kan fortsette med manuell registrering og generere AI-kommentarer senere.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"no","translation":"Bekrefter tilkobling","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"no","translation":"Estimert verdi er kun en veiledning. Du kan fritt justere verdien i det nederste feltet.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"no","translation":"Estimerte kalorier","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"no","translation":"Overgang","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"no","translation":"Inntatt kcal","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"no","translation":"Ta bilde","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"no","translation":"Bildeinnstilling","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"no","translation":"Rediger bildeinnstilling","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"no","translation":"Legg til bildeinnstilling","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"no","translation":"Fotograferingsretning","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"no","translation":"Antall dager med fotografering","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"no","translation":"Notater om fotografering og utseende","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"no","translation":"Fotografert","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"no","translation":"Eksempel på bilde. Øverst til venstre er helfigur, øverst til høyre er helfigur fra siden, nederst til venstre er helfigur fra ryggen, og nederst til høyre er et nærbilde av magen fra skuldrene ned til hoftene. Ta bilder med samme klær, avstand og lys.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"no","translation":"Krever forbedring","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"no","translation":"Retning","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"no","translation":"Bekreftet forskjeller i posisjon avhengig av retning.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"no","translation":"Bruk dette som et grunnlag for å vurdere ukens gjennomsnittlige trend, ikke daglige endringer.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"no","translation":"Dato","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"no","translation":"Søvn i går kveld","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"no","translation":"Middag","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"no","translation":"Tid","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"no","translation":"Dette er en referansepoeng beregnet av appen basert på tid, dyp søvn, REM-søvn og våkenhet.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"no","translation":"Vær tålmodig","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"no","translation":"Prøv igjen etter en stund. Hvis det fortsetter, sjekk statusen til AI-serveren.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"no","translation":"Prøv igjen etter en stund. Hvis det fortsetter, sjekk loggene fra AI-serveren.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"no","translation":"Tidspunkt","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"no","translation":"Juster RPE (Rate of Perceived Exertion) basert på dine vanlige aktiviteter.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"no","translation":"Normalt","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"no","translation":"Hvis du opplever høy belastning over lengre tid, bruk dette som en guide for å redusere volum og varighet.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"no","translation":"Vi lager et treningsprogram basert på tilgjengelige utstyr, slik at du enkelt kan starte.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"no","translation":"Når du registrerer den første verdien, kan du se endringer og forskjellen mot målet.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"no","translation":"Siste utendørsløp","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"no","translation":"Siste rapport","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"no","translation":"Månedlig gjennomgang","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"no","translation":"Gjennomgå månedlig gjennomgang","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"no","translation":"Lag et forslag til månedlig gjennomgang","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"no","translation":"Genererer månedlig gjennomgang","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"no","translation":"Månedlig rapport","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"no","translation":"Morgen","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"no","translation":"Prøver å begrense varsler om morgen og kveld.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"no","translation":"Ikke analysert","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"no","translation":"Ikke hentet","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"no","translation":"Ikke hentede elementer behandles som 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"no","translation":"Ikke utført","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"no","translation":"Ikke tatt bilde av","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"no","translation":"Ikke registrert. Vennligst skriv inn verdien for 100g etikett.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"no","translation":"Uregistrerte varer lagres på enheten etter inntasting og kan brukes igjen ved neste lesing.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"no","translation":"Ikke registrert","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"no","translation":"Ikke registrert. Kroppsopplevelse og forberedelsesgrunnlag inkluderes","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"no","translation":"Sammenligning etter kriterier","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"no","translation":"OCR for næringsstoffer (brukeroppføring)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"no","translation":"OCR for næringsstoffer (må verifiseres)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"no","translation":"Jeg har skrevet inn verdier fra næringsstoffvisning. Vennligst sjekk referanseverdien og hver verdi.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"no","translation":"Inntastet fra næringsstoffvisning","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"no","translation":"Kunne ikke lese næringsstoffvisning. Ta et nytt bilde fra et godt opplyst område, rett på, eller skriv inn manuelt.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"no","translation":"Leser næringsverdier","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"no","translation":"Næringsinnhold underveis","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"no","translation":"Neste handling","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"no","translation":"Neste steg","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"no","translation":"Neste justering","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"no","translation":"Jeg har sjekket magen fra både for- og sidevinkel.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"no","translation":"Jeg har målt rundt midjen ved å kombinere for- og baksiden.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"no","translation":"Jeg registrerer for-, side- og baksidesmålinger som en daglig oppføring.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"no","translation":"Jeg samler for-, side- og baksidesmålinger på samme dag. Du kan lagre den, og legge til flere senere.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"no","translation":"Antall skritt","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"no","translation":"Skritt: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"no","translation":"Du kan gi tillatelse for å spore skritt, aktivitet, søvn, hvilepuls, HRV (variabilitet i hvilepuls), pustefrekvens og hudtemperatur på håndleddet. Elementer du ikke har gitt tillatelse til, vil bli behandlet som \"ikke registrert\", og du kan fortsatt taste inn manuelt.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"no","translation":"Gjenværende {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"no","translation":"Det finnes ingen daglige data for sammenligning.","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"no","translation":"Brente {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"no","translation":"Ikke registrert","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"no","translation":"Dyp","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"no","translation":"Under aktivitet","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"no","translation":"Karbohydrater","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"no","translation":"Ikke overanstreng deg","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"no","translation":"Nåværende {{value1}}/4 stk","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"no","translation":"Oppdateres automatisk basert på dagens steg.","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"no","translation":"Dette er ikke en bruksgrense, men serverbelastning. Vennligst prøv igjen etter {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"no","translation":"Registrer din nåværende lokasjon i \"Mitt treningssenter\".","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"no","translation":"Bekrefter lokasjon...","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"no","translation":"Eksponering for omgivelseslyd","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"no","translation":"Jeg er sliten","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"no","translation":"Basert på data om tretthet og restitusjon, har vi foreslått dager med lavere belastning.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"no","translation":"Tretthet","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"no","translation":"Slett registrert sted","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"no","translation":"Søk etter registrerte produkter","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"no","translation":"Hvit ris","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"no","translation":"Hvit ris, kyllingbryst, miso-suppe","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"no","translation":"Mål","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"no","translation":"Du kan se forskjellen og fremgangen mot målet for hver KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"no","translation":"Basert på målet ditt og dagens matlogg, viser vi hvor mye protein du har igjen.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"no","translation":"Dette er en tilpasset plan basert på målet ditt og de tilgjengelige treningsutstyrene.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"no","translation":"Mål – Hva betyr det?","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"no","translation":"Målverdi","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"no","translation":"Når du setter en målverdi, vises forskjellen og fremgangen.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"no","translation":"Målavvik","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"no","translation":"Målavvik {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"no","translation":"Ingen mål satt","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"no","translation":"Sett mål","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"no","translation":"Oppnå mål og stabil trening","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"no","translation":"Jeg har sjekket dine trenings-, kostholds- og helseopptak de siste 30 dagene.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"no","translation":"Du er en av kandidatene som ikke har økt maksimal vektbruk de siste 3 gangene. Vurder form, antall repetisjoner og RPE (Rate of Perceived Exertion) også.","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"no","translation":"De siste 7 dagene","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"no","translation":"De siste 7 dagene: {{value1}} ganger","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"no","translation":"Antall besøk på treningsstudio de siste 7 dagene: {{value1}} ganger","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"no","translation":"Trening er innenfor normalt område","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"no","translation":"Din gjennomsnittlige vekt har gått ned den siste uken. Dette kan være et tegn på muskelvekst, så vurder å øke anbefalt inntak litt.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"no","translation":"Din gjennomsnittlige vekt har gått ned i motsatt retning av målet. Vurder først å justere anbefalt inntak litt.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"no","translation":"Din gjennomsnittlige vekt har gått ned raskt den siste uken. For å opprettholde en sunn fremgang, vurder å øke anbefalt inntak litt.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"no","translation":"Din gjennomsnittlige vekt har gått opp raskt den siste uken. For å regulere veksten, vurder å redusere anbefalt inntak litt.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"no","translation":"Verdien er under 85 dBA. Sjekk også varigheten.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"no","translation":"Gjennomsnittlig tid de siste {{value1}} timene","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"no","translation":"Relativ bevegelsesområde","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"no","translation":"Snakk med en ekspert","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"no","translation":"Søvn","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"no","translation":"Sørg for å få {{value1}} timer søvn.","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"no","translation":"Søvn: {{value1}} timer","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"no","translation":"Kortere søvn","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"no","translation":"Litt kortere søvn","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"no","translation":"Fordi søvnmønsteret ditt ikke er registrert, er dette en omtrentlig score basert på total tid.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"no","translation":"Søvndata er ikke registrert. Vi vil ikke bruke 0 som verdi for manglende data.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"no","translation":"Du kan se søvn, hvile og aktivitet sammen.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"no","translation":"Slett","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"no","translation":"Nøyaktighet: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"no","translation":"Bekreft før du lagrer","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"no","translation":"Bekreftede endringer","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"no","translation":"Venter på bekreftelse","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"no","translation":"{{value1}} bekreftede minner","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"no","translation":"Vitenskapelig grunnlag: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"no","translation":"Vitenskapelig grunnlag, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"no","translation":"Øvelse","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"no","translation":"Type","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"no","translation":"Du lastet inn produkter som er lagret på enheten.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"no","translation":"Prøv igjen etter å ha startet enheten på nytt.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"no","translation":"Hvis målet ditt er å bygge muskler, kan du vurdere å trene én ekstra gang denne uken innenfor et realistisk område.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"no","translation":"Omtrent {{value1}} minutter","review_note":""}

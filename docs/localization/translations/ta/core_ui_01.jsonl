@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"ta","translation":"{{value1}} உருப்படிகள்","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"ta","translation":"{{value1}}: திட்டமிட்ட தேதியில் ஜிம் வருகை அல்லது வொர்க்அவுட் பதிவு எதுவும் கிடைக்கவில்லை.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"ta","translation":"ஒரு அமர்வின் நேரம்","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"ta","translation":"தினசரி ஊட்டச்சத்து இலக்குகள்","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"ta","translation":"3 வொர்க்அவுட்களில் அசைவுகளை கற்றுக்கொள்ளுங்கள்","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"ta","translation":"AI உடன் வொர்க்அவுட் உருவாக்குங்கள்","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"ta","translation":"AI இல்லாமலும் இன்றைய பரிந்துரைகள் கிடைக்கும்.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"ta","translation":"உங்கள் தற்போதைய நிலையைப் பற்றி AI-யிடம் கேளுங்கள்","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"ta","translation":"AI-யிடம் கேளுங்கள்","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"ta","translation":"AI-க்கு அனுப்பப்படும் தரவு","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"ta","translation":"நீங்கள் தேர்ந்தெடுத்த உபகரணங்களை மட்டும் பயன்படுத்தி AI கோச் வொர்க்அவுட் திட்டங்களை உருவாக்கும். குறைந்தது ஒரு உபகரணம் எப்போதும் தேர்ந்தெடுக்கப்பட்டிருக்கும்.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"ta","translation":"AI சர்வரைப் பயன்படுத்தி வாராந்திர கருத்தை உருவாக்குங்கள்","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"ta","translation":"AI சர்வர் இணைக்கப்பட்டுள்ளது","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"ta","translation":"AI மாதிரி தயாராகிறது","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"ta","translation":"AI வரைவுகளும் வாராந்திர கருத்தும் கிடைக்கவில்லை; இருப்பினும் கைமுறை பதிவுகளைச் சேமிக்கலாம்.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"ta","translation":"AI வரைவுகளையும் வாராந்திர கருத்தையும் பயன்படுத்த, AI அம்சங்களை இயக்கி பின்னர் இணைப்பைச் சோதிக்கவும்.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"ta","translation":"AI புதுப்பிப்பு {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"ta","translation":"AI இணைப்பு","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"ta","translation":"AI அம்சங்கள் முடக்கப்பட்டுள்ளன","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"ta","translation":"AI அம்சங்களைப் பயன்படுத்தவும்","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"ta","translation":"AI சரிபார்ப்பு நடைபெறுகிறது","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"ta","translation":"AI சரிபார்த்தது","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"ta","translation":"AI அமைப்புகளை இயல்புநிலைக்கு மீட்டமைக்கவும்","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"ta","translation":"API விசை","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"ta","translation":"API விசை குறுகிய கால டோக்கன்களைப் பெற மட்டுமே பயன்படுத்தப்படுகிறது; வழக்கமான AI கோரிக்கைகளுடன் அனுப்பப்படாது.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"ta","translation":"API சர்வர் பதிலளிக்கிறது, ஆனால் தேவையான மாதிரி கிடைக்கவில்லை.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"ta","translation":"API சர்வர் பதிலளிக்கிறது, ஆனால் உணவு மற்றும் அறிக்கைகளுக்கான துணை மாதிரி கிடைக்கவில்லை.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"ta","translation":"API சர்வர் பதிலளிக்கிறது, ஆனால் புகைப்பட அடிப்படையிலான கலோரி மதிப்பீடு கிடைக்கவில்லை.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"ta","translation":"Apple Health வொர்க்அவுட்கள்","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"ta","translation":"வொர்க்அவுட்டை Apple Watch-க்கு ஒத்திசைக்கவும்","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"ta","translation":"Apple Watch பதிவுகள்","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"ta","translation":"Apple Watch மற்றும் சென்சார்கள்","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"ta","translation":"BodyMode விளம்பர அறிக்கை","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"ta","translation":"BodyMode-ஐத் தொடங்குங்கள்","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"ta","translation":"BodyMode நிர்வாக AI","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"ta","translation":"Google-ன் விளம்பரத் தரவு பயன்பாடு","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"ta","translation":"Google தனியுரிமைக் கொள்கை","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"ta","translation":"Health பகிர்வைச் சரிபார்க்கவும்","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"ta","translation":"Apple Watch மூலம் ரெப்ஸை மதிப்பிடவும்","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"ta","translation":"Apple Watch தொடு அறிவிப்புகள்","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"ta","translation":"{{value1}} / {{value2}} முடிந்தது","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"ta","translation":"{{value1}} / {{value2}} அடைந்தது","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"ta","translation":"{{value1}}/6 முடிந்தது","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"ta","translation":"{{value1}}/{{value2}} ரெப்ஸ்","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"ta","translation":"{{value1}}{{value2}} ரெப்ஸ்","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"ta","translation":"{{value1}} வழங்கிய பரிந்துரை","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"ta","translation":"{{value1}} சரிபார்க்கிறது · பரிந்துரை கிடைக்கிறது","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"ta","translation":"{{value1}} சரிபார்த்தது","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"ta","translation":"{{value1}} குறித்து இன்று இந்தப் பரிந்துரை ஏன் வழங்கப்பட்டது என்பதை விளக்கி, மாற்றங்களைப் பரிந்துரைக்கவும்.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"ta","translation":"{{value1}}-யிடம் கேளுங்கள்","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"ta","translation":"{{value1}}-ன் பரிந்துரை","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"ta","translation":"{{value1}}-ன் மதிப்பீடு","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"ta","translation":"{{value1}}-ன் அடிப்படை பரிந்துரை","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"ta","translation":"{{value1}} சரிபார்ப்புக்காக காத்திருக்கிறது · பரிந்துரை கிடைக்கிறது","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"ta","translation":"{{value1}}-ன் வாராந்திர அறிக்கை","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"ta","translation":"தேர்வி மூலம் {{value1}} அமைக்கவும்","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"ta","translation":"{{value1}}-ஐ வேறு செயலால் மாற்றவும்","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"ta","translation":"{{value1}} கிடைக்கிறது. {{value2}} கோச் வகைகள் சரிபார்க்கப்பட்டன.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"ta","translation":"{{value1}} பரிந்துரைக்கப்பட்டதற்கான காரணம்","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"ta","translation":"{{value1}}-ஐத் திறக்கவும்","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"ta","translation":"{{value1}} செட்கள்","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"ta","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"ta","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"ta","translation":"{{value1}} · {{value2}} புதுப்பிக்கப்பட்டது","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"ta","translation":"{{value1}} · {{value2}} உபகரண வகைகள்","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"ta","translation":"{{value1}} · வாரத்திற்கு {{value2}} நாட்கள்","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"ta","translation":"{{value1}} உருப்படிகள்","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"ta","translation":"{{value1}} முறை","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"ta","translation":"{{value1}} முடிந்தது","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"ta","translation":"{{value1}} பயிற்சிகள்","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"ta","translation":"{{value1}} பயிற்சிகள் / {{value2}} செட்கள்","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"ta","translation":"இனி BodyMode பார்த்துக்கொள்ளட்டும். தினமும் அதிகபட்சம் மூன்று செயல்களைப் பரிந்துரைக்கும்.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"ta","translation":"மதிப்பீட்டின் நம்பகத்தன்மையை உயர்த்தும் தரவு","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"ta","translation":"பரிந்துரைக்கப்பட்ட கோச்சைப் பயன்படுத்தவும்","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"ta","translation":"உங்கள் நாளை இங்கே தொடங்குங்கள்","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"ta","translation":"இந்த வொர்க்அவுட்டைத் தொடங்குங்கள்","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"ta","translation":"இந்த இலக்கைப் பயன்படுத்தவும்","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"ta","translation":"இந்த இலக்கிற்கான பயிற்சியாளர்","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"ta","translation":"இந்தச் செயல் தேர்ந்தெடுக்கப்பட்டதற்கான காரணம்","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"ta","translation":"அனைத்து கோச்சுகளும்","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"ta","translation":"மற்றவை","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"ta","translation":"புரதம்","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"ta","translation":"இதனால் செய்ய முடியாதவை","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"ta","translation":"முதலில் சாதனத்திலுள்ள பதிவுகளிலிருந்து உருவாக்கப்படும்; தேவைப்படும் போது மட்டும் AI மாற்றும்.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"ta","translation":"அடிக்கடி பயன்படுத்தும் வொர்க்அவுட்டைச் சேமிக்கவும்","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"ta","translation":"கலோரிகள்","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"ta","translation":"கலோரிகள் / மேக்ரோக்கள்","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"ta","translation":"கலோரி மதிப்பீட்டு மாதிரி தயாராகிறது","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"ta","translation":"ரத்துசெய்","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"ta","translation":"விரைவு பதிவு","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"ta","translation":"சர்வர் URL","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"ta","translation":"நான் ஜிம்மிற்கு வந்துவிட்டேன்","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"ta","translation":"ஜிம் வருகைகள்","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"ta","translation":"ஜிம் வருகைகளைத் தானாகப் பதிவு செய்யவும்","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"ta","translation":"தவிர்க்கவும்","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"ta","translation":"சென்சார்கள் கிடைக்காவிட்டாலும் எடை, ரெப்ஸ் மற்றும் RPE-ஐ கைமுறையாக உள்ளிடலாம். குறைந்த மின்சார மாதிரிப்பில் அசைவு மதிப்பீடுகளின் புதுப்பிப்பு அடிக்கடி நடப்பது குறையும்.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"ta","translation":"சோதனை விளம்பரம்","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"ta","translation":"தரவு","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"ta","translation":"தரவு முழுமை {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"ta","translation":"பயிற்சியாளர்கள்: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"ta","translation":"வொர்க்அவுட்","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"ta","translation":"3 வொர்க்அவுட்களை முடிக்கவும்","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"ta","translation":"வொர்க்அவுட்களைத் திறக்கவும்","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"ta","translation":"வொர்க்அவுட்டைத் தொடங்கவும்","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"ta","translation":"பதிப்பு: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"ta","translation":"தனிப்பயனாக்கப்படாதது","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"ta","translation":"தனிப்பயனாக்கம் முடக்கப்பட்டுள்ளது","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"ta","translation":"சுதந்திர வொர்க்அவுட்","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"ta","translation":"தனியுரிமை","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"ta","translation":"சுயவிவரம்","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"ta","translation":"உதவி","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"ta","translation":"முகப்பு","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"ta","translation":"உங்கள் வொர்க்அவுட்கள் இங்கே உள்ளன","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"ta","translation":"வொர்க்அவுட்டைத் தேர்ந்தெடுக்கவும் அல்லது தொடங்கவும்","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"ta","translation":"Mail போன்ற அனுப்பும் இடத்தைத் தேர்ந்தெடுத்து அறிக்கையை BodyMode Support-க்கு அனுப்பவும். அறிக்கையில் உடல் அல்லது ஆரோக்கியப் பதிவுகள் சேர்க்கப்படாது.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"ta","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"ta","translation":"புண்படுத்தும் உள்ளடக்கம்","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"ta","translation":"தெரியாத பிழை","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"ta","translation":"பொருத்தமற்ற உள்ளடக்கம்","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"ta","translation":"பொருத்தமற்ற விளம்பரத்தைப் புகாரளிக்கவும்","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"ta","translation":"திட்டமிட்ட வொர்க்அவுட் கிடைக்கவில்லை","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"ta","translation":"இந்த முறை மாற்ற வேண்டாம்","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"ta","translation":"இந்த முறை மாற்றம் இல்லை","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"ta","translation":"இன்று: {{value1}} · {{value2}} செட்கள்","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"ta","translation":"இன்றிலிருந்து மீண்டும் கற்றுக்கொள்ளத் தொடங்குங்கள்","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"ta","translation":"இன்றைய 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"ta","translation":"இன்றைய 3 தயாராகிறது","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"ta","translation":"இன்றைய வொர்க்அவுட்","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"ta","translation":"இன்றைய வொர்க்அவுட்டை முடிக்கவும்","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"ta","translation":"இன்றைய வொர்க்அவுட்டைச் செய்யவும்","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"ta","translation":"இன்றைய வொர்க்அவுட்டைத் தொடங்கவும்","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"ta","translation":"இன்றைய உள்ளீடுகள்","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"ta","translation":"இன்றைய பரிந்துரை","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"ta","translation":"இன்றைய நிலை","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"ta","translation":"இன்றைய பதிவு","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"ta","translation":"இன்றைய தயார்நிலை","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"ta","translation":"இன்றைய முன்னேற்றம்","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"ta","translation":"இன்றைக்கு நகர்த்தவும்","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"ta","translation":"இன்றைய செயல்கள் இங்கே உள்ளன","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"ta","translation":" உருப்படிகள்","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"ta","translation":"ஓய்வு","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"ta","translation":"ஓய்வு நேரம்","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"ta","translation":"தேர்வி மூலம் ஓய்வு நேரத்தை அமைக்கவும்","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"ta","translation":"முன்னேற்றப் புகைப்படங்கள்","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"ta","translation":"உடல் அமைப்பு","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"ta","translation":"எடை","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"ta","translation":"உடல் எடை {{value1}} + கூடுதல் எடை {{value2}} = குறிப்பு சுமை {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"ta","translation":"உடல் எடை {{value1}} - உதவி {{value2}} = குறிப்பு சுமை {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"ta","translation":"எடை · விருப்பம்","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"ta","translation":"தொடர்ந்து பின்பற்றக்கூடிய வேகத்தில் எடையையும் இடுப்பளவையும் மேம்படுத்தவும்","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"ta","translation":"எடை · இடுப்பளவு · உணவு · முன்னேற்றப் புகைப்படங்கள்","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"ta","translation":"உங்கள் இலக்கு என்ன?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"ta","translation":"உருவாக்கவும்","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"ta","translation":"பயனர் வழிகாட்டி","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"ta","translation":"கிடைக்கும் உபகரணங்களைப் பயன்படுத்தி வொர்க்அவுட்களை உருவாக்குவோம்","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"ta","translation":"கிடைக்கும் உபகரணங்கள்","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"ta","translation":"நீங்கள் பயன்படுத்தும் அம்சங்களின் வகைகள் மட்டுமே சாதனத்தில் சேமிக்கப்படும். எடை, புகைப்படங்கள், உணவு விவரங்கள், இதயத் துடிப்பு, இருப்பிடம் மற்றும் குறிப்புகள் பதிவு செய்யப்படவோ தானாக அனுப்பப்படவோ மாட்டாது.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"ta","translation":"சேமிக்கவும்","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"ta","translation":"சேமித்த பதிவுகளைப் பயன்படுத்திச் சரிபார்க்கப்பட்டது.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"ta","translation":"ஆரோக்கியப் பதிவுகளை விளம்பரத் தரவிலிருந்து தனியாக வைத்திருக்கவும்","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"ta","translation":"இப்போது சிலவற்றைப் பதிவு செய்து, பின்னர் அனைத்தையும் ஒன்றாகப் பார்க்கலாம்.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"ta","translation":"முடிந்தது","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"ta","translation":"அனைத்துத் தரவையும் நீக்கவா?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"ta","translation":"அனைத்துத் தரவையும் நீக்கவும்","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"ta","translation":"அனைத்துப் பதிவுகளையும் JSON ஆக ஏற்றுமதி செய்யவும்","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"ta","translation":"முழு உடல் வொர்க்அவுட்டுடன் தொடங்கவும்","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"ta","translation":"புகைப்படம்","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"ta","translation":"புகைப்படத்தை உடனே பகுப்பாய்வு செய்யவும்","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"ta","translation":"புகைப்படங்களும் அளவுகளும் மூலம் முன்னேற்றத்தை கண்காணிக்கவும்","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"ta","translation":"புகைப்படங்களும் அளவுகளும் இங்கே உள்ளன","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"ta","translation":"புகைப்படங்களையும் அளவுகளையும் பதிவு செய்யவும்","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"ta","translation":"புகைப்படம் எடுக்கவும்","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"ta","translation":"உடல் தோற்றம், இடுப்பளவு மற்றும் தசைச் சமநிலையை மேம்படுத்தவும்","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"ta","translation":" நிமிடம்","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"ta","translation":"நிமிடம்:விநாடி","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"ta","translation":"தொடக்கநிலை வொர்க்அவுட்டை உருவாக்கவும்","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"ta","translation":"மதிப்பீட்டு விவரங்களைக் காணவும்","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"ta","translation":"வேறு செயலைத் தேர்ந்தெடுக்கவும்","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"ta","translation":"எந்த உபகரணங்கள் கிடைக்கின்றன?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"ta","translation":"பயன்பாட்டு பகுப்பாய்வைப் பகிரவும்","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"ta","translation":"பயன்பாட்டுத் தரவை நீக்கவும்","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"ta","translation":"பயன்பாட்டுத் தரவை ஏற்றுமதி செய்யவும்","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"ta","translation":"ஆலோசனை முன்னுரிமைச் சமநிலை","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"ta","translation":"அசைவு","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"ta","translation":"பயன்படுத்திய தகவல்","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"ta","translation":"ஒப்புதல் நிலை சரிபார்க்கப்படுகிறது","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"ta","translation":"இது யாருக்கானது","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"ta","translation":"உபகரணம் அல்லது தசைக் குழுவின்படி தேர்ந்தெடுக்கவும்","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"ta","translation":" ரெப்ஸ்","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"ta","translation":"மீட்பு","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"ta","translation":"ரெப்ஸ்","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"ta","translation":"தேர்வி மூலம் ரெப்ஸை அமைக்கவும்","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"ta","translation":"நிலையான சோதனை விளம்பரம்","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"ta","translation":"தொடங்குவது எப்படி","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"ta","translation":"அடிப்படைத் தகவல் · விருப்பம்","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"ta","translation":"அறிக்கையை அனுப்பவும்","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"ta","translation":"புகாரளிப்பதற்கான காரணம்","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"ta","translation":"மாற்றங்களை இங்கே கண்காணிக்கவும்","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"ta","translation":"கண்காணிக்க வேண்டிய அளவுகளைத் தேர்ந்தெடுக்கவும்","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"ta","translation":"மாற்றவும்","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"ta","translation":"மாற்ற வரலாறு","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"ta","translation":"தொடங்கவும்","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"ta","translation":"கற்றல் இடைநிறுத்தப்பட்டுள்ளது. உங்கள் பழைய பதிவுகள் நீக்கப்படவில்லை.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"ta","translation":"முடிந்தது","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"ta","translation":"{{value1}} முடிந்தது","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"ta","translation":"முடிந்தது","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"ta","translation":"முடிந்ததாகக் குறிக்கவும்","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"ta","translation":"முடிந்தது","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"ta","translation":"செய்யவில்லை","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"ta","translation":"செய்யவும்","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"ta","translation":"நீங்கள் அதிகம் செய்யும் போது அடுத்த படி மேலும் தெளிவாகும்","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"ta","translation":"உங்கள் முடிவுகள் அடுத்த AI பரிந்துரையை மேம்படுத்துகின்றன","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"ta","translation":"விரிவாக்கப்பட்டது","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"ta","translation":"வரலாறு","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"ta","translation":" ஆண்டுகள்","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"ta","translation":"வயதிற்கு ஏற்றதல்ல","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"ta","translation":"விளம்பர ID அமைக்கப்படவில்லை","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"ta","translation":"விளம்பரங்களும் தரவுப் பயன்பாடும்","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"ta","translation":"விளம்பர தனியுரிமை அமைப்புகள்","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"ta","translation":"விளம்பர ஒப்புதல் வழங்கப்படவில்லை.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"ta","translation":"விளம்பரத்தில் காணப்பட்ட தயாரிப்புப் பெயர் அல்லது சிக்கல்","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"ta","translation":"விளம்பரங்கள் iPhone-ல் மட்டுமே காட்டப்படும். ஆரோக்கியம், உணவு, புகைப்படம் மற்றும் BodyMode இருப்பிடப் பதிவுகள் விளம்பரங்களைத் தேர்ந்தெடுக்கப் பயன்படுத்தப்படாது.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"ta","translation":"விளம்பரத்தைப் புகாரளிக்கவும்","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"ta","translation":"விளம்பரம் ஏற்றப்படுகிறது","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"ta","translation":"விளம்பரங்களும் தனியுரிமையும்","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"ta","translation":"விளம்பர வழங்குநர்","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"ta","translation":"விளம்பரங்களை வழங்க Google உங்கள் IP முகவரி, சாதனம் மற்றும் ஆப்பின் அடிப்படைத் தகவல், SDK கண்டறிதல் மற்றும் செயல்திறன் தரவு, மேலும் விளம்பரக் காட்சி மற்றும் தொடர்புத் தரவைப் பெறுகிறது. IP முகவரியிலிருந்து தோராயமான இருப்பிடம் கணிக்கப்படலாம். BodyMode-ல் பதிவான எடை, இதயத் துடிப்பு, தூக்கம், உணவு, புகைப்படங்கள், வொர்க்அவுட்கள், இலக்குகள், GPS தரவு மற்றும் ஜிம் இருப்பிடங்கள் விளம்பரக் கோரிக்கைகளில் சேர்க்கப்படாது.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"ta","translation":"இதயத் துடிப்பு மற்றும் RPE மூலம் ஓய்வைச் சரிசெய்யவும்","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"ta","translation":"இதயத் துடிப்பு மற்றும் அசைவு","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"ta","translation":"பாலினம்","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"ta","translation":"பாலினம் · விருப்பம்","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"ta","translation":"பின்செல்","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"ta","translation":"கைமுறை பதிவு இன்னும் கிடைக்கிறது.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"ta","translation":"கோச்: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"ta","translation":"ஒதுக்கப்பட்ட கோச்","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"ta","translation":"உங்கள் கோச்சிடம் கேளுங்கள்","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"ta","translation":"கோச்சின் அணுகுமுறை","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"ta","translation":"கோச் வகையை மாற்றினால் AI எந்தப் பதிவுகளுக்கு முன்னுரிமை தருகிறது மற்றும் வழங்கும் பரிந்துரைகள் மாறும்.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"ta","translation":"ஒதுக்கப்பட்ட பயிற்சியாளர்: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"ta","translation":"குறிப்பிடப்படவில்லை","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"ta","translation":"இணைப்பைச் சோதிக்கவும்","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"ta","translation":"iPhone அல்லது Apple Watch-ல் பரிந்துரைக்கப்பட்ட வொர்க்அவுட்டைப் பின்பற்றவும்.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"ta","translation":"பரிந்துரை கற்றலை மட்டும் மீட்டமைக்கவும்","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"ta","translation":"இடைமறியாத பேனர் விளம்பரங்கள் மட்டும்","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"ta","translation":"அளவுகளைப் பதிவு செய்யவும்","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"ta","translation":" நாட்கள்","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"ta","translation":"தேதியின்படி மதிப்பாய்வு செய்யவும்","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"ta","translation":"தினசரி செயல்பாடு","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"ta","translation":"தினசரி பரிந்துரைச் சரிபார்ப்பு","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"ta","translation":"ஏற்றுமதி செய்ய முடியவில்லை","review_note":""}

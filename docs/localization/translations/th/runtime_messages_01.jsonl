@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"th","translation":"ได้รับคำตอบจากผู้ฝึกสอน AI","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"th","translation":"ไม่สามารถส่งคำถามไปยังผู้ฝึกสอน AI ได้","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"th","translation":"รายการที่ซิงค์จาก Apple Watch","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"th","translation":"คุณสามารถตรวจสอบคำตอบได้ใน BodyMode","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"th","translation":"{{value1}} / {{value2}} สำเร็จแล้ว ค่อยๆ ทำในระดับที่เหมาะสม","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"th","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} ครั้ง","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"th","translation":"ไม่แนะนำให้ปรับเปลี่ยน {{value1}} ให้ถือว่าเป็นสิ่งที่ผู้ใช้เลือกเอง","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"th","translation":"{{value1}} นาที","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"th","translation":"{{value1}} ก้าว","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"th","translation":"{{value1}} มื้อ","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"th","translation":"อุปกรณ์นี้ไม่สามารถใช้งานการตรวจจับรอบข้างได้","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"th","translation":"วันนี้ไม่ได้ตั้งค่าให้ทำรายการนี้","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"th","translation":"เพียงทำสิ่งที่คุณทำได้ 1 อย่างก็พอ","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"th","translation":"ทำไมถึงทำเช่นนั้น","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"th","translation":"ประเภทการออกกำลังกาย","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"th","translation":"ลองเปิดแอปและลองใหม่อีกครั้ง","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"th","translation":"ลบสถานที่ยิม","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"th","translation":"บันทึกการมาที่ยิม","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"th","translation":"ตรวจจับการมายังบริเวณยิม","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"th","translation":"การตรวจจับการเข้ายิมโดยอัตโนมัติถูกปิด","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"th","translation":"บันทึกการออกจากยิม","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"th","translation":"ยกดัมเบล","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"th","translation":"สีเข้ม","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"th","translation":"Pull-up","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"th","translation":"การทำท่า Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"th","translation":"การทำท่า Dip","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"th","translation":"คุณสามารถออกกำลังกายได้อย่างต่อเนื่อง การเพิ่มบันทึกการฟื้นตัวจะช่วยปรับปรุงความแม่นยำในการปรับในสัปดาห์หน้า","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"th","translation":"Champagne ดำ","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"th","translation":"My Gym","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"th","translation":"ผู้ใช้ได้เปลี่ยนกิจกรรมวันนี้","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"th","translation":"ฉันได้สร้างคำแนะนำสำหรับวันนี้โดยอิงจากผู้ใช้","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"th","translation":"ไฟ","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"th","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"th","translation":"เพิ่ม","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"th","translation":"ลด","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"th","translation":"วันนี้ 1 ครั้ง","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"th","translation":"คุณทำตามเป้าหมายในวันนี้แล้ว จะนำไปปรับปรุงในคำแนะนำของวันพรุ่งนี้","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"th","translation":"เมนูวันนี้","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"th","translation":"ฉันได้อัปเดตคำแนะนำสำหรับวันนี้","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"th","translation":"ตำแหน่งยังไม่ได้ตั้งค่า","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"th","translation":"ตำแหน่งไม่ได้รับอนุญาต ให้ใช้การเช็คอินด้วยตนเอง","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"th","translation":"โปรดลองอีกครั้งหลังจากที่ความแม่นยำของตำแหน่งคงที่","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"th","translation":"กรุณาลงทะเบียนสถานที่ปัจจุบันของคุณเป็น \"My Gym\" ก่อน","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"th","translation":"สำหรับผู้เริ่มต้น เริ่มต้นแบบ Full Body","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"th","translation":"ไม่สามารถส่งข้อมูลจาก AI เทรนเนอร์ครั้งก่อนได้อีก","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"th","translation":"กรุณาส่งข้อมูลเดิมอีกครั้ง","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"th","translation":"ให้ความสำคัญกับการกู้คืน","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"th","translation":"หากไม่ต้องการเปลี่ยนแปลง ให้ใส่ค่าว่าง","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"th","translation":"ท่าลากตัว","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"th","translation":"ปรับการแนะนำวันนี้ให้ปลอดภัย โดยอ้างอิงข้อมูลการกู้คืนใหม่","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"th","translation":"บันทึกใหม่ได้รับการสะท้อน","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"th","translation":"รหัสเดิม","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"th","translation":"หมวดหมู่เดิมหรือที่จำเป็น","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"th","translation":"ได้ทำการบันทึกตำแหน่งปัจจุบันเป็น \"ยิมส่วนตัว\"","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"th","translation":"ไม่สามารถดึงข้อมูลตำแหน่งได้","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"th","translation":"กำลังตรวจสอบตำแหน่งปัจจุบัน","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"th","translation":"ได้ตรวจสอบประวัติการออกกำลังกาย 3 รายการและบันทึกอาหาร 8 รายการในช่วง 7 วันล่าสุด","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"th","translation":"ขาดบันทึกการนอนหลับ","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"th","translation":"โปรดบันทึกการนอนหลับเป็นเวลา 3 วัน และออกกำลังกายอย่างต่อเนื่อง 3 ครั้งต่อสัปดาห์","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"th","translation":"บันทึกการนอนหลับเป็นเวลา 3 วัน","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"th","translation":"ชาญฉลาด, สง่างาม, และทันสมัย","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"th","translation":"คำอธิบายโดยรวมสั้นๆ","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"th","translation":"กิจกรรมสั้นๆ","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"th","translation":"อก","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"th","translation":"อัตโนมัติ","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"th","translation":"คุณสามารถลงทะเบียนได้โดยอนุญาตให้แอปเปิดตำแหน่งที่ตั้ง","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"th","translation":"ตรวจสอบ KPI ของร่างกาย 3 รายการ, อาหาร 8 รายการ และการออกกำลังกาย 3 รายการ","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"th","translation":"1 ครั้งต่อสัปดาห์","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"th","translation":"สำเร็จจากการออกกำลังกาย 3 ครั้งต่อสัปดาห์","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"th","translation":"ต่อเนื่องกับการออกกำลังกาย 3 ครั้งต่อสัปดาห์","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"th","translation":"เข้มข้น, หรูหรา, กระตุ้น","review_note":""}

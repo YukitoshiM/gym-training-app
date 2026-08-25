@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"te","translation":"అత్యంత దగ్గరిదాన్ని ఒకటి ఎంచుకోండి","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"te","translation":"మీరు మొదట లక్ష్యాన్ని నిర్దేశిస్తే, మీరు రోజుకు మూడు పనులు మాత్రమే చేస్తారు.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"core_ui.49590b9fbda3","target_locale":"te","translation":"మొదటి వ్యాయామాన్ని పూర్తి చేయండి","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"te","translation":"మొదటి విలువను నమోదు చేయండి","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"te","translation":"గరిష్టంగా 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"te","translation":"ఖాళీగా ఉన్న అంశాలను, రికార్డ్ స్క్రీన్ నుండి తరువాత జోడించవచ్చు.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"te","translation":"పూర్త కానిది","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"te","translation":"చేయనిది","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"te","translation":"రికార్డ్ చేయనిది","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"te","translation":"సెట్ చేయనిది","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"te","translation":"ఎంచుకోలేదు","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"te","translation":"ఇప్పుడు లక్ష్యం ఆధారిత మెనూ","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"te","translation":"తదుపరి","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"te","translation":"దశలను చూడండి","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"te","translation":"బరువు తగ్గడం","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"te","translation":"కార్బోహైడ్రేట్లు","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"te","translation":"చెల్లదు","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"te","translation":"సులభంగా ఉండేలా, సమయాన్ని మరియు సంఖ్యను సెట్ చేయండి","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"te","translation":"ముఖ్యంగా దృష్టి పెట్టాల్సిన అంశం","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"te","translation":"స్థితిని మరియు తదుపరి దశను తెలుసుకోండి","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"te","translation":"స్థితిని తనిఖీ చేయండి","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"te","translation":"ప్రస్తుతం","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"te","translation":"ప్రస్తుత శారీరక సమాచారం","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"te","translation":"ప్రస్తుతం అందుబాటులో లేదు","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"te","translation":"ప్రస్తుతం పొందిన రికార్డులు మరియు సెట్టింగ్‌లను ఉపయోగించాము.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"te","translation":"ప్రస్తుతం ఎంచుకున్నది: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"te","translation":"మీ ఆదర్శ శరీరానికి, సందేహాలు లేకుండా ముందుకు సాగండి.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"te","translation":"కారణం","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"te","translation":"కారణం: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"te","translation":"పుట్టిన సంవత్సరం","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"te","translation":"స్క్రీన్ టూర్‌ను ప్రారంభించండి","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"te","translation":"రికార్డ్ చేయబడిన మెనూలు {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"te","translation":"మీరు లక్ష్యంగా పెట్టుకున్న స్థితి","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"te","translation":"లక్ష్యంగా పెట్టుకున్న శైలి","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"te","translation":"లక్ష్యం","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"te","translation":"లక్ష్యం {{value1}} / వ్యత్యాసం {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"te","translation":"లక్ష్యం మరియు వేగం","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"te","translation":"లక్ష్యం మరియు ఫలితాలు","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"te","translation":"లక్ష్యాన్ని సర్దుబాటు చేయడానికి సూచనలు","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"te","translation":"లక్ష్యం ఇంకా సెట్ చేయలేదు","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"te","translation":"లక్ష్యాన్ని చేరుకోవడం","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"te","translation":"లక్ష్యం","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"te","translation":"ప్రతి లక్ష్యానికి 2 మంది వ్యక్తులను కలిగి ఉన్నాము. వ్యక్తులను మార్చడం ద్వారా, మీరు కోరుకున్న శరీర ఆకృతి మరియు సంభాషణను పొందవచ్చు.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"te","translation":"సరియైన వ్యక్తికి అప్పగించడం","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"te","translation":"మీ లక్ష్యానికి అనుగుణంగా హోమ్ స్క్రీన్ యొక్క తనిఖీ పాయింట్‌లను మరియు తదుపరి ఏమి చేయాలో మార్చండి.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"te","translation":"లక్ష్యాన్ని మార్చడం","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"te","translation":"లక్ష్యాన్ని ఎంచుకోండి","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"te","translation":"లక్ష్యం మోడ్","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"te","translation":"లక్ష్యం మరియు లక్ష్యాలు","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"te","translation":"లక్ష్యానికి సంబంధించిన మెనూ అందుబాటులో ఉంది","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"te","translation":"లక్ష్యానికి సంబంధించిన మెనూ చూడండి","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"te","translation":"తాజా సమాచారం","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"te","translation":"సలహా తీసుకుంటూ మార్పులు చేయండి","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"te","translation":"శక్తిని ఆదా చేసే నమూనా","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"te","translation":"ప్రారంభించండి {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"te","translation":"నిద్ర మరియు కోలుకోవడం","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"te","translation":"తనిఖీ జరుగుతోంది","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"te","translation":"సెకన్లు","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"te","translation":"సెకన్ల సంఖ్య","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"te","translation":"వ్యాయామాలను కనుగొనండి మరియు జోడించండి","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"te","translation":"వివిధ పరికరాల కోసం తక్షణ ధృవీకరణను ఉపయోగించండి","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"te","translation":"పరికరంలోనే","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"te","translation":"పోటీ సామర్థ్యం","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"te","translation":"కండర వ్యాయామం","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"te","translation":"కండర బలం, ఫిట్‌నెస్ మరియు కోలుకునే సామర్థ్యాన్ని పోటీకి అనుగుణంగా తీసుకోండి","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"te","translation":"కండర పరిమాణం మరియు శిక్షణ ఫలితాలను పెంచండి","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"te","translation":"కండర పెరుగుదల","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"te","translation":"అనుభవం","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"te","translation":"అనుభవ స్థాయి","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"te","translation":"నిర్వహించగల వేగం","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"te","translation":"ఇది మీ సామర్థ్యాలు లేదా అర్హతల అంచనా కాదు. సమాధానంలో ప్రాధాన్యత ఇవ్వాల్సిన అంశాలను తెలియజేస్తుంది.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"te","translation":"కొవ్వు","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"te","translation":"ఉదర పరిమాణం","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"te","translation":"ఉదర పరిమాణం - ఐచ్ఛికం","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"te","translation":"ప్రవర్తన నమూనాలను నేర్చుకోండి","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"te","translation":"ప్రవర్తన హెచ్చరికలు","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"te","translation":"ప్రదర్శన","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"te","translation":"ప్రదర్శన మోడ్","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"te","translation":"ప్రదర్శన విధానం","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"te","translation":"ప్రదర్శన విధానం","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"te","translation":"సహాయక నమూనా కనెక్ట్ చేయబడలేదు","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"te","translation":"గమనిక","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"te","translation":"గమనిక: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"te","translation":"ప్రణాళిక","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"te","translation":"ప్రణాళిక, చరిత్ర, శారీరక KPI, ఆహారం, ఫోటోలు, AI సంభాషణ మరియు జ్ఞాపకాలు, అనుకూల అంశాలను తొలగిస్తుంది.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"te","translation":"ప్రణాళికతో ప్రారంభించండి లేదా వెంటనే అంశాలను జోడించి రికార్డ్ చేయండి.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"te","translation":"ప్రణాళిక లేకుండా అంశాలను జోడించడం","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"te","translation":"ప్రణాళికలో చేర్చడం","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"te","translation":"ప్రణాళికను సృష్టించండి","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"te","translation":"ప్రణాళికను సృష్టించండి","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"te","translation":"ప్రణాళిక మరియు వాచ్","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"te","translation":"ప్రణాళిక బరువును నవీకరించాలా?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"te","translation":"రికార్డ్ చేయడం","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"te","translation":"రికార్డ్ చేయండి","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"te","translation":"రికార్డ్ చేయండి. AIని అడగండి. అమలు చేయండి. ప్రతిరోజూ చేయడానికి 3 విషయాలు మాత్రమే ఉన్నాయి.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"te","translation":"రికార్డ్ చేసే అంశాన్ని నొక్కండి","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"te","translation":"రికార్డ్ మరియు అమలు ఫలితాలు తదుపరి AI విశ్లేషణకు బదిలీ అవుతాయి. మొదటి చర్య హోమ్ మిషన్ ద్వారా మార్గనిర్దేశం చేస్తుంది.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"te","translation":"రికార్డు ఇక్కడ నిల్వ చేయబడుతుంది","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"te","translation":"రికార్డును సమీక్షిస్తున్నాము. స్క్రీన్‌ను మూసివేసినా కొనసాగుతుంది.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"te","translation":"రికార్డులను చూడండి మరియు తదుపరి చర్యను సూచించండి","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"te","translation":"రికార్డు చేయబడుతోంది","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"te","translation":"రికార్డుల నుండి, మంచి మార్పులు, స్థిరత్వం, మరియు తక్కువ సమాచారం మరియు తదుపరి చర్యలను సూచిస్తుంది.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"te","translation":"రికార్డ్ చేయబడింది","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"te","translation":"సెట్టింగ్‌లు","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"te","translation":"సెట్టింగ్‌లు పూర్తయ్యాయి","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"te","translation":"డయాగ్నస్ లాగ్‌లో iPhone మరియు Apple Watch యొక్క పనితీరు, కమ్యూనికేషన్ మరియు వ్యాయామ కార్యకలాపాల రికార్డులు ఉంటాయి. ఇది స్వయంచాలకంగా బయటికి పంపబడదు.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"te","translation":"డయాగ్నస్ లాగ్‌ను తొలగించు","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"te","translation":"డయాగ్నస్ లాగ్‌ను సేవ్ చేయు","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"te","translation":"డయాగ్నస్ లాగ్‌ను పంపు","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"te","translation":"మాట్లాడే విధానం","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"te","translation":"మరింత తెలుసుకో","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"te","translation":"సరికాని సమాచారం","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"te","translation":"శరీర KPI","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"te","translation":"ఎత్తు","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"te","translation":"ఎత్తు - ఐచ్ఛికం","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"te","translation":"ఏదైనా సందేహం ఉంటే ఇక్కడ చూడండి","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"te","translation":"జోడించు","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"te","translation":"జోడించు","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"te","translation":"మరింత ప్రారంభించు","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"te","translation":"పంపు","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"te","translation":"వేచి ఉంది","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"te","translation":"మీరు వ్యాయామం చేస్తున్న జిమ్ లేదా ఇంట్లో ఉన్న వాటిని ఎంచుకోండి","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"te","translation":"కనెక్ట్ అయిన తర్వాత, రికార్డులను తనిఖీ చేస్తాను.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"te","translation":"వారానికి ఎన్నిసార్లు?","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"te","translation":"ప్రతి వారం ఎన్నిసార్లు వ్యాయామం చేయవచ్చు?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"te","translation":"ఎలా కొనసాగించాలి","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"te","translation":"ప్రస్తుతం జరుగుతోంది","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"te","translation":"వ్యాయామం, నిద్ర మరియు ఆహారపు అలవాట్లను కొనసాగించండి","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"te","translation":"ఎంచుకోండి: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"te","translation":"ఎంపికలో ఉంది","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"te","translation":"పంపడం","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"te","translation":"పంపిణీ చేసేటప్పుడు AI సెట్టింగ్‌లను లోడ్ చేయడం","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"te","translation":"ముఖ్యమైన భాగాలు","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"te","translation":"బరువు","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"te","translation":"బరువును రీల్ ద్వారా సెట్ చేయండి","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"te","translation":"బరువు యొక్క యూనిట్","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"te","translation":"మూసివేయబడుతోంది","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"te","translation":"మూసివేయు","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"te","translation":"ప్రారంభం","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"te","translation":"సంబంధిత సమాచారం","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"te","translation":"ఆహారం","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"te","translation":"ఆహారం మరియు శరీర ఆకృతి","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"te","translation":"ఆహారం మరియు శరీర ఆకృతిని ఫోటోలలో నమోదు చేయండి. బరువు, చుట్టుకొలత మరియు సెట్ల సంఖ్యను సంఖ్యా రూపంలో ఉంచండి.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"te","translation":"ఆహారాన్ని రికార్డ్ చేయడం","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"te","translation":"ఆహార విరామాల సంఖ్య","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"te","translation":"ఆహార విరామాల సంఖ్యను మరియు కేలరీలు, PFCలను వేర్వేరుగా ప్రదర్శించండి.","review_note":""}

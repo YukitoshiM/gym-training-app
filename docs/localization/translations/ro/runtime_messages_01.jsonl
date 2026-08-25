@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"ro","translation":"Am primit răspunsul de la antrenorul AI.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"ro","translation":"Nu am putut trimite întrebarea către antrenorul AI.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"ro","translation":"Acesta este un exercițiu sincronizat cu Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"ro","translation":"Puteți verifica răspunsurile în BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"ro","translation":"{{value1}} / {{value2}} atins. Continuăm cu un ritm realist.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"ro","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}}","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"ro","translation":"Nu reconfigurați {{value1}}, ci luați-o ca pe o alegere personală.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"ro","translation":"{{value1}} minute","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"ro","translation":"{{value1}} pași","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"ro","translation":"{{value1}} mese","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"ro","translation":"Acest dispozitiv nu poate utiliza detectarea mediului înconjurător.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"ro","translation":"Am setat acest lucru pentru a nu face nimic astăzi.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"ro","translation":"Un singur lucru este suficient.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"ro","translation":"De ce faceți această acțiune?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"ro","translation":"Tipuri de exerciții","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"ro","translation":"Vă rugăm să deschideți aplicația și să încercați din nou.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"ro","translation":"Am șters locația sălii de sport.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"ro","translation":"Am înregistrat sosirea la sala de sport.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"ro","translation":"Detectează sosirea în zona sălii de sport.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"ro","translation":"Detectarea automată a sosirii la sala de sport este dezactivată.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"ro","translation":"Am înregistrat plecarea de la sala de sport.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"ro","translation":"Îndreptare cu gantere","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"ro","translation":"Negru","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"ro","translation":"Tracțiuni","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"ro","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"ro","translation":"Dips","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"ro","translation":"Puteți continua antrenamentul. Creșterea numărului de înregistrări de recuperare va îmbunătăți precizia ajustărilor săptămâna viitoare.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"ro","translation":"Champan negru","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"ro","translation":"Sala mea","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"ro","translation":"Utilizatorul a schimbat acțiunile pentru astăzi.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"ro","translation":"Am reformat sugestiile pentru ziua de azi, pe baza acțiunilor utilizatorului.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"ro","translation":"Lumina","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"ro","translation":"Royal Cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"ro","translation":"Crește","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"ro","translation":"Scade","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"ro","translation":"O dată astăzi","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"ro","translation":"Ați atins toate cele 3 obiective pentru astăzi. Voi fi luate în considerare pentru sugestiile de mâine.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"ro","translation":"Meniul zilei","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"ro","translation":"Sugestiile pentru ziua de azi au fost actualizate","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"ro","translation":"Locația nu este setată","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"ro","translation":"Locația nu este permisă. Puteți utiliza check-in manual","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"ro","translation":"Vă rugăm să încercați din nou după ce locația a devenit stabilă","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"ro","translation":"Înregistrați mai întâi sala ca locație","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"ro","translation":"Pentru începători: Antrenament complet","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"ro","translation":"Nu am putut relua trimiterea anterioară cu antrenorul AI.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"ro","translation":"Vă rugăm să trimiteți din nou același conținut.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"ro","translation":"Prioritizați recuperarea","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"ro","translation":"Dacă nu doriți modificări, introduceți un spațiu gol","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"ro","translation":"Tracțiuni","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"ro","translation":"Am actualizat datele de recuperare și am ajustat recomandările pentru ziua curentă către o valoare mai sigură.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"ro","translation":"Am înregistrat noul set de date.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"ro","translation":"ID existent","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"ro","translation":"Categoria existentă sau necesară","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"ro","translation":"Am înregistrat locația actuală ca \"sala mea\"","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"ro","translation":"Nu am putut obține locația actuală","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"ro","translation":"Verific locația actuală","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"ro","translation":"Am verificat ultimele 3 activități de exerciții și 8 înregistrări alimentare din ultimele 7 zile.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"ro","translation":"Înregistrarea somnului este insuficientă","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"ro","translation":"Înregistrați somnul timp de 3 zile și continuați cu exercițiile de 3 ori pe săptămână.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"ro","translation":"Înregistrați somnul timp de 3 zile","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"ro","translation":"Inteligent, rafinat, avansat","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"ro","translation":"Comentariu general scurt","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"ro","translation":"Acțiune scurtă","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"ro","translation":"Exerciții pentru piept","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"ro","translation":"Automat","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"ro","translation":"Puteți înregistra activând permisiunea pentru locație în aplicația de setări.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"ro","translation":"Am verificat 3 indicatori KPI, 8 mese și 3 sesiuni de antrenament cu greutăți.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"ro","translation":"O dată pe săptămână","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"ro","translation":"Am finalizat 3 sesiuni de antrenament pe săptămână.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"ro","translation":"Continuă să faci exerciții de 3 ori pe săptămână.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"ro","translation":"Intens, premium, stimulant","review_note":""}

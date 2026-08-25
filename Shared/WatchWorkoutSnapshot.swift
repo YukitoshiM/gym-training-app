@@ -111,6 +111,7 @@ struct WatchPlanSetTargetSnapshot: Codable, Hashable, Identifiable, Sendable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var targetRPE: Double? = nil
     var plannedConcentricSeconds: Int? = nil
     var plannedEccentricSeconds: Int? = nil
     var plannedTempoBeatSpeed: Int? = nil

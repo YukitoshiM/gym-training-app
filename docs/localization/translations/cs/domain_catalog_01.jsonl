@@ -1,0 +1,250 @@
+{"id":"domain_catalog.d88484d584a8","target_locale":"cs","translation":"Nepodařilo se načíst denní návrh od AI. Použijte lokální návrh přímo.","review_note":""}
+{"id":"domain_catalog.a02090ea0171","target_locale":"cs","translation":"Historie pro odeslání do AI je příliš velká. Zkuste to znovu po další agregaci záznamů.","review_note":""}
+{"id":"domain_catalog.7864c3fcb9ae","target_locale":"cs","translation":"Nelze se připojit k AI trenérovi. Zkuste to znovu později.","review_note":""}
+{"id":"domain_catalog.0fe0841c2b17","target_locale":"cs","translation":"Formát obsahu pro AI trenéra je nesprávný.","review_note":""}
+{"id":"domain_catalog.f69267553023","target_locale":"cs","translation":"Hodnotí se PFC a spánek společně.","review_note":""}
+{"id":"domain_catalog.8a8b4730b070","target_locale":"cs","translation":"Chci dosáhnout PR.","review_note":""}
+{"id":"domain_catalog.d550531520da","target_locale":"cs","translation":"Dlouhodobě sleduji trendy v PR.","review_note":""}
+{"id":"domain_catalog.9ed5d6ea2c6a","target_locale":"cs","translation":"TRX low","review_note":""}
+{"id":"domain_catalog.05ab5da975bb","target_locale":"cs","translation":"V tvaru","review_note":""}
+{"id":"domain_catalog.e56aceac59d8","target_locale":"cs","translation":"Upřednostňuji {{value3}} při kombinaci s {{value1}} a \"{{value2}}\"","review_note":""}
+{"id":"domain_catalog.a140ea27deb0","target_locale":"cs","translation":"{{value1}} stroj","review_note":""}
+{"id":"domain_catalog.99b48c1f8791","target_locale":"cs","translation":"Výživové hodnoty {{value1}} byly znovu vypočítány z Japonské tabulky standardních složek potravin. Potraviny, které nebyly ověřeny, mají hodnoty podle AI.","review_note":""}
+{"id":"domain_catalog.c6670e068de2","target_locale":"cs","translation":"Toto zařízení není dostupné.","review_note":""}
+{"id":"domain_catalog.08b84157877f","target_locale":"cs","translation":"Rýže","review_note":""}
+{"id":"domain_catalog.1553cb74a7c5","target_locale":"cs","translation":"Kombinace rýže a zdrojů bílkovin.","review_note":""}
+{"id":"domain_catalog.abdd5f5af45a","target_locale":"cs","translation":"Rýže","review_note":""}
+{"id":"domain_catalog.78aac0044cb3","target_locale":"cs","translation":"Pohodlná a dobrá poloha","review_note":""}
+{"id":"domain_catalog.ea7e68e02761","target_locale":"cs","translation":"Provádějte střídání: dřep, tlaky na ruce, skákání.","review_note":""}
+{"id":"domain_catalog.e1b7b23b9300","target_locale":"cs","translation":"Dřep a vstávání","review_note":""}
+{"id":"domain_catalog.e3ad94e4b3b3","target_locale":"cs","translation":"Ostatní","review_note":""}
+{"id":"domain_catalog.252badb33931","target_locale":"cs","translation":"Zdravý tělo s zachovanou silou","review_note":""}
+{"id":"domain_catalog.b1193c3dc300","target_locale":"cs","translation":"Bílkoviny","review_note":""}
+{"id":"domain_catalog.42ad467d3e9d","target_locale":"cs","translation":"Zbývá přibližně {{value1}} g bílkovin.","review_note":""}
+{"id":"domain_catalog.493865938e62","target_locale":"cs","translation":"Zkontrolujte, co jste dosáhli, a přejděte k dalšímu kroku.","review_note":""}
+{"id":"domain_catalog.316f95cf480c","target_locale":"cs","translation":"a","review_note":""}
+{"id":"domain_catalog.36f6c898b53a","target_locale":"cs","translation":"hlavové svaly","review_note":""}
+{"id":"domain_catalog.f4577fa825e1","target_locale":"cs","translation":"Držte se v pozici, ve které využijete sílu nohou, abyste zvedali nohy.","review_note":""}
+{"id":"domain_catalog.fae7ab24c5bd","target_locale":"cs","translation":"Lehněte mírně do předklonu a zatáhněte hrudník a triceps, abyste vytvořili pohyb.","review_note":""}
+{"id":"domain_catalog.82a081d1ac91","target_locale":"cs","translation":"Přímý podchop","review_note":""}
+{"id":"domain_catalog.bb89e66f6f35","target_locale":"cs","translation":"Abdominalní cvičení","review_note":""}
+{"id":"domain_catalog.1438eb05085d","target_locale":"cs","translation":"Ujistěte se, že máte nejnovější verzi aplikace a serveru AI.","review_note":""}
+{"id":"domain_catalog.0d134133df87","target_locale":"cs","translation":"Inclinace","review_note":""}
+{"id":"domain_catalog.229e32a252f7","target_locale":"cs","translation":"Inklinační cvik s činkou","review_note":""}
+{"id":"domain_catalog.1b8e2d080da4","target_locale":"cs","translation":"Inclinovaný tlak s činkou","review_note":""}
+{"id":"domain_catalog.ce208d04dc8a","target_locale":"cs","translation":"Inclinovaný tlak na lavičce","review_note":""}
+{"id":"domain_catalog.da90e1d8f981","target_locale":"cs","translation":"Překonávací cvik pro triceps","review_note":""}
+{"id":"domain_catalog.4cdb07aaaf3c","target_locale":"cs","translation":"Kalorie","review_note":""}
+{"id":"domain_catalog.7215a2ca998d","target_locale":"cs","translation":"Zvedání","review_note":""}
+{"id":"domain_catalog.ff3d4ff54fbf","target_locale":"cs","translation":"Doporučení","review_note":""}
+{"id":"domain_catalog.bb7c180d314c","target_locale":"cs","translation":"Crunch","review_note":""}
+{"id":"domain_catalog.2ae9779480d0","target_locale":"cs","translation":"Cross","review_note":""}
+{"id":"domain_catalog.4280d342ea70","target_locale":"cs","translation":"Glute bridge","review_note":""}
+{"id":"domain_catalog.cb57944e9d86","target_locale":"cs","translation":"Kettlebell","review_note":""}
+{"id":"domain_catalog.df1bc7d67526","target_locale":"cs","translation":"Zvedání kettlebellu","review_note":""}
+{"id":"domain_catalog.f23ffd13e49f","target_locale":"cs","translation":"Kabelový systém","review_note":""}
+{"id":"domain_catalog.efc55a5e5d0d","target_locale":"cs","translation":"Přitáhněte kabel z boku těla a využijte odraz k zvednutí paže.","review_note":""}
+{"id":"domain_catalog.c2f484f7f013","target_locale":"cs","translation":"Kabelové cviky","review_note":""}
+{"id":"domain_catalog.ef6912570765","target_locale":"cs","translation":"Kabelový kickback","review_note":""}
+{"id":"domain_catalog.3969524dde47","target_locale":"cs","translation":"Kabelový crunch","review_note":""}
+{"id":"domain_catalog.da46dfa1365b","target_locale":"cs","translation":"Kabelový cross-over","review_note":""}
+{"id":"domain_catalog.f80514096571","target_locale":"cs","translation":"Kabelové side raise","review_note":""}
+{"id":"domain_catalog.d4547ef759f3","target_locale":"cs","translation":"Kabelový stroj","review_note":""}
+{"id":"domain_catalog.23e832e5df3b","target_locale":"cs","translation":"Kabelový row","review_note":""}
+{"id":"domain_catalog.a445012ac5ab","target_locale":"cs","translation":"Goblet squat","review_note":""}
+{"id":"domain_catalog.a2aa90f41c5a","target_locale":"cs","translation":"Side plank","review_note":""}
+{"id":"domain_catalog.a9f236ec70e3","target_locale":"cs","translation":"Side raise","review_note":""}
+{"id":"domain_catalog.a7b9552f5f66","target_locale":"cs","translation":"Suspension trainer","review_note":""}
+{"id":"domain_catalog.1d2f5637f72f","target_locale":"cs","translation":"Suspension systém","review_note":""}
+{"id":"domain_catalog.696ad3132f6c","target_locale":"cs","translation":"Shoulder press","review_note":""}
+{"id":"domain_catalog.94a47e1839ff","target_locale":"cs","translation":"Seated calf raises","review_note":""}
+{"id":"domain_catalog.2421c01f1aaf","target_locale":"cs","translation":"Seated row","review_note":""}
+{"id":"domain_catalog.b3fdfb32748f","target_locale":"cs","translation":"Použijte sedátko a polštář podle své postavy.","review_note":""}
+{"id":"domain_catalog.59ed1c8a7b13","target_locale":"cs","translation":"Upravte sedátko a přitahujte ručkami směrem k hlavě, aniž byste se ohýbali.","review_note":""}
+{"id":"domain_catalog.bfa9f9e01dcb","target_locale":"cs","translation":"Upravte si pozici a posuňte tělo dopředu od hrudníku.","review_note":""}
+{"id":"domain_catalog.4c7e42a86929","target_locale":"cs","translation":"Návštěva posilovny","review_note":""}
+{"id":"domain_catalog.adb09e5a425d","target_locale":"cs","translation":"Skalovací cvik","review_note":""}
+{"id":"domain_catalog.bb86be7f410e","target_locale":"cs","translation":"Dřepy","review_note":""}
+{"id":"domain_catalog.43c77f1d88bf","target_locale":"cs","translation":"Výpony na stojáco","review_note":""}
+{"id":"domain_catalog.7fd846c04ba8","target_locale":"cs","translation":"Udržujte správnou polohu pomocí popruhů a vlastní váhy","review_note":""}
+{"id":"domain_catalog.290018d0a5df","target_locale":"cs","translation":"Přítahy s jednoručkami","review_note":""}
+{"id":"domain_catalog.a561fd10109b","target_locale":"cs","translation":"Strojový tlak","review_note":""}
+{"id":"domain_catalog.1f510875c76d","target_locale":"cs","translation":"Dřepy na stroji","review_note":""}
+{"id":"domain_catalog.87656b607ca4","target_locale":"cs","translation":"Hubnutí","review_note":""}
+{"id":"domain_catalog.3e3505b43c22","target_locale":"cs","translation":"Rukavice s činkami","review_note":""}
+{"id":"domain_catalog.50c6a86a89fe","target_locale":"cs","translation":"Udržujte činky blízko těla a nakloňte se, přičemž pohyb provádějte hlavně v kyčli.","review_note":""}
+{"id":"domain_catalog.44071b6aba40","target_locale":"cs","translation":"Cvik s činkami – biceps curl","review_note":""}
+{"id":"domain_catalog.883366e48839","target_locale":"cs","translation":"Cvik s činkami – dumbbell fly","review_note":""}
+{"id":"domain_catalog.dcb079c45c6c","target_locale":"cs","translation":"Bench press s činkami","review_note":""}
+{"id":"domain_catalog.3ce615b07b19","target_locale":"cs","translation":"Rukavice s činkami – rumunský deadlift","review_note":""}
+{"id":"domain_catalog.e9621eac02b3","target_locale":"cs","translation":"Bench press","review_note":""}
+{"id":"domain_catalog.57ae8b998965","target_locale":"cs","translation":"Chin-up","review_note":""}
+{"id":"domain_catalog.8eb6bd923f0d","target_locale":"cs","translation":"Chin-up","review_note":""}
+{"id":"domain_catalog.630273f87ac0","target_locale":"cs","translation":"Dip","review_note":""}
+{"id":"domain_catalog.a8c2f5144429","target_locale":"cs","translation":"Kliky","review_note":""}
+{"id":"domain_catalog.35430f21626e","target_locale":"cs","translation":"Stojan na kliky","review_note":""}
+{"id":"domain_catalog.a21d92684639","target_locale":"cs","translation":"Dead bug","review_note":""}
+{"id":"domain_catalog.8e1637849284","target_locale":"cs","translation":"Dřep","review_note":""}
+{"id":"domain_catalog.bde33303765d","target_locale":"cs","translation":"Kliky s tlakem na triceps","review_note":""}
+{"id":"domain_catalog.6b0bfa3feb7f","target_locale":"cs","translation":"Tlak na triceps","review_note":""}
+{"id":"domain_catalog.3131957a07ea","target_locale":"cs","translation":"Tréninkové gumy","review_note":""}
+{"id":"domain_catalog.7f9c988574df","target_locale":"cs","translation":"Hodnocení tréninku, postupného zvyšování zátěže, PFC a regenerace v jednom","review_note":""}
+{"id":"domain_catalog.7936fdc099ed","target_locale":"cs","translation":"Zkontrolujte množství tréninku a příjem bílkovin.","review_note":""}
+{"id":"domain_catalog.bfc50ff9f2e8","target_locale":"cs","translation":"Kliky na úzké lavici","review_note":""}
+{"id":"domain_catalog.d68a2b5a32a9","target_locale":"cs","translation":"Zkontrolujte stav sítě, URL serveru a stav AI serveru.","review_note":""}
+{"id":"domain_catalog.202ce690e832","target_locale":"cs","translation":"Dřep s hákem","review_note":""}
+{"id":"domain_catalog.e7927193d843","target_locale":"cs","translation":"Hamstringy","review_note":""}
+{"id":"domain_catalog.8f628844dc9e","target_locale":"cs","translation":"Zvedání nohou v laně","review_note":""}
+{"id":"domain_catalog.fc557946398d","target_locale":"cs","translation":"Kliky s činkou","review_note":""}
+{"id":"domain_catalog.7acdb9a8304d","target_locale":"cs","translation":"Protažení zad","review_note":""}
+{"id":"domain_catalog.078284b91915","target_locale":"cs","translation":"Guma","review_note":""}
+{"id":"domain_catalog.a65e66cf431a","target_locale":"cs","translation":"Přetahování s gumou","review_note":""}
+{"id":"domain_catalog.a740b9a4bb20","target_locale":"cs","translation":"Uchopte tyč blízko těla a provádějte cvik, dokud necítíte nepohodlí v rameni.","review_note":""}
+{"id":"domain_catalog.b0b9c30ff338","target_locale":"cs","translation":"Udržujte tyč blízko těla a zvedejte se nohama ze země bez zakulaceného zad.","review_note":""}
+{"id":"domain_catalog.4717074d085c","target_locale":"cs","translation":"Držte se tyčkou v oblasti ramen a udržujte tělo ve vzpřímené poloze při sklonu.","review_note":""}
+{"id":"domain_catalog.8dc615a1cbbf","target_locale":"cs","translation":"Kliky","review_note":""}
+{"id":"domain_catalog.9d84b8975c8e","target_locale":"cs","translation":"Štětec","review_note":""}
+{"id":"domain_catalog.2a280b36e2bd","target_locale":"cs","translation":"Přítlak s činkou nad hlavu","review_note":""}
+{"id":"domain_catalog.c0a6d7c2a225","target_locale":"cs","translation":"Cvičení s činkou","review_note":""}
+{"id":"domain_catalog.82a2aeb11b42","target_locale":"cs","translation":"Přítahy s činkou","review_note":""}
+{"id":"domain_catalog.e04f1c15ff26","target_locale":"cs","translation":"Činka + stojan","review_note":""}
+{"id":"domain_catalog.e528d95671c8","target_locale":"cs","translation":"Hýždě","review_note":""}
+{"id":"domain_catalog.f72a879fb20d","target_locale":"cs","translation":"Odklon hýždí","review_note":""}
+{"id":"domain_catalog.6e53925a0c71","target_locale":"cs","translation":"Zvedání hýždí","review_note":""}
+{"id":"domain_catalog.c749f18edd8d","target_locale":"cs","translation":"Farmers Walk","review_note":""}
+{"id":"domain_catalog.5af670c6eade","target_locale":"cs","translation":"Traction","review_note":""}
+{"id":"domain_catalog.4483abaf3a46","target_locale":"cs","translation":"Neinterpretuji vaše tělesné postavení ani zranění.","review_note":""}
+{"id":"domain_catalog.3eafb191a8f3","target_locale":"cs","translation":"Udržujte správnou pozici a pohybujte se.","review_note":""}
+{"id":"domain_catalog.0e398c444a63","target_locale":"cs","translation":"Přítahy","review_note":""}
+{"id":"domain_catalog.b21d4fe27511","target_locale":"cs","translation":"Bench + činka","review_note":""}
+{"id":"domain_catalog.3e2b052a69c8","target_locale":"cs","translation":"Dřep","review_note":""}
+{"id":"domain_catalog.303eb3f8b894","target_locale":"cs","translation":"Výtlak","review_note":""}
+{"id":"domain_catalog.08989de187ef","target_locale":"cs","translation":"Chci vrátit zpět do původního stavu.","review_note":""}
+{"id":"domain_catalog.8a82058b0b4a","target_locale":"cs","translation":"Zkontrolujte bolest a reakce po tréninku a postupně zvyšujte zátěž.","review_note":""}
+{"id":"domain_catalog.57a4cf316c90","target_locale":"cs","translation":"Bulharské dřepy","review_note":""}
+{"id":"domain_catalog.1b4073f615d8","target_locale":"cs","translation":"Tlak","review_note":""}
+{"id":"domain_catalog.beda4562c5ed","target_locale":"cs","translation":"Kliky","review_note":""}
+{"id":"domain_catalog.29bc148beebf","target_locale":"cs","translation":"Plank","review_note":""}
+{"id":"domain_catalog.a7bf8f28b16d","target_locale":"cs","translation":"Přítahy s činkou (Přítahy v předklonu)","review_note":""}
+{"id":"domain_catalog.66c3d2cc0715","target_locale":"cs","translation":"Tah","review_note":""}
+{"id":"domain_catalog.38a7433c29d6","target_locale":"cs","translation":"Tlak","review_note":""}
+{"id":"domain_catalog.f39a081101ef","target_locale":"cs","translation":"Štola","review_note":""}
+{"id":"domain_catalog.d2b19f8df9ef","target_locale":"cs","translation":"Nastavte štolu pod úhel a zvedejte činku směrem k hrudníku.","review_note":""}
+{"id":"domain_catalog.e569c630ac0d","target_locale":"cs","translation":"Nastavte štolu pod úhel a zvedejte činku diagonálně nahoru.","review_note":""}
+{"id":"domain_catalog.c2a566ea8251","target_locale":"cs","translation":"Tlak na štoně","review_note":""}
+{"id":"domain_catalog.1ef485639c52","target_locale":"cs","translation":"Štola + činka","review_note":""}
+{"id":"domain_catalog.d3e414c96c7c","target_locale":"cs","translation":"Přítahy s činkou (Přítahy v nakloněné poloze)","review_note":""}
+{"id":"domain_catalog.83e9d90bae18","target_locale":"cs","translation":"Trenér pro posilování","review_note":""}
+{"id":"domain_catalog.fdc6190c332c","target_locale":"cs","translation":"Zkontrolujte objem a postupnost cvičení","review_note":""}
+{"id":"domain_catalog.6ec7c09949a1","target_locale":"cs","translation":"Stroj","review_note":""}
+{"id":"domain_catalog.e2241d1ff91a","target_locale":"cs","translation":"Tlak na stroji","review_note":""}
+{"id":"domain_catalog.06d5ac3d8c2e","target_locale":"cs","translation":"Analýza dat","review_note":""}
+{"id":"domain_catalog.3645d68d6247","target_locale":"cs","translation":"Zadejte zprávu do maximálně 4000 znaků.","review_note":""}
+{"id":"domain_catalog.c6b16105b918","target_locale":"cs","translation":"Zadejte zprávu.","review_note":""}
+{"id":"domain_catalog.f912225f0d5d","target_locale":"cs","translation":"Přítahy s kladkami","review_note":""}
+{"id":"domain_catalog.5040d710ed48","target_locale":"cs","translation":"Dřepy","review_note":""}
+{"id":"domain_catalog.a42741ed272e","target_locale":"cs","translation":"Náhodné porovnávací testy","review_note":""}
+{"id":"domain_catalog.74f975848d5e","target_locale":"cs","translation":"Zvedání v předklonu","review_note":""}
+{"id":"domain_catalog.0b0e3ca82493","target_locale":"cs","translation":"Zakrout","review_note":""}
+{"id":"domain_catalog.7539bfc86597","target_locale":"cs","translation":"Rumunský mrtvý tah","review_note":""}
+{"id":"domain_catalog.7c83ed5189f6","target_locale":"cs","translation":"Zvednutí","review_note":""}
+{"id":"domain_catalog.f535a50232c8","target_locale":"cs","translation":"Rozpažování nohou","review_note":""}
+{"id":"domain_catalog.a63e2e368a92","target_locale":"cs","translation":"Zakroucení nohou","review_note":""}
+{"id":"domain_catalog.0f7c8ab332a1","target_locale":"cs","translation":"Tlak na nohy","review_note":""}
+{"id":"domain_catalog.ef0b3d8cfce0","target_locale":"cs","translation":"Recenze","review_note":""}
+{"id":"domain_catalog.af273fdc159a","target_locale":"cs","translation":"Ruský twist","review_note":""}
+{"id":"domain_catalog.f93900b1afc2","target_locale":"cs","translation":"Dolů","review_note":""}
+{"id":"domain_catalog.e1f8d5497739","target_locale":"cs","translation":"Přivážete lano k úrovni obličeje a soustřeďte se na zad a ramena.","review_note":""}
+{"id":"domain_catalog.8c66e2563b4b","target_locale":"cs","translation":"Přítahy s jedním kladkem","review_note":""}
+{"id":"domain_catalog.ee583d0f2045","target_locale":"cs","translation":"Senzor pro trénink","review_note":""}
+{"id":"domain_catalog.774cb95972ff","target_locale":"cs","translation":"Pohybujte kladkou, přičemž si udržujete stálý napětí.","review_note":""}
+{"id":"domain_catalog.e85958c34f0b","target_locale":"cs","translation":"Udělejte krok dopředu a zvedněte koleno přední nohy a prsty, dokud se nezaměří.","review_note":""}
+{"id":"domain_catalog.e33e990219bc","target_locale":"cs","translation":"Některá data nelze získat","review_note":""}
+{"id":"domain_catalog.d462815994b8","target_locale":"cs","translation":"Nakloňte tělo a držte ramena blízko, ale ne příliš blízko, a odvíjejte lokty do strany.","review_note":""}
+{"id":"domain_catalog.572082fe89e3","target_locale":"cs","translation":"Pokročilí uživatelé","review_note":""}
+{"id":"domain_catalog.6d905526f64f","target_locale":"cs","translation":"Zafixujte paže a přesuňte tyč směrem k čelu, natáhněte lokty.","review_note":""}
+{"id":"domain_catalog.535a51f88058","target_locale":"cs","translation":"Přibližte paže ke zemi a natáhněte pouze část od loktů dozadu.","review_note":""}
+{"id":"domain_catalog.c3a15e701859","target_locale":"cs","translation":"Svaly paží (triceps)","review_note":""}
+{"id":"domain_catalog.c7c955f95fae","target_locale":"cs","translation":"Svaly paží (biceps)","review_note":""}
+{"id":"domain_catalog.e6dc11c050a3","target_locale":"cs","translation":"Držte činku oběma rukama a pohybujte jí současně vlevo i vpravo.","review_note":""}
+{"id":"domain_catalog.f09327f3d764","target_locale":"cs","translation":"Střed","review_note":""}
+{"id":"domain_catalog.dcfab50b8a2c","target_locale":"cs","translation":"Pro pokročilé uživatele","review_note":""}
+{"id":"domain_catalog.b38b92363a48","target_locale":"cs","translation":"Chcete rozšířit seznam hlavních cvičení","review_note":""}
+{"id":"domain_catalog.f48399266fad","target_locale":"cs","translation":"Zkontrolujte své subjektivní pocity a reakce na cvičení","review_note":""}
+{"id":"domain_catalog.ea51e0101b7a","target_locale":"cs","translation":"Spojte hlavní jídlo, hlavní pokrm a zeleninu v menších porcích.","review_note":""}
+{"id":"domain_catalog.433fc347a506","target_locale":"cs","translation":"Udržujte současný tempo.","review_note":""}
+{"id":"domain_catalog.4444cbea1c84","target_locale":"cs","translation":"Přibližujete se doporučenému množství živin pro dnešek.","review_note":""}
+{"id":"domain_catalog.54a38292197e","target_locale":"cs","translation":"Dnešní záznamy jsou {{value1}}/{{value2}}.","review_note":""}
+{"id":"domain_catalog.5bca283426f5","target_locale":"cs","translation":"Lehněte si na záda, položte chodidla na zem a zvedejte boky.","review_note":""}
+{"id":"domain_catalog.78e438f50d22","target_locale":"cs","translation":"Uspořádejte historii konverzací nebo ji za nějakou dobu znovu odešlete.","review_note":""}
+{"id":"domain_catalog.60a3e4582b17","target_locale":"cs","translation":"Využijte odpor, který se zvyšuje s natažením.","review_note":""}
+{"id":"domain_catalog.f58e9d61af58","target_locale":"cs","translation":"Nízký","review_note":""}
+{"id":"domain_catalog.b6d4c6091e0b","target_locale":"cs","translation":"Přitahujte tělo.","review_note":""}
+{"id":"domain_catalog.66d79da7b3e4","target_locale":"cs","translation":"Udržujte tělo v rovině a zatáhněte paže dozadu, abyste přiblížili hrudník k řízení.","review_note":""}
+{"id":"domain_catalog.5d6a1ebd0a56","target_locale":"cs","translation":"Zvedněte paže a zvedněte činka do výšky ramen.","review_note":""}
+{"id":"domain_catalog.b9009f656b8d","target_locale":"cs","translation":"Fotografie postavy","review_note":""}
+{"id":"domain_catalog.026b630cba03","target_locale":"cs","translation":"Zaznamenejte si fotografii postavy a obvod pasu.","review_note":""}
+{"id":"domain_catalog.8f9666833a49","target_locale":"cs","translation":"Úprava postavy","review_note":""}
+{"id":"domain_catalog.05748bf04331","target_locale":"cs","translation":"Kontrolní body pro úpravu postavy","review_note":""}
+{"id":"domain_catalog.0c52dc2ec22b","target_locale":"cs","translation":"Trápeň","review_note":""}
+{"id":"domain_catalog.63b90f2a3e7b","target_locale":"cs","translation":"Ovládejte trpáň","review_note":""}
+{"id":"domain_catalog.c69fe4f4931d","target_locale":"cs","translation":"Upevněte trpáň a lehce vyložte lokty, abyste zvedli hlavu.","review_note":""}
+{"id":"domain_catalog.fd491d2bd8bd","target_locale":"cs","translation":"Zafixujte trpáň a zatlačte nohy dozadu, abyste stáhli boky.","review_note":""}
+{"id":"domain_catalog.70b83fa847e3","target_locale":"cs","translation":"Procento tělesného tuku","review_note":""}
+{"id":"domain_catalog.f798938f0c2a","target_locale":"cs","translation":"Udržujte zdravý životní styl a aktivní den.","review_note":""}
+{"id":"domain_catalog.b0879cc1fb63","target_locale":"cs","translation":"Neprověřujte se při špatném zdravotním stavu.","review_note":""}
+{"id":"domain_catalog.00a62c054ebd","target_locale":"cs","translation":"Hmotnost","review_note":""}
+{"id":"domain_catalog.da5a773cf49d","target_locale":"cs","translation":"Sledujte svou hmotnost, objem tréninku a váhu podle cvičení. Postupně zvyšujte hodnoty na základě předchozích výsledků.","review_note":""}
+{"id":"domain_catalog.818335950a33","target_locale":"cs","translation":"Sledujte svou hmotnost, objem tréninku, úroveň únavy a spánku. V dnech s vysokou úrovní únavy navrhněte, aby se nemusely nutně zvyšovat hodnoty.","review_note":""}
+{"id":"domain_catalog.0d4594b21e65","target_locale":"cs","translation":"Udržujte svou hmotnost, obvod pasu a frekvenci cvičení. Prioritou je, aby záznamy nebyly přerušeny.","review_note":""}
+{"id":"domain_catalog.6e6324cfc621","target_locale":"cs","translation":"Sledujte nejen svou hmotnost, ale i obvod pasu a zaznamenávejte stravu. Pokud se i při stabilní hmotnosti sníží obvod pasu, znamená to pokrok.","review_note":""}
+{"id":"domain_catalog.3bb27f474dc3","target_locale":"cs","translation":"Zaměřte se především na změnu obvodu pasu","review_note":""}
+{"id":"domain_catalog.28ab7663b1cf","target_locale":"cs","translation":"Zhodnoťte změny postavy kombinací hmotnosti, obvodu pasu a fotografií, a také síly.","review_note":""}
+{"id":"domain_catalog.06fc88ece224","target_locale":"cs","translation":"Hmotnost sama o sobě nestačí","review_note":""}
+{"id":"domain_catalog.55b287d1dab0","target_locale":"cs","translation":"Nehodnotíme změny pouze podle váhy.","review_note":""}
+{"id":"domain_catalog.eac1bac2c287","target_locale":"cs","translation":"Zkontrolujte svou váhu, obvod pasu a frekvenci cvičení.","review_note":""}
+{"id":"domain_catalog.a73dafb59621","target_locale":"cs","translation":"Zaznamenejte si svou váhu, obvod pasu a stravu.","review_note":""}
+{"id":"domain_catalog.096953528159","target_locale":"cs","translation":"Chcete-li zkontrolovat svůj pokrok,","review_note":""}
+{"id":"domain_catalog.6ce192c3f346","target_locale":"cs","translation":"Nehodnotíme váš zdravotní stav.","review_note":""}
+{"id":"domain_catalog.5c95976db5e0","target_locale":"cs","translation":"Zdravý tvar V.","review_note":""}
+{"id":"domain_catalog.1ae4e72bc475","target_locale":"cs","translation":"Udržování zdraví.","review_note":""}
+{"id":"domain_catalog.d25c4cd334d9","target_locale":"cs","translation":"Kontrolní body pro udržení zdraví.","review_note":""}
+{"id":"domain_catalog.3ecf54bcfe2c","target_locale":"cs","translation":"Konzultant pro zdravé návyky.","review_note":""}
+{"id":"domain_catalog.7f998a38e9ec","target_locale":"cs","translation":"Chcete-li si vytvořit zdravé návyky.","review_note":""}
+{"id":"domain_catalog.c4c8f8c07255","target_locale":"cs","translation":"Lehněte si na šikmou lavici, položte ruce za sebe a ohněte paže v loktech.","review_note":""}
+{"id":"domain_catalog.0691ba053a52","target_locale":"cs","translation":"Serratus anterior (šroubováč).","review_note":""}
+{"id":"domain_catalog.8ff8ddea80c6","target_locale":"cs","translation":"Celé tělo.","review_note":""}
+{"id":"domain_catalog.55d772a6e8ff","target_locale":"cs","translation":"Množství a rovnováhu svalů celého těla.","review_note":""}
+{"id":"domain_catalog.20465297f989","target_locale":"cs","translation":"Všechny nutriční hodnoty potravin byly znovu vypočítány z Japonské standardní tabulky složení potravin.","review_note":""}
+{"id":"domain_catalog.4c3c32ef7d36","target_locale":"cs","translation":"Vytvořte si sílu, kterou můžete opakovat.","review_note":""}
+{"id":"domain_catalog.eb4094333313","target_locale":"cs","translation":"Nepokoušejte se odhadnout části těla, které nejsou na fotce.","review_note":""}
+{"id":"domain_catalog.8a7c08ed1b16","target_locale":"cs","translation":"Nevypočítejte hodnoty pouze z fotografie.","review_note":""}
+{"id":"domain_catalog.1bd26ac102fb","target_locale":"cs","translation":"Porovnejte fotografii, obvod pasu a váhu v daném období.","review_note":""}
+{"id":"domain_catalog.a2265283c677","target_locale":"cs","translation":"Buďte klidní a rozhodujte se rychle. Udržujte bezpečnost a opakovatelnost.","review_note":""}
+{"id":"domain_catalog.1957758467a5","target_locale":"cs","translation":"Začátečník","review_note":""}
+{"id":"domain_catalog.1e1da1697fb2","target_locale":"cs","translation":"Jako alternativu, {{value1}}. Vhodné, pokud chcete zdůraznit {{value2}}.","review_note":""}
+{"id":"domain_catalog.07526d7f2cc6","target_locale":"cs","translation":"Předloktí","review_note":""}
+{"id":"domain_catalog.6c43886de639","target_locale":"cs","translation":"Zafixujte předloktí a ohýbejte/rozepřete zápěstí, abyste posílili předloktí.","review_note":""}
+{"id":"domain_catalog.5a3309c1a4ab","target_locale":"cs","translation":"Silné a přirozené svaly","review_note":""}
+{"id":"domain_catalog.086cb45cf7dc","target_locale":"cs","translation":"Silné a přátelské. Přeměňte úspěch na sebevědomí.","review_note":""}
+{"id":"domain_catalog.9671cfa0696d","target_locale":"cs","translation":"Aktivní sportovní postava","review_note":""}
+{"id":"domain_catalog.b90323da299e","target_locale":"cs","translation":"Zvyšte počet aktivních dnů.","review_note":""}
+{"id":"domain_catalog.97a1cb44cf8f","target_locale":"cs","translation":"Aktivní návyky","review_note":""}
+{"id":"domain_catalog.bbba963ea7a4","target_locale":"cs","translation":"Aktivita a pohyb","review_note":""}
+{"id":"domain_catalog.b181ea2552a3","target_locale":"cs","translation":"Neprovádíme lékařské vyšetření.","review_note":""}
+{"id":"domain_catalog.0cc2ae8526d1","target_locale":"cs","translation":"Nenutíme vás k nebezpečné maximální zvedání.","review_note":""}
+{"id":"domain_catalog.68e0568f4060","target_locale":"cs","translation":"Silné a robustní tělo","review_note":""}
+{"id":"domain_catalog.39171b27dcf6","target_locale":"cs","translation":"Pro inspiraci","review_note":""}
+{"id":"domain_catalog.eeda02c01499","target_locale":"cs","translation":"Neúspěšná registrace","review_note":""}
+{"id":"domain_catalog.7d7297146ecd","target_locale":"cs","translation":"Na 100g potravin","review_note":""}
+{"id":"domain_catalog.164854e9197e","target_locale":"cs","translation":"Obnova","review_note":""}
+{"id":"domain_catalog.e5fa769d296f","target_locale":"cs","translation":"Postupně budujte svaly v rozsahu obnovy.","review_note":""}
+{"id":"domain_catalog.797274b60003","target_locale":"cs","translation":"Obnova a návrat do sportu","review_note":""}
+{"id":"domain_catalog.d6cdc9900460","target_locale":"cs","translation":"Nezvyšujte množství, které nelze obnovit.","review_note":""}
+{"id":"domain_catalog.cb08534c4b77","target_locale":"cs","translation":"Prioritizujte zotavení","review_note":""}
+{"id":"domain_catalog.1c3c0f3425a7","target_locale":"cs","translation":"Použijte tyč a pohybujte se po předem definovaných kolejích.","review_note":""}
+{"id":"domain_catalog.5ee36a0dcb06","target_locale":"cs","translation":"Chcete zvýšit...","review_note":""}
+{"id":"domain_catalog.8b28adb03d67","target_locale":"cs","translation":"Večeře","review_note":""}
+{"id":"domain_catalog.8c54b80a0189","target_locale":"cs","translation":"Silné a robustní tělo","review_note":""}
+{"id":"domain_catalog.008dc77eb69f","target_locale":"cs","translation":"Hamstringy","review_note":""}
+{"id":"domain_catalog.3a1fdfb57154","target_locale":"cs","translation":"Žena","review_note":""}

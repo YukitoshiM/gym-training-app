@@ -43,9 +43,9 @@ struct ExerciseListView: View {
             if filteredExercises.isEmpty {
                 Section {
                     ContentUnavailableView {
-                        Label("該当する種目がありません", systemImage: "magnifyingglass")
+                        Label(L10n.string("training.725a4adfc01a", fallback: "該当する種目がありません"), systemImage: "magnifyingglass")
                     } description: {
-                        Text("右上の追加ボタンからカスタム種目を登録できます。")
+                        Text(L10n.string("training.4ec785b46677", fallback: "右上の追加ボタンからカスタム種目を登録できます。"))
                     }
                 }
             } else {
@@ -65,8 +65,8 @@ struct ExerciseListView: View {
         }
         .scrollContentBackground(.hidden)
         .background(AppTheme.pageBackground)
-        .navigationTitle("種目")
-        .searchable(text: $searchText, prompt: "種目名・部位・手法")
+        .navigationTitle(L10n.string("training.460379a71a7f", fallback: "種目"))
+        .searchable(text: $searchText, prompt: L10n.string("training.e82a5f19c417", fallback: "種目名・部位・手法"))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -74,7 +74,7 @@ struct ExerciseListView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
-                .accessibilityLabel("カスタム種目を追加")
+                .accessibilityLabel(L10n.string("training.42254297b975", fallback: "カスタム種目を追加"))
                 .accessibilityIdentifier("addCustomExerciseButton")
             }
         }

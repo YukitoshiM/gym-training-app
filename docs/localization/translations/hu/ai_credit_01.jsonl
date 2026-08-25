@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "hu", "translation": "AI fiók", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "hu", "translation": "Ez {{value1}} kreditet igényel", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "hu", "translation": "Add hozzá kreditet", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "hu", "translation": "Kreditek kezelése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "hu", "translation": "Automatikus jelentéshez kredit használata", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "hu", "translation": "Nem fogyaszt kreditet, csak a helyi adatokat használja.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "hu", "translation": "A jelentés futtatásakor használja a heti vagy havi krediteket.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "hu", "translation": "AI kreditek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "hu", "translation": "Kreditek ellenőrzése", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "hu", "translation": "Kreditek: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "hu", "translation": "{{value1}} kreditet kaptál.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "hu", "translation": "Vásold a krediteket", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "hu", "translation": "Folytasd a manuális bejegyzést", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "hu", "translation": "Ez törli az összes helyi adatot és a BodyMode fiókot. A megmaradt krediteket is elveszíti, és nem állíthatók vissza.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "hu", "translation": "Kredit előzmények", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "hu", "translation": "Kréteket kaphatsz videóval, vagy vásárolhatod a szükséges mennyiséget. A manuális bejegyzés ingyenesen használható.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "hu", "translation": "Gyűjtsd az hirdetésekből, vagy vásárolj krediteket. A manuális bejegyzést továbbra is használhatod.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "hu", "translation": "Nem elég AI kredit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "hu", "translation": "Havi jelentés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "hu", "translation": "Nincs lejárati idő", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "hu", "translation": "{{value1}} AI kreditek", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "hu", "translation": "A vásárlás előkészítése alatt...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "hu", "translation": "Visszatérítést finomítottunk, {{value1}} kreditet adtunk.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "hu", "translation": "kreditet adtunk.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "hu", "translation": "A vásárlás jóvá kell még tennie. Automatikusan megjelenik a végrehajtás után.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "hu", "translation": "A vásárlási kreditek nem érvénytelenülnek. Nem adhatók át vagy pénzbe cserélhetők. A bannerek továbbra is megjelennek, még akkor is, ha vásároltál.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "hu", "translation": "Nem tudtuk azonosítani a vásárlás állapotát.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "hu", "translation": "Nem sikerült ellenőrizni az App Store-ban történő vásárlást.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "hu", "translation": "Visszatérítés finomítása", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "hu", "translation": "A mai hirdetési jutalom már felhasználva.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "hu", "translation": "A videó ellenőrzése még tart. A kreditek megjelennek, miután ellenőrizte.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "hu", "translation": "Az AI képernyőt újraindítva ellenőrizheti a legfrissebb egyenlegét. Nem kell újra megnézni a videót.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "hu", "translation": "5 kreditet fogadott meg.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "hu", "translation": "A session lejárt. Kérjük, újra jelentkezzen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "hu", "translation": "Apple-en keresztül jelentkezett be.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "hu", "translation": "Az AI képernyőn keresztül regisztrálva, megkapja az első krediteket. A manuális rekordok használhatóak regisztráció nélkül.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "hu", "translation": "Az AI funkciókhoz regisztráljon az Apple-en keresztül.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "hu", "translation": "Regisztrálok...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "hu", "translation": "Apple-en keresztül regisztrálva, 20 kreditet fogad meg. A manuális rekordok használhatóak regisztráció nélkül.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "hu", "translation": "Apple-en keresztül regisztrálva, 20 kreditet fogad meg. Nincs előfizetés vagy automatikus felújítás.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "hu", "translation": "20 kredit regisztrációval", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "hu", "translation": "Videóhirdetés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "hu", "translation": "Admin által biztosított", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "hu", "translation": "Vásárlás", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "hu", "translation": "Első regisztrációhoz jutalom", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "hu", "translation": "Kezdd a mesterséges intelligencia edzővel", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "hu", "translation": "Mesterséges intelligencia kredit", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "hu", "translation": "Próbáld később újra.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "hu", "translation": "Korlátlan használat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "hu", "translation": "Nézd meg a videót és szerezz 5 kreditet", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "hu", "translation": "Heti jelentés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

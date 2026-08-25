@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"he","translation":"{{value1}} פריטים","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"he","translation":"{{value1}}: לא נמצאו ביקור בחדר כושר או אימון בתאריך המתוכנן.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"he","translation":"משך אימון","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"he","translation":"יעדי תזונה יומיים","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"he","translation":"ללמוד את התנועות במהלך 3 אימונים","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"he","translation":"יצירת אימון עם AI","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"he","translation":"ההמלצות להיום זמינות גם ללא AI.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"he","translation":"לשאול את AI על המצב הנוכחי שלך","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"he","translation":"לשאול את AI","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"he","translation":"נתונים שנשלחים ל-AI","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"he","translation":"מאמן ה-AI יוצר תוכניות אימון רק עם הציוד שבחרת. תמיד ייבחר פריט אחד לפחות.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"he","translation":"יצירת משוב שבועי באמצעות שרת ה-AI","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"he","translation":"שרת ה-AI מחובר","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"he","translation":"מודל ה-AI בהכנה","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"he","translation":"טיוטות AI ומשוב שבועי אינם זמינים, אך עדיין אפשר לשמור רישומים ידניים.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"he","translation":"כדי להשתמש בטיוטות AI ובמשוב שבועי, יש להפעיל את תכונות ה-AI ואז לבדוק את החיבור.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"he","translation":"עדכון AI {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"he","translation":"חיבור AI","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"he","translation":"תכונות AI כבויות","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"he","translation":"שימוש בתכונות AI","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"he","translation":"בדיקת AI מתבצעת","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"he","translation":"נבדק על ידי AI","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"he","translation":"איפוס הגדרות AI לברירת המחדל","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"he","translation":"מפתח API","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"he","translation":"מפתח ה-API משמש רק לקבלת אסימונים קצרי-טווח ואינו נשלח בבקשות AI רגילות.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"he","translation":"שרת ה-API מגיב, אך המודל הנדרש אינו זמין.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"he","translation":"שרת ה-API מגיב, אך מודל העזר לארוחות ולדוחות אינו זמין.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"he","translation":"שרת ה-API מגיב, אך הערכת קלוריות מתמונה אינה זמינה.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"he","translation":"אימוני Apple Health","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"he","translation":"סנכרון אימון עם Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"he","translation":"יומני Apple Watch","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"he","translation":"Apple Watch וחיישנים","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"he","translation":"דיווח על מודעה ב-BodyMode","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"he","translation":"התחלת השימוש ב-BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"he","translation":"AI לניהול BodyMode","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"he","translation":"השימוש של Google בנתוני מודעות","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"he","translation":"מדיניות הפרטיות של Google","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"he","translation":"בדיקת שיתוף עם Health","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"he","translation":"הערכת חזרות באמצעות Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"he","translation":"משוב הפטי ב-Apple Watch","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"he","translation":"{{value1}} / {{value2}} הושלמו","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"he","translation":"{{value1}} / {{value2}} הושגו","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"he","translation":"{{value1}}/6 הושלמו","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"he","translation":"{{value1}}/{{value2}} חזרות","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"he","translation":"{{value1}}{{value2}} חזרות","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"he","translation":"המלצה מאת {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"he","translation":"{{value1}} בבדיקה · ההמלצה זמינה","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"he","translation":"נבדק על ידי {{value1}}","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"he","translation":"לגבי {{value1}}, נא להסביר מדוע זו ההמלצה להיום ולהציע התאמות.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"he","translation":"לשאול את {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"he","translation":"ההמלצה של {{value1}}","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"he","translation":"ההערכה של {{value1}}","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"he","translation":"ההמלצה הבסיסית של {{value1}}","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"he","translation":"ממתין לבדיקה של {{value1}} · ההמלצה זמינה","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"he","translation":"הדוח השבועי של {{value1}}","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"he","translation":"הגדרת {{value1}} באמצעות הבורר","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"he","translation":"החלפת {{value1}} בפעולה אחרת","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"he","translation":"{{value1}} זמין. אומתו {{value2}} סוגי מאמנים.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"he","translation":"למה {{value1}} הומלץ","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"he","translation":"פתיחת {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"he","translation":"{{value1}} סטים","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"he","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"he","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"he","translation":"{{value1}} · עודכן {{value2}}","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"he","translation":"{{value1}} · {{value2}} סוגי ציוד","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"he","translation":"{{value1}} · {{value2}} ימים בשבוע","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"he","translation":"{{value1}} פריטים","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"he","translation":"{{value1}} פעמים","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"he","translation":"{{value1}} הושלמו","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"he","translation":"{{value1}} תרגילים","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"he","translation":"{{value1}} תרגילים / {{value2}} סטים","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"he","translation":"מכאן BodyMode מטפל בשאר. בכל יום מוצעות עד שלוש פעולות.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"he","translation":"נתונים שמשפרים את אמינות ההערכה","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"he","translation":"החלת המאמן המומלץ","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"he","translation":"התחלת היום כאן","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"he","translation":"התחלת האימון הזה","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"he","translation":"שימוש ביעד הזה","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"he","translation":"מאמן ליעד הזה","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"he","translation":"למה הפעולה הזו נבחרה","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"he","translation":"כל המאמנים","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"he","translation":"אחר","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"he","translation":"חלבון","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"he","translation":"מה הוא לא יכול לעשות","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"he","translation":"נבנה תחילה מהרישומים במכשיר, עם התאמות AI רק כשצריך.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"he","translation":"שמירת אימון בשימוש תכוף","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"he","translation":"קלוריות","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"he","translation":"קלוריות / מאקרו","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"he","translation":"מודל הערכת הקלוריות בהכנה","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"he","translation":"ביטול","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"he","translation":"רישום מהיר","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"he","translation":"כתובת URL של השרת","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"he","translation":"הגעתי לחדר הכושר","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"he","translation":"ביקורים בחדר הכושר","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"he","translation":"רישום אוטומטי של ביקורים בחדר הכושר","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"he","translation":"דילוג","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"he","translation":"אם החיישנים אינם זמינים, עדיין אפשר להזין משקל, חזרות ו-RPE ידנית. דגימה חסכונית בחשמל מפחיתה את תדירות עדכון הערכות התנועה.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"he","translation":"מודעת בדיקה","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"he","translation":"נתונים","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"he","translation":"שלמות הנתונים {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"he","translation":"מאמנים: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"he","translation":"אימון","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"he","translation":"השלמת 3 אימונים","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"he","translation":"פתיחת אימונים","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"he","translation":"התחלת אימון","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"he","translation":"גרסה: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"he","translation":"ללא התאמה אישית","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"he","translation":"ההתאמה האישית כבויה","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"he","translation":"אימון חופשי","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"he","translation":"פרטיות","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"he","translation":"פרופיל","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"he","translation":"עזרה","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"he","translation":"בית","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"he","translation":"האימונים שלך כאן","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"he","translation":"בחירה או התחלה של אימון","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"he","translation":"יש לבחור יעד כגון Mail ולשלוח את הדיווח לתמיכה של BodyMode. הדיווח אינו כולל רישומי גוף או בריאות.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"he","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"he","translation":"תוכן פוגעני","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"he","translation":"שגיאה לא ידועה","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"he","translation":"תוכן בלתי הולם","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"he","translation":"דיווח על מודעה בלתי הולמת","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"he","translation":"לא נמצא אימון מתוכנן","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"he","translation":"לא לשנות הפעם","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"he","translation":"ללא שינוי הפעם","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"he","translation":"היום: {{value1}} · {{value2}} סטים","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"he","translation":"התחלת למידה מחדש היום","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"he","translation":"3 המשימות של היום","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"he","translation":"מכין את 3 המשימות של היום","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"he","translation":"האימון של היום","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"he","translation":"השלמת האימון של היום","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"he","translation":"ביצוע האימון של היום","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"he","translation":"התחלת האימון של היום","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"he","translation":"הרישומים של היום","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"he","translation":"ההמלצה של היום","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"he","translation":"המצב היום","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"he","translation":"היומן של היום","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"he","translation":"המוכנות היום","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"he","translation":"ההתקדמות היום","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"he","translation":"מעבר להיום","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"he","translation":"הפעולות להיום נמצאות כאן","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"he","translation":" פריטים","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"he","translation":"מנוחה","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"he","translation":"זמן מנוחה","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"he","translation":"הגדרת זמן מנוחה באמצעות הבורר","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"he","translation":"תמונות התקדמות","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"he","translation":"הרכב גוף","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"he","translation":"משקל","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"he","translation":"משקל גוף {{value1}} + משקל נוסף {{value2}} = עומס ייחוס {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"he","translation":"משקל גוף {{value1}} - סיוע {{value2}} = עומס ייחוס {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"he","translation":"משקל · אופציונלי","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"he","translation":"שיפור המשקל והיקף המותניים בקצב בר-קיימא","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"he","translation":"משקל · מותניים · ארוחות · תמונות התקדמות","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"he","translation":"מה היעד שלך?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"he","translation":"יצירה","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"he","translation":"מדריך למשתמש","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"he","translation":"נבנה אימונים באמצעות הציוד הזמין","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"he","translation":"ציוד זמין","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"he","translation":"רק סוגי התכונות שבהם נעשה שימוש נשמרים במכשיר. משקל, תמונות, פרטי ארוחות, דופק, מיקום והערות אינם נרשמים או נשלחים אוטומטית.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"he","translation":"שמירה","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"he","translation":"נבדק באמצעות הרישומים השמורים שלך.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"he","translation":"הפרדת רישומי בריאות מנתוני מודעות","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"he","translation":"אפשר לרשום כמה דברים עכשיו ולסקור הכול אחר כך.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"he","translation":"סיום","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"he","translation":"למחוק את כל הנתונים?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"he","translation":"מחיקת כל הנתונים","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"he","translation":"ייצוא כל הרישומים כ-JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"he","translation":"התחלה באימון לכל הגוף","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"he","translation":"תמונה","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"he","translation":"ניתוח תמונה מיד","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"he","translation":"מעקב אחר ההתקדמות באמצעות תמונות ומדידות","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"he","translation":"התמונות והמדידות נמצאות כאן","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"he","translation":"רישום תמונות ומדידות","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"he","translation":"צילום תמונה","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"he","translation":"שיפור המראה, המותניים ואיזון השרירים","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"he","translation":" דקות","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"he","translation":"דקות:שניות","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"he","translation":"יצירת אימון למתחילים","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"he","translation":"הצגת פרטי ההערכה","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"he","translation":"בחירת פעולה אחרת","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"he","translation":"איזה ציוד זמין?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"he","translation":"שיתוף ניתוחי שימוש","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"he","translation":"מחיקת נתוני שימוש","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"he","translation":"ייצוא נתוני שימוש","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"he","translation":"איזון סדרי העדיפות בעצות","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"he","translation":"תנועה","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"he","translation":"מידע שנעשה בו שימוש","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"he","translation":"בדיקת מצב ההסכמה","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"he","translation":"למי זה מתאים","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"he","translation":"בחירה לפי ציוד או קבוצת שרירים","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"he","translation":" חזרות","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"he","translation":"התאוששות","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"he","translation":"חזרות","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"he","translation":"הגדרת חזרות באמצעות הבורר","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"he","translation":"מודעת בדיקה קבועה","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"he","translation":"תחילת השימוש","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"he","translation":"מידע בסיסי · אופציונלי","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"he","translation":"שליחת דיווח","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"he","translation":"סיבת הדיווח","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"he","translation":"מעקב אחר שינויים כאן","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"he","translation":"בחירת מדדים למעקב","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"he","translation":"שינוי","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"he","translation":"היסטוריית שינויים","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"he","translation":"התחלה","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"he","translation":"הלמידה מושהית. הרישומים הקודמים שלך לא נמחקו.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"he","translation":"סיום","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"he","translation":"הושלם {{value1}}","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"he","translation":"הושלם","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"he","translation":"סימון כהושלם","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"he","translation":"הושלם","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"he","translation":"לא בוצע","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"he","translation":"ביצוע","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"he","translation":"ככל שמבצעים יותר, הצעד הבא נעשה ברור יותר","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"he","translation":"התוצאות שלך משפרות את המלצת ה-AI הבאה","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"he","translation":"מורחב","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"he","translation":"היסטוריה","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"he","translation":" שנים","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"he","translation":"לא מתאים לגיל","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"he","translation":"מזהה המודעה לא הוגדר","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"he","translation":"מודעות ושימוש בנתונים","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"he","translation":"הגדרות פרטיות של מודעות","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"he","translation":"לא ניתנה הסכמה למודעות.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"he","translation":"שם המוצר או הבעיה שנצפתה במודעה","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"he","translation":"מודעות מופיעות רק ב-iPhone. רישומי בריאות, ארוחות, תמונות ומיקום ב-BodyMode אינם משמשים לבחירת מודעות.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"he","translation":"דיווח על מודעה","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"he","translation":"המודעה נטענת","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"he","translation":"מודעות ופרטיות","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"he","translation":"ספק המודעות","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"he","translation":"לצורך הצגת מודעות, Google מקבלת את כתובת ה-IP, מידע בסיסי על המכשיר והיישום, נתוני אבחון וביצועים של ה-SDK ונתוני חשיפה ואינטראקציה עם מודעות. ייתכן שמיקום משוער יוסק מכתובת ה-IP. משקל, דופק, שינה, ארוחות, תמונות, אימונים, יעדים, נתוני GPS ומיקומי חדרי כושר שנרשמו ב-BodyMode אינם נכללים בבקשות למודעות.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"he","translation":"התאמת המנוחה לפי דופק ו-RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"he","translation":"דופק ותנועה","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"he","translation":"מין","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"he","translation":"מין · אופציונלי","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"he","translation":"חזרה","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"he","translation":"הרישום הידני עדיין זמין.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"he","translation":"מאמן: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"he","translation":"מאמן מוקצה","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"he","translation":"לשאול את המאמן שלך","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"he","translation":"גישת המאמן","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"he","translation":"שינוי סוג המאמן משנה אילו רישומים ה-AI מתעדף ואת ההמלצות שהוא מציע.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"he","translation":"מאמן מוקצה: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"he","translation":"לא צוין","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"he","translation":"בדיקת חיבור","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"he","translation":"אפשר לבצע את האימון המומלץ ב-iPhone או ב-Apple Watch.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"he","translation":"איפוס למידת ההמלצות בלבד","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"he","translation":"מודעות באנר בלבד, ללא הפרעות","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"he","translation":"רישום מדידות","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"he","translation":" ימים","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"he","translation":"סקירה לפי תאריך","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"he","translation":"פעילות יומית","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"he","translation":"בדיקת המלצה יומית","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"he","translation":"לא ניתן לייצא","review_note":""}

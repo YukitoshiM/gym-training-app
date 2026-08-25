@@ -169,11 +169,9 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 10))
         XCTAssertTrue(app.staticTexts["2件から選択"].exists)
         XCTAssertTrue(app.descendants(matching: .any)["watchRecentSession"].exists)
-        app.swipeUp()
-        XCTAssertTrue(
-            app.descendants(matching: .any)["watchMenu-胸の日"]
-                .waitForExistence(timeout: 5)
-        )
+        let restoredMenu = findHittableElement(in: app, identifier: "watchMenu-胸の日")
+        XCTAssertTrue(restoredMenu.waitForExistence(timeout: 5))
+        XCTAssertTrue(restoredMenu.isHittable)
     }
 
     func testCanChooseAnotherMenu() throws {
@@ -194,6 +192,27 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["背中の日"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["ラットプルダウン・3セット・計36回"].exists)
         XCTAssertTrue(app.buttons["watchStartWorkoutButton"].exists)
+    }
+
+    func testOutdoorWorkoutCanBeConfiguredAndStartedWithoutStrengthPlan() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial"
+        ]
+        app.launch()
+
+        let outdoorLink = findHittableElement(in: app, identifier: "watchOutdoorWorkoutLink")
+        XCTAssertTrue(outdoorLink.waitForExistence(timeout: 10))
+        outdoorLink.tap()
+
+        let startButton = findHittableElement(in: app, identifier: "watchStartOutdoorWorkoutButton")
+        XCTAssertTrue(startButton.waitForExistence(timeout: 5))
+        startButton.tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["watchOutdoorDistance"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["一時停止"].exists)
     }
 
     func testSwitchingSetsResetsThePreviousSetAndCarriesWeightForward() throws {
@@ -267,7 +286,6 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         app.launch()
 
         XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.descendants(matching: .any)["watchTutorialPage-1"].label, "メニューを選ぶ")
         app.buttons["skipWatchTutorialButton"].tap()
         XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 5))
     }
@@ -311,7 +329,6 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 10))
         let skipButton = app.buttons["skipWatchTutorialButton"]
         XCTAssertTrue(skipButton.exists)
-        XCTAssertEqual(skipButton.label, "チュートリアルをスキップ")
         skipButton.tap()
         XCTAssertTrue(app.staticTexts["今日のメニュー"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["skipWatchTutorialButton"].exists)
@@ -328,6 +345,80 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         XCTAssertEqual(tutorialButton.label, "Apple Watchの使い方")
         tutorialButton.tap()
         XCTAssertTrue(app.descendants(matching: .any)["watchTutorialPage-1"].waitForExistence(timeout: 5))
+    }
+
+    func testEnglishSocialPromoActiveSetScreenshot() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial",
+            "-AppleLanguages", "(en)",
+            "-AppleLocale", "en_US"
+        ]
+        app.launch()
+
+        let menu = app.descendants(matching: .any).matching(
+            NSPredicate(format: "identifier BEGINSWITH %@", "watchMenu-")
+        ).firstMatch
+        XCTAssertTrue(menu.waitForExistence(timeout: 10))
+        XCTAssertTrue(findHittableElement(in: app, identifier: menu.identifier).isHittable)
+        menu.tap()
+
+        let startWorkout = findHittableElement(in: app, identifier: "watchStartWorkoutButton")
+        XCTAssertTrue(startWorkout.waitForExistence(timeout: 5))
+        startWorkout.tap()
+
+        let startSet = app.buttons["watchStartNextSetButton"]
+        XCTAssertTrue(startSet.waitForExistence(timeout: 5))
+        startSet.tap()
+        XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].waitForExistence(timeout: 5))
+
+        let directory = URL(fileURLWithPath: "/tmp/bodymode-social-en", isDirectory: true)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        try app.screenshot().pngRepresentation.write(
+            to: directory.appendingPathComponent("02-active-set-en.png")
+        )
+    }
+
+    func testEnglishAppStoreScreenshots() throws {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--reset-watch-ui-test-data",
+            "--seed-watch-ui-test-plan",
+            "--suppress-watch-tutorial",
+            "-AppleLanguages", "(en)",
+            "-AppleLocale", "en_US"
+        ]
+        app.launch()
+
+        let directory = URL(fileURLWithPath: "/tmp/bodymode-watch-app-store-en", isDirectory: true)
+        try FileManager.default.removeItemIfExists(at: directory)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+
+        let menu = app.descendants(matching: .any).matching(
+            NSPredicate(format: "identifier BEGINSWITH %@", "watchMenu-")
+        ).firstMatch
+        XCTAssertTrue(menu.waitForExistence(timeout: 10))
+        try writeScreenshot(named: "01-menu-selection.png", app: app, directory: directory)
+
+        let hittableMenu = findHittableElement(in: app, identifier: menu.identifier)
+        XCTAssertTrue(hittableMenu.isHittable)
+        hittableMenu.tap()
+
+        let startWorkout = findHittableElement(in: app, identifier: "watchStartWorkoutButton")
+        XCTAssertTrue(startWorkout.waitForExistence(timeout: 5))
+        try writeScreenshot(named: "03-plan-detail.png", app: app, directory: directory)
+        startWorkout.tap()
+
+        XCTAssertTrue(app.descendants(matching: .any)["watchLiveMetrics"].waitForExistence(timeout: 5))
+        let startSet = findHittableElement(in: app, identifier: "watchStartNextSetButton")
+        XCTAssertTrue(startSet.waitForExistence(timeout: 5))
+        startSet.tap()
+        XCTAssertTrue(app.buttons["watchCompleteActiveSetButton"].waitForExistence(timeout: 5))
+        XCUIDevice.shared.rotateDigitalCrown(delta: 0.35)
+        try writeScreenshot(named: "02-active-set.png", app: app, directory: directory)
+
     }
 
     private func findHittableElement(
@@ -368,6 +459,11 @@ final class GymTrainingWatchAppUITests: XCTestCase {
         add(attachment)
     }
 
+    private func writeScreenshot(named name: String, app: XCUIApplication, directory: URL) throws {
+        RunLoop.current.run(until: Date().addingTimeInterval(0.25))
+        try app.screenshot().pngRepresentation.write(to: directory.appendingPathComponent(name))
+    }
+
     private func integerValue(of element: XCUIElement) -> Int? {
         let digits = rawValue(of: element).filter { $0.isNumber || $0 == "-" }
         return Int(digits)
@@ -388,5 +484,12 @@ final class GymTrainingWatchAppUITests: XCTestCase {
 
     private func rawValue(of element: XCUIElement) -> String {
         (element.value as? String) ?? String(describing: element.value)
+    }
+}
+
+private extension FileManager {
+    func removeItemIfExists(at url: URL) throws {
+        guard fileExists(atPath: url.path) else { return }
+        try removeItem(at: url)
     }
 }

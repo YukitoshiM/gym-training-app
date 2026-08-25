@@ -36,6 +36,15 @@ struct HomeView: View {
         appStore.todayPlan
     }
 
+    private var recentlyDiscardedWorkout: DeletedRecord? {
+        guard appStore.activeWorkoutSession == nil else { return nil }
+        return appStore.deletedRecords.first { record in
+            guard Date().timeIntervalSince(record.deletedAt) < 600 else { return false }
+            if case .activeWorkout = record.payload { return true }
+            return false
+        }
+    }
+
     private var beginnerJourney: BeginnerJourneyProgress {
         BeginnerJourneyProgress(
             hasPlan: !appStore.plans.isEmpty,
@@ -51,9 +60,62 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    if let active = appStore.activeWorkoutSession {
+                        Button {
+                            activeSession = active.session
+                        } label: {
+                            CardContainer {
+                                HStack(spacing: 12) {
+                                    IconBadge(systemImage: "play.fill", tint: AppTheme.accent)
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(L10n.string("core_ui.continue_workout", fallback: "続きから"))
+                                            .font(.headline)
+                                        Text(active.session.title)
+                                            .font(.body.weight(.semibold))
+                                        Text(L10n.string(
+                                            "core_ui.saved_workout_progress",
+                                            fallback: "{{value1}}/{{value2}}セット完了・自動保存済み",
+                                            values: [
+                                                String(active.session.completedSetCount),
+                                                String(active.session.plannedSetCount)
+                                            ]
+                                        ))
+                                        .font(.footnote)
+                                        .foregroundStyle(AppTheme.mutedInk)
+                                    }
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundStyle(AppTheme.accent)
+                                }
+                            }
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("resumeActiveWorkoutCard")
+                    } else if let deleted = recentlyDiscardedWorkout {
+                        CardContainer {
+                            HStack(spacing: 12) {
+                                IconBadge(systemImage: "arrow.uturn.backward", tint: AppTheme.orange)
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text(L10n.string("core_ui.workout_discarded", fallback: "トレーニングを破棄しました"))
+                                        .font(.headline)
+                                    Text(deleted.title)
+                                        .font(.footnote)
+                                        .foregroundStyle(AppTheme.mutedInk)
+                                }
+                                Spacer()
+                                Button(L10n.string("core_ui.undo", fallback: "元に戻す")) {
+                                    _ = appStore.restoreDeletedRecord(deleted.id)
+                                }
+                                .buttonStyle(.bordered)
+                                .accessibilityIdentifier("undoDiscardedWorkoutButton")
+                            }
+                        }
+                    }
+
                     if let recommendation = appStore.dailyRecommendation() {
                         OmakaseHomeDashboard(
                             recommendation: recommendation,
+                            profile: appStore.userProfile,
                             progress: progress(for:),
                             isAIRefreshing: aiTrainerBackgroundService.isSending
                                 && recommendation.aiEvaluatedAt == nil,
@@ -78,7 +140,7 @@ struct HomeView: View {
                     } else {
                         HStack(spacing: 12) {
                             ProgressView()
-                            Text("今日の3つを準備しています")
+                            Text(L10n.string("core_ui.99f0bdf9e0f1", fallback: "今日の3つを準備しています"))
                                 .font(.headline)
                         }
                         .frame(maxWidth: .infinity, minHeight: 120)
@@ -91,7 +153,7 @@ struct HomeView: View {
                         }
                     } label: {
                         HStack {
-                            Label("詳しく見る", systemImage: "slider.horizontal.3")
+                            Label(L10n.string("core_ui.bc485c713a2f", fallback: "詳しく見る"), systemImage: "slider.horizontal.3")
                                 .font(.headline)
                             Spacer()
                             Image(systemName: isShowingDetails ? "chevron.up" : "chevron.down")
@@ -103,10 +165,10 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, minHeight: 48)
                     .contentShape(Rectangle())
                     .accessibilityIdentifier("omakaseDetailsButton")
-                    .accessibilityValue(isShowingDetails ? "展開中" : "閉じています")
+                    .accessibilityValue(isShowingDetails ? L10n.string("core_ui.e25688df2e3a", fallback: "展開中") : L10n.string("core_ui.1d21ed2ea494", fallback: "閉じています"))
 
                     if isShowingDetails {
-                        Toggle("行動通知", isOn: $notificationsEnabled)
+                        Toggle(L10n.string("core_ui.8d43b9a92d79", fallback: "行動通知"), isOn: $notificationsEnabled)
                             .font(.headline)
                             .onChange(of: notificationsEnabled) { _, enabled in
                                 Task {
@@ -123,7 +185,7 @@ struct HomeView: View {
                                 .foregroundStyle(AppTheme.mutedInk)
                         }
 
-                        Toggle("行動パターンを学習", isOn: $behaviorLearningEnabled)
+                        Toggle(L10n.string("core_ui.a9d271807073", fallback: "行動パターンを学習"), isOn: $behaviorLearningEnabled)
                             .font(.headline)
                             .onChange(of: behaviorLearningEnabled) { _, enabled in
                                 DailyRecommendationPersonalizationStore.setEnabled(enabled)
@@ -133,7 +195,7 @@ struct HomeView: View {
                         Text(
                             behaviorLearningEnabled
                                 ? DailyRecommendationPersonalizationStore.summary(from: appStore.dailyRecommendations)
-                                : "学習は停止中です。過去の記録自体は削除されません。"
+                                : L10n.string("core_ui.70353d3dfb1a", fallback: "学習は停止中です。過去の記録自体は削除されません。")
                         )
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
@@ -143,11 +205,11 @@ struct HomeView: View {
                                 recommendations: appStore.dailyRecommendations,
                                 revisions: appStore.recommendationRevisions
                             )
-                            Text(
-                                "完了 \(evaluation.completionRate.formatted(.percent.precision(.fractionLength(0))))  "
-                                    + "着手 \(evaluation.adoptionRate.formatted(.percent.precision(.fractionLength(0))))  "
-                                    + "AI変更 \(evaluation.aiChangeRate.formatted(.percent.precision(.fractionLength(0))))"
-                            )
+                            Text([
+                                L10n.string("core_ui.f4afb2218186", fallback: "完了 {{value1}}", values: [evaluation.completionRate.formatted(.percent.precision(.fractionLength(0)))]),
+                                L10n.string("core_ui.6d1b61ab7cee", fallback: "着手 {{value1}}", values: [evaluation.adoptionRate.formatted(.percent.precision(.fractionLength(0)))]),
+                                L10n.string("core_ui.1eb7be768354", fallback: "AI変更 {{value1}}", values: [evaluation.aiChangeRate.formatted(.percent.precision(.fractionLength(0)))])
+                            ].joined(separator: "  "))
                             .font(.footnote.monospacedDigit())
                             .foregroundStyle(AppTheme.mutedInk)
                             .accessibilityIdentifier("dailyRecommendationEvaluation")
@@ -158,20 +220,23 @@ struct HomeView: View {
                             personalizationResetNotice = true
                             refreshDailyRecommendation(force: true)
                         } label: {
-                            Label("提案学習だけリセット", systemImage: "arrow.counterclockwise")
+                            Label(L10n.string("core_ui.813a696c3764", fallback: "提案学習だけリセット"), systemImage: "arrow.counterclockwise")
+                                .padding(.vertical, 14)
                         }
+                        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                        .contentShape(Rectangle())
                         .disabled(!behaviorLearningEnabled)
                         .accessibilityIdentifier("resetBehaviorLearningButton")
 
                         if personalizationResetNotice {
-                            Label("今日から学び直します", systemImage: "checkmark.circle.fill")
+                            Label(L10n.string("core_ui.174295096a95", fallback: "今日から学び直します"), systemImage: "checkmark.circle.fill")
                                 .font(.footnote)
                                 .foregroundStyle(AppTheme.positive)
                         }
 
                     if let liveWorkout = watchSyncService.liveWatchWorkout {
                         HomeSectionHeader(
-                            title: "進行中"
+                            title: L10n.string("core_ui.16b7f36b1361", fallback: "進行中")
                         )
                         WatchLiveWorkoutCard(snapshot: liveWorkout)
                     }
@@ -203,7 +268,7 @@ struct HomeView: View {
                     }
 
                     HomeSectionHeader(
-                        title: "今日の状態"
+                        title: L10n.string("core_ui.360f4c9aed78", fallback: "今日の状態")
                     )
 
                     NavigationLink {
@@ -241,7 +306,7 @@ struct HomeView: View {
                     )
 
                     HomeSectionHeader(
-                        title: "目標と実績"
+                        title: L10n.string("core_ui.23692e812696", fallback: "目標と実績")
                     )
 
                     GoalActionCard(profile: appStore.userProfile) {
@@ -249,9 +314,9 @@ struct HomeView: View {
                     }
 
                     HStack(spacing: 10) {
-                        CompactStat(title: "計画", value: "\(appStore.plans.count)", suffix: "件", tint: AppTheme.blue)
-                        CompactStat(title: "履歴", value: "\(appStore.workoutHistory.count)", suffix: "件", tint: AppTheme.orange)
-                        CompactStat(title: "直近", value: latestAchievementText, suffix: "", tint: AppTheme.accent)
+                        CompactStat(title: L10n.string("core_ui.4d75244133b3", fallback: "計画"), value: "\(appStore.plans.count)", suffix: L10n.string("core_ui.b9e5ce41271d", fallback: "件"), tint: AppTheme.blue)
+                        CompactStat(title: L10n.string("core_ui.b711e4d9455e", fallback: "履歴"), value: "\(appStore.workoutHistory.count)", suffix: L10n.string("core_ui.b9e5ce41271d", fallback: "件"), tint: AppTheme.orange)
+                        CompactStat(title: L10n.string("core_ui.25221b8c1c27", fallback: "直近"), value: latestAchievementText, suffix: "", tint: AppTheme.accent)
                     }
                     }
 
@@ -271,7 +336,7 @@ struct HomeView: View {
                             .font(.title3)
                             .frame(width: 44, height: 44)
                     }
-                    .accessibilityLabel("設定")
+                    .accessibilityLabel(L10n.string("core_ui.347a70f8f182", fallback: "設定"))
                     .accessibilityIdentifier("settingsButton")
                 }
             }
@@ -314,6 +379,19 @@ struct HomeView: View {
                     BodyPhotoListView(startsWithEditor: true)
                 case .condition:
                     ConditionDashboardView()
+                case .automaticPlan(let action):
+                    AIPlanCoachView(
+                        launchMode: .automaticStart,
+                        onStartOnce: { plan in
+                            appStore.markDailyActionAdopted(action.id)
+                            startGeneratedWorkout(plan, linksToSavedPlan: false)
+                        }
+                    ) { plan in
+                        appStore.savePlan(plan)
+                        appStore.selectTodayPlan(plan.id)
+                        appStore.markDailyActionAdopted(action.id)
+                        startGeneratedWorkout(plan, linksToSavedPlan: true)
+                    }
                 case .why(let action):
                     if let recommendation = appStore.dailyRecommendation() {
                         DailyActionWhyView(
@@ -325,6 +403,38 @@ struct HomeView: View {
                     }
                 }
             }
+            .confirmationDialog(
+                L10n.string("training.sync_conflict_title", fallback: "同じセットが両方で変更されています"),
+                isPresented: Binding(
+                    get: { watchSyncService.pendingWorkoutSyncConflict != nil },
+                    set: { _ in }
+                ),
+                titleVisibility: .visible
+            ) {
+                Button(L10n.string("training.keep_iphone_value", fallback: "iPhoneの記録を使う")) {
+                    watchSyncService.resolveWorkoutSyncConflict(preferWatch: false)
+                }
+                Button(L10n.string("training.use_watch_value", fallback: "Apple Watchの記録を使う")) {
+                    watchSyncService.resolveWorkoutSyncConflict(preferWatch: true)
+                }
+            } message: {
+                Text(L10n.string(
+                    "training.sync_conflict_message",
+                    fallback: "{{value1}}セットだけ選択が必要です。ほかのセットは自動で統合しました。",
+                    values: [String(watchSyncService.pendingWorkoutSyncConflict?.conflictingSetIDs.count ?? 0)]
+                ))
+            }
+        }
+    }
+
+    private func startGeneratedWorkout(_ plan: TrainingPlan, linksToSavedPlan: Bool) {
+        let session = appStore.makeWorkoutSession(
+            from: plan,
+            linksToSavedPlan: linksToSavedPlan
+        )
+        Task { @MainActor in
+            await Task.yield()
+            activeSession = session
         }
     }
 
@@ -458,16 +568,19 @@ struct HomeView: View {
             healthSnapshot: healthDataManager.snapshot,
             recoveryHistory: healthDataManager.recoveryHistory,
             memories: appStore.coachMemories,
-            insights: appStore.aiInsights
+            insights: appStore.aiInsights,
+            planRevisions: appStore.planRevisionProposals
         )
         let request = CoachChatRequest(
             coachID: appStore.userProfile.coachType.rawValue,
+            coach: AIRequestCoachContext(profile: appStore.userProfile),
+            purpose: .dailyRecommendation,
             message: appStore.dailyRecommendationPrompt(for: recommendation),
             context: context,
             recentMessages: []
         )
         let transmission = AITransmissionRecord(
-            purpose: "日次提案の点検",
+            purpose: L10n.string("core_ui.b4f216bc6936", fallback: "日次提案の点検"),
             sharedCategories: appStore.aiSettings.dataSharing.enabledCategoryNames,
             itemCount: context.itemCount
         )
@@ -482,7 +595,7 @@ struct HomeView: View {
                 )
                 appStore.markDailyRecommendationAIRequested(at: recommendation.date)
             } catch {
-                appStore.updateAITransmission(id: transmission.id, status: .failed)
+                appStore.recordAITransmissionFailure(id: transmission.id, error: error)
                 AppDiagnostics.shared.record(
                     error: error,
                     category: "daily_recommendation.ai",
@@ -500,7 +613,7 @@ struct HomeView: View {
             if let plan {
                 activeSession = appStore.makeWorkoutSession(from: plan)
             } else {
-                onCreatePlan()
+                omakaseSheet = .automaticPlan(action)
             }
         case .steps, .condition:
             omakaseSheet = .condition
@@ -580,6 +693,7 @@ private enum OmakaseHomeSheet: Identifiable {
     case bodyMetric(BodyMetricKind)
     case bodyPhoto
     case condition
+    case automaticPlan(DailyAction)
     case why(DailyAction)
 
     var id: String {
@@ -588,6 +702,7 @@ private enum OmakaseHomeSheet: Identifiable {
         case .bodyMetric(let kind): "bodyMetric-\(kind.rawValue)"
         case .bodyPhoto: "bodyPhoto"
         case .condition: "condition"
+        case .automaticPlan(let action): "automaticPlan-\(action.id.uuidString)"
         case .why(let action): "why-\(action.id.uuidString)"
         }
     }
@@ -611,10 +726,10 @@ private struct BeginnerNextStageCard: View {
                     Text("BEGINNER LEVEL \(progress.level)")
                         .font(.footnote.bold())
                         .foregroundStyle(AppTheme.positive)
-                    Text("次は目的別メニュー")
+                    Text(L10n.string("core_ui.bed0749e62dd", fallback: "次は目的別メニュー"))
                         .font(.headline)
                         .foregroundStyle(AppTheme.ink)
-                    Text("\(profile.outcomeStyle.displayName)・\(profile.availableEquipment.count)種類の器具")
+                    Text(L10n.string("core_ui.d9fbeb2e88e2", fallback: "{{value1}}・{{value2}}種類の器具", values: [String(describing: profile.outcomeStyle.displayName), String(describing: profile.availableEquipment.count)]))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                         .lineLimit(1)
@@ -623,7 +738,7 @@ private struct BeginnerNextStageCard: View {
                 Spacer(minLength: 6)
 
                 VStack(alignment: .trailing, spacing: 4) {
-                    Text("\(completedWorkoutCount)回")
+                    Text(L10n.string("core_ui.91bc80596709", fallback: "{{value1}}回", values: [String(describing: completedWorkoutCount)]))
                         .font(.subheadline.bold())
                         .foregroundStyle(AppTheme.accent)
                     Image(systemName: "chevron.right")
@@ -672,7 +787,7 @@ private struct GoalActionCard: View {
                 IconBadge(systemImage: profile.outcomeStyle.systemImage, tint: AppTheme.accent)
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("目的・目標")
+                    Text(L10n.string("core_ui.7dbe91b90819", fallback: "目的・目標"))
                         .font(.footnote.bold())
                         .foregroundStyle(AppTheme.mutedInk)
 
@@ -680,7 +795,7 @@ private struct GoalActionCard: View {
                         .font(.headline)
                         .foregroundStyle(AppTheme.ink)
 
-                    Text("\(profile.outcomeStyle.displayName)・週\(profile.weeklyTrainingDays)日")
+                    Text(L10n.string("core_ui.92751b790787", fallback: "{{value1}}・週{{value2}}日", values: [String(describing: profile.outcomeStyle.displayName), String(describing: profile.weeklyTrainingDays)]))
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -700,7 +815,7 @@ private struct GoalActionCard: View {
             )
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("目的を変更")
+        .accessibilityLabel(L10n.string("core_ui.74762f268854", fallback: "目的を変更"))
         .accessibilityIdentifier("goalActionCard")
     }
 }
@@ -737,14 +852,14 @@ private struct GoalPickerView: View {
                         .accessibilityIdentifier("goalOption-\(goalType.rawValue)")
                     }
                 } header: {
-                    Text("目的モード")
+                    Text(L10n.string("core_ui.b75a9bfcdbde", fallback: "目的モード"))
                 } footer: {
-                    Text("目的に合わせてホームの確認ポイントと次にやることを切り替えます。")
+                    Text(L10n.string("core_ui.e60c103c2985", fallback: "目的に合わせてホームの確認ポイントと次にやることを切り替えます。"))
                 }
             }
             .scrollContentBackground(.hidden)
             .background(AppTheme.pageBackground)
-            .navigationTitle("目的を選択")
+            .navigationTitle(L10n.string("core_ui.c82ef935ebf7", fallback: "目的を選択"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -783,17 +898,17 @@ private struct BeginnerJourneyCard: View {
 
             VStack(spacing: 10) {
                 BeginnerMissionRow(
-                    title: "初心者メニューを作る",
+                    title: L10n.string("core_ui.93f02f907e1f", fallback: "初心者メニューを作る"),
                     isCompleted: progress.hasPlan,
                     isCurrent: !progress.hasPlan
                 )
                 BeginnerMissionRow(
-                    title: "最初のトレーニングを完了",
+                    title: L10n.string("core_ui.49590b9fbda3", fallback: "最初のトレーニングを完了"),
                     isCompleted: progress.completedWorkoutCount >= 1,
                     isCurrent: progress.hasPlan && progress.completedWorkoutCount == 0
                 )
                 BeginnerMissionRow(
-                    title: "トレーニングを3回完了",
+                    title: L10n.string("core_ui.4e39030fe908", fallback: "トレーニングを3回完了"),
                     isCompleted: progress.completedWorkoutCount >= 3,
                     isCurrent: progress.completedWorkoutCount >= 1 && progress.completedWorkoutCount < 3
                 )
@@ -826,17 +941,17 @@ private struct BeginnerJourneyCard: View {
 
     private var levelTitle: String {
         switch progress.level {
-        case 1: "全身メニューから始める"
-        case 2: "3回続けて動きを覚える"
-        default: "目的別メニューが解放"
+        case 1: L10n.string("core_ui.e5e703460a11", fallback: "全身メニューから始める")
+        case 2: L10n.string("core_ui.cc1e78c76f29", fallback: "3回続けて動きを覚える")
+        default: L10n.string("core_ui.ad3e6c70e52a", fallback: "目的別メニューが解放")
         }
     }
 
     private var actionTitle: String {
         switch progress.nextAction {
-        case .createPlan: "初心者メニューを作る"
-        case .startWorkout: "トレーニングを開く"
-        case .explorePlans: "目的別メニューを見る"
+        case .createPlan: L10n.string("core_ui.93f02f907e1f", fallback: "初心者メニューを作る")
+        case .startWorkout: L10n.string("core_ui.3b063c787a1e", fallback: "トレーニングを開く")
+        case .explorePlans: L10n.string("core_ui.acf5f093f147", fallback: "目的別メニューを見る")
         }
     }
 
@@ -901,11 +1016,11 @@ private struct TodayTrainingCard: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("今日のメニュー")
+                    Text(L10n.string("core_ui.b82b1b7a064a", fallback: "今日のメニュー"))
                         .font(.footnote.bold())
                         .foregroundStyle(AppTheme.foregroundOnDark)
 
-                    Text(plan?.name ?? "計画を作成しましょう")
+                    Text(plan?.name ?? L10n.string("core_ui.2097dc5a3763", fallback: "計画を作成しましょう"))
                         .font(.largeTitle.bold())
                         .fontDesign(.rounded)
                         .foregroundStyle(AppTheme.foregroundOnDark)
@@ -933,8 +1048,8 @@ private struct TodayTrainingCard: View {
 
             if let plan {
                 HStack(spacing: 10) {
-                    Label("\(plan.exercises.count)種目", systemImage: "dumbbell")
-                    Label("\(plan.totalSetCount)セット", systemImage: "checklist")
+                    Label(L10n.string("core_ui.f3b483b42760", fallback: "{{value1}}種目", values: [String(describing: plan.exercises.count)]), systemImage: "dumbbell")
+                    Label(L10n.string("core_ui.1e0230abc2d8", fallback: "{{value1}}セット", values: [plan.totalSetCount.formatted()]), systemImage: "checklist")
                 }
                 .font(.subheadline)
                 .foregroundStyle(AppTheme.foregroundOnDark)
@@ -942,7 +1057,7 @@ private struct TodayTrainingCard: View {
                 Button(action: onStart) {
                     HStack {
                         Image(systemName: "play.fill")
-                        Text(completedSessions.isEmpty ? "トレーニング開始" : "追加で開始")
+                        Text(completedSessions.isEmpty ? L10n.string("core_ui.954bc37281ea", fallback: "トレーニング開始") : L10n.string("core_ui.d7afc61431b0", fallback: "追加で開始"))
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
@@ -955,7 +1070,7 @@ private struct TodayTrainingCard: View {
                 Button(action: onCreatePlan) {
                     HStack {
                         Image(systemName: "plus.circle.fill")
-                        Text("計画を作成")
+                        Text(L10n.string("core_ui.636a7ce9c4c4", fallback: "計画を作成"))
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
@@ -993,9 +1108,9 @@ private struct TodayTrainingCard: View {
 
     private var statusTitle: String {
         if !completedSessions.isEmpty {
-            return "\(completedSessions.count)回完了"
+            return L10n.string("core_ui.2fbdeef715e1", fallback: "{{value1}}回完了", values: [String(describing: completedSessions.count)])
         }
-        return plan == nil ? "未設定" : "Ready"
+        return plan == nil ? L10n.string("core_ui.213dbf0be17e", fallback: "未設定") : "Ready"
     }
 
     private var completedSessionList: some View {
@@ -1011,8 +1126,8 @@ private struct TodayTrainingCard: View {
                             Text(session.title)
                                 .font(.footnote.bold())
                             Text(
-                                "\(AppFormatters.shortDateTime.string(from: session.startedAt))・"
-                                    + "\(session.completedPlannedSetCount)セット"
+                                L10n.string("core_ui.52c54c49143b", fallback: "{{value1}}・", values: [String(describing: AppFormatters.shortDateTime.string(from: session.startedAt))])
+                                    + L10n.string("core_ui.1e0230abc2d8", fallback: "{{value1}}セット", values: [session.completedPlannedSetCount.formatted()])
                             )
                             .font(.footnote)
                             .foregroundStyle(AppTheme.foregroundOnDark)
@@ -1083,7 +1198,7 @@ private struct BodyKPIDashboard: View {
             VStack(alignment: .leading, spacing: 14) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("身体KPI")
+                        Text(L10n.string("core_ui.8ec43439f302", fallback: "身体KPI"))
                             .font(.headline)
                     }
 
@@ -1129,7 +1244,7 @@ private struct AIInsightStatusCard: View {
                 HStack(spacing: 10) {
                     CoachAvatarView(persona: persona, size: 42, cornerRadius: 8)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("\(persona.displayName)の週次レポート")
+                        Text(L10n.string("core_ui.ae4963a9ccdd", fallback: "{{value1}}の週次レポート", values: [String(describing: persona.displayName)]))
                             .font(.headline)
                         Text(coachRole)
                             .font(.caption)
@@ -1146,7 +1261,7 @@ private struct AIInsightStatusCard: View {
                         .foregroundStyle(AppTheme.mutedInk)
                         .lineLimit(2)
                 } else {
-                    Text("AIサーバーから週次コメントを生成します")
+                    Text(L10n.string("core_ui.10dcf23553ef", fallback: "AIサーバーから週次コメントを生成します"))
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -1201,7 +1316,7 @@ private struct BodyKPIProgressRow: View {
 
     private var valueText: String {
         guard let entry else {
-            return "未記録"
+            return L10n.string("core_ui.de7e126d0b16", fallback: "未記録")
         }
 
         return AppFormatters.metricValue(entry.value, unit: kind.unit)
@@ -1209,16 +1324,16 @@ private struct BodyKPIProgressRow: View {
 
     private var detailText: String {
         guard let entry else {
-            return "最初の値を記録してください"
+            return L10n.string("core_ui.141c005fe0b8", fallback: "最初の値を記録してください")
         }
 
         guard let target = goal.targetValue,
               let delta = goal.delta(from: entry.value) else {
-            return "目標未設定"
+            return L10n.string("core_ui.fff18139774a", fallback: "目標未設定")
         }
 
         let sign = delta > 0 ? "+" : ""
-        return "目標 \(AppFormatters.metricValue(target, unit: kind.unit)) / 差分 \(sign)\(AppFormatters.metricValue(delta, unit: kind.unit))"
+        return L10n.string("core_ui.8c68bbbed710", fallback: "目標 {{value1}} / 差分 {{value2}}{{value3}}", values: [String(describing: AppFormatters.metricValue(target, unit: kind.unit)), String(describing: sign), String(describing: AppFormatters.metricValue(delta, unit: kind.unit))])
     }
 }
 

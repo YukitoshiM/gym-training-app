@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"sv","translation":"Välj det närmaste alternativet","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"sv","translation":"När du har bestämt ditt mål, gör bara 3 saker varje dag","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"sv","translation":"Avsluta din första träning","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"sv","translation":"Registrera ditt första värde","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"sv","translation":"Max 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"sv","translation":"Du kan lägga till saknade objekt senare från registreringsskärmen.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"sv","translation":"Ej slutfört","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"sv","translation":"Ej utfört","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"sv","translation":"Ej registrerat","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"sv","translation":"Ej inställt","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"sv","translation":"Ej valt","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"sv","translation":"Nu, välj efter mål","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"sv","translation":"Nästa","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"sv","translation":"Se dina steg","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"sv","translation":"Viktminskning","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"sv","translation":"Kolhydrater","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"sv","translation":"Inaktivt","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"sv","translation":"Ställ in ett rimligt antal och tid","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"sv","translation":"Särskilt viktigt","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"sv","translation":"Lär dig om ditt tillstånd och nästa steg","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"sv","translation":"Kontrollera status","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"sv","translation":"Nuvarande","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"sv","translation":"Nuvarande kroppsinformation","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"sv","translation":"För närvarande tillgängligt","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"sv","translation":"Använder nuvarande data och inställningar.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"sv","translation":"Nuvarande val: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"sv","translation":"Gå framåt mot din idealiska kropp, utan tvekan.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"sv","translation":"Orsak","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"sv","translation":"Orsak: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"sv","translation":"Födelsedatum","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"sv","translation":"Starta guiden","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"sv","translation":"Registrerade menyer {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"sv","translation":"Mål","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"sv","translation":"Önskad stil","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"sv","translation":"Mål","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"sv","translation":"Mål {{value1}} / Skillnad {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"sv","translation":"Mål och tempo","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"sv","translation":"Mål och resultat","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"sv","translation":"Förslag på justering av mål","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"sv","translation":"Mål ej definierat","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"sv","translation":"Måluppnåelse","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"sv","translation":"Syfte","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"sv","translation":"Vi har för varje syfte två olika personer. Genom att byta person ändras idealformen och sättet att prata.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"sv","translation":"Rätt person för ditt mål","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"sv","translation":"Du kan anpassa hemskärmen efter dina behov och vad du vill göra härnäst.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"sv","translation":"Ändra mål","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"sv","translation":"Välj mål","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"sv","translation":"Mål-läge","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"sv","translation":"Mål och mål","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"sv","translation":"Målspecifika menyer är nu tillgängliga","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"sv","translation":"Visa målspecifik meny","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"sv","translation":"Senast","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"sv","translation":"Justera medan du pratar","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"sv","translation":"Energisparande provtagning","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"sv","translation":"Börja {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"sv","translation":"Sömn och återhämtning","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"sv","translation":"Kontrollerar","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"sv","translation":"Sekund","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"sv","translation":"Antal sekunder","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"sv","translation":"Hitta och lägg till övningar","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"sv","translation":"Använd korttidsautentisering per enhet.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"sv","translation":"Inuti enheten","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"sv","translation":"Prestation","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"sv","translation":"Styrketräning","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"sv","translation":"Koppla samman styrka, kondition och återhämtning med prestation","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"sv","translation":"Öka muskelmassa och träningsresultat","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"sv","translation":"Muskeltillväxt","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"sv","translation":"Erfarenhet","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"sv","translation":"Erfaringsnivå","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"sv","translation":"En hållbar takt","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"sv","translation":"Detta är inte en bedömning av förmågor eller kvalifikationer. Här anges de aspekter som prioriteras i svaret.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"sv","translation":"Fett","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"sv","translation":"Midjemått","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"sv","translation":"Valfritt midjemått","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"sv","translation":"Lär dig beteendemönster","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"sv","translation":"Beteendeaviseringar","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"sv","translation":"Visa","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"sv","translation":"Visningsläge","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"sv","translation":"Visningsmetod","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"sv","translation":"Visningsstrategi","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"sv","translation":"Modellen är inte ansluten","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"sv","translation":"Anmärkning","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"sv","translation":"Anmärkning: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"sv","translation":"Plan","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"sv","translation":"Ta bort plan, historik, kroppsmätningar, kost, bilder, AI-samtal och minne, samt anpassade aktiviteter.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"sv","translation":"Starta från planen eller lägg till aktiviteter direkt och spara.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"sv","translation":"Lägg till aktiviteter utan plan","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"sv","translation":"Införliva i planen","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"sv","translation":"Skapa en plan","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"sv","translation":"Skapa en plan","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"sv","translation":"Plan & Watch","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"sv","translation":"Uppdatera vikten i planen?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"sv","translation":"Spela in","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"sv","translation":"Spela in","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"sv","translation":"Spela in. Fråga AI:n. Utför. Bara tre saker per dag.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"sv","translation":"Tryck på \"spela in\"-elementet","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"sv","translation":"Resultatet av spelandet och utförandet överförs till nästa AI-analys. Första gången guidar \"uppdrag\" i huvudmenyn.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"sv","translation":"Spelade aktiviteter samlas här","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"sv","translation":"Kontrollerar spelade aktiviteter. Fortgår även om du stänger skärmen.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"sv","translation":"Se spelade aktiviteter och få förslag på nästa steg","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"sv","translation":"Under inspelning","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"sv","translation":"Baserat på dina inskrivningar, föreslår vi positiva förändringar, stagnation eller bristande information samt nästa steg.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"sv","translation":"Inskriven","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"sv","translation":"Inställningar","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"sv","translation":"Inställda","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"sv","translation":"Diagnosloggen innehåller information om iPhone och Apple Watch-funktioner, kommunikation och träningsaktiviteter. Den skickas inte automatiskt till dig.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"sv","translation":"Ta bort diagnoslogg","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"sv","translation":"Exportera diagnoslogg","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"sv","translation":"Skicka diagnoslogg","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"sv","translation":"Samtal","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"sv","translation":"Se mer","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"sv","translation":"Information som kan vara missledande","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"sv","translation":"Kroppskriterier","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"sv","translation":"Höjd","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"sv","translation":"Höjd - Valfri","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"sv","translation":"Om du är osäker, gå hit","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"sv","translation":"Lägg till","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"sv","translation":"Lägg till","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"sv","translation":"Starta igen","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"sv","translation":"Skicka","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"sv","translation":"Väntar på att skickas","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"sv","translation":"Välj gym eller utrustning du har hemma","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"sv","translation":"Jag kommer att kontrollera dina resultat när kommunikationen är aktiv.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"sv","translation":"Antal gånger per vecka","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"sv","translation":"Hur många gånger i veckan kan du träna?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"sv","translation":"Inställningar","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"sv","translation":"Pågående","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"sv","translation":"Behåll vanor för träning, sömn och kost","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"sv","translation":"Välj: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"sv","translation":"Vald","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"sv","translation":"Skicka","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"sv","translation":"Läs in AI-inställningar vid distribution","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"sv","translation":"Fokusområden","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"sv","translation":"Vikt","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"sv","translation":"Ställ in vikt med en slider","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"sv","translation":"Enhet för vikt","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"sv","translation":"Stängs","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"sv","translation":"Stäng","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"sv","translation":"Starta","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"sv","translation":"Relaterad information","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"sv","translation":"Kost","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"sv","translation":"Kost och kroppsform","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"sv","translation":"Visa din kost och kroppsform på bilder. Registrera vikt, midjemått och antal set med siffror.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"sv","translation":"Registrera måltider","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"sv","translation":"Antal måltider","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"sv","translation":"Visar uppfyllandet av antalet måltider samt kalorier och PFC separat.","review_note":""}

@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "zh-Hant", "translation": "{{value1}}。僅為參考，非實際測量值。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "zh-Hant", "translation": "由於上次測量後時間過長，因此無法確定變化，故提供範圍。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "zh-Hant", "translation": "基於身高、體重、年齡和性別的群體參考範圍，而非個人體脂率測量值。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "zh-Hant", "translation": "估計", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "zh-Hant", "translation": "參考估計", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "zh-Hant", "translation": "僅為參考範圍，非測量值。點擊確認後才會儲存。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "zh-Hant", "translation": "儲存估計？", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "zh-Hant", "translation": "以估計方式儲存", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "zh-Hant", "translation": "{{value1}} {{value2}}。不會覆蓋實際測量值。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "zh-Hant", "translation": "預約報告", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "zh-Hant", "translation": "每週報告", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "zh-Hant", "translation": "星期", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "zh-Hant", "translation": "每月報告", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "zh-Hant", "translation": "日期", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "zh-Hant", "translation": "{{value1}}日", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "zh-Hant", "translation": "通知時間", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "zh-Hant", "translation": "預定時間後首次開啟應用程式時，自動生成。若無法連接AI，則保留裝置內摘要。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "zh-Hant", "translation": "需要確認設定", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "zh-Hant", "translation": "可重新嘗試", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "zh-Hant", "translation": "已消耗配額", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "zh-Hant", "translation": "配額未消耗", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "zh-Hant", "translation": "科學證據 {{value1}}項", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "zh-Hant", "translation": "缺乏直接可用的證據，因此以記錄趨勢為基礎的參考。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "zh-Hant", "translation": "未找到可以直接使用的證據。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "zh-Hant", "translation": "無法確認科學證據，因此以記錄和一般原則為基礎的建議。", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "zh-Hant", "translation": "身體尺寸單位", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

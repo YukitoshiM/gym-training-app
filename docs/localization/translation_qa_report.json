@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-15",
+  "source_locale": "ja",
+  "target_locale_count": 43,
+  "deferred_locale_count": 6,
+  "deferred_locales": [
+    "bn",
+    "kn",
+    "ml",
+    "or",
+    "pa",
+    "ur"
+  ],
+  "source_record_count": 2163,
+  "translation_file_count": 559,
+  "translation_record_count": 93009,
+  "validation": {
+    "valid": true,
+    "missing_records": 0,
+    "duplicate_records": 0,
+    "empty_translations": 0,
+    "placeholder_mismatches": 0,
+    "bidi_control_warnings": 0,
+    "remaining_kana_warnings": 0,
+    "mixed_script_warnings": 0
+  },
+  "generation": {
+    "primary_model": "translategemma:4b-q4_K_M",
+    "nllb_fallback_records": 125,
+    "regional_draft_records": 11322
+  },
+  "regional_drafts": {
+    "en-CA": "en-AU",
+    "en-GB": "en-AU",
+    "en-US": "en-AU",
+    "fr-CA": "fr-FR",
+    "pt-PT": "pt-BR",
+    "es-ES": "es-MX"
+  },
+  "source_repairs": {
+    "core_ui_01_records": 2,
+    "remaining_pack_records": 13
+  },
+  "human_review_required": [
+    "regional draft wording",
+    "NLLB fallback rows marked in review_note",
+    "health and permission wording",
+    "right-to-left layout",
+    "Apple Watch text width",
+    "App Store metadata and legal copy",
+    "deferred locales before any future release"
+  ]
+}

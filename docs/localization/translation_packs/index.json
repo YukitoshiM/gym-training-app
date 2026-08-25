@@ -1,0 +1,102 @@
+{
+  "source_locale": "ja",
+  "max_records_per_file": 250,
+  "excluded_from_translation": [
+    "GymTrainingApp/Data/CoachContextBuilder.swift",
+    "GymTrainingApp/Features/Settings/LegalAndSupportViews.swift",
+    "GymTrainingApp/Support/AppDiagnostics.swift"
+  ],
+  "packs": [
+    {
+      "file": "translation_source_ja_core_ui_01.jsonl",
+      "category": "core_ui",
+      "records": 250
+    },
+    {
+      "file": "translation_source_ja_core_ui_02.jsonl",
+      "category": "core_ui",
+      "records": 146
+    },
+    {
+      "file": "translation_source_ja_training_01.jsonl",
+      "category": "training",
+      "records": 250
+    },
+    {
+      "file": "translation_source_ja_training_02.jsonl",
+      "category": "training",
+      "records": 115
+    },
+    {
+      "file": "translation_source_ja_health_meals_body_ai_01.jsonl",
+      "category": "health_meals_body_ai",
+      "records": 250
+    },
+    {
+      "file": "translation_source_ja_health_meals_body_ai_02.jsonl",
+      "category": "health_meals_body_ai",
+      "records": 250
+    },
+    {
+      "file": "translation_source_ja_health_meals_body_ai_03.jsonl",
+      "category": "health_meals_body_ai",
+      "records": 112
+    },
+    {
+      "file": "translation_source_ja_watch_widget_01.jsonl",
+      "category": "watch_widget",
+      "records": 204
+    },
+    {
+      "file": "translation_source_ja_domain_catalog_01.jsonl",
+      "category": "domain_catalog",
+      "records": 250
+    },
+    {
+      "file": "translation_source_ja_domain_catalog_02.jsonl",
+      "category": "domain_catalog",
+      "records": 229
+    },
+    {
+      "file": "translation_source_ja_runtime_messages_01.jsonl",
+      "category": "runtime_messages",
+      "records": 71
+    },
+    {
+      "file": "translation_source_ja_permissions_01.jsonl",
+      "category": "permissions",
+      "records": 10
+    },
+    {
+      "file": "translation_source_ja_release_delta_01.jsonl",
+      "category": "release_delta",
+      "records": 26
+    },
+    {
+      "file": "translation_source_ja_release_delta_02.jsonl",
+      "category": "release_delta",
+      "records": 82
+    },
+    {
+      "file": "translation_source_ja_release_delta_03.jsonl",
+      "category": "release_delta",
+      "records": 88
+    },
+    {
+      "file": "translation_source_ja_ai_credit_01.jsonl",
+      "category": "ai_credit",
+      "records": 51
+    },
+    {
+      "file": "translation_source_ja_ai_credit_02.jsonl",
+      "category": "ai_credit",
+      "records": 3
+    },
+    {
+      "file": "translation_source_ja_ai_credit_03.jsonl",
+      "category": "ai_credit",
+      "records": 1
+    }
+  ],
+  "total_records": 2388
+}

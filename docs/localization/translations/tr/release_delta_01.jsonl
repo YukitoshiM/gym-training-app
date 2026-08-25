@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "tr", "translation": "Tahmini değer. Gerçek ölçüm değildir. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "tr", "translation": "Son gerçek ölçümden sonra geçen süre nedeniyle, değişiklikleri kesin olarak belirleyemiyoruz ve geniş bir aralık kullanıyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "tr", "translation": "Boy, kilo, yaş ve cinsiyet gibi toplu değerlere göre bir referans aralığıdır. Kişinin vücut yağ oranı ölçümü değildir.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "tr", "translation": "Tahmini", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "tr", "translation": "Referans tahmini", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "tr", "translation": "Sadece bir referans aralığıdır, ölçüm değeridir.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "tr", "translation": "Tahmini kaydetmek ister misiniz?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "tr", "translation": "Tahmin olarak kaydet", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "tr", "translation": "{{value1}} {{value2}}. Gerçek ölçümleri üzerine yazmaz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "tr", "translation": "Planlanmış raporlar", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "tr", "translation": "Haftalık rapor", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "tr", "translation": "Gün", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "tr", "translation": "Aylık rapor", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "tr", "translation": "Tarih", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "tr", "translation": "{{value1}} gün", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "tr", "translation": "Bildirim zamanı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "tr", "translation": "Planlanan zamanda ilk açıldığında otomatik olarak oluşturulur. AI ile bağlantı kurulamazsa, cihazdaki özet kalır.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "tr", "translation": "Ayarların kontrol edilmesi gerekiyor", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "tr", "translation": "Tekrar deneyebilirsiniz", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "tr", "translation": "Kullanım limiti tükendi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "tr", "translation": "Kullanım limiti henüz tüketilmedi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "tr", "translation": "Bilimsel kanıt {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "tr", "translation": "Doğrudan kullanılabilecek kanıtlar yetersizdir, bu nedenle kayıt eğilimlerine göre bir kılavuz olarak kullanılır.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "tr", "translation": "Bu öneriye doğrudan kullanılabilecek kanıt bulunamadı", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "tr", "translation": "Bilimsel kanıtları kontrol edemiyoruz, bu nedenle kayıt ve genel prensiplere göre öneriler sunuyoruz.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "tr", "translation": "Vücut boyutu birimi", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

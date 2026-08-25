@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"sl","translation":"Predlagane vrednosti, ki temeljijo na vnosu podatkov, niso medicinska diagnoza. Če imate skrbi glede zdravja ali bolečin, se posvetujte s specialistom.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"sl","translation":"Povzetek vnosu podatkov","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"sl","translation":"Metoda vnosa","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"sl","translation":"Ne morem deliti","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"sl","translation":"Prosim, preverite in uredite, če je potrebno, ter shranite. Cilj se ne bo samodejno določil.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"sl","translation":"Potrebno ponoviti analizo","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"sl","translation":"Ponovi","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"sl","translation":"Fotografija","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"sl","translation":"Področje za referenco na fotografiji","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"sl","translation":"Izračunajte kalorije iz fotografije","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"sl","translation":"Ustvarite zapis iz fotografije in zmanjšajte potrebo po vnosu podatkov.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"sl","translation":"Analizirajte fotografijo","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"sl","translation":"Brez fotografije","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"sl","translation":"Fotografija je za opazanje sprememb, števila pa se preverjajo s merjenjem.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"sl","translation":"Ustvarite zapis prehrane iz fotografij in hrane, ki ste jo pojedli.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"sl","translation":"Če izberete vsaj eno fotografijo, lahko analizirate. Več slik omogoča lažjo preverjanje.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"sl","translation":"Analizirajte slike vseh","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"sl","translation":"Analizirajte slike","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"sl","translation":"Dodajte sliko","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"sl","translation":"Dodajte in urejajte sliko","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"sl","translation":"Izbira slike samodejno vnese kalorije in druge podatke.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"sl","translation":"Fotografije lahko shranite. Po povezavi lahko analizirate z gumbom \"Podrobnosti\".","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"sl","translation":"Minute","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"sl","translation":"Če vnesete količino, kjer je to mogoče, se poveča natančnost izračuna.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"sl","translation":"V procesu analize","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"sl","translation":"Analizirano","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"sl","translation":"Utemeljitev odločitve","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"sl","translation":"Prispelo","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"sl","translation":"Izbris","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"sl","translation":"Od zadnjega treninga je minilo {{value1}} dni, zato imate več prostora za naslednji teden.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"sl","translation":"Zadnje meritje prekomere imajo več kot 7 dni.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"sl","translation":"Vnos iz zadnje meritve","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"sl","translation":"Primerjaj z zadnjo vrednostjo: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"sl","translation":"Nazadnje","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"sl","translation":"Nimate podatkov za primerjavo s predhodnim tednom","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"sl","translation":"Vaš volumen je povečan za več kot 30% glede na prejšnji teden. Pri naslednem treningu se poskusite ohranjati približno enako, in preverite svojo raven napora (RPE) ter indikatorje regeneracije.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"sl","translation":"Primerjaj z zadnjo vrednostjo: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"sl","translation":"Primerjaj z zadnjo vrednostjo: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"sl","translation":"Podatki še niso na voljo. Priporočamo, da začnete z merjenjem s uro.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"sl","translation":"Pripoved o podatkih","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"sl","translation":"To je povzetek trendov, ki so bili ugotavljeni iz doseženih podatkov, ne glede na medicinsko oceno.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"sl","translation":"V uporabi","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"sl","translation":"Možnosti: {{value1}} (dostopno), {{value2}} (manjka)","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"sl","translation":"Uporabljeni parametri (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"sl","translation":"Izračunajte s pomočjo doseženih podatkov (teža, število, hitrost, relativni obseg gibanja, RPE). Ne uporabljajte pomanjkanja kot 0.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"sl","translation":"Desno: ravno, celo telo","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"sl","translation":"Spodaj: ramo do pasu","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"sl","translation":"Skupaj","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"sl","translation":"Uporabite isto obleko, razdaljo in svetlobo ter se poskusite sprožiti med snemanjem.","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"sl","translation":"Primerjavo je mogoče doseči, če se povečajo število zapisanih vaj, menijev in časov.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"sl","translation":"Rezultati za dan","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"sl","translation":"Prikazuje kandidatne elemente, ki so se spremenili, vendar ne določa vzrokov ali medicinskega stanja.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"sl","translation":"Dashi (juha)","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"sl","translation":"Število vdihov","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"sl","translation":"Število vdihov je več od povprečnega štetja za 14 dni","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"sl","translation":"Število vdihov: {{value1}} vdihov/min, pri povprosni vrednosti {{value2}} vdihov/min","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"sl","translation":"Število vdihov je manj od povprečnega štetja za 14 dni","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"sl","translation":"Število vdihov v normalnem obsegu","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"sl","translation":"Kakovost -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"sl","translation":"Kvaliteta {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"sl","translation":"Proizvod","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"sl","translation":"Nismo uspešni pri shranjevanju izdelka.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"sl","translation":"Številka izdelka","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"sl","translation":"Vnesite številko izdelka.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"sl","translation":"Ročno vnesite številko izdelka.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"sl","translation":"Ime izdelka","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"sl","translation":"Krat/min","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"sl","translation":"Izboljšava","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"sl","translation":"Izberite dan za izboljšavo.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"sl","translation":"Zato, da ohranimo nizko raven povrate, upoštevamo vrednost {{value1}} in število.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"sl","translation":"Končano kot dan za okrevanje","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"sl","translation":"Število","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"sl","translation":"Ločeno ocenjevanje števila in prehrane","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"sl","translation":"Na eno standardno količino","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"sl","translation":"Povezava z eksternim strežnikom ni dovoljena.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"sl","translation":"Večer","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"sl","translation":"Samodejno končano zvečer","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"sl","translation":"Ni pričakovani velikih sprememb ali stagnacije. Poskušajte ustvariti več zapisov, kjer lahko primerjate ciljno število in RPE tudi naslednjič.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"sl","translation":"Neuspešno","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"sl","translation":"Pozicija","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"sl","translation":"Srčni utrip v miro","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"sl","translation":"Srčni utrip v miro: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"sl","translation":"Srčni utrip v miro je višji od povprečne vrednosti za 14 dni","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"sl","translation":"Srčni utrip v miro je nižji od povprečne vrednosti","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"sl","translation":"Srčni utrip v miro je normalno","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"sl","translation":"Končano","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"sl","translation":"Enostavni elementi za končanje: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"sl","translation":"Trenutno preverjamo trend končanih in skočjenih dejavnosti na napravi.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"sl","translation":"Skupna količina","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"sl","translation":"Gusto","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"sl","translation":"Zapiski","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"sl","translation":"Zgoraj levo: Prednji pogled, celo telo","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"sl","translation":"Spodaj levo: Zadnji pogled, celo telo","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"sl","translation":"Razlika","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"sl","translation":"Povprečna hitrost srca {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"sl","translation":"Povprečna hitrost","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"sl","translation":"Pomagalo mi je","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"sl","translation":"Elemente, ki jih lahko poznaš kasneje: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"sl","translation":"Izid srčnih utripov","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"sl","translation":"Srčnih utripov ni bilo zbranim","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"sl","translation":"Vir informacij: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"sl","translation":"Skupine, kjer obstaja razlika med ročnim vnosom: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"sl","translation":"Zgolj gibanje rok na zapestju ne dovoljuje določitve vrste in tehnike. Pred uporabo preverite število in ga nato vnese.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"sl","translation":"Temperatura kože na zapestju","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"sl","translation":"Temperatura kože na zapestju je od ključne vrednosti","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"sl","translation":"Temperatura kože na zapestju je v normalnem obsegu","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"sl","translation":"Uporabljamo samo odobrene podatke za naslednje predlagane vrednosti.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"sl","translation":"Odobrene spomnine","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"sl","translation":"Odgovorna oseba {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"sl","translation":"Osobni trener","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"sl","translation":"Pregled","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"sl","translation":"Povezava uspešna","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"sl","translation":"Čeprav se ne morete povezati, shranjeni podatki ne bodo izbrisani. Lahko nadaljujete ročno snemanje in pozneje ustvarite samo AI komentiranje.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"sl","translation":"Preverjanje povezave","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"sl","translation":"Navedeni podatki so približni. Lahko jih prilagodite v spodnji polju.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"sl","translation":"Približen porabljen energijsko","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"sl","translation":"Progres","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"sl","translation":"Porabljene kcal","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"sl","translation":"Snemanje","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"sl","translation":"Nastavitve za snemanje","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"sl","translation":"Uredite nastavitve za snemanje","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"sl","translation":"Dodajte nastavitve za snemanje","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"sl","translation":"Usmeritev snemanja","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"sl","translation":"Število dni snemanja","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"sl","translation":"Opombe o snemanju in videzu","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"sl","translation":"Snemljeno","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"sl","translation":"Primer snemanja. Desna zgornja stran je celo telo, desna spodnja stran je celo telo v stranski poziciji, spodnja leva stran je celo telo z nazaj, spodnja desna stran pa je glavo do pasu. Snemite z isto obleko, razdaljo in svetlobo","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"sl","translation":"Potrebno izboljšati","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"sl","translation":"Usmeritev","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"sl","translation":"Potrdili smo razlike v položaju glede na smer.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"sl","translation":"Uporabite to kot osnovo za ocenjevanje trendov, ne le dnevnih sprememb.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"sl","translation":"Datum","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"sl","translation":"Kvalitetno spanje","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"sl","translation":"Popoldne","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"sl","translation":"Čas","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"sl","translation":"To so ocene, izračunate v napravi, na podlagi časa, globokega spanca, REM faze in obdobij medenjave.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"sl","translation":"Počakajte","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"sl","translation":"Čez nekaj časa poskusite znova. Če to še vedno poteka, preverite stanje modela na AI strežniku.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"sl","translation":"Čez nekaj časa poskusite znova. Če to še vedno poteka, preverite log na AI strežniku.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"sl","translation":"Obdobje","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"sl","translation":"Uporabite RPE kot vodilo in prilagujte glede na običajno aktivnost.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"sl","translation":"Normalno","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"sl","translation":"Časovno trajanje je lahko daljše. Upoštevajte to, da zmanjšate glasnost in čas, preživljene v aktivnosti.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"sl","translation":"Ustvarimo seznam vaj, ki ustreza opremi, da vam bo olajšala začetek prve vadbe.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"sl","translation":"Ko zabeležite prvo vrednost, lahko spremljate spremembe in ciljne razlike.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"sl","translation":"Najnovejšo tek v prostem","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"sl","translation":"Najnovejši izporočil","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"sl","translation":"Mesečni pregled","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"sl","translation":"Preverite mesečni pregled","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"sl","translation":"Naredite načrt za mesečni pregled","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"sl","translation":"Izvajam mesečni pregled","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"sl","translation":"Mesečni izveštaj","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"sl","translation":"Zjutraj","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"sl","translation":"Poskušam omejiti obvestila zjutraj in zvečer.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"sl","translation":"Neobdelano","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"sl","translation":"Neizmerjeno","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"sl","translation":"Če je vrednost neizmerjena, jo obravnavajte kot 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"sl","translation":"Neizvedeno","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"sl","translation":"Nefotografirano","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"sl","translation":"Niso zabeležene. Vnesite število za 100g oznake.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"sl","translation":"Proizvodi, ki niso zabeleženi, bodo shranjeni na naprave po vnosu in uporabljeni pri naslednji brani.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"sl","translation":"Nezabeleženo","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"sl","translation":"Nezabeleženo. Upoštevati tudi občutek in raven pripravljenosti","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"sl","translation":"Primerjaj glede na pogoje","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"sl","translation":"OCR za prikaz hranilnih sestavin (potrditev uporabnika)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"sl","translation":"OCR za prikaz hranilnih sestavin (za preveritvo)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"sl","translation":"Vnesli ste vrednosti iz prikaza hranilnih sestavin. Prosim, preverite standardno količino in vsako vrednost.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"sl","translation":"Vnesek iz slike prikaza hranilnih sestavin","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"sl","translation":"Nismo uspešno prebrali prikaza hranilnih sestavin. Poskusite posneti zjutraj odprt in direktno ali vnesati ročno.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"sl","translation":"Preberam podatke o prehrani","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"sl","translation":"Prehrana v teku","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"sl","translation":"Naslednji korak","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"sl","translation":"Naprej","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"sl","translation":"Nastavitve","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"sl","translation":"Preveril sem stanje trebuha s strani in zgorje.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"sl","translation":"Preveril sem obseg pasu, gledano s strani, zgorje in spodaj.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"sl","translation":"Zapisujem podatke za en dan (s strani, zgorje, spodaj itd.).","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"sl","translation":"Sodelam podatke za en dan. Lahko shranim tudi posamezne dne, nato pa jih dodam.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"sl","translation":"Število korakov","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"sl","translation":"Število korakov: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"sl","translation":"Lahko omogočite dostop do potrebnih podatkov: število korakov, aktivnost, spanje, srčni utrip v miro, HRV, dihal, temperaturo kože na zapestju. Neomogočene podatke obravnavam kot neprejete in jih lahko ročno vneseš.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"sl","translation":"Ostalo: {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"sl","translation":"Niso na voljo dnevni podatki za primerjavo","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"sl","translation":"Porabljeno: {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"sl","translation":"Porabljen, vendar še ni zabeležen","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"sl","translation":"Globoko","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"sl","translation":"Med aktivnostjo","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"sl","translation":"Ugljikohidrati","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"sl","translation":"Ne preobremenjujte se","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"sl","translation":"Trenutno {{value1}}/4","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"sl","translation":"Samodejno posodablja glede na število korakov","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"sl","translation":"Trenutno je problem zaradi preobremenjenosti strežnika, ne zaradi omejitve uporabe. {{value1}} Poskusite znova.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"sl","translation":"Dodajte trenutno lokacijo v svoj profil","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"sl","translation":"Preverjamam lokacijo","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"sl","translation":"Izpostavljen okoljskim zvokom","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"sl","translation":"Se počutim utrujeno","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"sl","translation":"Na podlagi podatkov o utrujenosti in regeneraciji predlagam, da ne boste preveč aktivni.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"sl","translation":"Čutim utrujenost","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"sl","translation":"Izbrišite lokacijo","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"sl","translation":"Iskanje dodanih izdelkov","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"sl","translation":"Bela pala","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"sl","translation":"Bela pala, piščančji vrat, juha","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"sl","translation":"Cilj","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"sl","translation":"Lahko preverite razliko in stopnjo doseganja ciljev po KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"sl","translation":"Na podlagi cilja in dnevnih zapis o prehrani prikazuje preostanek beljakovin.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"sl","translation":"Planski za preverjanje, prilagojeni cilju in opremi, ki jo uporabljate.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"sl","translation":"Pomenski pomen cilja","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"sl","translation":"Ciljna vrednost","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"sl","translation":"Ko nastavite ciljno vrednost, se prikažejo razlika in stopnja doseganja.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"sl","translation":"Ciljna razlika","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"sl","translation":"Ciljna razlika {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"sl","translation":"Cilj še ni določen","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"sl","translation":"Nastavi cilj","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"sl","translation":"Doseg cilja in stabilnost","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"sl","translation":"Preverili ste svoje fizične, prehrane in treninge zadnjih 30 dni.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"sl","translation":"Izgleda, da se največji izračunani teži v zadnjih 3 treningih niso povečali. Upoštevajte tudi svojo formo, število ponovitev in subjektivno ocenjevanje (RPE).","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"sl","translation":"Zadnji 7 dni","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"sl","translation":"Zadnji 7 dni {{value1}}krat","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"sl","translation":"Šteto obiskavanje telovadnice: {{value1}}krat","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"sl","translation":"Trenutna količina treninga je v normalnem obsegu","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"sl","translation":"Vaša povprečna telesna teža zadnjih tednih se zmanjšuje. To je lahko znak, da povečate priporočen dnevni odmerek.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"sl","translation":"Vaša povprečna telesna teža zadnjih tednikov se usmerja v nasprotni smeri cilja. Za začetek poskusite prilagoditi priporočen dnevni odmerek.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"sl","translation":"Vaša povprečna telesna teža zadnjih tednikov se hitro zmanjšuje. Za bolj udoben napredek, poskusite povečati priporočen dnevni odmerek.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"sl","translation":"Vaša povprečna telesna teža zadnjih tednikov se hitro povečuje. Za stabilizacijo rasta, poskusite nekoliko zmanjšati priporočen dnevni odmerek.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"sl","translation":"Trenutna vrednost je manj kot 85 dBA. Upoštevajte tudi trajanje.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"sl","translation":"Povprečna dolžina treninga {{value1}} ur","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"sl","translation":"Relativni obseg gibanja","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"sl","translation":"Pojdite k specialistu","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"sl","translation":"Spavanje","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"sl","translation":"Zagotovite si {{value1}} ur spanja","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"sl","translation":"Spanje: {{value1}} ura","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"sl","translation":"Spanje je nekoliko krajše","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"sl","translation":"Spanje je rahlo krajše","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"sl","translation":"Ker nimate podatkov o fazah spanja, je to povzetek, ki se osredotoča na skupno časovno trajanje.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"sl","translation":"Podatki o spanju niso na voljo. Ne ocenjujte pomanjkanja kot 0.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"sl","translation":"Lahko preverite spanje, regeneracijo in aktivnost.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"sl","translation":"Izbrisati","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"sl","translation":"Natančnost {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"sl","translation":"Prosimo, potrdite in shranite","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"sl","translation":"Ugotovljene spremembe","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"sl","translation":"Čakam na potrditev","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"sl","translation":"Potrdili spomini: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"sl","translation":"Št. znanstvenih dokazov: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"sl","translation":"Št. znanstvenih dokazov, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"sl","translation":"Vrsta aktivnosti","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"sl","translation":"Tip","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"sl","translation":"Podatki o izdelku, shranjenih na napravi, so bili naloženi.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"sl","translation":"Prosimo, ponovno zaženite napravo in poskusite znova.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"sl","translation":"Če je vaš cilj povečanje mišic, lahko razmislite o dodatnem treningu v tem tednu, če vam to ustreza.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"sl","translation":"Približno {{value1}} minut","review_note":""}

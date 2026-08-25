@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"it","translation":"Seleziona l'opzione più appropriata","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"it","translation":"Dopo aver definito il tuo obiettivo, dovrai fare solo 3 cose ogni giorno","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"it","translation":"Completa il primo allenamento","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"it","translation":"Registra il valore iniziale","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"it","translation":"Fino a 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"it","translation":"Puoi aggiungere gli elementi mancanti in seguito dalla schermata di registrazione.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"it","translation":"Non completato","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"it","translation":"Non eseguito","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"it","translation":"Non registrato","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"it","translation":"Non impostato","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"it","translation":"Non selezionato","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"it","translation":"Passa al menu per obiettivi specifici","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"it","translation":"Avanti","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"it","translation":"Visualizza i passi","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"it","translation":"Perdere peso","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"it","translation":"Carboidrati","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"it","translation":"Non valido","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"it","translation":"Imposta un numero e un tempo ragionevoli","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"it","translation":"Particolarmente importante","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"it","translation":"Conosci il tuo stato e il prossimo passo","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"it","translation":"Verifica lo stato","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"it","translation":"Attuale","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"it","translation":"Informazioni sul tuo corpo attuali","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"it","translation":"Non disponibile al momento","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"it","translation":"Utilizza i dati e le impostazioni attualmente disponibili.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"it","translation":"Attualmente selezionato: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"it","translation":"Raggiungi il tuo ideale, senza esitazioni.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"it","translation":"Motivo","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"it","translation":"Motivo: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"it","translation":"Anno di nascita","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"it","translation":"Avvia il tour della schermata","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"it","translation":"Menu registrati {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"it","translation":"Obiettivo desiderato","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"it","translation":"Stile desiderato","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"it","translation":"Obiettivo","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"it","translation":"Obiettivo {{value1}} / Differenza {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"it","translation":"Obiettivi e ritmo","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"it","translation":"Obiettivi e risultati","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"it","translation":"Suggerimenti per la modifica degli obiettivi","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"it","translation":"Obiettivo non impostato","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"it","translation":"Raggiungi i tuoi obiettivi","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"it","translation":"Obiettivo","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"it","translation":"Per ogni obiettivo, sono disponibili due profili. Cambiando il profilo, cambiano anche il modo di parlare e l'aspetto ideale.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"it","translation":"Profilo adatto all'obiettivo","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"it","translation":"In base all'obiettivo, vengono modificati i punti di controllo sulla homepage e le prossime azioni.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"it","translation":"Modifica obiettivo","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"it","translation":"Seleziona obiettivo","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"it","translation":"Modalità obiettivo","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"it","translation":"Obiettivo e traguardo","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"it","translation":"Sono disponibili menu specifici per ogni obiettivo","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"it","translation":"Visualizza menu specifico","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"it","translation":"Ultimo","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"it","translation":"Correggi mentre parli con il tuo coach","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"it","translation":"Campionamento a basso consumo energetico","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"it","translation":"Inizia {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"it","translation":"Sonno e recupero","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"it","translation":"In corso","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"it","translation":"Secondi","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"it","translation":"Numero di secondi","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"it","translation":"Trova o aggiungi un esercizio","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"it","translation":"Utilizza l'autenticazione a breve termine specifica per dispositivo.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"it","translation":"All'interno del dispositivo","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"it","translation":"Prestazioni atletiche","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"it","translation":"Allenamento di forza","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"it","translation":"Collega le prestazioni, la forza e il recupero alle attività sportive","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"it","translation":"Aumenta la massa muscolare e i risultati dell'allenamento","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"it","translation":"Ipertrofia muscolare","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"it","translation":"Esperienza","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"it","translation":"Livello di esperienza","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"it","translation":"Ritmo sostenibile","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"it","translation":"Non si tratta di valutare capacità o qualifiche. Indica i punti prioritari in base alle risposte.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"it","translation":"Grassi","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"it","translation":"Circonferenza addominale","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"it","translation":"Circonferenza addominale (opzionale)","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"it","translation":"Impara i modelli comportamentali","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"it","translation":"Notifiche comportamentali","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"it","translation":"Visualizzazione","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"it","translation":"Modalità di visualizzazione","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"it","translation":"Metodo di visualizzazione","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"it","translation":"Politica di visualizzazione","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"it","translation":"Modello di supporto non connesso","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"it","translation":"Note","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"it","translation":"Nota: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"it","translation":"Pianificazione","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"it","translation":"Elimina il piano, la cronologia, gli indicatori di benessere, l'alimentazione, le foto, la conversazione e la memoria AI, e le categorie personalizzate.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"it","translation":"Inizia con il piano o aggiungi categorie al volo e registra.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"it","translation":"Aggiungi categorie senza un piano","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"it","translation":"Applica al piano","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"it","translation":"Crea un piano","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"it","translation":"Creiamo un piano","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"it","translation":"Piano e Watch","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"it","translation":"Aggiornare il peso del piano?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"it","translation":"Registra","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"it","translation":"Registra","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"it","translation":"Registra. Chiedi all'AI. Esegui. Ci sono solo tre cose da fare ogni giorno.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"it","translation":"Tocca l'elemento da registrare","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"it","translation":"I risultati della registrazione e dell'esecuzione verranno trasferiti all'analisi AI successiva. La prima operazione ti guiderà nella missione principale.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"it","translation":"Le registrazioni vengono salvate qui","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"it","translation":"Sto controllando le registrazioni. Rimarrà attivo anche se chiudi lo schermo.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"it","translation":"Guarda le registrazioni e ricevi suggerimenti per la prossima azione","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"it","translation":"In corso la registrazione","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"it","translation":"Analizzando i dati, possiamo suggerire miglioramenti, stabilità o aree di attenzione.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"it","translation":"Dati registrati","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"it","translation":"Impostazioni","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"it","translation":"Impostazioni salvate","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"it","translation":"Il log diagnostico include informazioni sull'attività fisica e sulla comunicazione tra iPhone e Apple Watch. Non viene automaticamente inviato all'esterno.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"it","translation":"Elimina il log diagnostico","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"it","translation":"Esporta il log diagnostico","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"it","translation":"Invia il log diagnostico","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"it","translation":"Modalità di conversazione","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"it","translation":"Visualizza maggiori dettagli","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"it","translation":"Informazioni potenzialmente fuorvianti","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"it","translation":"Indicatori di performance fisica","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"it","translation":"Altezza","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"it","translation":"Altezza (opzionale)","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"it","translation":"Se hai dubbi, consulta qui","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"it","translation":"Aggiungi","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"it","translation":"Aggiungi","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"it","translation":"Inizia con l'aggiunta","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"it","translation":"Invia","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"it","translation":"In attesa di invio","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"it","translation":"Seleziona il centro sportivo o l'attrezzatura che hai a casa.","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"it","translation":"Verificherò i dati non appena la connessione sarà disponibile.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"it","translation":"Numero di allenamenti a settimana","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"it","translation":"Quanti giorni a settimana puoi allenarti?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"it","translation":"Modalità","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"it","translation":"In corso","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"it","translation":"Mantieni le tue abitudini di esercizio fisico, sonno e alimentazione.","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"it","translation":"Seleziona: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"it","translation":"In selezione","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"it","translation":"Invio","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"it","translation":"Carica le impostazioni AI al momento della distribuzione.","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"it","translation":"Area di interesse","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"it","translation":"Peso","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"it","translation":"Imposta il peso con la rotellina","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"it","translation":"Unità di misura","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"it","translation":"Chiuso","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"it","translation":"Chiudi","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"it","translation":"Avvia","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"it","translation":"Informazioni correlate","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"it","translation":"Alimentazione","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"it","translation":"Alimentazione e forma fisica","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"it","translation":"Registra la tua alimentazione e forma fisica con foto. Indica il peso, la circonferenza vita e le serie di esercizi con numeri.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"it","translation":"Registra i pasti","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"it","translation":"Numero di pasti","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"it","translation":"Visualizza separatamente il raggiungimento del numero di pasti e l'obiettivo di calorie e macronutrienti (PFC).","review_note":""}

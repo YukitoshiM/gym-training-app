@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"ml","translation":"ഇൻപുട്ട് ഡാറ്റയുടെ പ്രവണത അനുസരിച്ച് ഒരു നിർദ്ദേശം നൽകുന്നു, ഇത് ഒരു വൈദ്യकीय രോഗനിદાન അല്ല. നിങ്ങളുടെ ആരോഗ്യ സംബന്ധിച്ച് ആശങ്കയുണ്ടെങ്കിൽ, ഒരു വിദഗ്ദ്ധന്റെ ഉപദേശം തേടുക.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"ml","translation":"ഇൻപുട്ട് ഡാറ്റയുടെ സംഗ്രഹം","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"ml","translation":"ഇൻപുട്ട് ചെയ്യുന്ന രീതി","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"ml","translation":"സൂചികകൾ പങ്കിടാൻ ഇല്ല","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"ml","translation":"ഉള്ള内容 പരിശോധിച്ചു, ആവശ്യമെങ്കിൽ തിരുത്ത ശേഷം സംരക്ഷിക്കുക. ലക്ഷ്യങ്ങൾ സ്വയಂಚ <<>>മായി തീരുമാനമാകില്ല.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"ml","translation":"പുറnovu വിശകലനം ആവശ്യമാണ്","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"ml","translation":"പുറnovu ശ്രമിക്കുക","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"ml","translation":"ചിത്രം","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"ml","translation":"ചിത്രത്തിൽ നിന്ന് ലഭിക്കുന്ന വിവരങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"ml","translation":"ചിത്രത്തിൽ നിന്ന് കലോറിയെ കണക്കാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"ml","translation":"ചിത്രത്തിൽ നിന്ന് ഒരു രൂപം ഉണ്ടാക്കി, ഇൻപുട്ട് ചെയ്യുന്ന സമയം കുറയ്ക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"ml","translation":"ചിത്രത്തിലൂടെ വിശകലനം ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"ml","translation":"ചിത്രമില്ല","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"ml","translation":"ചിത്രങ്ങൾ ഉപയോഗിച്ച് ശരീരത്തിലെ മാറ്റങ്ങളെയും, സംഖ്യകളെയും അളക്കുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"ml","translation":"ചിത്രങ്ങളിലും, കഴിച്ച ഭക്ഷണത്തിലും നിന്ന് പോഷകാഹാരത്തിന്റെ രൂപം ഉണ്ടാക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"ml","translation":"ഒരു ചിത്രം തിരഞ്ഞെടുക്കുമ്പോൾ വിശകലനം ചെയ്യാൻ സാധിക്കും. കൂടുതൽ ചിത്രങ്ങൾ തിരഞ്ഞെടുക്കുന്നതിലൂടെ കൂടുതൽ കൃത്യമായി മനസ്സിലാക്കാൻ സാധിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"ml","translation":"ഫോട്ടോകൾ കൂട്ടിച്ചേർത്ത് വീണ്ടും വിശകലനം ചെയ്യുക.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"ml","translation":"ഫോട്ടോകൾ ശേഖരിക്കുകയും അവ വിശകലനം ചെയ്യുകയും ചെയ്യുക.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"ml","translation":"ചിത്രം ചേർക്കുക","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"ml","translation":"ചിത്രം ചേർക്കുകയും, എഡിറ്റ് ചെയ്യുകയും ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"ml","translation":"ഒരു ചിത്രം തിരഞ്ഞെടുക്കുമ്പോൾ, കലോറിയെ കൂടാതെ മറ്റ് വിവരങ്ങളും automáticamente നൽകുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"ml","translation":"ചിത്രങ്ങൾ ഒരു കൂട്ടമായി സംരക്ഷിക്കാവുന്നതാണ്. കണക്ട് ചെയ്ത ശേഷം, സെറ്റ് വിശദാംശകളിൽ നിന്ന് വീണ്ടും വിശകലനം ചെയ്യാൻ സാധിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"ml","translation":"മിനിറ്റ്","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"ml","translation":"അവകാശിക്കുന്ന അളവ് എഴുതുകയാണെങ്കിൽ, കൃത്യത വർദ്ധിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"ml","translation":"വിശകലനം ചെയ്യുന്നു","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"ml","translation":"വിശലനം ചെയ്തു","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"ml","translation":"判断യുടെ അടിസ്ഥാനം","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"ml","translation":"സമ chegada","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"ml","translation":"ഇല്ലാതാക്കുക","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"ml","translation":"മുമ്പത്തെ പരിശീലനത്തിന് ശേഷം {{value1}} ദിവസം കഴിഞ്ഞി, ഈ săptămളുടെ പ്രവചිත എണ്ണം കുറഞ്ഞതാണ്.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"ml","translation":"മുമ്പത്തെ വയറിന്റെ അളവ് രേഖപ്പെടുത്തിയതിന് ശേഷം 7 ദിവസങ്ങൾ കഴിഞ്ഞിരിക്കുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"ml","translation":"മുമ്പത്തെ മൂല്യത്തിൽ നിന്ന് നൽകുക","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"ml","translation":"മുമ്പത്തെ മൂല്യവുമായി താരതമ്യം ചെയ്യുമ്പോൾ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"ml","translation":"മുമ്പത്തെ săptămൾ","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"ml","translation":"മുമ്പത്തെ săptămളുമായി താരതമ്യം ചെയ്യുന്ന ഡാറ്റ ലഭ്യമല്ല","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"ml","translation":"മുമ്പത്തെ săptămളിൽ 30% കൂടുതൽ വർദ്ധിപ്പിച്ചിട്ടുണ്ട്. അടുത്ത തവണ, ഈ അളവ് നിലനിർത്തുകയും RPE (Rate of Perceived Exertion) & പുനഃസ്ഥാപിക്കുന്ന സൂചികകൾ പരിശോധിക്കുകയും ചെയ്യുക.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"ml","translation":"മുമ്പത്തെ săptămളുമായി താരതമ്യം ചെയ്യുമ്പോൾ {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"ml","translation":"മുമ്പത്തെ săptămളുമായി താരതമ്യം ചെയ്യുമ്പോൾ {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"ml","translation":"ഇപ്പോൾ പ്രവർത്തന ഡാറ്റ ലഭ്യമല്ല. വാച്ച് ഉപയോഗിച്ച് ആരംഭിക്കുന്നതായി കണക്കാക്കുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"ml","translation":"പ്രവർത്തനത്തിന്റെ പ്രവചനം","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"ml","translation":"ഇത് ഒരു വൈദ്യോപകരണമല്ല, ലഭ്യമായ ഡാറ്റയുടെ അടിസ്ഥാനത്തിൽ ഒരു സഹായകരമായ സൂചനയാണ്.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"ml","translation":"ഈ സമയത്ത്","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"ml","translation":"{{value1}} വരെ ഉപയോഗിക്കാം, {{value2}} വരെ ലഭ്യമല്ല","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"ml","translation":"ലഭ്യമായ പ്രധാന വിവരങ്ങൾ (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"ml","translation":"вес, എണ്ണം, താളം, ശാരീരിക വ്യതിയാസം, RPE എന്നിവ ഉപയോഗിച്ച് കണക്കാക്കുക, കൂടാതെ ആവശ്യമില്ലാത്ത ഡാറ്റ 0 ആയിരിക്കരുത്.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"ml","translation":"வலது മുകള: പൂർണ്ണ ശരീരവും,","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"ml","translation":"வலது கீழ்: தோள்பட்ட മുതൽ അര വരെ","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"ml","translation":"സൂമർ","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"ml","translation":"ഒരേ വസ്ത്രം, ദൂരം, വെളിച്ചത്തിൽ, വിശ്രമിച്ചു ഫോട്ടോ എടുക്കുക","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"ml","translation":"ഒരേ ഇനം, മെനു, സമയത്തിലെ രേഖകൾ കൂടുതൽ ഉണ്ടായിരിക്കുമ്പോൾ താരതമ്യം ചെയ്യാനാകും.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"ml","translation":"ഒരു ദിവസത്തെ അളവ് KPI","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"ml","translation":"ഈ പ്രകാരം മാറ്റങ്ങൾ കാണിക്കുന്നതാണ്, ഇത് കാരണം അല്ലെങ്കിൽ ആരോഗ്യസ്ഥിതിയെ സ്ഥിരീകരിക്കുന്നതല്ല.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"ml","translation":"മിസോ സൂപ്പ്","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"ml","translation":"ശ്വാസ ശതമാനം","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"ml","translation":"ശ്വാസ ശതമാനം 14 ദിവസത്തെ ശരാശരിയിൽ കൂടുതലാണ്","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"ml","translation":"ശ്വാസ ശതമാനം 14 ദിവസത്തെ ശരാശരി {{value1}} തവണ/മണിക്കൂറാണ്, എന്നാൽ {{value2}} തവണ/മണിക്കൂറാണ്.","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"ml","translation":"ശ്വാസ ശതമാനം 14 ദിവസത്തെ ശരാശരിയിൽ കുറവയാണ്","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"ml","translation":"ശ്വാസ ശതമാനം സാധാരണ നിലയിലുണ്ട്","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"ml","translation":"നില -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"ml","translation":"നില {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"ml","translation":"ഉൽപ്പന്നം","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"ml","translation":"ഉൽപ്പന്നം സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"ml","translation":"ഉൽപ്പന്ന കോഡ്","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"ml","translation":"ഉൽപ്പന്ന കോഡ് നൽകുക.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"ml","translation":"ഉൽപ്പന്ന കോഡ് സ്വകാര്യമായി നൽകുക.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"ml","translation":"ഉൽപ്പന്നത്തിന്റെ പേര്","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"ml","translation":"സമയം/മണിക്കൂർ","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"ml","translation":"പുനരുത്ഥാനം","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"ml","translation":"പുനരുത്ഥാനം ചെയ്യാൻ ഏറ്റവും നല്ല ദിവസം തിരഞ്ഞെടുക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"ml","translation":"പുനരുദ്ദാരണ ഡാറ്റ കുറഞ്ഞതിനാൽ, {{value1}} എന്ന മൂല്യം അല്ലെങ്കിൽ സെറ്റ് എണ്ണം കുറയ്ക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"ml","translation":"പുനരുദ്ദാരണ ദിവസം പൂർത്തിയാക്കി","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"ml","translation":"എണ്ണ","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"ml","translation":"ആവർത്തനങ്ങളുടെ എണ്ണവും പോഷകാഹാരവും വേർതിരിച്ച്","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"ml","translation":"ഒരു അടിസ്ഥാന അളവിന്റെ അനുസരണം","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"ml","translation":"HTTP കണക്ഷ് ബാഹ്യ സര്‍വറില്‍ അനുവദനീയമല്ല.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"ml","translation":"രാത്രി","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"ml","translation":"രാത്രിയിൽ സ്വയಂಚ <<<<മായി പൂർത്തിയാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"ml","translation":"പ്രതികൂലമായ വർധനവോ, നിലനിർത്തുന്ന അവസ്ഥയോ ഇല്ല. അടുത്ത തവണയും ലക്ഷ്യമിട്ടുള്ള എണ്ണവും RPE-യും ഒരേപോലെ രേഖപ്പെടുത്തുക.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"ml","translation":"വിജയം","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"ml","translation":"സ്ഥിരത","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"ml","translation":"ശരീര താപനില","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"ml","translation":"ശരീര താപനില: {{value1}} °C","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"ml","translation":"ശരീര താപനില, 14 ദിവസത്തെ ശരാശരിയിൽ നിന്ന് കൂടുതലാണ്","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"ml","translation":"ശരീര താപനില, ശരാശരിയിൽ നിന്ന് കുറവയാണ്","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"ml","translation":"ശരീര താപനില സാധാരണ നിലയിലുണ്ട്","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"ml","translation":"തീർപ്പാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"ml","translation":"തീർപ്പാക്കാൻ എളുപ്പമുള്ള കാര്യങ്ങൾ: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"ml","translation":"തീർപ്പാക്കുകയും ഒഴിവാക്കുകയും ചെയ്യുന്ന രീതികൾ, ഉപകരണത്തിൽ പരിശോധിക്കുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"ml","translation":"പ്ര thực食量","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"ml","translation":"സാന്ദ്രത","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"ml","translation":"ചരിത്രം","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"ml","translation":"കൈവശം, മുൻവശം & പൂർണ്ണരൂപ","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"ml","translation":"താഴെ, പിൻവശം & പൂർണ്ണരൂപ","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"ml","translation":"വ്യത്യാസം","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"ml","translation":"ശരാसरी ഹൃദയ താളം {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"ml","translation":"ശരാसरी വേഗം","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"ml","translation":"ഉപయోగപ്രദം","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"ml","translation":"ഇതിലേക്ക് എളുപ്പത്തിൽ മാറ്റാവുന്ന കാര്യങ്ങൾ: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"ml","translation":"ഹൃദയ താളം തിരിച്ചെത്തുക","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"ml","translation":"ഹൃദയ താളം ലഭ്യമല്ല","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"ml","translation":"സ്രോതസ്: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"ml","translation":"എന്തെങ്കിലും രേഖപ്പെടുത്തിയ കാര്യങ്ങൾ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"ml","translation":"കൈയിലെ ചലനത്തിലൂടെ മാത്രം, വ്യായാമവും രൂപവും നിർണയിക്കാൻ കഴിയില്ല. കൃത്യമായ കണക്കുകൾ നൽകുന്നതിന് ശേഷം ഇത് ഉപയോഗിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"ml","translation":"കൈയിലെ താപനില","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"ml","translation":"കൈയിലെ താപനില സാധാരണയിൽ നിന്ന് വ്യത്യസ്തമായിരിക്കുന്നത്","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"ml","translation":"കൈയിലെ താപനില സാധാരണ പരിധിക്കുള്ളിൽ","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"ml","translation":"അംഗീകരിച്ച കാര്യങ്ങൾ മാത്രം അടുത്ത നിർദ്ദേശത്തിൽ ഉപയോഗിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"ml","translation":"അംഗീകരിച്ചിട്ടുള്ള വിവരങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"ml","translation":"ഉത്തരവ് {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"ml","translation":"പരിചയ担当 കോച്ച്","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"ml","translation":"ഓരോന്നും","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"ml","translation":"കണexion ശരി","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"ml","translation":"കണexion സാധ്യമാകാത്ത സാഹചര്യത്തിലും, മുന്‍പ് രേഖപ്പെടുത്തിയ ഡാറ്റ നഷ്ടമാകില്ല. സ്വയം രേഖപ്പെടുത്തല്‍ തുടര്‍ന്ന്, പിന്നീട് AI-ന് മാത്രം അഭിപ്രായങ്ങള്‍ നിര്‍മ്മിക്കാം.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"ml","translation":"കണexion പരിശോധിക്കുന്നു","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"ml","translation":"ഈ കണക്ക് ഏകദേശമാണ്. താഴെയുള്ള ഫീൽഡുകളില്‍ ആവശ്യമനുസരിച്ച് മാറ്റാവുന്നതാണ്.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"ml","translation":"ഉദ്ധരിച്ച അളവ്","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"ml","translation":"ക്രമീകരണം","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"ml","translation":"섭취 ചെയ്ത കിലോക്കൽ","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"ml","translation":"ചിത്രീകരിക്കുക","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"ml","translation":"ചിത്രീകരണ ക്രമങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"ml","translation":"ചിത്രീകരണ ക്രമങ്ങൾ modificare ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"ml","translation":"പുതിയ ചിത്രീകരണ ക്രമം ചേർക്കുക","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"ml","translation":"ചിത്രീകരണ ദിശ","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"ml","translation":"ചിത്രീകരണ ദിവസങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"ml","translation":"ചിത്രീകരണ സാഹചര്യങ്ങളും രൂപത്തിന്റെ വിവരണം","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"ml","translation":"ചിത്രീകരിച്ചിരിക്കുന്നു","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"ml","translation":"ചിത്രീകരണ ഉദാഹരണം. മുകളിലുള്ള ഭാഗം മുന്‍വശം, താഴെയുള്ള ഭാഗം ഇടതുവശം, വലതുവശം, താഴെ ഇടതുവശം, വലതുവശം കൈ മുതല്‍ അര വരെ. ഒരേ വസ്ത്രം, ദൂരം, വെളിച്ചത്തില്‍ ചിത്രീകരിക്കുക","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"ml","translation":"പരിശോധിക്കേണ്ടതാണ്","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"ml","translation":"ദിശ","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"ml","translation":"നിലവിലെ സ്ഥാനത്തിന്റെ വ്യത്യാസങ്ങൾ ശ്രദ്ധിച്ചു.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"ml","translation":"പ്രതിദിന മാറ്റങ്ങളെക്കാൾ, săptămവയുടെ ശരാശരി പ്രവണതയെ അടിസ്ഥാനമാക്കിയുള്ള വിവരങ്ങൾ ഉപയോഗിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"ml","translation":"தேதி","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"ml","translation":"ഇറ്റേ രാത്രിയിലെ ഉറക്കം","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"ml","translation":"ദിവസം","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"ml","translation":"സമയം","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"ml","translation":"ഈ മൂല്യങ്ങൾ, നിങ്ങളുടെ ഉപകരണത്തിൽ നിന്ന് ലഭിച്ച ഒരു സൂചനയാണ്. ഇത്, സമയം, കൂടുതൽ ഉറക്കവും, REM ഘട്ടവും, ഉണർന്നുപോയ സമയത്തെ അടിസ്ഥാനമാക്കിയുള്ളതാണ്.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"ml","translation":"ഇടവേള എടുത്ത്","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"ml","translation":"ഇടവേള എടുത്ത് വീണ്ടും ശ്രമിക്കുക. തുടർന്നാൽ, AI സെർവറിലെ മോഡൽ സ്ഥിതിയെ പരിശോധിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"ml","translation":"ഇടവേള എടുത്ത് വീണ്ടും ശ്രമിക്കുക. തുടർന്നാൽ, AI സെർവറിലെ ലോഗിനെ പരിശോധിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"ml","translation":"സമയം","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"ml","translation":"പ്രതിദിന സ്ഥിരത അനുസരിച്ച്, RPE ഉപയോഗിച്ച് ക്രമീകരിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"ml","translation":"സാധാരണ","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"ml","translation":"തീവ്രമായ exposición ആണ്. കൂടുതൽ സമയം തുടരുന്നപക്ഷം, ശബ്ദം കുറയ്ക്കുന്നതും, സമയത്തെ നിയന്ത്രിക്കുന്നതുമായി ബന്ധപ്പെട്ട കാര്യങ്ങൾ ശ്രദ്ധിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"ml","translation":"ആരംഭിക്കുന്നതിന് മുൻപ്, ലഭ്യമായ ഉപകരണങ്ങൾക്ക് അനുസരിച്ച് ഒരു പരിശീലന പദ്ധതി തയ്യാറാക്കുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"ml","translation":"ആദ്യത്തെ അളവ് രേഖപ്പെടുത്തിയാൽ, പ്രവണതകളും ലക്ഷ്യത്തിലെ വ്യത്യാസവും അറിയാം.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"ml","translation":"സമീപകാലത്തെ ഓട്ട","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"ml","translation":"സമീപകാല റിപ്പോർട്ട്","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"ml","translation":"മാസം തോறும் അവലോകനം","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"ml","translation":"മാസം തോறும் അവലോകനം പരിശോധിക്കുക","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"ml","translation":"മാസം തോറും അവലോകനം തയ്യാറാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"ml","translation":"മാസം തോറും അവലോകനം സൃഷ്ടിക്കുന്നു","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"ml","translation":"മാസം തോറും റിപ്പോർട്ട്","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"ml","translation":"രാവിലെ","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"ml","translation":"രാവിലെയും രാത്രിയും അറിയിപ്പുകൾ കുറയ്ക്കാൻ ശ്രമിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"ml","translation":"അ分析 ചെയ്തതുമില്ല","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"ml","translation":"അമത് ശേഖരിച്ചത്","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"ml","translation":"സങ്കരേഖകൾ 0 ആയി കണക്കാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"ml","translation":"അനട thực hiện ചെയ്യാൻ","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"ml","translation":"അചിത്രീകരണം","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"ml","translation":"അ രജിസ്റ്റർ ചെയ്തിട്ടില്ല. ലേബലിലെ 100 ഗ്രാം അളവിന്റെ മൂല്യങ്ങൾ നൽകുക.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"ml","translation":"അ രജിസ്റ്റർ ചെയ്ത സാധനങ്ങൾ, നൽകുന്നതിന് ശേഷം ഉപകരണത്തിൽ സംരക്ഷിക്കുകയും, അടുത്ത തവണ ഉപയോഗിക്കുമ്പോൾ വീണ്ടും എടുക്കുകയും ചെയ്യും.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"ml","translation":"അ രേഖപ്പെടുത്തിയിട്ടില്ല","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"ml","translation":"അ രേഖപ്പെടുത്തിയിട്ടില്ല. ശരീരത്തിലെ അനുഭവവും തയ്യാറെടുപ്പിന്റെ അടിസ്ഥാനവും ഇതിൽ ഉൾപ്പെടുന്നു","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"ml","translation":"വ്യത്യസ്ത സാഹചര്യങ്ങളിൽ താരതമ്യം ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"ml","translation":"പോഷകാഹാര ഘടകങ്ങൾ പ്രദർശന OCR (ഉപയോക്താവ് പരിശോധന)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"ml","translation":"പോഷകാഹാര ഘടകങ്ങൾ പ്രദർശന OCR (പരിശോധിക്കേണ്ടത്)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"ml","translation":"പോഷകാഹാര പ്രദർശനത്തിൽ നിന്ന് മൂല്യങ്ങൾ നൽകി. മാനദണ്ഡവും ഓരോ മൂല്യങ്ങളും പരിശോധിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"ml","translation":"പോഷകാഹാര പ്രദർശനത്തിന്റെ ചിത്രം ഉപയോഗിച്ച് നൽകുക","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"ml","translation":"പോഷകാഹാര പ്രദർശനത്തെ വായിക്കാൻ കഴിഞ്ഞില്ല. നല്ല വെളിച്ചത്തിൽ നേരിട്ട് എടുക്കുക അല്ലെങ്കിൽ, സ്വകാര്യമായി നൽകുക.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"ml","translation":"영양 വിവരങ്ങൾ വായിക്കുന്നു","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"ml","translation":"വിശ്രമിക്കുന്നതിന് ശേഷം","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"ml","translation":"അടുത്ത നടപടി","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"ml","translation":"അടുത്ത പ്രവർത്തനം","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"ml","translation":"അടുത്ത ക്രമീകരണം","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"ml","translation":"മുഖവും, കൈയും ഉപയോഗിച്ച് വയറിന്റെ അവസ്ഥ പരിശോധിച്ചു.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"ml","translation":"മുഖവും, പിന്നും ഉപയോഗിച്ച് അരയMeasurement യുടെ അളവ് പരിശോധിച്ചു.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"ml","translation":"മുഖം, കൈ, പിൻ മുതലായവയെ ഒരു ദിവസത്തെ Measurement-മായി രേഖപ്പെടുത്താം.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"ml","translation":"ഒരു വശത്ത്, ഒരു വശത്ത്, ഒരു വശത്ത്, ഒരു വശത്ത്, ഒരു വശത്ത്, ഒരു വശത്ത്, ഒരു വശത്ത്.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"ml","translation":"നടത്തികളുടെ എണ്ണം","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"ml","translation":"നടത്തികളുടെ എണ്ണം: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"ml","translation":"നടത്തികൾ, പ്രവർത്തനങ്ങൾ, ഉറക്കം, വിശ്രമ സമയത്ത് ഹൃദയമിടിപ്പ്, HRV, ശ്വസന നിരക്ക്, കൈയിലെ താപനില എന്നിവ ആവശ്യമുള്ള കാര്യങ്ങൾ അനുസരിച്ച് അനുവദിക്കാവുന്നതാണ്. അനുവദിക്കാത്ത കാര്യങ്ങളെ \"അനുവദിച്ചിട്ടില്ല\" എന്ന് കാണിക്കും, കൂടാതെ സ്വകാര്യമായി നൽകുന്നതിനും സാധിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"ml","translation":"ശേഷിക്കുന്ന {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"ml","translation":"ஒப்பிടാൻ കഴിയുന്ന ഒരു ദിവസത്തെ വിവരങ്ങൾ ഇല്ല","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"ml","translation":"ഉപയോഗിച്ചത് {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"ml","translation":"ഉപയോഗിച്ചത് രേഖപ്പെടുത്തിയിട്ടില്ല","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"ml","translation":"താഴെ","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"ml","translation":"ഈ സമയത്ത്","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"ml","translation":"പ്രോട്ടീൻ","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"ml","translation":"അതിർത്തികൾ ലംഘിക്കരുത്","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"ml","translation":"നിലവിലെ {{value1}}/4 എണ്ണം","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"ml","translation":"നിലവിലെ കണക്ക് അനുസരിച്ച് സ്വയമാറ്റമായി അപ്ഡേറ്റ് ചെയ്യും.","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"ml","translation":"ഇപ്പോൾ ലഭ്യമല്ലാത്തതിനാൽ, സെർവറിലെ തിരക്കേ മൂലമാണ്. {{value1}} തവണ ശ്രമിക്കാവുന്നതാണ്.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"ml","translation":"നിലവിലെ സ്ഥാനം നിങ്ങളുടെ ജിമ്മിൽ രജിസ്റ്റർ ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"ml","translation":"സ്ഥലം സ്ഥിരീകരിക്കുന്നു","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"ml","translation":"പരിസ്ഥിതി ശബ്ദങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"ml","translation":"ഉറക്കമില്ല","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"ml","translation":"ഉറക്കമില്ലായ്‌മയെയും recuperación-നെയും അടിസ്ഥാനമാക്കി, കൂടുതൽ വ്യായാമം ചെയ്യാൻ Advising ചെയ്യുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"ml","translation":"ഉറക്കമില്ലായ്‌മ","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"ml","translation":"రికൈസ്റ്റ് ചെയ്ത സ്ഥാനം ഒഴിവാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"ml","translation":"రికൈസ്റ്റ് ചെയ്ത സാധനങ്ങൾ തിരയുക","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"ml","translation":"വെളുത്ത അരി","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"ml","translation":"വെളുത്ത അരി, ചിക്കൻ ബ്രോസ്റ്റ്, മിസോ സൂപ്പ്","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"ml","translation":"ലക്ഷ്യം","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"ml","translation":"ലക്ഷ്യവും, അതിനു അനുസരിച്ച Achievement-ഉം KPI അടിസ്ഥാനത്തിൽ പരിശോധിക്കാം.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"ml","translation":"ലക്ഷ്യവും, ഇന്നത്തെ ഭക്ഷണ രേഖയും ഉപയോഗിച്ച്, ശേഷിക്കുന്ന പ്രോട്ടീൻ അളവ് കാണിക്കുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"ml","translation":"ലക്ഷ്യത്തിനും, ലഭ്യമായ ഉപകരണങ്ങൾക്കും അനുസരിച്ചുള്ള ഒരു പദ്ധതിയാണ് ഇത്.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"ml","translation":"ലക്ഷ്യത്തിന്റെ പ്രാധാന്യം","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"ml","translation":"ലക്ഷ്യം","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"ml","translation":"ലക്ഷ്യം നിർവചിച്ച ശേഷം, അതിനു അനുസരിച്ച Achievement-ഉം കാണിക്കാം.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"ml","translation":"ലക്ഷ്യ വ്യത്യാസം","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"ml","translation":"ലക്ഷ്യം: {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"ml","translation":"ലക്ഷ്യം നിർവചിച്ചിട്ടില്ല","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"ml","translation":"ലക്ഷ്യം സജ്ജമാക്കുക","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"ml","translation":"ലക്ഷ്യം നേടുകയും പ്രവർത്തന സ്ഥിരത ഉറപ്പാക്കുകയും ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"ml","translation":"അവസാനത്തെ 30 ദിവസത്തെ ശാരീരിക, ഭക്ഷണ, വ്യായാമ രേഖകൾ പരിശോധിച്ചു.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"ml","translation":"അവസാനത്തെ 3 തവണകളിൽ ഏറ്റവും കൂടുതൽ ഭാരം ഉപയോഗിക്കുന്നതിന് സാധ്യതയുള്ളത്. രൂപം, എണ്ണം, RPE എന്നിവയെല്ലാം പരിഗണിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"ml","translation":"അവസാനത്തെ 7 ദിവസം","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"ml","translation":"അവസാനത്തെ 7 ദിവസം {{value1}} തവണ","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"ml","translation":"അവസാനത്തെ 7 ദിവസത്തെ ജിം സന്ദർശനം: {{value1}} തവണ","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"ml","translation":"അവസാനത്തെ വ്യായാമ അളവ് സാധാരണ പരിധിക്കുള്ളിൽ","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"ml","translation":"അവസാനത്തെ săptămത്തെ ശരാശരി ഭാരം കുറഞ്ഞിരിക്കുന്നു. ഇത് മസിൽ വളർച്ചയെ പിന്തുണയ്ക്കുന്നതിനായി, ഉപഭോഗ അളவை немного വർദ്ധിപ്പിക്കാൻ സാധ്യതയുള്ളതാണ്.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"ml","translation":"അവസാനത്തെ săptămത്തെ ശരാശരി ഭാരം ലക്ഷ്യ ദിശയിൽ താഴെയാണ്. ആദ്യം ഉപഭോഗ അളவை немного ക്രമീകരിക്കാൻ സാധിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"ml","translation":"അവസാനത്തെ săptămത്തെ ശരാശരി ഭാരം വേഗത്തിൽ കുറഞ്ഞിരിക്കുന്നു. ഇത് സുരക്ഷിതമായി മുന്നോട്ട് പോകാൻ, ഉപഭോഗ അളவை немного വർദ്ധിപ്പിക്കാൻ സാധ്യതയുള്ളതാണ്.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"ml","translation":"അവസാനത്തെ săptămത്തെ ശരാശരി ഭാരം വേഗത്തിൽ വർദ്ധിച്ചു. ഇത് ക്രമീകരിക്കാൻ, ഉപഭോഗ അളவை немного കുറയ്ക്കാൻ സാധിക്കും.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"ml","translation":"അവസാനത്തെ മൂല്യം 85 dBA-ൽ താഴെയാണ്. തുടർച്ചയുടെ സമയവും പരിഗണിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"ml","translation":"അവസാനത്തെ രേഖയുടെ ശരാശരി {{value1}} മണിക്കൂർ","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"ml","translation":"പരസ്പരം ചലനാത്മകത","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"ml","translation":"ചर्चा ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"ml","translation":"ഉറക്ക","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"ml","translation":"\">{{value1}} മണിക്കൂര്‍ ഉറക്ക നേടുക","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"ml","translation":"ഉറക്കം: {{value1}} മണിക്കൂര്‍","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"ml","translation":"ഉറക്കം കുറഞ്ഞതായി തോന്നുന്നു","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"ml","translation":"ഉറക്കം കുറച്ച് കുറവയാണ്","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"ml","translation":"നിങ്ങളുടെ ഉറക്ക ഘട്ടങ്ങൾ ഇതുവരെ ലഭ്യമായിട്ടില്ല, അതിനാൽ മൊത്തത്തിലുള്ള സമയത്തെ അടിസ്ഥാനമാക്കിയുള്ള ഒരു ഏകദേശ സ്കോർ നൽകുന്നു.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"ml","translation":"നിങ്ങളുടെ ഉറക്ക ഡാറ്റ ഇതുവരെ ലഭ്യമല്ല. ലഭ്യമല്ലാത്ത മൂല്യം 0 ആയി കണക്കാക്കുന്നില്ല.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"ml","translation":"നിങ്ങൾക്ക് ഉറക്കം, പുനരുജ്ജലനം, പ്രവർത്തന അളവ് എന്നിവയെല്ലാം ഒറ്റത്തിൽ പരിശോധിക്കാനാകും.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"ml","translation":"ചെല bỏ","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"ml","translation":"സ്ഥിരത {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"ml","translation":"ശേഖரிച്ച് salvare ചെയ്യുക","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"ml","translation":"പരിശോധിച്ച മാറ്റങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"ml","translation":"പരിശോധനയ്ക്ക് കാത്തിരിക്കുന്നു","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"ml","translation":"പരിശോധിച്ച മെമ്മറികൾ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"ml","translation":"ശാസ്ത്രീയമായ പിന്തുണ {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"ml","translation":"ശാസ്ത്രീയമായ പിന്തുണ, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"ml","translation":"പ്രവർത്തനങ്ങൾ","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"ml","translation":"രൂപം","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"ml","translation":"നിങ്ങളുടെ ഉപകരണത്തിൽ സംരക്ഷിച്ച ഉൽപ്പന്നങ്ങൾ ലോഡ് ചെയ്തു.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"ml","translation":"ആവശ്യമാണെങ്കിൽ നിങ്ങളുടെ ഉപകരണം പുനരാരംഭിക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"ml","translation":"നിങ്ങളുടെ ലക്ഷ്യം സ്നാ 근육 വളർച്ചയാണെങ്കിൽ, നിങ്ങൾക്ക് săptăm 주 में ഒരു തവണ കൂടുതൽ പരിശീലനം നടത്താൻ പരിഗണിക്കാം.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"ml","translation":"சுமார் {{value1}} മിനിറ്റ്","review_note":""}

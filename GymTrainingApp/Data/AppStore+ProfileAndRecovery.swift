@@ -4,6 +4,7 @@ import SwiftUI
 extension AppStore {
     func saveUserProfile(_ profile: UserProfile) {
         userProfile = profile
+        UserDefaults.standard.set(profile.weightUnit.rawValue, forKey: BodyUnitPreferences.weightKey)
         storage.saveUserProfile(profile)
     }
 
@@ -81,6 +82,13 @@ extension AppStore {
         gymVisits.filter { Calendar.current.isDate($0.arrivedAt, inSameDayAs: date) }
     }
 
+    func deleteGymVisit(_ visit: GymVisit) {
+        guard let index = gymVisits.firstIndex(where: { $0.id == visit.id }) else { return }
+        let removed = gymVisits.remove(at: index)
+        storage.saveGymVisits(gymVisits)
+        moveToTrash(title: L10n.string("health_meals_body_ai.gym_visit", fallback: "ジム訪問"), payload: .gymVisit(removed))
+    }
+
     var todaySubjectiveRecovery: SubjectiveRecoveryEntry? {
         subjectiveRecoveryEntries.first { Calendar.current.isDateInToday($0.recordedAt) }
     }
@@ -101,6 +109,13 @@ extension AppStore {
         storage.saveSubjectiveRecoveryEntries(subjectiveRecoveryEntries)
     }
 
+    func deleteSubjectiveRecovery(_ entry: SubjectiveRecoveryEntry) {
+        guard let index = subjectiveRecoveryEntries.firstIndex(where: { $0.id == entry.id }) else { return }
+        let removed = subjectiveRecoveryEntries.remove(at: index)
+        storage.saveSubjectiveRecoveryEntries(subjectiveRecoveryEntries)
+        moveToTrash(title: L10n.string("health_meals_body_ai.fatigue_record", fallback: "疲労記録"), payload: .subjectiveRecovery(removed))
+    }
+
     func saveAIInsight(_ insight: AIInsight) {
         if let index = aiInsights.firstIndex(where: { $0.id == insight.id }) {
             aiInsights[index] = insight
@@ -110,6 +125,13 @@ extension AppStore {
 
         aiInsights.sort { $0.date > $1.date }
         storage.saveAIInsights(aiInsights)
+    }
+
+    func deleteAIInsight(_ insight: AIInsight) {
+        guard let index = aiInsights.firstIndex(where: { $0.id == insight.id }) else { return }
+        let removed = aiInsights.remove(at: index)
+        storage.saveAIInsights(aiInsights)
+        moveToTrash(title: L10n.string("health_meals_body_ai.ai_report", fallback: "AIレポート"), payload: .aiInsight(removed))
     }
 
     func saveAITransmission(_ record: AITransmissionRecord) {
@@ -125,12 +147,62 @@ extension AppStore {
     func updateAITransmission(id: UUID, status: AITransmissionStatus) {
         guard let index = aiTransmissionHistory.firstIndex(where: { $0.id == id }) else { return }
         aiTransmissionHistory[index].status = status
+        if status == .completed {
+            aiTransmissionHistory[index].failureMessage = nil
+            aiTransmissionHistory[index].recoverySuggestion = nil
+            aiTransmissionHistory[index].canRetry = nil
+            aiTransmissionHistory[index].consumedQuota = nil
+        }
         storage.saveAITransmissionHistory(aiTransmissionHistory)
+    }
+
+    func recordAITransmissionFailure(id: UUID, error: Error) {
+        let presentation = AIClientError.presentation(for: error)
+        recordAITransmissionFailure(
+            id: id,
+            message: presentation.message,
+            recovery: presentation.recovery,
+            canRetry: Self.isRetryableAIError(error)
+        )
+    }
+
+    func recordAITransmissionFailure(
+        id: UUID,
+        message: String,
+        recovery: String?,
+        canRetry: Bool
+    ) {
+        guard let index = aiTransmissionHistory.firstIndex(where: { $0.id == id }) else { return }
+        aiTransmissionHistory[index].status = .failed
+        aiTransmissionHistory[index].failureMessage = message
+        aiTransmissionHistory[index].recoverySuggestion = recovery
+        aiTransmissionHistory[index].canRetry = canRetry
+        aiTransmissionHistory[index].consumedQuota = false
+        storage.saveAITransmissionHistory(aiTransmissionHistory)
+    }
+
+    private static func isRetryableAIError(_ error: Error) -> Bool {
+        guard let clientError = error as? AIClientError else { return true }
+        switch clientError {
+        case .disabled, .missingAPIKey, .invalidBaseURL, .insecureRemoteHTTPHost,
+             .invalidImage, .emptyMealItems, .secureStorageFailed,
+             .accountSignInRequired, .insufficientCredits:
+            return false
+        case .httpStatus(let code):
+            return code == 408 || code == 429 || code >= 500
+        case .quotaExceeded:
+            return false
+        case .serverPolicy, .invalidResponse, .requestFailed, .transport, .decodingFailed,
+             .rewardedAdVerificationPending:
+            return true
+        }
     }
 
     func deleteAITransmissionHistory(at offsets: IndexSet) {
         for offset in offsets.sorted(by: >) {
-            aiTransmissionHistory.remove(at: offset)
+            guard aiTransmissionHistory.indices.contains(offset) else { continue }
+            let record = aiTransmissionHistory.remove(at: offset)
+            moveToTrash(title: record.purpose, payload: .aiTransmission(record))
         }
         storage.saveAITransmissionHistory(aiTransmissionHistory)
     }
@@ -142,6 +214,9 @@ extension AppStore {
     }
 
     func clearCoachChatMessages() {
+        for message in coachChatMessages {
+            moveToTrash(title: L10n.string("health_meals_body_ai.ai_chat", fallback: "AIチャット"), payload: .coachChatMessage(message))
+        }
         coachChatMessages = []
         storage.saveCoachChatMessages([])
     }
@@ -157,12 +232,17 @@ extension AppStore {
 
     func deleteCoachMemories(at offsets: IndexSet) {
         for offset in offsets.sorted(by: >) {
-            coachMemories.remove(at: offset)
+            guard coachMemories.indices.contains(offset) else { continue }
+            let memory = coachMemories.remove(at: offset)
+            moveToTrash(title: memory.content, payload: .coachMemory(memory))
         }
         storage.saveCoachMemories(coachMemories)
     }
 
     func clearCoachMemories() {
+        for memory in coachMemories {
+            moveToTrash(title: memory.content, payload: .coachMemory(memory))
+        }
         coachMemories = []
         storage.saveCoachMemories([])
     }

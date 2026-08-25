@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"fi","translation":"Palautetaan {{value1}}:een. Manuaalinen kirjaus on edelleen käytettävissä.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"fi","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"fi","translation":"Syötä suurempi kuin 0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"fi","translation":"1. Pidä harjoittelua 3 kertaa viikossa\n2. Kirjaa proteiinin määrä\n3. Vertaa kehonkuvaa kuukauden lopussa","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"fi","translation":"Odota noin minuutti ja kokeile uudelleen.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"fi","translation":"Yksi annos","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"fi","translation":"Ei ole selkeää pysähdysvaihtoehtoa harjoituksiin, joita on kirjattu yli 3 kertaa.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"fi","translation":"Useita harjoituksia päivässä (yli 48)","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"fi","translation":"Kokonaisvaltainen tasapainon seuranta","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"fi","translation":"Seuratut tiedot","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"fi","translation":"AI:n käyttö on hetkellisesti ruuhkaisempaa.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"fi","translation":"AI:n tunnistautumistiedot ovat virheelliset tai vanhentuneet.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"fi","translation":"AI-virhe","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"fi","translation":"AI-valmentaja","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"fi","translation":"AI-palvelimen URL on virheellinen.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"fi","translation":"AI-palvelin palautti virheen: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"fi","translation":"AI-palvelimelta puuttuu tarvittavat API:t.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"fi","translation":"Ei pääsy AI-palvelimeen. Yritä uudelleen myöhemmin.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"fi","translation":"AI-palvelimen JSON-muoto ei vastaa sovelluksen odotuksia.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"fi","translation":"Ei pysty lukemaan AI-palvelimen vastetta.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"fi","translation":"Virhe AI-palvelimella: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"fi","translation":"Tarkista AI-palvelimen yhteys","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"fi","translation":"AI-valmentaja","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"fi","translation":"Haluatko poistaa keskustelun AI-valmentajan kanssa?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"fi","translation":"AI-mallia ei ole saatavilla tai kuvien analysointi epäonnistui.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"fi","translation":"AI-mallin valmistelu käynnissä","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"fi","translation":"AI-analyysi","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"fi","translation":"Riittävästi AI-käyttöä jäljellä.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"fi","translation":"Tarkista AI-käytön määrä.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"fi","translation":"AI-käyttö on pois päältä.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"fi","translation":"Varmista, että AI-arvot ovat oikein.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"fi","translation":"AI-yhteys on käytössä.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"fi","translation":"AI-yhteyden turvallinen tallennus ei onnistunut.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"fi","translation":"AI-toiminnot","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"fi","translation":"AI-toiminto on pois päältä asetuksissa.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"fi","translation":"AI-toiminto on pois päältä asetuksissa. Voit tallentaa valokuvat tällä hetkellä.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"fi","translation":"AI-toiminto on pois päältä asetuksissa. Manuaalinen syöttö voidaan tallentaa tällä hetkellä.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"fi","translation":"AI-tietojen historia","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"fi","translation":"API-avainta ei ole määritetty.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"fi","translation":"Tarkista API-palvelimen versio. Lisätietoja: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"fi","translation":"API-palvelin vastaa, mutta tarvittavia malleja ei ole käytettävissä.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"fi","translation":"API-palvelin vastaa, mutta ruoan ja raporttien apumalleja ei ole käytettävissä.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"fi","translation":"Yhteys Apple Healthiin","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"fi","translation":"Näytetään viimeisimmät juoksuväylät, jotka on tallennettu Apple Healthiin.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"fi","translation":"Yhdistä Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"fi","translation":"Käytä Apple Watchia sopivasti ja pidä se päällä myös nukkumisen aikana, jolloin palautumismittarit ovat helpommin saatavilla. Puuttuvien arvojen kohdalla ei tehdä oletuksia.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"fi","translation":"Tarkista perusosoite ja API-palvelimen versio.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"fi","translation":"HRV on alhaisempi kuin 14 päivän keskiarvo.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"fi","translation":"Ei ole saatavilla HRV:n jatkuvaa dataa.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"fi","translation":"HRV on keskimääräistä korkeampi.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"fi","translation":"HRV on normaalin alueen sisällä.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"fi","translation":"HRV-suhteen keskiarvo {{value1}} % (henkilökohtaiseen vertailuun verrattuna).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"fi","translation":"HTTP toimii vain localhostissa, LAN:ssa ja Tailscale-verkossa. Käytä HTTPS:ää ulkoisille palvelimille.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"fi","translation":"Energiankulutuksen tietoja Healthista ei ole saatavilla. Ruokapäiväkirjan tiedot on kuitenkin tallennettu.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"fi","translation":"Päivitä Health-dataa.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"fi","translation":"Valitse JPEG- tai PNG-kuva uudelleen.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"fi","translation":"Kirjaa KPI:t.","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"fi","translation":"Viimeisin arvo, jonka Noise-sovellus (tai muu sovellus) on tallentanut. Jos arvoa ei ole saatavilla, se jätetään 0:ksi.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"fi","translation":"Laske kalorit automaattisesti PFC:n avulla.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"fi","translation":"PFC saavutettu.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"fi","translation":"Vähennä RPE-arvoa yhdellä askeleella.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"fi","translation":"URL alkaa \"https:\" -merkillä. Paikallisessa kehityksessä voit käyttää myös HTTP:tä localhostissa, LAN-IP-osoitteessa ja Tailscale-nimen kautta.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"fi","translation":"URL alkaa \"https:\" -merkillä. Voit käyttää myös HTTP:tä vain paikallisessa kehityksessä.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"fi","translation":"Sisäänrakennettu sykemittari.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"fi","translation":"ly/30 sekuntia","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"fi","translation":"Kalorit ja PFC saavutettu.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"fi","translation":"Kalorit saavutettu.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"fi","translation":"kg / minuutti","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"fi","translation":"{\"id\":\"{{value1}}\",\"kategoria\":\"{{value2}}\",\"otsikko\":\"{{value3}}\",\"tavoite\":0,\"perustelu\":\"Tarkistin ja vahvistin tietosi\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"fi","translation":"{\"pidä_olemassa olevat tiedot\":true,\"valmistautumistaso\":\"normaali\",\"yhteenveto\":\"Jatketaan tämän päivän ehdotusta edelleen.\",\"muutoksen syy\":\"\", \"toimet\":[{{value1}}]","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"fi","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"fi","translation":"{{value1}} / {{value2}} tuntia","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"fi","translation":"{{value1}} / {{value2}} askelta","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"fi","translation":"{{value1}} / {{value2}} ateriaa","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"fi","translation":"{{value1}} {{value2}} kappaletta ({{value3}}: {{value4}})","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"fi","translation":"Voit luoda viikoittaisia kommentteja sekä {{value1}} että apumallin avulla.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"fi","translation":"{{value1}}/{{value2}} kertaa","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"fi","translation":"{{value1}}: {{value2}} saavutettu {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"fi","translation":"{{value1}} tarkistaa koko asetuksen","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"fi","translation":"{{value1}} pohtii vastausta","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"fi","translation":"{{value1}} tarkistaa ruokavalion ja PFC:n","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"fi","translation":"{{value1}} tarkistaa useita suuntia","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"fi","translation":"{{value1}} muistelee","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"fi","translation":"{{value1}} luo ja keskustelee muutoksista","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"fi","translation":"Keskustele {{value1}}:n kanssa","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"fi","translation":"{{value1}}:n raportti","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"fi","translation":"{{value1}}:n raporttia ei ole vielä saatavilla","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"fi","translation":"{{value1}}:n luonnos","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"fi","translation":"{{value1}}:n luonnos ja {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"fi","translation":"{{value1}}:n analyysi","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"fi","translation":"{{value1}}:n analyysin tulokset","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"fi","translation":"{{value1}}:n viittaavat tiedot","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"fi","translation":"{{value1}}:n arviointi","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"fi","translation":"Näytetään vain ne asiat, jotka on hyväksytty {{value1}}:n ehdotuksen jälkeen.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"fi","translation":"{{value1}}:n kuukausittainen tarkistus","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"fi","translation":"{{value1}}:n muistiinpanot","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"fi","translation":"Valitse {{value1}} kirjastosta","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"fi","translation":"Poista {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"fi","translation":"Ota kuva {{value1}}:stä","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"fi","translation":"Muokkaa arvoa {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"fi","translation":"Kirjaa arvo {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"fi","translation":"Käytä arvoa {{value1}} kevyesti","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"fi","translation":"Arvon {{value1}} keskimääräinen vakaus on {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"fi","translation":"Arvo {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"fi","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"fi","translation":"{{value1}}・Chat (chatti)","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"fi","translation":"{{value1}}・Kuukausittainen tarkistusluonnos","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"fi","translation":"{{value1}}・Muokkaa {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"fi","translation":"{{value1}}・Viikoittainen raportti","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"fi","translation":"{{value1}} kappaletta・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"fi","translation":"Kokeile {{value1}} kertaa uudelleen. Manuaalinen kirjaus on edelleen käytettävissä.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"fi","translation":"Kokeile {{value1}} kertaa uudelleen. Jos jatkat, tarkista AI-palvelun toimintatila.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"fi","translation":"{{value1}} Poista kuva","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"fi","translation":"{{value1}} minuuttia","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"fi","translation":"{{value1}} kertaa","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"fi","translation":"{{value1}} kertaa・Keskimääräinen saavutusaste {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"fi","translation":"Analysoi {{value1}} kuvaa yhdessä. Ei voi antaa lopullisia tuloksia, kuten kehon rasvaprosenttia.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"fi","translation":"{{value1}} kuvaa","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"fi","translation":"{{value1}} kuvan ottaminen","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"fi","translation":"{{value1}} askelta","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"fi","translation":"\"-\" tarkoittaa, että arvoa ei ole mitattu, ja se jätetään pois kokonaismäärästä. \"Tr\" tarkoittaa pientä määrää, jolloin se lasketaan nollaksi.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"fi","translation":"Lisäksi {{value1}} g","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"fi","translation":"Katsomme yhdessä tietojasi.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"fi","translation":"Olen melko hyvässä kunnossa","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"fi","translation":"Olen melko väsynyt","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"fi","translation":"Voimme analysoida tämän. Voit myös lisätä sivun ja takapuolen, jolloin voit tarkistaa tiedot eri näkökulmista.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"fi","translation":"Analysoi tämä sarja","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"fi","translation":"Tarjoan ehdotuksia tämän perusteella.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"fi","translation":"Poista kaikki","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"fi","translation":"Proteiini","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"fi","translation":"Tämä päivitetty tieto huomioidaan huomisen ehdotuksissa.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"fi","translation":"Muut {{value1}} tuote","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"fi","translation":"Tietoja ei ole vielä kerätty.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"fi","translation":"Ei ole mitään tallennettuja arvoja.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"fi","translation":"Arvioi uudelleen","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"fi","translation":"Vyötärönympärys","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"fi","translation":"Lue kameralla","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"fi","translation":"Kameraa ei voi käyttää","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"fi","translation":"Kameran lukeminen ei ole mahdollista","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"fi","translation":"Kalorit","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"fi","translation":"Lasketaan kaloreita","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"fi","translation":"Peruuta","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"fi","translation":"Tila","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"fi","translation":"Varmista, että palvelin URL, API-avain ja API-palvelimen tila ovat oikein.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"fi","translation":"Kuntosalin vierailu","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"fi","translation":"Pystytuki","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"fi","translation":"Sarja","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"fi","translation":"Analysoidaan sarjaa","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"fi","translation":"Sarjan laatu","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"fi","translation":"Sarjan laadun yksityiskohdat","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"fi","translation":"Proteiini {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"fi","translation":"Rintapainot","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"fi","translation":"Tämä on arvio.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"fi","translation":"Nopeus","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"fi","translation":"Kun dataa on kerätty, voit tarkistaa unen, palautumisen ja liikunnan yhdessä.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"fi","translation":"Datan laatu","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"fi","translation":"Keskustelu valmentajan kanssa","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"fi","translation":"Harjoittelu","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"fi","translation":"Harjoittelun analyysi","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"fi","translation":"Harjoitushistoria","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"fi","translation":"Harjoitusohjelma","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"fi","translation":"Harjoituksen intensiteetti","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"fi","translation":"Tarkista, että verkko ja AI-palvelin ovat toiminnassa. AI-laskenta voi kestää jopa 240 sekuntia.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"fi","translation":"Tarkista verkon tila ja palvelimen URL ennen uudelleenyritystä.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"fi","translation":"Tarkista verkon tila ja palvelimen URL.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"fi","translation":"Baarokoodi","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"fi","translation":"Volyymi","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"fi","translation":"Volyymi on täydellisen sarjan paino × toistojen määrä. Jos harjoitusohjelma vaihtelee paljon, älä tee yksinkertaisia vertailuja.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"fi","translation":"Liike","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"fi","translation":"Viestit","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"fi","translation":"Valikko","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"fi","translation":"Aloita valikon avulla","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"fi","translation":"Muistiinpanot","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"fi","translation":"Kirjasto","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"fi","translation":"Ratsipainaminen","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"fi","translation":"Merkinnän määrä","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"fi","translation":"Laske kalorit listasta","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"fi","translation":"Kokeile uudelleen, kun olet palauttanut asetukset. Manuaalinen kirjaus on edelleen käytettävissä.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"fi","translation":"Jos löydät reitin ulkoisessa juoksussa, näytetään etäisyys, nopeus ja korkeusero.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"fi","translation":"Jalkapainot","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"fi","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"fi","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"fi","translation":"Nousuun käytetty kerros","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"fi","translation":"Yllättävä herääminen","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"fi","translation":"Tärkeimmät mittarit","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"fi","translation":"Subjektiivinen väsymys on korkea","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"fi","translation":"Subjektiivinen väsymys on matala","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"fi","translation":"Subjektiivinen väsymys on normaali","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"fi","translation":"Valitse vain ne tiedot, joita voit käyttää tulevissa ehdotuksissa.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"fi","translation":"Jotta voit hyödyntää tulevia paino-ehdotuksia","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"fi","translation":"Tänään päätetyt kolme asiaa","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"fi","translation":"Tänään tehdyt aktiviteetit","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"fi","translation":"Tämän päivän energian tasapaino","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"fi","translation":"Tänään tehdyt sarjat","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"fi","translation":"Tämän päivän subjektiivinen väsymys","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"fi","translation":"Tänään ehdotukset","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"fi","translation":"Muokkaa tänään otettuja kuvia","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"fi","translation":"Lisää tänään otetut kuvat","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"fi","translation":"Tänään on tehty paljon","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"fi","translation":"Heijasta päivän aktiivisuutta","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"fi","translation":"Päivän valmius","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"fi","translation":"Päivän toiminta","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"fi","translation":"Tarkista päivän edistyminen","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"fi","translation":"Päivän ruokailu","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"fi","translation":"Päivän ruokavaihtoehdot","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"fi","translation":"Päivän ruokatavoite","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"fi","translation":"Priorisoi palautumista tänään","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"fi","translation":"Priorisoimme kohtuullisen aktiivisuuden ja pidemmän lepo-ajan.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"fi","translation":"Vähennä rasitusta hieman.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"fi","translation":"Voit valita, että käytät vähemmän painoja ja sarjoja, ja priorisoidaan palautuminen.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"fi","translation":"Tarkista mitä tänään tehdään.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"fi","translation":"Tällä viikolla","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"fi","translation":"Tällä viikolla {{value1}} kertaa・Nykyinen: {{value2}} m","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"fi","translation":"Tällä viikolla {{value1}} kertaa・Kokonaismäärä: {{value2}} kertaa","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"fi","translation":"Viikon yhteenveto","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"fi","translation":"Valinnainen","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"fi","translation":"Keskustelu","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"fi","translation":"Poista keskustelu","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"fi","translation":"Keskusteluhistoriaa ei poisteta.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"fi","translation":"Nämä ovat vain suuntaviivoja. Älä tallenna mittauksia tai kaavioita.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"fi","translation":"Kehon kuva","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"fi","translation":"Kehon kuvan AI-analyysi","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"fi","translation":"Kehon kuvan jakaminen asetuksissa on käytössä poistettu.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"fi","translation":"Et ole vielä ottanut kehon kuvaa.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"fi","translation":"Ota kehon kuva","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"fi","translation":"Analysoi kehon kuva","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"fi","translation":"Tarkista kehon kuva","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"fi","translation":"Jos sinulla on huono olo tai kipuja, priorisoi oma tuntemuksesi lukuja enemmän.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"fi","translation":"Pidä suunnitelmasta kiinni, kun tarkkailet vointiasi.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"fi","translation":"Paino","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"fi","translation":"Paino ja vyötärönympärys voivat vaihdella päivittäin, joten tarkastele muutosta.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"fi","translation":"Kirjaa painosi","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"fi","translation":"Ehdotuksia käytettävistä välineistä","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"fi","translation":"Esimerkki: Valkoinen riisi 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"fi","translation":"Tallenna","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"fi","translation":"Tallennetun kuukausittaisen analyysin näyttäminen","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"fi","translation":"Tallennettu muisti","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"fi","translation":"Et ole tallentanut mitään.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"fi","translation":"Tallennettu muisti ei poista.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"fi","translation":"Poistetaanko kaikki tallennetut muistot?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"fi","translation":"Älä poista","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"fi","translation":"Tallennus epäonnistui","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"fi","translation":"Luottamusarvo","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"fi","translation":"Arvo","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"fi","translation":"Kun lisäät arvon, tässä näkyy tulos.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"fi","translation":"Liikkuvuuden tarkistus","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"fi","translation":"Vertaa vaihtoehtoja laskemalla ensin paino yhden asteen alhaisemmaksi ja tavoite toistoihin, tai pidennämällä lepoa 15–30 sekunnilla.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"fi","translation":"Liikkuvuuden syyt","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"fi","translation":"Energisyys","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"fi","translation":"Syötetyt tiedot","review_note":""}

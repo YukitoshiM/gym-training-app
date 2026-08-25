@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "hu", "translation": "Javított becslés. Nem a tényleges mérés eredménye. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "hu", "translation": "Az utolsó tényleges mérés óta eltelt idő miatt, az változást nem lehet biztosan megállapítani, ezért a tartományt szélesebben használjuk.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "hu", "translation": "A magasság, súly, életkor és nem alapján számított átlagos értékekre hivatkozunk, nem a személyes testsúly százalékos értéke.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "hu", "translation": "Becsült", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "hu", "translation": "Javított becslés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "hu", "translation": "Javított tartomány, nem mérés eredménye. Csak akkor mentve, ha megtekinted a tartalmat.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "hu", "translation": "Menteni a javított becslést?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "hu", "translation": "Javítottként mentés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "hu", "translation": "{{value1}} {{value2}}. A tényleges mérést nem cseréli le.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "hu", "translation": "Tervezett jelentések", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "hu", "translation": "Heti jelentés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "hu", "translation": "Nap", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "hu", "translation": "Hónapra vonatkozó jelentés", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "hu", "translation": "Dátum", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "hu", "translation": "{{value1}} nap", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "hu", "translation": "Értesítés időpontja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "hu", "translation": "A tervszerű időpont után, amikor először nyitod meg az alkalmazást, automatikusan generálódik. Ha nem tud kapcsolni az AI-hez, a helyi összefoglalót használja.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "hu", "translation": "Beállítások ellenőrzése szükséges", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "hu", "translation": "Újrapróbálhatod", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "hu", "translation": "A felhasználási limitet felhasználtad", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "hu", "translation": "A felhasználási limit még nem fogyott el", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "hu", "translation": "Tudományos bizonyíték {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "hu", "translation": "Nem elegendő közvetlen bizonyíték, ezért a rekordot preferáljuk.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "hu", "translation": "Ez a javaslat nem tartalmaz közvetlenül használható bizonyítékot.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "hu", "translation": "Nem áll rendelkezésre tudományos bizonyíték, ezért a rekord és az általános elvek alapján javasolunk.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "hu", "translation": "Testméret egység", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

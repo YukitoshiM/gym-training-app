@@ -44,7 +44,7 @@ struct WatchSetControlRow: View {
                         in: Circle()
                     )
 
-                Text("目標 \(formatWeight(targetWeight, unit: unit)) × \(targetReps)回")
+                Text(L10n.string("watch_widget.ae259f92b4e5", fallback: "目標 {{value1}} × {{value2}}回", values: [String(describing: formatWeight(targetWeight, unit: unit)), String(describing: targetReps)]))
                     .font(.caption2)
                     .foregroundStyle(WatchAppTheme.mutedInk)
                     .accessibilityIdentifier("watchSetTarget-\(exerciseSortOrder)-\(setSortOrder)")
@@ -65,7 +65,7 @@ struct WatchSetControlRow: View {
                     }
                     .buttonStyle(.bordered)
                     .font(.caption2)
-                    .accessibilityLabel("開始前にテンポを設定")
+                    .accessibilityLabel(L10n.string("watch_widget.2f3d8874afc6", fallback: "開始前にテンポを設定"))
                     .accessibilityValue(tempoStatusTitle(for: set))
                     .accessibilityIdentifier("watchSetTempoEntry-\(exerciseSortOrder)-\(setSortOrder)")
                 }
@@ -75,14 +75,14 @@ struct WatchSetControlRow: View {
                         workoutStore.startSet(exerciseID: exercise.id, setID: set.id)
                     }
                 } label: {
-                    Label("セット開始", systemImage: "play.fill")
+                    Label(L10n.string("watch_widget.f76b7ad40815", fallback: "セット開始"), systemImage: "play.fill")
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(WatchAppTheme.positive)
                 .accessibilityIdentifier("watchSetStart-\(exerciseSortOrder)-\(setSortOrder)")
             } else {
                 if let set = workoutSet {
-                    Text("実績 \(formatWeight(set.actualWeight, unit: unit)) × \(set.actualReps)回")
+                    Text(L10n.string("watch_widget.3e06adb84ec0", fallback: "実績 {{value1}} × {{value2}}回", values: [String(describing: formatWeight(set.actualWeight, unit: unit)), String(describing: set.actualReps)]))
                         .font(.headline)
                         .accessibilityIdentifier("watchSetActual-\(exerciseSortOrder)-\(setSortOrder)")
                 }
@@ -117,7 +117,7 @@ struct WatchSetControlRow: View {
                         WatchRPESelectionView(
                             exerciseID: exercise.id,
                             setID: set.id,
-                            currentRPE: set.rpe
+                            currentRPE: set.rpe ?? set.targetRPE
                         )
                     case .tempo:
                         WatchTempoEntryView(
@@ -142,12 +142,12 @@ struct WatchSetControlRow: View {
             return ""
         }
         if set.isCompleted {
-            return "完了"
+            return L10n.string("watch_widget.01657c68d2fc", fallback: "完了")
         }
         if set.startedAt != nil {
-            return "実績入力中"
+            return L10n.string("watch_widget.c8d66636dee6", fallback: "実績入力中")
         }
-        return "未開始"
+        return L10n.string("watch_widget.2c96777bbcd1", fallback: "未開始")
     }
 
     private var statusColor: Color {
@@ -184,7 +184,7 @@ struct WatchSetControlRow: View {
                                 )
                             } label: {
                                 Label(
-                                    "推定\(estimatedReps)回を反映",
+                                    L10n.string("watch_widget.3178ee43fe66", fallback: "推定{{value1}}回を反映", values: [String(describing: estimatedReps)]),
                                     systemImage: "arrow.uturn.backward.circle"
                                 )
                             }
@@ -209,7 +209,7 @@ struct WatchSetControlRow: View {
                                 isCompleted: false
                             )
                         } label: {
-                            Label("修正", systemImage: "pencil")
+                            Label(L10n.string("watch_widget.75b83d4abde6", fallback: "修正"), systemImage: "pencil")
                         }
                         .buttonStyle(.bordered)
                         .accessibilityIdentifier("watchSetComplete-\(exerciseSortOrder)-\(setSortOrder)")
@@ -235,12 +235,12 @@ struct WatchSetControlRow: View {
                     }
                     .buttonStyle(.bordered)
                     .font(.caption2)
-                    .accessibilityLabel("テンポを設定")
+                    .accessibilityLabel(L10n.string("watch_widget.2ab8c8962b18", fallback: "テンポを設定"))
                     .accessibilityIdentifier("watchSetTempoEntry-\(exerciseSortOrder)-\(setSortOrder)")
 
                     if let estimate = workoutStore.motionEstimate(exerciseID: setIDPair.exerciseID, setID: setIDPair.setID) {
                         Label(
-                            "動作推定 \(estimate.estimatedReps)回・信頼度 \(Int(estimate.confidence * 100))%",
+                            L10n.string("watch_widget.4690f738b016", fallback: "動作推定 {{value1}}回・信頼度 {{value2}}%", values: [String(describing: estimate.estimatedReps), String(describing: Int(estimate.confidence * 100))]),
                             systemImage: "sensor.tag.radiowaves.forward"
                         )
                         .font(.caption2)
@@ -250,7 +250,7 @@ struct WatchSetControlRow: View {
 
                     if workoutStore.isSetCompletionSuggested,
                        workoutStore.motionEstimate(exerciseID: setIDPair.exerciseID, setID: setIDPair.setID) != nil {
-                        Label("動作停止を検知しました", systemImage: "checkmark.circle")
+                        Label(L10n.string("watch_widget.c29bd2f0c3ed", fallback: "動作停止を検知しました"), systemImage: "checkmark.circle")
                             .font(.caption2.bold())
                             .foregroundStyle(WatchAppTheme.warning)
                             .accessibilityIdentifier("watchSetCompletionSuggestion")
@@ -274,7 +274,7 @@ struct WatchSetControlRow: View {
                                 isCompleted: true
                             )
                         } label: {
-                            Label("完了", systemImage: "checkmark")
+                            Label(L10n.string("watch_widget.01657c68d2fc", fallback: "完了"), systemImage: "checkmark")
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(WatchAppTheme.positive)
@@ -296,7 +296,7 @@ struct WatchSetControlRow: View {
     private func actualValueControls(for set: WatchWorkoutSetSnapshot) -> some View {
         VStack(spacing: 8) {
             HStack {
-                Text("重量")
+                Text(L10n.string("watch_widget.74211dc96bd5", fallback: "重量"))
                     .frame(width: 32, alignment: .leading)
 
                 Spacer()
@@ -306,12 +306,12 @@ struct WatchSetControlRow: View {
                 } label: {
                     Label(formatWeight(set.actualWeight, unit: unit), systemImage: "dial.medium")
                 }
-                .accessibilityLabel("重量をリールで設定")
+                .accessibilityLabel(L10n.string("watch_widget.7d01b80b03ac", fallback: "重量をリールで設定"))
                 .accessibilityIdentifier("watchSetWeightEntry-\(exerciseSortOrder)-\(setSortOrder)")
             }
 
             HStack {
-                Text("回数")
+                Text(L10n.string("watch_widget.83fdf5d78dd0", fallback: "回数"))
                     .frame(width: 32, alignment: .leading)
 
                 Spacer()
@@ -319,9 +319,9 @@ struct WatchSetControlRow: View {
                 Button {
                     activeEditor = .reps
                 } label: {
-                    Label("\(set.actualReps)回", systemImage: "dial.medium")
+                    Label(L10n.string("watch_widget.672403542889", fallback: "{{value1}}回", values: [String(describing: set.actualReps)]), systemImage: "dial.medium")
                 }
-                .accessibilityLabel("回数をリールで設定")
+                .accessibilityLabel(L10n.string("watch_widget.02ce68bb4689", fallback: "回数をリールで設定"))
                 .accessibilityIdentifier("watchSetRepsEntry-\(exerciseSortOrder)-\(setSortOrder)")
             }
         }
@@ -330,21 +330,23 @@ struct WatchSetControlRow: View {
     }
 
     private func rpeTitle(for set: WatchWorkoutSetSnapshot) -> String {
-        guard let rpe = set.rpe else {
-            return "RPE"
+        if let rpe = set.rpe {
+            return "RPE \(rpe.formatted(.number.precision(.fractionLength(0...1))))"
         }
-
-        return "RPE \(rpe.formatted(.number.precision(.fractionLength(0...1))))"
+        if let targetRPE = set.targetRPE {
+            return "RPE \(targetRPE.formatted(.number.precision(.fractionLength(0...1))))"
+        }
+        return "RPE"
     }
 
     private func tempoStatusTitle(for set: WatchWorkoutSetSnapshot) -> String {
         guard let concentric = set.plannedConcentricSeconds,
               let eccentric = set.plannedEccentricSeconds,
               let beatSpeed = set.plannedTempoBeatSpeed else {
-            return "テンポ"
+            return L10n.string("watch_widget.d7e6f512c71c", fallback: "テンポ")
         }
 
-        return "上\(concentric)s・下\(eccentric)s・\(beatSpeed)回/秒"
+        return L10n.string("watch_widget.f1b303fe38bd", fallback: "上{{value1}}s・下{{value2}}s・{{value3}}回/秒", values: [String(describing: concentric), String(describing: eccentric), String(describing: beatSpeed)])
     }
 }
 
@@ -362,12 +364,12 @@ struct WatchLiveMetricsView: View {
                     tint: WatchAppTheme.critical
                 )
                 CompactWatchLiveMetric(
-                    value: metrics.averageHeartRate.map { "平均\(Int($0))" } ?? "平均-",
+                    value: metrics.averageHeartRate.map { L10n.string("watch_widget.a8407dcee209", fallback: "平均{{value1}}", values: [String(describing: Int($0))]) } ?? L10n.string("watch_widget.316ef65deb04", fallback: "平均-"),
                     systemImage: "heart",
                     tint: WatchAppTheme.secondaryAccent
                 )
                 CompactWatchLiveMetric(
-                    value: metrics.maximumHeartRate.map { "最大\(Int($0))" } ?? "最大-",
+                    value: metrics.maximumHeartRate.map { L10n.string("watch_widget.240979de36e1", fallback: "最大{{value1}}", values: [String(describing: Int($0))]) } ?? L10n.string("watch_widget.4abcf3c60406", fallback: "最大-"),
                     systemImage: "heart.circle",
                     tint: WatchAppTheme.warning
                 )
@@ -390,7 +392,7 @@ struct WatchLiveMetricsView: View {
                 )
             }
 
-            if statusMessage != "センサー計測中" {
+            if statusMessage != L10n.string("watch_widget.2e0ad9fc3b1a", fallback: "センサー計測中") {
                 Text(statusMessage)
                     .font(.caption2)
                     .foregroundStyle(WatchAppTheme.mutedInk)
@@ -440,31 +442,31 @@ struct WatchSetSensorSummaryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             if let estimatedReps = summary.estimatedReps {
-                Label("動作推定 \(estimatedReps)回", systemImage: "sensor.tag.radiowaves.forward")
+                Label(L10n.string("watch_widget.86202b9c17fc", fallback: "動作推定 {{value1}}回", values: [String(describing: estimatedReps)]), systemImage: "sensor.tag.radiowaves.forward")
             }
             if let averageHeartRate = summary.averageHeartRate {
-                Label("セット平均 \(Int(averageHeartRate)) bpm", systemImage: "heart.fill")
+                Label(L10n.string("watch_widget.828c11816565", fallback: "セット平均 {{value1}} bpm", values: [String(describing: Int(averageHeartRate))]), systemImage: "heart.fill")
             }
             if let consistency = summary.movementConsistency {
-                Label("動作の安定 \(Int(consistency * 100))%", systemImage: "waveform.path")
+                Label(L10n.string("watch_widget.21c62ab53877", fallback: "動作の安定 {{value1}}%", values: [String(describing: Int(consistency * 100))]), systemImage: "waveform.path")
             }
             if let concentric = summary.averageConcentricDuration,
                let eccentric = summary.averageEccentricDuration {
                 Label(
-                    "上げ \(concentric.formatted(.number.precision(.fractionLength(1))))秒・下げ \(eccentric.formatted(.number.precision(.fractionLength(1))))秒",
+                    L10n.string("watch_widget.1ba7a8ff8414", fallback: "上げ {{value1}}秒・下げ {{value2}}秒", values: [String(describing: concentric.formatted(.number.precision(.fractionLength(1)))), String(describing: eccentric.formatted(.number.precision(.fractionLength(1))))]),
                     systemImage: "metronome"
                 )
             }
             if let range = summary.relativeRangeOfMotion,
                let consistency = summary.rangeOfMotionConsistency {
-                Label("相対可動域 \(Int(range * 100))%・一貫性 \(Int(consistency * 100))%", systemImage: "arrow.up.and.down")
+                Label(L10n.string("watch_widget.0992ae1fad52", fallback: "相対可動域 {{value1}}%・一貫性 {{value2}}%", values: [String(describing: Int(range * 100)), String(describing: Int(consistency * 100))]), systemImage: "arrow.up.and.down")
             }
             if let velocityLoss = summary.velocityLossPercent {
-                Label("動作速度変化 \(velocityLoss.formatted(.number.precision(.fractionLength(0))))%", systemImage: "speedometer")
+                Label(L10n.string("watch_widget.0d7c2e67eb1b", fallback: "動作速度変化 {{value1}}%", values: [String(describing: velocityLoss.formatted(.number.precision(.fractionLength(0))))]), systemImage: "speedometer")
             }
             if let candidate = summary.exerciseCandidateName,
                let confidence = summary.exerciseCandidateConfidence {
-                Label("種目候補 \(candidate) \(Int(confidence * 100))%", systemImage: "checkmark.circle")
+                Label(L10n.string("watch_widget.12f8054dc126", fallback: "種目候補 {{value1}} {{value2}}%", values: [String(describing: candidate), String(describing: Int(confidence * 100))]), systemImage: "checkmark.circle")
             }
         }
         .font(.caption2)

@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"vi","translation":"{{value1}} mục","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"vi","translation":"{{value1}}: Không tìm thấy lần đến phòng gym hoặc buổi tập vào ngày đã lên lịch.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"vi","translation":"Thời lượng buổi tập","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"vi","translation":"Mục tiêu dinh dưỡng hằng ngày","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"vi","translation":"Ghi nhớ động tác qua 3 buổi tập","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"vi","translation":"Tạo buổi tập với AI","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"vi","translation":"Các đề xuất hôm nay vẫn dùng được khi không có AI.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"vi","translation":"Hỏi AI về trạng thái hiện tại của bạn","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"vi","translation":"Hỏi AI","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"vi","translation":"Dữ liệu gửi đến AI","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"vi","translation":"Huấn luyện viên AI chỉ tạo kế hoạch tập với thiết bị bạn đã chọn. Luôn có ít nhất một thiết bị được chọn.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"vi","translation":"Tạo nhận xét hằng tuần bằng máy chủ AI","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"vi","translation":"Đã kết nối máy chủ AI","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"vi","translation":"Đang chuẩn bị mô hình AI","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"vi","translation":"Không thể dùng bản nháp AI và nhận xét hằng tuần, nhưng bạn vẫn có thể lưu mục nhập thủ công.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"vi","translation":"Để dùng bản nháp AI và nhận xét hằng tuần, hãy bật tính năng AI rồi kiểm tra kết nối.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"vi","translation":"Cập nhật AI {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"vi","translation":"Kết nối AI","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"vi","translation":"Tính năng AI đang tắt","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"vi","translation":"Dùng tính năng AI","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"vi","translation":"AI đang xem xét","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"vi","translation":"AI đã xem xét","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"vi","translation":"Đặt lại cài đặt AI về mặc định","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"vi","translation":"Khóa API","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"vi","translation":"Khóa API chỉ được dùng để lấy mã thông báo ngắn hạn và không được gửi trong các yêu cầu AI thông thường.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"vi","translation":"Máy chủ API đang phản hồi, nhưng mô hình cần thiết hiện không khả dụng.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"vi","translation":"Máy chủ API đang phản hồi, nhưng mô hình hỗ trợ bữa ăn và báo cáo hiện không khả dụng.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"vi","translation":"Máy chủ API đang phản hồi, nhưng tính năng ước tính calo từ ảnh hiện không khả dụng.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"vi","translation":"Bài tập Apple Health","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"vi","translation":"Đồng bộ buổi tập với Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"vi","translation":"Nhật ký Apple Watch","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"vi","translation":"Apple Watch và cảm biến","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"vi","translation":"Báo cáo quảng cáo BodyMode","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"vi","translation":"Bắt đầu với BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"vi","translation":"AI quản lý BodyMode","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"vi","translation":"Cách Google dùng dữ liệu quảng cáo","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"vi","translation":"Chính sách quyền riêng tư của Google","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"vi","translation":"Xem lại mục chia sẻ với Health","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"vi","translation":"Ước tính số lần lặp bằng Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"vi","translation":"Phản hồi xúc giác trên Apple Watch","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"vi","translation":"Hoàn thành {{value1}} / {{value2}}","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"vi","translation":"Đạt {{value1}} / {{value2}}","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"vi","translation":"Hoàn thành {{value1}}/6","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"vi","translation":"{{value1}}/{{value2}} lần lặp","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"vi","translation":"{{value1}}{{value2}} lần lặp","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"vi","translation":"Đề xuất từ {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"vi","translation":"{{value1}} đang xem xét · Có thể dùng đề xuất","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"vi","translation":"Đã được {{value1}} xem xét","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"vi","translation":"Với {{value1}}, hãy giải thích vì sao hôm nay có đề xuất này và đưa ra cách điều chỉnh.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"vi","translation":"Hỏi {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"vi","translation":"Đề xuất của {{value1}}","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"vi","translation":"Đánh giá của {{value1}}","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"vi","translation":"Đề xuất cơ bản của {{value1}}","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"vi","translation":"Đang chờ {{value1}} xem xét · Có thể dùng đề xuất","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"vi","translation":"Báo cáo hằng tuần của {{value1}}","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"vi","translation":"Đặt {{value1}} bằng bộ chọn","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"vi","translation":"Thay {{value1}} bằng hành động khác","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"vi","translation":"Có thể dùng {{value1}}. Đã xác minh {{value2}} loại huấn luyện viên.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"vi","translation":"Vì sao {{value1}} được đề xuất","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"vi","translation":"Mở {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"vi","translation":"{{value1}} hiệp","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"vi","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"vi","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"vi","translation":"{{value1}} · Đã cập nhật {{value2}}","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"vi","translation":"{{value1}} · {{value2}} loại thiết bị","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"vi","translation":"{{value1}} · {{value2}} ngày/tuần","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"vi","translation":"{{value1}} mục","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"vi","translation":"{{value1}} lần","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"vi","translation":"Đã hoàn thành {{value1}}","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"vi","translation":"{{value1}} bài tập","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"vi","translation":"{{value1}} bài tập / {{value2}} hiệp","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"vi","translation":"Hãy để BodyMode lo phần còn lại. Mỗi ngày, ứng dụng đề xuất tối đa ba hành động.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"vi","translation":"Dữ liệu giúp đánh giá đáng tin cậy hơn","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"vi","translation":"Áp dụng huấn luyện viên được đề xuất","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"vi","translation":"Bắt đầu ngày mới tại đây","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"vi","translation":"Bắt đầu buổi tập này","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"vi","translation":"Dùng mục tiêu này","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"vi","translation":"Huấn luyện viên cho mục tiêu này","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"vi","translation":"Vì sao hành động này được chọn","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"vi","translation":"Tất cả huấn luyện viên","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"vi","translation":"Khác","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"vi","translation":"Protein","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"vi","translation":"Những việc không thể làm","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"vi","translation":"Được tạo trước tiên từ dữ liệu trên thiết bị, AI chỉ điều chỉnh khi cần.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"vi","translation":"Lưu buổi tập thường dùng","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"vi","translation":"Calo","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"vi","translation":"Calo / Dinh dưỡng đa lượng","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"vi","translation":"Đang chuẩn bị mô hình ước tính calo","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"vi","translation":"Hủy","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"vi","translation":"Ghi nhanh","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"vi","translation":"URL máy chủ","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"vi","translation":"Tôi đã đến phòng gym","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"vi","translation":"Lần đến phòng gym","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"vi","translation":"Tự động ghi lại lần đến phòng gym","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"vi","translation":"Bỏ qua","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"vi","translation":"Nếu không dùng được cảm biến, bạn vẫn có thể nhập thủ công mức tạ, số lần lặp và RPE. Chế độ lấy mẫu tiết kiệm pin làm giảm tần suất cập nhật ước tính chuyển động.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"vi","translation":"Quảng cáo thử nghiệm","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"vi","translation":"Dữ liệu","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"vi","translation":"Mức đầy đủ của dữ liệu {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"vi","translation":"Huấn luyện viên: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"vi","translation":"Buổi tập","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"vi","translation":"Hoàn thành 3 buổi tập","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"vi","translation":"Mở danh sách buổi tập","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"vi","translation":"Bắt đầu tập","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"vi","translation":"Phiên bản: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"vi","translation":"Không cá nhân hóa","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"vi","translation":"Đã tắt cá nhân hóa","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"vi","translation":"Tập tự do","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"vi","translation":"Quyền riêng tư","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"vi","translation":"Hồ sơ","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"vi","translation":"Trợ giúp","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"vi","translation":"Trang chủ","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"vi","translation":"Các buổi tập của bạn ở đây","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"vi","translation":"Chọn hoặc bắt đầu một buổi tập","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"vi","translation":"Chọn nơi gửi, chẳng hạn như Mail, rồi gửi báo cáo đến Bộ phận hỗ trợ BodyMode. Báo cáo không chứa dữ liệu cơ thể hoặc sức khỏe.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"vi","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"vi","translation":"Nội dung gây khó chịu","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"vi","translation":"Lỗi không xác định","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"vi","translation":"Nội dung không phù hợp","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"vi","translation":"Báo cáo quảng cáo không phù hợp","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"vi","translation":"Không tìm thấy buổi tập đã lên lịch","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"vi","translation":"Lần này không thay đổi","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"vi","translation":"Không thay đổi lần này","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"vi","translation":"Hôm nay: {{value1}} · {{value2}} hiệp","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"vi","translation":"Bắt đầu học lại từ hôm nay","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"vi","translation":"3 việc hôm nay","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"vi","translation":"Đang chuẩn bị 3 việc hôm nay","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"vi","translation":"Buổi tập hôm nay","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"vi","translation":"Hoàn thành buổi tập hôm nay","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"vi","translation":"Thực hiện buổi tập hôm nay","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"vi","translation":"Bắt đầu buổi tập hôm nay","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"vi","translation":"Mục nhập hôm nay","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"vi","translation":"Đề xuất hôm nay","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"vi","translation":"Trạng thái hôm nay","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"vi","translation":"Nhật ký hôm nay","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"vi","translation":"Thể trạng hôm nay","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"vi","translation":"Tiến độ hôm nay","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"vi","translation":"Chuyển đến hôm nay","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"vi","translation":"Các việc hôm nay ở đây","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"vi","translation":" mục","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"vi","translation":"Nghỉ","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"vi","translation":"Thời gian nghỉ","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"vi","translation":"Đặt thời gian nghỉ bằng bộ chọn","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"vi","translation":"Ảnh tiến độ","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"vi","translation":"Thành phần cơ thể","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"vi","translation":"Cân nặng","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"vi","translation":"Cân nặng {{value1}} + tạ thêm {{value2}} = tải tham chiếu {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"vi","translation":"Cân nặng {{value1}} - hỗ trợ {{value2}} = tải tham chiếu {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"vi","translation":"Cân nặng · Không bắt buộc","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"vi","translation":"Cải thiện cân nặng và vòng eo với tốc độ bền vững","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"vi","translation":"Cân nặng · Vòng eo · Bữa ăn · Ảnh tiến độ","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"vi","translation":"Mục tiêu của bạn là gì?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"vi","translation":"Tạo","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"vi","translation":"Hướng dẫn sử dụng","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"vi","translation":"Chúng tôi sẽ tạo buổi tập bằng thiết bị hiện có","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"vi","translation":"Thiết bị hiện có","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"vi","translation":"Chỉ loại tính năng bạn dùng được lưu trên thiết bị. Cân nặng, ảnh, chi tiết bữa ăn, nhịp tim, vị trí và ghi chú không được ghi lại hoặc tự động gửi đi.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"vi","translation":"Lưu","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"vi","translation":"Đã xem xét dựa trên dữ liệu đã lưu của bạn.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"vi","translation":"Tách riêng dữ liệu sức khỏe khỏi dữ liệu quảng cáo","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"vi","translation":"Ghi nhanh vài mục ngay bây giờ và xem lại tất cả sau.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"vi","translation":"Xong","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"vi","translation":"Xóa tất cả dữ liệu?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"vi","translation":"Xóa tất cả dữ liệu","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"vi","translation":"Xuất tất cả bản ghi dưới dạng JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"vi","translation":"Bắt đầu bằng buổi tập toàn thân","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"vi","translation":"Ảnh","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"vi","translation":"Phân tích ảnh ngay","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"vi","translation":"Theo dõi tiến độ bằng ảnh và số đo","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"vi","translation":"Ảnh và số đo ở đây","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"vi","translation":"Ghi ảnh và số đo","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"vi","translation":"Chụp ảnh","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"vi","translation":"Cải thiện vóc dáng, vòng eo và độ cân đối cơ bắp","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"vi","translation":" phút","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"vi","translation":"phút:giây","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"vi","translation":"Tạo buổi tập cho người mới","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"vi","translation":"Xem chi tiết đánh giá","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"vi","translation":"Chọn hành động khác","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"vi","translation":"Có những thiết bị nào?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"vi","translation":"Chia sẻ dữ liệu phân tích sử dụng","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"vi","translation":"Xóa dữ liệu sử dụng","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"vi","translation":"Xuất dữ liệu sử dụng","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"vi","translation":"Mức ưu tiên trong lời khuyên","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"vi","translation":"Chuyển động","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"vi","translation":"Thông tin đã dùng","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"vi","translation":"Đang kiểm tra trạng thái đồng ý","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"vi","translation":"Phù hợp với ai","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"vi","translation":"Chọn theo thiết bị hoặc nhóm cơ","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"vi","translation":" lần lặp","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"vi","translation":"Phục hồi","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"vi","translation":"Số lần lặp","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"vi","translation":"Đặt số lần lặp bằng bộ chọn","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"vi","translation":"Quảng cáo thử nghiệm cố định","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"vi","translation":"Bắt đầu sử dụng","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"vi","translation":"Thông tin cơ bản · Không bắt buộc","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"vi","translation":"Gửi báo cáo","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"vi","translation":"Lý do báo cáo","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"vi","translation":"Theo dõi thay đổi tại đây","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"vi","translation":"Chọn chỉ số cần theo dõi","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"vi","translation":"Thay đổi","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"vi","translation":"Lịch sử thay đổi","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"vi","translation":"Bắt đầu","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"vi","translation":"Việc học đang tạm dừng. Dữ liệu trước đây của bạn chưa bị xóa.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"vi","translation":"Xong","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"vi","translation":"Đã hoàn thành {{value1}}","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"vi","translation":"Đã hoàn thành","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"vi","translation":"Đánh dấu hoàn thành","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"vi","translation":"Đã hoàn thành","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"vi","translation":"Không thực hiện","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"vi","translation":"Thực hiện","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"vi","translation":"Bạn càng thực hiện nhiều, bước tiếp theo càng rõ ràng","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"vi","translation":"Kết quả của bạn giúp cải thiện đề xuất AI tiếp theo","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"vi","translation":"Đã mở rộng","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"vi","translation":"Lịch sử","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"vi","translation":" tuổi","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"vi","translation":"Không phù hợp với độ tuổi","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"vi","translation":"Chưa cấu hình ID quảng cáo","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"vi","translation":"Quảng cáo và cách dùng dữ liệu","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"vi","translation":"Cài đặt quyền riêng tư quảng cáo","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"vi","translation":"Chưa có sự đồng ý về quảng cáo.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"vi","translation":"Tên sản phẩm hoặc vấn đề bạn nhận thấy trong quảng cáo","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"vi","translation":"Quảng cáo chỉ hiển thị trên iPhone. Dữ liệu sức khỏe, bữa ăn, ảnh và vị trí trong BodyMode không được dùng để chọn quảng cáo.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"vi","translation":"Báo cáo quảng cáo","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"vi","translation":"Đang tải quảng cáo","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"vi","translation":"Quảng cáo và quyền riêng tư","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"vi","translation":"Nhà cung cấp quảng cáo","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"vi","translation":"Để phân phối quảng cáo, Google nhận địa chỉ IP, thông tin cơ bản về thiết bị và ứng dụng, dữ liệu chẩn đoán và hiệu suất SDK, cùng dữ liệu hiển thị và tương tác quảng cáo. Vị trí gần đúng có thể được suy ra từ địa chỉ IP. Cân nặng, nhịp tim, giấc ngủ, bữa ăn, ảnh, buổi tập, mục tiêu, dữ liệu GPS và vị trí phòng gym được ghi trong BodyMode không được đưa vào yêu cầu quảng cáo.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"vi","translation":"Điều chỉnh thời gian nghỉ bằng nhịp tim và RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"vi","translation":"Nhịp tim và chuyển động","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"vi","translation":"Giới tính","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"vi","translation":"Giới tính · Không bắt buộc","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"vi","translation":"Quay lại","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"vi","translation":"Bạn vẫn có thể ghi thủ công.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"vi","translation":"Huấn luyện viên: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"vi","translation":"Huấn luyện viên phụ trách","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"vi","translation":"Hỏi huấn luyện viên của bạn","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"vi","translation":"Cách huấn luyện","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"vi","translation":"Khi đổi loại huấn luyện viên, các dữ liệu AI ưu tiên và đề xuất đưa ra cũng sẽ thay đổi.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"vi","translation":"Huấn luyện viên phụ trách: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"vi","translation":"Không chỉ định","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"vi","translation":"Kiểm tra kết nối","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"vi","translation":"Làm theo buổi tập được đề xuất trên iPhone hoặc Apple Watch.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"vi","translation":"Chỉ đặt lại việc học đề xuất","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"vi","translation":"Chỉ dùng quảng cáo biểu ngữ, không gây gián đoạn","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"vi","translation":"Ghi số đo","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"vi","translation":" ngày","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"vi","translation":"Xem lại theo ngày","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"vi","translation":"Hoạt động hằng ngày","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"vi","translation":"Xem lại đề xuất hằng ngày","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"vi","translation":"Không thể xuất","review_note":""}

@@ -10,10 +10,10 @@ enum BodyPhotoAngle: String, CaseIterable, Identifiable, Codable {
 
     var displayName: String {
         switch self {
-        case .front: "正面"
-        case .side: "横"
-        case .back: "背面"
-        case .abdomen: "腹部アップ"
+        case .front: L10n.string("domain_catalog.67d08c097a1f", fallback: "正面")
+        case .side: L10n.string("domain_catalog.e62601fe3b43", fallback: "横")
+        case .back: L10n.string("domain_catalog.57667c7af199", fallback: "背面")
+        case .abdomen: L10n.string("domain_catalog.01537dd2ed14", fallback: "腹部アップ")
         }
     }
 }

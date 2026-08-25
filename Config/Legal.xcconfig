@@ -1,0 +1,7 @@
+BODYMODE_PRIVACY_POLICY_URL =
+BODYMODE_TERMS_URL =
+BODYMODE_SUPPORT_URL =
+BODYMODE_SUPPORT_EMAIL =
+
+// Public deployment values stay outside Git. See Legal.local.xcconfig.example.
+#include? "Legal.local.xcconfig"

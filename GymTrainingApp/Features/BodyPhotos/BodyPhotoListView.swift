@@ -18,13 +18,13 @@ struct BodyPhotoListView: View {
                 Section {
                     HStack(spacing: 10) {
                         MetricPill(
-                            title: "今日のセット",
+                            title: L10n.string("health_meals_body_ai.452d17cd1b90", fallback: "今日のセット"),
                             value: appStore.bodyPhotoSet() == nil ? "0" : "1",
                             systemImage: "camera",
                             tint: AppTheme.purple
                         )
                         MetricPill(
-                            title: "撮影日数",
+                            title: L10n.string("health_meals_body_ai.ec6849d2b62a", fallback: "撮影日数"),
                             value: "\(appStore.bodyPhotoSets.count)",
                             systemImage: "calendar",
                             tint: AppTheme.blue
@@ -34,12 +34,12 @@ struct BodyPhotoListView: View {
                     .listRowBackground(Color.clear)
                 }
 
-                Section("撮影セット") {
+                Section(L10n.string("health_meals_body_ai.6920fd3d3872", fallback: "撮影セット")) {
                     if appStore.bodyPhotoSets.isEmpty {
                         ContentUnavailableView(
-                            "体型写真はまだありません",
+                            L10n.string("health_meals_body_ai.a45de1210f8a", fallback: "体型写真はまだありません"),
                             systemImage: "camera.viewfinder",
-                            description: Text("正面・横・背面などを1日分のセットとして記録します。")
+                            description: Text(L10n.string("health_meals_body_ai.84df3f0402ab", fallback: "正面・横・背面などを1日分のセットとして記録します。"))
                         )
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
@@ -65,7 +65,7 @@ struct BodyPhotoListView: View {
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
             .background(TrainingBackground())
-            .navigationTitle("体型写真")
+            .navigationTitle(L10n.string("health_meals_body_ai.f47d6f2e6ec3", fallback: "体型写真"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -74,7 +74,7 @@ struct BodyPhotoListView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
-                    .accessibilityLabel(appStore.bodyPhotoSet() == nil ? "今日の撮影セットを追加" : "今日の撮影セットを編集")
+                    .accessibilityLabel(appStore.bodyPhotoSet() == nil ? L10n.string("health_meals_body_ai.4fcfec9e3704", fallback: "今日の撮影セットを追加") : L10n.string("health_meals_body_ai.0e1b8e6dc426", fallback: "今日の撮影セットを編集"))
                     .accessibilityIdentifier("addBodyPhotoButton")
                 }
             }
@@ -108,7 +108,7 @@ private struct BodyPhotoSetRow: View {
                     VStack(alignment: .leading, spacing: 3) {
                         Text(set.date.formatted(.dateTime.year().month().day()))
                             .font(.headline)
-                        Text("\(set.photoEntries.count)枚の撮影セット")
+                        Text(L10n.string("health_meals_body_ai.8ed437093c0a", fallback: "{{value1}}枚の撮影セット", values: [String(describing: set.photoEntries.count)]))
                             .font(.footnote)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
@@ -119,7 +119,7 @@ private struct BodyPhotoSetRow: View {
                 }
 
                 if set.angleEntries.isEmpty {
-                    Label(set.memo.isEmpty ? "写真を追加" : set.memo, systemImage: "camera.viewfinder")
+                    Label(set.memo.isEmpty ? L10n.string("health_meals_body_ai.7b243ff0f863", fallback: "写真を追加") : set.memo, systemImage: "camera.viewfinder")
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.mutedInk)
                 } else {
@@ -161,9 +161,9 @@ private struct BodyPhotoAnalysisStatus: View {
     }
 
     private var title: String {
-        if set.photoEntries.isEmpty { return "写真なし" }
-        if set.needsAnalysis { return set.analysis == nil ? "未分析" : "再分析が必要" }
-        return "分析済み"
+        if set.photoEntries.isEmpty { return L10n.string("health_meals_body_ai.2071566e71be", fallback: "写真なし") }
+        if set.needsAnalysis { return set.analysis == nil ? L10n.string("health_meals_body_ai.1583e5cb8444", fallback: "未分析") : L10n.string("health_meals_body_ai.8ac60e95bd23", fallback: "再分析が必要") }
+        return L10n.string("health_meals_body_ai.0ef0d76a0e8d", fallback: "分析済み")
     }
 
     private var symbol: String {
@@ -180,6 +180,7 @@ private struct BodyPhotoSetDetailView: View {
     @State private var isEditing = false
     @State private var isAnalyzing = false
     @State private var aiError: AIErrorPresentation?
+    @State private var creditAccessIssue: AICreditAccessIssue?
 
     private var set: BodyPhotoSet? {
         appStore.bodyPhotoSet(on: setDate)
@@ -203,9 +204,9 @@ private struct BodyPhotoSetDetailView: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 CoachAttributionLabel(
                                     persona: appStore.userProfile.coachPersona,
-                                    text: "\(appStore.userProfile.coachPersona.displayName)がセット全体を確認"
+                                    text: L10n.string("health_meals_body_ai.d94549194ed1", fallback: "{{value1}}がセット全体を確認", values: [String(describing: appStore.userProfile.coachPersona.displayName)])
                                 )
-                                Text("複数方向の写真をまとめて送ると、正面だけでは分からない姿勢や体型を補い合って確認できます。")
+                                Text(L10n.string("health_meals_body_ai.08aa1158cdcc", fallback: "複数方向の写真をまとめて送ると、正面だけでは分からない姿勢や体型を補い合って確認できます。"))
                                     .font(.subheadline)
                                     .foregroundStyle(AppTheme.mutedInk)
                             }
@@ -217,11 +218,13 @@ private struct BodyPhotoSetDetailView: View {
                     }
 
                     VStack(spacing: 10) {
+                        AICreditCostStatusView(feature: "body_photo", settings: appStore.aiSettings)
+
                         Button {
                             analyze(set)
                         } label: {
                             Label(
-                                isAnalyzing ? "分析中" : (set.analysis == nil ? "このセットを分析" : "写真をまとめて再分析"),
+                                isAnalyzing ? L10n.string("health_meals_body_ai.7c3d20b5d555", fallback: "分析中") : (set.analysis == nil ? L10n.string("health_meals_body_ai.b57fc7605da1", fallback: "このセットを分析") : L10n.string("health_meals_body_ai.d5b6606496a9", fallback: "写真をまとめて再分析")),
                                 systemImage: "sparkles"
                             )
                             .frame(maxWidth: .infinity)
@@ -233,7 +236,7 @@ private struct BodyPhotoSetDetailView: View {
                         Button {
                             isEditing = true
                         } label: {
-                            Label("写真を追加・編集", systemImage: "photo.badge.plus")
+                            Label(L10n.string("health_meals_body_ai.4cf77e9f289c", fallback: "写真を追加・編集"), systemImage: "photo.badge.plus")
                                 .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(.bordered)
@@ -253,6 +256,16 @@ private struct BodyPhotoSetDetailView: View {
                 }
             }
         }
+        .aiCreditRecoverySheet(
+            issue: $creditAccessIssue,
+            settings: appStore.aiSettings,
+            onResolved: {
+                await MainActor.run {
+                    aiError = nil
+                    if let set { analyze(set) }
+                }
+            }
+        )
     }
 
     private func canAnalyze(_ set: BodyPhotoSet) -> Bool {
@@ -271,8 +284,8 @@ private struct BodyPhotoSetDetailView: View {
         isAnalyzing = true
         aiError = nil
         let transmission = AITransmissionRecord(
-            purpose: "体型写真セット解析",
-            sharedCategories: ["体型写真"],
+            purpose: L10n.string("health_meals_body_ai.c7dfdfe56ee4", fallback: "体型写真セット解析"),
+            sharedCategories: [L10n.string("health_meals_body_ai.f47d6f2e6ec3", fallback: "体型写真")],
             itemCount: inputs.count
         )
         appStore.saveAITransmission(transmission)
@@ -287,10 +300,12 @@ private struct BodyPhotoSetDetailView: View {
                         previousPhotos: previousBodyPhotoInputs(appStore: appStore, before: set.date)
                     )
                 appStore.updateBodyPhotoSetAnalysis(on: set.date, comment: comment)
+                appStore.saveMissingBodyPhotoEstimates(from: comment, at: set.date)
                 appStore.updateAITransmission(id: transmission.id, status: .completed)
             } catch {
-                appStore.updateAITransmission(id: transmission.id, status: .failed)
+                appStore.recordAITransmissionFailure(id: transmission.id, error: error)
                 aiError = AIClientError.presentation(for: error)
+                creditAccessIssue = AICreditAccessIssue(error: error)
             }
             isAnalyzing = false
         }
@@ -307,9 +322,9 @@ private struct BodyPhotoMeasurementContextCard: View {
         CardContainer {
             VStack(alignment: .leading, spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Label("同日の実測KPI", systemImage: "ruler")
+                    Label(L10n.string("health_meals_body_ai.6ea10256c1ff", fallback: "同日の実測KPI"), systemImage: "ruler")
                         .font(.headline)
-                    Text("写真は見た目の変化、数値は実測で確認します。")
+                    Text(L10n.string("health_meals_body_ai.c51a6e397751", fallback: "写真は見た目の変化、数値は実測で確認します。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -348,7 +363,7 @@ private struct BodyPhotoMeasurementContextCard: View {
     }
 
     private func valueText(for kind: BodyMetricKind) -> String {
-        guard let entry = entry(for: kind) else { return "記録する" }
+        guard let entry = entry(for: kind) else { return L10n.string("health_meals_body_ai.4c3dac603b36", fallback: "記録する") }
         return AppFormatters.metricValue(entry.value, unit: kind.unit)
     }
 
@@ -368,7 +383,7 @@ private struct BodyPhotoSetOverview: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text("\(set.photoEntries.count)枚")
+                Text(L10n.string("health_meals_body_ai.9260bfe7ab30", fallback: "{{value1}}枚", values: [String(describing: set.photoEntries.count)]))
                     .font(.title2.bold())
                 Spacer()
                 BodyPhotoAnalysisStatus(set: set)
@@ -476,12 +491,13 @@ private struct BodyPhotoEditorView: View {
 
     @State private var imageDataByAngle: [BodyPhotoAngle: Data]
     @State private var entryIDByAngle: [BodyPhotoAngle: UUID]
-    @State private var recordedAtByAngle: [BodyPhotoAngle: Date]
+    @State private var recordedAt: Date
     @State private var removedAngles: Set<BodyPhotoAngle> = []
     @State private var memo: String
     @State private var aiComment: BodyPhotoAIComment?
     @State private var isAnalyzing = false
     @State private var aiError: AIErrorPresentation?
+    @State private var creditAccessIssue: AICreditAccessIssue?
 
     private let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
@@ -495,7 +511,7 @@ private struct BodyPhotoEditorView: View {
             })
         )
         _entryIDByAngle = State(initialValue: Dictionary(uniqueKeysWithValues: entries.map { ($0.angle, $0.id) }))
-        _recordedAtByAngle = State(initialValue: Dictionary(uniqueKeysWithValues: entries.map { ($0.angle, $0.recordedAt) }))
+        _recordedAt = State(initialValue: RecordDatePolicy.normalizedDay(existingSet?.recordedAt ?? Date()))
         _memo = State(initialValue: existingSet?.memo ?? "")
         _aiComment = State(initialValue: existingSet?.analysis)
     }
@@ -504,6 +520,13 @@ private struct BodyPhotoEditorView: View {
         NavigationStack {
             Form {
                 Section {
+                    DatePicker(
+                        L10n.string("health_meals_body_ai.c5deaf60f00d", fallback: "記録日"),
+                        selection: $recordedAt,
+                        in: RecordDatePolicy.allowedRange(),
+                        displayedComponents: .date
+                    )
+
                     BodyPhotoCaptureGuide()
 
                     LazyVGrid(columns: columns, spacing: 10) {
@@ -527,35 +550,37 @@ private struct BodyPhotoEditorView: View {
                         }
                     }
 
-                    Text("正面・横・背面などを同じ日にまとめます。1枚でも保存でき、後から追加できます。")
+                    Text(L10n.string("health_meals_body_ai.4c7bd8cd9b27", fallback: "正面・横・背面などを同じ日にまとめます。1枚でも保存でき、後から追加できます。"))
                         .font(.footnote)
                         .foregroundStyle(AppTheme.mutedInk)
                 } header: {
-                    Text("撮影方向")
+                    Text(L10n.string("health_meals_body_ai.7f4a4ef3a2a5", fallback: "撮影方向"))
                 } footer: {
-                    Text("現在 \(imageDataByAngle.count)/4枚")
+                    Text(L10n.string("health_meals_body_ai.8f378a32aed7", fallback: "現在 {{value1}}/4枚", values: [String(describing: imageDataByAngle.count)]))
                 }
 
-                Section("メモ") {
-                    TextField("撮影条件や見た目のメモ", text: $memo, axis: .vertical)
+                Section(L10n.string("health_meals_body_ai.03b5d7044111", fallback: "メモ")) {
+                    TextField(L10n.string("health_meals_body_ai.71bec5b80d72", fallback: "撮影条件や見た目のメモ"), text: $memo, axis: .vertical)
                         .lineLimit(3, reservesSpace: true)
                         .accessibilityIdentifier("bodyPhotoMemoField")
                 }
 
-                Section("AI分析") {
+                Section(L10n.string("health_meals_body_ai.f74c6003db3a", fallback: "AI分析")) {
                     CoachIdentityView(
                         persona: appStore.userProfile.coachPersona,
-                        role: "体型写真チェック",
-                        detail: "複数方向の写真をまとめて確認します。",
+                        role: L10n.string("health_meals_body_ai.e208549633cc", fallback: "体型写真チェック"),
+                        detail: L10n.string("health_meals_body_ai.4d8687bed4f2", fallback: "複数方向の写真をまとめて確認します。"),
                         avatarSize: 48
                     )
                     .accessibilityIdentifier("bodyPhotoAICoachIdentity")
+
+                    AICreditCostStatusView(feature: "body_photo", settings: appStore.aiSettings)
 
                     Button {
                         analyzeCurrentPhotos()
                     } label: {
                         Label(
-                            isAnalyzing ? "セットを分析中" : (aiComment == nil ? "写真をまとめて分析" : "写真をまとめて再分析"),
+                            isAnalyzing ? L10n.string("health_meals_body_ai.ce7cce7b48e4", fallback: "セットを分析中") : (aiComment == nil ? L10n.string("health_meals_body_ai.ff3c57454258", fallback: "写真をまとめて分析") : L10n.string("health_meals_body_ai.d5b6606496a9", fallback: "写真をまとめて再分析")),
                             systemImage: "sparkles"
                         )
                     }
@@ -568,36 +593,46 @@ private struct BodyPhotoEditorView: View {
                 }
 
                 if let aiComment {
-                    Section("\(appStore.userProfile.coachPersona.displayName)の分析結果") {
+                    Section(L10n.string("health_meals_body_ai.5c0fab317f2b", fallback: "{{value1}}の分析結果", values: [String(describing: appStore.userProfile.coachPersona.displayName)])) {
                         CoachAttributionLabel(
                             persona: appStore.userProfile.coachPersona,
-                            text: "見た目の変化を参考として確認"
+                            text: L10n.string("health_meals_body_ai.d82ca70d9996", fallback: "見た目の変化を参考として確認")
                         )
                         BodyPhotoAICommentContent(comment: aiComment)
                     }
                 }
 
                 if let aiError {
-                    Section("AIエラー") {
+                    Section(L10n.string("health_meals_body_ai.7d80eebb209d", fallback: "AIエラー")) {
                         BodyPhotoAIErrorCard(error: aiError)
                     }
                 }
             }
             .scrollContentBackground(.hidden)
             .background(AppTheme.pageBackground)
-            .navigationTitle(existingSet == nil ? "撮影セットを追加" : "撮影セットを編集")
+            .navigationTitle(existingSet == nil ? L10n.string("health_meals_body_ai.83b51a58d083", fallback: "撮影セットを追加") : L10n.string("health_meals_body_ai.a024d937dc43", fallback: "撮影セットを編集"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("キャンセル") { dismiss() }
+                    Button(L10n.string("health_meals_body_ai.dd84abcb6681", fallback: "キャンセル")) { dismiss() }
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button("保存") { save() }
+                    Button(L10n.string("health_meals_body_ai.1e18f9b0644c", fallback: "保存")) { save() }
                         .disabled(imageDataByAngle.isEmpty && memo.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                         .accessibilityIdentifier("saveBodyPhotoButton")
                 }
             }
+            .aiCreditRecoverySheet(
+                issue: $creditAccessIssue,
+                settings: appStore.aiSettings,
+                onResolved: {
+                    await MainActor.run {
+                        aiError = nil
+                        analyzeCurrentPhotos()
+                    }
+                }
+            )
         }
     }
 
@@ -608,14 +643,15 @@ private struct BodyPhotoEditorView: View {
     }
 
     private var aiHelpText: String {
-        if !appStore.aiSettings.isEnabled { return "AI機能は設定でオフです。写真セットはこのまま保存できます。" }
-        if !appStore.aiSettings.dataSharing.bodyPhotos { return "体型写真のAI共有は設定でオフです。" }
-        if imageDataByAngle.isEmpty { return "写真を1枚以上選ぶと分析できます。複数方向があるほど確認しやすくなります。" }
-        if imageDataByAngle.count == 1 { return "このまま分析できます。横や背面も追加すると、別方向から補って確認できます。" }
-        return "\(imageDataByAngle.count)方向の写真をまとめて分析します。体脂肪率などの数値は断定しません。"
+        if !appStore.aiSettings.isEnabled { return L10n.string("health_meals_body_ai.215d8802d90e", fallback: "AI機能は設定でオフです。写真セットはこのまま保存できます。") }
+        if !appStore.aiSettings.dataSharing.bodyPhotos { return L10n.string("health_meals_body_ai.33222467ebe4", fallback: "体型写真のAI共有は設定でオフです。") }
+        if imageDataByAngle.isEmpty { return L10n.string("health_meals_body_ai.c5c93f735c29", fallback: "写真を1枚以上選ぶと分析できます。複数方向があるほど確認しやすくなります。") }
+        if imageDataByAngle.count == 1 { return L10n.string("health_meals_body_ai.15277ebacd5d", fallback: "このまま分析できます。横や背面も追加すると、別方向から補って確認できます。") }
+        return L10n.string("health_meals_body_ai.7d4f39ef9618", fallback: "{{value1}}方向の写真をまとめて分析します。体脂肪率などの数値は断定しません。", values: [String(describing: imageDataByAngle.count)])
     }
 
     private func analyzeCurrentPhotos() {
+        let normalizedDate = RecordDatePolicy.normalizedDay(recordedAt)
         let inputs = BodyPhotoAngle.allCases.compactMap { angle in
             imageDataByAngle[angle].map { BodyPhotoAnalysisInput(angle: angle, imageData: $0) }
         }
@@ -624,44 +660,47 @@ private struct BodyPhotoEditorView: View {
         isAnalyzing = true
         aiError = nil
         let transmission = AITransmissionRecord(
-            purpose: "体型写真セット解析",
-            sharedCategories: ["体型写真"],
+            purpose: L10n.string("health_meals_body_ai.c7dfdfe56ee4", fallback: "体型写真セット解析"),
+            sharedCategories: [L10n.string("health_meals_body_ai.f47d6f2e6ec3", fallback: "体型写真")],
             itemCount: inputs.count
         )
         appStore.saveAITransmission(transmission)
 
         Task {
             do {
-                aiComment = try await AIAPIClient(settings: appStore.aiSettings)
+                let comment = try await AIAPIClient(settings: appStore.aiSettings)
                     .analyzeBodyPhotos(
                         inputs,
                         memo: memo,
                         context: bodyPhotoAnalysisContext(
                             appStore: appStore,
-                            date: existingSet?.date ?? Date()
+                            date: normalizedDate
                         ),
                         previousPhotos: previousBodyPhotoInputs(
                             appStore: appStore,
-                            before: existingSet?.date ?? Date()
+                            before: normalizedDate
                         )
                     )
+                aiComment = comment
+                appStore.saveMissingBodyPhotoEstimates(from: comment, at: normalizedDate)
                 appStore.updateAITransmission(id: transmission.id, status: .completed)
             } catch {
-                appStore.updateAITransmission(id: transmission.id, status: .failed)
+                appStore.recordAITransmissionFailure(id: transmission.id, error: error)
                 aiError = AIClientError.presentation(for: error)
+                creditAccessIssue = AICreditAccessIssue(error: error)
             }
             isAnalyzing = false
         }
     }
 
     private func save() {
-        let targetDate = existingSet?.date ?? Date()
-        let defaultRecordedAt = existingSet?.recordedAt ?? Date()
+        let targetDate = RecordDatePolicy.normalizedDay(existingSet?.date ?? Date())
+        let normalizedRecordedAt = RecordDatePolicy.normalizedDay(recordedAt)
         var entries = BodyPhotoAngle.allCases.compactMap { angle -> BodyPhotoEntry? in
             guard let imageData = imageDataByAngle[angle] else { return nil }
             return BodyPhotoEntry(
                 id: entryIDByAngle[angle] ?? UUID(),
-                recordedAt: recordedAtByAngle[angle] ?? defaultRecordedAt,
+                recordedAt: normalizedRecordedAt,
                 angle: angle,
                 memo: memo,
                 imageData: imageData,
@@ -673,7 +712,7 @@ private struct BodyPhotoEditorView: View {
             entries = [
                 BodyPhotoEntry(
                     id: existingSet?.entries.first?.id ?? UUID(),
-                    recordedAt: existingSet?.recordedAt ?? Date(),
+                    recordedAt: normalizedRecordedAt,
                     angle: existingSet?.entries.first?.angle ?? .front,
                     memo: memo
                 )
@@ -741,7 +780,7 @@ private struct BodyPhotoSlotEditor: View {
                             .foregroundStyle(AppTheme.foregroundOnDark, AppTheme.darkBase.opacity(0.85))
                     }
                     .padding(6)
-                    .accessibilityLabel("\(angle.displayName)写真を削除")
+                    .accessibilityLabel(L10n.string("health_meals_body_ai.156dec7f8ca6", fallback: "{{value1}}写真を削除", values: [String(describing: angle.displayName)]))
                 }
             }
 
@@ -754,7 +793,7 @@ private struct BodyPhotoSlotEditor: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled(!UIImagePickerController.isSourceTypeAvailable(.camera))
-                .accessibilityLabel("\(angle.displayName)を撮影")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.d715189703aa", fallback: "{{value1}}を撮影", values: [String(describing: angle.displayName)]))
                 .accessibilityIdentifier("bodyPhotoCamera-\(angle.rawValue)")
 
                 PhotosPicker(selection: $selectedPhoto, matching: .images) {
@@ -762,7 +801,7 @@ private struct BodyPhotoSlotEditor: View {
                         .frame(maxWidth: .infinity, minHeight: 34)
                 }
                 .buttonStyle(.bordered)
-                .accessibilityLabel("\(angle.displayName)をライブラリから選択")
+                .accessibilityLabel(L10n.string("health_meals_body_ai.ec33ef8cdb99", fallback: "{{value1}}をライブラリから選択", values: [String(describing: angle.displayName)]))
                 .accessibilityIdentifier(angle == .front ? "bodyPhotoPicker" : "bodyPhotoPicker-\(angle.rawValue)")
             }
         }
@@ -782,14 +821,14 @@ private struct BodyPhotoSlotEditor: View {
             }
             .ignoresSafeArea()
         }
-        .alert("カメラを使用できません", isPresented: $isShowingCameraPermissionAlert) {
-            Button("設定を開く") {
+        .alert(L10n.string("health_meals_body_ai.188fd18847ac", fallback: "カメラを使用できません"), isPresented: $isShowingCameraPermissionAlert) {
+            Button(L10n.string("health_meals_body_ai.1ed3ceaf4396", fallback: "設定を開く")) {
                 guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
                 UIApplication.shared.open(url)
             }
-            Button("キャンセル", role: .cancel) {}
+            Button(L10n.string("health_meals_body_ai.dd84abcb6681", fallback: "キャンセル"), role: .cancel) {}
         } message: {
-            Text("設定でBodyModeのカメラ利用を許可してください。")
+            Text(L10n.string("health_meals_body_ai.576015450b34", fallback: "設定でBodyModeのカメラ利用を許可してください。"))
         }
     }
 
@@ -838,12 +877,12 @@ private struct BodyPhotoCaptureGuide: View {
                 }
             }
 
-            Label("同じ服・距離・光で、力を抜いて撮影", systemImage: "camera.metering.center.weighted")
+            Label(L10n.string("health_meals_body_ai.4127c532bfe3", fallback: "同じ服・距離・光で、力を抜いて撮影"), systemImage: "camera.metering.center.weighted")
                 .font(.caption)
                 .foregroundStyle(AppTheme.mutedInk)
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("撮影見本。左上は正面全身、右上は真横全身、左下は背面全身、右下は肩から腰までの腹部アップ。同じ服、距離、光で撮影")
+        .accessibilityLabel(L10n.string("health_meals_body_ai.1400ab3be8e8", fallback: "撮影見本。左上は正面全身、右上は真横全身、左下は背面全身、右下は肩から腰までの腹部アップ。同じ服、距離、光で撮影"))
         .accessibilityIdentifier("bodyPhotoCaptureGuide")
     }
 }
@@ -869,10 +908,10 @@ private extension BodyPhotoAngle {
 
     var guideLabel: String {
         switch self {
-        case .front: "左上  正面・全身"
-        case .side: "右上  真横・全身"
-        case .back: "左下  背面・全身"
-        case .abdomen: "右下  肩〜腰"
+        case .front: L10n.string("health_meals_body_ai.f848634a1768", fallback: "左上  正面・全身")
+        case .side: L10n.string("health_meals_body_ai.9ab9099ebccb", fallback: "右上  真横・全身")
+        case .back: L10n.string("health_meals_body_ai.15292dad18bc", fallback: "左下  背面・全身")
+        case .abdomen: L10n.string("health_meals_body_ai.ca55f072b646", fallback: "右下  肩〜腰")
         }
     }
 }
@@ -886,7 +925,7 @@ private struct BodyPhotoAICommentCard: View {
             VStack(alignment: .leading, spacing: 12) {
                 CoachAttributionLabel(
                     persona: coachPersona,
-                    text: "\(coachPersona.displayName)の分析"
+                    text: L10n.string("health_meals_body_ai.356ec7e292c8", fallback: "{{value1}}の分析", values: [String(describing: coachPersona.displayName)])
                 )
                 BodyPhotoAICommentContent(comment: comment)
             }
@@ -913,7 +952,7 @@ private struct BodyPhotoAICommentContent: View {
 
             if let estimates = comment.referenceEstimates, !estimates.isEmpty {
                 VStack(alignment: .leading, spacing: 6) {
-                    Label("写真からの参考範囲", systemImage: "ruler.fill")
+                    Label(L10n.string("health_meals_body_ai.9cddd80a2f5a", fallback: "写真からの参考範囲"), systemImage: "ruler.fill")
                         .font(.caption.bold())
                         .foregroundStyle(AppTheme.warning)
                     ForEach(estimates) { estimate in
@@ -925,7 +964,7 @@ private struct BodyPhotoAICommentContent: View {
                         )
                         .font(.subheadline.bold())
                     }
-                    Text("低信頼度の参考値です。実測記録やグラフには保存しません。")
+                    Text(L10n.string("health_meals_body_ai.103eefbf9842", fallback: "低信頼度の参考値です。同日の未入力項目には推定値として自動記録します。実測値は上書きしません。"))
                         .font(.caption)
                         .foregroundStyle(AppTheme.mutedInk)
                 }
@@ -935,25 +974,25 @@ private struct BodyPhotoAICommentContent: View {
                 .accessibilityIdentifier("bodyPhotoReferenceEstimates")
             }
 
-            DisclosureGroup("詳しい分析", isExpanded: $isShowingDetails) {
+            DisclosureGroup(L10n.string("health_meals_body_ai.419ad2a6aa29", fallback: "詳しい分析"), isExpanded: $isShowingDetails) {
                 VStack(alignment: .leading, spacing: 12) {
                     if let goalRelevance = comment.goalRelevance, !goalRelevance.isEmpty {
-                        BodyPhotoObservation(label: "目標への意味", value: goalRelevance)
+                        BodyPhotoObservation(label: L10n.string("health_meals_body_ai.6d0bcffe314f", fallback: "目標への意味"), value: goalRelevance)
                     }
                     if let positiveFindings = comment.positiveFindings, !positiveFindings.isEmpty {
-                        BodyPhotoBulletList(label: "良い点", items: positiveFindings)
+                        BodyPhotoBulletList(label: L10n.string("health_meals_body_ai.7645e396f538", fallback: "良い点"), items: positiveFindings)
                     }
                     if let observedChanges = comment.observedChanges, !observedChanges.isEmpty {
-                        BodyPhotoBulletList(label: "確認できた変化", items: observedChanges)
+                        BodyPhotoBulletList(label: L10n.string("health_meals_body_ai.8466e434074d", fallback: "確認できた変化"), items: observedChanges)
                     }
                     if let nextActions = comment.nextActions, !nextActions.isEmpty {
-                        BodyPhotoBulletList(label: "次の一手", items: Array(nextActions.prefix(3)))
+                        BodyPhotoBulletList(label: L10n.string("health_meals_body_ai.92f1e4be7323", fallback: "次の一手"), items: Array(nextActions.prefix(3)))
                     }
-                    BodyPhotoObservation(label: "腹部", value: comment.abdomen)
-                    BodyPhotoObservation(label: "ウエスト", value: comment.waist)
-                    BodyPhotoObservation(label: "姿勢", value: comment.posture)
+                    BodyPhotoObservation(label: L10n.string("health_meals_body_ai.a038994e000b", fallback: "腹部"), value: comment.abdomen)
+                    BodyPhotoObservation(label: L10n.string("health_meals_body_ai.12006fd0cc46", fallback: "ウエスト"), value: comment.waist)
+                    BodyPhotoObservation(label: L10n.string("health_meals_body_ai.0eb1cd5802d6", fallback: "姿勢"), value: comment.posture)
                     HStack {
-                        Text("信頼度")
+                        Text(L10n.string("health_meals_body_ai.7421e1ca9b5b", fallback: "信頼度"))
                         Spacer()
                         Text(comment.confidence)
                             .foregroundStyle(AppTheme.mutedInk)
@@ -1084,7 +1123,7 @@ private struct BodyPhotoAIErrorCard: View {
                     .font(.footnote)
                     .foregroundStyle(AppTheme.mutedInk)
             }
-            Text("写真セットは保存できます。接続後にセット詳細から再分析できます。")
+            Text(L10n.string("health_meals_body_ai.e9872cc8c9d1", fallback: "写真セットは保存できます。接続後にセット詳細から再分析できます。"))
                 .font(.footnote)
                 .foregroundStyle(AppTheme.mutedInk)
         }

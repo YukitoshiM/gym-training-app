@@ -85,7 +85,8 @@ struct CoachContextBuilder {
         healthSnapshot: DailyHealthSnapshot,
         recoveryHistory: [DailyRecoveryTrendRecord],
         memories: [CoachMemory],
-        insights: [AIInsight]
+        insights: [AIInsight],
+        planRevisions: [PlanRevisionProposal] = []
     ) -> CoachContext {
         let coverage = coverage(
             profile: profile,
@@ -121,6 +122,7 @@ struct CoachContextBuilder {
             insights: insights
         )
 
+        let planContext = planRevisionContext(planRevisions, sharing: sharing)
         return CoachContext(
             recent7Days: recentContext,
             recent4Weeks: recent4Weeks(
@@ -141,9 +143,33 @@ struct CoachContextBuilder {
             goals: goals(profile: profile, sharing: sharing, bodyMetricGoals: bodyMetricGoals),
             preferences: preferences(profile: profile, sharing: sharing),
             memories: memories.map(\.content),
-            previousSuggestion: recommendationContext.previousSuggestion,
-            suggestionResult: recommendationContext.suggestionResult
+            previousSuggestion: recommendationContext.previousSuggestion.merging(planContext.previous) { _, plan in plan },
+            suggestionResult: recommendationContext.suggestionResult.merging(planContext.result) { _, plan in plan }
         )
+    }
+
+    private func planRevisionContext(
+        _ revisions: [PlanRevisionProposal],
+        sharing: AIDataSharingSettings
+    ) -> (previous: [String: String], result: [String: String]) {
+        guard sharing.workouts,
+              let revision = revisions
+                .filter({ $0.decision != .pending })
+                .sorted(by: { $0.createdAt > $1.createdAt })
+                .first else { return ([:], [:]) }
+        var previous = [
+            "plan_revision": bounded(revision.summary, maximum: 300),
+            "plan_revision_decision": revision.decision.rawValue
+        ]
+        if let revisedPlan = revision.revisedPlan {
+            previous["revised_plan"] = bounded(revisedPlan.name, maximum: 120)
+        }
+        var result: [String: String] = [:]
+        if revision.effectiveness != .unknown {
+            result["plan_revision_effectiveness"] = revision.effectiveness.rawValue
+        }
+        result["baseline_achievement"] = revision.baselineAchievementRate.formatted(.percent.precision(.fractionLength(0)))
+        return (previous, result)
     }
 
     func coverage(
@@ -174,6 +200,25 @@ struct CoachContextBuilder {
                 : "\(missingProfileFields.joined(separator: "・"))を設定すると負荷や栄養の助言が安定",
             systemImage: "person.crop.circle",
             state: missingProfileFields.isEmpty ? .ready : .needsRecord
+        ))
+
+        items.append(coverageItem(
+            id: "training_considerations",
+            title: AppLanguagePreference.bilingual(
+                japanese: "運動上の配慮",
+                english: "Training considerations"
+            ),
+            systemImage: "heart.text.square",
+            isShared: sharing.trainingConsiderations,
+            isReady: profile.healthIntake.isComplete,
+            readyDetail: AppLanguagePreference.bilingual(
+                japanese: "運動習慣・強度・配慮事項を参照",
+                english: "Activity, intensity, and considerations available"
+            ),
+            missingDetail: AppLanguagePreference.bilingual(
+                japanese: "健康・運動ヒアリングを完了",
+                english: "Complete the health and activity intake"
+            )
         ))
 
         let requiredMetrics: [BodyMetricKind] = switch profile.coachType {
@@ -355,7 +400,7 @@ struct CoachContextBuilder {
                 .map {
                     let note = $0.note.trimmingCharacters(in: .whitespacesAndNewlines)
                     let suffix = note.isEmpty ? "" : " メモ: \(note)"
-                    return "\(day($0.recordedAt)): \($0.kind.displayName) \(number($0.value))\($0.kind.unit)\(suffix)"
+                    return "\(day($0.recordedAt)): \($0.kind.displayName) \(number($0.value))\($0.kind.storageUnit)\(suffix)"
                 }
         }
 
@@ -502,7 +547,7 @@ struct CoachContextBuilder {
                         .filter { $0.kind == kind && $0.recordedAt >= start && $0.recordedAt < end }
                         .map(\.value)
                     if !values.isEmpty {
-                        parts.append("\(kind.displayName)平均\(number(values.reduce(0, +) / Double(values.count)))\(kind.unit)")
+                        parts.append("\(kind.displayName)平均\(number(values.reduce(0, +) / Double(values.count)))\(kind.storageUnit)")
                     }
                 }
             }
@@ -548,7 +593,7 @@ struct CoachContextBuilder {
                     .sorted { $0.recordedAt < $1.recordedAt }
                 guard let first = entries.first, let last = entries.last, first.id != last.id else { return nil }
                 let delta = last.value - first.value
-                return "\(kind.displayName): \(number(first.value))→\(number(last.value))\(kind.unit) (\(signed(delta))\(kind.unit))"
+                return "\(kind.displayName): \(number(first.value))→\(number(last.value))\(kind.storageUnit) (\(signed(delta))\(kind.storageUnit))"
             }
         }
 
@@ -597,7 +642,7 @@ struct CoachContextBuilder {
         if sharing.bodyMetrics {
             result.append(contentsOf: bodyMetricGoals.compactMap { goal in
                 guard let target = goal.targetValue else { return nil }
-                return "目標\(goal.kind.displayName): \(number(target))\(goal.kind.unit)"
+                return "目標\(goal.kind.displayName): \(number(target))\(goal.kind.storageUnit)"
             })
         }
         if sharing.meals {
@@ -617,8 +662,35 @@ struct CoachContextBuilder {
             "希望ペース: 週\(profile.weeklyTrainingDays)日・1回\(profile.preferredSessionMinutes)分",
             "利用できる器具: \(profile.availableEquipment.map(\.displayName).joined(separator: "、"))",
             "重量単位: \(profile.weightUnit.displayName)",
+            "返答言語: \(AppLanguagePreference.aiLocaleIdentifier)",
             "回答形式: 結論を先に示し、短い段落・見出し・箇条書きで読みやすくする"
         ]
+        if sharing.trainingConsiderations {
+            let intake = profile.healthIntake
+            result.append("現在の運動習慣: \(intake.activityLevel.displayName)")
+            result.append("予定する運動強度: \(intake.plannedIntensity.displayName)")
+            result.append("運動上の配慮: \(intake.safetyStatus.displayName)")
+            if !intake.considerations.isEmpty {
+                result.append("配慮項目: \(intake.considerations.map(\.displayName).joined(separator: "、"))")
+            }
+            result.append("ふだんの睡眠: \(intake.typicalSleep.displayName)")
+            if intake.goalFocus != .notAnswered {
+                result.append("目的別の優先項目: \(intake.goalFocus.displayName)")
+            }
+            if intake.nutritionGuidanceMode != .notAnswered {
+                result.append("食事助言の扱い: \(intake.nutritionGuidanceMode.displayName)")
+            }
+            if let days = intake.otherTrainingDays {
+                result.append("その他の練習: 週\(days)回")
+            }
+            if !intake.sportOrActivity.isEmpty {
+                result.append("競技・アクティビティ: \(intake.sportOrActivity)")
+            }
+            if !intake.note.isEmpty {
+                result.append("専門家の指示・避けたい動作: \(bounded(intake.note, maximum: 300))")
+            }
+            result.append("症状や専門家の指示に反する運動・食事の提案はしない")
+        }
         if sharing.bodyMetrics {
             if let height = profile.heightCm {
                 result.append("身長: \(number(height))cm")

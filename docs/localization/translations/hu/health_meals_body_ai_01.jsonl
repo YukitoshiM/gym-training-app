@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"hu","translation":"{{value1}}-ra visszaáll. A manuális rögzítés továbbra is használható.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"hu","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"hu","translation":"Kérjük, egy nagyobb értéket írjon be.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"hu","translation":"1. Hétre 3 alkalommal végezzük\n2. Rögzítsük a fehérje célért\n3. A hónap végén hasonlítsuk össze a testünk állapotát","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"hu","translation":"Kérjük, várjon néhány percet, majd próbálja újra.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"hu","translation":"1 adag","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"hu","translation":"Nincs egyértelmű lelassulási lehetőség a 3 alkalomnál többet rögzített edzések esetében.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"hu","translation":"Több mint 48 órás edzés","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"hu","translation":"Teljes test egyensúlyt biztosító AI","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"hu","translation":"Az AI által figyelembe vett adatok","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"hu","translation":"Az AI használata jelenleg forgalmas.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"hu","translation":"Az AI hitelesítő információk helytelenek vagy lejártak.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"hu","translation":"AI hiba","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"hu","translation":"AI edző","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"hu","translation":"Az AI szerver URL-je helytelen.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"hu","translation":"Az AI szerver hibát küldött vissza: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"hu","translation":"Nem található az AI szerveren szükséges API.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"hu","translation":"Nem sikerült csatlakozni az AI szerverhez. Kérjük, próbálja újra később.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"hu","translation":"Az AI szerver JSON formátuma nem egyezik a alkalmazás elvárásaival.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"hu","translation":"Nem sikerült értelmezni az AI szerver válaszát.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"hu","translation":"Hiba történt az AI szerveren: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"hu","translation":"Ellenőrizze az AI szerver csatlakozást","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"hu","translation":"AI edző","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"hu","translation":"Telení meg a beszélgetést az AI edzővel?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"hu","translation":"Az AI modell nem elérhető, vagy az képalkotás sikertelen.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"hu","translation":"Az AI modell előkészítése","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"hu","translation":"AI elemzés","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"hu","translation":"Van még tartalék AI-használat.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"hu","translation":"Ellenőrizze az AI-használati lehetőségeit.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"hu","translation":"Az AI funkció le van tiltva.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"hu","translation":"Az AI által javasolt értékek: ellenőrizze.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"hu","translation":"Az AI-kapcsolat engedélyezve van.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"hu","translation":"A biztonságos AI-kapcsolattal nem sikerült adatokat menteni.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"hu","translation":"AI funkciók","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"hu","translation":"Az AI funkció le van tiltva a beállításokban.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"hu","translation":"Az AI funkció le van tiltva a beállításokban. Ez a képkészlet jelenleg megmarad.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"hu","translation":"Az AI funkció le van tiltva a beállításokban. A manuális bevitelt is jelenleg meg lehet menteni.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"hu","translation":"AI használat előzményei","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"hu","translation":"Az API kulcs nincs beállítva.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"hu","translation":"Ellenőrizze az API szerver verzióját. Részletek: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"hu","translation":"Az API szerver válaszol, de a szükséges model nem elérhető.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"hu","translation":"Az API szerver válaszol, de a konyhával és jelentésekkel kapcsolatos model nem elérhető.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"hu","translation":"Integráció az Apple Health-szel","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"hu","translation":"Az Apple Health-ben tárolt legutóbbi futóút megjelenítve.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"hu","translation":"Integrálja az Apple Health-et","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"hu","translation":"A megfelelő edzéshez, valamint a pihenés közben viselje az Apple Watch-ot, hogy könnyebben megkapja a szükséges adatokat. A hiányzó értékeket nem fogja becsülni.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"hu","translation":"Ellenőrizze az alap URL-t és az API szerver verzióját.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"hu","translation":"HRV az átlagosnál alacsonyabb","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"hu","translation":"Nincs elérhető a HRV adatai az utolsó 14 napban.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"hu","translation":"A HRV az átlagnál magasabb.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"hu","translation":"A HRV a szokásos tartományon van.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"hu","translation":"Az HRV-hoz tartozó átlag {{value1}}% (az egyéni alapértékkel összehasonlítva).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"hu","translation":"Az HTTP csak localhost, LAN és Tailscale hálózatokon használható. Az external szerverekhez HTTPS protokollt használjon.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"hu","translation":"A Health által megadott energiafogyasztás még nem került be. Az étkezési napló viszont rögzített.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"hu","translation":"Frissítse a Health adatokat.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"hu","translation":"Válassza ki újra a JPEG vagy PNG képet.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"hu","translation":"Rögzítse az eredményeket.","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"hu","translation":"A Noise alkalmazás által rögzített legutóbbi érték. Ha nincs érték, akkor 0-t nem használunk.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"hu","translation":"Automatikusan kiszámolja a kalóriákat a PFC alapján.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"hu","translation":"Elértette a PFC célért.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"hu","translation":"1 szinttel csökkentse az RPE értéket.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"hu","translation":"Az URL-t https://-zal kezdje. A helyi fejlesztés során localhost, LAN IP és Tailscale nevű HTTP is használható.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"hu","translation":"Az URL-t https://-zal kezdje. Csak a helyi fejlesztés során használható az http:// is.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"hu","translation":"Pulzusmérővel ellátott.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"hu","translation":"bpm / 30 másodperc.","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"hu","translation":"Kalória és PFC elérése.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"hu","translation":"Kalória elérése.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"hu","translation":"kg / perc","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"hu","translation":"{\"id\":\"{{value1}}\",\"kategória\":\"{{value2}}\",\"cím\":\"{{value3}}\",\"cél\":0,\"alapok\":\"Az előző adatok és célokat ellenőriztem\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"hu","translation":"{\"megőrzés_meghatározás\":true,\"készségi_szint\":\"normál\",\"összefoglaló\":\"Folytassuk a mai javaslatot.\",\"változás_ok\":\"\",\"akciók\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"hu","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"hu","translation":"{{value1}} / {{value2}} óra","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"hu","translation":"{{value1}} / {{value2}} lépés","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"hu","translation":"{{value1}} / {{value2}} étkezés","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"hu","translation":"{{value1}} {{value2}} darab ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"hu","translation":"{{value1}} és a segítő modell segítségével hetente generálhatsz visszajelzéseket.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"hu","translation":"{{value1}}/{{value2}} alkalom","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"hu","translation":"{{value1}}: {{value2}} elért százalék {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"hu","translation":"{{value1}} teljesíti","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"hu","translation":"{{value1}} megvizsgálja a válaszokat","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"hu","translation":"{{value1}} ellenőrzi az étkezést és az étrendet","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"hu","translation":"{{value1}} több irányt is figyeli","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"hu","translation":"{{value1}} emlékezetes dolgok","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"hu","translation":"{{value1}}-zal készít és konzultál, majd módosítja","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"hu","translation":"{{value1}}-hez fordul","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"hu","translation":"{{value1}}-nek szóló jelentés","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"hu","translation":"{{value1}}-nek szóló jelentése még nincs","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"hu","translation":"{{value1}}-nek szóló vázlat","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"hu","translation":"{{value1}}-nek szóló vázlat és {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"hu","translation":"{{value1}}-nek szóló elemzés","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"hu","translation":"{{value1}}-nek szóló elemzési eredmény","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"hu","translation":"{{value1}}-nek szóló referenciainformációk","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"hu","translation":"{{value1}}-nek szóló visszapillantás","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"hu","translation":"A megtekinthető tartalmak csak azok, amelyeket {{value1}} javaslatát követően jóváhagyott.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"hu","translation":"{{value1}}-nek szóló havi áttekintés","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"hu","translation":"{{value1}}-nek szóló emlékezet","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"hu","translation":"{{value1}}-t választja a könyvtárból","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"hu","translation":"{{value1}}-t törli","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"hu","translation":"{{value1}}-t rögzíti","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"hu","translation":"{{value1}}-t szerkeszd","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"hu","translation":"{{value1}}-t rögzítse","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"hu","translation":"{{value1}}-t enyhén fogyassz.","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"hu","translation":"{{value1}} adagot tartalmazó átlagos stabilitás {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"hu","translation":"{{value1}}·","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"hu","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"hu","translation":"{{value1}} · Csevegés","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"hu","translation":"{{value1}} · Hónaponta történő áttekintés javaslat","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"hu","translation":"{{value1}} · Megszűrni {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"hu","translation":"{{value1}}· Havi összefoglaló","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"hu","translation":"{{value1}} bejegyzés・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"hu","translation":"Kérjük, {{value1}}-szer újra próbálja. A manuális rögzítés továbbra is használható.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"hu","translation":"Kérjük, {{value1}}-szer újra próbálja. Ha ez nem sikerül, ellenőrizze az AI-szerver állapotát.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"hu","translation":"{{value1}} Kép törlése","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"hu","translation":"{{value1}} perc","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"hu","translation":"{{value1}} alkalom","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"hu","translation":"{{value1}} alkalom・Átlagos teljesítési arány {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"hu","translation":"{{value1}}-irányú képeket csoportosan elemzi. A testsúly, a zsírtartalom stb. értékeket nem határozzák meg.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"hu","translation":"{{value1}} kép","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"hu","translation":"{{value1}} kép rögzítése","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"hu","translation":"{{value1}} lépés","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"hu","translation":"A \"-\" jel azt jelenti, hogy ez az érték még nem mérve, ezért kiválasztjuk a teljes összegezésből. A \"Tr\" pedig nagyon kis mennyiséget jelöl, melyet 0-val becsülünk.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"hu","translation":"És {{value1}} gramm","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"hu","translation":"Együtt megvizsgáljuk az adatait.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"hu","translation":"Nagyon jó!","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"hu","translation":"Nagyon fáradt vagy.","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"hu","translation":"Ezzel az adatokkal is lehet dolgozni. Ha a oldal és a hátoldal is hozzáadódnak, akkor más szempontból is ellenőrizhetjük.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"hu","translation":"Ez a beállítás elemzésre kerül.","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"hu","translation":"Ezek alapján javaslatokat teszem fel.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"hu","translation":"Mindenet törlöm","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"hu","translation":"Fehérje","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"hu","translation":"A beállított értékeket a jövőbeli javaslatokba fogjuk értékelni.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"hu","translation":"További {{value1}} elem","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"hu","translation":"Jelenleg nincs rendelkezésre álló adatszint.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"hu","translation":"Nincs rögzített adat.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"hu","translation":"Újabb becslés","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"hu","translation":"Derék","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"hu","translation":"Kamerával történő beolvasás","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"hu","translation":"A kamera használata nem lehetséges.","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"hu","translation":"A kameráról történő beolvasás nem támogatott.","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"hu","translation":"Kalória","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"hu","translation":"Kalória becslése","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"hu","translation":"Mégsem","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"hu","translation":"Állapot","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"hu","translation":"Ellenőrizze a szerver URL-t, az API kulcsot és az API szerver állapotát.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"hu","translation":"Edzőterem látogatás","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"hu","translation":"Tartó","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"hu","translation":"Szett","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"hu","translation":"Szett elemzése","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"hu","translation":"Szett minősége","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"hu","translation":"Szett minőségének részletei","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"hu","translation":"Fehérje {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"hu","translation":"Sorompáros edzés","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"hu","translation":"Ez egy becsült érték.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"hu","translation":"Tempó","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"hu","translation":"Amikor a megfelelő adatok rendelkezésre állnak, áttekintheti az alvást, a regenerálódást és az edzéseket.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"hu","translation":"Adatminőség","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"hu","translation":"Edzővel való konzultáció","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"hu","translation":"Edzés","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"hu","translation":"Edzés elemzése","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"hu","translation":"Edzés előzményei","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"hu","translation":"Edzésterv","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"hu","translation":"Edzés intenzitása","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"hu","translation":"Ellenőrizze, hogy a hálózat és az AI-szerver működik-e. Az AI-feldolgozás akár 240 másodpercet is igénybe vehet.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"hu","translation":"Ellenőrizze a hálózati állapotot és a szerver URL-t, majd próbálja újra.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"hu","translation":"Ellenőrizze a hálózati állapotot és a szerver URL-t.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"hu","translation":"Vonalkód","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"hu","translation":"Választék","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"hu","translation":"A választék az adott edzés teljesítéséhez szükséges súly × szám. Ha az edzések nagyon eltérnek, ne hasonlítsa őket egyszerűen össze.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"hu","translation":"Mozgás","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"hu","translation":"Üzenet","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"hu","translation":"Menü","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"hu","translation":"Új menüt létrehozva kezdhet","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"hu","translation":"Jegyzet","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"hu","translation":"Adatbázis","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"hu","translation":"Rájtöltés","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"hu","translation":"Etikai mennyiség","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"hu","translation":"Kalóriák becslése a listából","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"hu","translation":"Kérjük, próbálja újra azután. A manuális rögzítés továbbra is használható.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"hu","translation":"Ha egy útvonalon történő kültéri futást talált, megjeleníti a távolságot, sebességet és a magasságkülönbséget.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"hu","translation":"Legprés","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"hu","translation":"·","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"hu","translation":"·{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"hu","translation":"Megfelelő szinten","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"hu","translation":"Kezdeti fáradtság","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"hu","translation":"Főbb mérőszámok","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"hu","translation":"A fáradtság magasabb","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"hu","translation":"A fáradtság alacsonyabb","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"hu","translation":"A fáradtság normális tartományban","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"hu","translation":"Kérjük, csak azokat a pontokat válassza ki, amelyeket a jövőbeli javaslatokban használhat.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"hu","translation":"A jövőbeni súlyjavaszatokhoz való hozzájárulás érdekében","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"hu","translation":"Ma már meghatározott","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"hu","translation":"Ma's tevékenység","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"hu","translation":"Ma's energia egyensúly","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"hu","translation":"Ma's edzés","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"hu","translation":"Ma's tapasztalt fáradtság","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"hu","translation":"Ma's javaslat","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"hu","translation":"A mai edzéssorozat szerkesztése","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"hu","translation":"A mai edzéssorozat hozzáadása","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"hu","translation":"Ma's nagy mennyiségű tevékenység","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"hu","translation":"Napra vonatkozó aktivitás","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"hu","translation":"Napra vonatkozó felkészültség","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"hu","translation":"Napra vonatkozó tevékenység","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"hu","translation":"A mai előrehaladást ellenőrizze","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"hu","translation":"Ma elfogyasztott étel","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"hu","translation":"Ételajánlások","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"hu","translation":"Ma elfogyasztandó étel célja","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"hu","translation":"Prioritásként kezeljük a regenerálódást","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"hu","translation":"Ma a terhelés csökkentése és a kényelmes aktivitás prioritása.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"hu","translation":"Ma csökkentsük a terhelést.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"hu","translation":"Van lehetőség a súly és a sorok számának csökkentésére, a regenerációt prioritásként kezelve.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"hu","translation":"Ellenőrizzük, mit tervezünk ma.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"hu","translation":"Ezúttal","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"hu","translation":"Ezúttal {{value1}} alkalom・jelenleg {{value2}} méter","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"hu","translation":"Ezúttal {{value1}} alkalom・összesen {{value2}} alkalom","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"hu","translation":"Az ezúti összefoglaló","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"hu","translation":"Opcionális","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"hu","translation":"Csevegés","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"hu","translation":"Csevegés törlése","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"hu","translation":"A csevegési előzmények nem törlődnek.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"hu","translation":"Ez egy támpont, amely nem feltétlenül pontos. Ne mentse az eredményeket vagy a grafikonokat.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"hu","translation":"Testkép","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"hu","translation":"Testkép AI","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"hu","translation":"A testkép AI-val történő megosztás be van kapcsolva a beállításokban.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"hu","translation":"Jelenleg nincs testkép.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"hu","translation":"Készítsen egy testképet.","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"hu","translation":"Testkép elemzés","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"hu","translation":"Testkép ellenőrzés","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"hu","translation":"Ha érzik, hogy nem jól vannak vagy fájdalmat éreznek, akkor inkább a saját érzéseiket vegyük figyelembe, mint az adatokat.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"hu","translation":"Tartsuk be a terveket, figyelve a testérzetünket.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"hu","translation":"Testsúly","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"hu","translation":"A testsúly és a mellszög változásai természetesen eltérhetnek. A változásokat grafikonon is megtekintheti.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"hu","translation":"Rendeljen fel testsúlyt.","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"hu","translation":"Javasolt eszközök","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"hu","translation":"Példa: Fehér rizs 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"hu","translation":"Mentés","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"hu","translation":"A mentett havi összefoglaló","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"hu","translation":"Mentett emlékezet","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"hu","translation":"Nincs mentett emlékezet.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"hu","translation":"A mentett emlékezet nem törlődik.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"hu","translation":"Több mentett emléket töröl?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"hu","translation":"Nem, köszönöm","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"hu","translation":"Nem sikerült megőrizni","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"hu","translation":"Bizalom szint","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"hu","translation":"Érték","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"hu","translation":"Ha értéket adsz meg, itt láthatod a következőt.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"hu","translation":"Teljesítési ellenőrzés","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"hu","translation":"A teljesítéshez tartozó tevékenységek közül válaszd ki, hogy csökkentsd az edzésmenet számát, vagy hosszabb szünetet tegyél, és hasonlítsd össze.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"hu","translation":"Teljesítési tényezők","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"hu","translation":"Energia","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"hu","translation":"Beépített adatok","review_note":""}

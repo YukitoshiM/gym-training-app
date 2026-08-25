@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"ar-SA","translation":"تلقيت إجابة من مدرب الذكاء الاصطناعي.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"ar-SA","translation":"تعذر الإرسال إلى مدرب الذكاء الاصطناعي","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"ar-SA","translation":"هذا حدث تمت مزامنته من Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"ar-SA","translation":"يمكنك فتح BodyMode للتحقق من الإجابة.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"ar-SA","translation":"تم تحقيق {{value1}} / {{value2}}. المضي قدما في الباقي في حدود المعقول.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"ar-SA","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} مرات","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"ar-SA","translation":"لن يتم نقل {{value1}} وسيتم التعامل معه على أنه اختيار الشخص.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"ar-SA","translation":"الوقت {{value1}}","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"ar-SA","translation":"{{value1}} المشي","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"ar-SA","translation":"{{value1}}وجبة","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"ar-SA","translation":"اكتشاف المحيط غير متاح على هذا الجهاز","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"ar-SA","translation":"تم تعيين هذا العنصر بحيث لا يتم تنفيذه اليوم.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"ar-SA","translation":"شيء واحد يمكنك القيام به يكفي.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"ar-SA","translation":"لماذا هذا السلوك","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"ar-SA","translation":"حدث مساعدة","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"ar-SA","translation":"يرجى فتح التطبيق والمحاولة مرة أخرى.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"ar-SA","translation":"تمت إزالة موقع صالة الألعاب الرياضية","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"ar-SA","translation":"لقد سجلت وصولي إلى صالة الألعاب الرياضية.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"ar-SA","translation":"يكتشف الوصول إلى صالة الألعاب الرياضية","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"ar-SA","translation":"تم إيقاف الكشف التلقائي عن زيارات الصالة الرياضية","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"ar-SA","translation":"تم تسجيل مغادرة صالة الألعاب الرياضية","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"ar-SA","translation":"اضغط على مقاعد البدلاء الدمبل","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"ar-SA","translation":"داكن","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"ar-SA","translation":"الذقن","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"ar-SA","translation":"تراجع","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"ar-SA","translation":"الانخفاضات","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"ar-SA","translation":"لقد تمكنت من مواصلة تدريبي. ستؤدي زيادة سجل الاسترداد إلى زيادة دقة تعديلات الأسبوع المقبل.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"ar-SA","translation":"الشمبانيا السوداء","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"ar-SA","translation":"صالة الألعاب الرياضية الخاصة بي","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"ar-SA","translation":"قام المستخدم بتبديل إجراءات اليوم.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"ar-SA","translation":"لقد قمت بإعادة صياغة اقتراح اليوم مع تفاعل المستخدم.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"ar-SA","translation":"ضوء","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"ar-SA","translation":"الكوبالت الملكي","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"ar-SA","translation":"رفع","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"ar-SA","translation":"أقل","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"ar-SA","translation":"مرة واحدة اليوم","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"ar-SA","translation":"لقد أنجزت ثلاثة أشياء اليوم. وسوف أعكس ذلك في اقتراح الغد.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"ar-SA","translation":"القائمة اليوم","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"ar-SA","translation":"تم تحديث اقتراح اليوم","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"ar-SA","translation":"لم يتم تعيين معلومات الموقع","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"ar-SA","translation":"معلومات الموقع غير مسموح بها. يتوفر تسجيل الوصول اليدوي","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"ar-SA","translation":"يرجى المحاولة مرة أخرى بعد استقرار دقة الموضع.","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"ar-SA","translation":"يرجى تسجيل موقعك الحالي كصالة ألعاب رياضية أولاً.","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"ar-SA","translation":"بداية الجسم الكامل للمبتدئين","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"ar-SA","translation":"لا يمكن استئناف الإرسال السابق لمدرب الذكاء الاصطناعي.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"ar-SA","translation":"الرجاء ارسال نفس المحتوى مرة أخرى.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"ar-SA","translation":"إعطاء الأولوية للتعافي","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"ar-SA","translation":"سلسلة فارغة إذا لم يتم تغييرها","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"ar-SA","translation":"عمليات السحب","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"ar-SA","translation":"لقد قمنا بتعديل توصيات اليوم لتكون في الجانب الآمن لتعكس بيانات الاسترداد الجديدة.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"ar-SA","translation":"وقد انعكس الرقم القياسي الجديد.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"ar-SA","translation":"معرف موجود","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"ar-SA","translation":"الفئات الموجودة أو المطلوبة","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"ar-SA","translation":"لقد قمت بتسجيل موقعي الحالي كصالة الألعاب الرياضية الخاصة بي.","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"ar-SA","translation":"تعذر الحصول على الموقع الحالي","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"ar-SA","translation":"التحقق من الموقع الحالي","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"ar-SA","translation":"لقد أكدنا 3 سجلات تمارين و8 سجلات وجبات من آخر 7 أيام.","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"ar-SA","translation":"تسجيل النوم غير كاف","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"ar-SA","translation":"تتبع نومك لمدة 3 أيام واستمر في ممارسة الرياضة 3 مرات في الأسبوع.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"ar-SA","translation":"سجل نومك لمدة 3 أيام","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"ar-SA","translation":"الفكرية والنبيلة والمتقدمة","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"ar-SA","translation":"تعليق شامل قصير","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"ar-SA","translation":"عمل قصير","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"ar-SA","translation":"يوم الصدر","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"ar-SA","translation":"تلقائي","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"ar-SA","translation":"يمكنك التسجيل عن طريق السماح بمعلومات الموقع في تطبيق الإعدادات.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"ar-SA","translation":"لقد أكدنا على 3 مؤشرات أداء رئيسية، و8 وجبات، و3 عناصر لتدريب العضلات.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"ar-SA","translation":"مرة واحدة في الأسبوع","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"ar-SA","translation":"أكملت 3 دورات تدريبية في الأسبوع","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"ar-SA","translation":"الاستمرار في ممارسة الرياضة 3 مرات في الأسبوع","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"ar-SA","translation":"ثقيلة، فاخرة، مثيرة","review_note":""}

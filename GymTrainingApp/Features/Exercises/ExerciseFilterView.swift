@@ -7,9 +7,9 @@ struct ExerciseFilterView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             FilterRow(
-                title: "部位",
+                title: L10n.string("training.78efc5de2d26", fallback: "部位"),
                 systemImage: "figure.strengthtraining.traditional",
-                allTitle: "すべて",
+                allTitle: L10n.string("training.c7fe2b510de0", fallback: "すべて"),
                 items: MuscleGroup.selectionCases,
                 selectedItem: $selectedMuscle,
                 titleForItem: \.displayName,
@@ -17,9 +17,9 @@ struct ExerciseFilterView: View {
             )
 
             FilterRow(
-                title: "手法",
+                title: L10n.string("training.a0c4d068d3f0", fallback: "手法"),
                 systemImage: "dumbbell",
-                allTitle: "すべて",
+                allTitle: L10n.string("training.c7fe2b510de0", fallback: "すべて"),
                 items: Equipment.allCases,
                 selectedItem: $selectedEquipment,
                 titleForItem: \.displayName,

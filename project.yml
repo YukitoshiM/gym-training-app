@@ -1,14 +1,15 @@
 name: GymTrainingApp
 options:
   bundleIdPrefix: com.yukitoshim
+  developmentLanguage: en-US
   deploymentTarget:
     iOS: "17.0"
     watchOS: "10.0"
   createIntermediateGroups: true
 settings:
   base:
-    MARKETING_VERSION: 0.1.0
-    CURRENT_PROJECT_VERSION: 16
+    MARKETING_VERSION: 1.0
+    CURRENT_PROJECT_VERSION: 33
     SWIFT_VERSION: 6.0
     DEVELOPMENT_TEAM: PXJ45MLX8V
 packages:
@@ -22,6 +23,11 @@ targets:
   GymTrainingApp:
     type: application
     platform: iOS
+    scheme:
+      testTargets:
+        - GymTrainingAppTests
+        - GymTrainingAppUITests
+      storeKitConfiguration: Config/BodyMode.storekit
     configFiles:
       Debug: Config/App.Debug.xcconfig
       Release: Config/App.Release.xcconfig
@@ -48,15 +54,62 @@ targets:
         CFBundleDisplayName: BodyMode
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleLocalizations:
+          - ar-SA
+          - ca
+          - cs
+          - da
+          - de-DE
+          - el
+          - en-AU
+          - en-CA
+          - en-GB
+          - en-US
+          - es-ES
+          - es-MX
+          - fi
+          - fr-CA
+          - fr-FR
+          - gu
+          - he
+          - hi
+          - hr
+          - hu
+          - id
+          - it
+          - ja
+          - ko
+          - mr
+          - ms
+          - nb
+          - nl-NL
+          - pl
+          - pt-BR
+          - pt-PT
+          - ro
+          - ru
+          - sk
+          - sl
+          - sv
+          - ta
+          - te
+          - th
+          - tr
+          - uk
+          - vi
+          - zh-Hans
+          - zh-Hant
         BodyModeAIAPIKey: $(BODYMODE_AI_API_KEY)
         BodyModeAIBaseURL: $(BODYMODE_AI_BASE_URL)
         BodyModeAIConfigurationVersion: $(BODYMODE_AI_CONFIGURATION_VERSION)
         BodyModeAIUsesSessionTokens: $(BODYMODE_AI_USES_SESSION_TOKENS)
+        BodyModeAIRequiresAccount: true
         BodyModeAdBannerUnitID: $(BODYMODE_ADMOB_BANNER_AD_UNIT_ID)
-        BodyModePrivacyPolicyURL: ""
-        BodyModeSupportEmail: ""
-        BodyModeSupportURL: ""
-        BodyModeTermsURL: ""
+        BodyModeAdRewardedUnitID: $(BODYMODE_ADMOB_REWARDED_AD_UNIT_ID)
+        BodyModePrivacyPolicyURL: $(BODYMODE_PRIVACY_POLICY_URL)
+        BodyModeSupportEmail: $(BODYMODE_SUPPORT_EMAIL)
+        BodyModeSupportURL: $(BODYMODE_SUPPORT_URL)
+        BodyModeTermsURL: $(BODYMODE_TERMS_URL)
         GADApplicationIdentifier: $(BODYMODE_ADMOB_APP_ID)
         GADDelayAppMeasurementInit: true
         ITSAppUsesNonExemptEncryption: false
@@ -69,6 +122,7 @@ targets:
         NSLocationWhenInUseUsageDescription: 現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。
         NSLocalNetworkUsageDescription: Mac miniなど、ユーザーが指定したローカルAIサーバーへ接続するためにローカルネットワークを使用します。
         NSMotionUsageDescription: Apple Watchの動きからセット中の回数とテンポを推定します。
+        NSUserTrackingUsageDescription: Your permission lets our ad provider use your device's advertising identifier to limit repeated ads and measure ad performance. You can still use BodyMode and non-personalized ads if you decline.
         SKAdNetworkItems:
           - SKAdNetworkIdentifier: 22mmun2rn5.skadnetwork
           - SKAdNetworkIdentifier: 2fnua5tdw4.skadnetwork
@@ -160,7 +214,8 @@ targets:
         WKApplication: true
         WKCompanionAppBundleIdentifier: com.yukitoshim.gymtrainingapp
         NSHealthShareUsageDescription: ワークアウト中の心拍と消費エネルギーを表示し、セットごとの負荷を記録します。
-        NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングをApple Healthに保存します。
+        NSHealthUpdateUsageDescription: Apple Watchで記録した筋力トレーニングと屋外有酸素運動をApple Healthに保存します。
+        NSLocationWhenInUseUsageDescription: 屋外運動中のルートをApple Healthに保存するために位置情報を使用します。ルートはAIや広告へ送信しません。
         NSMotionUsageDescription: 手首の動きからセット中の回数とテンポを推定します。
         WKBackgroundModes:
           - workout-processing
@@ -202,6 +257,8 @@ targets:
     platform: iOS
     sources:
       - path: GymTrainingAppTests
+      - path: Config/BodyMode.storekit
+        buildPhase: resources
     dependencies:
       - target: GymTrainingApp
     settings:

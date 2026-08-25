@@ -29,7 +29,7 @@ chmod +x local_llm_server/run_server.sh scripts/install_local_ai_launch_agent.sh
 curl -H "Authorization: Bearer $(cat local_llm_server/.api_key)" http://127.0.0.1:8765/v1/health
 ```
 
-インストーラーは実行環境を`~/Library/Application Support/BodyMode/local_ai_server/`へ同期します。`/tmp`の削除に影響されず、macOSのバックグラウンドプロセスからも安定して読み込めます。サーバーコードを変更した場合はインストーラーを再実行してください。ログは`~/Library/Logs/BodyMode/`へ保存します。
+インストーラーは実行環境を`~/Library/Application Support/BodyMode/local_ai_server/`へ同期します。`/tmp`の削除に影響されず、macOSのバックグラウンドプロセスからも安定して読み込めます。サーバーコードを変更した場合はインストーラーを再実行してください。ログは`~/Library/Logs/BodyMode/`へ保存し、1ファイル5MiBまたは14日でローテーションします。バックアップは1世代だけ保持し、14日を超えたバックアップは削除します。
 
 同時に60秒間隔の監視Agentを登録します。`/internal/health`に加え、短命トークンを取得して認証付き`/v1/health`まで確認します。ローカル確認が3回連続で失敗した場合だけAPIを再起動し、5MiBを超えたログを1世代ローテーションします。インストール時に監視スクリプトのSHA-256とLaunchAgentの参照先を検証するため、リポジトリ更新後に古い監視コピーが残りません。
 
@@ -60,7 +60,25 @@ chmod 600 local_llm_server/.public_base_url
 
 トークンは端末Keychainへ保存され、期限の60秒前または401受信時に再取得します。同じ端末から同時要求が発生した場合はアプリ内で1回へまとめます。`POST /v1/auth/revoke`で個別トークンを失効でき、サーバーは端末・APIごとに1分当たりの要求数を制限します。トークン発行口は端末ごとの専用上限（既定8回/分）と全体上限（既定120回/分）を分け、同じWi-FiやNATを使う別端末が互いの枠を消費しないようにします。短い失敗遅延（既定0.25秒、最大2秒）を設け、成功・拒否・制限をハッシュ化識別子だけで監査記録します。登録キー、アクセストークン、端末IDの平文は監査ログへ保存しません。
 
-必要な場合は`.env.local`で次を調整できます。上限を無効化する設定はありません。
+全配布版で`AI_QUOTA_ENFORCEMENT=1`を維持します。オーナー端末だけは、一般配布キーと分離した失効可能な登録キーの`subject`を`AI_QUOTA_EXEMPT_SUBJECTS`へ指定して日次・期間上限を免除できます。短時間レート制限と同時実行制御はオーナーにも適用します。オーナー登録キーはアプリやGitへ埋め込みません。
+
+1分単位の制限に加えて、SQLiteの匿名利用台帳で旧ビルド互換の機能別日次・期間上限を管理します。Apple登録済みでクレジット制が有効な利用者にはこの旧上限を重ねず、残高と機能別コストを利用可否の正本にします。成功した推論だけを確定し、失敗時は枠または予約クレジットを返却します。同じ`X-Request-ID`の再送は二重計上しません。互換上限は`.env.local`の`AI_QUOTA_*`でアプリ再配布なしに変更できます。
+
+利用台帳には匿名化済み端末キー、機能、時刻、成功状態、処理時間だけを保存します。会話本文、画像、健康値、食事名、種目名、認証情報は保存しません。`GET /v1/usage`で端末ごとの残り回数とリセット時刻を取得できます。
+
+直近7日間の匿名運用集計は次で確認できます。
+
+```bash
+cd local_llm_server
+.venv/bin/python usage_report.py 7
+```
+
+同意済みの匿名利用KPIは`usage_analytics_report.py`、AdMob管理画面から転記した収益とAI運用費を含む週次比較は`weekly_operations_report.py`で確認できます。広告データとAIデータを利用者単位では結合しません。
+
+```bash
+.venv/bin/python usage_analytics_report.py 30
+.venv/bin/python weekly_operations_report.py --days 7 --ad-revenue-jpy 0 --ai-cost-jpy 0
+```
 
 ```bash
 AI_TOKEN_ISSUE_RATE_LIMIT_PER_MINUTE=8
@@ -70,12 +88,12 @@ AI_TOKEN_FAILURE_DELAY_SECONDS=0.25
 
 ```bash
 cd local_llm_server
-python -m unittest test_auth.py
+.venv/bin/python -m unittest test_auth.py
 ```
 
-## TestFlight開発用の公開URL
+## 公開URLと中立ゲートウェイ
 
-開発中は独自ドメインを購入せず、Tailscale Funnelの固定`*.ts.net` URLを使用します。
+Mac miniの入口にはTailscale Funnelの固定`*.ts.net` URLを使用します。この直接URLはアプリへ同梱せず、正式配布ビルドはCloudflare Workerの中立な`workers.dev` URLへ接続します。
 
 ```bash
 brew install tailscale
@@ -88,7 +106,7 @@ tailscale --socket="$SOCKET" funnel --bg --yes 8765
 tailscale --socket="$SOCKET" funnel status
 ```
 
-Tailscale Funnelは開発・TestFlight検証に限定します。正式リリース前には独自ドメインを取得し、Cloudflare Named Tunnelへ移行します。
+初期の中立ゲートウェイはCloudflare Workers Freeで運用し、独自ドメインは不要です。配備と段階移行は`docs/ai_gateway_deployment.md`を参照してください。旧TestFlightビルドの移行が完了するまでは、Mac mini側のゲートウェイ専用モードを有効にしません。
 
 ## Web画面
 
@@ -97,8 +115,7 @@ Tailscale Funnelは開発・TestFlight検証に限定します。正式リリー
 - Mac mini自身: `http://127.0.0.1:8765`
 - 同じWi-Fiの端末: `http://<Mac miniのLAN IP>:8765`
 
-インターネットへ公開する場合は、推測されにくい `LOCAL_AI_API_KEY` を設定し、Cloudflare TunnelやTailscaleなど認証・暗号化された経路を利用してください。開発用の `dev-local-key` のまま公開しないでください。
-実機からはMacのLAN IPかTailscale名を指定します。
+インターネットへ公開する場合は、推測されにくい`LOCAL_AI_API_KEY`、短期トークン、機能別利用枠を使用し、開発用の`dev-local-key`のまま公開しないでください。Debug実機はMacのLAN IPまたはTailscale名を利用できますが、Releaseでは中立ゲートウェイを使用します。
 
 ## Ollama
 
@@ -126,19 +143,48 @@ Ollamaに接続できない場合も、アプリ開発を止めないための�
 - `Ollama未接続`: `ollama serve` を起動し、`OLLAMA_BASE_URL` を確認します。
 - `モデル未取得`: `ollama pull $OLLAMA_MODEL` を実行するか、利用中のモデル名を `OLLAMA_MODEL` に指定します。
 
+## AIクレジット公開設定
+
+正式公開では、`.env.local.example`のクレジット、Sign in with Apple、StoreKit検証、AdMob SSV項目をすべて設定します。
+
+本番は`AI_RUNTIME_ENVIRONMENT=production`、`AI_AUTH_MODE=token_required`、`AI_CREDIT_ENFORCEMENT=1`の組み合わせだけを許可します。いずれかを緩めた場合はサーバーが起動せず、旧共有APIキーや残高なしの呼び出しへ誤ってAIを無料開放しません。
+
+```bash
+./scripts/install_app_store_root_certificates.sh
+openssl rand -base64 32 | tr '+/' '-_' | tr -d '='
+```
+
+- Apple DeveloperでSign in with Apple対応キーを作成し、Team ID、Key ID、`.p8`パスを設定する。
+- 2行目で生成した値を`AI_APPLE_TOKEN_ENCRYPTION_KEY`へ保存する。Git、ログ、アプリへ含めない。
+- App Store Connectで消耗型IAP 50・150・500クレジットを作成する。
+- App Store ConnectのServer Notifications V2 URLを、公開ゲートウェイの`/v1/app-store/notifications`へ設定する。SandboxとProductionの両方で署名検証を確認する。
+- AdMobで報酬動画ユニットを作り、同じ広告ユニットIDをアプリとサーバーへ設定する。
+- AdMobのSSV URLを公開ゲートウェイの`/v1/credits/rewarded-ad/ssv`へ設定する。
+- `GET /v1/health`の`monetization_ready`が`true`になることを公開前に確認する。
+
+Apple refresh tokenは専用SQLiteへAES-GCMで暗号化して保存する。アカウント削除時はAppleで失効できた場合だけクレジット台帳とアカウントを削除する。報酬広告はGoogleのECDSA署名検証後だけ付与する。
+
 ## Endpoints
 
 - `GET /v1/health`
 - `POST /v1/auth/token`
 - `POST /v1/auth/revoke`
+- `POST /v1/account/apple`
+- `DELETE /v1/account`
 - `GET /v1/coaches`
 - `GET /v1/evidence/status`
+- `GET /v1/evidence/metrics`
 - `POST /v1/agents/chat`
 - `POST /v1/meals/analyze-image`
 - `POST /v1/meals/analyze-text`
 - `POST /v1/body-photos/analyze`
 - `POST /v1/body-photos/analyze-set`
 - `POST /v1/reports/weekly`
+- `POST /v1/credits/rewarded-ad/challenge`
+- `POST /v1/credits/rewarded-ad/claim`
+- `GET /v1/credits/rewarded-ad/ssv`
+- `POST /v1/credits/purchases/verify`
+- `POST /v1/app-store/notifications`（App Store Server Notifications V2。認証ヘッダーではなくApple署名を検証）
 
 `analyze-set`は同じ日の正面・横・背面・腹部アップを最大4枚受け取り、角度を区別した1つの分析結果を返します。アプリは写真追加後に同じ撮影セットを再送でき、サーバーは画像や分析履歴を保存しません。
 
@@ -165,20 +211,21 @@ Ollamaに接続できない場合も、アプリ開発を止めないための�
 
 ## Evidence RAG
 
-Europe PMCの48個の固定検索式から、筋肥大、筋力、減量、ボディリコンポジション、健康維持、競技力、復帰に関する文献メタデータと抄録を同期します。各検索は関連度、直近研究、1990〜2016年の基礎研究を組み合わせます。Crossrefで高品質文献の訂正・撤回関係を補助照合し、SQLite FTS5、`sqlite-vec`、ローカルOllamaの`bge-m3`で検索します。
+Europe PMCの48個の固定検索式から文献メタデータと抄録を同期し、明示的に再利用可能なOAライセンスを確認できた文献だけ本文も取得します。PICO・制約・結論、訂正/旧版関係を保存し、SQLite FTS5、`sqlite-vec`、ローカルOllamaの`bge-m3`、ユーザーと研究対象者の適合度で検索します。
 
 ```bash
 cd local_llm_server
-./sync_evidence.sh --limit-per-query 160
+./sync_evidence.sh --limit-per-query 160 --full-text-limit 500
 ```
 
 - 検索式は固定で、ユーザーの相談文や健康データをEurope PMC/Crossrefへ送りません。
 - ユーザーの質問はMac mini内でだけ埋め込み・検索します。
 - 撤回済み文献は検索結果から除外します。
+- 訂正版に置き換えられた旧版と対象者が明確に不一致の文献は回答へ引用しません。
 - 既存ベクトルをPMID単位で再利用し、新規・入替文献だけを埋め込みます。
 - 同期結果は全件検証後に1トランザクションで置換し、途中失敗時は以前のコーパスを維持します。
 - RAGが空、停止、検索不能でも従来のAIチャットは継続します。
-- 文献本文や抄録をアプリへ再配布せず、タイトル、研究種別、年、PubMedリンクだけを表示します。
+- 文献本文や抄録をアプリへ再配布せず、根拠要約、対象者、介入、制約、適合度とPubMedリンクを表示します。
 
-同期状態は認証付き`GET /v1/evidence/status`で確認できます。詳細な設計と制約は`docs/evidence_rag_design.md`を参照してください。
+同期状態は`GET /v1/evidence/status`、遅延・費用・失敗は`GET /v1/evidence/metrics`で確認できます。`evidence_evaluation.py`は目的別Recall@K、関連適合率、撤回安全率、対象者適合率をJSON出力します。詳細は`docs/evidence_rag_design.md`を参照してください。
 `scripts/install_local_ai_launch_agent.sh`を再実行すると、毎週月曜03:15の自動同期も同時に登録されます。

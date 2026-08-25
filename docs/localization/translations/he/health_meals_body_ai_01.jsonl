@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"he","translation":"יוחזר ל-{{value1}}. ניתן להמשיך להקליד ידנית.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"he","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"he","translation":"יש להזין מספר גדול מ-0.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"he","translation":"1. שמירה על 3 אימונים בשבוע\n2. רישום מטרה של חלבון\n3. השוואה בין תמונות גוף בסוף החודש","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"he","translation":"אנא המתן כדקה ואז נסה שוב.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"he","translation":"כוס אחת","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"he","translation":"אין תרגילים שהוקלטו יותר מ-3 פעמים, כך שאין אפשרות ברורה להשהיה.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"he","translation":"מספר אימונים של 48 שעות","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"he","translation":"איזון גוף באמצעות AI","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"he","translation":"הנתונים שאליהם מתייחס ה-AI","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"he","translation":"שימוש ב-AI נמצא כרגע בעל עומס גבוה.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"he","translation":"מידע האימות של ה-AI אינו תקין או פג.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"he","translation":"שגיאת AI","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"he","translation":"מאמן AI","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"he","translation":"כתובת ה-URL של שרת ה-AI אינה תקינה.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"he","translation":"שרת ה-AI החזיר שגיאה: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"he","translation":"לא נמצא API נדרש לשרת ה-AI.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"he","translation":"לא ניתן להתחבר לשרת ה-AI. אנא נסו שוב לאחר זמן מה.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"he","translation":"פורמט ה-JSON של שרת ה-AI אינו תואם את ההנחה של האפליקציה.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"he","translation":"לא הצלחתי לקרוא את התגובה משרת ה-AI.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"he","translation":"התרחשה שגיאה בשרת ה-AI: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"he","translation":"בדוק חיבור לשרת ה-AI","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"he","translation":"מאמן AI","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"he","translation":"האם תרצו למחוק שיחה עם מאמן ה-AI?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"he","translation":"מודל ה-AI אינו זמין או ניתוח התמונות נכשל.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"he","translation":"הכנה של מודל ה-AI","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"he","translation":"ניתוח AI","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"he","translation":"יש מספיק מקום לשימוש ב-AI.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"he","translation":"בדוק את השימוש במקום ה-AI.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"he","translation":"הגדרות השימוש ב-AI כבויות.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"he","translation":"ערכי AI מומלצים - יש לבדוק.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"he","translation":"חיבור ה-AI פעיל.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"he","translation":"לא ניתן לשמור את מידע החיבור ל-AI בצורה מאובטחת.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"he","translation":"פונקציות AI","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"he","translation":"הפונקציות של ה-AI כבויות בהגדרות.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"he","translation":"ניתן לשמור את קבוצת התמונות הזו כפי שהיא, הפונקציות של ה-AI כבויות בהגדרות.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"he","translation":"ניתן לשמור את הקלט ידני הזה כפי שהוא, הפונקציות של ה-AI כבויות בהגדרות.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"he","translation":"היסטוריית שליחה של ה-AI","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"he","translation":"מפתח ה-API לא מוגדר.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"he","translation":"יש לבדוק את גרסת שרת ה-API. פרטים: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"he","translation":"שרת ה-API מגיב, אך אי אפשר להשתמש במודל הדרוש.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"he","translation":"שרת ה-API מגיב, אך אי אפשר להשתמש במודלים לסיוע ביצירת מתכונים ודוחות.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"he","translation":"חיבור ל-Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"he","translation":"מציג את המסלול האחרון של ריצה שנשמר ב-Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"he","translation":"חבר ל-Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"he","translation":"התאימו את השעון Apple בצורה נוחה והשתמשו בו גם בזמן השינה, כדי להקל על השגת מדדים רלוונטיים. לא נמליץ על השלמה של ערכים חסרים.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"he","translation":"יש לבדק את כתובת ה-URL הבסיסית ואת גרסת שרת ה-API.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"he","translation":"ערכי HRV נמוכים מהממוצע של 14 ימים.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"he","translation":"אין נתונים רציפים של HRV.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"he","translation":"ערכי HRV גבוהים מהממוצע.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"he","translation":"ערכי HRV בטווח הרגיל.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"he","translation":"השוואה ממוצעת של HRV: {{value1}}% (בהשוואה לערכים אישיים).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"he","translation":"ניתן להשתמש רק ב-HTTP עבור localhost, רשת מקומית ו-Tailscale. יש להשתמש ב-HTTPS עבור שרתים חיצוניים.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"he","translation":"לא ניתן לקבל את צריכת האנרגיה של הנתונים הבריאותיים. רק תיעוד התזונה נשמר.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"he","translation":"עדכן את נתוני הבריאות.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"he","translation":"בחר מחדש תמונות JPEG או PNG.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"he","translation":"רשום מדדים (KPI).","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"he","translation":"הערכים העדכניים ביותר שמחושבים על ידי אפליקציות כמו Noise. אם אין ערך, השאר אותו 0.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"he","translation":"חישוב אוטומטי של קלוריות מ-PFC.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"he","translation":"השגת PFC.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"he","translation":"הפחת את רמת העייפות (RPE) בשלב אחד.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"he","translation":"יש להתחיל בכתובת ה-URL עם https://. ניתן להשתמש גם ב-HTTP עבור localhost, כתובות IP של רשת מקומית ו-Tailscale במהלך פיתוח מקומי.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"he","translation":"ניתן להשתמש ב-http:// רק בזמן פיתוח מקומי.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"he","translation":"עם חיישן שעון.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"he","translation":"bpm / 30 שניות.","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"he","translation":"השגת קלוריות ו-PFC.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"he","translation":"השגת קלוריות.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"he","translation":"ק\"ג / דקה","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"he","translation":"{\"id\":\"{{value1}}\",\"category\":\"{{value2}}\",\"title\":\"{{value3}}\",\"target\":0,\"rationale\":\"בדקתי את ההיסטוריה והמטרות\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"he","translation":"{\"שמור את הקיים\":true,\"רמת מוכנות\":\"רגילה\",\"סיכום\":\"בואו נעשה את ההצעה הזאת כפי שהיא.\",\"סיבת שינוי\":\"\",\"פעולות\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"he","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"he","translation":"{{value1}} / {{value2}} שעות","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"he","translation":"{{value1}} / {{value2}} צעדים","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"he","translation":"{{value1}} / {{value2}} ארוחות","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"he","translation":"{{value1}} {{value2}} ({{value3}}: {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"he","translation":"{{value1}} וגם באמצעות מודל תמיכה, ניתן ליצור הערות שבועיות.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"he","translation":"{{value1}}/{{value2}} פעמים","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"he","translation":"{{value1}}: {{value2}} אחוז הצלחה {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"he","translation":"{{value1}}\": בדוק את כל ההגדרות","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"he","translation":"{{value1}} מכין תשובה","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"he","translation":"{{value1}} בודק את התזונה והערכים התזונתיים","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"he","translation":"{{value1}} בודק מספר כיוונים","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"he","translation":"{{value1}} זוכר","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"he","translation":"{{value1}} יוצר ומציע שיפורים","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"he","translation":"{{value1}} מתייעץ עם","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"he","translation":"דוח של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"he","translation":"אין דוח של {{value1}} עדיין","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"he","translation":"גרסה ראשונית של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"he","translation":"גרסה ראשונית של {{value1}} ו-{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"he","translation":"ניתוח של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"he","translation":"תוצאות הניתוח של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"he","translation":"מידע רלוונטי ל-{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"he","translation":"סקירה של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"he","translation":"התוכן ששמור לאחר אישור, רק מופיע לאחר ההצעה של {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"he","translation":"סקירת חודש עבור {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"he","translation":"זיכרון של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"he","translation":"בוחר מתוך הספרייה: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"he","translation":"מחק את {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"he","translation":"צלם את {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"he","translation":"ערוך את ה-{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"he","translation":"רשום את ה-{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"he","translation":"הגדר את ה-{{value1}} באופן קל","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"he","translation":"הממוצע של הסטים של {{value1}} הוא {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"he","translation":"{{value1}}•","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"he","translation":"{{value1}}•{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"he","translation":"{{value1}}• צ'אט","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"he","translation":"{{value1}}• הצעה לסקירה חודשית","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"he","translation":"{{value1}}• תיקון {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"he","translation":"{{value1}}• דוח שבועי","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"he","translation":"{{value1}}•{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"he","translation":"{{value1}}נסה שוב. ניתן להמשיך להשתמש בתיעוד ידני.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"he","translation":"{{value1}} נסה שוב. אם תרצה להמשיך, בדוק את מצב פעולת השרת של הבינה המלאכותית.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"he","translation":"{{value1}} למחוק תמונה","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"he","translation":"{{value1}} דקות","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"he","translation":"{{value1}} פעמים","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"he","translation":"{{value1}} פעמים• שיעור השגת ממוצע {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"he","translation":"מנתח את כל התמונות בכיוון {{value1}}. אין הסכמה לגבי ערכים כגון אחוז שומן גוף.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"he","translation":"{{value1}} תמונות","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"he","translation":"סט צילומים של {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"he","translation":"{{value1}} צעדים","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"he","translation":"\"–\" מציין מדידה לא בוצעה, ולכן מוסר מסך הסכום. \"Tr\" מציין כמות קטנה, ולכן מוערכת ב-0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"he","translation":"ועוד {{value1}} גרם","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"he","translation":"נחשוב יחד על הנתונים שלך.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"he","translation":"מרגיש טוב מאוד","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"he","translation":"מרגיש עייף מאוד","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"he","translation":"ניתן לנתח זאת כעת. ניתן להוסיף גם צדדים וגם גב, כדי לבדוק מנקודות שונות.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"he","translation":"לנתח את הסט הזה","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"he","translation":"אני יכול להציע בהתבסס על המידע הזה.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"he","translation":"מחיקה הכל","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"he","translation":"חלבון","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"he","translation":"נשקף בהצעות ליום מחר.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"he","translation":"ושאר {{value1}} פריטים","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"he","translation":"אין עדיין נתוני אימון.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"he","translation":"אין עדיין רישום.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"he","translation":"להעריך שוב","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"he","translation":"מותניים","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"he","translation":"לקרוא באמצעות מצלמה","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"he","translation":"אי אפשר להשתמש במצלמה","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"he","translation":"לא ניתן להשתמש בקריאת מצלמה","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"he","translation":"קלוריות","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"he","translation":"חישוב קלוריות בעיבוד","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"he","translation":"ביטול","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"he","translation":"סטטוס","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"he","translation":"אנא ודאו שכתובת השרת, מפתח ה-API והסטטוס של שרת ה-API פעילים.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"he","translation":"ביקור בחדר כושר","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"he","translation":"מכשיר","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"he","translation":"סט","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"he","translation":"ניתוח סט","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"he","translation":"איכות סט","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"he","translation":"פירוט איכות סט","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"he","translation":"חלבון {{value1}} גרם","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"he","translation":"לחיצת חזה","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"he","translation":"ערך זה הוא הערכה בלבד.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"he","translation":"קצב","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"he","translation":"לאחר קבלת הנתונים, תוכלו לבדוק את השינה, ההתאוששות והפעילות הגופנית שלכם ביחד.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"he","translation":"איכות נתונים","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"he","translation":"ייעוץ עם מאמן","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"he","translation":"אימון","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"he","translation":"ניתוח אימון","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"he","translation":"היסטוריית אימונים","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"he","translation":"תכנית אימונים","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"he","translation":"עומס אימונים","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"he","translation":"אנא ודאו שהשרתים של הרשת וה-AI פועלים. עיבוד ה-AI עשוי לקחת עד 240 שניות.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"he","translation":"בדקו את מצב הרשת ואת כתובת ה-URL של השרת, ולאחר מכן נסו שוב.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"he","translation":"בדקו את מצב הרשת ואת כתובת ה-URL של השרת.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"he","translation":"קוד QR","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"he","translation":"נפח","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"he","translation":"נפח הוא משקל × מספר חזרות עבור סט השלם. כאשר יש שינויים גדולים בהרכב האימונים, אין להשוות בצורה פשוטה מדי.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"he","translation":"תנועה","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"he","translation":"הודעה","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"he","translation":"תפריט","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"he","translation":"התחילו עם תפריט","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"he","translation":"הערות","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"he","translation":"ספרייה","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"he","translation":"משיכת רצועה","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"he","translation":"כמות מומלצת","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"he","translation":"העריכו קלוריות מרשימה","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"he","translation":"נסו שוב לאחר איפוס. ניתן להשתמש עדיין בתיעוד ידני.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"he","translation":"אם נמצא ריצה חיצונית עם מיקום, תצוגה של מרחק, מהירות ושינוי גובה.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"he","translation":"דחיפת רגליים","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"he","translation":"·","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"he","translation":"·{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"he","translation":"מספר הקומות שעלו","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"he","translation":"התעוררות באמצע","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"he","translation":"מדדי ביצוע מרכזיים","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"he","translation":"תחושת עייפות גבוהה","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"he","translation":"תחושת עייפות נמוכה","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"he","translation":"תחושת עייפות בטווח הרגיל","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"he","translation":"אנא בחרו רק את התוכן המתאים להמשך השימוש.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"he","translation":"כדי לסייע בהצעות המשקל העתידיות שלך","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"he","translation":"השלושה הבאים נקבעו:","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"he","translation":"פעילות היום","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"he","translation":"תקציב אנרגיה היום","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"he","translation":"סט היום","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"he","translation":"רמת עייפות גופנית היום","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"he","translation":"הצעה ליום זה","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"he","translation":"ערוך את סט הצילום של היום","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"he","translation":"הוסף סט צילום חדש ליום זה","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"he","translation":"רמת פעילות גבוהה היום","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"he","translation":"הצגת הפעילות של היום","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"he","translation":"רמת הכושר שלך היום","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"he","translation":"פעולות היום","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"he","translation":"בדיקת ההתקדמות שלך היום","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"he","translation":"ארוחת היום","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"he","translation":"אפשרויות לארוחה היום","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"he","translation":"מטרות ארוחת היום","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"he","translation":"היום, העדפת התאוששות","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"he","translation":"היום, נשמר מרחק בין אימוני הכוח, והפעילות תתבצע בצורה מתונה.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"he","translation":"היום, מפחיתים את העומס.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"he","translation":"יש אפשרות להפחית משקל וסטים, ולהעדיף התאוששות.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"he","translation":"בדוק מה אתה מתכנן לעשות היום.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"he","translation":"שבוע זה","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"he","translation":"שבוע זה {{value1}} פעמים • כרגע {{value2}} מטר","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"he","translation":"שבוע זה {{value1}} פעמים • סך הכל {{value2}} פעמים","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"he","translation":"סיכום השבוע","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"he","translation":"אופציונלי","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"he","translation":"שיחה","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"he","translation":"מחיקת שיחה","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"he","translation":"ההיסטוריה של השיחות לא נמחקת.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"he","translation":"ערכים מומלצים, אך לא מדויקים. אין לשמור את הנתונים או הגרפים.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"he","translation":"תמונות גוף","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"he","translation":"AI לתמונות גוף","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"he","translation":"שיתוף תמונות גוף באמצעות AI מושבת בהגדרות.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"he","translation":"אין עדיין תמונות גוף","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"he","translation":"לצלם תמונה של הגוף","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"he","translation":"ניתוח סט תמונות גוף","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"he","translation":"בדיקת תמונות גוף","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"he","translation":"אם יש מצב לא תקין או כאבים, עדיף לתת עדיפות לתחושה האישית.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"he","translation":"נסו להתקדם בהתאם ללוח הזמנים, תוך התחשבות במצב הבריאותי.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"he","translation":"משקל","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"he","translation":"ערכים כמו משקל ומספר המותניים יכולים להשתנות מדי יום, ולכן מומלץ לבדוק את השינויים לאורך זמן.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"he","translation":"לתעד משקל","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"he","translation":"הצעות לציוד שניתן להשתמש בו","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"he","translation":"לדוגמה: אורז לבן 150 גרם","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"he","translation":"שמירה","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"he","translation":"סקירת חודש שנשמרה","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"he","translation":"זיכרון שנשמר","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"he","translation":"אין לי זיכרון שנשמר","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"he","translation":"זיכרונות שנשמרו לא נמחקים.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"he","translation":"האם תרצה למחוק את כל הזיכרונות השמורים?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"he","translation":"לא לשמור","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"he","translation":"לא ניתן לשמור","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"he","translation":"רמת אמון","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"he","translation":"ערך","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"he","translation":"הוספת ערך תציג כאן את ההיסק.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"he","translation":"בדיקת קיפאון","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"he","translation":"סוגי קיפאון: השווה בין הורדת משקל פעם אחת לשימוש במספר חזרות, או בין הפסקת מנוחה של 15-30 שניות.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"he","translation":"חומרים לגילוי סיבות לקפיאה","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"he","translation":"אנרגיה","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"he","translation":"נתונים קלט","review_note":""}

@@ -17,9 +17,13 @@ struct WatchActiveWorkoutView: View {
     @ViewBuilder
     var body: some View {
         if let session = workoutStore.activeSession {
-            activeWorkoutContent(session: session)
+            if session.isOutdoorCardio {
+                WatchOutdoorActiveView(session: session)
+            } else {
+                activeWorkoutContent(session: session)
+            }
         } else {
-            Text("記録中のワークアウトがありません")
+            Text(L10n.string("watch_widget.e7c120e0433a", fallback: "記録中のワークアウトがありません"))
                 .padding()
         }
     }
@@ -31,18 +35,18 @@ struct WatchActiveWorkoutView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         Text(session.title)
                             .font(.headline)
-                        Text("\(session.completedSetCount)/\(session.totalSetCount)セット・\(session.completedRepCount)回記録")
+                        Text(L10n.string("watch_widget.fcce7b71cb97", fallback: "{{value1}}/{{value2}}セット・{{value3}}回記録", values: [String(describing: session.completedSetCount), String(describing: session.totalSetCount), String(describing: session.completedRepCount)]))
                             .font(.caption)
                             .foregroundStyle(WatchAppTheme.mutedInk)
                             .accessibilityIdentifier("watchWorkoutProgress")
 
                         if let activeSet {
-                            Text("\(activeSet.exercise.name)・セット\(activeSet.set.setOrder)")
+                            Text(L10n.string("watch_widget.bbe1d3c236c4", fallback: "{{value1}}・セット{{value2}}", values: [String(describing: activeSet.exercise.name), String(describing: activeSet.set.setOrder)]))
                                 .font(.caption.bold())
                                 .foregroundStyle(WatchAppTheme.positive)
 
                             VStack(alignment: .leading, spacing: 6) {
-                                Text("実績 \(formatWeight(activeSet.set.actualWeight, unit: session.weightUnit)) × \(activeSet.set.actualReps)回")
+                                Text(L10n.string("watch_widget.3e06adb84ec0", fallback: "実績 {{value1}} × {{value2}}回", values: [String(describing: formatWeight(activeSet.set.actualWeight, unit: session.weightUnit)), String(describing: activeSet.set.actualReps)]))
                                     .font(.caption)
                                     .accessibilityIdentifier("watchActiveSetActual")
 
@@ -54,9 +58,9 @@ struct WatchActiveWorkoutView: View {
                                             unit: session.weightUnit
                                         )
                                     } label: {
-                                        Label("重量", systemImage: "dial.medium")
+                                        Label(L10n.string("watch_widget.74211dc96bd5", fallback: "重量"), systemImage: "dial.medium")
                                     }
-                                    .accessibilityLabel("実行中セットの重量を変更")
+                                    .accessibilityLabel(L10n.string("watch_widget.27c9510ceaed", fallback: "実行中セットの重量を変更"))
                                     .accessibilityIdentifier("watchActiveWeightEntry")
 
                                     Button {
@@ -65,9 +69,9 @@ struct WatchActiveWorkoutView: View {
                                             set: activeSet.set
                                         )
                                     } label: {
-                                        Label("回数", systemImage: "number")
+                                        Label(L10n.string("watch_widget.83fdf5d78dd0", fallback: "回数"), systemImage: "number")
                                     }
-                                    .accessibilityLabel("実行中セットの回数を変更")
+                                    .accessibilityLabel(L10n.string("watch_widget.55fbfa481026", fallback: "実行中セットの回数を変更"))
                                     .accessibilityIdentifier("watchActiveRepsEntry")
 
                                     Button {
@@ -76,9 +80,9 @@ struct WatchActiveWorkoutView: View {
                                             set: activeSet.set
                                         )
                                     } label: {
-                                        Label("テンポ", systemImage: "metronome")
+                                        Label(L10n.string("watch_widget.d7e6f512c71c", fallback: "テンポ"), systemImage: "metronome")
                                     }
-                                    .accessibilityLabel("実行中セットのテンポを変更")
+                                    .accessibilityLabel(L10n.string("watch_widget.d782504f8bde", fallback: "実行中セットのテンポを変更"))
                                     .accessibilityIdentifier("watchActiveTempoEntry")
 
                                     Button {
@@ -89,7 +93,7 @@ struct WatchActiveWorkoutView: View {
                                     } label: {
                                         Text("RPE")
                                     }
-                                    .accessibilityLabel("実行中セットのRPEを変更")
+                                    .accessibilityLabel(L10n.string("watch_widget.ec4ab4872cdb", fallback: "実行中セットのRPEを変更"))
                                     .accessibilityIdentifier("watchActiveRPEEntry")
                                 }
                                 .buttonStyle(.bordered)
@@ -102,10 +106,10 @@ struct WatchActiveWorkoutView: View {
                                             setID: activeSet.set.id
                                         )
                                     } label: {
-                                        Label("取消", systemImage: "arrow.uturn.backward")
+                                        Label(L10n.string("watch_widget.e04ccdac55cd", fallback: "取消"), systemImage: "arrow.uturn.backward")
                                     }
                                     .buttonStyle(.bordered)
-                                    .accessibilityLabel("セット開始を取り消す")
+                                    .accessibilityLabel(L10n.string("watch_widget.f6a396814054", fallback: "セット開始を取り消す"))
                                     .accessibilityIdentifier("watchCancelActiveSetButton")
 
                                     Button {
@@ -115,11 +119,11 @@ struct WatchActiveWorkoutView: View {
                                             isCompleted: true
                                         )
                                     } label: {
-                                        Label("完了", systemImage: "checkmark")
+                                        Label(L10n.string("watch_widget.01657c68d2fc", fallback: "完了"), systemImage: "checkmark")
                                     }
                                     .buttonStyle(.borderedProminent)
                                     .tint(WatchAppTheme.positive)
-                                    .accessibilityLabel("セットを完了")
+                                    .accessibilityLabel(L10n.string("watch_widget.8223803cd257", fallback: "セットを完了"))
                                     .accessibilityIdentifier("watchCompleteActiveSetButton")
                                 }
                                 .font(.caption)
@@ -137,7 +141,7 @@ struct WatchActiveWorkoutView: View {
                         }
 
                         if !pendingExercises.isEmpty {
-                            Picker("次の種目", selection: $selectedExerciseID) {
+                            Picker(L10n.string("watch_widget.218a9aa6d716", fallback: "次の種目"), selection: $selectedExerciseID) {
                                 ForEach(pendingExercises) { exercise in
                                     Text(exercise.name)
                                         .tag(Optional(exercise.id))
@@ -159,7 +163,7 @@ struct WatchActiveWorkoutView: View {
                                 }
                                 .buttonStyle(.bordered)
                                 .font(.caption2)
-                                .accessibilityLabel("開始前にテンポを設定")
+                                .accessibilityLabel(L10n.string("watch_widget.2f3d8874afc6", fallback: "開始前にテンポを設定"))
                                 .accessibilityValue(tempoSummary(for: selectedPendingSet.set))
                                 .accessibilityIdentifier(
                                     "watchSelectedTempoEntry-\(selectedPendingSet.exercise.sortOrder)-\(selectedPendingSet.set.setOrder)"
@@ -174,7 +178,7 @@ struct WatchActiveWorkoutView: View {
                                 )
                             } label: {
                                 Label(
-                                    activeSet == nil ? "セットを開始" : "選択セットへ切替",
+                                    activeSet == nil ? L10n.string("watch_widget.864ffb74d301", fallback: "セットを開始") : L10n.string("watch_widget.b5ad6016c9a4", fallback: "選択セットへ切替"),
                                     systemImage: activeSet == nil ? "play.fill" : "arrow.left.arrow.right"
                                 )
                             }
@@ -205,7 +209,7 @@ struct WatchActiveWorkoutView: View {
                                 WatchCompletedSetsArchiveView(session: session)
                             } label: {
                                 Label(
-                                    "完了セット \(session.completedSetCount)件",
+                                    L10n.string("watch_widget.f7114d6c4059", fallback: "完了セット {{value1}}件", values: [String(describing: session.completedSetCount)]),
                                     systemImage: "archivebox.fill"
                                 )
                             }
@@ -214,20 +218,20 @@ struct WatchActiveWorkoutView: View {
 
                         if let suggestion = workoutStore.setStartSuggestion {
                             VStack(alignment: .leading, spacing: 6) {
-                                Label("動作候補: \(suggestion.exerciseName)", systemImage: "sensor.tag.radiowaves.forward")
+                                Label(L10n.string("watch_widget.39817f548ab9", fallback: "動作候補: {{value1}}", values: [String(describing: suggestion.exerciseName)]), systemImage: "sensor.tag.radiowaves.forward")
                                     .font(.caption.bold())
-                                Text("信頼度 \(Int(suggestion.confidence * 100))%・\(suggestion.reason)")
+                                Text(L10n.string("watch_widget.65047314093f", fallback: "信頼度 {{value1}}%・{{value2}}", values: [String(describing: Int(suggestion.confidence * 100)), String(describing: suggestion.reason)]))
                                     .font(.caption2)
                                     .foregroundStyle(WatchAppTheme.mutedInk)
                                 HStack {
-                                    Button("開始") {
+                                    Button(L10n.string("watch_widget.73efe52b65c2", fallback: "開始")) {
                                         workoutStore.acceptSetStartSuggestion()
                                     }
                                     .buttonStyle(.borderedProminent)
                                     .tint(WatchAppTheme.positive)
                                     .accessibilityIdentifier("watchAcceptSetStartSuggestion")
 
-                                    Button("違う") {
+                                    Button(L10n.string("watch_widget.2db35aa51fee", fallback: "違う")) {
                                         workoutStore.dismissSetStartSuggestion()
                                     }
                                     .buttonStyle(.bordered)
@@ -248,7 +252,7 @@ struct WatchActiveWorkoutView: View {
                            workoutStore.restExerciseID == exercise.id {
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack {
-                                    Label("休憩 \(formatDuration(workoutStore.restRemaining))", systemImage: "timer")
+                                    Label(L10n.string("watch_widget.bc91575d959a", fallback: "休憩 {{value1}}", values: [String(describing: formatDuration(workoutStore.restRemaining))]), systemImage: "timer")
                                         .font(.headline.monospacedDigit())
                                         .foregroundStyle(WatchAppTheme.positive)
                                         .accessibilityIdentifier("watchRestTimer")
@@ -260,13 +264,13 @@ struct WatchActiveWorkoutView: View {
                                     } label: {
                                         Image(systemName: "forward.end.fill")
                                     }
-                                    .accessibilityLabel("休憩をスキップ")
+                                    .accessibilityLabel(L10n.string("watch_widget.9101acbdbd05", fallback: "休憩をスキップ"))
                                 }
 
                                 Button {
                                     isEditingRestTimer = true
                                 } label: {
-                                    Label("時間を変更", systemImage: "dial.medium")
+                                    Label(L10n.string("watch_widget.7b9526eff5f9", fallback: "時間を変更"), systemImage: "dial.medium")
                                 }
                                 .buttonStyle(.bordered)
                                 .font(.caption2)
@@ -282,13 +286,13 @@ struct WatchActiveWorkoutView: View {
                                 if let suggestion = workoutStore.nextSetLoadSuggestion {
                                     VStack(alignment: .leading, spacing: 5) {
                                         Text(
-                                            "次: \(suggestion.exerciseName) \(formatWeight(suggestion.suggestedWeight, unit: session.weightUnit)) × \(suggestion.suggestedReps)回"
+                                            L10n.string("watch_widget.ac9b2200eb4a", fallback: "次: {{value1}} {{value2}} × {{value3}}回", values: [String(describing: suggestion.exerciseName), String(describing: formatWeight(suggestion.suggestedWeight, unit: session.weightUnit)), String(describing: suggestion.suggestedReps)])
                                         )
                                             .font(.caption.bold())
                                         Text(suggestion.reason)
                                             .font(.caption2)
                                             .foregroundStyle(WatchAppTheme.mutedInk)
-                                        Button("提案を反映") {
+                                        Button(L10n.string("watch_widget.b15c1f0ea25c", fallback: "提案を反映")) {
                                             workoutStore.applyNextSetLoadSuggestion()
                                         }
                                         .buttonStyle(.bordered)
@@ -313,7 +317,7 @@ struct WatchActiveWorkoutView: View {
                         }
                     } label: {
                         Label(
-                            workoutStore.isWorkoutPaused ? "再開" : "一時停止",
+                            workoutStore.isWorkoutPaused ? L10n.string("watch_widget.0c6172650d06", fallback: "再開") : L10n.string("watch_widget.68283c0be6f6", fallback: "一時停止"),
                             systemImage: workoutStore.isWorkoutPaused ? "play.fill" : "pause.fill"
                         )
                     }
@@ -322,7 +326,7 @@ struct WatchActiveWorkoutView: View {
                     Button {
                         isEditingWorkoutNote = true
                     } label: {
-                        Label(session.note == nil ? "音声・文字メモ" : "メモを編集", systemImage: "mic")
+                        Label(session.note == nil ? L10n.string("watch_widget.784d61a7d1fe", fallback: "音声・文字メモ") : L10n.string("watch_widget.6dacb17a2939", fallback: "メモを編集"), systemImage: "mic")
                     }
                     .accessibilityIdentifier("watchWorkoutNoteButton")
 
@@ -336,7 +340,7 @@ struct WatchActiveWorkoutView: View {
                     Button {
                         isConfirmingFinish = true
                     } label: {
-                        Label("完了して送信", systemImage: "checkmark.circle.fill")
+                        Label(L10n.string("watch_widget.b1deb806b237", fallback: "完了して送信"), systemImage: "checkmark.circle.fill")
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(WatchAppTheme.positive)
@@ -345,7 +349,7 @@ struct WatchActiveWorkoutView: View {
                     Button(role: .destructive) {
                         isConfirmingCancel = true
                     } label: {
-                        Label("破棄", systemImage: "xmark.circle")
+                        Label(L10n.string("watch_widget.49e3394121fb", fallback: "破棄"), systemImage: "xmark.circle")
                     }
                 }
             }
@@ -406,7 +410,7 @@ struct WatchActiveWorkoutView: View {
                 }
             }
         }
-        .navigationTitle("記録中")
+        .navigationTitle(L10n.string("watch_widget.31d6157ec148", fallback: "記録中"))
         .onReceive(timer) { _ in
             workoutStore.tickRestTimer()
         }
@@ -445,7 +449,7 @@ struct WatchActiveWorkoutView: View {
                 WatchRPESelectionView(
                     exerciseID: editor.exercise.id,
                     setID: editor.set.id,
-                    currentRPE: editor.set.rpe
+                    currentRPE: editor.set.rpe ?? editor.set.targetRPE
                 )
             }
         }
@@ -460,21 +464,21 @@ struct WatchActiveWorkoutView: View {
                 )
             }
         }
-        .confirmationDialog("ワークアウトを完了しますか？", isPresented: $isConfirmingFinish, titleVisibility: .visible) {
-            Button("完了してiPhoneへ送信") {
+        .confirmationDialog(L10n.string("watch_widget.1b2df563ab78", fallback: "ワークアウトを完了しますか？"), isPresented: $isConfirmingFinish, titleVisibility: .visible) {
+            Button(L10n.string("watch_widget.5a4fab46f0a5", fallback: "完了してiPhoneへ送信")) {
                 workoutStore.finishWorkout()
             }
-            Button("続ける", role: .cancel) {}
+            Button(L10n.string("watch_widget.5ce04d515d1c", fallback: "続ける"), role: .cancel) {}
         } message: {
-            Text("未完了セットも含めて現在の内容を保存します。")
+            Text(L10n.string("watch_widget.0e66f9cd10a3", fallback: "未完了セットも含めて現在の内容を保存します。"))
         }
-        .confirmationDialog("記録を破棄しますか？", isPresented: $isConfirmingCancel, titleVisibility: .visible) {
-            Button("破棄", role: .destructive) {
+        .confirmationDialog(L10n.string("watch_widget.a9bcd1d54574", fallback: "記録を破棄しますか？"), isPresented: $isConfirmingCancel, titleVisibility: .visible) {
+            Button(L10n.string("watch_widget.49e3394121fb", fallback: "破棄"), role: .destructive) {
                 workoutStore.cancelWorkout()
             }
-            Button("続ける", role: .cancel) {}
+            Button(L10n.string("watch_widget.5ce04d515d1c", fallback: "続ける"), role: .cancel) {}
         } message: {
-            Text("Watch上の実行中記録は削除されます。")
+            Text(L10n.string("watch_widget.cbeb009a0ca4", fallback: "Watch上の実行中記録は削除されます。"))
         }
     }
 
@@ -542,9 +546,9 @@ struct WatchActiveWorkoutView: View {
     private func tempoSummary(for set: WatchWorkoutSetSnapshot) -> String {
         guard let concentric = set.plannedConcentricSeconds,
               let eccentric = set.plannedEccentricSeconds else {
-            return "テンポを設定"
+            return L10n.string("watch_widget.2ab8c8962b18", fallback: "テンポを設定")
         }
-        return "上\(concentric)s・下\(eccentric)s・\(set.resolvedTempoBeatSpeed)回/秒"
+        return L10n.string("watch_widget.f1b303fe38bd", fallback: "上{{value1}}s・下{{value2}}s・{{value3}}回/秒", values: [String(describing: concentric), String(describing: eccentric), String(describing: set.resolvedTempoBeatSpeed)])
     }
 }
 
@@ -557,7 +561,7 @@ private struct WatchTempoGuideView: View {
             Text(statusText)
                 .font(.caption.bold().monospacedDigit())
                 .foregroundStyle(WatchAppTheme.positive)
-                .accessibilityValue("\(target.beatSpeed)回/秒")
+                .accessibilityValue(L10n.string("watch_widget.8cfae2e66c26", fallback: "{{value1}}回/秒", values: [String(describing: target.beatSpeed)]))
                 .accessibilityIdentifier("watchTempoCue")
                 .accessibilityElement(children: .ignore)
 
@@ -572,7 +576,7 @@ private struct WatchTempoGuideView: View {
                     } label: {
                         Image(systemName: workoutStore.isTempoGuidePaused ? "play.fill" : "pause.fill")
                     }
-                    .accessibilityLabel(workoutStore.isTempoGuidePaused ? "テンポ案内を再開" : "テンポ案内を一時停止")
+                    .accessibilityLabel(workoutStore.isTempoGuidePaused ? L10n.string("watch_widget.d30b38ecfe50", fallback: "テンポ案内を再開") : L10n.string("watch_widget.f8a940f32407", fallback: "テンポ案内を一時停止"))
                     .accessibilityIdentifier("watchTempoPauseButton")
 
                     Button {
@@ -580,7 +584,7 @@ private struct WatchTempoGuideView: View {
                     } label: {
                         Image(systemName: "forward.end.fill")
                     }
-                    .accessibilityLabel("現在の動作をスキップ")
+                    .accessibilityLabel(L10n.string("watch_widget.96ff4778f70e", fallback: "現在の動作をスキップ"))
                     .accessibilityIdentifier("watchTempoSkipButton")
                 }
             }
@@ -590,13 +594,13 @@ private struct WatchTempoGuideView: View {
 
     private var statusText: String {
         if workoutStore.isTempoGuideFinished {
-            return "目標テンポ完了"
+            return L10n.string("watch_widget.8e715c8cf147", fallback: "目標テンポ完了")
         }
         if workoutStore.isTempoGuidePaused {
-            return "一時停止・上げ\(target.concentricSeconds)秒／下げ\(target.eccentricSeconds)秒"
+            return L10n.string("watch_widget.97c1d37f643b", fallback: "一時停止・上げ{{value1}}秒／下げ{{value2}}秒", values: [String(describing: target.concentricSeconds), String(describing: target.eccentricSeconds)])
         }
         return workoutStore.tempoCue?.displayText
-            ?? "上げ\(target.concentricSeconds)秒／下げ\(target.eccentricSeconds)秒"
+            ?? L10n.string("watch_widget.53a48095c684", fallback: "上げ{{value1}}秒／下げ{{value2}}秒", values: [String(describing: target.concentricSeconds), String(describing: target.eccentricSeconds)])
     }
 }
 
@@ -642,11 +646,11 @@ struct WatchCompletedSetsArchiveView: View {
                                 .foregroundStyle(WatchAppTheme.positive)
 
                             VStack(alignment: .leading, spacing: 3) {
-                                Text("セット \(set.setOrder)")
+                                Text(L10n.string("watch_widget.cf0fe40d1182", fallback: "セット {{value1}}", values: [String(describing: set.setOrder)]))
                                     .font(.caption.bold())
                                 Text(
                                     "\(formatWeight(set.actualWeight, unit: session.weightUnit)) × "
-                                        + "\(set.actualReps)回"
+                                        + L10n.string("watch_widget.672403542889", fallback: "{{value1}}回", values: [String(describing: set.actualReps)])
                                 )
                                 .font(.headline)
                             }
@@ -663,7 +667,7 @@ struct WatchCompletedSetsArchiveView: View {
                 }
             }
         }
-        .navigationTitle("完了セット")
+        .navigationTitle(L10n.string("watch_widget.31a26178d3b4", fallback: "完了セット"))
     }
 }
 
@@ -679,11 +683,11 @@ struct WatchWorkoutNoteEntryView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 10) {
-                TextField("メモ", text: $note, axis: .vertical)
+                TextField(L10n.string("watch_widget.a2c4001d98d3", fallback: "メモ"), text: $note, axis: .vertical)
                     .lineLimit(2...5)
                     .accessibilityIdentifier("watchWorkoutNoteField")
 
-                Button("保存") {
+                Button(L10n.string("watch_widget.139ccbf8df18", fallback: "保存")) {
                     workoutStore.setWorkoutNote(note)
                     dismiss()
                 }
@@ -692,6 +696,6 @@ struct WatchWorkoutNoteEntryView: View {
                 .accessibilityIdentifier("saveWatchWorkoutNoteButton")
             }
         }
-        .navigationTitle("メモ")
+        .navigationTitle(L10n.string("watch_widget.a2c4001d98d3", fallback: "メモ"))
     }
 }

@@ -32,6 +32,29 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         verifyDailyJournalForManualLogs()
     }
 
+    func testMealTemplatePrefillsNextMealFoodList() throws {
+        tapTab("記録")
+        let mealLink = scrollToHittable(app.buttons["recordHubMealLink"])
+        XCTAssertTrue(mealLink.isHittable)
+        mealLink.tap()
+
+        let template = scrollToHittable(
+            app.descendants(matching: .any)["dailyMealSuggestion-breakfast"]
+        )
+        XCTAssertTrue(template.isHittable)
+        template.tap()
+
+        XCTAssertTrue(app.navigationBars["食事を記録"].waitForExistence(timeout: 5))
+        let foodFields = app.textFields.matching(
+            NSPredicate(format: "identifier BEGINSWITH %@", "mealFoodItemField-")
+        )
+        XCTAssertEqual(foodFields.count, 4)
+        XCTAssertEqual(foodFields.element(boundBy: 0).value as? String, "無糖ヨーグルト 150g")
+        let nameField = scrollToHittable(app.textFields["mealNameField"])
+        XCTAssertTrue(nameField.exists)
+        XCTAssertEqual(nameField.value as? String, "軽く整える朝食")
+    }
+
     func testBodyPhotoSetCanBeReopenedForLaterAdditions() throws {
         addBodyPhotoMemoEntry()
 
@@ -81,8 +104,8 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(app.navigationBars["食事を編集"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["mealCameraButton"].exists)
         XCTAssertTrue(app.buttons["mealPhotoPicker"].exists)
-        XCTAssertEqual(app.textFields["mealProteinField"].value as? String, "31")
-        XCTAssertEqual(app.textFields["mealCaloriesField"].value as? String, "512")
+        XCTAssertEqual(scrollToHittable(app.textFields["mealProteinField"]).value as? String, "31")
+        XCTAssertEqual(scrollToHittable(app.textFields["mealCaloriesField"]).value as? String, "512")
 
         let nameField = app.textFields["mealNameField"]
         nameField.tap()
@@ -163,18 +186,24 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(foodField.waitForExistence(timeout: 5))
         foodField.tap()
         foodField.typeText("白ごはん 150g")
+        let returnKey = app.keyboards.buttons["Return"]
+        if returnKey.exists {
+            returnKey.tap()
+        }
 
         let analyzeButton = app.buttons["analyzeMealTextButton"]
         XCTAssertTrue(analyzeButton.waitForExistence(timeout: 5))
         analyzeButton.tap()
 
-        let caloriesField = app.textFields["mealCaloriesField"]
-        XCTAssertTrue(caloriesField.waitForExistence(timeout: 5))
-        let deadline = Date().addingTimeInterval(10)
-        while Date() < deadline, caloriesField.value as? String != "427" {
-            RunLoop.current.run(until: Date().addingTimeInterval(0.2))
-        }
+        let populatedName = NSPredicate(
+            format: "value == %@",
+            "白ごはん・鶏むね肉・味噌汁"
+        )
+        expectation(for: populatedName, evaluatedWith: app.textFields["mealNameField"])
+        waitForExpectations(timeout: 10)
 
+        let caloriesField = scrollToHittable(app.textFields["mealCaloriesField"])
+        XCTAssertTrue(caloriesField.waitForExistence(timeout: 5))
         XCTAssertEqual(caloriesField.value as? String, "427")
         XCTAssertEqual(
             app.textFields["mealNameField"].value as? String,
@@ -207,6 +236,7 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         let rice = app.buttons["foodDatabaseResult-01088"]
         XCTAssertTrue(rice.waitForExistence(timeout: 5))
         rice.tap()
+        XCTAssertTrue(app.navigationBars["食品DB"].waitForNonExistence(timeout: 5))
 
         let amount = app.textFields.matching(
             NSPredicate(format: "identifier BEGINSWITH %@", "compositionAmount-")
@@ -214,6 +244,7 @@ final class BodyAndNutritionUITests: GymTrainingAppUITestCase {
         let visibleAmount = scrollToHittable(amount)
         XCTAssertTrue(visibleAmount.exists)
         replaceNumericText(in: visibleAmount, with: "150")
+        XCTAssertEqual(visibleAmount.value as? String, "150")
 
         XCTAssertTrue(scrollToHittable(app.staticTexts["食品から自動集計"]).exists)
         let caloriesField = scrollToHittable(app.textFields["mealCaloriesField"])

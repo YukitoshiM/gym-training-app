@@ -4,7 +4,7 @@ import Foundation
 extension WatchWorkoutStore {
     func configureSession() {
         guard WCSession.isSupported() else {
-            statusMessage = "このWatchでは連携を利用できません"
+            statusMessage = L10n.string("watch_widget.7c2ed04ca304", fallback: "このWatchでは連携を利用できません")
             WatchDiagnostics.shared.record(
                 level: "error",
                 category: "connectivity.unsupported",
@@ -183,13 +183,13 @@ extension WatchWorkoutStore {
 
     func sendFinishedSession(_ finishedSession: WatchWorkoutSessionSnapshot) {
         guard WCSession.isSupported() else {
-            statusMessage = "このWatchではiPhone連携を利用できません。記録はWatchに残しています"
+            statusMessage = L10n.string("watch_widget.b3cc40dc0bf1", fallback: "このWatchではiPhone連携を利用できません。記録はWatchに残しています")
             return
         }
 
         let session = WCSession.default
         guard session.activationState == .activated else {
-            statusMessage = "iPhone連携を準備中です。あとで再送できます"
+            statusMessage = L10n.string("watch_widget.62d8e367decc", fallback: "iPhone連携を準備中です。あとで再送できます")
             session.activate()
             return
         }
@@ -204,7 +204,7 @@ extension WatchWorkoutStore {
                 WatchWorkoutTransfer.sentAtKey: Date()
             ]
 
-            statusMessage = "\(finishedSession.title) をiPhoneへ送信中"
+            statusMessage = L10n.string("watch_widget.638bb341594f", fallback: "{{value1}} をiPhoneへ送信中", values: [String(describing: finishedSession.title)])
 
             if session.isReachable {
                 sendImmediately(
@@ -215,7 +215,7 @@ extension WatchWorkoutStore {
                 )
             } else {
                 session.transferUserInfo(message)
-                statusMessage = "\(finishedSession.title) はiPhoneへ送信予約しました"
+                statusMessage = L10n.string("watch_widget.31645ef37c0c", fallback: "{{value1}} はiPhoneへ送信予約しました", values: [finishedSession.title])
                 WatchDiagnostics.shared.record(
                     category: "connectivity.session_queued",
                     message: "Finished workout queued for iPhone",
@@ -227,7 +227,7 @@ extension WatchWorkoutStore {
                 flushDiagnostics()
             }
         } catch {
-            statusMessage = "iPhoneへ送る記録データを作れませんでした"
+            statusMessage = L10n.string("watch_widget.7ef6982792b8", fallback: "iPhoneへ送る記録データを作れませんでした")
             WatchDiagnostics.shared.record(
                 level: "error",
                 category: "connectivity.session_encode",
@@ -247,7 +247,7 @@ extension WatchWorkoutStore {
         case WatchWorkoutTransfer.planLibraryPushType:
             guard let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return false }
             guard let library = try? JSONDecoder().decode(WatchWorkoutPlanLibrarySnapshot.self, from: data) else {
-                updateStatus("メニューデータを読み込めませんでした")
+                updateStatus(L10n.string("watch_widget.3131fa35f883", fallback: "メニューデータを読み込めませんでした"))
                 WatchDiagnostics.shared.record(
                     level: "error",
                     category: "connectivity.plan_decode",
@@ -269,7 +269,7 @@ extension WatchWorkoutStore {
         case WatchWorkoutTransfer.planPushType:
             guard let data = userInfo[WatchWorkoutTransfer.payloadKey] as? Data else { return false }
             guard let snapshot = try? JSONDecoder().decode(WatchWorkoutPlanSnapshot.self, from: data) else {
-                updateStatus("メニューデータを読み込めませんでした")
+                updateStatus(L10n.string("watch_widget.3131fa35f883", fallback: "メニューデータを読み込めませんでした"))
                 WatchDiagnostics.shared.record(
                     level: "error",
                     category: "connectivity.plan_decode",
@@ -352,11 +352,11 @@ extension WatchWorkoutStore {
             self?.updateSendResult(
                 acknowledged: acknowledged,
                 sessionID: sessionID,
-                successMessage: "\(title) をiPhone履歴へ保存しました"
+                successMessage: L10n.string("watch_widget.26513765e70e", fallback: "{{value1}} をiPhone履歴へ保存しました", values: [String(describing: title)])
             )
         }, errorHandler: { [weak self] error in
             session.transferUserInfo(message)
-            self?.updateStatus("\(title) はiPhoneへ送信予約しました")
+            self?.updateStatus(L10n.string("watch_widget.31645ef37c0c", fallback: "{{value1}} はiPhoneへ送信予約しました", values: [title]))
             WatchDiagnostics.shared.record(
                 level: "error",
                 category: "connectivity.session_immediate_send",
@@ -383,7 +383,7 @@ extension WatchWorkoutStore {
                 clearPendingSession()
                 statusMessage = successMessage
             case .retainPending:
-                statusMessage = "iPhone側で保存できませんでした。あとで再送できます"
+                statusMessage = L10n.string("watch_widget.2035fb2564b8", fallback: "iPhone側で保存できませんでした。あとで再送できます")
             case .ignoreStaleCompletion:
                 WatchDiagnostics.shared.record(
                     category: "connectivity.session_stale_ack",
@@ -409,16 +409,16 @@ extension WatchWorkoutStore {
             )
             switch resolution {
             case .clearPending:
-                let title = pendingFinishedSession?.title ?? "ワークアウト"
+                let title = pendingFinishedSession?.title ?? L10n.string("watch_widget.328184940a77", fallback: "ワークアウト")
                 clearPendingSession()
-                statusMessage = "\(title) をiPhoneへ送信しました"
+                statusMessage = L10n.string("watch_widget.64bd9f2dda21", fallback: "{{value1}} をiPhoneへ送信しました", values: [String(describing: title)])
                 WatchDiagnostics.shared.record(
                     category: "connectivity.session_queue_delivered",
                     message: "Queued finished workout delivered to iPhone",
                     metadata: ["session_id": sessionID?.uuidString ?? "unknown"]
                 )
             case .retainPending:
-                statusMessage = "iPhoneへ送信できませんでした。記録を残して再送します"
+                statusMessage = L10n.string("watch_widget.05e4231f9dca", fallback: "iPhoneへ送信できませんでした。記録を残して再送します")
                 WatchDiagnostics.shared.record(
                     level: "error",
                     category: "connectivity.session_queue_failed",
@@ -447,7 +447,7 @@ extension WatchWorkoutStore {
             guard let self else { return }
 
             if let errorDescription {
-                statusMessage = "接続失敗: \(errorDescription)"
+                statusMessage = L10n.string("watch_widget.d0f48676bebb", fallback: "接続失敗: {{value1}}", values: [String(describing: errorDescription)])
                 WatchDiagnostics.shared.record(
                     level: "error",
                     category: "connectivity.activation",
@@ -462,7 +462,7 @@ extension WatchWorkoutStore {
                 if pendingFinishedSession != nil {
                     resendPendingSession()
                 } else {
-                    statusMessage = activeSession == nil ? "iPhoneと接続しました" : "\(activeSession?.title ?? "ワークアウト") を記録中"
+                    statusMessage = activeSession == nil ? L10n.string("watch_widget.67df75393fee", fallback: "iPhoneと接続しました") : L10n.string("watch_widget.6f1859896371", fallback: "{{value1}} を記録中", values: [String(describing: activeSession?.title ?? "ワークアウト")])
                 }
                 flushDiagnostics()
             }

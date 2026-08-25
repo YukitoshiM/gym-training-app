@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"nl-NL","translation":"Wordt teruggezet naar {{value1}}. Handmatige registratie blijft mogelijk.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"nl-NL","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"nl-NL","translation":"Vul een getal groter dan 0 in.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"nl-NL","translation":"1. 3 keer per week volhouden\n2. Streefwaarde voor eiwitten registreren\n3. Eindmaand foto's vergelijken","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"nl-NL","translation":"Wacht even en probeer het opnieuw.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"nl-NL","translation":"1 kopje","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"nl-NL","translation":"Er zijn geen duidelijke stagnatie-opties voor oefeningen die meer dan 3 keer zijn geregistreerd.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"nl-NL","translation":"Meerdere trainingen per dag (48 uur)","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"nl-NL","translation":"AI voor een complete balans","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"nl-NL","translation":"Data die door de AI wordt geraadpleegd","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"nl-NL","translation":"De gebruik van de AI is op dit moment intensief.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"nl-NL","translation":"De authenticatiegegevens van de AI zijn ongeldig of verlopen.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"nl-NL","translation":"AI-fout","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"nl-NL","translation":"AI-coach","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"nl-NL","translation":"Het AI-serveradres is incorrect.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"nl-NL","translation":"De AI-server geeft een foutmelding: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"nl-NL","translation":"De benodigde API voor de AI-server kan niet worden gevonden.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"nl-NL","translation":"Er is geen verbinding met de AI-server mogelijk. Probeer het later opnieuw.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"nl-NL","translation":"Het JSON-formaat van de AI-server komt niet overeen met wat de app verwacht.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"nl-NL","translation":"De reactie van de AI-server kon niet worden gelezen.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"nl-NL","translation":"Er is een fout opgetreden in de AI-server: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"nl-NL","translation":"AI-serververbinding controleren","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"nl-NL","translation":"AI-trainer","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"nl-NL","translation":"Wil je het gesprek met de AI-trainer verwijderen?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"nl-NL","translation":"Het AI-model is niet beschikbaar of er is een fout bij het analyseren van afbeeldingen.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"nl-NL","translation":"AI-model wordt geladen","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"nl-NL","translation":"AI-analyse","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"nl-NL","translation":"Er is nog voldoende ruimte voor het gebruik van AI.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"nl-NL","translation":"AI-gebruik: controleer de status.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"nl-NL","translation":"De instellingen voor AI zijn uitgeschakeld.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"nl-NL","translation":"AI-referentiewaarden: moet worden gecontroleerd.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"nl-NL","translation":"AI-verbinding is ingeschakeld.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"nl-NL","translation":"Het was niet mogelijk om de AI-gegevens veilig op te slaan.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"nl-NL","translation":"AI-functies","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"nl-NL","translation":"De AI-functie staat uit, via instellingen.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"nl-NL","translation":"De AI-functie staat uit, via instellingen. Dit foto-set kan worden opgeslagen zoals het is.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"nl-NL","translation":"De AI-functie staat uit, via instellingen. Handmatige invoer kan worden opgeslagen zoals het is.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"nl-NL","translation":"AI-geschiedenis","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"nl-NL","translation":"De API-sleutel is niet ingesteld.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"nl-NL","translation":"Controleer de versie van de API-server. Meer informatie: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"nl-NL","translation":"De API-server reageert, maar het benodigde model kan niet worden gebruikt.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"nl-NL","translation":"De API-server reageert, maar het model voor recepten en rapporten kan niet worden gebruikt.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"nl-NL","translation":"Integratie met Apple Health","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"nl-NL","translation":"De meest recente looproute die is opgeslagen in Apple Health wordt weergegeven.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"nl-NL","translation":"Integreer met Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"nl-NL","translation":"Draag een Apple Watch tijdens het sporten en slapen om de herstelindicatoren te verzamelen. Waarden die ontbreken, worden niet ingeroepen.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"nl-NL","translation":"Controleer de Base URL en de versie van de API-server.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"nl-NL","translation":"HRV is lager dan de gemiddelde waarde over 14 dagen.","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"nl-NL","translation":"Geen continue HRV-gegevens beschikbaar.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"nl-NL","translation":"HRV is hoger dan het gemiddelde.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"nl-NL","translation":"HRV valt binnen het normale bereik.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"nl-NL","translation":"Gemiddelde HRV-ratio: {{value1}}% (vergeleken met persoonlijke basislijn).","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"nl-NL","translation":"HTTP kan alleen worden gebruikt voor localhost, LAN en Tailscale. Gebruik HTTPS voor externe servers.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"nl-NL","translation":"De hoeveelheid verbruikte energie is nog niet geregistreerd. De voedingsgegevens zijn wel opgeslagen.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"nl-NL","translation":"Update de gezondheidsdata.","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"nl-NL","translation":"Kies een andere JPEG- of PNG-afbeelding.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"nl-NL","translation":"Registreer KPI's.","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"nl-NL","translation":"De meest recente waarde die door Noise (of vergelijkbare app) is geregistreerd. Als er geen waarde is, wordt deze niet op 0 ingesteld.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"nl-NL","translation":"Bereken automatisch calorieën via PFC.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"nl-NL","translation":"PFC doel bereikt.","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"nl-NL","translation":"Verlaag de RPE met één stap.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"nl-NL","translation":"Begin de URL met https://. Tijdens lokale ontwikkeling kan ook HTTP worden gebruikt voor localhost, LAN IP en Tailscale (bijv. \"http://tailscale.example.com\").","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"nl-NL","translation":"Begin de URL met https://. Alleen tijdens lokale ontwikkeling is http:// ook mogelijk.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"nl-NL","translation":"Met sensoren op de pols.","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"nl-NL","translation":"Hartslag per minuut / 30 seconden.","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"nl-NL","translation":"Calorieën en PFC doel bereikt.","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"nl-NL","translation":"Calorieën doel bereikt.","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"nl-NL","translation":"kg / min","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"nl-NL","translation":"{\"id\":\"{{value1}}\",\"categorie\":\"{{value2}}\",\"titel\":\"{{value3}}\",\"doel\":0,\"reden\":\"Ik heb uw gegevens en doelen bekeken\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"nl-NL","translation":"{\"bestaande_waarden_behoud\":true,\"bereidheidsniveau\":\"normaal\",\"samenvatting\":\"Laten we deze suggestie verder volgen.\",\"reden_verandering\":\"\",\"acties\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"nl-NL","translation":"{{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"nl-NL","translation":"{{value1}} / {{value2}} uur","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"nl-NL","translation":"{{value1}} / {{value2}} stappen","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"nl-NL","translation":"{{value1}} / {{value2}} maaltijden","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"nl-NL","translation":"{{value1}} {{value2}} ({{value3}}) : {{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"nl-NL","translation":"Met {{value1}} en het bijbehorende model kunt u wekelijks feedback genereren.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"nl-NL","translation":"{{value1}}/{{value2}} keer","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"nl-NL","translation":"{{value1}}: {{value2}} Voltooiingspercentage {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"nl-NL","translation":"{{value1}} controleert de volledige set","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"nl-NL","translation":"{{value1}} Ik ben bezig met het formuleren van een antwoord.","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"nl-NL","translation":"{{value1}} bekijken, samen met je maaltijden en calorie-inname.","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"nl-NL","translation":"{{value1}} bekijken vanuit verschillende hoeken.","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"nl-NL","translation":"{{value1}}: Wat je onthoudt","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"nl-NL","translation":"{{value1}} maken en bespreken, en indien nodig aanpassen.","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"nl-NL","translation":"{{value1}} Neem contact op","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"nl-NL","translation":"{{value1}} Uw rapport","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"nl-NL","translation":"Het rapport voor {{value1}} is nog niet beschikbaar.","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"nl-NL","translation":"Voorbeeld: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"nl-NL","translation":"{{value1}} Opslaan · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"nl-NL","translation":"Analyse van {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"nl-NL","translation":"Analyse van {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"nl-NL","translation":"Referentie-informatie voor {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"nl-NL","translation":"Terugblik op {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"nl-NL","translation":"Na het accepteren van de suggestie voor {{value1}}>, worden alleen de items die zijn opgeslagen weergegeven.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"nl-NL","translation":"Maandelijkse overzicht van {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"nl-NL","translation":"{{value1}} Je voortgang bijhouden","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"nl-NL","translation":"{{value1}} selecteren uit de bibliotheek","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"nl-NL","translation":"{{value1}} Verwijderen","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"nl-NL","translation":"{{value1}} Maak een foto van","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"nl-NL","translation":"{{value1}}Waarde bewerken","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"nl-NL","translation":"{{value1}} Opnemen","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"nl-NL","translation":"{{value1}} Licht aanpakken","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"nl-NL","translation":"De gemiddelde stabiliteit van {{value1}}-sets is {{value2}}%.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"nl-NL","translation":"{{value1}} ·","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"nl-NL","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"nl-NL","translation":"{{value1}} · Chat","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"nl-NL","translation":"{{value1}} ・Maandelijkse beoordeling voorstel","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"nl-NL","translation":"{{value1}} · Correctie {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"nl-NL","translation":"{{value1}} · Wekelijks rapport","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"nl-NL","translation":"{{value1}} resultaten · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"nl-NL","translation":"{{value1}}Probeer het opnieuw. Handmatige registratie blijft mogelijk.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"nl-NL","translation":"{{value1}}Probeer het opnieuw. Als dit probleem aanhoudt, controleer dan of de AI-server actief is.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"nl-NL","translation":"{{value1}} Foto verwijderen","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"nl-NL","translation":"{{value1}} Minuut ¶","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"nl-NL","translation":"{{value1}}","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"nl-NL","translation":"{{value1}} Aantal keer/Gemiddelde voltooiingspercentage {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"nl-NL","translation":"{{value1}}-gerichte foto's analyseren. We geven geen definitieve uitspraken over bijvoorbeeld het percentage lichaamsvet.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"nl-NL","translation":"{{value1}} Aantal","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"nl-NL","translation":"{{value1}} sets voor het maken van foto's","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"nl-NL","translation":"{{value1}} Stappen","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"nl-NL","translation":"\"-\" staat voor ongemeten en wordt uitgesloten van de totale waarde. \"Tr\" staat voor een kleine hoeveelheid en wordt geschat op 0.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"nl-NL","translation":"En {{value1}} gram","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"nl-NL","translation":"Laten we samen kijken naar je gegevens.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"nl-NL","translation":"Redelijk fit","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"nl-NL","translation":"Redelijk moe","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"nl-NL","translation":"Dit kan worden geanalyseerd. Door ook de zijkanten en achterkant toe te voegen, kun je vanuit verschillende hoeken controleren.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"nl-NL","translation":"Deze analyse uitvoeren","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"nl-NL","translation":"Ik zal dit gebruiken om aanbevelingen te doen.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"nl-NL","translation":"Alles verwijderen","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"nl-NL","translation":"Proteïne","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"nl-NL","translation":"De resultaten worden meegenomen in de suggesties voor morgen.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"nl-NL","translation":"En {{value1}} andere producten","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"nl-NL","translation":"Er zijn nog geen gegevens beschikbaar.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"nl-NL","translation":"Er zijn nog geen gegevens geregistreerd.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"nl-NL","translation":"Herberekenen","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"nl-NL","translation":"Omtrek taille","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"nl-NL","translation":"Scannen met de camera","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"nl-NL","translation":"De camera kan niet worden gebruikt.","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"nl-NL","translation":"Het gebruik van de camera is niet mogelijk.","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"nl-NL","translation":"Calorieën","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"nl-NL","translation":"Calorieën worden geschat.","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"nl-NL","translation":"Annuleren","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"nl-NL","translation":"Conditie","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"nl-NL","translation":"Controleer de server-URL, API-sleutel en de status van de API-server.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"nl-NL","translation":"Bezoek aan de sportschool","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"nl-NL","translation":"Stand","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"nl-NL","translation":"Set","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"nl-NL","translation":"Analyse van de set","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"nl-NL","translation":"Kwaliteit van de set","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"nl-NL","translation":"Details over de kwaliteit van de set","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"nl-NL","translation":"Proteïne {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"nl-NL","translation":"Borstpersen","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"nl-NL","translation":"Dit is een schatting.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"nl-NL","translation":"Tempo","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"nl-NL","translation":"Zodra er voldoende gegevens zijn, kunt u uw slaap-, herstel- en trainingsgegevens bekijken.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"nl-NL","translation":"Kwaliteit van de data","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"nl-NL","translation":"Overleg met een trainer","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"nl-NL","translation":"Training","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"nl-NL","translation":"Analyse van de training","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"nl-NL","translation":"Trainingsgeschiedenis","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"nl-NL","translation":"Trainingsplan","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"nl-NL","translation":"Trainingsintensiteit","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"nl-NL","translation":"Controleer of het netwerk en de AI-server actief zijn. Het verwerken kan tot 240 seconden duren.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"nl-NL","translation":"Controleer eerst de netwerkstatus en server-URL voordat u opnieuw probeert.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"nl-NL","translation":"Controleer de netwerkstatus en server-URL.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"nl-NL","translation":"Barcode","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"nl-NL","translation":"Volume","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"nl-NL","translation":"Volume is het gewicht van een voltooide set vermenigvuldigd met het aantal herhalingen. Vergelijk verschillende weken niet te veel, vooral als de oefeningen sterk verschillen.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"nl-NL","translation":"Move","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"nl-NL","translation":"Berichten","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"nl-NL","translation":"Menu","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"nl-NL","translation":"Begin met een nieuw menu","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"nl-NL","translation":"Notities","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"nl-NL","translation":"Bibliotheek","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"nl-NL","translation":"Lat pull-down","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"nl-NL","translation":"Referentie voor het gewicht","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"nl-NL","translation":"Schat calorieën uit de lijst","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"nl-NL","translation":"Probeer het opnieuw na het resetten. Handmatige registratie blijft mogelijk.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"nl-NL","translation":"Als u een route met buitenlopen vindt, worden afstand, snelheid en hoogteverschil weergegeven.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"nl-NL","translation":"Legdrukken","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"nl-NL","translation":"·","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"nl-NL","translation":"·{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"nl-NL","translation":"Aantal verdiepingen waarop je bent geweest","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"nl-NL","translation":"Plotselinge slaap","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"nl-NL","translation":"Belangrijkste KPI's","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"nl-NL","translation":"Subjectief gevoel van vermoeidheid is hoog","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"nl-NL","translation":"Subjectief gevoel van vermoeidheid is laag","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"nl-NL","translation":"Subjectief gevoel van vermoeidheid is normaal","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"nl-NL","translation":"Selecteer alleen de relevante informatie voor toekomstige suggesties.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"nl-NL","translation":"Om toekomstige gewichtsanbevelingen te helpen","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"nl-NL","translation":"De volgende drie zijn vastgesteld","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"nl-NL","translation":"Activiteit vandaag","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"nl-NL","translation":"Energiebalans vandaag","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"nl-NL","translation":"Sets vandaag","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"nl-NL","translation":"Subjectief gevoel van vermoeidheid vandaag","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"nl-NL","translation":"Suggestie voor vandaag","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"nl-NL","translation":"Bewerk de foto-set van vandaag","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"nl-NL","translation":"Voeg een nieuwe foto-set toe aan vandaag","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"nl-NL","translation":"Je hebt veel gedaan vandaag","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"nl-NL","translation":"Reflecteert uw activiteit van vandaag","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"nl-NL","translation":"Uw voorbereiding voor vandaag","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"nl-NL","translation":"Uw acties van vandaag","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"nl-NL","translation":"Controleer uw voortgang van vandaag","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"nl-NL","translation":"Uw maaltijden van vandaag","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"nl-NL","translation":"Mogelijke maaltijden voor vandaag","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"nl-NL","translation":"Uw voedingsdoelen voor vandaag","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"nl-NL","translation":"Prioriteer herstel vandaag","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"nl-NL","translation":"Neem rustdagen en geef prioriteit aan een veilige activiteitsniveau.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"nl-NL","translation":"Verminder de intensiteit vandaag.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"nl-NL","translation":"U kunt kiezen om het gewicht en aantal sets te verminderen, met als doel herstel.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"nl-NL","translation":"Controleer wat u vandaag wilt doen.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"nl-NL","translation":"Deze week","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"nl-NL","translation":"Deze week {{value1}} keer / Huidig: {{value2}} m","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"nl-NL","translation":"Deze week {{value1}} keer / Totale: {{value2}} keer","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"nl-NL","translation":"Conclusie van deze week","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"nl-NL","translation":"Optioneel","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"nl-NL","translation":"Gesprek","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"nl-NL","translation":"Gesprek verwijderen","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"nl-NL","translation":"Gespreksgeschiedenis wordt niet verwijderd.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"nl-NL","translation":"Dit zijn indicatiewaarden met een lage betrouwbaarheid. Sla deze niet op in uw meetgegevens of grafieken.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"nl-NL","translation":"Foto van uw lichaam","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"nl-NL","translation":"AI voor foto's van uw lichaam","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"nl-NL","translation":"Het delen van foto's van uw lichaam via AI is uitgeschakeld in de instellingen.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"nl-NL","translation":"U heeft nog geen foto van uw lichaam gemaakt.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"nl-NL","translation":"Maak een foto van uw lichaam","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"nl-NL","translation":"Analyse van een set foto's van uw lichaam","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"nl-NL","translation":"Controleer uw foto's van uw lichaam","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"nl-NL","translation":"Als u zich niet goed voelt of pijn hebt, geef dan de voorkeur aan uw eigen gevoel, boven de numerieke waarden.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"nl-NL","translation":"Volg uw schema en blijf op koers.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"nl-NL","translation":"Gewicht","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"nl-NL","translation":"Getallen zoals gewicht en taille die dagelijks fluctueren, worden het beste bekeken in een grafiek.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"nl-NL","translation":"Noteer uw gewicht","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"nl-NL","translation":"Suggesties op basis van beschikbare apparatuur","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"nl-NL","translation":"Bijvoorbeeld: witte rijst 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"nl-NL","translation":"Opslaan","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"nl-NL","translation":"Maandelijkse review van opgeslagen gegevens","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"nl-NL","translation":"Opgeslagen herinneringen","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"nl-NL","translation":"Ik heb geen herinneringen opgeslagen.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"nl-NL","translation":"Opgeslagen herinneringen worden niet verwijderd.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"nl-NL","translation":"Verwijder alle opgeslagen gegevens?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"nl-NL","translation":"Niet opslaan","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"nl-NL","translation":"Opslaan niet mogelijk","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"nl-NL","translation":"Betrouwbaarheid","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"nl-NL","translation":"Waarde","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"nl-NL","translation":"Wanneer u een waarde toevoegt, wordt hier de overgang weergegeven.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"nl-NL","translation":"Statische controle","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"nl-NL","translation":"Om te controleren op stagnatie, verlaag dan het gewicht even en probeer het doel aantal keren te bereiken, of verleng de rust 15-30 seconden en vergelijk.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"nl-NL","translation":"Materialen voor stagnatie","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"nl-NL","translation":"Energie","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"nl-NL","translation":"Invoergegevens","review_note":""}

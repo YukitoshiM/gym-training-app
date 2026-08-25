@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"ko","translation":"{{value1}}로 초기화됩니다. 수동 기록은 계속 이용 가능합니다.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"ko","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"ko","translation":"0보다 큰 숫자를 입력해주세요.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"ko","translation":"1. 주 3회 유지\n2. 단백질 목표 기록\n3. 월말에 체형 사진 비교","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"ko","translation":"약 1분 정도 기다린 후 다시 시도해주세요.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"ko","translation":"1잔","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"ko","translation":"3회 이상 기록된 운동에는 명확한 정체 구간이 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"ko","translation":"48시간 동안의 운동 횟수가 많음","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"ko","translation":"AI 전체 균형","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"ko","translation":"AI가 참조하는 기록","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"ko","translation":"현재 AI 사용량이 집중되고 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"ko","translation":"AI 인증 정보가 유효하지 않거나 만료되었습니다.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"ko","translation":"AI 오류","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"ko","translation":"AI 코치","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"ko","translation":"AI 서버 URL이 잘못되었습니다.","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"ko","translation":"AI 서버에서 오류를 반환했습니다: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"ko","translation":"AI 서버에 필요한 API를 찾을 수 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"ko","translation":"AI 서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"ko","translation":"AI 서버의 JSON 형식은 앱의 예상과 다릅니다.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"ko","translation":"AI 서버 응답을 읽을 수 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"ko","translation":"AI 서버 측에서 오류가 발생했습니다: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"ko","translation":"AI 서버 연결 확인","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"ko","translation":"AI 트레이너","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"ko","translation":"AI 트레이너와의 대화를 삭제하시겠습니까?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"ko","translation":"AI 모델이 사용 불가능하거나 이미지 분석에 실패했습니다.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"ko","translation":"AI 모델 준비 중","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"ko","translation":"AI 분석","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"ko","translation":"AI 사용 가능한 잔여량이 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"ko","translation":"AI 사용 가능한 잔여량 확인","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"ko","translation":"AI 사용 설정이 꺼져 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"ko","translation":"AI 참고 값 및 확인 필요","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"ko","translation":"AI 연결이 활성화되어 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"ko","translation":"AI 연결 정보를 안전하게 저장하지 못했습니다.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"ko","translation":"AI 기능","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"ko","translation":"AI 기능은 설정에서 꺼져 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"ko","translation":"AI 기능은 설정에서 꺼져 있습니다. 사진 세트는 그대로 저장할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"ko","translation":"AI 기능은 설정에서 꺼져 있습니다. 수동 입력도 그대로 저장할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"ko","translation":"AI 전송 기록","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"ko","translation":"API 키가 설정되지 않았습니다.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"ko","translation":"API 서버 버전을 확인하십시오. 자세한 내용: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"ko","translation":"API 서버는 응답하지만, 필요한 모델을 사용할 수 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"ko","translation":"API 서버는 응답하지만, 요리 및 보고서 보조 모델을 사용할 수 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"ko","translation":"Apple Health와 연동","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"ko","translation":"Apple Health에 저장된 최신 러닝 경로를 표시합니다.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"ko","translation":"Apple Health와 연동","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"ko","translation":"Apple Watch을 적절하게 착용하고 잠자는 동안에도 착용하면 회복 지표를 쉽게 얻을 수 있습니다. 값이 없는 항목은 추측으로 보완하지 않습니다.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"ko","translation":"Base URL 및 API 서버 버전을 확인하십시오.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"ko","translation":"HRV가 14일 평균보다 낮음","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"ko","translation":"HRV 지속 데이터가 없음","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"ko","translation":"HRV는 평균보다 높음","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"ko","translation":"HRV는 평소 범위 내","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"ko","translation":"HRV 비율의 평균 {{value1}}% (개인 기준 비교)","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"ko","translation":"HTTP는 localhost, LAN, Tailscale 내에서만 사용 가능합니다. 외부 서버에는 HTTPS를 사용하십시오.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"ko","translation":"건강 활동의 소비 에너지는 아직 수집되지 않았습니다. 식사 기록은 저장되었습니다.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"ko","translation":"건강 데이터 업데이트","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"ko","translation":"JPEG 또는 PNG 이미지를 다시 선택해주세요.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"ko","translation":"KPI 기록","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"ko","translation":"Noise 앱 등이 기록한 최신 값입니다. 미수집인 경우 0으로 설정하지 않습니다.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"ko","translation":"PFC를 통해 자동으로 칼로리를 계산합니다.","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"ko","translation":"PFC 달성","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"ko","translation":"RPE를 1단계 낮춥니다.","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"ko","translation":"URL은 https://로 시작해주세요. 로컬 개발 시에는 localhost, LAN IP, Tailscale 이름의 HTTP도 사용 가능합니다.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"ko","translation":"URL은 https://로 시작해주세요. 로컬 개발 시에만 http://도 사용할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"ko","translation":"시계 센서 포함","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"ko","translation":"bpm / 30초","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"ko","translation":"칼로리 및 PFC 달성","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"ko","translation":"칼로리 달성","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"ko","translation":"kg / 분","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"ko","translation":"{\"id\":\"{{value1}}\",\"category\":\"{{value2}}\",\"title\":\"{{value3}}\",\"target\":0,\"rationale\":\"기록 및 목표를 확인했습니다\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"ko","translation":"{\"keep_existing\":true,\"readiness_level\":\"normal\",\"summary\":\"오늘 제안대로 진행하겠습니다.\",\"change_reason\":\"\",\"actions\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"ko","translation":"{{value1}} / {{value2}}건","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"ko","translation":"{{value1}} / {{value2}}시간","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"ko","translation":"{{value1}} / {{value2}}걸음","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"ko","translation":"{{value1}} / {{value2}}식","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"ko","translation":"{{value1}} {{value2}}개（{{value3}}）：{{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"ko","translation":"{{value1}}와 보조 모델을 사용하여 주간 피드백을 생성할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"ko","translation":"{{value1}}/{{value2}}회","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"ko","translation":"{{value1}}: {{value2}} 달성률 {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"ko","translation":"{{value1}}가 전체를 확인","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"ko","translation":"{{value1}}가 답변을 검토 중입니다.","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"ko","translation":"{{value1}}가 식단 및 영양 분석 확인","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"ko","translation":"{{value1}}가 여러 방향 확인","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"ko","translation":"{{value1}}가 기억하는 것","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"ko","translation":"{{value1}}와 함께 작성 및 상담 후 수정","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"ko","translation":"{{value1}}에게 문의","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"ko","translation":"{{value1}}의 보고서","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"ko","translation":"{{value1}}의 보고서는 아직 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"ko","translation":"{{value1}} 초안","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"ko","translation":"{{value1}} 초안 및 {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"ko","translation":"{{value1}} 분석","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"ko","translation":"{{value1}} 분석 결과","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"ko","translation":"{{value1}} 참조 정보","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"ko","translation":"{{value1}} 복기","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"ko","translation":"{{value1}} 제안 후, 승인된 내용만 표시됩니다.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"ko","translation":"{{value1}} 월간 리뷰","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"ko","translation":"{{value1}} 기억","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"ko","translation":"{{value1}}를 라이브러리에서 선택","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"ko","translation":"{{value1}} 삭제","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"ko","translation":"{{value1}} 촬영","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"ko","translation":"{{value1}} 수정","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"ko","translation":"{{value1}} 기록","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"ko","translation":"{{value1}} 가볍게","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"ko","translation":"{{value1}} 세트의 평균 안정도는 {{value2}}% 입니다.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"ko","translation":"{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"ko","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"ko","translation":"{{value1}} 채팅","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"ko","translation":"{{value1}} 월간 리뷰 제안","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"ko","translation":"{{value1}} 수정 {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"ko","translation":"{{value1}} 주간 보고서","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"ko","translation":"{{value1}} 건・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"ko","translation":"{{value1}} 다시 시도해 주세요. 수동 기록은 계속 이용 가능합니다.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"ko","translation":"{{value1}} 다시 시도해 주세요. 계속 진행하는 경우 AI 서버의 작동 상태를 확인해주세요.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"ko","translation":"{{value1}} 사진 삭제","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"ko","translation":"{{value1}} 분","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"ko","translation":"{{value1}} 회","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"ko","translation":"{{value1}} 회・평균 달성률 {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"ko","translation":"{{value1}} 방향의 사진을 모아 분석합니다.","review_note":"NLLB fallback used to remove untranslated Japanese; human review required."}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"ko","translation":"{{value1}} 장","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"ko","translation":"{{value1}} 장 촬영 세트","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"ko","translation":"{{value1}}걸음","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"ko","translation":"\"-\"은 측정되지 않았으므로 총에서 제외하고, \"Tr\"는 미량으로 0으로 추정합니다.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"ko","translation":"그리고 {{value1}}g 더","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"ko","translation":"함께 기록을 확인하면서 함께 생각해보겠습니다.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"ko","translation":"꽤 활력이 넘치는 상태","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"ko","translation":"꽤 피곤한 상태","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"ko","translation":"이 데이터를 분석할 수 있습니다. 옆면이나 뒷면도 추가하면 다른 방향에서 보완하여 확인할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"ko","translation":"이 세트를 분석","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"ko","translation":"이 정보를 바탕으로 제안합니다.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"ko","translation":"모두 삭제","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"ko","translation":"단백질","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"ko","translation":"오늘의 제안에 반영합니다.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"ko","translation":"다른 {{value1}}가지","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"ko","translation":"아직 학습 데이터가 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"ko","translation":"아직 기록이 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"ko","translation":"다시 추정","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"ko","translation":"허리둘레","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"ko","translation":"카메라로 읽어냅니다","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"ko","translation":"카메라 사용 불가","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"ko","translation":"카메라 읽기 기능 사용 불가","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"ko","translation":"칼로리","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"ko","translation":"칼로리 추정 중","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"ko","translation":"취소","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"ko","translation":"운동 상태","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"ko","translation":"서버 URL, API 키, API 서버의 작동 상태를 확인해주세요.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"ko","translation":"짐 방문","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"ko","translation":"스탠드","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"ko","translation":"세트","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"ko","translation":"세트를 분석 중","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"ko","translation":"세트 품질","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"ko","translation":"세트 품질 내역","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"ko","translation":"단백질 {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"ko","translation":"가슴 운동","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"ko","translation":"테스트용 추정치입니다.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"ko","translation":"템포","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"ko","translation":"데이터가 모이면 수면, 회복, 운동량을 종합적으로 확인할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"ko","translation":"데이터 품질","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"ko","translation":"코치 상담","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"ko","translation":"운동","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"ko","translation":"운동 분석","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"ko","translation":"운동 기록","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"ko","translation":"운동 계획","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"ko","translation":"운동 강도","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"ko","translation":"네트워크 및 AI 서버의 작동 상태를 확인하십시오. AI 처리에 최대 240초가 소요될 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"ko","translation":"네트워크 상태와 서버 URL을 확인한 후 다시 시도하십시오.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"ko","translation":"네트워크 상태와 서버 URL을 확인하십시오.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"ko","translation":"바코드","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"ko","translation":"용량","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"ko","translation":"용량은 완료 세트의 무게 × 횟수입니다. 운동 종류 구성이 크게 다른 주에는 단순 비교는 피해주세요.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"ko","translation":"운동","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"ko","translation":"메시지","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"ko","translation":"메뉴","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"ko","translation":"메뉴를 만들어 시작하기","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"ko","translation":"메모","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"ko","translation":"라이브러리","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"ko","translation":"랫 풀 다운","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"ko","translation":"레이블 기준량","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"ko","translation":"목록에서 칼로리를 추정","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"ko","translation":"재시도해 보십시오. 수동 기록은 계속 이용할 수 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"ko","translation":"길이와 함께 야외 달리를 찾으면, 거리・속도・고도 차이를 표시합니다.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"ko","translation":"레그 프레스","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"ko","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"ko","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"ko","translation":"올라간 층수","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"ko","translation":"중간에 잠들기","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"ko","translation":"주요 KPI","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"ko","translation":"주관적인 피로도가 높음","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"ko","translation":"주관적인 피로도가 낮음","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"ko","translation":"주관적인 피로도가 정상 범위","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"ko","translation":"향후 제안에 사용할 수 있는 내용만 선택해 주세요.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"ko","translation":"향후 무게 제안에 도움이 되도록","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"ko","translation":"오늘의 3가지 활동이 결정되었습니다","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"ko","translation":"오늘의 활동","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"ko","translation":"오늘의 에너지 균형","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"ko","translation":"오늘의 세트","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"ko","translation":"오늘의 주관적인 피로도","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"ko","translation":"오늘의 제안","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"ko","translation":"오늘의 촬영 세트를 편집","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"ko","translation":"오늘의 촬영 세트에 추가","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"ko","translation":"오늘의 활동량이 많음","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"ko","translation":"오늘의 활동량을 반영","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"ko","translation":"오늘의 준비 상태","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"ko","translation":"오늘의 활동","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"ko","translation":"오늘의 진행 상황 확인","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"ko","translation":"오늘의 식사","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"ko","translation":"오늘의 식사 옵션","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"ko","translation":"오늘의 식사 목표","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"ko","translation":"오늘은 회복을 우선시","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"ko","translation":"오늘은 근력 운동 간격을 두고, 무리 없는 활동량을 우선합니다.","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"ko","translation":"오늘은 강도를 약간 줄입니다.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"ko","translation":"오늘은 무게와 세트 수를 줄이고, 회복을 우선하는 선택이 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"ko","translation":"오늘 할 일을 확인해 보세요.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"ko","translation":"이번 주","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"ko","translation":"이번 주 {{value1}}회・현재 {{value2}}m","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"ko","translation":"이번 주 {{value1}}회・총 {{value2}}회","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"ko","translation":"이번 주의 요약","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"ko","translation":"선택 사항","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"ko","translation":"대화","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"ko","translation":"대화 삭제","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"ko","translation":"대화 기록은 삭제되지 않습니다.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"ko","translation":"신뢰도가 낮은 참고 값입니다. 실제 측정 기록이나 그래프에는 저장하지 마세요.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"ko","translation":"체형 사진","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"ko","translation":"체형 사진 AI","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"ko","translation":"체형 사진 공유는 설정에서 꺼져 있습니다.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"ko","translation":"현재 체형 사진은 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"ko","translation":"체형 사진 촬영","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"ko","translation":"체형 사진 세트 분석","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"ko","translation":"체형 사진 확인","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"ko","translation":"건강 상태나 통증이 있을 경우, 수치를 우선시하지 말고 본인의 감각을 따르세요.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"ko","translation":"건강 상태를 고려하여 계획대로 진행하세요.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"ko","translation":"체중","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"ko","translation":"매일 변하는 체중이나 허리둘레와 같은 수치는 변화 추이를 확인하기 위한 것입니다.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"ko","translation":"체중 기록","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"ko","translation":"사용 가능한 도구 제안","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"ko","translation":"예: 흰쌀밥 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"ko","translation":"저장","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"ko","translation":"저장된 월간 리뷰","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"ko","translation":"저장된 기억","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"ko","translation":"저장된 기억은 없습니다.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"ko","translation":"저장된 기억은 삭제되지 않습니다.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"ko","translation":"저장된 모든 기억을 삭제하시겠습니까?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"ko","translation":"삭제하지 않음","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"ko","translation":"삭제할 수 없음","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"ko","translation":"신뢰도","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"ko","translation":"값","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"ko","translation":"값을 추가하면 여기에서 추이가 표시됩니다.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"ko","translation":"정체 확인","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"ko","translation":"정체 가능 항목은, 무게를 한 번 낮춰 목표 횟수를 맞추거나, 휴식을 15~30초 연장하여 비교해 보세요.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"ko","translation":"정체 요인 재료","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"ko","translation":"에너지","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"ko","translation":"입력 데이터","review_note":""}

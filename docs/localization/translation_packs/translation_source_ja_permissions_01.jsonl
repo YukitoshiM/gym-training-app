@@ -1,0 +1,10 @@
+{"id":"permissions.8a6dea64cf71","source_locale":"ja","source_ja":"Apple Watchで記録した筋力トレーニングと身体測定をApple Healthに保存します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSHealthUpdateUsageDescription"]}
+{"id":"permissions.762ae96a716f","source_locale":"ja","source_ja":"Apple Watchで記録した筋力トレーニングをApple Healthに保存します。","placeholders":[],"source_refs":["GymTrainingWatchApp/Info.plist:NSHealthUpdateUsageDescription"]}
+{"id":"permissions.724cb79d3bb9","source_locale":"ja","source_ja":"Apple Watchの動きからセット中の回数とテンポを推定します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSMotionUsageDescription"]}
+{"id":"permissions.6415e75e7c3f","source_locale":"ja","source_ja":"Mac miniなど、ユーザーが指定したローカルAIサーバーへ接続するためにローカルネットワークを使用します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSLocalNetworkUsageDescription"]}
+{"id":"permissions.39f94ffbfc0b","source_locale":"ja","source_ja":"ワークアウト中の心拍と消費エネルギーを表示し、セットごとの負荷を記録します。","placeholders":[],"source_refs":["GymTrainingWatchApp/Info.plist:NSHealthShareUsageDescription"]}
+{"id":"permissions.42e6eda276f8","source_locale":"ja","source_ja":"手首の動きからセット中の回数とテンポを推定します。","placeholders":[],"source_refs":["GymTrainingWatchApp/Info.plist:NSMotionUsageDescription"]}
+{"id":"permissions.0dfc4eb17b3c","source_locale":"ja","source_ja":"歩数、活動量、睡眠、心拍などをまとめてコンディションとトレーニング傾向を表示します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSHealthShareUsageDescription"]}
+{"id":"permissions.2cb9c37e0a02","source_locale":"ja","source_ja":"現在地をジムとして登録し、ジム訪問を記録するために位置情報を使用します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSLocationWhenInUseUsageDescription"]}
+{"id":"permissions.b81b5b9d3c09","source_locale":"ja","source_ja":"登録したジムへの到着と退出を記録する場合に位置情報を使用します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSLocationAlwaysAndWhenInUseUsageDescription"]}
+{"id":"permissions.44744ac4ed80","source_locale":"ja","source_ja":"食事や体型の写真を撮影し、記録とAIによる参考分析に使用します。","placeholders":[],"source_refs":["GymTrainingApp/Info.plist:NSCameraUsageDescription"]}

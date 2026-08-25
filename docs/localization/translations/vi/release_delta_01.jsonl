@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "vi", "translation": "Ước tính tham khảo. Không phải là giá trị đo thực tế. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "vi", "translation": "Do thời gian giữa lần đo cuối và hiện tại, nên không thể xác định chính xác sự thay đổi, do đó có sai số.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "vi", "translation": "Dựa trên phạm vi tham khảo theo nhóm dựa trên chiều cao, cân nặng, tuổi và giới tính. Không phải là giá trị đo thực tế tỷ lệ mỡ cơ thể.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "vi", "translation": "Ước tính", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "vi", "translation": "Ước tính tham khảo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "vi", "translation": "Đây là phạm vi ước tính, không phải giá trị đo. Chỉ lưu khi bạn nhấn để xem chi tiết.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "vi", "translation": "Lưu ước tính?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "vi", "translation": "Lưu dưới dạng ước tính", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "vi", "translation": "{{value1}} {{value2}}. Không ghi đè giá trị đo thực tế.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "vi", "translation": "Báo cáo theo lịch", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "vi", "translation": "Báo cáo hàng tuần", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "vi", "translation": "Ngày trong tuần", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "vi", "translation": "Báo cáo hàng tháng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "vi", "translation": "Ngày", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "vi", "translation": "{{value1}} ngày", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "vi", "translation": "Thời gian thông báo", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "vi", "translation": "Tự động tạo khi bạn mở ứng dụng lần đầu sau thời gian dự định. Nếu không thể kết nối với AI, vẫn lưu lại bản tóm tắt trong thiết bị.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "vi", "translation": "Cần kiểm tra cài đặt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "vi", "translation": "Có thể thử lại", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "vi", "translation": "Đã sử dụng giới hạn", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "vi", "translation": "Giới hạn chưa được sử dụng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "vi", "translation": "Bằng chứng khoa học {{value1}} cái", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "vi", "translation": "Không đủ bằng chứng trực tiếp, do đó đây là chỉ dẫn dựa trên xu hướng ghi lại.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "vi", "translation": "Không tìm thấy bằng chứng trực tiếp cho đề xuất này.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "vi", "translation": "Không thể xác minh bằng chứng khoa học, do đó đề xuất dựa trên ghi chép và nguyên tắc chung.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "vi", "translation": "Đơn vị đo kích thước cơ thể", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

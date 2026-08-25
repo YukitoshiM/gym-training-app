@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"th","translation":"{{value1}} รายการ","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"th","translation":"{{value1}}: ไม่พบการไปยิมหรือประวัติการฝึกในวันที่กำหนด","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"th","translation":"ระยะเวลาต่อครั้ง","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"th","translation":"เป้าหมายโภชนาการรายวัน","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"th","translation":"เรียนรู้ท่าทางด้วยการฝึก 3 ครั้ง","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"th","translation":"สร้างโปรแกรมกับ AI","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"th","translation":"คำแนะนำวันนี้ยังใช้ได้แม้ไม่มี AI","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"th","translation":"ถาม AI เกี่ยวกับสภาพปัจจุบันของคุณ","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"th","translation":"ถาม AI","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"th","translation":"ข้อมูลที่ส่งให้ AI","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"th","translation":"โค้ช AI จะสร้างแผนฝึกโดยใช้อุปกรณ์ที่คุณเลือกเท่านั้น และจะมีอุปกรณ์อย่างน้อย 1 รายการถูกเลือกเสมอ","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"th","translation":"สร้างความคิดเห็นรายสัปดาห์จากเซิร์ฟเวอร์ AI","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"th","translation":"เชื่อมต่อเซิร์ฟเวอร์ AI แล้ว","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"th","translation":"กำลังเตรียมโมเดล AI","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"th","translation":"ใช้ร่างจาก AI และความคิดเห็นรายสัปดาห์ไม่ได้ แต่ยังบันทึกข้อมูลด้วยตนเองได้","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"th","translation":"หากต้องการใช้ร่างจาก AI และความคิดเห็นรายสัปดาห์ ให้เปิดฟีเจอร์ AI แล้วตรวจสอบการเชื่อมต่อ","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"th","translation":"อัปเดตโดย AI {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"th","translation":"การเชื่อมต่อ AI","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"th","translation":"ฟีเจอร์ AI ปิดอยู่","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"th","translation":"ใช้ฟีเจอร์ AI","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"th","translation":"AI กำลังตรวจสอบ","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"th","translation":"AI ตรวจสอบแล้ว","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"th","translation":"คืนค่าการตั้งค่า AI เป็นค่าเริ่มต้น","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"th","translation":"คีย์ API","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"th","translation":"คีย์ API ใช้เพื่อรับโทเค็นอายุสั้นเท่านั้น และจะไม่ถูกส่งไปกับคำขอ AI ตามปกติ","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"th","translation":"เซิร์ฟเวอร์ API ตอบสนอง แต่โมเดลที่จำเป็นยังใช้งานไม่ได้","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"th","translation":"เซิร์ฟเวอร์ API ตอบสนอง แต่โมเดลเสริมสำหรับมื้ออาหารและรายงานยังใช้งานไม่ได้","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"th","translation":"เซิร์ฟเวอร์ API ตอบสนอง แต่การประเมินแคลอรีจากภาพยังใช้งานไม่ได้","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"th","translation":"การออกกำลังกายใน Apple Health","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"th","translation":"ซิงค์โปรแกรมไปยัง Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"th","translation":"บันทึก Apple Watch","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"th","translation":"Apple Watch และเซ็นเซอร์","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"th","translation":"รายงานโฆษณา BodyMode","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"th","translation":"เริ่มใช้ BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"th","translation":"AI จัดการ BodyMode","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"th","translation":"การใช้ข้อมูลโฆษณาของ Google","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"th","translation":"นโยบายความเป็นส่วนตัวของ Google","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"th","translation":"ตรวจสอบข้อมูลที่แชร์กับ Health","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"th","translation":"ประเมินจำนวนครั้งด้วย Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"th","translation":"การแจ้งเตือนแบบสั่นบน Apple Watch","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"th","translation":"เสร็จแล้ว {{value1}} / {{value2}}","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"th","translation":"บรรลุ {{value1}} / {{value2}}","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"th","translation":"เสร็จแล้ว {{value1}}/6","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"th","translation":"{{value1}}/{{value2}} ครั้ง","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"th","translation":"{{value1}}{{value2}} ครั้ง","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"th","translation":"คำแนะนำจาก {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"th","translation":"{{value1}} กำลังตรวจสอบ · ใช้คำแนะนำได้","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"th","translation":"ตรวจสอบโดย {{value1}} แล้ว","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"th","translation":"สำหรับ {{value1}} โปรดอธิบายเหตุผลของคำแนะนำวันนี้และเสนอวิธีปรับ","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"th","translation":"ถาม {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"th","translation":"คำแนะนำของ {{value1}}","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"th","translation":"การประเมินของ {{value1}}","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"th","translation":"คำแนะนำพื้นฐานของ {{value1}}","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"th","translation":"รอ {{value1}} ตรวจสอบ · ใช้คำแนะนำได้","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"th","translation":"รายงานรายสัปดาห์ของ {{value1}}","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"th","translation":"ตั้งค่า {{value1}} ด้วยตัวเลือก","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"th","translation":"เปลี่ยน {{value1}} เป็นกิจกรรมอื่น","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"th","translation":"ใช้ {{value1}} ได้ ตรวจสอบโค้ชแล้ว {{value2}} ประเภท","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"th","translation":"เหตุผลที่แนะนำ {{value1}}","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"th","translation":"เปิด {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"th","translation":"{{value1}} เซ็ต","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"th","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"th","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"th","translation":"{{value1}} · อัปเดต {{value2}}","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"th","translation":"{{value1}} · อุปกรณ์ {{value2}} ประเภท","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"th","translation":"{{value1}} · {{value2}} วัน/สัปดาห์","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"th","translation":"{{value1}} รายการ","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"th","translation":"{{value1}} ครั้ง","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"th","translation":"เสร็จแล้ว {{value1}}","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"th","translation":"{{value1}} ท่า","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"th","translation":"{{value1}} ท่า / {{value2}} เซ็ต","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"th","translation":"จากนี้ให้ BodyMode ดูแล ทุกวันระบบจะแนะนำสิ่งที่ควรทำไม่เกิน 3 อย่าง","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"th","translation":"ข้อมูลที่ช่วยให้การประเมินแม่นยำขึ้น","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"th","translation":"ใช้โค้ชที่แนะนำ","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"th","translation":"เริ่มต้นวันนี้ที่นี่","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"th","translation":"เริ่มโปรแกรมนี้","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"th","translation":"ใช้เป้าหมายนี้","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"th","translation":"เทรนเนอร์สำหรับเป้าหมายนี้","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"th","translation":"เหตุผลที่เลือกกิจกรรมนี้","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"th","translation":"โค้ชทั้งหมด","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"th","translation":"อื่นๆ","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"th","translation":"โปรตีน","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"th","translation":"สิ่งที่ทำไม่ได้","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"th","translation":"สร้างจากข้อมูลในอุปกรณ์ก่อน และให้ AI ปรับเฉพาะเมื่อจำเป็น","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"th","translation":"บันทึกโปรแกรมที่ใช้บ่อย","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"th","translation":"แคลอรี","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"th","translation":"แคลอรี / สารอาหารหลัก","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"th","translation":"กำลังเตรียมโมเดลประเมินแคลอรี","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"th","translation":"ยกเลิก","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"th","translation":"บันทึกด่วน","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"th","translation":"URL เซิร์ฟเวอร์","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"th","translation":"ถึงยิมแล้ว","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"th","translation":"การไปยิม","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"th","translation":"บันทึกการไปยิมอัตโนมัติ","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"th","translation":"ข้าม","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"th","translation":"แม้ใช้เซ็นเซอร์ไม่ได้ คุณยังกรอกน้ำหนัก จำนวนครั้ง และ RPE ด้วยตนเองได้ การเก็บตัวอย่างแบบประหยัดพลังงานจะลดความถี่ในการอัปเดตการประเมินการเคลื่อนไหว","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"th","translation":"โฆษณาทดสอบ","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"th","translation":"ข้อมูล","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"th","translation":"ความครบถ้วนของข้อมูล {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"th","translation":"เทรนเนอร์: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"th","translation":"การฝึก","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"th","translation":"ฝึกให้ครบ 3 ครั้ง","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"th","translation":"เปิดรายการฝึก","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"th","translation":"เริ่มฝึก","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"th","translation":"เวอร์ชัน: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"th","translation":"ไม่ปรับเฉพาะบุคคล","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"th","translation":"ปิดการปรับเฉพาะบุคคล","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"th","translation":"ฝึกอิสระ","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"th","translation":"ความเป็นส่วนตัว","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"th","translation":"โปรไฟล์","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"th","translation":"ช่วยเหลือ","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"th","translation":"หน้าหลัก","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"th","translation":"โปรแกรมของคุณอยู่ที่นี่","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"th","translation":"เลือกหรือเริ่มโปรแกรม","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"th","translation":"เลือกปลายทาง เช่น Mail แล้วส่งรายงานไปยังฝ่ายสนับสนุน BodyMode รายงานจะไม่มีข้อมูลร่างกายหรือสุขภาพ","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"th","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"th","translation":"เนื้อหาที่ทำให้ไม่สบายใจ","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"th","translation":"ข้อผิดพลาดที่ไม่ทราบสาเหตุ","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"th","translation":"เนื้อหาไม่เหมาะสม","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"th","translation":"รายงานโฆษณาที่ไม่เหมาะสม","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"th","translation":"ไม่พบโปรแกรมที่กำหนดไว้","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"th","translation":"ครั้งนี้ไม่เปลี่ยน","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"th","translation":"ไม่เปลี่ยนในครั้งนี้","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"th","translation":"วันนี้: {{value1}} · {{value2}} เซ็ต","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"th","translation":"เริ่มเรียนรู้ใหม่ตั้งแต่วันนี้","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"th","translation":"3 อย่างวันนี้","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"th","translation":"กำลังเตรียม 3 อย่างวันนี้","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"th","translation":"โปรแกรมวันนี้","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"th","translation":"ทำโปรแกรมวันนี้ให้เสร็จ","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"th","translation":"ทำโปรแกรมวันนี้","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"th","translation":"เริ่มโปรแกรมวันนี้","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"th","translation":"ข้อมูลวันนี้","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"th","translation":"คำแนะนำวันนี้","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"th","translation":"สถานะวันนี้","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"th","translation":"บันทึกวันนี้","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"th","translation":"ความพร้อมวันนี้","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"th","translation":"ความคืบหน้าวันนี้","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"th","translation":"ไปที่วันนี้","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"th","translation":"สิ่งที่ต้องทำวันนี้อยู่ที่นี่","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"th","translation":" รายการ","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"th","translation":"พัก","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"th","translation":"เวลาพัก","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"th","translation":"ตั้งเวลาพักด้วยตัวเลือก","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"th","translation":"ภาพความคืบหน้า","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"th","translation":"องค์ประกอบร่างกาย","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"th","translation":"น้ำหนัก","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"th","translation":"น้ำหนักตัว {{value1}} + น้ำหนักเพิ่ม {{value2}} = แรงต้านอ้างอิง {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"th","translation":"น้ำหนักตัว {{value1}} - แรงช่วย {{value2}} = แรงต้านอ้างอิง {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"th","translation":"น้ำหนัก · ไม่บังคับ","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"th","translation":"ปรับน้ำหนักและรอบเอวอย่างยั่งยืน","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"th","translation":"น้ำหนัก · รอบเอว · มื้ออาหาร · ภาพความคืบหน้า","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"th","translation":"เป้าหมายของคุณคืออะไร?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"th","translation":"สร้าง","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"th","translation":"คู่มือการใช้งาน","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"th","translation":"เราจะสร้างโปรแกรมด้วยอุปกรณ์ที่มี","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"th","translation":"อุปกรณ์ที่มี","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"th","translation":"ระบบจะเก็บเฉพาะประเภทฟีเจอร์ที่คุณใช้ไว้ในอุปกรณ์ โดยจะไม่บันทึกหรือส่งน้ำหนัก รูปภาพ รายละเอียดอาหาร อัตราการเต้นหัวใจ ตำแหน่ง และบันทึกย่อโดยอัตโนมัติ","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"th","translation":"บันทึก","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"th","translation":"ตรวจสอบจากข้อมูลที่บันทึกไว้แล้ว","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"th","translation":"แยกข้อมูลสุขภาพออกจากข้อมูลโฆษณา","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"th","translation":"บันทึกสั้นๆ ตอนนี้ แล้วค่อยทบทวนทั้งหมดภายหลัง","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"th","translation":"เสร็จ","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"th","translation":"ลบข้อมูลทั้งหมดหรือไม่?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"th","translation":"ลบข้อมูลทั้งหมด","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"th","translation":"ส่งออกบันทึกทั้งหมดเป็น JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"th","translation":"เริ่มด้วยโปรแกรมทั่วร่างกาย","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"th","translation":"รูปภาพ","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"th","translation":"วิเคราะห์จากรูปภาพทันที","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"th","translation":"ติดตามความคืบหน้าด้วยรูปภาพและค่าที่วัด","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"th","translation":"รูปภาพและค่าที่วัดอยู่ที่นี่","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"th","translation":"บันทึกรูปภาพและค่าที่วัด","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"th","translation":"ถ่ายรูป","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"th","translation":"ปรับรูปร่าง รอบเอว และสมดุลกล้ามเนื้อ","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"th","translation":" นาที","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"th","translation":"นาที:วินาที","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"th","translation":"สร้างโปรแกรมสำหรับผู้เริ่มต้น","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"th","translation":"ดูรายละเอียดการประเมิน","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"th","translation":"เลือกกิจกรรมอื่น","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"th","translation":"มีอุปกรณ์อะไรบ้าง?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"th","translation":"แชร์ข้อมูลวิเคราะห์การใช้งาน","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"th","translation":"ลบข้อมูลการใช้งาน","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"th","translation":"ส่งออกข้อมูลการใช้งาน","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"th","translation":"สัดส่วนความสำคัญของคำแนะนำ","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"th","translation":"การเคลื่อนไหว","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"th","translation":"ข้อมูลที่ใช้","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"th","translation":"กำลังตรวจสอบสถานะความยินยอม","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"th","translation":"เหมาะกับใคร","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"th","translation":"เลือกตามอุปกรณ์หรือกลุ่มกล้ามเนื้อ","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"th","translation":" ครั้ง","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"th","translation":"การฟื้นตัว","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"th","translation":"จำนวนครั้ง","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"th","translation":"ตั้งจำนวนครั้งด้วยตัวเลือก","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"th","translation":"โฆษณาทดสอบแบบคงที่","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"th","translation":"เริ่มต้นใช้งาน","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"th","translation":"ข้อมูลพื้นฐาน · ไม่บังคับ","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"th","translation":"ส่งรายงาน","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"th","translation":"เหตุผลในการรายงาน","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"th","translation":"ติดตามการเปลี่ยนแปลงที่นี่","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"th","translation":"เลือกค่าที่ต้องการติดตาม","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"th","translation":"เปลี่ยน","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"th","translation":"ประวัติการเปลี่ยนแปลง","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"th","translation":"เริ่มต้น","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"th","translation":"การเรียนรู้หยุดชั่วคราว บันทึกที่ผ่านมาไม่ได้ถูกลบ","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"th","translation":"เสร็จ","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"th","translation":"เสร็จแล้ว {{value1}}","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"th","translation":"เสร็จแล้ว","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"th","translation":"ทำเครื่องหมายว่าเสร็จ","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"th","translation":"เสร็จแล้ว","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"th","translation":"ไม่ได้ทำ","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"th","translation":"ทำเลย","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"th","translation":"ยิ่งทำมาก ขั้นตอนถัดไปยิ่งชัดเจน","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"th","translation":"ผลลัพธ์ของคุณช่วยปรับปรุงคำแนะนำ AI ครั้งถัดไป","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"th","translation":"ขยายแล้ว","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"th","translation":"ประวัติ","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"th","translation":" ปี","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"th","translation":"ไม่เหมาะกับอายุ","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"th","translation":"ยังไม่ได้ตั้งค่า ID โฆษณา","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"th","translation":"โฆษณาและการใช้ข้อมูล","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"th","translation":"การตั้งค่าความเป็นส่วนตัวของโฆษณา","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"th","translation":"ยังไม่ได้รับความยินยอมสำหรับโฆษณา","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"th","translation":"ชื่อสินค้าหรือปัญหาที่พบในโฆษณา","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"th","translation":"โฆษณาแสดงบน iPhone เท่านั้น และจะไม่ใช้ข้อมูลสุขภาพ อาหาร รูปภาพ หรือตำแหน่งใน BodyMode เพื่อเลือกโฆษณา","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"th","translation":"รายงานโฆษณา","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"th","translation":"กำลังโหลดโฆษณา","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"th","translation":"โฆษณาและความเป็นส่วนตัว","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"th","translation":"ผู้ให้บริการโฆษณา","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"th","translation":"เพื่อแสดงโฆษณา Google จะได้รับที่อยู่ IP ข้อมูลพื้นฐานของอุปกรณ์และแอป ข้อมูลการวินิจฉัยและประสิทธิภาพของ SDK รวมถึงข้อมูลการแสดงผลและการโต้ตอบกับโฆษณา ตำแหน่งโดยประมาณอาจถูกอนุมานจากที่อยู่ IP น้ำหนัก อัตราการเต้นหัวใจ การนอน อาหาร รูปภาพ การฝึก เป้าหมาย ข้อมูล GPS และตำแหน่งยิมที่บันทึกใน BodyMode จะไม่รวมอยู่ในคำขอโฆษณา","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"th","translation":"ปรับเวลาพักด้วยอัตราการเต้นหัวใจและ RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"th","translation":"อัตราการเต้นหัวใจและการเคลื่อนไหว","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"th","translation":"เพศ","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"th","translation":"เพศ · ไม่บังคับ","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"th","translation":"กลับ","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"th","translation":"ยังบันทึกด้วยตนเองได้","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"th","translation":"โค้ช: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"th","translation":"โค้ชประจำ","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"th","translation":"ถามโค้ชของคุณ","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"th","translation":"แนวทางของโค้ช","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"th","translation":"เมื่อเปลี่ยนประเภทโค้ช ข้อมูลที่ AI ให้ความสำคัญและคำแนะนำที่ได้รับจะเปลี่ยนไป","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"th","translation":"เทรนเนอร์ประจำ: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"th","translation":"ไม่ระบุ","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"th","translation":"ตรวจสอบการเชื่อมต่อ","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"th","translation":"ทำตามโปรแกรมที่แนะนำบน iPhone หรือ Apple Watch","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"th","translation":"รีเซ็ตเฉพาะการเรียนรู้คำแนะนำ","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"th","translation":"แสดงเฉพาะแบนเนอร์โฆษณาที่ไม่รบกวนการใช้งาน","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"th","translation":"บันทึกค่าที่วัด","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"th","translation":" วัน","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"th","translation":"ทบทวนตามวันที่","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"th","translation":"กิจกรรมประจำวัน","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"th","translation":"ตรวจสอบคำแนะนำรายวัน","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"th","translation":"ส่งออกไม่ได้","review_note":""}

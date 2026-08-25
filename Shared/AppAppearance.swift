@@ -8,8 +8,8 @@ enum AppColorTheme: String, Codable, CaseIterable, Identifiable, Sendable {
 
     var displayName: String {
         switch self {
-        case .royalCobalt: "ロイヤルコバルト"
-        case .blackChampagne: "ブラックシャンパン"
+        case .royalCobalt: L10n.string("runtime_messages.381a8ceae643", fallback: "ロイヤルコバルト")
+        case .blackChampagne: L10n.string("runtime_messages.8617ffabdc47", fallback: "ブラックシャンパン")
         }
     }
 
@@ -22,8 +22,8 @@ enum AppColorTheme: String, Codable, CaseIterable, Identifiable, Sendable {
 
     var summary: String {
         switch self {
-        case .royalCobalt: "知的・高貴・先進的"
-        case .blackChampagne: "重厚・高級・刺激的"
+        case .royalCobalt: L10n.string("runtime_messages.2dc960114eaa", fallback: "知的・高貴・先進的")
+        case .blackChampagne: L10n.string("runtime_messages.f974d51c5ef8", fallback: "重厚・高級・刺激的")
         }
     }
 }
@@ -37,9 +37,9 @@ enum AppAppearanceMode: String, Codable, CaseIterable, Identifiable, Sendable {
 
     var displayName: String {
         switch self {
-        case .system: "自動"
-        case .light: "ライト"
-        case .dark: "ダーク"
+        case .system: L10n.string("runtime_messages.e7c885a6a202", fallback: "自動")
+        case .light: L10n.string("runtime_messages.e0654cb7b536", fallback: "ライト")
+        case .dark: L10n.string("runtime_messages.02b7a66f4b4d", fallback: "ダーク")
         }
     }
 }

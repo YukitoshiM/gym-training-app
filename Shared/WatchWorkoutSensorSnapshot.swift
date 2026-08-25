@@ -42,6 +42,7 @@ struct WatchSetSensorSummary: Codable, Hashable, Sendable {
 
 struct WatchLiveWorkoutMetrics: Codable, Hashable, Sendable {
     var elapsedSeconds: Double = 0
+    var distanceKilometers: Double?
     var currentHeartRate: Double?
     var averageHeartRate: Double?
     var maximumHeartRate: Double?

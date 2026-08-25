@@ -26,6 +26,9 @@ final class AppStore: ObservableObject {
     @Published var recommendationRevisions: [RecommendationRevision] = []
     @Published var dailyReviews: [DailyReview] = []
     @Published var targetAdjustmentProposals: [TargetAdjustmentProposal] = []
+    @Published var planRevisionProposals: [PlanRevisionProposal] = []
+    @Published var activeWorkoutSession: ActiveWorkoutSession?
+    @Published var deletedRecords: [DeletedRecord] = []
 
     let storage: any AppDataRepository
 
@@ -77,6 +80,9 @@ final class AppStore: ObservableObject {
             storage.saveRecommendationRevisions([])
             storage.saveDailyReviews([])
             storage.saveTargetAdjustmentProposals([])
+            storage.savePlanRevisionProposals([])
+            storage.saveActiveWorkoutSession(nil)
+            storage.saveDeletedRecords([])
             storage.saveUserProfile(.default)
         }
 
@@ -118,18 +124,19 @@ final class AppStore: ObservableObject {
             storage.saveAIInsights([
                 AIInsight(
                     insightType: .weekly,
-                    inputSummary: "身体KPI 3件、食事 8件、筋トレ 3件を確認しました。",
-                    outputComment: "トレーニングを継続できています。回復記録を増やすと次週の調整精度が上がります。",
-                    actionSuggestion: "睡眠を3日記録し、週3回の運動を続けてください。",
-                    goodPoints: ["週3回のトレーニングを完了しました"],
-                    challenges: ["睡眠の記録が不足しています"],
-                    rationales: ["直近7日の運動履歴3件と食事記録8件を確認しました"],
-                    nextActions: ["睡眠を3日記録する", "週3回の運動を続ける"]
+                    inputSummary: L10n.string("runtime_messages.fb74f39c8a88", fallback: "身体KPI 3件、食事 8件、筋トレ 3件を確認しました。"),
+                    outputComment: L10n.string("runtime_messages.6e7b0917d47f", fallback: "トレーニングを継続できています。回復記録を増やすと次週の調整精度が上がります。"),
+                    actionSuggestion: L10n.string("runtime_messages.7b0ad81a2260", fallback: "睡眠を3日記録し、週3回の運動を続けてください。"),
+                    goodPoints: [L10n.string("runtime_messages.773a830c7c4d", fallback: "週3回のトレーニングを完了しました")],
+                    challenges: [L10n.string("runtime_messages.119a3a0a5dee", fallback: "睡眠の記録が不足しています")],
+                    rationales: [L10n.string("runtime_messages.3b260a3803bc", fallback: "直近7日の運動履歴3件と食事記録8件を確認しました")],
+                    nextActions: [L10n.string("runtime_messages.9ed0a3f60d19", fallback: "睡眠を3日記録する"), L10n.string("runtime_messages.0d10dbb2d71a", fallback: "週3回の運動を続ける")]
                 )
             ])
         }
 
         userProfile = storage.loadUserProfile()
+        UserDefaults.standard.set(userProfile.weightUnit.rawValue, forKey: BodyUnitPreferences.weightKey)
         plans = storage.loadPlans()
         workoutHistory = storage.loadWorkoutHistory()
         bodyMetricEntries = storage.loadBodyMetricEntries()
@@ -143,7 +150,7 @@ final class AppStore: ObservableObject {
             category: "ai.configuration",
             message: "AI settings loaded",
             metadata: [
-                "host": URL(string: aiSettings.baseURLString)?.host ?? "invalid",
+                "connection_profile": aiSettings.managedConfigurationVersion == nil ? "custom" : "managed",
                 "managed_configuration_version": aiSettings.managedConfigurationVersion.map(String.init) ?? "custom",
                 "enabled": String(aiSettings.isEnabled)
             ]
@@ -162,6 +169,19 @@ final class AppStore: ObservableObject {
         recommendationRevisions = storage.loadRecommendationRevisions()
         dailyReviews = storage.loadDailyReviews()
         targetAdjustmentProposals = storage.loadTargetAdjustmentProposals()
+        planRevisionProposals = storage.loadPlanRevisionProposals()
+        activeWorkoutSession = storage.loadActiveWorkoutSession()
+        deletedRecords = storage.loadDeletedRecords()
+            .filter { Date().timeIntervalSince($0.deletedAt) < 30 * 86_400 }
+            .sorted { $0.deletedAt > $1.deletedAt }
+        storage.saveDeletedRecords(deletedRecords)
+        if activeWorkoutSession?.session.isCompleted == true {
+            activeWorkoutSession = nil
+            storage.saveActiveWorkoutSession(nil)
+        } else if activeWorkoutSession?.state == .active {
+            activeWorkoutSession?.state = .interrupted
+            storage.saveActiveWorkoutSession(activeWorkoutSession)
+        }
 
         if let selection = dailyWorkoutSelection,
            !Calendar.current.isDateInToday(selection.date) {
@@ -187,7 +207,7 @@ final class AppStore: ObservableObject {
 
     private static func alphaUITestPlan() -> TrainingPlan {
         TrainingPlan(
-            name: "胸の日",
+            name: L10n.string("runtime_messages.e630ef8d86d2", fallback: "胸の日"),
             exercises: [
                 PlanExercise(
                     exercise: PresetExerciseStore.exercises[0],
@@ -202,11 +222,11 @@ final class AppStore: ObservableObject {
 
     private static func assistedUITestPlan() -> TrainingPlan {
         let dips = PresetExerciseStore.exercises.first {
-            $0.name == "ディップス"
+            $0.name == L10n.string("runtime_messages.cf8ad4f70108", fallback: "ディップス")
         } ?? PresetExerciseStore.exercises[0]
 
         return TrainingPlan(
-            name: "アシスト種目",
+            name: L10n.string("runtime_messages.1da67cd9d0b7", fallback: "アシスト種目"),
             exercises: [
                 PlanExercise(
                     exercise: dips,
@@ -225,10 +245,10 @@ final class AppStore: ObservableObject {
         history: [WorkoutSession]
     ) {
         let exercise = PresetExerciseStore.exercises.first {
-            $0.name == "ダンベルベンチプレス"
+            $0.name == L10n.string("runtime_messages.0c99a6dc8a8a", fallback: "ダンベルベンチプレス")
         } ?? PresetExerciseStore.exercises[0]
         let plan = TrainingPlan(
-            name: "初心者 全身スタート",
+            name: L10n.string("runtime_messages.0b0f57e99c1c", fallback: "初心者 全身スタート"),
             exercises: [
                 PlanExercise(
                     exercise: exercise,
@@ -302,7 +322,7 @@ final class AppStore: ObservableObject {
     private static func retiredAISettings() -> AISettings {
         AISettings(
             isEnabled: true,
-            baseURLString: "https://christopher-using-organisations-hull.trycloudflare.com",
+            baseURLString: "https://retired-ai-endpoint.invalid",
             apiKey: AISettings.default.apiKey,
             managedConfigurationVersion: 2
         )

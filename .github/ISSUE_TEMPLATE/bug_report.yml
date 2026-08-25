@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible BodyMode problem without personal or health data.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include body measurements, meal details, photos, AI conversations, Apple IDs, email addresses, access tokens, or other personal information. Describe only the app behavior.
+  - type: input
+    id: version
+    attributes:
+      label: BodyMode version and build
+      placeholder: "1.0 (28)"
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Affected device
+      options:
+        - iPhone
+        - Apple Watch
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Device model and OS version
+      placeholder: "iPhone 16, iOS 26.0"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the screen and actions. Do not paste record contents.
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. The app ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I confirmed that this report contains no health records, photos, AI conversations, credentials, or personal information.
+          required: true

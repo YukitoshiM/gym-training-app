@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "mr", "translation": "तुमच्या मागील कामगिरी, पूर्णता, RPE (रेटेड पेक्षा), आणि बरेच काही तपासा आणि पुढील प्रशिक्षणासाठी योजना अधिक चांगल्या प्रकारे तयार करा. बदल नको असल्यास, सध्याची योजना जशी आहे तशी ठेवा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "mr", "translation": "बदल", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "mr", "translation": "{{value1}} जोडा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "mr", "translation": "{{value1}} काढा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "mr", "translation": "{{value1}}: {{value2}} → {{value3}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "mr", "translation": "{{value1}}: विश्रांती {{value2}} → {{value3}} सेकंद", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "mr", "translation": "{{value1}}: {{value2}} → {{value3}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "mr", "translation": "यावेळी बदल नाही", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "mr", "translation": "जतन करा आणि सुरू करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "mr", "translation": "नवीन योजना म्हणून जतन करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "mr", "translation": "फक्त एकदा सुरू करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "mr", "translation": "हे तात्पुरते वापरून पहा किंवा योजना म्हणून जतन करा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "mr", "translation": "सध्याची योजना अपडेट करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "mr", "translation": "फक्त जेव्हा तुम्ही सहमत असाल, तेव्हाच, आम्ही तुमच्या नावाचा वापर करून, तुमच्या ॲपच्या वापराची माहिती आणि अनुभव, तसेच तुमच्या आरोग्या संबंधित माहिती (जसे की वजन, फोटो, हृदय गती, झोप, स्थान, नोट्स, जाहिरात आयडी) पाठवणार नाही. ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "mr", "translation": "उच्च", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "mr", "translation": "कमी", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "mr", "translation": "मध्यवर्ती", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "mr", "translation": "संदर्भ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "mr", "translation": "शोधलेले साहित्य", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "mr", "translation": "हे निष्कर्ष सामान्य ट्रेंडवर आधारित आहेत. ते तुमच्यासाठी योग्य आहेत याची खात्री नाही.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "mr", "translation": "साहित्य उपलब्ध नसल्यामुळे, आम्ही सध्या नोंदी आणि सामान्य नियमांनुसार निर्णय घेत आहोत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "mr", "translation": "या प्रस्तावासाठी थेट वापरण्यायोग्य साहित्य सापडले नाही. आम्ही नोंदी आणि सामान्य व्यायामाच्या नियमांनुसार निर्णय घेत आहोत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "mr", "translation": "एकूण आत्मविश्वास", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "mr", "translation": "तुमच्यासारख्याच परिस्थितीत असलेल्या लोकांची माहिती असलेले साहित्य आम्हाला सापडले नाही, त्यामुळे आम्ही नोंदी आणि सामान्य नियमांनुसार निर्णय घेत आहोत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "mr", "translation": "शिफारशीचा पुरावा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "mr", "translation": "संदर्भित संशोधन", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "mr", "translation": "शोध माहिती", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "mr", "translation": "साहित्य शोधणे शक्य नाही. त्यामुळे, आम्ही नोंदीनुसार निर्णय घेत आहोत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "mr", "translation": "वैज्ञानिक पुरावा पहा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "mr", "translation": "सारांश", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "mr", "translation": "यासाठी योग्य आहे का?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "mr", "translation": "हे तुमच्यासाठी पुरेसे आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "mr", "translation": "संपूर्ण माहिती", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "mr", "translation": "उपचार", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "mr", "translation": "माहितीचा परवाना", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "mr", "translation": "मर्यादा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "mr", "translation": "तुमच्यासाठी योग्य नाही.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "mr", "translation": "नवीन संशोधन", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "mr", "translation": "पेपर पहा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "mr", "translation": "काही प्रमाणात योग्य", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "mr", "translation": "लक्ष्य गट", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "mr", "translation": "संशोधनाचा निष्कर्ष", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "mr", "translation": "निष्कर्ष आणि उपयोगिता", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "mr", "translation": "माहिती स्पष्ट नाही.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "mr", "translation": "ॲप आणि Apple Watch च्या माहितीचे विश्लेषण (Diagnostic Log) जोडा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "mr", "translation": "रद्द करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "mr", "translation": "समस्या", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "mr", "translation": "इतर", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "mr", "translation": "प्रतिक्रिया प्रकार निवडा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "mr", "translation": "अपेक्षित गोष्टी", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "mr", "translation": "प्रकार", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "mr", "translation": "वापरण्यास सोपे नाही", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "mr", "translation": "मजकूर कॉपी करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "mr", "translation": "तपशील", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "mr", "translation": "ॲप आणि Apple Watch च्या कार्यात्मक माहिती तसेच, तुमच्या आरोग्या संबंधित नोंदी, फोटो आणि AI च बरोबरच्या संभाषणाचे विश्लेषण (Diagnostic Log) जोडा. शारीरिक आणि आरोग्य नोंदी, फोटो, AI च संभाषण किंवा तुमचा संपर्क क्रमांक यात समाविष्ट करू नका.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "mr", "translation": "विश्लेषण माहिती पाठवण्यात अयशस्वी.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "mr", "translation": "इतर प्रकारे संपर्क साधा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "mr", "translation": "बॉडी मोड फीडबॅक\n\nप्रकार: {{value1}}\nसामग्री:\n{{value2}}\nॲप: {{value3}}\nOS: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "mr", "translation": "पुन्हा प्रयत्न करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "mr", "translation": "फीडबॅक पाठवा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "mr", "translation": "ईमेलद्वारे पाठवा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "mr", "translation": "विश्लेषण माहितीशिवाय पाठवा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "mr", "translation": "तुमचे शारीरिक आणि आरोग्य संबंधित तपशील, जेवण, फोटो, AI च संभाषण किंवा तुमचा संपर्क क्रमांक यात समाविष्ट करू नका.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "mr", "translation": "फीडबॅक", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "mr", "translation": "अज्ञात त्रुटी", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "mr", "translation": "परिणाम प्रतीक्षेत आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "mr", "translation": "{{value1}} - सुधारित", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "mr", "translation": "{{value1}} प्रशिक्षकाद्वारे सुधारित", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "mr", "translation": "AI द्वारे केलेले बदल", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "mr", "translation": "पुढील प्रयत्नात सुधारणा अपेक्षित आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "mr", "translation": "तपासणी करत आहे", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "mr", "translation": "सुधारित योजना पूर्ववत केली आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "mr", "translation": "पुन्हा तपासा आणि आवश्यक असल्यास बदला.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "mr", "translation": "नवीन योजना म्हणून जतन करा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "mr", "translation": "सुधारणेकडे दुर्लक्ष करा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "mr", "translation": "पुढील प्रयत्नातही योजना सारखीच राहील.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "mr", "translation": "योजना अपडेट केली आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "mr", "translation": "AI च्या मदतीने पुढील योजनेमध्ये बदल करा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "mr", "translation": "सध्याची योजना तसेच चालू ठेवा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "mr", "translation": "{{value1}} नवीन योजना म्हणून जतन केले आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "mr", "translation": "पुढील योजनेमध्ये बदल केला आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "mr", "translation": "पुढचा सत्रासाठी", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "mr", "translation": "बदल स्वीकारण्यापूर्वी, कृपया ते तपासा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "mr", "translation": "तुम्ही ध्येय पूर्ण केले आहे! आता पुढील स्तरावर जाण्यासाठी तयार आहात.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "mr", "translation": "तुम्हाला थोडं कमी यश मिळालं, त्यामुळे तुम्ही पुढील योजनेत बदल करू शकता.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "mr", "translation": "आजच्या कामगिरीचा वापर करून तुम्ही पुढील सत्रासाठी योजना तयार करू शकता.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "mr", "translation": "तुम्ही सुधारित योजनेला पूर्ववत केले आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "mr", "translation": "सुधारणा रद्द करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

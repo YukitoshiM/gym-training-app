@@ -46,6 +46,7 @@ final class InitialSetupTests: XCTestCase {
         XCTAssertTrue(profile.focusMuscles.isEmpty)
         XCTAssertEqual(profile.availableEquipment, Equipment.allCases)
         XCTAssertEqual(profile.coachingStyle, .analytical)
+        XCTAssertEqual(profile.healthIntake, .default)
     }
 
     func testLegacyProfileKeepsPersonaSpecificCoachingStyle() throws {
@@ -53,8 +54,22 @@ final class InitialSetupTests: XCTestCase {
 
         let profile = try JSONDecoder().decode(UserProfile.self, from: data)
 
-        XCTAssertEqual(profile.coachPersona, .maya)
+        XCTAssertEqual(profile.coachPersona, .camila)
         XCTAssertEqual(profile.coachingStyle, .encouraging)
+    }
+
+    func testEveryCoachTypeOffersOneWomanAndOneMan() {
+        for coachType in CoachType.allCases {
+            let personas = CoachPersona.options(for: coachType)
+
+            XCTAssertEqual(personas.count, 2, "Expected exactly two personas for \(coachType)")
+            XCTAssertEqual(Set(personas.map(\.gender)), Set([.woman, .man]))
+        }
+    }
+
+    func testChangingPurposePreservesPersonaGender() {
+        XCTAssertEqual(CoachPersona.hana.replacement(for: .strength), .ada)
+        XCTAssertEqual(CoachPersona.omar.replacement(for: .wellness), .koa)
     }
 
     func testCoachRecommendationUsesGoalAndOutcome() {
@@ -76,11 +91,11 @@ final class InitialSetupTests: XCTestCase {
         first.goalType = .health
         first.outcomeStyle = .activeLifestyle
         first.sex = .female
-        first.coachPersona = .maya
+        first.coachPersona = .nia
 
         var second = first
         second.sex = .male
-        second.coachPersona = .ken
+        second.coachPersona = .mateo
 
         XCTAssertEqual(
             CoachType.recommendations(for: first).map(\.coachType),
@@ -93,6 +108,39 @@ final class InitialSetupTests: XCTestCase {
         XCTAssertFalse(OutcomeStyle.available(for: .health).contains(.vShape))
         XCTAssertTrue(OutcomeStyle.available(for: .health).contains(.activeLifestyle))
         XCTAssertEqual(OutcomeStyle.available(for: .performance).last, .custom)
+    }
+
+    func testHealthIntakeNormalizesGoalSpecificAnswers() {
+        var intake = HealthIntakeProfile.default
+        intake.activityLevel = .regular
+        intake.plannedIntensity = .vigorous
+        intake.safetyStatus = .noKnownConcerns
+        intake.typicalSleep = .sevenToNine
+        intake.goalFocus = .strengthAndPower
+        intake.nutritionGuidanceMode = .followProfessionalPlan
+        intake.otherTrainingDays = 18
+        intake.sportOrActivity = "  Powerlifting  "
+
+        let performance = intake.normalized(for: .performance)
+        let health = intake.normalized(for: .health)
+
+        XCTAssertEqual(performance.goalFocus, .strengthAndPower)
+        XCTAssertEqual(performance.otherTrainingDays, 14)
+        XCTAssertEqual(performance.sportOrActivity, "Powerlifting")
+        XCTAssertEqual(performance.nutritionGuidanceMode, .notAnswered)
+        XCTAssertEqual(health.goalFocus, .notAnswered)
+        XCTAssertNil(health.otherTrainingDays)
+        XCTAssertTrue(health.sportOrActivity.isEmpty)
+    }
+
+    func testExerciseRelatedSymptomsTriggerConservativeGuardrail() {
+        var intake = HealthIntakeProfile.default
+        intake.safetyStatus = .hasConsiderations
+        intake.considerations = [.jointOrMuscleDiscomfort, .chestPainOrPressure]
+
+        XCTAssertTrue(intake.requiresLoadAdjustment)
+        XCTAssertTrue(intake.requiresProfessionalGuidance)
+        XCTAssertTrue(intake.hasWarningSymptoms)
     }
 
     private func makeDefaults() -> UserDefaults {

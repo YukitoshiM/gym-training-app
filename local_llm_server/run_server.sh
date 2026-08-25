@@ -38,7 +38,18 @@ if [[ -r "${ENV_FILE}" ]]; then
   set +a
 fi
 
+GATEWAY_KEY_FILE="${SERVER_DIR}/.gateway_shared_secret"
+if [[ -r "${GATEWAY_KEY_FILE}" ]]; then
+  export AI_GATEWAY_SHARED_SECRET="$(tr -d '\r\n' < "${GATEWAY_KEY_FILE}")"
+fi
+
 export AI_AUTH_STATE_PATH="${AI_AUTH_STATE_PATH:-${HOME}/Library/Application Support/BodyMode/ai-auth-state.json}"
+export AI_USAGE_DB_PATH="${AI_USAGE_DB_PATH:-${HOME}/Library/Application Support/BodyMode/ai-usage.sqlite3}"
+export AI_CREDIT_DB_PATH="${AI_CREDIT_DB_PATH:-${HOME}/Library/Application Support/BodyMode/ai-credits.sqlite3}"
+export USAGE_ANALYTICS_DB_PATH="${USAGE_ANALYTICS_DB_PATH:-${HOME}/Library/Application Support/BodyMode/usage-analytics.sqlite3}"
+export AI_QUOTA_ENFORCEMENT="${AI_QUOTA_ENFORCEMENT:-1}"
+export AI_CREDIT_ENFORCEMENT="${AI_CREDIT_ENFORCEMENT:-1}"
+export AI_QUOTA_EXEMPT_SUBJECTS="${AI_QUOTA_EXEMPT_SUBJECTS:-}"
 export AI_RATE_LIMIT_PER_MINUTE="${AI_RATE_LIMIT_PER_MINUTE:-30}"
 export AI_MAX_CONCURRENT_INFERENCE="${AI_MAX_CONCURRENT_INFERENCE:-1}"
 export AI_INFERENCE_QUEUE_TIMEOUT_SECONDS="${AI_INFERENCE_QUEUE_TIMEOUT_SECONDS:-8}"

@@ -73,7 +73,7 @@ final class AITrainerUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(reportLink.isHittable)
         reportLink.tap()
 
-        XCTAssertTrue(app.navigationBars["Noorのレポート"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["Niaのレポート"].waitForExistence(timeout: 5))
         XCTAssertTrue(scrollToHittable(app.staticTexts["今週の結論"]).exists)
         XCTAssertTrue(scrollToHittable(app.staticTexts["良かった点"]).exists)
         XCTAssertTrue(scrollToHittable(app.staticTexts["課題"]).exists)
@@ -89,7 +89,7 @@ final class AITrainerUITests: GymTrainingAppUITestCase {
         XCTAssertTrue(planButton.waitForExistence(timeout: 5))
         planButton.tap()
 
-        XCTAssertTrue(app.navigationBars["Noorと計画作成"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["Niaと計画作成"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.descendants(matching: .any)["aiPlanCoachIdentity"].exists)
         let generateButton = app.buttons["generateAIPlanButton"]
         XCTAssertTrue(generateButton.waitForExistence(timeout: 5))
@@ -121,7 +121,7 @@ final class AITrainerUITests: GymTrainingAppUITestCase {
         let contextButton = app.buttons["coachContextCoverageButton"]
         XCTAssertTrue(contextButton.waitForExistence(timeout: 5))
         contextButton.tap()
-        XCTAssertTrue(app.navigationBars["Noorの参照情報"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["Niaの参照情報"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.descendants(matching: .any)["activeCoachIdentity"].exists)
         XCTAssertTrue(app.descendants(matching: .any)["coachContextCoverageRow-profile"].exists)
         app.buttons["完了"].tap()
@@ -137,7 +137,7 @@ final class AITrainerUITests: GymTrainingAppUITestCase {
         sendButton.tap()
 
         XCTAssertTrue(app.descendants(matching: .any)["aiTrainerReply"].waitForExistence(timeout: 8))
-        XCTAssertTrue(app.staticTexts["Noor"].exists)
+        XCTAssertTrue(app.staticTexts["Nia"].exists)
         XCTAssertTrue(app.navigationBars["記憶を確認"].waitForExistence(timeout: 5))
 
         let candidate = app.buttons["memoryCandidateToggle-0"]
@@ -156,10 +156,13 @@ final class AITrainerUITests: GymTrainingAppUITestCase {
             app.staticTexts["Resistance training volume and muscle hypertrophy"]
         )
         XCTAssertTrue(citation.isHittable)
-        let helpfulButton = app.buttons["役に立った"]
-        XCTAssertTrue(helpfulButton.waitForExistence(timeout: 5))
+        app.swipeUp()
+        let helpfulButton = scrollToHittable(app.buttons["役に立った"])
+        XCTAssertTrue(helpfulButton.isHittable)
         helpfulButton.tap()
-        XCTAssertTrue(helpfulButton.isSelected)
+        let selected = NSPredicate(format: "value == %@", "selected")
+        expectation(for: selected, evaluatedWith: helpfulButton)
+        waitForExpectations(timeout: 5)
         let readabilityScreenshot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         readabilityScreenshot.name = "AI trainer formatted reply"
         readabilityScreenshot.lifetime = .keepAlways

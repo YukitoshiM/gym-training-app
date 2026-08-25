@@ -135,7 +135,10 @@ class GymTrainingAppUITestCase: XCTestCase {
         let identifier = field.identifier
         XCTAssertTrue(field.waitForExistence(timeout: 5))
         field.tap()
-        field.typeText(text)
+        for character in text {
+            field.typeText(String(character))
+            RunLoop.current.run(until: Date().addingTimeInterval(0.05))
+        }
 
         let dismissButton = app.buttons["dismiss-\(identifier)"]
         XCTAssertTrue(dismissButton.waitForExistence(timeout: 5))
@@ -313,8 +316,9 @@ class GymTrainingAppUITestCase: XCTestCase {
 
         let saveButton = app.buttons["saveProfileSettingsButton"]
         XCTAssertTrue(saveButton.waitForExistence(timeout: 5))
-        let aiBaseURLField = scrollToHittable(app.textFields["aiBaseURLField"])
-        XCTAssertTrue(aiBaseURLField.isHittable)
+        let aiStatus = scrollToHittable(app.descendants(matching: .any)["aiManagedConnectionStatus"])
+        XCTAssertTrue(aiStatus.isHittable)
+        XCTAssertFalse(app.textFields["aiBaseURLField"].exists)
         saveButton.tap()
     }
 
@@ -326,8 +330,8 @@ class GymTrainingAppUITestCase: XCTestCase {
         settingsButton.tap()
 
         XCTAssertTrue(app.navigationBars["設定"].waitForExistence(timeout: 5))
-        let aiBaseURLField = scrollToHittable(app.textFields["aiBaseURLField"])
-        XCTAssertTrue(aiBaseURLField.isHittable)
+        let aiStatus = scrollToHittable(app.descendants(matching: .any)["aiManagedConnectionStatus"])
+        XCTAssertTrue(aiStatus.isHittable)
 
         let checkButton = scrollToHittable(app.buttons["checkAIHealthButton"])
         XCTAssertTrue(checkButton.isHittable)
@@ -365,6 +369,9 @@ class GymTrainingAppUITestCase: XCTestCase {
         XCTAssertTrue(app.descendants(matching: .any)["aiReportLink"].waitForExistence(timeout: 5))
 
         tapTab("履歴")
+
+        let comparisonLink = app.descendants(matching: .any)["historyPeriodComparisonLink"]
+        XCTAssertTrue(comparisonLink.waitForExistence(timeout: 5))
 
         let weeklyVolumeLink = app.descendants(matching: .any)["weeklyVolumeLink"]
         XCTAssertTrue(weeklyVolumeLink.waitForExistence(timeout: 5))

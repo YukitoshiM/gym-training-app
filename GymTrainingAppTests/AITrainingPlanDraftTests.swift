@@ -9,7 +9,7 @@ final class AITrainingPlanDraftTests: XCTestCase {
           "name":"胸と背中",
           "summary":"上半身をバランスよく行います。",
           "exercises":[
-            {"exercise_name":"ベンチプレス","sets":3,"reps":8,"weight":60.25,"rest_seconds":92},
+            {"exercise_name":"ベンチプレス","sets":3,"reps":8,"weight":60.25,"rest_seconds":92,"target_rpe":7.5,"concentric_seconds":1,"eccentric_seconds":3,"tempo_beat_speed":2,"alternative_exercise_names":["チェストプレス"]},
             {"exercise_name":"ラットプルダウン","sets":4,"reps":10,"weight":45,"rest_seconds":120}
           ]
         }
@@ -26,6 +26,12 @@ final class AITrainingPlanDraftTests: XCTestCase {
         XCTAssertEqual(proposal.plan.exercises[0].sets.count, 3)
         XCTAssertEqual(proposal.plan.exercises[0].sets[0].targetWeight, 60.3)
         XCTAssertEqual(proposal.plan.exercises[0].restSeconds, 90)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].targetRPE, 7.5)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].plannedConcentricSeconds, 1)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].plannedEccentricSeconds, 3)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].plannedTempoBeatSpeed, 2)
+        XCTAssertFalse(proposal.plan.exercises[0].alternativeExerciseIDs?.isEmpty ?? true)
+        XCTAssertGreaterThan(proposal.plan.estimatedDurationMinutes, 0)
         XCTAssertEqual(proposal.summary, "上半身をバランスよく行います。")
     }
 
@@ -53,7 +59,17 @@ final class AITrainingPlanDraftTests: XCTestCase {
                 PlanExercise(
                     exercise: exercise,
                     sortOrder: 0,
-                    sets: [PlanSetTarget(setOrder: 1, targetWeight: 37.5, targetReps: 10)]
+                    sets: [
+                        PlanSetTarget(
+                            setOrder: 1,
+                            targetWeight: 37.5,
+                            targetReps: 10,
+                            targetRPE: 8,
+                            plannedConcentricSeconds: 2,
+                            plannedEccentricSeconds: 4,
+                            plannedTempoBeatSpeed: 3
+                        )
+                    ]
                 )
             ]
         )
@@ -68,6 +84,10 @@ final class AITrainingPlanDraftTests: XCTestCase {
         XCTAssertEqual(proposal.plan.id, existingPlan.id)
         XCTAssertEqual(proposal.plan.createdAt, existingPlan.createdAt)
         XCTAssertEqual(proposal.plan.exercises[0].sets[0].targetWeight, 37.5)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].targetRPE, 8)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].plannedConcentricSeconds, 2)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].plannedEccentricSeconds, 4)
+        XCTAssertEqual(proposal.plan.exercises[0].sets[0].plannedTempoBeatSpeed, 3)
     }
 
     func testPromptIncludesGoalAndOnlySelectedEquipment() {
@@ -87,6 +107,8 @@ final class AITrainingPlanDraftTests: XCTestCase {
         XCTAssertTrue(prompt.contains("チェストプレス[胸/マシン]"))
         XCTAssertFalse(prompt.contains("ベンチプレス[胸/バーベル]"))
         XCTAssertTrue(prompt.contains("肩を重点的に"))
+        XCTAssertTrue(prompt.contains("target_rpe"))
+        XCTAssertTrue(prompt.contains("alternative_exercise_names"))
         XCTAssertLessThanOrEqual(prompt.count, CoachChatRequest.maximumMessageCharacters)
     }
 
@@ -101,5 +123,44 @@ final class AITrainingPlanDraftTests: XCTestCase {
         ) { error in
             XCTAssertEqual(error as? AITrainingPlanDraftError, .noUsableExercises)
         }
+    }
+
+    func testLegacyPlanDecodesWithoutRPEOrAlternatives() throws {
+        let exercise = try XCTUnwrap(PresetExerciseStore.exercises.first)
+        let plan = TrainingPlan(
+            name: "互換性",
+            exercises: [
+                PlanExercise(
+                    exercise: exercise,
+                    sortOrder: 0,
+                    sets: [
+                        PlanSetTarget(
+                            setOrder: 1,
+                            targetWeight: 20,
+                            targetReps: 10,
+                            targetRPE: 7
+                        )
+                    ],
+                    alternativeExerciseIDs: [UUID()]
+                )
+            ]
+        )
+        var json = try XCTUnwrap(
+            JSONSerialization.jsonObject(with: JSONEncoder().encode(plan)) as? [String: Any]
+        )
+        var exercises = try XCTUnwrap(json["exercises"] as? [[String: Any]])
+        exercises[0].removeValue(forKey: "alternativeExerciseIDs")
+        var sets = try XCTUnwrap(exercises[0]["sets"] as? [[String: Any]])
+        sets[0].removeValue(forKey: "targetRPE")
+        exercises[0]["sets"] = sets
+        json["exercises"] = exercises
+
+        let decoded = try JSONDecoder().decode(
+            TrainingPlan.self,
+            from: JSONSerialization.data(withJSONObject: json)
+        )
+
+        XCTAssertNil(decoded.exercises[0].alternativeExerciseIDs)
+        XCTAssertNil(decoded.exercises[0].sets[0].targetRPE)
     }
 }

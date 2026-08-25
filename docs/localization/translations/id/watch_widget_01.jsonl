@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"id","translation":"Merekam {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"id","translation":"Tidak didukung: {{value1}}. Input manual tersedia","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"id","translation":"Jumlah getaran per detik","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"id","translation":"Disimpan ke Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"id","translation":"Cara menggunakan Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"id","translation":"Gym: Lanjut ke sesi berikutnya","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"id","translation":"Merekam tanpa izin Kesehatan dan input manual","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"id","translation":"Tidak dapat menggunakan Health, sedang mencatat secara manual.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"id","translation":"Tidak dapat memulai Health, sedang mencatat secara manual.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"id","translation":"Workout Health dihentikan sementara.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"id","translation":"Memproses penyimpanan Health.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"id","translation":"Penyimpanan Health gagal, catatan Watch sudah tersimpan.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"id","translation":"Catatan Watch belum tersimpan, tetapi sudah tersimpan.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"id","translation":"Data pengukuran Health tidak dapat dipulihkan. Anda tetap dapat mencatat secara manual.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"id","translation":"Data pengukuran Health telah dipulihkan.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"id","translation":"Pengukuran Health dihentikan, pencatatan manual sedang berlangsung.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"id","translation":"Menghubungkan dengan Health, sedang mencatat secara manual.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"id","translation":"Tidak ada skala RPE.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"id","translation":"Catatan yang sedang berjalan di Watch akan dihapus.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"id","translation":"Catatan Watch telah tersimpan.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"id","translation":"Sinkronkan menu dari iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"id","translation":"Pilih dan mulai menu hari ini dari iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"id","translation":"Periksa menu hari ini di iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"id","translation":"Terhubung ke iPhone.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"id","translation":"Sinkronkan konten hari ini dari iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"id","translation":"Tidak dapat membuat data catatan untuk dikirim ke iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"id","translation":"Tidak dapat mengirim. Simpan catatan dan kirim kembali.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"id","translation":"Tidak dapat menyimpan di iPhone. Dapat dikirim kembali nanti.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"id","translation":"Sedang menyiapkan koneksi dengan iPhone. Dapat dikirim kembali nanti.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"id","translation":"{{value1}} × {{value2}} kali × {{value3}} set","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"id","translation":"{{value1}} dapat dikirim kembali ke iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"id","translation":"{{value1}} telah dipesan untuk dikirim ke iPhone","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"id","translation":"{{value1}} telah dikirim ke iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"id","translation":"{{value1}} sedang dikirim ke iPhone","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"id","translation":"{{value1}} telah disimpan dalam riwayat iPhone","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"id","translation":"Kirim kembali {{value1}}","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"id","translation":"{{value1}} dapat dilanjutkan","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"id","translation":"{{value1}} telah dipilih","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"id","translation":"{{value1}} dimulai","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"id","translation":"{{value1}}/{{value2}} set・{{value3}} kali tercatat","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"id","translation":"{{value1}} set・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"id","translation":"{{value1}} set・Target Total {{value2}} kali","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"id","translation":"{{value1}}・{{value2}} set・Total {{value3}} kali","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"id","translation":"{{value1}}・set{{value2}}","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"id","translation":"Pilih dari {{value1}} item","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"id","translation":"Menu {{value1}} telah disinkronkan","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"id","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"id","translation":"{{value1}} kali/detik","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"id","translation":"{{value1}} kali・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"id","translation":"{{value1}} detik","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"id","translation":"{{value1}} jenis・{{value2}} set・Total {{value3}} kali","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"id","translation":"Perangkat ini tidak dapat digunakan untuk menghubungkan dengan iPhone. Catatan tersimpan di perangkat ini.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"id","translation":"Perangkat ini tidak dapat digunakan untuk menghubungkan","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"id","translation":"Lewati","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"id","translation":"Set","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"id","translation":"Set {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"id","translation":"Selesaikan set","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"id","translation":"Mulai set","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"id","translation":"Rata-rata set {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"id","translation":"Set belum ditentukan","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"id","translation":"Mulai set","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"id","translation":"Batalkan mulai set","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"id","translation":"Sedang mengukur sensor","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"id","translation":"Karena tidak dapat menyiapkan item sensor, sedang dicatat secara manual.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"id","translation":"Lewati tutorial","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"id","translation":"Tempo","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"id","translation":"Sesuaikan tempo","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"id","translation":"Atur tempo","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"id","translation":"Tunda panduan tempo","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"id","translation":"Kembalikan panduan tempo","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"id","translation":"Bench Press","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"id","translation":"Menu","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"id","translation":"Pilih menu","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"id","translation":"Gagal membaca data menu","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"id","translation":"Ubah menu","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"id","translation":"Menunggu menu","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"id","translation":"Catatan","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"id","translation":"Edit catatan","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"id","translation":"Gerakan","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"id","translation":"Tarik ke bawah","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"id","translation":"Latihan","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"id","translation":"Apakah Anda ingin menyelesaikan latihan?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"id","translation":"Latihan dibatalkan","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"id","translation":"Jeda","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"id","translation":"Jeda selama {{value1}} detik / Maju {{value2}} detik","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"id","translation":"Sedang dijeda","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"id","translation":"Naik","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"id","translation":"{{value1}} detik ke atas・{{value2}} detik ke bawah・{{value3}} kali/detik","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"id","translation":"Angkat","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"id","translation":"Angkat {{value1}} detik・Turun {{value2}} detik","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"id","translation":"Angkat{{value1}} detik／Turun{{value2}} detik","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"id","translation":"Atur waktu angkat dan turun secara terpisah. Apple Watch akan memberikan panduan dengan 1 hingga 3 sentuhan per detik.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"id","translation":"Waktu Angkat","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"id","translation":"Masukkan waktu angkat langsung","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"id","translation":"Turun","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"id","translation":"Turun","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"id","translation":"Waktu Turun","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"id","translation":"Masukkan waktu turun langsung","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"id","translation":"Hari ini","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"id","translation":"Menu hari ini","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"id","translation":"Menu hari ini: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"id","translation":"Pilih menu hari ini","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"id","translation":"Istirahat {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"id","translation":"Istirahat {{value1}} detik","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"id","translation":"Beristirahat","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"id","translation":"Lewati istirahat","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"id","translation":"Waktu Istirahat","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"id","translation":"Selesai Istirahat","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"id","translation":"Berdasarkan sisa energi dan kecepatan, kami sarankan berat sebesar 2.5% lebih.","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"id","translation":"Mulai Menggunakan","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"id","translation":"Cara Penggunaan: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"id","translation":"Simpan","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"id","translation":"Kepercayaan: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"id","translation":"Perbaiki","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"id","translation":"Lanjutkan","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"id","translation":"Menit:Detik","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"id","translation":"Rekor Terakhir","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"id","translation":"Stabilitas operasi {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"id","translation":"Pilihan operasi: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"id","translation":"Terdeteksi penghentian operasi","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"id","translation":"Perkiraan operasi {{value1}} kali","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"id","translation":"Perkiraan operasi {{value1}} kali・Tingkat kepercayaan {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"id","translation":"Perubahan kecepatan operasi {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"id","translation":"Sinkronkan","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"id","translation":"Batalkan","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"id","translation":"Karena ada catatan kebugaran pada waktu yang sama, kami menghindari penyimpanan ganda ke Health.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"id","translation":"Anda dapat memilih dari menu yang sudah disinkronkan","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"id","translation":"Putaran","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"id","translation":"Jumlah","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"id","translation":"Atur jumlah putaran menggunakan gulir","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"id","translation":"Selesai","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"id","translation":"Kirim ke iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"id","translation":"Kirim","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"id","translation":"Timer istirahat dimulai setelah selesai. Anda dapat memilih jenis latihan berikutnya secara berurutan.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"id","translation":"Tidak ada latihan yang terselesaikan","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"id","translation":"Set Selesai","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"id","translation":"Set Selesai {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"id","translation":"Prestasi {{value1}} × {{value2}} putaran","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"id","translation":"Sesuaikan prestasi","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"id","translation":"Memasukkan prestasi","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"id","translation":"Ubah RPE untuk set yang sedang berjalan","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"id","translation":"Ubah tempo untuk set yang sedang berjalan","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"id","translation":"Ubah jumlah putaran untuk set yang sedang berjalan","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"id","translation":"Ubah berat untuk set yang sedang berjalan","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"id","translation":"Rata-rata -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"id","translation":"Rata-rata {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"id","translation":"Detak jantung menunjukkan tren pemulihan. Jika Anda merasa nyaman, lanjutkan ke set berikutnya","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"id","translation":"Teruslah beristirahat sambil memantau detak jantung Anda.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"id","translation":"Sedang mengukur detak jantung dan energi yang terbakar.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"id","translation":"Input manual","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"id","translation":"Dapat dicatat melalui input manual.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"id","translation":"Sedang mencatat melalui input manual.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"id","translation":"Perkirakan berdasarkan urutan gerakan pergelangan tangan dan set yang belum selesai.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"id","translation":"Jumlah getaran (1-3 kali/detik)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"id","translation":"Kecepatan getaran","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"id","translation":"Gagal terhubung: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"id","translation":"Memperbarui perkiraan {{value1}} kali.","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"id","translation":"Menerapkan saran","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"id","translation":"Ubah waktu","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"id","translation":"Maksimum -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"id","translation":"Maksimum {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"id","translation":"Setelah selesai, akan dikirim ke iPhone. Rekaman yang belum terkirim dapat dikirim kembali nanti.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"id","translation":"Menyimpan konten saat ini, termasuk set yang belum selesai.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"id","translation":"Belum terkirim","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"id","translation":"Tidak ada catatan Watch yang belum terkirim.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"id","translation":"Belum dimulai","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"id","translation":"Berikut: {{value1}} {{value2}} × {{value3}} kali","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"id","translation":"Mulai set berikutnya","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"id","translation":"Kembali langsung ke latihan berikutnya.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"id","translation":"Latihan berikutnya","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"id","translation":"Berikutnya","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"id","translation":"Lewati aktivitas saat ini","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"id","translation":"Target {{value1}} × {{value2}} kali","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"id","translation":"Selesaikan tempo target","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"id","translation":"Usulkan penurunan 5% dari salah satu: Target belum tercapai, RPE, kecepatan gerakan menurun","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"id","translation":"Rentang gerak relatif {{value1}}%, Konsistensi {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"id","translation":"Pengambilan sampel hemat energi (sisa baterai)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"id","translation":"Pengambilan sampel hemat energi (mode daya rendah)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"id","translation":"Pengaturan pengambilan sampel hemat energi","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"id","translation":"Hapus","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"id","translation":"Detik","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"id","translation":"Pilih latihan dan set untuk memulai. Jika salah, gunakan \"Batalkan\" untuk kembali ke yang belum dilakukan.","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"id","translation":"Pilihan latihan {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"id","translation":"Selesai dan sinkronkan","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"id","translation":"Lanjutkan","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"id","translation":"Punggung","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"id","translation":"Hari punggung","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"id","translation":"Dada","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"id","translation":"Hari Dada","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"id","translation":"Apakah Anda ingin menghapus catatan?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"id","translation":"Sedang merekam","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"id","translation":"Tidak ada latihan yang sedang direkam","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"id","translation":"Pengambilan sampel normal","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"id","translation":"Cepat","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"id","translation":"Menyarankan berat yang sama berdasarkan tingkat kemajuan, RPE, dan kecepatan gerakan","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"id","translation":"Tidak","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"id","translation":"Beralih ke set pilihan","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"id","translation":"Berat","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"id","translation":"Atur berat menggunakan reel","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"id","translation":"Berat, jumlah, RPE, dan istirahat dapat diubah menggunakan reel sebelum dan sesudah memulai.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"id","translation":"Mulai","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"id","translation":"Tetapkan tempo sebelum memulai","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"id","translation":"Tidak didukung: {{value1}}. Input manual tersedia","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"id","translation":"Catatan suara dan teks","review_note":""}

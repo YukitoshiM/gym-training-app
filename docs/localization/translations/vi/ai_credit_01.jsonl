@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "vi", "translation": "Tài khoản AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "vi", "translation": "Chi {{value1}} tín dụng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "vi", "translation": "Thêm tín dụng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "vi", "translation": "Điều chỉnh số dư", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "vi", "translation": "Sử dụng tín dụng AI để phân tích tự động", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "vi", "translation": "Không tiêu thụ tín dụng, chỉ sử dụng dữ liệu trong thiết bị để tóm tắt.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "vi", "translation": "Tiêu thụ tín dụng cho báo cáo hàng tuần hoặc hàng tháng khi thực hiện đặt lịch.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "vi", "translation": "Tín dụng AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "vi", "translation": "Đang kiểm tra số dư", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "vi", "translation": "Số dư {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "vi", "translation": "{{value1}} tín dụng đã nhận.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "vi", "translation": "Mua tín dụng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "vi", "translation": "Tiếp tục sử dụng mà không cần AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "vi", "translation": "Xóa toàn bộ dữ liệu và tài khoản BodyMode. Tất cả tín dụng mua và nhận cũng sẽ bị mất vĩnh viễn.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "vi", "translation": "Lịch sử tín dụng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "vi", "translation": "Bạn có thể nhận tín dụng qua video hoặc mua số lượng cần thiết. Ghi lại thủ công vẫn miễn phí.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "vi", "translation": "Nhận qua quảng cáo hoặc mua tín dụng. Ghi lại thủ công vẫn hoạt động.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "vi", "translation": "Không đủ tín dụng AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "vi", "translation": "Báo cáo hàng tháng", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "vi", "translation": "Không hết hạn", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "vi", "translation": "{{value1}} tín dụng AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "vi", "translation": "Đang chuẩn bị sản phẩm.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "vi", "translation": "Đã điều chỉnh hoàn tiền, thêm {{value1}} điểm tín dụng.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "vi", "translation": "Thêm điểm tín dụng.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "vi", "translation": "Đang chờ xác nhận. Sẽ tự động hiển thị sau khi hoàn thành.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "vi", "translation": "Điểm tín dụng mua không hết hạn. Không thể chuyển nhượng hoặc đổi ra tiền mặt. Banner quảng cáo vẫn hiển thị ngay cả khi đã mua.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "vi", "translation": "Không thể xác định trạng thái giao dịch.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "vi", "translation": "Không thể xác minh giao dịch trên App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "vi", "translation": "Điều chỉnh hoàn tiền", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "vi", "translation": "Bạn đã nhận đủ ưu đãi quảng cáo trong ngày.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "vi", "translation": "Đang xử lý xem video. Điểm tín dụng sẽ được cộng sau khi xác minh.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "vi", "translation": "Mở lại ứng dụng để kiểm tra số dư mới nhất. Không cần phải xem lại video.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "vi", "translation": "Đã nhận 5 điểm tín dụng.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "vi", "translation": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "vi", "translation": "Đã đăng nhập bằng tài khoản Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "vi", "translation": "Đăng ký trên Apple để nhận điểm tín dụng ban đầu. Ghi lại thủ công có thể sử dụng mà không cần đăng ký.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "vi", "translation": "Để sử dụng tính năng AI, vui lòng đăng ký trên Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "vi", "translation": "Đang đăng ký...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "vi", "translation": "Đăng ký trên Apple để nhận 20 điểm tín dụng ban đầu. Ghi lại thủ công có thể sử dụng mà không cần đăng ký.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "vi", "translation": "Đăng ký trên Apple để nhận 20 điểm tín dụng ban đầu. Không phát sinh phí hoặc tự động gia hạn.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "vi", "translation": "Nhận 20 điểm khi đăng ký", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "vi", "translation": "Quảng cáo video", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "vi", "translation": "Nhà phát triển cung cấp", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "vi", "translation": "Mua", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "vi", "translation": "Ưu đãi khi đăng ký", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "vi", "translation": "Bắt đầu sử dụng AI Trainer", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "vi", "translation": "Điểm tín nhiệm AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "vi", "translation": "Vui lòng thử lại sau.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "vi", "translation": "Sử dụng không giới hạn", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "vi", "translation": "Xem video để nhận 5 điểm", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "vi", "translation": "Báo cáo hàng tuần", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

@@ -1,0 +1,91 @@
+{
+  "identifier" : "B0D1C0DE",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "CREDIT050",
+      "localizations" : [
+        {
+          "description" : "AIトレーナーの相談、食事・写真分析、計画作成などに使えます。",
+          "displayName" : "AIクレジット 50",
+          "locale" : "ja_JP"
+        },
+        {
+          "description" : "AI coaching, meal photos, body photos, and plans.",
+          "displayName" : "50 AI Credits",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.yukitoshim.gymtrainingapp.credits50",
+      "referenceName" : "AI Credits 50",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "CREDIT150",
+      "localizations" : [
+        {
+          "description" : "AIトレーナーを継続的に活用できる150クレジットです。",
+          "displayName" : "AIクレジット 150",
+          "locale" : "ja_JP"
+        },
+        {
+          "description" : "Use AI coaching and analysis more often.",
+          "displayName" : "150 AI Credits",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.yukitoshim.gymtrainingapp.credits150",
+      "referenceName" : "AI Credits 150",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "12.99",
+      "familyShareable" : false,
+      "internalID" : "CREDIT500",
+      "localizations" : [
+        {
+          "description" : "AIトレーナーと各種分析を多く利用する方向けの500クレジットです。",
+          "displayName" : "AIクレジット 500",
+          "locale" : "ja_JP"
+        },
+        {
+          "description" : "For frequent AI coaching and analysis.",
+          "displayName" : "500 AI Credits",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.yukitoshim.gymtrainingapp.credits500",
+      "referenceName" : "AI Credits 500",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      { "current" : null, "enabled" : false, "name" : "Load Products" },
+      { "current" : null, "enabled" : false, "name" : "Purchase" },
+      { "current" : null, "enabled" : false, "name" : "Verification" },
+      { "current" : null, "enabled" : false, "name" : "App Store Sync" },
+      { "current" : null, "enabled" : false, "name" : "Subscription Status" },
+      { "current" : null, "enabled" : false, "name" : "App Transaction" },
+      { "current" : null, "enabled" : false, "name" : "Manage Subscriptions Sheet" },
+      { "current" : null, "enabled" : false, "name" : "Refund Request Sheet" },
+      { "current" : null, "enabled" : false, "name" : "Offer Code Redeem Sheet" }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

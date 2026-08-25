@@ -1,0 +1,112 @@
+{"id":"health_meals_body_ai.b9d2ae097ed2","target_locale":"es-MX","translation":"Espera aproximadamente {{value1}} segundos y","review_note":""}
+{"id":"health_meals_body_ai.b869cf466465","target_locale":"es-MX","translation":"Podemos confirmar el equilibrio entre el entrenamiento que pudimos mantener y la recuperación.","review_note":""}
+{"id":"health_meals_body_ai.08a296b53ccb","target_locale":"es-MX","translation":"Propuesta de objetivos para el mes siguiente","review_note":""}
+{"id":"health_meals_body_ai.c20a7b4dbb8b","target_locale":"es-MX","translation":"Grasas","review_note":""}
+{"id":"health_meals_body_ai.0021a0220d44","target_locale":"es-MX","translation":"Circunferencia abdominal","review_note":""}
+{"id":"health_meals_body_ai.b0709fea6b90","target_locale":"es-MX","translation":"Registrar la circunferencia abdominal","review_note":""}
+{"id":"health_meals_body_ai.a038994e000b","target_locale":"es-MX","translation":"Abdomen","review_note":""}
+{"id":"health_meals_body_ai.1bb8b3868e2e","target_locale":"es-MX","translation":"Detección automática","review_note":""}
+{"id":"health_meals_body_ai.7645e396f538","target_locale":"es-MX","translation":"Puntos positivos","review_note":""}
+{"id":"health_meals_body_ai.02d8de91c3f5","target_locale":"es-MX","translation":"Aspectos positivos","review_note":""}
+{"id":"health_meals_body_ai.9cbe36a4ce6d","target_locale":"es-MX","translation":"Unidades de visualización","review_note":""}
+{"id":"health_meals_body_ai.b3ec9a0c94cd","target_locale":"es-MX","translation":"Modelo auxiliar no conectado","review_note":""}
+{"id":"health_meals_body_ai.f2d1aefd4747","target_locale":"es-MX","translation":"Revisamos varias fotos tomadas en diferentes ángulos. Para facilitar la comparación, es importante mantener las mismas condiciones al tomar las fotos.","review_note":""}
+{"id":"health_meals_body_ai.4d8687bed4f2","target_locale":"es-MX","translation":"Revisamos varias fotos tomadas en diferentes ángulos.","review_note":""}
+{"id":"health_meals_body_ai.08aa1158cdcc","target_locale":"es-MX","translation":"Enviar varias fotos tomadas desde diferentes ángulos permite complementar y confirmar posturas y formas corporales que no se pueden ver solo desde el frente.","review_note":""}
+{"id":"health_meals_body_ai.625a53e73e40","target_locale":"es-MX","translation":"Factores","review_note":""}
+{"id":"health_meals_body_ai.d82ca70d9996","target_locale":"es-MX","translation":"Verificar como referencia los cambios físicos","review_note":""}
+{"id":"health_meals_body_ai.505ff00fae7c","target_locale":"es-MX","translation":"Para poder comparar los cambios físicos, tomamos fotos bajo condiciones similares a las anteriores.","review_note":""}
+{"id":"health_meals_body_ai.1a77000ba493","target_locale":"es-MX","translation":"Tasa de medición","review_note":""}
+{"id":"health_meals_body_ai.1c1f8aa404fd","target_locale":"es-MX","translation":"Crear plan","review_note":""}
+{"id":"health_meals_body_ai.a6cf924ebc76","target_locale":"es-MX","translation":"Posibles recuerdos","review_note":""}
+{"id":"health_meals_body_ai.1b92bb1ce7f3","target_locale":"es-MX","translation":"Borrar todos los recuerdos","review_note":""}
+{"id":"health_meals_body_ai.237f4919c9d9","target_locale":"es-MX","translation":"Ver registros","review_note":""}
+{"id":"health_meals_body_ai.88346340fae8","target_locale":"es-MX","translation":"Registrar","review_note":""}
+{"id":"health_meals_body_ai.f66aeeafd500","target_locale":"es-MX","translation":"Registro {{value1}} días · Promedio de proteínas {{value2}} g/día","review_note":""}
+{"id":"health_meals_body_ai.f82081bc2f90","target_locale":"es-MX","translation":"No hay registro","review_note":""}
+{"id":"health_meals_body_ai.4c3dac603b36","target_locale":"es-MX","translation":"Registrar","review_note":""}
+{"id":"health_meals_body_ai.9b10a7bc0507","target_locale":"es-MX","translation":"Cómo ver los registros","review_note":""}
+{"id":"health_meals_body_ai.c656bd9e9244","target_locale":"es-MX","translation":"Los registros se guardan. Puede volver a generarlos más tarde, cuando esté conectado.","review_note":""}
+{"id":"health_meals_body_ai.cafd0ed89a65","target_locale":"es-MX","translation":"Sugerir la siguiente acción y el objetivo del próximo mes basándose en los registros","review_note":""}
+{"id":"health_meals_body_ai.c5deaf60f00d","target_locale":"es-MX","translation":"Día de registro","review_note":""}
+{"id":"health_meals_body_ai.212c4e7d1abf","target_locale":"es-MX","translation":"Registro completado","review_note":""}
+{"id":"health_meals_body_ai.cbf6c6a18f68","target_locale":"es-MX","translation":"Verifique que la URL del servidor configurada sea correcta.","review_note":""}
+{"id":"health_meals_body_ai.a6282305f882","target_locale":"es-MX","translation":"Seleccioné según su objetivo, el equipo disponible y el número de entrenamientos semanales.","review_note":""}
+{"id":"health_meals_body_ai.7aefc85ff14d","target_locale":"es-MX","translation":"La función de IA está desactivada en la configuración.","review_note":""}
+{"id":"health_meals_body_ai.576015450b34","target_locale":"es-MX","translation":"Permita el uso de la cámara de BodyMode en la configuración.","review_note":""}
+{"id":"health_meals_body_ai.bff7fb34d198","target_locale":"es-MX","translation":"Habilite \"Usar la función de IA\" en la configuración. Puede guardar los registros manualmente de esta manera.","review_note":""}
+{"id":"health_meals_body_ai.1ed3ceaf4396","target_locale":"es-MX","translation":"Abrir configuración","review_note":""}
+{"id":"health_meals_body_ai.c1902956ff42","target_locale":"es-MX","translation":"Ingrese la clave API del servidor de IA en la pantalla de configuración.","review_note":""}
+{"id":"health_meals_body_ai.b5035ba9b9f0","target_locale":"es-MX","translation":"Verifique la información de conexión en la pantalla de configuración y vuelva a intentarlo. La autenticación corta se actualiza automáticamente.","review_note":""}
+{"id":"health_meals_body_ai.419ad2a6aa29","target_locale":"es-MX","translation":"Análisis detallado","review_note":""}
+{"id":"health_meals_body_ai.234f23b52f12","target_locale":"es-MX","translation":"Desafíos","review_note":""}
+{"id":"health_meals_body_ai.b9428ba987dc","target_locale":"es-MX","translation":"Carga, calidad del entrenamiento, recuperación cardíaca, opciones de descanso","review_note":""}
+{"id":"health_meals_body_ai.ea2c7c407ab9","target_locale":"es-MX","translation":"Distancia","review_note":""}
+{"id":"health_meals_body_ai.639d445a88af","target_locale":"es-MX","translation":"KPIs corporales","review_note":""}
+{"id":"health_meals_body_ai.bc649c604570","target_locale":"es-MX","translation":"Cree comentarios semanales basándose en sus KPIs corporales, dieta y fotos de su físico, e historial de entrenamiento.","review_note":""}
+{"id":"health_meals_body_ai.6cc0928ab83d","target_locale":"es-MX","translation":"Ejercicio ligero","review_note":""}
+{"id":"health_meals_body_ai.d63a0e48148e","target_locale":"es-MX","translation":"Realice movimientos suaves para activar el cuerpo","review_note":""}
+{"id":"health_meals_body_ai.76b8d9691185","target_locale":"es-MX","translation":"Añadir","review_note":""}
+{"id":"health_meals_body_ai.855dc416beda","target_locale":"es-MX","translation":"Añadir ayuda a estabilizar las recomendaciones","review_note":""}
+{"id":"health_meals_body_ai.fe32e34696b6","target_locale":"es-MX","translation":"Salir","review_note":""}
+{"id":"health_meals_body_ai.28d11eaa4971","target_locale":"es-MX","translation":"Enviar","review_note":""}
+{"id":"health_meals_body_ai.a25f576fd5c5","target_locale":"es-MX","translation":"No se pudo enviar","review_note":""}
+{"id":"health_meals_body_ai.e228355c530a","target_locale":"es-MX","translation":"Enviando...","review_note":""}
+{"id":"health_meals_body_ai.fbfadfb06d6e","target_locale":"es-MX","translation":"No hay historial de envío","review_note":""}
+{"id":"health_meals_body_ai.dc2cd2929fe4","target_locale":"es-MX","translation":"Parece que puede continuar normalmente. Verifique también la sensación durante el calentamiento.","review_note":""}
+{"id":"health_meals_body_ai.c8701eaa65da","target_locale":"es-MX","translation":"Parece que puede continuar normalmente.","review_note":""}
+{"id":"health_meals_body_ai.a65c82a761d0","target_locale":"es-MX","translation":"Para evitar notificaciones excesivas, las notificaciones nocturnas están desactivadas automáticamente.","review_note":""}
+{"id":"health_meals_body_ai.499175873569","target_locale":"es-MX","translation":"Le proporcionaremos indicaciones por la mañana y por la noche en función de sus interacciones con las notificaciones.","review_note":""}
+{"id":"health_meals_body_ai.8601f9d25351","target_locale":"es-MX","translation":"Seleccionar los elementos a sincronizar","review_note":""}
+{"id":"health_meals_body_ai.e93d5d757551","target_locale":"es-MX","translation":"Revisión semanal","review_note":""}
+{"id":"health_meals_body_ai.ef1563011431","target_locale":"es-MX","translation":"Una vez por semana, con las mismas condiciones","review_note":""}
+{"id":"health_meals_body_ai.debfca7f8b6f","target_locale":"es-MX","translation":"Promedio semanal","review_note":""}
+{"id":"health_meals_body_ai.406d8b52c4f0","target_locale":"es-MX","translation":"Generar comentario de IA semanal","review_note":""}
+{"id":"health_meals_body_ai.d9a3c67cccb6","target_locale":"es-MX","translation":"Informe semanal","review_note":""}
+{"id":"health_meals_body_ai.07a4aa136201","target_locale":"es-MX","translation":"Generando informe semanal","review_note":""}
+{"id":"health_meals_body_ai.fafa909be0a5","target_locale":"es-MX","translation":"Informes semanales y mensuales","review_note":""}
+{"id":"health_meals_body_ai.d7b486554fb6","target_locale":"es-MX","translation":"Promedio semanal","review_note":""}
+{"id":"health_meals_body_ai.eb495142430b","target_locale":"es-MX","translation":"El promedio semanal aún no está disponible.","review_note":""}
+{"id":"health_meals_body_ai.f56ee73fb4dd","target_locale":"es-MX","translation":"Comparación semanal","review_note":""}
+{"id":"health_meals_body_ai.76a8b51a97f4","target_locale":"es-MX","translation":"Ejercicio","review_note":""}
+{"id":"health_meals_body_ai.7f76c343c17b","target_locale":"es-MX","translation":"Registro de ejercicio existente","review_note":""}
+{"id":"health_meals_body_ai.dad988a8437f","target_locale":"es-MX","translation":"Porcentaje de logro","review_note":""}
+{"id":"health_meals_body_ai.f2264d502bc8","target_locale":"es-MX","translation":"No se pudo convertir la imagen seleccionada para su análisis.","review_note":""}
+{"id":"health_meals_body_ai.8bfd55a4ed1d","target_locale":"es-MX","translation":"Peso","review_note":""}
+{"id":"health_meals_body_ai.513dcf9887ac","target_locale":"es-MX","translation":"Quiero aumentar el peso gradualmente","review_note":""}
+{"id":"health_meals_body_ai.ffadd0622088","target_locale":"es-MX","translation":"Cerrar","review_note":""}
+{"id":"health_meals_body_ai.e216609daeb6","target_locale":"es-MX","translation":"Frecuencia","review_note":""}
+{"id":"health_meals_body_ai.4023d26ef616","target_locale":"es-MX","translation":"Comida consumida","review_note":""}
+{"id":"health_meals_body_ai.f60350613f0c","target_locale":"es-MX","translation":"Ingresa al menos un alimento.","review_note":""}
+{"id":"health_meals_body_ai.9e38754cb6e4","target_locale":"es-MX","translation":"Añadir alimento","review_note":""}
+{"id":"health_meals_body_ai.738844ab541c","target_locale":"es-MX","translation":"Comida","review_note":""}
+{"id":"health_meals_body_ai.166aed922fa0","target_locale":"es-MX","translation":"El uso de IA para compartir comidas está desactivado en la configuración.","review_note":""}
+{"id":"health_meals_body_ai.2e73d1d00afb","target_locale":"es-MX","translation":"Registra tu comida","review_note":""}
+{"id":"health_meals_body_ai.f31f45373056","target_locale":"es-MX","translation":"Edita tu comida","review_note":""}
+{"id":"health_meals_body_ai.2fab54303f04","target_locale":"es-MX","translation":"Registra tu comida","review_note":""}
+{"id":"health_meals_body_ai.14d3b7bdf022","target_locale":"es-MX","translation":"Al registrar tu comida, podrás comparar las diferencias con la energía en reposo y actividad de Apple Health.","review_note":""}
+{"id":"health_meals_body_ai.e1790b48822b","target_locale":"es-MX","translation":"Añadir comida","review_note":""}
+{"id":"health_meals_body_ai.d15616c39ec5","target_locale":"es-MX","translation":"Verificar comidas","review_note":""}
+{"id":"health_meals_body_ai.037d690fd891","target_locale":"es-MX","translation":"Análisis del contenido de la comida","review_note":""}
+{"id":"health_meals_body_ai.909d632d0101","target_locale":"es-MX","translation":"Foto de la comida","review_note":""}
+{"id":"health_meals_body_ai.3d31c5bc2270","target_locale":"es-MX","translation":"IA para fotos de comida","review_note":""}
+{"id":"health_meals_body_ai.aa2ce729eb99","target_locale":"es-MX","translation":"Ambas estimaciones de cantidad y consumo de energía de Health son valores orientativos. Consulta los resultados a diario, pero también semanalmente.","review_note":""}
+{"id":"health_meals_body_ai.c5b5539d921c","target_locale":"es-MX","translation":"Nombre de la comida","review_note":""}
+{"id":"health_meals_body_ai.a9e371b42094","target_locale":"es-MX","translation":"Si introduces manualmente el nombre y las calorías (PFC), podrás guardar esto.","review_note":""}
+{"id":"health_meals_body_ai.3384dbefe259","target_locale":"es-MX","translation":"Nombre y cantidad de la comida","review_note":""}
+{"id":"health_meals_body_ai.6301c7ac2181","target_locale":"es-MX","translation":"Análisis de imágenes de comida","review_note":""}
+{"id":"health_meals_body_ai.3c90f2799f7f","target_locale":"es-MX","translation":"Análisis de comidas","review_note":""}
+{"id":"health_meals_body_ai.131d65f0becd","target_locale":"es-MX","translation":"Registro de comidas","review_note":""}
+{"id":"health_meals_body_ai.b3ac75dc7510","target_locale":"es-MX","translation":"No hay registro de comidas.","review_note":""}
+{"id":"health_meals_body_ai.b18007a5bc56","target_locale":"es-MX","translation":"Aún no hay registro de comidas.","review_note":""}
+{"id":"health_meals_body_ai.51b278066b12","target_locale":"es-MX","translation":"Alimentos","review_note":""}
+{"id":"health_meals_body_ai.3d6e7d3996d5","target_locale":"es-MX","translation":"Base de datos de alimentos","review_note":""}
+{"id":"health_meals_body_ai.61184419aea8","target_locale":"es-MX","translation":"Actualiza la suma con la adición y modificación de alimentos y códigos de barras. Los alimentos ingresados libremente se suman después de la estimación de IA.","review_note":""}
+{"id":"health_meals_body_ai.4563c325c141","target_locale":"es-MX","translation":"Recopilación automática de alimentos","review_note":""}
+{"id":"health_meals_body_ai.39d757a8749c","target_locale":"es-MX","translation":"Por favor, ingrese el nombre del alimento y, si es posible, la cantidad.","review_note":""}
+{"id":"health_meals_body_ai.4d24a28d4ef0","target_locale":"es-MX","translation":"Buscar alimentos","review_note":""}
+{"id":"health_meals_body_ai.00ae7a9a5808","target_locale":"es-MX","translation":"Recalcular con la tabla de ingredientes","review_note":""}
+{"id":"health_meals_body_ai.1d91da8d5c82","target_locale":"es-MX","translation":"Este es un registro de exposición elevada. Utilícelo como criterio para alejarse de la fuente de sonido, reducir el volumen o usar protección auditiva.","review_note":""}
+{"id":"health_meals_body_ai.6e0a448de044","target_locale":"es-MX","translation":"Diferencia de altura","review_note":""}
+{"id":"health_meals_body_ai.91d223d5b73b","target_locale":"es-MX","translation":"Comida completa de pollo pechuga","review_note":""}
+{"id":"health_meals_body_ai.8690f6def93b","target_locale":"es-MX","translation":"Pollo pechuga (sin piel)","review_note":""}

@@ -1,0 +1,26 @@
+{"id":"release_delta.estimate_note","source_locale":"ja","source_ja":"参考推定。実測値ではありません。{{value1}}","placeholders":["{{value1}}"],"source_refs":["GymTrainingApp/Data/BodyMetricEstimateService.swift"]}
+{"id":"release_delta.estimate_stale_reason","source_locale":"ja","source_ja":"最後の実測値から期間が空いているため、変化を断定せず幅を持たせています。","placeholders":[],"source_refs":["GymTrainingApp/Data/BodyMetricEstimateService.swift"]}
+{"id":"release_delta.body_fat_estimate_reason","source_locale":"ja","source_ja":"身長・体重・年齢・性別による集団式の参考範囲で、個人の体脂肪率を測定した値ではありません。","placeholders":[],"source_refs":["GymTrainingApp/Data/BodyMetricEstimateService.swift"]}
+{"id":"release_delta.estimated","source_locale":"ja","source_ja":"推定","placeholders":[],"source_refs":["GymTrainingApp/Features/BodyMetrics/BodyMetricListView.swift"]}
+{"id":"release_delta.reference_estimate","source_locale":"ja","source_ja":"参考推定","placeholders":[],"source_refs":["GymTrainingApp/Features/BodyMetrics/BodyMetricListView.swift"]}
+{"id":"release_delta.estimate_disclaimer","source_locale":"ja","source_ja":"参考範囲であり測定値ではありません。タップして内容を確認した場合だけ保存します。","placeholders":[],"source_refs":["GymTrainingApp/Features/BodyMetrics/BodyMetricListView.swift"]}
+{"id":"release_delta.save_estimate_title","source_locale":"ja","source_ja":"参考推定を保存しますか？","placeholders":[],"source_refs":["GymTrainingApp/Features/BodyMetrics/BodyMetricListView.swift"]}
+{"id":"release_delta.save_as_estimate","source_locale":"ja","source_ja":"推定として保存","placeholders":[],"source_refs":["GymTrainingApp/Features/BodyMetrics/BodyMetricListView.swift"]}
+{"id":"release_delta.estimate_confirmation","source_locale":"ja","source_ja":"{{value1}} {{value2}}。実測値は上書きしません。","placeholders":["{{value1}}","{{value2}}"],"source_refs":["GymTrainingApp/Features/BodyMetrics/BodyMetricListView.swift"]}
+{"id":"release_delta.scheduled_reports","source_locale":"ja","source_ja":"予約レポート","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.weekly_report","source_locale":"ja","source_ja":"週次レポート","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.weekday","source_locale":"ja","source_ja":"曜日","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.monthly_report","source_locale":"ja","source_ja":"月次レポート","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.day_of_month","source_locale":"ja","source_ja":"日付","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.day_value","source_locale":"ja","source_ja":"{{value1}}日","placeholders":["{{value1}}"],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.report_time","source_locale":"ja","source_ja":"通知時刻","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.scheduled_report_explanation","source_locale":"ja","source_ja":"予定時刻後に最初にアプリを開いた時、自動生成します。AIに接続できない場合も端末内の要約を残します。","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.check_settings","source_locale":"ja","source_ja":"設定確認が必要","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.can_retry","source_locale":"ja","source_ja":"再試行できます","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.quota_consumed","source_locale":"ja","source_ja":"利用枠を消費","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.quota_not_consumed","source_locale":"ja","source_ja":"利用枠は未消費","placeholders":[],"source_refs":["GymTrainingApp/Features/Reports/AIReportView.swift"]}
+{"id":"release_delta.evidence_count","source_locale":"ja","source_ja":"科学的根拠 {{value1}}件","placeholders":["{{value1}}"],"source_refs":["GymTrainingApp/Features/Home/OmakaseHomeView.swift","GymTrainingApp/Features/Plans/AIPlanCoachView.swift"]}
+{"id":"release_delta.insufficient_direct_evidence","source_locale":"ja","source_ja":"直接使える根拠が不足しているため、記録傾向を優先した目安です","placeholders":[],"source_refs":["GymTrainingApp/Features/Home/OmakaseHomeView.swift"]}
+{"id":"release_delta.no_direct_evidence","source_locale":"ja","source_ja":"この提案に直接使える根拠は見つかりませんでした","placeholders":[],"source_refs":["GymTrainingApp/Features/Plans/AIPlanCoachView.swift"]}
+{"id":"release_delta.evidence_unavailable","source_locale":"ja","source_ja":"科学的根拠を確認できないため、記録と一般原則を中心に提案しています","placeholders":[],"source_refs":["GymTrainingApp/Features/Plans/AIPlanCoachView.swift"]}
+{"id":"release_delta.body_size_unit","source_locale":"ja","source_ja":"身体サイズ単位","placeholders":[],"source_refs":["GymTrainingApp/Features/Settings/ProfileSettingsView.swift"]}

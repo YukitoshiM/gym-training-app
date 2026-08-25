@@ -1,5 +1,69 @@
 import Foundation
 
+enum PlanRevisionDecision: String, Codable, Hashable {
+    case pending
+    case acceptedAsNew
+    case acceptedAsUpdate
+    case rejected
+    case reverted
+}
+
+enum PlanRevisionEffectiveness: String, Codable, Hashable {
+    case unknown
+    case improved
+    case unchanged
+    case worsened
+}
+
+struct PlanRevisionProposal: Identifiable, Codable, Hashable {
+    var id: UUID
+    var createdAt: Date
+    var triggerSessionID: UUID
+    var originalPlan: TrainingPlan
+    var revisedPlan: TrainingPlan?
+    var summary: String
+    var decision: PlanRevisionDecision
+    var decidedAt: Date?
+    var appliedPlanID: UUID?
+    var baselineAchievementRate: Double
+    var evaluatedSessionID: UUID?
+    var effectiveness: PlanRevisionEffectiveness
+    var evidence: [CoachEvidenceCitation]
+    var evidenceStatus: CoachEvidenceStatus?
+
+    init(
+        id: UUID = UUID(),
+        createdAt: Date = Date(),
+        triggerSessionID: UUID,
+        originalPlan: TrainingPlan,
+        revisedPlan: TrainingPlan? = nil,
+        summary: String,
+        decision: PlanRevisionDecision = .pending,
+        decidedAt: Date? = nil,
+        appliedPlanID: UUID? = nil,
+        baselineAchievementRate: Double,
+        evaluatedSessionID: UUID? = nil,
+        effectiveness: PlanRevisionEffectiveness = .unknown,
+        evidence: [CoachEvidenceCitation] = [],
+        evidenceStatus: CoachEvidenceStatus? = nil
+    ) {
+        self.id = id
+        self.createdAt = createdAt
+        self.triggerSessionID = triggerSessionID
+        self.originalPlan = originalPlan
+        self.revisedPlan = revisedPlan
+        self.summary = summary
+        self.decision = decision
+        self.decidedAt = decidedAt
+        self.appliedPlanID = appliedPlanID
+        self.baselineAchievementRate = baselineAchievementRate
+        self.evaluatedSessionID = evaluatedSessionID
+        self.effectiveness = effectiveness
+        self.evidence = evidence
+        self.evidenceStatus = evidenceStatus
+    }
+}
+
 struct TrainingPlan: Identifiable, Codable, Hashable {
     var id: UUID
     var name: String
@@ -24,6 +88,23 @@ struct TrainingPlan: Identifiable, Codable, Hashable {
     var totalSetCount: Int {
         exercises.reduce(0) { $0 + $1.sets.count }
     }
+
+    var estimatedDurationMinutes: Int {
+        let workSeconds = exercises.reduce(0) { planTotal, exercise in
+            let orderedSets = exercise.sets.sorted { $0.setOrder < $1.setOrder }
+            let setSeconds = orderedSets.reduce(0) { setTotal, set in
+                let repSeconds = (set.plannedConcentricSeconds ?? 1) + (set.plannedEccentricSeconds ?? 2)
+                return setTotal + max(1, set.targetReps) * repSeconds
+            }
+            let restSeconds = max(0, orderedSets.count - 1) * max(0, exercise.restSeconds)
+            return planTotal + setSeconds + restSeconds
+        }
+        let warmupSeconds = exercises.isEmpty ? 0 : 5 * 60
+        let setupSeconds = exercises.count * 2 * 60
+        let transitionSeconds = max(0, exercises.count - 1) * 60
+        let totalSeconds = workSeconds + warmupSeconds + setupSeconds + transitionSeconds
+        return max(1, Int(ceil(Double(totalSeconds) / 60)))
+    }
 }
 
 struct PlanExercise: Identifiable, Codable, Hashable {
@@ -32,19 +113,22 @@ struct PlanExercise: Identifiable, Codable, Hashable {
     var sortOrder: Int
     var restSeconds: Int
     var sets: [PlanSetTarget]
+    var alternativeExerciseIDs: [UUID]?
 
     init(
         id: UUID = UUID(),
         exercise: Exercise,
         sortOrder: Int,
         restSeconds: Int = 90,
-        sets: [PlanSetTarget] = PlanSetTarget.defaultSets()
+        sets: [PlanSetTarget] = PlanSetTarget.defaultSets(),
+        alternativeExerciseIDs: [UUID]? = nil
     ) {
         self.id = id
         self.exercise = exercise
         self.sortOrder = sortOrder
         self.restSeconds = restSeconds
         self.sets = sets
+        self.alternativeExerciseIDs = alternativeExerciseIDs
     }
 }
 
@@ -53,6 +137,7 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var targetRPE: Double?
     var plannedConcentricSeconds: Int?
     var plannedEccentricSeconds: Int?
     var plannedTempoBeatSpeed: Int?
@@ -62,6 +147,7 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
         setOrder: Int,
         targetWeight: Double,
         targetReps: Int,
+        targetRPE: Double? = nil,
         plannedConcentricSeconds: Int? = nil,
         plannedEccentricSeconds: Int? = nil,
         plannedTempoBeatSpeed: Int? = nil
@@ -70,6 +156,7 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
         self.setOrder = setOrder
         self.targetWeight = targetWeight
         self.targetReps = targetReps
+        self.targetRPE = targetRPE
         self.plannedConcentricSeconds = plannedConcentricSeconds
         self.plannedEccentricSeconds = plannedEccentricSeconds
         self.plannedTempoBeatSpeed = plannedTempoBeatSpeed
@@ -79,6 +166,74 @@ struct PlanSetTarget: Identifiable, Codable, Hashable {
         (1...3).map {
             PlanSetTarget(setOrder: $0, targetWeight: 50, targetReps: 10)
         }
+    }
+}
+
+enum ActiveWorkoutState: String, Codable, Hashable {
+    case active
+    case paused
+    case interrupted
+}
+
+struct ActiveWorkoutSession: Codable, Hashable, Identifiable {
+    var session: WorkoutSession
+    var state: ActiveWorkoutState
+    var revision: Int
+    var updatedAt: Date
+    var restTimerEndAt: Date?
+    var restExerciseID: UUID?
+
+    var id: UUID { session.id }
+
+    init(
+        session: WorkoutSession,
+        state: ActiveWorkoutState = .active,
+        revision: Int = 1,
+        updatedAt: Date = Date(),
+        restTimerEndAt: Date? = nil,
+        restExerciseID: UUID? = nil
+    ) {
+        self.session = session
+        self.state = state
+        self.revision = max(1, revision)
+        self.updatedAt = updatedAt
+        self.restTimerEndAt = restTimerEndAt
+        self.restExerciseID = restExerciseID
+    }
+}
+
+enum DeletedRecordPayload: Codable {
+    case trainingPlan(TrainingPlan)
+    case activeWorkout(ActiveWorkoutSession)
+    case workout(WorkoutSession)
+    case meal(MealEntry)
+    case bodyPhotos([BodyPhotoEntry])
+    case bodyMetric(BodyMetricEntry)
+    case customExercise(Exercise)
+    case gymVisit(GymVisit)
+    case subjectiveRecovery(SubjectiveRecoveryEntry)
+    case coachMemory(CoachMemory)
+    case coachChatMessage(CoachChatMessage)
+    case aiInsight(AIInsight)
+    case aiTransmission(AITransmissionRecord)
+}
+
+struct DeletedRecord: Codable, Identifiable {
+    var id: UUID
+    var deletedAt: Date
+    var title: String
+    var payload: DeletedRecordPayload
+
+    init(
+        id: UUID = UUID(),
+        deletedAt: Date = Date(),
+        title: String,
+        payload: DeletedRecordPayload
+    ) {
+        self.id = id
+        self.deletedAt = deletedAt
+        self.title = title
+        self.payload = payload
     }
 }
 
@@ -94,6 +249,7 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
     var sensorSummary: WorkoutSensorSummary?
     var healthWorkoutSaveState: HealthWorkoutSaveState?
     var note: String?
+    var outdoorCardio: OutdoorCardioSnapshot?
 
     init(
         id: UUID = UUID(),
@@ -106,7 +262,8 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         watchSyncState: WatchSyncState? = nil,
         sensorSummary: WorkoutSensorSummary? = nil,
         healthWorkoutSaveState: HealthWorkoutSaveState? = nil,
-        note: String? = nil
+        note: String? = nil,
+        outdoorCardio: OutdoorCardioSnapshot? = nil
     ) {
         self.id = id
         self.title = title
@@ -119,6 +276,7 @@ struct WorkoutSession: Identifiable, Codable, Hashable {
         self.sensorSummary = sensorSummary
         self.healthWorkoutSaveState = healthWorkoutSaveState
         self.note = note
+        self.outdoorCardio = outdoorCardio
     }
 
     var isCompleted: Bool {
@@ -251,6 +409,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var targetRPE: Double?
     var plannedConcentricSeconds: Int?
     var plannedEccentricSeconds: Int?
     var plannedTempoBeatSpeed: Int?
@@ -270,6 +429,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         setOrder: Int,
         targetWeight: Double,
         targetReps: Int,
+        targetRPE: Double? = nil,
         plannedConcentricSeconds: Int? = nil,
         plannedEccentricSeconds: Int? = nil,
         plannedTempoBeatSpeed: Int? = nil,
@@ -288,6 +448,7 @@ struct WorkoutSet: Identifiable, Codable, Hashable {
         self.setOrder = setOrder
         self.targetWeight = targetWeight
         self.targetReps = targetReps
+        self.targetRPE = targetRPE
         self.plannedConcentricSeconds = plannedConcentricSeconds
         self.plannedEccentricSeconds = plannedEccentricSeconds
         self.plannedTempoBeatSpeed = plannedTempoBeatSpeed
@@ -384,6 +545,7 @@ extension WorkoutSession {
                                 setOrder: $0.setOrder,
                                 targetWeight: $0.targetWeight,
                                 targetReps: $0.targetReps,
+                                targetRPE: $0.targetRPE,
                                 plannedConcentricSeconds: $0.plannedConcentricSeconds,
                                 plannedEccentricSeconds: $0.plannedEccentricSeconds,
                                 plannedTempoBeatSpeed: $0.plannedTempoBeatSpeed

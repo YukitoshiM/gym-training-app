@@ -50,7 +50,7 @@ extension AppStore {
                     date: current.date,
                     previous: previous,
                     next: revised,
-                    reason: "新しい回復データを反映し、安全側へ今日の提案を調整しました。",
+                    reason: L10n.string("runtime_messages.da73bd0d95fc", fallback: "新しい回復データを反映し、安全側へ今日の提案を調整しました。"),
                     source: .localRule
                 )
             } else {
@@ -86,12 +86,16 @@ extension AppStore {
                 date: recommendation.date,
                 previous: previous.actions,
                 next: recommendation.actions,
-                reason: "ユーザー操作で今日の提案を作り直しました。",
+                reason: L10n.string("runtime_messages.eac72f8d78bd", fallback: "ユーザー操作で今日の提案を作り直しました。"),
                 source: .user
             )
         } else {
             dailyRecommendations.insert(recommendation, at: 0)
-            UsageAnalytics.shared.record(.dailyRecommendationGenerated, dimension: recommendation.source.rawValue)
+            UsageAnalytics.shared.record(
+                .dailyRecommendationGenerated,
+                dimension: recommendation.source.rawValue,
+                properties: .dailyRecommendation(profile: userProfile, recommendation: recommendation)
+            )
         }
         trimDailyRecommendationHistory(now: now)
         persistRecommendationState()
@@ -156,9 +160,17 @@ extension AppStore {
             dailyRecommendations[recommendationIndex].actions[actionIndex].adoptedAt = now
         }
         if !wasCompleted {
+            let recommendation = dailyRecommendations[recommendationIndex]
+            let action = recommendation.actions[actionIndex]
             UsageAnalytics.shared.record(
                 .dailyActionCompleted,
-                dimension: dailyRecommendations[recommendationIndex].actions[actionIndex].category.rawValue
+                dimension: action.category.rawValue,
+                properties: .dailyAction(
+                    profile: userProfile,
+                    recommendation: recommendation,
+                    action: action,
+                    completionMethod: "manual"
+                )
             )
         }
         persistRecommendationState()
@@ -203,11 +215,21 @@ extension AppStore {
         ) else {
             recommendation.actions[actionIndex].status = .skipped
             dailyRecommendations[recommendationIndex] = recommendation
+            UsageAnalytics.shared.record(
+                .dailyActionDismissed,
+                dimension: oldAction.category.rawValue,
+                properties: .dailyAction(
+                    profile: userProfile,
+                    recommendation: recommendation,
+                    action: recommendation.actions[actionIndex],
+                    reason: "other"
+                )
+            )
             appendRevision(
                 date: recommendation.date,
                 previous: previous,
                 next: recommendation.actions,
-                reason: "この項目は今日は行わない設定にしました。",
+                reason: L10n.string("runtime_messages.f989482e8b85", fallback: "この項目は今日は行わない設定にしました。"),
                 source: .user
             )
             persistRecommendationState()
@@ -219,11 +241,24 @@ extension AppStore {
         replacement.priority = oldAction.priority
         recommendation.actions.append(replacement)
         dailyRecommendations[recommendationIndex] = recommendation
+        var replacementProperties = UsageEventProperties.dailyAction(
+            profile: userProfile,
+            recommendation: recommendation,
+            action: replacement,
+            reason: "other"
+        )
+        replacementProperties.fromCategory = oldAction.category.rawValue
+        replacementProperties.toCategory = replacement.category.rawValue
+        UsageAnalytics.shared.record(
+            .dailyActionReplaced,
+            dimension: oldAction.category.rawValue,
+            properties: replacementProperties
+        )
         appendRevision(
             date: recommendation.date,
             previous: previous,
             next: recommendation.actions,
-            reason: "ユーザーが今日の行動を入れ替えました。",
+            reason: L10n.string("runtime_messages.88d8bda8617e", fallback: "ユーザーが今日の行動を入れ替えました。"),
             source: .user
         )
         persistRecommendationState()
@@ -236,8 +271,13 @@ extension AppStore {
         persistRecommendationState()
     }
 
-    func shouldRequestDailyAIAnalysis(at date: Date = Date()) -> Bool {
-        guard aiSettings.isEnabled, let recommendation = dailyRecommendation(on: date) else { return false }
+    func shouldRequestDailyAIAnalysis(
+        at date: Date = Date(),
+        defaults: UserDefaults = .standard
+    ) -> Bool {
+        guard aiSettings.isEnabled,
+              DailyRecommendationAICreditPolicy.allowsAutomaticUse(defaults: defaults),
+              let recommendation = dailyRecommendation(on: date) else { return false }
         if recommendation.aiEvaluatedAt != nil { return false }
         if let requestedAt = recommendation.aiRequestedAt,
            date.timeIntervalSince(requestedAt) < 30 * 60 {
@@ -313,6 +353,20 @@ extension AppStore {
         }
     }
 
+    func applyDailyAIResponse(_ response: CoachChatResponse, for date: Date) {
+        applyDailyAIResponse(response.reply, for: date)
+        if let recommendationIndex = recommendationIndex(on: date) {
+            dailyRecommendations[recommendationIndex].evidence = response.evidence
+            dailyRecommendations[recommendationIndex].evidenceStatus = response.evidenceStatus
+            persistRecommendationState()
+        }
+        if let proposalIndex = targetAdjustmentProposals.firstIndex(where: { $0.status == .pending }) {
+            targetAdjustmentProposals[proposalIndex].evidence = response.evidence
+            targetAdjustmentProposals[proposalIndex].evidenceStatus = response.evidenceStatus
+            storage.saveTargetAdjustmentProposals(targetAdjustmentProposals)
+        }
+    }
+
     func latestRecommendationRevision(on date: Date = Date()) -> RecommendationRevision? {
         recommendationRevisions.first {
             Calendar.current.isDate($0.date, inSameDayAs: date)
@@ -327,8 +381,10 @@ extension AppStore {
         [BODYMODE_DAILY_JSON]
         あなたはBodyModeの日次提案を安全側から点検する担当コーチです。
         端末内ルールが作成した今日の提案を、共有済み記録の短期・中期・長期傾向から確認してください。
+        科学的根拠が役立つ判断ではEvidence RAGの文献を参照してください。
         小さな差では提案を変更せず、強い疲労、睡眠の大幅悪化、新しい重要記録がある場合だけ変更してください。
         完了済み項目は変更しないでください。医療診断はしないでください。
+        titleとrationaleは結論を先にした自然な日本語にしてください。rationaleは、ユーザー自身の記録と行動をつなぐ短い1文にし、論文名や長い説明は含めないでください。
 
         現在の調子: \(recommendation.readiness.level.rawValue)
         現在の提案:
@@ -338,10 +394,10 @@ extension AppStore {
         {
           "keep_existing": true,
           "readiness_level": "good|normal|tired|rest",
-          "summary": "短い全体コメント",
-          "change_reason": "変更しない場合は空文字",
+          "summary": L10n.string("runtime_messages.27857aa2b1ae", fallback: "短い全体コメント"),
+          "change_reason": L10n.string("runtime_messages.292ff42d336e", fallback: "変更しない場合は空文字"),
           "actions": [
-            {"id":"既存ID", "category":"既存または必要なカテゴリ", "title":"短い行動", "target":0, "rationale":"なぜこの行動か"}
+            {"id":L10n.string("runtime_messages.c9091516c87d", fallback: "既存ID"), "category":L10n.string("runtime_messages.79540619d261", fallback: "既存または必要なカテゴリ"), "title":L10n.string("runtime_messages.f7a8a3bb3767", fallback: "短い行動"), "target":0, "rationale":L10n.string("runtime_messages.1cf9ffa9a2cb", fallback: "なぜこの行動か")}
           ]
         }
         actionsは最大3件。categoryはworkout,steps,protein,mealGuidance,bodyWeight,waist,bodyPhoto,sleep,recovery,lightActivityのみ。
@@ -400,7 +456,13 @@ extension AppStore {
             if oldStatus != .completed, result.actions[index].status == .completed {
                 UsageAnalytics.shared.record(
                     .dailyActionCompleted,
-                    dimension: result.actions[index].category.rawValue
+                    dimension: result.actions[index].category.rawValue,
+                    properties: .dailyAction(
+                        profile: userProfile,
+                        recommendation: result,
+                        action: result.actions[index],
+                        completionMethod: "automatic"
+                    )
                 )
             }
         }
@@ -413,13 +475,13 @@ extension AppStore {
         let skipped = recommendation.actions.filter { $0.status == .skipped }
         let summary: String
         if completed.count == active.count, !active.isEmpty {
-            summary = "今日の3つを達成しました。明日の提案に反映します。"
+            summary = L10n.string("runtime_messages.1e9b7e0b1de9", fallback: "今日の3つを達成しました。明日の提案に反映します。")
         } else if completed.isEmpty {
-            summary = "できるものから1つで十分です。"
+            summary = L10n.string("runtime_messages.a0f36c6cb2d2", fallback: "できるものから1つで十分です。")
         } else {
-            summary = "\(completed.count) / \(active.count)達成。残りは無理のない範囲で進めましょう。"
+            summary = L10n.string("runtime_messages.7439490555e5", fallback: "{{value1}} / {{value2}}達成。残りは無理のない範囲で進めましょう。", values: [String(describing: completed.count), String(describing: active.count)])
         }
-        let adjustments = skipped.map { "\($0.title)は再配置せず、本人の選択として扱う" }
+        let adjustments = skipped.map { L10n.string("runtime_messages.0d127efd525d", fallback: "{{value1}}は再配置せず、本人の選択として扱う", values: [String(describing: $0.title)]) }
         let review = DailyReview(
             date: recommendation.date,
             generatedAt: now,
@@ -521,12 +583,12 @@ extension AppStore {
                 let planID: UUID? = if case .workout(let id) = existing?.destination { id } else { todayPlan?.id }
                 rule = .workoutCompleted(planID: planID)
                 destination = .workout(planID: planID)
-                targetDescription = existing?.targetDescription ?? "今日のメニュー"
+                targetDescription = existing?.targetDescription ?? L10n.string("runtime_messages.09d55c9613d1", fallback: "今日のメニュー")
             case .steps, .lightActivity:
                 let stepTarget = Int(target > 0 ? target : 8_000)
                 rule = .stepsAtLeast(stepTarget)
                 destination = .steps
-                targetDescription = "\(stepTarget.formatted())歩"
+                targetDescription = L10n.string("runtime_messages.3e158eb5aa2a", fallback: "{{value1}}歩", values: [String(describing: stepTarget.formatted())])
             case .protein:
                 let proteinTarget = target > 0 ? target : userProfile.nutritionGoals.protein
                 rule = .proteinAtLeast(proteinTarget)
@@ -536,28 +598,28 @@ extension AppStore {
                 let mealTarget = Int(target > 0 ? target : Double(userProfile.nutritionGoals.mealCount))
                 rule = .mealsRecorded(mealTarget)
                 destination = .meal
-                targetDescription = "\(mealTarget)食"
+                targetDescription = L10n.string("runtime_messages.28ae9e02d508", fallback: "{{value1}}食", values: [String(describing: mealTarget)])
             case .bodyWeight:
                 rule = .bodyMetricRecorded(.bodyWeight)
                 destination = .bodyMetric(.bodyWeight)
-                targetDescription = "今日1回"
+                targetDescription = L10n.string("runtime_messages.8f99d9e86006", fallback: "今日1回")
             case .waist:
                 rule = .bodyMetricRecorded(.waist)
                 destination = .bodyMetric(.waist)
-                targetDescription = "週1回"
+                targetDescription = L10n.string("runtime_messages.b5aace88c82a", fallback: "週1回")
             case .bodyPhoto:
                 rule = .photoSetRecorded
                 destination = .bodyPhoto
-                targetDescription = "週1回"
+                targetDescription = L10n.string("runtime_messages.b5aace88c82a", fallback: "週1回")
             case .sleep:
                 let sleepTarget = target > 0 ? target : 7
                 rule = .sleepAtLeast(sleepTarget)
                 destination = .condition
-                targetDescription = "\(sleepTarget.formatted(.number.precision(.fractionLength(0...1))))時間"
+                targetDescription = L10n.string("runtime_messages.c98c9b59305c", fallback: "{{value1}}時間", values: [String(describing: sleepTarget.formatted(.number.precision(.fractionLength(0...1))))])
             case .recovery:
                 rule = .recoveryDayObserved
                 destination = .condition
-                targetDescription = existing?.targetDescription ?? "回復を優先"
+                targetDescription = existing?.targetDescription ?? L10n.string("runtime_messages.3574f4648a2f", fallback: "回復を優先")
             }
             return DailyAction(
                 id: id,

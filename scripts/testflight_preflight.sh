@@ -15,13 +15,15 @@ exec > >(tee "${REPORT_PATH}") 2>&1
 
 cd "${ROOT_DIR}"
 
-echo "[1/8] Source and project checks"
+echo "[1/9] Source and project checks"
 git diff --check
 plutil -lint Shared/PrivacyInfo.xcprivacy
 plutil -lint GymTrainingApp/Info.plist GymTrainingWatchApp/Info.plist GymTrainingWatchWidget/Info.plist
 plutil -lint scripts/TestFlightExportOptions.plist
 plutil -lint scripts/TestFlightUploadOptions.plist
 swift scripts/validate_theme_contrast.swift
+python3 scripts/validate_localization_catalogs.py
+PYTHONPATH=scripts python3 -m unittest scripts/test_configure_ai_credit_products.py
 
 test -f GymTrainingApp/Support/ProtectedDataStore.swift
 grep -q "completeFileProtectionUntilFirstUserAuthentication" GymTrainingApp/Support/ProtectedDataStore.swift
@@ -38,7 +40,34 @@ for screenshot in docs/app-store/screenshots/*.png; do
   [[ "$(sips -g pixelHeight "${screenshot}" | awk '/pixelHeight/ {print $2}')" == "2868" ]]
   [[ "$(sips -g hasAlpha "${screenshot}" | awk '/hasAlpha/ {print $2}')" == "no" ]]
 done
-[[ "${iphone_screenshot_count}" -ge 1 && "${iphone_screenshot_count}" -le 10 ]]
+[[ "${iphone_screenshot_count}" -eq 8 ]]
+
+english_iphone_screenshot_count=0
+for screenshot in docs/app-store/screenshots-en/*.png; do
+  english_iphone_screenshot_count=$((english_iphone_screenshot_count + 1))
+  [[ "$(sips -g pixelWidth "${screenshot}" | awk '/pixelWidth/ {print $2}')" == "1320" ]]
+  [[ "$(sips -g pixelHeight "${screenshot}" | awk '/pixelHeight/ {print $2}')" == "2868" ]]
+  [[ "$(sips -g hasAlpha "${screenshot}" | awk '/hasAlpha/ {print $2}')" == "no" ]]
+done
+[[ "${english_iphone_screenshot_count}" -eq 8 ]]
+
+ipad_screenshot_count=0
+for screenshot in docs/app-store/ipad-screenshots/*.png; do
+  ipad_screenshot_count=$((ipad_screenshot_count + 1))
+  [[ "$(sips -g pixelWidth "${screenshot}" | awk '/pixelWidth/ {print $2}')" == "2064" ]]
+  [[ "$(sips -g pixelHeight "${screenshot}" | awk '/pixelHeight/ {print $2}')" == "2752" ]]
+  [[ "$(sips -g hasAlpha "${screenshot}" | awk '/hasAlpha/ {print $2}')" == "no" ]]
+done
+[[ "${ipad_screenshot_count}" -eq 1 ]]
+
+english_ipad_screenshot_count=0
+for screenshot in docs/app-store/ipad-screenshots-en/*.png; do
+  english_ipad_screenshot_count=$((english_ipad_screenshot_count + 1))
+  [[ "$(sips -g pixelWidth "${screenshot}" | awk '/pixelWidth/ {print $2}')" == "2064" ]]
+  [[ "$(sips -g pixelHeight "${screenshot}" | awk '/pixelHeight/ {print $2}')" == "2752" ]]
+  [[ "$(sips -g hasAlpha "${screenshot}" | awk '/hasAlpha/ {print $2}')" == "no" ]]
+done
+[[ "${english_ipad_screenshot_count}" -eq 1 ]]
 
 watch_screenshot_count=0
 for screenshot in docs/app-store/watch-screenshots/*.png; do
@@ -47,7 +76,16 @@ for screenshot in docs/app-store/watch-screenshots/*.png; do
   [[ "$(sips -g pixelHeight "${screenshot}" | awk '/pixelHeight/ {print $2}')" == "496" ]]
   [[ "$(sips -g hasAlpha "${screenshot}" | awk '/hasAlpha/ {print $2}')" == "no" ]]
 done
-[[ "${watch_screenshot_count}" -ge 1 && "${watch_screenshot_count}" -le 10 ]]
+[[ "${watch_screenshot_count}" -eq 3 ]]
+
+english_watch_screenshot_count=0
+for screenshot in docs/app-store/watch-screenshots-en/*.png; do
+  english_watch_screenshot_count=$((english_watch_screenshot_count + 1))
+  [[ "$(sips -g pixelWidth "${screenshot}" | awk '/pixelWidth/ {print $2}')" == "416" ]]
+  [[ "$(sips -g pixelHeight "${screenshot}" | awk '/pixelHeight/ {print $2}')" == "496" ]]
+  [[ "$(sips -g hasAlpha "${screenshot}" | awk '/hasAlpha/ {print $2}')" == "no" ]]
+done
+[[ "${english_watch_screenshot_count}" -eq 3 ]]
 
 if rg -n --glob '*.{swift,plist,yml,json}' \
   --glob '!GymTrainingApp/Domain/AIModels.swift' \
@@ -67,10 +105,10 @@ if git ls-files --error-unmatch Config/Ads.local.xcconfig >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "[2/8] Generate Xcode project"
+echo "[2/9] Generate Xcode project"
 xcodegen generate
 
-echo "[3/8] Unsigned Release build"
+echo "[3/9] Unsigned Release build"
 xcodebuild \
   -project GymTrainingApp.xcodeproj \
   -scheme GymTrainingApp \
@@ -81,7 +119,7 @@ xcodebuild \
   CODE_SIGNING_ALLOWED=NO \
   build
 
-echo "[4/8] Embedded app and privacy manifests"
+echo "[4/9] Embedded app and privacy manifests"
 test -d "${APP_PATH}"
 test -d "${WATCH_APP_PATH}"
 test -d "${WATCH_WIDGET_PATH}"
@@ -102,7 +140,13 @@ test ! -d "${WATCH_APP_PATH}/Frameworks/UserMessagingPlatform.framework"
 test ! -d "${WATCH_WIDGET_PATH}/Frameworks/GoogleMobileAds.framework"
 test ! -d "${WATCH_WIDGET_PATH}/Frameworks/UserMessagingPlatform.framework"
 
-echo "[5/8] Secrets and transport security"
+echo "[5/9] Aggregate privacy manifest baseline"
+python3 scripts/audit_privacy_manifests.py \
+  "${APP_PATH}" \
+  --baseline Config/privacy_manifest_baseline.json \
+  --report "${REPORT_DIR}/privacy-manifest-audit.md"
+
+echo "[6/9] Secrets and transport security"
 if strings "${APP_PATH}/GymTrainingApp" | grep "dev-local-key" >/dev/null; then
   echo "error: development AI key is present in the Release binary" >&2
   exit 1
@@ -153,8 +197,14 @@ if [[ "${SKAD_COUNT}" -lt 1 ]]; then
   exit 1
 fi
 
-if /usr/libexec/PlistBuddy -c 'Print :NSUserTrackingUsageDescription' "${APP_PATH}/Info.plist" >/dev/null 2>&1; then
-  echo "error: ATT usage text is present even though BodyMode does not request cross-app tracking" >&2
+ATT_USAGE_TEXT=$(/usr/libexec/PlistBuddy -c 'Print :NSUserTrackingUsageDescription' "${APP_PATH}/Info.plist" 2>/dev/null || true)
+if [[ -z "${ATT_USAGE_TEXT}" ]]; then
+  echo "error: NSUserTrackingUsageDescription is required before the advertising SDK starts" >&2
+  exit 1
+fi
+ATT_SYMBOLS="$(nm -u "${APP_PATH}/GymTrainingApp")"
+if ! grep -Fq '_OBJC_CLASS_$_ATTrackingManager' <<<"${ATT_SYMBOLS}"; then
+  echo "error: AppTrackingTransparency is declared but ATTrackingManager is not linked into the Release binary" >&2
   exit 1
 fi
 
@@ -163,7 +213,7 @@ if [[ "$(/usr/libexec/PlistBuddy -c 'Print :NSAppTransportSecurity:NSAllowsArbit
   exit 1
 fi
 
-echo "[6/8] Export compliance and storage protection"
+echo "[7/9] Export compliance and storage protection"
 if [[ "$(/usr/libexec/PlistBuddy -c 'Print :ITSAppUsesNonExemptEncryption' "${APP_PATH}/Info.plist")" != "false" ]]; then
   echo "error: ITSAppUsesNonExemptEncryption must be false" >&2
   exit 1
@@ -174,7 +224,7 @@ if ! nm -j "${APP_PATH}/GymTrainingApp" | grep "ProtectedDataStore" >/dev/null; 
   exit 1
 fi
 
-echo "[7/8] Optional UI regression suite"
+echo "[8/9] Optional UI regression suite"
 if [[ "${RUN_UI_TESTS:-0}" == "1" ]]; then
   xcodebuild test \
     -project GymTrainingApp.xcodeproj \
@@ -190,7 +240,7 @@ else
   echo "Skipped. Run with RUN_UI_TESTS=1 to include the iPhone UI suite."
 fi
 
-echo "[8/8] Version and unresolved owner inputs"
+echo "[9/9] Version and unresolved owner inputs"
 BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "${APP_PATH}/Info.plist")
 VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "${APP_PATH}/Info.plist")
 

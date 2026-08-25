@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"vi","translation":"Đang ghi lại {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"vi","translation":"Không hỗ trợ: {{value1}}. Bạn có thể nhập thủ công.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"vi","translation":"Số lần rung trong 1 giây","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"vi","translation":"Đã lưu vào Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"vi","translation":"Hướng dẫn sử dụng Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"vi","translation":"Gym: Đến buổi tập tiếp theo","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"vi","translation":"Đang ghi lại mà không cần cấp quyền Health","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"vi","translation":"Không thể sử dụng Health, đang ghi lại thủ công.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"vi","translation":"Không thể khởi động Health, đang ghi lại thủ công.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"vi","translation":"Health tạm dừng tập luyện.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"vi","translation":"Đang xử lý lưu Health.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"vi","translation":"Lưu Health thất bại, Watch đã lưu.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"vi","translation":"Chưa lưu, Watch đã lưu.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"vi","translation":"Không thể khôi phục dữ liệu đo Health. Bạn có thể tiếp tục ghi lại thủ công.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"vi","translation":"Đã khôi phục dữ liệu đo Health.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"vi","translation":"Tạm dừng đo Health, đang ghi lại thủ công.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"vi","translation":"Liên kết Health bị tắt, đang ghi lại thủ công.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"vi","translation":"Không có thang điểm RPE.","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"vi","translation":"Các hoạt động hiện tại trên Watch sẽ bị xóa.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"vi","translation":"Đã lưu Watch.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"vi","translation":"Vui lòng đồng bộ hóa menu từ iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"vi","translation":"Chọn và bắt đầu với menu hôm nay từ iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"vi","translation":"Kiểm tra menu hôm nay trên iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"vi","translation":"Đã kết nối với iPhone.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"vi","translation":"Đồng bộ hóa nội dung hôm nay từ iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"vi","translation":"Không thể tạo dữ liệu để gửi đến iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"vi","translation":"Không thể gửi. Vui lòng lưu và gửi lại.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"vi","translation":"Không thể lưu trên iPhone. Bạn có thể gửi lại sau.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"vi","translation":"Đang chuẩn bị kết nối với iPhone. Bạn có thể gửi lại sau.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"vi","translation":"{{value1}} × {{value2}} lần × {{value3}} tập","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"vi","translation":"Bạn có thể gửi {{value1}} về iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"vi","translation":"Đã đặt lịch gửi {{value1}} về iPhone","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"vi","translation":"Đã gửi {{value1}} về iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"vi","translation":"Đang gửi {{value1}} về iPhone","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"vi","translation":"Đã lưu {{value1}} vào lịch sử iPhone","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"vi","translation":"Gửi lại {{value1}}","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"vi","translation":"Bạn có thể tiếp tục {{value1}}","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"vi","translation":"Chọn {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"vi","translation":"Bắt đầu {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"vi","translation":"{{value1}}/{{value2}} tập, {{value3}} lần ghi nhận","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"vi","translation":"{{value1}} tập,","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"vi","translation":"{{value1}} tập, mục tiêu tổng cộng {{value2}} lần","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"vi","translation":"{{value1}} × {{value2}} tập, tổng cộng {{value3}} lần","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"vi","translation":"{{value1}} × {{value2}} tập","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"vi","translation":"Chọn từ {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"vi","translation":"Đã đồng bộ {{value1}} món","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"vi","translation":"{{value1}} lần","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"vi","translation":"{{value1}} lần/giây","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"vi","translation":"{{value1}} lần・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"vi","translation":"{{value1}} giây","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"vi","translation":"{{value1}} bài tập・{{value2}} hiệp・Tổng cộng {{value3}} lần","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"vi","translation":"Không thể sử dụng kết nối iPhone với thiết bị này. Dữ liệu đã được lưu trong thiết bị.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"vi","translation":"Không thể sử dụng kết nối với thiết bị này","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"vi","translation":"Bỏ qua","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"vi","translation":"Hiệp","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"vi","translation":"Hiệp {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"vi","translation":"Hoàn thành hiệp","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"vi","translation":"Bắt đầu hiệp","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"vi","translation":"Trung bình hiệp {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"vi","translation":"Chưa thiết lập hiệp","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"vi","translation":"Bắt đầu hiệp","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"vi","translation":"Hủy bỏ bắt đầu hiệp","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"vi","translation":"Đang đo bằng cảm biến","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"vi","translation":"Không thể chuẩn bị các thông số cảm biến, đang nhập thủ công","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"vi","translation":"Bỏ qua hướng dẫn","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"vi","translation":"Nhịp độ","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"vi","translation":"Điều chỉnh nhịp độ","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"vi","translation":"Thiết lập nhịp độ","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"vi","translation":"Tạm dừng hướng dẫn nhịp độ","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"vi","translation":"Tiếp tục hướng dẫn nhịp độ","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"vi","translation":"Ép tạ","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"vi","translation":"Thực đơn","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"vi","translation":"Chọn thực đơn","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"vi","translation":"Không thể đọc dữ liệu thực đơn","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"vi","translation":"Thay đổi thực đơn","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"vi","translation":"Đợi thực đơn","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"vi","translation":"Ghi chú","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"vi","translation":"Chỉnh sửa ghi chú","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"vi","translation":"Chuyển động","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"vi","translation":"Kéo xuống","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"vi","translation":"Bài tập","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"vi","translation":"Hoàn thành bài tập?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"vi","translation":"Hủy bài tập","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"vi","translation":"Tạm dừng","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"vi","translation":"Tạm dừng {{value1}} giây / Tiếp tục {{value2}} giây","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"vi","translation":"Đang tạm dừng","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"vi","translation":"Tiếp","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"vi","translation":"{{value1}} lần/ giây (trên)・{{value2}} lần/ giây (dưới)・{{value3}} lần/ giây","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"vi","translation":"Tăng","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"vi","translation":"Tăng {{value1}} giây, giảm {{value2}} giây","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"vi","translation":"Tăng {{value1}} giây / giảm {{value2}} giây","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"vi","translation":"Thiết lập thời gian tăng và giảm cho mỗi bộ. Apple Watch sẽ hướng dẫn bạn với 1-3 lần cảm giác chạm mỗi giây.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"vi","translation":"Thời gian tăng","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"vi","translation":"Nhập trực tiếp thời gian tăng","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"vi","translation":"Giảm","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"vi","translation":"Giảm","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"vi","translation":"Thời gian giảm","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"vi","translation":"Nhập trực tiếp thời gian giảm","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"vi","translation":"Hôm nay","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"vi","translation":"Lựa chọn thực đơn hôm nay","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"vi","translation":"Thực đơn hôm nay: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"vi","translation":"Chọn thực đơn hôm nay","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"vi","translation":"Nghỉ ngơi {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"vi","translation":"Nghỉ ngơi {{value1}} giây","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"vi","translation":"Nghỉ ngơi","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"vi","translation":"Bỏ qua nghỉ ngơi","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"vi","translation":"Thời gian nghỉ","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"vi","translation":"Kết thúc nghỉ ngơi","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"vi","translation":"Đề xuất tăng thêm 2,5% dựa trên năng lượng và tốc độ hoạt động","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"vi","translation":"Bắt đầu sử dụng","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"vi","translation":"Hướng dẫn sử dụng {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"vi","translation":"Lưu","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"vi","translation":"Độ tin cậy: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"vi","translation":"Sửa đổi","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"vi","translation":"Tiếp tục","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"vi","translation":"Phút:Giây","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"vi","translation":"Ghi lại lần trước","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"vi","translation":"Ổn định hoạt động {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"vi","translation":"Các lựa chọn hoạt động: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"vi","translation":"Đã phát hiện sự dừng hoạt động","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"vi","translation":"Ước tính hoạt động {{value1}} lần","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"vi","translation":"Ước tính hoạt động {{value1}} lần, độ tin cậy {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"vi","translation":"Thay đổi tốc độ hoạt động {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"vi","translation":"Áp dụng","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"vi","translation":"Hủy bỏ","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"vi","translation":"Để tránh sao chép trùng lặp vào Health, chúng tôi đã sử dụng dữ liệu từ cùng thời điểm","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"vi","translation":"Bạn có thể chọn từ danh sách thực đơn đồng bộ","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"vi","translation":"Lần","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"vi","translation":"Số lần","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"vi","translation":"Đặt số lần bằng thanh trượt","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"vi","translation":"Hoàn thành","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"vi","translation":"Gửi đến iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"vi","translation":"Gửi","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"vi","translation":"Khi hoàn thành, bộ đếm nghỉ sẽ bắt đầu. Bạn có thể chọn bài tập tiếp theo theo thứ tự khác.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"vi","translation":"Không có bài tập nào đã hoàn thành","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"vi","translation":"Hoàn thành tập","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"vi","translation":"Hoàn thành tập {{value1}}","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"vi","translation":"Thành tích {{value1}} × {{value2}} lần","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"vi","translation":"Cập nhật thành tích","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"vi","translation":"Đang nhập thành tích","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"vi","translation":"Thay đổi RPE của tập đang thực hiện","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"vi","translation":"Thay đổi tốc độ của tập đang thực hiện","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"vi","translation":"Thay đổi số lần của tập đang thực hiện","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"vi","translation":"Thay đổi trọng lượng của tập đang thực hiện","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"vi","translation":"Trung bình -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"vi","translation":"Trung bình {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"vi","translation":"Nhịp tim đang có xu hướng hồi phục. Khi cảm thấy thoải mái, bạn có thể chuyển sang tập tiếp theo","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"vi","translation":"Hãy tiếp tục nghỉ ngơi khi theo dõi nhịp tim.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"vi","translation":"Đang đo nhịp tim và năng lượng tiêu hao.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"vi","translation":"Nhập thủ công","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"vi","translation":"Có thể ghi lại bằng cách nhập thủ công.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"vi","translation":"Đang ghi lại bằng cách nhập thủ công.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"vi","translation":"Ước tính dựa trên chuyển động của cổ tay và thứ tự các tập chưa hoàn thành.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"vi","translation":"Số lần rung (1-3 lần/giây)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"vi","translation":"Tốc độ rung","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"vi","translation":"Kết nối thất bại: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"vi","translation":"Đã phản ánh {{value1}} lần ước tính","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"vi","translation":"Phản ánh đề xuất","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"vi","translation":"Thay đổi thời gian","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"vi","translation":"Tối đa -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"vi","translation":"Tối đa {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"vi","translation":"Khi kết thúc, dữ liệu sẽ được gửi đến iPhone. Bạn có thể gửi lại các bản ghi chưa gửi sau này.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"vi","translation":"Lưu trữ nội dung hiện tại, bao gồm cả tập chưa hoàn thành.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"vi","translation":"Chưa gửi","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"vi","translation":"Không có bản ghi trên đồng hồ chưa gửi.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"vi","translation":"Chưa bắt đầu","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"vi","translation":"Tiếp theo: {{value1}} {{value2}} × {{value3}} lần","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"vi","translation":"Bắt đầu tập luyện tiếp theo","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"vi","translation":"Quay lại tập luyện ngay lập tức.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"vi","translation":"Bài tập tiếp theo","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"vi","translation":"Tiếp tục","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"vi","translation":"Bỏ qua bài hiện tại","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"vi","translation":"Mục tiêu: {{value1}} × {{value2}} lần","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"vi","translation":"Hoàn thành mục tiêu tốc độ","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"vi","translation":"Đề xuất giảm 5% từ mục tiêu chưa đạt, RPE hoặc tốc độ tập luyện chậm lại","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"vi","translation":"Phạm vi vận động tương đối: {{value1}}%, Tính nhất quán: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"vi","translation":"Sử dụng năng lượng tối ưu (mức pin còn lại)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"vi","translation":"Sử dụng năng lượng tối ưu (chế độ tiết kiệm điện)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"vi","translation":"Cài đặt sử dụng năng lượng tối ưu","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"vi","translation":"Xóa","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"vi","translation":"Giây","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"vi","translation":"Chọn bài tập và bộ tập để bắt đầu. Nếu sai, bạn có thể quay lại bằng nút \"Hủy\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"vi","translation":"Bài tập gợi ý: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"vi","translation":"Kết thúc và đồng bộ hóa","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"vi","translation":"Tiếp tục","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"vi","translation":"Lưng","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"vi","translation":"Ngày tập luyện lưng","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"vi","translation":"Ngực","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"vi","translation":"Ngày tập ngực","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"vi","translation":"Bạn có muốn xóa hồ sơ?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"vi","translation":"Đang ghi lại","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"vi","translation":"Không có bài tập nào đang được ghi lại","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"vi","translation":"Lấy mẫu thông thường","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"vi","translation":"Nhanh","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"vi","translation":"Đề xuất cùng một trọng lượng dựa trên mức độ đạt, RPE và tốc độ hoạt động","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"vi","translation":"Không","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"vi","translation":"Chuyển sang bộ chọn khác","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"vi","translation":"Trọng lượng","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"vi","translation":"Đặt trọng lượng bằng thanh trượt","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"vi","translation":"Bạn có thể thay đổi trọng lượng, số lần, RPE và thời gian nghỉ trước hoặc sau khi bắt đầu bằng thanh trượt.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"vi","translation":"Bắt đầu","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"vi","translation":"Thiết lập nhịp độ trước khi bắt đầu","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"vi","translation":"Không hỗ trợ: {{value1}}. Bạn có thể nhập thủ công","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"vi","translation":"Ghi âm & ghi chú văn bản","review_note":""}

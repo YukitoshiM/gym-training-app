@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "sl", "translation": "Približen izračun. Ni rezultat meritev. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "sl", "translation": "Ker je minilo čas od zadnje meritve, spremembe ne moremo potrditi in zato je vrednost omejena.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "sl", "translation": "Na podlagi skupinskih povratnih cen glede na višino, težo, starost in spol, ni rezultat individualne meritve telesne maščobe.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "sl", "translation": "Približen izračun", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "sl", "translation": "Približen izračun", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "sl", "translation": "To je samo okvirni izračun, ne rezultat meritev. Shranite le, če kliknete in preberete.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "sl", "translation": "Shraniti kot priblizen izračun?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "sl", "translation": "Shrani kot priblizen izračun", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "sl", "translation": "{{value1}} {{value2}}. Ne nadpisuje rezultatov meritev.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "sl", "translation": "Napovedana poraba", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "sl", "translation": "Tedenska poraba", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "sl", "translation": "Dan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "sl", "translation": "Mesečna poraba", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "sl", "translation": "Datum", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "sl", "translation": "{{value1}} dan", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "sl", "translation": "Čas obveščanja", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "sl", "translation": "Avtomatično ustvari, ko prvič odprete aplikacijo po napovedanem času. Če se ne poveže z AI, shranjuje povzetek v napravi.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "sl", "translation": "Potrebujete preveriti nastavitve", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "sl", "translation": "Lahko poskusite znova", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "sl", "translation": "Porabljene zmogljivosti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "sl", "translation": "Zmogljivosti niso porabljene", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "sl", "translation": "{{value1}} znanstvenih dokazov", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "sl", "translation": "Ker ni na voljo neposrednih podatkov, je to vodilo glede na trende.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "sl", "translation": "Ne moremo najti neposrednih podatkov za to predlog.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "sl", "translation": "Ker ni na voljo znanstvenih podatkov, se posnujemo z zapiski in splošnimi načeli.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "sl", "translation": "Enote za merjenje telesne velikosti", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

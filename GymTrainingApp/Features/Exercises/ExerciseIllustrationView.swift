@@ -32,7 +32,7 @@ struct ExerciseIllustrationView: View {
         VStack(spacing: 12) {
             ExercisePhotoCropView(exercise: exercise)
                 .overlay(alignment: .bottomLeading) {
-                    Label("フォーム参考", systemImage: "camera.fill")
+                    Label(L10n.string("training.91665e47ba14", fallback: "フォーム参考"), systemImage: "camera.fill")
                         .font(.caption.bold())
                         .foregroundStyle(.white)
                         .padding(.horizontal, 9)
@@ -55,7 +55,7 @@ struct ExerciseIllustrationView: View {
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
         .accessibilityLabel(
-            "\(exercise.name)のフォーム参考画像。主な部位は\(exercise.primaryMuscle.displayName)、\(exercise.equipmentSetupName)を使って\(exercise.movementName)種目です"
+            L10n.string("training.eb836dfced6d", fallback: "{{value1}}のフォーム参考画像。主な部位は{{value2}}、{{value3}}を使って{{value4}}種目です", values: [String(describing: exercise.name), String(describing: exercise.primaryMuscle.displayName), String(describing: exercise.equipmentSetupName), String(describing: exercise.movementName)])
         )
         .accessibilityIdentifier("exerciseIllustration")
     }

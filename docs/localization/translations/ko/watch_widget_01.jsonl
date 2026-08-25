@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"ko","translation":"{{value1}}을 기록 중입니다.","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"ko","translation":"지원되지 않음: {{value1}}. 수동 입력은 가능합니다.","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"ko","translation":"1초당 진동 횟수","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"ko","translation":"Apple Health에 저장했습니다.","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"ko","translation":"Apple Watch 사용법","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"ko","translation":"짐: 다음 세션으로","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"ko","translation":"건강 허가 없이, 수동 입력으로 기록 중","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"ko","translation":"Health을 사용할 수 없으므로 수동으로 기록 중","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"ko","translation":"Health 시작에 실패하여 수동으로 기록 중","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"ko","translation":"Health 운동 일시 중지","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"ko","translation":"Health 저장 처리 중","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"ko","translation":"Health 저장 실패 - Watch 기록은 저장됨","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"ko","translation":"Health 미저장 - Watch 기록은 저장됨","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"ko","translation":"Health 측정값을 복원할 수 없습니다. 수동 입력은 계속 가능합니다","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"ko","translation":"Health 측정값을 복원했습니다","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"ko","translation":"Health 측정 중지 - 수동 입력을 계속 중","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"ko","translation":"Health 연동 끄기 - 수동으로 기록 중","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"ko","translation":"RPE 없음","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"ko","translation":"Watch에 있는 실행 중 기록은 삭제됩니다.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"ko","translation":"Watch 기록을 저장했습니다","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"ko","translation":"iPhone에서 메뉴를 동기화해주세요","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"ko","translation":"iPhone에서 받은 오늘의 메뉴를 선택하고 시작합니다.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"ko","translation":"오늘의 메뉴를 iPhone에서 확인하세요","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"ko","translation":"iPhone과 연결되었습니다","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"ko","translation":"iPhone 홈에서 오늘의 내용을 동기화합니다.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"ko","translation":"iPhone으로 전송할 기록 데이터를 생성하지 못했습니다","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"ko","translation":"iPhone으로 전송할 수 없습니다. 기록을 남기고 다시 전송해주세요","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"ko","translation":"iPhone에서 저장할 수 없었습니다. 나중에 다시 보내실 수 있습니다.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"ko","translation":"iPhone 연동 준비 중입니다. 나중에 다시 보내실 수 있습니다.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"ko","translation":"{{value1}} × {{value2}}회 × {{value3}}세트","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"ko","translation":"{{value1}}를 iPhone으로 다시 보낼 수 있습니다.","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"ko","translation":"{{value1}}를 iPhone으로 전송 예약했습니다.","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"ko","translation":"{{value1}}를 iPhone으로 전송했습니다.","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"ko","translation":"{{value1}}를 iPhone으로 전송 중입니다.","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"ko","translation":"{{value1}}를 iPhone 기록에 저장했습니다.","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"ko","translation":"{{value1}}를 다시 보내기","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"ko","translation":"{{value1}}를 재개할 수 있습니다.","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"ko","translation":"{{value1}}를 선택했습니다.","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"ko","translation":"{{value1}}를 시작했습니다.","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"ko","translation":"{{value1}}/{{value2}}세트・{{value3}}회 기록","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"ko","translation":"{{value1}}세트・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"ko","translation":"{{value1}}세트・목표 총 {{value2}}회","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"ko","translation":"{{value1}}・{{value2}}세트・총 {{value3}}회","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"ko","translation":"{{value1}}・세트{{value2}}","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"ko","translation":"{{value1}}개에서 선택","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"ko","translation":"{{value1}}개의 메뉴를 동기화했습니다.","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"ko","translation":"{{value1}}회","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"ko","translation":"{{value1}}회/초","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"ko","translation":"{{value1}}회・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"ko","translation":"{{value1}}초","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"ko","translation":"{{value1}}개・{{value2}}세트・총 {{value3}}회","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"ko","translation":"이 워치는 iPhone 연동을 사용할 수 없습니다. 기록은 워치에 남아 있습니다.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"ko","translation":"이 워치는 연동을 사용할 수 없습니다.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"ko","translation":"건너뛰기","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"ko","translation":"세트","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"ko","translation":"세트 {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"ko","translation":"세트를 완료","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"ko","translation":"세트를 시작","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"ko","translation":"세트 평균 {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"ko","translation":"세트 미 설정","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"ko","translation":"세트 시작","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"ko","translation":"세트 시작 취소","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"ko","translation":"센서 측정 중","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"ko","translation":"센서 항목을 준비할 수 없으므로 수동으로 기록 중입니다.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"ko","translation":"튜토리얼 건너뛰기","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"ko","translation":"템포","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"ko","translation":"템포 맞춤","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"ko","translation":"템포 설정","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"ko","translation":"템포 안내 일시 중지","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"ko","translation":"템포 안내 재개","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"ko","translation":"벤치 프레스","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"ko","translation":"메뉴","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"ko","translation":"메뉴 선택","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"ko","translation":"메뉴 데이터 로드 실패","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"ko","translation":"메뉴 변경","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"ko","translation":"메뉴 대기","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"ko","translation":"메모","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"ko","translation":"메모 편집","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"ko","translation":"운동","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"ko","translation":"랫 풀 다운","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"ko","translation":"운동","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"ko","translation":"운동을 완료하시겠습니까?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"ko","translation":"운동을 취소했습니다","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"ko","translation":"일시 중지","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"ko","translation":"일시 중지 및 {{value1}}초 멈춤 / {{value2}}초 진행","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"ko","translation":"일시 중지 중","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"ko","translation":"위","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"ko","translation":"상{{value1}}s・하{{value2}}s・{{value3}}회/초","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"ko","translation":"올리기","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"ko","translation":"올리기 {{value1}}초・내리기 {{value2}}초","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"ko","translation":"올리기{{value1}}초／내리기{{value2}}초","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"ko","translation":"올리고 내리는 시간을 세트로 설정합니다. Apple Watch은 1초당 1~3회의 촉각으로 안내합니다.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"ko","translation":"올리는 시간","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"ko","translation":"올리는 시간을 직접 입력","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"ko","translation":"내리기","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"ko","translation":"내리기","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"ko","translation":"내리는 시간","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"ko","translation":"내리는 시간을 직접 입력","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"ko","translation":"오늘","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"ko","translation":"오늘의 메뉴","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"ko","translation":"오늘의 메뉴: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"ko","translation":"오늘의 메뉴를 선택하세요","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"ko","translation":"휴식 {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"ko","translation":"휴식 {{value1}}초","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"ko","translation":"휴식하기","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"ko","translation":"휴식을 건너듸기","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"ko","translation":"휴식 시간","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"ko","translation":"휴식 종료","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"ko","translation":"잔여 에너지와 운동 속도를 고려하여 2.5% 더 높은 목표 제안","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"ko","translation":"시작하기","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"ko","translation":"사용 방법: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"ko","translation":"저장","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"ko","translation":"신뢰도: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"ko","translation":"수정","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"ko","translation":"재개","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"ko","translation":"분:초","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"ko","translation":"이전 기록","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"ko","translation":"운동 안정성: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"ko","translation":"추천 운동: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"ko","translation":"운동 중단 감지됨","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"ko","translation":"예상 운동 횟수: {{value1}}회","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"ko","translation":"예상 운동 횟수: {{value1}}회・신뢰도: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"ko","translation":"운동 속도 변화: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"ko","translation":"적용","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"ko","translation":"취소","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"ko","translation":"동일 시간대의 Fitness 기록이 있으므로 Health에 중복 저장하는 것을 방지했습니다.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"ko","translation":"동기화된 메뉴에서 선택 가능","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"ko","translation":"회","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"ko","translation":"횟수","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"ko","translation":"횟수를 리본으로 설정","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"ko","translation":"완료","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"ko","translation":"완료 후 iPhone로 전송","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"ko","translation":"완료 후 전송","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"ko","translation":"완료되면 휴식 타이머가 시작됩니다. 다음 운동은 순서를 변경하여 선택할 수 있습니다.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"ko","translation":"운동이 완료되지 않았습니다","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"ko","translation":"완료 세트","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"ko","translation":"완료 세트 {{value1}}개","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"ko","translation":"성공 {{value1}}회 × {{value2}}회","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"ko","translation":"성공 기록 맞춤","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"ko","translation":"성공 기록 입력 중","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"ko","translation":"실행 중인 세트의 RPE 변경","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"ko","translation":"실행 중인 세트의 템포 변경","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"ko","translation":"실행 중인 세트의 횟수 변경","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"ko","translation":"실행 중인 세트의 무게 변경","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"ko","translation":"평균-","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"ko","translation":"평균{{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"ko","translation":"심박수는 회복 추세입니다. 감각이 안정되면 다음 세트로 진행","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"ko","translation":"심박수를 보면서 휴식을 계속 이어가세요.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"ko","translation":"심박수 및 소비 에너지를 측정 중입니다.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"ko","translation":"수동 입력","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"ko","translation":"수동으로 기록할 수 있습니다.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"ko","translation":"수동으로 기록 중입니다.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"ko","translation":"손목 움직임과 완료되지 않은 세트의 순서에서 추정","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"ko","translation":"진동 횟수 (1~3회/초)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"ko","translation":"진동 속도","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"ko","translation":"연결 실패: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"ko","translation":"{{value1}}회를 반영","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"ko","translation":"제안을 반영","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"ko","translation":"시간 변경","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"ko","translation":"최대 -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"ko","translation":"최대 {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"ko","translation":"마지막으로 종료하면 iPhone으로 전송됩니다. 아직 전송되지 않은 기록은 나중에 다시 전송할 수 있습니다.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"ko","translation":"완료되지 않은 세트 포함 현재 내용을 저장합니다.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"ko","translation":"전송 중 없음","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"ko","translation":"현재 워치 기록이 없습니다.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"ko","translation":"시작 안 함","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"ko","translation":"다음: {{value1}} {{value2}} × {{value3}}회","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"ko","translation":"다음 세트를 시작할 수 있습니다.","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"ko","translation":"바로 다음 운동으로 돌아갈 수 있습니다.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"ko","translation":"다음 운동","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"ko","translation":"다음","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"ko","translation":"현재 동작 건너뛰기","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"ko","translation":"목표 {{value1}} × {{value2}}회","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"ko","translation":"목표 속도 완료","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"ko","translation":"목표 달성 실패, RPE, 동작 속도 저하 중 하나를 선택하여 5% 가볍게 제안","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"ko","translation":"상대적 범위 {{value1}}%, 일관성 {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"ko","translation":"절전 샘플링 (배터리 잔량)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"ko","translation":"절전 샘플링 (저전력 모드)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"ko","translation":"절전 샘플링 (설정)","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"ko","translation":"삭제","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"ko","translation":"초","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"ko","translation":"운동과 세트를 선택하여 시작합니다. 잘못된 경우 \"취소\"를 눌러 실행 취소할 수 있습니다.","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"ko","translation":"운동 후보 {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"ko","translation":"종료 및 동기화","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"ko","translation":"계속","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"ko","translation":"등","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"ko","translation":"등 운동","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"ko","translation":"가슴","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"ko","translation":"가슴 운동일","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"ko","translation":"기록을 삭제하시겠습니까?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"ko","translation":"운동 기록 중","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"ko","translation":"현재 운동 기록이 없습니다.","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"ko","translation":"일반 샘플링","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"ko","translation":"빠른 속도","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"ko","translation":"성공도, RPE, 동작 속도를 기반으로 동일한 무게를 제안","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"ko","translation":"아니요","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"ko","translation":"다른 세트로 변경","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"ko","translation":"무게","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"ko","translation":"리드로 무게 설정","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"ko","translation":"무게, 횟수, RPE, 휴식은 시작 전후에 리드로 변경할 수 있습니다.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"ko","translation":"시작","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"ko","translation":"시작 전에 템포를 설정","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"ko","translation":"지원되지 않음: {{value1}}. 수동 입력은 가능합니다.","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"ko","translation":"음성 및 문자 메모","review_note":""}

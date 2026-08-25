@@ -51,7 +51,31 @@ struct AISettings: Codable, Equatable, Sendable {
         #endif
     }()
 
-    static let configurationHelp = "HTTPSのAI API、またはMac mini上のローカルAPIを指定できます。URL変更後も再ビルドは不要です。APIキーは端末のKeychainへ保存します。"
+    static var allowsConnectionEditing: Bool {
+        #if DEBUG
+        ProcessInfo.processInfo.arguments.contains("--enable-ai-connection-editor")
+        #else
+        false
+        #endif
+    }
+
+    static var configurationHelp: String {
+        if allowsConnectionEditing {
+            return L10n.string("domain_catalog.4d5b0045e0e5", fallback: "開発用の接続先を指定できます。APIキーは端末のKeychainへ保存します。")
+        }
+        return L10n.string("domain_catalog.b1f2c64a95cc", fallback: "接続先と認証情報はBodyModeが管理します。画面や診断ログには接続アドレスを表示しません。")
+    }
+
+    var hasConfiguredConnection: Bool {
+        guard !apiKey.isEmpty,
+              let url = URL(string: baseURLString.trimmingCharacters(in: .whitespacesAndNewlines)),
+              let scheme = url.scheme?.lowercased(),
+              ["http", "https"].contains(scheme),
+              url.host?.isEmpty == false else {
+            return false
+        }
+        return true
+    }
 
     static var hasBundledConfiguration: Bool {
         bundledConfiguration != nil
@@ -69,7 +93,7 @@ struct AISettings: Codable, Equatable, Sendable {
 
         let currentURL = Self.normalizedBaseURL(baseURLString)
         let bundledURL = Self.normalizedBaseURL(bundled.baseURLString)
-        let usesRetiredBundledURL = Self.retiredBundledBaseURLs.contains(currentURL)
+        let usesRetiredBundledURL = Self.isRetiredBundledURL(currentURL)
         let matchesUnversionedBundledConfiguration = managedConfigurationVersion == nil
             && currentURL == bundledURL
             && apiKey == bundled.apiKey
@@ -112,11 +136,20 @@ struct AISettings: Codable, Equatable, Sendable {
     }
 
     private static let retiredBundledBaseURLs: Set<String> = [
-        "https://alike-generate-ghz-seo.trycloudflare.com",
-        "https://christopher-using-organisations-hull.trycloudflare.com",
+        "https://retired-ai-endpoint.invalid",
+        "https://bodymode-ai-gateway.bodymode-ai.workers.dev",
+        "https://bodymode-ai-gateway-staging.bodymode-ai.workers.dev",
         "http://127.0.0.1:8765",
         "http://localhost:8765"
     ]
+
+    private static func isRetiredBundledURL(_ value: String) -> Bool {
+        if retiredBundledBaseURLs.contains(value) {
+            return true
+        }
+        guard let host = URL(string: value)?.host?.lowercased() else { return false }
+        return host.hasSuffix(".trycloudflare.com") || host.hasSuffix(".ts.net")
+    }
 }
 
 private enum AIServiceBuildConfiguration {
@@ -153,6 +186,8 @@ enum SecureSettingsStore {
     private static let service = "com.yukitoshim.gymtrainingapp.ai"
     private static let apiKeyAccount = "local-ai-api-key"
     private static let accessTokenAccount = "local-ai-access-token-v1"
+    private static let accountRegistrationAccount = "ai-account-registration-v1"
+    private static let appAccountTokenAccount = "storekit-app-account-token-v1"
     private static let installationIDAccount = "installation-id-v1"
 
     static func loadAPIKey() -> String? {
@@ -211,6 +246,30 @@ enum SecureSettingsStore {
         delete(account: accessTokenAccount)
     }
 
+    static var hasAIAccount: Bool {
+        loadData(account: accountRegistrationAccount) != nil
+    }
+
+    @discardableResult
+    static func markAIAccountRegistered() -> Bool {
+        saveData(Data([1]), account: accountRegistrationAccount)
+    }
+
+    static func deleteAIAccountRegistration() {
+        delete(account: accountRegistrationAccount)
+    }
+
+    static var appAccountToken: UUID? {
+        guard let data = loadData(account: appAccountTokenAccount),
+              let value = String(data: data, encoding: .utf8) else { return nil }
+        return UUID(uuidString: value)
+    }
+
+    @discardableResult
+    static func saveAppAccountToken(_ token: UUID) -> Bool {
+        saveData(Data(token.uuidString.lowercased().utf8), account: appAccountTokenAccount)
+    }
+
     static func deleteInstallationID() {
         delete(account: installationIDAccount)
     }
@@ -218,6 +277,8 @@ enum SecureSettingsStore {
     static func resetAIIdentity() {
         deleteAPIKey()
         deleteAccessToken()
+        deleteAIAccountRegistration()
+        delete(account: appAccountTokenAccount)
         deleteInstallationID()
     }
 
@@ -380,6 +441,178 @@ struct AIAccessTokenRequest: Encodable {
     }
 }
 
+struct AIAppleAccountRequest: Encodable {
+    var identityToken: String
+    var authorizationCode: String
+    var rawNonce: String
+    var installationID: String
+    var appVersion: String
+
+    enum CodingKeys: String, CodingKey {
+        case identityToken = "identity_token"
+        case authorizationCode = "authorization_code"
+        case rawNonce = "raw_nonce"
+        case installationID = "installation_id"
+        case appVersion = "app_version"
+    }
+}
+
+struct AIAppleAccountResponse: Decodable {
+    var accessToken: String
+    var expiresIn: TimeInterval
+    var signupGranted: Bool
+    var signupGrantedAmount: Int
+    var credits: AICreditBalance
+    var featureCosts: [String: Int]
+    var appAccountToken: UUID
+
+    enum CodingKeys: String, CodingKey {
+        case accessToken = "access_token"
+        case expiresIn = "expires_in"
+        case signupGranted = "signup_granted"
+        case signupGrantedAmount = "signup_granted_amount"
+        case credits
+        case featureCosts = "feature_costs"
+        case appAccountToken = "app_account_token"
+    }
+}
+
+struct AICreditBalance: Codable, Hashable {
+    var total: Int
+    var available: Int
+    var reserved: Int
+    var buckets: [String: Int]
+}
+
+struct AICreditSummary: Codable, Hashable {
+    var enforced: Bool
+    var unlimited: Bool
+    var supportID: String?
+    var balance: AICreditBalance?
+    var featureCosts: [String: Int]
+
+    enum CodingKeys: String, CodingKey {
+        case enforced, unlimited, balance
+        case supportID = "support_id"
+        case featureCosts = "feature_costs"
+    }
+}
+
+struct AIRewardedAdClaimRequest: Encodable {
+    var challengeID: String
+    enum CodingKeys: String, CodingKey { case challengeID = "challenge_id" }
+}
+
+struct AIRewardedAdChallengeResponse: Decodable {
+    var challengeID: String
+    var customData: String
+    var expiresIn: Int
+    var remainingToday: Int
+    enum CodingKeys: String, CodingKey {
+        case challengeID = "challenge_id"
+        case customData = "custom_data"
+        case expiresIn = "expires_in"
+        case remainingToday = "remaining_today"
+    }
+}
+
+struct AIRewardedAdClaimResponse: Decodable {
+    var granted: Bool
+    var grantedAmount: Int
+    var remainingToday: Int
+    var balance: AICreditBalance
+    var pending: Bool
+    enum CodingKeys: String, CodingKey {
+        case granted, balance
+        case grantedAmount = "granted_amount"
+        case remainingToday = "remaining_today"
+        case pending
+    }
+}
+
+struct AICreditPurchaseVerifyRequest: Encodable {
+    var signedTransaction: String
+    enum CodingKeys: String, CodingKey { case signedTransaction = "signed_transaction" }
+}
+
+struct AICreditPurchaseVerifyResponse: Decodable {
+    var granted: Bool
+    var grantedAmount: Int
+    var transactionID: String
+    var productID: String
+    var balance: AICreditBalance
+    enum CodingKeys: String, CodingKey {
+        case granted, balance
+        case grantedAmount = "granted_amount"
+        case transactionID = "transaction_id"
+        case productID = "product_id"
+    }
+}
+
+struct AIAccountDeletionResponse: Decodable {
+    var removedCredits: Int
+    enum CodingKeys: String, CodingKey { case removedCredits = "removed_credits" }
+}
+
+struct AICreditHistoryResponse: Decodable {
+    var supportID: String?
+    var events: [AICreditHistoryEvent]
+    var balance: AICreditBalance
+
+    enum CodingKeys: String, CodingKey {
+        case supportID = "support_id"
+        case events, balance
+    }
+}
+
+struct AICreditHistoryEvent: Decodable, Identifiable {
+    var id: Int
+    var eventType: String
+    var amount: Int
+    var source: String?
+    var feature: String?
+    var occurredAt: Int
+    enum CodingKeys: String, CodingKey {
+        case id, amount, source, feature
+        case eventType = "event_type"
+        case occurredAt = "occurred_at"
+    }
+}
+
+struct UsageAnalyticsUploadEvent: Encodable {
+    var id: UUID
+    var occurredAt: Int
+    var name: String
+    var dimension: String?
+    var properties: UsageEventProperties?
+    var appVersion: String
+    var locale: String
+    var channel: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case occurredAt = "occurred_at"
+        case name
+        case dimension
+        case properties
+        case appVersion = "app_version"
+        case locale
+        case channel
+    }
+}
+
+struct UsageAnalyticsUploadBatch: Encodable {
+    var events: [UsageAnalyticsUploadEvent]
+}
+
+struct UsageAnalyticsUploadResponse: Decodable {
+    var accepted: Int
+}
+
+struct UsageAnalyticsDeleteResponse: Decodable {
+    var deleted: Int
+}
+
 struct AIDataSharingSettings: Codable, Equatable, Sendable {
     var bodyMetrics: Bool
     var meals: Bool
@@ -389,6 +622,42 @@ struct AIDataSharingSettings: Codable, Equatable, Sendable {
     var dailyActivity: Bool
     var gymVisits: Bool
     var workoutSensors: Bool
+    var trainingConsiderations: Bool
+
+    init(
+        bodyMetrics: Bool,
+        meals: Bool,
+        workouts: Bool,
+        bodyPhotos: Bool,
+        sleepAndRecovery: Bool,
+        dailyActivity: Bool,
+        gymVisits: Bool,
+        workoutSensors: Bool,
+        trainingConsiderations: Bool = false
+    ) {
+        self.bodyMetrics = bodyMetrics
+        self.meals = meals
+        self.workouts = workouts
+        self.bodyPhotos = bodyPhotos
+        self.sleepAndRecovery = sleepAndRecovery
+        self.dailyActivity = dailyActivity
+        self.gymVisits = gymVisits
+        self.workoutSensors = workoutSensors
+        self.trainingConsiderations = trainingConsiderations
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        bodyMetrics = try container.decodeIfPresent(Bool.self, forKey: .bodyMetrics) ?? true
+        meals = try container.decodeIfPresent(Bool.self, forKey: .meals) ?? true
+        workouts = try container.decodeIfPresent(Bool.self, forKey: .workouts) ?? true
+        bodyPhotos = try container.decodeIfPresent(Bool.self, forKey: .bodyPhotos) ?? true
+        sleepAndRecovery = try container.decodeIfPresent(Bool.self, forKey: .sleepAndRecovery) ?? false
+        dailyActivity = try container.decodeIfPresent(Bool.self, forKey: .dailyActivity) ?? false
+        gymVisits = try container.decodeIfPresent(Bool.self, forKey: .gymVisits) ?? false
+        workoutSensors = try container.decodeIfPresent(Bool.self, forKey: .workoutSensors) ?? false
+        trainingConsiderations = try container.decodeIfPresent(Bool.self, forKey: .trainingConsiderations) ?? false
+    }
 
     static let `default` = AIDataSharingSettings(
         bodyMetrics: true,
@@ -398,20 +667,37 @@ struct AIDataSharingSettings: Codable, Equatable, Sendable {
         sleepAndRecovery: false,
         dailyActivity: false,
         gymVisits: false,
-        workoutSensors: false
+        workoutSensors: false,
+        trainingConsiderations: false
     )
 
     var enabledCategoryNames: [String] {
         [
-            bodyMetrics ? "身体KPI" : nil,
-            meals ? "食事" : nil,
-            workouts ? "筋トレ" : nil,
-            bodyPhotos ? "体型写真" : nil,
-            sleepAndRecovery ? "睡眠・回復" : nil,
-            dailyActivity ? "日常活動" : nil,
-            gymVisits ? "ジム訪問" : nil,
-            workoutSensors ? "ワークアウトセンサー" : nil
+            bodyMetrics ? L10n.string("domain_catalog.629a44944024", fallback: "身体KPI") : nil,
+            meals ? L10n.string("domain_catalog.c313c696c2b6", fallback: "食事") : nil,
+            workouts ? L10n.string("domain_catalog.50320710b7fb", fallback: "筋トレ") : nil,
+            bodyPhotos ? L10n.string("domain_catalog.b9009f656b8d", fallback: "体型写真") : nil,
+            sleepAndRecovery ? L10n.string("domain_catalog.d6c47594dbd3", fallback: "睡眠・回復") : nil,
+            dailyActivity ? L10n.string("domain_catalog.e452c77116e2", fallback: "日常活動") : nil,
+            gymVisits ? L10n.string("domain_catalog.4c7e42a86929", fallback: "ジム訪問") : nil,
+            workoutSensors ? L10n.string("domain_catalog.ee583d0f2045", fallback: "ワークアウトセンサー") : nil,
+            trainingConsiderations ? AppLanguagePreference.bilingual(
+                japanese: "運動上の配慮事項",
+                english: "Training considerations"
+            ) : nil
         ].compactMap { $0 }
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case bodyMetrics
+        case meals
+        case workouts
+        case bodyPhotos
+        case sleepAndRecovery
+        case dailyActivity
+        case gymVisits
+        case workoutSensors
+        case trainingConsiderations
     }
 }
 
@@ -469,7 +755,7 @@ struct MealAIDraft: Codable, Hashable {
         reconciled.fat = totals.fat
         reconciled.carbs = totals.carbs
         if hasMaterialDifference {
-            let notice = "食品別の内訳を合計してPFCとカロリーを補正しました。"
+            let notice = L10n.string("domain_catalog.c8708c4bc61f", fallback: "食品別の内訳を合計してPFCとカロリーを補正しました。")
             reconciled.comment = comment.isEmpty ? notice : "\(comment)\n\(notice)"
         }
         return reconciled
@@ -635,7 +921,7 @@ struct BodyPhotoReferenceEstimate: Codable, Hashable, Identifiable {
 
     var displayName: String {
         switch metric {
-        case "body_fat_percent": "体脂肪率"
+        case "body_fat_percent": L10n.string("domain_catalog.70b83fa847e3", fallback: "体脂肪率")
         default: metric
         }
     }
@@ -719,7 +1005,10 @@ struct BodyPhotoAnalysisContext: Encodable, Hashable {
 
 struct AIRequestCoachContext: Encodable, Hashable {
     var coachID: String
+    var personaID: String
     var coachName: String
+    var personaSummary: String
+    var coachingStyleID: String
     var coachingStyle: String
     var promise: String
     var focusAreas: [String]
@@ -729,7 +1018,10 @@ struct AIRequestCoachContext: Encodable, Hashable {
     init(profile: UserProfile) {
         let expertise = profile.coachType.expertiseProfile
         coachID = profile.coachType.rawValue
+        personaID = profile.coachPersona.rawValue
         coachName = profile.coachPersona.displayName
+        personaSummary = profile.coachPersona.characterSummary
+        coachingStyleID = profile.coachingStyle.rawValue
         coachingStyle = profile.coachingStyle.promptDescription
         promise = expertise.promise
         focusAreas = expertise.topFocusAreas
@@ -739,7 +1031,10 @@ struct AIRequestCoachContext: Encodable, Hashable {
 
     enum CodingKeys: String, CodingKey {
         case coachID = "coach_id"
+        case personaID = "persona_id"
         case coachName = "coach_name"
+        case personaSummary = "persona_summary"
+        case coachingStyleID = "coaching_style_id"
         case coachingStyle = "coaching_style"
         case promise
         case focusAreas = "focus_areas"
@@ -799,6 +1094,10 @@ struct AITransmissionRecord: Identifiable, Codable, Equatable {
     var sharedCategories: [String]
     var itemCount: Int
     var status: AITransmissionStatus
+    var failureMessage: String?
+    var recoverySuggestion: String?
+    var canRetry: Bool?
+    var consumedQuota: Bool?
 
     init(
         id: UUID = UUID(),
@@ -806,7 +1105,11 @@ struct AITransmissionRecord: Identifiable, Codable, Equatable {
         purpose: String,
         sharedCategories: [String],
         itemCount: Int,
-        status: AITransmissionStatus = .sending
+        status: AITransmissionStatus = .sending,
+        failureMessage: String? = nil,
+        recoverySuggestion: String? = nil,
+        canRetry: Bool? = nil,
+        consumedQuota: Bool? = nil
     ) {
         self.id = id
         self.sentAt = sentAt
@@ -814,6 +1117,10 @@ struct AITransmissionRecord: Identifiable, Codable, Equatable {
         self.sharedCategories = sharedCategories
         self.itemCount = itemCount
         self.status = status
+        self.failureMessage = failureMessage
+        self.recoverySuggestion = recoverySuggestion
+        self.canRetry = canRetry
+        self.consumedQuota = consumedQuota
     }
 }
 

@@ -1,0 +1,51 @@
+app_store_locale,language_ja,language_en,app_binary_locale,direction,translation_strategy,qa_wave
+ar-SA,アラビア語,Arabic,ar,rtl,full,3
+bn,ベンガル語,Bangla,bn,ltr,deferred,3
+ca,カタルーニャ語,Catalan,ca,ltr,full,2
+zh-Hans,中国語（簡体字）,Chinese (Simplified),zh-Hans,ltr,full,1
+zh-Hant,中国語（繁体字）,Chinese (Traditional),zh-Hant,ltr,full,1
+hr,クロアチア語,Croatian,hr,ltr,full,2
+cs,チェコ語,Czech,cs,ltr,full,2
+da,デンマーク語,Danish,da,ltr,full,2
+nl-NL,オランダ語,Dutch,nl,ltr,full,2
+en-AU,英語（オーストラリア）,English (Australia),en,ltr,inherit_en_then_store_review,1
+en-CA,英語（カナダ）,English (Canada),en,ltr,inherit_en_then_store_review,1
+en-GB,英語（英国）,English (U.K.),en,ltr,inherit_en_then_store_review,1
+en-US,英語（米国）,English (U.S.),en,ltr,full_base_english,1
+fi,フィンランド語,Finnish,fi,ltr,full,2
+fr-FR,フランス語,French,fr,ltr,full_base_french,1
+fr-CA,フランス語（カナダ）,French (Canada),fr-CA,ltr,regional_review,2
+de-DE,ドイツ語,German,de,ltr,full,1
+el,ギリシャ語,Greek,el,ltr,full,2
+gu,グジャラート語,Gujarati,gu,ltr,full,3
+he,ヘブライ語,Hebrew,he,rtl,full,3
+hi,ヒンディー語,Hindi,hi,ltr,full,2
+hu,ハンガリー語,Hungarian,hu,ltr,full,2
+id,インドネシア語,Indonesian,id,ltr,full,1
+it,イタリア語,Italian,it,ltr,full,1
+ja,日本語,Japanese,ja,ltr,source,0
+kn,カンナダ語,Kannada,kn,ltr,deferred,3
+ko,韓国語,Korean,ko,ltr,full,1
+ms,マレー語,Malay,ms,ltr,full,2
+ml,マラヤーラム語,Malayalam,ml,ltr,deferred,3
+mr,マラーティー語,Marathi,mr,ltr,full,3
+no,ノルウェー語,Norwegian,nb,ltr,full,2
+or,オディア語,Odia,or,ltr,deferred,3
+pl,ポーランド語,Polish,pl,ltr,full,2
+pt-BR,ポルトガル語（ブラジル）,Portuguese (Brazil),pt-BR,ltr,full,1
+pt-PT,ポルトガル語（ポルトガル）,Portuguese (Portugal),pt-PT,ltr,regional_review,2
+pa,パンジャブ語,Punjabi,pa,ltr,deferred,3
+ro,ルーマニア語,Romanian,ro,ltr,full,2
+ru,ロシア語,Russian,ru,ltr,full,2
+sk,スロバキア語,Slovak,sk,ltr,full,2
+sl,スロベニア語,Slovenian,sl,ltr,full,2
+es-MX,スペイン語（メキシコ）,Spanish (Mexico),es-MX,ltr,full_base_latin_america,1
+es-ES,スペイン語（スペイン）,Spanish (Spain),es-ES,ltr,regional_review,1
+sv,スウェーデン語,Swedish,sv,ltr,full,2
+ta,タミル語,Tamil,ta,ltr,full,3
+te,テルグ語,Telugu,te,ltr,full,3
+th,タイ語,Thai,th,ltr,full,2
+tr,トルコ語,Turkish,tr,ltr,full,2
+uk,ウクライナ語,Ukrainian,uk,ltr,full,2
+ur,ウルドゥー語,Urdu,ur,rtl,deferred,3
+vi,ベトナム語,Vietnamese,vi,ltr,full,1

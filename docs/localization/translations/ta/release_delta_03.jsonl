@@ -1,0 +1,88 @@
+{"id":"ai_plan.automatic_revision_request","target_locale":"ta","translation":"சமீபத்திய செயல்திறன், நிறைவேற்ற விகிதம், RPE மற்றும் மீட்பு நிலையை மதிப்பாய்வு செய்து, அடுத்த முறை முதல் எளிதாகச் செயல்படுத்தக்கூடிய திட்டமாகக் குறிப்பாகச் சரிசெய்யவும். மாற்றம் தேவையில்லை என்றால், தற்போதைய மதிப்புகளைத் தொடரவும்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.changes","target_locale":"ta","translation":"変更内容","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.diff_add_exercise","target_locale":"ta","translation":"{{value1}} சேர்க்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.diff_remove_exercise","target_locale":"ta","translation":"{{value1}} நீக்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.diff_reps","target_locale":"ta","translation":"{{value1}}：{{value2}}→{{value3}}回","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.diff_rest","target_locale":"ta","translation":"{{value1}}：休憩{{value2}}→{{value3}}秒","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.diff_sets","target_locale":"ta","translation":"{{value1}}：{{value2}}→{{value3}} செட்கள்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.not_now","target_locale":"ta","translation":"இந்த முறை மாற்றம் இல்லை","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"ai_plan.save_and_start","target_locale":"ta","translation":"சேமித்து தொடங்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.save_as_new_plan","target_locale":"ta","translation":"புதிய திட்டமாக மாற்றவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.start_once","target_locale":"ta","translation":"இந்த முறை மட்டும் செயல்படுத்தவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.try_or_save","target_locale":"ta","translation":"இதை இப்படியே ஒருமுறை மட்டும் முயற்சிக்கலாம் அல்லது திட்டமாகச் சேமிக்கலாம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"ai_plan.update_current_plan","target_locale":"ta","translation":"ஏற்கனவே உள்ள திட்டத்தைப் புதுப்பிக்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"core_ui.analytics_privacy_explanation","target_locale":"ta","translation":"உங்கள் ஒப்புதல் அளித்தால் மட்டுமே, அம்சங்களைப் பயன்படுத்தும் விதம் மற்றும் நோக்கம், அனுபவம், உடல்நிலை, பரிந்துரை வகை ஆகியவற்றின் வகைப்பாடுகள், பெயர் போன்ற தகவல்களுடன் இணைக்கப்படாத நிறுவல் அடிப்படையில் அனுப்பப்படும். உடல் அல்லது உணவு தொடர்பான அளவுகள், புகைப்படங்கள், இதயத் துடிப்பு, உறக்க நேரம், இருப்பிடம், குறிப்புகள், விளம்பர ID ஆகியவை அனுப்பப்படாது.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.confidence_high","target_locale":"ta","translation":"அதிகம்","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.confidence_low","target_locale":"ta","translation":"குறைவான","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.confidence_moderate","target_locale":"ta","translation":"நடுத்தர நிலை","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.confidence_reference","target_locale":"ta","translation":"குறிப்பு","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.documents_searched","target_locale":"ta","translation":"検索対象","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.general_trends_disclaimer","target_locale":"ta","translation":"ஆய்வு முடிவுகள் பொதுவான போக்குகளைக் குறிக்கின்றன. அவை உங்களுக்கான விளைவுகளை உறுதியாகக் கூறுவதல்ல.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.library_unavailable","target_locale":"ta","translation":"ஆய்வுத் தரவுகளைப் பயன்படுத்த முடியாததால், இந்த முறை பதிவுகள் மற்றும் பொதுவான கொள்கைகளின் அடிப்படையில் முக்கியமாக மதிப்பீடு செய்கிறோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.no_direct_paper","target_locale":"ta","translation":"இந்தப் பரிந்துரைக்கு நேரடியாகப் பயன்படுத்தக்கூடிய ஆய்வுகளை உறுதிப்படுத்த முடியவில்லை. பதிவுகள் மற்றும் பொதுவான உடற்பயிற்சி கோட்பாடுகளை மையமாகக் கொண்டு மதிப்பிடுகிறோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.overall_confidence","target_locale":"ta","translation":"ஒட்டுமொத்த நம்பகத்தன்மை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.population_mismatch","target_locale":"ta","translation":"ஒத்த தகுதிகளைக் கொண்டவர்களைப் பற்றிய ஆய்வுகள் கிடைக்காததால், இந்த முறை பதிவுகள் மற்றும் பொதுவான கோட்பாடுகளை மையமாகக் கொண்டு மதிப்பிடுகிறோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.recommendation_evidence","target_locale":"ta","translation":"பரிந்துரைக்கான ஆதாரம்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.referenced_research","target_locale":"ta","translation":"பார்வையிட்ட ஆய்வுகள்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.search_information","target_locale":"ta","translation":"検索情報","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"evidence.search_unavailable","target_locale":"ta","translation":"ஆய்வுகளைத் தேடும் வசதியைப் பயன்படுத்த முடியவில்லை. ஆதாரத்தைச் சரிபார்க்க முடியாததால், இந்த முறை பதிவுகளை மையமாகக் கொண்டு மதிப்பிடுகிறோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"evidence.view_scientific","target_locale":"ta","translation":"அறிவியல் ஆதாரத்தைப் பார்க்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_abstract","target_locale":"ta","translation":"抄録確認","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_applicability","target_locale":"ta","translation":"இந்தச் சூழலுக்கான பொருத்தம்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_direct","target_locale":"ta","translation":"ஆய்வில் உள்ளவர்கள் ஒப்பீட்டளவில் ஒத்தவர்கள்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_full_text","target_locale":"ta","translation":"本文確認","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_intervention","target_locale":"ta","translation":"介入","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_license","target_locale":"ta","translation":"கட்டுரையின் உரிமம்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_limitations","target_locale":"ta","translation":"制約","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_mismatch","target_locale":"ta","translation":"ஆய்வில் உள்ளவர்களின் தகுதிகள் வேறுபட்டவை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_newer","target_locale":"ta","translation":"புதிய ஆய்வு","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_open_paper","target_locale":"ta","translation":"ஆய்வுக் கட்டுரையைத் திறக்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_partial","target_locale":"ta","translation":"சில நிபந்தனைகள் ஒத்தவை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_population","target_locale":"ta","translation":"対象者","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"health_meals_body_ai.evidence_summary","target_locale":"ta","translation":"ஆய்வின் முடிவு","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_summary_applicability","target_locale":"ta","translation":"சுருக்கமும் பொருந்தும் வரம்பும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"health_meals_body_ai.evidence_unclear","target_locale":"ta","translation":"தகவல் போதாமையால் தெளிவில்லை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_attach_diagnostics","target_locale":"ta","translation":"அநாமதேய கண்டறிதல் பதிவுகளை இணைக்கவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_cancel","target_locale":"ta","translation":"ரத்து செய்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_category_bug","target_locale":"ta","translation":"不具合","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_other","target_locale":"ta","translation":"மற்றவை","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_picker","target_locale":"ta","translation":"பின்னூட்ட வகை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_category_request","target_locale":"ta","translation":"要望","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_section","target_locale":"ta","translation":"வகை","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_category_usability","target_locale":"ta","translation":"பயன்படுத்துவதில் சிரமம்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_copy_text","target_locale":"ta","translation":"உரை நகலெடு","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_details","target_locale":"ta","translation":"内容","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_diagnostics_explanation","target_locale":"ta","translation":"ஆப் மற்றும் Apple Watch-ன் செயல்பாடு மற்றும் தொடர்பு பற்றிய தகவல்களை இணைக்கிறோம். உடல் மற்றும் சுகாதாரப் பதிவுகள், புகைப்படங்கள் அல்லது AI உரையாடல்கள் இதில் இடம்பெறாது.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_diagnostics_failed","target_locale":"ta","translation":"கண்டறிதல் பதிவுகளை இணைக்க முடியவில்லை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_other_ways","target_locale":"ta","translation":"வேறு வழிகளில் அனுப்பவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_report_body","target_locale":"ta","translation":"BodyMode பின்னூட்டம்\n\nவகை: {{value1}}\nஉள்ளடக்கம்:\n{{value2}}\n\nஆப்: {{value3}}\nOS: {{value4}}","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_retry","target_locale":"ta","translation":"மீண்டும் முயற்சி","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"support.feedback_send","target_locale":"ta","translation":"பின்னூட்டம் அனுப்பவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_send_email","target_locale":"ta","translation":"மின்னஞ்சலில் அனுப்பவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_send_without_diagnostics","target_locale":"ta","translation":"கண்டறிதல் தகவலின்றி அனுப்பவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_sensitive_warning","target_locale":"ta","translation":"உடல் அளவீடுகள், உணவு விவரங்கள், புகைப்படங்கள், AI உடனான உரையாடல்கள் அல்லது உள்நுழைவுச் சான்றுகளைச் சேர்க்க வேண்டாம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_title","target_locale":"ta","translation":"பின்னூட்டம்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"support.feedback_unknown_error","target_locale":"ta","translation":"தெரியாத பிழை","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_awaiting_result","target_locale":"ta","translation":"மதிப்பீட்டுக்காகக் காத்திருக்கிறது","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_copy_name","target_locale":"ta","translation":"{{value1}} 改訂版","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_from_coach","target_locale":"ta","translation":"{{value1}} வழங்கிய திட்ட மறுபரிசீலனை","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_history","target_locale":"ta","translation":"AI மறுபரிசீலனை வரலாறு","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_improved","target_locale":"ta","translation":"அடுத்த முறை செயல்திறன் மேம்பட்டது","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_pending","target_locale":"ta","translation":"காத்திருப்பு","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_reverted","target_locale":"ta","translation":"ரத்துசெய்யப்பட்டது","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_review_again","target_locale":"ta","translation":"அடுத்த முறை மீண்டும் சரிசெய்ய பரிசீலிக்கலாம்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_saved_new","target_locale":"ta","translation":"新規保存","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"training.ai_revision_skipped","target_locale":"ta","translation":"தவிர்க்கப்பட்டது","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_unchanged","target_locale":"ta","translation":"அடுத்த முறை முடிவு இதே அளவில் இருக்கும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"training.ai_revision_updated","target_locale":"ta","translation":"更新","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"workout_summary.adjust_next_plan_ai","target_locale":"ta","translation":"அடுத்த திட்டத்தை AI மூலம் சரிசெய்யவும்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.keep_current_plan","target_locale":"ta","translation":"தற்போதைய திட்டத்தை அப்படியே தொடர்கிறோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.new_plan_saved","target_locale":"ta","translation":"「{{value1}}」 புதியதாகச் சேமிக்கப்பட்டது.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.next_plan_updated","target_locale":"ta","translation":"அடுத்த திட்டம் புதுப்பிக்கப்பட்டது.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.next_session","target_locale":"ta","translation":"次回","review_note":"機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id":"workout_summary.revision_approval_notice","target_locale":"ta","translation":"மாற்றங்களை மதிப்பாய்வு செய்யும் வரை, தற்போதைய திட்டத்தை மாற்றமாட்டோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_headline_met","target_locale":"ta","translation":"இலக்கை அடைந்துள்ளீர்கள். அடுத்த சுமையைப் பார்ப்போம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_headline_missed","target_locale":"ta","translation":"சிறிதளவு குறைவாக இருந்ததால், அடுத்த முறையைச் சரிசெய்யலாம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_headline_ready","target_locale":"ta","translation":"இன்றைய செயல்திறனை அடுத்த முறையில் பிரதிபலிக்கலாம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.revision_restored","target_locale":"ta","translation":"புதுப்பிப்பதற்கு முன் இருந்த திட்டத்துக்குத் திரும்பினோம்.","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}
+{"id":"workout_summary.undo_revision","target_locale":"ta","translation":"புதுப்பிப்பைச் செயல்தவிர்","review_note":"GPT-5.6 Lunaで日本語残留を補修。健康・課金・プライバシー表現は公開後も人手確認対象。"}

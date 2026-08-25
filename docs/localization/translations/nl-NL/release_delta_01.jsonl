@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "nl-NL", "translation": "Geschatte waarde. Geen meetresultaat. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "nl-NL", "translation": "Omdat er een periode zonder meetresultaten is, wordt de verandering niet definitief vastgesteld en wordt een marge aangehouden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "nl-NL", "translation": "Op basis van een algemeen bereik gebaseerd op lengte, gewicht, leeftijd en geslacht. Dit is geen individueel metingresultaat voor lichaamsvet.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "nl-NL", "translation": "Geschat", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "nl-NL", "translation": "Referentie-schatting", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "nl-NL", "translation": "Dit is een schatting, geen meetresultaat. Alleen als u op 'Bekijken' tikt, wordt deze opgeslagen.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "nl-NL", "translation": "Wilt u de referentie-schatting opslaan?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "nl-NL", "translation": "Opslaan als schatting", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "nl-NL", "translation": "{{value1}} {{value2}}. Meetwaarden worden niet overschreven.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "nl-NL", "translation": "Gereserveerde rapporten", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "nl-NL", "translation": "Wekelijkse rapport", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "nl-NL", "translation": "Dag van de week", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "nl-NL", "translation": "Maandelijks rapport", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "nl-NL", "translation": "Datum", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "nl-NL", "translation": "{{value1}}e dag", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "nl-NL", "translation": "Notitietijd", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "nl-NL", "translation": "Na de geplande tijd, genereert het automatisch een rapport bij de eerste opening van de app. Als er geen verbinding met AI mogelijk is, blijft een samenvatting op uw apparaat.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "nl-NL", "translation": "Instellingen controleren vereist", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "nl-NL", "translation": "Herproberen is mogelijk", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "nl-NL", "translation": "Quota is verbruikt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "nl-NL", "translation": "Quota is nog niet verbruikt", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "nl-NL", "translation": "Wetenschappelijke bewijzen: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "nl-NL", "translation": "Omdat er geen directe bewijsstukken beschikbaar zijn, is dit een richtlijn gebaseerd op de trend van de gegevens.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "nl-NL", "translation": "Er zijn geen directe bewijsstukken voor deze suggestie gevonden.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "nl-NL", "translation": "Omdat er geen wetenschappelijke bewijzen beschikbaar zijn, is dit gebaseerd op de gegevens en algemene principes.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "nl-NL", "translation": "Eenheid voor lichaamsafmetingen", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

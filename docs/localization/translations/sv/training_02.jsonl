@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"sv","translation":"Fotograferingsuppsättning","review_note":""}
+{"id":"training.3064c4117490","target_locale":"sv","translation":"Dag","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"sv","translation":"Datum","review_note":""}
+{"id":"training.137012e67a97","target_locale":"sv","translation":"Tid","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"sv","translation":"Maxpuls","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"sv","translation":"Maxvikt","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"sv","translation":"Månad","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"sv","translation":"Torsdag","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"sv","translation":"Ej registrerat","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"sv","translation":"Ej slutfört","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"sv","translation":"Exkluderat på grund av ej registrering: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"sv","translation":"Ej uppnått","review_note":""}
+{"id":"training.379774690c05","target_locale":"sv","translation":"Sök, detaljer och lägg till anpassade övningar","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"sv","translation":"Standard","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"sv","translation":"Nästa månad","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"sv","translation":"Spara vikten, antalet repetitioner och övningen i nästa skärm.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"sv","translation":"Fredag","review_note":""}
+{"id":"training.586036cfde65","target_locale":"sv","translation":"Förbrukad","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"sv","translation":"Pågående","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"sv","translation":"Lördag","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"sv","translation":"Registrerade övningar","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"sv","translation":"Rekommenderat","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"sv","translation":"Mål","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"sv","translation":"Mål: {{value1}} × {{value2}} gånger","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"sv","translation":"Reflektera mål, resultat och tillgängliga utrustning","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"sv","translation":"Kopiera mål","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"sv","translation":"Skillnad mellan mål","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"sv","translation":"Skillnad mellan mål: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"sv","translation":"Nästa nivå anpassad efter mål och utrustning","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"sv","translation":"Skapas baserat på mål, fokusområden, tillgänglig utrustning och tidigare resultat. Du kan ändra övningar och värden innan du sparar.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"sv","translation":"Fråga om justering","review_note":""}
+{"id":"training.804773e6316f","target_locale":"sv","translation":"Ta bort","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"sv","translation":"Bekräfta och spara planen","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"sv","translation":"Sekunder","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"sv","translation":"Övning","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"sv","translation":"Ingen övning tillgänglig","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"sv","translation":"Registrera övningar och mål, så att du kan börja träningen utan tvekan.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"sv","translation":"Lägg till övning","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"sv","translation":"Lägg till en övning och ange målet för varje set.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"sv","translation":"Du kan konfigurera allt i ett steg när du lägger till en övning.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"sv","translation":"Välj övning","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"sv","translation":"Övningsbibliotek","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"sv","translation":"Efter övningstyp","review_note":""}
+{"id":"training.f3db21504894","target_locale":"sv","translation":"Övningstyphistorik","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"sv","translation":"Övningstyp","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"sv","translation":"Övningstyp, muskelgrupp, teknik","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"sv","translation":"Detaljer om övningen","review_note":""}
+{"id":"training.0902af066756","target_locale":"sv","translation":"Styrketräning","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"sv","translation":"Styrka A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"sv","translation":"Styrka B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"sv","translation":"Muskeltillväxt","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"sv","translation":"Avsluta","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"sv","translation":"Framsteg","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"sv","translation":"Fortsätt","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"sv","translation":"Total volym","review_note":""}
+{"id":"training.299456e922c2","target_locale":"sv","translation":"Redigera","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"sv","translation":"Axlar / Biceps / Triceps","review_note":""}
+{"id":"training.14f202634605","target_locale":"sv","translation":"Axlar och armar","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"sv","translation":"Ryggdagen","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"sv","translation":"Bröstdagen","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"sv","translation":"Ben / Hinner","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"sv","translation":"Ben dagen","review_note":""}
+{"id":"training.ed189402693b","target_locale":"sv","translation":"Eget rekord","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"sv","translation":"Se dina sparade resultat per tidsperiod, övning och sensor.","review_note":""}
+{"id":"training.36467fec4916","target_locale":"sv","translation":"Få vägledning genom känseln för att hitta rätt tempo.","review_note":""}
+{"id":"training.84447148c208","target_locale":"sv","translation":"Plan","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"sv","translation":"{{value1}} / {{value2}} set slutfört / Uppnått {{value3}} / {{value4}}","review_note":""}
+{"id":"training.170899739631","target_locale":"sv","translation":"Starta från plan","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"sv","translation":"Följ planen","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"sv","translation":"Lägg till övningar och spara dem utan plan","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"sv","translation":"Ingen plan ännu","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"sv","translation":"Långsammare än planen","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"sv","translation":"Snabbare än planen","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"sv","translation":"Skapa en plan","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"sv","translation":"Skapa en plan","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"sv","translation":"Spara planen","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"sv","translation":"Plan set","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"sv","translation":"Skapa en plan","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"sv","translation":"Planets namn","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"sv","translation":"Ange ett namn och minst en övning.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"sv","translation":"Logg","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"sv","translation":"Se dina loggade resultat per dag.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"sv","translation":"Avsluta utan att spara","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"sv","translation":"Bedöm lämpligt från registrering och mål","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"sv","translation":"Ta bort registrering","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"sv","translation":"Registreringstyp, styrketräning, kropp, kost, foto, gym","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"sv","translation":"Ingen matchande typ hittades","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"sv","translation":"Kropp","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"sv","translation":"Mätning av kroppen","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"sv","translation":"Kropps-mätning är inte registrerad","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"sv","translation":"Lättare","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"sv","translation":"Lägg till","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"sv","translation":"Vecka","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"sv","translation":"{{value1}} dagar/{{value2}} minuter per vecka","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"sv","translation":"Per vecka","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"sv","translation":"Veckovis volym","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"sv","translation":"Analys av veckovis volym","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"sv","translation":"Justerar vikt och antal baserat på tidigare framgång. Kontrollera och spara.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"sv","translation":"Framgång","review_note":""}
+{"id":"training.90687409925b","target_locale":"sv","translation":"Framgångs-set","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"sv","translation":"Procentuell framgång","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"sv","translation":"{{value1}} procent","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"sv","translation":"Endast de registrerade övningarna som matchar det valda verktyget skickas till AI.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"sv","translation":"Sammanfattning för dagen","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"sv","translation":"Muskelgrupp","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"sv","translation":"Viktvariation","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"sv","translation":"Viktvariation {{value1}} / Variation i antal repetitioner {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"sv","translation":"Viktutveckling","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"sv","translation":"Guld","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"sv","translation":"Stäng","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"sv","translation":"Starta","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"sv","translation":"Avbryt start","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"sv","translation":"Kost","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"sv","translation":"Ingen kost har registrerats","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"sv","translation":"Hög vikt","review_note":""}

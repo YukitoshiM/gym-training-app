@@ -1,0 +1,250 @@
+{"id":"training.593a06e5b8ca","target_locale":"de-DE","translation":"0 Einträge","review_note":""}
+{"id":"training.965f9a854c19","target_locale":"de-DE","translation":"1 Aktion","review_note":""}
+{"id":"training.8011c7f226da","target_locale":"de-DE","translation":"3 Übungen, jeweils 2 Sätze. Passen Sie das Gewicht an, um es zu speichern.","review_note":""}
+{"id":"training.b2778f7f4f92","target_locale":"de-DE","translation":"Ich konnte den KI-Plan nicht lesen. Bitte erstellen Sie ihn erneut.","review_note":""}
+{"id":"training.fadb3814b3dc","target_locale":"de-DE","translation":"KI-Coach-Plan","review_note":""}
+{"id":"training.6427e2eb8c0c","target_locale":"de-DE","translation":"Gespeichert in Apple Health","review_note":""}
+{"id":"training.4a9b3adb6c14","target_locale":"de-DE","translation":"Synchronisierung mit Apple Watch","review_note":""}
+{"id":"training.4343c0de2bfd","target_locale":"de-DE","translation":"Die Apple Watch informiert Sie über die angepassten Aufwärts-/Abwärtszeiten (1–3 Berührungen pro Sekunde).","review_note":""}
+{"id":"training.2592d4be6d03","target_locale":"de-DE","translation":"Da die Apple Watch nicht in der Nähe ist, habe ich sie für den nächsten Start so konfiguriert, dass sie verfügbar ist.","review_note":""}
+{"id":"training.6fb962f9cfaa","target_locale":"de-DE","translation":"Ich konnte keine Aktionen auf der Apple Watch ausführen.","review_note":""}
+{"id":"training.bd776f26c0ae","target_locale":"de-DE","translation":"Ich konnte die Aufzeichnungen von der Apple Watch nicht auf dem iPhone speichern.","review_note":""}
+{"id":"training.e5c5dcd8769a","target_locale":"de-DE","translation":"Die Aufzeichnungen von der Apple Watch sind noch nicht bereit zum Speichern.","review_note":""}
+{"id":"training.315ad87fb453","target_locale":"de-DE","translation":"Ich konnte die Aufzeichnungen von der Apple Watch nicht lesen.","review_note":""}
+{"id":"training.89eea2d0eb23","target_locale":"de-DE","translation":"Sie können Menüs mit der Apple Watch synchronisieren","review_note":""}
+{"id":"training.47e7e8577809","target_locale":"de-DE","translation":"Der Inhalt für heute ist nicht mit Ihrem Apple Watch synchronisiert.","review_note":""}
+{"id":"training.3ae842776ce3","target_locale":"de-DE","translation":"Ich konnte keine Aktion an Ihr Apple Watch senden.","review_note":""}
+{"id":"training.63cb88f01990","target_locale":"de-DE","translation":"Ich konnte keine Daten zum Senden an Ihr Apple Watch erstellen.","review_note":""}
+{"id":"training.031d2e49c1b3","target_locale":"de-DE","translation":"Öffnen Sie die App und versuchen Sie es erneut.","review_note":""}
+{"id":"training.ffff1775646c","target_locale":"de-DE","translation":"Installieren Sie BodyMode auf Ihrem Apple Watch.","review_note":""}
+{"id":"training.e55f47a9e83d","target_locale":"de-DE","translation":"Die Verbindung zu Ihrem Apple Watch ist vorübergehend unterbrochen.","review_note":""}
+{"id":"training.ccbfd895aa76","target_locale":"de-DE","translation":"Die Verbindung zu Ihrem Apple Watch ist noch nicht eingerichtet.","review_note":""}
+{"id":"training.0ed25fb12cc9","target_locale":"de-DE","translation":"Verbindung zu Ihrem Apple Watch fehlgeschlagen: {{value1}}","review_note":""}
+{"id":"training.6c7e2e66ae07","target_locale":"de-DE","translation":"Ich bereite die Verbindung zu Ihrem Apple Watch vor. Bitte warten Sie einen Moment und versuchen Sie es erneut.","review_note":""}
+{"id":"training.9d376a20015f","target_locale":"de-DE","translation":"Der Status der Verbindung zu Ihrem Apple Watch kann nicht überprüft werden.","review_note":""}
+{"id":"training.937ac541fc5f","target_locale":"de-DE","translation":"Ich konnte keine Daten für das Menü für Ihr Apple Watch erstellen.","review_note":""}
+{"id":"training.54ba864f9b13","target_locale":"de-DE","translation":"Messung mit Apple Watch","review_note":""}
+{"id":"training.e4bf5e7357de","target_locale":"de-DE","translation":"Gesundheitsdaten gespeichert, App-Historie ist gespeichert","review_note":""}
+{"id":"training.7a9ab7fdc8a1","target_locale":"de-DE","translation":"Keine Gesundheitsdaten gespeichert","review_note":""}
+{"id":"training.93bdb35325e7","target_locale":"de-DE","translation":"Status der Gesundheitsdaten wird überprüft","review_note":""}
+{"id":"training.5f2538c97a2c","target_locale":"de-DE","translation":"Gesundheitsdaten nicht autorisiert, nur App-Historie gespeichert","review_note":""}
+{"id":"training.90dd341bcfdd","target_locale":"de-DE","translation":"LEVEL 1: Ganzkörpertraining","review_note":""}
+{"id":"training.21b3c423a0af","target_locale":"de-DE","translation":"TRX Low","review_note":""}
+{"id":"training.148b91e44188","target_locale":"de-DE","translation":"Training wird mit Ihrem Apple Watch aufgezeichnet.","review_note":""}
+{"id":"training.3e098891145f","target_locale":"de-DE","translation":"Möchten Sie Ihr Apple Watch Training abschließen?","review_note":""}
+{"id":"training.1815a117bafa","target_locale":"de-DE","translation":"Die Aufzeichnung mit dem Watch wurde beendet.","review_note":""}
+{"id":"training.f1fc156b78fb","target_locale":"de-DE","translation":"Sollen die Aufzeichnungen mit dem Watch gelöscht werden?","review_note":""}
+{"id":"training.71d42af1e263","target_locale":"de-DE","translation":"Analyse durch den Watch-Sensor","review_note":""}
+{"id":"training.e9af98302821","target_locale":"de-DE","translation":"Live-Überwachung","review_note":""}
+{"id":"training.22db347214b9","target_locale":"de-DE","translation":"{{value1}} / {{value2}} Mal","review_note":""}
+{"id":"training.9fcc2f46457a","target_locale":"de-DE","translation":"{{value1}} {{value2}} × {{value3}} Mal","review_note":""}
+{"id":"training.e99c824f7ff9","target_locale":"de-DE","translation":"{{value1}} {{value2}} → {{value3}} ({{value4}} Sätze)","review_note":""}
+{"id":"training.c16d54ec55fa","target_locale":"de-DE","translation":"Die Aufzeichnung von {{value1}} wurde in Ihrem iPhone-Verlauf gespeichert.","review_note":""}
+{"id":"training.2501e04e6ece","target_locale":"de-DE","translation":"Ich habe die Aufzeichnung von {{value1}} auf meinem Apple Watch im Verlauf gespeichert.","review_note":""}
+{"id":"training.dcd2a5e619a3","target_locale":"de-DE","translation":"{{value1}} erhöhen {{value2}} Sekunden / verringern {{value3}} Sekunden · {{value4}} Mal / Sekunde {{value5}}","review_note":""}
+{"id":"training.efc343f41739","target_locale":"de-DE","translation":"{{value1}}/{{value2}} Sätze, {{value3}}","review_note":""}
+{"id":"training.1c33183e078a","target_locale":"de-DE","translation":"{{value1}}/{{value2}} Sätze abgeschlossen","review_note":""}
+{"id":"training.98e103d659e2","target_locale":"de-DE","translation":"{{value1}}: {{value2}} Sätze, {{value3}} kg, {{value4}} Mal, Pause {{value5}} Sekunden","review_note":""}
+{"id":"training.4fbc27d5b179","target_locale":"de-DE","translation":"{{value1}}{{value2}} Mal","review_note":""}
+{"id":"training.4547089161d9","target_locale":"de-DE","translation":"Keine Aufzeichnung für {{value1}}","review_note":""}
+{"id":"training.a7f361c7373f","target_locale":"de-DE","translation":"Erstellen Sie einen Plan für {{value1}}","review_note":""}
+{"id":"training.3754e98d69a7","target_locale":"de-DE","translation":"Erstellen Sie einen Plan mit {{value1}}","review_note":""}
+{"id":"training.c5ce2388abe7","target_locale":"de-DE","translation":"Lassen Sie {{value1}} erstellen","review_note":""}
+{"id":"training.380f3b3f31f1","target_locale":"de-DE","translation":"[{{value1}}] anpassen","review_note":""}
+{"id":"training.6db8599d1a4e","target_locale":"de-DE","translation":"«{{value1}}» besprechen","review_note":""}
+{"id":"training.eb836dfced6d","target_locale":"de-DE","translation":"Beispielbild für «{{value1}}». Hauptbereiche sind «{{value2}}», «{{value3}}» und «{{value4}}» Übungen.","review_note":""}
+{"id":"training.859660768503","target_locale":"de-DE","translation":"Entwurf von «{{value1}}»","review_note":""}
+{"id":"training.7544024a8347","target_locale":"de-DE","translation":"Zielgewicht in «{{value1}}» wurde aktualisiert","review_note":""}
+{"id":"training.a55517b0b274","target_locale":"de-DE","translation":"Aktualisiere Zielgewicht in «{{value1}}».\n«{{value2}}»","review_note":""}
+{"id":"training.a6a1cc3a4bfc","target_locale":"de-DE","translation":"«{{value1}}» Sätze","review_note":""}
+{"id":"training.7c3e3fe6dbeb","target_locale":"de-DE","translation":"«{{value1}}» Sätze × {{value2}} Wiederholungen · {{value3}} kg · Pause {{value4}} Sekunden","review_note":""}
+{"id":"training.7ccbd585d5ee","target_locale":"de-DE","translation":"«{{value1}}» Sätze · {{value2}} Wiederholungen","review_note":""}
+{"id":"training.82f49e5f2763","target_locale":"de-DE","translation":"«{{value1}}» · {{value2}}","review_note":""}
+{"id":"training.f6878ce776cf","target_locale":"de-DE","translation":"«{{value1}}» · Plan {{value2}}/{{value3}} Sätze · Erfolgsgrad {{value4}}","review_note":""}
+{"id":"training.e41498e34979","target_locale":"de-DE","translation":"Plan erstellen für «{{value1}}»","review_note":""}
+{"id":"training.c3bdfc0865be","target_locale":"de-DE","translation":"«{{value1}}» Einträge","review_note":""}
+{"id":"training.81ce6b4b29d6","target_locale":"de-DE","translation":"«{{value1}}» Einträge wurden mit dem Apple Watch synchronisiert","review_note":""}
+{"id":"training.2c02454ec433","target_locale":"de-DE","translation":"«{{value1}}» Minuten","review_note":""}
+{"id":"training.2caf706359d6","target_locale":"de-DE","translation":"«{{value1}}» Minuten {{value2}} Sekunden","review_note":""}
+{"id":"training.b76f27bcd552","target_locale":"de-DE","translation":"«{{value1}}» Mal","review_note":""}
+{"id":"training.4d980bac73d4","target_locale":"de-DE","translation":"«{{value1}}» Mal/Sekunde","review_note":""}
+{"id":"training.bb1a78b0b78c","target_locale":"de-DE","translation":"«{{value1}}» Stunden {{value2}} Minuten","review_note":""}
+{"id":"training.ccf4abb42a0e","target_locale":"de-DE","translation":"«{{value1}}» ({{value2}})","review_note":""}
+{"id":"training.7a2a62b34f78","target_locale":"de-DE","translation":"{{value1}} Sekunden","review_note":""}
+{"id":"training.70d17961dda6","target_locale":"de-DE","translation":"{{value1}} Übungen","review_note":""}
+{"id":"training.41bc72cbabce","target_locale":"de-DE","translation":"{{value1}} Übungen ⋅ {{value2}} Sätze ⋅ {{value3}}","review_note":""}
+{"id":"training.396fd4f4d8fa","target_locale":"de-DE","translation":"{{value1}} Arten","review_note":""}
+{"id":"training.65d75c9e2044","target_locale":"de-DE","translation":"Mit diesem Menü beginnen","review_note":""}
+{"id":"training.65f350d032fe","target_locale":"de-DE","translation":"Dieses Menü speichern","review_note":""}
+{"id":"training.5a03b277c63d","target_locale":"de-DE","translation":"Möchten Sie diesen Verlauf löschen?","review_note":""}
+{"id":"training.8a729334a0cc","target_locale":"de-DE","translation":"Kein Training für heute","review_note":""}
+{"id":"training.cb7f0433f8fc","target_locale":"de-DE","translation":"Diese Übung wurde übersprungen","review_note":""}
+{"id":"training.5201136a12ab","target_locale":"de-DE","translation":"Die Nutzung der Apple Watch-Integration ist auf diesem Gerät nicht möglich","review_note":""}
+{"id":"training.d652983f98fd","target_locale":"de-DE","translation":"Wie soll dieser Plan geändert werden?","review_note":""}
+{"id":"training.6d940b85a589","target_locale":"de-DE","translation":"Möchten Sie diesen Plan löschen?","review_note":""}
+{"id":"training.c7fe2b510de0","target_locale":"de-DE","translation":"Alle","review_note":""}
+{"id":"training.1c72d399dbcb","target_locale":"de-DE","translation":"Alle Aufzeichnungen","review_note":""}
+{"id":"training.6e64eee654b8","target_locale":"de-DE","translation":"Nichts","review_note":""}
+{"id":"training.d93774e1de71","target_locale":"de-DE","translation":"Anleitung","review_note":""}
+{"id":"training.5472591c5dd4","target_locale":"de-DE","translation":"Nur App-Verlauf speichern","review_note":""}
+{"id":"training.39029011b26a","target_locale":"de-DE","translation":"Bankdrücken mit Kurzhantel","review_note":""}
+{"id":"training.97c1ea491f39","target_locale":"de-DE","translation":"Fehler","review_note":""}
+{"id":"training.98bbb4bec719","target_locale":"de-DE","translation":"Benutzerdefinierte Übung","review_note":""}
+{"id":"training.42254297b975","target_locale":"de-DE","translation":"Benutzerdefinierte Übungen hinzufügen","review_note":""}
+{"id":"training.76c1a8f001dd","target_locale":"de-DE","translation":"Abbrechen","review_note":""}
+{"id":"training.880aa82c0af0","target_locale":"de-DE","translation":"Schnelle Erstellung","review_note":""}
+{"id":"training.aa13a7c82f0f","target_locale":"de-DE","translation":"Kniebeugen mit Gewichten","review_note":""}
+{"id":"training.7d35335dea62","target_locale":"de-DE","translation":"Brücke mit Gewichten","review_note":""}
+{"id":"training.1792e5824127","target_locale":"de-DE","translation":"Gewichtheben","review_note":""}
+{"id":"training.2a31f578437f","target_locale":"de-DE","translation":"Gewichts-Zurückstrecken","review_note":""}
+{"id":"training.e696e3ae3665","target_locale":"de-DE","translation":"Gewichts-Kreuzheben","review_note":""}
+{"id":"training.0c7818c1fc9e","target_locale":"de-DE","translation":"Kopieren","review_note":""}
+{"id":"training.f0d764cbc433","target_locale":"de-DE","translation":"Wunsch für Trainer (optional)","review_note":""}
+{"id":"training.dc48071f113b","target_locale":"de-DE","translation":"Goblet Squats","review_note":""}
+{"id":"training.4b7886d221dd","target_locale":"de-DE","translation":"Seitliche Planke","review_note":""}
+{"id":"training.8eac181b85a5","target_locale":"de-DE","translation":"Seitliches Heben","review_note":""}
+{"id":"training.5722403a802d","target_locale":"de-DE","translation":"Untermenü","review_note":""}
+{"id":"training.7a44ac818519","target_locale":"de-DE","translation":"Schulterdrücken","review_note":""}
+{"id":"training.7ebc8b96d7ed","target_locale":"de-DE","translation":"Sitzende Wadenheben","review_note":""}
+{"id":"training.861902f328fe","target_locale":"de-DE","translation":"Sitzen-Rudern","review_note":""}
+{"id":"training.1f24d20a2866","target_locale":"de-DE","translation":"Fitnessstudio","review_note":""}
+{"id":"training.89e769e459b9","target_locale":"de-DE","translation":"Ankunft im Fitnessstudio","review_note":""}
+{"id":"training.17ca9a7a2745","target_locale":"de-DE","translation":"Besuch im Fitnessstudio","review_note":""}
+{"id":"training.be1f44fd2a48","target_locale":"de-DE","translation":"Besuch im Fitnessstudio nicht protokolliert.","review_note":""}
+{"id":"training.17135f0f1ac6","target_locale":"de-DE","translation":"Überspringen","review_note":""}
+{"id":"training.ce9fc6f5909f","target_locale":"de-DE","translation":"Kniebeugen","review_note":""}
+{"id":"training.d92fd6ec348c","target_locale":"de-DE","translation":"Stehende Wadenheben","review_note":""}
+{"id":"training.264702fd4fe2","target_locale":"de-DE","translation":"Squats auf der Maschine","review_note":""}
+{"id":"training.a667d8bcf664","target_locale":"de-DE","translation":"Satz","review_note":""}
+{"id":"training.9f638e07adf6","target_locale":"de-DE","translation":"Satz {{value1}} abgeschlossen","review_note":""}
+{"id":"training.0a9240ad4b7e","target_locale":"de-DE","translation":"Satz hinzufügen","review_note":""}
+{"id":"training.fca5e185e9e2","target_locale":"de-DE","translation":"Mehrere Sätze gleichzeitig festlegen","review_note":""}
+{"id":"training.45231573ad1d","target_locale":"de-DE","translation":"Satz-Historie","review_note":""}
+{"id":"training.7556f1c352e7","target_locale":"de-DE","translation":"Satzzeit {{value1}}","review_note":""}
+{"id":"training.fa6a2ef643a8","target_locale":"de-DE","translation":"Satz-Konfiguration","review_note":""}
+{"id":"training.ecbede3ec48a","target_locale":"de-DE","translation":"Die Ziele für den Satz werden beim Start des Trainings kopiert und in der Historie gespeichert.","review_note":""}
+{"id":"training.c1fe760f7267","target_locale":"de-DE","translation":"Titel","review_note":""}
+{"id":"training.c878919a9bf6","target_locale":"de-DE","translation":"Kurzhantel-Curls","review_note":""}
+{"id":"training.968fc7f1220b","target_locale":"de-DE","translation":"Kurzhantel-Bankdrücken","review_note":""}
+{"id":"training.0d799718504b","target_locale":"de-DE","translation":"Kurzhantel-Rumänisches Kreuzheben","review_note":""}
+{"id":"training.01aca7cb57f6","target_locale":"de-DE","translation":"Brustpresse","review_note":""}
+{"id":"training.ffb65eb71783","target_locale":"de-DE","translation":"Klimmzüge","review_note":""}
+{"id":"training.8f6540106bbd","target_locale":"de-DE","translation":"Tempo festlegen","review_note":""}
+{"id":"training.6ac8a3e464be","target_locale":"de-DE","translation":"Tempo-Plan: Erhöhen um {{value1}} Sekunden, Verringern um {{value2}} Sekunden, {{value3}} Mal/Sekunde","review_note":""}
+{"id":"training.0468fd02f0c1","target_locale":"de-DE","translation":"Dead Bug","review_note":""}
+{"id":"training.2f0138ac5e92","target_locale":"de-DE","translation":"Trizeps-Press","review_note":""}
+{"id":"training.d76c7025a2c6","target_locale":"de-DE","translation":"Training","review_note":""}
+{"id":"training.e7426ea8f8c7","target_locale":"de-DE","translation":"Kein Trainingsverlauf vorhanden","review_note":""}
+{"id":"training.3a77d7bcf1a1","target_locale":"de-DE","translation":"Training abschließen","review_note":""}
+{"id":"training.7e246c7e390c","target_locale":"de-DE","translation":"Keine Trainingshistorie","review_note":""}
+{"id":"training.4f1a5e5dfc4f","target_locale":"de-DE","translation":"Trainingsplan","review_note":""}
+{"id":"training.5dc1d6f9b7f5","target_locale":"de-DE","translation":"Hammer Curl","review_note":""}
+{"id":"training.da70de7280dc","target_locale":"de-DE","translation":"Hüftabduktion","review_note":""}
+{"id":"training.bc25e5938e41","target_locale":"de-DE","translation":"Hüftdrücken","review_note":""}
+{"id":"training.555c9f45a820","target_locale":"de-DE","translation":"Face Pull","review_note":""}
+{"id":"training.9b2888ed5a36","target_locale":"de-DE","translation":"Form und Hinweise","review_note":""}
+{"id":"training.91665e47ba14","target_locale":"de-DE","translation":"Form-Referenz","review_note":""}
+{"id":"training.82b0d9b842e2","target_locale":"de-DE","translation":"Freies Training","review_note":""}
+{"id":"training.2ef07d4e1418","target_locale":"de-DE","translation":"Liegestütze","review_note":""}
+{"id":"training.d59e261b21df","target_locale":"de-DE","translation":"Plank","review_note":""}
+{"id":"training.e2b5cf1b1f39","target_locale":"de-DE","translation":"Bankdrücken","review_note":""}
+{"id":"training.0c4f0b55fb09","target_locale":"de-DE","translation":"Kein passendes Apple Watch gefunden","review_note":""}
+{"id":"training.b43a38f668a7","target_locale":"de-DE","translation":"Volumen","review_note":""}
+{"id":"training.5920e2c80803","target_locale":"de-DE","translation":"Maschinen-Schulterdrücken","review_note":""}
+{"id":"training.68947abe5cb8","target_locale":"de-DE","translation":"Hauptübung","review_note":""}
+{"id":"training.ef172c6f0ed0","target_locale":"de-DE","translation":"Notizen","review_note":""}
+{"id":"training.2424db9d2280","target_locale":"de-DE","translation":"Benutzerdefinierte Übungen hinzufügen","review_note":""}
+{"id":"training.350f04ad1646","target_locale":"de-DE","translation":"Rudern mit Langhantel","review_note":""}
+{"id":"training.564c4b7935f7","target_locale":"de-DE","translation":"Ausfallschritte","review_note":""}
+{"id":"training.dfd6b19dd66a","target_locale":"de-DE","translation":"Rumänisches Kreuzheben","review_note":""}
+{"id":"training.c47e9693a5f3","target_locale":"de-DE","translation":"Beinbeuger","review_note":""}
+{"id":"training.f0fcaf87273a","target_locale":"de-DE","translation":"Beinpresse","review_note":""}
+{"id":"training.37679aa5c82b","target_locale":"de-DE","translation":"Einhand-Kurzhantelrudern","review_note":""}
+{"id":"training.3a175af6d72d","target_locale":"de-DE","translation":"Training","review_note":""}
+{"id":"training.f51fc1a0d598","target_locale":"de-DE","translation":"Möchten Sie das Training beenden?","review_note":""}
+{"id":"training.02fd70fbf77e","target_locale":"de-DE","translation":"Möchten Sie das Training abbrechen?","review_note":""}
+{"id":"training.a2333d5b2d78","target_locale":"de-DE","translation":"·","review_note":""}
+{"id":"training.b29f639d55b9","target_locale":"de-DE","translation":"· Korrigiert","review_note":""}
+{"id":"training.3c0d51bbe730","target_locale":"de-DE","translation":"Hochheben","review_note":""}
+{"id":"training.46bd062fc9c7","target_locale":"de-DE","translation":"Hochheben {{value1}} Sekunden / Absenken {{value2}} Sekunden / {{value3}} Mal pro Sekunde","review_note":""}
+{"id":"training.5299c5bbedaa","target_locale":"de-DE","translation":"Hochheben {{value1}} Sekunden / Absenken {{value2}} Sekunden / {{value3}} Mal pro Sekunde","review_note":""}
+{"id":"training.3bf410eec240","target_locale":"de-DE","translation":"Hochheben (Sekunden)","review_note":""}
+{"id":"training.d3dc45699b72","target_locale":"de-DE","translation":"Mit Auf- und Abwärtsbewegung","review_note":""}
+{"id":"training.522aa99f1470","target_locale":"de-DE","translation":"Oberkörper","review_note":""}
+{"id":"training.4befe1f9a87c","target_locale":"de-DE","translation":"Herunterfahren","review_note":""}
+{"id":"training.6350c70cf355","target_locale":"de-DE","translation":"Herunterfahren (Sekunden)","review_note":""}
+{"id":"training.2611654f84a2","target_locale":"de-DE","translation":"Unterkörper","review_note":""}
+{"id":"training.fff037a8485f","target_locale":"de-DE","translation":"Hauptmuskelgruppen","review_note":""}
+{"id":"training.0b8c05103896","target_locale":"de-DE","translation":"Verfügbare Geräte für diese Übung","review_note":""}
+{"id":"training.fb1b356d17a5","target_locale":"de-DE","translation":"Heute's Training wurde auf das Apple Watch synchronisiert","review_note":""}
+{"id":"training.ee48ec2b9299","target_locale":"de-DE","translation":"Heute's Training wird auf das Apple Watch synchronisiert","review_note":""}
+{"id":"training.a0b0ff58b87b","target_locale":"de-DE","translation":"Pause {{value1}}","review_note":""}
+{"id":"training.d7d8f0d93063","target_locale":"de-DE","translation":"Foto des Körpertyps","review_note":""}
+{"id":"training.82865627f395","target_locale":"de-DE","translation":"Kein Foto des Körpertyps vorhanden","review_note":""}
+{"id":"training.a1576054e4f1","target_locale":"de-DE","translation":"Beispiel: Eine Übung weniger, um die Pause zu verlängern","review_note":""}
+{"id":"training.9ec38ed0596c","target_locale":"de-DE","translation":"Beispiel: Brusttraining","review_note":""}
+{"id":"training.5ed33898a3d7","target_locale":"de-DE","translation":"Beispiel: Leichte Beine, Fokus auf Brust","review_note":""}
+{"id":"training.0fcb170ec7cf","target_locale":"de-DE","translation":"Speichern","review_note":""}
+{"id":"training.6689025e44d0","target_locale":"de-DE","translation":"Nicht gespeichert","review_note":""}
+{"id":"training.c6f3f3a298ad","target_locale":"de-DE","translation":"Übungen aus der Liste","review_note":""}
+{"id":"training.e2374146acf3","target_locale":"de-DE","translation":"Stoppen","review_note":""}
+{"id":"training.fbf5f35e5109","target_locale":"de-DE","translation":"Eingabe abgeschlossen","review_note":""}
+{"id":"training.2f789b4bb6e5","target_locale":"de-DE","translation":"Gesamtfortschritt","review_note":""}
+{"id":"training.53aa1d520961","target_locale":"de-DE","translation":"Gesamt","review_note":""}
+{"id":"training.de776f6a7f2c","target_locale":"de-DE","translation":"Gesamt / Aufrechterhalten","review_note":""}
+{"id":"training.0b609d7ebdd0","target_locale":"de-DE","translation":"Gesamt A","review_note":""}
+{"id":"training.23ab9984271c","target_locale":"de-DE","translation":"Gesamt B","review_note":""}
+{"id":"training.f74271660465","target_locale":"de-DE","translation":"Gesamt C","review_note":""}
+{"id":"training.eb204e77e96f","target_locale":"de-DE","translation":"Leichte Gesamtübung","review_note":""}
+{"id":"training.7cbb717aa7f1","target_locale":"de-DE","translation":"Foto","review_note":""}
+{"id":"training.9fc01e5510fb","target_locale":"de-DE","translation":"Kein Foto","review_note":""}
+{"id":"training.172f4e4cd7d1","target_locale":"de-DE","translation":"Analyse","review_note":""}
+{"id":"training.1a7841dadb88","target_locale":"de-DE","translation":"Keine Analyse-Daten verfügbar","review_note":""}
+{"id":"training.5cfd9de649b5","target_locale":"de-DE","translation":"Für Anfänger: Start mit Ganzkörpertraining","review_note":""}
+{"id":"training.4b13f017ef21","target_locale":"de-DE","translation":"Die ausgewählten Übungen sind nicht im Plan enthalten. Bitte überprüfen und neu erstellen Sie den Plan.","review_note":""}
+{"id":"training.2ea97ad7fcee","target_locale":"de-DE","translation":"Verfügbare Geräte","review_note":""}
+{"id":"training.ac806fcfe196","target_locale":"de-DE","translation":"Löschen","review_note":""}
+{"id":"training.0d59a64e0167","target_locale":"de-DE","translation":"Vormonat","review_note":""}
+{"id":"training.eef6e758977b","target_locale":"de-DE","translation":"Letzte {{value1}} × {{value2}} Wiederholungen","review_note":""}
+{"id":"training.a9ba22011245","target_locale":"de-DE","translation":"Gewicht hinzufügen. Hilfsgewichte können mit negativen Werten erfasst werden.","review_note":""}
+{"id":"training.84c7d164b06b","target_locale":"de-DE","translation":"Tempo der Bewegung","review_note":""}
+{"id":"training.3d76a425a0b1","target_locale":"de-DE","translation":"Geschätzte Gesamtanzahl: {{value1}} Wiederholungen","review_note":""}
+{"id":"training.e1472f598358","target_locale":"de-DE","translation":"Reflektieren","review_note":""}
+{"id":"training.4ec785b46677","target_locale":"de-DE","translation":"Sie können benutzerdefinierte Übungen über den Button \"Hinzufügen\" oben rechts hinzufügen.","review_note":""}
+{"id":"training.ed9a0cee2df7","target_locale":"de-DE","translation":"Gesamt: {{value1}} / P {{value2}} F {{value3}} C {{value4}}","review_note":""}
+{"id":"training.9c2c951fe4e9","target_locale":"de-DE","translation":"Ausrüstung","review_note":""}
+{"id":"training.8e33a5a0f037","target_locale":"de-DE","translation":"Differenz in der Anzahl","review_note":""}
+{"id":"training.bb83fd66413b","target_locale":"de-DE","translation":"Erde","review_note":""}
+{"id":"training.ac1592e85d63","target_locale":"de-DE","translation":"Grundlage","review_note":""}
+{"id":"training.9f51331cdcae","target_locale":"de-DE","translation":"Stabilität: {{value1}}%","review_note":""}
+{"id":"training.4dce1b477edb","target_locale":"de-DE","translation":"Fertig","review_note":""}
+{"id":"training.e3290760a2fd","target_locale":"de-DE","translation":"Abgeschlossene Aufzeichnungen können Sie im Verlauf einsehen.","review_note":""}
+{"id":"training.e133f5c0915f","target_locale":"de-DE","translation":"Nicht abgeschlossene Aufzeichnungen werden nicht gespeichert.","review_note":""}
+{"id":"training.b99f564095bb","target_locale":"de-DE","translation":"Abschließen und in den Verlauf speichern","review_note":""}
+{"id":"training.45a16902aa22","target_locale":"de-DE","translation":"Abschließen und zum Verlauf hinzufügen","review_note":""}
+{"id":"training.1784283f2316","target_locale":"de-DE","translation":"In Bearbeitung","review_note":""}
+{"id":"training.6e8b76e77952","target_locale":"de-DE","translation":"Anzahl der Ausführungen","review_note":""}
+{"id":"training.1150f3eb9a23","target_locale":"de-DE","translation":"Gemessener Takt: Erhöhen um {{value1}} Sekunden / Verringern um {{value2}} Sekunden","review_note":""}
+{"id":"training.cfbf8016ae16","target_locale":"de-DE","translation":"Erreichte Leistung: {{value1}} × {{value2}} Mal","review_note":""}
+{"id":"training.cda9a6386691","target_locale":"de-DE","translation":"Leistung bearbeiten","review_note":""}
+{"id":"training.556ff4c055f1","target_locale":"de-DE","translation":"Zielbereich","review_note":""}
+{"id":"training.6157f8cd2251","target_locale":"de-DE","translation":"Verlauf","review_note":""}
+{"id":"training.3294eead40cd","target_locale":"de-DE","translation":"Kein Verlauf","review_note":""}
+{"id":"training.2d6bc7bc380f","target_locale":"de-DE","translation":"Keine bisherigen Aufzeichnungen vorhanden.","review_note":""}
+{"id":"training.5e6ee388a66f","target_locale":"de-DE","translation":"Aufzeichnung löschen","review_note":""}
+{"id":"training.029dbfd15c77","target_locale":"de-DE","translation":"Aufzeichnung bearbeiten","review_note":""}
+{"id":"training.818fc41a9095","target_locale":"de-DE","translation":"Aufzeichnung bearbeiten","review_note":""}
+{"id":"training.dfb4aa016e77","target_locale":"de-DE","translation":"Detaillierte Aufzeichnung","review_note":""}
+{"id":"training.116d7c49a7ee","target_locale":"de-DE","translation":"Durchschnittlicher Herzfrequenzwert","review_note":""}
+{"id":"training.461619512206","target_locale":"de-DE","translation":"Zug/Tiefe","review_note":""}
+{"id":"training.5c4f3b18a99c","target_locale":"de-DE","translation":"Warten","review_note":""}
+{"id":"training.1b75451060ca","target_locale":"de-DE","translation":"Herzfrequenz","review_note":""}
+{"id":"training.827de2f8b16f","target_locale":"de-DE","translation":"Sie können Übungen als benutzerdefinierte Übungen hinzufügen.","review_note":""}
+{"id":"training.a0c4d068d3f0","target_locale":"de-DE","translation":"Methode","review_note":""}
+{"id":"training.705d0af3ec6e","target_locale":"de-DE","translation":"Drücken/Oberkörper","review_note":""}
+{"id":"training.4dc9770fdb02","target_locale":"de-DE","translation":"Verantwortlicher Trainer","review_note":""}
+{"id":"training.2dffe9ee162c","target_locale":"de-DE","translation":"Nicht angegeben","review_note":""}
+{"id":"training.6532391678cf","target_locale":"de-DE","translation":"Schwingungsgeschwindigkeit","review_note":""}
+{"id":"training.f57690abba57","target_locale":"de-DE","translation":"Geschätzter 1RM","review_note":""}
+{"id":"training.86351613651a","target_locale":"de-DE","translation":"Geschätzte {{value1}} Wiederholungen","review_note":""}
+{"id":"training.95a2d2eab80c","target_locale":"de-DE","translation":"Begründung kurz zusammenfassen","review_note":""}

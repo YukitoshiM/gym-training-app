@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"zh-Hans","translation":"将重置为{{value1}}。您仍然可以手动记录。","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"zh-Hans","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"zh-Hans","translation":"请输入大于0的数值。","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"zh-Hans","translation":"1. 每周保持3次运动\n2. 记录蛋白质摄入目标\n3. 月末比较身体照片","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"zh-Hans","translation":"请稍等1分钟后再尝试。","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"zh-Hans","translation":"1杯","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"zh-Hans","translation":"已经记录了3次以上的运动，没有明显的停滞点。","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"zh-Hans","translation":"训练次数较多（48小时）","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"zh-Hans","translation":"AI 全身平衡","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"zh-Hans","translation":"由 AI 记录","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"zh-Hans","translation":"目前，人工智能的使用量正在快速增长。","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"zh-Hans","translation":"您的 AI 认证信息可能已失效或过期。","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"zh-Hans","translation":"人工智能错误","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"zh-Hans","translation":"人工智能教练","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"zh-Hans","translation":"AI服务器地址无效。","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"zh-Hans","translation":"AI服务器返回错误：{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"zh-Hans","translation":"无法找到用于 AI 服务器所需的 API。","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"zh-Hans","translation":"无法连接到 AI 服务器，请稍后再试。","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"zh-Hans","translation":"AI服务器的JSON格式与应用程序的预期不符。","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"zh-Hans","translation":"无法读取 AI 服务器的响应。","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"zh-Hans","translation":"在 AI 服务器端发生错误：{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"zh-Hans","translation":"确认 AI 服务器连接","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"zh-Hans","translation":"人工智能教练","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"zh-Hans","translation":"是否要删除与 AI 训练师的对话？","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"zh-Hans","translation":"无法使用 AI 模型，图像解析失败。","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"zh-Hans","translation":"正在准备 AI 模型","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"zh-Hans","translation":"进行 AI 分析","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"zh-Hans","translation":"有足够的 AI 利用额度","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"zh-Hans","translation":"查看 AI 利用额度","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"zh-Hans","translation":"AI 利用功能已关闭。","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"zh-Hans","translation":"请参考 AI 建议","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"zh-Hans","translation":"AI 连接已启用","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"zh-Hans","translation":"无法安全保存 AI 连接信息。","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"zh-Hans","translation":"AI 功能","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"zh-Hans","translation":"AI 功能已在设置中关闭","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"zh-Hans","translation":"AI 功能已在设置中关闭。此照片集可以继续保存。","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"zh-Hans","translation":"AI功能已关闭，可以通过手动输入保存。","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"zh-Hans","translation":"AI发送历史记录","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"zh-Hans","translation":"未设置API密钥。","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"zh-Hans","translation":"请检查API服务器的版本：详细信息：{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"zh-Hans","translation":"API服务器正在响应，但无法使用所需的模型。","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"zh-Hans","translation":"API服务器正在响应，但无法使用烹饪和报告辅助模型。","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"zh-Hans","translation":"与Apple Health同步","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"zh-Hans","translation":"显示了在Apple Health中保存的最新跑步路线。","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"zh-Hans","translation":"连接到Apple Health","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"zh-Hans","translation":"适度地佩戴Apple Watch，并在睡眠时佩戴，有助于获得更全面的恢复指标。对于没有值的项目，不会进行推测补充。","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"zh-Hans","translation":"请检查Base URL和API服务器的版本。","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"zh-Hans","translation":"HRV低于14天的平均值","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"zh-Hans","translation":"没有持续的HRV数据","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"zh-Hans","translation":"HRV高于平均值","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"zh-Hans","translation":"HRV在正常范围内","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"zh-Hans","translation":"与平均值的HRV差值为 {{value1}}%（基于个人基准）","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"zh-Hans","translation":"只能在localhost、局域网和Tailscale中使用HTTP。对于外部服务器，请使用HTTPS。","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"zh-Hans","translation":"健康消耗能量尚未获取。只有饮食记录已保存。","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"zh-Hans","translation":"更新健康数据","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"zh-Hans","translation":"请重新选择JPEG或PNG图片。","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"zh-Hans","translation":"记录KPI","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"zh-Hans","translation":"由Noise应用等记录的最新值。未获取时，不设为0。","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"zh-Hans","translation":"从PFC自动计算卡路里","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"zh-Hans","translation":"达成PFC","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"zh-Hans","translation":"将RPE降低一级","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"zh-Hans","translation":"请以https://开头。在本地开发中，可以使用localhost、局域网IP和Tailscale名称的HTTP。","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"zh-Hans","translation":"请以https://开头。仅在本地开发时，还可以使用http://。","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"zh-Hans","translation":"带有手表传感器","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"zh-Hans","translation":"每30秒的心率（bpm）","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"zh-Hans","translation":"达成卡路里和PFC","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"zh-Hans","translation":"达成卡路里","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"zh-Hans","translation":"每分钟的重量（kg）","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"zh-Hans","translation":"{\"id\":\"{{value1}}\",\"category\":\"{{value2}}\",\"title\":\"{{value3}}\",\"target\":0,\"rationale\":\"已确认记录和目标\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"zh-Hans","translation":"{\"keep_existing\":true,\"readiness_level\":\"normal\",\"summary\":\"继续按照今天的建议进行。\",\"change_reason\":\"\",\"actions\":[{{value1}}]}","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"zh-Hans","translation":"{{value1}} / {{value2}}个","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"zh-Hans","translation":"{{value1}} / {{value2}}小时","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"zh-Hans","translation":"{{value1}} / {{value2}}步","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"zh-Hans","translation":"{{value1}} / {{value2}}餐","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"zh-Hans","translation":"{{value1}} {{value2}}张（{{value3}}）：{{value4}}","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"zh-Hans","translation":"可以使用{{value1}}和辅助模型生成每周总结。","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"zh-Hans","translation":"{{value1}}/{{value2}}次","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"zh-Hans","translation":"{{value1}}: {{value2}} 达成率 {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"zh-Hans","translation":"{{value1}}可以查看整体设置","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"zh-Hans","translation":"{{value1}}正在思考答案","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"zh-Hans","translation":"{{value1}}查看了食物和PFC","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"zh-Hans","translation":"{{value1}}从多个方向进行确认","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"zh-Hans","translation":"{{value1}}记得的事情","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"zh-Hans","translation":"与{{value1}}咨询并修改","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"zh-Hans","translation":"向{{value1}}咨询","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"zh-Hans","translation":"{{value1}}的报告","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"zh-Hans","translation":"{{value1}}的报告目前还没有","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"zh-Hans","translation":"{{value1}} 草稿","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"zh-Hans","translation":"{{value1}} 草稿・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"zh-Hans","translation":"{{value1}} 分析","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"zh-Hans","translation":"{{value1}} 分析结果","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"zh-Hans","translation":"{{value1}} 参考信息","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"zh-Hans","translation":"{{value1}} 回顾","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"zh-Hans","translation":"在保存 {{value1}} 后，仅显示已批准的内容。","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"zh-Hans","translation":"{{value1}} 的月度回顾","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"zh-Hans","translation":"{{value1}} 的记录","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"zh-Hans","translation":"从库中选择 {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"zh-Hans","translation":"删除 {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"zh-Hans","translation":"拍摄 {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"zh-Hans","translation":"编辑 {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"zh-Hans","translation":"记录 {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"zh-Hans","translation":"轻松记录 {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"zh-Hans","translation":"{{value1}}套产品的平均稳定性为 {{value2}}%。","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"zh-Hans","translation":"{{value1}}·","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"zh-Hans","translation":"{{value1}}·{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"zh-Hans","translation":"{{value1}}·聊天","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"zh-Hans","translation":"{{value1}}·每月回顾方案","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"zh-Hans","translation":"{{value1}}·修改 {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"zh-Hans","translation":"{{value1}}·每周报告","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"zh-Hans","translation":"{{value1}}次・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"zh-Hans","translation":"请再次尝试{{value1}}次。您仍然可以使用手动记录功能。","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"zh-Hans","translation":"{{value1}}请重新尝试。如果继续，请确认 AI 服务器是否正常运行。","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"zh-Hans","translation":"删除 {{value1}} 照片","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"zh-Hans","translation":"{{value1}} 分","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"zh-Hans","translation":"{{value1}} 次","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"zh-Hans","translation":"{{value1}} 次・平均达成率 {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"zh-Hans","translation":"将 {{value1}} 方向的照片进行整合分析。不确定体脂肪率等数值。","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"zh-Hans","translation":"{{value1}}张","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"zh-Hans","translation":"{{value1}}张拍摄套装","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"zh-Hans","translation":"{{value1}}步","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"zh-Hans","translation":"“-”表示未测量，从总和中排除，“Tr”表示微量，以0估算。","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"zh-Hans","translation":"还有{{value1}}克","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"zh-Hans","translation":"一起看看您的记录，共同思考。","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"zh-Hans","translation":"感觉很不错","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"zh-Hans","translation":"感觉很疲劳","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"zh-Hans","translation":"可以继续分析。如果添加横向或背面，也可以从不同方向进行补充检查。","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"zh-Hans","translation":"分析这个套装","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"zh-Hans","translation":"利用这些信息给出建议。","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"zh-Hans","translation":"全部删除","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"zh-Hans","translation":"蛋白质","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"zh-Hans","translation":"将已完成的事反映到明天的建议中。","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"zh-Hans","translation":"还有{{value1}}种","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"zh-Hans","translation":"尚无学习数据。","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"zh-Hans","translation":"尚无记录。","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"zh-Hans","translation":"重新估算","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"zh-Hans","translation":"腰围","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"zh-Hans","translation":"使用相机读取","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"zh-Hans","translation":"无法使用相机","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"zh-Hans","translation":"无法使用相机读取","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"zh-Hans","translation":"卡路里","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"zh-Hans","translation":"正在估算卡路里","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"zh-Hans","translation":"取消","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"zh-Hans","translation":"身体状况","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"zh-Hans","translation":"请检查服务器URL、API密钥和API服务器的状态。","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"zh-Hans","translation":"健身房拜访","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"zh-Hans","translation":"站姿","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"zh-Hans","translation":"设置","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"zh-Hans","translation":"正在分析设置","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"zh-Hans","translation":"设置质量","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"zh-Hans","translation":"设置质量的详细信息","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"zh-Hans","translation":"蛋白质 {{value1}}克","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"zh-Hans","translation":"卧推","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"zh-Hans","translation":"这是一个测试估算值。","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"zh-Hans","translation":"节奏","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"zh-Hans","translation":"当数据收集完成后，您可以查看睡眠、恢复和运动量。","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"zh-Hans","translation":"数据质量","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"zh-Hans","translation":"咨询教练","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"zh-Hans","translation":"训练","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"zh-Hans","translation":"训练分析","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"zh-Hans","translation":"训练历史","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"zh-Hans","translation":"训练计划","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"zh-Hans","translation":"训练强度","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"zh-Hans","translation":"请检查网络和AI服务器的状态。AI处理可能需要最多240秒。","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"zh-Hans","translation":"在确认网络状态和服务器URL后，再尝试。","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"zh-Hans","translation":"请确认网络状态和服务器URL。","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"zh-Hans","translation":"条形码","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"zh-Hans","translation":"重量","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"zh-Hans","translation":"重量是完成一组的重量 × 次数。当每周的训练项目差异较大时，不要简单地进行比较。","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"zh-Hans","translation":"动作","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"zh-Hans","translation":"消息","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"zh-Hans","translation":"菜单","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"zh-Hans","translation":"开始制作菜单","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"zh-Hans","translation":"备注","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"zh-Hans","translation":"库","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"zh-Hans","translation":"拉力","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"zh-Hans","translation":"标签的基准量","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"zh-Hans","translation":"从列表中估算卡路里","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"zh-Hans","translation":"请尝试后再操作。手动记录仍然可用。","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"zh-Hans","translation":"如果找到带有路线的户外跑步，则会显示距离、速度和海拔差异。","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"zh-Hans","translation":"腿举","review_note":""}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"zh-Hans","translation":"・","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"zh-Hans","translation":"・{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"zh-Hans","translation":"爬楼数","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"zh-Hans","translation":"中途醒来","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"zh-Hans","translation":"主要KPI","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"zh-Hans","translation":"主观疲劳较高","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"zh-Hans","translation":"主观疲劳较低","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"zh-Hans","translation":"主观疲劳在正常范围内","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"zh-Hans","translation":"请仅选择用于后续建议的内容。","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"zh-Hans","translation":"为了帮助您进行未来的重量建议","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"zh-Hans","translation":"今天已经确定了3个活动","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"zh-Hans","translation":"今天的活动","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"zh-Hans","translation":"今日的目标","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"zh-Hans","translation":"今日的数据","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"zh-Hans","translation":"今日的主观疲劳程度","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"zh-Hans","translation":"今日的建议","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"zh-Hans","translation":"编辑今天的训练计划","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"zh-Hans","translation":"添加今天的训练计划","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"zh-Hans","translation":"今天活动量较高","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"zh-Hans","translation":"反映今天的活动量","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"zh-Hans","translation":"今天的准备情况","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"zh-Hans","translation":"今天的行动","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"zh-Hans","translation":"确认今天的进展","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"zh-Hans","translation":"今天的饮食","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"zh-Hans","translation":"今天的饮食选项","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"zh-Hans","translation":"今天的饮食目标","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"zh-Hans","translation":"今天优先恢复","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"zh-Hans","translation":"今天减少训练强度，优先进行适度活动。","review_note":""}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"zh-Hans","translation":"今天降低负重。","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"zh-Hans","translation":"今天可以选择减少重量和组数，以优先恢复。","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"zh-Hans","translation":"确认今天要做的事情。","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"zh-Hans","translation":"本周","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"zh-Hans","translation":"本周 {{value1}}次・目前 {{value2}}米","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"zh-Hans","translation":"本周 {{value1}}次・累计 {{value2}}次","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"zh-Hans","translation":"本周总结","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"zh-Hans","translation":"任意","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"zh-Hans","translation":"对话","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"zh-Hans","translation":"删除对话","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"zh-Hans","translation":"对话记录不会被删除。","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"zh-Hans","translation":"这是一个低信赖度的参考值，请勿保存到测量记录或图表。","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"zh-Hans","translation":"体型照片","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"zh-Hans","translation":"体型照片AI","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"zh-Hans","translation":"体型照片的AI共享已关闭。","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"zh-Hans","translation":"还没有体型照片","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"zh-Hans","translation":"拍摄体型照片","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"zh-Hans","translation":"体型照片分析","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"zh-Hans","translation":"体型照片检查","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"zh-Hans","translation":"如果身体不适或有疼痛，请优先考虑自己的感觉。","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"zh-Hans","translation":"根据身体状况，按照计划进行活动。","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"zh-Hans","translation":"体重","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"zh-Hans","translation":"每日波动的数据（如体重和腰围），应以趋势图的形式查看。","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"zh-Hans","translation":"记录体重","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"zh-Hans","translation":"推荐使用的器械","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"zh-Hans","translation":"例如：白米饭 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"zh-Hans","translation":"保存","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"zh-Hans","translation":"保存后的月度回顾","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"zh-Hans","translation":"保存的记忆","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"zh-Hans","translation":"没有保存的记忆","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"zh-Hans","translation":"保存的记忆不会被删除。","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"zh-Hans","translation":"是否要删除所有保存的记忆？","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"zh-Hans","translation":"不保存","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"zh-Hans","translation":"无法保存","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"zh-Hans","translation":"信赖度","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"zh-Hans","translation":"值","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"zh-Hans","translation":"添加值后，会在此处显示趋势。","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"zh-Hans","translation":"停滞检查","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"zh-Hans","translation":"如果怀疑停滞，可以尝试降低重量并达到目标次数，或者延长休息时间15-30秒进行比较。","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"zh-Hans","translation":"停滞因素材料","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"zh-Hans","translation":"精力充沛","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"zh-Hans","translation":"输入数据","review_note":""}

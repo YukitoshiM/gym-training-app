@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"hi","translation":"AI प्रशिक्षक से प्रतिक्रिया प्राप्त हुई।","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"hi","translation":"AI प्रशिक्षक को प्रतिक्रिया भेजने में असमर्थ।","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"hi","translation":"यह Apple Watch से सिंक किया गया है।","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"hi","translation":"BodyMode खोलें और प्रतिक्रिया की जांच करें।","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"hi","translation":"{{value1}} / {{value2}} लक्ष्य हासिल। बाकी का काम, अपनी क्षमता के अनुसार ही करें।","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"hi","translation":"{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}} बार","review_note":""}
+{"id":"runtime_messages.0d127efd525d","target_locale":"hi","translation":"{{value1}} को दोबारा न करें, यह आपकी पसंद है।","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"hi","translation":"{{value1}} मिनट","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"hi","translation":"{{value1}} कदम","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"hi","translation":"{{value1}} भोजन","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"hi","translation":"इस डिवाइस पर आस-पास का पता लगाने की सुविधा उपलब्ध नहीं है।","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"hi","translation":"आज इस गतिविधि को करने से मना कर दिया है।","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"hi","translation":"एक काम करके ही काफी है।","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"hi","translation":"यह कार्य क्यों करना चाहते हैं?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"hi","translation":"सहायक गतिविधियाँ","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"hi","translation":"ऐप खोलकर फिर से प्रयास करें।","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"hi","translation":"जिम का स्थान हटा दिया गया है।","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"hi","translation":"जिम पर पहुंचने की जानकारी दर्ज की गई है।","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"hi","translation":"जिम के आसपास आने का पता लगाया जा रहा है।","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"hi","translation":"जिम जाने की स्वचालित पहचान बंद है।","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"hi","translation":"जिम से बाहर निकलने की जानकारी दर्ज की गई है।","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"hi","translation":"डम्बल बेंच प्रेस","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"hi","translation":"अंधेरा","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"hi","translation":"चिन-अप","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"hi","translation":"डिप","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"hi","translation":"डिप्स","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"hi","translation":"हम प्रशिक्षण जारी रख रहे हैं। रिकवरी रिकॉर्ड को बढ़ाने से अगले सप्ताह के समायोजन में सुधार होगा।","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"hi","translation":"ब्लैक शैंपेन","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"hi","translation":"मेरा जिम","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"hi","translation":"उपयोगकर्ता ने आज की गतिविधियों को बदल दिया है।","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"hi","translation":"उपयोगकर्ता द्वारा आज के सुझावों को फिर से बनाया गया है।","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"hi","translation":"लाइट","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"hi","translation":"रॉयल बार्ट","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"hi","translation":"ऊपर","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"hi","translation":"नीचे","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"hi","translation":"आज एक बार","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"hi","translation":"हमने आज के 3 लक्ष्यों को पूरा किया है। हम इसे कल के सुझाव में शामिल करेंगे।","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"hi","translation":"आज का मेनू","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"hi","translation":"आज के सुझावों को अपडेट किया गया है","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"hi","translation":"स्थान जानकारी सेट नहीं की गई है","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"hi","translation":"स्थान जानकारी अनुमति नहीं है। आप मैन्युअल रूप से चेक-इन कर सकते हैं","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"hi","translation":"जब स्थान सटीकता स्थिर हो, तो फिर से प्रयास करें","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"hi","translation":"पहले अपने जिम को वर्तमान स्थान के रूप में पंजीकृत करें","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"hi","translation":"शुरुआती - पूरे शरीर का व्यायाम","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"hi","translation":"पिछली AI ट्रेनर भेजने की कोशिश फिर से नहीं हो पाई।","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"hi","translation":"कृपया उसी सामग्री को दोबारा भेजें।","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"hi","translation":"पुनर्प्राप्ति को प्राथमिकता दें","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"hi","translation":"यदि आप बदलाव नहीं करना चाहते हैं, तो खाली मान दर्ज करें","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"hi","translation":"चढ़ना","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"hi","translation":"नए पुनर्प्राप्ति डेटा को प्रतिबिंबित करने और सुरक्षित दिशा में आज के सुझावों को समायोजित किया गया है।","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"hi","translation":"नए रिकॉर्ड को प्रतिबिंबित किया गया है।","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"hi","translation":"मौजूदा आईडी","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"hi","translation":"मौजूदा या आवश्यक श्रेणी","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"hi","translation":"मैंने वर्तमान स्थान को अपने जिम के रूप में पंजीकृत किया है","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"hi","translation":"वर्तमान स्थान प्राप्त नहीं हो सका","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"hi","translation":"वर्तमान स्थान की जांच कर रहा हूँ","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"hi","translation":"पिछले 7 दिनों के व्यायाम और भोजन के रिकॉर्ड की समीक्षा की गई।","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"hi","translation":"नींद का रिकॉर्ड अपर्याप्त है","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"hi","translation":"3 दिनों तक नींद का रिकॉर्ड रखें और सप्ताह में 3 बार व्यायाम करते रहें।","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"hi","translation":"3 दिनों तक नींद का रिकॉर्ड करें","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"hi","translation":"बुद्धिमान, उत्कृष्ट और आधुनिक","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"hi","translation":"संक्षिप्त समग्र टिप्पणी","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"hi","translation":"संक्षिप्त क्रिया","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"hi","translation":"छाती का","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"hi","translation":"स्वचालित","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"hi","translation":"\"सेटिंग ऐप\" में लोकेशन की अनुमति देने पर पंजीकरण संभव है।","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"hi","translation":"मैंने 3 \"शारीरिक KPI\", 8 \"भोजन\", और 3 \"वजन प्रशिक्षण\" की जानकारी देखी है।","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"hi","translation":"प्रति सप्ताह एक बार","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"hi","translation":"मैंने प्रति सप्ताह 3 बार का प्रशिक्षण पूरा किया है।","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"hi","translation":"प्रति सप्ताह 3 बार व्यायाम जारी रखें।","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"hi","translation":"गहन, शानदार, और प्रेरणादायक","review_note":""}

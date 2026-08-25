@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"fr-CA","translation":"Sélectionnez l'option la plus proche","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b02b7cafa79f","target_locale":"fr-CA","translation":"Une fois vos objectifs définis, vous n'avez besoin de faire seulement 3 choses chaque jour.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.49590b9fbda3","target_locale":"fr-CA","translation":"Terminez votre premier entraînement.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.141c005fe0b8","target_locale":"fr-CA","translation":"Enregistrez votre première valeur.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"fr-CA","translation":"Jusqu'à 3 éléments","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.43babac56b38","target_locale":"fr-CA","translation":"Vous pouvez ajouter les champs non renseignés ultérieurement depuis l'écran d'enregistrement.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.3c3407bde7db","target_locale":"fr-CA","translation":"Non terminé","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b0b7d41109d6","target_locale":"fr-CA","translation":"Non effectué","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.de7e126d0b16","target_locale":"fr-CA","translation":"Non enregistré","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.213dbf0be17e","target_locale":"fr-CA","translation":"Non défini","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b5bf4c52186f","target_locale":"fr-CA","translation":"Non sélectionné","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.bed0749e62dd","target_locale":"fr-CA","translation":"Passer au menu par objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"fr-CA","translation":"Suivant","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.13c8c880dac8","target_locale":"fr-CA","translation":"Voir le nombre de pas","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.7d3eec40647b","target_locale":"fr-CA","translation":"Perte de poids","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.fa1f489c01a4","target_locale":"fr-CA","translation":"Glucides","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"fr-CA","translation":"Invalide","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.738330e87b19","target_locale":"fr-CA","translation":"Définissez un nombre et une durée raisonnables.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.240039c19262","target_locale":"fr-CA","translation":"Particulièrement important","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.0307962d6266","target_locale":"fr-CA","translation":"Connaître votre état et la prochaine étape","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.e30570ba3b2d","target_locale":"fr-CA","translation":"Vérifier l'état","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.be12755005fc","target_locale":"fr-CA","translation":"Actuellement","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b156d426183c","target_locale":"fr-CA","translation":"Informations sur votre corps actuelles","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.6951e0c608be","target_locale":"fr-CA","translation":"Non disponible pour le moment","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8f44663f425e","target_locale":"fr-CA","translation":"Utilisation des données et paramètres enregistrés.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.6861aea5ee0c","target_locale":"fr-CA","translation":"Sélection actuelle : {{value1}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.52709c47198c","target_locale":"fr-CA","translation":"Avancez sans hésitation vers votre corps idéal.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.3f755a378fa9","target_locale":"fr-CA","translation":"Raison","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.e5553c6ea028","target_locale":"fr-CA","translation":"Raison : {{value1}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.11c5aab1badf","target_locale":"fr-CA","translation":"Année de naissance","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.eb51a9c91d64","target_locale":"fr-CA","translation":"Démarrer le guide","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"fr-CA","translation":"Menus enregistrés : {{value1}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.a5075311a2c0","target_locale":"fr-CA","translation":"État souhaité","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.728b5580ef93","target_locale":"fr-CA","translation":"Style souhaité","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8b91257ffe51","target_locale":"fr-CA","translation":"Objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8c68bbbed710","target_locale":"fr-CA","translation":"Objectif : {{value1}} / Différence : {{value2}}{{value3}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.95b6839df407","target_locale":"fr-CA","translation":"Objectifs et rythme","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.23692e812696","target_locale":"fr-CA","translation":"Objectifs et progrès","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"fr-CA","translation":"Suggestions pour ajuster les objectifs","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.fff18139774a","target_locale":"fr-CA","translation":"Objectif non défini","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.32670ed3aace","target_locale":"fr-CA","translation":"Atteindre ses objectifs","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d63e2c6f601f","target_locale":"fr-CA","translation":"Objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.6d46fc51fc89","target_locale":"fr-CA","translation":"Nous proposons deux profils pour chaque objectif. En changeant de profil, vous obtiendrez une approche différente et un corps idéal.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"fr-CA","translation":"Profil adapté à l'objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.e60c103c2985","target_locale":"fr-CA","translation":"Vous pouvez modifier les points de contrôle sur la page d'accueil et la prochaine action en fonction de votre objectif.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.74762f268854","target_locale":"fr-CA","translation":"Changer d'objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.c82ef935ebf7","target_locale":"fr-CA","translation":"Sélectionner un objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"fr-CA","translation":"Mode objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.7dbe91b90819","target_locale":"fr-CA","translation":"Objectif et objectifs","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"fr-CA","translation":"Le menu par objectif est débloqué","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.acf5f093f147","target_locale":"fr-CA","translation":"Voir le menu par objectif","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.25221b8c1c27","target_locale":"fr-CA","translation":"Récemment","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.43d3051bc08b","target_locale":"fr-CA","translation":"Modifier en consultant","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b6d7339a72a5","target_locale":"fr-CA","translation":"Échantillonnage économisé","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"fr-CA","translation":"Commencer {{value1}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.212ef44a8ffe","target_locale":"fr-CA","translation":"Sommeil et récupération","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.271ef84863f9","target_locale":"fr-CA","translation":"En cours de vérification","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.6d288403a166","target_locale":"fr-CA","translation":"Seconde","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.289507ab2d81","target_locale":"fr-CA","translation":"Nombre de secondes","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.92720ac0b07b","target_locale":"fr-CA","translation":"Rechercher ou ajouter une activité","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.3b78698aba6f","target_locale":"fr-CA","translation":"Utiliser l'authentification à court terme spécifique à chaque appareil","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.4d7d6a61c333","target_locale":"fr-CA","translation":"À l'intérieur de l'appareil","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d5abaf673873","target_locale":"fr-CA","translation":"Performance sportive","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.536e51b3f816","target_locale":"fr-CA","translation":"Entraînement musculaire","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"fr-CA","translation":"Relier la force, l'endurance et la récupération à la performance sportive","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.48648d4ea8d7","target_locale":"fr-CA","translation":"Augmenter la masse musculaire et les résultats de l'entraînement","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f0cee25fbea7","target_locale":"fr-CA","translation":"Hypertrophie musculaire","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"fr-CA","translation":"Expérience","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8fd842ee7231","target_locale":"fr-CA","translation":"Niveau d'expérience","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.781733d2b8b2","target_locale":"fr-CA","translation":"Rythme maintenable","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.4bf044eb7319","target_locale":"fr-CA","translation":"Ce n'est pas une évaluation des capacités ou des qualifications. Il s'agit d'indiquer les aspects prioritaires à considérer dans la réponse.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.66cd07bba953","target_locale":"fr-CA","translation":"Lipides","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.424306f5227a","target_locale":"fr-CA","translation":"Tour de taille","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.bcfa5445429a","target_locale":"fr-CA","translation":"Tour de taille (facultatif)","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.a9d271807073","target_locale":"fr-CA","translation":"Apprendre les schémas de comportement","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8d43b9a92d79","target_locale":"fr-CA","translation":"Notifications concernant les comportements","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f34962367358","target_locale":"fr-CA","translation":"Affichage","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"fr-CA","translation":"Mode d'affichage","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"fr-CA","translation":"Méthode d'affichage","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.492de47a7b63","target_locale":"fr-CA","translation":"Politique d'affichage","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.19b1ef380c77","target_locale":"fr-CA","translation":"Mode d'assistance non connecté","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f4cfe025d665","target_locale":"fr-CA","translation":"Note","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f25b70d5d45b","target_locale":"fr-CA","translation":"Note : {{value1}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.4d75244133b3","target_locale":"fr-CA","translation":"Plan","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.eed8ba416205","target_locale":"fr-CA","translation":"Supprimez le plan, l'historique, les indicateurs de santé, les repas, les photos, la conversation et la mémoire IA, ainsi que les catégories personnalisées.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.0bb8af30fad6","target_locale":"fr-CA","translation":"Commencez avec le plan ou ajoutez des catégories sur place et enregistrez-les.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.172cd4e16deb","target_locale":"fr-CA","translation":"Ajouter une catégorie sans plan","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"fr-CA","translation":"Intégrer dans le plan","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"fr-CA","translation":"Créer un plan","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.2097dc5a3763","target_locale":"fr-CA","translation":"Créez votre propre plan","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.76f154401eec","target_locale":"fr-CA","translation":"Plan et suivi","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.dd7a93b061c4","target_locale":"fr-CA","translation":"Voulez-vous mettre à jour le poids de votre plan ?","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.725fe331d7f6","target_locale":"fr-CA","translation":"Enregistrer","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8d02c094b191","target_locale":"fr-CA","translation":"Enregistrer","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.7538ba8df343","target_locale":"fr-CA","translation":"Enregistrez. Posez une question à l'IA. Exécutez. Il n'y a que trois choses à faire chaque jour.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d84fb59f0560","target_locale":"fr-CA","translation":"Appuyez sur l'élément à enregistrer","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"fr-CA","translation":"Les résultats de l'enregistrement et de l'exécution seront transférés à l'analyse IA suivante. La première action vous guidera via la mission principale.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.44b61d42de8d","target_locale":"fr-CA","translation":"Les enregistrements sont stockés ici","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"fr-CA","translation":"En cours d'enregistrement. L'application continuera même si vous fermez l'écran.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.5479236de8a3","target_locale":"fr-CA","translation":"Consultez vos enregistrements et obtenez des suggestions pour les prochaines étapes","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.a9efa7f0620d","target_locale":"fr-CA","translation":"En cours d'enregistrement","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"fr-CA","translation":"Sur la base de vos enregistrements, nous vous proposons des améliorations, une stabilisation ou des informations manquantes.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.da6af7f58be0","target_locale":"fr-CA","translation":"Enregistré","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.347a70f8f182","target_locale":"fr-CA","translation":"Paramètres","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f6c6bda43180","target_locale":"fr-CA","translation":"Paramètres sauvegardés","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"fr-CA","translation":"Le journal de diagnostic contient les données relatives au fonctionnement, à la communication et aux activités de votre iPhone et de votre Apple Watch. Il n'est pas automatiquement envoyé à l'extérieur.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b9422032c88b","target_locale":"fr-CA","translation":"Supprimer le journal de diagnostic","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"fr-CA","translation":"Exporter le journal de diagnostic","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.7de76d94979f","target_locale":"fr-CA","translation":"Envoyer le journal de diagnostic","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.247d52447f29","target_locale":"fr-CA","translation":"Conversation","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.bc485c713a2f","target_locale":"fr-CA","translation":"Voir plus","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.692e3d951baa","target_locale":"fr-CA","translation":"Informations potentiellement trompeuses","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.8ec43439f302","target_locale":"fr-CA","translation":"Indicateurs clés de performance (KPI)","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"fr-CA","translation":"Taille","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d2d277d3549f","target_locale":"fr-CA","translation":"Taille (facultatif)","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"fr-CA","translation":"Si vous avez des doutes, consultez ici","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.cfb169f1651f","target_locale":"fr-CA","translation":"Ajouter","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.27259dff554d","target_locale":"fr-CA","translation":"Ajouter","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d7afc61431b0","target_locale":"fr-CA","translation":"Démarrer une nouvelle session","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"fr-CA","translation":"Envoyer","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.88c138af4a1e","target_locale":"fr-CA","translation":"En attente d'envoi","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.690f0b405af4","target_locale":"fr-CA","translation":"Sélectionner le centre de remise en forme ou les équipements disponibles à la maison","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.d624960db5e8","target_locale":"fr-CA","translation":"Les données seront vérifiées dès que la connexion sera établie.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.77ab8584d196","target_locale":"fr-CA","translation":"Nombre de séances par semaine","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.4f3a00976e8f","target_locale":"fr-CA","translation":"Combien de fois par semaine pouvez-vous faire de l'exercice ?","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.905a5306693a","target_locale":"fr-CA","translation":"Progression","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.16b7f36b1361","target_locale":"fr-CA","translation":"En cours","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"fr-CA","translation":"Maintenir des habitudes d'exercice, de sommeil et d'alimentation","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.9de73676efe0","target_locale":"fr-CA","translation":"Sélectionner : {{value1}}","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.1588c48590fa","target_locale":"fr-CA","translation":"Sélection en cours","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.7759ae6468d0","target_locale":"fr-CA","translation":"Diffusion","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"fr-CA","translation":"Charger les paramètres AI lors de la distribution","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.c0244b275a43","target_locale":"fr-CA","translation":"Zones ciblées","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"fr-CA","translation":"Poids","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.9dc32540526b","target_locale":"fr-CA","translation":"Définir le poids avec un curseur","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"fr-CA","translation":"Unité de mesure","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.1d21ed2ea494","target_locale":"fr-CA","translation":"Fermé","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.fa14b32474d2","target_locale":"fr-CA","translation":"Fermer","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"fr-CA","translation":"Démarrer","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.864932cf530c","target_locale":"fr-CA","translation":"Informations connexes","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.e8a52146d9dc","target_locale":"fr-CA","translation":"Alimentation","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"fr-CA","translation":"Alimentation et silhouette","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.17de0f52b479","target_locale":"fr-CA","translation":"Suivez votre alimentation et votre silhouette avec des photos. Indiquez votre poids, votre tour de taille et vos séries en chiffres.","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"fr-CA","translation":"Enregistrer les repas","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.3871f0a40fbb","target_locale":"fr-CA","translation":"Nombre de repas","review_note":"Regional draft based on fr-FR; regional review required."}
+{"id":"core_ui.e98cf07747d2","target_locale":"fr-CA","translation":"Affichez séparément l'atteinte du nombre de repas et l'atteinte des calories et des macronutriments.","review_note":"Regional draft based on fr-FR; regional review required."}

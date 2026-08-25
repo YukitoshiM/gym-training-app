@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "el", "translation": "Ενδεικτική εκτίμηση. Δεν είναι μετρήσεις. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "el", "translation": "Λόγω του χρονικού διαστήματος που έχει περάσει από την τελευταία μέτρηση, δεν μπορούμε να επιβεβαιώσουμε τις αλλαγές και παρέχουμε ένα εύρος τιμών.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "el", "translation": "Με βάση στατιστικές εκτιμήσεις που βασίζονται σε ύψος, βάρος, ηλικία και φύλο, δεν είναι ακριβείς μετρήσεις του ποσοστού λίπους.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "el", "translation": "Εκτιμώμενο", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "el", "translation": "Ενδεικτική εκτίμηση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "el", "translation": "Αφορά ένα εύρος τιμών και δεν είναι μετρήσεις. Αποθηκεύεται μόνο όταν κάνετε κλικ για να δείτε την περιγραφή.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "el", "translation": "Θέλετε να αποθηκεύσετε την ενδεικτική εκτίμηση;", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "el", "translation": "Αποθήκευση ως εκτίμηση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "el", "translation": "{{value1}} {{value2}}. Δεν αντικαθιστά τις μετρήσεις.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "el", "translation": "Προγραμματισμένα αναφορές", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "el", "translation": "Εβδομαδιαία αναφορά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "el", "translation": "Ημέρα της εβδομάδας", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "el", "translation": "Μηνιαία αναφορά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "el", "translation": "Ημερομηνία", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "el", "translation": "{{value1}} ημέρες", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "el", "translation": "Ώρα ειδοποίησης", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "el", "translation": "Δημιουργείται αυτόματα όταν ανοίξετε την εφαρμογή για πρώτη φορά μετά τη προγραμματισμένη ώρα. Εάν δεν μπορεί να συνδεθεί με το AI, διατηρείται μια περίληψη στην εφαρμογή.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "el", "translation": "Απαιτείται έλεγχος ρυθμίσεων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "el", "translation": "Μπορείτε να προσπαθήσετε ξανά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "el", "translation": "Καταναλώθηκε όριο", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "el", "translation": "Το όριο δεν έχει καταναλωθεί", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "el", "translation": "Επιστημονικά στοιχεία {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "el", "translation": "Λόγω έλλειψης άμεσων στοιχείων, παρέχουμε μια εκτίμηση με βάση τις τάσεις.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "el", "translation": "Δεν βρέθηκαν άμεσα στοιχεία για αυτή την πρόταση.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "el", "translation": "Λόγω αδυναμίας επαλήθευσης των επιστημονικών στοιχείων, προτείνουμε με βάση τις καταγεγραμμένες πληροφορίες και γενικές αρχές.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "el", "translation": "Μονάδα μέτρησης σώματος", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

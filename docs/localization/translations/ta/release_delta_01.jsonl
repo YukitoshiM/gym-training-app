@@ -1,0 +1,26 @@
+{"id": "release_delta.estimate_note", "target_locale": "ta", "translation": "தோராயமான மதிப்பீடு. இது அளவீட்டு மதிப்பு அல்ல. {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_stale_reason", "target_locale": "ta", "translation": "கடைசியாக அளவிட்டதிலிருந்து கால இடைவெளி இருப்பதால், மாற்றத்தை உறுதியாகக் கூற முடியாது. பரவலான மதிப்பீட்டை வழங்குகிறோம்.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_fat_estimate_reason", "target_locale": "ta", "translation": "உயரம், எடை, வயது மற்றும் பாலினத்தின் அடிப்படையில் குழு மதிப்பீட்டின் வரம்பில் உள்ளது. இது தனிப்பட்ட உடல் கொழுப்பு சதவீத அளவீடு அல்ல.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimated", "target_locale": "ta", "translation": "மதிப்பிடப்பட்டது", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.reference_estimate", "target_locale": "ta", "translation": "குறிப்பு மதிப்பீடு", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_disclaimer", "target_locale": "ta", "translation": "இது ஒரு குறிப்பு வரம்பாகும், அளவீட்டு மதிப்பு அல்ல. இதைத் தட்டினால் மட்டுமே சேமிக்கப்படும்.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_estimate_title", "target_locale": "ta", "translation": "குறிப்பு மதிப்பீட்டைச் சேமிக்கவா?", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.save_as_estimate", "target_locale": "ta", "translation": "மதிப்பீடாகச் சேமிக்கவும்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.estimate_confirmation", "target_locale": "ta", "translation": "{{value1}} {{value2}}. அளவீட்டு மதிப்பை மாற்றாது.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_reports", "target_locale": "ta", "translation": "திட்டமிடப்பட்ட அறிக்கைகள்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekly_report", "target_locale": "ta", "translation": "வாராந்திர அறிக்கை", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.weekday", "target_locale": "ta", "translation": "நாள்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.monthly_report", "target_locale": "ta", "translation": "மாதாந்திர அறிக்கை", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_of_month", "target_locale": "ta", "translation": "தேதி", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.day_value", "target_locale": "ta", "translation": "{{value1}} நாட்கள்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.report_time", "target_locale": "ta", "translation": "அறிக்கைக்கான நேரம்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.scheduled_report_explanation", "target_locale": "ta", "translation": "திட்டமிடப்பட்ட நேரத்தில் முதல் முறை பயன்பாட்டைத் திறக்கும்போது, தானாகவே உருவாக்கப்படும். AI உடன் இணைக்க முடியாவிட்டால், சாதனத்தில் உள்ள சுருக்கத்தை சேமித்து வைக்கும்.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.check_settings", "target_locale": "ta", "translation": "அமைப்புகளைச் சரிபார்க்கவும்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.can_retry", "target_locale": "ta", "translation": "மீண்டும் முயற்சிக்கலாம்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_consumed", "target_locale": "ta", "translation": "பயன்பாட்டு வரம்பை பயன்படுத்தியுள்ளீர்கள்", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.quota_not_consumed", "target_locale": "ta", "translation": "பயன்பாட்டு வரம்பு இன்னும் பயன்படுத்தப்படவில்லை", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_count", "target_locale": "ta", "translation": "அறிவியல் சான்றுகள் {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.insufficient_direct_evidence", "target_locale": "ta", "translation": "நேரடியாகப் பயன்படுத்தக்கூடிய சான்றுகள் குறைவாக இருப்பதால், பதிவுகளை அடிப்படையாகக் கொண்டு ஒரு பொதுவான வழிகாட்டியாக வழங்குகிறோம்.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.no_direct_evidence", "target_locale": "ta", "translation": "இந்த பரிந்துரைக்கு நேரடியாகப் பயன்படுத்தக்கூடிய சான்றுகள் எதுவும் இல்லை.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.evidence_unavailable", "target_locale": "ta", "translation": "அறிவியல் சான்றுகளைச் சரிபார்க்க முடியவில்லை, எனவே பதிவுகள் மற்றும் பொதுவான கொள்கைகளை அடிப்படையாகக் கொண்டு பரிந்துரைக்கிறோம்.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "release_delta.body_size_unit", "target_locale": "ta", "translation": "உடல் அளவு அலகு", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

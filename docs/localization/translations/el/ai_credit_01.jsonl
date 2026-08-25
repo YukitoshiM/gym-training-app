@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "el", "translation": "Λογαριασμός AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "el", "translation": "{{value1}} Κρεδίτ για αυτήν την ενέργεια", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "el", "translation": "Προσθήκη Κρεδίτ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "el", "translation": "Αλλαγή Ισολογισμού", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "el", "translation": "Χρήση Κρεδίτ για αυτόματη ανάλυση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "el", "translation": "Δεν καταναλώνεται Κρεδίτ, χρησιμοποιούνται μόνο οι εγγραφές στη συσκευή.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "el", "translation": "Κατανάλωση Κρεδίτ για τις εβδομαδιαίες ή μηνιαίες αναφορές κατά την εκτέλεση.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "el", "translation": "Κρεδίτ AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "el", "translation": "Έλεγχος Ισολογισμού", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "el", "translation": "Ισολογισμός: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "el", "translation": "{{value1}} Κρεδίτ Λήφθηκαν", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "el", "translation": "Αγορά Κρεδίτ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "el", "translation": "Συνέχιση Χειροκίνητης Εγγραφής", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "el", "translation": "Διαγραφή όλων των εγγραφών και του λογαριασμού BodyMode. Όλα τα υπόλοιπα κρεδίτ θα χαθούν και δεν μπορούν να ανακτηθούν.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "el", "translation": "Ιστορικό Κρεδίτ", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "el", "translation": "Μπορείτε να λάβετε κρεδίτ μέσω βίντεο ή να αγοράσετε όσα χρειάζεστε. Η χειροκίνητη εγγραφή παραμένει δωρεάν.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "el", "translation": "Αποκτήστε κρεδίτ βλέποντας διαφημίσεις ή αγοράζοντας. Η χειροκίνητη εγγραφή παραμένει στη χρήση.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "el", "translation": "Δεν υπάρχουν αρκετά Κρεδίτ AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "el", "translation": "Μηνιαία Αναφορά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "el", "translation": "Χωρίς Ημερομηνία Λήξης", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "el", "translation": "{{value1}} AI αξία", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "el", "translation": "Ετοιμάζονται τα προϊόντα για αγορά.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "el", "translation": "Αναπροσαρμόστηκε η επιστροφή και προστέθηκαν {{value1}} αξίες.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "el", "translation": "Προστέθηκαν αξίες.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "el", "translation": "Η αγορά περιμένει έγκριση. Θα εμφανιστούν αυτόματα μετά την ολοκλήρωση.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "el", "translation": "Οι αξίες αγοράς δεν λήγουν. Δεν μπορούν να μεταφερθούν ή να εξαργυρωθούν. Ακόμα και μετά την αγορά, οι διαφημιστικές προτάσεις παραμένουν ορατές.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "el", "translation": "Δεν μπορώ να ελέγξω την κατάσταση της αγοράς.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "el", "translation": "Δεν μπορώ να επαληθεύσω την αγορά στο App Store.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "el", "translation": "Αναπροσαρμογή επιστροφής χρημάτων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "el", "translation": "Έχετε ήδη λάβει το προωθητικό για σήμερα.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "el", "translation": "Χρειάζεται χρόνος για την επεξεργασία της παρακολούθησης βίντεο. Θα εμφανιστούν οι αξίες μετά την επιβεβαίωση.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "el", "translation": "Για να δείτε το πιο πρόσφατο υπόλοιπο, ανοίξτε ξανά την οθόνη AI. Δεν χρειάζεται να παρακολουθήσετε ξανά το βίντεο.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "el", "translation": "Λήφθηκαν 5 αξίες.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "el", "translation": "Η συνεδρία σας έχει λήξει. Παρακαλούμε συνδεθεί ξανά.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "el", "translation": "Έχετε συνδεθεί με το λογαριασμό Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "el", "translation": "Με την εγγραφή σας στο Apple, θα λάβετε τις αρχικές αξίες. Η χειροκίνητη καταγραφή μπορεί να χρησιμοποιηθεί χωρίς εγγραφή.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "el", "translation": "Για να χρησιμοποιήσετε τις λειτουργίες AI, εγγραφείτε στο Apple.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "el", "translation": "Είμαι σε διαδικασία εγγραφής", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "el", "translation": "Με την εγγραφή σας στο Apple, θα λάβετε τις 20 αρχικές αξίες. Η χειροκίνητη καταγραφή μπορεί να χρησιμοποιηθεί χωρίς εγγραφή.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "el", "translation": "Με την εγγραφή σας στο Apple, θα λάβετε τις 20 αρχικές αξίες. Δεν θα ξεκινήσουν συνδρομές ή αυτόματες ανανεώσεις.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "el", "translation": "20 Κρεδοτικά με εγγραφή", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "el", "translation": "Διαφημίσεις βίντεο", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "el", "translation": "Κερδίζετε από την πλατφόρμα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "el", "translation": "Από αγορά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "el", "translation": "Ειδική προσφορά για νέους χρήστες", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "el", "translation": "Ξεκινήστε με τον AI Προπονητή σας", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "el", "translation": "AI Κρεδοτικά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "el", "translation": "Παρακαλούμε, δοκιμάστε ξανά αργότερα.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "el", "translation": "Απεριόριστη χρήση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "el", "translation": "Δείτε μια διαφήμιση και κερδίστε 5 Κρεδοτικά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "el", "translation": "Εβδομαδιαίο Αναφορά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

@@ -1,0 +1,71 @@
+{"id":"runtime_messages.1f65b4107746","target_locale":"nl-NL","translation":"Je antwoord is ontvangen van de AI-trainer.","review_note":""}
+{"id":"runtime_messages.83e511abe728","target_locale":"nl-NL","translation":"Kan niet worden verzonden naar de AI-trainer.","review_note":""}
+{"id":"runtime_messages.bee8e1a579e0","target_locale":"nl-NL","translation":"Dit is een activiteit die is gesynchroniseerd vanuit je Apple Watch.","review_note":""}
+{"id":"runtime_messages.c0e4c62759a0","target_locale":"nl-NL","translation":"Je kunt het antwoord bekijken in BodyMode.","review_note":""}
+{"id":"runtime_messages.7439490555e5","target_locale":"nl-NL","translation":"{{value1}} / {{value2}} bereikt. Probeer de rest op een comfortabele manier te voltooien.","review_note":""}
+{"id":"runtime_messages.12d5f3fcfc22","target_locale":"nl-NL","translation":"{{value1}} {{value2}} / {{value3}} {{value4}} / {{value5}} keer","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"runtime_messages.0d127efd525d","target_locale":"nl-NL","translation":"{{value1}} blijft op dezelfde plek staan en wordt beschouwd als een persoonlijke keuze.","review_note":""}
+{"id":"runtime_messages.c98c9b59305c","target_locale":"nl-NL","translation":"{{value1}} Tijd","review_note":""}
+{"id":"runtime_messages.3e158eb5aa2a","target_locale":"nl-NL","translation":"{{value1}} Stappen","review_note":""}
+{"id":"runtime_messages.28ae9e02d508","target_locale":"nl-NL","translation":"{{value1}} Voeding","review_note":""}
+{"id":"runtime_messages.7a9bf7eecb2d","target_locale":"nl-NL","translation":"Deze apparaat ondersteunt geen omgevingsdetectie.","review_note":""}
+{"id":"runtime_messages.f989482e8b85","target_locale":"nl-NL","translation":"Ik heb ervoor gekozen dit vandaag niet uit te voeren.","review_note":""}
+{"id":"runtime_messages.a0f36c6cb2d2","target_locale":"nl-NL","translation":"Eén activiteit is al voldoende.","review_note":""}
+{"id":"runtime_messages.1cf9ffa9a2cb","target_locale":"nl-NL","translation":"Waarom deze actie?","review_note":""}
+{"id":"runtime_messages.1da67cd9d0b7","target_locale":"nl-NL","translation":"Oefeningen","review_note":""}
+{"id":"runtime_messages.ccae93b28d43","target_locale":"nl-NL","translation":"Open de app opnieuw en probeer het.","review_note":""}
+{"id":"runtime_messages.f68b4cd73087","target_locale":"nl-NL","translation":"De locatie van het fitnesscentrum is verwijderd.","review_note":""}
+{"id":"runtime_messages.2c16bd45e064","target_locale":"nl-NL","translation":"Ik heb mijn aankomst op het fitnesscentrum geregistreerd.","review_note":""}
+{"id":"runtime_messages.d0f5dceef96c","target_locale":"nl-NL","translation":"Het systeem detecteert je aankomst in de buurt van het fitnesscentrum.","review_note":""}
+{"id":"runtime_messages.2201dfcbf766","target_locale":"nl-NL","translation":"Automatische detectie van bezoek aan het fitnesscentrum is uitgeschakeld.","review_note":""}
+{"id":"runtime_messages.48a731fa2573","target_locale":"nl-NL","translation":"Ik heb mijn vertrek van het fitnesscentrum geregistreerd.","review_note":""}
+{"id":"runtime_messages.0c99a6dc8a8a","target_locale":"nl-NL","translation":"Dumbbell bench press","review_note":""}
+{"id":"runtime_messages.02b7a66f4b4d","target_locale":"nl-NL","translation":"Donker","review_note":""}
+{"id":"runtime_messages.35bde4b057c2","target_locale":"nl-NL","translation":"Chin-ups","review_note":""}
+{"id":"runtime_messages.8722ecf123bc","target_locale":"nl-NL","translation":"Dip","review_note":""}
+{"id":"runtime_messages.cf8ad4f70108","target_locale":"nl-NL","translation":"Dips","review_note":""}
+{"id":"runtime_messages.6e7b0917d47f","target_locale":"nl-NL","translation":"Je kunt blijven trainen. Door je herstelrecords bij te houden, verhoog je de nauwkeurigheid van de aanbevelingen voor volgende week.","review_note":""}
+{"id":"runtime_messages.8617ffabdc47","target_locale":"nl-NL","translation":"Zwarte champagne","review_note":""}
+{"id":"runtime_messages.ec6df6460320","target_locale":"nl-NL","translation":"Mijn fitnesscentrum","review_note":""}
+{"id":"runtime_messages.88d8bda8617e","target_locale":"nl-NL","translation":"De gebruiker heeft zijn activiteiten voor vandaag gewijzigd.","review_note":""}
+{"id":"runtime_messages.eac72f8d78bd","target_locale":"nl-NL","translation":"Ik heb de aanbeveling voor vandaag aangepast op basis van de acties van de gebruiker.","review_note":""}
+{"id":"runtime_messages.e0654cb7b536","target_locale":"nl-NL","translation":"Licht","review_note":""}
+{"id":"runtime_messages.381a8ceae643","target_locale":"nl-NL","translation":"Royal cobalt","review_note":""}
+{"id":"runtime_messages.3f24b48377e7","target_locale":"nl-NL","translation":"Omhoog","review_note":""}
+{"id":"runtime_messages.6300aee71ea9","target_locale":"nl-NL","translation":"Omlaag","review_note":""}
+{"id":"runtime_messages.8f99d9e86006","target_locale":"nl-NL","translation":"Een keer vandaag","review_note":""}
+{"id":"runtime_messages.1e9b7e0b1de9","target_locale":"nl-NL","translation":"Je hebt de drie doelen voor vandaag bereikt. Dit wordt meegenomen in de aanbevelingen voor morgen.","review_note":""}
+{"id":"runtime_messages.09d55c9613d1","target_locale":"nl-NL","translation":"Maandmenu","review_note":""}
+{"id":"runtime_messages.b9096002d34b","target_locale":"nl-NL","translation":"De aanbeveling voor vandaag is bijgewerkt","review_note":""}
+{"id":"runtime_messages.2c69e0809480","target_locale":"nl-NL","translation":"Locatie is niet ingesteld","review_note":""}
+{"id":"runtime_messages.f6a2b99e1e89","target_locale":"nl-NL","translation":"Locatie is niet toegestaan. Je kunt handmatig check-in gebruiken","review_note":""}
+{"id":"runtime_messages.fef93188027e","target_locale":"nl-NL","translation":"Probeer het opnieuw nadat de locatie nauwkeurig is","review_note":""}
+{"id":"runtime_messages.dd30b7ff48b4","target_locale":"nl-NL","translation":"Registreer eerst je fitnesscentrum als locatie","review_note":""}
+{"id":"runtime_messages.0b0f57e99c1c","target_locale":"nl-NL","translation":"Beginner, full body","review_note":""}
+{"id":"runtime_messages.2608fa3a1c38","target_locale":"nl-NL","translation":"Het opnieuw verzenden van de vorige AI-trainer is niet mogelijk.","review_note":""}
+{"id":"runtime_messages.dccb743b791b","target_locale":"nl-NL","translation":"Stuur dezelfde informatie nogmaals.","review_note":""}
+{"id":"runtime_messages.3574f4648a2f","target_locale":"nl-NL","translation":"Prioriteit geven aan herstel","review_note":""}
+{"id":"runtime_messages.292ff42d336e","target_locale":"nl-NL","translation":"Laat het leeg als je niets wilt wijzigen","review_note":""}
+{"id":"runtime_messages.c80fde6d1fda","target_locale":"nl-NL","translation":"Pull-ups","review_note":""}
+{"id":"runtime_messages.da73bd0d95fc","target_locale":"nl-NL","translation":"De nieuwe herstelinformatie is verwerkt en de aanbevelingen zijn aangepast, rekening houdend met de veiligste opties.","review_note":""}
+{"id":"runtime_messages.21b0ce47a5e9","target_locale":"nl-NL","translation":"De nieuwe gegevens zijn opgenomen.","review_note":""}
+{"id":"runtime_messages.c9091516c87d","target_locale":"nl-NL","translation":"Bestaande ID","review_note":""}
+{"id":"runtime_messages.79540619d261","target_locale":"nl-NL","translation":"Bestaande of benodigde categorie","review_note":""}
+{"id":"runtime_messages.0d4de13deafc","target_locale":"nl-NL","translation":"Ik heb mijn lokale sportschool als locatie geregistreerd","review_note":""}
+{"id":"runtime_messages.fc3831a386a6","target_locale":"nl-NL","translation":"Locatie kon niet worden verkregen","review_note":""}
+{"id":"runtime_messages.aae5c414579e","target_locale":"nl-NL","translation":"Ik controleer uw huidige locatie","review_note":""}
+{"id":"runtime_messages.3b260a3803bc","target_locale":"nl-NL","translation":"Ik heb de laatste 7 dagen van beweging en voedingsgegevens bekeken (3 bewegingen, 8 voedingen)","review_note":""}
+{"id":"runtime_messages.119a3a0a5dee","target_locale":"nl-NL","translation":"Er ontbreken gegevens over slaap.","review_note":""}
+{"id":"runtime_messages.7b0ad81a2260","target_locale":"nl-NL","translation":"Registreer uw slaap gedurende 3 dagen en blijf 3 keer per week bewegen.","review_note":""}
+{"id":"runtime_messages.9ed0a3f60d19","target_locale":"nl-NL","translation":"Registreer uw slaap gedurende 3 dagen","review_note":""}
+{"id":"runtime_messages.2dc960114eaa","target_locale":"nl-NL","translation":"Intelligent, elegant en modern","review_note":""}
+{"id":"runtime_messages.27857aa2b1ae","target_locale":"nl-NL","translation":"Korte algehele opmerking","review_note":""}
+{"id":"runtime_messages.f7a8a3bb3767","target_locale":"nl-NL","translation":"Korte actie","review_note":""}
+{"id":"runtime_messages.e630ef8d86d2","target_locale":"nl-NL","translation":"Borst oefening","review_note":""}
+{"id":"runtime_messages.e7c885a6a202","target_locale":"nl-NL","translation":"Automatisch","review_note":""}
+{"id":"runtime_messages.7eb470b54bec","target_locale":"nl-NL","translation":"Door locatie-informatie toe te staan in de instellingen, kunt u zich registreren.","review_note":""}
+{"id":"runtime_messages.fb74f39c8a88","target_locale":"nl-NL","translation":"Ik heb de volgende lichaamsmetingen, maaltijden en krachttraining sessies bekeken: 3 lichaamsmetingen, 8 maaltijden, 3 krachttraining sessies.","review_note":""}
+{"id":"runtime_messages.b5aace88c82a","target_locale":"nl-NL","translation":"Één keer per week","review_note":""}
+{"id":"runtime_messages.773a830c7c4d","target_locale":"nl-NL","translation":"Ik heb 3 keer per week training voltooid.","review_note":""}
+{"id":"runtime_messages.0d10dbb2d71a","target_locale":"nl-NL","translation":"Blijf 3 keer per week trainen.","review_note":""}
+{"id":"runtime_messages.f974d51c5ef8","target_locale":"nl-NL","translation":"Uitdagend en intensief","review_note":""}

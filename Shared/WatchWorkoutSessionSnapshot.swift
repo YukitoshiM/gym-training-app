@@ -6,8 +6,8 @@ enum WatchTempoPhase: String, Codable, Hashable, Sendable {
 
     var displayName: String {
         switch self {
-        case .concentric: "上げ"
-        case .eccentric: "下げ"
+        case .concentric: L10n.string("runtime_messages.3f24b48377e7", fallback: "上げ")
+        case .eccentric: L10n.string("runtime_messages.6300aee71ea9", fallback: "下げ")
         }
     }
 }
@@ -115,7 +115,7 @@ struct WatchTempoCue: Codable, Hashable, Sendable {
     var beatSpeed: Int
 
     var displayText: String {
-        "\(phase.displayName) \(second)/\(phaseDuration)・\(repetition)/\(targetRepetitions)回"
+        L10n.string("runtime_messages.12d5f3fcfc22", fallback: "{{value1}} {{value2}}/{{value3}}・{{value4}}/{{value5}}回", values: [String(describing: phase.displayName), String(describing: second), String(describing: phaseDuration), String(describing: repetition), String(describing: targetRepetitions)])
     }
 
     var hapticCue: WatchTempoHapticCue {
@@ -227,6 +227,7 @@ struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
     var sensorSummary: WatchWorkoutSensorSummary?
     var healthKitSaveStatus: WatchHealthKitSaveStatus?
     var note: String?
+    var outdoorCardio: OutdoorCardioSnapshot?
 
     init(
         id: UUID = UUID(),
@@ -238,7 +239,8 @@ struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
         exercises: [WatchWorkoutExerciseSnapshot],
         sensorSummary: WatchWorkoutSensorSummary? = nil,
         healthKitSaveStatus: WatchHealthKitSaveStatus? = nil,
-        note: String? = nil
+        note: String? = nil,
+        outdoorCardio: OutdoorCardioSnapshot? = nil
     ) {
         self.id = id
         self.sourcePlanID = sourcePlanID
@@ -250,6 +252,7 @@ struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
         self.sensorSummary = sensorSummary
         self.healthKitSaveStatus = healthKitSaveStatus
         self.note = note
+        self.outdoorCardio = outdoorCardio
     }
 
     init(plan: WatchWorkoutPlanSnapshot) {
@@ -281,6 +284,10 @@ struct WatchWorkoutSessionSnapshot: Codable, Hashable, Identifiable, Sendable {
 
     var isAllSetsCompleted: Bool {
         totalSetCount > 0 && completedSetCount == totalSetCount
+    }
+
+    var isOutdoorCardio: Bool {
+        outdoorCardio != nil
     }
 }
 
@@ -368,12 +375,12 @@ enum AssistedLoadSupport {
         isDip(exerciseName: exerciseName)
             || containsAny(
                 exerciseName,
-                keywords: ["チンニング", "懸垂", "chin-up", "chin up", "pull-up", "pull up"]
+                keywords: [L10n.string("runtime_messages.35bde4b057c2", fallback: "チンニング"), L10n.string("runtime_messages.c80fde6d1fda", fallback: "懸垂"), "chin-up", "chin up", "pull-up", "pull up"]
             )
     }
 
     static func isDip(exerciseName: String) -> Bool {
-        containsAny(exerciseName, keywords: ["ディップ", "dip"])
+        containsAny(exerciseName, keywords: [L10n.string("runtime_messages.8722ecf123bc", fallback: "ディップ"), "dip"])
     }
 
     private static func containsAny(_ exerciseName: String, keywords: [String]) -> Bool {
@@ -387,6 +394,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
     var setOrder: Int
     var targetWeight: Double
     var targetReps: Int
+    var targetRPE: Double?
     var plannedConcentricSeconds: Int?
     var plannedEccentricSeconds: Int?
     var plannedTempoBeatSpeed: Int?
@@ -406,6 +414,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         setOrder: Int,
         targetWeight: Double,
         targetReps: Int,
+        targetRPE: Double? = nil,
         plannedConcentricSeconds: Int? = nil,
         plannedEccentricSeconds: Int? = nil,
         plannedTempoBeatSpeed: Int? = nil,
@@ -424,6 +433,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
         self.setOrder = setOrder
         self.targetWeight = targetWeight
         self.targetReps = targetReps
+        self.targetRPE = targetRPE
         self.plannedConcentricSeconds = plannedConcentricSeconds
         self.plannedEccentricSeconds = plannedEccentricSeconds
         self.plannedTempoBeatSpeed = plannedTempoBeatSpeed
@@ -450,6 +460,7 @@ struct WatchWorkoutSetSnapshot: Codable, Hashable, Identifiable, Sendable {
             setOrder: planSet.setOrder,
             targetWeight: planSet.targetWeight,
             targetReps: planSet.targetReps,
+            targetRPE: planSet.targetRPE,
             plannedConcentricSeconds: planSet.plannedConcentricSeconds,
             plannedEccentricSeconds: planSet.plannedEccentricSeconds,
             plannedTempoBeatSpeed: planSet.plannedTempoBeatSpeed,

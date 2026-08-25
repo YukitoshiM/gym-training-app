@@ -1,0 +1,250 @@
+{"id":"core_ui.af89edae43f1","target_locale":"uk","translation":"{{value1}} елементів","review_note":"Recovered missing Swift count interpolation; verify spacing in context."}
+{"id":"core_ui.f369d217b16c","target_locale":"uk","translation":"{{value1}}: На заплановану дату не знайдено відвідування спортзалу або тренування.","review_note":"Recovered missing Swift plan-name interpolation; verify in context."}
+{"id":"core_ui.bed598542aad","target_locale":"uk","translation":"Тривалість тренування","review_note":""}
+{"id":"core_ui.79f4b3098d2f","target_locale":"uk","translation":"Щоденні цілі харчування","review_note":""}
+{"id":"core_ui.cc1e78c76f29","target_locale":"uk","translation":"Опануйте рухи за 3 тренування","review_note":""}
+{"id":"core_ui.1d7e9fda7bdb","target_locale":"uk","translation":"Створити тренування з ШІ","review_note":""}
+{"id":"core_ui.79fac498bcc6","target_locale":"uk","translation":"Сьогоднішні рекомендації доступні й без ШІ.","review_note":""}
+{"id":"core_ui.6fe4b509ad50","target_locale":"uk","translation":"Запитати ШІ про поточний стан","review_note":""}
+{"id":"core_ui.379c080870e5","target_locale":"uk","translation":"Запитати ШІ","review_note":""}
+{"id":"core_ui.f2baffe4a974","target_locale":"uk","translation":"Дані, що надсилаються ШІ","review_note":""}
+{"id":"core_ui.17c5baf0a5ab","target_locale":"uk","translation":"ШІ-тренер створює плани лише з вибраним обладнанням. Завжди буде вибрано принаймні один елемент.","review_note":""}
+{"id":"core_ui.10dcf23553ef","target_locale":"uk","translation":"Створити щотижневий коментар через сервер ШІ","review_note":""}
+{"id":"core_ui.7d0a47df7889","target_locale":"uk","translation":"Сервер ШІ підключено","review_note":""}
+{"id":"core_ui.d48edde1fdc0","target_locale":"uk","translation":"Підготовка моделі ШІ","review_note":""}
+{"id":"core_ui.288a496c1f39","target_locale":"uk","translation":"Чернетки ШІ та щотижневі коментарі недоступні, але ручні записи можна зберігати.","review_note":""}
+{"id":"core_ui.08b9d0492bce","target_locale":"uk","translation":"Щоб використовувати чернетки ШІ та щотижневі коментарі, увімкніть функції ШІ, а потім перевірте підключення.","review_note":""}
+{"id":"core_ui.1eb7be768354","target_locale":"uk","translation":"Зміна ШІ {{value1}}","review_note":""}
+{"id":"core_ui.6867f20e988c","target_locale":"uk","translation":"Підключення ШІ","review_note":""}
+{"id":"core_ui.774ed165f29d","target_locale":"uk","translation":"Функції ШІ вимкнено","review_note":""}
+{"id":"core_ui.70d26c237020","target_locale":"uk","translation":"Використовувати функції ШІ","review_note":""}
+{"id":"core_ui.a09a04648e2c","target_locale":"uk","translation":"Перевірка ШІ","review_note":""}
+{"id":"core_ui.386d8d6ae3c9","target_locale":"uk","translation":"Перевірено ШІ","review_note":""}
+{"id":"core_ui.5d0ffa7e4b48","target_locale":"uk","translation":"Скинути налаштування ШІ","review_note":""}
+{"id":"core_ui.04b0c641ffb6","target_locale":"uk","translation":"Ключ API","review_note":""}
+{"id":"core_ui.4330553de90e","target_locale":"uk","translation":"Ключ API використовується лише для отримання короткострокових токенів і не надсилається зі звичайними запитами ШІ.","review_note":""}
+{"id":"core_ui.0922a8545a63","target_locale":"uk","translation":"Сервер API відповідає, але потрібна модель недоступна.","review_note":""}
+{"id":"core_ui.dcf81350e9e5","target_locale":"uk","translation":"Сервер API відповідає, але допоміжна модель для харчування та звітів недоступна.","review_note":""}
+{"id":"core_ui.b0a2ce18faf2","target_locale":"uk","translation":"Сервер API відповідає, але оцінювання калорій за зображенням недоступне.","review_note":""}
+{"id":"core_ui.bfcdf42c1ed2","target_locale":"uk","translation":"Тренування Apple Health","review_note":""}
+{"id":"core_ui.a6e1ba4bb69f","target_locale":"uk","translation":"Синхронізувати тренування з Apple Watch","review_note":""}
+{"id":"core_ui.4bebd78efec8","target_locale":"uk","translation":"Журнали Apple Watch","review_note":""}
+{"id":"core_ui.c81277b1521a","target_locale":"uk","translation":"Apple Watch і датчики","review_note":""}
+{"id":"core_ui.bf84924a22d4","target_locale":"uk","translation":"Скарга на рекламу BodyMode","review_note":""}
+{"id":"core_ui.0a1dbd803991","target_locale":"uk","translation":"Почати роботу з BodyMode","review_note":""}
+{"id":"core_ui.f2168633ea59","target_locale":"uk","translation":"ШІ керування BodyMode","review_note":""}
+{"id":"core_ui.2a02f05069da","target_locale":"uk","translation":"Використання рекламних даних Google","review_note":""}
+{"id":"core_ui.d8ded648c16c","target_locale":"uk","translation":"Політика конфіденційності Google","review_note":""}
+{"id":"core_ui.a0332baa739d","target_locale":"uk","translation":"Перевірити спільний доступ до Здоров’я","review_note":""}
+{"id":"core_ui.2dd0bb3c4033","target_locale":"uk","translation":"Оцінювати повторення за допомогою Apple Watch","review_note":""}
+{"id":"core_ui.0db9dbeb81f2","target_locale":"uk","translation":"Тактильні сповіщення Apple Watch","review_note":""}
+{"id":"core_ui.703c05467ff9","target_locale":"uk","translation":"Виконано: {{value1}} / {{value2}}","review_note":""}
+{"id":"core_ui.139e4fcc88af","target_locale":"uk","translation":"Досягнуто: {{value1}} / {{value2}}","review_note":""}
+{"id":"core_ui.06eaf4650b54","target_locale":"uk","translation":"Виконано: {{value1}}/6","review_note":""}
+{"id":"core_ui.5e0934899b21","target_locale":"uk","translation":"{{value1}}/{{value2}} повторень","review_note":""}
+{"id":"core_ui.d1d79a159d4b","target_locale":"uk","translation":"{{value1}}{{value2}} повторень","review_note":""}
+{"id":"core_ui.0e9e7fa3d87c","target_locale":"uk","translation":"Рекомендація від {{value1}}","review_note":""}
+{"id":"core_ui.34effd785dea","target_locale":"uk","translation":"{{value1}} перевіряє · Рекомендація доступна","review_note":""}
+{"id":"core_ui.e7a6c6422c09","target_locale":"uk","translation":"Перевірено: {{value1}}","review_note":""}
+{"id":"core_ui.eafad186b3bf","target_locale":"uk","translation":"Для {{value1}} поясніть, чому сьогодні надано цю рекомендацію, і запропонуйте коригування.","review_note":""}
+{"id":"core_ui.1d7aec6451c6","target_locale":"uk","translation":"Запитати {{value1}}","review_note":""}
+{"id":"core_ui.7f624f77db97","target_locale":"uk","translation":"Рекомендація {{value1}}","review_note":""}
+{"id":"core_ui.0e0996974372","target_locale":"uk","translation":"Оцінка {{value1}}","review_note":""}
+{"id":"core_ui.246b9f2d306d","target_locale":"uk","translation":"Базова рекомендація {{value1}}","review_note":""}
+{"id":"core_ui.6ef5a3bdd141","target_locale":"uk","translation":"Очікується перевірка {{value1}} · Рекомендація доступна","review_note":""}
+{"id":"core_ui.ae4963a9ccdd","target_locale":"uk","translation":"Щотижневий звіт {{value1}}","review_note":""}
+{"id":"core_ui.8aac861df779","target_locale":"uk","translation":"Установити {{value1}} за допомогою вибору","review_note":""}
+{"id":"core_ui.b3e3454f449d","target_locale":"uk","translation":"Замінити {{value1}} іншою дією","review_note":""}
+{"id":"core_ui.851b7f4f21fc","target_locale":"uk","translation":"{{value1}} доступний. Перевірено типів тренерів: {{value2}}.","review_note":""}
+{"id":"core_ui.81040e1e98f5","target_locale":"uk","translation":"Чому рекомендовано {{value1}}","review_note":""}
+{"id":"core_ui.9c32e5e1faac","target_locale":"uk","translation":"Відкрити {{value1}}","review_note":""}
+{"id":"core_ui.1e0230abc2d8","target_locale":"uk","translation":"{{value1}} підходів","review_note":""}
+{"id":"core_ui.52c54c49143b","target_locale":"uk","translation":"{{value1}} ·","review_note":""}
+{"id":"core_ui.3071da6bb538","target_locale":"uk","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"core_ui.305942690f5d","target_locale":"uk","translation":"{{value1}} · {{value2}} оновлено","review_note":""}
+{"id":"core_ui.d9fbeb2e88e2","target_locale":"uk","translation":"{{value1}} · {{value2}} типів обладнання","review_note":""}
+{"id":"core_ui.92751b790787","target_locale":"uk","translation":"{{value1}} · {{value2}} дн./тиж.","review_note":""}
+{"id":"core_ui.f913cce82a70","target_locale":"uk","translation":"{{value1}} елементів","review_note":""}
+{"id":"core_ui.91bc80596709","target_locale":"uk","translation":"{{value1}} разів","review_note":""}
+{"id":"core_ui.2fbdeef715e1","target_locale":"uk","translation":"Виконано: {{value1}}","review_note":""}
+{"id":"core_ui.f3b483b42760","target_locale":"uk","translation":"{{value1}} вправ","review_note":""}
+{"id":"core_ui.cd89a1bc8f6a","target_locale":"uk","translation":"{{value1}} вправ / {{value2}} підходів","review_note":""}
+{"id":"core_ui.647335981a99","target_locale":"uk","translation":"Далі подбає BodyMode. Щодня застосунок пропонує до трьох дій.","review_note":""}
+{"id":"core_ui.af3103318eb4","target_locale":"uk","translation":"Дані, що підвищують надійність оцінки","review_note":""}
+{"id":"core_ui.154071eaa53b","target_locale":"uk","translation":"Застосувати рекомендованого тренера","review_note":""}
+{"id":"core_ui.770eb9a63b98","target_locale":"uk","translation":"Почніть день тут","review_note":""}
+{"id":"core_ui.bb8ea3c17233","target_locale":"uk","translation":"Почати це тренування","review_note":""}
+{"id":"core_ui.d9bbe4698b75","target_locale":"uk","translation":"Використати цю ціль","review_note":""}
+{"id":"core_ui.c7b878740639","target_locale":"uk","translation":"Тренер для цієї цілі","review_note":""}
+{"id":"core_ui.cf7bb911516d","target_locale":"uk","translation":"Чому вибрано цю дію","review_note":""}
+{"id":"core_ui.3e6334ceae9a","target_locale":"uk","translation":"Усі тренери","review_note":""}
+{"id":"core_ui.004da00de9b0","target_locale":"uk","translation":"Інше","review_note":""}
+{"id":"core_ui.6122ee8bbee3","target_locale":"uk","translation":"Білок","review_note":""}
+{"id":"core_ui.77e36dbf6362","target_locale":"uk","translation":"Що недоступно","review_note":""}
+{"id":"core_ui.b5a54050d994","target_locale":"uk","translation":"Спочатку створюється за даними на пристрої, а ШІ вносить зміни лише за потреби.","review_note":""}
+{"id":"core_ui.8f6c619d1202","target_locale":"uk","translation":"Зберегти часто використовуване тренування","review_note":""}
+{"id":"core_ui.3be34ee2e466","target_locale":"uk","translation":"Калорії","review_note":""}
+{"id":"core_ui.6c96c72399c0","target_locale":"uk","translation":"Калорії / БЖВ","review_note":""}
+{"id":"core_ui.d22be6e7aad2","target_locale":"uk","translation":"Підготовка моделі оцінювання калорій","review_note":""}
+{"id":"core_ui.37a3754927b6","target_locale":"uk","translation":"Скасувати","review_note":""}
+{"id":"core_ui.a5067c621aca","target_locale":"uk","translation":"Швидкий запис","review_note":""}
+{"id":"core_ui.5318d1ecf91a","target_locale":"uk","translation":"URL сервера","review_note":""}
+{"id":"core_ui.ae6db79774b7","target_locale":"uk","translation":"Я в спортзалі","review_note":""}
+{"id":"core_ui.42ff672ad87a","target_locale":"uk","translation":"Відвідування спортзалу","review_note":""}
+{"id":"core_ui.f904bbca161c","target_locale":"uk","translation":"Автоматично записувати відвідування спортзалу","review_note":""}
+{"id":"core_ui.a4a3b16ba214","target_locale":"uk","translation":"Пропустити","review_note":""}
+{"id":"core_ui.693f2367c5a9","target_locale":"uk","translation":"Якщо датчики недоступні, вагу, повторення та RPE можна вводити вручну. Енергоощадна вибірка знижує частоту оновлення оцінювання рухів.","review_note":""}
+{"id":"core_ui.42da49eab006","target_locale":"uk","translation":"Тестова реклама","review_note":""}
+{"id":"core_ui.2fa9d7bbabe7","target_locale":"uk","translation":"Дані","review_note":""}
+{"id":"core_ui.dcd096e9f343","target_locale":"uk","translation":"Повнота даних {{value1}} / 5","review_note":""}
+{"id":"core_ui.5b622cf96e0e","target_locale":"uk","translation":"Тренери: {{value1}}, {{value2}}, {{value3}}, {{value4}}","review_note":""}
+{"id":"core_ui.36b391f81e59","target_locale":"uk","translation":"Тренування","review_note":""}
+{"id":"core_ui.4e39030fe908","target_locale":"uk","translation":"Виконати 3 тренування","review_note":""}
+{"id":"core_ui.3b063c787a1e","target_locale":"uk","translation":"Відкрити тренування","review_note":""}
+{"id":"core_ui.954bc37281ea","target_locale":"uk","translation":"Почати тренування","review_note":""}
+{"id":"core_ui.9aab60659c0d","target_locale":"uk","translation":"Версія: {{value1}}","review_note":""}
+{"id":"core_ui.d30f54815002","target_locale":"uk","translation":"Без персоналізації","review_note":""}
+{"id":"core_ui.84cf5a25fb13","target_locale":"uk","translation":"Персоналізацію вимкнено","review_note":""}
+{"id":"core_ui.e517c836f842","target_locale":"uk","translation":"Вільне тренування","review_note":""}
+{"id":"core_ui.3ecafdb887da","target_locale":"uk","translation":"Конфіденційність","review_note":""}
+{"id":"core_ui.e028f6ce70b7","target_locale":"uk","translation":"Профіль","review_note":""}
+{"id":"core_ui.88b5b95a568c","target_locale":"uk","translation":"Допомога","review_note":""}
+{"id":"core_ui.ef6a6560996f","target_locale":"uk","translation":"Головна","review_note":""}
+{"id":"core_ui.2ea4965834a2","target_locale":"uk","translation":"Ваші тренування тут","review_note":""}
+{"id":"core_ui.3ce631b16b2d","target_locale":"uk","translation":"Вибрати або почати тренування","review_note":""}
+{"id":"core_ui.4c48305c3a97","target_locale":"uk","translation":"Виберіть застосунок, наприклад Mail, і надішліть скаргу до підтримки BodyMode. Скарга не містить даних про тіло чи здоров’я.","review_note":""}
+{"id":"core_ui.3b67eb100838","target_locale":"uk","translation":" · ","review_note":""}
+{"id":"core_ui.d1460b55a3de","target_locale":"uk","translation":"Образливий вміст","review_note":""}
+{"id":"core_ui.4662621ef14c","target_locale":"uk","translation":"Невідома помилка","review_note":""}
+{"id":"core_ui.5dea169a560e","target_locale":"uk","translation":"Неприпустимий вміст","review_note":""}
+{"id":"core_ui.fb66b4fecde1","target_locale":"uk","translation":"Поскаржитися на неприпустиму рекламу","review_note":""}
+{"id":"core_ui.4c5dd856653e","target_locale":"uk","translation":"Заплановане тренування не знайдено","review_note":""}
+{"id":"core_ui.01f9df15aee7","target_locale":"uk","translation":"Не змінювати цього разу","review_note":""}
+{"id":"core_ui.a73cbe33e52d","target_locale":"uk","translation":"Без змін цього разу","review_note":""}
+{"id":"core_ui.fc9d4f61d361","target_locale":"uk","translation":"Сьогодні: {{value1}} · {{value2}} підходів","review_note":""}
+{"id":"core_ui.174295096a95","target_locale":"uk","translation":"Почати навчання заново сьогодні","review_note":""}
+{"id":"core_ui.4df982e6c906","target_locale":"uk","translation":"Сьогоднішні 3","review_note":""}
+{"id":"core_ui.99f0bdf9e0f1","target_locale":"uk","translation":"Підготовка сьогоднішніх 3","review_note":""}
+{"id":"core_ui.b82b1b7a064a","target_locale":"uk","translation":"Сьогоднішнє тренування","review_note":""}
+{"id":"core_ui.9418cc5a98f9","target_locale":"uk","translation":"Завершити сьогоднішнє тренування","review_note":""}
+{"id":"core_ui.e1de544d20a2","target_locale":"uk","translation":"Виконати сьогоднішнє тренування","review_note":""}
+{"id":"core_ui.a13dde79fbc2","target_locale":"uk","translation":"Почати сьогоднішнє тренування","review_note":""}
+{"id":"core_ui.e75bf42e2b4a","target_locale":"uk","translation":"Сьогоднішні записи","review_note":""}
+{"id":"core_ui.0221665d470d","target_locale":"uk","translation":"Сьогоднішня рекомендація","review_note":""}
+{"id":"core_ui.360f4c9aed78","target_locale":"uk","translation":"Сьогоднішній стан","review_note":""}
+{"id":"core_ui.58c1f125a05a","target_locale":"uk","translation":"Сьогоднішній журнал","review_note":""}
+{"id":"core_ui.3e4b49a95d93","target_locale":"uk","translation":"Готовність сьогодні","review_note":""}
+{"id":"core_ui.98bcbb87d970","target_locale":"uk","translation":"Прогрес сьогодні","review_note":""}
+{"id":"core_ui.34307b75b184","target_locale":"uk","translation":"Перейти до сьогодні","review_note":""}
+{"id":"core_ui.4c047b751f90","target_locale":"uk","translation":"Сьогоднішні дії тут","review_note":""}
+{"id":"core_ui.b9e5ce41271d","target_locale":"uk","translation":" елементів","review_note":""}
+{"id":"core_ui.5f561feac629","target_locale":"uk","translation":"Відпочинок","review_note":""}
+{"id":"core_ui.d2f1acf908b5","target_locale":"uk","translation":"Час відпочинку","review_note":""}
+{"id":"core_ui.f2fa32a7adcc","target_locale":"uk","translation":"Установити час відпочинку за допомогою вибору","review_note":""}
+{"id":"core_ui.910d79f7cbf5","target_locale":"uk","translation":"Фотографії прогресу","review_note":""}
+{"id":"core_ui.e4890e3026c6","target_locale":"uk","translation":"Склад тіла","review_note":""}
+{"id":"core_ui.d05d75dc142b","target_locale":"uk","translation":"Вага","review_note":""}
+{"id":"core_ui.95c5fa8fabe3","target_locale":"uk","translation":"Вага тіла {{value1}} + додаткова вага {{value2}} = розрахункове навантаження {{value3}}","review_note":""}
+{"id":"core_ui.848ccd1f9199","target_locale":"uk","translation":"Вага тіла {{value1}} - допомога {{value2}} = розрахункове навантаження {{value3}}","review_note":""}
+{"id":"core_ui.cada6d06bebb","target_locale":"uk","translation":"Вага · Необов’язково","review_note":""}
+{"id":"core_ui.27e336fb0262","target_locale":"uk","translation":"Поліпшуйте вагу й обхват талії в сталому темпі","review_note":""}
+{"id":"core_ui.d344d7db4a1d","target_locale":"uk","translation":"Вага · Талія · Харчування · Фотографії прогресу","review_note":""}
+{"id":"core_ui.117fe6f9d272","target_locale":"uk","translation":"Яка ваша ціль?","review_note":""}
+{"id":"core_ui.f37338c0fef4","target_locale":"uk","translation":"Створити","review_note":""}
+{"id":"core_ui.a44407ea9e94","target_locale":"uk","translation":"Посібник користувача","review_note":""}
+{"id":"core_ui.81cbef31388d","target_locale":"uk","translation":"Тренування буде створено з доступним обладнанням","review_note":""}
+{"id":"core_ui.c1c9d8af06fa","target_locale":"uk","translation":"Доступне обладнання","review_note":""}
+{"id":"core_ui.5882525e2748","target_locale":"uk","translation":"На пристрої зберігаються лише типи використовуваних функцій. Вага, фотографії, відомості про харчування, пульс, розташування та нотатки не записуються й не надсилаються автоматично.","review_note":""}
+{"id":"core_ui.b3f9e7c55531","target_locale":"uk","translation":"Зберегти","review_note":""}
+{"id":"core_ui.716b63d8113c","target_locale":"uk","translation":"Перевірено за збереженими записами.","review_note":""}
+{"id":"core_ui.f94b300a8f3b","target_locale":"uk","translation":"Відокремлювати дані про здоров’я від рекламних даних","review_note":""}
+{"id":"core_ui.5741ec6a7cf6","target_locale":"uk","translation":"Запишіть кілька показників зараз і перегляньте все пізніше.","review_note":""}
+{"id":"core_ui.ce815d645805","target_locale":"uk","translation":"Готово","review_note":""}
+{"id":"core_ui.e29cb92d2b35","target_locale":"uk","translation":"Видалити всі дані?","review_note":""}
+{"id":"core_ui.b5f638ea3736","target_locale":"uk","translation":"Видалити всі дані","review_note":""}
+{"id":"core_ui.c0db37cbee38","target_locale":"uk","translation":"Експортувати всі записи у JSON","review_note":""}
+{"id":"core_ui.e5e703460a11","target_locale":"uk","translation":"Почати з тренування всього тіла","review_note":""}
+{"id":"core_ui.a1ed281773ea","target_locale":"uk","translation":"Фото","review_note":""}
+{"id":"core_ui.fa85c3a6e4ce","target_locale":"uk","translation":"Одразу проаналізувати фото","review_note":""}
+{"id":"core_ui.f33ef7b7b5dc","target_locale":"uk","translation":"Відстежуйте прогрес за фотографіями та вимірюваннями","review_note":""}
+{"id":"core_ui.0f966c64084a","target_locale":"uk","translation":"Фотографії та вимірювання тут","review_note":""}
+{"id":"core_ui.0676a757f1f4","target_locale":"uk","translation":"Записати фотографії та вимірювання","review_note":""}
+{"id":"core_ui.451d1e265682","target_locale":"uk","translation":"Зробити фото","review_note":""}
+{"id":"core_ui.bf6f2859521c","target_locale":"uk","translation":"Поліпшуйте зовнішній вигляд, талію та м’язовий баланс","review_note":""}
+{"id":"core_ui.07bfafc15465","target_locale":"uk","translation":" хв","review_note":""}
+{"id":"core_ui.5a47abbc3654","target_locale":"uk","translation":"хв:с","review_note":""}
+{"id":"core_ui.93f02f907e1f","target_locale":"uk","translation":"Створити тренування для початківців","review_note":""}
+{"id":"core_ui.1c56ad058cb9","target_locale":"uk","translation":"Переглянути відомості про оцінку","review_note":""}
+{"id":"core_ui.4e4c49222b4d","target_locale":"uk","translation":"Вибрати іншу дію","review_note":""}
+{"id":"core_ui.9d6adc8c71ef","target_locale":"uk","translation":"Яке обладнання доступне?","review_note":""}
+{"id":"core_ui.9ddacc949085","target_locale":"uk","translation":"Ділитися аналітикою використання","review_note":""}
+{"id":"core_ui.96ca24057307","target_locale":"uk","translation":"Видалити дані про використання","review_note":""}
+{"id":"core_ui.6de6ada9475e","target_locale":"uk","translation":"Експортувати дані про використання","review_note":""}
+{"id":"core_ui.8ed7116ddb59","target_locale":"uk","translation":"Баланс пріоритетів рекомендацій","review_note":""}
+{"id":"core_ui.01123bc3cf73","target_locale":"uk","translation":"Рух","review_note":""}
+{"id":"core_ui.3bd14a48af52","target_locale":"uk","translation":"Використані дані","review_note":""}
+{"id":"core_ui.744f3f778eba","target_locale":"uk","translation":"Перевірка стану згоди","review_note":""}
+{"id":"core_ui.d357bb8bb46e","target_locale":"uk","translation":"Для кого підходить","review_note":""}
+{"id":"core_ui.39b4189364d7","target_locale":"uk","translation":"Вибрати за обладнанням або групою м’язів","review_note":""}
+{"id":"core_ui.f894a2a47a50","target_locale":"uk","translation":" повторень","review_note":"トレーニング回数と反復回数の両方で使われているため、英語ではキーを分けることを推奨します。"}
+{"id":"core_ui.06d6e4f2f426","target_locale":"uk","translation":"Відновлення","review_note":""}
+{"id":"core_ui.60083756f428","target_locale":"uk","translation":"Повторення","review_note":""}
+{"id":"core_ui.bc1c81c09d67","target_locale":"uk","translation":"Установити повторення за допомогою вибору","review_note":""}
+{"id":"core_ui.35145a2177b1","target_locale":"uk","translation":"Фіксована тестова реклама","review_note":""}
+{"id":"core_ui.69788c65c769","target_locale":"uk","translation":"Початок роботи","review_note":""}
+{"id":"core_ui.5fc716aa3fbf","target_locale":"uk","translation":"Основні відомості · Необов’язково","review_note":""}
+{"id":"core_ui.3fc270c70af2","target_locale":"uk","translation":"Надіслати скаргу","review_note":""}
+{"id":"core_ui.8154b5aebe16","target_locale":"uk","translation":"Причина скарги","review_note":""}
+{"id":"core_ui.996089f9d53a","target_locale":"uk","translation":"Відстежуйте зміни тут","review_note":""}
+{"id":"core_ui.d4fe0248b5c0","target_locale":"uk","translation":"Виберіть показники для відстеження","review_note":""}
+{"id":"core_ui.f04176da6625","target_locale":"uk","translation":"Змінити","review_note":""}
+{"id":"core_ui.3bcfc8fdb197","target_locale":"uk","translation":"Історія змін","review_note":""}
+{"id":"core_ui.8e1c3ab5aef1","target_locale":"uk","translation":"Почати","review_note":""}
+{"id":"core_ui.70353d3dfb1a","target_locale":"uk","translation":"Навчання призупинено. Попередні записи не видалено.","review_note":""}
+{"id":"core_ui.9eeac2fd3ceb","target_locale":"uk","translation":"Готово","review_note":""}
+{"id":"core_ui.f4afb2218186","target_locale":"uk","translation":"Виконано: {{value1}}","review_note":""}
+{"id":"core_ui.a16ead46fb2d","target_locale":"uk","translation":"Виконано","review_note":""}
+{"id":"core_ui.66bbc01c25cd","target_locale":"uk","translation":"Позначити як виконане","review_note":""}
+{"id":"core_ui.3362a5982780","target_locale":"uk","translation":"Виконано","review_note":""}
+{"id":"core_ui.e86654c1dabb","target_locale":"uk","translation":"Не виконано","review_note":""}
+{"id":"core_ui.f4b3ed35961f","target_locale":"uk","translation":"Виконати","review_note":""}
+{"id":"core_ui.8db1bd8f5b87","target_locale":"uk","translation":"Що більше ви робите, то зрозумілішим стає наступний крок","review_note":""}
+{"id":"core_ui.cfb9b70a1a45","target_locale":"uk","translation":"Ваші результати поліпшують наступну рекомендацію ШІ","review_note":""}
+{"id":"core_ui.e25688df2e3a","target_locale":"uk","translation":"Розгорнуто","review_note":""}
+{"id":"core_ui.b711e4d9455e","target_locale":"uk","translation":"Історія","review_note":""}
+{"id":"core_ui.d1ce72ea5c2b","target_locale":"uk","translation":" років","review_note":""}
+{"id":"core_ui.4c70eaf9acf8","target_locale":"uk","translation":"Не відповідає віку","review_note":""}
+{"id":"core_ui.952d521268fa","target_locale":"uk","translation":"ID реклами не налаштовано","review_note":""}
+{"id":"core_ui.6ecd0742beb6","target_locale":"uk","translation":"Реклама та використання даних","review_note":""}
+{"id":"core_ui.aac8d0ee418a","target_locale":"uk","translation":"Налаштування конфіденційності реклами","review_note":""}
+{"id":"core_ui.be8a39c136e2","target_locale":"uk","translation":"Згоду на рекламу не отримано.","review_note":""}
+{"id":"core_ui.b059d3be52a7","target_locale":"uk","translation":"Назва товару або помічена проблема в рекламі","review_note":""}
+{"id":"core_ui.0200140f3573","target_locale":"uk","translation":"Реклама показується лише на iPhone. Дані про здоров’я, харчування, фотографії та розташування BodyMode не використовуються для добору реклами.","review_note":""}
+{"id":"core_ui.845fb299a5e2","target_locale":"uk","translation":"Поскаржитися на рекламу","review_note":""}
+{"id":"core_ui.0ad77cc5064c","target_locale":"uk","translation":"Завантаження реклами","review_note":""}
+{"id":"core_ui.0defda7f85a6","target_locale":"uk","translation":"Реклама та конфіденційність","review_note":""}
+{"id":"core_ui.b28b3c7c3418","target_locale":"uk","translation":"Постачальник реклами","review_note":""}
+{"id":"core_ui.ca5b5635259a","target_locale":"uk","translation":"Для показу реклами Google отримує вашу IP-адресу, основні відомості про пристрій і застосунок, діагностичні дані та дані продуктивності SDK, а також відомості про покази реклами й взаємодію з нею. За IP-адресою може бути визначено приблизне розташування. Вага, пульс, сон, харчування, фотографії, тренування, цілі, дані GPS і розташування спортзалів, записані в BodyMode, не включаються до рекламних запитів.","review_note":""}
+{"id":"core_ui.82ae8bf04c79","target_locale":"uk","translation":"Налаштувати відпочинок за пульсом і RPE","review_note":""}
+{"id":"core_ui.5263b86c134f","target_locale":"uk","translation":"Пульс і рух","review_note":""}
+{"id":"core_ui.4ad24abc61b0","target_locale":"uk","translation":"Стать","review_note":""}
+{"id":"core_ui.96465ca042cf","target_locale":"uk","translation":"Стать · Необов’язково","review_note":""}
+{"id":"core_ui.789d7c369bcb","target_locale":"uk","translation":"Назад","review_note":""}
+{"id":"core_ui.9e3593f0f682","target_locale":"uk","translation":"Ручний запис досі доступний.","review_note":""}
+{"id":"core_ui.57f7d1515dab","target_locale":"uk","translation":"Тренер: {{value1}}","review_note":""}
+{"id":"core_ui.a40e8863f052","target_locale":"uk","translation":"Призначений тренер","review_note":""}
+{"id":"core_ui.3b9c8e4a9579","target_locale":"uk","translation":"Запитати тренера","review_note":""}
+{"id":"core_ui.46e1ee031bf8","target_locale":"uk","translation":"Підхід тренера","review_note":""}
+{"id":"core_ui.a2190945ec45","target_locale":"uk","translation":"Під час зміни типу тренера змінюються дані, яким ШІ надає пріоритет, і його рекомендації.","review_note":""}
+{"id":"core_ui.395989968966","target_locale":"uk","translation":"Призначений тренер: {{value1}}, {{value2}}","review_note":""}
+{"id":"core_ui.4a384e48e5fa","target_locale":"uk","translation":"Не вказано","review_note":""}
+{"id":"core_ui.4116785260b6","target_locale":"uk","translation":"Перевірити підключення","review_note":""}
+{"id":"core_ui.7cc0b0723d1f","target_locale":"uk","translation":"Дотримуйтеся рекомендованого тренування на iPhone або Apple Watch.","review_note":""}
+{"id":"core_ui.813a696c3764","target_locale":"uk","translation":"Скинути лише навчання рекомендацій","review_note":""}
+{"id":"core_ui.b8fd47274dc1","target_locale":"uk","translation":"Лише банерна реклама без переривань","review_note":""}
+{"id":"core_ui.bbc2f5175dc6","target_locale":"uk","translation":"Записати вимірювання","review_note":""}
+{"id":"core_ui.1b712ec8244d","target_locale":"uk","translation":" днів","review_note":""}
+{"id":"core_ui.df908fa3f54c","target_locale":"uk","translation":"Перегляд за датою","review_note":""}
+{"id":"core_ui.214ff534b879","target_locale":"uk","translation":"Щоденна активність","review_note":""}
+{"id":"core_ui.b4f216bc6936","target_locale":"uk","translation":"Перевірка щоденної рекомендації","review_note":""}
+{"id":"core_ui.684a148ea1f5","target_locale":"uk","translation":"Не вдалося експортувати","review_note":""}

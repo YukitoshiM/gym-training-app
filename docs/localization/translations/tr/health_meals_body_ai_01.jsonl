@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.f2a88880f646","target_locale":"tr","translation":"{{value1}}'e sıfırlanacaktır. Manuel olarak kaydetme özelliği hala kullanılabilir.","review_note":""}
+{"id":"health_meals_body_ai.e7389b1be06a","target_locale":"tr","translation":"{{value1}}・{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.24a8a9fb448f","target_locale":"tr","translation":"0'dan büyük bir sayı girin.","review_note":""}
+{"id":"health_meals_body_ai.86f4e09eea0c","target_locale":"tr","translation":"1. Haftada 3 kez egzersiz yapmaya devam et\n2. Protein hedefi kaydı tut\n3. Ay sonunda vücut fotoğrafını karşılaştır","review_note":""}
+{"id":"health_meals_body_ai.859914a154e7","target_locale":"tr","translation":"Birkaç dakika bekleyip tekrar deneyin.","review_note":""}
+{"id":"health_meals_body_ai.238a52b5a2f7","target_locale":"tr","translation":"1 bardak","review_note":""}
+{"id":"health_meals_body_ai.65d6f899ad2f","target_locale":"tr","translation":"3 veya daha fazla kez kaydedilmiş egzersizlerde belirgin bir ilerleme yok.","review_note":""}
+{"id":"health_meals_body_ai.f053074509dd","target_locale":"tr","translation":"Çok sayıda antrenman seansı (48 saat)","review_note":""}
+{"id":"health_meals_body_ai.646815b94145","target_locale":"tr","translation":"Yapay zeka ile genel denge","review_note":""}
+{"id":"health_meals_body_ai.9f3fa8dd0ea9","target_locale":"tr","translation":"Yapay zekanın referans aldığı kayıtlar","review_note":""}
+{"id":"health_meals_body_ai.ac02ca6a6ac9","target_locale":"tr","translation":"Yapay zeka kullanımı şu anda yoğun.","review_note":""}
+{"id":"health_meals_body_ai.033555b3e02e","target_locale":"tr","translation":"Yapay zeka kimlik bilgileri geçersiz veya süresi dolmuştur.","review_note":""}
+{"id":"health_meals_body_ai.7d80eebb209d","target_locale":"tr","translation":"Yapay zeka hatası","review_note":""}
+{"id":"health_meals_body_ai.f0b4abc21d0c","target_locale":"tr","translation":"Yapay zeka antrenörü","review_note":""}
+{"id":"health_meals_body_ai.1e8bd0778f84","target_locale":"tr","translation":"Yanlış Yapay zeka sunucu URL'si","review_note":""}
+{"id":"health_meals_body_ai.9cf22e4b7f64","target_locale":"tr","translation":"Yapay zeka sunucusu hata döndürdü: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.76691cf4f1f7","target_locale":"tr","translation":"Gerekli Yapay zeka sunucu API'si bulunamadı.","review_note":""}
+{"id":"health_meals_body_ai.a8806f356dd5","target_locale":"tr","translation":"Yapay zeka sunucusuna bağlanamıyoruz. Lütfen daha sonra tekrar deneyin.","review_note":""}
+{"id":"health_meals_body_ai.59dc9f20a101","target_locale":"tr","translation":"Yapay zeka sunucusunun JSON formatı, uygulamanın beklentisiyle uyuşmuyor.","review_note":""}
+{"id":"health_meals_body_ai.b419c3f5c523","target_locale":"tr","translation":"Yapay zeka sunucusundan yanıt okunamadı.","review_note":""}
+{"id":"health_meals_body_ai.ccdad25cb2a2","target_locale":"tr","translation":"Yapay zeka sunucusu tarafında bir hata oluştu: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.075a3448ee9c","target_locale":"tr","translation":"Yapay zeka sunucu bağlantısını kontrol et","review_note":""}
+{"id":"health_meals_body_ai.4b6c42529d18","target_locale":"tr","translation":"Yapay zeka antrenörü","review_note":""}
+{"id":"health_meals_body_ai.ab8ec8a66973","target_locale":"tr","translation":"Yapay zeka antrenörü ile olan konuşmayı silmek ister misiniz?","review_note":""}
+{"id":"health_meals_body_ai.072ba0df4357","target_locale":"tr","translation":"Yapay zeka modeli kullanılamıyor veya görüntü analizi başarısız oldu.","review_note":""}
+{"id":"health_meals_body_ai.75a1ae0d8cd7","target_locale":"tr","translation":"Yapay zeka modeli hazırlanıyor","review_note":""}
+{"id":"health_meals_body_ai.f74c6003db3a","target_locale":"tr","translation":"Yapay zeka analizi","review_note":""}
+{"id":"health_meals_body_ai.d320406ff6df","target_locale":"tr","translation":"AI kullanım alanı için yeterli yeriniz var.","review_note":""}
+{"id":"health_meals_body_ai.a7d57de9953d","target_locale":"tr","translation":"AI kullanım alanınızı kontrol edin.","review_note":""}
+{"id":"health_meals_body_ai.35adcbc0257c","target_locale":"tr","translation":"AI kullanımı kapalıdır.","review_note":""}
+{"id":"health_meals_body_ai.7e9dd72271a8","target_locale":"tr","translation":"AI referans değerlerini ve gerekli kontrolleri yapın.","review_note":""}
+{"id":"health_meals_body_ai.e92c4b6bfa1d","target_locale":"tr","translation":"AI bağlantısı etkinleştirilmiştir.","review_note":""}
+{"id":"health_meals_body_ai.19d7834ec7ec","target_locale":"tr","translation":"AI bağlantı bilgisi güvenli bir şekilde kaydedilemedi.","review_note":""}
+{"id":"health_meals_body_ai.8883e756324e","target_locale":"tr","translation":"AI özellikleri","review_note":""}
+{"id":"health_meals_body_ai.ebaaf28b717e","target_locale":"tr","translation":"AI özellikleri, ayarlar üzerinden kapatılmıştır.","review_note":""}
+{"id":"health_meals_body_ai.215d8802d90e","target_locale":"tr","translation":"AI özellikleri, ayarlar üzerinden kapatılmıştır. Fotoğraf seti bu haliyle kaydedilebilir.","review_note":""}
+{"id":"health_meals_body_ai.16d5fbaa5425","target_locale":"tr","translation":"AI özellikleri, ayarlar üzerinden kapatılmıştır. Manuel giriş bu haliyle kaydedilebilir.","review_note":""}
+{"id":"health_meals_body_ai.4d382e329510","target_locale":"tr","translation":"AI gönderim geçmişi","review_note":""}
+{"id":"health_meals_body_ai.7ab71e403577","target_locale":"tr","translation":"API anahtarı ayarlanmamıştır.","review_note":""}
+{"id":"health_meals_body_ai.b0dd483bd6a7","target_locale":"tr","translation":"API sunucusunun sürümünü kontrol edin. Detay: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.abbfa3552a40","target_locale":"tr","translation":"API sunucusu yanıt vermektedir, ancak gerekli modeller kullanılabilir değildir.","review_note":""}
+{"id":"health_meals_body_ai.4047b572f3a1","target_locale":"tr","translation":"API sunucusu yanıt vermektedir, ancak yemek ve raporlama için yardımcı modeller kullanılabilir değildir.","review_note":""}
+{"id":"health_meals_body_ai.a9a7774c8845","target_locale":"tr","translation":"Apple Health ile bağlantı","review_note":""}
+{"id":"health_meals_body_ai.fa00a282a7bd","target_locale":"tr","translation":"En son koşu rotanızı Apple Health'te sakladığınızı gösteriyor.","review_note":""}
+{"id":"health_meals_body_ai.4597562046d9","target_locale":"tr","translation":"Apple Health ile bağlantı kurun","review_note":""}
+{"id":"health_meals_body_ai.097c8a28c9eb","target_locale":"tr","translation":"Apple Watch'unuzu uygun şekilde takın ve uyurken de kullanmak, iyileşme ölçümlerinizi daha kolay toplamanıza yardımcı olur. Eksik değerleri tahminle tamamlamamaktadır.","review_note":""}
+{"id":"health_meals_body_ai.9331cab52986","target_locale":"tr","translation":"Temel URL ve API sunucusunun sürümünü kontrol edin.","review_note":""}
+{"id":"health_meals_body_ai.93df76c886d2","target_locale":"tr","translation":"HRV, 14 günlük ortalamadan daha düşüktür","review_note":""}
+{"id":"health_meals_body_ai.a938c37a9c75","target_locale":"tr","translation":"HRV için sürekli veri mevcut değil.","review_note":""}
+{"id":"health_meals_body_ai.846e364a038b","target_locale":"tr","translation":"HRV, normal değerlerin üzerindedir.","review_note":""}
+{"id":"health_meals_body_ai.a6455e49514a","target_locale":"tr","translation":"HRV, normal aralıkta.","review_note":""}
+{"id":"health_meals_body_ai.953bd2bfe007","target_locale":"tr","translation":"HRV oranı ortalama {{value1}}% (Kişisel referansla karşılaştırma)","review_note":""}
+{"id":"health_meals_body_ai.325f72991867","target_locale":"tr","translation":"HTTP yalnızca localhost, yerel ağ ve Tailscale içinde kullanılabilir. Dış sunucular için HTTPS kullanın.","review_note":""}
+{"id":"health_meals_body_ai.08b433c8bd55","target_locale":"tr","translation":"Health'in enerji harcama değeri henüz alınmamıştır. Sadece yemek kaydı kaydedilmiştir.","review_note":""}
+{"id":"health_meals_body_ai.fe02dc7991e6","target_locale":"tr","translation":"Health verilerini güncelleyin","review_note":""}
+{"id":"health_meals_body_ai.0a842afdf860","target_locale":"tr","translation":"JPEG veya PNG seçeneğini yeniden seçin.","review_note":""}
+{"id":"health_meals_body_ai.d957869454ea","target_locale":"tr","translation":"KPI'leri kaydedin","review_note":""}
+{"id":"health_meals_body_ai.6e80ae6c0ed4","target_locale":"tr","translation":"Gürültü uygulaması gibi, en son değerler. Alınmayan değerler için 0 kullanmayın.","review_note":""}
+{"id":"health_meals_body_ai.16bcee4b0ed9","target_locale":"tr","translation":"PFC üzerinden otomatik olarak kalori hesaplaması","review_note":""}
+{"id":"health_meals_body_ai.01862aa03144","target_locale":"tr","translation":"PFC hedefine ulaştınız","review_note":""}
+{"id":"health_meals_body_ai.0ea281b9e3cc","target_locale":"tr","translation":"RPE'yi bir basamak azaltın","review_note":""}
+{"id":"health_meals_body_ai.8cffd32caabd","target_locale":"tr","translation":"URL \"https://\" ile başlayın. Yerel geliştirme sırasında localhost, yerel ağ IP adresi ve Tailscale adı gibi HTTP adreslerini de kullanabilirsiniz.","review_note":""}
+{"id":"health_meals_body_ai.b8e6974a0b21","target_locale":"tr","translation":"URL \"https://\" ile başlayın. Sadece yerel geliştirme sırasında \"http://\" da kullanılabilir.","review_note":""}
+{"id":"health_meals_body_ai.f7a0028b2b6a","target_locale":"tr","translation":"Watch sensörü ile","review_note":""}
+{"id":"health_meals_body_ai.ec8769bf01cc","target_locale":"tr","translation":"bpm / 30 saniye","review_note":""}
+{"id":"health_meals_body_ai.72f5049fd184","target_locale":"tr","translation":"kcal ve PFC hedefine ulaştınız","review_note":""}
+{"id":"health_meals_body_ai.44a5b22247ad","target_locale":"tr","translation":"Kcal hedefine ulaştınız","review_note":""}
+{"id":"health_meals_body_ai.05fbc7a9d044","target_locale":"tr","translation":"kg / dakika","review_note":""}
+{"id":"health_meals_body_ai.5ffda91dfa7a","target_locale":"tr","translation":"{\"id\":\"{{value1}}\",\"kategori\":\"{{value2}}\",\"başlık\":\"{{value3}}\",\"hedef\":0,\"neden\":\"Kaydı ve hedefleri kontrol ettim\"}","review_note":""}
+{"id":"health_meals_body_ai.320cd1a54732","target_locale":"tr","translation":"{\"var olanı koru\":true,\"hazırlık seviyesi\":\"normal\",\"özet\":\"Bugünkü öneriyi aynen devam ettirelim.\",\"değiştirme nedeni\":\"\", \"eylemler\":[{{value1}}]","review_note":""}
+{"id":"health_meals_body_ai.1edd54ba3719","target_locale":"tr","translation":"{{value1}} / {{value2}} adet","review_note":""}
+{"id":"health_meals_body_ai.bd3f192f376f","target_locale":"tr","translation":"{{value1}} / {{value2}} saat","review_note":""}
+{"id":"health_meals_body_ai.10ced1c103ad","target_locale":"tr","translation":"{{value1}} / {{value2}} adım","review_note":""}
+{"id":"health_meals_body_ai.b48f44afd030","target_locale":"tr","translation":"{{value1}} / {{value2}} öğün","review_note":""}
+{"id":"health_meals_body_ai.1913fa724bc8","target_locale":"tr","translation":"{{value1}} {{value2}} adet ({{value3}}: {{value4}})","review_note":""}
+{"id":"health_meals_body_ai.336d67026106","target_locale":"tr","translation":"{{value1}} ve yardımcı model ile haftalık geri bildirim oluşturabilirsiniz.","review_note":""}
+{"id":"health_meals_body_ai.6a0da3609e1e","target_locale":"tr","translation":"{{value1}}/{{value2}} kez","review_note":""}
+{"id":"health_meals_body_ai.ca5bfb0e7766","target_locale":"tr","translation":"{{value1}}: {{value2}} Başarı oranı {{value3}}","review_note":""}
+{"id":"health_meals_body_ai.d94549194ed1","target_locale":"tr","translation":"{{value1}} tüm seti kontrol et","review_note":""}
+{"id":"health_meals_body_ai.f31fb12d4b07","target_locale":"tr","translation":"{{value1}}, cevabı değerlendiriyor","review_note":""}
+{"id":"health_meals_body_ai.3ef862b1075b","target_locale":"tr","translation":"{{value1}}, yeme ve PFC'yi kontrol ediyor","review_note":""}
+{"id":"health_meals_body_ai.eed6016a2209","target_locale":"tr","translation":"{{value1}}, farklı yönleri inceliyor","review_note":""}
+{"id":"health_meals_body_ai.9341e4c7e4b5","target_locale":"tr","translation":"{{value1}}, hatırladığı şeyleri","review_note":""}
+{"id":"health_meals_body_ai.227ec548982d","target_locale":"tr","translation":"{{value1}} ile birlikte oluşturulmuş ve görüşülmüş değişiklikler","review_note":""}
+{"id":"health_meals_body_ai.ea35bda4ca72","target_locale":"tr","translation":"{{value1}} ile danışma","review_note":""}
+{"id":"health_meals_body_ai.b4254a2710b4","target_locale":"tr","translation":"{{value1}}'in raporu","review_note":""}
+{"id":"health_meals_body_ai.c61497f4f0c1","target_locale":"tr","translation":"{{value1}}'in raporu henüz yok","review_note":""}
+{"id":"health_meals_body_ai.e6415cd101bd","target_locale":"tr","translation":"{{value1}}'in taslağı","review_note":""}
+{"id":"health_meals_body_ai.6bf0f1539402","target_locale":"tr","translation":"{{value1}}'in taslağı ve {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.356ec7e292c8","target_locale":"tr","translation":"{{value1}}'in analizi","review_note":""}
+{"id":"health_meals_body_ai.5c0fab317f2b","target_locale":"tr","translation":"{{value1}}'in analiz sonuçları","review_note":""}
+{"id":"health_meals_body_ai.6867358ace30","target_locale":"tr","translation":"{{value1}}'in referans bilgileri","review_note":""}
+{"id":"health_meals_body_ai.561be95fd706","target_locale":"tr","translation":"{{value1}}'in değerlendirmesi","review_note":""}
+{"id":"health_meals_body_ai.7874427a15f4","target_locale":"tr","translation":"{{value1}}'in önerdiği değişiklikler, onaylanmış olanlar yalnızca görüntülenir.","review_note":""}
+{"id":"health_meals_body_ai.81ad045e3190","target_locale":"tr","translation":"{{value1}}'in aylık gözden geçirme","review_note":""}
+{"id":"health_meals_body_ai.2ccfc30d5576","target_locale":"tr","translation":"{{value1}}'in hafızası","review_note":""}
+{"id":"health_meals_body_ai.ec33ef8cdb99","target_locale":"tr","translation":"{{value1}}, kütüphaneden seçiliyor","review_note":""}
+{"id":"health_meals_body_ai.d801f8eaaf8a","target_locale":"tr","translation":"{{value1}}, siliniyor","review_note":""}
+{"id":"health_meals_body_ai.d715189703aa","target_locale":"tr","translation":"{{value1}}, fotoğraf çekiliyor","review_note":""}
+{"id":"health_meals_body_ai.763b6c839189","target_locale":"tr","translation":"[{{value1}}]'i düzenle","review_note":""}
+{"id":"health_meals_body_ai.7b34b98fc5f0","target_locale":"tr","translation":"{{value1}} değerini kaydedin","review_note":""}
+{"id":"health_meals_body_ai.4e90e03be3ab","target_locale":"tr","translation":"{{value1}}'i hafifçe","review_note":""}
+{"id":"health_meals_body_ai.6917e81df8db","target_locale":"tr","translation":"{{value1}} set'in ortalama istikrarı %{{value2}}'dir.","review_note":""}
+{"id":"health_meals_body_ai.402c5e169f80","target_locale":"tr","translation":"{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6bf0c99ca090","target_locale":"tr","translation":"{{value1}} · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.d1b5f3636ed7","target_locale":"tr","translation":"{{value1}}· Sohbet","review_note":""}
+{"id":"health_meals_body_ai.0bc6450c1c5b","target_locale":"tr","translation":"{{value1}}{} ・ Aylık değerlendirme önerisi","review_note":""}
+{"id":"health_meals_body_ai.066be6f8dc2d","target_locale":"tr","translation":"{{value1}} · Düzeltme {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.e8afca8b2ea3","target_locale":"tr","translation":"{{value1}}· Haftalık rapor","review_note":""}
+{"id":"health_meals_body_ai.d80a4d642fbb","target_locale":"tr","translation":"{{value1}} adet · {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.35a91d364b5f","target_locale":"tr","translation":"{{value1}} kez tekrar deneyin. Manuel kayıt kullanımı devam etmektedir.","review_note":""}
+{"id":"health_meals_body_ai.a0a1a2fec576","target_locale":"tr","translation":"{{value1}} kez tekrar deneyin. Devam ediliyorsa, AI sunucunun çalışıp çalışmadığını kontrol edin.","review_note":""}
+{"id":"health_meals_body_ai.156dec7f8ca6","target_locale":"tr","translation":"{{value1}} fotoğrafı sil","review_note":""}
+{"id":"health_meals_body_ai.e3e557893569","target_locale":"tr","translation":"{{value1}} dakika","review_note":""}
+{"id":"health_meals_body_ai.f20927268a6d","target_locale":"tr","translation":"{{value1}} defa","review_note":""}
+{"id":"health_meals_body_ai.50a93127c0f7","target_locale":"tr","translation":"{{value1}} defa · Ortalama başarı oranı {{value2}}%","review_note":""}
+{"id":"health_meals_body_ai.7d4f39ef9618","target_locale":"tr","translation":"{{value1}} yönden fotoğrafları toplu olarak analiz eder. Yağ oranları gibi değerler kesin değildir.","review_note":""}
+{"id":"health_meals_body_ai.9260bfe7ab30","target_locale":"tr","translation":"{{value1}} fotoğraf","review_note":""}
+{"id":"health_meals_body_ai.8ed437093c0a","target_locale":"tr","translation":"{{value1}} fotoğraf çekimi","review_note":""}
+{"id":"health_meals_body_ai.e2eadb18879f","target_locale":"tr","translation":"{{value1}} adım","review_note":""}
+{"id":"health_meals_body_ai.42539e8231ed","target_locale":"tr","translation":"\"-\" değeri ölçülmediği için toplamdan çıkarılır, \"Tr\" değeri çok düşük olduğu için 0 olarak tahmin edilir.","review_note":""}
+{"id":"health_meals_body_ai.2e46c93455a4","target_locale":"tr","translation":"Ayrıca {{value1}} gram daha","review_note":""}
+{"id":"health_meals_body_ai.e8a45501dd61","target_locale":"tr","translation":"Birlikte kaydınızı inceleyerek değerlendirelim.","review_note":""}
+{"id":"health_meals_body_ai.5de8b517bd37","target_locale":"tr","translation":"Çok enerjik","review_note":""}
+{"id":"health_meals_body_ai.73102423924e","target_locale":"tr","translation":"Çok yorgun","review_note":""}
+{"id":"health_meals_body_ai.15277ebacd5d","target_locale":"tr","translation":"Bu verileri analiz edebiliriz. Ayrıca, yan ve arka tarafları da ekleyerek farklı açılardan kontrol edebilirsiniz.","review_note":""}
+{"id":"health_meals_body_ai.b57fc7605da1","target_locale":"tr","translation":"Bu veriyi analiz et","review_note":""}
+{"id":"health_meals_body_ai.9db16b95c403","target_locale":"tr","translation":"Bu bilgileri kullanarak önerilerde bulunabilirim.","review_note":""}
+{"id":"health_meals_body_ai.0c64557b2b39","target_locale":"tr","translation":"Tümünü sil","review_note":""}
+{"id":"health_meals_body_ai.140a2c34da87","target_locale":"tr","translation":"Protein","review_note":""}
+{"id":"health_meals_body_ai.c8c7a19a1169","target_locale":"tr","translation":"Bugünkü sonuçları yarının planına dahil ediyorum.","review_note":""}
+{"id":"health_meals_body_ai.9cc8f59144b4","target_locale":"tr","translation":"Diğer {{value1}} öğe","review_note":""}
+{"id":"health_meals_body_ai.a553bc46de29","target_locale":"tr","translation":"Henüz öğrenme verisi yok.","review_note":""}
+{"id":"health_meals_body_ai.33b6f5aef21f","target_locale":"tr","translation":"Henüz kayıt yok.","review_note":""}
+{"id":"health_meals_body_ai.9200c9bcb7a4","target_locale":"tr","translation":"Tekrar tahmin et","review_note":""}
+{"id":"health_meals_body_ai.12006fd0cc46","target_locale":"tr","translation":"Belden ölçü","review_note":""}
+{"id":"health_meals_body_ai.db59ae95c8ef","target_locale":"tr","translation":"Kamera ile okuma","review_note":""}
+{"id":"health_meals_body_ai.188fd18847ac","target_locale":"tr","translation":"Kamera kullanılamıyor","review_note":""}
+{"id":"health_meals_body_ai.0b497fb0939d","target_locale":"tr","translation":"Kamera okuma özelliği kullanılmıyor","review_note":""}
+{"id":"health_meals_body_ai.a412f109a6d5","target_locale":"tr","translation":"Kalori","review_note":""}
+{"id":"health_meals_body_ai.333d812c9fca","target_locale":"tr","translation":"Kalori tahmini yapılıyor","review_note":""}
+{"id":"health_meals_body_ai.dd84abcb6681","target_locale":"tr","translation":"İptal et","review_note":""}
+{"id":"health_meals_body_ai.e8c88bb7608c","target_locale":"tr","translation":"Durum","review_note":""}
+{"id":"health_meals_body_ai.5a4c72805744","target_locale":"tr","translation":"Sunucu URL'si, API anahtarı ve API sunucusunun durumunu kontrol edin.","review_note":""}
+{"id":"health_meals_body_ai.cf3d3dbdd0f6","target_locale":"tr","translation":"Spor salonu ziyareti","review_note":""}
+{"id":"health_meals_body_ai.482b99ee1cad","target_locale":"tr","translation":"Ayaklı cihaz","review_note":""}
+{"id":"health_meals_body_ai.4c46ceec68e0","target_locale":"tr","translation":"Set","review_note":""}
+{"id":"health_meals_body_ai.ce7cce7b48e4","target_locale":"tr","translation":"Set'i analiz ediliyor","review_note":""}
+{"id":"health_meals_body_ai.f42eb4dd5c1d","target_locale":"tr","translation":"Set kalitesi","review_note":""}
+{"id":"health_meals_body_ai.fe9c10c97608","target_locale":"tr","translation":"Set kalitesinin detayları","review_note":""}
+{"id":"health_meals_body_ai.0e29b476147b","target_locale":"tr","translation":"Protein {{value1}}g","review_note":""}
+{"id":"health_meals_body_ai.a535761413f5","target_locale":"tr","translation":"Göğüs egzersizi","review_note":""}
+{"id":"health_meals_body_ai.5abcc8fb6635","target_locale":"tr","translation":"Bu, yalnızca bir tahmindir.","review_note":""}
+{"id":"health_meals_body_ai.4792fe290e90","target_locale":"tr","translation":"Tempo","review_note":""}
+{"id":"health_meals_body_ai.5abca7b1f34a","target_locale":"tr","translation":"Veriler toplandığında, uyku, dinlenme ve egzersiz miktarınızı tek bir yerde görebilirsiniz.","review_note":""}
+{"id":"health_meals_body_ai.3b5b91c5855d","target_locale":"tr","translation":"Veri kalitesi","review_note":""}
+{"id":"health_meals_body_ai.bb243f7c92b4","target_locale":"tr","translation":"Antrenörle görüşme","review_note":""}
+{"id":"health_meals_body_ai.97bcb3ef255f","target_locale":"tr","translation":"Egzersiz","review_note":""}
+{"id":"health_meals_body_ai.4e27cb296a97","target_locale":"tr","translation":"Egzersiz analizi","review_note":""}
+{"id":"health_meals_body_ai.5a2ca5b0687b","target_locale":"tr","translation":"Eğitim geçmişi","review_note":""}
+{"id":"health_meals_body_ai.2e6d80b23ca9","target_locale":"tr","translation":"Eğitim planı","review_note":""}
+{"id":"health_meals_body_ai.d652958253ce","target_locale":"tr","translation":"Eğitim yükü","review_note":""}
+{"id":"health_meals_body_ai.91022a59299a","target_locale":"tr","translation":"Ağ ve yapay zeka sunucusunun durumunu kontrol edin. Yapay zeka işlemleri en fazla 240 saniye sürebilir.","review_note":""}
+{"id":"health_meals_body_ai.1a249c16e07b","target_locale":"tr","translation":"Ağ durumunu ve sunucu URL'sini kontrol ettikten sonra tekrar deneyin.","review_note":""}
+{"id":"health_meals_body_ai.c85e8d637553","target_locale":"tr","translation":"Ağ durumunu ve sunucu URL'sini kontrol edin.","review_note":""}
+{"id":"health_meals_body_ai.f15118749eab","target_locale":"tr","translation":"Barkod","review_note":""}
+{"id":"health_meals_body_ai.90858d235fa5","target_locale":"tr","translation":"Hacim","review_note":""}
+{"id":"health_meals_body_ai.8c75473ee509","target_locale":"tr","translation":"Hacim, tamamlanmış setlerin ağırlığı × tekrar sayısıdır. Farklı egzersiz türlerine sahip haftalarda basit karşılaştırmalar yapmaktan kaçının.","review_note":""}
+{"id":"health_meals_body_ai.8519bcac90ba","target_locale":"tr","translation":"Hareket","review_note":""}
+{"id":"health_meals_body_ai.340d133557fc","target_locale":"tr","translation":"Mesaj","review_note":""}
+{"id":"health_meals_body_ai.b42ca3558100","target_locale":"tr","translation":"Menü","review_note":""}
+{"id":"health_meals_body_ai.ac69d517823e","target_locale":"tr","translation":"Menü oluşturarak başlayın","review_note":""}
+{"id":"health_meals_body_ai.03b5d7044111","target_locale":"tr","translation":"Notlar","review_note":""}
+{"id":"health_meals_body_ai.506e586e218c","target_locale":"tr","translation":"Kütüphane","review_note":""}
+{"id":"health_meals_body_ai.2bb02e3fab46","target_locale":"tr","translation":"Lat pull-down","review_note":""}
+{"id":"health_meals_body_ai.9bf285f4e0ce","target_locale":"tr","translation":"Etiketleme için referans değerleri","review_note":""}
+{"id":"health_meals_body_ai.530bc7429a78","target_locale":"tr","translation":"Listeden kalori tahmin edin","review_note":""}
+{"id":"health_meals_body_ai.a91961dc43c1","target_locale":"tr","translation":"Yeniden denemeyi deneyin. Manuel kayıt kullanımı devam etmektedir.","review_note":""}
+{"id":"health_meals_body_ai.7dca00d85e73","target_locale":"tr","translation":"Yaya koşusu (yol kenarı) bulduğunuzda, mesafe, hız ve yükseklik farkını gösterir.","review_note":""}
+{"id":"health_meals_body_ai.a1cf4f52b620","target_locale":"tr","translation":"Çekil basın.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.3654226ac56b","target_locale":"tr","translation":"·","review_note":""}
+{"id":"health_meals_body_ai.ac2ad0f51452","target_locale":"tr","translation":"·{{value1}}","review_note":""}
+{"id":"health_meals_body_ai.dc7014ca09f7","target_locale":"tr","translation":"Yükseldiğiniz kat sayısı","review_note":""}
+{"id":"health_meals_body_ai.5849c46696c5","target_locale":"tr","translation":"Orta gece uyanışı","review_note":""}
+{"id":"health_meals_body_ai.d9eb6553376d","target_locale":"tr","translation":"Önemli KPI'lar","review_note":""}
+{"id":"health_meals_body_ai.bcdb18a0c6bb","target_locale":"tr","translation":"Öznel yorgunluk yüksek","review_note":""}
+{"id":"health_meals_body_ai.7c25eddabd36","target_locale":"tr","translation":"Öznel yorgunluk düşük","review_note":""}
+{"id":"health_meals_body_ai.4842a70e2a73","target_locale":"tr","translation":"Öznel yorgunluk normal aralıkta","review_note":""}
+{"id":"health_meals_body_ai.d6bc1c633432","target_locale":"tr","translation":"Gelecekteki öneriler için kullanılabilecek içerikleri seçin.","review_note":""}
+{"id":"health_meals_body_ai.3f6a42bf20f8","target_locale":"tr","translation":"Bu bilgilerin gelecekteki antrenman önerilerine yardımcı olması için","review_note":""}
+{"id":"health_meals_body_ai.79c97ab01e64","target_locale":"tr","translation":"Bugünkü hedefler belirlendi","review_note":""}
+{"id":"health_meals_body_ai.24d95a3f7ec3","target_locale":"tr","translation":"Bugünün aktivitesi","review_note":""}
+{"id":"health_meals_body_ai.7267f6d11355","target_locale":"tr","translation":"Bugünün enerji dengesi","review_note":""}
+{"id":"health_meals_body_ai.452d17cd1b90","target_locale":"tr","translation":"Bugünün antrenmanı","review_note":""}
+{"id":"health_meals_body_ai.e2d8e613515a","target_locale":"tr","translation":"Bugünün algılanan yorgunluk seviyesi","review_note":""}
+{"id":"health_meals_body_ai.8f9454672f34","target_locale":"tr","translation":"Bugünün önerisi","review_note":""}
+{"id":"health_meals_body_ai.0e1b8e6dc426","target_locale":"tr","translation":"Bugünün fotoğraf setini düzenle","review_note":""}
+{"id":"health_meals_body_ai.4fcfec9e3704","target_locale":"tr","translation":"Bugünün fotoğraf setine ekle","review_note":""}
+{"id":"health_meals_body_ai.a96837b53ce2","target_locale":"tr","translation":"Bugün çok aktif","review_note":""}
+{"id":"health_meals_body_ai.6c03b0ffd290","target_locale":"tr","translation":"Günlük aktivite durumunu gösterir","review_note":""}
+{"id":"health_meals_body_ai.3b27f523d6f1","target_locale":"tr","translation":"Bugünkü hazırlık durumu","review_note":""}
+{"id":"health_meals_body_ai.da700eb35e0e","target_locale":"tr","translation":"Bugünkü eylemler","review_note":""}
+{"id":"health_meals_body_ai.41cc3b9ae0d5","target_locale":"tr","translation":"Bugünkü ilerleme durumunu kontrol et","review_note":""}
+{"id":"health_meals_body_ai.8167b76a03f0","target_locale":"tr","translation":"Bugünkü beslenme","review_note":""}
+{"id":"health_meals_body_ai.0e38f949ffe5","target_locale":"tr","translation":"Bugünün yemek önerileri","review_note":""}
+{"id":"health_meals_body_ai.bca43a6ff7b0","target_locale":"tr","translation":"Bugünün beslenme hedefi","review_note":""}
+{"id":"health_meals_body_ai.975710015482","target_locale":"tr","translation":"Bugün, iyileşmeye öncelik verin","review_note":""}
+{"id":"health_meals_body_ai.cb1cb5f6027a","target_locale":"tr","translation":"Bugün, kas egzersizleri için ara veriyorum ve yapamayacağımız her şeye öncelik veriyorum.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"health_meals_body_ai.1ee9de084998","target_locale":"tr","translation":"Bugün, yükü biraz azaltın.","review_note":""}
+{"id":"health_meals_body_ai.c120f8925e69","target_locale":"tr","translation":"Bugün, ağırlık ve tekrar sayısını azaltarak, dinlenmeye öncelik verebilirsiniz.","review_note":""}
+{"id":"health_meals_body_ai.2984f299585f","target_locale":"tr","translation":"Bugün yapacağınız aktiviteleri kontrol edin.","review_note":""}
+{"id":"health_meals_body_ai.8f6e8ec10218","target_locale":"tr","translation":"Bu hafta","review_note":""}
+{"id":"health_meals_body_ai.b1113781c4b4","target_locale":"tr","translation":"Bu hafta {{value1}} kez・Şu anda {{value2}} metre","review_note":""}
+{"id":"health_meals_body_ai.16365b4215a3","target_locale":"tr","translation":"Bu hafta {{value1}} kez・Toplam {{value2}} kez","review_note":""}
+{"id":"health_meals_body_ai.df10c0112692","target_locale":"tr","translation":"Haftalık özet","review_note":""}
+{"id":"health_meals_body_ai.d7efe8748167","target_locale":"tr","translation":"İsteğe bağlı","review_note":""}
+{"id":"health_meals_body_ai.abf6a2685234","target_locale":"tr","translation":"Sohbet","review_note":""}
+{"id":"health_meals_body_ai.41ce58020850","target_locale":"tr","translation":"Sohbeti sil","review_note":""}
+{"id":"health_meals_body_ai.3a36a6db01f0","target_locale":"tr","translation":"Sohbet geçmişi silinmez.","review_note":""}
+{"id":"health_meals_body_ai.103eefbf9842","target_locale":"tr","translation":"Bu, güvenilirlik açısından düşük bir referans değeridir. Ölçüm kayıtlarını veya grafiklerini kaydetmeyin.","review_note":""}
+{"id":"health_meals_body_ai.f47d6f2e6ec3","target_locale":"tr","translation":"Vücut fotoğrafı","review_note":""}
+{"id":"health_meals_body_ai.0b508232ea17","target_locale":"tr","translation":"Vücut fotoğrafı AI","review_note":""}
+{"id":"health_meals_body_ai.33222467ebe4","target_locale":"tr","translation":"Vücut fotoğrafı paylaşımı, ayarlar üzerinden kapatılmıştır.","review_note":""}
+{"id":"health_meals_body_ai.a45de1210f8a","target_locale":"tr","translation":"Şu anda vücut fotoğrafınız yok.","review_note":""}
+{"id":"health_meals_body_ai.b24621a93e79","target_locale":"tr","translation":"Vücut fotoğrafı çek","review_note":""}
+{"id":"health_meals_body_ai.c7dfdfe56ee4","target_locale":"tr","translation":"Vücut fotoğrafı seti analizi","review_note":""}
+{"id":"health_meals_body_ai.e208549633cc","target_locale":"tr","translation":"Vücut fotoğrafı kontrolü","review_note":""}
+{"id":"health_meals_body_ai.23786a963f38","target_locale":"tr","translation":"Eğer sağlık durumunuzda veya ağrıda bir değişiklik varsa, lütfen sayısal değerlerden ziyade kendi hislerinize öncelik verin.","review_note":""}
+{"id":"health_meals_body_ai.3b0096995c03","target_locale":"tr","translation":"Sağlığınızı göz önünde bulundurarak planınıza uygun ilerleyin.","review_note":""}
+{"id":"health_meals_body_ai.5f7020cba17f","target_locale":"tr","translation":"Kilo","review_note":""}
+{"id":"health_meals_body_ai.b695d78f775e","target_locale":"tr","translation":"Kilo ve karın çevresi gibi günlük olarak değişen değerler, zaman içindeki değişimleri göstermek için kullanılır.","review_note":""}
+{"id":"health_meals_body_ai.18dbc5a49111","target_locale":"tr","translation":"Kiloyu kaydet","review_note":""}
+{"id":"health_meals_body_ai.5e7815c9308c","target_locale":"tr","translation":"Kullanabileceğiniz ekipmanlardan öneriler","review_note":""}
+{"id":"health_meals_body_ai.87bd781e5e2a","target_locale":"tr","translation":"Örnek: Beyaz pirinç 150g","review_note":""}
+{"id":"health_meals_body_ai.1e18f9b0644c","target_locale":"tr","translation":"Kaydet","review_note":""}
+{"id":"health_meals_body_ai.d44c1e54131a","target_locale":"tr","translation":"Kaydedilen aylık değerlendirme","review_note":""}
+{"id":"health_meals_body_ai.6ac95b24ca1e","target_locale":"tr","translation":"Kaydedilmiş anılar","review_note":""}
+{"id":"health_meals_body_ai.65a30f6f427a","target_locale":"tr","translation":"Kaydedilmiş bir anınız yok.","review_note":""}
+{"id":"health_meals_body_ai.de69cad40c07","target_locale":"tr","translation":"Kaydedilmiş anılarınız silinmez.","review_note":""}
+{"id":"health_meals_body_ai.a9219094c815","target_locale":"tr","translation":"Kaydedilen tüm verileri mi silmek istiyorsunuz?","review_note":""}
+{"id":"health_meals_body_ai.fe17bf85705c","target_locale":"tr","translation":"Silme","review_note":""}
+{"id":"health_meals_body_ai.06aa9ac77950","target_locale":"tr","translation":"Kaydetme başarısız oldu","review_note":""}
+{"id":"health_meals_body_ai.7421e1ca9b5b","target_locale":"tr","translation":"Güvenilirlik","review_note":""}
+{"id":"health_meals_body_ai.8bb7c26634ce","target_locale":"tr","translation":"Değer","review_note":""}
+{"id":"health_meals_body_ai.23f03e95c0a1","target_locale":"tr","translation":"Değeri eklediğinizde, buraya geçiş gösterilir.","review_note":""}
+{"id":"health_meals_body_ai.4bfe07c53900","target_locale":"tr","translation":"Durum Kontrolü","review_note":""}
+{"id":"health_meals_body_ai.6055fa3672d8","target_locale":"tr","translation":"Durum kontrolünde değerlendirmek için, ağırlığı bir kez düşürerek hedeflenen tekrar sayısını tamamlayın veya dinlenme süresini 15-30 saniye uzatarak karşılaştırın.","review_note":""}
+{"id":"health_meals_body_ai.a7f7c52063ec","target_locale":"tr","translation":"Durumun nedenleri","review_note":""}
+{"id":"health_meals_body_ai.5ea6be912e53","target_locale":"tr","translation":"Enerji seviyesi","review_note":""}
+{"id":"health_meals_body_ai.92d173b2e197","target_locale":"tr","translation":"Girdi Verisi","review_note":""}

@@ -1,0 +1,88 @@
+{"id": "ai_plan.automatic_revision_request", "target_locale": "el", "translation": "Ελέγξτε τις πρόσφατες επιδόσεις, το ποσοστό επίτευξης, την ένταση και την κατάσταση αποκατάστασης, και κάντε συγκεκριμένες προσαρμογές στο σχέδιό σας για να είναι πιο εύκολο στην εκτέλεση. Εάν δεν θέλετε αλλαγές, διατηρήστε τις τρέχουσες τιμές.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.changes", "target_locale": "el", "translation": "Αλλαγές", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_add_exercise", "target_locale": "el", "translation": "{{value1}} προσθήκη", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_remove_exercise", "target_locale": "el", "translation": "{{value1}} αφαίρεση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_reps", "target_locale": "el", "translation": "{{value1}}: {{value2}} → {{value3}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_rest", "target_locale": "el", "translation": "{{value1}}: Ξεκούραση {{value2}} → {{value3}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.diff_sets", "target_locale": "el", "translation": "{{value1}}: {{value2}} → {{value3}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.not_now", "target_locale": "el", "translation": "Καμία αλλαγή αυτή τη φορά", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_and_start", "target_locale": "el", "translation": "Αποθήκευση και εκκίνηση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.save_as_new_plan", "target_locale": "el", "translation": "Δημιουργία νέου σχεδίου", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.start_once", "target_locale": "el", "translation": "Εκτέλεση μόνο τώρα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.try_or_save", "target_locale": "el", "translation": "Μπορείτε να το δοκιμάσετε μία φορά ή να το αποθηκεύσετε ως σχέδιο.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_plan.update_current_plan", "target_locale": "el", "translation": "Ενημέρωση του υπάρχοντος σχεδίου", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "core_ui.analytics_privacy_explanation", "target_locale": "el", "translation": "Μόνο όταν συμφωνείτε, στέλνουμε μόνο την κατάσταση χρήσης και τον σκοπό, καθώς και τις πληροφορίες σχετικά με την εμπειρία, την υγεία και τις προτάσεις, σε μορφή που συνδέεται με το όνομα. Δεν στέλνουμε αριθμούς σώματος, φωτογραφίες, καρδιακό ρυθμό, χρόνο ύπνου, θέση, σημειώσεις ή αναγνωριστικό διαφήμισης.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_high", "target_locale": "el", "translation": "Υψηλό", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_low", "target_locale": "el", "translation": "Χαμηλή", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_moderate", "target_locale": "el", "translation": "Μέτρια δυσκολία", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.confidence_reference", "target_locale": "el", "translation": "Σημείωση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.documents_searched", "target_locale": "el", "translation": "Αναζητημένα έγγραφα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.general_trends_disclaimer", "target_locale": "el", "translation": "Τα αποτελέσματα είναι γενικές τάσεις και δεν αποτελούν απόδειξη για την επίδρασή σας.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.library_unavailable", "target_locale": "el", "translation": "Δεν μπορούμε να χρησιμοποιήσουμε δεδομένα από βιβλιοθήκες, επομένως βασιζόμαστε κυρίως στα αρχεία και τις γενικές αρχές άσκησης.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.no_direct_paper", "target_locale": "el", "translation": "Δεν βρέθηκαν έγγραφα που μπορούν να χρησιμοποιηθούν απευθείας σε αυτή την πρόταση. Βασιζόμαστε κυρίως στα αρχεία και τις γενικές αρχές άσκησης.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.overall_confidence", "target_locale": "el", "translation": "Συνολική αξιοπιστία", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.population_mismatch", "target_locale": "el", "translation": "Δεν βρέθηκαν έγγραφα που να αφορούν παρόμοιες ομάδες, επομένως βασιζόμαστε κυρίως στα αρχεία και τις γενικές αρχές άσκησης.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.recommendation_evidence", "target_locale": "el", "translation": "Απόδειξη για την πρόταση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.referenced_research", "target_locale": "el", "translation": "Αναφερόμενη έρευνα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_information", "target_locale": "el", "translation": "Πληροφορίες αναζήτησης", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.search_unavailable", "target_locale": "el", "translation": "Δεν ήταν δυνατή η χρήση της αναζήτησης. Δεν έχουμε διαβεβαίωση, επομένως βασιζόμαστε κυρίως στα αρχεία.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "evidence.view_scientific", "target_locale": "el", "translation": "Προβολή επιστημονικών στοιχείων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_abstract", "target_locale": "el", "translation": "Επισκόπηση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_applicability", "target_locale": "el", "translation": "Καταλληλότητα για την τρέχουσα περίπτωση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_direct", "target_locale": "el", "translation": "Σχετική με την ομάδα στόχων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_full_text", "target_locale": "el", "translation": "Πλήρης κείμενο", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_intervention", "target_locale": "el", "translation": "Διαταραχή", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_license", "target_locale": "el", "translation": "Άδεια κειμένου", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_limitations", "target_locale": "el", "translation": "Περιορισμοί", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_mismatch", "target_locale": "el", "translation": "Οι συνθήκες του στόχου δεν ταιριάζουν", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_newer", "target_locale": "el", "translation": "Νέα έρευνα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_open_paper", "target_locale": "el", "translation": "Άνοιγμα εγγράφου", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_partial", "target_locale": "el", "translation": "Μερικές συνθήκες είναι σχετικές", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_population", "target_locale": "el", "translation": "Πληθυσμός στόχων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary", "target_locale": "el", "translation": "Συνοπτική σύσταση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_summary_applicability", "target_locale": "el", "translation": "Εφαρμογή της σύνοψης", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "health_meals_body_ai.evidence_unclear", "target_locale": "el", "translation": "Μη σαφείς πληροφορίες", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_attach_diagnostics", "target_locale": "el", "translation": "Ανάρτηση αρχείου καταγραφής διαγνωστικών δεδομένων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_cancel", "target_locale": "el", "translation": "Ακύρωση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_bug", "target_locale": "el", "translation": "Σφάλμα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_other", "target_locale": "el", "translation": "Άλλο", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_picker", "target_locale": "el", "translation": "Επιλογή τύπου ανατροφοδότησης", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_request", "target_locale": "el", "translation": "Αίτημα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_section", "target_locale": "el", "translation": "Τύπος", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_category_usability", "target_locale": "el", "translation": "Χρήση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_copy_text", "target_locale": "el", "translation": "Αντιγραφή κειμένου", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_details", "target_locale": "el", "translation": "Λεπτομέρειες", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_explanation", "target_locale": "el", "translation": "Αντιμετωπίστε αρχεία καταγραφής λειτουργίας και επικοινωνίας μεταξύ εφαρμογής και Apple Watch. Δεν περιλαμβάνονται δεδομένα σώματος, ιατρικά στοιχεία, φωτογραφίες, συνομιλίες με την τεχνητή νοημοσύνη ή πληροφορίες ελέγχου.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_diagnostics_failed", "target_locale": "el", "translation": "Δεν ήταν δυνατή η αποστολή αρχείου καταγραφής διαγνωστικών δεδομένων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_other_ways", "target_locale": "el", "translation": "Άλλοι τρόποι αποστολής", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_report_body", "target_locale": "el", "translation": "Ανατροφοδότηση για το BodyMode\n\nΤύπος: {{value1}}\nΠεριεχόμενο:\n{{value2}}\nΕφαρμογή: {{value3}}\nΛειτουργικό Σύστημα: {{value4}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_retry", "target_locale": "el", "translation": "Επαναλάβετε", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send", "target_locale": "el", "translation": "Αποστολή ανατροφοδότησης", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_email", "target_locale": "el", "translation": "Αποστολή μέσω email", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_send_without_diagnostics", "target_locale": "el", "translation": "Αποστολή χωρίς αρχείο καταγραφής διαγνωστικών δεδομένων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_sensitive_warning", "target_locale": "el", "translation": "Μην συμπεριλάβετε πληροφορίες σχετικά με το σώμα, τη διατροφή, τις φωτογραφίες, συνομιλίες με την τεχνητή νοημοσύνη ή στοιχεία ελέγχου.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_title", "target_locale": "el", "translation": "Ανατροφοδότηση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "support.feedback_unknown_error", "target_locale": "el", "translation": "Άγνωστο σφάλμα", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_awaiting_result", "target_locale": "el", "translation": "Εν αναμονή αποτελεσμάτων", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_copy_name", "target_locale": "el", "translation": "{{value1}} - Επανεξέταση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_from_coach", "target_locale": "el", "translation": "Επανεξέταση του σχεδίου από τον προπονητή: {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_history", "target_locale": "el", "translation": "Ιστορικό επανεξέτασης AI", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_improved", "target_locale": "el", "translation": "Οι επόμενοι στόχοι έχουν βελτιωθεί", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_pending", "target_locale": "el", "translation": "Περιμένετε την επιβεβαίωση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_reverted", "target_locale": "el", "translation": "Ακύρωση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_review_again", "target_locale": "el", "translation": "Επανεξέταση κατά την επόμενη συνεδρία", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_saved_new", "target_locale": "el", "translation": "Αποθηκεύτηκε ως νέο σχέδιο", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_skipped", "target_locale": "el", "translation": "Ακυρώθηκε", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_unchanged", "target_locale": "el", "translation": "Οι επόμενοι στόχοι παραμένουν ίδιοι", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "training.ai_revision_updated", "target_locale": "el", "translation": "Ενημέρωση", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.adjust_next_plan_ai", "target_locale": "el", "translation": "Αναπροσαρμογή του επόμενου σχεδίου από την τεχνητή νοημοσύνη", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.keep_current_plan", "target_locale": "el", "translation": "Συνέχιση με το τρέχον σχέδιο.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.new_plan_saved", "target_locale": "el", "translation": "\"{{value1}}\" αποθηκεύτηκε ως νέο σχέδιο.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_plan_updated", "target_locale": "el", "translation": "Το επόμενο σχέδιο ενημερώθηκε.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.next_session", "target_locale": "el", "translation": "Επόμενη συνεδρία", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_approval_notice", "target_locale": "el", "translation": "Η αλλαγή θα εφαρμοστεί μόνο αφού επιβεβαιώσετε τις αλλαγές.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_met", "target_locale": "el", "translation": "Έχετε επιτύχει τον στόχο σας. Ελέγξτε την επόμενη φάση.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_missed", "target_locale": "el", "translation": "Δεν έχετε επιτύχει τον στόχο, αλλά μπορείτε να το προσαρμόσετε για την επόμενη συνεδρία.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_headline_ready", "target_locale": "el", "translation": "Μπορείτε να χρησιμοποιήσετε τα αποτελέσματα της σημερινής σας προπόνησης στην επόμενη συνεδρία.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.revision_restored", "target_locale": "el", "translation": "Επιστροφή στο αρχικό σχέδιο.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "workout_summary.undo_revision", "target_locale": "el", "translation": "Ακύρωση αλλαγών", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

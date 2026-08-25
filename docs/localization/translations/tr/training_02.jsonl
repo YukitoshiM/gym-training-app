@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"tr","translation":"Fotoğraf seti","review_note":""}
+{"id":"training.3064c4117490","target_locale":"tr","translation":"Gün","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"tr","translation":"Tarih","review_note":""}
+{"id":"training.137012e67a97","target_locale":"tr","translation":"Saat","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"tr","translation":"Maksimum kalp hızı","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"tr","translation":"Maksimum ağırlık","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"tr","translation":"Ay","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"tr","translation":"Perşembe","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"tr","translation":"Tamamlanmamış","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"tr","translation":"Tamamlanmamış","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"tr","translation":"Kaydedilmemiş olduğu için hariç: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"tr","translation":"Başarısız","review_note":""}
+{"id":"training.379774690c05","target_locale":"tr","translation":"Arama, detay ve özel egzersiz ekle","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"tr","translation":"Standart","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"tr","translation":"Sonraki ay","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"tr","translation":"Ağırlık, tekrar sayısı ve egzersizi sonraki sayfada kontrol ederek kaydedin.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"tr","translation":"Cuma","review_note":""}
+{"id":"training.586036cfde65","target_locale":"tr","translation":"Tüketilen","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"tr","translation":"Devam ediyor","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"tr","translation":"Salı","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"tr","translation":"Kaydedilmiş egzersizler","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"tr","translation":"Tahmini","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"tr","translation":"Hedef","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"tr","translation":"Hedef: {{value1}} × {{value2}} tekrar","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"tr","translation":"Hedefi, başarıları ve kullanılabilir ekipmanları yansıtın","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"tr","translation":"Hedef değerini kopyala","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"tr","translation":"Hedef farkı","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"tr","translation":"Hedef farkı: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"tr","translation":"Amaç ve ekipmana uygun bir sonraki seviye","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"tr","translation":"Amaç, odaklanılacak bölge, kullanılabilir ekipman ve geçmiş başarılarınızdan oluşturulur. Kaydetmeden önce egzersizi ve sayıları değiştirebilirsiniz.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"tr","translation":"Danışarak düzelt","review_note":""}
+{"id":"training.804773e6316f","target_locale":"tr","translation":"Sil","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"tr","translation":"Onaylayın ve planı kaydedin","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"tr","translation":"Saniye","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"tr","translation":"Egzersiz","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"tr","translation":"Egzersiz yok","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"tr","translation":"Egzersizi ve hedef hedeflerini kaydederek, bir sonraki antrenmanı kolayca başlayın.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"tr","translation":"Egzersize ekle","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"tr","translation":"Egzersizi ekleyin ve her biri için ayrı hedefler belirleyin.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"tr","translation":"Egzersizi eklediğinizde, tüm ayarları tek seferde yapabilirsiniz.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"tr","translation":"Egzersizi seç","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"tr","translation":"Egzersiz kütüphanesi","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"tr","translation":"Egzersiz Türüne Göre","review_note":""}
+{"id":"training.f3db21504894","target_locale":"tr","translation":"Egzersiz Türlerine Göre Geçmiş","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"tr","translation":"Egzersiz Adı","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"tr","translation":"Egzersiz Adı, Bölüm, Teknik","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"tr","translation":"Egzersiz Detayları","review_note":""}
+{"id":"training.0902af066756","target_locale":"tr","translation":"Kas Gücü Antrenmanı","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"tr","translation":"Kas Gücü A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"tr","translation":"Kas Gücü B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"tr","translation":"Kas Gelişimi","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"tr","translation":"Bitiş","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"tr","translation":"İlerleme","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"tr","translation":"Devam Et","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"tr","translation":"Toplam Hacim","review_note":""}
+{"id":"training.299456e922c2","target_locale":"tr","translation":"Düzenle","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"tr","translation":"Omuz / Kol / Triceps","review_note":""}
+{"id":"training.14f202634605","target_locale":"tr","translation":"Omuz ve Kollar","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"tr","translation":"Sırt Günü","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"tr","translation":"Göğüs Günü","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"tr","translation":"Bacaklar / Kalça","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"tr","translation":"Bacak Günü","review_note":""}
+{"id":"training.ed189402693b","target_locale":"tr","translation":"Kendi rekorunuz","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"tr","translation":"Topladığınız kayıtları, dönem, egzersiz türü ve sensörlere göre kontrol edin.","review_note":""}
+{"id":"training.36467fec4916","target_locale":"tr","translation":"Dokunarak tempoyu belirleyin.","review_note":""}
+{"id":"training.84447148c208","target_locale":"tr","translation":"Planlama","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"tr","translation":"{{value1}}/{{value2}} set tamamlandı / {{value3}}/{{value4}} hedefe ulaştı","review_note":""}
+{"id":"training.170899739631","target_locale":"tr","translation":"Planlamadan başlayın","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"tr","translation":"Planlamaya uygun olarak","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"tr","translation":"Planlama olmadan egzersiz türlerini ekleyip kaydedin.","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"tr","translation":"Henüz bir planınız yok","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"tr","translation":"Planlamadan daha yavaş","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"tr","translation":"Planlamadan daha hızlı","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"tr","translation":"Bir plan oluşturun","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"tr","translation":"Plan oluşturun","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"tr","translation":"Planı kaydet","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"tr","translation":"Set olarak planlama","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"tr","translation":"Plan oluşturma","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"tr","translation":"Plan adı","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"tr","translation":"Plan adını ve bir veya daha fazla egzersiz türünü girin.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"tr","translation":"Kayıtları görüntüleme","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"tr","translation":"Günlere göre kaydedilen kayıtlarınızı görüntüleyebilirsiniz.","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"tr","translation":"Kaydetmeyi iptal et ve çıkış yap","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"tr","translation":"Kayıt ve hedeflere göre doğru değerlendirme","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"tr","translation":"Kayıtı sil","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"tr","translation":"Kayıt türleri: Antrenman, vücut, beslenme, fotoğraf, spor salonu","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"tr","translation":"İlgili bir tür bulunamadı","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"tr","translation":"Vücut","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"tr","translation":"Vücut ölçümü","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"tr","translation":"Vücut ölçümü kaydedilmedi","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"tr","translation":"Hafif","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"tr","translation":"Ek","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"tr","translation":"Hafta","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"tr","translation":"{{value1}} hafta・{{value2}} dakika","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"tr","translation":"Haftalık","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"tr","translation":"Haftalık hacim","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"tr","translation":"Haftalık hacim analizi","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"tr","translation":"Geçmiş başarılarınızdan ağırlık ve tekrar sayısını ayarlıyoruz. Kontrol edin ve kaydedin.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"tr","translation":"Başarı","review_note":""}
+{"id":"training.90687409925b","target_locale":"tr","translation":"Başarı seti","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"tr","translation":"Başarı oranı","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"tr","translation":"Başarı oranı {{value1}}","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"tr","translation":"Seçilen ekipmanlara uygun olan ve önceden kaydedilmiş egzersizleri sadece AI'ye öneri olarak verir.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"tr","translation":"Günlük Özet","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"tr","translation":"Bölge","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"tr","translation":"Ağırlık Farkı","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"tr","translation":"Ağırlık Farkı {{value1}} / Tekrar Sayısı Farkı {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"tr","translation":"Ağırlık Değişimi","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"tr","translation":"Altın","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"tr","translation":"Kapat","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"tr","translation":"Başlat","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"tr","translation":"Başlatmayı İptal Et","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"tr","translation":"Beslenme","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"tr","translation":"Beslenme bilgisi kaydedilmemiştir.","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"tr","translation":"Yüksek Ağırlık","review_note":""}

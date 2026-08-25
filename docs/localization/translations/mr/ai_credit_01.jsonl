@@ -1,0 +1,51 @@
+{"id": "ai_credit.account_notice", "target_locale": "mr", "translation": "AI खाते", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.action_cost", "target_locale": "mr", "translation": "यावेळी {{value1}} क्रेडिट्स", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.add", "target_locale": "mr", "translation": "क्रेडिट्स जोडा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.adjustment", "target_locale": "mr", "translation": "बॅलन्स ॲडजस्ट करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use", "target_locale": "mr", "translation": "AI क्रेडिट वापरून ऑटोमॅटिक रिपोर्ट तयार करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_off", "target_locale": "mr", "translation": "क्रेडिट वापरणार नाही, फक्त डिव्हाइसमधील नोंदीनुसार सारांश तयार होईल.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.automatic_report_credit_use_on", "target_locale": "mr", "translation": "शेड्यूल केलेल्या वेळेत साप्ताहिक किंवा मासिक रिपोर्टसाठी क्रेडिट्स वापरले जातील.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance", "target_locale": "mr", "translation": "AI क्रेडिट्स", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_checking", "target_locale": "mr", "translation": "बॅलन्स तपासत आहे", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.balance_short", "target_locale": "mr", "translation": "बॅलन्स {{value1}}", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.bonus_received", "target_locale": "mr", "translation": "{{value1}} क्रेडिट्स प्राप्त झाले.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.buy", "target_locale": "mr", "translation": "क्रेडिट खरेदी करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.continue_manual", "target_locale": "mr", "translation": "AI वापरणे टाळा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.delete_warning", "target_locale": "mr", "translation": "डिव्हाइसवरील सर्व नोंदी आणि BodyMode खात्याला हटवा. उर्वरित खरेदी केलेले क्रेडिट्स आणि फायदे देखील नष्ट होतील, जे परत मिळवता येणार नाहीत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.history", "target_locale": "mr", "translation": "क्रेडिट हिस्ट्री", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_choices", "target_locale": "mr", "translation": "व्हिडिओद्वारे क्रेडिट मिळवा किंवा आवश्यक तेवढेच खरेदी करा. मॅन्युअल नोंदी मोफत वापरता येतील.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_recovery", "target_locale": "mr", "translation": "जाहिराती पाहून क्रेडिट मिळवा किंवा क्रेडिट खरेदी करा. मॅन्युअल नोंदी तसेच वापरता येतील.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.insufficient_title", "target_locale": "mr", "translation": "AI क्रेडिट्स अपुरे आहेत", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.monthly", "target_locale": "mr", "translation": "मासिक अहवाल", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.never_expires", "target_locale": "mr", "translation": "समाप्त होत नाही", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.product_amount", "target_locale": "mr", "translation": "{{value1}} AI क्रेडिट्स", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.products_unavailable", "target_locale": "mr", "translation": "उत्पादं खरेदी करण्याच्या प्रक्रियेत आहेत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_adjusted", "target_locale": "mr", "translation": "परताव्याची रक्कम समायोजित केली आहे आणि {{value1}} क्रेडिट जोडले आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_complete", "target_locale": "mr", "translation": "क्रेडिट जोडले आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_pending", "target_locale": "mr", "translation": "खरेदीची प्रतीक्षा केली जात आहे. पूर्ण झाल्यावर आपोआप अपडेट होईल.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_terms", "target_locale": "mr", "translation": "खरेदी केलेले क्रेडिट रद्द होत नाही. ते हस्तांतरित किंवा विनिमय करता येत नाही. खरेदी केल्यावर बॅनर जाहिरात दिसणार नाही.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_unknown", "target_locale": "mr", "translation": "खरेदीची स्थिती तपासण्यात अयशस्वी.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.purchase_verification_failed", "target_locale": "mr", "translation": "App Store मधील खरेदीची पडताळणी करण्यात अयशस्वी.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.refund_adjustment", "target_locale": "mr", "translation": "खरेदीच्या परताव्याची जुळवणी", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_limit", "target_locale": "mr", "translation": "आजचे जाहिरात बक्षीस प्राप्त झाले आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending", "target_locale": "mr", "translation": "व्हिडिओ पाहण्यासाठी वेळ लागत आहे. पाहिल्यानंतर क्रेडिटमध्ये रूपांतर होईल.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_pending_recovery", "target_locale": "mr", "translation": "AI स्क्रीन पुन्हा उघडून तुम्ही नवीनतम शिल्लक तपासू शकता. पुन्हा व्हिडिओ पाहण्याची आवश्यकता नाही.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.reward_received", "target_locale": "mr", "translation": "5 क्रेडिट प्राप्त झाले आहेत.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_again", "target_locale": "mr", "translation": "सत्रची मुदत संपली आहे. पुन्हा साइन इन करा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_complete", "target_locale": "mr", "translation": "ॲपल खात्यावर साइन इन केले आहे.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_recovery", "target_locale": "mr", "translation": "ॲपलवर नोंदणी केल्यास, तुम्हाला पहिले क्रेडिट मिळेल. कोणतीही नोंदणी न करता तुम्ही मॅन्युअल नोंदी वापरू शकता.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.sign_in_required", "target_locale": "mr", "translation": "ॲपलवर नोंदणी करून AI वैशिष्ट्ये वापरा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signing_in", "target_locale": "mr", "translation": "नोंदणी करत आहे...", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus", "target_locale": "mr", "translation": "ॲपलवर नोंदणी केल्यास, तुम्हाला पहिले 20 क्रेडिट मिळतील. कोणतीही नोंदणी न करता तुम्ही मॅन्युअल नोंदी वापरू शकता.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_bonus_no_subscription", "target_locale": "mr", "translation": "ॲपलवर नोंदणी केल्यास, तुम्हाला पहिले 20 क्रेडिट मिळतील. यासाठी कोणतेही शुल्क किंवा ऑटोमॅटिक अपडेट आवश्यक नाही.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.signup_short", "target_locale": "mr", "translation": "नोंदणी करून 20 क्रेडिट मिळवा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_ad", "target_locale": "mr", "translation": "व्हिडिओ जाहिरात", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_admin", "target_locale": "mr", "translation": "प्रशासनाकडून", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_purchase", "target_locale": "mr", "translation": "खरेदी करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.source_signup", "target_locale": "mr", "translation": "नोंदणी केल्यावर विशेष ऑफर", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.start_title", "target_locale": "mr", "translation": "AI प्रशिक्षकाची सुरुवात करा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.title", "target_locale": "mr", "translation": "AI क्रेडिट", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.try_later", "target_locale": "mr", "translation": "कृपया नंतर पुन्हा प्रयत्न करा.", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.unlimited", "target_locale": "mr", "translation": "अखंड वापरा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.watch_ad", "target_locale": "mr", "translation": "व्हिडिओ पाहून 5 क्रेडिट मिळवा", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}
+{"id": "ai_credit.weekly", "target_locale": "mr", "translation": "साप्ताहिक अहवाल", "review_note": "機械翻訳。健康・推定表現は公開前に人手確認が必要です。"}

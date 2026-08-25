@@ -1,0 +1,250 @@
+{"id":"health_meals_body_ai.2494cf2da9de","target_locale":"ro","translation":"Acestea sunt sugestii bazate pe datele introduse și nu reprezintă un diagnostic medical. Dacă ai nelămuriri legate de starea ta de sănătate sau durere, consultă un specialist.","review_note":""}
+{"id":"health_meals_body_ai.8a216fc82c1c","target_locale":"ro","translation":"Rezumatul datelor introduse","review_note":""}
+{"id":"health_meals_body_ai.b76e2c70647b","target_locale":"ro","translation":"Metoda de introducere a datelor","review_note":""}
+{"id":"health_meals_body_ai.23efa56b6422","target_locale":"ro","translation":"Nu există elemente partajate","review_note":""}
+{"id":"health_meals_body_ai.c1b1833378f2","target_locale":"ro","translation":"Verifică conținutul și, dacă este necesar, modifică-l înainte de a salva. Obiectivul nu se stabilește automat.","review_note":""}
+{"id":"health_meals_body_ai.8ac60e95bd23","target_locale":"ro","translation":"Este necesară o nouă analiză","review_note":""}
+{"id":"health_meals_body_ai.0a6efdc04529","target_locale":"ro","translation":"Reîncearcă","review_note":""}
+{"id":"health_meals_body_ai.595af419ef23","target_locale":"ro","translation":"Fotografie","review_note":""}
+{"id":"health_meals_body_ai.9cddd80a2f5a","target_locale":"ro","translation":"Intervalul de referință din fotografie","review_note":""}
+{"id":"health_meals_body_ai.8c5fc5e7a8da","target_locale":"ro","translation":"Estimează caloriile din fotografie","review_note":""}
+{"id":"health_meals_body_ai.a278de26907c","target_locale":"ro","translation":"Creează o schiță dintr-o fotografie și reduce efortul de introducere a datelor.","review_note":""}
+{"id":"health_meals_body_ai.09ef2612396c","target_locale":"ro","translation":"Analizează fotografia","review_note":""}
+{"id":"health_meals_body_ai.2071566e71be","target_locale":"ro","translation":"Fără fotografie","review_note":""}
+{"id":"health_meals_body_ai.c51a6e397751","target_locale":"ro","translation":"Fotografia indică schimbările în aspect, iar valorile sunt verificate prin măsurători.","review_note":""}
+{"id":"health_meals_body_ai.f592bc420a69","target_locale":"ro","translation":"Creează o schiță a nutriției din fotografie sau din alimentele consumate.","review_note":""}
+{"id":"health_meals_body_ai.c5c93f735c29","target_locale":"ro","translation":"Poți analiza dacă selectezi una sau mai multe fotografii. Cu cât ai mai multe fotografii, cu atât este mai ușor de verificat.","review_note":""}
+{"id":"health_meals_body_ai.d5b6606496a9","target_locale":"ro","translation":"Reanalizează fotografiile în grup","review_note":""}
+{"id":"health_meals_body_ai.ff3c57454258","target_locale":"ro","translation":"Analizează fotografiile în grup","review_note":""}
+{"id":"health_meals_body_ai.7b243ff0f863","target_locale":"ro","translation":"Adaugă o fotografie","review_note":""}
+{"id":"health_meals_body_ai.4cf77e9f289c","target_locale":"ro","translation":"Adaugă și editează o fotografie","review_note":""}
+{"id":"health_meals_body_ai.9ab5dabe4459","target_locale":"ro","translation":"Selectează o fotografie și datele precum caloriile vor fi introduse automat.","review_note":""}
+{"id":"health_meals_body_ai.e9872cc8c9d1","target_locale":"ro","translation":"Seturile de fotografii pot fi salvate. După conectare, poți reanaliza din detaliile setului.","review_note":""}
+{"id":"health_meals_body_ai.4e07f10d1d26","target_locale":"ro","translation":"Minute","review_note":""}
+{"id":"health_meals_body_ai.1313855c233c","target_locale":"ro","translation":"Specifică cantitatea cât mai precis posibil pentru a îmbunătăți acuratețea estimării.","review_note":""}
+{"id":"health_meals_body_ai.7c3d20b5d555","target_locale":"ro","translation":"În analiza","review_note":""}
+{"id":"health_meals_body_ai.0ef0d76a0e8d","target_locale":"ro","translation":"Analizat","review_note":""}
+{"id":"health_meals_body_ai.bde5657225e5","target_locale":"ro","translation":"Motivul deciziei","review_note":""}
+{"id":"health_meals_body_ai.8ed8b430d180","target_locale":"ro","translation":"Sosire","review_note":""}
+{"id":"health_meals_body_ai.907dbde4bc88","target_locale":"ro","translation":"Șterge","review_note":""}
+{"id":"health_meals_body_ai.eb9a6e939480","target_locale":"ro","translation":"Am avut o pauză de {{value1}} zile de la ultima antrenament și am suficient timp disponibil pentru numărul de sesiuni programate în această săptămână.","review_note":""}
+{"id":"health_meals_body_ai.8a426ea51d13","target_locale":"ro","translation":"Ultima măsurătoare a circumferinței abdomenului are peste 7 zile.","review_note":""}
+{"id":"health_meals_body_ai.fdb5411cd8e5","target_locale":"ro","translation":"Introdu valoarea anterioară","review_note":""}
+{"id":"health_meals_body_ai.16a787976406","target_locale":"ro","translation":"Comparativ cu valoarea anterioară: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f41bf6a53cd4","target_locale":"ro","translation":"Săptămâna trecută","review_note":""}
+{"id":"health_meals_body_ai.a9058584802a","target_locale":"ro","translation":"Nu există date de comparație cu săptămâna precedentă","review_note":""}
+{"id":"health_meals_body_ai.a83b5bccdf24","target_locale":"ro","translation":"Volumul a crescut cu peste 30% față de săptămâna trecută. La următoarea sesiune, încercați să mențineți acest nivel și verificați indicatorii RPE și de recuperare.","review_note":""}
+{"id":"health_meals_body_ai.41151468db96","target_locale":"ro","translation":"Comparativ cu săptămâna trecută: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.978741a28a39","target_locale":"ro","translation":"Comparativ cu săptămâna trecută: {{value1}}%","review_note":""}
+{"id":"health_meals_body_ai.8b421501c6ce","target_locale":"ro","translation":"Nu există încă date despre activitate. Estimăm că puteți începe prin a seta dispozitivul.","review_note":""}
+{"id":"health_meals_body_ai.3e054aa7cb45","target_locale":"ro","translation":"Estimare a activității","review_note":""}
+{"id":"health_meals_body_ai.b20615d50842","target_locale":"ro","translation":"Nu este o evaluare medicală, ci o valoare de referință care sumarizează tendințele datelor obținute.","review_note":""}
+{"id":"health_meals_body_ai.a01511b65af0","target_locale":"ro","translation":"În curs de referință","review_note":""}
+{"id":"health_meals_body_ai.02cbbe915d5f","target_locale":"ro","translation":"Posibilitate de referință: {{value1}} articole, lipsesc {{value2}} articole","review_note":""}
+{"id":"health_meals_body_ai.8ba8689d50cb","target_locale":"ro","translation":"Valori disponibile (availableCount)/8","review_note":""}
+{"id":"health_meals_body_ai.f411122ea062","target_locale":"ro","translation":"Calculat doar pe baza greutății, numărului, ritmului, amplitudinii relative și a RPE (Rating of Perceived Exertion), fără a atribui valori zero pentru valorile lipsă.","review_note":""}
+{"id":"health_meals_body_ai.9ab9099ebccb","target_locale":"ro","translation":"În dreapta sus: Mișcare laterală, întregul corp","review_note":""}
+{"id":"health_meals_body_ai.ca55f072b646","target_locale":"ro","translation":"În stânga jos: De la umeri până la talie","review_note":""}
+{"id":"health_meals_body_ai.b2312d1c369b","target_locale":"ro","translation":"Total","review_note":""}
+{"id":"health_meals_body_ai.4127c532bfe3","target_locale":"ro","translation":"Cu aceeași îmbrăcăminte, distanță și lumină, relaxează-te în timp ce filmezi","review_note":""}
+{"id":"health_meals_body_ai.c944b82d7eb8","target_locale":"ro","translation":"Compararea devine mai ușoară atunci când înregistrezi aceleași exerciții, același meniu și aceeași oră.","review_note":""}
+{"id":"health_meals_body_ai.6ea10256c1ff","target_locale":"ro","translation":"KPI-uri măsurate în ziua respectivă","review_note":""}
+{"id":"health_meals_body_ai.834d88de3434","target_locale":"ro","translation":"Această funcție indică elementele care s-au schimbat simultan, fără a stabili cauza sau starea medicală.","review_note":""}
+{"id":"health_meals_body_ai.f93ac37a9b58","target_locale":"ro","translation":"Supă de miso","review_note":""}
+{"id":"health_meals_body_ai.f7e084d26a4b","target_locale":"ro","translation":"Frecvența respiratorie","review_note":""}
+{"id":"health_meals_body_ai.e38a51092b11","target_locale":"ro","translation":"Frecvența respiratorie este mai mare decât media din ultimele 14 zile","review_note":""}
+{"id":"health_meals_body_ai.aec3a3416e01","target_locale":"ro","translation":"Frecvența respiratorie este {{value1}} respirații/minut, comparativ cu {{value2}} respirații/minut (media din ultimele 14 zile)","review_note":""}
+{"id":"health_meals_body_ai.caa9aafe072d","target_locale":"ro","translation":"Frecvența respiratorie este mai mică decât media din ultimele 14 zile","review_note":""}
+{"id":"health_meals_body_ai.14bdb2a55427","target_locale":"ro","translation":"Frecvența respiratorie se încadrează în intervalul normal","review_note":""}
+{"id":"health_meals_body_ai.98a1dbcbd2a8","target_locale":"ro","translation":"Calitate -","review_note":""}
+{"id":"health_meals_body_ai.e7357be38956","target_locale":"ro","translation":"Calitate {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.6622f6b6d24f","target_locale":"ro","translation":"Produs","review_note":""}
+{"id":"health_meals_body_ai.6a08e330f48e","target_locale":"ro","translation":"Nu am putut salva produsul.","review_note":""}
+{"id":"health_meals_body_ai.5ce14bc41fd3","target_locale":"ro","translation":"Codul produsului","review_note":""}
+{"id":"health_meals_body_ai.43dc3b27e76e","target_locale":"ro","translation":"Introduceți codul produsului.","review_note":""}
+{"id":"health_meals_body_ai.e9d4a9038ed6","target_locale":"ro","translation":"Introduceți manual codul produsului.","review_note":""}
+{"id":"health_meals_body_ai.2a6a23ccdb93","target_locale":"ro","translation":"Numele produsului","review_note":""}
+{"id":"health_meals_body_ai.3bbe0e753f4d","target_locale":"ro","translation":"Respirații/minut","review_note":""}
+{"id":"health_meals_body_ai.5602244ffb3a","target_locale":"ro","translation":"Recuperare","review_note":""}
+{"id":"health_meals_body_ai.bea0697bcdf8","target_locale":"ro","translation":"Alegeți ziua în care doriți să vă concentrați pe recuperare.","review_note":""}
+{"id":"health_meals_body_ai.9bf093a3e203","target_locale":"ro","translation":"Datorită valorilor de recuperare mai mici, este recomandat să limitați greutatea sau numărul de seturi la {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.c17a63bc8b26","target_locale":"ro","translation":"Recuperare finalizată","review_note":""}
+{"id":"health_meals_body_ai.7287fddb8374","target_locale":"ro","translation":"Număr","review_note":""}
+{"id":"health_meals_body_ai.985a2101ab82","target_locale":"ro","translation":"Distincția între număr și nutriție","review_note":""}
+{"id":"health_meals_body_ai.ea5962a2dde7","target_locale":"ro","translation":"Per unitate de referință","review_note":""}
+{"id":"health_meals_body_ai.fda0d26cd60c","target_locale":"ro","translation":"Conexiunea HTTP către serverul extern nu este permisă.","review_note":""}
+{"id":"health_meals_body_ai.74ba117a8319","target_locale":"ro","translation":"Noaptea","review_note":""}
+{"id":"health_meals_body_ai.ebab60269579","target_locale":"ro","translation":"Finalizare automată noaptea","review_note":""}
+{"id":"health_meals_body_ai.0f9da1e37f0e","target_locale":"ro","translation":"Nu există creșteri bruște sau perioade de stagnare. Vă recomandăm să creați mai multe înregistrări, comparând numărul de repetări și nivelul de efort (RPE) pentru următoarea sesiune.","review_note":""}
+{"id":"health_meals_body_ai.8ecbbfce44c6","target_locale":"ro","translation":"Eșec","review_note":""}
+{"id":"health_meals_body_ai.0eb1cd5802d6","target_locale":"ro","translation":"Poziție","review_note":""}
+{"id":"health_meals_body_ai.d8323e0a0c6c","target_locale":"ro","translation":"Frecvența cardiacă în repaus","review_note":""}
+{"id":"health_meals_body_ai.2dc87f83e5a5","target_locale":"ro","translation":"Frecvența cardiacă în repaus: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.b11d41985e01","target_locale":"ro","translation":"Frecvența cardiacă în repaus este mai mare decât media de 14 zile","review_note":""}
+{"id":"health_meals_body_ai.1e452a939388","target_locale":"ro","translation":"Frecvența cardiacă în repaus este mai mică decât media","review_note":""}
+{"id":"health_meals_body_ai.8168d1a78f05","target_locale":"ro","translation":"Frecvența cardiacă în repaus este normală","review_note":""}
+{"id":"health_meals_body_ai.16f7a1da8526","target_locale":"ro","translation":"Finalizat","review_note":""}
+{"id":"health_meals_body_ai.a08a51f7e427","target_locale":"ro","translation":"Elemente ușor de finalizat: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.0bf9b10cad35","target_locale":"ro","translation":"Verificăm în prezent tendințele de finalizare și salt.","review_note":""}
+{"id":"health_meals_body_ai.33cef63d33eb","target_locale":"ro","translation":"Cantitatea reală consumată","review_note":""}
+{"id":"health_meals_body_ai.9cecb9de001c","target_locale":"ro","translation":"Densitate","review_note":""}
+{"id":"health_meals_body_ai.263add43eb28","target_locale":"ro","translation":"Istoric","review_note":""}
+{"id":"health_meals_body_ai.f848634a1768","target_locale":"ro","translation":"Stânga sus: Față și corp întreg","review_note":""}
+{"id":"health_meals_body_ai.15292dad18bc","target_locale":"ro","translation":"Stânga jos: Spate și corp întreg","review_note":""}
+{"id":"health_meals_body_ai.26b7c3fa5902","target_locale":"ro","translation":"Diferențe","review_note":""}
+{"id":"health_meals_body_ai.6c784a6d3865","target_locale":"ro","translation":"Ritm cardiac mediu: {{value1}} bpm","review_note":""}
+{"id":"health_meals_body_ai.a25deb7e2e15","target_locale":"ro","translation":"Viteză medie","review_note":""}
+{"id":"health_meals_body_ai.b82b07755169","target_locale":"ro","translation":"Ajută","review_note":""}
+{"id":"health_meals_body_ai.1f60ca761ad5","target_locale":"ro","translation":"Elemente ușor de amânat: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.7a101c9b7ca5","target_locale":"ro","translation":"Recuperare a ritmului cardiac","review_note":""}
+{"id":"health_meals_body_ai.ea8e5fa4331a","target_locale":"ro","translation":"Ritm cardiac nu a fost înregistrat","review_note":""}
+{"id":"health_meals_body_ai.048097c4c2a5","target_locale":"ro","translation":"Sursa informațiilor: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.f8ca17da4fc3","target_locale":"ro","translation":"Seturi cu diferențe față de introducerea manuală: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.ac7338c98088","target_locale":"ro","translation":"Nu se poate determina exercițiul și forma doar pe baza mișcărilor de la încheietură. Numărul estimat va fi verificat înainte de a fi aplicat.","review_note":""}
+{"id":"health_meals_body_ai.17557a3ae4cb","target_locale":"ro","translation":"Temperatura pielii de la încheietură","review_note":""}
+{"id":"health_meals_body_ai.479e875e017c","target_locale":"ro","translation":"Tendința ca temperatura pielii de la încheietură să fie diferită față de normal","review_note":""}
+{"id":"health_meals_body_ai.41c24080d6cf","target_locale":"ro","translation":"Temperatura pielii de la încheietură este în intervalul normal","review_note":""}
+{"id":"health_meals_body_ai.b271ea39b530","target_locale":"ro","translation":"Vom folosi doar conținutul aprobat pentru următoarea sugestie.","review_note":""}
+{"id":"health_meals_body_ai.c437a0ce5ac1","target_locale":"ro","translation":"Memorie aprobată","review_note":""}
+{"id":"health_meals_body_ai.1ff87d20c07b","target_locale":"ro","translation":"Responsabil: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.d6fbb962587f","target_locale":"ro","translation":"Antrenor responsabil","review_note":""}
+{"id":"health_meals_body_ai.05b6f177b81d","target_locale":"ro","translation":"Revizuire","review_note":""}
+{"id":"health_meals_body_ai.ef2753a0d8e9","target_locale":"ro","translation":"Conexiune stabilită","review_note":""}
+{"id":"health_meals_body_ai.eb9e09955b1e","target_locale":"ro","translation":"Chiar dacă conexiunea nu este stabilă, datele înregistrate nu vor fi șterse. Puteți continua să înregistrați manual și apoi puteți genera comentarii AI.","review_note":""}
+{"id":"health_meals_body_ai.b981046693bf","target_locale":"ro","translation":"Verificarea conexiunii","review_note":""}
+{"id":"health_meals_body_ai.24383cef4e4f","target_locale":"ro","translation":"Valoarea estimată este doar o valoare orientativă. Puteți modifica liber valorile din câmpul de intrare de mai jos.","review_note":""}
+{"id":"health_meals_body_ai.ceb6a96246a0","target_locale":"ro","translation":"Consum estimat","review_note":""}
+{"id":"health_meals_body_ai.ff23aa7afe29","target_locale":"ro","translation":"Progres","review_note":""}
+{"id":"health_meals_body_ai.4480ba8fa2eb","target_locale":"ro","translation":"Calorii consumate","review_note":""}
+{"id":"health_meals_body_ai.e4a6aca658b9","target_locale":"ro","translation":"Înregistrare","review_note":""}
+{"id":"health_meals_body_ai.6920fd3d3872","target_locale":"ro","translation":"Set de înregistrări","review_note":""}
+{"id":"health_meals_body_ai.a024d937dc43","target_locale":"ro","translation":"Editează setul de înregistrări","review_note":""}
+{"id":"health_meals_body_ai.83b51a58d083","target_locale":"ro","translation":"Adaugă un nou set de înregistrări","review_note":""}
+{"id":"health_meals_body_ai.7f4a4ef3a2a5","target_locale":"ro","translation":"Direcția înregistrării","review_note":""}
+{"id":"health_meals_body_ai.ec6849d2b62a","target_locale":"ro","translation":"Numărul de zile de înregistrare","review_note":""}
+{"id":"health_meals_body_ai.71bec5b80d72","target_locale":"ro","translation":"Note despre condițiile și aspectul înregistrării","review_note":""}
+{"id":"health_meals_body_ai.72687e2f6224","target_locale":"ro","translation":"Înregistrat","review_note":""}
+{"id":"health_meals_body_ai.1400ab3be8e8","target_locale":"ro","translation":"Exemplu de înregistrare. Colțul stânga sus este imaginea frontală, colțul dreapta sus este imaginea laterală, colțul stânga jos este imaginea din spate, iar colțul dreapta jos este o imagine a abdomenului de la umeri până la talie. Înregistrează cu aceeași haină, distanță și lumină.","review_note":""}
+{"id":"health_meals_body_ai.4307847306a2","target_locale":"ro","translation":"Necesită îmbunătățiri","review_note":""}
+{"id":"health_meals_body_ai.a75904915773","target_locale":"ro","translation":"Direcție","review_note":""}
+{"id":"health_meals_body_ai.e4606eba2adb","target_locale":"ro","translation":"Am verificat diferențele în poziție în funcție de direcția în care te-ai mișcat.","review_note":""}
+{"id":"health_meals_body_ai.ee7759267a4d","target_locale":"ro","translation":"Folosiți aceste informații pentru a evalua tendința săptămânală, nu doar schimbările zilnice.","review_note":""}
+{"id":"health_meals_body_ai.a339f925e565","target_locale":"ro","translation":"Data","review_note":""}
+{"id":"health_meals_body_ai.5c0466a0d2f3","target_locale":"ro","translation":"Somn","review_note":""}
+{"id":"health_meals_body_ai.4be68a8e4622","target_locale":"ro","translation":"Prânz","review_note":""}
+{"id":"health_meals_body_ai.041784c72fcd","target_locale":"ro","translation":"Ora","review_note":""}
+{"id":"health_meals_body_ai.cf65f2670394","target_locale":"ro","translation":"Acesta este un scor estimativ calculat de aplicație, bazat pe ora, durata somnului profund, REM și trezirea parțială.","review_note":""}
+{"id":"health_meals_body_ai.1b8717eea915","target_locale":"ro","translation":"Așteptați puțin","review_note":""}
+{"id":"health_meals_body_ai.9f8623da2f24","target_locale":"ro","translation":"Dacă problema persistă, verificați starea modelului serverului AI.","review_note":""}
+{"id":"health_meals_body_ai.88e74f83b764","target_locale":"ro","translation":"Dacă problema persistă, consultați log-urile serverului AI.","review_note":""}
+{"id":"health_meals_body_ai.1472efa74baa","target_locale":"ro","translation":"Intervalul de timp","review_note":""}
+{"id":"health_meals_body_ai.b2e71d0a9bc5","target_locale":"ro","translation":"Ajustați nivelul RPE (percepția efortului) în funcție de situația dumneavoastră, așa cum faceți de obicei.","review_note":""}
+{"id":"health_meals_body_ai.9058a5e61c76","target_locale":"ro","translation":"Normal","review_note":""}
+{"id":"health_meals_body_ai.755d793eabaa","target_locale":"ro","translation":"Expunerea este ridicată. Dacă durează mult, folosiți volumul și durata sesiunii ca ghid.","review_note":""}
+{"id":"health_meals_body_ai.df3038574b14","target_locale":"ro","translation":"Vom crea un meniu adaptat echipamentului disponibil pentru a vă ajuta să începeți cu ușurință prima sesiune de antrenament.","review_note":""}
+{"id":"health_meals_body_ai.6c466f96ae9a","target_locale":"ro","translation":"Înregistrarea valorii inițiale vă permite să vedeți evoluția și diferența față de obiectiv.","review_note":""}
+{"id":"health_meals_body_ai.83b4c9182250","target_locale":"ro","translation":"Ultima alergare în aer liber","review_note":""}
+{"id":"health_meals_body_ai.922efdd3ed8a","target_locale":"ro","translation":"Raportul curent","review_note":""}
+{"id":"health_meals_body_ai.5b23cf84d4e8","target_locale":"ro","translation":"Revizuirea lunară","review_note":""}
+{"id":"health_meals_body_ai.ff95423bda70","target_locale":"ro","translation":"Verificați revizuirea lunară","review_note":""}
+{"id":"health_meals_body_ai.400cfd92d15f","target_locale":"ro","translation":"Creați un plan de revizuire lunară","review_note":""}
+{"id":"health_meals_body_ai.2e56b4936c7f","target_locale":"ro","translation":"Generarea revizuirii lunare este în curs","review_note":""}
+{"id":"health_meals_body_ai.804513c997c7","target_locale":"ro","translation":"Raport lunar","review_note":""}
+{"id":"health_meals_body_ai.fb30f3e9ff8f","target_locale":"ro","translation":"Dimineața","review_note":""}
+{"id":"health_meals_body_ai.d11125844b6c","target_locale":"ro","translation":"Încerc să reducem notificările pentru dimineață și seară.","review_note":""}
+{"id":"health_meals_body_ai.1583e5cb8444","target_locale":"ro","translation":"Ne analizat","review_note":""}
+{"id":"health_meals_body_ai.e7150bf221cb","target_locale":"ro","translation":"Nu a fost colectat","review_note":""}
+{"id":"health_meals_body_ai.12f06f2c1cac","target_locale":"ro","translation":"Valorile pentru elementele necolectate sunt tratate ca 0","review_note":""}
+{"id":"health_meals_body_ai.26f4704c35a2","target_locale":"ro","translation":"Nu a fost implementat","review_note":""}
+{"id":"health_meals_body_ai.1fd16ab817c8","target_locale":"ro","translation":"Nu a fost fotografiat","review_note":""}
+{"id":"health_meals_body_ai.406225b8c87e","target_locale":"ro","translation":"Nu este înregistrat. Introduceți numărul de 100g pentru etichetă.","review_note":""}
+{"id":"health_meals_body_ai.1b0c2ec5452e","target_locale":"ro","translation":"Produsele neînregistrate vor fi salvate pe dispozitiv după introducere și reutilizate la următoarea citire.","review_note":""}
+{"id":"health_meals_body_ai.220b27fdd9bd","target_locale":"ro","translation":"Ne înregistrat","review_note":""}
+{"id":"health_meals_body_ai.7453de0b9772","target_locale":"ro","translation":"Nu a fost înregistrat. Se iau în considerare atât senzația, cât și gradul de pregătire.","review_note":""}
+{"id":"health_meals_body_ai.4d4309ebc66e","target_locale":"ro","translation":"Comparație după criterii","review_note":""}
+{"id":"health_meals_body_ai.8fa1b3c8eff2","target_locale":"ro","translation":"OCR pentru afișarea nutrienților (verificare utilizator)","review_note":""}
+{"id":"health_meals_body_ai.31969faf266a","target_locale":"ro","translation":"OCR pentru afișarea nutrienților (necesită verificare)","review_note":""}
+{"id":"health_meals_body_ai.0eea7055641a","target_locale":"ro","translation":"Am introdus numerele din afișajul nutrienților. Verificați cantitatea de referință și fiecare valoare.","review_note":""}
+{"id":"health_meals_body_ai.a3f776f9b426","target_locale":"ro","translation":"Introducere din fotografie cu afișaj nutrienți","review_note":""}
+{"id":"health_meals_body_ai.d4de549ad1bc","target_locale":"ro","translation":"Nu am putut citi afișajul nutrienților. Vă rugăm să faceți o nouă fotografie frontală într-o locație luminoasă sau introduceți manual.","review_note":""}
+{"id":"health_meals_body_ai.78cd1b7ccb8e","target_locale":"ro","translation":"Citirea valorilor nutriționale","review_note":""}
+{"id":"health_meals_body_ai.dfccb419b22f","target_locale":"ro","translation":"Valori nutriționale parțiale","review_note":""}
+{"id":"health_meals_body_ai.92f1e4be7323","target_locale":"ro","translation":"Următorul pas","review_note":""}
+{"id":"health_meals_body_ai.4fc4c85b1a6c","target_locale":"ro","translation":"Acțiunea următoare","review_note":""}
+{"id":"health_meals_body_ai.84b073b073ed","target_locale":"ro","translation":"Ajustarea următoare","review_note":""}
+{"id":"health_meals_body_ai.8381775621bd","target_locale":"ro","translation":"Am verificat starea abdomenului din față și lateral.","review_note":""}
+{"id":"health_meals_body_ai.1f351a03b1e3","target_locale":"ro","translation":"Am verificat circumferința taliei, combinând fața și spatele.","review_note":""}
+{"id":"health_meals_body_ai.84df3f0402ab","target_locale":"ro","translation":"Înregistrez seturi zilnice cu față, lateral și spate etc.","review_note":""}
+{"id":"health_meals_body_ai.4c7bd8cd9b27","target_locale":"ro","translation":"Pot combina față, lateral și spate într-o singură înregistrare. Poți salva chiar și o singură înregistrare și să adaugi mai târziu.","review_note":""}
+{"id":"health_meals_body_ai.a64954d4ecda","target_locale":"ro","translation":"Pasul","review_note":""}
+{"id":"health_meals_body_ai.69f2ab157759","target_locale":"ro","translation":"Pas: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.efb7ffef371a","target_locale":"ro","translation":"Poți autoriza anumite elemente, cum ar fi numărul de pași, activitatea, somnul, ritmul cardiac în repaus, HRV (variația frecvenței cardiace), respirația și temperatura pielii de la încheietură. Elementele neautorizate vor fi tratate ca fiind neobținute, iar introducerea manuală poate fi utilizată direct.","review_note":""}
+{"id":"health_meals_body_ai.37ee0f70625a","target_locale":"ro","translation":"Rămâne: {{value1}} / {{value2}}","review_note":""}
+{"id":"health_meals_body_ai.4c5179b35822","target_locale":"ro","translation":"Nu există date zilnice comparabile","review_note":""}
+{"id":"health_meals_body_ai.1a4c8a429964","target_locale":"ro","translation":"Consum: {{value1}} kcal","review_note":""}
+{"id":"health_meals_body_ai.ef05cf14844b","target_locale":"ro","translation":"Consum neînregistrat","review_note":""}
+{"id":"health_meals_body_ai.fe80292cae43","target_locale":"ro","translation":"Adânc","review_note":""}
+{"id":"health_meals_body_ai.fb5cc9f666a3","target_locale":"ro","translation":"În timpul","review_note":""}
+{"id":"health_meals_body_ai.09beaa3b972f","target_locale":"ro","translation":"Carbohidrați","review_note":""}
+{"id":"health_meals_body_ai.da3b9c692005","target_locale":"ro","translation":"Nu forța","review_note":""}
+{"id":"health_meals_body_ai.8f378a32aed7","target_locale":"ro","translation":"În prezent: {{value1}}/4","review_note":""}
+{"id":"health_meals_body_ai.243eb0872e37","target_locale":"ro","translation":"Actualizare automată pe baza numărului de pași","review_note":""}
+{"id":"health_meals_body_ai.d0c704c61c9b","target_locale":"ro","translation":"În prezent, nu este vorba despre limitele utilizării, ci despre congestia serverului. Vă rugăm să încercați din nou după {{value1}}.","review_note":""}
+{"id":"health_meals_body_ai.a83447b11951","target_locale":"ro","translation":"Înregistrați locația actuală în \"My Gym\"","review_note":""}
+{"id":"health_meals_body_ai.2e02f2290c71","target_locale":"ro","translation":"Verificarea locației","review_note":""}
+{"id":"health_meals_body_ai.0ea53fa197bc","target_locale":"ro","translation":"Expunerea la zgomot ambiental","review_note":""}
+{"id":"health_meals_body_ai.7ca7c3729503","target_locale":"ro","translation":"Sunt obosit(ă)","review_note":""}
+{"id":"health_meals_body_ai.17bdb87ebc9d","target_locale":"ro","translation":"Am propus zile în care nu trebuie să creșteți intensitatea, ținând cont de nivelul de oboseală și recuperare.","review_note":""}
+{"id":"health_meals_body_ai.73b27b5babe7","target_locale":"ro","translation":"Oboseală","review_note":""}
+{"id":"health_meals_body_ai.506832e552c5","target_locale":"ro","translation":"Ștergeți locația înregistrată","review_note":""}
+{"id":"health_meals_body_ai.6bfd0c245861","target_locale":"ro","translation":"Căutați produse înregistrate","review_note":""}
+{"id":"health_meals_body_ai.54adbdc92e60","target_locale":"ro","translation":"Orez alb","review_note":""}
+{"id":"health_meals_body_ai.704be7784e42","target_locale":"ro","translation":"Orez alb, piept de pui, supă miso","review_note":""}
+{"id":"health_meals_body_ai.f8497f20e519","target_locale":"ro","translation":"Obiectiv","review_note":""}
+{"id":"health_meals_body_ai.b4469d69cea6","target_locale":"ro","translation":"Puteți verifica diferența și procentul de realizare al obiectivelor pentru fiecare indicator KPI.","review_note":""}
+{"id":"health_meals_body_ai.51e5b8720d81","target_locale":"ro","translation":"Pe baza obiectivului și a înregistrărilor alimentare de astăzi, afișăm cantitatea rămasă de proteine.","review_note":""}
+{"id":"health_meals_body_ai.776a04d597c7","target_locale":"ro","translation":"Un plan de verificare adaptat obiectivului și echipamentelor disponibile.","review_note":""}
+{"id":"health_meals_body_ai.6d0bcffe314f","target_locale":"ro","translation":"Semnificația obiectivului","review_note":""}
+{"id":"health_meals_body_ai.85361e8b23b9","target_locale":"ro","translation":"Valoarea obiectivului","review_note":""}
+{"id":"health_meals_body_ai.f9c18792e243","target_locale":"ro","translation":"După ce setați valoarea obiectivului, veți vedea diferența și procentul de realizare.","review_note":""}
+{"id":"health_meals_body_ai.892855ade115","target_locale":"ro","translation":"Diferență față de obiectiv","review_note":""}
+{"id":"health_meals_body_ai.b8b04a1e8e72","target_locale":"ro","translation":"Diferența față de obiectiv: {{value1}}{{value2}}","review_note":""}
+{"id":"health_meals_body_ai.f972a5f65765","target_locale":"ro","translation":"Obiectiv nefixat","review_note":""}
+{"id":"health_meals_body_ai.7b0fb61cbb59","target_locale":"ro","translation":"Fixarea unui obiectiv","review_note":""}
+{"id":"health_meals_body_ai.5b8e684267ba","target_locale":"ro","translation":"Atinerea obiectivelor și stabilitate","review_note":""}
+{"id":"health_meals_body_ai.c80ab7033a1d","target_locale":"ro","translation":"Am verificat înregistrarea dumneavoastră recentă privind activitatea fizică, alimentația și antrenamentul din ultimele 30 de zile.","review_note":""}
+{"id":"health_meals_body_ai.7bd42e67d0fc","target_locale":"ro","translation":"Pare că nu ați reușit să creșteți semnificativ greutatea maximă utilizată în ultimele 3 sesiuni. Vă rugăm să luați în considerare forma, numărul de repetări și nivelul de efort (RPE) atunci când faceți acest lucru.","review_note":""}
+{"id":"health_meals_body_ai.00801f6516ce","target_locale":"ro","translation":"Ultimii 7 zile","review_note":""}
+{"id":"health_meals_body_ai.9ef3eebb8e35","target_locale":"ro","translation":"Ultimii 7 zile: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.e0cb665ec8d8","target_locale":"ro","translation":"Vizite la sală în ultimii 7 zile: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.1e49abe778ad","target_locale":"ro","translation":"Volumul antrenamentului este în limite normale","review_note":""}
+{"id":"health_meals_body_ai.c4e16ef103db","target_locale":"ro","translation":"În ultima săptămână, greutatea medie a scăzut. Pentru a susține creșterea musculară, puteți lua în considerare creșterea ușoară a aportului caloric.","review_note":""}
+{"id":"health_meals_body_ai.dda25c014089","target_locale":"ro","translation":"În ultima săptămână, greutatea medie a scăzut în direcție inversă față de obiectiv. În primul rând, puteți ajusta ușor aportul caloric.","review_note":""}
+{"id":"health_meals_body_ai.a7c9d8a11521","target_locale":"ro","translation":"În ultima săptămână, greutatea medie a scăzut rapid. Pentru a asigura un progres sănătos, puteți lua în considerare creșterea ușoară a aportului caloric.","review_note":""}
+{"id":"health_meals_body_ai.a513563874a0","target_locale":"ro","translation":"În ultima săptămână, greutatea medie a crescut rapid. Pentru a controla ritmul creșterii, puteți lua în considerare reducerea ușoară a aportului caloric.","review_note":""}
+{"id":"health_meals_body_ai.9a20afa66267","target_locale":"ro","translation":"Valoarea recentă este sub 85 dBA. Vă rugăm să verificați și durata expunerii.","review_note":""}
+{"id":"health_meals_body_ai.af2cc7357835","target_locale":"ro","translation":"Media înregistrată: {{value1}} ore","review_note":""}
+{"id":"health_meals_body_ai.8830d85c52ee","target_locale":"ro","translation":"Intervalul de mișcare relativ","review_note":""}
+{"id":"health_meals_body_ai.b0913a8eb8e5","target_locale":"ro","translation":"Discutați cu un specialist","review_note":""}
+{"id":"health_meals_body_ai.8878e4c5b97f","target_locale":"ro","translation":"Somn","review_note":""}
+{"id":"health_meals_body_ai.62b4274f6ef5","target_locale":"ro","translation":"Asigurați-vă un somn de {{value1}} ore.","review_note":""}
+{"id":"health_meals_body_ai.5f3317f450fa","target_locale":"ro","translation":"Somn: {{value1}} ore.","review_note":""}
+{"id":"health_meals_body_ai.c3262e1157cc","target_locale":"ro","translation":"Somnul este mai scurt.","review_note":""}
+{"id":"health_meals_body_ai.06bf7aa1d0bd","target_locale":"ro","translation":"Somnul este ușor mai scurt.","review_note":""}
+{"id":"health_meals_body_ai.0cce0b71e377","target_locale":"ro","translation":"Scorul este calculat în funcție de timpul total, deoarece nu aveți date despre stadiile somnului.","review_note":""}
+{"id":"health_meals_body_ai.4060e1dc437c","target_locale":"ro","translation":"Nu avem date despre somn. Nu vom evalua valorile lipsă ca fiind 0.","review_note":""}
+{"id":"health_meals_body_ai.051a5a9c5eea","target_locale":"ro","translation":"Puteți verifica împreună somnul, recuperarea și activitatea.","review_note":""}
+{"id":"health_meals_body_ai.5e978cf690d0","target_locale":"ro","translation":"Șterge","review_note":""}
+{"id":"health_meals_body_ai.d13068c0450c","target_locale":"ro","translation":"Precizie: {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.9c55bbc73d4a","target_locale":"ro","translation":"Salvați după ce confirmați.","review_note":""}
+{"id":"health_meals_body_ai.8466e434074d","target_locale":"ro","translation":"Schimbările confirmate","review_note":""}
+{"id":"health_meals_body_ai.ee2b79317f96","target_locale":"ro","translation":"În așteptare de confirmare","review_note":""}
+{"id":"health_meals_body_ai.b5a13bb1eb04","target_locale":"ro","translation":"{{value1}} amintiri confirmate","review_note":""}
+{"id":"health_meals_body_ai.24d491e59887","target_locale":"ro","translation":"{{value1}} surse științifice","review_note":""}
+{"id":"health_meals_body_ai.de927406b58c","target_locale":"ro","translation":"Surse științifice, {{value1}}","review_note":""}
+{"id":"health_meals_body_ai.897341c7f1b0","target_locale":"ro","translation":"Exerciții","review_note":""}
+{"id":"health_meals_body_ai.bc5796a0a9e9","target_locale":"ro","translation":"Tip","review_note":""}
+{"id":"health_meals_body_ai.4fd6f0c4f98f","target_locale":"ro","translation":"Am încărcat produsele salvate pe dispozitiv.","review_note":""}
+{"id":"health_meals_body_ai.ed052a8c3035","target_locale":"ro","translation":"Încercați din nou după ce reporniți dispozitivul.","review_note":""}
+{"id":"health_meals_body_ai.1a14ccfb8745","target_locale":"ro","translation":"Dacă obiectivul este creșterea musculară, puteți lua în considerare o a doua sesiune de antrenament săptămânal, într-o măsură rezonabilă.","review_note":""}
+{"id":"health_meals_body_ai.5d3092d5f543","target_locale":"ro","translation":"Aproximativ {{value1}} minute","review_note":""}

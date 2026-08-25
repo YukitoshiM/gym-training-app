@@ -46,7 +46,7 @@ final class AppDiagnostics: NSObject, MXMetricManagerSubscriber, @unchecked Send
             level: level,
             category: category,
             message: message,
-            metadata: metadata
+            metadata: Self.sanitizedMetadata(metadata)
         )
         guard let data = try? JSONEncoder.diagnostic.encode(event) else { return }
         appendLine(data)
@@ -205,7 +205,17 @@ final class AppDiagnostics: NSObject, MXMetricManagerSubscriber, @unchecked Send
                       event.timestamp >= cutoff else {
                     return nil
                 }
-                return (event.timestamp, line)
+                let sanitizedEvent = DiagnosticEvent(
+                    timestamp: event.timestamp,
+                    level: event.level,
+                    category: event.category,
+                    message: event.message,
+                    metadata: Self.sanitizedMetadata(event.metadata)
+                )
+                guard let sanitizedLine = try? JSONEncoder.diagnostic.encode(sanitizedEvent) else {
+                    return nil
+                }
+                return (event.timestamp, sanitizedLine)
             }
             .sorted { $0.timestamp < $1.timestamp }
             .suffix(Self.maximumEventCount)
@@ -237,6 +247,27 @@ final class AppDiagnostics: NSObject, MXMetricManagerSubscriber, @unchecked Send
         var values = URLResourceValues()
         values.isExcludedFromBackup = true
         try directoryURL.setResourceValues(values)
+    }
+
+    private static func sanitizedMetadata(_ metadata: [String: String]) -> [String: String] {
+        let redactedKeys: Set<String> = [
+            "host",
+            "hostname",
+            "url",
+            "baseurl",
+            "requesturl",
+            "serverurl",
+            "apikey",
+            "authorization",
+            "accesstoken"
+        ]
+
+        return metadata.reduce(into: [:]) { result, item in
+            let normalizedKey = item.key
+                .lowercased()
+                .filter { $0.isLetter || $0.isNumber }
+            result[item.key] = redactedKeys.contains(normalizedKey) ? "[redacted]" : item.value
+        }
     }
 
     private static var logURL: URL {
@@ -308,6 +339,8 @@ struct ActivityShareView: UIViewControllerRepresentable {
 
 enum UsageEventName: String, Codable {
     case analyticsEnabled = "analytics_enabled"
+    case initialSetupCompleted = "initial_setup_completed"
+    case firstWorkoutCompleted = "first_workout_completed"
     case appOpened = "app_opened"
     case tabSelected = "tab_selected"
     case planSaved = "plan_saved"
@@ -319,13 +352,55 @@ enum UsageEventName: String, Codable {
     case tutorialViewed = "tutorial_viewed"
     case dailyRecommendationGenerated = "daily_recommendation_generated"
     case dailyRecommendationChanged = "daily_recommendation_changed"
+    case dailyActionImpression = "daily_action_impression"
     case dailyActionCompleted = "daily_action_completed"
+    case dailyActionDismissed = "daily_action_dismissed"
+    case homePrimaryActionStarted = "home_primary_action_started"
+    case dailyActionReasonOpened = "daily_action_reason_opened"
+    case dailyActionReplaced = "daily_action_replaced"
+    case quickRecordOpened = "quick_record_opened"
+    case recommendationSourceShown = "recommendation_source_shown"
     case notificationOpened = "notification_opened"
     case notificationDisabled = "notification_disabled"
     case coachRecommendationAccepted = "coach_recommendation_accepted"
     case coachSelectionChanged = "coach_selection_changed"
     case coachResponseHelpful = "coach_response_helpful"
     case coachResponseNeedsImprovement = "coach_response_needs_improvement"
+    case aiAccountRegistered = "ai_account_registered"
+    case aiSignupGrantReceived = "ai_signup_grant_received"
+    case aiCreditInsufficientShown = "ai_credit_insufficient_shown"
+    case creditStoreOpened = "credit_store_opened"
+    case rewardedAdStarted = "rewarded_ad_started"
+    case rewardedAdCompleted = "rewarded_ad_completed"
+    case rewardedCreditGranted = "rewarded_credit_granted"
+    case rewardedAdFailed = "rewarded_ad_failed"
+    case creditPurchaseCompleted = "credit_purchase_completed"
+    case creditPurchasePending = "credit_purchase_pending"
+    case creditPurchaseCancelled = "credit_purchase_cancelled"
+    case creditPurchaseFailed = "credit_purchase_failed"
+}
+
+enum UsageDistributionChannel: String, Codable, Sendable {
+    case appStore = "app_store"
+    case testFlight = "testflight"
+    case simulator = "simulator"
+    case unknown = "unknown"
+}
+
+extension UsageDistributionChannel {
+    static func current() -> UsageDistributionChannel {
+        #if targetEnvironment(simulator)
+        return .simulator
+        #else
+        return resolve(receiptURL: Bundle.main.appStoreReceiptURL, isSimulator: false)
+        #endif
+    }
+
+    static func resolve(receiptURL: URL?, isSimulator: Bool) -> UsageDistributionChannel {
+        if isSimulator { return .simulator }
+        guard receiptURL?.lastPathComponent == "sandboxReceipt" else { return .appStore }
+        return .testFlight
+    }
 }
 
 enum CoachResponseRating: String, Codable {
@@ -333,20 +408,112 @@ enum CoachResponseRating: String, Codable {
     case needsImprovement = "needs_improvement"
 }
 
-private struct UsageEvent: Codable {
+/// Non-sensitive, enumerated dimensions used to evaluate the daily recommendation UX.
+/// Health values, free text, record IDs, photos, and locations must never be added here.
+struct UsageEventProperties: Codable, Equatable, Sendable {
+    var goal: String? = nil
+    var experience: String? = nil
+    var readiness: String? = nil
+    var actionCategory: String? = nil
+    var fromCategory: String? = nil
+    var toCategory: String? = nil
+    var position: Int? = nil
+    var source: String? = nil
+    var reason: String? = nil
+    var completionMethod: String? = nil
+
+    static func dailyRecommendation(
+        profile: UserProfile,
+        recommendation: DailyRecommendation
+    ) -> UsageEventProperties {
+        UsageEventProperties(
+            goal: profile.goalType.rawValue,
+            experience: profile.experienceLevel.rawValue,
+            readiness: recommendation.readiness.level.rawValue,
+            source: recommendation.source.rawValue
+        )
+    }
+
+    static func dailyAction(
+        profile: UserProfile,
+        recommendation: DailyRecommendation,
+        action: DailyAction,
+        completionMethod: String? = nil,
+        reason: String? = nil
+    ) -> UsageEventProperties {
+        UsageEventProperties(
+            goal: profile.goalType.rawValue,
+            experience: profile.experienceLevel.rawValue,
+            readiness: recommendation.readiness.level.rawValue,
+            actionCategory: action.category.rawValue,
+            position: recommendation.activeActions.firstIndex(where: { $0.id == action.id }),
+            source: recommendation.source.rawValue,
+            reason: reason,
+            completionMethod: completionMethod
+        )
+    }
+}
+
+struct UsageEvent: Codable, Sendable {
+    let id: UUID
     let timestamp: Date
     let name: UsageEventName
     let dimension: String?
+    let properties: UsageEventProperties?
     let appVersion: String
+    let locale: String
+    let channel: UsageDistributionChannel
+
+    init(
+        id: UUID = UUID(),
+        timestamp: Date,
+        name: UsageEventName,
+        dimension: String?,
+        properties: UsageEventProperties? = nil,
+        appVersion: String,
+        locale: String = Locale.current.identifier,
+        channel: UsageDistributionChannel? = nil
+    ) {
+        self.id = id
+        self.timestamp = timestamp
+        self.name = name
+        self.dimension = dimension
+        self.properties = properties
+        self.appVersion = appVersion
+        self.locale = locale
+        self.channel = channel ?? UsageDistributionChannel.current()
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case id, timestamp, name, dimension, properties, appVersion, locale, channel
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        timestamp = try container.decode(Date.self, forKey: .timestamp)
+        name = try container.decode(UsageEventName.self, forKey: .name)
+        dimension = try container.decodeIfPresent(String.self, forKey: .dimension)
+        properties = try container.decodeIfPresent(UsageEventProperties.self, forKey: .properties)
+        appVersion = try container.decode(String.self, forKey: .appVersion)
+        locale = try container.decodeIfPresent(String.self, forKey: .locale) ?? ""
+        channel = try container.decodeIfPresent(
+            UsageDistributionChannel.self,
+            forKey: .channel
+        ) ?? UsageDistributionChannel.current()
+    }
 }
 
-/// Stores coarse feature-use events on this device. It never sends data over the network.
+/// Stores coarse feature-use events and uploads them only after explicit opt-in.
 final class UsageAnalytics: @unchecked Sendable {
     static let shared = UsageAnalytics()
 
     private static let enabledKey = "bodymode.usageAnalytics.enabled"
     private static let eventsKey = "bodymode.usageAnalytics.events"
     private static let coachResponseRatingsKey = "bodymode.usageAnalytics.coachResponseRatings"
+    private static let uploadedEventIDsKey = "bodymode.usageAnalytics.uploadedEventIDs"
+    private static let networkConsentVersionKey = "bodymode.usageAnalytics.networkConsentVersion"
+    private static let currentNetworkConsentVersion = "2026-08-21-ai-credit-events-v3"
 
     private let queue = DispatchQueue(label: "com.yukitoshim.gymtrainingapp.usage-analytics")
     private let lock = NSLock()
@@ -356,32 +523,51 @@ final class UsageAnalytics: @unchecked Sendable {
     private let retentionInterval: TimeInterval = 90 * 24 * 60 * 60
     private var cachedEvents: [UsageEvent]
     private var cachedCoachResponseRatings: [String: String]
+    private var uploadedEventIDs: Set<UUID>
     private var persistenceGeneration: UInt = 0
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        if defaults.string(forKey: Self.networkConsentVersionKey) != Self.currentNetworkConsentVersion {
+            // The collected categories changed. Require a fresh opt-in before any event is
+            // sent to the operator's server under the revised disclosure.
+            defaults.set(false, forKey: Self.enabledKey)
+            defaults.removeObject(forKey: Self.uploadedEventIDsKey)
+        }
         cachedEvents = Self.decodeEvents(defaults.data(forKey: Self.eventsKey))
         cachedCoachResponseRatings = defaults.dictionary(forKey: Self.coachResponseRatingsKey) as? [String: String] ?? [:]
+        uploadedEventIDs = Set(
+            (defaults.stringArray(forKey: Self.uploadedEventIDsKey) ?? []).compactMap(UUID.init(uuidString:))
+        )
     }
 
     var isCollectionEnabled: Bool {
         defaults.bool(forKey: Self.enabledKey)
+            && defaults.string(forKey: Self.networkConsentVersionKey) == Self.currentNetworkConsentVersion
     }
 
     func setCollectionEnabled(_ isEnabled: Bool) {
+        if isEnabled {
+            defaults.set(Self.currentNetworkConsentVersion, forKey: Self.networkConsentVersionKey)
+        }
         defaults.set(isEnabled, forKey: Self.enabledKey)
         if isEnabled {
             record(.analyticsEnabled)
         }
     }
 
-    func record(_ name: UsageEventName, dimension: String? = nil) {
+    func record(
+        _ name: UsageEventName,
+        dimension: String? = nil,
+        properties: UsageEventProperties? = nil
+    ) {
         let generation = lock.withLock { persistenceGeneration }
         queue.async {
-            guard self.defaults.bool(forKey: Self.enabledKey) else { return }
+            guard self.isCollectionEnabled else { return }
             guard let events = self.appendEvent(
                 name,
                 dimension: dimension,
+                properties: properties,
                 generation: generation
             ) else { return }
             self.saveEvents(events)
@@ -429,6 +615,7 @@ final class UsageAnalytics: @unchecked Sendable {
             _ = appendEvent(
                 rating == .helpful ? .coachResponseHelpful : .coachResponseNeedsImprovement,
                 dimension: coachType,
+                properties: nil,
                 generation: generation
             )
         }
@@ -459,16 +646,48 @@ final class UsageAnalytics: @unchecked Sendable {
             persistenceGeneration &+= 1
             cachedEvents = []
             cachedCoachResponseRatings = [:]
+            uploadedEventIDs = []
         }
         queue.async {
             self.defaults.removeObject(forKey: Self.eventsKey)
             self.defaults.removeObject(forKey: Self.coachResponseRatingsKey)
+            self.defaults.removeObject(forKey: Self.uploadedEventIDsKey)
         }
     }
 
     func reset() {
         defaults.removeObject(forKey: Self.enabledKey)
+        defaults.removeObject(forKey: Self.networkConsentVersionKey)
         deleteData()
+    }
+
+    func synchronize(settings: AISettings) async {
+        guard isCollectionEnabled else { return }
+        for _ in 0..<10 {
+            let batch = lock.withLock {
+                Array(cachedEvents.filter { !uploadedEventIDs.contains($0.id) }.prefix(100))
+            }
+            guard !batch.isEmpty else { return }
+            do {
+                try await AIAPIClient(settings: settings).uploadUsageEvents(batch)
+                let ids = Set(batch.map(\.id))
+                let storedIDs = lock.withLock { () -> [String] in
+                    uploadedEventIDs.formUnion(ids)
+                    uploadedEventIDs = Set(uploadedEventIDs.filter { id in
+                        cachedEvents.contains(where: { $0.id == id })
+                    })
+                    return uploadedEventIDs.map(\.uuidString)
+                }
+                defaults.set(storedIDs, forKey: Self.uploadedEventIDsKey)
+            } catch {
+                AppDiagnostics.shared.record(
+                    error: error,
+                    category: "analytics.upload",
+                    message: "Anonymous usage events could not be uploaded"
+                )
+                return
+            }
+        }
     }
 
     private static func decodeEvents(_ data: Data?) -> [UsageEvent] {
@@ -481,6 +700,7 @@ final class UsageAnalytics: @unchecked Sendable {
     private func appendEvent(
         _ name: UsageEventName,
         dimension: String?,
+        properties: UsageEventProperties?,
         generation: UInt
     ) -> [UsageEvent]? {
         let now = Date()
@@ -488,10 +708,13 @@ final class UsageAnalytics: @unchecked Sendable {
             guard persistenceGeneration == generation else { return nil }
             cachedEvents.append(
                 UsageEvent(
+                    id: UUID(),
                     timestamp: now,
                     name: name,
                     dimension: dimension.map { String($0.prefix(40)) },
-                    appVersion: LegalConfiguration.appVersion
+                    properties: properties,
+                    appVersion: LegalConfiguration.appVersion,
+                    locale: Locale.current.identifier
                 )
             )
             cachedEvents = cachedEvents

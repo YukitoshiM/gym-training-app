@@ -1,0 +1,115 @@
+{"id":"training.ecbfec695cfb","target_locale":"de-DE","translation":"Aufnahmeset","review_note":""}
+{"id":"training.3064c4117490","target_locale":"de-DE","translation":"Tag","review_note":""}
+{"id":"training.3f9f5b28c76e","target_locale":"de-DE","translation":"Datum","review_note":""}
+{"id":"training.137012e67a97","target_locale":"de-DE","translation":"Uhrzeit","review_note":""}
+{"id":"training.09b15b45b062","target_locale":"de-DE","translation":"Maximale Herzfrequenz","review_note":""}
+{"id":"training.cdbec49a500c","target_locale":"de-DE","translation":"Maximales Gewicht","review_note":""}
+{"id":"training.f29b58714fe0","target_locale":"de-DE","translation":"Monat","review_note":""}
+{"id":"training.0ec9a1b0cd59","target_locale":"de-DE","translation":"Mittwoch","review_note":""}
+{"id":"training.29d0d2b3bbd0","target_locale":"de-DE","translation":"Nicht erreicht","review_note":""}
+{"id":"training.9720cc8de334","target_locale":"de-DE","translation":"Nicht abgeschlossen","review_note":""}
+{"id":"training.a0c8f6106c6b","target_locale":"de-DE","translation":"Ausgeschlossen aufgrund fehlender Registrierung: {{value1}}","review_note":""}
+{"id":"training.76bbf2a42b69","target_locale":"de-DE","translation":"Nicht erreicht","review_note":""}
+{"id":"training.379774690c05","target_locale":"de-DE","translation":"Suche, Details, hinzufügen von benutzerdefinierten Übungen","review_note":""}
+{"id":"training.3d3e4ad500a9","target_locale":"de-DE","translation":"Standard","review_note":""}
+{"id":"training.e7954b54321d","target_locale":"de-DE","translation":"Nächster Monat","review_note":""}
+{"id":"training.e1b8fd383091","target_locale":"de-DE","translation":"Speichern Sie das Gewicht, die Anzahl und die Übung im nächsten Bildschirm.","review_note":""}
+{"id":"training.d34df1b5c392","target_locale":"de-DE","translation":"Donnerstag","review_note":""}
+{"id":"training.586036cfde65","target_locale":"de-DE","translation":"Verbraucht","review_note":""}
+{"id":"training.57ea66302bcf","target_locale":"de-DE","translation":"Während der Aktivität","review_note":""}
+{"id":"training.29166d008ccd","target_locale":"de-DE","translation":"Freitag","review_note":""}
+{"id":"training.621fc28b71e5","target_locale":"de-DE","translation":"Registrierte Übungen","review_note":""}
+{"id":"training.4f40a3e174d3","target_locale":"de-DE","translation":"Empfehlung","review_note":""}
+{"id":"training.891003bfa15c","target_locale":"de-DE","translation":"Ziel","review_note":""}
+{"id":"training.ad1d41e268ba","target_locale":"de-DE","translation":"Ziel: {{value1}} × {{value2}} Wiederholungen","review_note":""}
+{"id":"training.53da0cff7831","target_locale":"de-DE","translation":"Ziel, Erfolge und verfügbare Geräte berücksichtigen","review_note":""}
+{"id":"training.85006d7df5ce","target_locale":"de-DE","translation":"Zielwert kopieren","review_note":""}
+{"id":"training.f85857b6a867","target_locale":"de-DE","translation":"Zielunterschied","review_note":""}
+{"id":"training.7f60357273d2","target_locale":"de-DE","translation":"Zielunterschied: {{value1}}","review_note":""}
+{"id":"training.c9046d518292","target_locale":"de-DE","translation":"Nächstes Level basierend auf Ziel und Ausrüstung","review_note":""}
+{"id":"training.d6713c7cb074","target_locale":"de-DE","translation":"Wird anhand von Ziel, Fokusbereich, verfügbaren Geräten und bisherigen Erfolgen erstellt. Vor dem Speichern können Sie Übungen und Werte ändern.","review_note":""}
+{"id":"training.d73b5768f914","target_locale":"de-DE","translation":"Beratung und Anpassung","review_note":""}
+{"id":"training.804773e6316f","target_locale":"de-DE","translation":"Löschen","review_note":""}
+{"id":"training.9920db8c0ebb","target_locale":"de-DE","translation":"Überprüfen und Plan speichern","review_note":""}
+{"id":"training.b1d936d15858","target_locale":"de-DE","translation":"Sekunde","review_note":""}
+{"id":"training.460379a71a7f","target_locale":"de-DE","translation":"Übung","review_note":""}
+{"id":"training.f91b5b160025","target_locale":"de-DE","translation":"Keine Übung vorhanden","review_note":""}
+{"id":"training.c1eb249e0b6c","target_locale":"de-DE","translation":"Registrieren Sie Übungen und Ziele, um sofort mit dem nächsten Training zu beginnen.","review_note":""}
+{"id":"training.131342b755f7","target_locale":"de-DE","translation":"Übung hinzufügen","review_note":""}
+{"id":"training.5e2876f45479","target_locale":"de-DE","translation":"Fügen Sie eine Übung hinzu und geben Sie das Ziel für jede Reihe ein.","review_note":""}
+{"id":"training.50730e3c9ce5","target_locale":"de-DE","translation":"Sie können alle Einstellungen gleichzeitig vornehmen, wenn Sie eine Übung hinzufügen.","review_note":""}
+{"id":"training.66f7a1943f08","target_locale":"de-DE","translation":"Übung auswählen","review_note":""}
+{"id":"training.640e7f5d70f7","target_locale":"de-DE","translation":"Übungsbibliothek","review_note":""}
+{"id":"training.6b602a42b27f","target_locale":"de-DE","translation":"Nach Übungstyp","review_note":""}
+{"id":"training.f3db21504894","target_locale":"de-DE","translation":"Übungstyp-Historie","review_note":""}
+{"id":"training.ee4c1cfcf5fd","target_locale":"de-DE","translation":"Übungstyp","review_note":""}
+{"id":"training.e82a5f19c417","target_locale":"de-DE","translation":"Übungstyp, Muskelgruppe, Methode","review_note":""}
+{"id":"training.44734e637a7d","target_locale":"de-DE","translation":"Detaillierte Informationen zur Übung","review_note":""}
+{"id":"training.0902af066756","target_locale":"de-DE","translation":"Krafttraining","review_note":""}
+{"id":"training.018e4148e6e6","target_locale":"de-DE","translation":"Kraft A","review_note":""}
+{"id":"training.840f119546c3","target_locale":"de-DE","translation":"Kraft B","review_note":""}
+{"id":"training.ff094202dcaa","target_locale":"de-DE","translation":"Muskelaufbau","review_note":""}
+{"id":"training.fd89f4db4ef1","target_locale":"de-DE","translation":"Fertig","review_note":""}
+{"id":"training.b7bac668058e","target_locale":"de-DE","translation":"Fortschritt","review_note":""}
+{"id":"training.ab9657692a70","target_locale":"de-DE","translation":"Weiter","review_note":""}
+{"id":"training.922870c3ac56","target_locale":"de-DE","translation":"Gesamtvolumen","review_note":""}
+{"id":"training.299456e922c2","target_locale":"de-DE","translation":"Bearbeiten","review_note":""}
+{"id":"training.0ee4231d91b6","target_locale":"de-DE","translation":"Schultern / Bizeps / Trizeps","review_note":""}
+{"id":"training.14f202634605","target_locale":"de-DE","translation":"Schultern & Arme","review_note":""}
+{"id":"training.6ffb7a731dd0","target_locale":"de-DE","translation":"Tag für den Rücken","review_note":""}
+{"id":"training.d30ca9b91ccb","target_locale":"de-DE","translation":"Tag für Brust","review_note":""}
+{"id":"training.59a002a36b66","target_locale":"de-DE","translation":"Beine / Gesäß","review_note":""}
+{"id":"training.f9b578ec8c80","target_locale":"de-DE","translation":"Tag für Beine","review_note":""}
+{"id":"training.ed189402693b","target_locale":"de-DE","translation":"Persönliche Bestleistungen","review_note":""}
+{"id":"training.cb5d23c702e0","target_locale":"de-DE","translation":"Aufzeichnungen nach Zeitraum, Übung und Sensor anzeigen","review_note":""}
+{"id":"training.36467fec4916","target_locale":"de-DE","translation":"Tempo durch taktile Rückmeldung bestimmen","review_note":""}
+{"id":"training.84447148c208","target_locale":"de-DE","translation":"Plan","review_note":""}
+{"id":"training.597a1eba1bab","target_locale":"de-DE","translation":"{{value1}}/{{value2}} Sätze abgeschlossen / Erreicht {{value3}}/{{value4}}","review_note":""}
+{"id":"training.170899739631","target_locale":"de-DE","translation":"Von Plan starten","review_note":""}
+{"id":"training.84f4ceb9bc7b","target_locale":"de-DE","translation":"Gemäß Plan","review_note":""}
+{"id":"training.41fee4a5554c","target_locale":"de-DE","translation":"Übungen hinzufügen und aufzeichnen, ohne Plan","review_note":""}
+{"id":"training.75c83d4d34c6","target_locale":"de-DE","translation":"Noch kein Plan vorhanden","review_note":""}
+{"id":"training.1823e96b3cdc","target_locale":"de-DE","translation":"Langsamer als der Plan","review_note":""}
+{"id":"training.742f77fb799f","target_locale":"de-DE","translation":"Schneller als der Plan","review_note":""}
+{"id":"training.3cee319a5e3a","target_locale":"de-DE","translation":"Plan erstellen","review_note":""}
+{"id":"training.7c36c155b82c","target_locale":"de-DE","translation":"Plan erstellen","review_note":""}
+{"id":"training.241d46d2cd02","target_locale":"de-DE","translation":"Plan speichern","review_note":""}
+{"id":"training.a85ababac45e","target_locale":"de-DE","translation":"Satzplan","review_note":""}
+{"id":"training.9e5c5d0f4baf","target_locale":"de-DE","translation":"Plan erstellen","review_note":""}
+{"id":"training.29ef9e964c43","target_locale":"de-DE","translation":"Name des Plans","review_note":""}
+{"id":"training.6558f1d0f210","target_locale":"de-DE","translation":"Bitte Name und mindestens eine Übung eingeben.","review_note":""}
+{"id":"training.672e0be9ce7a","target_locale":"de-DE","translation":"Aufzeichnungen","review_note":""}
+{"id":"training.bbb6e51d140e","target_locale":"de-DE","translation":"Aufzeichnungen nach Tag anzeigen","review_note":""}
+{"id":"training.e8f06ffa02b6","target_locale":"de-DE","translation":"Daten löschen und schließen","review_note":""}
+{"id":"training.0e7d62c179e0","target_locale":"de-DE","translation":"Geeignete Entscheidung anhand von Aufzeichnungen und Zielen treffen","review_note":""}
+{"id":"training.be6165c4a524","target_locale":"de-DE","translation":"Aufzeichnung löschen","review_note":""}
+{"id":"training.f71407d1df3f","target_locale":"de-DE","translation":"Aufzeichnungsart: Krafttraining, Körper, Ernährung, Fotos, Fitnessstudio","review_note":""}
+{"id":"training.725a4adfc01a","target_locale":"de-DE","translation":"Keine passende Kategorie gefunden","review_note":""}
+{"id":"training.f7f7fa19af19","target_locale":"de-DE","translation":"Körper","review_note":""}
+{"id":"training.b4ec903162bc","target_locale":"de-DE","translation":"Körpermaße","review_note":""}
+{"id":"training.04d1487f6347","target_locale":"de-DE","translation":"Körpermaße nicht erfasst","review_note":""}
+{"id":"training.56009c5efa29","target_locale":"de-DE","translation":"Leicht","review_note":""}
+{"id":"training.aef5c7b0939e","target_locale":"de-DE","translation":"Hinzufügen","review_note":""}
+{"id":"training.a9629f892deb","target_locale":"de-DE","translation":"Woche","review_note":""}
+{"id":"training.f1bec92b6943","target_locale":"de-DE","translation":"{{value1}} Tage / {{value2}} Minuten pro Woche","review_note":""}
+{"id":"training.902c06373dc5","target_locale":"de-DE","translation":"Pro Woche","review_note":""}
+{"id":"training.5efc858e0f9e","target_locale":"de-DE","translation":"Wöchentlicher Umfang","review_note":""}
+{"id":"training.79469f04a73c","target_locale":"de-DE","translation":"Analyse des wöchentlichen Umfangs","review_note":""}
+{"id":"training.16261933d5eb","target_locale":"de-DE","translation":"Ich passe Gewicht und Anzahl anhand Ihrer bisherigen Erfolge an. Bitte überprüfen und speichern Sie.","review_note":""}
+{"id":"training.6f68dd807f5f","target_locale":"de-DE","translation":"Erfolg","review_note":""}
+{"id":"training.90687409925b","target_locale":"de-DE","translation":"Erfolgsset","review_note":""}
+{"id":"training.e79acd05d832","target_locale":"de-DE","translation":"Erfolgsgrad","review_note":""}
+{"id":"training.f3374f25ffb6","target_locale":"de-DE","translation":"Erfolgsgrad {{value1}}","review_note":""}
+{"id":"training.7d2c88039500","target_locale":"de-DE","translation":"Nur die registrierten Übungen, die zu der ausgewählten Ausrüstung passen, werden an das KI-System übergeben.","review_note":""}
+{"id":"training.43ab6b5ca1ab","target_locale":"de-DE","translation":"Zusammenfassung des Tages","review_note":""}
+{"id":"training.78efc5de2d26","target_locale":"de-DE","translation":"Muskelgruppe","review_note":""}
+{"id":"training.37144dc3ed75","target_locale":"de-DE","translation":"Gewichtsunterschied","review_note":""}
+{"id":"training.e0f05832f7f0","target_locale":"de-DE","translation":"Gewichtsunterschied {{value1}} / Unterschied in der Anzahl der Wiederholungen {{value2}}","review_note":""}
+{"id":"training.7d51185bb279","target_locale":"de-DE","translation":"Gewichtsentwicklung","review_note":""}
+{"id":"training.78d7f266fb1e","target_locale":"de-DE","translation":"Gold","review_note":""}
+{"id":"training.2ea27dba9b9a","target_locale":"de-DE","translation":"Schließen","review_note":""}
+{"id":"training.92f3acd01a38","target_locale":"de-DE","translation":"Starten","review_note":""}
+{"id":"training.b9a458e7a4a8","target_locale":"de-DE","translation":"Start abbrechen","review_note":""}
+{"id":"training.98bedebd5bd9","target_locale":"de-DE","translation":"Ernährung","review_note":""}
+{"id":"training.2f46f8d9486a","target_locale":"de-DE","translation":"Ernährung nicht erfasst","review_note":""}
+{"id":"training.7aa2531ffa78","target_locale":"de-DE","translation":"Hohes Gewicht","review_note":""}

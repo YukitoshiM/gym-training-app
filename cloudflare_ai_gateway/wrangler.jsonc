@@ -1,0 +1,84 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bodymode-ai-gateway",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "triggers": {
+    "crons": ["17 * * * *"]
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  },
+  "env": {
+    "staging": {
+      "name": "bodymode-ai-gateway-staging",
+      "vars": {
+        "BODYMODE_ENV": "staging",
+        "BODYMODE_OPENAI_MODEL": "gpt-5.6-luna",
+        "BODYMODE_AI_ENABLED": "1",
+        "BODYMODE_AI_GLOBAL_DAILY_LIMIT": "500",
+        "BODYMODE_AI_REQUESTS_PER_MINUTE": "10",
+        "AI_CREDIT_SIGNUP_BONUS": "20",
+        "AI_REWARDED_AD_CREDITS": "5",
+        "BODYMODE_UNLIMITED_SUBJECTS": "owner",
+        "APPLE_APP_ID": "6799871527",
+        "APPLE_ENABLE_ONLINE_CHECKS": "true",
+        "BODYMODE_CLOUD_ROUTES": "/v1/health,/v1/auth/token,/v1/auth/revoke,/v1/account/apple,/v1/account,/v1/coaches,/v1/evidence/status,/v1/analytics/events,/v1/usage,/v1/credits,/v1/credits/history,/v1/credits/signup-grant,/v1/credits/rewarded-ad/challenge,/v1/credits/rewarded-ad/claim,/v1/credits/rewarded-ad/ssv,/v1/credits/purchases/verify,/v1/app-store/notifications,/v1/operations/status,/v1/operations/credits/grant,/v1/agents/chat,/v1/meals/analyze-image,/v1/meals/analyze-text,/v1/body-photos/analyze,/v1/body-photos/analyze-set,/v1/reports/weekly,/v1/reports/monthly"
+      },
+      "d1_databases": [
+        {
+          "binding": "BODYMODE_DB",
+          "database_name": "bodymode-staging",
+          "database_id": "0f6e8968-bf0e-441d-bf66-dd6340af227d",
+          "migrations_dir": "migrations"
+        }
+      ],
+      "vectorize": [
+        {
+          "binding": "EVIDENCE_VECTORIZE",
+          "index_name": "bodymode-evidence-staging"
+        }
+      ],
+      "ai": {
+        "binding": "AI"
+      }
+    },
+    "production": {
+      "name": "bodymode-ai-gateway-production",
+      "vars": {
+        "BODYMODE_ENV": "production",
+        "BODYMODE_OPENAI_MODEL": "gpt-5.6-luna",
+        "BODYMODE_AI_ENABLED": "1",
+        "BODYMODE_AI_GLOBAL_DAILY_LIMIT": "500",
+        "BODYMODE_AI_REQUESTS_PER_MINUTE": "10",
+        "AI_CREDIT_SIGNUP_BONUS": "20",
+        "AI_REWARDED_AD_CREDITS": "5",
+        "BODYMODE_UNLIMITED_SUBJECTS": "owner",
+        "APPLE_APP_ID": "6799871527",
+        "APPLE_ENABLE_ONLINE_CHECKS": "true",
+        "BODYMODE_CLOUD_ROUTES": "/v1/health,/v1/auth/token,/v1/auth/revoke,/v1/account/apple,/v1/account,/v1/coaches,/v1/evidence/status,/v1/analytics/events,/v1/usage,/v1/credits,/v1/credits/history,/v1/credits/signup-grant,/v1/credits/rewarded-ad/challenge,/v1/credits/rewarded-ad/claim,/v1/credits/rewarded-ad/ssv,/v1/credits/purchases/verify,/v1/app-store/notifications,/v1/operations/status,/v1/operations/credits/grant,/v1/agents/chat,/v1/meals/analyze-image,/v1/meals/analyze-text,/v1/body-photos/analyze,/v1/body-photos/analyze-set,/v1/reports/weekly,/v1/reports/monthly"
+      },
+      "d1_databases": [
+        {
+          "binding": "BODYMODE_DB",
+          "database_name": "bodymode-production",
+          "database_id": "167c7f1a-bc1f-4a11-a870-f86a50eb490a",
+          "migrations_dir": "migrations"
+        }
+      ],
+      "vectorize": [
+        {
+          "binding": "EVIDENCE_VECTORIZE",
+          "index_name": "bodymode-evidence-production"
+        }
+      ],
+      "ai": {
+        "binding": "AI"
+      }
+    }
+  }
+}

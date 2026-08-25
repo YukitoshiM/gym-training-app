@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"en-US","translation":"Recording {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"en-US","translation":"Not supported: {{value1}}. Manual entry is available.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.040f06159cfe","target_locale":"en-US","translation":"Vibration count per second","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a0272546c24a","target_locale":"en-US","translation":"Saved to Apple Health","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.762361d25a0e","target_locale":"en-US","translation":"How to use Apple Watch","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"en-US","translation":"Gym: Proceed to the next session","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.919f5d735c32","target_locale":"en-US","translation":"Recording without Health permission or manual entry","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.6c39297531fa","target_locale":"en-US","translation":"Unable to use Health, so recording manually.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.41e43dbbf218","target_locale":"en-US","translation":"Unable to start Health, so recording manually.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.152f186dda7a","target_locale":"en-US","translation":"Health workout paused.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"en-US","translation":"Saving Health data...","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"en-US","translation":"Health save failed; Watch recording saved.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.775a658d59cf","target_locale":"en-US","translation":"Health not saved; Watch recording saved.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.875a5d223149","target_locale":"en-US","translation":"Health measurement cannot be recovered. You can continue manual entry.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"en-US","translation":"Health measurement recovered.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.eeccc1fae145","target_locale":"en-US","translation":"Health measurement stopped; continuing manual entry.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"en-US","translation":"Health connection disabled; recording manually.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"en-US","translation":"No RPE value provided.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"en-US","translation":"The running record on the Watch will be deleted.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"en-US","translation":"Watch recording saved.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.84664872f4c8","target_locale":"en-US","translation":"Please sync the menu from your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.172b72b0e366","target_locale":"en-US","translation":"Select and start today's menu from your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"en-US","translation":"Check today's menu on your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.67df75393fee","target_locale":"en-US","translation":"Connected to iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"en-US","translation":"Sync today's content from your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7ef6982792b8","target_locale":"en-US","translation":"Unable to create recording data to send to iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.05e4231f9dca","target_locale":"en-US","translation":"Failed to send to iPhone. Please save the record and resend.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2035fb2564b8","target_locale":"en-US","translation":"Could not save on the iPhone. You can resend it later.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.62d8e367decc","target_locale":"en-US","translation":"Preparing for iPhone integration. You can resend it later.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c27de027c299","target_locale":"en-US","translation":"{{value1}} × {{value2}} times × {{value3}} sets","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"en-US","translation":"You can resend {{value1}} to your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.31645ef37c0c","target_locale":"en-US","translation":"{{value1}} has been scheduled to be sent to your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"en-US","translation":"{{value1}} has been sent to your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.638bb341594f","target_locale":"en-US","translation":"Sending {{value1}} to your iPhone.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.26513765e70e","target_locale":"en-US","translation":"{{value1}} saved to your iPhone history.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8a6e496052a2","target_locale":"en-US","translation":"Resend {{value1}}.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7f66dfd79322","target_locale":"en-US","translation":"You can resume {{value1}}.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8c241f2be831","target_locale":"en-US","translation":"{{value1}} selected.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"en-US","translation":"{{value1}} started.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"en-US","translation":"{{value1}}/{{value2}} sets・{{value3}} times recorded","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"en-US","translation":"{{value1}} sets・","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.54998c4de19e","target_locale":"en-US","translation":"{{value1}} sets・Target: Total {{value2}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b37eb49c5125","target_locale":"en-US","translation":"{{value1}}・{{value2}} sets・Total {{value3}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"en-US","translation":"{{value1}}・{{value2}} sets","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.3148813301ee","target_locale":"en-US","translation":"Select from {{value1}} items.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"en-US","translation":"Synchronized {{value1}} menu items.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.672403542889","target_locale":"en-US","translation":"{{value1}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"en-US","translation":"{{value1}} times/second","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.d1749584e623","target_locale":"en-US","translation":"{{value1}} times・","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"en-US","translation":"{{value1}} seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2411abd90241","target_locale":"en-US","translation":"{{value1}} exercises・{{value2}} sets・Total {{value3}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"en-US","translation":"This watch cannot be used with iPhone. Records are saved on the watch.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"en-US","translation":"This watch cannot be used for syncing.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.5e1713107aae","target_locale":"en-US","translation":"Skip","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.558199564f3f","target_locale":"en-US","translation":"Set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"en-US","translation":"Set {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8223803cd257","target_locale":"en-US","translation":"Complete set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.864ffb74d301","target_locale":"en-US","translation":"Start set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.828c11816565","target_locale":"en-US","translation":"Average set {{value1}} bpm","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.1a782a782a5d","target_locale":"en-US","translation":"Set not configured","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.f76b7ad40815","target_locale":"en-US","translation":"Start set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.f6a396814054","target_locale":"en-US","translation":"Cancel set start","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"en-US","translation":"Sensor measurement in progress","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2315bef407c9","target_locale":"en-US","translation":"Unable to prepare sensor data, so recording manually.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.db540f633c8c","target_locale":"en-US","translation":"Skip tutorial","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"en-US","translation":"Pace","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.19550a012210","target_locale":"en-US","translation":"Adjust pace","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"en-US","translation":"Set tempo","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.f8a940f32407","target_locale":"en-US","translation":"Pause tempo guidance","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"en-US","translation":"Resume tempo guidance","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.40e95ebae744","target_locale":"en-US","translation":"Bench press","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.54ef1a234c86","target_locale":"en-US","translation":"Menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2b5f588ea836","target_locale":"en-US","translation":"Select menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.3131fa35f883","target_locale":"en-US","translation":"Unable to load menu data","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.137725ad45aa","target_locale":"en-US","translation":"Change menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.12ffae136992","target_locale":"en-US","translation":"Waiting for menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"en-US","translation":"Notes","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.6dacb17a2939","target_locale":"en-US","translation":"Edit notes","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"en-US","translation":"Motion","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e031879b0b11","target_locale":"en-US","translation":"Lat pull-down","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.328184940a77","target_locale":"en-US","translation":"Workout","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.1b2df563ab78","target_locale":"en-US","translation":"Complete workout?","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.66f5e3987c92","target_locale":"en-US","translation":"Workout cancelled","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.68283c0be6f6","target_locale":"en-US","translation":"Pause","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.97c1d37f643b","target_locale":"en-US","translation":"Pause for {{value1}} seconds / Resume every {{value2}} seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.114f06b70d1a","target_locale":"en-US","translation":"Pausing","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.49b442f82f9b","target_locale":"en-US","translation":"Resume","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"en-US","translation":"{{value1}} seconds up / {{value2}} seconds down / {{value3}} times per second","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.434b69b48377","target_locale":"en-US","translation":"Up","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"en-US","translation":"Up for {{value1}} seconds, Down for {{value2}} seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.53a48095c684","target_locale":"en-US","translation":"Up {{value1}} seconds / Down {{value2}} seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.9a3e26289146","target_locale":"en-US","translation":"Set up the duration for each exercise. Your Apple Watch will provide haptic feedback of 1 to 3 touches per second.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.6a959494f4ff","target_locale":"en-US","translation":"Up Duration","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.0caface262a2","target_locale":"en-US","translation":"Enter the up duration directly","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.1bee52246397","target_locale":"en-US","translation":"Down","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"en-US","translation":"Down","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.af7f47ccca87","target_locale":"en-US","translation":"Down Duration","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.75d55853c35e","target_locale":"en-US","translation":"Enter the down duration directly","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"en-US","translation":"Today","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.686a6c522309","target_locale":"en-US","translation":"Today's Menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7a379d574423","target_locale":"en-US","translation":"Today's Menu: {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"en-US","translation":"Select Today's Menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.bc91575d959a","target_locale":"en-US","translation":"Rest {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"en-US","translation":"Rest for {{value1}} seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"en-US","translation":"Take a Rest","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.9101acbdbd05","target_locale":"en-US","translation":"Skip Rest","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.4d0773120c03","target_locale":"en-US","translation":"Rest Duration","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8ada25b32266","target_locale":"en-US","translation":"End Break","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b871438c85a2","target_locale":"en-US","translation":"Suggested weight: 2.5% heavier based on remaining energy and activity speed","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.afec905a94f5","target_locale":"en-US","translation":"Start Using","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.508051ad5c0a","target_locale":"en-US","translation":"How to use {{value1}}/{{value2}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.139ccbf8df18","target_locale":"en-US","translation":"Save","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.65047314093f","target_locale":"en-US","translation":"Confidence: {{value1}}%・{{value2}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.75b83d4abde6","target_locale":"en-US","translation":"Edit","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.0c6172650d06","target_locale":"en-US","translation":"Resume","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c6128f953672","target_locale":"en-US","translation":"Minutes:Seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"en-US","translation":"Previous Record","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.21c62ab53877","target_locale":"en-US","translation":"Activity Stability: {{value1}}%","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.39817f548ab9","target_locale":"en-US","translation":"Possible Activities: {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"en-US","translation":"Activity stopped detected","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.86202b9c17fc","target_locale":"en-US","translation":"Estimated Activity: {{value1}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.4690f738b016","target_locale":"en-US","translation":"Estimated Activity: {{value1}} times・Confidence: {{value2}}%","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"en-US","translation":"Activity Speed Change: {{value1}}%","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"en-US","translation":"Apply","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"en-US","translation":"Cancel","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.56dc053a7297","target_locale":"en-US","translation":"Avoided double saving to Health due to existing Fitness record at the same time.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.184f5906186f","target_locale":"en-US","translation":"Choose from synced menu","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a62be7ac164d","target_locale":"en-US","translation":"Reps","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"en-US","translation":"Number of Reps","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.02ce68bb4689","target_locale":"en-US","translation":"Set reps using the slider","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.01657c68d2fc","target_locale":"en-US","translation":"Complete","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"en-US","translation":"Send to iPhone","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b1deb806b237","target_locale":"en-US","translation":"Send","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8dbc8435b124","target_locale":"en-US","translation":"Rest timer starts when complete. You can choose the next exercise in order.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.4fe891ea4590","target_locale":"en-US","translation":"No completed workout","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.31a26178d3b4","target_locale":"en-US","translation":"Completed Sets","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.f7114d6c4059","target_locale":"en-US","translation":"{{value1}} Completed Sets","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"en-US","translation":"Achievements {{value1}} × {{value2}} Reps","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.11f4022e0437","target_locale":"en-US","translation":"Synchronize Achievements","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c8d66636dee6","target_locale":"en-US","translation":"Entering Achievement Data","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"en-US","translation":"Change RPE for current set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.d782504f8bde","target_locale":"en-US","translation":"Change tempo for current set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.55fbfa481026","target_locale":"en-US","translation":"Change reps for current set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.27c9510ceaed","target_locale":"en-US","translation":"Change weight for current set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.316ef65deb04","target_locale":"en-US","translation":"Average -","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a8407dcee209","target_locale":"en-US","translation":"Average {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.24aa552350de","target_locale":"en-US","translation":"Heart rate is returning to normal. If you feel comfortable, proceed to the next set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"en-US","translation":"Keep taking breaks while monitoring your heart rate.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"en-US","translation":"Measuring heart rate and energy expenditure.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"en-US","translation":"Manual entry","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.abe1f768e53b","target_locale":"en-US","translation":"You can record manually.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.85d6ce62e862","target_locale":"en-US","translation":"Recording manually.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.baf368705ac0","target_locale":"en-US","translation":"Estimated based on wrist movement and the order of incomplete sets.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.fe02518c224f","target_locale":"en-US","translation":"Vibration frequency (1-3 times/second)","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a102da2a71e9","target_locale":"en-US","translation":"Vibration speed","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.d0f48676bebb","target_locale":"en-US","translation":"Connection failed: {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.3178ee43fe66","target_locale":"en-US","translation":"Reflecting estimated {{value1}} times.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"en-US","translation":"Applying suggestions","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"en-US","translation":"Change time","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.4abcf3c60406","target_locale":"en-US","translation":"Maximum -","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.240979de36e1","target_locale":"en-US","translation":"Maximum {{value1}}","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7b80546b6322","target_locale":"en-US","translation":"Sending to iPhone when finished. You can resend any unsubmitted records later.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"en-US","translation":"Save the current content, including incomplete sets.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.51caea1e57ce","target_locale":"en-US","translation":"Unsent","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.dd99ab962c51","target_locale":"en-US","translation":"No unsent Watch recordings.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"en-US","translation":"Not started","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"en-US","translation":"Next: {{value1}} {{value2}} × {{value3}} times","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"en-US","translation":"Start the next set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.cf20cadc0998","target_locale":"en-US","translation":"Return to the next workout immediately.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.218a9aa6d716","target_locale":"en-US","translation":"Next exercise","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"en-US","translation":"Next","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.96ff4778f70e","target_locale":"en-US","translation":"Skip current activity","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"en-US","translation":"Goal: {{value1}} × {{value2}} repetitions","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8e715c8cf147","target_locale":"en-US","translation":"Goal tempo completed","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.343b2fe4308b","target_locale":"en-US","translation":"Suggest a reduction of 5% from either unmet goal, RPE, or reduced movement speed","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.0992ae1fad52","target_locale":"en-US","translation":"Relative range of motion: {{value1}}%, Consistency: {{value2}}%","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.62acc0267a84","target_locale":"en-US","translation":"Power-saving sampling (battery level)","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2bf7693c376f","target_locale":"en-US","translation":"Power-saving sampling (low power mode)","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"en-US","translation":"Power-saving sampling (settings)","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.49e3394121fb","target_locale":"en-US","translation":"Discard","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.586175148774","target_locale":"en-US","translation":"Seconds","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e71bb44afc57","target_locale":"en-US","translation":"Select an exercise and set to start. If you make a mistake, you can return to the uncompleted state by pressing \"Cancel\".","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.12f8054dc126","target_locale":"en-US","translation":"Exercise options: {{value1}} {{value2}}%","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.64b1330508b2","target_locale":"en-US","translation":"Finish and sync","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"en-US","translation":"Continue","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.8361420226c3","target_locale":"en-US","translation":"Back","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.52e036cf79ae","target_locale":"en-US","translation":"Back day","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.f4f93e827213","target_locale":"en-US","translation":"Chest","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.349df198921f","target_locale":"en-US","translation":"Chest Day","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"en-US","translation":"Delete records?","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.31d6157ec148","target_locale":"en-US","translation":"Recording","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.e7c120e0433a","target_locale":"en-US","translation":"No workouts recorded","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2f9be1574e74","target_locale":"en-US","translation":"Normal sampling","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.a0b5240a769f","target_locale":"en-US","translation":"Fast","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.423b784208d1","target_locale":"en-US","translation":"Suggest the same weight based on achievement, RPE, and movement speed","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2db35aa51fee","target_locale":"en-US","translation":"Different","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"en-US","translation":"Switch to selected set","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.74211dc96bd5","target_locale":"en-US","translation":"Weight","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"en-US","translation":"Set weight using a reel","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"en-US","translation":"You can change weight, reps, RPE, and rest before and after starting using the reel.","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.73efe52b65c2","target_locale":"en-US","translation":"Start","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"en-US","translation":"Set tempo before starting","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.2a072a116cb4","target_locale":"en-US","translation":"Not supported: {{value1}}. Manual input is available","review_note":"Neutral English draft based on en-AU; regional review required."}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"en-US","translation":"Voice & text notes","review_note":"Neutral English draft based on en-AU; regional review required."}

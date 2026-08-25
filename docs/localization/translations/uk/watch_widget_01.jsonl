@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"uk","translation":"Записується: {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"uk","translation":"Не підтримується: {{value1}}. Можна ввести вручну","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"uk","translation":"Кількість вібрацій за секунду","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"uk","translation":"Збережено в Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"uk","translation":"Як користуватися Apple Watch","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"uk","translation":"Фітнес-центр: Перехід до наступної сесії","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"uk","translation":"Запис без дозволу Health або ручний введення","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"uk","translation":"Не вдається використовувати Health, тому дані вводяться вручну.","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"uk","translation":"Не вдається запустити Health, тому дані вводяться вручну.","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"uk","translation":"Workout в Health призупинено.","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"uk","translation":"Обробка збереження в Health.","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"uk","translation":"Не вдалося зберегти в Health, але записи з Watch вже збережено.","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"uk","translation":"Записи з Watch вже збережено, але дані в Health не збережені.","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"uk","translation":"Не вдається відновити вимірювання в Health. Ви можете продовжувати введення вручну.","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"uk","translation":"Вимірювання в Health відновлено.","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"uk","translation":"Вимірювання в Health призупинено, введення даних триває.","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"uk","translation":"Підключення до Health вимкнено, дані вводяться вручну.","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"uk","translation":"Відсутній рівень відчуття навантаження (RPE).","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"uk","translation":"Записи з Watch будуть видалені.","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"uk","translation":"Записано записи з Watch.","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"uk","translation":"Синхронізуйте меню з iPhone.","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"uk","translation":"Виберіть та запустіть сьогоднішнє меню, яке було отримано з iPhone.","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"uk","translation":"Перевірте сьогоднішнє меню на iPhone.","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"uk","translation":"Пристрій iPhone підключено.","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"uk","translation":"Синхронізуйте вміст iPhone.","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"uk","translation":"Не вдалося створити дані для відправки на iPhone.","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"uk","translation":"Не вдалося відправити. Збережіть записи та відправте їх повторно.","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"uk","translation":"Не вдалося зберегти на iPhone. Можна буде відправити пізніше.","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"uk","translation":"Підготовка до синхронізації з iPhone. Можна буде відправити пізніше.","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"uk","translation":"{{value1}} × {{value2}} разів × {{value3}} наборів","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"uk","translation":"Можна відправити {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"uk","translation":"Відправлено {{value1}} на iPhone (заплановано)","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"uk","translation":"Відправляємо {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"uk","translation":"Відправляємо {{value1}} на iPhone","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"uk","translation":"{{value1}} збережено в історії iPhone","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"uk","translation":"Відправити {{value1}} знову","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"uk","translation":"Можна відновити {{value1}}","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"uk","translation":"Вибрано {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"uk","translation":"Почато {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"uk","translation":"{{value1}}/{{value2}} наборів・{{value3}} разів запис","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"uk","translation":"{{value1}} наборів・","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"uk","translation":"{{value1}} наборів・Мета, загалом {{value2}} разів","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"uk","translation":"{{value1}}・{{value2}} наборів・Разом {{value3}} разів","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"uk","translation":"{{value1}}・{{value2}} наборів","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"uk","translation":"Вибрати з {{value1}}","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"uk","translation":"Синхронізовано {{value1}} меню","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"uk","translation":"{{value1}}","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"uk","translation":"{{value1}} разів/секунду","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"uk","translation":"{{value1}} разів・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"uk","translation":"{{value1}} секунд","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"uk","translation":"{{value1}} вправа・{{value2}} підходів・Загалом {{value3}} разів","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"uk","translation":"З цим годинником неможливо використовувати функцію синхронізації з iPhone. Запис зберігається на годиннику.","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"uk","translation":"З цим годинником неможливо використовувати функцію синхронізації.","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"uk","translation":"Пропустити","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"uk","translation":"Підхід","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"uk","translation":"Підхід {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"uk","translation":"Завершити підхід","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"uk","translation":"Почати підхід","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"uk","translation":"Середній показник {{value1}} ударів/хвилину","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"uk","translation":"Підхід не встановлено","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"uk","translation":"Почати підхід","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"uk","translation":"Скасувати початок підходу","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"uk","translation":"Детектор вимірює","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"uk","translation":"Не вдається підготувати параметри детектора, запис здійснюється вручну.","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"uk","translation":"Пропустити інструктаж","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"uk","translation":"Темп","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"uk","translation":"Встановити темп","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"uk","translation":"Встановити темп","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"uk","translation":"Призупинити інструкції щодо темпу","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"uk","translation":"Відновити інструкції щодо темпу","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"uk","translation":"Жим лежачи","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"uk","translation":"Меню","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"uk","translation":"Вибрати меню","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"uk","translation":"Не вдалося завантажити дані меню","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"uk","translation":"Змінити меню","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"uk","translation":"Очікування меню","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"uk","translation":"Примітки","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"uk","translation":"Редагувати нотатки","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"uk","translation":"Рух","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"uk","translation":"Тягнути вниз","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"uk","translation":"Тренування","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"uk","translation":"Завершити тренування?","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"uk","translation":"Тренування скасовано","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"uk","translation":"Призупинити","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"uk","translation":"Призупинити на {{value1}} секунд / Відновити на {{value2}} секунд","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"uk","translation":"В режимі призупинення","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"uk","translation":"Підняти","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"uk","translation":"{{value1}} підйоми・{{value2}} спусків・{{value3}} разів/секунду","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"uk","translation":"Підйом","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"uk","translation":"Підйом {{value1}} секунд・Спуск {{value2}} секунд","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"uk","translation":"Підйом {{value1}} секунд / Спуск {{value2}} секунд","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"uk","translation":"Встановіть час підйому та спуску окремо. Apple Watch повідомляє 1-3 рази на секунду.","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"uk","translation":"Час підйому","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"uk","translation":"Введіть час підйому безпосередньо","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"uk","translation":"Спуск","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"uk","translation":"Спуск","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"uk","translation":"Час спуску","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"uk","translation":"Введіть час спуску безпосередньо","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"uk","translation":"Сьогодні","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"uk","translation":"Меню на сьогодні","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"uk","translation":"Меню на сьогодні: {{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"uk","translation":"Виберіть меню на сьогодні","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"uk","translation":"Відпочинок {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"uk","translation":"Відпочинок {{value1}} секунд","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"uk","translation":"Відпочити","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"uk","translation":"Пропустити відпочинок","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"uk","translation":"Час відпочинку","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"uk","translation":"Завершено відпочинок","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"uk","translation":"На основі вашої активності та швидкості, запропоновано збільшити на 2.5%","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"uk","translation":"Почати використання","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"uk","translation":"Як користуватися: {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"uk","translation":"Зберегти","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"uk","translation":"Довіра: {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"uk","translation":"Виправити","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"uk","translation":"Відновити","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"uk","translation":"Хвилини:Секунди","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"uk","translation":"Попередній запис","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"uk","translation":"Стабільність роботи: {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"uk","translation":"Можливі варіанти: {{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"uk","translation":"Виявлено зупинку роботи","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"uk","translation":"Оцінка роботи: {{value1}} разів","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"uk","translation":"Оцінка роботи: {{value1}} разів・Довіра: {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"uk","translation":"Зміна швидкості: {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"uk","translation":"Застосувати","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"uk","translation":"Скасувати","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"uk","translation":"Через наявність записів Fitness у цей час, було запобігано подвійному збереженню в розділ Health.","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"uk","translation":"Можна вибрати з синхронізованого меню","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"uk","translation":"Раунди","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"uk","translation":"Кількість раундів","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"uk","translation":"Встановити кількість раундів за допомогою регулятора","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"uk","translation":"Готово","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"uk","translation":"Відправлено на iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"uk","translation":"Відправлено","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"uk","translation":"Після завершення, таймер відпочинку почнеться. Ви можете вибрати наступний вид діяльності в іншому порядку.","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"uk","translation":"Немає завершених тренувань","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"uk","translation":"Завершено","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"uk","translation":"Завершено {{value1}} разів","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"uk","translation":"Досягнення: {{value1}} × {{value2}} раундів","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"uk","translation":"Синхронізувати досягнення","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"uk","translation":"Введення даних про досягнення","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"uk","translation":"Змінити рівень навантаження (RPE) для поточного набору","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"uk","translation":"Змінити темп для поточного набору","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"uk","translation":"Змінити кількість повторень для поточного набору","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"uk","translation":"Змінити вагу для поточного набору","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"uk","translation":"Середнє значення -","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"uk","translation":"Середнє {{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"uk","translation":"Ваш пульс відновлюється. Якщо ви відчуваєте комфорт, переходьте до наступного набору","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"uk","translation":"Продовжуйте відпочивати, контролюючи частоту серцевих скорочень.","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"uk","translation":"Вимірюється частота серцевих скорочень та споживання енергії.","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"uk","translation":"Введіть вручну","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"uk","translation":"Можна записати вручну.","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"uk","translation":"Записую вручну.","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"uk","translation":"Оцінюється на основі рухів зап'ястя та порядку незавершених наборів.","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"uk","translation":"Кількість вібрацій (1-3 рази/секунду)","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"uk","translation":"Швидкість вібрації","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"uk","translation":"Помилка підключення: {{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"uk","translation":"Оновлено оцінку {{value1}} разів.","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"uk","translation":"Враховано пропозицію.","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"uk","translation":"Змінити час","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"uk","translation":"Максимально -","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"uk","translation":"Максимум {{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"uk","translation":"Після завершення, дані надсилаються на iPhone. Не відправлені записи можна буде повторно відправити пізніше.","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"uk","translation":"Збережено поточний стан, включаючи незавершені набори.","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"uk","translation":"Не відправлено","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"uk","translation":"Відсутні записи на годиннику.","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"uk","translation":"Не розпочато","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"uk","translation":"Наступний: {{value1}} {{value2}} × {{value3}} разів","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"uk","translation":"Почніть наступний сет.","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"uk","translation":"Можете негайно повернутися до наступного тренування.","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"uk","translation":"Наступне вправа","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"uk","translation":"Далі","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"uk","translation":"Пропустити поточну дію","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"uk","translation":"Мета: {{value1}} × {{value2}} разів","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"uk","translation":"Завершено ціль, RPE, зниження швидкості","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"uk","translation":"Запропонувати 5% легше, якщо досягнуто ціль, або RPE, або зниження швидкості","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"uk","translation":"Відносна амплітуда руху: {{value1}}%, Коректність: {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"uk","translation":"Економія енергії (залишок батареї)","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"uk","translation":"Економія енергії (режим низької потужності)","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"uk","translation":"Налаштування економії енергії","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"uk","translation":"Видалити","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"uk","translation":"Секунди","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"uk","translation":"Оберіть вправу та сет для початку. Якщо помилилися, можна повернутися до невиконаного за допомогою \"Скасувати\".","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"uk","translation":"Вправи: {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"uk","translation":"Завершити та синхронізувати","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"uk","translation":"Продовжити","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"uk","translation":"Спина","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"uk","translation":"День для спини","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"uk","translation":"Груди","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"uk","translation":"День для грудей","review_note":""}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"uk","translation":"Чи хочете видалити записи?","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"uk","translation":"Запис триває","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"uk","translation":"Немає тренувань у записі","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"uk","translation":"Стандартне зразкування","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"uk","translation":"Швидко","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"uk","translation":"Пропонуємо ту ж вагу на основі досягнень, RPE та швидкості","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"uk","translation":"Інше","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"uk","translation":"Перейти до обраного набору","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"uk","translation":"Вага","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"uk","translation":"Встановити вагу за допомогою ременя","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"uk","translation":"Вага, кількість повторень, RPE та перерви можна змінювати перед початком або після.","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"uk","translation":"Почати","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"uk","translation":"Встановити темп перед початком","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"uk","translation":"Не підтримується: {{value1}}. Можна ввести вручну","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"uk","translation":"Голос/Текстові нотатки","review_note":""}

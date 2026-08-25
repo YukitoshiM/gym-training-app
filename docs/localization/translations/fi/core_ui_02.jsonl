@@ -1,0 +1,146 @@
+{"id":"core_ui.d0ebd393995d","target_locale":"fi","translation":"Valitse lähin vaihtoehto","review_note":""}
+{"id":"core_ui.b02b7cafa79f","target_locale":"fi","translation":"Kun olet asettanut ensimmäisen tavoitteen, tee vain 3 asiaa joka päivä.","review_note":""}
+{"id":"core_ui.49590b9fbda3","target_locale":"fi","translation":"Suorita ensimmäinen harjoitus.","review_note":""}
+{"id":"core_ui.141c005fe0b8","target_locale":"fi","translation":"Kirjaa ensimmäiset arvot.","review_note":""}
+{"id":"core_ui.0f89f6f0b0b1","target_locale":"fi","translation":"Enintään 3","review_note":""}
+{"id":"core_ui.43babac56b38","target_locale":"fi","translation":"Tyhjiin kenttiin voidaan lisätä tietoja myöhemmin tallennusnäytössä.","review_note":""}
+{"id":"core_ui.3c3407bde7db","target_locale":"fi","translation":"Ei suoritettu","review_note":""}
+{"id":"core_ui.b0b7d41109d6","target_locale":"fi","translation":"Ei toteutettu","review_note":""}
+{"id":"core_ui.de7e126d0b16","target_locale":"fi","translation":"Ei kirjattu","review_note":""}
+{"id":"core_ui.213dbf0be17e","target_locale":"fi","translation":"Ei määritetty","review_note":""}
+{"id":"core_ui.b5bf4c52186f","target_locale":"fi","translation":"Valinta ei ole tehty","review_note":""}
+{"id":"core_ui.bed0749e62dd","target_locale":"fi","translation":"Siirry seuraavaan, tavoitteen mukaan valittuihin vaihtoehtoihin","review_note":""}
+{"id":"core_ui.d4d1fe3054d4","target_locale":"fi","translation":"Seuraava","review_note":""}
+{"id":"core_ui.13c8c880dac8","target_locale":"fi","translation":"Näytä askeleet","review_note":""}
+{"id":"core_ui.7d3eec40647b","target_locale":"fi","translation":"Painonpudotus","review_note":""}
+{"id":"core_ui.fa1f489c01a4","target_locale":"fi","translation":"Hiilihydraatit","review_note":""}
+{"id":"core_ui.14dfa1fb3cf1","target_locale":"fi","translation":"Virheellinen","review_note":""}
+{"id":"core_ui.738330e87b19","target_locale":"fi","translation":"Määritä sopiva määrä toistoja ja aikaa.","review_note":""}
+{"id":"core_ui.240039c19262","target_locale":"fi","translation":"Erityisesti tärkeää","review_note":""}
+{"id":"core_ui.0307962d6266","target_locale":"fi","translation":"Selvitä tila ja seuraava vaihe","review_note":""}
+{"id":"core_ui.e30570ba3b2d","target_locale":"fi","translation":"Tila tarkistetaan","review_note":""}
+{"id":"core_ui.be12755005fc","target_locale":"fi","translation":"Nykyinen","review_note":""}
+{"id":"core_ui.b156d426183c","target_locale":"fi","translation":"Nykyiset kehon tiedot","review_note":""}
+{"id":"core_ui.6951e0c608be","target_locale":"fi","translation":"Ei saatavilla tällä hetkellä","review_note":""}
+{"id":"core_ui.8f44663f425e","target_locale":"fi","translation":"Käytettiin aiemmin saatavia tietoja ja asetuksia.","review_note":""}
+{"id":"core_ui.6861aea5ee0c","target_locale":"fi","translation":"Valittu: {{value1}}","review_note":""}
+{"id":"core_ui.52709c47198c","target_locale":"fi","translation":"Edisty kohti ihannetilaa vaivattomasti.","review_note":""}
+{"id":"core_ui.3f755a378fa9","target_locale":"fi","translation":"Perustelu","review_note":""}
+{"id":"core_ui.e5553c6ea028","target_locale":"fi","translation":"Perustelu: {{value1}}","review_note":""}
+{"id":"core_ui.11c5aab1badf","target_locale":"fi","translation":"Syntymävuosi","review_note":""}
+{"id":"core_ui.eb51a9c91d64","target_locale":"fi","translation":"Aloita opastettu käyttö","review_note":""}
+{"id":"core_ui.29ac6f9dcd7c","target_locale":"fi","translation":"Tallentettuja reseptejä {{value1}}","review_note":""}
+{"id":"core_ui.a5075311a2c0","target_locale":"fi","translation":"Tavoitteena oleva tila","review_note":""}
+{"id":"core_ui.728b5580ef93","target_locale":"fi","translation":"Tavoiteltava tyyli","review_note":""}
+{"id":"core_ui.8b91257ffe51","target_locale":"fi","translation":"Tavoite","review_note":""}
+{"id":"core_ui.8c68bbbed710","target_locale":"fi","translation":"Tavoite: {{value1}} / Ero: {{value2}}{{value3}}","review_note":""}
+{"id":"core_ui.95b6839df407","target_locale":"fi","translation":"Tavoite ja etenemisvauhti","review_note":""}
+{"id":"core_ui.23692e812696","target_locale":"fi","translation":"Tavoite ja edistyminen","review_note":""}
+{"id":"core_ui.9ce2ddc2666c","target_locale":"fi","translation":"Mahdollisia tavoitteiden säätöjä","review_note":""}
+{"id":"core_ui.fff18139774a","target_locale":"fi","translation":"Tavoitetta ei ole määritetty","review_note":""}
+{"id":"core_ui.32670ed3aace","target_locale":"fi","translation":"Tavoitteen saavuttaminen","review_note":""}
+{"id":"core_ui.d63e2c6f601f","target_locale":"fi","translation":"Tavoite","review_note":""}
+{"id":"core_ui.6d46fc51fc89","target_locale":"fi","translation":"Jokaiselle tavoitteelle on valittu kaksi henkilöä. Henkilön vaihtamalla voit muuttaa ihannemuotoa ja puhetyyliä.","review_note":""}
+{"id":"core_ui.0ec1ab5accd8","target_locale":"fi","translation":"Oikean henkilön valitseminen","review_note":""}
+{"id":"core_ui.e60c103c2985","target_locale":"fi","translation":"Voit vaihtaa kotisivun tarkistuspisteitä ja seuraavaa vaihetta tavoitteesi mukaan.","review_note":""}
+{"id":"core_ui.74762f268854","target_locale":"fi","translation":"Tavoitteen muuttaminen","review_note":""}
+{"id":"core_ui.c82ef935ebf7","target_locale":"fi","translation":"Valitse tavoite","review_note":""}
+{"id":"core_ui.b75a9bfcdbde","target_locale":"fi","translation":"Tavoitemoodi","review_note":""}
+{"id":"core_ui.7dbe91b90819","target_locale":"fi","translation":"Tavoite ja tavoitteet","review_note":""}
+{"id":"core_ui.ad3e6c70e52a","target_locale":"fi","translation":"Tavoitteiden mukaiset valikot ovat nyt käytettävissä","review_note":""}
+{"id":"core_ui.acf5f093f147","target_locale":"fi","translation":"Näytä tavoitteiden mukainen valikko","review_note":""}
+{"id":"core_ui.25221b8c1c27","target_locale":"fi","translation":"Viimeisimmät tiedot","review_note":""}
+{"id":"core_ui.43d3051bc08b","target_locale":"fi","translation":"Muokkaa keskustelun avulla","review_note":""}
+{"id":"core_ui.b6d7339a72a5","target_locale":"fi","translation":"Vähävirtaisuusnäytteistys","review_note":""}
+{"id":"core_ui.6d1b61ab7cee","target_locale":"fi","translation":"Aloita {{value1}}","review_note":""}
+{"id":"core_ui.212ef44a8ffe","target_locale":"fi","translation":"Uni ja palautuminen","review_note":""}
+{"id":"core_ui.271ef84863f9","target_locale":"fi","translation":"Tarkistetaan","review_note":""}
+{"id":"core_ui.6d288403a166","target_locale":"fi","translation":"Sekunti","review_note":""}
+{"id":"core_ui.289507ab2d81","target_locale":"fi","translation":"Aika","review_note":""}
+{"id":"core_ui.92720ac0b07b","target_locale":"fi","translation":"Etsi harjoituksia tai lisää uusia","review_note":""}
+{"id":"core_ui.3b78698aba6f","target_locale":"fi","translation":"Käytä laitteittain toimivia lyhytaikaisia tunnistuksia.","review_note":""}
+{"id":"core_ui.4d7d6a61c333","target_locale":"fi","translation":"Laitteessa","review_note":""}
+{"id":"core_ui.d5abaf673873","target_locale":"fi","translation":"Kilpailukyky","review_note":""}
+{"id":"core_ui.536e51b3f816","target_locale":"fi","translation":"Voimaharjoittelu","review_note":""}
+{"id":"core_ui.4cfa4f6e6a37","target_locale":"fi","translation":"Yhdistä voima, kunto ja palautuminen kilpailuun","review_note":""}
+{"id":"core_ui.48648d4ea8d7","target_locale":"fi","translation":"Lisää lihasmassaa ja harjoittelutuloksia","review_note":""}
+{"id":"core_ui.f0cee25fbea7","target_locale":"fi","translation":"Lihasten kasvaminen","review_note":""}
+{"id":"core_ui.ffd6cf1a85d3","target_locale":"fi","translation":"Kokemus","review_note":""}
+{"id":"core_ui.8fd842ee7231","target_locale":"fi","translation":"Kokemustaso","review_note":""}
+{"id":"core_ui.781733d2b8b2","target_locale":"fi","translation":"Sopiva harjoitteluun","review_note":""}
+{"id":"core_ui.4bf044eb7319","target_locale":"fi","translation":"Tämä ei ole kykyjen tai pätevyyksien arvio. Esitämme, mitkä näkökohdat ovat tärkeitä vastauksissa.","review_note":""}
+{"id":"core_ui.66cd07bba953","target_locale":"fi","translation":"Rasva","review_note":""}
+{"id":"core_ui.424306f5227a","target_locale":"fi","translation":"Vatsanympärys","review_note":""}
+{"id":"core_ui.bcfa5445429a","target_locale":"fi","translation":"Vatsanympärys (valinnainen)","review_note":""}
+{"id":"core_ui.a9d271807073","target_locale":"fi","translation":"Opi käyttäytymismallit","review_note":""}
+{"id":"core_ui.8d43b9a92d79","target_locale":"fi","translation":"Toimintanauhoitus","review_note":""}
+{"id":"core_ui.f34962367358","target_locale":"fi","translation":"Näytä","review_note":""}
+{"id":"core_ui.9fdcbafcd96a","target_locale":"fi","translation":"Näyttötila","review_note":""}
+{"id":"core_ui.0f0e0b4defc7","target_locale":"fi","translation":"Näyttotapa","review_note":""}
+{"id":"core_ui.492de47a7b63","target_locale":"fi","translation":"Näyttostrategia","review_note":""}
+{"id":"core_ui.19b1ef380c77","target_locale":"fi","translation":"Tuki-mallia ei ole yhdistetty","review_note":""}
+{"id":"core_ui.f4cfe025d665","target_locale":"fi","translation":"Lisätietoja","review_note":""}
+{"id":"core_ui.f25b70d5d45b","target_locale":"fi","translation":"Lisätietoja: {{value1}}","review_note":""}
+{"id":"core_ui.4d75244133b3","target_locale":"fi","translation":"Suunnitelma","review_note":""}
+{"id":"core_ui.eed8ba416205","target_locale":"fi","translation":"Poista suunnitelma, historia, kehon mittarit, ruokapäiväkirja, valokuvat, AI-keskustelu ja muisti, sekä räätälöidyt aktiviteetit.","review_note":""}
+{"id":"core_ui.0bb8af30fad6","target_locale":"fi","translation":"Aloita suunnitelmasta tai lisää aktiviteetteja ja kirjaa ne heti.","review_note":""}
+{"id":"core_ui.172cd4e16deb","target_locale":"fi","translation":"Lisää aktiviteetti ilman suunnitelmaa","review_note":""}
+{"id":"core_ui.a3d0303c7fcb","target_locale":"fi","translation":"Tallenna suunnitelmaan","review_note":""}
+{"id":"core_ui.636a7ce9c4c4","target_locale":"fi","translation":"Luo uusi suunnitelma","review_note":""}
+{"id":"core_ui.2097dc5a3763","target_locale":"fi","translation":"Luo uusi suunnitelma","review_note":""}
+{"id":"core_ui.76f154401eec","target_locale":"fi","translation":"Suunnitelma & Seuraa","review_note":""}
+{"id":"core_ui.dd7a93b061c4","target_locale":"fi","translation":"Päivitä suunnitelman paino?","review_note":""}
+{"id":"core_ui.725fe331d7f6","target_locale":"fi","translation":"Kirjaa ylös","review_note":""}
+{"id":"core_ui.8d02c094b191","target_locale":"fi","translation":"Kirjaa ylös","review_note":""}
+{"id":"core_ui.7538ba8df343","target_locale":"fi","translation":"Kirjaa ylös. Kysy AI:ltä. Suorita. Päivittäisen harjoittelun tulisi olla kolme asiaa.","review_note":""}
+{"id":"core_ui.d84fb59f0560","target_locale":"fi","translation":"Napauta kirjaamista varten","review_note":""}
+{"id":"core_ui.bf6f0ec9eac4","target_locale":"fi","translation":"Kirjattu ja suoritettu tieto siirretään seuraavaan AI-analyysiin. Ensimmäinen toiminto ohjaa sinut aloittamaan kotinäkymästä.","review_note":""}
+{"id":"core_ui.44b61d42de8d","target_locale":"fi","translation":"Kirjatut tiedot tallentuvat tähän","review_note":""}
+{"id":"core_ui.ddbfa4c66ff8","target_locale":"fi","translation":"Tarkistetaan kirjaamista. Voit sulkea näytön, ja prosessi jatkuu.","review_note":""}
+{"id":"core_ui.5479236de8a3","target_locale":"fi","translation":"Katso kirjaamista ja ehdota seuraavaa toimintoa","review_note":""}
+{"id":"core_ui.a9efa7f0620d","target_locale":"fi","translation":"Tallennetaan","review_note":""}
+{"id":"core_ui.6d1f0a3fcc4b","target_locale":"fi","translation":"Koko tallennetusta tiedosta voidaan päätellä, onko kehitystä tapahtunut, onko tilanne pysynyt samana tai onko tietoa puuttuu. Ehdotamme seuraavaa toimintaa.","review_note":""}
+{"id":"core_ui.da6af7f58be0","target_locale":"fi","translation":"Tallennettu","review_note":""}
+{"id":"core_ui.347a70f8f182","target_locale":"fi","translation":"Asetukset","review_note":""}
+{"id":"core_ui.f6c6bda43180","target_locale":"fi","translation":"Asetukset valittu","review_note":""}
+{"id":"core_ui.5f8bbdddc70b","target_locale":"fi","translation":"Diagnostiikkalogi sisältää iPhone- ja Apple Watch -laitteiden toiminnan, yhteydenpidon sekä harjoittelun tiedot. Se ei lähetetä automaattisesti ulos.","review_note":""}
+{"id":"core_ui.b9422032c88b","target_locale":"fi","translation":"Poista diagnostiikkalogi","review_note":""}
+{"id":"core_ui.3c4f04e77e6a","target_locale":"fi","translation":"Vie diagnostiikkalogi","review_note":""}
+{"id":"core_ui.7de76d94979f","target_locale":"fi","translation":"Lähetä diagnostiikkalogi","review_note":""}
+{"id":"core_ui.247d52447f29","target_locale":"fi","translation":"Keskustelu","review_note":""}
+{"id":"core_ui.bc485c713a2f","target_locale":"fi","translation":"Näytä lisää","review_note":""}
+{"id":"core_ui.692e3d951baa","target_locale":"fi","translation":"Väärinymmärryksiä aiheuttava sisältö","review_note":""}
+{"id":"core_ui.8ec43439f302","target_locale":"fi","translation":"Kehon mittarit","review_note":""}
+{"id":"core_ui.ad1e9ee3c7de","target_locale":"fi","translation":"Pituus","review_note":""}
+{"id":"core_ui.d2d277d3549f","target_locale":"fi","translation":"Pituus (valinnainen)","review_note":""}
+{"id":"core_ui.efa3e8bf82a8","target_locale":"fi","translation":"Jos olet epävarma, käytä tätä","review_note":""}
+{"id":"core_ui.cfb169f1651f","target_locale":"fi","translation":"Lisää","review_note":""}
+{"id":"core_ui.27259dff554d","target_locale":"fi","translation":"Lisää","review_note":""}
+{"id":"core_ui.d7afc61431b0","target_locale":"fi","translation":"Aloita uudelleen","review_note":""}
+{"id":"core_ui.9bf8130ba8a1","target_locale":"fi","translation":"Lähetä","review_note":""}
+{"id":"core_ui.88c138af4a1e","target_locale":"fi","translation":"Lähetys odotetaan","review_note":""}
+{"id":"core_ui.690f0b405af4","target_locale":"fi","translation":"Valitse käytössä oleva kuntosali tai kotona olevat laitteet","review_note":""}
+{"id":"core_ui.d624960db5e8","target_locale":"fi","translation":"Tiedon lähetyksen jälkeen tarkistetaan tallennetut tiedot.","review_note":""}
+{"id":"core_ui.77ab8584d196","target_locale":"fi","translation":"Viikoittainen määrä","review_note":""}
+{"id":"core_ui.4f3a00976e8f","target_locale":"fi","translation":"Kuinka monta kertaa viikossa voit harjoittaa?","review_note":""}
+{"id":"core_ui.905a5306693a","target_locale":"fi","translation":"Ohjeet","review_note":""}
+{"id":"core_ui.16b7f36b1361","target_locale":"fi","translation":"Harjoitus käynnissä","review_note":""}
+{"id":"core_ui.ecd3571c4ca8","target_locale":"fi","translation":"Pidä kiinni harjoittelusta, unesta ja ruokavaliosta","review_note":""}
+{"id":"core_ui.9de73676efe0","target_locale":"fi","translation":"Valitse: {{value1}}","review_note":""}
+{"id":"core_ui.1588c48590fa","target_locale":"fi","translation":"Valittu","review_note":""}
+{"id":"core_ui.7759ae6468d0","target_locale":"fi","translation":"Lähetä","review_note":""}
+{"id":"core_ui.b9f3dd55ffff","target_locale":"fi","translation":"Lataa asetukset, jotka on määritetty jakelun yhteydessä","review_note":""}
+{"id":"core_ui.c0244b275a43","target_locale":"fi","translation":"Painopistealueet","review_note":""}
+{"id":"core_ui.a05dfd9b7b1f","target_locale":"fi","translation":"Paino","review_note":""}
+{"id":"core_ui.9dc32540526b","target_locale":"fi","translation":"Aseta paino pyörällä","review_note":""}
+{"id":"core_ui.f1a5f69d86ba","target_locale":"fi","translation":"Painoyksikkö","review_note":""}
+{"id":"core_ui.1d21ed2ea494","target_locale":"fi","translation":"Suljetaan","review_note":""}
+{"id":"core_ui.fa14b32474d2","target_locale":"fi","translation":"Sulje","review_note":""}
+{"id":"core_ui.f5f5c6e6cc80","target_locale":"fi","translation":"Aloita","review_note":""}
+{"id":"core_ui.864932cf530c","target_locale":"fi","translation":"Liittyvät tiedot","review_note":""}
+{"id":"core_ui.e8a52146d9dc","target_locale":"fi","translation":"Ruokailu","review_note":""}
+{"id":"core_ui.9c2fd6984d3e","target_locale":"fi","translation":"Ruoka ja kehon muoto","review_note":""}
+{"id":"core_ui.17de0f52b479","target_locale":"fi","translation":"Ruoka ja kehon muoto voidaan tallentaa kuvilla. Paino, vyötärönympärys ja muut tiedot voidaan merkitä numeroina.","review_note":""}
+{"id":"core_ui.dd8dea3af7bd","target_locale":"fi","translation":"Ruokapäiväkirjan lisääminen","review_note":""}
+{"id":"core_ui.3871f0a40fbb","target_locale":"fi","translation":"Ruokapäivän määrä","review_note":""}
+{"id":"core_ui.e98cf07747d2","target_locale":"fi","translation":"Ruokapäivän määrän saavuttaminen sekä kalorien ja makrojen (PFC) saavuttaminen näytetään erikseen.","review_note":""}

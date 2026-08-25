@@ -38,25 +38,25 @@ enum AppTutorialContent {
         AppTutorialStep(
             id: "record",
             number: 1,
-            title: "写真と数値を記録する",
-            detail: "食事と体型は写真で。体重・腹囲・セットは数値で残します。",
-            destination: "記録",
+            title: L10n.string("core_ui.0676a757f1f4", fallback: "写真と数値を記録する"),
+            detail: L10n.string("core_ui.17de0f52b479", fallback: "食事と体型は写真で。体重・腹囲・セットは数値で残します。"),
+            destination: L10n.string("core_ui.725fe331d7f6", fallback: "記録"),
             systemImage: "camera.fill"
         ),
         AppTutorialStep(
             id: "coach",
             number: 2,
-            title: "AIに今の状態を聞く",
-            detail: "記録全体から、良い変化・停滞・不足情報と次の一手を提案します。",
+            title: L10n.string("core_ui.6fe4b509ad50", fallback: "AIに今の状態を聞く"),
+            detail: L10n.string("core_ui.6d1f0a3fcc4b", fallback: "記録全体から、良い変化・停滞・不足情報と次の一手を提案します。"),
             destination: "AI",
             systemImage: "sparkles"
         ),
         AppTutorialStep(
             id: "execute",
             number: 3,
-            title: "今日のメニューを実行する",
-            detail: "提案されたメニューをiPhoneやApple Watchで、そのまま進めます。",
-            destination: "計画・Watch",
+            title: L10n.string("core_ui.e1de544d20a2", fallback: "今日のメニューを実行する"),
+            detail: L10n.string("core_ui.7cc0b0723d1f", fallback: "提案されたメニューをiPhoneやApple Watchで、そのまま進めます。"),
+            destination: L10n.string("core_ui.76f154401eec", fallback: "計画・Watch"),
             systemImage: "play.fill"
         )
     ]
@@ -69,24 +69,24 @@ struct AppIntroductionView: View {
                 IntroductionPoint(
                     number: 1,
                     systemImage: "camera.fill",
-                    title: "記録する",
-                    detail: "写真と数値で、今を残す"
+                    title: L10n.string("core_ui.8d02c094b191", fallback: "記録する"),
+                    detail: L10n.string("core_ui.f33ef7b7b5dc", fallback: "写真と数値で、今を残す")
                 )
                 IntroductionPoint(
                     number: 2,
                     systemImage: "sparkles",
-                    title: "AIに聞く",
-                    detail: "状態と次の一手を知る"
+                    title: L10n.string("core_ui.379c080870e5", fallback: "AIに聞く"),
+                    detail: L10n.string("core_ui.0307962d6266", fallback: "状態と次の一手を知る")
                 )
                 IntroductionPoint(
                     number: 3,
                     systemImage: "play.fill",
-                    title: "実行する",
-                    detail: "今日のメニューをこなす"
+                    title: L10n.string("core_ui.f4b3ed35961f", fallback: "実行する"),
+                    detail: L10n.string("core_ui.9418cc5a98f9", fallback: "今日のメニューをこなす")
                 )
             }
 
-            Label("実行結果は、次のAI提案へつながります", systemImage: "arrow.trianglehead.2.clockwise.rotate.90")
+            Label(L10n.string("core_ui.cfb9b70a1a45", fallback: "実行結果は、次のAI提案へつながります"), systemImage: "arrow.trianglehead.2.clockwise.rotate.90")
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(AppTheme.mutedInk)
         }
@@ -103,10 +103,10 @@ struct AppTutorialOverviewView: View {
             }
 
             VStack(alignment: .leading, spacing: 8) {
-                Label("実行するほど、次が明確になる", systemImage: "arrow.trianglehead.2.clockwise.rotate.90")
+                Label(L10n.string("core_ui.8db1bd8f5b87", fallback: "実行するほど、次が明確になる"), systemImage: "arrow.trianglehead.2.clockwise.rotate.90")
                     .font(.headline)
                     .foregroundStyle(AppTheme.ink)
-                Text("記録と実行結果は次のAI分析へ引き継がれます。最初の操作はホームのミッションが案内します。")
+                Text(L10n.string("core_ui.bf6f0ec9eac4", fallback: "記録と実行結果は次のAI分析へ引き継がれます。最初の操作はホームのミッションが案内します。"))
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.mutedInk)
                     .lineSpacing(3)
@@ -127,10 +127,10 @@ struct AppTutorialView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("基本の使い方")
+                        Text(L10n.string("core_ui.69788c65c769", fallback: "基本の使い方"))
                             .font(.largeTitle.bold())
                             .foregroundStyle(AppTheme.ink)
-                        Text("記録する。AIに聞く。実行する。毎日やるのは3つだけです。")
+                        Text(L10n.string("core_ui.7538ba8df343", fallback: "記録する。AIに聞く。実行する。毎日やるのは3つだけです。"))
                             .font(.title3)
                             .foregroundStyle(AppTheme.mutedInk)
                     }
@@ -143,11 +143,11 @@ struct AppTutorialView: View {
                 .frame(maxWidth: .infinity)
             }
             .background(AppTheme.pageBackground)
-            .navigationTitle("使い方ガイド")
+            .navigationTitle(L10n.string("core_ui.a44407ea9e94", fallback: "使い方ガイド"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("完了") {
+                    Button(L10n.string("core_ui.9eeac2fd3ceb", fallback: "完了")) {
                         UsageAnalytics.shared.record(.tutorialViewed, dimension: "settings")
                         dismiss()
                     }

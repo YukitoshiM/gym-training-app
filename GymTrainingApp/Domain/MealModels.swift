@@ -10,10 +10,10 @@ enum MealType: String, CaseIterable, Identifiable, Codable {
 
     var displayName: String {
         switch self {
-        case .breakfast: "朝食"
-        case .lunch: "昼食"
-        case .dinner: "夕食"
-        case .snack: "間食"
+        case .breakfast: L10n.string("domain_catalog.3a8d944c799f", fallback: "朝食")
+        case .lunch: L10n.string("domain_catalog.c70541decbdb", fallback: "昼食")
+        case .dinner: L10n.string("domain_catalog.8b28adb03d67", fallback: "夕食")
+        case .snack: L10n.string("domain_catalog.1c78937cfc50", fallback: "間食")
         }
     }
 }

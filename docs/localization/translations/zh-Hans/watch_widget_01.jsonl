@@ -1,0 +1,204 @@
+{"id":"watch_widget.6f1859896371","target_locale":"zh-Hans","translation":"正在记录 {{value1}}","review_note":""}
+{"id":"watch_widget.2501cba5bc6d","target_locale":"zh-Hans","translation":"不支持：{{value1}}。可以使用手动输入","review_note":""}
+{"id":"watch_widget.040f06159cfe","target_locale":"zh-Hans","translation":"每秒的震动次数","review_note":""}
+{"id":"watch_widget.a0272546c24a","target_locale":"zh-Hans","translation":"已保存到 Apple Health","review_note":""}
+{"id":"watch_widget.762361d25a0e","target_locale":"zh-Hans","translation":"Apple Watch 使用方法","review_note":""}
+{"id":"watch_widget.47f7d3a16f1c","target_locale":"zh-Hans","translation":"健身房：进入下一节","review_note":""}
+{"id":"watch_widget.919f5d735c32","target_locale":"zh-Hans","translation":"正在不带健康应用授权的情况下手动记录","review_note":""}
+{"id":"watch_widget.6c39297531fa","target_locale":"zh-Hans","translation":"由于无法使用健康应用，因此进行手动记录","review_note":""}
+{"id":"watch_widget.41e43dbbf218","target_locale":"zh-Hans","translation":"由于无法启动健康应用，因此进行手动记录","review_note":""}
+{"id":"watch_widget.152f186dda7a","target_locale":"zh-Hans","translation":"健康应用工作已暂停","review_note":""}
+{"id":"watch_widget.b9b1cb7b9197","target_locale":"zh-Hans","translation":"正在处理健康应用保存","review_note":""}
+{"id":"watch_widget.e29bbf1b3ab8","target_locale":"zh-Hans","translation":"健康应用保存失败，手表记录已保存","review_note":""}
+{"id":"watch_widget.775a658d59cf","target_locale":"zh-Hans","translation":"未保存健康应用数据，手表记录已保存","review_note":""}
+{"id":"watch_widget.875a5d223149","target_locale":"zh-Hans","translation":"无法恢复健康应用测量。您可以继续手动输入","review_note":""}
+{"id":"watch_widget.b1bb5fa8c916","target_locale":"zh-Hans","translation":"已恢复健康应用测量","review_note":""}
+{"id":"watch_widget.eeccc1fae145","target_locale":"zh-Hans","translation":"已停止健康应用测量，并且您正在手动输入","review_note":""}
+{"id":"watch_widget.c7c0bd2400ae","target_locale":"zh-Hans","translation":"已关闭健康应用联动，并且您正在手动输入","review_note":""}
+{"id":"watch_widget.3e36ab9a7f63","target_locale":"zh-Hans","translation":"无 RPE 值","review_note":""}
+{"id":"watch_widget.cbeb009a0ca4","target_locale":"zh-Hans","translation":"手表上的正在进行的记录将被删除。","review_note":""}
+{"id":"watch_widget.2e494aa6c8a6","target_locale":"zh-Hans","translation":"已保存手表记录","review_note":""}
+{"id":"watch_widget.84664872f4c8","target_locale":"zh-Hans","translation":"请从 iPhone 同步菜单","review_note":""}
+{"id":"watch_widget.172b72b0e366","target_locale":"zh-Hans","translation":"选择并开始来自 iPhone 的今日菜单。","review_note":""}
+{"id":"watch_widget.8bdf19ffeed6","target_locale":"zh-Hans","translation":"请在 iPhone 上查看今天的菜单","review_note":""}
+{"id":"watch_widget.67df75393fee","target_locale":"zh-Hans","translation":"已连接到 iPhone","review_note":""}
+{"id":"watch_widget.8e03ffd59ca7","target_locale":"zh-Hans","translation":"从 iPhone 同步今日内容。","review_note":""}
+{"id":"watch_widget.7ef6982792b8","target_locale":"zh-Hans","translation":"未能创建用于发送记录数据到 iPhone 的数据","review_note":""}
+{"id":"watch_widget.05e4231f9dca","target_locale":"zh-Hans","translation":"无法发送给 iPhone。请保留记录并再次发送","review_note":""}
+{"id":"watch_widget.2035fb2564b8","target_locale":"zh-Hans","translation":"在 iPhone 侧无法保存。稍后可以再次发送","review_note":""}
+{"id":"watch_widget.62d8e367decc","target_locale":"zh-Hans","translation":"正在准备 iPhone 联动。稍后可以再次发送","review_note":""}
+{"id":"watch_widget.c27de027c299","target_locale":"zh-Hans","translation":"{{value1}} × {{value2}} 次 × {{value3}} 套","review_note":""}
+{"id":"watch_widget.3f81f9df08a8","target_locale":"zh-Hans","translation":"可以将 {{value1}} 发送到 iPhone。","review_note":""}
+{"id":"watch_widget.31645ef37c0c","target_locale":"zh-Hans","translation":"已将 {{value1}} 预约发送到 iPhone。","review_note":""}
+{"id":"watch_widget.64bd9f2dda21","target_locale":"zh-Hans","translation":"已将 {{value1}} 发送至 iPhone。","review_note":""}
+{"id":"watch_widget.638bb341594f","target_locale":"zh-Hans","translation":"正在将 {{value1}} 发送至 iPhone。","review_note":""}
+{"id":"watch_widget.26513765e70e","target_locale":"zh-Hans","translation":"已将 {{value1}} 保存到 iPhone 历史记录。","review_note":""}
+{"id":"watch_widget.8a6e496052a2","target_locale":"zh-Hans","translation":"重新发送 {{value1}}。","review_note":""}
+{"id":"watch_widget.7f66dfd79322","target_locale":"zh-Hans","translation":"可以重新开始发送 {{value1}}。","review_note":""}
+{"id":"watch_widget.8c241f2be831","target_locale":"zh-Hans","translation":"已选择 {{value1}}","review_note":""}
+{"id":"watch_widget.0bb63860cfdd","target_locale":"zh-Hans","translation":"开始 {{value1}}","review_note":""}
+{"id":"watch_widget.fcce7b71cb97","target_locale":"zh-Hans","translation":"{{value1}} / {{value2}} 组，记录 {{value3}} 次","review_note":""}
+{"id":"watch_widget.9ae2c6a9fa00","target_locale":"zh-Hans","translation":"{{value1}} 组，","review_note":""}
+{"id":"watch_widget.54998c4de19e","target_locale":"zh-Hans","translation":"{{value1}} 组，目标总计 {{value2}} 次","review_note":""}
+{"id":"watch_widget.b37eb49c5125","target_locale":"zh-Hans","translation":"{{value1}} 和 {{value2}} 组，共记录 {{value3}} 次","review_note":""}
+{"id":"watch_widget.bbe1d3c236c4","target_locale":"zh-Hans","translation":"{{value1}} 组，{{value2}} 次","review_note":""}
+{"id":"watch_widget.3148813301ee","target_locale":"zh-Hans","translation":"从 {{value1}} 中选择","review_note":""}
+{"id":"watch_widget.e28d7cc26f9a","target_locale":"zh-Hans","translation":"{{value1}}个菜谱已同步","review_note":""}
+{"id":"watch_widget.672403542889","target_locale":"zh-Hans","translation":"{{value1}}次","review_note":""}
+{"id":"watch_widget.8cfae2e66c26","target_locale":"zh-Hans","translation":"{{value1}}次/秒","review_note":""}
+{"id":"watch_widget.d1749584e623","target_locale":"zh-Hans","translation":"{{value1}}次・","review_note":""}
+{"id":"watch_widget.e90e08ac6f9b","target_locale":"zh-Hans","translation":"{{value1}}秒","review_note":""}
+{"id":"watch_widget.2411abd90241","target_locale":"zh-Hans","translation":"{{value1}}项目・{{value2}}组・总计{{value3}}次","review_note":""}
+{"id":"watch_widget.b3cc40dc0bf1","target_locale":"zh-Hans","translation":"此手表不支持与iPhone的连接。已将记录保存到手表中","review_note":""}
+{"id":"watch_widget.7c2ed04ca304","target_locale":"zh-Hans","translation":"此手表不支持连接","review_note":""}
+{"id":"watch_widget.5e1713107aae","target_locale":"zh-Hans","translation":"跳过","review_note":""}
+{"id":"watch_widget.558199564f3f","target_locale":"zh-Hans","translation":"设置","review_note":""}
+{"id":"watch_widget.cf0fe40d1182","target_locale":"zh-Hans","translation":"设置 {{value1}}","review_note":""}
+{"id":"watch_widget.8223803cd257","target_locale":"zh-Hans","translation":"完成设置","review_note":""}
+{"id":"watch_widget.864ffb74d301","target_locale":"zh-Hans","translation":"开始设置","review_note":""}
+{"id":"watch_widget.828c11816565","target_locale":"zh-Hans","translation":"平均心率 {{value1}} bpm","review_note":""}
+{"id":"watch_widget.1a782a782a5d","target_locale":"zh-Hans","translation":"未设置","review_note":""}
+{"id":"watch_widget.f76b7ad40815","target_locale":"zh-Hans","translation":"开始训练","review_note":""}
+{"id":"watch_widget.f6a396814054","target_locale":"zh-Hans","translation":"取消开始训练","review_note":""}
+{"id":"watch_widget.2e0ad9fc3b1a","target_locale":"zh-Hans","translation":"正在测量","review_note":""}
+{"id":"watch_widget.2315bef407c9","target_locale":"zh-Hans","translation":"由于无法准备传感器，请手动记录","review_note":""}
+{"id":"watch_widget.db540f633c8c","target_locale":"zh-Hans","translation":"跳过教程","review_note":""}
+{"id":"watch_widget.d7e6f512c71c","target_locale":"zh-Hans","translation":"节奏","review_note":""}
+{"id":"watch_widget.19550a012210","target_locale":"zh-Hans","translation":"调整节奏","review_note":""}
+{"id":"watch_widget.2ab8c8962b18","target_locale":"zh-Hans","translation":"设置节奏","review_note":""}
+{"id":"watch_widget.f8a940f32407","target_locale":"zh-Hans","translation":"暂停节奏提示","review_note":""}
+{"id":"watch_widget.d30b38ecfe50","target_locale":"zh-Hans","translation":"重新开始节奏提示","review_note":""}
+{"id":"watch_widget.40e95ebae744","target_locale":"zh-Hans","translation":"卧推","review_note":""}
+{"id":"watch_widget.54ef1a234c86","target_locale":"zh-Hans","translation":"菜单","review_note":""}
+{"id":"watch_widget.2b5f588ea836","target_locale":"zh-Hans","translation":"选择菜单","review_note":""}
+{"id":"watch_widget.3131fa35f883","target_locale":"zh-Hans","translation":"无法读取菜单数据","review_note":""}
+{"id":"watch_widget.137725ad45aa","target_locale":"zh-Hans","translation":"更改菜单","review_note":""}
+{"id":"watch_widget.12ffae136992","target_locale":"zh-Hans","translation":"等待菜单","review_note":""}
+{"id":"watch_widget.a2c4001d98d3","target_locale":"zh-Hans","translation":"备注","review_note":""}
+{"id":"watch_widget.6dacb17a2939","target_locale":"zh-Hans","translation":"编辑备注","review_note":""}
+{"id":"watch_widget.8dffc87acbb9","target_locale":"zh-Hans","translation":"运动","review_note":""}
+{"id":"watch_widget.e031879b0b11","target_locale":"zh-Hans","translation":"拉动下拉","review_note":""}
+{"id":"watch_widget.328184940a77","target_locale":"zh-Hans","translation":"训练","review_note":""}
+{"id":"watch_widget.1b2df563ab78","target_locale":"zh-Hans","translation":"是否完成训练？","review_note":""}
+{"id":"watch_widget.66f5e3987c92","target_locale":"zh-Hans","translation":"已取消训练","review_note":""}
+{"id":"watch_widget.68283c0be6f6","target_locale":"zh-Hans","translation":"暂停","review_note":""}
+{"id":"watch_widget.97c1d37f643b","target_locale":"zh-Hans","translation":"暂停{{value1}}秒/恢复{{value2}}秒","review_note":""}
+{"id":"watch_widget.114f06b70d1a","target_locale":"zh-Hans","translation":"正在暂停","review_note":""}
+{"id":"watch_widget.49b442f82f9b","target_locale":"zh-Hans","translation":"向上","review_note":""}
+{"id":"watch_widget.f1b303fe38bd","target_locale":"zh-Hans","translation":"向上{{value1}}s・向下{{value2}}s・{{value3}}次/每秒","review_note":""}
+{"id":"watch_widget.434b69b48377","target_locale":"zh-Hans","translation":"恢复","review_note":""}
+{"id":"watch_widget.1ba7a8ff8414","target_locale":"zh-Hans","translation":"恢复 {{value1}}秒・暂停 {{value2}}秒","review_note":""}
+{"id":"watch_widget.53a48095c684","target_locale":"zh-Hans","translation":"恢复{{value1}}秒／暂停{{value2}}秒","review_note":""}
+{"id":"watch_widget.9a3e26289146","target_locale":"zh-Hans","translation":"恢复和暂停时间，可按训练设置。Apple Watch每秒提供1-3次触觉提示。","review_note":""}
+{"id":"watch_widget.6a959494f4ff","target_locale":"zh-Hans","translation":"恢复时间","review_note":""}
+{"id":"watch_widget.0caface262a2","target_locale":"zh-Hans","translation":"直接输入恢复时间","review_note":""}
+{"id":"watch_widget.1bee52246397","target_locale":"zh-Hans","translation":"向下","review_note":""}
+{"id":"watch_widget.065c7d0ae56f","target_locale":"zh-Hans","translation":"暂停","review_note":""}
+{"id":"watch_widget.af7f47ccca87","target_locale":"zh-Hans","translation":"暂停时间","review_note":""}
+{"id":"watch_widget.75d55853c35e","target_locale":"zh-Hans","translation":"直接输入暂停时间","review_note":""}
+{"id":"watch_widget.9890a0a76fc6","target_locale":"zh-Hans","translation":"今天","review_note":""}
+{"id":"watch_widget.686a6c522309","target_locale":"zh-Hans","translation":"今天的菜单","review_note":""}
+{"id":"watch_widget.7a379d574423","target_locale":"zh-Hans","translation":"今天的菜单：{{value1}}","review_note":""}
+{"id":"watch_widget.7624bd6c72ec","target_locale":"zh-Hans","translation":"选择今天的菜单","review_note":""}
+{"id":"watch_widget.bc91575d959a","target_locale":"zh-Hans","translation":"休息 {{value1}}","review_note":""}
+{"id":"watch_widget.09998c5a6ec8","target_locale":"zh-Hans","translation":"休息{{value1}}秒","review_note":""}
+{"id":"watch_widget.c69c7fb85f9b","target_locale":"zh-Hans","translation":"休息","review_note":""}
+{"id":"watch_widget.9101acbdbd05","target_locale":"zh-Hans","translation":"跳过休息","review_note":""}
+{"id":"watch_widget.4d0773120c03","target_locale":"zh-Hans","translation":"休息时间","review_note":""}
+{"id":"watch_widget.8ada25b32266","target_locale":"zh-Hans","translation":"休息结束","review_note":""}
+{"id":"watch_widget.b871438c85a2","target_locale":"zh-Hans","translation":"根据体力，建议增加2.5%","review_note":""}
+{"id":"watch_widget.afec905a94f5","target_locale":"zh-Hans","translation":"开始使用","review_note":""}
+{"id":"watch_widget.508051ad5c0a","target_locale":"zh-Hans","translation":"用法 {{value1}}/{{value2}}","review_note":""}
+{"id":"watch_widget.139ccbf8df18","target_locale":"zh-Hans","translation":"保存","review_note":""}
+{"id":"watch_widget.65047314093f","target_locale":"zh-Hans","translation":"准确度 {{value1}}%・{{value2}}","review_note":""}
+{"id":"watch_widget.75b83d4abde6","target_locale":"zh-Hans","translation":"修改","review_note":""}
+{"id":"watch_widget.0c6172650d06","target_locale":"zh-Hans","translation":"重新开始","review_note":""}
+{"id":"watch_widget.c6128f953672","target_locale":"zh-Hans","translation":"分:秒","review_note":""}
+{"id":"watch_widget.a6830bdb3dd4","target_locale":"zh-Hans","translation":"上次记录","review_note":""}
+{"id":"watch_widget.21c62ab53877","target_locale":"zh-Hans","translation":"动作稳定性 {{value1}}%","review_note":""}
+{"id":"watch_widget.39817f548ab9","target_locale":"zh-Hans","translation":"建议动作：{{value1}}","review_note":""}
+{"id":"watch_widget.c29bd2f0c3ed","target_locale":"zh-Hans","translation":"检测到停止动作","review_note":""}
+{"id":"watch_widget.86202b9c17fc","target_locale":"zh-Hans","translation":"动作估计 {{value1}} 次","review_note":""}
+{"id":"watch_widget.4690f738b016","target_locale":"zh-Hans","translation":"动作估计 {{value1}} 次，置信度 {{value2}}%","review_note":""}
+{"id":"watch_widget.0d7c2e67eb1b","target_locale":"zh-Hans","translation":"动作速度变化 {{value1}}%","review_note":""}
+{"id":"watch_widget.e9b84e3ea7ac","target_locale":"zh-Hans","translation":"反映","review_note":""}
+{"id":"watch_widget.e04ccdac55cd","target_locale":"zh-Hans","translation":"取消","review_note":""}
+{"id":"watch_widget.56dc053a7297","target_locale":"zh-Hans","translation":"由于存在同一时间段的健身记录，因此避免了对健康数据的双重保存","review_note":""}
+{"id":"watch_widget.184f5906186f","target_locale":"zh-Hans","translation":"可以选择同步菜单","review_note":""}
+{"id":"watch_widget.a62be7ac164d","target_locale":"zh-Hans","translation":"次","review_note":""}
+{"id":"watch_widget.83fdf5d78dd0","target_locale":"zh-Hans","translation":"次数","review_note":""}
+{"id":"watch_widget.02ce68bb4689","target_locale":"zh-Hans","translation":"使用循环设置次数","review_note":""}
+{"id":"watch_widget.01657c68d2fc","target_locale":"zh-Hans","translation":"完成","review_note":""}
+{"id":"watch_widget.5a4fab46f0a5","target_locale":"zh-Hans","translation":"已完成，发送到iPhone","review_note":""}
+{"id":"watch_widget.b1deb806b237","target_locale":"zh-Hans","translation":"已完成，发送","review_note":""}
+{"id":"watch_widget.8dbc8435b124","target_locale":"zh-Hans","translation":"完成后启动休息计时器。可以选择下一个项目，并按顺序选择","review_note":""}
+{"id":"watch_widget.4fe891ea4590","target_locale":"zh-Hans","translation":"没有完成的锻炼","review_note":""}
+{"id":"watch_widget.31a26178d3b4","target_locale":"zh-Hans","translation":"完成一组","review_note":""}
+{"id":"watch_widget.f7114d6c4059","target_locale":"zh-Hans","translation":"完成一组 {{value1}} 个","review_note":""}
+{"id":"watch_widget.3e06adb84ec0","target_locale":"zh-Hans","translation":"成就 {{value1}} × {{value2}} 次","review_note":""}
+{"id":"watch_widget.11f4022e0437","target_locale":"zh-Hans","translation":"同步成就","review_note":""}
+{"id":"watch_widget.c8d66636dee6","target_locale":"zh-Hans","translation":"输入成就","review_note":""}
+{"id":"watch_widget.ec4ab4872cdb","target_locale":"zh-Hans","translation":"更改正在进行的RPE","review_note":""}
+{"id":"watch_widget.d782504f8bde","target_locale":"zh-Hans","translation":"更改正在进行的节奏","review_note":""}
+{"id":"watch_widget.55fbfa481026","target_locale":"zh-Hans","translation":"更改正在进行的次数","review_note":""}
+{"id":"watch_widget.27c9510ceaed","target_locale":"zh-Hans","translation":"更改正在进行的重量","review_note":""}
+{"id":"watch_widget.316ef65deb04","target_locale":"zh-Hans","translation":"平均-","review_note":""}
+{"id":"watch_widget.a8407dcee209","target_locale":"zh-Hans","translation":"平均{{value1}}","review_note":""}
+{"id":"watch_widget.24aa552350de","target_locale":"zh-Hans","translation":"心率恢复趋势。当感觉良好时，可以进入下一组","review_note":""}
+{"id":"watch_widget.2e7eb94e9ba2","target_locale":"zh-Hans","translation":"在监测心率的同时继续休息","review_note":""}
+{"id":"watch_widget.fdc98ee0d134","target_locale":"zh-Hans","translation":"正在测量心率和消耗能量","review_note":""}
+{"id":"watch_widget.31d0f75e46f9","target_locale":"zh-Hans","translation":"手动输入","review_note":""}
+{"id":"watch_widget.abe1f768e53b","target_locale":"zh-Hans","translation":"可以使用手动记录","review_note":""}
+{"id":"watch_widget.85d6ce62e862","target_locale":"zh-Hans","translation":"正在手动记录","review_note":""}
+{"id":"watch_widget.baf368705ac0","target_locale":"zh-Hans","translation":"根据手腕动作和未完成组的顺序进行估计","review_note":""}
+{"id":"watch_widget.fe02518c224f","target_locale":"zh-Hans","translation":"振动次数（每秒1〜3次）","review_note":""}
+{"id":"watch_widget.a102da2a71e9","target_locale":"zh-Hans","translation":"振动速度","review_note":""}
+{"id":"watch_widget.d0f48676bebb","target_locale":"zh-Hans","translation":"连接失败：{{value1}}","review_note":""}
+{"id":"watch_widget.3178ee43fe66","target_locale":"zh-Hans","translation":"反映 {{value1}} 次","review_note":""}
+{"id":"watch_widget.b15c1f0ea25c","target_locale":"zh-Hans","translation":"应用建议","review_note":""}
+{"id":"watch_widget.7b9526eff5f9","target_locale":"zh-Hans","translation":"更改时间","review_note":""}
+{"id":"watch_widget.4abcf3c60406","target_locale":"zh-Hans","translation":"最大-","review_note":""}
+{"id":"watch_widget.240979de36e1","target_locale":"zh-Hans","translation":"最大{{value1}}","review_note":""}
+{"id":"watch_widget.7b80546b6322","target_locale":"zh-Hans","translation":"最后完成后发送到iPhone。未发送的记录可以在稍后重新发送","review_note":""}
+{"id":"watch_widget.0e66f9cd10a3","target_locale":"zh-Hans","translation":"保存包括所有未完成组的内容","review_note":""}
+{"id":"watch_widget.51caea1e57ce","target_locale":"zh-Hans","translation":"未发送","review_note":""}
+{"id":"watch_widget.dd99ab962c51","target_locale":"zh-Hans","translation":"没有Watch上的未发送记录","review_note":""}
+{"id":"watch_widget.2c96777bbcd1","target_locale":"zh-Hans","translation":"未开始","review_note":""}
+{"id":"watch_widget.ac9b2200eb4a","target_locale":"zh-Hans","translation":"下一组：{{value1}} {{value2}} × {{value3}} 次","review_note":""}
+{"id":"watch_widget.45268b5fcf2c","target_locale":"zh-Hans","translation":"可以开始下一组","review_note":""}
+{"id":"watch_widget.cf20cadc0998","target_locale":"zh-Hans","translation":"立即返回到下一个训练。","review_note":""}
+{"id":"watch_widget.218a9aa6d716","target_locale":"zh-Hans","translation":"下一个项目","review_note":""}
+{"id":"watch_widget.c8c2bdae1bbc","target_locale":"zh-Hans","translation":"下一步","review_note":""}
+{"id":"watch_widget.96ff4778f70e","target_locale":"zh-Hans","translation":"跳过当前动作","review_note":""}
+{"id":"watch_widget.ae259f92b4e5","target_locale":"zh-Hans","translation":"目标 {{value1}} × {{value2}} 次","review_note":""}
+{"id":"watch_widget.8e715c8cf147","target_locale":"zh-Hans","translation":"完成目标节奏","review_note":""}
+{"id":"watch_widget.343b2fe4308b","target_locale":"zh-Hans","translation":"如果未达到目标，RPE或动作速度下降，则建议轻微调整5%","review_note":""}
+{"id":"watch_widget.0992ae1fad52","target_locale":"zh-Hans","translation":"相对活动范围 {{value1}}%，一致性 {{value2}}%","review_note":""}
+{"id":"watch_widget.62acc0267a84","target_locale":"zh-Hans","translation":"省电采样（电池剩余）","review_note":""}
+{"id":"watch_widget.2bf7693c376f","target_locale":"zh-Hans","translation":"省电采样（低功耗模式）","review_note":""}
+{"id":"watch_widget.7c8493ad4a26","target_locale":"zh-Hans","translation":"省电采样（设置）","review_note":""}
+{"id":"watch_widget.49e3394121fb","target_locale":"zh-Hans","translation":"停止","review_note":""}
+{"id":"watch_widget.586175148774","target_locale":"zh-Hans","translation":"秒","review_note":""}
+{"id":"watch_widget.e71bb44afc57","target_locale":"zh-Hans","translation":"选择项目和套组开始。如果操作错误，可以按“取消”返回未执行状态。","review_note":""}
+{"id":"watch_widget.12f8054dc126","target_locale":"zh-Hans","translation":"项目选项 {{value1}} {{value2}}%","review_note":""}
+{"id":"watch_widget.64b1330508b2","target_locale":"zh-Hans","translation":"结束并同步","review_note":""}
+{"id":"watch_widget.5ce04d515d1c","target_locale":"zh-Hans","translation":"继续","review_note":""}
+{"id":"watch_widget.8361420226c3","target_locale":"zh-Hans","translation":"背部","review_note":""}
+{"id":"watch_widget.52e036cf79ae","target_locale":"zh-Hans","translation":"背部日","review_note":""}
+{"id":"watch_widget.f4f93e827213","target_locale":"zh-Hans","translation":"胸","review_note":""}
+{"id":"watch_widget.349df198921f","target_locale":"zh-Hans","translation":"胸部的一天.","review_note":"NLLB fallback used because TranslateGemma mixed writing systems; human review required."}
+{"id":"watch_widget.a9bcd1d54574","target_locale":"zh-Hans","translation":"是否要删除记录？","review_note":""}
+{"id":"watch_widget.31d6157ec148","target_locale":"zh-Hans","translation":"正在记录","review_note":""}
+{"id":"watch_widget.e7c120e0433a","target_locale":"zh-Hans","translation":"没有正在进行的记录","review_note":""}
+{"id":"watch_widget.2f9be1574e74","target_locale":"zh-Hans","translation":"常规采样","review_note":""}
+{"id":"watch_widget.a0b5240a769f","target_locale":"zh-Hans","translation":"快","review_note":""}
+{"id":"watch_widget.423b784208d1","target_locale":"zh-Hans","translation":"根据完成度、RPE和动作速度，建议相同的重量","review_note":""}
+{"id":"watch_widget.2db35aa51fee","target_locale":"zh-Hans","translation":"不同","review_note":""}
+{"id":"watch_widget.b5ad6016c9a4","target_locale":"zh-Hans","translation":"切换到选择的套组","review_note":""}
+{"id":"watch_widget.74211dc96bd5","target_locale":"zh-Hans","translation":"重量","review_note":""}
+{"id":"watch_widget.7d01b80b03ac","target_locale":"zh-Hans","translation":"使用卷尺设置重量","review_note":""}
+{"id":"watch_widget.50b4d8445e1e","target_locale":"zh-Hans","translation":"重量、次数、RPE和休息可以在开始前后的卷尺上进行更改。","review_note":""}
+{"id":"watch_widget.73efe52b65c2","target_locale":"zh-Hans","translation":"开始","review_note":""}
+{"id":"watch_widget.2f3d8874afc6","target_locale":"zh-Hans","translation":"在开始前设定节奏","review_note":""}
+{"id":"watch_widget.2a072a116cb4","target_locale":"zh-Hans","translation":"不支持：{{value1}}。可以使用手动输入","review_note":""}
+{"id":"watch_widget.784d61a7d1fe","target_locale":"zh-Hans","translation":"语音/文字笔记","review_note":""}

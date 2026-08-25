@@ -35,7 +35,7 @@ struct WatchContentView: View {
                     } label: {
                         Image(systemName: "questionmark.circle")
                     }
-                    .accessibilityLabel("Apple Watchの使い方")
+                    .accessibilityLabel(L10n.string("watch_widget.762361d25a0e", fallback: "Apple Watchの使い方"))
                     .accessibilityIdentifier("watchTutorialHelpButton")
                 }
             }
@@ -47,8 +47,11 @@ struct WatchContentView: View {
         }
         .onAppear {
             let arguments = ProcessInfo.processInfo.arguments
-            if arguments.contains("--show-watch-tutorial") {
+            if arguments.contains("--reset-watch-ui-test-data")
+                || arguments.contains("--show-watch-tutorial") {
                 completedTutorialVersion = ""
+            }
+            if arguments.contains("--show-watch-tutorial") {
                 isShowingTutorial = true
             } else if !arguments.contains("--suppress-watch-tutorial"),
                       completedTutorialVersion != WatchTutorialView.currentVersion {
@@ -84,33 +87,33 @@ struct WatchTutorialView: View {
     private let steps = [
         WatchTutorialStep(
             icon: "list.bullet.rectangle",
-            title: "メニューを選ぶ",
-            detail: "iPhoneから届いた今日のメニューを選び、開始します。"
+            title: L10n.string("watch_widget.2b5f588ea836", fallback: "メニューを選ぶ"),
+            detail: L10n.string("watch_widget.172b72b0e366", fallback: "iPhoneから届いた今日のメニューを選び、開始します。")
         ),
         WatchTutorialStep(
             icon: "play.fill",
-            title: "セットを開始",
-            detail: "種目とセットを選んで開始。間違えた時は「キャンセル」で未実行に戻せます。"
+            title: L10n.string("watch_widget.864ffb74d301", fallback: "セットを開始"),
+            detail: L10n.string("watch_widget.e71bb44afc57", fallback: "種目とセットを選んで開始。間違えた時は「キャンセル」で未実行に戻せます。")
         ),
         WatchTutorialStep(
             icon: "dial.medium",
-            title: "実績を合わせる",
-            detail: "重量・回数・RPE・休憩は開始前後にリールで変更できます。"
+            title: L10n.string("watch_widget.11f4022e0437", fallback: "実績を合わせる"),
+            detail: L10n.string("watch_widget.50b4d8445e1e", fallback: "重量・回数・RPE・休憩は開始前後にリールで変更できます。")
         ),
         WatchTutorialStep(
             icon: "metronome",
-            title: "テンポを合わせる",
-            detail: "上げ・下げ時間をセットごとに設定。Apple Watchが1秒あたり1〜3回の触覚で案内します。"
+            title: L10n.string("watch_widget.19550a012210", fallback: "テンポを合わせる"),
+            detail: L10n.string("watch_widget.9a3e26289146", fallback: "上げ・下げ時間をセットごとに設定。Apple Watchが1秒あたり1〜3回の触覚で案内します。")
         ),
         WatchTutorialStep(
             icon: "timer",
-            title: "休憩する",
-            detail: "完了すると休憩タイマーが開始。次の種目は順番を変えて選べます。"
+            title: L10n.string("watch_widget.c69c7fb85f9b", fallback: "休憩する"),
+            detail: L10n.string("watch_widget.8dbc8435b124", fallback: "完了すると休憩タイマーが開始。次の種目は順番を変えて選べます。")
         ),
         WatchTutorialStep(
             icon: "iphone.and.arrow.forward",
-            title: "終了して同期",
-            detail: "最後に終了するとiPhoneへ送信。未送信の記録はあとから再送できます。"
+            title: L10n.string("watch_widget.64b1330508b2", fallback: "終了して同期"),
+            detail: L10n.string("watch_widget.7b80546b6322", fallback: "最後に終了するとiPhoneへ送信。未送信の記録はあとから再送できます。")
         )
     ]
 
@@ -146,9 +149,9 @@ struct WatchTutorialView: View {
             .accessibilityHidden(true)
 
             HStack(spacing: 6) {
-                Button("スキップ", action: onComplete)
+                Button(L10n.string("watch_widget.5e1713107aae", fallback: "スキップ"), action: onComplete)
                     .buttonStyle(.bordered)
-                    .accessibilityLabel("チュートリアルをスキップ")
+                    .accessibilityLabel(L10n.string("watch_widget.db540f633c8c", fallback: "チュートリアルをスキップ"))
                     .accessibilityIdentifier("skipWatchTutorialButton")
 
                 Button {
@@ -158,7 +161,7 @@ struct WatchTutorialView: View {
                         page += 1
                     }
                 } label: {
-                    Label(page == steps.count - 1 ? "使い始める" : "次へ", systemImage: page == steps.count - 1 ? "checkmark" : "chevron.right")
+                    Label(page == steps.count - 1 ? L10n.string("watch_widget.afec905a94f5", fallback: "使い始める") : L10n.string("watch_widget.c8c2bdae1bbc", fallback: "次へ"), systemImage: page == steps.count - 1 ? "checkmark" : "chevron.right")
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
@@ -167,7 +170,7 @@ struct WatchTutorialView: View {
             .font(.footnote)
         }
         .padding(.horizontal, 10)
-        .navigationTitle("使い方 \(page + 1)/\(steps.count)")
+        .accessibilityLabel(L10n.string("watch_widget.508051ad5c0a", fallback: "使い方 {{value1}}/{{value2}}", values: [String(describing: page + 1), String(describing: steps.count)]))
     }
 }
 
@@ -203,7 +206,7 @@ struct WatchEmptyPlanView: View {
                     .font(.largeTitle)
                     .foregroundStyle(WatchAppTheme.positive)
 
-                Text("メニュー待ち")
+                Text(L10n.string("watch_widget.12ffae136992", fallback: "メニュー待ち"))
                     .font(.headline)
             }
 
@@ -212,10 +215,18 @@ struct WatchEmptyPlanView: View {
                 .foregroundStyle(WatchAppTheme.mutedInk)
                 .multilineTextAlignment(.center)
 
-            Text("iPhoneのホームから今日の内容を同期します。")
+            Text(L10n.string("watch_widget.8e03ffd59ca7", fallback: "iPhoneのホームから今日の内容を同期します。"))
                 .font(.caption2)
                 .foregroundStyle(WatchAppTheme.mutedInk)
                 .multilineTextAlignment(.center)
+
+            NavigationLink {
+                WatchOutdoorWorkoutSetupView()
+            } label: {
+                Label(L10n.string("watch_widget.outdoor_start", fallback: "屋外運動を始める"), systemImage: "figure.run")
+            }
+            .buttonStyle(.borderedProminent)
+            .accessibilityIdentifier("watchOutdoorWorkoutLink")
         }
         .padding()
     }
@@ -236,9 +247,9 @@ struct WatchMenuSelectionView: View {
 
             Section {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("今日のメニュー")
+                    Text(L10n.string("watch_widget.686a6c522309", fallback: "今日のメニュー"))
                         .font(.headline)
-                    Text("\(plans.count)件から選択")
+                    Text(L10n.string("watch_widget.3148813301ee", fallback: "{{value1}}件から選択", values: [String(describing: plans.count)]))
                         .font(.caption)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                     Text(statusMessage)
@@ -251,7 +262,7 @@ struct WatchMenuSelectionView: View {
                 WatchRecentSessionSection(session: lastCompletedSession)
             }
 
-            Section("メニュー") {
+            Section(L10n.string("watch_widget.54ef1a234c86", fallback: "メニュー")) {
                 ForEach(plans) { plan in
                     Button {
                         workoutStore.selectPlan(plan)
@@ -277,12 +288,21 @@ struct WatchMenuSelectionView: View {
                 }
             }
 
+            Section(L10n.string("watch_widget.outdoor", fallback: "屋外有酸素")) {
+                NavigationLink {
+                    WatchOutdoorWorkoutSetupView()
+                } label: {
+                    Label(L10n.string("watch_widget.outdoor_start", fallback: "屋外運動を始める"), systemImage: "figure.run")
+                }
+                .accessibilityIdentifier("watchOutdoorWorkoutLink")
+            }
+
             if let pendingSession {
-                Section("未送信") {
+                Section(L10n.string("watch_widget.51caea1e57ce", fallback: "未送信")) {
                     Button {
                         workoutStore.resendPendingSession()
                     } label: {
-                        Label("\(pendingSession.title) を再送", systemImage: "arrow.clockwise")
+                        Label(L10n.string("watch_widget.8a6e496052a2", fallback: "{{value1}} を再送", values: [pendingSession.title]), systemImage: "arrow.clockwise")
                     }
                     .accessibilityIdentifier("watchResendPendingSessionButton")
                 }
@@ -319,7 +339,7 @@ struct WatchPlanDetailView: View {
                 Button {
                     workoutStore.startWorkout()
                 } label: {
-                    Label("開始", systemImage: "play.fill")
+                    Label(L10n.string("watch_widget.73efe52b65c2", fallback: "開始"), systemImage: "play.fill")
                 }
                 .buttonStyle(.borderedProminent)
                 .accessibilityIdentifier("watchStartWorkoutButton")
@@ -327,7 +347,7 @@ struct WatchPlanDetailView: View {
                 Button {
                     workoutStore.clearPlanSelection()
                 } label: {
-                    Label("メニュー変更", systemImage: "arrow.left.circle")
+                    Label(L10n.string("watch_widget.137725ad45aa", fallback: "メニュー変更"), systemImage: "arrow.left.circle")
                 }
                 .accessibilityIdentifier("watchChangeMenuButton")
 
@@ -335,7 +355,7 @@ struct WatchPlanDetailView: View {
                     Button {
                         workoutStore.resendPendingSession()
                     } label: {
-                        Label("\(pendingSession.title) を再送", systemImage: "arrow.clockwise")
+                        Label(L10n.string("watch_widget.8a6e496052a2", fallback: "{{value1}} を再送", values: [pendingSession.title]), systemImage: "arrow.clockwise")
                     }
                     .accessibilityIdentifier("watchResendPendingSessionButton")
                 }
@@ -370,7 +390,7 @@ private struct WatchDailyRecommendationSection: View {
     let showsStart: Bool
 
     var body: some View {
-        Section("今日") {
+        Section(L10n.string("watch_widget.9890a0a76fc6", fallback: "今日")) {
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(recommendation.readiness)
@@ -397,7 +417,7 @@ private struct WatchDailyRecommendationSection: View {
                 Button {
                     workoutStore.startRecommendedWorkout()
                 } label: {
-                    Label("開始", systemImage: "play.fill")
+                    Label(L10n.string("watch_widget.73efe52b65c2", fallback: "開始"), systemImage: "play.fill")
                 }
                 .buttonStyle(.borderedProminent)
                 .accessibilityIdentifier("watchRecommendedStartButton")
@@ -414,24 +434,31 @@ struct WatchRecentSessionSection: View {
     let session: WatchWorkoutSessionSnapshot
 
     var body: some View {
-        Section("前回の記録") {
+        Section(L10n.string("watch_widget.a6830bdb3dd4", fallback: "前回の記録")) {
             NavigationLink {
                 WatchCompletedSetsArchiveView(session: session)
             } label: {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(session.title)
                         .font(.headline)
-                    Text(
-                        "\(session.completedSetCount)セット・"
-                            + "\(session.completedRepCount)回・"
-                            + "\(session.totalVolume.formatted(.number.precision(.fractionLength(0...1))))kg"
-                    )
+                    Text(recentSummary)
                     .font(.caption2)
                     .foregroundStyle(WatchAppTheme.mutedInk)
                 }
             }
             .accessibilityIdentifier("watchRecentSession")
         }
+    }
+
+    private var recentSummary: String {
+        if let cardio = session.outdoorCardio {
+            let distance = cardio.distanceKilometers.formatted(.number.precision(.fractionLength(1)))
+            let duration = Int(max(0, (session.endedAt ?? Date()).timeIntervalSince(session.startedAt)) / 60)
+            return "\(distance) km・\(duration) min"
+        }
+        return L10n.string("watch_widget.9ae2c6a9fa00", fallback: "{{value1}}セット・", values: [String(describing: session.completedSetCount)])
+            + L10n.string("watch_widget.d1749584e623", fallback: "{{value1}}回・", values: [String(describing: session.completedRepCount)])
+            + "\(session.totalVolume.formatted(.number.precision(.fractionLength(0...1))))kg"
     }
 }
 
@@ -448,13 +475,13 @@ struct WatchExercisePreviewView: View {
                     Text(exercise.primaryMuscleName)
                         .font(.caption)
                         .foregroundStyle(WatchAppTheme.mutedInk)
-                    Text("休憩 \(exercise.restSeconds)秒")
+                    Text(L10n.string("watch_widget.09998c5a6ec8", fallback: "休憩 {{value1}}秒", values: [String(describing: exercise.restSeconds)]))
                         .font(.caption2)
                         .foregroundStyle(WatchAppTheme.mutedInk)
                 }
             }
 
-            Section("セット") {
+            Section(L10n.string("watch_widget.558199564f3f", fallback: "セット")) {
                 ForEach(exercise.sets) { set in
                     HStack {
                         Text("\(set.setOrder)")
@@ -465,7 +492,7 @@ struct WatchExercisePreviewView: View {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(formatWeight(set.targetWeight, unit: unit))
                                 .font(.headline)
-                            Text("\(set.targetReps)回")
+                            Text(L10n.string("watch_widget.672403542889", fallback: "{{value1}}回", values: [String(describing: set.targetReps)]))
                                 .font(.caption)
                                 .foregroundStyle(WatchAppTheme.mutedInk)
                         }
